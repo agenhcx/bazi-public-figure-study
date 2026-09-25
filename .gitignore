@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Large/rebuildable raw caches
+**/cache/
+**/wikidata_batches/
+*_category_members.json
+
+# Local temporary files
+*.log
+.DS_Store
+Thumbs.db
+
+# Keep analysis scripts, preregistration, summary CSV/TXT results.
