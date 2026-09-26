@@ -1,0 +1,5 @@
+﻿test_id,subgroup,x,y,expected_direction,n,rho_spearman,p_perm_one_sided,p_scipy_two_sided,x_distribution_count:value,interpretation,permutations
+H1,辛,xin_partial_seal_count,peak_elo_gender_z,positive,25,0.30424349222966557,0.07184464077679611,0.1392335416490198,0:6; 1:13; 2:6,辛金偏印越多 -> Elo越高,200000
+H2,辛,xin_partial_seal_count,highest_rank,negative,26,-0.2973100695724329,0.06929965350173249,0.14020629894089473,0:6; 1:13; 2:7,辛金偏印越多 -> official rank越小,200000
+H3,土,earth_root_count,peak_elo_gender_z,positive,75,0.08694794153915995,0.22816885915570423,0.45823853893173616,0:14; 1:38; 2:19; 3:4,土日主土根越多 -> Elo越高,200000
+H4,土,earth_root_count,highest_rank,negative,79,-0.0687569653416145,0.2746636266818666,0.5471091555172181,0:15; 1:40; 2:20; 3:4,土日主土根越多 -> official rank越小,200000
