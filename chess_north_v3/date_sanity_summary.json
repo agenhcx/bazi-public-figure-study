@@ -1,0 +1,73 @@
+{
+  "stage": "pre-reveal DOB temporal sanity patch; no BaZi",
+  "hard_rule": "exact DOB must be <= snapshot date",
+  "source_population": "chess_north_v2",
+  "cohorts": {
+    "1994_M": {
+      "source_n": 502,
+      "invalid_future_dob_n": 1,
+      "valid_before_reselection_n": 501,
+      "target": 500,
+      "n": 501,
+      "cutoff_elo": 2435,
+      "n_above_cutoff": 478,
+      "n_at_cutoff": 23,
+      "birth_year_min": 1922,
+      "birth_year_max": 1979,
+      "age_years_min": 14.07010410891394,
+      "age_years_max": 71.8974380035182
+    },
+    "1994_F": {
+      "source_n": 201,
+      "invalid_future_dob_n": 0,
+      "valid_before_reselection_n": 201,
+      "target": 200,
+      "n": 201,
+      "cutoff_elo": 2135,
+      "n_above_cutoff": 194,
+      "n_at_cutoff": 7,
+      "birth_year_min": 1928,
+      "birth_year_max": 1980,
+      "age_years_min": 13.686797127935549,
+      "age_years_max": 65.02802932298404
+    },
+    "2013_M": {
+      "source_n": 501,
+      "invalid_future_dob_n": 0,
+      "valid_before_reselection_n": 501,
+      "target": 500,
+      "n": 501,
+      "cutoff_elo": 2529,
+      "n_above_cutoff": 493,
+      "n_at_cutoff": 8,
+      "birth_year_min": 1945,
+      "birth_year_max": 1996,
+      "age_years_min": 16.263167621511734,
+      "age_years_max": 67.36620190695223
+    },
+    "2013_F": {
+      "source_n": 200,
+      "invalid_future_dob_n": 0,
+      "valid_before_reselection_n": 200,
+      "target": 200,
+      "n": 200,
+      "cutoff_elo": 2272,
+      "n_above_cutoff": 197,
+      "n_at_cutoff": 3,
+      "birth_year_min": 1941,
+      "birth_year_max": 1998,
+      "age_years_min": 14.261757599403136,
+      "age_years_max": 71.66745381493118
+    }
+  },
+  "invalid_rows": [
+    {
+      "fide_id": 4500024,
+      "name": "Oll, Lembit",
+      "rating": 2605,
+      "_parsed_dob": "1997-06-17",
+      "_snapshot": "1994-01-01",
+      "_reason": "dob_after_snapshot_impossible"
+    }
+  ]
+}
