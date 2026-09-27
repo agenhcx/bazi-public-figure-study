@@ -1,0 +1,35 @@
+{
+  "snapshot": "2023-01-01",
+  "analysis_role": "pre_reveal_population_freeze",
+  "required_plan_tag": "chess-2023-validation-plan-v2",
+  "sexes": {
+    "M": {
+      "target": 500,
+      "full_n": 501,
+      "full_cutoff_elo": 2513,
+      "new_within_full_n": 209,
+      "new_target_n": 501,
+      "new_target_cutoff_elo": 2423,
+      "overlap_in_full_n": 292,
+      "new_target_max_elo": 2785,
+      "new_target_min_elo": 2423,
+      "full_max_elo": 2859,
+      "full_min_elo": 2513,
+      "audit_candidates_scanned": 1478
+    },
+    "F": {
+      "target": 200,
+      "full_n": 202,
+      "full_cutoff_elo": 2244,
+      "new_within_full_n": 80,
+      "new_target_n": 200,
+      "new_target_cutoff_elo": 1975,
+      "overlap_in_full_n": 122,
+      "new_target_max_elo": 2545,
+      "new_target_min_elo": 1975,
+      "full_max_elo": 2638,
+      "full_min_elo": 2244,
+      "audit_candidates_scanned": 1293
+    }
+  }
+}
