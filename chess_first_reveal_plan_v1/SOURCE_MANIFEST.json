@@ -1,0 +1,37 @@
+{
+  "source_tag": "chess-preregister-v3-date-sanity",
+  "source_files": {
+    "1994_M": {
+      "path": "chess_north_v3\\primary_north_top_1994_M.csv",
+      "sha256": "28f50e08d79faa57473e4a517fd8628284b75ef22d7c522b93b50ecd6f1e4117",
+      "n": 501
+    },
+    "1994_F": {
+      "path": "chess_north_v3\\primary_north_top_1994_F.csv",
+      "sha256": "47c071dbfdfc0bd7f42ff89a971477097623839ff23132b14f86284866b6023f",
+      "n": 201
+    },
+    "2013_M": {
+      "path": "chess_north_v3\\primary_north_top_2013_M.csv",
+      "sha256": "0b38d7a74c9eae36ee3c792ca781bf4325ef97966d5ce50ccababfd052ed4f9d",
+      "n": 501
+    },
+    "2013_F": {
+      "path": "chess_north_v3\\primary_north_top_2013_F.csv",
+      "sha256": "448424b60c53e42290b46f3c7eba4888ea3de8d53cbd19014ca56132d7a3b029",
+      "n": 200
+    }
+  },
+  "seed": 20260927,
+  "null_sims": 5000,
+  "confirmatory": [
+    "C1 Day-Master five-element distribution 1994 vs 2013",
+    "C2 Metal-vs-Earth temporal gradient",
+    "C3 伤官/偏印 six-position exposure and Elo association"
+  ],
+  "exploratory_not_confirmatory": [
+    "E1 Water Day Master",
+    "E2 WaterCount 0..6",
+    "E3 MetalWaterCount 0..6"
+  ]
+}
