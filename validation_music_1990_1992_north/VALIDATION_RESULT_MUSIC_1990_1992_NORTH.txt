@@ -1,0 +1,32 @@
+FROZEN VALIDATION RESULT
+Music × BaZi, 1990–1992
+
+Freeze tag: prereg-music-1990-1992-north-v1
+Freeze commit: 7b0de85
+
+PRIMARY SAMPLE: NORTH ONLY
+Eligible people: 36,689
+Eligible dates represented: 1,064
+
+PRIMARY HYPOTHESIS
+H1: month-order 伤官 positive
+Adjusted OR = 1.067784
+95% CI = [0.939951, 1.213001]
+Frozen one-sided p = 0.15669989
+Two-sided p = 0.31339977
+
+SECONDARY FAMILY (BH-FDR across exactly 3 tests)
+S1_water_lower: effect=1.006661, raw directional p=0.66337337, BH q=0.66337337
+S2_month_order_jiecai_negative: effect=0.978292, raw directional p=0.36608198, BH q=0.54912297
+S3_month_order_bijian_positive: effect=1.126253, raw directional p=0.034935609, BH q=0.10480683
+
+Sensitivity samples were computed only after applying the same frozen
+hypothesis definitions:
+known: H1 OR=1.0854, p1=0.096065, N=42,484
+full: H1 OR=1.0694, p1=0.12307, N=48,199
+
+Per-year estimates are descriptive only; pooled 1990–1992 is confirmatory.
+Water Monte Carlo reps (pooled): 100000
+
+Interpretation rule:
+Do not promote any newly noticed 1990–1992 feature to confirmatory status.
