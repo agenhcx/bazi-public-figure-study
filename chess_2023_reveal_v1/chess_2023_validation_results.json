@@ -1,0 +1,1449 @@
+{
+  "analysis_role": "prospective_2023_validation_reveal",
+  "plan_tag": "chess-2023-validation-plan-v2",
+  "cohort_tag": "chess-2023-cohorts-frozen-v1",
+  "seed": 20260927,
+  "null_sims": 20000,
+  "performance_permutations": 50000,
+  "selection": {
+    "M_FULL": {
+      "n": 501,
+      "day_stem_counts": {
+        "甲": 55,
+        "乙": 66,
+        "丙": 48,
+        "丁": 44,
+        "戊": 46,
+        "己": 41,
+        "庚": 53,
+        "辛": 59,
+        "壬": 50,
+        "癸": 39
+      },
+      "element_counts": {
+        "木": 121,
+        "火": 92,
+        "土": 87,
+        "金": 112,
+        "水": 89
+      },
+      "H1_stem_direction": {
+        "observed_sum": 37.0,
+        "observed_mean_per_player": 0.07385229540918163,
+        "null_mean_sum": -0.0153,
+        "null_mean_per_player": -3.053892215568862e-05,
+        "null_sd_sum": 22.520593348449733,
+        "z": 1.6436201048205532,
+        "empirical_p_high": 0.055747212639368035,
+        "empirical_p_low": 0.9537523123843807,
+        "n_sims": 20000,
+        "null": "uniform Gregorian date within same birth year",
+        "individual_pairs": [
+          {
+            "predicted_stem": "乙",
+            "opposite_stem": "甲",
+            "predicted_count": 66,
+            "opposite_count": 55,
+            "observed_predicted_share": 0.5454545454545454,
+            "matched_calendar_predicted_share": 0.4998764427190015,
+            "direction_matches": true
+          },
+          {
+            "predicted_stem": "丙",
+            "opposite_stem": "丁",
+            "predicted_count": 48,
+            "opposite_count": 44,
+            "observed_predicted_share": 0.5217391304347826,
+            "matched_calendar_predicted_share": 0.5001780906425682,
+            "direction_matches": true
+          },
+          {
+            "predicted_stem": "戊",
+            "opposite_stem": "己",
+            "predicted_count": 46,
+            "opposite_count": 41,
+            "observed_predicted_share": 0.5287356321839081,
+            "matched_calendar_predicted_share": 0.499794715071846,
+            "direction_matches": true
+          },
+          {
+            "predicted_stem": "辛",
+            "opposite_stem": "庚",
+            "predicted_count": 59,
+            "opposite_count": 53,
+            "observed_predicted_share": 0.5267857142857143,
+            "matched_calendar_predicted_share": 0.4999049002258871,
+            "direction_matches": true
+          },
+          {
+            "predicted_stem": "壬",
+            "opposite_stem": "癸",
+            "predicted_count": 50,
+            "opposite_count": 39,
+            "observed_predicted_share": 0.5617977528089888,
+            "matched_calendar_predicted_share": 0.4998633248223838,
+            "direction_matches": true
+          }
+        ]
+      },
+      "H2_shangguan": {
+        "observed_sum": 271.0,
+        "observed_mean_per_player": 0.5409181636726547,
+        "null_mean_sum": 234.01905,
+        "null_mean_per_player": 0.46710389221556886,
+        "null_sd_sum": 14.72133224197623,
+        "z": 2.512065443000666,
+        "empirical_p_high": 0.007149642517874106,
+        "empirical_p_low": 0.9943002849857507,
+        "n_sims": 20000,
+        "null": "uniform Gregorian date within same birth year"
+      },
+      "pianyin_descriptive_null": {
+        "observed_sum": 259.0,
+        "observed_mean_per_player": 0.5169660678642715,
+        "null_mean_sum": 266.92755,
+        "null_mean_per_player": 0.5327895209580839,
+        "null_sd_sum": 15.844549646019425,
+        "z": -0.5003329332236092,
+        "empirical_p_high": 0.7008649567521624,
+        "empirical_p_low": 0.32193390330483473,
+        "n_sims": 20000,
+        "null": "uniform Gregorian date within same birth year"
+      }
+    },
+    "F_FULL": {
+      "n": 202,
+      "day_stem_counts": {
+        "甲": 16,
+        "乙": 21,
+        "丙": 20,
+        "丁": 22,
+        "戊": 15,
+        "己": 17,
+        "庚": 21,
+        "辛": 33,
+        "壬": 19,
+        "癸": 18
+      },
+      "element_counts": {
+        "木": 37,
+        "火": 42,
+        "土": 32,
+        "金": 54,
+        "水": 37
+      },
+      "H1_stem_direction": {
+        "observed_sum": 14.0,
+        "observed_mean_per_player": 0.06930693069306931,
+        "null_mean_sum": -0.0353,
+        "null_mean_per_player": -0.00017475247524752473,
+        "null_sd_sum": 14.24162543759508,
+        "z": 0.985512507789285,
+        "empirical_p_high": 0.1814909254537273,
+        "empirical_p_low": 0.8546072696365181,
+        "n_sims": 20000,
+        "null": "uniform Gregorian date within same birth year",
+        "individual_pairs": [
+          {
+            "predicted_stem": "乙",
+            "opposite_stem": "甲",
+            "predicted_count": 21,
+            "opposite_count": 16,
+            "observed_predicted_share": 0.5675675675675675,
+            "matched_calendar_predicted_share": 0.49999935184092914,
+            "direction_matches": true
+          },
+          {
+            "predicted_stem": "丙",
+            "opposite_stem": "丁",
+            "predicted_count": 20,
+            "opposite_count": 22,
+            "observed_predicted_share": 0.47619047619047616,
+            "matched_calendar_predicted_share": 0.49993261986388654,
+            "direction_matches": false
+          },
+          {
+            "predicted_stem": "戊",
+            "opposite_stem": "己",
+            "predicted_count": 15,
+            "opposite_count": 17,
+            "observed_predicted_share": 0.46875,
+            "matched_calendar_predicted_share": 0.5000339334044884,
+            "direction_matches": false
+          },
+          {
+            "predicted_stem": "辛",
+            "opposite_stem": "庚",
+            "predicted_count": 33,
+            "opposite_count": 21,
+            "observed_predicted_share": 0.6111111111111112,
+            "matched_calendar_predicted_share": 0.5001363547268218,
+            "direction_matches": true
+          },
+          {
+            "predicted_stem": "壬",
+            "opposite_stem": "癸",
+            "predicted_count": 19,
+            "opposite_count": 18,
+            "observed_predicted_share": 0.5135135135135135,
+            "matched_calendar_predicted_share": 0.4997962926748328,
+            "direction_matches": true
+          }
+        ]
+      },
+      "H2_shangguan": {
+        "observed_sum": 99.0,
+        "observed_mean_per_player": 0.4900990099009901,
+        "null_mean_sum": 94.34655,
+        "null_mean_per_player": 0.4670621287128712,
+        "null_sd_sum": 9.42884395100548,
+        "z": 0.49353346223359323,
+        "empirical_p_high": 0.3240337983100845,
+        "empirical_p_low": 0.7129143542822859,
+        "n_sims": 20000,
+        "null": "uniform Gregorian date within same birth year"
+      },
+      "pianyin_descriptive_null": {
+        "observed_sum": 118.0,
+        "observed_mean_per_player": 0.5841584158415841,
+        "null_mean_sum": 107.6428,
+        "null_mean_per_player": 0.5328851485148515,
+        "null_sd_sum": 10.14641097348132,
+        "z": 1.0207747376948957,
+        "empirical_p_high": 0.16214189290535475,
+        "empirical_p_low": 0.8594570271486426,
+        "n_sims": 20000,
+        "null": "uniform Gregorian date within same birth year"
+      }
+    },
+    "FULL_POOLED": {
+      "n": 703,
+      "day_stem_counts": {
+        "甲": 71,
+        "乙": 87,
+        "丙": 68,
+        "丁": 66,
+        "戊": 61,
+        "己": 58,
+        "庚": 74,
+        "辛": 92,
+        "壬": 69,
+        "癸": 57
+      },
+      "element_counts": {
+        "木": 158,
+        "火": 134,
+        "土": 119,
+        "金": 166,
+        "水": 126
+      },
+      "H1_stem_direction": {
+        "observed_sum": 51.0,
+        "observed_mean_per_player": 0.07254623044096728,
+        "null_mean_sum": -0.0363,
+        "null_mean_per_player": -5.1635846372688476e-05,
+        "null_sd_sum": 26.49403289419997,
+        "z": 1.9263318726826513,
+        "empirical_p_high": 0.02974851257437128,
+        "empirical_p_low": 0.9747012649367531,
+        "n_sims": 20000,
+        "null": "uniform Gregorian date within same birth year",
+        "individual_pairs": [
+          {
+            "predicted_stem": "乙",
+            "opposite_stem": "甲",
+            "predicted_count": 87,
+            "opposite_count": 71,
+            "observed_predicted_share": 0.5506329113924051,
+            "matched_calendar_predicted_share": 0.4999117789526623,
+            "direction_matches": true
+          },
+          {
+            "predicted_stem": "丙",
+            "opposite_stem": "丁",
+            "predicted_count": 68,
+            "opposite_count": 66,
+            "observed_predicted_share": 0.5074626865671642,
+            "matched_calendar_predicted_share": 0.5001075493118122,
+            "direction_matches": true
+          },
+          {
+            "predicted_stem": "戊",
+            "opposite_stem": "己",
+            "predicted_count": 61,
+            "opposite_count": 58,
+            "observed_predicted_share": 0.5126050420168067,
+            "matched_calendar_predicted_share": 0.4998634482871791,
+            "direction_matches": true
+          },
+          {
+            "predicted_stem": "辛",
+            "opposite_stem": "庚",
+            "predicted_count": 92,
+            "opposite_count": 74,
+            "observed_predicted_share": 0.5542168674698795,
+            "matched_calendar_predicted_share": 0.4999713926611398,
+            "direction_matches": true
+          },
+          {
+            "predicted_stem": "壬",
+            "opposite_stem": "癸",
+            "predicted_count": 69,
+            "opposite_count": 57,
+            "observed_predicted_share": 0.5476190476190477,
+            "matched_calendar_predicted_share": 0.4998440715459215,
+            "direction_matches": true
+          }
+        ]
+      },
+      "H2_shangguan": {
+        "observed_sum": 370.0,
+        "observed_mean_per_player": 0.5263157894736842,
+        "null_mean_sum": 328.42715,
+        "null_mean_per_player": 0.4671794452347084,
+        "null_sd_sum": 17.464313413061777,
+        "z": 2.3804457133085557,
+        "empirical_p_high": 0.009399530023498826,
+        "empirical_p_low": 0.9916504174791261,
+        "n_sims": 20000,
+        "null": "uniform Gregorian date within same birth year"
+      },
+      "pianyin_descriptive_null": {
+        "observed_sum": 377.0,
+        "observed_mean_per_player": 0.5362731152204836,
+        "null_mean_sum": 374.79365,
+        "null_mean_per_player": 0.5331346372688478,
+        "null_sd_sum": 18.814876285960075,
+        "z": 0.11726625072982252,
+        "empirical_p_high": 0.46202689865506724,
+        "empirical_p_low": 0.5590720463976802,
+        "n_sims": 20000,
+        "null": "uniform Gregorian date within same birth year"
+      }
+    },
+    "M_NEW_TARGET": {
+      "n": 501,
+      "day_stem_counts": {
+        "甲": 52,
+        "乙": 58,
+        "丙": 49,
+        "丁": 51,
+        "戊": 45,
+        "己": 49,
+        "庚": 46,
+        "辛": 55,
+        "壬": 38,
+        "癸": 58
+      },
+      "element_counts": {
+        "木": 110,
+        "火": 100,
+        "土": 94,
+        "金": 101,
+        "水": 96
+      },
+      "H1_stem_direction": {
+        "observed_sum": -11.0,
+        "observed_mean_per_player": -0.021956087824351298,
+        "null_mean_sum": -0.1168,
+        "null_mean_per_player": -0.00023313373253493015,
+        "null_sd_sum": 22.41831141710588,
+        "z": -0.48546029170135335,
+        "empirical_p_high": 0.7042147892605369,
+        "empirical_p_low": 0.32988350582470877,
+        "n_sims": 20000,
+        "null": "uniform Gregorian date within same birth year",
+        "individual_pairs": [
+          {
+            "predicted_stem": "乙",
+            "opposite_stem": "甲",
+            "predicted_count": 58,
+            "opposite_count": 52,
+            "observed_predicted_share": 0.5272727272727272,
+            "matched_calendar_predicted_share": 0.4997950503539306,
+            "direction_matches": true
+          },
+          {
+            "predicted_stem": "丙",
+            "opposite_stem": "丁",
+            "predicted_count": 49,
+            "opposite_count": 51,
+            "observed_predicted_share": 0.49,
+            "matched_calendar_predicted_share": 0.500191767442389,
+            "direction_matches": false
+          },
+          {
+            "predicted_stem": "戊",
+            "opposite_stem": "己",
+            "predicted_count": 45,
+            "opposite_count": 49,
+            "observed_predicted_share": 0.4787234042553192,
+            "matched_calendar_predicted_share": 0.49995939822719293,
+            "direction_matches": false
+          },
+          {
+            "predicted_stem": "辛",
+            "opposite_stem": "庚",
+            "predicted_count": 55,
+            "opposite_count": 46,
+            "observed_predicted_share": 0.5445544554455446,
+            "matched_calendar_predicted_share": 0.5000137410768882,
+            "direction_matches": true
+          },
+          {
+            "predicted_stem": "壬",
+            "opposite_stem": "癸",
+            "predicted_count": 38,
+            "opposite_count": 58,
+            "observed_predicted_share": 0.3958333333333333,
+            "matched_calendar_predicted_share": 0.49999966411631425,
+            "direction_matches": false
+          }
+        ]
+      },
+      "H2_shangguan": {
+        "observed_sum": 261.0,
+        "observed_mean_per_player": 0.5209580838323353,
+        "null_mean_sum": 233.8365,
+        "null_mean_per_player": 0.46673952095808385,
+        "null_sd_sum": 14.704413580246474,
+        "z": 1.8473025021882368,
+        "empirical_p_high": 0.03564821758912055,
+        "empirical_p_low": 0.9696015199240038,
+        "n_sims": 20000,
+        "null": "uniform Gregorian date within same birth year"
+      },
+      "pianyin_descriptive_null": {
+        "observed_sum": 263.0,
+        "observed_mean_per_player": 0.5249500998003992,
+        "null_mean_sum": 267.58915,
+        "null_mean_per_player": 0.5341100798403194,
+        "null_sd_sum": 15.724570435572133,
+        "z": -0.2918458102752645,
+        "empirical_p_high": 0.6230188490575471,
+        "empirical_p_low": 0.40247987600619967,
+        "n_sims": 20000,
+        "null": "uniform Gregorian date within same birth year"
+      }
+    },
+    "F_NEW_TARGET": {
+      "n": 200,
+      "day_stem_counts": {
+        "甲": 18,
+        "乙": 17,
+        "丙": 22,
+        "丁": 20,
+        "戊": 15,
+        "己": 17,
+        "庚": 25,
+        "辛": 20,
+        "壬": 25,
+        "癸": 21
+      },
+      "element_counts": {
+        "木": 35,
+        "火": 42,
+        "土": 32,
+        "金": 45,
+        "水": 46
+      },
+      "H1_stem_direction": {
+        "observed_sum": -2.0,
+        "observed_mean_per_player": -0.01,
+        "null_mean_sum": -0.0976,
+        "null_mean_per_player": -0.00048800000000000004,
+        "null_sd_sum": 14.204695100851175,
+        "z": -0.13392754905988824,
+        "empirical_p_high": 0.583370831458427,
+        "empirical_p_low": 0.4734763261836908,
+        "n_sims": 20000,
+        "null": "uniform Gregorian date within same birth year",
+        "individual_pairs": [
+          {
+            "predicted_stem": "乙",
+            "opposite_stem": "甲",
+            "predicted_count": 17,
+            "opposite_count": 18,
+            "observed_predicted_share": 0.4857142857142857,
+            "matched_calendar_predicted_share": 0.5000342052196978,
+            "direction_matches": false
+          },
+          {
+            "predicted_stem": "丙",
+            "opposite_stem": "丁",
+            "predicted_count": 22,
+            "opposite_count": 20,
+            "observed_predicted_share": 0.5238095238095238,
+            "matched_calendar_predicted_share": 0.49955578943820106,
+            "direction_matches": true
+          },
+          {
+            "predicted_stem": "戊",
+            "opposite_stem": "己",
+            "predicted_count": 15,
+            "opposite_count": 17,
+            "observed_predicted_share": 0.46875,
+            "matched_calendar_predicted_share": 0.5001030276298993,
+            "direction_matches": false
+          },
+          {
+            "predicted_stem": "辛",
+            "opposite_stem": "庚",
+            "predicted_count": 20,
+            "opposite_count": 25,
+            "observed_predicted_share": 0.4444444444444444,
+            "matched_calendar_predicted_share": 0.499932313498446,
+            "direction_matches": false
+          },
+          {
+            "predicted_stem": "壬",
+            "opposite_stem": "癸",
+            "predicted_count": 25,
+            "opposite_count": 21,
+            "observed_predicted_share": 0.5434782608695652,
+            "matched_calendar_predicted_share": 0.5002729504937447,
+            "direction_matches": true
+          }
+        ]
+      },
+      "H2_shangguan": {
+        "observed_sum": 89.0,
+        "observed_mean_per_player": 0.445,
+        "null_mean_sum": 93.365,
+        "null_mean_per_player": 0.466825,
+        "null_sd_sum": 9.274749379298743,
+        "z": -0.47063266310383356,
+        "empirical_p_high": 0.6971151442427879,
+        "empirical_p_low": 0.3422828858557072,
+        "n_sims": 20000,
+        "null": "uniform Gregorian date within same birth year"
+      },
+      "pianyin_descriptive_null": {
+        "observed_sum": 111.0,
+        "observed_mean_per_player": 0.555,
+        "null_mean_sum": 106.682,
+        "null_mean_per_player": 0.53341,
+        "null_sd_sum": 9.984566118666795,
+        "z": 0.43246746515376533,
+        "empirical_p_high": 0.3471326433678316,
+        "empirical_p_low": 0.6897655117244138,
+        "n_sims": 20000,
+        "null": "uniform Gregorian date within same birth year"
+      }
+    },
+    "NEW_TARGET_POOLED": {
+      "n": 701,
+      "day_stem_counts": {
+        "甲": 70,
+        "乙": 75,
+        "丙": 71,
+        "丁": 71,
+        "戊": 60,
+        "己": 66,
+        "庚": 71,
+        "辛": 75,
+        "壬": 63,
+        "癸": 79
+      },
+      "element_counts": {
+        "木": 145,
+        "火": 142,
+        "土": 126,
+        "金": 146,
+        "水": 142
+      },
+      "H1_stem_direction": {
+        "observed_sum": -13.0,
+        "observed_mean_per_player": -0.018544935805991442,
+        "null_mean_sum": 0.1061,
+        "null_mean_per_player": 0.00015135520684736093,
+        "null_sd_sum": 26.709009928310103,
+        "z": -0.4906995817208576,
+        "empirical_p_high": 0.6998150092495375,
+        "empirical_p_low": 0.328183590820459,
+        "n_sims": 20000,
+        "null": "uniform Gregorian date within same birth year",
+        "individual_pairs": [
+          {
+            "predicted_stem": "乙",
+            "opposite_stem": "甲",
+            "predicted_count": 75,
+            "opposite_count": 70,
+            "observed_predicted_share": 0.5172413793103449,
+            "matched_calendar_predicted_share": 0.49986323321384746,
+            "direction_matches": true
+          },
+          {
+            "predicted_stem": "丙",
+            "opposite_stem": "丁",
+            "predicted_count": 71,
+            "opposite_count": 71,
+            "observed_predicted_share": 0.5,
+            "matched_calendar_predicted_share": 0.5000103123707949,
+            "direction_matches": false
+          },
+          {
+            "predicted_stem": "戊",
+            "opposite_stem": "己",
+            "predicted_count": 60,
+            "opposite_count": 66,
+            "observed_predicted_share": 0.47619047619047616,
+            "matched_calendar_predicted_share": 0.5000004269160312,
+            "direction_matches": false
+          },
+          {
+            "predicted_stem": "辛",
+            "opposite_stem": "庚",
+            "predicted_count": 75,
+            "opposite_count": 71,
+            "observed_predicted_share": 0.5136986301369864,
+            "matched_calendar_predicted_share": 0.49999050093885944,
+            "direction_matches": true
+          },
+          {
+            "predicted_stem": "壬",
+            "opposite_stem": "癸",
+            "predicted_count": 63,
+            "opposite_count": 79,
+            "observed_predicted_share": 0.44366197183098594,
+            "matched_calendar_predicted_share": 0.5000775649959713,
+            "direction_matches": false
+          }
+        ]
+      },
+      "H2_shangguan": {
+        "observed_sum": 350.0,
+        "observed_mean_per_player": 0.4992867332382311,
+        "null_mean_sum": 327.27975,
+        "null_mean_per_player": 0.4668755349500713,
+        "null_sd_sum": 17.285789824708424,
+        "z": 1.3143888841876086,
+        "empirical_p_high": 0.10149492525373731,
+        "empirical_p_low": 0.9087045647717614,
+        "n_sims": 20000,
+        "null": "uniform Gregorian date within same birth year"
+      },
+      "pianyin_descriptive_null": {
+        "observed_sum": 374.0,
+        "observed_mean_per_player": 0.5335235378031383,
+        "null_mean_sum": 373.80775,
+        "null_mean_per_player": 0.5332492867332382,
+        "null_sd_sum": 18.585210798926173,
+        "z": 0.01034424640537891,
+        "empirical_p_high": 0.5005249737513124,
+        "empirical_p_low": 0.5191240437978101,
+        "n_sims": 20000,
+        "null": "uniform Gregorian date within same birth year"
+      }
+    },
+    "M_NEW_WITHIN_FULL": {
+      "n": 209,
+      "day_stem_counts": {
+        "甲": 20,
+        "乙": 25,
+        "丙": 23,
+        "丁": 22,
+        "戊": 20,
+        "己": 21,
+        "庚": 17,
+        "辛": 25,
+        "壬": 18,
+        "癸": 18
+      },
+      "element_counts": {
+        "木": 45,
+        "火": 45,
+        "土": 41,
+        "金": 42,
+        "水": 36
+      },
+      "H1_stem_direction": {
+        "observed_sum": 13.0,
+        "observed_mean_per_player": 0.06220095693779904,
+        "null_mean_sum": 0.0072,
+        "null_mean_per_player": 3.4449760765550235e-05,
+        "null_sd_sum": 14.486339802104709,
+        "z": 0.8969001264289194,
+        "empirical_p_high": 0.2039898005099745,
+        "empirical_p_low": 0.8346082695865207,
+        "n_sims": 20000,
+        "null": "uniform Gregorian date within same birth year",
+        "individual_pairs": [
+          {
+            "predicted_stem": "乙",
+            "opposite_stem": "甲",
+            "predicted_count": 25,
+            "opposite_count": 20,
+            "observed_predicted_share": 0.5555555555555556,
+            "matched_calendar_predicted_share": 0.49980377742774407,
+            "direction_matches": true
+          },
+          {
+            "predicted_stem": "丙",
+            "opposite_stem": "丁",
+            "predicted_count": 23,
+            "opposite_count": 22,
+            "observed_predicted_share": 0.5111111111111111,
+            "matched_calendar_predicted_share": 0.5001647453538229,
+            "direction_matches": true
+          },
+          {
+            "predicted_stem": "戊",
+            "opposite_stem": "己",
+            "predicted_count": 20,
+            "opposite_count": 21,
+            "observed_predicted_share": 0.4878048780487805,
+            "matched_calendar_predicted_share": 0.500099079119604,
+            "direction_matches": false
+          },
+          {
+            "predicted_stem": "辛",
+            "opposite_stem": "庚",
+            "predicted_count": 25,
+            "opposite_count": 17,
+            "observed_predicted_share": 0.5952380952380952,
+            "matched_calendar_predicted_share": 0.4999675665834747,
+            "direction_matches": true
+          },
+          {
+            "predicted_stem": "壬",
+            "opposite_stem": "癸",
+            "predicted_count": 18,
+            "opposite_count": 18,
+            "observed_predicted_share": 0.5,
+            "matched_calendar_predicted_share": 0.4998026260929378,
+            "direction_matches": false
+          }
+        ]
+      },
+      "H2_shangguan": {
+        "observed_sum": 116.0,
+        "observed_mean_per_player": 0.5550239234449761,
+        "null_mean_sum": 97.5874,
+        "null_mean_per_player": 0.46692535885167463,
+        "null_sd_sum": 9.282735033301606,
+        "z": 1.9835317860463757,
+        "empirical_p_high": 0.029148542572871357,
+        "empirical_p_low": 0.9771511424428778,
+        "n_sims": 20000,
+        "null": "uniform Gregorian date within same birth year"
+      },
+      "pianyin_descriptive_null": {
+        "observed_sum": 109.0,
+        "observed_mean_per_player": 0.5215311004784688,
+        "null_mean_sum": 111.77895,
+        "null_mean_per_player": 0.5348275119617225,
+        "null_sd_sum": 10.062502153787582,
+        "z": -0.27616888498791353,
+        "empirical_p_high": 0.6217689115544223,
+        "empirical_p_low": 0.41787910604469775,
+        "n_sims": 20000,
+        "null": "uniform Gregorian date within same birth year"
+      }
+    },
+    "F_NEW_WITHIN_FULL": {
+      "n": 80,
+      "day_stem_counts": {
+        "甲": 8,
+        "乙": 9,
+        "丙": 11,
+        "丁": 11,
+        "戊": 1,
+        "己": 4,
+        "庚": 11,
+        "辛": 9,
+        "壬": 7,
+        "癸": 9
+      },
+      "element_counts": {
+        "木": 17,
+        "火": 22,
+        "土": 5,
+        "金": 20,
+        "水": 16
+      },
+      "H1_stem_direction": {
+        "observed_sum": -6.0,
+        "observed_mean_per_player": -0.075,
+        "null_mean_sum": -0.0436,
+        "null_mean_per_player": -0.000545,
+        "null_sd_sum": 8.975128226734943,
+        "z": -0.6636562564373385,
+        "empirical_p_high": 0.7799610019499025,
+        "empirical_p_low": 0.2924853757312134,
+        "n_sims": 20000,
+        "null": "uniform Gregorian date within same birth year",
+        "individual_pairs": [
+          {
+            "predicted_stem": "乙",
+            "opposite_stem": "甲",
+            "predicted_count": 9,
+            "opposite_count": 8,
+            "observed_predicted_share": 0.5294117647058824,
+            "matched_calendar_predicted_share": 0.5000004686632974,
+            "direction_matches": true
+          },
+          {
+            "predicted_stem": "丙",
+            "opposite_stem": "丁",
+            "predicted_count": 11,
+            "opposite_count": 11,
+            "observed_predicted_share": 0.5,
+            "matched_calendar_predicted_share": 0.49948733938975126,
+            "direction_matches": false
+          },
+          {
+            "predicted_stem": "戊",
+            "opposite_stem": "己",
+            "predicted_count": 1,
+            "opposite_count": 4,
+            "observed_predicted_share": 0.2,
+            "matched_calendar_predicted_share": 0.5000861888952266,
+            "direction_matches": false
+          },
+          {
+            "predicted_stem": "辛",
+            "opposite_stem": "庚",
+            "predicted_count": 9,
+            "opposite_count": 11,
+            "observed_predicted_share": 0.45,
+            "matched_calendar_predicted_share": 0.5000857804926278,
+            "direction_matches": false
+          },
+          {
+            "predicted_stem": "壬",
+            "opposite_stem": "癸",
+            "predicted_count": 7,
+            "opposite_count": 9,
+            "observed_predicted_share": 0.4375,
+            "matched_calendar_predicted_share": 0.5000842015448177,
+            "direction_matches": false
+          }
+        ]
+      },
+      "H2_shangguan": {
+        "observed_sum": 38.0,
+        "observed_mean_per_player": 0.475,
+        "null_mean_sum": 37.31455,
+        "null_mean_per_player": 0.46643187499999994,
+        "null_sd_sum": 5.778172519177933,
+        "z": 0.1186274722198019,
+        "empirical_p_high": 0.4776761161941903,
+        "empirical_p_low": 0.5891705414729264,
+        "n_sims": 20000,
+        "null": "uniform Gregorian date within same birth year"
+      },
+      "pianyin_descriptive_null": {
+        "observed_sum": 49.0,
+        "observed_mean_per_player": 0.6125,
+        "null_mean_sum": 42.8295,
+        "null_mean_per_player": 0.5353687500000001,
+        "null_sd_sum": 6.199060506847661,
+        "z": 0.9953927684983692,
+        "empirical_p_high": 0.17944102794860256,
+        "empirical_p_low": 0.8595570221488925,
+        "n_sims": 20000,
+        "null": "uniform Gregorian date within same birth year"
+      }
+    },
+    "NEW_WITHIN_FULL_POOLED": {
+      "n": 289,
+      "day_stem_counts": {
+        "甲": 28,
+        "乙": 34,
+        "丙": 34,
+        "丁": 33,
+        "戊": 21,
+        "己": 25,
+        "庚": 28,
+        "辛": 34,
+        "壬": 25,
+        "癸": 27
+      },
+      "element_counts": {
+        "木": 62,
+        "火": 67,
+        "土": 46,
+        "金": 62,
+        "水": 52
+      },
+      "H1_stem_direction": {
+        "observed_sum": 7.0,
+        "observed_mean_per_player": 0.02422145328719723,
+        "null_mean_sum": 0.2936,
+        "null_mean_per_player": 0.001015916955017301,
+        "null_sd_sum": 17.040279269891087,
+        "z": 0.39356162500515546,
+        "empirical_p_high": 0.36788160591970404,
+        "empirical_p_low": 0.6745162741862907,
+        "n_sims": 20000,
+        "null": "uniform Gregorian date within same birth year",
+        "individual_pairs": [
+          {
+            "predicted_stem": "乙",
+            "opposite_stem": "甲",
+            "predicted_count": 34,
+            "opposite_count": 28,
+            "observed_predicted_share": 0.5483870967741935,
+            "matched_calendar_predicted_share": 0.4998581463261453,
+            "direction_matches": true
+          },
+          {
+            "predicted_stem": "丙",
+            "opposite_stem": "丁",
+            "predicted_count": 34,
+            "opposite_count": 33,
+            "observed_predicted_share": 0.5074626865671642,
+            "matched_calendar_predicted_share": 0.4999773324635907,
+            "direction_matches": true
+          },
+          {
+            "predicted_stem": "戊",
+            "opposite_stem": "己",
+            "predicted_count": 21,
+            "opposite_count": 25,
+            "observed_predicted_share": 0.45652173913043476,
+            "matched_calendar_predicted_share": 0.5000955057889458,
+            "direction_matches": false
+          },
+          {
+            "predicted_stem": "辛",
+            "opposite_stem": "庚",
+            "predicted_count": 34,
+            "opposite_count": 28,
+            "observed_predicted_share": 0.5483870967741935,
+            "matched_calendar_predicted_share": 0.5000003238406988,
+            "direction_matches": true
+          },
+          {
+            "predicted_stem": "壬",
+            "opposite_stem": "癸",
+            "predicted_count": 25,
+            "opposite_count": 27,
+            "observed_predicted_share": 0.4807692307692308,
+            "matched_calendar_predicted_share": 0.4998805349033523,
+            "direction_matches": false
+          }
+        ]
+      },
+      "H2_shangguan": {
+        "observed_sum": 154.0,
+        "observed_mean_per_player": 0.532871972318339,
+        "null_mean_sum": 135.1086,
+        "null_mean_per_player": 0.4675038062283737,
+        "null_sd_sum": 10.803982707414757,
+        "z": 1.7485588890321775,
+        "empirical_p_high": 0.04484775761211939,
+        "empirical_p_low": 0.9638518074096295,
+        "n_sims": 20000,
+        "null": "uniform Gregorian date within same birth year"
+      },
+      "pianyin_descriptive_null": {
+        "observed_sum": 158.0,
+        "observed_mean_per_player": 0.5467128027681661,
+        "null_mean_sum": 154.41845,
+        "null_mean_per_player": 0.5343198961937716,
+        "null_sd_sum": 11.769552910637081,
+        "z": 0.30430637656278864,
+        "empirical_p_high": 0.3913804309784511,
+        "empirical_p_low": 0.6390680465976701,
+        "n_sims": 20000,
+        "null": "uniform Gregorian date within same birth year"
+      }
+    }
+  },
+  "performance": {
+    "FULL": {
+      "H3a_metal_gt_earth": {
+        "group_A": "金",
+        "group_B": "土",
+        "n_A": 166,
+        "n_B": 119,
+        "mean_z_A": -0.06587884859270794,
+        "mean_z_B": -0.00019078904798983738,
+        "diff_A_minus_B": -0.06568805954471811,
+        "p_one_A_gt_B": 0.7042459150816983,
+        "p_two": 0.5977880442391152,
+        "n_perm": 50000
+      },
+      "H3b_geng_gt_wu": {
+        "group_A": "庚",
+        "group_B": "戊",
+        "n_A": 74,
+        "n_B": 61,
+        "mean_z_A": -0.061738034957485574,
+        "mean_z_B": -0.062351684252354045,
+        "diff_A_minus_B": 0.0006136492948684708,
+        "p_one_A_gt_B": 0.5056098878022439,
+        "p_two": 0.997640047199056,
+        "n_perm": 50000
+      },
+      "H3_secondary": {
+        "geng_vs_xin": {
+          "group_A": "庚",
+          "group_B": "辛",
+          "n_A": 74,
+          "n_B": 92,
+          "mean_z_A": -0.061738034957485574,
+          "mean_z_B": -0.06920950303843033,
+          "diff_A_minus_B": 0.00747146808094476,
+          "p_one_A_gt_B": 0.4828503429931401,
+          "p_two": 0.9623407531849363,
+          "n_perm": 50000
+        },
+        "wu_vs_ji": {
+          "group_A": "戊",
+          "group_B": "己",
+          "n_A": 61,
+          "n_B": 58,
+          "mean_z_A": -0.062351684252354045,
+          "mean_z_B": 0.0651853248738415,
+          "diff_A_minus_B": -0.12753700912619553,
+          "p_one_A_gt_B": 0.7409651806963861,
+          "p_two": 0.49945001099978,
+          "n_perm": 50000
+        },
+        "five_element_omnibus": {
+          "anova_F": 0.6680336095171459,
+          "anova_p": 0.6143251017470452,
+          "kruskal_H": 2.781237739049791,
+          "kruskal_p": 0.5950757349673885
+        },
+        "ten_stem_omnibus": {
+          "anova_F": 0.7819012150938813,
+          "anova_p": 0.6332767195752629,
+          "kruskal_H": 6.090152239396361,
+          "kruskal_p": 0.7308626609348756
+        },
+        "element_means": {
+          "木": {
+            "n": 158,
+            "mean_elo_z": 0.03562520767321223
+          },
+          "火": {
+            "n": 134,
+            "mean_elo_z": -0.0567671592747044
+          },
+          "土": {
+            "n": 119,
+            "mean_elo_z": -0.00019078904798983738
+          },
+          "金": {
+            "n": 166,
+            "mean_elo_z": -0.06587884859270794
+          },
+          "水": {
+            "n": 126,
+            "mean_elo_z": 0.10267150232971063
+          }
+        },
+        "stem_means": {
+          "甲": {
+            "n": 71,
+            "mean_elo_z": 0.17710494326718568
+          },
+          "乙": {
+            "n": 87,
+            "mean_elo_z": -0.07983526620232936
+          },
+          "丙": {
+            "n": 68,
+            "mean_elo_z": -0.14643479206792476
+          },
+          "丁": {
+            "n": 66,
+            "mean_elo_z": 0.03561767451224995
+          },
+          "戊": {
+            "n": 61,
+            "mean_elo_z": -0.062351684252354045
+          },
+          "己": {
+            "n": 58,
+            "mean_elo_z": 0.0651853248738415
+          },
+          "庚": {
+            "n": 74,
+            "mean_elo_z": -0.061738034957485574
+          },
+          "辛": {
+            "n": 92,
+            "mean_elo_z": -0.06920950303843033
+          },
+          "壬": {
+            "n": 69,
+            "mean_elo_z": 0.06565716355700947
+          },
+          "癸": {
+            "n": 57,
+            "mean_elo_z": 0.14747833347561204
+          }
+        }
+      },
+      "H4_tengod_performance": {
+        "shangguan_count_6pos": {
+          "M": {
+            "rho": -0.005753647029806258,
+            "p": 0.8977822399451005,
+            "n": 501
+          },
+          "F": {
+            "rho": 0.03307213338093789,
+            "p": 0.6403180301428675,
+            "n": 202
+          },
+          "pooled": {
+            "rho": 0.00597358043398097,
+            "p": 0.8743748894084804,
+            "n": 703
+          }
+        },
+        "pianyin_count_6pos": {
+          "M": {
+            "rho": -0.0694517531460805,
+            "p": 0.12053481425277934,
+            "n": 501
+          },
+          "F": {
+            "rho": -0.03663778201259997,
+            "p": 0.6046933634258223,
+            "n": 202
+          },
+          "pooled": {
+            "rho": -0.05895736959274939,
+            "p": 0.11833952093204703,
+            "n": 703
+          }
+        }
+      }
+    },
+    "NEW_TARGET": {
+      "H3a_metal_gt_earth": {
+        "group_A": "金",
+        "group_B": "土",
+        "n_A": 146,
+        "n_B": 126,
+        "mean_z_A": -0.012904560612127058,
+        "mean_z_B": -0.09940938556986718,
+        "diff_A_minus_B": 0.08650482495774013,
+        "p_one_A_gt_B": 0.20747585048299033,
+        "p_two": 0.4742505149897002,
+        "n_perm": 50000
+      },
+      "H3b_geng_gt_wu": {
+        "group_A": "庚",
+        "group_B": "戊",
+        "n_A": 71,
+        "n_B": 60,
+        "mean_z_A": -0.0495744762506346,
+        "mean_z_B": -0.09093199794958312,
+        "diff_A_minus_B": 0.04135752169894852,
+        "p_one_A_gt_B": 0.34531309373812524,
+        "p_two": 0.8130237395252095,
+        "n_perm": 50000
+      },
+      "H3_secondary": {
+        "geng_vs_xin": {
+          "group_A": "庚",
+          "group_B": "辛",
+          "n_A": 71,
+          "n_B": 75,
+          "mean_z_A": -0.0495744762506346,
+          "mean_z_B": 0.021809626192326695,
+          "diff_A_minus_B": -0.0713841024429613,
+          "p_one_A_gt_B": 0.6512669746605068,
+          "p_two": 0.6452870942581148,
+          "n_perm": 50000
+        },
+        "wu_vs_ji": {
+          "group_A": "戊",
+          "group_B": "己",
+          "n_A": 60,
+          "n_B": 66,
+          "mean_z_A": -0.09093199794958312,
+          "mean_z_B": -0.10711610158830721,
+          "diff_A_minus_B": 0.016184103638724093,
+          "p_one_A_gt_B": 0.4762704745905082,
+          "p_two": 0.9332213355732886,
+          "n_perm": 50000
+        },
+        "five_element_omnibus": {
+          "anova_F": 0.5937606131531558,
+          "anova_p": 0.6672580015700826,
+          "kruskal_H": 5.672735131212192,
+          "kruskal_p": 0.2249579927374266
+        },
+        "ten_stem_omnibus": {
+          "anova_F": 0.33743555182001606,
+          "anova_p": 0.9624600477153994,
+          "kruskal_H": 6.091744509908888,
+          "kruskal_p": 0.7307021508975727
+        },
+        "element_means": {
+          "木": {
+            "n": 145,
+            "mean_elo_z": 0.027827074950880246
+          },
+          "火": {
+            "n": 142,
+            "mean_elo_z": 0.0833755173550273
+          },
+          "土": {
+            "n": 126,
+            "mean_elo_z": -0.09940938556986718
+          },
+          "金": {
+            "n": 146,
+            "mean_elo_z": -0.012904560612127058
+          },
+          "水": {
+            "n": 142,
+            "mean_elo_z": -0.01031409085294254
+          }
+        },
+        "stem_means": {
+          "甲": {
+            "n": 70,
+            "mean_elo_z": 0.028918261568002316
+          },
+          "乙": {
+            "n": 75,
+            "mean_elo_z": 0.026808634108232945
+          },
+          "丙": {
+            "n": 71,
+            "mean_elo_z": 0.02482203440190211
+          },
+          "丁": {
+            "n": 71,
+            "mean_elo_z": 0.1419290003081527
+          },
+          "戊": {
+            "n": 60,
+            "mean_elo_z": -0.09093199794958312
+          },
+          "己": {
+            "n": 66,
+            "mean_elo_z": -0.10711610158830721
+          },
+          "庚": {
+            "n": 71,
+            "mean_elo_z": -0.0495744762506346
+          },
+          "辛": {
+            "n": 75,
+            "mean_elo_z": 0.021809626192326695
+          },
+          "壬": {
+            "n": 63,
+            "mean_elo_z": -0.01484475153952902
+          },
+          "癸": {
+            "n": 79,
+            "mean_elo_z": -0.006701032330727963
+          }
+        }
+      },
+      "H4_tengod_performance": {
+        "shangguan_count_6pos": {
+          "M": {
+            "rho": 0.026114823213739556,
+            "p": 0.5597800529602177,
+            "n": 501
+          },
+          "F": {
+            "rho": 0.04988956023962568,
+            "p": 0.4829538730244135,
+            "n": 200
+          },
+          "pooled": {
+            "rho": 0.030968011497757443,
+            "p": 0.412983450015857,
+            "n": 701
+          }
+        },
+        "pianyin_count_6pos": {
+          "M": {
+            "rho": 0.02953719883662027,
+            "p": 0.5094948337091607,
+            "n": 501
+          },
+          "F": {
+            "rho": 0.11253766213954036,
+            "p": 0.11260522512966031,
+            "n": 200
+          },
+          "pooled": {
+            "rho": 0.059050021902961346,
+            "p": 0.1182867376684708,
+            "n": 701
+          }
+        }
+      }
+    },
+    "NEW_WITHIN_FULL": {
+      "H3a_metal_gt_earth": {
+        "group_A": "金",
+        "group_B": "土",
+        "n_A": 62,
+        "n_B": 46,
+        "mean_z_A": -0.22742568427690896,
+        "mean_z_B": 0.18779891020238876,
+        "diff_A_minus_B": -0.4152245944792977,
+        "p_one_A_gt_B": 0.9620807583848323,
+        "p_two": 0.04137917241655167,
+        "n_perm": 50000
+      },
+      "H3b_geng_gt_wu": {
+        "group_A": "庚",
+        "group_B": "戊",
+        "n_A": 28,
+        "n_B": 21,
+        "mean_z_A": -0.31444729361894164,
+        "mean_z_B": 0.32751768711790197,
+        "diff_A_minus_B": -0.6419649807368436,
+        "p_one_A_gt_B": 0.9699606007879843,
+        "p_two": 0.030619387612247754,
+        "n_perm": 50000
+      },
+      "H3_secondary": {
+        "geng_vs_xin": {
+          "group_A": "庚",
+          "group_B": "辛",
+          "n_A": 28,
+          "n_B": 34,
+          "mean_z_A": -0.31444729361894164,
+          "mean_z_B": -0.1557608295246467,
+          "diff_A_minus_B": -0.15868646409429493,
+          "p_one_A_gt_B": 0.6394672106557869,
+          "p_two": 0.5059298814023719,
+          "n_perm": 50000
+        },
+        "wu_vs_ji": {
+          "group_A": "戊",
+          "group_B": "己",
+          "n_A": 21,
+          "n_B": 25,
+          "mean_z_A": 0.32751768711790197,
+          "mean_z_B": 0.07043513759335775,
+          "diff_A_minus_B": 0.25708254952454423,
+          "p_one_A_gt_B": 0.12829743405131896,
+          "p_two": 0.4237715245695086,
+          "n_perm": 50000
+        },
+        "five_element_omnibus": {
+          "anova_F": 1.5302677946832233,
+          "anova_p": 0.19345017308625376,
+          "kruskal_H": 5.167420942599273,
+          "kruskal_p": 0.2705463724265315
+        },
+        "ten_stem_omnibus": {
+          "anova_F": 1.2110010294153517,
+          "anova_p": 0.28791142112030543,
+          "kruskal_H": 9.965571463037461,
+          "kruskal_p": 0.3532795945153232
+        },
+        "element_means": {
+          "木": {
+            "n": 62,
+            "mean_elo_z": 0.012336991667419996
+          },
+          "火": {
+            "n": 67,
+            "mean_elo_z": -0.04420456763798885
+          },
+          "土": {
+            "n": 46,
+            "mean_elo_z": 0.18779891020238876
+          },
+          "金": {
+            "n": 62,
+            "mean_elo_z": -0.22742568427690896
+          },
+          "水": {
+            "n": 52,
+            "mean_elo_z": 0.1472779827735214
+          }
+        },
+        "stem_means": {
+          "甲": {
+            "n": 28,
+            "mean_elo_z": 0.13875848439253463
+          },
+          "乙": {
+            "n": 34,
+            "mean_elo_z": -0.09177482587090975
+          },
+          "丙": {
+            "n": 34,
+            "mean_elo_z": -0.17888766747706883
+          },
+          "丁": {
+            "n": 33,
+            "mean_elo_z": 0.09455983825682082
+          },
+          "戊": {
+            "n": 21,
+            "mean_elo_z": 0.32751768711790197
+          },
+          "己": {
+            "n": 25,
+            "mean_elo_z": 0.07043513759335775
+          },
+          "庚": {
+            "n": 28,
+            "mean_elo_z": -0.31444729361894164
+          },
+          "辛": {
+            "n": 34,
+            "mean_elo_z": -0.1557608295246467
+          },
+          "壬": {
+            "n": 25,
+            "mean_elo_z": -0.032641870295125094
+          },
+          "癸": {
+            "n": 27,
+            "mean_elo_z": 0.31387043931856434
+          }
+        }
+      },
+      "H4_tengod_performance": {
+        "shangguan_count_6pos": {
+          "M": {
+            "rho": -0.008054950421212374,
+            "p": 0.9078486537610801,
+            "n": 209
+          },
+          "F": {
+            "rho": 0.06304444378703307,
+            "p": 0.5785082392305909,
+            "n": 80
+          },
+          "pooled": {
+            "rho": 0.013102494875923788,
+            "p": 0.8244800171796239,
+            "n": 289
+          }
+        },
+        "pianyin_count_6pos": {
+          "M": {
+            "rho": 0.005933290881523872,
+            "p": 0.9320523811306758,
+            "n": 209
+          },
+          "F": {
+            "rho": -0.08411389757126808,
+            "p": 0.4582006794294482,
+            "n": 80
+          },
+          "pooled": {
+            "rho": -0.020666457174433567,
+            "p": 0.7264553888231335,
+            "n": 289
+          }
+        }
+      }
+    }
+  }
+}
