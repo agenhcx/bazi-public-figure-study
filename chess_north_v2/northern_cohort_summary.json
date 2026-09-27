@@ -1,0 +1,120 @@
+{
+  "stage": "pre-reveal northern-hemisphere cohort amendment; no BaZi",
+  "analysis_role": "primary population amendment v2",
+  "rule": {
+    "hemisphere_basis": "birthplace latitude via Wikidata P19/P625",
+    "eligible_hemisphere": "north only (latitude > 0)",
+    "south": "excluded",
+    "equator": "excluded",
+    "unknown": "excluded",
+    "season_month_inversion": "none",
+    "gm_requirement": "none",
+    "selection": "scan full active Elo ranking downward until target number of clean exact-DOB confirmed-north players; include eligible cutoff ties"
+  },
+  "cohorts": {
+    "1994_M": {
+      "year": 1994,
+      "sex": "M",
+      "target": 500,
+      "n": 502,
+      "cutoff_elo": 2435,
+      "n_above_cutoff": 479,
+      "n_at_cutoff": 23,
+      "candidates_scanned": 811,
+      "highest_elo": 2815,
+      "lowest_elo": 2435,
+      "mean_elo": 2511.7828685258964,
+      "birth_year_min": 1922,
+      "birth_year_max": 1997,
+      "exclusion_reason_counts_scanned": {
+        "hemisphere:unknown:person_no_birthplace": 150,
+        "hemisphere:unknown:no_wikidata_match": 92,
+        "hemisphere:south:resolved_unique_birthplace": 30,
+        "dob:profile_wikidata_exact_conflict": 20,
+        "dob:no_exact_dob": 8,
+        "dob:wikidata_identity_or_dob_ambiguous": 3,
+        "dob:wikidata_non_day_precision": 3,
+        "dob:profile_explicit_dob_conflict": 2,
+        "hemisphere:unknown:birthplace_no_coordinates": 1
+      }
+    },
+    "1994_F": {
+      "year": 1994,
+      "sex": "F",
+      "target": 200,
+      "n": 201,
+      "cutoff_elo": 2135,
+      "n_above_cutoff": 194,
+      "n_at_cutoff": 7,
+      "candidates_scanned": 468,
+      "highest_elo": 2630,
+      "lowest_elo": 2135,
+      "mean_elo": 2254.6019900497513,
+      "birth_year_min": 1928,
+      "birth_year_max": 1980,
+      "exclusion_reason_counts_scanned": {
+        "hemisphere:unknown:person_no_birthplace": 156,
+        "hemisphere:unknown:no_wikidata_match": 60,
+        "dob:no_exact_dob": 21,
+        "dob:profile_wikidata_exact_conflict": 17,
+        "dob:wikidata_non_day_precision": 9,
+        "hemisphere:south:resolved_unique_birthplace": 2,
+        "dob:wikidata_identity_or_dob_ambiguous": 1,
+        "hemisphere:unknown:birthplace_no_coordinates": 1
+      }
+    },
+    "2013_M": {
+      "year": 2013,
+      "sex": "M",
+      "target": 500,
+      "n": 501,
+      "cutoff_elo": 2529,
+      "n_above_cutoff": 493,
+      "n_at_cutoff": 8,
+      "candidates_scanned": 550,
+      "highest_elo": 2861,
+      "lowest_elo": 2529,
+      "mean_elo": 2600.7305389221556,
+      "birth_year_min": 1945,
+      "birth_year_max": 1996,
+      "exclusion_reason_counts_scanned": {
+        "hemisphere:unknown:person_no_birthplace": 20,
+        "hemisphere:south:resolved_unique_birthplace": 13,
+        "dob:multiple_wikidata_exact_dobs": 8,
+        "dob:no_wikidata_match": 7,
+        "dob:wikidata_year_mismatch": 1
+      }
+    },
+    "2013_F": {
+      "year": 2013,
+      "sex": "F",
+      "target": 200,
+      "n": 200,
+      "cutoff_elo": 2272,
+      "n_above_cutoff": 197,
+      "n_at_cutoff": 3,
+      "candidates_scanned": 240,
+      "highest_elo": 2696,
+      "lowest_elo": 2272,
+      "mean_elo": 2369.195,
+      "birth_year_min": 1941,
+      "birth_year_max": 1998,
+      "exclusion_reason_counts_scanned": {
+        "hemisphere:unknown:person_no_birthplace": 31,
+        "dob:no_wikidata_match": 3,
+        "hemisphere:south:resolved_unique_birthplace": 3,
+        "dob:wikidata_non_day_precision": 2,
+        "hemisphere:unknown:birthplace_no_coordinates": 1
+      }
+    }
+  },
+  "inputs": {
+    "1994_population": "C:\\chenxi\\bazi_project\\chess\\chess_dob\\augmented_active_1994.csv",
+    "2013_population": "C:\\chenxi\\bazi_project\\chess\\chess_crawl\\active_2013.csv",
+    "1994_olimpbase_html": "C:\\chenxi\\bazi_project\\chess\\Elo199401e.html"
+  },
+  "cache_files": {
+    "olimpbase_profiles": "C:\\chenxi\\bazi_project\\chess\\chess_north_cache\\olimpbase_1994_profile_cache_north_v2.json",
+    "wikidata_identity_dob_birthplace": "C:\\chenxi\\bazi_project\\chess\\chess_north_cache\\wikidata_identity_dob_birthplace_cache_north_v2.json"
+  }
+}
