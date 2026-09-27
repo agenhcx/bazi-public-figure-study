@@ -1,0 +1,74 @@
+{
+  "stage": "chess cohort/preregistration freeze; no BaZi",
+  "primary_rule_1994": "exclude unresolved DOB and all credible exact-date source conflicts",
+  "sensitivity_rule_1994": "include manually adjudicated conflicts; unresolved remain excluded",
+  "primary_rule_2013": "require pre-reveal exact_dob_final; no imputation",
+  "primary": {
+    "1994_M": {
+      "n": 494,
+      "mean_elo": 2529.018218623482,
+      "median_elo": 2520.0,
+      "min_elo": 2470,
+      "max_elo": 2815,
+      "birth_year_min": 1920,
+      "birth_year_max": 1979
+    },
+    "1994_F": {
+      "n": 188,
+      "mean_elo": 2288.803191489362,
+      "median_elo": 2260.0,
+      "min_elo": 2215,
+      "max_elo": 2630,
+      "birth_year_min": 1919,
+      "birth_year_max": 1994
+    },
+    "2013_M": {
+      "n": 492,
+      "mean_elo": 2604.25,
+      "median_elo": 2589.0,
+      "min_elo": 2536,
+      "max_elo": 2861,
+      "birth_year_min": 1945,
+      "birth_year_max": 1996
+    },
+    "2013_F": {
+      "n": 197,
+      "mean_elo": 2376.796954314721,
+      "median_elo": 2355.0,
+      "min_elo": 2290,
+      "max_elo": 2696,
+      "birth_year_min": 1941,
+      "birth_year_max": 1998
+    }
+  },
+  "sensitivity": {
+    "1994_M_adjudicated": {
+      "n": 508,
+      "mean_elo": 2529.0748031496064,
+      "median_elo": 2520.0,
+      "min_elo": 2470,
+      "max_elo": 2815,
+      "birth_year_min": 1920,
+      "birth_year_max": 1979
+    },
+    "1994_F_adjudicated": {
+      "n": 196,
+      "mean_elo": 2288.137755102041,
+      "median_elo": 2260.0,
+      "min_elo": 2215,
+      "max_elo": 2630,
+      "birth_year_min": 1919,
+      "birth_year_max": 1994
+    }
+  },
+  "excluded_from_1994_primary": {
+    "source_conflict_unique": 22,
+    "unresolved_unique": 9
+  },
+  "performance_endpoint_primary": "elo_z_within_snapshot_sex",
+  "secondary_performance_fields": [
+    "rating",
+    "analysis_rank_within_sex",
+    "rank_percentile_within_snapshot_sex"
+  ]
+}
