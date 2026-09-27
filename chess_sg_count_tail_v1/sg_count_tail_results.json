@@ -1,0 +1,394 @@
+{
+  "analysis_role": "post_reveal_exploratory_diagnostic",
+  "question": "Is the 2013M SG exposure signal driven by a heavier SG-count upper tail?",
+  "categories": [
+    "0",
+    "1",
+    "2",
+    "3+"
+  ],
+  "null_sims": 20000,
+  "seed": 20260927,
+  "cohorts": {
+    "1994_M": {
+      "n": 501,
+      "observed_categories": {
+        "0": {
+          "count": 312,
+          "rate": 0.6227544910179641
+        },
+        "1": {
+          "count": 159,
+          "rate": 0.31736526946107785
+        },
+        "2": {
+          "count": 26,
+          "rate": 0.05189620758483034
+        },
+        "3+": {
+          "count": 4,
+          "rate": 0.007984031936127744
+        }
+      },
+      "weighted_exact_expected_categories": {
+        "0": 0.6170181382873897,
+        "1": 0.30505730062444164,
+        "2": 0.07135033025497772,
+        "3+": 0.006574230833191017
+      },
+      "monte_carlo": {
+        "0": {
+          "observed_count": 312,
+          "observed_rate": 0.6227544910179641,
+          "null_mean_count": 309.13835,
+          "null_mean_rate": 0.6170426147704591,
+          "null_sd_count": 10.798177592050683,
+          "z": 0.2650123111613449,
+          "empirical_p_high": 0.41387930603469825,
+          "empirical_p_low": 0.623568821558922
+        },
+        "1": {
+          "observed_count": 159,
+          "observed_rate": 0.31736526946107785,
+          "null_mean_count": 152.82885,
+          "null_mean_rate": 0.30504760479041915,
+          "null_sd_count": 10.20229689925759,
+          "z": 0.604878495591427,
+          "empirical_p_high": 0.28618569071546424,
+          "empirical_p_low": 0.7468626568671567
+        },
+        "2": {
+          "observed_count": 26,
+          "observed_rate": 0.05189620758483034,
+          "null_mean_count": 35.73395,
+          "null_mean_rate": 0.071325249500998,
+          "null_sd_count": 5.7219493560081105,
+          "z": -1.7011597611885965,
+          "empirical_p_high": 0.967751612419379,
+          "empirical_p_low": 0.049647517624118793
+        },
+        "3+": {
+          "observed_count": 4,
+          "observed_rate": 0.007984031936127744,
+          "null_mean_count": 3.29885,
+          "null_mean_rate": 0.006584530938123752,
+          "null_sd_count": 1.8007500694268006,
+          "z": 0.38936552712347483,
+          "empirical_p_high": 0.42357882105894706,
+          "empirical_p_low": 0.7654617269136543
+        }
+      },
+      "upper_tail_ge2": {
+        "observed_count": 30,
+        "observed_rate": 0.059880239520958084,
+        "null_mean_count": 39.0328,
+        "null_mean_rate": 0.07790978043912176,
+        "null_sd_count": 5.954099153090771,
+        "z": -1.5170724853164526,
+        "empirical_p_high": 0.9510524473776312,
+        "empirical_p_low": 0.07069646517674116
+      },
+      "upper_tail_ge3": {
+        "observed_count": 4,
+        "observed_rate": 0.007984031936127744,
+        "null_mean_count": 3.29885,
+        "null_mean_rate": 0.006584530938123752,
+        "null_sd_count": 1.8007500694268006,
+        "z": 0.38936552712347483,
+        "empirical_p_high": 0.42357882105894706,
+        "empirical_p_low": 0.7654617269136543
+      },
+      "chi_square_gof_descriptive": {
+        "chi2": 3.084419541562823,
+        "df": 3,
+        "p": 0.37879159882447894,
+        "note": "post-reveal descriptive diagnostic"
+      }
+    },
+    "1994_F": {
+      "n": 201,
+      "observed_categories": {
+        "0": {
+          "count": 129,
+          "rate": 0.6417910447761194
+        },
+        "1": {
+          "count": 54,
+          "rate": 0.26865671641791045
+        },
+        "2": {
+          "count": 16,
+          "rate": 0.07960199004975124
+        },
+        "3+": {
+          "count": 2,
+          "rate": 0.009950248756218905
+        }
+      },
+      "weighted_exact_expected_categories": {
+        "0": 0.6206200452189237,
+        "1": 0.29943303171246094,
+        "2": 0.07290547785065987,
+        "3+": 0.007041445217955435
+      },
+      "monte_carlo": {
+        "0": {
+          "observed_count": 129,
+          "observed_rate": 0.6417910447761194,
+          "null_mean_count": 124.7607,
+          "null_mean_rate": 0.6207,
+          "null_sd_count": 6.869854092683682,
+          "z": 0.6170873417114938,
+          "empirical_p_high": 0.2913354332283386,
+          "empirical_p_low": 0.7547622618869056
+        },
+        "1": {
+          "observed_count": 54,
+          "observed_rate": 0.26865671641791045,
+          "null_mean_count": 60.17765,
+          "null_mean_rate": 0.2993912935323383,
+          "null_sd_count": 6.455274897802595,
+          "z": -0.9569925522618564,
+          "empirical_p_high": 0.8464576771161442,
+          "empirical_p_low": 0.19264036798160092
+        },
+        "2": {
+          "observed_count": 16,
+          "observed_rate": 0.07960199004975124,
+          "null_mean_count": 14.65535,
+          "null_mean_rate": 0.07291218905472636,
+          "null_sd_count": 3.6791633817567115,
+          "z": 0.36547711000481903,
+          "empirical_p_high": 0.39163041847907604,
+          "empirical_p_low": 0.7020648967551623
+        },
+        "3+": {
+          "observed_count": 2,
+          "observed_rate": 0.009950248756218905,
+          "null_mean_count": 1.4063,
+          "null_mean_rate": 0.006996517412935324,
+          "null_sd_count": 1.1810546365442731,
+          "z": 0.5026863124106997,
+          "empirical_p_high": 0.41237938103094846,
+          "empirical_p_low": 0.8337083145842707
+        }
+      },
+      "upper_tail_ge2": {
+        "observed_count": 18,
+        "observed_rate": 0.08955223880597014,
+        "null_mean_count": 16.06165,
+        "null_mean_rate": 0.0799087064676617,
+        "null_sd_count": 3.8503623909999822,
+        "z": 0.5034201467713247,
+        "empirical_p_high": 0.3428828558572071,
+        "empirical_p_low": 0.7433128343582821
+      },
+      "upper_tail_ge3": {
+        "observed_count": 2,
+        "observed_rate": 0.009950248756218905,
+        "null_mean_count": 1.4063,
+        "null_mean_rate": 0.006996517412935324,
+        "null_sd_count": 1.1810546365442731,
+        "z": 0.5026863124106997,
+        "empirical_p_high": 0.41237938103094846,
+        "empirical_p_low": 0.8337083145842707
+      },
+      "chi_square_gof_descriptive": {
+        "chi2": 1.146133481484169,
+        "df": 3,
+        "p": 0.7659505420721486,
+        "note": "post-reveal descriptive diagnostic"
+      }
+    },
+    "2013_M": {
+      "n": 501,
+      "observed_categories": {
+        "0": {
+          "count": 291,
+          "rate": 0.5808383233532934
+        },
+        "1": {
+          "count": 166,
+          "rate": 0.3313373253493014
+        },
+        "2": {
+          "count": 37,
+          "rate": 0.07385229540918163
+        },
+        "3+": {
+          "count": 7,
+          "rate": 0.013972055888223553
+        }
+      },
+      "weighted_exact_expected_categories": {
+        "0": 0.6244143496822508,
+        "1": 0.2922849413083407,
+        "2": 0.07507884149359786,
+        "3+": 0.008221867515810508
+      },
+      "monte_carlo": {
+        "0": {
+          "observed_count": 291,
+          "observed_rate": 0.5808383233532934,
+          "null_mean_count": 312.8901,
+          "null_mean_rate": 0.6245311377245509,
+          "null_sd_count": 10.83411237201943,
+          "z": -2.020479320164168,
+          "empirical_p_high": 0.9798010099495025,
+          "empirical_p_low": 0.02534873256337183
+        },
+        "1": {
+          "observed_count": 166,
+          "observed_rate": 0.3313373253493014,
+          "null_mean_count": 146.3693,
+          "null_mean_rate": 0.2921542914171657,
+          "null_sd_count": 10.057413936432885,
+          "z": 1.9518635828329556,
+          "empirical_p_high": 0.029298535073246337,
+          "empirical_p_low": 0.9767511624418779
+        },
+        "2": {
+          "observed_count": 37,
+          "observed_rate": 0.07385229540918163,
+          "null_mean_count": 37.6145,
+          "null_mean_rate": 0.07507884231536927,
+          "null_sd_count": 5.890214298412585,
+          "z": -0.10432557609416819,
+          "empirical_p_high": 0.5612219389030548,
+          "empirical_p_low": 0.5058247087645618
+        },
+        "3+": {
+          "observed_count": 7,
+          "observed_rate": 0.013972055888223553,
+          "null_mean_count": 4.1261,
+          "null_mean_rate": 0.008235728542914171,
+          "null_sd_count": 2.031035461347798,
+          "z": 1.4149925270595107,
+          "empirical_p_high": 0.12309384530773461,
+          "empirical_p_low": 0.9416529173541323
+        }
+      },
+      "upper_tail_ge2": {
+        "observed_count": 44,
+        "observed_rate": 0.08782435129740519,
+        "null_mean_count": 41.7406,
+        "null_mean_rate": 0.08331457085828343,
+        "null_sd_count": 6.17018761471319,
+        "z": 0.3661801133262661,
+        "empirical_p_high": 0.37943102844857757,
+        "empirical_p_low": 0.6792160391980401
+      },
+      "upper_tail_ge3": {
+        "observed_count": 7,
+        "observed_rate": 0.013972055888223553,
+        "null_mean_count": 4.1261,
+        "null_mean_rate": 0.008235728542914171,
+        "null_sd_count": 2.031035461347798,
+        "z": 1.4149925270595107,
+        "empirical_p_high": 0.12309384530773461,
+        "empirical_p_low": 0.9416529173541323
+      },
+      "chi_square_gof_descriptive": {
+        "chi2": 6.162523519800075,
+        "df": 3,
+        "p": 0.10396534146103063,
+        "note": "post-reveal descriptive diagnostic"
+      }
+    },
+    "2013_F": {
+      "n": 200,
+      "observed_categories": {
+        "0": {
+          "count": 121,
+          "rate": 0.605
+        },
+        "1": {
+          "count": 56,
+          "rate": 0.28
+        },
+        "2": {
+          "count": 23,
+          "rate": 0.115
+        },
+        "3+": {
+          "count": 0,
+          "rate": 0.0
+        }
+      },
+      "weighted_exact_expected_categories": {
+        "0": 0.6228972977019238,
+        "1": 0.29465948050003743,
+        "2": 0.07469810614566957,
+        "3+": 0.00774511565236919
+      },
+      "monte_carlo": {
+        "0": {
+          "observed_count": 121,
+          "observed_rate": 0.605,
+          "null_mean_count": 124.61775,
+          "null_mean_rate": 0.62308875,
+          "null_sd_count": 6.83857245638021,
+          "z": -0.5290212281986915,
+          "empirical_p_high": 0.7268136593170341,
+          "empirical_p_low": 0.32453377331133443
+        },
+        "1": {
+          "observed_count": 56,
+          "observed_rate": 0.28,
+          "null_mean_count": 58.89585,
+          "null_mean_rate": 0.29447925,
+          "null_sd_count": 6.378498023778949,
+          "z": -0.45400186520467917,
+          "empirical_p_high": 0.7030648467576621,
+          "empirical_p_low": 0.3575321233938303
+        },
+        "2": {
+          "observed_count": 23,
+          "observed_rate": 0.115,
+          "null_mean_count": 14.9355,
+          "null_mean_rate": 0.0746775,
+          "null_sd_count": 3.7148525887964685,
+          "z": 2.1708802185910487,
+          "empirical_p_high": 0.0263986800659967,
+          "empirical_p_low": 0.9851507424628768
+        },
+        "3+": {
+          "observed_count": 0,
+          "observed_rate": 0.0,
+          "null_mean_count": 1.5509,
+          "null_mean_rate": 0.0077545,
+          "null_sd_count": 1.2447837821618728,
+          "z": -1.245919188717643,
+          "empirical_p_high": 1.0,
+          "empirical_p_low": 0.21053947302634868
+        }
+      },
+      "upper_tail_ge2": {
+        "observed_count": 23,
+        "observed_rate": 0.115,
+        "null_mean_count": 16.4864,
+        "null_mean_rate": 0.082432,
+        "null_sd_count": 3.885494806777468,
+        "z": 1.676388806037864,
+        "empirical_p_high": 0.06539673016349183,
+        "empirical_p_low": 0.9580520973951302
+      },
+      "upper_tail_ge3": {
+        "observed_count": 0,
+        "observed_rate": 0.0,
+        "null_mean_count": 1.5509,
+        "null_mean_rate": 0.0077545,
+        "null_sd_count": 1.2447837821618728,
+        "z": -1.245919188717643,
+        "empirical_p_high": 1.0,
+        "empirical_p_low": 0.21053947302634868
+      },
+      "chi_square_gof_descriptive": {
+        "chi2": 6.146551736897704,
+        "df": 3,
+        "p": 0.10469382721465366,
+        "note": "post-reveal descriptive diagnostic"
+      }
+    }
+  }
+}
