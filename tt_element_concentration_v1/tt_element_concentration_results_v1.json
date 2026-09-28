@@ -1,0 +1,675 @@
+{
+  "analysis_role": "cross_domain_exploratory_validation_plan_frozen_before_first_TT_concentration_calculation",
+  "plan_tag": "tt-element-concentration-plan-v1",
+  "training_source_tag": "chess-preregister-v3-date-sanity",
+  "seed": 20260928,
+  "performance_permutations": 50000,
+  "calendar_null_simulations": 20000,
+  "historical_inputs": {
+    "selection_path": "C:\\chenxi\\bazi_project\\pingpong\\tt_holdout_1950_1984_PRIMARY.csv",
+    "selection_sha256": "775e0890ecbba1153dac4cb79767cbce0809bba8d81e28eba4bff0e34e77196d",
+    "selection_n": 335,
+    "performance_path": "C:\\chenxi\\bazi_project\\pingpong\\tt_performance_lock_v1_H3_PRIMARY.csv",
+    "performance_sha256": "ca8cd0f59c251fd5c80368072b9a9ca6d852ca28b656b96acce309116550aee8",
+    "performance_n": 112
+  },
+  "training_inputs": {
+    "cohort_tag_path": "chess-preregister-v3-date-sanity:studies/table_tennis/data/tabletennis_reference_enriched.csv",
+    "cohort_n": 384,
+    "elo_tag_path": "chess-preregister-v3-date-sanity:studies/table_tennis/data/ttr_elo_player_summary.csv",
+    "elo_n_total": 350,
+    "elo_n_reliable": 320
+  },
+  "primary_selection": {
+    "sample": "HIST_POOLED",
+    "metric": "distinct_elements_6pos",
+    "n": 335,
+    "observed_mean": 3.564179104477612,
+    "null_mean": 3.5596568656716414,
+    "null_sd": 0.03822670717649684,
+    "z": 0.11830050611189255,
+    "direction": "less",
+    "p_directional": 0.5645217739113044,
+    "p_two_sided": 0.9322533873306335,
+    "simulations": 20000
+  },
+  "primary_performance": {
+    "sample": "HIST_PERF_POOLED",
+    "metric": "distinct_elements_6pos",
+    "n": 112,
+    "rho": -0.0683597125052406,
+    "direction": "less",
+    "p_directional": 0.2381952360952781,
+    "p_two_sided": 0.47287054258914824,
+    "permutations": 50000,
+    "outcome": "strength_percentile"
+  },
+  "selection": {
+    "HIST_POOLED": {
+      "distinct_elements_6pos": {
+        "n": 335,
+        "observed_mean": 3.564179104477612,
+        "null_mean": 3.5596568656716414,
+        "null_sd": 0.03822670717649684,
+        "z": 0.11830050611189255,
+        "direction": "less",
+        "p_directional": 0.5645217739113044,
+        "p_two_sided": 0.9322533873306335,
+        "simulations": 20000
+      },
+      "dominant_element_share": {
+        "n": 335,
+        "observed_mean": 0.43980099502487563,
+        "null_mean": 0.4486835074626866,
+        "null_sd": 0.006357487847234845,
+        "z": -1.3971733255729877,
+        "direction": "greater",
+        "p_directional": 0.9261536923153842,
+        "p_two_sided": 0.17229138543072847,
+        "simulations": 20000
+      },
+      "hhi_element_concentration": {
+        "n": 335,
+        "observed_mean": 0.34444444444444444,
+        "null_mean": 0.3500449668325042,
+        "null_sd": 0.004973085654157724,
+        "z": -1.1261664844596952,
+        "direction": "greater",
+        "p_directional": 0.8754062296885156,
+        "p_two_sided": 0.2631868406579671,
+        "simulations": 20000
+      },
+      "element_entropy": {
+        "n": 335,
+        "observed_mean": 1.1657430790057906,
+        "null_mean": 1.1577589928690661,
+        "null_sd": 0.012274603778878904,
+        "z": 0.6504557116917083,
+        "direction": "less",
+        "p_directional": 0.7408629568521574,
+        "p_two_sided": 0.5185740712964352,
+        "simulations": 20000
+      },
+      "all_five_present_6pos": {
+        "n": 335,
+        "observed_mean": 0.06567164179104477,
+        "null_mean": 0.08136149253731344,
+        "null_sd": 0.014677682558993512,
+        "z": -1.0689596728371102,
+        "direction": "less",
+        "p_directional": 0.167891605419729,
+        "p_two_sided": 0.335783210839458,
+        "simulations": 20000
+      }
+    },
+    "TRAIN_POOLED": {
+      "distinct_elements_6pos": {
+        "n": 384,
+        "observed_mean": 3.6744791666666665,
+        "null_mean": 3.7261071614583328,
+        "null_sd": 0.03652415123830467,
+        "z": -1.4135303091594207,
+        "direction": "less",
+        "p_directional": 0.08564571771411429,
+        "p_two_sided": 0.17129143542822858,
+        "simulations": 20000
+      },
+      "dominant_element_share": {
+        "n": 384,
+        "observed_mean": 0.4375,
+        "null_mean": 0.4238486762152777,
+        "null_sd": 0.0054330950373290485,
+        "z": 2.512623779066706,
+        "direction": "greater",
+        "p_directional": 0.007999600019999,
+        "p_two_sided": 0.015999200039998,
+        "simulations": 20000
+      },
+      "hhi_element_concentration": {
+        "n": 384,
+        "observed_mean": 0.3360821759259259,
+        "null_mean": 0.3290643229166667,
+        "null_sd": 0.004190317077379921,
+        "z": 1.674778514290193,
+        "direction": "greater",
+        "p_directional": 0.050997450127493626,
+        "p_two_sided": 0.10199490025498725,
+        "simulations": 20000
+      },
+      "element_entropy": {
+        "n": 384,
+        "observed_mean": 1.1942754095712338,
+        "null_mean": 1.2127020281763907,
+        "null_sd": 0.011113513924148999,
+        "z": -1.6580371186755787,
+        "direction": "less",
+        "p_directional": 0.05124743762811859,
+        "p_two_sided": 0.10249487525623718,
+        "simulations": 20000
+      },
+      "all_five_present_6pos": {
+        "n": 384,
+        "observed_mean": 0.09895833333333333,
+        "null_mean": 0.12885104166666667,
+        "null_sd": 0.017076603362069367,
+        "z": -1.7505066844692994,
+        "direction": "less",
+        "p_directional": 0.04449777511124444,
+        "p_two_sided": 0.08899555022248888,
+        "simulations": 20000
+      }
+    },
+    "HIST_M": {
+      "distinct_elements_6pos": {
+        "n": 182,
+        "observed_mean": 3.5384615384615383,
+        "null_mean": 3.5635760989010987,
+        "null_sd": 0.05183055583391546,
+        "z": -0.4845512465665402,
+        "direction": "less",
+        "p_directional": 0.3304334783260837,
+        "p_two_sided": 0.6608669566521674,
+        "simulations": 20000
+      },
+      "dominant_element_share": {
+        "n": 182,
+        "observed_mean": 0.44597069597069605,
+        "null_mean": 0.4475197802197803,
+        "null_sd": 0.00856291065455377,
+        "z": -0.18090627259557193,
+        "direction": "greater",
+        "p_directional": 0.5915204239788011,
+        "p_two_sided": 0.9033548322583871,
+        "simulations": 20000
+      },
+      "hhi_element_concentration": {
+        "n": 182,
+        "observed_mean": 0.34890109890109894,
+        "null_mean": 0.3494506715506715,
+        "null_sd": 0.006689865128481229,
+        "z": -0.08215003427091926,
+        "direction": "greater",
+        "p_directional": 0.5385730713464327,
+        "p_two_sided": 0.9571521423928804,
+        "simulations": 20000
+      },
+      "element_entropy": {
+        "n": 182,
+        "observed_mean": 1.1554034077587958,
+        "null_mean": 1.1592479190231306,
+        "null_sd": 0.01657055927374927,
+        "z": -0.2320085400150145,
+        "direction": "less",
+        "p_directional": 0.40432978351082444,
+        "p_two_sided": 0.8086595670216489,
+        "simulations": 20000
+      },
+      "all_five_present_6pos": {
+        "n": 182,
+        "observed_mean": 0.06043956043956044,
+        "null_mean": 0.08419313186813186,
+        "null_sd": 0.02022388685048131,
+        "z": -1.1745304749866177,
+        "direction": "less",
+        "p_directional": 0.14849257537123145,
+        "p_two_sided": 0.2969851507424629,
+        "simulations": 20000
+      }
+    },
+    "HIST_F": {
+      "distinct_elements_6pos": {
+        "n": 153,
+        "observed_mean": 3.5947712418300655,
+        "null_mean": 3.554006862745098,
+        "null_sd": 0.05627235047744376,
+        "z": 0.7244122333455341,
+        "direction": "less",
+        "p_directional": 0.7822108894555272,
+        "p_two_sided": 0.5062746862656867,
+        "simulations": 20000
+      },
+      "dominant_element_share": {
+        "n": 153,
+        "observed_mean": 0.43246187363834415,
+        "null_mean": 0.4499672657952069,
+        "null_sd": 0.009390387177826554,
+        "z": -1.8641821498263773,
+        "direction": "greater",
+        "p_directional": 0.9743512824358782,
+        "p_two_sided": 0.06759662016899155,
+        "simulations": 20000
+      },
+      "hhi_element_concentration": {
+        "n": 153,
+        "observed_mean": 0.3391430646332607,
+        "null_mean": 0.35079152142338416,
+        "null_sd": 0.007283399337273654,
+        "z": -1.5993159582107617,
+        "direction": "greater",
+        "p_directional": 0.951952402379881,
+        "p_two_sided": 0.10969451527423629,
+        "simulations": 20000
+      },
+      "element_entropy": {
+        "n": 153,
+        "observed_mean": 1.1780425572211703,
+        "null_mean": 1.1557940245928833,
+        "null_sd": 0.018015431762631786,
+        "z": 1.2349708250920597,
+        "direction": "less",
+        "p_directional": 0.8908054597270136,
+        "p_two_sided": 0.21878906054697264,
+        "simulations": 20000
+      },
+      "all_five_present_6pos": {
+        "n": 153,
+        "observed_mean": 0.0718954248366013,
+        "null_mean": 0.07757385620915032,
+        "null_sd": 0.02150061333255411,
+        "z": -0.264105552930962,
+        "direction": "less",
+        "p_directional": 0.4687265636718164,
+        "p_two_sided": 0.9374531273436328,
+        "simulations": 20000
+      }
+    },
+    "TRAIN_M": {
+      "distinct_elements_6pos": {
+        "n": 190,
+        "observed_mean": 3.6526315789473682,
+        "null_mean": 3.7203473684210526,
+        "null_sd": 0.05165624187049793,
+        "z": -1.3108926825038436,
+        "direction": "less",
+        "p_directional": 0.10619469026548672,
+        "p_two_sided": 0.21238938053097345,
+        "simulations": 20000
+      },
+      "dominant_element_share": {
+        "n": 190,
+        "observed_mean": 0.4456140350877194,
+        "null_mean": 0.4244906140350877,
+        "null_sd": 0.007742095643155612,
+        "z": 2.7283854431979067,
+        "direction": "greater",
+        "p_directional": 0.005149742512874356,
+        "p_two_sided": 0.010299485025748713,
+        "simulations": 20000
+      },
+      "hhi_element_concentration": {
+        "n": 190,
+        "observed_mean": 0.34122807017543855,
+        "null_mean": 0.32973709064327483,
+        "null_sd": 0.005972704617211547,
+        "z": 1.9239155907777776,
+        "direction": "greater",
+        "p_directional": 0.03274836258187091,
+        "p_two_sided": 0.06549672516374182,
+        "simulations": 20000
+      },
+      "element_entropy": {
+        "n": 190,
+        "observed_mean": 1.1836639158743412,
+        "null_mean": 1.210894672529927,
+        "null_sd": 0.01575860801330538,
+        "z": -1.7279925125743487,
+        "direction": "less",
+        "p_directional": 0.04304784760761962,
+        "p_two_sided": 0.08609569521523924,
+        "simulations": 20000
+      },
+      "all_five_present_6pos": {
+        "n": 190,
+        "observed_mean": 0.1,
+        "null_mean": 0.1278302631578947,
+        "null_sd": 0.024312666057850558,
+        "z": -1.1446816688747428,
+        "direction": "less",
+        "p_directional": 0.15154242287885605,
+        "p_two_sided": 0.3030848457577121,
+        "simulations": 20000
+      }
+    },
+    "TRAIN_F": {
+      "distinct_elements_6pos": {
+        "n": 194,
+        "observed_mean": 3.695876288659794,
+        "null_mean": 3.7316317010309277,
+        "null_sd": 0.050646041773498754,
+        "z": -0.7059863144101259,
+        "direction": "less",
+        "p_directional": 0.25793710314484275,
+        "p_two_sided": 0.5158742062896855,
+        "simulations": 20000
+      },
+      "dominant_element_share": {
+        "n": 194,
+        "observed_mean": 0.429553264604811,
+        "null_mean": 0.42317285223367707,
+        "null_sd": 0.007626649307086256,
+        "z": 0.8365944354102708,
+        "direction": "greater",
+        "p_directional": 0.21448927553622318,
+        "p_two_sided": 0.42897855107244637,
+        "simulations": 20000
+      },
+      "hhi_element_concentration": {
+        "n": 194,
+        "observed_mean": 0.3310423825887744,
+        "null_mean": 0.32839591924398626,
+        "null_sd": 0.005831956779570871,
+        "z": 0.4537865153696944,
+        "direction": "greater",
+        "p_directional": 0.33013349332533376,
+        "p_two_sided": 0.6602669866506675,
+        "simulations": 20000
+      },
+      "element_entropy": {
+        "n": 194,
+        "observed_mean": 1.2046681095836542,
+        "null_mean": 1.2144647293458928,
+        "null_sd": 0.015438433063959426,
+        "z": -0.6345604972766622,
+        "direction": "less",
+        "p_directional": 0.26368681565921703,
+        "p_two_sided": 0.5273736313184341,
+        "simulations": 20000
+      },
+      "all_five_present_6pos": {
+        "n": 194,
+        "observed_mean": 0.0979381443298969,
+        "null_mean": 0.12978505154639175,
+        "null_sd": 0.023966904923361097,
+        "z": -1.3287868132465,
+        "direction": "less",
+        "p_directional": 0.1095945202739863,
+        "p_two_sided": 0.2191890405479726,
+        "simulations": 20000
+      }
+    }
+  },
+  "performance": {
+    "HIST_PERF_POOLED": {
+      "distinct_elements_6pos": {
+        "n": 112,
+        "rho": -0.0683597125052406,
+        "direction": "less",
+        "p_directional": 0.2381952360952781,
+        "p_two_sided": 0.47287054258914824,
+        "permutations": 50000,
+        "outcome": "strength_percentile"
+      },
+      "dominant_element_share": {
+        "n": 112,
+        "rho": 0.11158498916559358,
+        "direction": "greater",
+        "p_directional": 0.12057758844823104,
+        "p_two_sided": 0.2371152576948461,
+        "permutations": 50000,
+        "outcome": "strength_percentile"
+      },
+      "hhi_element_concentration": {
+        "n": 112,
+        "rho": 0.10018200907724645,
+        "direction": "greater",
+        "p_directional": 0.14889702205955882,
+        "p_two_sided": 0.2968540629187416,
+        "permutations": 50000,
+        "outcome": "strength_percentile"
+      },
+      "element_entropy": {
+        "n": 112,
+        "rho": -0.10673774356406747,
+        "direction": "less",
+        "p_directional": 0.13123737525249496,
+        "p_two_sided": 0.2621947561048779,
+        "permutations": 50000,
+        "outcome": "strength_percentile"
+      },
+      "all_five_present_6pos": {
+        "n": 112,
+        "rho": 0.12437897819698442,
+        "direction": "less",
+        "p_directional": 0.9044019119617608,
+        "p_two_sided": 0.19447611047779045,
+        "permutations": 50000,
+        "outcome": "strength_percentile"
+      }
+    },
+    "TRAIN_ELO_POOLED": {
+      "distinct_elements_6pos": {
+        "n": 320,
+        "rho": 0.08966994509759448,
+        "direction": "less",
+        "p_directional": 0.9465010699786004,
+        "p_two_sided": 0.10577788444231115,
+        "permutations": 50000,
+        "outcome": "peak_elo_gender_z"
+      },
+      "dominant_element_share": {
+        "n": 320,
+        "rho": -0.06754637999980705,
+        "direction": "greater",
+        "p_directional": 0.8872422551548969,
+        "p_two_sided": 0.22833543329133418,
+        "permutations": 50000,
+        "outcome": "peak_elo_gender_z"
+      },
+      "hhi_element_concentration": {
+        "n": 320,
+        "rho": -0.07387166918265355,
+        "direction": "greater",
+        "p_directional": 0.9063818723625527,
+        "p_two_sided": 0.1869162616747665,
+        "permutations": 50000,
+        "outcome": "peak_elo_gender_z"
+      },
+      "element_entropy": {
+        "n": 320,
+        "rho": 0.07747037709129155,
+        "direction": "less",
+        "p_directional": 0.9156816863662727,
+        "p_two_sided": 0.16885662286754266,
+        "permutations": 50000,
+        "outcome": "peak_elo_gender_z"
+      },
+      "all_five_present_6pos": {
+        "n": 320,
+        "rho": 0.007135651756131335,
+        "direction": "less",
+        "p_directional": 0.5518689626207476,
+        "p_two_sided": 0.9005019899602008,
+        "permutations": 50000,
+        "outcome": "peak_elo_gender_z"
+      }
+    },
+    "HIST_PERF_M": {
+      "distinct_elements_6pos": {
+        "n": 66,
+        "rho": -0.08494133551474518,
+        "direction": "less",
+        "p_directional": 0.248535029299414,
+        "p_two_sided": 0.49685006299874,
+        "permutations": 50000,
+        "outcome": "strength_percentile"
+      },
+      "dominant_element_share": {
+        "n": 66,
+        "rho": 0.16274138872931185,
+        "direction": "greater",
+        "p_directional": 0.09583808323833523,
+        "p_two_sided": 0.19479610407791845,
+        "permutations": 50000,
+        "outcome": "strength_percentile"
+      },
+      "hhi_element_concentration": {
+        "n": 66,
+        "rho": 0.1436096033163482,
+        "direction": "greater",
+        "p_directional": 0.123497530049399,
+        "p_two_sided": 0.24563508729825403,
+        "permutations": 50000,
+        "outcome": "strength_percentile"
+      },
+      "element_entropy": {
+        "n": 66,
+        "rho": -0.15715740031011755,
+        "direction": "less",
+        "p_directional": 0.10655786884262315,
+        "p_two_sided": 0.2109757804843903,
+        "permutations": 50000,
+        "outcome": "strength_percentile"
+      },
+      "all_five_present_6pos": {
+        "n": 66,
+        "rho": 0.24826376897820285,
+        "direction": "less",
+        "p_directional": 0.9840803183936321,
+        "p_two_sided": 0.03465930681386372,
+        "permutations": 50000,
+        "outcome": "strength_percentile"
+      }
+    },
+    "HIST_PERF_F": {
+      "distinct_elements_6pos": {
+        "n": 46,
+        "rho": -0.04977197270240618,
+        "direction": "less",
+        "p_directional": 0.373172536549269,
+        "p_two_sided": 0.74372512549749,
+        "permutations": 50000,
+        "outcome": "strength_percentile"
+      },
+      "dominant_element_share": {
+        "n": 46,
+        "rho": 0.05424011287092845,
+        "direction": "greater",
+        "p_directional": 0.36069278614427713,
+        "p_two_sided": 0.7182056358872823,
+        "permutations": 50000,
+        "outcome": "strength_percentile"
+      },
+      "hhi_element_concentration": {
+        "n": 46,
+        "rho": 0.050563935446200386,
+        "direction": "greater",
+        "p_directional": 0.37133257334853303,
+        "p_two_sided": 0.7403251934961301,
+        "permutations": 50000,
+        "outcome": "strength_percentile"
+      },
+      "element_entropy": {
+        "n": 46,
+        "rho": -0.044943377846948324,
+        "direction": "less",
+        "p_directional": 0.379012419751605,
+        "p_two_sided": 0.7663046739065219,
+        "permutations": 50000,
+        "outcome": "strength_percentile"
+      },
+      "all_five_present_6pos": {
+        "n": 46,
+        "rho": 0.009956817559562571,
+        "direction": "less",
+        "p_directional": 0.5242895142097158,
+        "p_two_sided": 0.9610407791844163,
+        "permutations": 50000,
+        "outcome": "strength_percentile"
+      }
+    },
+    "TRAIN_ELO_M": {
+      "distinct_elements_6pos": {
+        "n": 157,
+        "rho": 0.07507173825518691,
+        "direction": "less",
+        "p_directional": 0.8224435511289774,
+        "p_two_sided": 0.3537529249415012,
+        "permutations": 50000,
+        "outcome": "peak_elo_gender_z"
+      },
+      "dominant_element_share": {
+        "n": 157,
+        "rho": -0.1571493056916549,
+        "direction": "greater",
+        "p_directional": 0.9746805063898722,
+        "p_two_sided": 0.050658986820263596,
+        "permutations": 50000,
+        "outcome": "peak_elo_gender_z"
+      },
+      "hhi_element_concentration": {
+        "n": 157,
+        "rho": -0.12409363516914744,
+        "direction": "greater",
+        "p_directional": 0.9389812203755925,
+        "p_two_sided": 0.12159756804863903,
+        "permutations": 50000,
+        "outcome": "peak_elo_gender_z"
+      },
+      "element_entropy": {
+        "n": 157,
+        "rho": 0.09061657493092473,
+        "direction": "less",
+        "p_directional": 0.8693426131477371,
+        "p_two_sided": 0.26029479410411793,
+        "permutations": 50000,
+        "outcome": "peak_elo_gender_z"
+      },
+      "all_five_present_6pos": {
+        "n": 157,
+        "rho": 0.10963323662884061,
+        "direction": "less",
+        "p_directional": 0.9159416811663766,
+        "p_two_sided": 0.17165656686866262,
+        "permutations": 50000,
+        "outcome": "peak_elo_gender_z"
+      }
+    },
+    "TRAIN_ELO_F": {
+      "distinct_elements_6pos": {
+        "n": 163,
+        "rho": 0.1074285640807854,
+        "direction": "less",
+        "p_directional": 0.9144817103657927,
+        "p_two_sided": 0.1716965660686786,
+        "permutations": 50000,
+        "outcome": "peak_elo_gender_z"
+      },
+      "dominant_element_share": {
+        "n": 163,
+        "rho": 0.016713863657896844,
+        "direction": "greater",
+        "p_directional": 0.4135517289654207,
+        "p_two_sided": 0.8301233975320493,
+        "permutations": 50000,
+        "outcome": "peak_elo_gender_z"
+      },
+      "hhi_element_concentration": {
+        "n": 163,
+        "rho": -0.02268370273376363,
+        "direction": "greater",
+        "p_directional": 0.617167656646867,
+        "p_two_sided": 0.7708845823083539,
+        "permutations": 50000,
+        "outcome": "peak_elo_gender_z"
+      },
+      "element_entropy": {
+        "n": 163,
+        "rho": 0.06674698981990229,
+        "direction": "less",
+        "p_directional": 0.8030039399212016,
+        "p_two_sided": 0.39381212375752483,
+        "permutations": 50000,
+        "outcome": "peak_elo_gender_z"
+      },
+      "all_five_present_6pos": {
+        "n": 163,
+        "rho": -0.08652752331080384,
+        "direction": "less",
+        "p_directional": 0.13473730525389493,
+        "p_two_sided": 0.2741945161096778,
+        "permutations": 50000,
+        "outcome": "peak_elo_gender_z"
+      }
+    }
+  }
+}
