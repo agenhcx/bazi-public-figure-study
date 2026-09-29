@@ -1,0 +1,115 @@
+Hour-marginalized BaZi Music analysis — 1989
+
+Input dates: 365
+People: 16,761
+Music: 1,079
+Transition ambiguous dates: 10
+Transition dates in main analysis: excluded
+Dominant BaZi year pillar: 己巳
+
+Equal-hour prior: each of 12 traditional double-hours has weight 1/12.
+
+PREREGISTERED PRIMARY HYPOTHESES FOR 1987:
+  H1: YMD_DAY_HALF_TRINE is positively associated with Music.
+  H2: P_HOUR_COMPLETES_DAY_SANHE is positively associated with Music.
+  H3: YMD_STEM_COMBINE_AND_HALF_TRINE is positively associated with Music.
+  Primary inferential test: grouped-binomial GLM, adjusted for Gregorian
+  month + weekday, one-sided positive coefficient; H1/H2/H3 corrected
+  together with Benjamini-Hochberg FDR.
+
+================================================================================
+SCOPE: gregorian_1989
+
+Y/M/D frozen replication:
+  YMD_DAY_HALF_TRINE: MusicRate=6.38% vs 6.49%, RR=0.982, adjusted OR=0.990, one-sided p=0.561347, global BH q=0.561347
+  YMD_STEM_COMBINE_AND_HALF_TRINE: MusicRate=7.30% vs 6.42%, RR=1.137, adjusted OR=1.078, one-sided p=0.319224, global BH q=0.561347
+
+PRIMARY hour-marginalized probability GLM:
+  P_HOUR_COMPLETES_DAY_SANHE: range=0.000..0.083, OR(0->1)=1.079, one-sided p=0.462166, global BH q=0.561347
+
+PRIMARY hour-marginalized probability permutation:
+  P_HOUR_COMPLETES_DAY_SANHE: mean exposure Music=0.0246, non-Music=0.0247, delta=-0.00005, p=0.51445, q=0.51445
+
+SECONDARY / exploratory probability GLM:
+  P4_DAY_HALF_TRINE: range=0.167..1.000, OR(0->1)=0.988, two-sided p=0.877307
+  P4_FULL_SANHE_ANY: range=0.000..1.000, OR(0->1)=0.499, two-sided p=0.00555235
+  P4_FULL_SANHE_INVOLVES_DAY: range=0.000..1.000, OR(0->1)=0.602, two-sided p=0.0288747
+  P4_DAY_STEM_COMBINE: range=0.083..1.000, OR(0->1)=1.111, two-sided p=0.16325
+  P4_FULL_DAY_SANHE_AND_STEM_COMBINE: range=0.000..0.167, OR(0->1)=0.624, two-sided p=0.776491
+
+SECONDARY / exploratory probability permutation:
+  P4_DAY_HALF_TRINE: delta=-0.00338, p=0.614908
+  P4_FULL_SANHE_ANY: delta=-0.00380, p=0.939241
+  P4_FULL_SANHE_INVOLVES_DAY: delta=-0.00347, p=0.919862
+  P4_DAY_STEM_COMBINE: delta=0.01159, p=0.142237
+  P4_FULL_DAY_SANHE_AND_STEM_COMBINE: delta=0.00003, p=0.47665
+
+Selected exposure level summaries:
+  P4_FULL_SANHE_INVOLVES_DAY:
+    x=0.000: dates=246, people=11369, MusicRate=6.49%
+    x=0.083: dates=107, people=4827, MusicRate=6.44%
+    x=1.000: dates=2, people=114, MusicRate=3.51%
+  P4_DAY_STEM_COMBINE:
+    x=0.083: dates=222, people=10144, MusicRate=6.30%
+    x=0.167: dates=64, people=2915, MusicRate=6.59%
+    x=1.000: dates=69, people=3251, MusicRate=6.83%
+  P4_FULL_DAY_SANHE_AND_STEM_COMBINE:
+    x=0.000: dates=339, people=15552, MusicRate=6.44%
+    x=0.083: dates=15, people=700, MusicRate=7.00%
+    x=0.167: dates=1, people=58, MusicRate=3.45%
+
+================================================================================
+SCOPE: bazi_year_己巳
+
+Y/M/D frozen replication:
+  YMD_DAY_HALF_TRINE: MusicRate=6.37% vs 6.63%, RR=0.960, adjusted OR=0.962, one-sided p=0.709185, global BH q=0.709185
+  YMD_STEM_COMBINE_AND_HALF_TRINE: MusicRate=6.79% vs 6.54%, RR=1.038, adjusted OR=0.973, one-sided p=0.55838, global BH q=0.709185
+
+PRIMARY hour-marginalized probability GLM:
+  P_HOUR_COMPLETES_DAY_SANHE: range=0.000..0.083, OR(0->1)=0.783, one-sided p=0.613878, global BH q=0.709185
+
+PRIMARY hour-marginalized probability permutation:
+  P_HOUR_COMPLETES_DAY_SANHE: mean exposure Music=0.0241, non-Music=0.0246, delta=-0.00044, p=0.638807, q=0.638807
+
+SECONDARY / exploratory probability GLM:
+  P4_DAY_HALF_TRINE: range=0.167..1.000, OR(0->1)=0.955, two-sided p=0.581631
+  P4_FULL_SANHE_ANY: range=0.000..1.000, OR(0->1)=0.470, two-sided p=0.00262129
+  P4_FULL_SANHE_INVOLVES_DAY: range=0.000..1.000, OR(0->1)=0.547, two-sided p=0.00693845
+  P4_DAY_STEM_COMBINE: range=0.083..1.000, OR(0->1)=1.067, two-sided p=0.429718
+  P4_FULL_DAY_SANHE_AND_STEM_COMBINE: range=0.000..0.167, OR(0->1)=0.208, two-sided p=0.380494
+
+SECONDARY / exploratory probability permutation:
+  P4_DAY_HALF_TRINE: delta=-0.00760, p=0.730545
+  P4_FULL_SANHE_ANY: delta=-0.00430, p=0.947361
+  P4_FULL_SANHE_INVOLVES_DAY: delta=-0.00432, p=0.950501
+  P4_DAY_STEM_COMBINE: delta=0.00729, p=0.259735
+  P4_FULL_DAY_SANHE_AND_STEM_COMBINE: delta=-0.00037, p=0.725525
+
+Selected exposure level summaries:
+  P4_FULL_SANHE_INVOLVES_DAY:
+    x=0.000: dates=223, people=10180, MusicRate=6.63%
+    x=0.083: dates=97, people=4300, MusicRate=6.44%
+    x=1.000: dates=2, people=114, MusicRate=3.51%
+  P4_DAY_STEM_COMBINE:
+    x=0.083: dates=202, people=9089, MusicRate=6.40%
+    x=0.167: dates=58, people=2627, MusicRate=6.81%
+    x=1.000: dates=62, people=2878, MusicRate=6.78%
+  P4_FULL_DAY_SANHE_AND_STEM_COMBINE:
+    x=0.000: dates=308, people=13935, MusicRate=6.57%
+    x=0.083: dates=13, people=601, MusicRate=6.49%
+    x=0.167: dates=1, people=58, MusicRate=3.45%
+
+================================================================================
+Interpretation guardrails:
+  * Primary hypotheses, test direction, covariates, and multiplicity family
+    were frozen before inspecting 1987 outcomes.
+  * 1986 is discovery, not clean replication.
+  * 1987 is the first intended replication cohort.
+  * 1987 (or another untouched year) should be analyzed without first
+    inspecting high-Music dates.
+  * Equal 1/12 hour weights are a sensitivity model, not a claim that
+    real birth hours are uniformly distributed.
+  * A stronger future sensitivity analysis can substitute empirical
+    birth-hour weights if a suitable population dataset is available.
+  * The late-Zi (23:00) day-boundary convention is intentionally not
+    modeled in this version.

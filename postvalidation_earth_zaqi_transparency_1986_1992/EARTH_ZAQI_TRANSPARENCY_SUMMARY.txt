@@ -1,0 +1,74 @@
+POST-VALIDATION EXPLORATORY 杂气月透干 ANALYSIS
+North-primary, 1986–1992
+
+Target combos: 戊辰 / 戊戌 / 己丑 / 己未
+
+Definition:
+  透干 fixed = hidden stem appears in YEAR or MONTH stem.
+  DAY STEM is excluded from 透干.
+  Hour contribution is marginalized equally across 12 representative double-hours.
+
+Hidden stems:
+  辰 = 戊 / 乙 / 癸
+  戌 = 戊 / 辛 / 丁
+  丑 = 己 / 癸 / 辛
+  未 = 己 / 丁 / 乙
+
+All p-values below are exploratory because outcomes were already inspected.
+
+================================================================================
+1986_1989_discovery
+People: 1,619
+Music: 124
+Dates: 47
+
+Combo summary:
+  己丑: N=413, Music=23, rate=5.5690%, hidden TG=比肩/偏财/食神
+  己未: N=407, Music=35, rate=8.5995%, hidden TG=比肩/偏印/七杀
+  戊戌: N=375, Music=29, rate=7.7333%, hidden TG=比肩/伤官/正印
+  戊辰: N=424, Music=37, rate=8.7264%, hidden TG=比肩/正官/正财
+
+Selected transparency models:
+  p_main_exposed_total: OR/unit=1.1487, 95CI=[0.7778,1.6965], p2=0.485859
+  p_middle_exposed_total: OR/unit=0.9786, 95CI=[0.6032,1.5878], p2=0.930323
+  p_residual_exposed_total: OR/unit=1.2577, 95CI=[0.7196,2.1983], p2=0.420912
+  p_any_aux_exposed: OR/unit=1.3400, 95CI=[0.4163,4.3133], p2=0.623629
+  p_multiple_exposed: OR/unit=3.3206, 95CI=[0.3355,32.8692], p2=0.304829
+
+================================================================================
+1990_1992_validation_era
+People: 1,209
+Music: 90
+Dates: 37
+
+Combo summary:
+  己丑: N=304, Music=21, rate=6.9079%, hidden TG=比肩/偏财/食神
+  己未: N=306, Music=21, rate=6.8627%, hidden TG=比肩/偏印/七杀
+  戊戌: N=294, Music=22, rate=7.4830%, hidden TG=比肩/伤官/正印
+  戊辰: N=305, Music=26, rate=8.5246%, hidden TG=比肩/正官/正财
+
+Selected transparency models:
+  p_main_exposed_total: OR/unit=0.7815, 95CI=[0.3114,1.9612], p2=0.599506
+  p_middle_exposed_total: fit_failed: LinAlgError: Singular matrix
+  p_residual_exposed_total: fit_failed: LinAlgError: Singular matrix
+  p_any_aux_exposed: OR/unit=0.4519, 95CI=[0.1813,1.1264], p2=0.0882686
+  p_multiple_exposed: OR/unit=0.3039, 95CI=[0.0003,345.4115], p2=0.740026
+
+================================================================================
+1986_1992_pooled_exploratory
+People: 2,828
+Music: 214
+Dates: 84
+
+Combo summary:
+  己丑: N=717, Music=44, rate=6.1367%, hidden TG=比肩/偏财/食神
+  己未: N=713, Music=56, rate=7.8541%, hidden TG=比肩/偏印/七杀
+  戊戌: N=669, Music=51, rate=7.6233%, hidden TG=比肩/伤官/正印
+  戊辰: N=729, Music=63, rate=8.6420%, hidden TG=比肩/正官/正财
+
+Selected transparency models:
+  p_main_exposed_total: OR/unit=1.2566, 95CI=[0.8749,1.8049], p2=0.216172
+  p_middle_exposed_total: OR/unit=0.8519, 95CI=[0.6572,1.1043], p2=0.225978
+  p_residual_exposed_total: fit_failed: LinAlgError: Singular matrix
+  p_any_aux_exposed: fit_failed: LinAlgError: Singular matrix
+  p_multiple_exposed: OR/unit=0.8516, 95CI=[0.2736,2.6505], p2=0.781562

@@ -1,0 +1,85 @@
+BaZi relational-feature Music test — Gregorian year 1986
+
+Input dates: 365
+Input people: 16,404
+Input Music count: 1,240
+Solar-term transition ambiguous dates: 11
+Main analysis transition dates: excluded
+Dominant BaZi year pillar: 丙寅
+
+Frozen features:
+  - DAY_STEM_COMBINE
+  - DAY_BRANCH_HALF_TRINE
+  - DAY_BRANCH_LIUHE
+  - DAY_BRANCH_CHONG
+  - DAY_BRANCH_XING_HAI
+  - STEM_COMBINE_AND_HALF_TRINE
+
+Highlighted-date pillars:
+      date year_pillar month_pillar day_pillar  n_people  Music__n  DAY_STEM_COMBINE DAY_STEM_COMBINE_TARGET  DAY_BRANCH_HALF_TRINE DAY_BRANCH_HALF_TRINE_TARGET  DAY_BRANCH_LIUHE  DAY_BRANCH_CHONG  DAY_BRANCH_XING  DAY_BRANCH_HAI  RELATION_SCORE  pillar_transition_ambiguous
+1986-05-14          丙寅           癸巳         戊午        49         6              True                   month                   True                         year             False             False            False           False               2                        False
+1986-08-01          丙寅           乙未         丁丑        54        10             False                                          False                                          False              True             True           False               2                        False
+1986-11-11          丙寅           己亥         己未        43         9             False                                           True                        month             False             False            False           False               1                        False
+1986-12-27          丙寅           庚子         乙巳        30         9              True                   month                  False                                          False             False             True            True               3                        False
+
+========================================================================
+SCOPE: gregorian_1986
+
+Permutation tests (one-sided hypothesis = higher Music rate):
+  DAY_BRANCH_HALF_TRINE: days=105, MusicRate=8.20% vs 7.31%, RR=1.122, perm_p=0.0225595, BH_q=0.135357
+  DAY_STEM_COMBINE: days=67, MusicRate=8.18% vs 7.44%, RR=1.100, perm_p=0.0754385, BH_q=0.174597
+  STEM_COMBINE_AND_HALF_TRINE: days=10, MusicRate=9.22% vs 7.53%, RR=1.225, perm_p=0.0872983, BH_q=0.174597
+  DAY_BRANCH_LIUHE: days=56, MusicRate=8.12% vs 7.47%, RR=1.087, perm_p=0.122278, BH_q=0.183416
+  DAY_BRANCH_XING_HAI: days=111, MusicRate=7.43% vs 7.64%, RR=0.972, perm_p=0.683026, BH_q=0.803344
+  DAY_BRANCH_CHONG: days=55, MusicRate=7.16% vs 7.65%, RR=0.936, perm_p=0.803344, BH_q=0.803344
+
+Adjusted GLM (feature + Gregorian month + weekday):
+  DAY_BRANCH_HALF_TRINE: OR=1.127 [1.005, 1.265], p=0.0412888, BH_q=0.247733
+  DAY_STEM_COMBINE: OR=1.111 [0.962, 1.282], p=0.15124, BH_q=0.386183
+  DAY_BRANCH_CHONG: OR=0.899 [0.765, 1.056], p=0.193092, BH_q=0.386183
+  STEM_COMBINE_AND_HALF_TRINE: OR=1.178 [0.873, 1.590], p=0.283087, BH_q=0.424631
+  DAY_BRANCH_LIUHE: OR=1.072 [0.913, 1.259], p=0.396605, BH_q=0.475926
+  DAY_BRANCH_XING_HAI: OR=0.974 [0.856, 1.110], p=0.695776, BH_q=0.695776
+
+Relation-score descriptive trend:
+  score=0: days=88, people=4015, Music=272, MusicRate=6.77%
+  score=1: days=140, people=6206, Music=486, MusicRate=7.83%
+  score=2: days=93, people=4205, Music=340, MusicRate=8.09%
+  score=3: days=30, people=1343, Music=96, MusicRate=7.15%
+  score=4: days=3, people=102, Music=8, MusicRate=7.84%
+
+========================================================================
+SCOPE: bazi_year_丙寅
+
+Permutation tests (one-sided hypothesis = higher Music rate):
+  DAY_BRANCH_HALF_TRINE: days=98, MusicRate=8.17% vs 7.35%, RR=1.111, perm_p=0.0416592, BH_q=0.242485
+  STEM_COMBINE_AND_HALF_TRINE: days=10, MusicRate=9.22% vs 7.55%, RR=1.221, perm_p=0.0888982, BH_q=0.242485
+  DAY_STEM_COMBINE: days=61, MusicRate=8.08% vs 7.50%, RR=1.077, perm_p=0.144437, BH_q=0.242485
+  DAY_BRANCH_LIUHE: days=53, MusicRate=8.08% vs 7.51%, RR=1.076, perm_p=0.161657, BH_q=0.242485
+  DAY_BRANCH_XING_HAI: days=102, MusicRate=7.50% vs 7.65%, RR=0.981, perm_p=0.624228, BH_q=0.697886
+  DAY_BRANCH_CHONG: days=51, MusicRate=7.34% vs 7.65%, RR=0.960, perm_p=0.697886, BH_q=0.697886
+
+Adjusted GLM (feature + Gregorian month + weekday):
+  DAY_BRANCH_HALF_TRINE: OR=1.119 [0.992, 1.263], p=0.068244, BH_q=0.409464
+  STEM_COMBINE_AND_HALF_TRINE: OR=1.183 [0.873, 1.603], p=0.278092, BH_q=0.533009
+  DAY_STEM_COMBINE: OR=1.082 [0.928, 1.262], p=0.315463, BH_q=0.533009
+  DAY_BRANCH_CHONG: OR=0.924 [0.782, 1.092], p=0.35534, BH_q=0.533009
+  DAY_BRANCH_LIUHE: OR=1.058 [0.900, 1.244], p=0.492096, BH_q=0.590515
+  DAY_BRANCH_XING_HAI: OR=0.986 [0.859, 1.132], p=0.838526, BH_q=0.838526
+
+Relation-score descriptive trend:
+  score=0: days=75, people=3419, Music=231, MusicRate=6.76%
+  score=1: days=127, people=5517, Music=435, MusicRate=7.88%
+  score=2: days=86, people=3864, Music=312, MusicRate=8.07%
+  score=3: days=29, people=1289, Music=93, MusicRate=7.21%
+  score=4: days=3, people=102, Music=8, MusicRate=7.84%
+
+Interpretation guardrails:
+  * A low p-value here is association, not causation.
+  * We already inspected several high-Music dates before freezing these
+    hypotheses, so 1986 remains exploratory/discovery data.
+  * The real test is to freeze the definitions and replicate them in
+    an untouched year/cohort.
+  * Gregorian birth-date-only data cannot recover exact birth hour/location.
+  * Transition dates are excluded by default because month/year pillar can
+    depend on birth time on those dates.

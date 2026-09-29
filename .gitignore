@@ -15,3 +15,17 @@ venv/
 Thumbs.db
 
 # Keep analysis scripts, preregistration, summary CSV/TXT results.
+
+# Legacy reproducible intermediate data excluded at investigation closeout
+hemisphere_cache/
+hemisphere_19*/
+occupation_scan_19*/
+birthdate_scan_19*/
+birthdate_scan_1986_v4/
+*_people_with_occupations.csv
+*_daily_counts.png
+postvalidation_monthorder_mechanism_1986_1992/north_people_with_mechanism_features.csv
+postvalidation_earth_zaqi_transparency_1986_1992/earth_zaqi_people_with_transparency.csv
+postvalidation_music_creator_specialization_1986_1992/music_people_creator_classification_audit.csv
+music_overall_five_elements_results/music_people_with_6component_elements.csv
+music_daymaster_results/music_people_with_daymaster.csv

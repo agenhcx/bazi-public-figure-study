@@ -1,0 +1,33 @@
+Hemisphere sensitivity — Ten-God × Music
+Years: 1986, 1987, 1988, 1989
+
+Interpretation:
+  full  = all eligible people, including south and unknown birthplace.
+  north = only people whose P19 birthplace has P625 latitude > 0.
+  Missing P19/P625 is NOT silently treated as north.
+
+POOLED FULL VS NORTH:
+  month_order 伤官: full OR=1.061, north OR=1.101, full p1=0.1246, north p1=0.04032, full q=0.643, north q=0.4867
+  month_order 比肩: full OR=1.084, north OR=1.089, full p1=0.0499, north p1=0.05352, full q=0.643, north q=0.4867
+  month_stem 正财: full OR=1.041, north OR=1.076, full p1=0.1992, north p1=0.07803, full q=0.643, north q=0.4867
+  month_stem 七杀: full OR=1.039, north OR=1.072, full p1=0.225, north p1=0.1074, full q=0.643, north q=0.4867
+  month_order 正印: full OR=1.040, north OR=1.064, full p1=0.2033, north p1=0.1236, full q=0.643, north q=0.4867
+  month_stem 偏印: full OR=1.043, north OR=1.063, full p1=0.2141, north p1=0.146, full q=0.643, north q=0.4867
+  month_stem 正印: full OR=1.043, north OR=1.030, full p1=0.2175, north p1=0.3064, full q=0.643, north q=0.7562
+  month_order 正官: full OR=1.016, north OR=1.021, full p1=0.3681, north p1=0.3433, full q=0.7992, north q=0.7562
+  month_stem 食神: full OR=1.003, north OR=1.018, full p1=0.4727, north p1=0.3611, full q=0.8595, north q=0.7562
+  month_order 七杀: full OR=1.014, north OR=1.016, full p1=0.3901, north p1=0.3781, full q=0.7992, north q=0.7562
+  month_stem 偏财: full OR=0.979, north OR=1.000, full p1=0.6731, north p1=0.5005, full q=0.8811, north q=0.9066
+  month_order 偏印: full OR=0.989, north OR=0.994, full p1=0.587, north p1=0.5439, full q=0.8811, north q=0.9066
+  month_stem 比肩: full OR=1.012, north OR=0.981, full p1=0.3996, north p1=0.6409, full q=0.7992, north q=0.9704
+  month_stem 劫财: full OR=0.976, north OR=0.963, full p1=0.6857, north p1=0.7504, full q=0.8811, north q=0.9704
+  month_order 食神: full OR=0.977, north OR=0.956, full p1=0.6765, north p1=0.8003, full q=0.8811, north q=0.9704
+  month_order 偏财: full OR=0.971, north OR=0.954, full p1=0.7303, north p1=0.7928, full q=0.8811, north q=0.9704
+  month_stem 伤官: full OR=0.966, north OR=0.946, full p1=0.7489, north p1=0.8248, full q=0.8811, north q=0.9704
+  month_order 正财: full OR=0.906, north OR=0.917, full p1=0.9618, north p1=0.9135, full q=0.9776, north q=0.9955
+  month_order 劫财: full OR=0.949, north OR=0.898, full p1=0.8262, north p1=0.9528, full q=0.918, north q=0.9955
+  month_stem 正官: full OR=0.896, north OR=0.856, full p1=0.9776, north p1=0.9955, full q=0.9776, north q=0.9955
+
+Guardrail:
+  This is a sensitivity analysis for already-inspected cohorts.
+  Do not reinterpret it as a new preregistered confirmatory test.

@@ -1,0 +1,52 @@
+FROZEN VALIDATION RESULT
+Music × BaZi, 1993–1995
+
+Freeze tag: prereg-music-1993-1995-north-v1
+Freeze commit: e2071c8
+
+PRIMARY SAMPLE: NORTH ONLY
+Eligible people: 33,034
+Music people: 1,792
+Eligible dates represented: 1,062
+
+DATA QA
+1993: P106 coverage=99.01% (15,664/15,821), north_raw=11,845
+1994: P106 coverage=98.71% (15,465/15,667), north_raw=11,595
+1995: P106 coverage=98.97% (14,704/14,857), north_raw=10,659
+
+PRIMARY HYPOTHESIS H1
+Earth-Day-Master matching-main-qi tomb-month positive
+Frozen exact set: 戊辰 / 戊戌 / 己丑 / 己未
+Adjusted OR = 0.920767
+95% CI = [0.694231, 1.221225]
+Frozen one-sided p = 0.71665019
+Two-sided p = 0.56669962
+Result: Direction did not reproduce (OR <= 1).
+
+SECONDARY HYPOTHESIS H2
+Non-Fire month-order 伤官 positive
+Frozen exact set: 甲午 / 乙巳 / 戊酉 / 己申 / 庚子 / 辛亥 / 壬卯 / 癸寅
+Adjusted OR = 1.019834
+95% CI = [0.820188, 1.268077]
+Frozen one-sided p = 0.42987605
+Two-sided p = 0.85975211
+Result: Directionally positive but unsupported at the frozen threshold.
+
+SENSITIVITY (same frozen models)
+known: H1 OR=0.9597, p1=0.624297; H2 OR=0.9898, p1=0.538847
+full: H1 OR=0.9724, p1=0.583786; H2 OR=0.9619, p1=0.656817
+
+SUPPORTIVE EXACT-COMBO DIRECTION COUNTS (descriptive only)
+H1_supportive: 2/4 exact combinations have OR > 1
+H2_supportive: 5/8 exact combinations have OR > 1
+
+Per-year and exact-combination estimates are descriptive only.
+No newly noticed 1993–1995 feature may be promoted to confirmatory status.
+
+SOFTWARE
+Python: 3.10.2
+pandas: 2.3.3
+numpy: 2.2.6
+statsmodels: 0.15.0
+lunar_python: unknown
+platform: Windows-10-10.0.26200-SP0

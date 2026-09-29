@@ -1,0 +1,63 @@
+Music overall Five-Element composition analysis
+Years: 1986, 1987, 1988, 1989
+
+Definition:
+  6 equally weighted components per person:
+  year stem + year branch main qi + month stem + month branch main qi
+  + day stem + day branch main qi.
+
+Transition-ambiguous dates are excluded.
+Null is matched to actual Music birth-year composition.
+Monte Carlo samples whole date-level 6-component vectors, preserving
+within-chart dependence rather than treating 6*N slots as independent.
+
+====================================================================================
+SCOPE: full
+Music N: 4,400
+Element slots: 26,400
+
+FIVE ELEMENTS, sorted by enrichment:
+  木: obs=5653 (21.41%, mean/person=1.285), exp=5598.2 (21.21%, mean/person=1.272), enrichment=1.010, p_upper=0.147639, p2=0.295277, Holm=1
+  火: obs=6481 (24.55%, mean/person=1.473), exp=6432.9 (24.37%, mean/person=1.462), enrichment=1.007, p_upper=0.193838, p2=0.387676, Holm=1
+  土: obs=7869 (29.81%, mean/person=1.788), exp=7855.3 (29.75%, mean/person=1.785), enrichment=1.002, p_upper=0.422566, p2=0.845132, Holm=1
+  金: obs=3225 (12.22%, mean/person=0.733), exp=3244.9 (12.29%, mean/person=0.737), enrichment=0.994, p_upper=0.648754, p2=0.716873, Holm=1
+  水: obs=3172 (12.02%, mean/person=0.721), exp=3268.8 (12.38%, mean/person=0.743), enrichment=0.970, p_upper=0.97006, p2=0.0626794, Holm=0.313397
+
+GLOBAL: Pearson-like=3.9071, MonteCarlo p=0.290767 (100000 reps)
+
+====================================================================================
+SCOPE: known
+Music N: 3,834
+Element slots: 23,004
+
+FIVE ELEMENTS, sorted by enrichment:
+  木: obs=4921 (21.39%, mean/person=1.284), exp=4871.7 (21.18%, mean/person=1.271), enrichment=1.010, p_upper=0.156788, p2=0.313577, Holm=1
+  金: obs=2847 (12.38%, mean/person=0.743), exp=2827.5 (12.29%, mean/person=0.737), enrichment=1.007, p_upper=0.346437, p2=0.692873, Holm=1
+  火: obs=5654 (24.58%, mean/person=1.475), exp=5616.6 (24.42%, mean/person=1.465), enrichment=1.007, p_upper=0.236188, p2=0.472375, Holm=1
+  土: obs=6831 (29.69%, mean/person=1.782), exp=6839.9 (29.73%, mean/person=1.784), enrichment=0.999, p_upper=0.560614, p2=0.891851, Holm=1
+  水: obs=2751 (11.96%, mean/person=0.718), exp=2848.2 (12.38%, mean/person=0.743), enrichment=0.966, p_upper=0.97841, p2=0.0452595, Holm=0.226298
+
+GLOBAL: Pearson-like=4.2132, MonteCarlo p=0.250657 (100000 reps)
+
+====================================================================================
+SCOPE: north
+Music N: 3,545
+Element slots: 21,270
+
+FIVE ELEMENTS, sorted by enrichment:
+  木: obs=4548 (21.38%, mean/person=1.283), exp=4491.1 (21.11%, mean/person=1.267), enrichment=1.013, p_upper=0.112719, p2=0.225438, Holm=0.901751
+  金: obs=2640 (12.41%, mean/person=0.745), exp=2613.2 (12.29%, mean/person=0.737), enrichment=1.010, p_upper=0.283607, p2=0.567214, Holm=1
+  火: obs=5226 (24.57%, mean/person=1.474), exp=5187.9 (24.39%, mean/person=1.463), enrichment=1.007, p_upper=0.223228, p2=0.446456, Holm=1
+  土: obs=6315 (29.69%, mean/person=1.781), exp=6344.5 (29.83%, mean/person=1.790), enrichment=0.995, p_upper=0.695063, p2=0.621934, Holm=1
+  水: obs=2541 (11.95%, mean/person=0.717), exp=2633.3 (12.38%, mean/person=0.743), enrichment=0.965, p_upper=0.97698, p2=0.0490195, Holm=0.245098
+
+GLOBAL: Pearson-like=4.6448, MonteCarlo p=0.207298 (100000 reps)
+
+Guardrail:
+  1986-1989 are exploratory/discovery for this Five-Element composition question.
+  Do not inspect 1990-1992 until any new hypotheses are frozen/preregistered.
+
+Scope interpretation:
+  full  = all Music people.
+  known = only people with known P19/P625 latitude.
+  north = known latitude > 0.

@@ -1,0 +1,72 @@
+Exploratory Music × Ten-God analysis v2 — 1986
+
+Eligible dates: 354
+People: 15,871
+Music: 1,202
+Overall Music rate: 7.57%
+Excluded pillar-transition dates: 11
+
+Metrics:
+  P(Music|TG) = Music rate within that Ten-God group.
+  Share among Music = P(TG|Music). These 10 shares sum to 100%.
+  Share among all = P(TG) in all eligible people. These 10 shares sum to 100%.
+  Enrichment = P(TG|Music) / P(TG). >1 means overrepresented among Music.
+
+MONTH STEM / 月干 — sorted by enrichment:
+  偏印: Music=134/1563, P(Music|TG)=8.57%, share among Music=11.15%, share among all=9.85%, enrichment=1.132
+  正印: Music=133/1611, P(Music|TG)=8.26%, share among Music=11.06%, share among all=10.15%, enrichment=1.090
+  正财: Music=135/1653, P(Music|TG)=8.17%, share among Music=11.23%, share among all=10.42%, enrichment=1.078
+  七杀: Music=120/1557, P(Music|TG)=7.71%, share among Music=9.98%, share among all=9.81%, enrichment=1.018
+  比肩: Music=117/1527, P(Music|TG)=7.66%, share among Music=9.73%, share among all=9.62%, enrichment=1.012
+  伤官: Music=123/1611, P(Music|TG)=7.64%, share among Music=10.23%, share among all=10.15%, enrichment=1.008
+  偏财: Music=115/1583, P(Music|TG)=7.26%, share among Music=9.57%, share among all=9.97%, enrichment=0.959
+  正官: Music=109/1508, P(Music|TG)=7.23%, share among Music=9.07%, share among all=9.50%, enrichment=0.954
+  劫财: Music=114/1665, P(Music|TG)=6.85%, share among Music=9.48%, share among all=10.49%, enrichment=0.904
+  食神: Music=102/1593, P(Music|TG)=6.40%, share among Music=8.49%, share among all=10.04%, enrichment=0.845
+
+MONTH ORDER / 月令本气 — sorted by enrichment:
+  偏印: Music=139/1600, P(Music|TG)=8.69%, share among Music=11.56%, share among all=10.08%, enrichment=1.147
+  伤官: Music=129/1544, P(Music|TG)=8.35%, share among Music=10.73%, share among all=9.73%, enrichment=1.103
+  正印: Music=127/1602, P(Music|TG)=7.93%, share among Music=10.57%, share among all=10.09%, enrichment=1.047
+  比肩: Music=112/1468, P(Music|TG)=7.63%, share among Music=9.32%, share among all=9.25%, enrichment=1.007
+  正官: Music=124/1631, P(Music|TG)=7.60%, share among Music=10.32%, share among all=10.28%, enrichment=1.004
+  正财: Music=126/1721, P(Music|TG)=7.32%, share among Music=10.48%, share among all=10.84%, enrichment=0.967
+  偏财: Music=117/1604, P(Music|TG)=7.29%, share among Music=9.73%, share among all=10.11%, enrichment=0.963
+  食神: Music=111/1564, P(Music|TG)=7.10%, share among Music=9.23%, share among all=9.85%, enrichment=0.937
+  七杀: Music=113/1600, P(Music|TG)=7.06%, share among Music=9.40%, share among all=10.08%, enrichment=0.933
+  劫财: Music=104/1537, P(Music|TG)=6.77%, share among Music=8.65%, share among all=9.68%, enrichment=0.893
+
+TARGETED 食神/伤官/食伤 exploratory tests:
+  month_stem_shangguan: rate=7.64% vs 7.57%, RR=1.009, adjusted OR=1.032 [0.871,1.222], one-sided p=0.359035, BH q=0.718069
+  month_stem_shishen: rate=6.40% vs 7.70%, RR=0.831, adjusted OR=0.812 [0.677,0.973], one-sided p=0.98808, BH q=0.98808
+  month_stem_shishang: rate=7.02% vs 7.71%, RR=0.910, adjusted OR=0.910 [0.797,1.040], one-sided p=0.916098, BH q=0.98808
+  month_order_shangguan: rate=8.35% vs 7.49%, RR=1.116, adjusted OR=1.129 [0.943,1.352], one-sided p=0.0925863, BH q=0.555518
+  month_order_shishen: rate=7.10% vs 7.63%, RR=0.931, adjusted OR=0.937 [0.757,1.159], one-sided p=0.726423, BH q=0.98808
+  month_order_shishang: rate=7.72% vs 7.54%, RR=1.024, adjusted OR=1.035 [0.893,1.199], one-sided p=0.323828, BH q=0.718069
+
+ALL 20 one-vs-rest exploratory tests — sorted by one-sided p:
+  month_order 偏印: OR=1.170 [0.985,1.391], one-sided p=0.0369516, BH q(all20)=0.384115
+  month_stem 偏印: OR=1.176 [0.983,1.408], one-sided p=0.0384115, BH q(all20)=0.384115
+  month_order 伤官: OR=1.129 [0.943,1.352], one-sided p=0.0925863, BH q(all20)=0.617242
+  month_stem 正印: OR=1.108 [0.922,1.332], one-sided p=0.136234, BH q(all20)=0.681168
+  month_stem 正财: OR=1.074 [0.908,1.270], one-sided p=0.202598, BH q(all20)=0.698569
+  month_order 正印: OR=1.073 [0.904,1.274], one-sided p=0.209571, BH q(all20)=0.698569
+  month_stem 伤官: OR=1.032 [0.871,1.222], one-sided p=0.359035, BH q(all20)=0.86066
+  month_order 比肩: OR=1.022 [0.854,1.223], one-sided p=0.406383, BH q(all20)=0.86066
+  month_stem 比肩: OR=1.024 [0.837,1.254], one-sided p=0.40801, BH q(all20)=0.86066
+  month_stem 七杀: OR=1.008 [0.854,1.189], one-sided p=0.463836, BH q(all20)=0.86066
+  month_order 正官: OR=1.006 [0.847,1.194], one-sided p=0.473363, BH q(all20)=0.86066
+  month_order 正财: OR=0.960 [0.770,1.196], one-sided p=0.642112, BH q(all20)=0.914153
+  month_order 偏财: OR=0.964 [0.812,1.144], one-sided p=0.662667, BH q(all20)=0.914153
+  month_stem 正官: OR=0.933 [0.740,1.176], one-sided p=0.720696, BH q(all20)=0.914153
+  month_order 食神: OR=0.937 [0.757,1.159], one-sided p=0.726423, BH q(all20)=0.914153
+  month_stem 偏财: OR=0.955 [0.826,1.105], one-sided p=0.731322, BH q(all20)=0.914153
+  month_order 七杀: OR=0.913 [0.782,1.066], one-sided p=0.876102, BH q(all20)=0.977081
+  month_stem 劫财: OR=0.895 [0.744,1.077], one-sided p=0.879373, BH q(all20)=0.977081
+  month_order 劫财: OR=0.845 [0.695,1.029], one-sided p=0.953204, BH q(all20)=0.98808
+  month_stem 食神: OR=0.812 [0.677,0.973], one-sided p=0.98808, BH q(all20)=0.98808
+
+Interpretation guardrail:
+  1986 is exploratory/discovery only.
+  A high enrichment or nominal p-value here is hypothesis-generating.
+  It should be frozen and tested in an untouched cohort before confirmatory use.
