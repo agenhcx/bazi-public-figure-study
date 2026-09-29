@@ -1,0 +1,86 @@
+{
+  "analysis_role": "final_posthoc_exploratory_temporal_followup_plan_frozen_before_calculation",
+  "plan_tag": "final-birthyear-elementcount-plan-v1",
+  "seed": 20260928,
+  "permutations": 50000,
+  "chess_unique_n": 1907,
+  "tt_unique_n": 719,
+  "headline": {
+    "Chess": {
+      "raw": {
+        "domain": "Chess",
+        "metric": "distinct_elements_6pos",
+        "n": 1907,
+        "rho": 0.041640140376235014,
+        "direction": "less",
+        "p_directional": 0.9651606967860643,
+        "p_two_sided": 0.07061858762824744,
+        "permutations": 50000,
+        "birth_year_min": 1922,
+        "birth_year_max": 2011
+      },
+      "calendar_adjusted": {
+        "domain": "Chess",
+        "metric": "distinct_z_vs_birthyear_calendar",
+        "n": 1907,
+        "rho": -0.0068090562122597054,
+        "direction": "less",
+        "p_directional": 0.3866922661546769,
+        "p_two_sided": 0.7669246615067699,
+        "permutations": 50000,
+        "birth_year_min": 1922,
+        "birth_year_max": 2011
+      },
+      "year_equal_weight": {
+        "domain": "Chess",
+        "metric": "mean_adjusted_z",
+        "n": 84,
+        "rho": -0.06807735142249671,
+        "direction": "less",
+        "p_directional": 0.26699466010679784,
+        "p_two_sided": 0.5345493090138197,
+        "permutations": 50000,
+        "birth_year_min": 1922,
+        "birth_year_max": 2011
+      }
+    },
+    "TableTennis": {
+      "raw": {
+        "domain": "TableTennis",
+        "metric": "distinct_elements_6pos",
+        "n": 719,
+        "rho": 0.06806994342085534,
+        "direction": "less",
+        "p_directional": 0.9662806743865122,
+        "p_two_sided": 0.06813863722725545,
+        "permutations": 50000,
+        "birth_year_min": 1950,
+        "birth_year_max": 2008
+      },
+      "calendar_adjusted": {
+        "domain": "TableTennis",
+        "metric": "distinct_z_vs_birthyear_calendar",
+        "n": 719,
+        "rho": -0.06861123307952226,
+        "direction": "less",
+        "p_directional": 0.03465930681386372,
+        "p_two_sided": 0.06891862162756744,
+        "permutations": 50000,
+        "birth_year_min": 1950,
+        "birth_year_max": 2008
+      },
+      "year_equal_weight": {
+        "domain": "TableTennis",
+        "metric": "mean_adjusted_z",
+        "n": 59,
+        "rho": -0.007948568088836937,
+        "direction": "less",
+        "p_directional": 0.4763304733905322,
+        "p_two_sided": 0.9509809803803924,
+        "permutations": 50000,
+        "birth_year_min": 1950,
+        "birth_year_max": 2008
+      }
+    }
+  }
+}
