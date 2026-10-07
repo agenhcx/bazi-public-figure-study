@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # Audited supplement v3: complete the three deceased science-core DOB gaps from authoritative sources.
+# Trigger PR CI after wiring v3 into the checkpoint workflow.
 from __future__ import annotations
 
 import csv
