@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Triggered through PR CI so checkpoint artifacts are retrievable for audit.
 from __future__ import annotations
 
 import csv
