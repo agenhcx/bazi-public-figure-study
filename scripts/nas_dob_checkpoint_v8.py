@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # Triggered through PR CI so checkpoint artifacts are retrievable for audit.
+# Checkpoint rerun after dynamic review invariant and source-supplement additions.
 from __future__ import annotations
 
 import csv
