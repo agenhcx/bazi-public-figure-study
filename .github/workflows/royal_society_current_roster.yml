@@ -1,0 +1,26 @@
+name: Royal Society Current Roster Acquisition
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/royal_society_current_roster_v1.py'
+      - '.github/workflows/royal_society_current_roster.yml'
+  workflow_dispatch:
+
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Acquire official current Fellow and Foreign Member rosters
+        run: python scripts/royal_society_current_roster_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: royal-society-current-roster-v1
+          path: data/royal_society_current_roster_v1/
+          if-no-files-found: error
