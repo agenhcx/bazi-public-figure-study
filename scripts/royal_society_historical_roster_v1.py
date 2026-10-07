@@ -250,12 +250,16 @@ def crawl_category(category):
         rows.extend(part)
 
         if b>=total:break
-        next_url=find_next(text,url)
-        if not next_url:raise RuntimeError(f"{category}: no Next link on page {page_no}")
-        # CalmView deliberately reuses the same Next action URL; pagination state
-        # is held server-side in the ASP.NET session. Progress is validated by
-        # the strictly increasing result range above.
-        raw,url,status,headers=request(op,next_url,referer=url)
+        # Follow the browser's real ASP.NET behavior. The visible Next href is
+        # only a fallback; onclick calls __doPostBack with current VIEWSTATE.
+        # Reusing the current page's fresh state avoids CalmView session paging
+        # resetting to an earlier range.
+        state=hidden_fields(raw)
+        if "__VIEWSTATE" not in state or "__EVENTVALIDATION" not in state:
+            raise RuntimeError(f"{category}: missing ASP.NET state on page {page_no}")
+        state["__EVENTTARGET"]="ctl00$main$TopPager$ctl22"
+        state["__EVENTARGUMENT"]=""
+        raw,url,status,headers=request(op,url,state,referer=url)
         page_no+=1
         time.sleep(0.08)
 
