@@ -227,6 +227,9 @@ def crawl_category(category):
         if not rr:raise RuntimeError(f"{category}: missing result range on page {page_no}")
         a,b,t=rr
         if t!=total:raise RuntimeError(f"{category}: total changed {total}->{t}")
+        if a!=previous_end+1:
+            raise RuntimeError(f"{category}: non-progressing result range on page {page_no}: previous_end={previous_end}, current={a}-{b}")
+        previous_end=b
 
         p=raw_dir/f"page_{page_no:04d}.html"
         p.write_bytes(raw)
@@ -244,8 +247,9 @@ def crawl_category(category):
         if b>=total:break
         next_url=find_next(text,url)
         if not next_url:raise RuntimeError(f"{category}: no Next link on page {page_no}")
-        if next_url in seen_urls:raise RuntimeError(f"{category}: repeated Next URL on page {page_no}")
-        seen_urls.add(next_url)
+        # CalmView deliberately reuses the same Next action URL; pagination state
+        # is held server-side in the ASP.NET session. Progress is validated by
+        # the strictly increasing result range above.
         raw,url,status,headers=request(op,next_url,referer=url)
         page_no+=1
         time.sleep(0.08)
