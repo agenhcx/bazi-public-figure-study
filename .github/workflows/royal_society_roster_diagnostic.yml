@@ -1,0 +1,26 @@
+name: Royal Society Roster Diagnostic
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/royal_society_roster_diagnostic_v1.py'
+      - '.github/workflows/royal_society_roster_diagnostic.yml'
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Probe official Royal Society roster sources
+        run: python scripts/royal_society_roster_diagnostic_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: royal-society-roster-diagnostic
+          path: data/royal_society_roster_diagnostic_v1/
+          if-no-files-found: error
