@@ -41,6 +41,9 @@ jobs:
       - name: Apply audited manual conflict review
         run: python scripts/nas_manual_dob_review_v1.py
 
+      - name: Apply audited exact-DOB supplement v2
+        run: python scripts/nas_manual_dob_supplement_v2.py
+
       - name: Diagnose DOB availability
         run: python scripts/nas_dob_availability_diagnostic_v1.py
 
@@ -53,6 +56,11 @@ jobs:
           name: nas-dob-v8-checkpoint
           path: |
             data/nas_science_core_dob_crosswalk/summary_v7.json
+            data/nas_science_core_dob_crosswalk/summary_v8.json
+            data/nas_science_core_dob_crosswalk/nas_science_core_dob_manual_supplement_log_v2.csv
+            data/nas_science_core_dob_crosswalk/nas_science_core_dob_crosswalk_v8.csv
+            data/nas_science_core_dob_manual_supplement_v2.csv
+            data/nas_wikipedia_candidate_review_v2.csv
             data/nas_science_core_dob_crosswalk/summary_dob_availability_v1.json
             data/nas_science_core_dob_crosswalk/nas_science_core_dob_availability_by_election_decade_v1.csv
             data/nas_science_core_dob_crosswalk/nas_science_core_dob_availability_by_section_v1.csv
