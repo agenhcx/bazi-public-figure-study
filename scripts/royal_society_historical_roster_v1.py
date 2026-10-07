@@ -211,10 +211,15 @@ def crawl_category(category):
 
     op,raw,url,rr=start_search(category)
     total=rr[2]
-    raw,url,page100=try_set_page_size_100(op,raw,url)
+    # Keep CalmView's native 20-row page size. A 100-row postback works briefly
+    # but the server may reset that preference mid-session, which can revisit
+    # earlier ranges. Native paging is slower but deterministic.
+    page100=False
     rr=result_range(raw.decode("utf-8",errors="replace"))
     page_size=(rr[1]-rr[0]+1) if rr else 20
-    print(f"[{category}] total={total}, page_size={page_size}, page100={page100}")
+    if page_size != 20:
+        raise RuntimeError(f"{category}: expected native page size 20, got {page_size}")
+    print(f"[{category}] total={total}, page_size={page_size}, native_paging=True")
 
     rows=[]
     page_hashes=[]
