@@ -6,6 +6,9 @@ on:
       - main
     paths:
       - 'scripts/nas_dob_checkpoint_v8.py'
+      - 'scripts/nas_current_profile_dob_supplement_v1.py'
+      - 'scripts/nas_manual_dob_supplement_v2.py'
+      - 'data/nas_science_core_dob_manual_supplement_v2.csv'
       - '.github/workflows/nas_dob_checkpoint_v8.yml'
 
 permissions:
@@ -47,6 +50,9 @@ jobs:
       - name: Diagnose DOB availability
         run: python scripts/nas_dob_availability_diagnostic_v1.py
 
+      - name: Refresh exact DOB from current NAS official profiles
+        run: python scripts/nas_current_profile_dob_supplement_v1.py
+
       - name: Build v8 checkpoint
         run: python scripts/nas_dob_checkpoint_v8.py
 
@@ -57,6 +63,10 @@ jobs:
           path: |
             data/nas_science_core_dob_crosswalk/summary_v7.json
             data/nas_science_core_dob_crosswalk/summary_v8.json
+            data/nas_science_core_dob_crosswalk/summary_v9.json
+            data/nas_science_core_dob_crosswalk/nas_science_core_dob_crosswalk_v9.csv
+            data/nas_science_core_dob_crosswalk/nas_current_profile_dob_diagnostic_v1.csv
+            data/nas_science_core_dob_crosswalk/nas_current_profile_dob_supplement_log_v1.csv
             data/nas_science_core_dob_crosswalk/nas_science_core_dob_manual_supplement_log_v2.csv
             data/nas_science_core_dob_crosswalk/nas_science_core_dob_crosswalk_v8.csv
             data/nas_science_core_dob_manual_supplement_v2.csv
