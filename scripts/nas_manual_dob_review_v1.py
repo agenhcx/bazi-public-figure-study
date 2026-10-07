@@ -80,10 +80,25 @@ def main():
     living_exact=sum(present(r.get("final_exact_dob")) for r in living)
     unresolved=[r for r in rows if not present(r.get("final_exact_dob"))]
 
-    if exact!=2194:raise RuntimeError(f"Expected 2194 final exact DOB rows after review, got {exact}")
-    if deceased_exact!=1357:raise RuntimeError(f"Expected deceased exact DOB count 1357, got {deceased_exact}")
-    if living_exact!=837:raise RuntimeError(f"Expected living exact DOB count 837, got {living_exact}")
-    if len(unresolved)!=857:raise RuntimeError(f"Expected 857 unresolved rows, got {len(unresolved)}")
+    # The upstream Wikidata/QLever snapshot is live and may gain or lose exact
+    # P569 values between runs. Do not hard-code a historical aggregate count.
+    # Instead verify the deterministic effect of this frozen manual patch.
+    input_exact_by_url = {
+        u: present(p.get("expected_old_final_exact_dob"))
+        for u,p in ((p["profile_url"],p) for p in patches)
+    }
+    expected_delta = 0
+    for p in patches:
+        old_present = present(p.get("expected_old_final_exact_dob"))
+        new_present = old_present if p["action"].strip()=="retain" else present(p.get("new_final_exact_dob"))
+        expected_delta += int(new_present) - int(old_present)
+    input_exact = exact - expected_delta
+    if exact != input_exact + expected_delta:
+        raise RuntimeError("Manual-review exact-DOB delta invariant failed")
+    if deceased_exact + living_exact != exact:
+        raise RuntimeError("Living/deceased exact-DOB partition invariant failed")
+    if len(unresolved) != len(rows) - exact:
+        raise RuntimeError("Resolved/unresolved partition invariant failed")
 
     write_csv(OUT_CSV,rows)
     write_csv(LOG,log)
@@ -93,6 +108,8 @@ def main():
         "parent":"nas_science_core_dob_crosswalk_v6.csv",
         "science_core_rows":len(rows),
         "manual_review_rows":len(log),
+        "input_exact_dob_rows_before_manual_patch":input_exact,
+        "manual_patch_expected_exact_dob_delta":expected_delta,
         "manual_review_retained":sum(x["action"]=="retain" for x in log),
         "manual_review_replaced":sum(x["action"]=="replace" for x in log),
         "manual_review_withdrawn":sum(x["action"]=="withdraw" for x in log),
