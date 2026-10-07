@@ -1,0 +1,39 @@
+name: NAS LOC DOB Provenance Probe
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'scripts/nas_loc_provenance_probe_v1.py'
+      - 'data/nas_authority_dob_candidates_v1.csv'
+      - '.github/workflows/nas_loc_provenance_probe.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Probe LOC MARC provenance
+        run: python scripts/nas_loc_provenance_probe_v1.py
+
+      - name: Upload provenance outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: nas-loc-provenance-probe-v1
+          path: |
+            data/nas_loc_provenance_probe_v1.csv
+            data/nas_loc_provenance_probe_summary_v1.json
+          if-no-files-found: error
