@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Audited supplement: only independently verified exact dates are applied.
 from __future__ import annotations
 
 import csv
