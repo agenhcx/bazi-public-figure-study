@@ -1,0 +1,31 @@
+name: NAS Wikidata DOB Pilot
+
+on:
+  push:
+    branches:
+      - main
+      - nas-wikidata-dob-pilot
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run NAS Wikidata DOB pilot
+        run: python scripts/nas_wikidata_dob_pilot.py
+
+      - name: Upload pilot outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: nas-wikidata-dob-pilot
+          path: data/nas_wikidata_dob_pilot/
+          if-no-files-found: error
