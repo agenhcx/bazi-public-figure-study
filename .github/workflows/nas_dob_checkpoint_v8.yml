@@ -1,0 +1,70 @@
+name: NAS DOB v8 checkpoint
+
+on:
+  push:
+    branches:
+      - nas-dob-continuation-v8
+    paths:
+      - 'scripts/nas_dob_checkpoint_v8.py'
+      - '.github/workflows/nas_dob_checkpoint_v8.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  checkpoint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: nas-dob-continuation-v8
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run Wikidata NAS DOB pilot
+        run: python scripts/nas_wikidata_dob_pilot.py
+
+      - name: Build NAS science-core DOB crosswalk
+        run: python scripts/nas_science_core_dob_crosswalk.py
+
+      - name: Supplement from DBpedia
+        run: python scripts/nas_dbpedia_dob_supplement.py
+
+      - name: Diagnose Wikipedia birth dates
+        continue-on-error: true
+        run: python scripts/nas_wikipedia_bday_diagnostic.py
+
+      - name: Apply audited manual conflict review
+        run: python scripts/nas_manual_dob_review_v1.py
+
+      - name: Diagnose DOB availability
+        run: python scripts/nas_dob_availability_diagnostic_v1.py
+
+      - name: Build v8 checkpoint
+        run: python scripts/nas_dob_checkpoint_v8.py
+
+      - name: Commit checkpoint outputs to branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f data/nas_science_core_dob_crosswalk/summary_v7.json
+          git add -f data/nas_science_core_dob_crosswalk/summary_dob_availability_v1.json
+          git add -f data/nas_science_core_dob_crosswalk/nas_science_core_dob_availability_by_election_decade_v1.csv
+          git add -f data/nas_science_core_dob_crosswalk/nas_science_core_dob_availability_by_section_v1.csv
+          git add -f data/nas_science_core_dob_crosswalk/nas_science_core_dob_unresolved_v8.csv
+          git add -f data/nas_science_core_dob_crosswalk/nas_wikipedia_supplement_candidates_v8.csv
+          git add -f data/nas_science_core_dob_crosswalk/nas_wikipedia_validation_conflicts_v8.csv
+          git add -f data/nas_science_core_dob_crosswalk/summary_checkpoint_v8.json
+          if [ -f data/nas_science_core_dob_crosswalk/summary_wikipedia_birthdate_diagnostic.json ]; then git add -f data/nas_science_core_dob_crosswalk/summary_wikipedia_birthdate_diagnostic.json; fi
+          if git diff --cached --quiet; then
+            echo "No checkpoint changes"
+          else
+            git commit -m "Checkpoint NAS DOB v8 outputs [skip ci]"
+            git push origin HEAD:nas-dob-continuation-v8
+          fi
