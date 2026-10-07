@@ -6,7 +6,7 @@ from pathlib import Path
 OUT=Path("data/royal_society_postdisplay_probe_v1")
 BASE="https://royalsociety.org"
 DIRECTORY=BASE+"/fellows-directory/"
-MAINJS=BASE+"/assets/js/main.js"
+MAINJS=BASE+"/assets/js/main.js"\nPOSTDISPLAY_CHUNK=BASE+"/assets/js/749.cc8a7755fca0c0232e7c.js"
 UA="bazi-public-figure-study/1.0 (Royal Society official roster protocol probe; no DOB/BaZi)"
 
 def fetch(url, accept="*/*"):
@@ -43,6 +43,10 @@ def main():
     jp=OUT/"main.js"; jp.write_bytes(j)
     text=j.decode("utf-8",errors="replace")
 
+    c,ch,cu,cs=fetch(POSTDISPLAY_CHUNK,"application/javascript,text/javascript,*/*")
+    cp=OUT/"postdisplay_chunk_749.js"; cp.write_bytes(c)
+    chunk_text=c.decode("utf-8",errors="replace")
+
     patterns=[
         r"PostDisplay",
         r"postDisplay",
@@ -59,15 +63,23 @@ def main():
 
     endpoint="/api/sitecore/FellowsDirectory/PostFellowsDirectoryDisplay"
     endpoint_hits=[m.start() for m in re.finditer(re.escape(endpoint),text,re.I)]
+    chunk_ctx=contexts(chunk_text,[
+        r"axios",r"\.post\s*\(",r"\.get\s*\(",r"fetch\s*\(",r"FormData",
+        r"URLSearchParams",r"Content-Type",r"data-name",r"dataset",r"page",
+        r"subject",r"researchArea",r"yearFrom",r"yearTo",r"award",r"type",r"sort"
+    ],radius=1800,max_per=15)
 
     summary={
         "dataset":"Royal Society PostDisplay frontend protocol diagnostic v1",
         "created_utc":dt.datetime.now(dt.timezone.utc).isoformat(),
         "directory":{"url":u,"status":s,"bytes":len(d),"sha256":sha256(dp)},
         "main_js":{"url":ju,"status":js,"bytes":len(j),"content_type":jh.get("Content-Type",""),"sha256":sha256(jp)},
+        "postdisplay_chunk":{"url":cu,"status":cs,"bytes":len(c),"content_type":ch.get("Content-Type",""),"sha256":sha256(cp)},
         "endpoint_literal_hits_in_js":endpoint_hits,
         "context_count":len(ctx),
         "contexts":ctx,
+        "postdisplay_chunk_context_count":len(chunk_ctx),
+        "postdisplay_chunk_contexts":chunk_ctx,
         "dob_lookup_performed":0,
         "bazi_variables_computed":0,
         "note":"Diagnostic only. No roster is frozen. This captures the official frontend request-construction code before implementing the directory crawler."
@@ -76,8 +88,11 @@ def main():
     print(json.dumps({
         "main_js_status":js,
         "main_js_bytes":len(j),
+        "postdisplay_chunk_status":cs,
+        "postdisplay_chunk_bytes":len(c),
         "endpoint_literal_hits_in_js":len(endpoint_hits),
         "context_count":len(ctx),
+        "postdisplay_chunk_context_count":len(chunk_ctx),
         "output":str(OUT)
     },indent=2))
 
