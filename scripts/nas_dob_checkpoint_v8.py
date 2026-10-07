@@ -7,7 +7,7 @@ import json
 from pathlib import Path
 
 BASE = Path("data/nas_science_core_dob_crosswalk")
-V7 = BASE / "nas_science_core_dob_crosswalk_v7.csv"
+V7 = BASE / "nas_science_core_dob_crosswalk_v8.csv"
 AVAIL = BASE / "nas_science_core_dob_availability_v1.csv"
 WIKI = BASE / "nas_wikipedia_birthdate_diagnostic.csv"
 
@@ -102,10 +102,10 @@ living_unresolved = [r for r in unresolved if r.get("deceased") != "Y"]
 dead_unresolved = [r for r in unresolved if r.get("deceased") == "Y"]
 
 summary = {
-    "dataset": "NAS science-core DOB checkpoint v8",
+    "dataset": "NAS science-core DOB checkpoint after audited supplement v2",
     "science_core_rows": len(rows),
-    "final_exact_dob_rows_v7": sum(present(r.get("final_exact_dob")) for r in rows),
-    "final_exact_dob_coverage_v7": round(sum(present(r.get("final_exact_dob")) for r in rows) / len(rows), 6),
+    "final_exact_dob_rows_v8": sum(present(r.get("final_exact_dob")) for r in rows),
+    "final_exact_dob_coverage_v8": round(sum(present(r.get("final_exact_dob")) for r in rows) / len(rows), 6),
     "remaining_without_exact_dob": len(unresolved),
     "living_rows": len(living),
     "living_exact_dob_rows": sum(present(r.get("final_exact_dob")) for r in living),
@@ -131,8 +131,8 @@ summary = {
     ),
     "bazi_variables_computed": 0,
     "policy_note": (
-        "Checkpoint only. Wikipedia candidates are not yet accepted into final_exact_dob. "
-        "They are surfaced for source-validation and audited supplementation."
+        "Checkpoint after audited supplement v2. Only independently audited candidates are "
+        "accepted; remaining Wikipedia candidates stay unresolved for further review."
     ),
 }
 OUT_SUMMARY.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
