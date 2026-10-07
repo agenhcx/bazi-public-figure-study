@@ -4,7 +4,9 @@ on:
   push:
     branches: [main]
     paths:
-      - 'scripts/royal_society_*.py'
+      - 'scripts/royal_society_roster_diagnostic_v1.py'
+      - 'scripts/royal_society_postdisplay_probe_v1.py'
+      - 'scripts/royal_society_past_search_probe_v1.py'
       - '.github/workflows/royal_society_roster_diagnostic.yml'
   workflow_dispatch:
 
