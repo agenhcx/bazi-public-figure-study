@@ -23,9 +23,14 @@ jobs:
       - name: Run NAS Wikidata DOB pilot
         run: python scripts/nas_wikidata_dob_pilot.py
 
-      - name: Upload pilot outputs
+      - name: Crosswalk NAS science-core exact DOB
+        run: python scripts/nas_science_core_dob_crosswalk.py
+
+      - name: Upload DOB acquisition outputs
         uses: actions/upload-artifact@v4
         with:
-          name: nas-wikidata-dob-pilot
-          path: data/nas_wikidata_dob_pilot/
+          name: nas-dob-acquisition
+          path: |
+            data/nas_wikidata_dob_pilot/
+            data/nas_science_core_dob_crosswalk/
           if-no-files-found: error
