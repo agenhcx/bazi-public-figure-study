@@ -35,17 +35,14 @@ ORDER BY ?person
 DOB_QUERY = r"""
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 PREFIX p: <http://www.wikidata.org/prop/>
-PREFIX ps: <http://www.wikidata.org/prop/statement/>
 PREFIX psv: <http://www.wikidata.org/prop/statement/value/>
 PREFIX wikibase: <http://wikiba.se/ontology#>
-SELECT ?person ?dob ?precision ?rank WHERE {
+SELECT ?person ?dob ?precision WHERE {
   ?person wdt:P5380 ?nasid ;
           p:P569 ?dob_stmt .
-  ?dob_stmt ps:P569 ?dob ;
-            psv:P569 ?dob_value ;
-            wikibase:rank ?rank .
-  FILTER(?rank != wikibase:DeprecatedRank)
-  ?dob_value wikibase:timePrecision ?precision .
+  ?dob_stmt psv:P569 ?dob_value .
+  ?dob_value wikibase:timeValue ?dob ;
+             wikibase:timePrecision ?precision .
 }
 ORDER BY ?person
 """
@@ -117,7 +114,7 @@ if not {"person","nasid"}.issubset(h_ids):
     raise RuntimeError(f"Unexpected P5380 headers: {h_ids}")
 if not {"person","label"}.issubset(h_labels):
     raise RuntimeError(f"Unexpected label headers: {h_labels}")
-if not {"person","dob","precision","rank"}.issubset(h_dob):
+if not {"person","dob","precision"}.issubset(h_dob):
     raise RuntimeError(f"Unexpected DOB headers: {h_dob}")
 
 people=defaultdict(lambda:{"nasids":set(),"labels":set(),"statements":[]})
@@ -140,17 +137,16 @@ for r in dob_rows:
         continue
     p=precision_int(r.get("precision",""))
     dob=r.get("dob","")
-    rank=r.get("rank","")
     if dob and p is not None:
-        people[person]["statements"].append((dob,p,rank))
+        people[person]["statements"].append((dob,p))
 
 collapsed=[]
 for person,d in sorted(people.items()):
     stmts=d["statements"]
-    exact=sorted({dob for dob,p,rank in stmts if p>=11})
-    month=sorted({dob for dob,p,rank in stmts if p==10})
-    year=sorted({dob for dob,p,rank in stmts if p==9})
-    precisions=sorted({p for _,p,_ in stmts})
+    exact=sorted({dob for dob,p in stmts if p>=11})
+    month=sorted({dob for dob,p in stmts if p==10})
+    year=sorted({dob for dob,p in stmts if p==9})
+    precisions=sorted({p for _,p in stmts})
     collapsed.append({
         "wikidata_uri":person,
         "qid":person.rsplit("/",1)[-1],
@@ -174,7 +170,7 @@ with out_csv.open("w",encoding="utf-8-sig",newline="") as f:
 summary={
     "source":"Wikidata via QLever",
     "endpoint":ENDPOINT,
-    "query_strategy":"three independent mandatory queries joined locally: P5380 identity, English label, P569 statement/precision",
+    "query_strategy":"three independent mandatory queries joined locally; P569 date is read from wikibase:timeValue on the value node, without relying on incomplete rank/ps triples",
     "property_nas_id":"P5380",
     "property_date_of_birth":"P569",
     "wikidata_persons_with_p5380":len(collapsed),
@@ -187,7 +183,7 @@ summary={
     "raw_p569_rows":len(dob_rows),
     "sample_labels":[x["english_labels"] for x in collapsed if x["english_labels"]][:5],
     "bazi_variables_computed":0,
-    "note":"Exact DOB requires Wikidata time precision >=11. Deprecated P569 statements are excluded. No BaZi variables are computed."
+    "note":"Exact DOB requires Wikidata time precision >=11. Multiple P569 values are retained and flagged as conflicts; no BaZi variables are computed."
 }
 (OUT/"summary.json").write_text(json.dumps(summary,indent=2,ensure_ascii=False),encoding="utf-8")
 print(json.dumps(summary,indent=2,ensure_ascii=False))
