@@ -219,7 +219,7 @@ def crawl_category(category):
     rows=[]
     page_hashes=[]
     page_no=1
-    seen_urls=set()
+    previous_end=0
 
     while True:
         text=raw.decode("utf-8",errors="replace")
