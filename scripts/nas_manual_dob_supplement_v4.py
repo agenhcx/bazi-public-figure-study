@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # Audited supplement v4: living exact-DOB additions from independent published/official sources.
+# Trigger PR CI with v4 wired into the checkpoint workflow.
 from __future__ import annotations
 import csv, datetime as dt, hashlib, json
 from pathlib import Path
