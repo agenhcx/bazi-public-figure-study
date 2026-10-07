@@ -73,6 +73,16 @@ SELECT DISTINCT ?person ?label WHERE {
 ORDER BY ?person
 """
 
+DIRECT_DOB_QUERY = r"""
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+SELECT DISTINCT ?person ?dob WHERE {
+""" + CANDIDATE_PATTERN + r"""
+  ?person wdt:P569 ?dob .
+}
+ORDER BY ?person
+"""
+
 DOB_QUERY = r"""
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 PREFIX wd: <http://www.wikidata.org/entity/>
@@ -135,6 +145,7 @@ raw_p463=run_sparql(P463_QUERY)
 raw_p166=run_sparql(P166_QUERY)
 raw_labels=run_sparql(LABEL_QUERY)
 raw_alt=run_sparql(ALT_LABEL_QUERY)
+raw_direct_dob=run_sparql(DIRECT_DOB_QUERY)
 raw_dob=run_sparql(DOB_QUERY)
 
 raw_files={
@@ -143,7 +154,8 @@ raw_files={
     "wikidata_p166_mnas_raw.tsv":raw_p166,
     "wikidata_nas_labels_raw.tsv":raw_labels,
     "wikidata_nas_altlabels_raw.tsv":raw_alt,
-    "wikidata_nas_p569_raw.tsv":raw_dob,
+    "wikidata_nas_direct_p569_raw.tsv":raw_direct_dob,
+    "wikidata_nas_p569_statement_raw.tsv":raw_dob,
 }
 for name,data in raw_files.items():
     (OUT/name).write_bytes(data)
@@ -153,6 +165,7 @@ h463,r463=parse_tsv(raw_p463)
 h166,r166=parse_tsv(raw_p166)
 hlab,rlab=parse_tsv(raw_labels)
 halt,ralt=parse_tsv(raw_alt)
+hdirect,rdirect=parse_tsv(raw_direct_dob)
 hdob,rdob=parse_tsv(raw_dob)
 
 if not {"person","nasid"}.issubset(h5380): raise RuntimeError(f"Unexpected P5380 headers: {h5380}")
@@ -160,11 +173,12 @@ if "person" not in h463: raise RuntimeError(f"Unexpected P463 headers: {h463}")
 if "person" not in h166: raise RuntimeError(f"Unexpected P166 headers: {h166}")
 if not {"person","label"}.issubset(hlab): raise RuntimeError(f"Unexpected label headers: {hlab}")
 if not {"person","label"}.issubset(halt): raise RuntimeError(f"Unexpected alt-label headers: {halt}")
+if not {"person","dob"}.issubset(hdirect): raise RuntimeError(f"Unexpected direct DOB headers: {hdirect}")
 if not {"person","dob","precision"}.issubset(hdob): raise RuntimeError(f"Unexpected DOB headers: {hdob}")
 
 people=defaultdict(lambda:{
     "nasids":set(),"labels":set(),"preferred_labels":set(),"alt_labels":set(),
-    "sources":set(),"statements":[]
+    "sources":set(),"direct_dobs":set(),"statements":[]
 })
 
 for r in r5380:
@@ -186,6 +200,9 @@ for r in ralt:
     p=r.get("person",""); label=r.get("label","")
     if p in people and label:
         people[p]["labels"].add(label); people[p]["alt_labels"].add(label)
+for r in rdirect:
+    p=r.get("person",""); dob=r.get("dob","")
+    if p in people and dob: people[p]["direct_dobs"].add(dob)
 for r in rdob:
     p=r.get("person","")
     if p not in people: continue
@@ -195,6 +212,7 @@ for r in rdob:
 collapsed=[]
 for person,d in sorted(people.items()):
     stmts=d["statements"]
+    direct=sorted(d["direct_dobs"])
     exact=sorted({dob for dob,p in stmts if p>=11})
     month=sorted({dob for dob,p in stmts if p==10})
     year=sorted({dob for dob,p in stmts if p==9})
@@ -207,7 +225,10 @@ for person,d in sorted(people.items()):
         "english_labels":"|".join(sorted(d["labels"])),
         "preferred_english_labels":"|".join(sorted(d["preferred_labels"])),
         "english_alt_labels":"|".join(sorted(d["alt_labels"])),
-        "has_p569":int(bool(stmts)),
+        "has_direct_p569":int(bool(direct)),
+        "direct_p569_values":"|".join(direct),
+        "direct_p569_value_count":len(direct),
+        "has_statement_p569":int(bool(stmts)),
         "max_birthdate_precision":max(precisions) if precisions else "",
         "exact_day_values":"|".join(exact),
         "exact_day_value_count":len(exact),
@@ -233,7 +254,8 @@ summary={
     "persons_from_p463_nas":len(p463_people),
     "persons_from_p166_mnas":len(p166_people),
     "persons_with_any_english_label_or_altlabel":sum(bool(x["english_labels"]) for x in collapsed),
-    "persons_with_p569":sum(int(x["has_p569"]) for x in collapsed),
+    "persons_with_direct_p569":sum(int(x["has_direct_p569"]) for x in collapsed),
+    "persons_with_statement_p569":sum(int(x["has_statement_p569"]) for x in collapsed),
     "persons_with_exact_day_precision_11_or_better":sum(int(x["exact_day_value_count"]>0) for x in collapsed),
     "persons_with_conflicting_exact_day_values":sum(int(x["exact_day_conflict"]) for x in collapsed),
     "raw_p5380_rows":len(r5380),
@@ -241,7 +263,8 @@ summary={
     "raw_p166_rows":len(r166),
     "raw_label_rows":len(rlab),
     "raw_altlabel_rows":len(ralt),
-    "raw_p569_rows":len(rdob),
+    "raw_direct_p569_rows":len(rdirect),
+    "raw_statement_p569_rows":len(rdob),
     "sample_labels":[x["english_labels"] for x in collapsed if x["english_labels"]][:5],
     "bazi_variables_computed":0,
     "note":"P569 exact day requires precision >=11. Multiple exact values are retained as conflicts. No BaZi variables are computed."
