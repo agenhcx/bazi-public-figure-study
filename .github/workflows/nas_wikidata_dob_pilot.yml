@@ -32,6 +32,9 @@ jobs:
       - name: Diagnose machine-readable Wikipedia birth dates
         run: python scripts/nas_wikipedia_bday_diagnostic.py
 
+      - name: Apply audited manual DOB conflict review
+        run: python scripts/nas_manual_dob_review_v1.py
+
       - name: Upload DOB acquisition outputs
         uses: actions/upload-artifact@v4
         with:
