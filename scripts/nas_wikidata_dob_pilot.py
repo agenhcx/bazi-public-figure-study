@@ -38,9 +38,9 @@ SELECT ?person ?nasid ?label ?dob ?precision ?rank WHERE {
 ORDER BY ?person ?nasid
 """
 
-def run_query() -> bytes:
+def run_sparql(query: str) -> bytes:
     body = urllib.parse.urlencode({
-        "query": QUERY,
+        "query": query,
         "action": "tsv_export",
     }).encode("utf-8")
     req = urllib.request.Request(
@@ -76,7 +76,71 @@ def precision_int(s: str):
     except Exception:
         return None
 
-raw = run_query()
+def count_people(query: str) -> int:
+    raw_count = run_sparql(query).decode("utf-8-sig")
+    rr = list(csv.reader(raw_count.splitlines(), delimiter="\t"))
+    if len(rr) <= 1:
+        return 0
+    return len({clean_term(r[0]) for r in rr[1:] if r and clean_term(r[0])})
+
+COUNT_P5380 = r"""
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+SELECT DISTINCT ?person WHERE { ?person wdt:P5380 ?nasid . }
+"""
+
+COUNT_WDT_P569 = r"""
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+SELECT DISTINCT ?person WHERE {
+  ?person wdt:P5380 ?nasid ;
+          wdt:P569 ?dob .
+}
+"""
+
+COUNT_P_P569 = r"""
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX p: <http://www.wikidata.org/prop/>
+SELECT DISTINCT ?person WHERE {
+  ?person wdt:P5380 ?nasid ;
+          p:P569 ?stmt .
+}
+"""
+
+COUNT_PSV_PRECISION = r"""
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX psv: <http://www.wikidata.org/prop/statement/value/>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+SELECT DISTINCT ?person WHERE {
+  ?person wdt:P5380 ?nasid ;
+          p:P569 ?stmt .
+  ?stmt psv:P569 ?value .
+  ?value wikibase:timePrecision ?precision .
+}
+"""
+
+COUNT_EXACT_PRECISION = r"""
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX psv: <http://www.wikidata.org/prop/statement/value/>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+SELECT DISTINCT ?person WHERE {
+  ?person wdt:P5380 ?nasid ;
+          p:P569 ?stmt .
+  ?stmt psv:P569 ?value .
+  ?value wikibase:timePrecision ?precision .
+  FILTER(?precision >= 11)
+}
+"""
+
+diagnostics = {
+    "count_distinct_p5380": count_people(COUNT_P5380),
+    "count_with_truthy_wdt_p569": count_people(COUNT_WDT_P569),
+    "count_with_any_p_p569_statement": count_people(COUNT_P_P569),
+    "count_with_psv_p569_time_precision": count_people(COUNT_PSV_PRECISION),
+    "count_with_precision_11_or_better_unfiltered_rank": count_people(COUNT_EXACT_PRECISION),
+}
+
+raw = run_sparql(QUERY)
 raw_path = OUT / "wikidata_p5380_p569_raw.tsv"
 raw_path.write_bytes(raw)
 
@@ -153,6 +217,7 @@ summary = {
     "property_nas_id": "P5380",
     "property_date_of_birth": "P569",
     "wikidata_persons_with_p5380": n,
+    "diagnostics": diagnostics,
     "persons_with_non_deprecated_p569": sum(int(x["has_non_deprecated_p569"]) for x in collapsed),
     "persons_with_exact_day_precision_11_or_better": sum(int(x["exact_day_value_count"] > 0) for x in collapsed),
     "persons_with_conflicting_exact_day_values": sum(int(x["exact_day_conflict"]) for x in collapsed),
