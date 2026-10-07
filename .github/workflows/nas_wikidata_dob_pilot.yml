@@ -4,7 +4,10 @@ on:
   push:
     branches:
       - main
-      - nas-wikidata-dob-pilot
+    paths:
+      - 'scripts/nas_*.py'
+      - 'data/nas_science_core_dob_manual_review_v1.csv'
+      - '.github/workflows/nas_wikidata_dob_pilot.yml'
   workflow_dispatch:
 
 jobs:
