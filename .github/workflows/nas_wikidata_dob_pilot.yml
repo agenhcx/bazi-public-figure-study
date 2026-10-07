@@ -1,6 +1,9 @@
 name: NAS Wikidata DOB Pilot
 
 on:
+  push:
+    branches:
+      - nas-wikidata-dob-pilot
   workflow_dispatch:
 
 jobs:
