@@ -21,10 +21,13 @@ jobs:
         run: python scripts/royal_society_roster_diagnostic_v1.py
       - name: Probe Royal Society PostDisplay frontend protocol
         run: python scripts/royal_society_postdisplay_probe_v1.py
+      - name: Probe Royal Society historical membership search
+        run: python scripts/royal_society_past_search_probe_v1.py
       - uses: actions/upload-artifact@v4
         with:
           name: royal-society-roster-diagnostic
           path: |
             data/royal_society_roster_diagnostic_v1/
             data/royal_society_postdisplay_probe_v1/
+            data/royal_society_past_search_probe_v1/
           if-no-files-found: error
