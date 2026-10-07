@@ -26,6 +26,9 @@ jobs:
       - name: Crosswalk NAS science-core exact DOB
         run: python scripts/nas_science_core_dob_crosswalk.py
 
+      - name: Supplement exact DOB from DBpedia
+        run: python scripts/nas_dbpedia_dob_supplement.py
+
       - name: Upload DOB acquisition outputs
         uses: actions/upload-artifact@v4
         with:
