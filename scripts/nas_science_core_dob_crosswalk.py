@@ -8,6 +8,8 @@ import re
 import unicodedata
 import urllib.parse
 import urllib.request
+import urllib.error
+import time
 from collections import defaultdict
 from pathlib import Path
 
@@ -104,18 +106,33 @@ def unique_index(rows,keyfn,valuefn):
         {k:v for k,v in tmp.items() if len(v)>1},
     )
 
-def run_sparql(query: str):
+def run_sparql(query: str, retries: int = 5):
     body=urllib.parse.urlencode({"query":query,"action":"tsv_export"}).encode("utf-8")
-    req=urllib.request.Request(
-        QLEVER,data=body,method="POST",
-        headers={
-            "User-Agent":"bazi-public-figure-study/1.0 NAS global-name DOB supplement",
-            "Content-Type":"application/x-www-form-urlencoded",
-            "Accept":"text/tab-separated-values",
-        },
-    )
-    with urllib.request.urlopen(req,timeout=300) as resp:
-        raw=resp.read()
+    last=None
+    for attempt in range(retries):
+        req=urllib.request.Request(
+            QLEVER,data=body,method="POST",
+            headers={
+                "User-Agent":"bazi-public-figure-study/1.0 NAS global-name DOB supplement",
+                "Content-Type":"application/x-www-form-urlencoded",
+                "Accept":"text/tab-separated-values",
+            },
+        )
+        try:
+            with urllib.request.urlopen(req,timeout=300) as resp:
+                raw=resp.read()
+            break
+        except urllib.error.HTTPError as e:
+            last=e
+            if e.code not in {429,500,502,503,504} or attempt+1>=retries:
+                raise
+        except urllib.error.URLError as e:
+            last=e
+            if attempt+1>=retries:
+                raise
+        time.sleep(min(30, 2**attempt))
+    else:
+        raise RuntimeError(f"QLever request failed after {retries} attempts: {last}")
     rows=list(csv.reader(raw.decode("utf-8-sig").splitlines(),delimiter="\t"))
     if not rows: return []
     headers=[x.lstrip("?").strip() for x in rows[0]]
