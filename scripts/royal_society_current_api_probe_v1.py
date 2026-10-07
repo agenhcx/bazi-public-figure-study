@@ -49,6 +49,8 @@ def main():
         ("json_fellow_page1",post_json,{"type":"Fellow","page":1}),
         ("form_fellow_page1",post_form,{"type":"Fellow","page":1}),
         ("json_all_page1",post_json,{"page":1}),
+        ("json_fellow_year_range",post_json,{"type":"Fellow","yearFrom":"1962","yearTo":"2025","page":1}),
+        ("form_fellow_year_range",post_form,{"type":"Fellow","yearFrom":"1962","yearTo":"2025","page":1}),
     ]
     results=[]
     for name,fn,payload in payloads:
