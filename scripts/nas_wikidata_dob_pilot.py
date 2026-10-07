@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import csv
 import json
+import re
 import urllib.parse
 import urllib.request
 from collections import defaultdict
@@ -12,30 +13,41 @@ ENDPOINT = "https://qlever.dev/api/wikidata"
 OUT = Path("data/nas_wikidata_dob_pilot")
 OUT.mkdir(parents=True, exist_ok=True)
 
-QUERY = r"""
+P5380_QUERY = r"""
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+SELECT ?person ?nasid WHERE {
+  ?person wdt:P5380 ?nasid .
+}
+ORDER BY ?person ?nasid
+"""
+
+LABEL_QUERY = r"""
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?person ?label WHERE {
+  ?person wdt:P5380 ?nasid ;
+          rdfs:label ?label .
+  FILTER(LANG(?label) = "en")
+}
+ORDER BY ?person
+"""
+
+DOB_QUERY = r"""
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 PREFIX p: <http://www.wikidata.org/prop/>
 PREFIX ps: <http://www.wikidata.org/prop/statement/>
 PREFIX psv: <http://www.wikidata.org/prop/statement/value/>
 PREFIX wikibase: <http://wikiba.se/ontology#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-SELECT ?person ?nasid ?label ?dob ?precision ?rank WHERE {
-  ?person wdt:P5380 ?nasid .
-  OPTIONAL {
-    ?person rdfs:label ?label .
-    FILTER(LANG(?label) = "en")
-  }
-  OPTIONAL {
-    ?person p:P569 ?dob_stmt .
-    ?dob_stmt ps:P569 ?dob ;
-              psv:P569 ?dob_value ;
-              wikibase:rank ?rank .
-    FILTER(?rank != wikibase:DeprecatedRank)
-    ?dob_value wikibase:timePrecision ?precision .
-  }
+SELECT ?person ?dob ?precision ?rank WHERE {
+  ?person wdt:P5380 ?nasid ;
+          p:P569 ?dob_stmt .
+  ?dob_stmt ps:P569 ?dob ;
+            psv:P569 ?dob_value ;
+            wikibase:rank ?rank .
+  FILTER(?rank != wikibase:DeprecatedRank)
+  ?dob_value wikibase:timePrecision ?precision .
 }
-ORDER BY ?person ?nasid
+ORDER BY ?person
 """
 
 def run_sparql(query: str) -> bytes:
@@ -60,171 +72,122 @@ def clean_header(s: str) -> str:
     return s.lstrip("?").strip()
 
 def clean_term(s: str) -> str:
-    s = (s or "").strip()
+    s=(s or "").strip()
     if s.startswith("<") and s.endswith(">"):
         return s[1:-1]
-    if len(s) >= 2 and s[0] == '"' and '"' in s[1:]:
-        # QLever TSV may serialize literals with quotes and datatype/lang suffix.
-        end = s.rfind('"')
-        return s[1:end].replace('\\t', '\t').replace('\\n', '\n').replace('\\r', '\r').replace('\\\"', '"').replace('\\\\', '\\')
+    if len(s)>=2 and s[0]=='"' and '"' in s[1:]:
+        end=s.rfind('"')
+        return s[1:end].replace('\\t','\t').replace('\\n','\n').replace('\\r','\r').replace('\\\"','"').replace('\\\\','\\')
+    # QLever TSV currently serializes simple language-tagged strings as Label@en.
+    s=re.sub(r"@[A-Za-z][A-Za-z0-9-]*$", "", s)
     return s
 
 def precision_int(s: str):
-    s = clean_term(s)
     try:
-        return int(s)
+        return int(clean_term(s))
     except Exception:
         return None
 
-def count_people(query: str) -> int:
-    raw_count = run_sparql(query).decode("utf-8-sig")
-    rr = list(csv.reader(raw_count.splitlines(), delimiter="\t"))
-    if len(rr) <= 1:
-        return 0
-    return len({clean_term(r[0]) for r in rr[1:] if r and clean_term(r[0])})
+def parse_tsv(raw: bytes):
+    rows=list(csv.reader(raw.decode("utf-8-sig").splitlines(), delimiter="\t"))
+    if not rows:
+        raise RuntimeError("QLever returned no rows.")
+    headers=[clean_header(x) for x in rows[0]]
+    out=[]
+    for r in rows[1:]:
+        if not r:
+            continue
+        r=r+[""]*(len(headers)-len(r))
+        out.append({h:clean_term(r[i]) for i,h in enumerate(headers)})
+    return headers,out
 
-COUNT_P5380 = r"""
-PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-SELECT DISTINCT ?person WHERE { ?person wdt:P5380 ?nasid . }
-"""
+raw_ids=run_sparql(P5380_QUERY)
+raw_labels=run_sparql(LABEL_QUERY)
+raw_dob=run_sparql(DOB_QUERY)
 
-COUNT_WDT_P569 = r"""
-PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-SELECT DISTINCT ?person WHERE {
-  ?person wdt:P5380 ?nasid ;
-          wdt:P569 ?dob .
-}
-"""
+(OUT/"wikidata_p5380_raw.tsv").write_bytes(raw_ids)
+(OUT/"wikidata_p5380_labels_raw.tsv").write_bytes(raw_labels)
+(OUT/"wikidata_p5380_p569_raw.tsv").write_bytes(raw_dob)
 
-COUNT_P_P569 = r"""
-PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-PREFIX p: <http://www.wikidata.org/prop/>
-SELECT DISTINCT ?person WHERE {
-  ?person wdt:P5380 ?nasid ;
-          p:P569 ?stmt .
-}
-"""
+h_ids,id_rows=parse_tsv(raw_ids)
+h_labels,label_rows=parse_tsv(raw_labels)
+h_dob,dob_rows=parse_tsv(raw_dob)
 
-COUNT_PSV_PRECISION = r"""
-PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-PREFIX p: <http://www.wikidata.org/prop/>
-PREFIX psv: <http://www.wikidata.org/prop/statement/value/>
-PREFIX wikibase: <http://wikiba.se/ontology#>
-SELECT DISTINCT ?person WHERE {
-  ?person wdt:P5380 ?nasid ;
-          p:P569 ?stmt .
-  ?stmt psv:P569 ?value .
-  ?value wikibase:timePrecision ?precision .
-}
-"""
+if not {"person","nasid"}.issubset(h_ids):
+    raise RuntimeError(f"Unexpected P5380 headers: {h_ids}")
+if not {"person","label"}.issubset(h_labels):
+    raise RuntimeError(f"Unexpected label headers: {h_labels}")
+if not {"person","dob","precision","rank"}.issubset(h_dob):
+    raise RuntimeError(f"Unexpected DOB headers: {h_dob}")
 
-COUNT_EXACT_PRECISION = r"""
-PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-PREFIX p: <http://www.wikidata.org/prop/>
-PREFIX psv: <http://www.wikidata.org/prop/statement/value/>
-PREFIX wikibase: <http://wikiba.se/ontology#>
-SELECT DISTINCT ?person WHERE {
-  ?person wdt:P5380 ?nasid ;
-          p:P569 ?stmt .
-  ?stmt psv:P569 ?value .
-  ?value wikibase:timePrecision ?precision .
-  FILTER(?precision >= 11)
-}
-"""
+people=defaultdict(lambda:{"nasids":set(),"labels":set(),"statements":[]})
 
-diagnostics = {
-    "count_distinct_p5380": count_people(COUNT_P5380),
-    "count_with_truthy_wdt_p569": count_people(COUNT_WDT_P569),
-    "count_with_any_p_p569_statement": count_people(COUNT_P_P569),
-    "count_with_psv_p569_time_precision": count_people(COUNT_PSV_PRECISION),
-    "count_with_precision_11_or_better_unfiltered_rank": count_people(COUNT_EXACT_PRECISION),
-}
-
-raw = run_sparql(QUERY)
-raw_path = OUT / "wikidata_p5380_p569_raw.tsv"
-raw_path.write_bytes(raw)
-
-text = raw.decode("utf-8-sig")
-reader = csv.reader(text.splitlines(), delimiter="\t")
-rows = list(reader)
-if not rows:
-    raise RuntimeError("QLever returned no rows.")
-
-headers = [clean_header(x) for x in rows[0]]
-required = {"person", "nasid", "label", "dob", "precision", "rank"}
-if not required.issubset(headers):
-    raise RuntimeError(f"Unexpected TSV headers: {headers}")
-
-idx = {h: i for i, h in enumerate(headers)}
-people = defaultdict(lambda: {
-    "nasids": set(),
-    "labels": set(),
-    "statements": [],
-})
-
-for r in rows[1:]:
-    if not r:
-        continue
-    r = r + [""] * (len(headers) - len(r))
-    person = clean_term(r[idx["person"]])
+for r in id_rows:
+    person=r.get("person","")
     if not person:
         continue
-    d = people[person]
-    nasid = clean_term(r[idx["nasid"]])
-    label = clean_term(r[idx["label"]])
-    dob = clean_term(r[idx["dob"]])
-    precision = precision_int(r[idx["precision"]])
-    rank = clean_term(r[idx["rank"]])
-    if nasid:
-        d["nasids"].add(nasid)
-    if label:
-        d["labels"].add(label)
-    if dob and precision is not None:
-        d["statements"].append((dob, precision, rank))
+    if r.get("nasid"):
+        people[person]["nasids"].add(r["nasid"])
 
-collapsed = []
-for person, d in sorted(people.items()):
-    stmts = d["statements"]
-    exact = sorted({dob for dob, p, rank in stmts if p >= 11})
-    month = sorted({dob for dob, p, rank in stmts if p == 10})
-    year = sorted({dob for dob, p, rank in stmts if p == 9})
-    precisions = sorted({p for _, p, _ in stmts})
+for r in label_rows:
+    person=r.get("person","")
+    if person in people and r.get("label"):
+        people[person]["labels"].add(r["label"])
+
+for r in dob_rows:
+    person=r.get("person","")
+    if person not in people:
+        continue
+    p=precision_int(r.get("precision",""))
+    dob=r.get("dob","")
+    rank=r.get("rank","")
+    if dob and p is not None:
+        people[person]["statements"].append((dob,p,rank))
+
+collapsed=[]
+for person,d in sorted(people.items()):
+    stmts=d["statements"]
+    exact=sorted({dob for dob,p,rank in stmts if p>=11})
+    month=sorted({dob for dob,p,rank in stmts if p==10})
+    year=sorted({dob for dob,p,rank in stmts if p==9})
+    precisions=sorted({p for _,p,_ in stmts})
     collapsed.append({
-        "wikidata_uri": person,
-        "qid": person.rsplit("/", 1)[-1],
-        "nas_member_ids": "|".join(sorted(d["nasids"])),
-        "english_labels": "|".join(sorted(d["labels"])),
-        "has_non_deprecated_p569": int(bool(stmts)),
-        "max_birthdate_precision": max(precisions) if precisions else "",
-        "exact_day_values": "|".join(exact),
-        "exact_day_value_count": len(exact),
-        "exact_day_conflict": int(len(exact) > 1),
-        "month_precision_values": "|".join(month),
-        "year_precision_values": "|".join(year),
+        "wikidata_uri":person,
+        "qid":person.rsplit("/",1)[-1],
+        "nas_member_ids":"|".join(sorted(d["nasids"])),
+        "english_labels":"|".join(sorted(d["labels"])),
+        "has_non_deprecated_p569":int(bool(stmts)),
+        "max_birthdate_precision":max(precisions) if precisions else "",
+        "exact_day_values":"|".join(exact),
+        "exact_day_value_count":len(exact),
+        "exact_day_conflict":int(len(exact)>1),
+        "month_precision_values":"|".join(month),
+        "year_precision_values":"|".join(year),
     })
 
-out_csv = OUT / "nas_wikidata_dob_collapsed.csv"
-fields = list(collapsed[0].keys()) if collapsed else []
-with out_csv.open("w", encoding="utf-8-sig", newline="") as f:
-    w = csv.DictWriter(f, fieldnames=fields)
-    w.writeheader()
-    w.writerows(collapsed)
+out_csv=OUT/"nas_wikidata_dob_collapsed.csv"
+fields=list(collapsed[0].keys()) if collapsed else []
+with out_csv.open("w",encoding="utf-8-sig",newline="") as f:
+    w=csv.DictWriter(f,fieldnames=fields)
+    w.writeheader(); w.writerows(collapsed)
 
-n = len(collapsed)
-summary = {
-    "source": "Wikidata via QLever",
-    "endpoint": ENDPOINT,
-    "property_nas_id": "P5380",
-    "property_date_of_birth": "P569",
-    "wikidata_persons_with_p5380": n,
-    "diagnostics": diagnostics,
-    "persons_with_non_deprecated_p569": sum(int(x["has_non_deprecated_p569"]) for x in collapsed),
-    "persons_with_exact_day_precision_11_or_better": sum(int(x["exact_day_value_count"] > 0) for x in collapsed),
-    "persons_with_conflicting_exact_day_values": sum(int(x["exact_day_conflict"]) for x in collapsed),
-    "persons_without_english_label": sum(int(not x["english_labels"]) for x in collapsed),
-    "raw_result_rows": max(0, len(rows) - 1),
-    "bazi_variables_computed": 0,
-    "note": "Exact DOB availability requires Wikidata time precision >=11; deprecated birth-date statements are excluded. No BaZi variables are computed.",
+summary={
+    "source":"Wikidata via QLever",
+    "endpoint":ENDPOINT,
+    "query_strategy":"three independent mandatory queries joined locally: P5380 identity, English label, P569 statement/precision",
+    "property_nas_id":"P5380",
+    "property_date_of_birth":"P569",
+    "wikidata_persons_with_p5380":len(collapsed),
+    "persons_with_english_label":sum(bool(x["english_labels"]) for x in collapsed),
+    "persons_with_non_deprecated_p569":sum(int(x["has_non_deprecated_p569"]) for x in collapsed),
+    "persons_with_exact_day_precision_11_or_better":sum(int(x["exact_day_value_count"]>0) for x in collapsed),
+    "persons_with_conflicting_exact_day_values":sum(int(x["exact_day_conflict"]) for x in collapsed),
+    "raw_p5380_rows":len(id_rows),
+    "raw_label_rows":len(label_rows),
+    "raw_p569_rows":len(dob_rows),
+    "sample_labels":[x["english_labels"] for x in collapsed if x["english_labels"]][:5],
+    "bazi_variables_computed":0,
+    "note":"Exact DOB requires Wikidata time precision >=11. Deprecated P569 statements are excluded. No BaZi variables are computed."
 }
-(OUT / "summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
-print(json.dumps(summary, indent=2))
+(OUT/"summary.json").write_text(json.dumps(summary,indent=2,ensure_ascii=False),encoding="utf-8")
+print(json.dumps(summary,indent=2,ensure_ascii=False))
