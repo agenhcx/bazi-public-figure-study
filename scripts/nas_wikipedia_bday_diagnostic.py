@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import csv, datetime as dt, hashlib, html, json, re, time, urllib.parse, urllib.request
+import csv, datetime as dt, hashlib, html, json, re, time, urllib.parse, urllib.request, urllib.error
 from pathlib import Path
 
 INPUT=Path("data/nas_science_core_dob_crosswalk/nas_science_core_dob_crosswalk_v6.csv")
@@ -10,6 +10,7 @@ WIKIPEDIA_API="https://en.wikipedia.org/w/api.php"
 USER_AGENT="bazi-public-figure-study/1.0 (NAS DOB source validation; no BaZi computation)"
 VALIDATION_SAMPLE_N=300
 TITLE_BATCH=40
+BETWEEN_BATCH_SECONDS=1.0
 
 def read_csv(p):
     with p.open("r",encoding="utf-8-sig",newline="") as f: return list(csv.DictReader(f))
@@ -21,15 +22,28 @@ def as_int(v,default=0):
     try:return int(float(str(v)))
     except:return default
 
-def http_json(url,retries=5):
+def http_json(url,retries=8):
     last=None
     for a in range(retries):
         try:
             req=urllib.request.Request(url,headers={"User-Agent":USER_AGENT,"Accept":"application/json"})
-            with urllib.request.urlopen(req,timeout=120) as r: return json.loads(r.read().decode("utf-8"))
+            with urllib.request.urlopen(req,timeout=120) as r:
+                return json.loads(r.read().decode("utf-8"))
+        except urllib.error.HTTPError as e:
+            last=e
+            if a+1>=retries or e.code not in {429,500,502,503,504}:
+                break
+            retry_after=e.headers.get("Retry-After","").strip()
+            try:
+                delay=float(retry_after)
+            except Exception:
+                delay=10.0 if e.code==429 else min(30.0,2.0**a)
+            time.sleep(max(1.0,min(60.0,delay)))
         except Exception as e:
             last=e
-            if a+1<retries: time.sleep(min(20,2**a))
+            if a+1>=retries:
+                break
+            time.sleep(min(30.0,2.0**a))
     raise RuntimeError(f"HTTP failed: {url}\n{last}")
 
 def qlever_tsv(query):
@@ -90,7 +104,8 @@ def fetch_wikitext_batch(titles):
 def fetch_all_wikitext(titles):
     out={}; titles=sorted(set(titles))
     for i in range(0,len(titles),TITLE_BATCH):
-        out.update(fetch_wikitext_batch(titles[i:i+TITLE_BATCH])); time.sleep(0.15)
+        out.update(fetch_wikitext_batch(titles[i:i+TITLE_BATCH]))
+        time.sleep(BETWEEN_BATCH_SECONDS)
     return out
 
 MONTHS={m.lower():i+1 for i,m in enumerate(
