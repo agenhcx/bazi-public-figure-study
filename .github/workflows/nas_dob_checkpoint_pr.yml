@@ -11,6 +11,8 @@ on:
       - 'data/nas_science_core_dob_manual_supplement_v2.csv'
       - 'scripts/nas_manual_dob_supplement_v3.py'
       - 'data/nas_science_core_dob_manual_supplement_v3.csv'
+      - 'scripts/nas_manual_dob_supplement_v4.py'
+      - 'data/nas_science_core_dob_manual_supplement_v4.csv'
       - '.github/workflows/nas_dob_checkpoint_v8.yml'
 
 permissions:
@@ -58,6 +60,9 @@ jobs:
       - name: Apply audited deceased exact-DOB supplement v3
         run: python scripts/nas_manual_dob_supplement_v3.py
 
+      - name: Apply audited living exact-DOB supplement v4
+        run: python scripts/nas_manual_dob_supplement_v4.py
+
       - name: Build v8 checkpoint
         run: python scripts/nas_dob_checkpoint_v8.py
 
@@ -70,6 +75,10 @@ jobs:
             data/nas_science_core_dob_crosswalk/summary_v8.json
             data/nas_science_core_dob_crosswalk/summary_v9.json
             data/nas_science_core_dob_crosswalk/summary_v10.json
+            data/nas_science_core_dob_crosswalk/summary_v11.json
+            data/nas_science_core_dob_crosswalk/nas_science_core_dob_crosswalk_v11.csv
+            data/nas_science_core_dob_crosswalk/nas_science_core_dob_manual_supplement_log_v4.csv
+            data/nas_science_core_dob_manual_supplement_v4.csv
             data/nas_science_core_dob_crosswalk/nas_science_core_dob_crosswalk_v10.csv
             data/nas_science_core_dob_crosswalk/nas_science_core_dob_manual_supplement_log_v3.csv
             data/nas_science_core_dob_manual_supplement_v3.csv
