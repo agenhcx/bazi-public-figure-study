@@ -29,6 +29,9 @@ jobs:
       - name: Supplement exact DOB from DBpedia
         run: python scripts/nas_dbpedia_dob_supplement.py
 
+      - name: Diagnose machine-readable Wikipedia birth dates
+        run: python scripts/nas_wikipedia_bday_diagnostic.py
+
       - name: Upload DOB acquisition outputs
         uses: actions/upload-artifact@v4
         with:
