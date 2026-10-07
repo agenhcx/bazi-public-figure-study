@@ -33,6 +33,7 @@ jobs:
         run: python scripts/nas_dbpedia_dob_supplement.py
 
       - name: Diagnose machine-readable Wikipedia birth dates
+        continue-on-error: true
         run: python scripts/nas_wikipedia_bday_diagnostic.py
 
       - name: Apply audited manual DOB conflict review
