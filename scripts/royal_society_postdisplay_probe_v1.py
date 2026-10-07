@@ -6,7 +6,8 @@ from pathlib import Path
 OUT=Path("data/royal_society_postdisplay_probe_v1")
 BASE="https://royalsociety.org"
 DIRECTORY=BASE+"/fellows-directory/"
-MAINJS=BASE+"/assets/js/main.js"\nPOSTDISPLAY_CHUNK=BASE+"/assets/js/749.cc8a7755fca0c0232e7c.js"
+MAINJS=BASE+"/assets/js/main.js"
+POSTDISPLAY_CHUNK=BASE+"/assets/js/749.cc8a7755fca0c0232e7c.js"
 UA="bazi-public-figure-study/1.0 (Royal Society official roster protocol probe; no DOB/BaZi)"
 
 def fetch(url, accept="*/*"):
