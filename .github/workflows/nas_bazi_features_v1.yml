@@ -1,0 +1,45 @@
+name: NAS BaZi Features v1
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'scripts/nas_bazi_features_v1.py'
+      - '.github/workflows/nas_bazi_features_v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  derive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install pandas lunar-python
+      - name: Download frozen v16 checkpoint
+        uses: actions/download-artifact@v4
+        with:
+          name: nas-dob-v16-zanni-provenance
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 37860554354
+          path: data
+      - name: Derive preregistered mechanical BaZi features
+        run: python scripts/nas_bazi_features_v1.py
+      - name: Upload BaZi feature checkpoint
+        uses: actions/upload-artifact@v4
+        with:
+          name: nas-bazi-features-v1
+          path: |
+            data/nas_bazi_features_v1/nas_science_core_bazi_features_v1.csv
+            data/nas_bazi_features_v1/nas_bazi_boundary_cases_v1.csv
+            data/nas_bazi_features_v1/summary_nas_bazi_features_v1.json
+          if-no-files-found: error
