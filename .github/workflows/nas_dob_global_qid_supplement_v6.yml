@@ -1,0 +1,45 @@
+name: NAS DOB Global QID Supplement v6
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'scripts/nas_manual_dob_supplement_v6.py'
+      - 'data/nas_science_core_dob_manual_supplement_v6.csv'
+      - '.github/workflows/nas_dob_global_qid_supplement_v6.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  supplement:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Download frozen v12 checkpoint
+        uses: actions/download-artifact@v4
+        with:
+          name: nas-dob-v12-loc-supplement
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 37706406869
+          path: data
+      - name: Apply audited supplement v6
+        run: python scripts/nas_manual_dob_supplement_v6.py
+      - name: Upload v13 checkpoint
+        uses: actions/upload-artifact@v4
+        with:
+          name: nas-dob-v13-global-qid-supplement
+          path: |
+            data/nas_science_core_dob_crosswalk/nas_science_core_dob_crosswalk_v13.csv
+            data/nas_science_core_dob_crosswalk/nas_science_core_dob_manual_supplement_log_v6.csv
+            data/nas_science_core_dob_crosswalk/summary_v13.json
+            data/nas_science_core_dob_manual_supplement_v6.csv
+          if-no-files-found: error
