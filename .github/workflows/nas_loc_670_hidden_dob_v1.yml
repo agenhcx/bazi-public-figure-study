@@ -1,0 +1,44 @@
+name: NAS LOC 670 Hidden DOB v1
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'scripts/nas_loc_670_hidden_dob_v1.py'
+      - '.github/workflows/nas_loc_670_hidden_dob_v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Download frozen v14 checkpoint
+        uses: actions/download-artifact@v4
+        with:
+          name: nas-dob-v14-ambiguous-qid-supplement
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 37774904385
+          path: data
+      - name: Run LOC MARC hidden-DOB diagnostic
+        run: python scripts/nas_loc_670_hidden_dob_v1.py
+      - name: Upload outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: nas-loc-670-hidden-dob-v1
+          path: |
+            data/nas_science_core_dob_crosswalk/nas_loc_670_hidden_dob_v1.csv
+            data/nas_science_core_dob_crosswalk/nas_loc_670_hidden_dob_validation_conflicts_v1.csv
+            data/nas_science_core_dob_crosswalk/nas_loc_670_hidden_dob_candidates_v1.csv
+            data/nas_science_core_dob_crosswalk/summary_loc_670_hidden_dob_v1.json
+          if-no-files-found: error
