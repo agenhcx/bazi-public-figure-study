@@ -1,0 +1,43 @@
+name: NAS Ambiguous QID Affiliation v1
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'scripts/nas_ambiguous_qid_affiliation_v1.py'
+      - '.github/workflows/nas_ambiguous_qid_affiliation_v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Download frozen v13 checkpoint
+        uses: actions/download-artifact@v4
+        with:
+          name: nas-dob-v13-global-qid-supplement
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 37708652806
+          path: data
+      - name: Run ambiguous QID affiliation diagnostic
+        run: python scripts/nas_ambiguous_qid_affiliation_v1.py
+      - name: Upload outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: nas-ambiguous-qid-affiliation-v1
+          path: |
+            data/nas_science_core_dob_crosswalk/nas_ambiguous_qid_affiliation_v1.csv
+            data/nas_science_core_dob_crosswalk/nas_ambiguous_qid_affiliation_candidates_v1.csv
+            data/nas_science_core_dob_crosswalk/summary_ambiguous_qid_affiliation_v1.json
+          if-no-files-found: error
