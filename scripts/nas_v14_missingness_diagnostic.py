@@ -6,7 +6,11 @@ from pathlib import Path
 
 BASE=Path("data/nas_science_core_dob_crosswalk")
 INPUT=BASE/"nas_science_core_dob_crosswalk_v14.csv"
-WD=Path("data/nas_wikidata_dob_pilot/nas_wikidata_dob_collapsed.csv")
+WD_CANDIDATES=[
+    Path("data/nas_wikidata_dob_pilot/nas_wikidata_dob_collapsed.csv"),
+    Path("pilot_artifact/nas_wikidata_dob_pilot/nas_wikidata_dob_collapsed.csv"),
+]
+WD=next((p for p in WD_CANDIDATES if p.exists()),WD_CANDIDATES[0])
 OUT=BASE/"nas_v14_missingness_rows.csv"
 DECADE=BASE/"nas_v14_missingness_by_election_decade.csv"
 SECTION=BASE/"nas_v14_missingness_by_section.csv"
