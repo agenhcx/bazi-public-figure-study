@@ -1,0 +1,44 @@
+name: NAS Collection Closeout v1
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'scripts/nas_collection_closeout_v1.py'
+      - '.github/workflows/nas_collection_closeout_v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  closeout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Download frozen v16 checkpoint
+        uses: actions/download-artifact@v4
+        with:
+          name: nas-dob-v16-zanni-provenance
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 37860554354
+          path: data
+      - name: Run collection closeout diagnostic
+        run: python scripts/nas_collection_closeout_v1.py
+      - name: Upload closeout outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: nas-collection-closeout-v1
+          path: |
+            data/nas_science_core_dob_crosswalk/nas_v16_missingness_by_election_decade.csv
+            data/nas_science_core_dob_crosswalk/nas_v16_missingness_by_section.csv
+            data/nas_science_core_dob_crosswalk/nas_v16_missingness_by_living_status.csv
+            data/nas_science_core_dob_crosswalk/summary_nas_collection_closeout_v1.json
+          if-no-files-found: error
