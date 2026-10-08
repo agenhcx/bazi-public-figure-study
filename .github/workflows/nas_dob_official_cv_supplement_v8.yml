@@ -1,0 +1,45 @@
+name: NAS DOB Official CV Supplement v8
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'scripts/nas_manual_dob_supplement_v8.py'
+      - 'data/nas_science_core_dob_manual_supplement_v8.csv'
+      - '.github/workflows/nas_dob_official_cv_supplement_v8.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  supplement:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Download frozen v14 checkpoint
+        uses: actions/download-artifact@v4
+        with:
+          name: nas-dob-v14-ambiguous-qid-supplement
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 37774904385
+          path: data
+      - name: Apply audited supplement v8
+        run: python scripts/nas_manual_dob_supplement_v8.py
+      - name: Upload v15 checkpoint
+        uses: actions/upload-artifact@v4
+        with:
+          name: nas-dob-v15-official-cv-supplement
+          path: |
+            data/nas_science_core_dob_crosswalk/nas_science_core_dob_crosswalk_v15.csv
+            data/nas_science_core_dob_crosswalk/nas_science_core_dob_manual_supplement_log_v8.csv
+            data/nas_science_core_dob_crosswalk/summary_v15.json
+            data/nas_science_core_dob_manual_supplement_v8.csv
+          if-no-files-found: error
