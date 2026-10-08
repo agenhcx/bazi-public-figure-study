@@ -1,0 +1,39 @@
+name: NAS Pending Authority Search v1
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'scripts/nas_pending_authority_search_v1.py'
+      - 'data/nas_pending_wikipedia_dob_candidates_v1.csv'
+      - '.github/workflows/nas_pending_authority_search_v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  search:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Search LOC and GND authority records
+        run: python scripts/nas_pending_authority_search_v1.py
+
+      - name: Upload diagnostic
+        uses: actions/upload-artifact@v4
+        with:
+          name: nas-pending-authority-search-v1
+          path: |
+            data/nas_pending_authority_search_v1.csv
+            data/nas_pending_authority_search_summary_v1.json
+          if-no-files-found: error
