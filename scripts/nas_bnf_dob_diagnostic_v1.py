@@ -80,49 +80,81 @@ def fetch_entity(qid):
             if isinstance(v,str) and v.strip():vals.append(v.strip())
         return qid,{"ok":1,"p268":sorted(set(vals)),"error":"","url":url}
     except Exception as e:return qid,{"ok":0,"p268":[],"error":repr(e),"url":url}
-def parse_bnf_dates(text):
+
+def dates_from_jsonld(obj):
+    vals=set()
+    if isinstance(obj,dict):
+        for k,v in obj.items():
+            kl=str(k).lower()
+            if "dateofbirth" in kl or "birthdate" in kl:
+                stack=v if isinstance(v,list) else [v]
+                for x in stack:
+                    if isinstance(x,dict):
+                        for kk in ("@value","value","label"):
+                            if kk in x:
+                                d=exact_date(x.get(kk))
+                                if d:vals.add(d)
+                    else:
+                        d=exact_date(x)
+                        if d:vals.add(d)
+            vals.update(dates_from_jsonld(v))
+    elif isinstance(obj,list):
+        for x in obj:vals.update(dates_from_jsonld(x))
+    return vals
+
+def parse_bnf_dates_text(text):
     vals=set()
     pats=[
       r'"birthDate"\s*:\s*"([^"]+)"',
       r'"dateOfBirth"\s*:\s*"([^"]+)"',
-      r'itemprop=["\']birthdate["\'][^>]{0,300}?(?:content|datetime|value)=["\']([^"\']+)["\']',
-      r'(?:birthDate|dateOfBirth)[^0-9]{0,120}([12]\d{3}-\d{2}-\d{2})',
-      r'([12]\d{3}-\d{2}-\d{2})[^\n<]{0,100}(?:birthDate|dateOfBirth)',
+      r'(?:birthDate|dateOfBirth)[^0-9]{0,160}([12]\d{3}-\d{2}-\d{2})',
+      r'([12]\d{3}-\d{2}-\d{2})[^\n<]{0,140}(?:birthDate|dateOfBirth)',
     ]
     for p in pats:
         for x in re.findall(p,text,re.I|re.S):
             d=exact_date(x)
             if d:vals.add(d)
-    return sorted(vals)
+    return vals
+
 def fetch_bnf(p268):
     pid=p268.strip()
     if pid.lower().startswith("cb"):pid=pid[2:]
-    urls=[
-      f"https://data.bnf.fr/ark:/12148/cb{urllib.parse.quote(pid)}",
-      f"https://data.bnf.fr/en/ark:/12148/cb{urllib.parse.quote(pid)}",
+    base=f"https://data.bnf.fr/ark:/12148/cb{urllib.parse.quote(pid)}"
+    endpoints=[
+      (base+"/rdf.jsonld","application/ld+json,application/json;q=0.9,*/*;q=0.1","jsonld"),
+      (base+".json","application/json,*/*;q=0.1","json"),
+      (base,"text/html,application/xhtml+xml;q=0.9,*/*;q=0.8","html"),
     ]
     errors=[]
-    for url in urls:
-        st,data,err=get(url,"text/html,application/xhtml+xml;q=0.9,*/*;q=0.8")
+    saw_data=0
+    for url,accept,kind in endpoints:
+        st,data,err=get(url,accept)
         if err:errors.append(f"{url}: {err}")
-        if data:
-            try:text=data.decode("utf-8","ignore")
-            except:text=str(data)
-            dates=parse_bnf_dates(text)
-            if dates:return p268,{"ok":1,"dates":dates,"url":url,"error":" || ".join(errors)}
-    return p268,{"ok":0,"dates":[],"url":urls[0],"error":" || ".join(errors)}
+        if not data:continue
+        saw_data=1
+        dates=set()
+        try:
+            if kind in {"jsonld","json"}:
+                obj=json.loads(data.decode("utf-8","ignore"))
+                dates.update(dates_from_jsonld(obj))
+            else:
+                text=data.decode("utf-8","ignore")
+                dates.update(parse_bnf_dates_text(text))
+        except Exception as e:
+            errors.append(f"{url}: parse {repr(e)}")
+        if dates:
+            return p268,{"ok":1,"dates":sorted(dates),"url":url,"format":kind,"error":" || ".join(errors)}
+    return p268,{"ok":int(saw_data),"dates":[],"url":base+"/rdf.jsonld","format":"","error":" || ".join(errors)}
 
 rows=read_csv(INPUT)
 if len(rows)!=3051:raise RuntimeError(f"Expected 3051 rows, got {len(rows)}")
 unresolved=[r for r in rows if not present(r.get("final_exact_dob"))]
 
-# unresolved targets with conservative/reliable identity
 targets=[]
 for r in unresolved:
     q,b=reliable_qid(r)
     if q:targets.append((r,q,b))
 
-# deterministic validation sample from already-known exact rows with reliable QID
 known=[]
 for r in rows:
     if not present(r.get("final_exact_dob")):continue
@@ -146,7 +178,7 @@ with ThreadPoolExecutor(max_workers=6) as ex:
     for f in as_completed(fs):
         p=fs[f]
         try:pp,res=f.result();bnf[pp]=res
-        except Exception as e:bnf[p]={"ok":0,"dates":[],"url":"","error":repr(e)}
+        except Exception as e:bnf[p]={"ok":0,"dates":[],"url":"","format":"","error":repr(e)}
 
 def combined_dates(q):
     vals=set()
@@ -187,6 +219,7 @@ for r,q,b in targets:
       "age_at_election":age if age is not None else "","age_plausible":ageok,
       "candidate_for_manual_review":int(bool(cand) and not conflict and ageok==1),
       "bnf_urls":"|".join(bnf[p].get("url","") for p in ps if p in bnf),
+      "bnf_formats":"|".join(sorted({bnf[p].get("format","") for p in ps if p in bnf and bnf[p].get("format","")})),
       "fetch_errors":" || ".join([entities.get(q,{}).get("error","")]+[bnf[p].get("error","") for p in ps if p in bnf]).strip(" |")
     }
     out.append(row)
@@ -203,6 +236,8 @@ summary={
  "validation_sample_rows":len(known),
  "wikidata_entity_fetch_successes":sum(int(entities[q]["ok"]) for q in all_qids if q in entities),
  "unique_p268_ids":len(all_p268),
+ "bnf_records_with_any_response":sum(int(bnf[p].get("ok",0)) for p in all_p268 if p in bnf),
+ "bnf_records_with_exact_date":sum(bool(bnf[p].get("dates")) for p in all_p268 if p in bnf),
  "validation_rows_with_p268":sum(bool(entities.get(q,{}).get("p268")) for _,q,_ in known),
  "validation_comparable_exact_rows":comparable,
  "validation_exact_matches":matches,
@@ -212,7 +247,7 @@ summary={
  "unresolved_rows_with_unique_bnf_exact_candidate":sum(bool(x["bnf_candidate_dob"]) and not int(x["bnf_exact_conflict"]) for x in out),
  "candidates_for_manual_review":len(cands),
  "bazi_variables_computed":0,
- "decision_note":"Diagnostic only. BnF dates are not auto-accepted. Validation on frozen known exact DOBs is reported first; unresolved candidates require identity/provenance review before any supplement."
+ "decision_note":"Diagnostic only. BnF structured RDF/JSON-LD endpoints are queried before HTML fallback. BnF dates are not auto-accepted; validation on frozen known exact DOBs is reported first."
 }
 SUMMARY.write_text(json.dumps(summary,ensure_ascii=False,indent=2),encoding="utf-8")
 print(json.dumps(summary,ensure_ascii=False,indent=2))
