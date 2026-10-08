@@ -1,0 +1,45 @@
+name: NAS Zanni Provenance Correction v1
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'scripts/nas_zanni_provenance_correction_v1.py'
+      - 'data/nas_science_core_dob_provenance_correction_v1.csv'
+      - '.github/workflows/nas_zanni_provenance_correction_v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  correction:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Download frozen v15 checkpoint
+        uses: actions/download-artifact@v4
+        with:
+          name: nas-dob-v15-official-cv-supplement
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 37860207387
+          path: data
+      - name: Apply provenance correction
+        run: python scripts/nas_zanni_provenance_correction_v1.py
+      - name: Upload v16 checkpoint
+        uses: actions/upload-artifact@v4
+        with:
+          name: nas-dob-v16-zanni-provenance
+          path: |
+            data/nas_science_core_dob_crosswalk/nas_science_core_dob_crosswalk_v16.csv
+            data/nas_science_core_dob_crosswalk/nas_science_core_dob_provenance_correction_log_v1.csv
+            data/nas_science_core_dob_crosswalk/summary_v16.json
+            data/nas_science_core_dob_provenance_correction_v1.csv
+          if-no-files-found: error
