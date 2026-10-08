@@ -1,0 +1,21 @@
+{
+  "dataset": "NAS science-core exact-DOB collection freeze v16",
+  "cohort_rows": 3051,
+  "exact_dob_rows": 2238,
+  "exact_dob_coverage": 0.73353,
+  "unresolved_rows": 813,
+  "deceased_rows": 1360,
+  "deceased_exact_dob_rows": 1360,
+  "living_rows": 1691,
+  "living_exact_dob_rows": 878,
+  "living_exact_dob_coverage": 0.519219,
+  "source_checkpoint": {
+    "workflow_run_id": 37860554354,
+    "artifact_id": 11586500739,
+    "artifact_name": "nas-dob-v16-zanni-provenance",
+    "artifact_zip_sha256": "7f2b86bb117fc617b83250309642d24d384b2d5461fccc8e7f8e18f279a0603b",
+    "v16_csv_sha256": "f577b22bf646b4b5355a133cc265d4d9ccf253f501bac98b6afddce874fc4561"
+  },
+  "collection_stop_rule": "Freeze systematic exact-DOB acquisition at v16 unless a new high-authority source or a small manually audited correction set is identified. Any post-freeze change must be versioned and documented before outcome analysis.",
+  "bazi_variables_computed": 0
+}
