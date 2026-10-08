@@ -1,0 +1,34 @@
+name: NAS Ambiguous QID Provenance v1
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'scripts/nas_ambiguous_qid_provenance_v1.py'
+      - 'data/nas_ambiguous_qid_affiliation_candidates_v1.csv'
+      - '.github/workflows/nas_ambiguous_qid_provenance_v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  provenance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Audit candidate provenance
+        run: python scripts/nas_ambiguous_qid_provenance_v1.py
+      - name: Upload provenance outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: nas-ambiguous-qid-provenance-v1
+          path: |
+            data/nas_ambiguous_qid_provenance_v1.csv
+            data/nas_ambiguous_qid_provenance_summary_v1.json
+          if-no-files-found: error
