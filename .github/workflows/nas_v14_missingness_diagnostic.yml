@@ -30,6 +30,14 @@ jobs:
           repository: agenhcx/bazi-public-figure-study
           run-id: 37774904385
           path: data
+      - name: Download frozen Wikidata pilot
+        uses: actions/download-artifact@v4
+        with:
+          name: nas-dob-acquisition
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 37778826271
+          path: pilot_artifact
       - name: Run v14 missingness diagnostic
         run: python scripts/nas_v14_missingness_diagnostic.py
       - name: Upload outputs
