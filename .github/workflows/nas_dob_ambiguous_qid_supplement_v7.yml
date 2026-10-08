@@ -1,0 +1,45 @@
+name: NAS DOB Ambiguous QID Supplement v7
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'scripts/nas_manual_dob_supplement_v7.py'
+      - 'data/nas_science_core_dob_manual_supplement_v7.csv'
+      - '.github/workflows/nas_dob_ambiguous_qid_supplement_v7.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  supplement:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Download frozen v13 checkpoint
+        uses: actions/download-artifact@v4
+        with:
+          name: nas-dob-v13-global-qid-supplement
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 37708652806
+          path: data
+      - name: Apply audited supplement v7
+        run: python scripts/nas_manual_dob_supplement_v7.py
+      - name: Upload v14 checkpoint
+        uses: actions/upload-artifact@v4
+        with:
+          name: nas-dob-v14-ambiguous-qid-supplement
+          path: |
+            data/nas_science_core_dob_crosswalk/nas_science_core_dob_crosswalk_v14.csv
+            data/nas_science_core_dob_crosswalk/nas_science_core_dob_manual_supplement_log_v7.csv
+            data/nas_science_core_dob_crosswalk/summary_v14.json
+            data/nas_science_core_dob_manual_supplement_v7.csv
+          if-no-files-found: error
