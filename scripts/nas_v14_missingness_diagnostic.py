@@ -98,6 +98,7 @@ counts=Counter(r["missingness_bucket"] for r in out)
 ucounts=Counter(r["missingness_bucket"] for r in unresolved)
 summary={
  "dataset":"NAS v14 exact-DOB missingness diagnostic",
+ "frozen_wikidata_pilot_run_id":37778826271,
  "science_core_rows":len(out),
  "exact_dob_rows":sum(r["has_exact_dob"] for r in out),
  "exact_dob_coverage":round(sum(r["has_exact_dob"] for r in out)/len(out),6),
