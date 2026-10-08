@@ -1,0 +1,34 @@
+name: NAS Global QID Provenance v1
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'scripts/nas_global_qid_authority_provenance_v1.py'
+      - 'data/nas_global_qid_authority_candidates_v1.csv'
+      - '.github/workflows/nas_global_qid_authority_provenance_v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  provenance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Audit LOC and GND provenance
+        run: python scripts/nas_global_qid_authority_provenance_v1.py
+      - name: Upload provenance audit
+        uses: actions/upload-artifact@v4
+        with:
+          name: nas-global-qid-authority-provenance-v1
+          path: |
+            data/nas_global_qid_authority_provenance_v1.csv
+            data/nas_global_qid_authority_provenance_summary_v1.json
+          if-no-files-found: error
