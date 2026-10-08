@@ -1,0 +1,44 @@
+name: NAS v14 Missingness Diagnostic
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'scripts/nas_v14_missingness_diagnostic.py'
+      - '.github/workflows/nas_v14_missingness_diagnostic.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Download frozen v14 checkpoint
+        uses: actions/download-artifact@v4
+        with:
+          name: nas-dob-v14-ambiguous-qid-supplement
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 37774904385
+          path: data
+      - name: Run v14 missingness diagnostic
+        run: python scripts/nas_v14_missingness_diagnostic.py
+      - name: Upload outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: nas-v14-missingness-diagnostic
+          path: |
+            data/nas_science_core_dob_crosswalk/nas_v14_missingness_rows.csv
+            data/nas_science_core_dob_crosswalk/nas_v14_missingness_by_election_decade.csv
+            data/nas_science_core_dob_crosswalk/nas_v14_missingness_by_section.csv
+            data/nas_science_core_dob_crosswalk/summary_v14_missingness.json
+          if-no-files-found: error
