@@ -127,7 +127,7 @@ def parse_textual_date(s,election_year):
 def marker_dates(text,election_year):
     vals=set();evidence=[]
     # Only inspect local windows following explicit birth markers, avoiding publication dates.
-    for m in re.finditer(r"(?i)\b(?:b(?:orn)?\.?|birth\s*date|date\s*of\s*birth)\s*[:=]?\s*",text):
+    for m in re.finditer(r"(?i)(?:\\bb\\.(?=\\s|\\d)|\\bborn\\b|\\bbirth\\s*date\\b|\\bdate\\s*of\\s*birth\\b)\\s*[:=]?\\s*",text):
         w=text[m.end():m.end()+55]
         candidates=[]
         for p in [
