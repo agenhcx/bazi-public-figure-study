@@ -1,0 +1,43 @@
+name: NAS Global QID Authority Gap v1
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'scripts/nas_global_qid_authority_gap_v1.py'
+      - '.github/workflows/nas_global_qid_authority_gap_v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Download frozen v12 checkpoint
+        uses: actions/download-artifact@v4
+        with:
+          name: nas-dob-v12-loc-supplement
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 37706406869
+          path: data
+      - name: Run global-QID authority gap diagnostic
+        run: python scripts/nas_global_qid_authority_gap_v1.py
+      - name: Upload outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: nas-global-qid-authority-gap-v1
+          path: |
+            data/nas_science_core_dob_crosswalk/nas_global_qid_authority_gap_v1.csv
+            data/nas_science_core_dob_crosswalk/nas_global_qid_authority_gap_candidates_v1.csv
+            data/nas_science_core_dob_crosswalk/summary_global_qid_authority_gap_v1.json
+          if-no-files-found: error
