@@ -67,7 +67,7 @@ def crawl(category):
     rawdir=OUT/"raw_api"/safe
     rawdir.mkdir(parents=True,exist_ok=True)
 
-    raw=post({"type":category,"yearTo":"2025","page":1})
+    raw=post({"type":category,"yearFrom":"1962","yearTo":"2025","page":1})
     text=raw.decode("utf-8",errors="replace")
     pages=max_page(text)
     if not pages: raise RuntimeError(f"{category}: could not determine page count")
@@ -77,7 +77,7 @@ def crawl(category):
     expected_full_page=None
     for page in range(1,pages+1):
         if page>1:
-            raw=post({"type":category,"yearTo":"2025","page":page})
+            raw=post({"type":category,"yearFrom":"1962","yearTo":"2025","page":page})
             text=raw.decode("utf-8",errors="replace")
         observed_max=max_page(text)
         if observed_max!=pages:
@@ -122,7 +122,7 @@ def main():
         "dataset":"Royal Society official current Fellows Directory roster v1",
         "created_utc":dt.datetime.now(dt.timezone.utc).isoformat(),
         "source_endpoint":ENDPOINT,
-        "request_protocol":"POST JSON; fields type, yearTo=2025, and page, matching official PostDisplay frontend",
+        "request_protocol":"POST JSON; fields type, yearFrom=1962, yearTo=2025, and page, matching a validated official PostDisplay request",
         "election_year_cutoff":2025,
         "categories":["Fellow","Foreign Member"],
         "primary_academy_rule":"Fellow only; Foreign Member retained separately",
