@@ -18,7 +18,7 @@ def api(params,retries=8):
             req=urllib.request.Request(API+"?"+qs,headers={"User-Agent":UA,"Accept":"application/json"})
             with urllib.request.urlopen(req,timeout=60) as r:
                 data=json.load(r)
-                time.sleep(1.0)
+                time.sleep(0.9)
                 return data
         except urllib.error.HTTPError as e:
             last=e
@@ -105,8 +105,9 @@ def main():
     current=sorted(current,key=lambda r:r["cohort_key"])
     rows=[r for i,r in enumerate(current) if i%a.shard_count==a.shard_index]
 
-    rs_q=item_id("Royal Society")
-    frs_q=item_id("Fellow of the Royal Society")
+    # Fixed Wikidata identifiers established by the successful 120-person diagnostic.
+    rs_q="Q123885"
+    frs_q="Q15631401"
     print("Royal Society item",rs_q,"FRS item",frs_q,"shard",a.shard_index,"rows",len(rows))
 
     searches={}; all_ids=[]
@@ -140,7 +141,7 @@ def main():
         ref_urls=sorted({u for d in exact for rr in d["references"] for u in rr["P854"]})
         stated_in=sorted({q for d in exact for rr in d["references"] for q in rr["P248"]})
         out.append({
-          "cohort_key":r["cohort_key"],"record_id":r["record_id"],"display_name":r["display_name"],
+          "cohort_key":r["cohort_key"],"record_id":r["source_id"],"display_name":r["display_name"],
           "election_year":r.get("election_year",""),"source_url":r.get("source_url",""),
           "wikidata_qid":best["id"] if resolved else "",
           "locator_confidence":"high_membership_exact_name" if high else ("medium_exact_name_science_rank1" if medium else "unresolved"),
