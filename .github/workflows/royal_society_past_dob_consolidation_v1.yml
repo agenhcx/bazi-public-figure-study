@@ -1,0 +1,38 @@
+name: Royal Society Past DOB Consolidation v1
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/royal_society_past_dob_consolidate_v1.py'
+      - '.github/workflows/royal_society_past_dob_consolidation_v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  consolidate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: royal-society-past-dob-official-v1-chunk-*
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 37924077556
+          path: data/royal_society_past_dob_official_v1_inputs
+          merge-multiple: false
+      - name: Consolidate official past-Fellow DOB collection
+        run: python scripts/royal_society_past_dob_consolidate_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: royal-society-past-dob-consolidated-v1
+          path: data/royal_society_past_dob_official_v1_consolidated/
+          if-no-files-found: error
