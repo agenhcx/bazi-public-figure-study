@@ -1,0 +1,38 @@
+name: Royal Society Historical By-Year v2
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/royal_society_historical_by_year_v2.py'
+      - '.github/workflows/royal_society_historical_by_year_v2.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  acquire:
+    strategy:
+      fail-fast: false
+      matrix:
+        range:
+          - { start: 1660, end: 1799 }
+          - { start: 1800, end: 1899 }
+          - { start: 1900, end: 1949 }
+          - { start: 1950, end: 2025 }
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Acquire Royal Society past Fellows by election year
+        run: python scripts/royal_society_historical_by_year_v2.py --start-year ${{ matrix.range.start }} --end-year ${{ matrix.range.end }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: royal-society-historical-by-year-v2-${{ matrix.range.start }}-${{ matrix.range.end }}
+          path: data/royal_society_historical_by_year_v2/${{ matrix.range.start }}_${{ matrix.range.end }}/
+          if-no-files-found: error
