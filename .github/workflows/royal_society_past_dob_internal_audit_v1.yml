@@ -14,8 +14,12 @@ permissions:
 
 jobs:
   audit:
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0,1,2]
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -29,9 +33,9 @@ jobs:
           run-id: 37929852241
           path: data/royal_society_past_dob_audit_inputs_v1
       - name: Audit conflicts and retry prior network failures
-        run: python scripts/royal_society_past_dob_internal_audit_v1.py
+        run: python scripts/royal_society_past_dob_internal_audit_v1.py --shard-index ${{ matrix.shard }} --shard-count 3
       - uses: actions/upload-artifact@v4
         with:
-          name: royal-society-past-dob-internal-audit-v1
-          path: data/royal_society_past_dob_internal_audit_v1/
+          name: royal-society-past-dob-internal-audit-v1-shard-${{ matrix.shard }}
+          path: data/royal_society_past_dob_internal_audit_v1/shard_0${{ matrix.shard }}_of_03/
           if-no-files-found: error
