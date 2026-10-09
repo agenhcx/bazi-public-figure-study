@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import csv, json, re, time, urllib.parse, urllib.request
+import csv, json, re, time, urllib.parse, urllib.request, urllib.error
 from pathlib import Path
 from collections import Counter
 
@@ -15,17 +15,36 @@ SCI_WORDS=("scientist","physicist","chemist","biologist","mathematician","engine
 def read_csv(p):
     with p.open("r",encoding="utf-8-sig",newline="") as f:return list(csv.DictReader(f))
 
-def api(params,retries=5):
+def api(params,retries=8):
+    params=dict(params)
+    params.setdefault("maxlag",5)
     qs=urllib.parse.urlencode(params,doseq=True)
     last=None
     for a in range(retries):
         try:
             req=urllib.request.Request(API+"?"+qs,headers={"User-Agent":UA,"Accept":"application/json"})
             with urllib.request.urlopen(req,timeout=60) as r:
-                return json.load(r)
+                data=json.load(r)
+                time.sleep(0.65)
+                return data
+        except urllib.error.HTTPError as e:
+            last=e
+            if e.code==429 and a+1<retries:
+                ra=e.headers.get("Retry-After","")
+                try: wait=float(ra)
+                except: wait=min(60,8*(a+1))
+                time.sleep(max(8,min(90,wait)))
+                continue
+            if a+1<retries:
+                time.sleep(min(30,2**a))
+                continue
+            raise
         except Exception as e:
             last=e
-            if a+1<retries:time.sleep(min(12,2**a))
+            if a+1<retries:
+                time.sleep(min(30,2**a))
+                continue
+            raise
     raise RuntimeError(repr(last))
 
 def norm(s):
@@ -119,7 +138,6 @@ def main():
         search_results[(kind,r["cohort_key"])]=xs
         all_ids.extend(x["id"] for x in xs)
         if i%20==0:print("searched",i,"/",len(sample))
-        time.sleep(0.08)
 
     ents=batch_entities(all_ids)
     rows=[]
