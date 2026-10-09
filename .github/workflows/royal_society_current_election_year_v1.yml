@@ -1,0 +1,37 @@
+name: Royal Society Current Election Year v1
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/royal_society_current_election_year_v1.py'
+      - '.github/workflows/royal_society_current_election_year_v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  enrich:
+    strategy:
+      fail-fast: false
+      matrix:
+        range:
+          - { start: 1962, end: 1979 }
+          - { start: 1980, end: 1999 }
+          - { start: 2000, end: 2012 }
+          - { start: 2013, end: 2025 }
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Enrich current Fellows with election year
+        run: python scripts/royal_society_current_election_year_v1.py --start-year ${{ matrix.range.start }} --end-year ${{ matrix.range.end }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: royal-society-current-election-year-v1-${{ matrix.range.start }}-${{ matrix.range.end }}
+          path: data/royal_society_current_election_year_v1/${{ matrix.range.start }}_${{ matrix.range.end }}/
+          if-no-files-found: error
