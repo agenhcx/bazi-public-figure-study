@@ -1,0 +1,35 @@
+name: Royal Society Current Wikidata Locator v1
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/royal_society_current_wikidata_locator_v1.py'
+      - '.github/workflows/royal_society_current_wikidata_locator_v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  locate:
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        shard: [0,1,2,3,4,5,6,7]
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run current-Fellow Wikidata locator shard
+        run: python scripts/royal_society_current_wikidata_locator_v1.py --shard-index ${{ matrix.shard }} --shard-count 8
+      - uses: actions/upload-artifact@v4
+        with:
+          name: royal-society-current-wikidata-locator-v1-shard-${{ matrix.shard }}
+          path: data/royal_society_current_wikidata_locator_v1/shard_0${{ matrix.shard }}_of_08/
+          if-no-files-found: error
