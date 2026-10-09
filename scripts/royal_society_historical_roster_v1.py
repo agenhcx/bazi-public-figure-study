@@ -19,7 +19,7 @@ from urllib.parse import urljoin, urlparse, parse_qs
 BASE="https://catalogues.royalsociety.org"
 SEARCH=BASE+"/calmview/personsearch.aspx?src=CalmView.Persons"
 OUT=Path("data/royal_society_historical_roster_v1")
-UA="bazi-public-figure-study/1.0 (Royal Society official historical roster acquisition; no DOB/BaZi)"
+UA="bazi-public-figure-study/1.0 (Royal Society official historical roster acquisition; no DOB/BaZi)"\n# GET-next navigation v2: avoid repeated ASP.NET postbacks that triggered 403 throttling.
 
 MEMBERSHIP="ctl00$main$DSCoverySearch1$ctl00$SearchText$MembershipCategory_default"
 SEARCHBTN="ctl00$main$DSCoverySearch1$ctl01$Button1"
