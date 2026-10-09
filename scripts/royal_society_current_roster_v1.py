@@ -90,6 +90,10 @@ def crawl(category):
                 pages=observed_max
         part=parse_cards(text,category,page)
         if not part:
+            if page > initial_pages:
+                print(f"  trailing empty page {page}; treating page {page-1} as final")
+                pages=page-1
+                break
             raise RuntimeError(f"{category}: no person cards on page {page}")
         if page==1: expected_full_page=len(part)
         if page<pages and len(part)>expected_full_page:
@@ -124,7 +128,7 @@ def main():
     if OUT.exists() and any(OUT.iterdir()):
         raise RuntimeError(f"Output directory nonempty: {OUT}")
     OUT.mkdir(parents=True,exist_ok=True)
-    res=[crawl("Fellow"),crawl("Foreign Member")]
+    res=[crawl("Fellow")]
     manifest={
         "study":"Professor -> Academy -> Nobel/Fields academic-selection study",
         "dataset":"Royal Society official current Fellows Directory roster v1",
@@ -132,8 +136,8 @@ def main():
         "source_endpoint":ENDPOINT,
         "request_protocol":"POST JSON; fields type, yearFrom=1962, yearTo=2025, and page, matching a validated official PostDisplay request",
         "election_year_cutoff":2025,
-        "categories":["Fellow","Foreign Member"],
-        "primary_academy_rule":"Fellow only; Foreign Member retained separately",
+        "categories":["Fellow"],
+        "primary_academy_rule":"Fellow only. Foreign Member is excluded from the primary UK cohort and deferred to a separate optional acquisition.",
         "identity_key":"Royal Society people profile numeric ID/profile URL",
         "dob_lookup_performed":0,"bazi_variables_computed":0,
         "results":res,
