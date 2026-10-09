@@ -1,0 +1,49 @@
+name: Royal Society Past DOB Closeout v1
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/royal_society_past_dob_closeout_v1.py'
+      - '.github/workflows/royal_society_past_dob_closeout_v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  closeout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: royal-society-past-dob-consolidated-v1
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 37929852241
+          path: data/royal_society_past_dob_closeout_inputs_v1/consolidated
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: royal-society-past-dob-internal-audit-v1-shard-*
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 37932008597
+          path: data/royal_society_past_dob_closeout_inputs_v1/audit
+          merge-multiple: false
+
+      - name: Close out official Royal Society past-Fellow DOB pass
+        run: python scripts/royal_society_past_dob_closeout_v1.py
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: royal-society-past-dob-closeout-v1
+          path: data/royal_society_past_dob_closeout_v1/
+          if-no-files-found: error
