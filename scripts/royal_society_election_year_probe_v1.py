@@ -5,6 +5,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 
 OUT=Path("data/royal_society_election_year_probe_v1")
+# Independent small queries avoid long-session CalmView throttling.
 URL="https://catalogues.royalsociety.org/calmview/personsearch.aspx?src=CalmView.Persons"
 UA="bazi-public-figure-study/1.0 (Royal Society election-year roster probe; no DOB/BaZi)"
 MEMBERSHIP="ctl00$main$DSCoverySearch1$ctl00$SearchText$MembershipCategory_default"
