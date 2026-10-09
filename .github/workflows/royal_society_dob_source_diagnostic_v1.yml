@@ -1,0 +1,54 @@
+name: Royal Society DOB Source Diagnostic v1
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/royal_society_dob_source_diagnostic_v1.py'
+      - '.github/workflows/royal_society_dob_source_diagnostic_v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Download frozen Royal Society roster
+        uses: actions/download-artifact@v4
+        with:
+          name: royal-society-roster-freeze-v1
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 37922710777
+          path: data/royal_society_roster_freeze_v1
+
+      - name: Persist frozen roster on the collection branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/royal_society_roster_freeze_v1
+          if ! git diff --cached --quiet; then
+            git commit -m "Persist Royal Society roster freeze v1"
+            git push origin HEAD:${{ github.head_ref }}
+          fi
+
+      - name: Diagnose official Royal Society DOB sources
+        run: python scripts/royal_society_dob_source_diagnostic_v1.py
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: royal-society-dob-source-diagnostic-v1
+          path: data/royal_society_dob_source_diagnostic_v1/
+          if-no-files-found: error
