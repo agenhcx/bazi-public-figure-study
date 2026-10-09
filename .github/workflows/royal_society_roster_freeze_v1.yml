@@ -1,0 +1,49 @@
+name: Royal Society Roster Freeze v1
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/royal_society_roster_freeze_v1.py'
+      - '.github/workflows/royal_society_roster_freeze_v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  freeze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: royal-society-roster-consolidated-v1
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 37921031289
+          path: data/royal_society_freeze_inputs_v1/consolidated
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: royal-society-current-election-year-v1-*
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 37921841583
+          path: data/royal_society_freeze_inputs_v1/current-ey
+          merge-multiple: false
+
+      - name: Audit and freeze Royal Society primary Fellow roster
+        run: python scripts/royal_society_roster_freeze_v1.py
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: royal-society-roster-freeze-v1
+          path: data/royal_society_roster_freeze_v1/
+          if-no-files-found: error
