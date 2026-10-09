@@ -1,0 +1,34 @@
+name: Royal Society Historical Missing Years Retry
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/royal_society_historical_by_year_v2.py'
+      - '.github/workflows/royal_society_historical_missing_years_retry.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  retry:
+    strategy:
+      fail-fast: false
+      matrix:
+        year: [1821, 1841, 1956]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Retry one missing Royal Society election year
+        run: python scripts/royal_society_historical_by_year_v2.py --start-year ${{ matrix.year }} --end-year ${{ matrix.year }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: royal-society-historical-retry-${{ matrix.year }}
+          path: data/royal_society_historical_by_year_v2/${{ matrix.year }}_${{ matrix.year }}/
+          if-no-files-found: error
