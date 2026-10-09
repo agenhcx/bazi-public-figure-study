@@ -7,6 +7,7 @@ on:
     paths:
       - 'scripts/royal_society_current_roster_v1.py'
       - 'scripts/royal_society_historical_source_probe_v2.py'
+      - 'scripts/royal_society_historical_roster_v1.py'
       - '.github/workflows/royal_society_roster_v2.yml'
   workflow_dispatch:
 
@@ -44,4 +45,20 @@ jobs:
         with:
           name: royal-society-historical-source-probe-v2
           path: data/royal_society_historical_source_probe_v2/
+          if-no-files-found: error
+
+  historical-roster:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Acquire historical Fellow roster from CalmView
+        run: python scripts/royal_society_historical_roster_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: royal-society-historical-roster-v2
+          path: data/royal_society_historical_roster_v1/
           if-no-files-found: error
