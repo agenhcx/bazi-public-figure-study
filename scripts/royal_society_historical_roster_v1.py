@@ -20,6 +20,7 @@ BASE="https://catalogues.royalsociety.org"
 SEARCH=BASE+"/calmview/personsearch.aspx?src=CalmView.Persons"
 OUT=Path("data/royal_society_historical_roster_v1")
 UA="bazi-public-figure-study/1.0 (Royal Society official historical roster acquisition; no DOB/BaZi)"
+# GET-next navigation v2: avoid repeated ASP.NET postbacks that triggered 403 throttling.
 
 MEMBERSHIP="ctl00$main$DSCoverySearch1$ctl00$SearchText$MembershipCategory_default"
 SEARCHBTN="ctl00$main$DSCoverySearch1$ctl01$Button1"
@@ -250,18 +251,16 @@ def crawl_category(category):
         rows.extend(part)
 
         if b>=total:break
-        # Follow the browser's real ASP.NET behavior. The visible Next href is
-        # only a fallback; onclick calls __doPostBack with current VIEWSTATE.
-        # Reusing the current page's fresh state avoids CalmView session paging
-        # resetting to an earlier range.
-        state=hidden_fields(raw)
-        if "__VIEWSTATE" not in state or "__EVENTVALIDATION" not in state:
-            raise RuntimeError(f"{category}: missing ASP.NET state on page {page_no}")
-        state["__EVENTTARGET"]="ctl00$main$TopPager$ctl22"
-        state["__EVENTARGUMENT"]=""
-        raw,url,status,headers=request(op,url,state,referer=url)
+        # Follow the visible server-generated Next URL instead of repeated
+        # ASP.NET postbacks. In prior diagnostics, the postback route triggered
+        # HTTP 403 after six pages, while each Next link carries a fresh action
+        # token intended for browser navigation.
+        next_url=find_next(text,url)
+        if not next_url:
+            raise RuntimeError(f"{category}: missing Next link on page {page_no} before total reached")
+        raw,url,status,headers=request(op,next_url,referer=url)
         page_no+=1
-        time.sleep(0.08)
+        time.sleep(0.35)
 
     ids=[r["record_id"] for r in rows]
     if len(rows)!=total:
@@ -295,7 +294,7 @@ def main():
         raise RuntimeError(f"Output directory already exists and is not empty: {OUT}")
     OUT.mkdir(parents=True,exist_ok=True)
     summaries=[]
-    for cat in ("Fellow","Foreign Member"):
+    for cat in ("Fellow",):
         summaries.append(crawl_category(cat))
     manifest={
         "study":"Professor -> Academy -> Nobel/Fields academic-selection study",
@@ -303,8 +302,8 @@ def main():
         "created_utc":dt.datetime.now(dt.timezone.utc).isoformat(),
         "source":SEARCH,
         "source_system":"Royal Society CalmView Persons",
-        "membership_categories_acquired":["Fellow","Foreign Member"],
-        "primary_academy_cohort_rule":"Fellow only; Foreign Member retained separately and excluded from primary UK S=1 cohort",
+        "membership_categories_acquired":["Fellow"],
+        "primary_academy_cohort_rule":"Fellow only. Foreign Member is excluded from the primary UK cohort and deferred to a separate optional acquisition to reduce load on the official historical catalogue.",
         "identity_key":"CalmView Persons record_id (NA...)",
         "dob_lookup_performed":0,
         "bazi_variables_computed":0,

@@ -67,32 +67,44 @@ def crawl(category):
     rawdir=OUT/"raw_api"/safe
     rawdir.mkdir(parents=True,exist_ok=True)
 
-    raw=post({"type":category,"yearTo":"2025","page":1})
+    raw=post({"type":category,"yearFrom":"1962","yearTo":"2025","page":1})
     text=raw.decode("utf-8",errors="replace")
     pages=max_page(text)
     if not pages: raise RuntimeError(f"{category}: could not determine page count")
-    print(f"[{category}] pages={pages}")
+    initial_pages=pages
+    print(f"[{category}] initial_pages={pages}")
 
     rows=[]; pagehash=[]
     expected_full_page=None
-    for page in range(1,pages+1):
+    page=1
+    while page<=pages:
         if page>1:
-            raw=post({"type":category,"yearTo":"2025","page":page})
+            raw=post({"type":category,"yearFrom":"1962","yearTo":"2025","page":page})
             text=raw.decode("utf-8",errors="replace")
         observed_max=max_page(text)
-        if observed_max!=pages:
-            raise RuntimeError(f"{category}: page count changed {pages}->{observed_max} at page {page}")
+        if observed_max:
+            if observed_max>pages:
+                if observed_max>initial_pages+5:
+                    raise RuntimeError(f"{category}: implausible page-count growth {initial_pages}->{observed_max}")
+                print(f"  page-count extension at page {page}: {pages}->{observed_max}")
+                pages=observed_max
         part=parse_cards(text,category,page)
-        if not part: raise RuntimeError(f"{category}: no person cards on page {page}")
+        if not part:
+            if page > initial_pages:
+                print(f"  trailing empty page {page}; treating page {page-1} as final")
+                pages=page-1
+                break
+            raise RuntimeError(f"{category}: no person cards on page {page}")
         if page==1: expected_full_page=len(part)
-        if page<pages and len(part)!=expected_full_page:
-            raise RuntimeError(f"{category}: page {page} has {len(part)} cards, expected {expected_full_page}")
+        if page<pages and len(part)>expected_full_page:
+            raise RuntimeError(f"{category}: page {page} has {len(part)} cards, exceeds full-page size {expected_full_page}")
         rows.extend(part)
         p=rawdir/f"page_{page:04d}.html";p.write_bytes(raw)
-        pagehash.append({"page":page,"cards":len(part),"sha256":sha256(p),"bytes":p.stat().st_size})
+        pagehash.append({"page":page,"cards":len(part),"observed_max_page":observed_max,"sha256":sha256(p),"bytes":p.stat().st_size})
         if page==1 or page==pages or page%25==0:
             print(f"  page {page}/{pages}: cards={len(part)}, cumulative={len(rows)}")
-        time.sleep(0.04)
+        page+=1
+        time.sleep(0.05)
 
     urls=[r["profile_url"] for r in rows]
     if len(set(urls))!=len(rows):
@@ -106,7 +118,7 @@ def crawl(category):
     with csvp.open("w",encoding="utf-8-sig",newline="") as f:
         w=csv.DictWriter(f,fieldnames=fields);w.writeheader();w.writerows(rows)
     return {
-        "category":category,"pages":pages,"page_size":expected_full_page,
+        "category":category,"initial_pages":initial_pages,"pages":pages,"page_size":expected_full_page,
         "rows":len(rows),"unique_profile_urls":len(set(urls)),"unique_profile_ids":len(set(ids)),
         "csv_file":csvp.name,"csv_sha256":sha256(csvp),"csv_bytes":csvp.stat().st_size,
         "raw_pages":pagehash,
@@ -116,23 +128,23 @@ def main():
     if OUT.exists() and any(OUT.iterdir()):
         raise RuntimeError(f"Output directory nonempty: {OUT}")
     OUT.mkdir(parents=True,exist_ok=True)
-    res=[crawl("Fellow"),crawl("Foreign Member")]
+    res=[crawl("Fellow")]
     manifest={
         "study":"Professor -> Academy -> Nobel/Fields academic-selection study",
         "dataset":"Royal Society official current Fellows Directory roster v1",
         "created_utc":dt.datetime.now(dt.timezone.utc).isoformat(),
         "source_endpoint":ENDPOINT,
-        "request_protocol":"POST JSON; fields type, yearTo=2025, and page, matching official PostDisplay frontend",
+        "request_protocol":"POST JSON; fields type, yearFrom=1962, yearTo=2025, and page, matching a validated official PostDisplay request",
         "election_year_cutoff":2025,
-        "categories":["Fellow","Foreign Member"],
-        "primary_academy_rule":"Fellow only; Foreign Member retained separately",
+        "categories":["Fellow"],
+        "primary_academy_rule":"Fellow only. Foreign Member is excluded from the primary UK cohort and deferred to a separate optional acquisition.",
         "identity_key":"Royal Society people profile numeric ID/profile URL",
         "dob_lookup_performed":0,"bazi_variables_computed":0,
         "results":res,
     }
     (OUT/"manifest.json").write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding="utf-8")
     with (OUT/"summary.csv").open("w",encoding="utf-8-sig",newline="") as f:
-        w=csv.DictWriter(f,fieldnames=["category","pages","page_size","rows","unique_profile_urls","unique_profile_ids"])
+        w=csv.DictWriter(f,fieldnames=["category","initial_pages","pages","page_size","rows","unique_profile_urls","unique_profile_ids"])
         w.writeheader();w.writerows([{k:r[k] for k in w.fieldnames} for r in res])
     print(json.dumps({r["category"]:{k:r[k] for k in ("pages","page_size","rows","unique_profile_urls")} for r in res},indent=2))
 
