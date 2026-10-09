@@ -1,0 +1,66 @@
+name: Royal Society Roster Consolidation v1
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/royal_society_roster_consolidate_v1.py'
+      - '.github/workflows/royal_society_roster_consolidation_v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  consolidate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: royal-society-current-roster-v2
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 37864524529
+          path: data/royal_society_consolidation_inputs_v1/current
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: royal-society-historical-by-year-v2-*
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 37867909990
+          path: data/royal_society_consolidation_inputs_v1/base
+          merge-multiple: false
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: royal-society-historical-retry-*
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 37920660932
+          path: data/royal_society_consolidation_inputs_v1/retries
+          merge-multiple: false
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: royal-society-missing-election-date-probe
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 37920805427
+          path: data/royal_society_consolidation_inputs_v1/missing-date
+
+      - name: Consolidate and audit Royal Society Fellow roster
+        run: python scripts/royal_society_roster_consolidate_v1.py
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: royal-society-roster-consolidated-v1
+          path: data/royal_society_roster_consolidated_v1/
+          if-no-files-found: error
