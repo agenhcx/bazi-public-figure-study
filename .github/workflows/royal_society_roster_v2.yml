@@ -1,0 +1,47 @@
+name: Royal Society Roster v2
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'scripts/royal_society_current_roster_v1.py'
+      - 'scripts/royal_society_historical_source_probe_v2.py'
+      - '.github/workflows/royal_society_roster_v2.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  current-roster:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Acquire current Fellows through 2025
+        run: python scripts/royal_society_current_roster_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: royal-society-current-roster-v2
+          path: data/royal_society_current_roster_v1/
+          if-no-files-found: error
+
+  historical-source-probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Probe official historical listing source
+        run: python scripts/royal_society_historical_source_probe_v2.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: royal-society-historical-source-probe-v2
+          path: data/royal_society_historical_source_probe_v2/
+          if-no-files-found: error
