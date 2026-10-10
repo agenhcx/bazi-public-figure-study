@@ -87,7 +87,8 @@ def page_is_target(text,slug):
     # generating false multi-page DOB conflicts.
     head_raw=text[:1800]
     head=norm(head_raw)
-    if first not in head or last not in head:return False
+    if not re.search(rf"\\b{re.escape(first)}\\b",head):return False
+    if not re.search(rf"\\b{re.escape(last)}\\b",head):return False
     if not re.search(r"\b(section|sektion)\b",head):return False
     if not re.search(r"\b(matricula|matrikel|date of election|aufnahmedatum)\b",head):return False
     return "*" in head_raw
