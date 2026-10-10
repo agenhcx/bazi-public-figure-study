@@ -1,0 +1,38 @@
+name: Royal Society Current Authority DOB Diagnostic v1
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/royal_society_current_authority_diagnostic_v1.py'
+      - '.github/workflows/royal_society_current_authority_diagnostic_v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Download current P569 provenance audit
+        uses: actions/download-artifact@v4
+        with:
+          name: royal-society-current-p569-provenance-audit-v1
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 38007153174
+          path: data/royal_society_current_p569_provenance_input
+      - name: Run authority-source DOB diagnostic
+        run: python scripts/royal_society_current_authority_diagnostic_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: royal-society-current-authority-dob-diagnostic-v1
+          path: data/royal_society_current_authority_diagnostic_v1/
+          if-no-files-found: error
