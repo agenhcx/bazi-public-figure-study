@@ -15,7 +15,11 @@ permissions:
 jobs:
   audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 8
+    strategy:
+      fail-fast: false
+      matrix:
+        provider: [LC, SUDOC, DNB, BNF]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -30,11 +34,14 @@ jobs:
           run-id: 38052372047
           path: data
       - name: Run direct-authority provenance audit
+        env:
+          VIAF_PROVENANCE_CODES: ${{ matrix.provider }}
+          VIAF_PROVENANCE_VALIDATION_N: '10'
         run: python scripts/nas_viaf_provenance_audit_v1.py
       - name: Upload provenance outputs
         uses: actions/upload-artifact@v4
         with:
-          name: nas-viaf-provenance-audit-v1
+          name: nas-viaf-provenance-audit-v1-${{ matrix.provider }}
           path: |
             data/nas_viaf_provenance_audit_v1.csv
             data/nas_viaf_provenance_validation_v1.csv
