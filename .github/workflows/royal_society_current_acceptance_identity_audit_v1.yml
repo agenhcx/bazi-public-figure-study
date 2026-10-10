@@ -1,0 +1,53 @@
+name: Royal Society Current Acceptance Identity Audit v1
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/royal_society_current_acceptance_identity_audit_v1.py'
+      - '.github/workflows/royal_society_current_acceptance_identity_audit_v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: royal-society-current-direct-reference-validation-v1-shard-*
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 38007751078
+          path: data/direct_validation_inputs
+          merge-multiple: false
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: royal-society-current-authority-dob-validation-v1-shard-*
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 38008267585
+          path: data/authority_validation_inputs
+          merge-multiple: false
+      - uses: actions/download-artifact@v4
+        with:
+          name: royal-society-current-wikidata-locator-consolidated-v1
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 38006991346
+          path: data/current_locator_input
+      - name: Audit candidate identities before DOB acceptance
+        run: python scripts/royal_society_current_acceptance_identity_audit_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: royal-society-current-acceptance-identity-audit-v1
+          path: data/royal_society_current_acceptance_identity_audit_v1/
+          if-no-files-found: error
