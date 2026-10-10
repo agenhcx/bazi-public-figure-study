@@ -83,20 +83,55 @@ def get(url,retries=2):
             time.sleep(min(4,2**i))
     return getattr(last,"code",""),b"",url,repr(last)
 
-def relevant_xml_text(data):
+def norm_text(s):
+    return re.sub(r"[^a-z0-9]+"," ",str(s or "").lower()).strip()
+
+def near_birth_keyword(text,candidate):
+    raw=str(text or "")
+    n=norm_text(raw)
+    birth_pat=re.compile(r"(?i)\\b(born|birth|date of birth|dob|b\\.?|née?|né|geboren|geb\\.?|nacido|nacida|nació|nato|nata|født)\\b")
+    if not birth_pat.search(raw):return 0
+    return int(any(v and v in n for v in candidate_forms(candidate)))
+
+def processed_birth_evidence(data,candidate):
     try:root=ET.fromstring(data)
-    except:return data.decode("utf-8","ignore")
-    vals=[]
-    # VIAF may return MARCXML, UNIMARC-like XML, or its internal XML.
+    except Exception:
+        txt=data.decode("utf-8","ignore")
+        return [],int(near_birth_keyword(txt,candidate)),"",txt[:2200]
+    birth_dates=set();support=0;structured=[];notes=[];saw_fields=False
     for elem in root.iter():
         tag=elem.tag.split("}")[-1]
-        if tag=="datafield":
-            ft=elem.attrib.get("tag","")
-            if ft in {"046","103","670","678","100","200"}:
-                vals.append(" ".join((x.text or "") for x in elem.iter() if (x.text or "").strip()))
-        elif tag.lower() in {"birthdate","dateofbirth","date","dates"} and (elem.text or "").strip():
-            vals.append(elem.text.strip())
-    return " || ".join(vals) if vals else ET.tostring(root,encoding="unicode")
+        if tag!="datafield":continue
+        saw_fields=True
+        ft=elem.attrib.get("tag","")
+        subs=[(x.attrib.get("code",""),(x.text or "").strip()) for x in elem.iter() if x.tag.split("}")[-1]=="subfield"]
+        if ft=="046":
+            vals=[v for code,v in subs if code=="f"]
+            txt=" || ".join(vals)
+            birth_dates.update(exact_dates(txt));structured.append("046$f:"+txt)
+            if explicit_candidate(txt,candidate):support=1
+        elif ft=="103":
+            vals=[v for code,v in subs if code=="a"]
+            txt=" || ".join(vals)
+            birth_dates.update(exact_dates(txt));structured.append("103$a:"+txt)
+            if explicit_candidate(txt,candidate):support=1
+        elif ft in {"100","200"}:
+            vals=[v for code,v in subs if code in {"d","f"}]
+            txt=" || ".join(vals)
+            if txt:
+                birth_dates.update(exact_dates(txt));structured.append(ft+" date:"+txt)
+                if explicit_candidate(txt,candidate):support=1
+        elif ft in {"670","678","300","810"}:
+            txt=" ".join(v for _,v in subs if v)
+            notes.append(ft+":"+txt)
+            if near_birth_keyword(txt,candidate):
+                support=1
+                birth_dates.update(exact_dates(txt))
+    if not saw_fields:
+        txt=ET.tostring(root,encoding="unicode")
+        if near_birth_keyword(txt,candidate):support=1
+        return sorted(birth_dates),support,"",txt[:2200]
+    return sorted(birth_dates),support," || ".join(structured)," || ".join(notes)[:2200]
 
 def fetch_processed(code,ident,candidate):
     sid=f"{code}|{ident}"
@@ -111,15 +146,15 @@ def fetch_processed(code,ident,candidate):
         last_status=st
         if not data:
             errs.append(f"{url}:{st}:{err}");continue
-        txt=relevant_xml_text(data)
-        ds=exact_dates(txt)
-        sup=explicit_candidate(txt,candidate)
-        return {"ok":1,"status":st,"url":final,"dates":ds,"supports":sup,"excerpt":txt[:1800],"error":""}
-    return {"ok":0,"status":last_status,"url":urls[0],"dates":[],"supports":0,"excerpt":"","error":" || ".join(errs)}
+        ds,sup,structured,notes=processed_birth_evidence(data,candidate)
+        return {"ok":1,"status":st,"url":final,"dates":ds,"supports":sup,"structured":structured,"notes":notes,"error":""}
+    return {"ok":0,"status":last_status,"url":urls[0],"dates":[],"supports":0,"structured":"","notes":"","error":" || ".join(errs)}
 
 cand=read_csv(locate("nas_viaf_dob_candidates_v1.csv"))
 allrows=read_csv(locate("nas_viaf_dob_diagnostic_v1.csv"))
-validation=[r for r in allrows if r.get("cohort")=="validation" and r.get("viaf_candidate_dob") and r.get("validation_match")=="1"][:20]
+validation_matches=[r for r in allrows if r.get("cohort")=="validation" and r.get("viaf_candidate_dob") and r.get("validation_match")=="1"][:30]
+validation_conflicts=[r for r in allrows if r.get("cohort")=="validation" and r.get("viaf_candidate_dob") and r.get("validation_match")=="0"]
+validation=validation_matches+validation_conflicts
 targets=[("candidate",r) for r in cand]+[("validation",r) for r in validation]
 
 jobs={}
@@ -147,7 +182,7 @@ for cohort,r in targets:
         if z.get("ok"):fet.append(code+":"+ident)
         if z.get("supports"):sup.append(code+":"+ident)
         if z.get("dates") and d not in z.get("dates",[]):conf.append(code+":"+ident+":"+",".join(z.get("dates",[])))
-        details.append(json.dumps({"code":code,"id":ident,"ok":z.get("ok",0),"status":z.get("status",""),"supports":z.get("supports",0),"dates":z.get("dates",[]),"url":z.get("url",""),"error":z.get("error","")},ensure_ascii=False))
+        details.append(json.dumps({"code":code,"id":ident,"ok":z.get("ok",0),"status":z.get("status",""),"supports":z.get("supports",0),"birth_dates":z.get("dates",[]),"structured":z.get("structured",""),"notes":z.get("notes",""),"url":z.get("url",""),"error":z.get("error","")},ensure_ascii=False))
     out.append({
       "cohort":cohort,"name":r.get("name",""),"profile_url":r.get("profile_url",""),
       "viaf_candidate_dob":d,"master_exact_dob":r.get("master_exact_dob",""),
@@ -162,7 +197,7 @@ write_csv(OUT,out,fields)
 crows=[x for x in out if x["cohort"]=="candidate"]
 vrows=[x for x in out if x["cohort"]=="validation"]
 summary={
- "dataset":"NAS VIAF processed-source provenance diagnostic v1",
+ "dataset":"NAS VIAF processed-source provenance diagnostic v2",
  "candidate_rows":len(crows),
  "candidate_rows_with_any_processed_source_fetched":sum(bool(x["processed_sources_fetched"]) for x in crows),
  "candidate_rows_with_candidate_date_in_processed_source":sum(bool(x["supporting_processed_sources"]) for x in crows),
@@ -170,11 +205,14 @@ summary={
  "verified_candidates":[{"name":x["name"],"dob":x["viaf_candidate_dob"],"source_codes":x["supporting_source_codes"]} for x in crows if x["verified_by_processed_source"]],
  "candidate_rows_with_conflict":sum(bool(x["conflicting_processed_sources"]) for x in crows),
  "validation_rows":len(vrows),
+ "validation_match_rows":sum(x["viaf_candidate_dob"]==x["master_exact_dob"] for x in vrows),
+ "validation_viaf_conflict_rows":sum(x["viaf_candidate_dob"]!=x["master_exact_dob"] for x in vrows),
  "validation_rows_with_any_processed_source_fetched":sum(bool(x["processed_sources_fetched"]) for x in vrows),
- "validation_rows_supported":sum(bool(x["supporting_processed_sources"]) for x in vrows),
- "validation_rows_verified_without_conflict":sum(int(x["verified_by_processed_source"]) for x in vrows),
+ "validation_match_rows_with_birth_evidence":sum(bool(x["supporting_processed_sources"]) for x in vrows if x["viaf_candidate_dob"]==x["master_exact_dob"]),
+ "validation_viaf_conflict_rows_with_wrong_date_birth_evidence":sum(bool(x["supporting_processed_sources"]) for x in vrows if x["viaf_candidate_dob"]!=x["master_exact_dob"]),
+ "validation_rows_verified_without_birth_conflict":sum(int(x["verified_by_processed_source"]) for x in vrows),
  "bazi_variables_computed":0,
- "decision_note":"Diagnostic only. This queries VIAF source-specific processed authority records, not the cluster-level birthDate. WKP is deliberately excluded. A candidate remains eligible for a post-v16 supplement only if the exact date appears in a non-WKP processed authority source without a conflicting exact date."
+ "decision_note":"Diagnostic only. V2 counts only birth-specific evidence: MARC21 046$f, UNIMARC 103$a, date subfields on personal-name headings, or explicitly birth-labeled biographical/source notes. WKP is excluded. Conflicts are restricted to birth-specific dates rather than unrelated publication dates."
 }
 SUMMARY.write_text(json.dumps(summary,ensure_ascii=False,indent=2),encoding="utf-8")
 print(json.dumps(summary,ensure_ascii=False,indent=2))
