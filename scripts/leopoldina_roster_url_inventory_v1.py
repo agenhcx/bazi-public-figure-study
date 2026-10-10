@@ -5,7 +5,9 @@ from html import unescape
 from pathlib import Path
 from urllib.parse import urljoin
 
-BASE="https://www.leopoldina.org/en/members/member-list"\nJAR=http.cookiejar.CookieJar()\nOPENER=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(JAR))
+BASE="https://www.leopoldina.org/en/members/member-list"
+JAR=http.cookiejar.CookieJar()
+OPENER=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(JAR))
 OUT=Path("data/leopoldina_roster_url_inventory_v1")
 UA="Mozilla/5.0 (compatible; bazi-public-figure-study/1.0; reproducibility research)"
 
