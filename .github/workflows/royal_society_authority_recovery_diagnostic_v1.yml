@@ -1,0 +1,29 @@
+name: Royal Society Authority Recovery Diagnostic v1
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/royal_society_authority_recovery_diagnostic_v1.py'
+      - '.github/workflows/royal_society_authority_recovery_diagnostic_v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Probe original authority records
+        run: python scripts/royal_society_authority_recovery_diagnostic_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: royal-society-authority-recovery-diagnostic-v1
+          path: data/royal_society_authority_recovery_diagnostic_v1/
+          if-no-files-found: error
