@@ -1,0 +1,37 @@
+name: Royal Society DOB Freeze v1
+
+on:
+  pull_request:
+    paths:
+      - "data/royal_society_roster_freeze_v1/**"
+      - "data/royal_society_past_dob_closeout_v1/**"
+      - "data/royal_society_current_dob_candidate_v1/**"
+      - "scripts/royal_society_dob_freeze_v1.py"
+      - ".github/workflows/royal_society_dob_freeze_v1.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  freeze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Build Royal Society DOB freeze candidate
+        run: python scripts/royal_society_dob_freeze_v1.py
+      - name: Upload Royal Society DOB freeze candidate
+        uses: actions/upload-artifact@v4
+        with:
+          name: royal-society-dob-freeze-v1-candidate
+          path: |
+            data/royal_society_dob_freeze_v1/royal_society_fellows_dob_crosswalk_v1.csv
+            data/royal_society_dob_freeze_v1/royal_society_current_exact_dob_final_v1.csv
+            data/royal_society_dob_freeze_v1/royal_society_current_authority_reaudit_v1.csv
+            data/royal_society_dob_freeze_v1/missingness_by_status_v1.csv
+            data/royal_society_dob_freeze_v1/missingness_by_election_era_v1.csv
+            data/royal_society_dob_freeze_v1/summary_v1.json
+            data/royal_society_dob_freeze_v1/freeze_candidate_v1.json
