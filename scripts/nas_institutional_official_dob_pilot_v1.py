@@ -77,7 +77,7 @@ def reliable_qid(r):
         return q, "global_unique_identity"
     return "", ""
 
-def get(url, accept="text/html,application/xhtml+xml,application/pdf;q=0.9,*/*;q=0.1", retries=3, timeout=45):
+def get(url, accept="text/html,application/xhtml+xml,application/pdf;q=0.9,*/*;q=0.1", retries=2, timeout=15):
     last = None
     for i in range(retries):
         try:
@@ -103,7 +103,7 @@ def get(url, accept="text/html,application/xhtml+xml,application/pdf;q=0.9,*/*;q
     return getattr(last, "code", ""), b"", "", url, repr(last)
 
 def json_get(url):
-    st, data, ct, final, err = get(url, "application/json", retries=3)
+    st, data, ct, final, err = get(url, "application/json", retries=2, timeout=15)
     if not data:
         return st, None, final, err
     try:
@@ -200,7 +200,7 @@ def institution_domains_for_row(r, person_ent_cache, inst_ent_cache, affil_searc
         d = x[0]
         if d not in best or (x[4], x[5]) > (best[d][4], best[d][5]):
             best[d] = x
-    return sorted(best.values(), key=lambda x: (-x[4], -x[5], x[0]))[:3]
+    return sorted(best.values(), key=lambda x: (-x[4], -x[5], x[0]))[:1]
 
 def wbsearch_affiliation(affil):
     if not affil:
@@ -314,7 +314,7 @@ def parse_pdf(data, expected_year):
 
 def ddg_results(query):
     q = urllib.parse.urlencode({"q": query})
-    st, data, ct, final, err = get("https://html.duckduckgo.com/html/?" + q, "text/html", retries=2, timeout=35)
+    st, data, ct, final, err = get("https://html.duckduckgo.com/html/?" + q, "text/html", retries=1, timeout=10)
     if not data:
         return [], "duckduckgo:" + err
     text = data.decode("utf-8", "ignore")
@@ -335,7 +335,7 @@ def ddg_results(query):
 
 def bing_results(query):
     q = urllib.parse.urlencode({"q": query})
-    st, data, ct, final, err = get("https://www.bing.com/search?" + q, "text/html", retries=2, timeout=35)
+    st, data, ct, final, err = get("https://www.bing.com/search?" + q, "text/html", retries=1, timeout=10)
     if not data:
         return [], "bing:" + err
     text = data.decode("utf-8", "ignore")
@@ -345,9 +345,8 @@ def bing_results(query):
 
 def search_official(name, dom):
     queries = [
-        f'site:{dom} "{name}" "date of birth"',
-        f'site:{dom} "{name}" born',
-        f'site:{dom} "{name}" CV',
+        f'site:{dom} "{name}" ("date of birth" OR born OR DOB)',
+        f'site:{dom} "{name}" (CV OR biography)',
     ]
     urls, errs = [], []
     for q in queries:
@@ -361,12 +360,12 @@ def search_official(name, dom):
         for u in got:
             if same_domain(u, dom) and u not in urls:
                 urls.append(u)
-        if len(urls) >= 6:
+        if len(urls) >= 3:
             break
-    return urls[:6], " || ".join(errs)
+    return urls[:3], " || ".join(errs)
 
 def fetch_candidate_url(url, expected_year):
-    st, data, ct, final, err = get(url)
+    st, data, ct, final, err = get(url, retries=1, timeout=12)
     if not data:
         return [], [], final or url, err
     if "pdf" in (ct or "").lower() or str(final).lower().endswith(".pdf"):
