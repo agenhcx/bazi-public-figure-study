@@ -263,7 +263,7 @@ def main():
       "collection_stop_rule":"Freeze broad Royal Society DOB acquisition after this provenance-aligned pass. Reopen only for a newly identified high-authority correction with independently auditable provenance, versioned before hierarchy outcome analysis.",
       "bazi_variables_computed":0
     }
-    (OUT/"freeze_v1.json").write_text(json.dumps(freeze,ensure_ascii=False,indent=2),encoding="utf-8")
+    (OUT/"freeze_candidate_v1.json").write_text(json.dumps(freeze,ensure_ascii=False,indent=2),encoding="utf-8")
     print(json.dumps(summary,ensure_ascii=False,indent=2))
     print(json.dumps(freeze,ensure_ascii=False,indent=2))
 
