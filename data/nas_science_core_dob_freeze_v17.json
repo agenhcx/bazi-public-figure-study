@@ -1,0 +1,59 @@
+{
+  "dataset": "NAS science-core exact-DOB collection freeze v17",
+  "parent": "nas_science_core_dob_crosswalk_v16.csv",
+  "parent_v16_sha256": "f577b22bf646b4b5355a133cc265d4d9ccf253f501bac98b6afddce874fc4561",
+  "cohort_rows": 3051,
+  "exact_dob_rows": 2242,
+  "exact_dob_coverage": 0.734841,
+  "unresolved_rows": 809,
+  "deceased_rows": 1361,
+  "deceased_exact_dob_rows": 1361,
+  "deceased_exact_dob_coverage": 1.0,
+  "living_rows": 1690,
+  "living_exact_dob_rows": 881,
+  "living_exact_dob_coverage": 0.521302,
+  "post_v16_corrections": [
+    {
+      "name": "Jay Quade",
+      "exact_dob": "1955-12-13",
+      "status_change": "living_to_deceased",
+      "death_date": "2025-10-17",
+      "provenance_class": "official_NAS_plus_institutional_CV"
+    },
+    {
+      "name": "Mark Johnston",
+      "exact_dob": "1951-12-20",
+      "provenance_class": "institutional_CV"
+    },
+    {
+      "name": "John M. Tranquada",
+      "exact_dob": "1955-10-05",
+      "provenance_class": "official_national_lab_document"
+    },
+    {
+      "name": "John E. Dowling",
+      "exact_dob": "1935-08-31",
+      "provenance_class": "professional_society_autobiography"
+    }
+  ],
+  "viaf_candidate_audit": {
+    "processed_source_verified_candidates": 15,
+    "accepted_with_independent_nonlibrary_provenance": 4,
+    "rejected_due_nonlibrary_date_conflict": 1,
+    "remaining_unresolved_after_targeted_audit": 10,
+    "audit_file": "data/nas_viaf_independent_source_audit_v1.csv",
+    "policy": "VIAF and contributing library-authority records are locators only. Multiple authority records are not treated as independent confirmation because validation demonstrated replicated wrong dates."
+  },
+  "source_checkpoint": {
+    "workflow_run_id": 38055620488,
+    "artifact_id": 11671021142,
+    "artifact_name": "nas-dob-v17-official-provenance-freeze",
+    "artifact_zip_sha256": "dfbdeadd1dd0fe3ac05c8c70f233857582ef694e483f8ff3ffdba897a5e96c10",
+    "v17_csv_sha256": "a897797d59c25f0fe7f4fcfb61b417338394b577c3380a456faeb8135e0cef29",
+    "amendment_log_sha256": "41df6d085fd823053a35794a05ef32409762fbf5d32af19dba23ecbc6c6af218",
+    "supplement_patch_sha256": "ccb0162823863e64758614f124be17ecf7cae650a77665ebc4223182b9300628"
+  },
+  "collection_stop_rule": "Freeze NAS science-core exact-DOB collection at v17. Reopen only for a newly identified high-authority correction with independently auditable provenance, versioned before any hierarchy outcome analysis.",
+  "freeze_status": "final",
+  "bazi_variables_computed": 0
+}
