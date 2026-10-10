@@ -196,20 +196,27 @@ for cohort,r in targets:
 write_csv(OUT,out,fields)
 crows=[x for x in out if x["cohort"]=="candidate"]
 vrows=[x for x in out if x["cohort"]=="validation"]
+def support_code_count(x):
+    return len({z for z in str(x.get("supporting_source_codes","")).split("|") if z})
 summary={
  "dataset":"NAS VIAF processed-source provenance diagnostic v2",
  "candidate_rows":len(crows),
  "candidate_rows_with_any_processed_source_fetched":sum(bool(x["processed_sources_fetched"]) for x in crows),
  "candidate_rows_with_candidate_date_in_processed_source":sum(bool(x["supporting_processed_sources"]) for x in crows),
  "candidate_rows_verified_without_processed_source_conflict":sum(int(x["verified_by_processed_source"]) for x in crows),
- "verified_candidates":[{"name":x["name"],"dob":x["viaf_candidate_dob"],"source_codes":x["supporting_source_codes"]} for x in crows if x["verified_by_processed_source"]],
+ "verified_candidates":[{"name":x["name"],"dob":x["viaf_candidate_dob"],"source_codes":x["supporting_source_codes"],"independent_source_count":support_code_count(x)} for x in crows if x["verified_by_processed_source"]],
  "candidate_rows_with_conflict":sum(bool(x["conflicting_processed_sources"]) for x in crows),
+ "candidate_rows_supported_by_2plus_independent_sources":sum(support_code_count(x)>=2 for x in crows),
+ "candidate_rows_supported_by_3plus_independent_sources":sum(support_code_count(x)>=3 for x in crows),
+ "candidate_2plus_source_details":[{"name":x["name"],"dob":x["viaf_candidate_dob"],"source_codes":x["supporting_source_codes"]} for x in crows if support_code_count(x)>=2],
  "validation_rows":len(vrows),
  "validation_match_rows":sum(x["viaf_candidate_dob"]==x["master_exact_dob"] for x in vrows),
  "validation_viaf_conflict_rows":sum(x["viaf_candidate_dob"]!=x["master_exact_dob"] for x in vrows),
  "validation_rows_with_any_processed_source_fetched":sum(bool(x["processed_sources_fetched"]) for x in vrows),
  "validation_match_rows_with_birth_evidence":sum(bool(x["supporting_processed_sources"]) for x in vrows if x["viaf_candidate_dob"]==x["master_exact_dob"]),
  "validation_viaf_conflict_rows_with_wrong_date_birth_evidence":sum(bool(x["supporting_processed_sources"]) for x in vrows if x["viaf_candidate_dob"]!=x["master_exact_dob"]),
+ "validation_viaf_conflict_rows_wrong_date_supported_by_2plus_sources":sum(support_code_count(x)>=2 for x in vrows if x["viaf_candidate_dob"]!=x["master_exact_dob"]),
+ "validation_conflict_details":[{"name":x["name"],"master":x["master_exact_dob"],"viaf":x["viaf_candidate_dob"],"source_codes":x["supporting_source_codes"],"independent_source_count":support_code_count(x)} for x in vrows if x["viaf_candidate_dob"]!=x["master_exact_dob"]],
  "validation_rows_verified_without_birth_conflict":sum(int(x["verified_by_processed_source"]) for x in vrows),
  "bazi_variables_computed":0,
  "decision_note":"Diagnostic only. V2 counts only birth-specific evidence: MARC21 046$f, UNIMARC 103$a, date subfields on personal-name headings, or explicitly birth-labeled biographical/source notes. WKP is excluded. Conflicts are restricted to birth-specific dates rather than unrelated publication dates."
