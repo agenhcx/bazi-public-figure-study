@@ -1,0 +1,38 @@
+name: NAS VIAF Processed Source Provenance v1
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/nas_viaf_processed_source_provenance_v1.py'
+      - '.github/workflows/nas_viaf_processed_source_provenance_v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Download successful VIAF diagnostic artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: nas-viaf-dob-diagnostic-v1
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 38052372047
+          path: data
+      - name: Run source-specific processed authority diagnostic
+        run: python scripts/nas_viaf_processed_source_provenance_v1.py
+      - name: Upload outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: nas-viaf-processed-source-provenance-v1
+          path: |
+            data/nas_viaf_processed_source_provenance_v1.csv
+            data/summary_nas_viaf_processed_source_provenance_v1.json
+          if-no-files-found: error
