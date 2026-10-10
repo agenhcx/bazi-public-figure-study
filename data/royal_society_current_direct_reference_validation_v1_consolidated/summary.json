@@ -6,8 +6,8 @@
   "eligible_url_instances": 75,
   "fetched_ok": 38,
   "accepted_url_instances": 15,
-  "accepted_unique_people": 75,
-  "accepted_exact_dob": 75,
+  "accepted_unique_people": 78,
+  "accepted_exact_dob": 78,
   "accepted_by_domain": {
     "catalogue.bnf.fr": 8,
     "prixduquebec.gouv.qc.ca": 3,
@@ -41,7 +41,7 @@
     "dof.princeton.edu": 1,
     "gov.za": 1
   },
-  "note": "Current accepted exact DOB total is 75. Four direct-reference PDF cases were recovered: three by visual inspection of institution-hosted CV PDFs and Tom Muir via the independent Science History Institute oral-history collection. Wikidata P569 remains locator-only.",
+  "note": "Current accepted exact DOB total is 78. Three additional high-quality sources were recovered from non-English/date-format cases: MTA, Oxford FMRIB, and Max Planck.",
   "accepted_authoritative_web_fallback": 3,
   "accepted_authority_record_after_identity_audit": 34,
   "authority_candidate_unique_before_identity": 47,
@@ -70,5 +70,11 @@
     "John Peacock Q17123859 = 1956-03-27 (Royal Observatory Edinburgh-hosted CV)",
     "Glynn Winskel Q62560641 = 1953-05-23 (Cambridge Computer Laboratory-hosted CV)",
     "Tom Muir Q88189796 = 1967-06-21 (Science History Institute oral-history archive; fallback for inaccessible Princeton CV PDF)"
+  ],
+  "accepted_format_recovery": 3,
+  "accepted_format_recovery_people": [
+    "Ole Petersen Q7086466 = 1943-03-03 (Hungarian Academy of Sciences)",
+    "Timothy Behrens Q7806999 = 1978-06-09 (Oxford FMRIB CV)",
+    "Stuart Parkin Q7635348 = 1955-12-09 (Max Planck Institute CV)"
   ]
 }
