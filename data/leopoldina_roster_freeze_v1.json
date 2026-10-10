@@ -1,0 +1,55 @@
+{
+  "dataset": "Leopoldina science-core roster freeze v1",
+  "institution": "Nationale Akademie der Wissenschaften Leopoldina",
+  "cohort_definition": "Official Leopoldina members assigned to Class I (Mathematics, Natural Sciences and Engineering), Class II (Life Sciences), or Class III (Medicine), with election/admission year through 2025. Class IV is excluded. 2026 elections are excluded. No honorary/non-ordinary membership category was encountered in the frozen Class I-III detail-page cohort.",
+  "roster_rows": 2888,
+  "class_counts": {
+    "Class I: Mathematics, Natural Sciences and Engineering": 1131,
+    "Class II: Life Sciences": 946,
+    "Class III: Medicine": 811
+  },
+  "sections": 22,
+  "deceased_marker_rows": 1527,
+  "rows_without_deceased_marker": 1361,
+  "post2025_excluded_rows": 40,
+  "post2025_excluded_by_class": {
+    "Class I: Mathematics, Natural Sciences and Engineering": 8,
+    "Class II: Life Sciences": 21,
+    "Class III: Medicine": 11
+  },
+  "audit": {
+    "unique_detail_urls": 2888,
+    "http_or_required_field_errors": 0,
+    "election_year_mismatches": 0,
+    "section_class_ambiguities": 0,
+    "honorary_heading_review_rows": 0
+  },
+  "checksums": {
+    "roster_csv_sha256": "c17e9297c6c3c7945381034bb48ca4e86582ff9c896fcd69ec3d31add354402a",
+    "section_class_map_sha256": "aca68d61ccf1118768c372d264ba31d6d5f510ada9627f3dacdfb9d20f4a511c",
+    "honorary_heading_review_sha256": "edd4cb2e64e24dc518d964dc9086571b86a498673e25a0dc67283963d9711b54",
+    "primary_url_inventory_sha256": "41a57ab664902118dbd16b507cc4f99d181ab44ac874c3a72d0c2b1168cb81c4",
+    "post2025_excluded_url_inventory_sha256": "f3566a44a128829a57dc3a2f4ea68530d252503c1f2d1f7d078e5e1464cbe507",
+    "class_year_bucket_audit_sha256": "d678956ba2284e52fb9ebe9e4ebe1ee607efce7198be6a2ac997fe460a54f3b9"
+  },
+  "reproducibility_checkpoints": {
+    "class_year_inventory": {
+      "workflow_run_id": 38093754128,
+      "consolidated_artifact_id": 11684932133,
+      "artifact_name": "leopoldina-science-class-url-inventory-v1",
+      "artifact_zip_sha256": "a48fe6d9b05a1447b66f1b2f305560f03245fff806895b01f21b21395a1bbf01"
+    },
+    "detail_metadata": {
+      "workflow_run_id": 38095813825,
+      "consolidated_artifact_id": 11685369375,
+      "artifact_name": "leopoldina-roster-freeze-candidate-v1",
+      "artifact_zip_sha256": "36458b7781f28a823d806c728f1572fbc70525fa0f27ebec7886755dfb00f3fe"
+    }
+  },
+  "source_method": "The official member-directory landing page exposed class and election-year facets but pagination queries were blocked by the site's WAF from GitHub Actions. The roster was therefore enumerated with official POST filters for Class x election year. Every bucket was required to return exactly its official facet total and never exceed 50 rows. The resulting immutable URL universe was then fetched at the official member-detail pages in 16 shards.",
+  "membership_category_note": "The official directory exposes Class, Section, Election year and Active/Historical facets, but no separate honorary-membership facet. Within the Class I-III cohort, no detail-page heading identified an honorary Leopoldina member. Individual official biographies describe Leopoldina affiliation as Member. If a future official source identifies a row as honorary/non-ordinary, it must be handled as a versioned provenance correction before hierarchy unblinding.",
+  "roster_freeze_status": "final",
+  "roster_stop_rule": "Freeze the Leopoldina science-core roster at v1. DOB collection may proceed only against this immutable cohort. Reopen roster membership only for a newly identified official correction with independently auditable provenance, versioned before any hierarchy-study BaZi outcome analysis.",
+  "dob_lookup_performed": 0,
+  "bazi_variables_computed": 0
+}
