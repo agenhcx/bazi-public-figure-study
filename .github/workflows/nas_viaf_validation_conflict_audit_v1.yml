@@ -1,0 +1,44 @@
+name: NAS VIAF Validation Conflict Audit v1
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/nas_viaf_validation_conflict_audit_v1.py'
+      - '.github/workflows/nas_viaf_validation_conflict_audit_v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Download frozen v16
+        uses: actions/download-artifact@v4
+        with:
+          name: nas-dob-v16-zanni-provenance
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 37860554354
+          path: data
+      - name: Download VIAF diagnostic
+        uses: actions/download-artifact@v4
+        with:
+          name: nas-viaf-dob-diagnostic-v1
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 38052372047
+          path: data/viaf
+      - name: Audit conflict provenance
+        run: python scripts/nas_viaf_validation_conflict_audit_v1.py
+      - name: Upload audit
+        uses: actions/upload-artifact@v4
+        with:
+          name: nas-viaf-validation-conflict-audit-v1
+          path: data/nas_viaf_validation_conflict_master_provenance_v1.json
+          if-no-files-found: error
