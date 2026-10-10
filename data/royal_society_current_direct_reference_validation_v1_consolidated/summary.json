@@ -1,0 +1,36 @@
+{
+  "dataset": "Royal Society current direct-reference DOB validation consolidated v1",
+  "source_run_id": 38007751078,
+  "url_instances": 102,
+  "unique_people": 97,
+  "eligible_url_instances": 75,
+  "fetched_ok": 38,
+  "accepted_url_instances": 15,
+  "accepted_unique_people": 15,
+  "accepted_exact_dob": 15,
+  "accepted_by_domain": {
+    "catalogue.bnf.fr": 8,
+    "prixduquebec.gouv.qc.ca": 3,
+    "nobelprize.org": 2,
+    "web.math.ku.dk": 1,
+    "optometry.berkeley.edu": 1
+  },
+  "fetch_status_counts": {
+    "ok": 38,
+    "HTTP 403": 34,
+    "HTTP 404": 17,
+    "pdf_not_parsed": 6,
+    "URLError: <urlopen error [Errno -2] Name or service not known>": 2,
+    "HTTP 502": 1,
+    "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1016)>": 1,
+    "HTTP 405": 1,
+    "ValueError: unknown url type: 'jsessionid=C01EEDCFD50920EA02B5B5EE28327988'": 1,
+    "URLError: <urlopen error timed out>": 1
+  },
+  "eligible_but_unaccepted": 60,
+  "full_csv_sha256": "cefabf473ebeaf69bc3d2906c6863cf22357812211b24a74e3d36f06e6cf8b04",
+  "accepted_csv_sha256": "15b61e7f6c9e0e1e01bb6f1c602090300b4654fec3e8b7c433264828b32ece02",
+  "unresolved_csv_sha256": "9f906ac18361d969775fe6a4345c33bb0f2567e04fe349cb547d6b2380c53d90",
+  "bazi_variables_computed": 0,
+  "acceptance_rule": "Wikidata P569 is locator-only. Accept only when a frozen-hierarchy-eligible independent source visibly contains the unique exact day-month-year candidate; otherwise remain unresolved."
+}
