@@ -124,11 +124,21 @@ def viaf_name(obj):
     for v in vals:ss.extend(flatten_strings(v))
     return next((s for s in ss if s.strip()),"")
 def fetch_viaf(vid):
-    url=f"https://viaf.org/viaf/{urllib.parse.quote(vid)}/viaf.json"
-    st,obj,final,err=get_json(url)
-    if not isinstance(obj,dict):
-        return vid,{"ok":0,"status":st,"url":final,"error":err,"dates":[],"sources":[],"name":""}
-    return vid,{"ok":1,"status":st,"url":final,"error":"","dates":viaf_dates(obj),"sources":viaf_sources(obj),"name":viaf_name(obj)}
+    q=urllib.parse.quote(vid)
+    urls=[
+      f"https://viaf.org/viaf/{q}?httpAccept=application/json",
+      f"https://viaf.org/viaf/{q}?format=json",
+      f"https://viaf.org/viaf/{q}/viaf.json",
+    ]
+    errs=[]
+    last_status=""
+    for url in urls:
+        st,obj,final,err=get_json(url,retries=2)
+        last_status=st
+        if isinstance(obj,dict):
+            return vid,{"ok":1,"status":st,"url":final,"error":"","dates":viaf_dates(obj),"sources":viaf_sources(obj),"name":viaf_name(obj)}
+        errs.append(f"{url}:{st}:{err}")
+    return vid,{"ok":0,"status":last_status,"url":urls[0],"error":" || ".join(errs),"dates":[],"sources":[],"name":""}
 
 rows=read_csv(INPUT)
 if len(rows)!=3051:raise RuntimeError(f"Expected 3051 rows, got {len(rows)}")
@@ -212,6 +222,9 @@ code_counts=defaultdict(int)
 for x in unres:
     for c in str(x["contributing_authority_codes"]).split("|"):
         if c:code_counts[c]+=1
+failure_status_counts=defaultdict(int)
+for v in all_vid:
+    if not int(fetched[v].get("ok",0)):failure_status_counts[str(fetched[v].get("status",""))]+=1
 summary={
  "dataset":"NAS VIAF exact-DOB diagnostic v1",
  "input":INPUT.name,
@@ -221,6 +234,7 @@ summary={
  "qids_with_p214":sum(bool(ids[q]) for q in qids),
  "unique_viaf_ids":len(all_vid),
  "viaf_fetch_successes":sum(int(fetched[v].get("ok",0)) for v in all_vid),
+ "viaf_fetch_failure_status_counts":dict(sorted(failure_status_counts.items())),
  "validation_rows_with_viaf":sum(bool(ids[q]) for cohort,r,q,b in qid_rows if cohort=="validation"),
  "validation_rows_with_unique_exact_candidate":len(vf),
  "validation_exact_matches":sum(x["validation_match"]==1 for x in vf),
