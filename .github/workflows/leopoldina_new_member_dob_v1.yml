@@ -1,0 +1,54 @@
+name: Leopoldina Official New-Member DOB v1
+on:
+  push:
+    branches: [leopoldina-dob-official-v1]
+    paths:
+      - "scripts/leopoldina_new_member_dob_v1.py"
+      - "scripts/leopoldina_new_member_dob_consolidate_v1.py"
+      - ".github/workflows/leopoldina_new_member_dob_v1.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  collect:
+    strategy:
+      fail-fast: false
+      matrix:
+        election_year: [2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019]
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      ELECTION_YEAR: ${{ matrix.election_year }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m pip install --quiet pypdf
+      - run: python scripts/leopoldina_new_member_dob_v1.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: leopoldina-new-member-dob-${{ matrix.election_year }}
+          path: |
+            data/leopoldina_new_member_dob_shard_v1/dob_candidates_${{ matrix.election_year }}.csv
+            data/leopoldina_new_member_dob_shard_v1/summary_${{ matrix.election_year }}.json
+  consolidate:
+    needs: collect
+    if: needs.collect.result == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: leopoldina-new-member-dob-*
+          path: data/leopoldina_new_member_dob_inputs_v1
+          merge-multiple: false
+      - run: python scripts/leopoldina_new_member_dob_consolidate_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: leopoldina-new-member-dob-official-v1
+          path: data/leopoldina_new_member_dob_official_v1/
