@@ -1,0 +1,19 @@
+name: Leopoldina 2013 Conflict Page Probe
+on:
+  push:
+    branches: [leopoldina-dob-official-v1]
+    paths:
+      - "scripts/leopoldina_2013_conflict_page_probe.py"
+      - ".github/workflows/leopoldina_2013_conflict_page_probe.yml"
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m pip install --quiet pypdf
+      - run: python scripts/leopoldina_2013_conflict_page_probe.py
