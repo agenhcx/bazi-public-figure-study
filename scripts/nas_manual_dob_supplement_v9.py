@@ -104,7 +104,7 @@ summary={
 }
 SUMMARY.write_text(json.dumps(summary,ensure_ascii=False,indent=2),encoding="utf-8")
 freeze={
- "dataset":"NAS science-core exact-DOB collection freeze candidate v17",
+ "dataset":"NAS science-core exact-DOB collection freeze v17",
  "parent_v16_sha256":"f577b22bf646b4b5355a133cc265d4d9ccf253f501bac98b6afddce874fc4561",
  "cohort_rows":len(rows),
  "exact_dob_rows":after,
@@ -117,9 +117,9 @@ freeze={
  "v17_csv_sha256":sha(OUT),
  "amendment_log_sha256":sha(LOG),
  "supplement_patch_sha256":sha(PATCH),
- "freeze_status":"staged_not_final",
+ "freeze_status":"final",
  "bazi_variables_computed":0,
- "collection_stop_rule":"Retain v16 stop rule. Only independently corroborated high-authority post-freeze corrections may enter v17 before the hierarchy-wide pre-unblinding freeze."
+ "collection_stop_rule":"Freeze NAS science-core exact-DOB collection at v17. Reopen only for a newly identified high-authority correction with independently auditable provenance, versioned before any hierarchy outcome analysis."
 }
 FREEZE.write_text(json.dumps(freeze,ensure_ascii=False,indent=2),encoding="utf-8")
 print(json.dumps(summary,ensure_ascii=False,indent=2))
