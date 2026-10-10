@@ -78,12 +78,19 @@ def slug_tokens(slug):
     return [norm(x) for x in toks if len(norm(x))>1]
 
 def page_is_target(text,slug):
-    nt=norm(text); toks=slug_tokens(slug)
+    toks=slug_tokens(slug)
     if len(toks)<2:return False
     first,last=toks[0],toks[-1]
-    if first not in nt or last not in nt:return False
-    # Profile pages in these volumes carry membership metadata.
-    return bool(re.search(r"\b(section|sektion)\b",nt) and re.search(r"\b(matricula|matrikel|date of election|aufnahmedatum)\b",nt))
+    # True profiles identify the member near the top of the page. Restricting
+    # identity and metadata matching to the header region prevents citations
+    # to other Leopoldina members later in somebody else's biography from
+    # generating false multi-page DOB conflicts.
+    head_raw=text[:1800]
+    head=norm(head_raw)
+    if first not in head or last not in head:return False
+    if not re.search(r"\b(section|sektion)\b",head):return False
+    if not re.search(r"\b(matricula|matrikel|date of election|aufnahmedatum)\b",head):return False
+    return "*" in head_raw
 
 def main():
     OUT.mkdir(parents=True,exist_ok=True)
@@ -99,7 +106,7 @@ def main():
         matches=[]
         for i,text in enumerate(pages):
             if not page_is_target(text,r["member_slug"]):continue
-            ds=dates(text)
+            ds=dates(text[:1800])
             # Keep exact DOB-like starred dates only; old volumes use the star as birth marker.
             for iso,raw in ds:
                 age=YEAR-int(iso[:4])
