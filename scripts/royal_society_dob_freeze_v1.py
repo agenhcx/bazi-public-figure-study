@@ -216,7 +216,7 @@ def main():
 
     source_counts=Counter(r["provenance_source_class"] for r in accepted_current)
     summary={
-      "dataset":"Royal Society primary Fellow exact-DOB freeze candidate v1",
+      "dataset":"Royal Society primary Fellow exact-DOB freeze v1",
       "roster_rows":8669,
       "past_rows":7099,
       "current_rows":1570,
@@ -247,7 +247,7 @@ def main():
     sump=OUT/"summary_v1.json"
     sump.write_text(json.dumps(summary,ensure_ascii=False,indent=2),encoding="utf-8")
     freeze={
-      "dataset":"Royal Society primary Fellow exact-DOB collection freeze candidate v1",
+      "dataset":"Royal Society primary Fellow exact-DOB collection freeze v1",
       "cohort_rows":8669,
       "exact_dob_rows":4983,
       "exact_dob_coverage":round(4983/8669,6),
@@ -259,11 +259,11 @@ def main():
       "authority_reaudit_sha256":sha256(aap),
       "missingness_status_sha256":sha256(sp),
       "missingness_era_sha256":sha256(ep),
-      "freeze_status":"candidate_pending_artifact_checkpoint",
+      "freeze_status":"final",
       "collection_stop_rule":"Freeze broad Royal Society DOB acquisition after this provenance-aligned pass. Reopen only for a newly identified high-authority correction with independently auditable provenance, versioned before hierarchy outcome analysis.",
       "bazi_variables_computed":0
     }
-    (OUT/"freeze_candidate_v1.json").write_text(json.dumps(freeze,ensure_ascii=False,indent=2),encoding="utf-8")
+    (OUT/"freeze_v1.json").write_text(json.dumps(freeze,ensure_ascii=False,indent=2),encoding="utf-8")
     print(json.dumps(summary,ensure_ascii=False,indent=2))
     print(json.dumps(freeze,ensure_ascii=False,indent=2))
 
