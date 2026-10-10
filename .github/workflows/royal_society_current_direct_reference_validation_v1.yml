@@ -1,0 +1,47 @@
+name: Royal Society Current Direct Reference DOB Validation v1
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/royal_society_current_direct_reference_validation_v1.py'
+      - '.github/workflows/royal_society_current_direct_reference_validation_v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  validate:
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        shard: [0,1,2,3]
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Download P569 provenance audit artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: royal-society-current-p569-provenance-audit-v1
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 38007153174
+          path: data/royal_society_current_p569_provenance_input
+
+      - name: Validate direct reference URLs
+        run: python scripts/royal_society_current_direct_reference_validation_v1.py --shard-index ${{ matrix.shard }} --shard-count 4
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: royal-society-current-direct-reference-validation-v1-shard-${{ matrix.shard }}
+          path: data/royal_society_current_direct_reference_validation_v1/shard_0${{ matrix.shard }}_of_04/
+          if-no-files-found: error
