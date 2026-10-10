@@ -1,0 +1,50 @@
+name: Leopoldina Science-Class URL Inventory v1
+on:
+  push:
+    branches: [leopoldina-roster-probe-v1]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  collect:
+    strategy:
+      fail-fast: false
+      matrix:
+        class_index: [0,1,2]
+        shard_index: [0,1,2,3]
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      CLASS_INDEX: ${{ matrix.class_index }}
+      SHARD_INDEX: ${{ matrix.shard_index }}
+      SHARD_COUNT: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python scripts/leopoldina_class_year_inventory_v1.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: leopoldina-class-year-c${{ matrix.class_index }}-s${{ matrix.shard_index }}
+          path: data/leopoldina_class_year_inventory_shard_v1/
+  consolidate:
+    needs: collect
+    if: always() && needs.collect.result == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: leopoldina-class-year-c*-s*
+          path: data/leopoldina_class_year_inventory_inputs_v1
+          merge-multiple: false
+      - run: python scripts/leopoldina_class_year_consolidate_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: leopoldina-science-class-url-inventory-v1
+          path: data/leopoldina_roster_url_inventory_v1/
