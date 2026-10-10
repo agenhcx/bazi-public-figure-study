@@ -15,7 +15,7 @@ def read_csv(p):
 def clean(s):
     return re.sub(r"\s+"," ",unescape(re.sub(r"<[^>]+>"," ",s or ""))).strip()
 def field(html,label):
-    m=re.search(r'<strong[^>]*>\s*'+re.escape(label)+r'\s*</strong>\s*<span[^>]*>(.*?)</span>',html,re.I|re.S)
+    m=re.search(r'<strong[^>]*>\s*'+re.escape(label)+r'\s*</strong>\s*<span[^>]*>(.*?)</span\s*>',html,re.I|re.S)
     return clean(m.group(1)) if m else ""
 def fetch(url,tries=5):
     err=""
