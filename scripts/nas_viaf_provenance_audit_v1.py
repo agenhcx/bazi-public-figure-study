@@ -190,6 +190,7 @@ def fetch_one(code,ident,candidate):
     else:raise ValueError(code)
     return code,ident,{"ok":1,"url":final,"status":st,"error":"","dates":ds,"supports":sup,"structured":structured,"notes":notes}
 
+allowed_codes={x.strip() for x in os.environ.get("VIAF_PROVENANCE_CODES","LC,SUDOC,DNB,BNF").split(",") if x.strip()}
 cand_rows=read_csv(locate(CAND_NAMES))
 all_rows=read_csv(locate(ALL_NAMES))
 # Add a bounded validation set whose VIAF date already matches the frozen master; this tests direct-source tracing.
@@ -201,7 +202,7 @@ jobs={}
 for cohort,r in targets:
     candidate=r.get("viaf_candidate_dob","")
     for code,ident in split_sids(r.get("contributing_authority_sids","")):
-        if code in {"LC","SUDOC","DNB","BNF"}:
+        if code in allowed_codes:
             jobs[(code,ident,candidate)]=None
 
 with ThreadPoolExecutor(max_workers=12) as ex:
@@ -221,7 +222,7 @@ out=[];verified=[];validation=[]
 for cohort,r in targets:
     cand=r.get("viaf_candidate_dob","");attempted=[];fetched=[];support=[];conflicts=[];dates=set();details=[]
     for code,ident in split_sids(r.get("contributing_authority_sids","")):
-        if code not in {"LC","SUDOC","DNB","BNF"}:continue
+        if code not in allowed_codes:continue
         attempted.append(code+":"+ident)
         z=jobs.get((code,ident,cand),{})
         if z.get("ok"):fetched.append(code+":"+ident)
@@ -237,7 +238,7 @@ for cohort,r in targets:
       "direct_supporting_sources":"|".join(support),"direct_conflicting_sources":"|".join(conflicts),
       "verified_by_direct_authority":verified_flag,
       "verified_source_codes":"|".join(sorted({x.split(":",1)[0] for x in support})),
-      "verified_source_urls":"|".join(sorted({jobs[(code,ident,cand)].get("url","") for code,ident in split_sids(r.get("contributing_authority_sids","")) if code in {"LC","SUDOC","DNB","BNF"} and jobs.get((code,ident,cand),{}).get("supports")})),
+      "verified_source_urls":"|".join(sorted({jobs[(code,ident,cand)].get("url","") for code,ident in split_sids(r.get("contributing_authority_sids","")) if code in allowed_codes and jobs.get((code,ident,cand),{}).get("supports")})),
       "all_direct_dates":"|".join(sorted(dates)),"audit_details":" || ".join(details)
     }
     out.append(row)
@@ -248,6 +249,7 @@ write_csv(OUT,out,fields);write_csv(VER,verified,fields);write_csv(VAL,validatio
 vfetch=[x for x in validation if x["direct_sources_fetched"]]
 summary={
  "dataset":"NAS VIAF candidate contributing-authority provenance audit v1",
+ "authority_codes_requested":sorted(allowed_codes),
  "viaf_candidate_rows":len(cand_rows),
  "candidate_rows_with_any_direct_source_attempted":sum(bool(x["direct_sources_attempted"]) for x in out if x["cohort"]=="candidate"),
  "candidate_rows_with_any_direct_source_fetched":sum(bool(x["direct_sources_fetched"]) for x in out if x["cohort"]=="candidate"),
