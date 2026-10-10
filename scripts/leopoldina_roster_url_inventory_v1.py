@@ -1,25 +1,31 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import csv,json,re,time,urllib.request,urllib.error
+import csv,json,re,time,urllib.request,urllib.error,urllib.parse,http.cookiejar
 from html import unescape
 from pathlib import Path
 from urllib.parse import urljoin
 
-BASE="https://www.leopoldina.org/en/members/member-list"
+BASE="https://www.leopoldina.org/en/members/member-list"\nJAR=http.cookiejar.CookieJar()\nOPENER=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(JAR))
 OUT=Path("data/leopoldina_roster_url_inventory_v1")
 UA="Mozilla/5.0 (compatible; bazi-public-figure-study/1.0; reproducibility research)"
 
-def fetch(url,tries=4):
+def fetch_page(page,tries=4):
     err=""
     for i in range(tries):
         try:
-            req=urllib.request.Request(url,headers={"User-Agent":UA,"Accept":"text/html,application/xhtml+xml"})
-            with urllib.request.urlopen(req,timeout=40) as r:
+            headers={"User-Agent":UA,"Accept":"text/html,application/xhtml+xml","Referer":BASE+"/"}
+            if page==1:
+                req=urllib.request.Request(BASE+"/",headers=headers)
+            else:
+                data=urllib.parse.urlencode({"tx_solr[page]":str(page),"tx_solr[resultsPerPage]":"50"}).encode()
+                headers["Content-Type"]="application/x-www-form-urlencoded"
+                req=urllib.request.Request(BASE+"/",data=data,headers=headers,method="POST")
+            with OPENER.open(req,timeout=40) as r:
                 return r.status,r.geturl(),r.read().decode("utf-8","replace"),""
         except Exception as e:
             err=f"{type(e).__name__}: {e}"
             time.sleep(2**i)
-    return None,url,"",err
+    return None,BASE+"/","",err
 
 def details(html,base):
     hrefs=[unescape(h) for h in re.findall(r'href=["\']([^"\']+)["\']',html,re.I)]
@@ -32,8 +38,8 @@ def main():
     pages=[]
     stop_reason=""
     for page in range(1,401):
-        url=BASE+"/" if page==1 else f"{BASE}?tx_solr%5Bpage%5D={page}"
-        status,final_url,html,error=fetch(url)
+        url=BASE+"/" if page==1 else f"POST {BASE}/ tx_solr[page]={page}"
+        status,final_url,html,error=fetch_page(page)
         ds=details(html,final_url) if html else []
         new=[u for u in ds if u not in seen]
         pages.append({"page":page,"requested_url":url,"status":status or "","final_url":final_url,"detail_links":len(ds),"new_detail_links":len(new),"bytes":len(html.encode("utf-8")) if html else 0,"error":error})
