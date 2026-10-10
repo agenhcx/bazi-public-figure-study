@@ -1,0 +1,28 @@
+name: Leopoldina Official PDF DOB Probe v1
+on:
+  push:
+    branches: [leopoldina-dob-official-v1]
+    paths:
+      - "scripts/leopoldina_official_pdf_probe_v1.py"
+      - ".github/workflows/leopoldina_official_pdf_probe_v1.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m pip install --quiet pypdf
+      - run: python scripts/leopoldina_official_pdf_probe_v1.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: leopoldina-official-pdf-dob-probe-v1
+          path: |
+            data/leopoldina_official_pdf_probe_v1/summary.json
+            data/leopoldina_official_pdf_probe_v1/*_probe.json
