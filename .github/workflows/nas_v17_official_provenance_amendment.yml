@@ -30,15 +30,16 @@ jobs:
           repository: agenhcx/bazi-public-figure-study
           run-id: 37860554354
           path: data
-      - name: Apply staged official-provenance amendment
+      - name: Apply official-provenance freeze
         run: python scripts/nas_manual_dob_supplement_v9.py
-      - name: Upload v17 candidate
+      - name: Upload frozen v17
         uses: actions/upload-artifact@v4
         with:
-          name: nas-dob-v17-staged-official-provenance
+          name: nas-dob-v17-official-provenance-freeze
           path: |
             data/nas_science_core_dob_crosswalk/nas_science_core_dob_crosswalk_v17.csv
             data/nas_science_core_dob_crosswalk/nas_science_core_dob_manual_supplement_log_v9.csv
             data/nas_science_core_dob_crosswalk/summary_v17.json
             data/nas_science_core_dob_freeze_v17.json
+            data/nas_viaf_independent_source_audit_v1.csv
           if-no-files-found: error
