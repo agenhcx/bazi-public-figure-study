@@ -1,0 +1,26 @@
+name: Leopoldina Roster Location Cleanup v1
+on:
+  push:
+    branches: [leopoldina-roster-probe-v1]
+    paths:
+      - ".github/workflows/leopoldina_roster_location_cleanup_v1.yml"
+permissions:
+  contents: write
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: leopoldina-roster-probe-v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python scripts/leopoldina_roster_location_cleanup_v1.py
+      - name: Commit deterministic metadata cleanup
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/leopoldina_roster_freeze_v1
+          git commit -m "Correct Leopoldina roster location parser suffix"
+          git push origin HEAD:leopoldina-roster-probe-v1
