@@ -16,12 +16,12 @@ permissions:
 jobs:
   pilot:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 18
     strategy:
       fail-fast: false
-      max-parallel: 2
+      max-parallel: 6
       matrix:
-        shard: [0, 1, 2, 3]
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -38,7 +38,7 @@ jobs:
           run-id: 37860554354
           path: data
       - name: Run institutional-official pilot shard
-        run: python scripts/nas_institutional_official_dob_pilot_v1.py --shard ${{ matrix.shard }} --shards 4 --validation-n 80 --unresolved-n 160
+        run: python scripts/nas_institutional_official_dob_pilot_v1.py --shard ${{ matrix.shard }} --shards 12 --validation-n 80 --unresolved-n 160
       - name: Upload shard outputs
         uses: actions/upload-artifact@v4
         with:
