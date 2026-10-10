@@ -1,0 +1,29 @@
+name: Leopoldina 2025 PDF DOB Probe v1
+on:
+  push:
+    branches: [leopoldina-roster-probe-v1]
+    paths:
+      - ".github/workflows/leopoldina_2025_pdf_dob_probe_v1.yml"
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Download official 2025 directory PDF
+        run: |
+          mkdir -p data/leopoldina_2025_pdf_dob_probe_v1
+          curl -fL --retry 4 --retry-delay 2 -A 'Mozilla/5.0' 'https://www.leopoldina.org/fileadmin/Daten/Publikationen/Dokumente/2025_Leopoldina_Struktur_und_Mitglieder.pdf' -o data/leopoldina_2025_pdf_dob_probe_v1/2025_Leopoldina_Struktur_und_Mitglieder.pdf
+      - run: python scripts/leopoldina_2025_pdf_dob_probe_v1.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: leopoldina-2025-pdf-dob-probe-v1
+          path: |
+            data/leopoldina_2025_pdf_dob_probe_v1/probe.json
+            data/leopoldina_2025_pdf_dob_probe_v1/2025_Leopoldina_Struktur_und_Mitglieder.txt
