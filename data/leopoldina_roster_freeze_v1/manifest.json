@@ -16,9 +16,18 @@
   "http_parse_failures": 0,
   "election_year_mismatches": 0,
   "honorary_membership_rule": "Leopoldina honorary membership is an Academy distinction awarded to existing members, not a separate admission category; later honorary distinction does not remove an otherwise eligible Member from the primary cohort.",
-  "roster_csv_sha256": "713c8b090df134057adf30e89951f77dc6a3f49f710c54e6413469ecb54c7163",
+  "roster_csv_sha256": "79cefeac97cb556750ae876455f65d0401148181fbfe4d9ef80fec8f9b7c57e2",
   "section_audit_sha256": "2e28a6aa3f981e44624b9e4c4bccd924008ccef8ce2c1f128df98143b19580bd",
   "dob_lookup_performed": 0,
   "bazi_variables_computed": 0,
-  "freeze_status": "roster_frozen_dob_not_started"
+  "freeze_status": "roster_frozen_dob_not_started",
+  "location_parser_cleanup": {
+    "changed_rows": 1894,
+    "rule": "Strip parser-introduced suffix 'Election year YYYY' from location only when YYYY exactly equals the frozen row election_year.",
+    "source_membership_changed": 0,
+    "class_or_section_changed": 0,
+    "election_year_changed": 0,
+    "status_changed": 0,
+    "audit_csv_sha256": "425bb593406792de1406244bace03d9f697b4d017f27501950ad0288f58a8b40"
+  }
 }
