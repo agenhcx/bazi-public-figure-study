@@ -1,0 +1,43 @@
+name: NAS VIAF Provenance Audit v1
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/nas_viaf_provenance_audit_v1.py'
+      - '.github/workflows/nas_viaf_provenance_audit_v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Download VIAF diagnostic artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: nas-viaf-dob-diagnostic-v1
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 38052372047
+          path: data
+      - name: Run direct-authority provenance audit
+        run: python scripts/nas_viaf_provenance_audit_v1.py
+      - name: Upload provenance outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: nas-viaf-provenance-audit-v1
+          path: |
+            data/nas_viaf_provenance_audit_v1.csv
+            data/nas_viaf_provenance_validation_v1.csv
+            data/nas_viaf_provenance_verified_candidates_v1.csv
+            data/summary_nas_viaf_provenance_audit_v1.json
+          if-no-files-found: error
