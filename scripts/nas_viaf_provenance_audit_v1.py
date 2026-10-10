@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from __future__ import annotations
+import os
 import csv,datetime as dt,json,re,time,urllib.error,urllib.parse,urllib.request,xml.etree.ElementTree as ET
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor,as_completed
@@ -192,7 +193,8 @@ def fetch_one(code,ident,candidate):
 cand_rows=read_csv(locate(CAND_NAMES))
 all_rows=read_csv(locate(ALL_NAMES))
 # Add a bounded validation set whose VIAF date already matches the frozen master; this tests direct-source tracing.
-val_rows=[r for r in all_rows if r.get("cohort")=="validation" and r.get("viaf_candidate_dob") and r.get("validation_match")=="1"][:80]
+validation_n=int(os.environ.get("VIAF_PROVENANCE_VALIDATION_N","20"))
+val_rows=[r for r in all_rows if r.get("cohort")=="validation" and r.get("viaf_candidate_dob") and r.get("validation_match")=="1"][:validation_n]
 targets=[("candidate",r) for r in cand_rows]+[("validation",r) for r in val_rows]
 
 jobs={}
