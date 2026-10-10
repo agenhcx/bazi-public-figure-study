@@ -1,0 +1,30 @@
+name: Persist Leopoldina URL Inventory v1
+on:
+  push:
+    branches: [leopoldina-roster-probe-v1]
+    paths:
+      - ".github/workflows/leopoldina_persist_url_inventory_v1.yml"
+permissions:
+  actions: read
+  contents: write
+jobs:
+  persist:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: leopoldina-roster-probe-v1
+      - uses: actions/download-artifact@v4
+        with:
+          name: leopoldina-science-class-url-inventory-v1
+          path: data/leopoldina_roster_url_inventory_v1
+          github-token: ${{ github.token }}
+          run-id: 38093754128
+      - name: Commit frozen URL inventory inputs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/leopoldina_roster_url_inventory_v1
+          git commit -m "Persist Leopoldina science-class URL inventory v1"
+          git push origin HEAD:leopoldina-roster-probe-v1
