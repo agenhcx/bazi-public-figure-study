@@ -1,11 +1,6 @@
 name: Royal Society Secondary DOB Locator Diagnostic v1
 
 on:
-  pull_request:
-    branches: [main]
-    paths:
-      - 'scripts/royal_society_wikidata_locator_diagnostic_v1.py'
-      - '.github/workflows/royal_society_secondary_dob_locator_v1.yml'
   workflow_dispatch:
 
 permissions:

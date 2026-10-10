@@ -1,11 +1,6 @@
 name: Royal Society Current Wikidata Locator v1
 
 on:
-  pull_request:
-    branches: [main]
-    paths:
-      - 'scripts/royal_society_current_wikidata_locator_v1.py'
-      - '.github/workflows/royal_society_current_wikidata_locator_v1.yml'
   workflow_dispatch:
 
 permissions:
