@@ -46,7 +46,7 @@ def main():
                     ey=str(y);break
         dob=f"{m.group(3)}-{m.group(2).zfill(2)}-{m.group(1).zfill(2)}"
         raw.append({"pdf_line":i+1,"pdf_name":name,"pdf_name_inverted":invert_pdf_name(name),"dob":dob,"election_year":ey})
-    if len(raw)!=1612:raise RuntimeError(f"Expected 1612 exact DOB lines from diagnostic, got {len(raw)}")
+    if len(raw)!=1574:raise RuntimeError(f"Expected 1574 standalone member-table exact DOB records, got {len(raw)}")
     index=defaultdict(list)
     for r in roster:
         index[(norm(r["display_name"]),r["election_year"])].append(r)
@@ -66,7 +66,7 @@ def main():
         w=csv.DictWriter(f,fieldnames=fields);w.writeheader();w.writerows(out)
     summary={
       "dataset":"Leopoldina 2015 official directory exact-DOB crosswalk diagnostic v1",
-      "pdf_exact_dob_records":len(raw),
+      "pdf_standalone_member_table_exact_dob_records":len(raw),
       "parse_missing_name":sum(not x["pdf_name"] for x in raw),
       "parse_missing_election_year":sum(not x["election_year"] for x in raw),
       "match_status_counts":dict(counts),
