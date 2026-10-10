@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import csv, json, re, time, urllib.parse, urllib.request
+import csv, json, re, time, urllib.parse, urllib.request, urllib.error
 from collections import Counter
 from pathlib import Path
 
@@ -17,13 +17,37 @@ def write_csv(p,rows,fields):
         w=csv.DictWriter(f,fieldnames=fields,extrasaction="ignore");w.writeheader();w.writerows(rows)
 
 def entities(qids):
-    out={};qids=list(dict.fromkeys(qids))
-    for i in range(0,len(qids),50):
-        qs=urllib.parse.urlencode({"action":"wbgetentities","ids":"|".join(qids[i:i+50]),"props":"claims","format":"json"})
-        req=urllib.request.Request(API+"?"+qs,headers={"User-Agent":UA})
-        with urllib.request.urlopen(req,timeout=45) as r:out.update(json.load(r).get("entities",{}))
-        if (i//50+1)%5==0:print("entity batches",i//50+1,"/",((len(qids)+49)//50))
-        time.sleep(.15)
+    out={};qids=list(dict.fromkeys(qids)); batch=25
+    total=(len(qids)+batch-1)//batch
+    for i in range(0,len(qids),batch):
+        part=qids[i:i+batch]
+        params={"action":"wbgetentities","ids":"|".join(part),"props":"claims","format":"json","maxlag":5}
+        qs=urllib.parse.urlencode(params)
+        last=None
+        for a in range(8):
+            try:
+                req=urllib.request.Request(API+"?"+qs,headers={"User-Agent":UA,"Accept":"application/json"})
+                with urllib.request.urlopen(req,timeout=60) as r:
+                    out.update(json.load(r).get("entities",{}))
+                last=None
+                break
+            except urllib.error.HTTPError as e:
+                last=e
+                if e.code==429 and a<7:
+                    try:wait=float(e.headers.get("Retry-After",""))
+                    except:wait=min(60,5*(a+1))
+                    time.sleep(max(5,min(90,wait)));continue
+                if a<7:
+                    time.sleep(min(30,2**a));continue
+                raise
+            except Exception as e:
+                last=e
+                if a<7:
+                    time.sleep(min(30,2**a));continue
+                raise
+        n=i//batch+1
+        if n%5==0 or n==total:print("entity batches",n,"/",total)
+        time.sleep(.8)
     return out
 
 def time_claims(ent,pid):
