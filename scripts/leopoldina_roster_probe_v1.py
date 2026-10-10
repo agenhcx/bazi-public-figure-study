@@ -29,8 +29,10 @@ def clean(s):
 def main():
     OUT.mkdir(parents=True,exist_ok=True)
     report={"dataset":"Leopoldina official member-directory discovery probe v1","bazi_variables_computed":0,"pages":[]}
-    for url in URLS:
+    for idx,url in enumerate(URLS):
         x=fetch(url); html=x.pop("html")
+        if idx==0 and html:
+            (OUT/"member_list_landing_snapshot.html").write_text(html,encoding="utf-8")
         hrefs=[unescape(h) for h in re.findall(r'href=["\']([^"\']+)["\']',html,re.I)]
         hrefs=[urljoin(x["final_url"],h) for h in hrefs]
         detail=sorted(set(h for h in hrefs if re.search(r"/(?:en/members/member-list|mitglieder/mitgliederverzeichnis)/detail/",h)))
