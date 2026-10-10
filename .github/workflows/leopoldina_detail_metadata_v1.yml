@@ -1,0 +1,63 @@
+name: Leopoldina Detail Metadata v1
+on:
+  push:
+    branches: [leopoldina-roster-probe-v1]
+    paths:
+      - "scripts/leopoldina_detail_metadata_v1.py"
+      - "scripts/leopoldina_detail_metadata_consolidate_v1.py"
+      - ".github/workflows/leopoldina_detail_metadata_v1.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  collect:
+    strategy:
+      fail-fast: false
+      matrix:
+        shard_index: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      SHARD_INDEX: ${{ matrix.shard_index }}
+      SHARD_COUNT: 16
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: leopoldina-roster-probe-v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python scripts/leopoldina_detail_metadata_v1.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: leopoldina-detail-metadata-s${{ matrix.shard_index }}
+          path: data/leopoldina_detail_metadata_shard_v1/
+  consolidate:
+    needs: collect
+    if: needs.collect.result == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: leopoldina-roster-probe-v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: leopoldina-detail-metadata-s*
+          path: data/leopoldina_detail_metadata_inputs_v1
+          merge-multiple: false
+      - run: python scripts/leopoldina_detail_metadata_consolidate_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: leopoldina-roster-freeze-candidate-v1
+          path: data/leopoldina_roster_freeze_candidate_v1/
+      - name: Persist roster candidate
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/leopoldina_roster_freeze_candidate_v1
+          git commit -m "Persist Leopoldina roster freeze candidate v1"
+          git push origin HEAD:leopoldina-roster-probe-v1
