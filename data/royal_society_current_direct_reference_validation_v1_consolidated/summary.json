@@ -6,8 +6,8 @@
   "eligible_url_instances": 75,
   "fetched_ok": 38,
   "accepted_url_instances": 15,
-  "accepted_unique_people": 55,
-  "accepted_exact_dob": 55,
+  "accepted_unique_people": 71,
+  "accepted_exact_dob": 71,
   "accepted_by_domain": {
     "catalogue.bnf.fr": 8,
     "prixduquebec.gouv.qc.ca": 3,
@@ -41,7 +41,7 @@
     "dof.princeton.edu": 1,
     "gov.za": 1
   },
-  "note": "Current accepted exact DOB total is 55: 15 direct-reference validations + 3 authoritative web fallbacks + 34 GND/BnF authority records after targeted identity audit + 3 corrected-identity institutional sources. Wikidata P569 remains locator-only.",
+  "note": "Current accepted exact DOB total is 71: 15 direct-reference validations + 3 authoritative web fallbacks + 34 GND/BnF authority records after targeted identity audit + 3 corrected-identity institutional sources + 16 new MacTutor/EOAS validations. Wikidata P569 remains locator-only.",
   "accepted_authoritative_web_fallback": 3,
   "accepted_authority_record_after_identity_audit": 34,
   "authority_candidate_unique_before_identity": 47,
@@ -57,5 +57,11 @@
     "John Ball Q667583 = 1948-05-19 (Oxford-hosted CV)",
     "James Murray Q1680238 = 1931-01-02 (MacTutor / University of St Andrews)",
     "James Dunlop Q24051741 = 1962-05-01 (Royal Observatory Edinburgh-hosted CV)"
-  ]
+  ],
+  "mactutor_eoas_validated_rows": 20,
+  "mactutor_eoas_validated_unique_people": 19,
+  "mactutor_eoas_overlap_with_prior_accepted": 3,
+  "mactutor_eoas_new_accepted": 16,
+  "mactutor_eoas_identity_rejected": 1,
+  "mactutor_eoas_identity_rejected_person": "Thomas Simpson historical Q336780 (1710-08-20)"
 }
