@@ -6,7 +6,7 @@ from concurrent.futures import ThreadPoolExecutor,as_completed
 from pathlib import Path
 
 BASE=Path("data")
-INPUT=BASE/"nas_science_core_dob_crosswalk_v16.csv"
+INPUT=BASE/"nas_science_core_dob_crosswalk"/"nas_science_core_dob_crosswalk_v16.csv"
 UA="bazi-public-figure-study/1.0 (NAS VIAF full provenance validation; no BaZi computation)"
 QLEVER="https://qlever.dev/api/wikidata"
 
