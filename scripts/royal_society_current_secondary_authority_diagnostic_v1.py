@@ -23,22 +23,38 @@ def write_csv(p,rows,fields):
 
 def wd_entities(qids):
     out={};qids=list(dict.fromkeys(qids))
-    for i in range(0,len(qids),25):
-        part=qids[i:i+25]
+    for i in range(0,len(qids),10):
+        part=qids[i:i+10]
         qs=urllib.parse.urlencode({"action":"wbgetentities","ids":"|".join(part),"props":"claims","format":"json","maxlag":5})
-        for a in range(8):
+        last=None
+        for a in range(10):
             try:
                 req=urllib.request.Request(API+"?"+qs,headers={"User-Agent":UA,"Accept":"application/json"})
-                with urllib.request.urlopen(req,timeout=60) as r:out.update(json.load(r).get("entities",{}))
+                with urllib.request.urlopen(req,timeout=60) as r:
+                    data=json.load(r)
+                if data.get("error"):
+                    last=RuntimeError(json.dumps(data["error"],ensure_ascii=False))
+                    time.sleep(min(60,3*(a+1)))
+                    continue
+                out.update(data.get("entities",{}))
+                last=None
                 break
             except urllib.error.HTTPError as e:
-                if e.code==429 and a<7:
+                last=e
+                if e.code==429 and a<9:
                     try:wait=float(e.headers.get("Retry-After",""))
                     except:wait=5*(a+1)
                     time.sleep(max(5,min(60,wait)));continue
-                if a<7:time.sleep(min(30,2**a));continue
+                if a<9:time.sleep(min(30,2**a));continue
                 raise
-        time.sleep(.8)
+            except Exception as e:
+                last=e
+                if a<9:time.sleep(min(30,2**a));continue
+                raise
+        if last is not None:
+            raise RuntimeError(f"Wikidata entity batch failed after retries: {part}: {last}")
+        print("wikidata entity batch",i//10+1)
+        time.sleep(1.0)
     return out
 
 def claim_string(ent,pid):
