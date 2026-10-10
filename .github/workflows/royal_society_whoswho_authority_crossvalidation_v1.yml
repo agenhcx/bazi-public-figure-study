@@ -1,0 +1,50 @@
+name: Royal Society Who's Who Authority Crossvalidation v1
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/royal_society_whoswho_authority_crossvalidation_v1.py'
+      - '.github/workflows/royal_society_whoswho_authority_crossvalidation_v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  validate:
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        shard: [0,1]
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: royal-society-current-direct-reference-validation-v1-shard-*
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 38007751078
+          path: data/direct_validation_inputs
+          merge-multiple: false
+      - uses: actions/download-artifact@v4
+        with:
+          name: royal-society-current-locator-identity-audit-v1
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 38008500051
+          path: data/current_locator_identity_audit_input
+      - name: Cross-validate Who's Who dates against independent authority records
+        run: python scripts/royal_society_whoswho_authority_crossvalidation_v1.py --shard-index ${{ matrix.shard }} --shard-count 2
+      - uses: actions/upload-artifact@v4
+        with:
+          name: royal-society-whoswho-authority-crossvalidation-v1-shard-${{ matrix.shard }}
+          path: data/royal_society_whoswho_authority_crossvalidation_v1/shard_0${{ matrix.shard }}_of_02/
+          if-no-files-found: error
