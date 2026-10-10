@@ -35,7 +35,7 @@ Detail-roster workflow run: 38094217464.
 Detail-roster artifact ID: 11685836062.
 Detail-roster artifact ZIP SHA256: f149b6fb666f5f944b943a941fe1778baff8b9d0bca48bd87c2f7d8c632eaf53.
 
-Frozen roster CSV SHA256: 713c8b090df134057adf30e89951f77dc6a3f49f710c54e6413469ecb54c7163.
+Frozen roster CSV SHA256 after deterministic location-parser cleanup: 79cefeac97cb556750ae876455f65d0401148181fbfe4d9ef80fec8f9b7c57e2.\n\nLocation parser cleanup audit SHA256: 425bb593406792de1406244bace03d9f697b4d017f27501950ad0288f58a8b40. The cleanup changed 1,894 location strings only; membership, class, section, election year, and current/deceased status were unchanged.
 Section audit SHA256: 2e28a6aa3f981e44624b9e4c4bccd924008ccef8ce2c1f128df98143b19580bd.
 
 ## Stop rule
