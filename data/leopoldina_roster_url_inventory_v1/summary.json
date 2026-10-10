@@ -1,0 +1,42 @@
+{
+  "dataset": "Leopoldina science Classes I-III official member URL inventory v1",
+  "source": "Official Leopoldina member directory via POST class + electionYear buckets, avoiding WAF-blocked pagination queries.",
+  "observed_election_years": 352,
+  "election_year_min": 1652,
+  "election_year_max": 2026,
+  "class_facet_totals": {
+    "Class I: Mathematics, Natural Sciences and Engineering": 1139,
+    "Class II: Life Sciences": 967,
+    "Class III: Medicine": 822
+  },
+  "class_all_year_bucket_totals": {
+    "Class I: Mathematics, Natural Sciences and Engineering": 1139,
+    "Class II: Life Sciences": 967,
+    "Class III: Medicine": 822
+  },
+  "class_through_2025_totals": {
+    "Class I: Mathematics, Natural Sciences and Engineering": 1131,
+    "Class II: Life Sciences": 946,
+    "Class III: Medicine": 811
+  },
+  "class_2026_excluded_totals": {
+    "Class I: Mathematics, Natural Sciences and Engineering": 8,
+    "Class II: Life Sciences": 21,
+    "Class III: Medicine": 11
+  },
+  "all_classified_science_member_urls": 2928,
+  "primary_member_urls_through_2025": 2888,
+  "post2025_excluded": 40,
+  "class_year_reconciliation_gaps": {
+    "Class I: Mathematics, Natural Sciences and Engineering": 0,
+    "Class II: Life Sciences": 0,
+    "Class III: Medicine": 0
+  },
+  "duplicate_urls": 0,
+  "primary_csv_sha256": "41a57ab664902118dbd16b507cc4f99d181ab44ac874c3a72d0c2b1168cb81c4",
+  "post2025_csv_sha256": "f3566a44a128829a57dc3a2f4ea68530d252503c1f2d1f7d078e5e1464cbe507",
+  "bucket_audit_sha256": "d678956ba2284e52fb9ebe9e4ebe1ee607efce7198be6a2ac997fe460a54f3b9",
+  "dob_lookup_performed": 0,
+  "bazi_variables_computed": 0,
+  "next_step": "Fetch official member detail pages for frozen URL universe; parse section, election metadata, deceased status, and membership-category clues before DOB collection."
+}
