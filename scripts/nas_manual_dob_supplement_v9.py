@@ -31,27 +31,39 @@ before=sum(present(r.get("final_exact_dob")) for r in rows)
 before_dead=sum(r.get("deceased")=="Y" for r in rows)
 before_dead_exact=sum(r.get("deceased")=="Y" and present(r.get("final_exact_dob")) for r in rows)
 log=[]
+deceased_status_changes=0
 
 for p in patches:
-    matches=[r for r in rows if r.get("name","").strip()==p["name"].strip()]
-    if len(matches)!=1:raise RuntimeError(f"Expected unique name match for {p['name']}, got {len(matches)}")
+    u=(p.get("profile_url") or "").strip()
+    matches=[r for r in rows if (r.get("profile_url") or "").strip()==u] if u else [r for r in rows if r.get("name","").strip()==p["name"].strip()]
+    if len(matches)!=1:raise RuntimeError(f"Expected unique target for {p['name']}, got {len(matches)}")
     r=matches[0]
+    if r.get("name","").strip()!=p["name"].strip():raise RuntimeError(f"Name mismatch for {u}: {r.get('name')!r} vs {p['name']!r}")
     old=(r.get("final_exact_dob") or "").strip()
     exp=(p.get("expected_old_final_exact_dob") or "").strip()
     if old!=exp:raise RuntimeError(f"Old DOB mismatch for {p['name']}: {old!r} vs expected {exp!r}")
     if old:raise RuntimeError(f"v9 only fills blank DOBs: {p['name']}")
-    if r.get("deceased")=="Y":raise RuntimeError(f"v9 expected operationally living/unresolved row: {p['name']}")
+    old_deceased=(r.get("deceased") or "").strip()
     new=valid(p["new_final_exact_dob"].strip())
-    death=valid(p["death_date"].strip())
+    requested_deceased=(p.get("new_deceased") or "").strip()
+    death_raw=(p.get("death_date") or "").strip()
+    death=valid(death_raw) if death_raw else ""
+    if requested_deceased and requested_deceased not in {"Y"}:
+        raise RuntimeError(f"Unsupported new_deceased value for {p['name']}: {requested_deceased!r}")
+    if death and requested_deceased!="Y":
+        raise RuntimeError(f"death_date requires new_deceased=Y for {p['name']}")
     r["final_exact_dob"]=new
-    r["deceased"]=p["new_deceased"].strip()
-    r["dob_status"]="exact_manual_supplement_v9_official_nas_plus_institutional_cv"
+    if requested_deceased:
+        if old_deceased=="Y":raise RuntimeError(f"Target already deceased before v9: {p['name']}")
+        r["deceased"]=requested_deceased
+        deceased_status_changes+=1
+    r["dob_status"]="exact_manual_supplement_v9_official_provenance"
     for k in ("review_status","primary_source_url","secondary_source_url","death_date","note"):
         r["manual_supplement_v9_"+k]=p.get(k,"")
     log.append({
       **p,
       "matched_profile_url":r.get("profile_url",""),
-      "old_deceased":"",
+      "old_deceased":old_deceased,
       "new_deceased_applied":r.get("deceased","")
     })
 
@@ -65,8 +77,8 @@ living=[r for r in rows if r.get("deceased")!="Y"]
 dead_exact=sum(present(r.get("final_exact_dob")) for r in dead)
 living_exact=sum(present(r.get("final_exact_dob")) for r in living)
 if after!=before+len(patches):raise RuntimeError("Exact-DOB delta invariant failed")
-if len(dead)!=before_dead+len(patches):raise RuntimeError("Deceased-status delta invariant failed")
-if dead_exact!=before_dead_exact+len(patches):raise RuntimeError("Deceased exact-DOB delta invariant failed")
+if len(dead)!=before_dead+deceased_status_changes:raise RuntimeError("Deceased-status delta invariant failed")
+if dead_exact!=before_dead_exact+deceased_status_changes:raise RuntimeError("Deceased exact-DOB delta invariant failed")
 if dead_exact!=len(dead):raise RuntimeError("Deceased completeness regressed")
 
 write_csv(OUT,rows);write_csv(LOG,log)
@@ -76,6 +88,7 @@ summary={
  "science_core_rows":len(rows),
  "input_exact_dob_rows":before,
  "supplement_rows":len(patches),
+ "deceased_status_changes":deceased_status_changes,
  "final_exact_dob_rows":after,
  "final_exact_dob_coverage":round(after/len(rows),6),
  "remaining_without_exact_dob":len(rows)-after,
@@ -86,7 +99,7 @@ summary={
  "living_final_exact_dob_rows":living_exact,
  "living_final_exact_dob_coverage":round(living_exact/len(living),6),
  "bazi_variables_computed":0,
- "policy_note":"Post-v16 amendment contains only independently corroborated high-authority corrections. Current patch adds Jay Quade from an official NAS profile plus a University of Arizona-hosted personal CV and corrects the operational deceased flag from current NAS evidence. VIAF-only/library-chain candidates remain excluded pending independent non-library corroboration.",
+ "policy_note":"Post-v16 amendment contains only high-authority non-library provenance corrections: Jay Quade (official NAS profile plus University of Arizona-hosted CV), Mark Johnston (University of Colorado School of Medicine-hosted CV), and John M. Tranquada (Brookhaven National Laboratory-hosted professional biographical record). Jay Quade also receives an operational deceased-status correction. VIAF/library-chain-only candidates remain excluded pending independent non-library corroboration.",
  "files":{OUT.name:sha(OUT),LOG.name:sha(LOG),PATCH.name:sha(PATCH)}
 }
 SUMMARY.write_text(json.dumps(summary,ensure_ascii=False,indent=2),encoding="utf-8")
