@@ -23,10 +23,10 @@ def write_csv(p,rows,fields):
         w=csv.DictWriter(f,fieldnames=fields,extrasaction="ignore");w.writeheader();w.writerows(rows)
 
 def wd_entities(qids):
-    out={};qids=list(dict.fromkeys(qids));batch=20
+    out={};qids=list(dict.fromkeys(qids));batch=10
     for i in range(0,len(qids),batch):
         part=qids[i:i+batch]
-        qs=urllib.parse.urlencode({"action":"wbgetentities","ids":"|".join(part),"props":"claims","format":"json","maxlag":5})
+        qs=urllib.parse.urlencode({"action":"wbgetentities","ids":"|".join(part),"props":"claims","format":"json","maxlag":30})
         last=None
         for a in range(10):
             try:
