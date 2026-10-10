@@ -1,0 +1,104 @@
+{
+  "dataset": "Royal Society current direct-reference DOB validation consolidated v1",
+  "source_run_id": 38007751078,
+  "url_instances": 102,
+  "unique_people": 97,
+  "eligible_url_instances": 75,
+  "fetched_ok": 38,
+  "accepted_url_instances": 15,
+  "accepted_unique_people": 125,
+  "accepted_exact_dob": 125,
+  "accepted_by_domain": {
+    "catalogue.bnf.fr": 8,
+    "prixduquebec.gouv.qc.ca": 3,
+    "nobelprize.org": 2,
+    "web.math.ku.dk": 1,
+    "optometry.berkeley.edu": 1
+  },
+  "fetch_status_counts": {
+    "ok": 38,
+    "HTTP 403": 34,
+    "HTTP 404": 17,
+    "pdf_not_parsed": 6,
+    "URLError: <urlopen error [Errno -2] Name or service not known>": 2,
+    "HTTP 502": 1,
+    "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1016)>": 1,
+    "HTTP 405": 1,
+    "ValueError: unknown url type: 'jsessionid=C01EEDCFD50920EA02B5B5EE28327988'": 1,
+    "URLError: <urlopen error timed out>": 1
+  },
+  "eligible_but_unaccepted": 60,
+  "full_csv_sha256": "cefabf473ebeaf69bc3d2906c6863cf22357812211b24a74e3d36f06e6cf8b04",
+  "accepted_csv_sha256": "15b61e7f6c9e0e1e01bb6f1c602090300b4654fec3e8b7c433264828b32ece02",
+  "unresolved_csv_sha256": "9f906ac18361d969775fe6a4345c33bb0f2567e04fe349cb547d6b2380c53d90",
+  "bazi_variables_computed": 0,
+  "acceptance_rule": "Wikidata P569 is locator-only. Accept only when a frozen-hierarchy-eligible independent source visibly contains the unique exact day-month-year candidate; otherwise remain unresolved.",
+  "accepted_direct_validator": 15,
+  "accepted_authoritative_fallback": 3,
+  "eligible_but_unaccepted_after_fallback": 57,
+  "fallback_sources": {
+    "csir.res.in": 1,
+    "dof.princeton.edu": 1,
+    "gov.za": 1
+  },
+  "note": "Current accepted exact DOB total is 125. Magdi Yacoub added after visual inspection of the University of Coimbra-hosted CV, which explicitly states born 16 November 1935.",
+  "accepted_authoritative_web_fallback": 3,
+  "accepted_authority_record_after_identity_audit": 34,
+  "authority_candidate_unique_before_identity": 47,
+  "authority_new_unique_before_identity": 37,
+  "authority_identity_rejected": 3,
+  "authority_identity_rejected_people": [
+    "John Ball (wrong historical Q957519)",
+    "Gareth Roberts (wrong deceased Q5522960)",
+    "Thomas Simpson (wrong historical Q336780)"
+  ],
+  "accepted_identity_rematch": 3,
+  "accepted_identity_rematch_people": [
+    "John Ball Q667583 = 1948-05-19 (Oxford-hosted CV)",
+    "James Murray Q1680238 = 1931-01-02 (MacTutor / University of St Andrews)",
+    "James Dunlop Q24051741 = 1962-05-01 (Royal Observatory Edinburgh-hosted CV)"
+  ],
+  "mactutor_eoas_validated_rows": 20,
+  "mactutor_eoas_validated_unique_people": 19,
+  "mactutor_eoas_overlap_with_prior_accepted": 3,
+  "mactutor_eoas_new_accepted": 16,
+  "mactutor_eoas_identity_rejected": 1,
+  "mactutor_eoas_identity_rejected_person": "Thomas Simpson historical Q336780 (1710-08-20)",
+  "accepted_pdf_recovery": 4,
+  "accepted_pdf_recovery_people": [
+    "Victoria Kaspi Q7926813 = 1967-06-30 (McGill Physics-hosted CV)",
+    "John Peacock Q17123859 = 1956-03-27 (Royal Observatory Edinburgh-hosted CV)",
+    "Glynn Winskel Q62560641 = 1953-05-23 (Cambridge Computer Laboratory-hosted CV)",
+    "Tom Muir Q88189796 = 1967-06-21 (Science History Institute oral-history archive; fallback for inaccessible Princeton CV PDF)"
+  ],
+  "accepted_format_recovery": 3,
+  "accepted_format_recovery_people": [
+    "Ole Petersen Q7086466 = 1943-03-03 (Hungarian Academy of Sciences)",
+    "Timothy Behrens Q7806999 = 1978-06-09 (Oxford FMRIB CV)",
+    "Stuart Parkin Q7635348 = 1955-12-09 (Max Planck Institute CV)"
+  ],
+  "accepted_official_old_link_recovery": 3,
+  "accepted_official_old_link_recovery_people": [
+    "Daniel Frost Q5217907 = 1970-11-29 (Leopoldina)",
+    "Ottoline Leyser Q1960814 = 1965-03-07 (Leopoldina)",
+    "Arthur McDonald Q7251 = 1943-08-29 (Nobel Prize)"
+  ],
+  "accepted_additional_authority_recovery": 3,
+  "accepted_additional_authority_recovery_people": [
+    "Iain Mattaj Q21127249 = 1952-10-05 (EMBL Archive)",
+    "Barry Osmond Q21165493 = 1939-09-20 (EOAS)",
+    "Xiaodong Chen Q15990061 = 1975-12-13 (Angewandte Chemie Author Profile)"
+  ],
+  "accepted_government_recovery": 1,
+  "accepted_scholarly_cv_recovery": 1,
+  "recovered_from_early_eoas_classification": 7,
+  "recovered_from_early_eoas_people": [
+    "Peter Colman = 1944-04-03",
+    "Warren Ewens = 1937-01-23",
+    "Marshall Hatch = 1932-12-24",
+    "Trevor McDougall = 1952-07-01",
+    "Roger Summons = 1946-06-11",
+    "Marilyn Renfree = 1947-04-19",
+    "Richard Robson = 1937-06-04"
+  ]
+}
