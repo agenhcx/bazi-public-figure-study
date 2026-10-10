@@ -1,9 +1,9 @@
-cohort_key,display_name,bad_wikidata_qid,bad_candidate_dob,review_reason,status,corrective_note
-RS_CURRENT_11027,John Ball,Q957519,1818-08-20,"wrong historical FRS; P570 present; impossible chronology",rejected_locator,"Rematch to current Sir John Macleod Ball"
-RS_CURRENT_12191,Gareth Roberts,Q5522960,1940-05-16,"wrong deceased namesake; P570 present",rejected_locator,"Rematch to current statistician Gareth Owen Roberts"
-RS_CURRENT_12278,Thomas Simpson,Q336780,1710-08-20,"wrong historical mathematician; P570 present; impossible chronology",rejected_locator,"Rematch to current chemist Thomas James Simpson"
-RS_CURRENT_11944,James Murray,Q2668150,1721-02-07,"birth year impossible for current Fellow elected 1985",identity_review,"Rematch required"
-RS_CURRENT_12381,Charles Stirling,Q796264,1760-11-04,"birth year impossible for current Fellow elected 1986",identity_review,"Rematch required"
-RS_CURRENT_11375,James Dunlop,Q375158,1793-10-31,"birth year impossible for current Fellow elected 2016",identity_review,"Rematch required"
-RS_CURRENT_12239,John Scott,Q11927850,1836-01-26,"birth year impossible for current Fellow elected 2003",identity_review,"Rematch required"
-RS_CURRENT_11664,John Hutchinson,Q253917,1884-04-07,"birth year impossible for current Fellow elected 2023",identity_review,"Rematch required"
+cohort_key,display_name,bad_wikidata_qid,bad_candidate_dob,review_reason,status,correct_wikidata_qid,correct_candidate_dob,corrective_note
+RS_CURRENT_11027,John Ball,Q957519,1818-08-20,"wrong historical FRS; impossible chronology",rematched,Q667583,1948-05-19,"Correct Sir John Macleod Ball; Oxford-hosted CV exact DOB validated and accepted"
+RS_CURRENT_12191,Gareth Roberts,Q5522960,1940-05-16,"wrong deceased namesake",rematched_year_only,Q5522957,1964,"Correct statistician Gareth Owen Roberts; exact day/month unresolved"
+RS_CURRENT_12278,Thomas Simpson,Q336780,1710-08-20,"wrong historical mathematician; impossible chronology",rematched_exact_unvalidated,Q21166276,1947-02-23,"Correct chemist Thomas James Simpson; exact DOB still needs independent source validation"
+RS_CURRENT_11989,James Murray,Q2668150,"1721-01-21;1722-01-21","wrong historical namesake; impossible chronology",rematched_exact_unvalidated,Q1680238,1931-01-02,"Correct mathematician James Dickson Murray; MacTutor/Who's Who cited, original source validation pending"
+RS_CURRENT_12352,Charles Stirling,Q796264,"1760-04-28;1769-04-28","wrong historical naval officer; impossible chronology",rematched_exact_unvalidated,Q21165547,1930-12-08,"Correct organic chemist Charles James Matthew Stirling; exact DOB source validation pending"
+RS_CURRENT_12862,James Dunlop,Q375158,1793-10-31,"wrong historical astronomer; impossible chronology",rematched_exact_unvalidated,Q24051741,1962-05-01,"Correct astrophysicist James Scott Dunlop; official CV reference located, PDF validation pending"
+RS_CURRENT_12244,John Scott,Q11927850,1836-04-05,"wrong historical botanist; impossible chronology",rematched_no_exact_dob,Q21165752,,"Correct biochemist John D. Scott; exact DOB not yet located"
+RS_CURRENT_9661,John Hutchinson,Q253917,1884-04-07,"wrong historical botanist; impossible chronology",rematched_no_exact_dob,Q30506087,,"Correct evolutionary biomechanist John R. Hutchinson; exact DOB not yet located"
