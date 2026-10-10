@@ -99,7 +99,7 @@ summary={
  "living_final_exact_dob_rows":living_exact,
  "living_final_exact_dob_coverage":round(living_exact/len(living),6),
  "bazi_variables_computed":0,
- "policy_note":"Post-v16 amendment contains only high-authority non-library provenance corrections: Jay Quade (official NAS profile plus University of Arizona-hosted CV), Mark Johnston (University of Colorado School of Medicine-hosted CV), and John M. Tranquada (Brookhaven National Laboratory-hosted professional biographical record). Jay Quade also receives an operational deceased-status correction. VIAF/library-chain-only candidates remain excluded pending independent non-library corroboration.",
+ "policy_note":"Post-v16 amendment contains only high-authority non-library provenance corrections: Jay Quade (official NAS profile plus University of Arizona-hosted CV), Mark Johnston (University of Colorado School of Medicine-hosted CV), John M. Tranquada (Brookhaven National Laboratory-hosted professional biographical record), and John E. Dowling (Society for Neuroscience-published autobiography, identity corroborated by Harvard). Jay Quade also receives an operational deceased-status correction. VIAF/library-chain-only candidates remain excluded pending independent non-library corroboration.",
  "files":{OUT.name:sha(OUT),LOG.name:sha(LOG),PATCH.name:sha(PATCH)}
 }
 SUMMARY.write_text(json.dumps(summary,ensure_ascii=False,indent=2),encoding="utf-8")
