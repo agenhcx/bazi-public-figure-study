@@ -1,0 +1,25 @@
+name: Leopoldina Publication Locator Audit v1
+on:
+  push:
+    branches: [leopoldina-dob-official-v1]
+    paths:
+      - "scripts/leopoldina_publication_locator_audit_v1.py"
+      - ".github/workflows/leopoldina_publication_locator_audit_v1.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python scripts/leopoldina_publication_locator_audit_v1.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: leopoldina-publication-locator-audit-v1
+          path: data/leopoldina_publication_locator_audit_v1/audit.json
