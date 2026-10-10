@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import argparse
 import csv
 import datetime as dt
 import hashlib
@@ -84,12 +85,12 @@ def run_sparql(q,retries=5):
             time.sleep(min(20,2**i))
     raise RuntimeError(last)
 
-def get(url,accept="application/xml,text/xml;q=0.9,*/*;q=0.1",retries=3):
+def get(url,accept="application/xml,text/xml;q=0.9,*/*;q=0.1",retries=1):
     last=None
     for i in range(retries):
         try:
             req=urllib.request.Request(url,headers={"User-Agent":UA,"Accept":accept})
-            with urllib.request.urlopen(req,timeout=45) as r:
+            with urllib.request.urlopen(req,timeout=15) as r:
                 return getattr(r,"status",200),r.read(3_000_000),r.geturl(),""
         except urllib.error.HTTPError as e:
             last=e
@@ -152,6 +153,11 @@ def fetch_idref(ppn):
     except Exception as e:
         return ppn,{"ok":0,"status":st,"url":final,"error":repr(e),"dates":[],"heading":"","field103":"","notes":""}
 
+ap=argparse.ArgumentParser()
+ap.add_argument("--shard",type=int,default=0)
+ap.add_argument("--shards",type=int,default=1)
+args=ap.parse_args()
+
 rows=read_csv(INPUT)
 if len(rows)!=3051:raise RuntimeError(f"Expected 3051 rows, got {len(rows)}")
 
@@ -162,6 +168,8 @@ unresolved=[r for r in living if not present(r.get("final_exact_dob"))]
 # Validation sample is deterministic but broad enough to estimate exact-date precision.
 known=sorted(known,key=lambda r:hashlib.sha256(("idref-validation-v1:"+r["profile_url"]).encode()).hexdigest())[:300]
 targets=[("validation",r) for r in known]+[("unresolved",r) for r in unresolved]
+targets=sorted(targets,key=lambda x:hashlib.sha256((x[0]+":"+x[1]["profile_url"]).encode()).hexdigest())
+targets=[x for i,x in enumerate(targets) if i%args.shards==args.shard]
 
 qid_rows=[]
 for cohort,r in targets:
@@ -235,15 +243,21 @@ for cohort,r,q,b in qid_rows:
     if cohort=="validation" and cand and vm==0:valconf.append(row)
     if row["candidate_for_manual_review"]==1:cands.append(row)
 
-write_csv(OUT,out,fields)
-write_csv(CAND,cands,fields)
-write_csv(VAL,valconf,fields)
+OUT_SHARD=BASE/f"nas_idref_dob_diagnostic_v1_shard{args.shard}.csv"
+CAND_SHARD=BASE/f"nas_idref_dob_candidates_v1_shard{args.shard}.csv"
+VAL_SHARD=BASE/f"nas_idref_dob_validation_conflicts_v1_shard{args.shard}.csv"
+SUMMARY_SHARD=BASE/f"summary_nas_idref_dob_diagnostic_v1_shard{args.shard}.json"
+write_csv(OUT_SHARD,out,fields)
+write_csv(CAND_SHARD,cands,fields)
+write_csv(VAL_SHARD,valconf,fields)
 
 val=[x for x in out if x["cohort"]=="validation"]
 val_found=[x for x in val if x["idref_candidate_dob"]]
 unres=[x for x in out if x["cohort"]=="unresolved"]
 summary={
  "dataset":"NAS IdRef exact-DOB diagnostic v1",
+ "shard":args.shard,
+ "shards":args.shards,
  "input":INPUT.name,
  "input_rows":len(rows),
  "living_validation_sample_rows":len(known),
@@ -266,5 +280,5 @@ summary={
  "bazi_variables_computed":0,
  "decision_note":"Diagnostic only. Identity linkage is frozen NAS reliable QID -> Wikidata P269 -> IdRef MARCXML. Only exact day-level values parsed from UNIMARC authority field 103 are candidates. No v16 DOB is modified automatically."
 }
-SUMMARY.write_text(json.dumps(summary,ensure_ascii=False,indent=2),encoding="utf-8")
+SUMMARY_SHARD.write_text(json.dumps(summary,ensure_ascii=False,indent=2),encoding="utf-8")
 print(json.dumps(summary,ensure_ascii=False,indent=2))
