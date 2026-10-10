@@ -1,0 +1,22 @@
+name: Leopoldina POST Capacity Probe v1
+on:
+  push:
+    branches: [leopoldina-roster-probe-v1]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python scripts/leopoldina_post_capacity_probe_v1.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: leopoldina-post-capacity-probe-v1
+          path: data/leopoldina_post_capacity_probe_v1/probe.json
