@@ -1,4 +1,4 @@
-# workflow trigger: direct-reference validation v1
+# workflow trigger: direct-reference validation v1 (dedicated PR)
 #!/usr/bin/env python3
 from __future__ import annotations
 
