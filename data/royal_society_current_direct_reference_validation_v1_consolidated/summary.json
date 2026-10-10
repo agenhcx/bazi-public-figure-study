@@ -6,8 +6,8 @@
   "eligible_url_instances": 75,
   "fetched_ok": 38,
   "accepted_url_instances": 15,
-  "accepted_unique_people": 15,
-  "accepted_exact_dob": 15,
+  "accepted_unique_people": 18,
+  "accepted_exact_dob": 18,
   "accepted_by_domain": {
     "catalogue.bnf.fr": 8,
     "prixduquebec.gouv.qc.ca": 3,
@@ -32,5 +32,14 @@
   "accepted_csv_sha256": "15b61e7f6c9e0e1e01bb6f1c602090300b4654fec3e8b7c433264828b32ece02",
   "unresolved_csv_sha256": "9f906ac18361d969775fe6a4345c33bb0f2567e04fe349cb547d6b2380c53d90",
   "bazi_variables_computed": 0,
-  "acceptance_rule": "Wikidata P569 is locator-only. Accept only when a frozen-hierarchy-eligible independent source visibly contains the unique exact day-month-year candidate; otherwise remain unresolved."
+  "acceptance_rule": "Wikidata P569 is locator-only. Accept only when a frozen-hierarchy-eligible independent source visibly contains the unique exact day-month-year candidate; otherwise remain unresolved.",
+  "accepted_direct_validator": 15,
+  "accepted_authoritative_fallback": 3,
+  "eligible_but_unaccepted_after_fallback": 57,
+  "fallback_sources": {
+    "csir.res.in": 1,
+    "dof.princeton.edu": 1,
+    "gov.za": 1
+  },
+  "note": "Direct-reference validator accepted 15. Authoritative web fallback added 3 more (Mashelkar/CSIR, Tremaine/Princeton, Nyokong/South African Government). Wikidata remains locator-only."
 }
