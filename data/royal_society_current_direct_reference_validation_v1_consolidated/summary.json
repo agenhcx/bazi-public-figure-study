@@ -6,8 +6,8 @@
   "eligible_url_instances": 75,
   "fetched_ok": 38,
   "accepted_url_instances": 15,
-  "accepted_unique_people": 52,
-  "accepted_exact_dob": 52,
+  "accepted_unique_people": 53,
+  "accepted_exact_dob": 53,
   "accepted_by_domain": {
     "catalogue.bnf.fr": 8,
     "prixduquebec.gouv.qc.ca": 3,
@@ -41,7 +41,7 @@
     "dof.princeton.edu": 1,
     "gov.za": 1
   },
-  "note": "Current accepted exact DOB total is 52: 15 direct-reference validations + 3 authoritative web fallbacks + 34 GND/BnF authority records after targeted identity audit. Wikidata P569 remains locator-only; three authority candidates were rejected for wrong-person QID matches.",
+  "note": "Current accepted exact DOB total is 53: 15 direct-reference validations + 3 authoritative web fallbacks + 34 GND/BnF authority records after targeted identity audit + 1 corrected-identity Oxford CV (John Ball). Wikidata P569 remains locator-only.",
   "accepted_authoritative_web_fallback": 3,
   "accepted_authority_record_after_identity_audit": 34,
   "authority_candidate_unique_before_identity": 47,
@@ -51,5 +51,9 @@
     "John Ball (wrong historical Q957519)",
     "Gareth Roberts (wrong deceased Q5522960)",
     "Thomas Simpson (wrong historical Q336780)"
+  ],
+  "accepted_identity_rematch": 1,
+  "accepted_identity_rematch_people": [
+    "John Ball Q667583 = 1948-05-19 (Oxford-hosted CV)"
   ]
 }
