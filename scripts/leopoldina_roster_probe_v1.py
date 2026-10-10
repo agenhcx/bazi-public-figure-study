@@ -9,6 +9,8 @@ OUT=Path("data/leopoldina_roster_probe_v1")
 URLS=[
  "https://www.leopoldina.org/en/members/member-list/",
  "https://www.leopoldina.org/mitglieder/mitgliederverzeichnis/",
+ "https://www.leopoldina.org/en/members/member-list?tx_solr%5Bfilter%5D%5B0%5D=class%3AClass+I%3A+Mathematics%2C+Natural+Sciences+and+Engineering",
+ "https://www.leopoldina.org/en/members/member-list?tx_solr%5Bfilter%5D%5B0%5D=class%3AClass+I%3A+Mathematics%2C+Natural+Sciences+and+Engineering&tx_solr%5Bpage%5D=2",
 ]
 UA="Mozilla/5.0 (compatible; bazi-public-figure-study/1.0; reproducibility research)"
 
@@ -59,6 +61,7 @@ def main():
           "member_directory_link_count":len(member_links),
           "member_directory_links_sample":member_links[:80],
           "query_links_sample":page_like[:80],
+          "pagination_links":[h for h in member_links if "tx_solr%5Bpage%5D" in h or "tx_solr[page]" in h][:30],
           "forms":forms[:20]
         })
         time.sleep(1)
