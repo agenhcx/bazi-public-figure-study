@@ -1,0 +1,62 @@
+{
+  "dataset": "Royal Society primary Fellow exact-DOB collection freeze v1",
+  "cohort_definition": "Royal Society Fellows only; current plus past/deceased Fellows; election/admission through 2025; Foreign Members, Honorary Fellows, and Royal Fellows excluded from the primary cohort.",
+  "cohort_rows": 8669,
+  "past_rows": 7099,
+  "current_rows": 1570,
+  "exact_dob_rows": 4983,
+  "exact_dob_coverage": 0.574807,
+  "unresolved_rows": 3686,
+  "past_exact_dob_rows": 4884,
+  "past_exact_dob_coverage": 0.687984,
+  "current_exact_dob_rows": 99,
+  "current_exact_dob_coverage": 0.063057,
+  "current_provenance_reaudit": {
+    "raw_candidate_pool": 125,
+    "nonlibrary_candidates_retained": 82,
+    "library_authority_candidates_reaudited": 43,
+    "authority_candidates_independently_recovered": 17,
+    "authority_candidates_downgraded_unresolved": 26,
+    "policy": "Library authority records are locator-only. A current-Fellow exact DOB is accepted only when an independent non-library source visibly states the same exact day-month-year."
+  },
+  "missingness": {
+    "past_pre_1900_exact_coverage": 0.545793,
+    "past_1900_1949_exact_coverage": 0.988426,
+    "past_1950_1979_exact_coverage": 0.994193,
+    "past_1980_1999_exact_coverage": 0.997701,
+    "current_1950_1979_exact_coverage": 0.142857,
+    "current_1980_1999_exact_coverage": 0.118598,
+    "current_2000_2009_exact_coverage": 0.056757,
+    "current_2010_2019_exact_coverage": 0.040179,
+    "current_2020_2025_exact_coverage": 0.031792,
+    "interpretation": "Exact-DOB missingness is strongly associated with historical/current status and election era; modern current Fellows are far less likely to have day-level DOBs public. Treat missingness as non-random in downstream preregistered sensitivity analyses."
+  },
+  "repository_snapshots": {
+    "roster_manifest_git_blob_sha": "6f6e28ea53ebbc1d0b1c242e5fc46a9eed0754ad",
+    "past_exact_dob_table_path": "data/royal_society_past_dob_closeout_v1/accepted_exact_dob_final_v1.csv",
+    "past_exact_dob_table_git_blob_sha": "86beaabd8dfb7601a56b88d3c25df986ef5b067c",
+    "current_candidate_pool_git_blob_sha": "09a8f1e7da962ea2733d2f1f3f57d02c826e820e",
+    "authority_recovery_whitelist_git_blob_sha": "aeca23ba9682795af2387a4898a5a51dc7dd5834",
+    "current_final_exact_dob_table_path": "data/royal_society_dob_freeze_v1/royal_society_current_exact_dob_final_v1.csv",
+    "current_final_exact_dob_table_git_blob_sha": "80d514ac141343e94dd61f4e42a4eb58b0f5ccb6",
+    "authority_reaudit_git_blob_sha": "1792e50d8c44d6c067912b76a980564de48b7b23",
+    "missingness_status_git_blob_sha": "730b34228c25a8b106dae49d6c489afedd86681f",
+    "missingness_era_git_blob_sha": "7e9d69b902b20b3df24556aa7f5b5548fd672842",
+    "freeze_builder_git_blob_sha": "39cfd398d025a71690eef36737dd50056f37dd72"
+  },
+  "reproducibility_checkpoint": {
+    "workflow_run_id": 38056983527,
+    "artifact_id": 11671182149,
+    "artifact_name": "royal-society-dob-freeze-v1-candidate",
+    "artifact_zip_sha256": "dc5642a2a9933c3e16fbe1367ae0683ead6fa3c072524ea9d38ae05978a6f46a",
+    "unified_crosswalk_sha256": "f6e382930d5d1ad294c78b4e6ae9132b8ad101b5e3304bc0e05b22e23ff6b698",
+    "generated_current_exact_csv_sha256": "3450b0ee51756c4cc427db951e95148430b6a3eeafe26e4a70493fdaacc64a6a",
+    "generated_authority_reaudit_sha256": "c056131d709c9c66c6acc589afb101ec119de776e136e2491b971fc2e85c0eb1",
+    "generated_missingness_status_sha256": "8ecb0357e6ca1e3b00eaeb10f3d361f5070b6aa13f9004515c2def643c65b258",
+    "generated_missingness_era_sha256": "8508a2227ba2763bc189b89466df5ef5883a67c1a8c09aea02128716690f7d98"
+  },
+  "superseded_collection_prs": [36, 37, 38],
+  "freeze_status": "final",
+  "collection_stop_rule": "Freeze broad Royal Society DOB acquisition at v1. Reopen only for a newly identified high-authority correction with independently auditable provenance, versioned before hierarchy outcome analysis.",
+  "bazi_variables_computed": 0
+}
