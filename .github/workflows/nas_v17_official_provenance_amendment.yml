@@ -1,0 +1,44 @@
+name: NAS v17 Official Provenance Amendment
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'data/nas_science_core_dob_manual_supplement_v9.csv'
+      - 'scripts/nas_manual_dob_supplement_v9.py'
+      - '.github/workflows/nas_v17_official_provenance_amendment.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  amend:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Download frozen NAS v16 checkpoint
+        uses: actions/download-artifact@v4
+        with:
+          name: nas-dob-v16-zanni-provenance
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 37860554354
+          path: data
+      - name: Apply staged official-provenance amendment
+        run: python scripts/nas_manual_dob_supplement_v9.py
+      - name: Upload v17 candidate
+        uses: actions/upload-artifact@v4
+        with:
+          name: nas-dob-v17-staged-official-provenance
+          path: |
+            data/nas_science_core_dob_crosswalk/nas_science_core_dob_crosswalk_v17.csv
+            data/nas_science_core_dob_crosswalk/nas_science_core_dob_manual_supplement_log_v9.csv
+            data/nas_science_core_dob_crosswalk/summary_v17.json
+            data/nas_science_core_dob_freeze_v17.json
+          if-no-files-found: error
