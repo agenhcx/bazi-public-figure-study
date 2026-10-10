@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import json,re,subprocess
+import json,re
 from pathlib import Path
 
 PDF=Path("data/leopoldina_2025_pdf_dob_probe_v1/2025_Leopoldina_Struktur_und_Mitglieder.pdf")
@@ -10,8 +10,14 @@ SAMPLES=["Zvi Laron","Meike Stiesch","Anja Feldmann","Bettina Rockenbach","Volke
 
 def main():
     OUT.mkdir(parents=True,exist_ok=True)
-    subprocess.run(["pdftotext","-layout",str(PDF),str(TXT)],check=True)
-    text=TXT.read_text(encoding="utf-8",errors="replace")
+    from pypdf import PdfReader
+    reader=PdfReader(str(PDF))
+    page_text=[]
+    for i,p in enumerate(reader.pages,1):
+        t=p.extract_text() or ""
+        page_text.append(t)
+    text="\n\f\n".join(page_text)
+    TXT.write_text(text,encoding="utf-8")
     lines=text.splitlines()
     # Historical Leopoldina directories used an asterisk before exact birth dates.
     pats=[
