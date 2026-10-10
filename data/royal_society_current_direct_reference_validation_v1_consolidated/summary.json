@@ -6,8 +6,8 @@
   "eligible_url_instances": 75,
   "fetched_ok": 38,
   "accepted_url_instances": 15,
-  "accepted_unique_people": 18,
-  "accepted_exact_dob": 18,
+  "accepted_unique_people": 52,
+  "accepted_exact_dob": 52,
   "accepted_by_domain": {
     "catalogue.bnf.fr": 8,
     "prixduquebec.gouv.qc.ca": 3,
@@ -41,5 +41,15 @@
     "dof.princeton.edu": 1,
     "gov.za": 1
   },
-  "note": "Direct-reference validator accepted 15. Authoritative web fallback added 3 more (Mashelkar/CSIR, Tremaine/Princeton, Nyokong/South African Government). Wikidata remains locator-only."
+  "note": "Current accepted exact DOB total is 52: 15 direct-reference validations + 3 authoritative web fallbacks + 34 GND/BnF authority records after targeted identity audit. Wikidata P569 remains locator-only; three authority candidates were rejected for wrong-person QID matches.",
+  "accepted_authoritative_web_fallback": 3,
+  "accepted_authority_record_after_identity_audit": 34,
+  "authority_candidate_unique_before_identity": 47,
+  "authority_new_unique_before_identity": 37,
+  "authority_identity_rejected": 3,
+  "authority_identity_rejected_people": [
+    "John Ball (wrong historical Q957519)",
+    "Gareth Roberts (wrong deceased Q5522960)",
+    "Thomas Simpson (wrong historical Q336780)"
+  ]
 }
