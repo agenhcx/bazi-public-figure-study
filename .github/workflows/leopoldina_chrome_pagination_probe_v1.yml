@@ -1,0 +1,39 @@
+name: Leopoldina Chrome Pagination Probe v1
+on:
+  push:
+    branches: [leopoldina-roster-probe-v1]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Probe page 2 with installed Chrome
+        shell: bash
+        run: |
+          set -euo pipefail
+          CHROME="$(command -v google-chrome || command -v google-chrome-stable || command -v chromium || command -v chromium-browser || true)"
+          echo "chrome=$CHROME"
+          test -n "$CHROME"
+          "$CHROME" --headless --disable-gpu --no-sandbox --disable-dev-shm-usage --dump-dom 'https://www.leopoldina.org/en/members/member-list?tx_solr%5Bpage%5D=2' > leopoldina_page2.html
+          python - <<'PY'
+          from pathlib import Path
+          import re,json
+          s=Path("leopoldina_page2.html").read_text(encoding="utf-8",errors="replace")
+          links=sorted(set(re.findall(r'href="([^"]*/en/members/member-list/detail/[^"]+)"',s)))
+          m=re.search(r'Displaying results\s+(\d+)\s+to\s+(\d+)\s+of\s+(\d+)',s,re.I)
+          out={"html_bytes":len(s.encode()),"detail_links":len(links),"display_range":list(m.groups()) if m else None,"first_links":links[:5]}
+          Path("chrome_probe.json").write_text(json.dumps(out,indent=2),encoding="utf-8")
+          print(json.dumps(out,indent=2))
+          if len(links)!=50 or not m or m.group(1)!="51":
+              raise SystemExit("Chrome did not reach true page 2")
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: leopoldina-chrome-pagination-probe-v1
+          path: |
+            chrome_probe.json
+            leopoldina_page2.html
