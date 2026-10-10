@@ -1,0 +1,51 @@
+name: NAS Institutional Official DOB Pilot v1
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'scripts/nas_institutional_official_dob_pilot_v1.py'
+      - '.github/workflows/nas_institutional_official_dob_pilot_v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        shard: [0, 1, 2, 3]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install PDF parser
+        run: pip install pypdf
+      - name: Download frozen NAS v16 checkpoint
+        uses: actions/download-artifact@v4
+        with:
+          name: nas-dob-v16-zanni-provenance
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 37860554354
+          path: data
+      - name: Run institutional-official pilot shard
+        run: python scripts/nas_institutional_official_dob_pilot_v1.py --shard ${{ matrix.shard }} --shards 4 --validation-n 80 --unresolved-n 160
+      - name: Upload shard outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: nas-institutional-official-dob-pilot-v1-shard-${{ matrix.shard }}
+          path: |
+            data/nas_science_core_dob_crosswalk/nas_institutional_official_dob_pilot_v1_shard${{ matrix.shard }}.csv
+            data/nas_science_core_dob_crosswalk/nas_institutional_official_dob_candidates_v1_shard${{ matrix.shard }}.csv
+            data/nas_science_core_dob_crosswalk/nas_institutional_official_dob_validation_conflicts_v1_shard${{ matrix.shard }}.csv
+            data/nas_science_core_dob_crosswalk/summary_nas_institutional_official_dob_pilot_v1_shard${{ matrix.shard }}.json
+          if-no-files-found: error
