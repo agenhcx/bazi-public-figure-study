@@ -1,0 +1,44 @@
+name: NAS IdRef DOB Diagnostic v1
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'scripts/nas_idref_dob_diagnostic_v1.py'
+      - '.github/workflows/nas_idref_dob_diagnostic_v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Download frozen NAS v16 checkpoint
+        uses: actions/download-artifact@v4
+        with:
+          name: nas-dob-v16-zanni-provenance
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 37860554354
+          path: data
+      - name: Run IdRef DOB diagnostic
+        run: python scripts/nas_idref_dob_diagnostic_v1.py
+      - name: Upload outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: nas-idref-dob-diagnostic-v1
+          path: |
+            data/nas_science_core_dob_crosswalk/nas_idref_dob_diagnostic_v1.csv
+            data/nas_science_core_dob_crosswalk/nas_idref_dob_candidates_v1.csv
+            data/nas_science_core_dob_crosswalk/nas_idref_dob_validation_conflicts_v1.csv
+            data/nas_science_core_dob_crosswalk/summary_nas_idref_dob_diagnostic_v1.json
+          if-no-files-found: error
