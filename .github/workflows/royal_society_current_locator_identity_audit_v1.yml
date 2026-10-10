@@ -1,0 +1,38 @@
+name: Royal Society Current Locator Identity Audit v1
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/royal_society_current_locator_identity_audit_v1.py'
+      - '.github/workflows/royal_society_current_locator_identity_audit_v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Download consolidated current locator
+        uses: actions/download-artifact@v4
+        with:
+          name: royal-society-current-wikidata-locator-consolidated-v1
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 38006991346
+          path: data/royal_society_current_locator_consolidated_input
+      - name: Audit current locator identity
+        run: python scripts/royal_society_current_locator_identity_audit_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: royal-society-current-locator-identity-audit-v1
+          path: data/royal_society_current_locator_identity_audit_v1/
+          if-no-files-found: error
