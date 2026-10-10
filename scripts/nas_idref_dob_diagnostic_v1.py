@@ -140,7 +140,7 @@ def parse_idref_xml(data):
     return out
 
 def fetch_idref(ppn):
-    url=f"https://www.idref.fr/{urllib.parse.quote(ppn)}.xml"
+    url=f"http://www.idref.fr/{urllib.parse.quote(ppn)}.xml"
     st,data,final,err=get(url)
     if not data:return ppn,{"ok":0,"status":st,"url":final,"error":err,"dates":[],"heading":"","field103":"","notes":""}
     try:
@@ -267,6 +267,8 @@ summary={
  "qids_with_p269":sum(bool(ids[q]) for q in allq),
  "unique_idref_ids":len(all_ppn),
  "idref_fetch_successes":sum(int(fetched[p].get("ok",0)) for p in all_ppn),
+ "idref_fetch_status_counts":dict(sorted(__import__("collections").Counter(str(fetched[p].get("status","")) for p in all_ppn).items())),
+ "idref_fetch_error_samples":[f"{p}:{fetched[p].get('error','')}" for p in all_ppn if fetched[p].get("error")][:5],
  "validation_rows_with_p269":sum(bool(ids[q]) for cohort,r,q,b in qid_rows if cohort=="validation"),
  "validation_rows_with_unique_exact_candidate":len(val_found),
  "validation_exact_matches":sum(x["validation_match"]==1 for x in val_found),
