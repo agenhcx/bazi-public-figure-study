@@ -1,0 +1,49 @@
+name: Royal Society Current MacTutor EOAS DOB Validation v1
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/royal_society_current_secondary_authority_validation_v1.py'
+      - '.github/workflows/royal_society_current_secondary_authority_validation_v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  validate:
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        shard: [0,1]
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/download-artifact@v4
+        with:
+          name: royal-society-current-p569-provenance-audit-v1
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 38007153174
+          path: data/royal_society_current_p569_provenance_input
+      - uses: actions/download-artifact@v4
+        with:
+          name: royal-society-current-locator-identity-audit-v1
+          github-token: ${{ github.token }}
+          repository: agenhcx/bazi-public-figure-study
+          run-id: 38008500051
+          path: data/royal_society_current_locator_identity_audit_input
+      - name: Validate MacTutor and EOAS exact DOBs
+        run: python scripts/royal_society_current_secondary_authority_validation_v1.py --shard-index ${{ matrix.shard }} --shard-count 2
+      - uses: actions/upload-artifact@v4
+        with:
+          name: royal-society-current-mactutor-eoas-validation-v1-shard-${{ matrix.shard }}
+          path: data/royal_society_current_secondary_authority_validation_v1/shard_0${{ matrix.shard }}_of_02/
+          if-no-files-found: error

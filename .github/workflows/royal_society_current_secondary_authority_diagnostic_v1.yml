@@ -1,11 +1,6 @@
 name: Royal Society Current Secondary Authority Diagnostic v1
 
 on:
-  pull_request:
-    branches: [main]
-    paths:
-      - 'scripts/royal_society_current_secondary_authority_diagnostic_v1.py'
-      - '.github/workflows/royal_society_current_secondary_authority_diagnostic_v1.yml'
   workflow_dispatch:
 
 permissions:
