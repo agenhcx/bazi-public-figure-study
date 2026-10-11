@@ -1,0 +1,276 @@
+{
+  "dataset": "Leopoldina local P569 reference provenance inventory v1",
+  "source_api": "Wikidata MediaWiki API wbgetentities, props=claims",
+  "date_normalization": "Wikidata JSON Julian-calendar values (Q1985786) are converted to proleptic Gregorian absolute dates to match RDF/QLever candidate dates.",
+  "input_candidate_rows": 2497,
+  "input_candidate_sha256": "f8991437937a6de30bd4ec86eff930293bd766fdaf44622d19ff7920d50cbdea",
+  "batch_size": 40,
+  "wikidata_maxlag_seconds": 15,
+  "batch_count": 63,
+  "cache_directory": "data\\leopoldina_p569_reference_local_v1\\cache",
+  "entities_returned": 2497,
+  "candidate_rows_with_matching_p569_claim": 2497,
+  "candidate_rows_with_any_reference_node": 2289,
+  "candidate_rows_with_any_reference_url": 740,
+  "candidate_rows_with_nonlibrary_reference_url": 719,
+  "candidate_rows_with_library_locator_url": 22,
+  "candidate_rows_with_wiki_reference_url": 1,
+  "candidate_rows_with_stated_in": 1245,
+  "queue_counts": {
+    "inspect_nonlibrary_reference_url": 719,
+    "locator_or_reference_only": 1570,
+    "no_reference_metadata": 208
+  },
+  "top_reference_domains": [
+    [
+      "leopoldina.org",
+      339
+    ],
+    [
+      "deutsche-biographie.de",
+      27
+    ],
+    [
+      "gepris-historisch.dfg.de",
+      23
+    ],
+    [
+      "doi.org",
+      22
+    ],
+    [
+      "hpk.uni-hamburg.de",
+      15
+    ],
+    [
+      "catalogue.bnf.fr",
+      13
+    ],
+    [
+      "www2.unil.ch",
+      13
+    ],
+    [
+      "nasonline.org",
+      10
+    ],
+    [
+      "nobelprize.org",
+      9
+    ],
+    [
+      "geschichtewiki.wien.gv.at",
+      7
+    ],
+    [
+      "sok.riksarkivet.se",
+      6
+    ],
+    [
+      "biographien.ac.at",
+      5
+    ],
+    [
+      "nndb.com",
+      5
+    ],
+    [
+      "svazky.cz",
+      5
+    ],
+    [
+      "boku.ac.at",
+      5
+    ],
+    [
+      "austria-forum.org",
+      5
+    ],
+    [
+      "cs.isabart.org",
+      4
+    ],
+    [
+      "lagis-hessen.de",
+      4
+    ],
+    [
+      "mi.ras.ru",
+      4
+    ],
+    [
+      "zobodat.at",
+      4
+    ],
+    [
+      "nytimes.com",
+      4
+    ],
+    [
+      "d-nb.info",
+      4
+    ],
+    [
+      "trauer.sueddeutsche.de",
+      3
+    ],
+    [
+      "bbaw.de",
+      3
+    ],
+    [
+      "tritius.kmol.cz",
+      3
+    ],
+    [
+      "data.bnf.fr",
+      3
+    ],
+    [
+      "research.uni-leipzig.de",
+      3
+    ],
+    [
+      "pas.va",
+      3
+    ],
+    [
+      "dgho.de",
+      3
+    ],
+    [
+      "mek.oszk.hu",
+      3
+    ]
+  ],
+  "top_stated_in_qids": [
+    [
+      "Q36578",
+      680
+    ],
+    [
+      "Q19938912",
+      247
+    ],
+    [
+      "Q237227",
+      246
+    ],
+    [
+      "Q29861311",
+      214
+    ],
+    [
+      "Q107343683",
+      136
+    ],
+    [
+      "Q547473",
+      119
+    ],
+    [
+      "Q5375741",
+      102
+    ],
+    [
+      "Q1789619",
+      95
+    ],
+    [
+      "Q2664168",
+      62
+    ],
+    [
+      "Q3407324",
+      54
+    ],
+    [
+      "Q63056",
+      49
+    ],
+    [
+      "Q55740543",
+      38
+    ],
+    [
+      "Q105958830",
+      37
+    ],
+    [
+      "Q13550863",
+      33
+    ],
+    [
+      "Q107212659",
+      32
+    ],
+    [
+      "Q107213173",
+      28
+    ],
+    [
+      "Q23833686",
+      27
+    ],
+    [
+      "Q21491701",
+      26
+    ],
+    [
+      "Q138946088",
+      23
+    ],
+    [
+      "Q26951121",
+      18
+    ],
+    [
+      "Q642074",
+      16
+    ],
+    [
+      "Q17378135",
+      16
+    ],
+    [
+      "Q2111979",
+      16
+    ],
+    [
+      "Q19142610",
+      16
+    ],
+    [
+      "Q66683",
+      15
+    ],
+    [
+      "Q201469",
+      14
+    ],
+    [
+      "Q746368",
+      12
+    ],
+    [
+      "Q98769076",
+      10
+    ],
+    [
+      "Q1868372",
+      10
+    ],
+    [
+      "Q5924723",
+      10
+    ]
+  ],
+  "domain_class_candidate_counts": {
+    "library_locator": 22,
+    "nonlibrary_url": 754,
+    "wiki_nonindependent": 1
+  },
+  "acceptance_rule": "Inventory only. A P569 reference URL or stated-in claim is not accepted automatically. Library authorities remain locator-only; non-library reference URLs proceed to content-level verification.",
+  "final_exact_dob_written": 0,
+  "bazi_variables_computed": 0
+}

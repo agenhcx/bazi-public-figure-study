@@ -1,0 +1,69 @@
+{
+  "dataset": "Leopoldina local DOB candidate collection v1",
+  "frozen_roster_rows": 2888,
+  "frozen_roster_sha256": "c17e9297c6c3c7945381034bb48ca4e86582ff9c896fcd69ec3d31add354402a",
+  "identity_rule": "Exact frozen official member_slug == Wikidata P10299. No name or fuzzy matching.",
+  "candidate_rule": "Exactly one P10299 QID, exactly one P569 value with Wikidata timePrecision >= 11, and plausible election age 15-110.",
+  "acceptance_rule": "Candidate generation only. P569 is not final evidence; final_exact_dob remains blank pending provenance adjudication under the hierarchy-wide source policy.",
+  "overall": {
+    "rows": 2888,
+    "candidate_unique_day_p569": 2497,
+    "review_rows": 40,
+    "unmatched_p10299": 105,
+    "no_day_precision_p569": 246
+  },
+  "by_status": {
+    "deceased_marker": {
+      "rows": 1527,
+      "candidate_unique_day_p569": 1407,
+      "review_rows": 31,
+      "unmatched_p10299": 55,
+      "no_day_precision_p569": 34
+    },
+    "no_deceased_marker": {
+      "rows": 1361,
+      "candidate_unique_day_p569": 1090,
+      "review_rows": 9,
+      "unmatched_p10299": 50,
+      "no_day_precision_p569": 212
+    }
+  },
+  "by_election_era": {
+    "<=1900": {
+      "rows": 261,
+      "candidate_unique_day_p569": 244,
+      "review_rows": 14,
+      "unmatched_p10299": 2,
+      "no_day_precision_p569": 1
+    },
+    "1901-1950": {
+      "rows": 333,
+      "candidate_unique_day_p569": 316,
+      "review_rows": 4,
+      "unmatched_p10299": 8,
+      "no_day_precision_p569": 5
+    },
+    "1951-2000": {
+      "rows": 1141,
+      "candidate_unique_day_p569": 1011,
+      "review_rows": 13,
+      "unmatched_p10299": 62,
+      "no_day_precision_p569": 55
+    },
+    "2001-2025": {
+      "rows": 1153,
+      "candidate_unique_day_p569": 926,
+      "review_rows": 9,
+      "unmatched_p10299": 33,
+      "no_day_precision_p569": 185
+    }
+  },
+  "output_files": {
+    "crosswalk": "leopoldina_dob_candidate_crosswalk_v1.csv",
+    "candidates": "candidate_unique_day_p569_v1.csv",
+    "review": "review_queue_v1.csv",
+    "unmatched": "unmatched_p10299_v1.csv",
+    "no_day": "no_day_precision_p569_v1.csv"
+  },
+  "bazi_variables_computed": 0
+}
