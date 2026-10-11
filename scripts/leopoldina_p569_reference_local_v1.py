@@ -165,19 +165,43 @@ def classify_domain(d):
 def valid_qid(v):
     return bool(re.fullmatch(r"Q\d+", str(v or "").strip()))
 
+JULIAN_CALENDAR_QID = "Q1985786"
+
+def julian_to_gregorian_date(year, month, day):
+    a = (14 - month) // 12
+    y = year + 4800 - a
+    m = month + 12 * a - 3
+    jdn = day + (153 * m + 2) // 5 + 365 * y + y // 4 - 32083
+
+    a2 = jdn + 32044
+    b = (4 * a2 + 3) // 146097
+    c = a2 - (146097 * b) // 4
+    d = (4 * c + 3) // 1461
+    e = c - (1461 * d) // 4
+    m2 = (5 * e + 2) // 153
+    gday = e - (153 * m2 + 2) // 5 + 1
+    gmonth = m2 + 3 - 12 * (m2 // 10)
+    gyear = 100 * b + d - 4800 + (m2 // 10)
+    return dt.date(gyear, gmonth, gday)
+
 def normalize_wikidata_time(value):
     if not isinstance(value, dict):
         return "", None
     raw = str(value.get("time") or "")
     precision = value.get("precision")
+    calendar_qid = str(value.get("calendarmodel") or "").rsplit("/", 1)[-1]
     m = re.match(r"^[+-]([12]\d{3})-(\d{2})-(\d{2})T", raw)
     if not m:
         return "", precision
     try:
-        d = dt.date(int(m.group(1)), int(m.group(2)), int(m.group(3))).isoformat()
+        year, month, day = map(int, m.groups())
+        if calendar_qid == JULIAN_CALENDAR_QID:
+            normalized = julian_to_gregorian_date(year, month, day)
+        else:
+            normalized = dt.date(year, month, day)
     except ValueError:
         return "", precision
-    return d, precision
+    return normalized.isoformat(), precision
 
 def snak_values(reference, prop):
     snaks = (reference or {}).get("snaks", {})
@@ -457,6 +481,7 @@ def main():
     summary = {
         "dataset": "Leopoldina local P569 reference provenance inventory v1",
         "source_api": "Wikidata MediaWiki API wbgetentities, props=claims",
+        "date_normalization": "Wikidata JSON Julian-calendar values (Q1985786) are converted to proleptic Gregorian absolute dates to match RDF/QLever candidate dates.",
         "input_candidate_rows": len(candidates),
         "input_candidate_sha256": sha256(IN),
         "batch_size": BATCH_SIZE,
