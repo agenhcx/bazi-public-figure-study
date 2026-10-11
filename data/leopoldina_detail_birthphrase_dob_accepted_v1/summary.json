@@ -1,0 +1,18 @@
+{
+  "dataset": "Leopoldina official member-detail explicit-birth-phrase exact-DOB checkpoint v1",
+  "source_run_id": 38098749349,
+  "source_artifact_id": 11686587443,
+  "source_artifact_name": "leopoldina-detail-birthphrase-candidates-rebuilt-v1",
+  "source_artifact_zip_sha256": "28e16d8a4372b5a2de675de9df7e87dcd139c53e09d4f11c0899f45d8fae24d2",
+  "target_rows_scanned": 2640,
+  "candidate_members": 53,
+  "accepted_exact_dob": 53,
+  "multidate_members_adjudicated": 2,
+  "rejected_nonbirth_date_rows": 2,
+  "overlap_with_prior_official_accepted": 0,
+  "accepted_csv_sha256": "7d29ddcc4e02e550cdf2362effea40f6d9a55b4f240f32fc6ae4817440c9f84a",
+  "rejected_csv_sha256": "0fab5a2284d2172843c12d8c2d837a307e78051033de90ccc5c511ed88e478f4",
+  "adjudication_csv_sha256": "b964075bb9e5687d82c58a6042e155381b8bd8eccc72a429d74c5a0284027579",
+  "acceptance_rule": "Exact day-month-year must be stated in an explicit born/geboren/date-of-birth phrase on the frozen member's own official Leopoldina detail page. Multiple dates are accepted only after row-level semantic adjudication identifying the actual birth sentence.",
+  "bazi_variables_computed": 0
+}
