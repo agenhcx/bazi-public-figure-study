@@ -1,0 +1,24 @@
+name: Leopoldina Levana Resolver Probe v1
+on:
+  push:
+    branches: [leopoldina-dob-official-v1]
+    paths:
+      - "scripts/leopoldina_levana_resolver_probe_v1.py"
+      - ".github/workflows/leopoldina_levana_resolver_probe_v1.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python scripts/leopoldina_levana_resolver_probe_v1.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: leopoldina-levana-resolver-probe-v1
+          path: data/leopoldina_levana_resolver_probe_v1/probe.json
