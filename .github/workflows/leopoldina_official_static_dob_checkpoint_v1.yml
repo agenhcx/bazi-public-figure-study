@@ -1,0 +1,35 @@
+name: Persist Leopoldina Official Static DOB Checkpoint v1
+on:
+  push:
+    branches: [leopoldina-dob-official-v1]
+    paths:
+      - "scripts/leopoldina_official_static_dob_checkpoint_v1.py"
+      - ".github/workflows/leopoldina_official_static_dob_checkpoint_v1.yml"
+  workflow_dispatch:
+permissions:
+  actions: read
+  contents: write
+jobs:
+  checkpoint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: leopoldina-dob-official-v1
+      - uses: actions/download-artifact@v4
+        with:
+          name: leopoldina-new-member-dob-official-v1
+          path: data/leopoldina_official_static_checkpoint_input
+          github-token: ${{ github.token }}
+          run-id: 38097235061
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python scripts/leopoldina_official_static_dob_checkpoint_v1.py
+      - name: Persist official static DOB checkpoint
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/leopoldina_official_static_dob_v1
+          git commit -m "Persist Leopoldina official static DOB checkpoint v1"
+          git push origin HEAD:leopoldina-dob-official-v1
