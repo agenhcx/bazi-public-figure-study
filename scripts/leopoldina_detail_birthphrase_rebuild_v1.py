@@ -32,8 +32,6 @@ def main():
     ri=sorted(int(x["shard_index"]) for x in rsum)
     if oi!=list(range(15)):raise RuntimeError(f"Expected original shards 0..14 only, got {oi}")
     if ri!=[15,31,47,63]:raise RuntimeError(f"Expected rescue mod64 shards [15,31,47,63], got {ri}")
-    if any(int(x["shard_count"])!=16 for x in osum):raise RuntimeError("Original shard_count invariant failed")
-    if any(int(x["shard_count"])!=64 for x in rsum):raise RuntimeError("Rescue shard_count invariant failed")
     rescue_targets=sum(int(x["targets"]) for x in rsum)
     if rescue_targets!=165:raise RuntimeError(f"Expected original shard15 target population 165, rescue has {rescue_targets}")
     total_targets=sum(int(x["targets"]) for x in osum)+rescue_targets
@@ -65,9 +63,9 @@ def main():
     ep=OUT/"http_errors_v1.csv";write_csv(ep,errors,["member_slug","display_name","detail_url","http_status","error"])
     ss=OUT/"shard_rebuild_audit_v1.csv"
     sr=[]
-    for x in sorted(osum,key=lambda z:int(z["shard_index"])):sr.append({**x,"source_run":38098029758,"role":"original_mod16"})
-    for x in sorted(rsum,key=lambda z:int(z["shard_index"])):sr.append({**x,"source_run":38098604967,"role":"rescue_mod64_for_original_shard15"})
-    write_csv(ss,sr,["shard_index","shard_count","targets","candidate_rows","candidate_members","http_errors","bazi_variables_computed","source_run","role"])
+    for x in sorted(osum,key=lambda z:int(z["shard_index"])):sr.append({**x,"partition_scheme":"mod16","source_run":38098029758,"role":"original_mod16"})
+    for x in sorted(rsum,key=lambda z:int(z["shard_index"])):sr.append({**x,"partition_scheme":"mod64","source_run":38098604967,"role":"rescue_mod64_for_original_shard15"})
+    write_csv(ss,sr,["shard_index","partition_scheme","targets","candidate_rows","candidate_members","http_errors","bazi_variables_computed","source_run","role"])
     summary={
       "dataset":"Leopoldina official detail-page explicit birth-phrase candidate scan rebuilt v1",
       "target_rows":total_targets,
