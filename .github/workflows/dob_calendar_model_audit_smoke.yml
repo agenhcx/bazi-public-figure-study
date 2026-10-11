@@ -24,6 +24,12 @@ jobs:
         run: python scripts/dob_calendar_model_audit_v1.py --datasets table_tennis --limit 20 --out data/dob_calendar_model_audit_smoke_v1
       - name: Assert audit-only invariants
         run: python -c "import json; s=json.load(open('data/dob_calendar_model_audit_smoke_v1/summary.json',encoding='utf-8')); assert s['bazi_variables_computed']==0; assert s['automatic_dob_changes']==0; assert s['audit_rows']==20; print('audit-only invariants OK')"
+      - name: Build synthetic Nobel enriched roster
+        run: python -c "import csv,pathlib; p=pathlib.Path('data/nobel_science_enriched_v1'); p.mkdir(parents=True,exist_ok=True); f=(p/'nobel_science_people.csv').open('w',encoding='utf-8-sig',newline=''); w=csv.DictWriter(f,fieldnames=['laureate_id','full_name','birth_date','birth_date_exact','wikidata']); w.writeheader(); [w.writerow({'laureate_id':str(i+1),'full_name':f'Person {i+1}','birth_date':(f'{1900+i%80}-01-01' if i<655 else str(1949+i-655)),'birth_date_exact':('1' if i<655 else '0'),'wikidata':''}) for i in range(658)]; f.close()"
+      - name: Audit synthetic Nobel rows
+        run: python scripts/dob_calendar_model_audit_v1.py --datasets nobel --limit 5 --out data/dob_calendar_model_audit_nobel_smoke_v1
+      - name: Assert Nobel adapter invariants
+        run: python -c "import json; s=json.load(open('data/dob_calendar_model_audit_nobel_smoke_v1/summary.json',encoding='utf-8')); assert s['audit_rows']==5; assert s['input_metadata']['nobel']['status']=='loaded'; assert s['input_metadata']['nobel']['input_unique_people']==658; assert s['bazi_variables_computed']==0; print('Nobel adapter invariants OK')"
       - uses: actions/upload-artifact@v4
         with:
           name: dob-calendar-model-audit-smoke
