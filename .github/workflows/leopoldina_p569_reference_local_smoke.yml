@@ -1,0 +1,36 @@
+name: Leopoldina Local Provenance Smoke
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/leopoldina_p569_reference_local_v1.py'
+      - '.github/workflows/leopoldina_p569_reference_local_smoke.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      LEOPOLDINA_REF_LIMIT: '40'
+      LEOPOLDINA_REF_BATCH_SIZE: '20'
+      LEOPOLDINA_REF_SLEEP: '0.5'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Build candidate input
+        run: python scripts/leopoldina_dob_local_v1.py
+      - name: Run provenance smoke
+        run: python scripts/leopoldina_p569_reference_local_v1.py
+      - name: Upload smoke artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: leopoldina-p569-reference-local-smoke
+          path: data/leopoldina_p569_reference_local_v1/
+          if-no-files-found: error
