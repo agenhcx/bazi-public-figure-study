@@ -1,0 +1,25 @@
+name: DOB Absolute Date Adjudication Smoke
+
+on:
+  pull_request:
+    paths:
+      - "DOB_ABSOLUTE_DATE_ADJUDICATION_V1.md"
+      - "data/dob_absolute_date_adjudication_v1/**"
+      - "scripts/apply_canonical_gregorian_dob_overlay_v1.py"
+      - ".github/workflows/dob_absolute_date_adjudication_smoke.yml"
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build synthetic primary audit rows
+        run: python -c "import csv,pathlib; p=pathlib.Path('/tmp/audit.csv'); f=p.open('w',encoding='utf-8-sig',newline=''); fields=['dataset','record_key','display_name','stored_dob','wikidata_qids','bazi_variables_computed']; w=csv.DictWriter(f,fieldnames=fields); w.writeheader(); w.writerows([{'dataset':'nobel_science_exact','record_key':'110','display_name':'Pyotr Kapitsa','stored_dob':'1894-07-09','wikidata_qids':'Q172844','bazi_variables_computed':'0'},{'dataset':'royal_society','record_key':'RS_PAST_NA4517','display_name':'Piotr Kapitsa','stored_dob':'1894-06-26','wikidata_qids':'Q172844','bazi_variables_computed':'0'},{'dataset':'nas_science_core','record_key':'esau','display_name':'Katherine Esau','stored_dob':'1898-04-03','wikidata_qids':'Q568623','bazi_variables_computed':'0'},{'dataset':'leopoldina_candidate','record_key':'normal','display_name':'Normal','stored_dob':'1900-01-01','wikidata_qids':'Q999999999','bazi_variables_computed':'0'}]); f.close()"
+      - name: Apply adjudication overlay
+        run: python scripts/apply_canonical_gregorian_dob_overlay_v1.py --audit /tmp/audit.csv --registry data/dob_absolute_date_adjudication_v1/canonical_gregorian_dob_registry_v1.csv --out /tmp/overlay
+      - name: Assert overlay invariants
+        run: python -c "import csv,json; s=json.load(open('/tmp/overlay/summary.json',encoding='utf-8')); assert s['rows']==4; assert s['changed_rows']==2; assert s['pending_rows']==1; assert s['frozen_inputs_modified']==0; assert s['bazi_variables_computed']==0; rows=list(csv.DictReader(open('/tmp/overlay/primary_hierarchy_dob_canonical_v1.csv',encoding='utf-8-sig'))); k=[r for r in rows if r['adjudication_qid']=='Q172844']; assert len(k)==2 and all(r['analysis_dob_gregorian']=='1894-07-08' for r in k); e=[r for r in rows if r['adjudication_qid']=='Q568623'][0]; assert e['analysis_eligible_calendar']=='0'; print('adjudication overlay invariants OK')"
