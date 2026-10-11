@@ -202,7 +202,7 @@ def fetch_batch(batch_index, members):
     qids = []
     for r in members:
         qid = (r.get("wikidata_qids") or "").strip()
-        if not re.fullmatch(r"Q\\d+", qid):
+        if not re.fullmatch(r"Q\d+", qid):
             raise RuntimeError(f"Expected one exact QID for {r['member_slug']}, got {qid!r}")
         qids.append(qid)
     values = " ".join("wd:" + q for q in qids)
