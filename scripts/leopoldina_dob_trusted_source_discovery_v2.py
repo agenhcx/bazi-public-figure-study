@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import argparse
 import csv
 import hashlib
 import json
@@ -89,6 +90,15 @@ def source_hint(tier):
     return "institutional_or_archival_candidate" if tier=="A" else "content_source_candidate"
 
 def main():
+    ap=argparse.ArgumentParser()
+    ap.add_argument("--self-test",action="store_true")
+    args=ap.parse_args()
+    if args.self_test:
+        assert formatter_url("https://example.org/person/$1","A B")=="https://example.org/person/A%20B"
+        assert parse_formatter_items("P1:https://x/$1|P2:https://y/$1")==[("P1","https://x/$1"),("P2","https://y/$1")]
+        print("Leopoldina trusted-source discovery v2 self-test OK")
+        return
+
     for p in (CANDIDATES,SOURCE_CATALOG,V1_CONTENT,POLICY):
         if not p.exists():
             raise RuntimeError(f"Missing required input: {p}")
