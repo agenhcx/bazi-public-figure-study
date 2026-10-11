@@ -279,6 +279,11 @@ def domain(url):
 
 
 def effective_class(row):
+    policy_tier = (row.get("policy_tier") or "").strip()
+    if policy_tier == "A":
+        return "tier_a_candidate"
+    if policy_tier == "B":
+        return "tier_b_candidate"
     qid = (row.get("stated_in_qid") or "").strip()
     label = fold(row.get("stated_in_label") or "")
     hint = (row.get("source_policy_hint") or "").strip()
@@ -314,6 +319,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--input", default=str(IN))
     ap.add_argument("--out", default=str(OUT))
+    ap.add_argument("--cache-dir", default="", help="Optional shared cache directory; default is <out>/cache")
     ap.add_argument("--year-min", type=int, default=1835)
     ap.add_argument("--year-max", type=int, default=1985)
     ap.add_argument("--limit", type=int, default=0, help="Optional URL-attempt limit for a pilot; 0=all")
@@ -325,13 +331,15 @@ def main():
         hit, variant, snippet = find_date(sample, "1896-04-15")
         assert hit == 1 and "1896" in snippet
         assert effective_class({"stated_in_qid":"Q29861311","stated_in_label":"SNAC","source_policy_hint":"content_source_candidate"}) == "locator_only"
+        assert effective_class({"policy_tier":"A","stated_in_qid":"Q1050232"}) == "tier_a_candidate"
+        assert effective_class({"policy_tier":"B","stated_in_qid":"Q1202222"}) == "tier_b_candidate"
         print("Leopoldina content verifier self-test OK")
         return
 
     src = Path(args.input)
     out = Path(args.out)
     OUT = out
-    CACHE = out / "cache"
+    CACHE = Path(args.cache_dir) if args.cache_dir else out / "cache"
     if not src.exists():
         raise RuntimeError(f"Missing {src}. Run source resolver first.")
 
@@ -388,6 +396,10 @@ def main():
             "stated_in_qid": r.get("stated_in_qid",""),
             "stated_in_label": r.get("stated_in_label",""),
             "resolver_policy_hint": r.get("source_policy_hint",""),
+            "policy_tier": r.get("policy_tier",""),
+            "single_source_sufficient": r.get("single_source_sufficient",""),
+            "independence_group": r.get("independence_group",""),
+            "discovery_route": r.get("discovery_route",""),
             "effective_source_class": cls,
             "url_kind": kind,
             "url": u,
@@ -416,7 +428,8 @@ def main():
 
     vfields = [
         "member_slug","display_name","wikidata_qid","candidate_exact_dob",
-        "stated_in_qid","stated_in_label","resolver_policy_hint","effective_source_class",
+        "stated_in_qid","stated_in_label","resolver_policy_hint","policy_tier",
+        "single_source_sufficient","independence_group","discovery_route","effective_source_class",
         "url_kind","url","domain","http_status","final_url","content_type","captured_bytes",
         "body_sha256","cache_hit","parse_mode","name_anchor_hit",
         "candidate_exact_date_text_match","matched_variant","evidence_snippet_folded",
@@ -447,6 +460,8 @@ def main():
         pos = [x for x in vv if int(x["content_verified_machine"]) == 1]
         tier_a = sorted({x["stated_in_qid"] for x in pos if x["effective_source_class"] == "tier_a_candidate" and x["stated_in_qid"]})
         tier_b = sorted({x["stated_in_qid"] for x in pos if x["effective_source_class"] == "tier_b_candidate" and x["stated_in_qid"]})
+        tier_a_groups = sorted({(x["independence_group"] or x["stated_in_qid"]) for x in pos if x["effective_source_class"] == "tier_a_candidate" and (x["independence_group"] or x["stated_in_qid"])})
+        tier_b_groups = sorted({(x["independence_group"] or x["stated_in_qid"]) for x in pos if x["effective_source_class"] == "tier_b_candidate" and (x["independence_group"] or x["stated_in_qid"])})
         summary_rows.append({
             **base,
             "verification_url_attempts": len(vv),
@@ -454,16 +469,20 @@ def main():
             "machine_exact_date_positive_rows": len(pos),
             "positive_tier_a_source_qids": "|".join(tier_a),
             "positive_tier_a_source_count": len(tier_a),
+            "positive_tier_a_independence_groups": "|".join(tier_a_groups),
+            "positive_tier_a_independence_group_count": len(tier_a_groups),
             "positive_tier_b_source_qids": "|".join(tier_b),
             "positive_tier_b_source_count": len(tier_b),
+            "positive_tier_b_independence_groups": "|".join(tier_b_groups),
+            "positive_tier_b_independence_group_count": len(tier_b_groups),
             "positive_domains": "|".join(sorted({x["domain"] for x in pos if x["domain"]})),
             "pdf_review_rows": sum(x["verification_status"] == "pdf_needs_separate_verification" for x in vv),
             "fetch_failed_rows": sum(x["verification_status"] == "fetch_failed" for x in vv),
             "machine_evidence_status": (
                 "not_attempted" if not vv else
-                "tier_a_positive" if tier_a else
-                "two_plus_tier_b_positive" if len(tier_b) >= 2 else
-                "one_tier_b_positive" if len(tier_b) == 1 else
+                "tier_a_positive" if tier_a_groups else
+                "two_plus_tier_b_positive" if len(tier_b_groups) >= 2 else
+                "one_tier_b_positive" if len(tier_b_groups) == 1 else
                 "no_machine_positive"
             ),
             "final_exact_dob": "",
@@ -481,9 +500,10 @@ def main():
     status_counts = Counter(x["verification_status"] for x in verification)
     evidence_counts = Counter(x["machine_evidence_status"] for x in summary_rows)
     summary = {
-        "dataset": "Leopoldina primary-window DOB source-content verification v1",
+        "dataset": "Leopoldina primary-window DOB source-content verification",
         "input": str(src),
         "input_sha256": sha256_file(src),
+        "cache_directory": str(CACHE),
         "year_min": args.year_min,
         "year_max": args.year_max,
         "eligible_reference_rows": len(eligible),
@@ -494,8 +514,8 @@ def main():
         "candidates_attempted": sum(int(x["verification_url_attempts"]) > 0 for x in summary_rows),
         "candidates_unattempted": sum(int(x["verification_url_attempts"]) == 0 for x in summary_rows),
         "candidates_with_any_machine_positive": sum(int(x["machine_exact_date_positive_rows"]) > 0 for x in summary_rows),
-        "candidates_with_tier_a_positive": sum(int(x["positive_tier_a_source_count"]) > 0 for x in summary_rows),
-        "candidates_with_two_plus_tier_b_positive": sum(int(x["positive_tier_b_source_count"]) >= 2 for x in summary_rows),
+        "candidates_with_tier_a_positive": sum(int(x["positive_tier_a_independence_group_count"]) > 0 for x in summary_rows),
+        "candidates_with_two_plus_tier_b_positive": sum(int(x["positive_tier_b_independence_group_count"]) >= 2 for x in summary_rows),
         "final_exact_dob_written": 0,
         "automatic_acceptance": 0,
         "bazi_variables_computed": 0,
