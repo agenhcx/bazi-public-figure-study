@@ -595,19 +595,45 @@ def load_royal_society(limit=0):
     }
 
 
-def discover_nobel():
-    hits = []
-    for p in Path(".").rglob("*"):
-        if p.is_file() and "nobel" in p.name.lower() and p.suffix.lower() in {".csv", ".json"}:
-            if "dob_calendar_model_audit" not in str(p):
-                hits.append(str(p))
-    return sorted(hits)
-
-
 def load_nobel(limit=0):
-    hits = discover_nobel()
-    return [], {"status": "not_connected", "candidate_local_files": hits,
-                "reason": "Frozen Nobel master is not tracked in this repository; no file is guessed automatically."}
+    path = Path("data/nobel_science_enriched_v1/nobel_science_people.csv")
+    if not path.exists():
+        return [], {
+            "status": "not_found",
+            "path": str(path),
+            "reason": "Run the restored Nobel master crawler, verifier, and DOB enrichment v1 builder first.",
+        }
+    rows = read_csv(path)
+    if len(rows) != 658:
+        raise RuntimeError(f"Expected 658 Nobel science people, got {len(rows)}")
+    exact_rows = [r for r in rows if str(r.get("birth_date_exact") or "").strip() == "1"]
+    if len(exact_rows) != 655:
+        raise RuntimeError(f"Expected 655 exact Nobel DOB rows in enriched v1, got {len(exact_rows)}")
+    if limit:
+        exact_rows = exact_rows[:limit]
+    out = []
+    no_qid = 0
+    for r in exact_rows:
+        qids = split_qids(first_present(r, ["wikidata", "wikidata_qid", "same_as"]))
+        if not qids:
+            no_qid += 1
+        out.append(record(
+            "nobel_science_exact",
+            r.get("laureate_id"),
+            first_present(r, ["full_name", "known_name", "name"]),
+            r.get("birth_date"),
+            path,
+            qids,
+            note="frozen Nobel science DOB-enriched v1 exact-DOB row; audit only",
+        ))
+    return out, {
+        "status": "loaded",
+        "path": str(path),
+        "sha256": sha256(path),
+        "input_unique_people": 658,
+        "exact_dob_rows": len(exact_rows),
+        "rows_without_qid": no_qid,
+    }
 
 
 def load_datasets(names, limit=0):
