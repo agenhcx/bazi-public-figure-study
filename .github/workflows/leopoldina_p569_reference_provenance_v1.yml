@@ -1,0 +1,26 @@
+name: Leopoldina P569 Reference Provenance v1
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  provenance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Audit P569 references
+        run: python scripts/leopoldina_p569_reference_provenance_v1.py
+      - name: Upload provenance artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: leopoldina-p569-reference-provenance-v1
+          path: data/leopoldina_p569_reference_provenance_v1/
+          if-no-files-found: error
