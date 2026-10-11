@@ -1,0 +1,24 @@
+name: Leopoldina DOB Content Verification Smoke
+
+on:
+  pull_request:
+    paths:
+      - "LEOPOLDINA_DOB_CONTENT_VERIFICATION_PLAN_V1.md"
+      - "scripts/leopoldina_dob_content_verify_local_v1.py"
+      - ".github/workflows/leopoldina_dob_content_verification_smoke.yml"
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install TLS CA helper
+        run: python -m pip install certifi
+      - name: Compile verifier
+        run: python -m py_compile scripts/leopoldina_dob_content_verify_local_v1.py
+      - name: Run verifier self-test
+        run: python scripts/leopoldina_dob_content_verify_local_v1.py --self-test
