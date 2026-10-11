@@ -1,0 +1,26 @@
+name: Leopoldina Wikidata Identity Pilot v1
+on:
+  push:
+    branches: [leopoldina-dob-official-v1]
+    paths:
+      - "scripts/leopoldina_wikidata_identity_pilot_v1.py"
+      - ".github/workflows/leopoldina_wikidata_identity_pilot_v1.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: leopoldina-dob-official-v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python scripts/leopoldina_wikidata_identity_pilot_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: leopoldina-wikidata-identity-pilot-v1
+          path: data/leopoldina_wikidata_identity_pilot_v1/
