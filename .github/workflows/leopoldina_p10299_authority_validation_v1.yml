@@ -1,0 +1,33 @@
+name: Leopoldina P10299 Authority Validation v1
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/leopoldina_p10299_authority_validation_v1.py'
+      - '.github/workflows/leopoldina_p10299_authority_validation_v1.yml'
+      - 'data/leopoldina_roster_freeze_v1/**'
+      - 'data/leopoldina_roster_freeze_v1.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate P10299-linked P569 against direct authorities
+        run: python scripts/leopoldina_p10299_authority_validation_v1.py
+      - name: Upload validation artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: leopoldina-p10299-authority-validation-v1
+          path: data/leopoldina_p10299_authority_validation_v1/
+          if-no-files-found: error
