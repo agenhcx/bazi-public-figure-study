@@ -327,13 +327,16 @@ def cached_entity_fetch(ids, cache_prefix):
     for i, batch in enumerate(chunks(ids, BATCH_SIZE)):
         cp = CACHE / f"{cache_prefix}_{i:04d}.json"
         signature = list(batch)
+        refresh = True
         if cp.exists():
             obj = json.loads(cp.read_text(encoding="utf-8"))
-            if obj.get("ids") != signature:
-                raise RuntimeError(f"Cache ID mismatch in {cp}; delete that file and rerun.")
-            api = obj.get("api_response", {})
-            print(f"{cache_prefix} batch {i}: cache hit ({len(batch)} IDs)")
-        else:
+            if obj.get("ids") == signature:
+                api = obj.get("api_response", {})
+                print(f"{cache_prefix} batch {i}: cache hit ({len(batch)} IDs)")
+                refresh = False
+            else:
+                print(f"{cache_prefix} batch {i}: stale cache signature; refreshing {len(batch)} IDs")
+        if refresh:
             api = wikidata_entities(batch)
             cp.write_text(
                 json.dumps({"ids": signature, "api_response": api}, ensure_ascii=False),
