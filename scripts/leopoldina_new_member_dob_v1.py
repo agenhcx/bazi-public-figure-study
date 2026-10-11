@@ -91,17 +91,21 @@ def page_is_target(text,slug):
     toks=slug_tokens(slug)
     if len(toks)<2:return False
     first,last=toks[0],toks[-1]
-    # True profiles identify the member near the top of the page. Restricting
-    # identity and metadata matching to the header region prevents citations
-    # to other Leopoldina members later in somebody else's biography from
-    # generating false multi-page DOB conflicts.
+    # In the old new-member volumes the profile identity appears before the
+    # first starred birth marker. Require the exact first-name and surname
+    # tokens in that pre-birth header. This rejects references to spouses,
+    # collaborators, or similarly named members later on the same/adjacent
+    # profile text (e.g. Mann/Wilmanns and the two Mosers).
     head_raw=text[:1800]
+    star=head_raw.find("*")
+    if star<0:return False
+    identity=norm(head_raw[:star])
     head=norm(head_raw)
-    if not re.search(rf"\b{re.escape(first)}\b",head):return False
-    if not re.search(rf"\b{re.escape(last)}\b",head):return False
+    if not re.search(rf"\b{re.escape(first)}\b",identity):return False
+    if not re.search(rf"\b{re.escape(last)}\b",identity):return False
     if not re.search(r"\b(section|sektion)\b",head):return False
     if not re.search(r"\b(matricula|matrikel|date of election|aufnahmedatum)\b",head):return False
-    return "*" in head_raw
+    return True
 
 def main():
     OUT.mkdir(parents=True,exist_ok=True)
