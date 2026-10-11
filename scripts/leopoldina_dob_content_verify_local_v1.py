@@ -294,6 +294,7 @@ def row_urls(row):
 
 
 def main():
+    global OUT, CACHE
     ap = argparse.ArgumentParser()
     ap.add_argument("--input", default=str(IN))
     ap.add_argument("--out", default=str(OUT))
@@ -313,7 +314,6 @@ def main():
 
     src = Path(args.input)
     out = Path(args.out)
-    global OUT, CACHE
     OUT = out
     CACHE = out / "cache"
     if not src.exists():
