@@ -1,0 +1,30 @@
+name: Leopoldina Local DOB Collector Smoke
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/leopoldina_dob_local_v1.py'
+      - '.github/workflows/leopoldina_dob_local_smoke.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run local-ready collector
+        run: python scripts/leopoldina_dob_local_v1.py
+      - name: Upload smoke artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: leopoldina-dob-local-v1-smoke
+          path: data/leopoldina_dob_local_v1/
+          if-no-files-found: error
