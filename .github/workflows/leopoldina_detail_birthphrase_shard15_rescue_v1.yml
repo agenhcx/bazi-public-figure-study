@@ -1,0 +1,33 @@
+name: Leopoldina Detail Birth-Phrase Shard15 Rescue v1
+on:
+  push:
+    branches: [leopoldina-dob-official-v1]
+    paths:
+      - ".github/workflows/leopoldina_detail_birthphrase_shard15_rescue_v1.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  rescue:
+    strategy:
+      fail-fast: false
+      matrix:
+        shard_index: [15,31,47,63]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      SHARD_INDEX: ${{ matrix.shard_index }}
+      SHARD_COUNT: 64
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: leopoldina-dob-official-v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python scripts/leopoldina_detail_birthphrase_v1.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: leopoldina-detail-birthphrase-rescue-s${{ matrix.shard_index }}
+          path: data/leopoldina_detail_birthphrase_shard_v1/
