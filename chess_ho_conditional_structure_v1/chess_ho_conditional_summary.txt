@@ -1,0 +1,73 @@
+CHESS HURTING-OFFICER CONDITIONAL STRUCTURE V1
+======================================================================================
+
+FROZEN DESIGN
+-------------
+Primary cohort: 2023_M_NEW_TARGET, N=501.
+Consistency cohort: 2013_M_DISCOVERY, N=501.
+Overlapping sensitivity: 2023_M_FULL, N=501.
+Primary model: M0 five known-date positions, main qi.
+Monte Carlo simulations per test: 50000.
+Frozen plan SHA256: 0d7d654f58e6e6a1d23a5370ca4d8238965da47a19e212f680284c5a28c5763e
+
+PRIMARY 2023_M_NEW_TARGET — M0 CONDITIONAL TESTS
+------------------------------------------------
+Interpretation: companion enrichment AFTER conditioning on exact birth year and Hurting Officer.
+T1 Direct Resource: H+ N=214 obs=0.3458 exp=0.3657 ratio=0.946 Z=-0.615 p_enrich=0.752385 Holm5=1 p2=0.567969
+T2 Indirect Resource: H+ N=214 obs=0.3692 exp=0.3688 ratio=1.001 Z=+0.007 p_enrich=0.52481 Holm5=1 p2=1
+T3 Any Resource: H+ N=214 obs=0.6028 exp=0.6205 ratio=0.972 Z=-0.535 p_enrich=0.727825 Holm5=1 p2=0.622548
+T4 Seven Killings: H+ N=214 obs=0.3131 exp=0.3577 ratio=0.875 Z=-1.375 p_enrich=0.926681 Holm5=1 p2=0.173037
+T5 Direct Officer: H+ N=214 obs=0.3178 exp=0.3621 ratio=0.878 Z=-1.364 p_enrich=0.925941 Holm5=1 p2=0.172237
+
+T5G GENG DAY MASTER — M0
+------------------------
+Geng N=46; Geng+HO N=20; Direct Officer among Geng+HO=4/20 (0.2000); expected=0.3264; ratio=0.613; p_enrich=0.956941; p2=0.194516; Wilson95=[0.0807,0.4160]
+
+PRIMARY COHORT — ALL-MODEL CONDITIONAL EFFECTS
+----------------------------------------------
+T1: M0=0.946 M1=0.909 M2=0.951 M3=0.923 | M2-M0=+0.006 M3-M1=+0.014 same_direction=True
+T2: M0=1.001 M1=0.976 M2=1.005 M3=0.999 | M2-M0=+0.004 M3-M1=+0.023 same_direction=False
+T3: M0=0.972 M1=0.937 M2=0.978 M3=0.965 | M2-M0=+0.006 M3-M1=+0.028 same_direction=True
+T4: M0=0.875 M1=0.825 M2=0.933 M3=0.907 | M2-M0=+0.058 M3-M1=+0.083 same_direction=True
+T5: M0=0.878 M1=0.878 M2=0.942 M3=0.954 | M2-M0=+0.064 M3-M1=+0.076 same_direction=True
+T5G: M0=0.613 M1=0.653 M2=0.835 M3=0.845 | M2-M0=+0.222 M3-M1=+0.191 same_direction=True
+
+PRIMARY COHORT — HOUR INVARIANCE
+--------------------------------
+Fractions below quantify whether the binary state is identical under all 12 possible hours.
+T1: M2 H=0.427 X=0.351 joint=0.363 | M3 H=0.232 X=0.194 joint=0.415
+T2: M2 H=0.427 X=0.435 joint=0.359 | M3 H=0.232 X=0.269 joint=0.299
+T3: M2 H=0.427 X=0.647 joint=0.341 | M3 H=0.232 X=0.419 joint=0.222
+T4: M2 H=0.427 X=0.395 joint=0.309 | M3 H=0.232 X=0.228 joint=0.335
+T5: M2 H=0.427 X=0.369 joint=0.475 | M3 H=0.232 X=0.244 joint=0.481
+T5G: M2 H=0.435 X=0.370 joint=0.370 | M3 H=0.435 X=0.130 joint=0.413
+
+CROSS-COHORT M0 CONDITIONAL RATIOS
+----------------------------------
+T1: 2023_M_NEW_TARGET=0.946 (p+=0.7524) | 2013_M_DISCOVERY=0.874 (p+=0.9163) | 2023_M_FULL=0.936 (p+=0.7789)
+T2: 2023_M_NEW_TARGET=1.001 (p+=0.5248) | 2013_M_DISCOVERY=1.125 (p+=0.09728) | 2023_M_FULL=1.055 (p+=0.2873)
+T3: 2023_M_NEW_TARGET=0.972 (p+=0.7278) | 2013_M_DISCOVERY=0.936 (p+=0.8823) | 2023_M_FULL=0.978 (p+=0.6892)
+T4: 2023_M_NEW_TARGET=0.875 (p+=0.9267) | 2013_M_DISCOVERY=0.969 (p+=0.6575) | 2023_M_FULL=0.955 (p+=0.7139)
+T5: 2023_M_NEW_TARGET=0.878 (p+=0.9259) | 2013_M_DISCOVERY=1.224 (p+=0.0137) | 2023_M_FULL=1.128 (p+=0.09186)
+T5G: 2023_M_NEW_TARGET=0.613 (p+=0.9569) | 2013_M_DISCOVERY=1.257 (p+=0.1406) | 2023_M_FULL=0.938 (p+=0.7159)
+
+SECONDARY JOINT ENRICHMENT — PRIMARY COHORT M0
+---------------------------------------------
+T1: joint obs=0.1477 exp=0.1422 ratio=1.038 Z=+0.352 p_enrich=0.380912 p2=0.747325
+T2: joint obs=0.1577 exp=0.1434 ratio=1.099 Z=+0.913 p_enrich=0.196516 p2=0.372893
+T3: joint obs=0.2575 exp=0.2402 ratio=1.072 Z=+0.906 p_enrich=0.196716 p2=0.374893
+T4: joint obs=0.1337 exp=0.1373 ratio=0.974 Z=-0.236 p_enrich=0.613548 p2=0.844303
+T5: joint obs=0.1357 exp=0.1403 ratio=0.968 Z=-0.294 p_enrich=0.635647 p2=0.795864
+T5G: joint obs=0.0870 exp=0.1489 ratio=0.584 Z=-1.240 p_enrich=0.934941 p2=0.279134
+
+INTERPRETATION GUARDRAILS
+-------------------------
+1. These are conditional co-occurrence components, not full classical 格局 classifications.
+2. No 身强/身弱, 用神, 喜忌, or subjective chart-strength judgment is used.
+3. Conditional enrichment given Hurting Officer has priority over joint enrichment.
+4. M0 is primary; M1-M3 are sensitivity analyses.
+5. M2/M3 marginalize the unknown Hour Pillar across all 12 double-hours.
+6. Robustness may support 'insensitive to hour marginalization under the pre-specified model';
+   it does NOT prove that the true Hour Pillar has no effect.
+7. T5G is a separate theory-motivated subgroup, not part of Holm5.
+8. Null and opposite-direction findings are retained.

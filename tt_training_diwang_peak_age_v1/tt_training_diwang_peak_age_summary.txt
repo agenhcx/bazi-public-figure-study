@@ -1,0 +1,79 @@
+TT TRAINING DI-WANG / YANG-REN VS AGE-AT-PEAK SCREENING V1
+==================================================================================
+
+ROLE: post-hoc outcome screening in TT training only.
+Historical holdout is not read.
+
+Training N=384
+Complete approx_age_at_peak N=335
+Observed peak-age range=14.75 to 38.50
+
+OUTCOME
+-------
+Frozen approx_age_at_peak = approximate age when the player's recorded
+career-best world ranking was reached.
+This is NOT age at first world ranking / first Top-100 / first Top-50.
+
+PRIMARY TEST
+------------
+Age-at-peak is centered within exact birth-year x gender strata.
+Exposure labels are permuted within those same strata while preserving
+the observed exposed count in each stratum.
+Negative effect = exposed players peaked earlier.
+
+RESULTS
+-------
+YEAR_DIWANG
+  n exposed/unexposed = 33/302
+  raw mean age          = 25.723 vs 25.536
+  raw median age        = 25.079 vs 25.772
+  primary adjusted diff = +0.023 years
+  primary perm Z        = +0.040
+  primary p(earlier)    = 0.51848
+  primary p(two-sided)  = 0.96305
+  birth-year-only Z     = +0.204
+  birth-year-only p(earlier) = 0.58498
+
+STRICT_YANGREN_MONTH
+  n exposed/unexposed = 11/324
+  raw mean age          = 25.905 vs 25.542
+  raw median age        = 26.382 vs 25.727
+  primary adjusted diff = +0.966 years
+  primary perm Z        = +1.179
+  primary p(earlier)    = 0.88001
+  primary p(two-sided)  = 0.24000
+  birth-year-only Z     = +0.890
+  birth-year-only p(earlier) = 0.81242
+
+ANY_BRANCH_DIWANG
+  n exposed/unexposed = 80/255
+  raw mean age          = 25.305 vs 25.632
+  raw median age        = 25.196 vs 25.980
+  primary adjusted diff = +0.044 years
+  primary perm Z        = +0.119
+  primary p(earlier)    = 0.54787
+  primary p(two-sided)  = 0.90427
+  birth-year-only Z     = +0.044
+  birth-year-only p(earlier) = 0.51877
+
+YEAR_BRANCH_JIECAI_MAINQI
+  n exposed/unexposed = 48/287
+  raw mean age          = 25.856 vs 25.504
+  raw median age        = 26.217 vs 25.703
+  primary adjusted diff = +0.005 years
+  primary perm Z        = +0.010
+  primary p(earlier)    = 0.50615
+  primary p(two-sided)  = 0.98771
+  birth-year-only Z     = +0.103
+  birth-year-only p(earlier) = 0.54421
+
+INTERPRETATION GUARDRAILS
+-------------------------
+1. This is screening/post-hoc, not confirmatory.
+2. YEAR_DIWANG overlaps prior Year-Branch Jie-Cai for 8/10 Day Stems.
+3. The primary permutation controls exact birth year and gender because
+   younger cohorts have less follow-up and a mechanically younger peak-to-date.
+4. approx_age_at_peak is not a debut/first-ranking milestone.
+5. If there is a strong earlier-peak signal here, the next data collection
+   target should be age at first Top-100 / Top-50 / Top-20.
+6. Historical TT holdout remains untouched.

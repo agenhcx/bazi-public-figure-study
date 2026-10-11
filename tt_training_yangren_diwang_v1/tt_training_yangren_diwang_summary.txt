@@ -1,0 +1,55 @@
+TT TRAINING YANG-REN / DI-WANG BRANCH DIAGNOSTIC V1
+==============================================================================
+
+ROLE: post-hoc characterization in TT training only.
+Historical holdout is not read.
+
+Training N=384
+Pillar recalculation mismatches=0
+
+FROZEN DI-WANG MAPPING
+----------------------
+甲卯 乙寅 丙午 丁巳 戊午 己巳 庚酉 辛申 壬子 癸亥
+
+IMPORTANT DEPENDENCE
+--------------------
+For the eight non-Earth Day Stems, Year-Branch Di-Wang is exactly identical
+to the already examined Year-Branch main-qi Jie-Cai event.
+Non-Earth identity mismatches in observed data=0 (expected 0).
+Observed non-Earth Year Di-Wang=33; Year-Branch Jie-Cai=33.
+Observed Earth Year Di-Wang=5; Earth Year-Branch Jie-Cai=23.
+
+PRIMARY / SECONDARY RESULTS
+---------------------------
+STRICT_YANGREN_MONTH    : obs= 11 exp= 16.150 delta= -5.150 ratio=0.681 z=-1.31 p+=0.93142 p2=0.22999
+MONTH_DIWANG_ALL        : obs= 30 exp= 32.165 delta= -2.165 ratio=0.933 z=-0.40 p+=0.68071 p2=0.77954
+YEAR_DIWANG             : obs= 38 exp= 30.854 delta= +7.146 ratio=1.232 z=+1.38 p+=0.10177 p2=0.20354
+MONTH_DIWANG            : obs= 30 exp= 32.165 delta= -2.165 ratio=0.933 z=-0.40 p+=0.68071 p2=0.77954
+DAY_DIWANG              : obs= 40 exp= 38.448 delta= +1.552 ratio=1.040 z=+0.27 p+=0.41731 p2=0.83463
+ANY_BRANCH_DIWANG       : obs= 95 exp= 92.817 delta= +2.183 ratio=1.024 z=+0.27 p+=0.41467 p2=0.82935
+ANY_YANGREN_BRANCH      : obs= 38 exp= 45.103 delta= -7.103 ratio=0.843 z=-1.13 p+=0.88919 p2=0.29120
+DIWANG_BRANCH_COUNT     : sum(obs)= 108.0 sum(exp)=101.467 delta= +6.533 ratio=1.064 z=+0.69 p+=0.25969 p2=0.51938
+
+DAY-STEM DESCRIPTIVE COUNTS
+----------------------------
+甲日主 (帝旺=卯) n=38: year= 4 month= 1 day= 0 any= 5 strict_yangren_month= 1 year_JC= 4
+乙日主 (帝旺=寅) n=37: year= 8 month= 6 day= 0 any=14 strict_yangren_month=NA year_JC= 8
+丙日主 (帝旺=午) n=33: year= 6 month= 2 day= 7 any=13 strict_yangren_month= 2 year_JC= 6
+丁日主 (帝旺=巳) n=42: year= 4 month= 3 day= 3 any= 9 strict_yangren_month=NA year_JC= 4
+戊日主 (帝旺=午) n=40: year= 1 month= 5 day= 8 any=10 strict_yangren_month= 5 year_JC=11
+己日主 (帝旺=巳) n=50: year= 4 month= 6 day= 9 any=16 strict_yangren_month=NA year_JC=12
+庚日主 (帝旺=酉) n=39: year= 0 month= 1 day= 0 any= 1 strict_yangren_month= 1 year_JC= 0
+辛日主 (帝旺=申) n=30: year= 4 month= 3 day= 0 any= 7 strict_yangren_month=NA year_JC= 4
+壬日主 (帝旺=子) n=36: year= 2 month= 2 day= 6 any= 9 strict_yangren_month= 2 year_JC= 2
+癸日主 (帝旺=亥) n=39: year= 5 month= 1 day= 7 any=11 strict_yangren_month=NA year_JC= 5
+
+INTERPRETATION GUARDRAILS
+-------------------------
+1. STRICT_YANGREN_MONTH is the clean operational test of 阳刃格/羊刃格.
+2. MONTH_DIWANG_ALL includes Yin Day Stems and is labeled 月令帝旺 rather than
+   claiming universal traditional agreement on 阴刃/刃格 terminology.
+3. YEAR_DIWANG is not independent of the prior TT Year-Branch Jie-Cai analysis:
+   for 8/10 Day Stems it is literally the same event.
+4. ANY_BRANCH_DIWANG and DIWANG_BRANCH_COUNT are post-hoc exploratory summaries.
+5. Do not promote nominal p-values from this training-only family as confirmation.
+6. Historical TT holdout remains untouched.

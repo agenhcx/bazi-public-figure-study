@@ -1,0 +1,70 @@
+{
+  "plan_file": "CHESS_TENGOD_TEMPORAL_PLAN_V1.md",
+  "plan_sha256": "9e278ffeb1fa7fa5841a1704159e8aa8ab41e99030a0e94a367eb89f15118ac7",
+  "input_file": "final_birthyear_elementcount_v1\\chess_unique_players_temporal.csv",
+  "n_unique": 1907,
+  "birth_year_min": 1922,
+  "birth_year_max": 2011,
+  "represented_birth_years": 84,
+  "primary_model": "M0_5pos_mainqi",
+  "sensitivity_models": [
+    "M1_5pos_hidden",
+    "M2_8char_mainqi",
+    "M3_8char_hidden"
+  ],
+  "sims": 20000,
+  "batch_size": 50,
+  "seed": 20261008,
+  "locked_transfer_hypotheses": [
+    {
+      "id": "H1",
+      "ten_god": "劫财",
+      "direction": "high",
+      "role": "PRIMARY"
+    },
+    {
+      "id": "H2",
+      "ten_god": "比肩",
+      "direction": "low",
+      "role": "SECONDARY"
+    },
+    {
+      "id": "H3",
+      "ten_god": "食神",
+      "direction": "high",
+      "role": "SECONDARY"
+    },
+    {
+      "id": "H4",
+      "ten_god": "伤官",
+      "direction": "low",
+      "role": "SECONDARY"
+    },
+    {
+      "id": "H5",
+      "ten_god": "正官",
+      "direction": "high",
+      "role": "SECONDARY"
+    },
+    {
+      "id": "H6",
+      "ten_god": "偏印",
+      "direction": "high",
+      "role": "SECONDARY"
+    }
+  ],
+  "complete_windows": [
+    "1925-1934",
+    "1935-1944",
+    "1945-1954",
+    "1955-1964",
+    "1965-1974",
+    "1975-1984",
+    "1985-1994",
+    "1995-2004"
+  ],
+  "partial_edge_windows": [
+    "1922-1924",
+    "2005-2011"
+  ]
+}

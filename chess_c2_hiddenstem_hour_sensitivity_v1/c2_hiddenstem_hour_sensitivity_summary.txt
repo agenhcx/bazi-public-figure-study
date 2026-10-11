@@ -1,0 +1,44 @@
+C2 HIDDEN-STEM / HOUR-PILLAR SENSITIVITY
+==============================================================================
+
+IMPORTANT: M0 is the frozen original C2 feature.
+M1/M2/M3 are post-validation method sensitivities, not replacement primaries.
+
+Hour weights: 子=0.08333 丑=0.08333 寅=0.08333 卯=0.08333 辰=0.08333 巳=0.08333 午=0.08333 未=0.08333 申=0.08333 酉=0.08333 戌=0.08333 亥=0.08333
+
+------------------------------------------------------------------------------
+M_FULL  n=501
+------------------------------------------------------------------------------
+M0_mainqi_6pos: obs=0.540918 null=0.467484 delta=+0.073434 z=2.4985 p_high=0.00801984 ratio_vs_M0=1.0 same_dir=True
+M1_priority_6pos: obs=0.572854 null=0.479005 delta=+0.093849 z=2.6956 p_high=0.00423992 ratio_vs_M0=1.2780063092442988 same_dir=True
+M1_share_6pos: obs=0.570858 null=0.478970 delta=+0.091889 z=2.6619 p_high=0.00545989 ratio_vs_M0=1.2513094427196616 same_dir=True
+M1_any_6pos: obs=0.588822 null=0.490652 delta=+0.098171 z=2.7490 p_high=0.00421992 ratio_vs_M0=1.336856891705078 same_dir=True
+M2_mainqi_8pos_hour_marginal: obs=0.741850 null=0.667444 delta=+0.074406 z=2.5115 p_high=0.00621988 ratio_vs_M0=1.0132332765976086 same_dir=True
+M3_priority_8pos_hour_marginal: obs=0.776946 null=0.682112 delta=+0.094834 z=2.7337 p_high=0.00367993 ratio_vs_M0=1.2914125020453675 same_dir=True
+M3_share_8pos_hour_marginal: obs=0.771402 null=0.680298 delta=+0.091103 z=2.6333 p_high=0.0048599 ratio_vs_M0=1.2406130179158168 same_dir=True
+M3_any_8pos_hour_marginal: obs=0.820359 null=0.721086 delta=+0.099273 z=2.6808 p_high=0.00437991 ratio_vs_M0=1.3518710647633452 same_dir=True
+
+------------------------------------------------------------------------------
+M_NEW_TARGET  n=501
+------------------------------------------------------------------------------
+M0_mainqi_6pos: obs=0.520958 null=0.466964 delta=+0.053994 z=1.8620 p_high=0.0342793 ratio_vs_M0=1.0 same_dir=True
+M1_priority_6pos: obs=0.520958 null=0.478439 delta=+0.042519 z=1.2184 p_high=0.118938 ratio_vs_M0=0.7874866639902227 same_dir=True
+M1_share_6pos: obs=0.511976 null=0.478521 delta=+0.033455 z=0.9697 p_high=0.168917 ratio_vs_M0=0.6196137492320009 same_dir=True
+M1_any_6pos: obs=0.524950 null=0.489927 delta=+0.035023 z=0.9882 p_high=0.168797 ratio_vs_M0=0.6486546433712547 same_dir=True
+M2_mainqi_8pos_hour_marginal: obs=0.722056 null=0.666875 delta=+0.055181 z=1.8924 p_high=0.0307994 ratio_vs_M0=1.0219818351778842 same_dir=True
+M3_priority_8pos_hour_marginal: obs=0.720559 null=0.681547 delta=+0.039012 z=1.1270 p_high=0.130977 ratio_vs_M0=0.7225353981875589 same_dir=True
+M3_share_8pos_hour_marginal: obs=0.708971 null=0.679714 delta=+0.029257 z=0.8484 p_high=0.196796 ratio_vs_M0=0.5418532701699162 same_dir=True
+M3_any_8pos_hour_marginal: obs=0.752994 null=0.719976 delta=+0.033018 z=0.8954 p_high=0.186476 ratio_vs_M0=0.6115212650362066 same_dir=True
+
+INTERPRETATION
+--------------
+1) First sanity check: M0 observed means should reproduce the frozen C2 values
+   (approximately 0.5409 for M_FULL and 0.5210 for M_NEW_TARGET).
+2) The cleanest robustness question is whether M3_priority retains a positive
+   observed-minus-null delta in BOTH M_FULL and independent M_NEW_TARGET.
+3) Do not judge robustness from p<0.05 alone. Compare effect direction and
+   delta magnitude versus M0, then inspect share/any sensitivity envelope.
+4) If priority/share/any all preserve the positive NEW_TARGET effect, the
+   C2 selection signal is much less likely to be an artifact of main-qi-only coding.
+5) If the sign flips under plausible exposure rules, C2 should be reframed as
+   coding-sensitive rather than a stable full-chart population association.

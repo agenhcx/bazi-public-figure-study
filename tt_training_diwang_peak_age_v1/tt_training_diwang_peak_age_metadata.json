@@ -1,0 +1,24 @@
+{
+  "role": "posthoc_outcome_screening",
+  "dataset": "TT training only",
+  "n_training": 384,
+  "n_complete_peak_age": 335,
+  "outcome": "frozen approx_age_at_peak",
+  "primary_exposure": "YEAR_DIWANG",
+  "secondary_exposures": [
+    "STRICT_YANGREN_MONTH",
+    "ANY_BRANCH_DIWANG",
+    "YEAR_BRANCH_JIECAI_MAINQI"
+  ],
+  "primary_strata": [
+    "birth_year_analysis",
+    "gender"
+  ],
+  "secondary_strata": [
+    "birth_year_analysis"
+  ],
+  "direction": "negative effect means earlier peak",
+  "holdout_accessed": false,
+  "permutations": 100000,
+  "seed": 20261008
+}

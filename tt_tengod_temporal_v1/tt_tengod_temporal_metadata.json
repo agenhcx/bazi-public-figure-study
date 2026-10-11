@@ -1,0 +1,34 @@
+{
+  "plan": "TT_TENGOD_TEMPORAL_PLAN_V1.md",
+  "pooled_n": 719,
+  "set2_older_n": 335,
+  "set1_modern_n": 384,
+  "years": [
+    1950,
+    2008
+  ],
+  "primary_model": "M0_5pos_mainqi",
+  "sensitivity_models": [
+    "M1_5pos_hidden",
+    "M2_8char_mainqi",
+    "M3_8char_hidden"
+  ],
+  "sims": 20000,
+  "seed": 20261008,
+  "complete_windows": [
+    "1955-1964",
+    "1965-1974",
+    "1975-1984",
+    "1985-1994",
+    "1995-2004"
+  ],
+  "partial_edge_windows": [
+    "1950-1954",
+    "2005-2008"
+  ],
+  "directional_candidates": {
+    "劫财": "high",
+    "正财": "low",
+    "偏财": "low"
+  }
+}

@@ -1,0 +1,51 @@
+TT TRAINING YEAR-BRANCH JIE-CAI EXACT-PAIR DECOMPOSITION V1
+==================================================================================
+
+ROLE: post-hoc localization of the already observed M0 Year-Branch Jie-Cai excess.
+TRAINING ONLY. Historical holdout is not read.
+Pair-level p-values are descriptive; do not treat them as a new confirmatory family.
+
+Training N=384
+Pillar recalculation mismatches=0
+
+UPSTREAM QA
+-----------
+Year-Branch Jie-Cai observed=56
+Expected exact same-birth-year calendar null=38.382
+Delta=+17.618
+
+DAY-MASTER GROUPED DECOMPOSITION
+--------------------------------
+己日主   : obs=12 exp= 6.790 delta=+5.210 ratio=1.767 z=+2.08 p+=0.03759 share=+29.6%
+乙日主   : obs= 8 exp= 3.488 delta=+4.512 ratio=2.294 z=+2.53 p+=0.02058 share=+25.6%
+戊日主   : obs=11 exp= 6.925 delta=+4.075 ratio=1.588 z=+1.62 p+=0.08373 share=+23.1%
+丙日主   : obs= 6 exp= 2.885 delta=+3.115 ratio=2.080 z=+1.91 p+=0.06486 share=+17.7%
+癸日主   : obs= 5 exp= 3.197 delta=+1.803 ratio=1.564 z=+1.05 p+=0.21270 share=+10.2%
+甲日主   : obs= 4 exp= 2.605 delta=+1.395 ratio=1.536 z=+0.90 p+=0.26148 share= +7.9%
+丁日主   : obs= 4 exp= 3.260 delta=+0.740 ratio=1.227 z=+0.43 p+=0.41203 share= +4.2%
+辛日主   : obs= 4 exp= 3.727 delta=+0.273 ratio=1.073 z=+0.15 p+=0.51867 share= +1.5%
+壬日主   : obs= 2 exp= 2.679 delta=-0.679 ratio=0.747 z=-0.43 p+=0.75909 share= -3.9%
+庚日主   : obs= 0 exp= 2.827 delta=-2.827 ratio=0.000 z=-1.76 p+=1.00000 share=-16.0%
+
+EXACT DAY-STEM / YEAR-BRANCH PAIRS
+----------------------------------
+乙-寅  : obs= 8 exp= 3.488 delta=+4.512 ratio=2.294 z=+2.53 p+=0.02007 share=+25.6%
+己-戌  : obs= 6 exp= 2.732 delta=+3.268 ratio=2.197 z=+2.07 p+=0.05112 share=+18.6%
+丙-午  : obs= 6 exp= 2.885 delta=+3.115 ratio=2.080 z=+1.91 p+=0.06479 share=+17.7%
+戊-丑  : obs= 6 exp= 3.921 delta=+2.079 ratio=1.530 z=+1.10 p+=0.19561 share=+11.8%
+戊-未  : obs= 5 exp= 3.004 delta=+1.996 ratio=1.664 z=+1.21 p+=0.17638 share=+11.3%
+己-辰  : obs= 6 exp= 4.058 delta=+1.942 ratio=1.479 z=+1.00 p+=0.21788 share=+11.0%
+癸-亥  : obs= 5 exp= 3.197 delta=+1.803 ratio=1.564 z=+1.05 p+=0.21224 share=+10.2%
+甲-卯  : obs= 4 exp= 2.605 delta=+1.395 ratio=1.536 z=+0.90 p+=0.26164 share= +7.9%
+丁-巳  : obs= 4 exp= 3.260 delta=+0.740 ratio=1.227 z=+0.43 p+=0.41330 share= +4.2%
+辛-申  : obs= 4 exp= 3.727 delta=+0.273 ratio=1.073 z=+0.15 p+=0.51909 share= +1.5%
+壬-子  : obs= 2 exp= 2.679 delta=-0.679 ratio=0.747 z=-0.43 p+=0.76003 share= -3.9%
+庚-酉  : obs= 0 exp= 2.827 delta=-2.827 ratio=0.000 z=-1.76 p+=1.00000 share=-16.0%
+
+INTERPRETATION GUARDRAILS
+-------------------------
+1. This decomposition follows an already observed TT-training Year-Branch JC signal.
+2. The 10 day-master rows and 12 exact-pair rows are descriptive localization diagnostics.
+3. A large contribution from one or two categories suggests concentration, not confirmation.
+4. A broad excess across many categories would support a more generic Year-Branch JC pattern.
+5. Historical TT holdout remains untouched.

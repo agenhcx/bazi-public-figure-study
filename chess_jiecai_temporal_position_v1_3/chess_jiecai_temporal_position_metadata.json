@@ -1,0 +1,23 @@
+{
+  "role": "post-validation exploratory mechanism diagnostic",
+  "primary_representation": "M0 5pos main qi",
+  "sensitivity_representation": "M1 5pos hidden priority",
+  "day_stem": "reference_only",
+  "temporal_unique_expected_n": 1907,
+  "temporal_expected_birth_year_range": [
+    1922,
+    2011
+  ],
+  "temporal_direction": "later_birth_year_more_jiecai",
+  "trend_permutations": 50000,
+  "position_sims": 100000,
+  "seed": 20261007,
+  "positions": [
+    "year_stem",
+    "year_branch",
+    "month_stem",
+    "month_branch",
+    "day_branch"
+  ],
+  "temporal_population_source": "exact C10 frozen all-rows source: chess-element-concentration-results-v1:chess_element_concentration_v1/element_concentration_player_features.csv"
+}

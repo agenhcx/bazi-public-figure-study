@@ -1,0 +1,35 @@
+{
+  "analysis_role": "stage-1 discovery / theory-target reveal",
+  "holdout_access": "none",
+  "training_years_allowed": [
+    1985,
+    2008
+  ],
+  "canonical_training_n": 384,
+  "theory_targets": {
+    "H1": {
+      "ten_god": "食神",
+      "direction": "enrichment",
+      "origin": "data-informed / traditional-compatible"
+    },
+    "H2": {
+      "ten_god": "七杀",
+      "direction": "enrichment",
+      "origin": "theory-driven pre-reveal"
+    }
+  },
+  "all_tengod_scan_positions": [
+    "year_stem",
+    "year_branch_main_qi",
+    "month_stem",
+    "month_branch_main_qi",
+    "day_branch_main_qi"
+  ],
+  "day_stem_excluded_from_all_tengod_scan": true,
+  "candidate_selection_rule": "largest positive z_enrichment; tie-break enrichment_ratio",
+  "null": "uniform Gregorian date within each athlete's exact birth year",
+  "sims": 200000,
+  "seed": 20261006,
+  "input": "C:\\chenxi\\bazi_project\\1986wiki\\table_tennis_players_1985_2008.csv",
+  "dob_column": "dob"
+}

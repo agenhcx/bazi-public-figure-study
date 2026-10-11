@@ -1,0 +1,24 @@
+{
+  "analysis_role": "post-validation method sensitivity",
+  "cohort_source": "hemisphere_YEAR/YEAR_people_with_hemisphere.csv",
+  "transition_rule": "exclude if Year or Month pillar differs between 00:30 and 22:30",
+  "pillar_time_for_features": "12:00 civil time",
+  "primary_scope": "hemisphere == north",
+  "day_stem_excluded_from_transparency": true,
+  "fallback": "main qi when no hidden stem exposed",
+  "priority_order": "main > middle > residual",
+  "hour_weights": {
+    "子": 0.08333333333333333,
+    "丑": 0.08333333333333333,
+    "寅": 0.08333333333333333,
+    "卯": 0.08333333333333333,
+    "辰": 0.08333333333333333,
+    "巳": 0.08333333333333333,
+    "午": 0.08333333333333333,
+    "未": 0.08333333333333333,
+    "申": 0.08333333333333333,
+    "酉": 0.08333333333333333,
+    "戌": 0.08333333333333333,
+    "亥": 0.08333333333333333
+  }
+}

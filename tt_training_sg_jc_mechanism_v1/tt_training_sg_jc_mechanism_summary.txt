@@ -1,0 +1,14 @@
+TT TRAINING SG->JC MECHANISM DIAGNOSTIC
+======================================================================
+Training cohort only; historical holdout NOT accessed.
+
+M0_5pos_mainqi: rho(SG,JC)=-0.076; JC uncond z=+1.744 p+=0.04539; conditional-on-SG z=+1.855 p+=0.03654; residual=+23.20
+M1_5pos_hidden: rho(SG,JC)=-0.163; JC uncond z=+1.404 p+=0.08661; conditional-on-SG z=+1.613 p+=0.05945; residual=+23.88
+M2_8char_mainqi: rho(SG,JC)=-0.133; JC uncond z=+1.826 p+=0.03629; conditional-on-SG z=+1.688 p+=0.04675; residual=+19.99
+M3_8char_hidden: rho(SG,JC)=-0.121; JC uncond z=+1.380 p+=0.0862; conditional-on-SG z=+0.914 p+=0.1824; residual=+12.45
+
+Month-order SG:
+M0_5pos_mainqi: n_month_SG=45, JCmean SGmonth=0.422 vs other=0.537; cond-month z=+1.695 p+=0.05078
+M1_5pos_hidden: n_month_SG=47, JCmean SGmonth=0.319 vs other=0.561; cond-month z=+1.380 p+=0.09195
+
+Interpretation: if unconditional JC excess collapses after exact-SG conditioning, JC is compatible with a derivative/companion signal rather than an independent enrichment.
