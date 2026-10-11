@@ -1,0 +1,21 @@
+{
+  "role": "post-validation descriptive characterization",
+  "day_stem": "reference_only",
+  "models": [
+    "M0_5pos_mainqi",
+    "M1_5pos_hidden",
+    "M2_8char_mainqi",
+    "M3_8char_hidden"
+  ],
+  "hidden_rule": "priority_exposed_main_middle_residual_else_main_qi",
+  "hour": "uniform_12_double_hours_exact_marginalization",
+  "null": "same-birth-year Gregorian calendar",
+  "sims": 50000,
+  "seed": 20261007,
+  "cohorts": {
+    "2013_M_DISCOVERY": 492,
+    "2023_M_FULL": 501,
+    "2023_M_NEW_TARGET": 501
+  },
+  "no_new_hypothesis_mining": true
+}

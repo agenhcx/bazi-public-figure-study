@@ -1,0 +1,18 @@
+{
+  "role": "posthoc_mechanism_diagnostic",
+  "condition": [
+    "same_Gregorian_birth_year",
+    "same_exact_Day_Stem",
+    "Year_Stem_is_Jie_Cai"
+  ],
+  "features": [
+    "ys_ms_combine",
+    "ms_ds_combine",
+    "any_known_stem_combine",
+    "month_stem_wealth",
+    "month_stem_officer_killing",
+    "month_stem_wealth_or_officer_killing"
+  ],
+  "sims": 100000,
+  "seed": 20261007
+}

@@ -1,0 +1,16 @@
+{
+  "role": "posthoc_confound_diagnostic",
+  "dataset": "TT training only",
+  "n": 384,
+  "observed_yearbranch_jc_upstream": 56,
+  "conditioning": [
+    "Gregorian birth year",
+    "exact Day Stem"
+  ],
+  "calendar_engine": "lunar-python noon",
+  "null": "uniform over dates in same birth year having same Day Stem",
+  "holdout_accessed": false,
+  "daystem_rows_confirmatory": false,
+  "sims": 200000,
+  "seed": 20261007
+}

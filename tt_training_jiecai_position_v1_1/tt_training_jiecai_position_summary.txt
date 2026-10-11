@@ -1,0 +1,39 @@
+TT TRAINING JIE-CAI POSITION DECOMPOSITION V1.1
+==============================================================================
+
+CORRECTION: V1 used sxtwl; V1.1 restores the frozen TT lunar-python/noon convention.
+Observed frozen-vs-recalculated pillar mismatches: 0
+
+ROLE: post-discovery mechanism characterization.
+TRAINING ONLY. Historical holdout is not read.
+
+Training N=384, birth years 1985-2008
+
+M0 PRIMARY — five date-known positions, branch main qi
+------------------------------------------------------
+M0 aggregate: obs=201 exp=178.845 delta=+22.155 ratio=1.124 z=+1.752 p+=0.04503 p2=0.09007
+  year_stem   : obs= 40 exp= 38.451 delta= +1.549 ratio= 1.040 z=+0.264 p+=0.41970 contribution=+7.0%
+  year_branch : obs= 56 exp= 38.382 delta=+17.618 ratio= 1.459 z=+3.004 p+=0.00290 contribution=+79.5%
+  month_stem  : obs= 41 exp= 37.890 delta= +3.110 ratio= 1.082 z=+0.536 p+=0.31951 contribution=+14.0%
+  month_branch: obs= 41 exp= 38.484 delta= +2.516 ratio= 1.065 z=+0.428 p+=0.35848 contribution=+11.4%
+  day_branch  : obs= 23 exp= 25.638 delta= -2.638 ratio= 0.897 z=-0.540 p+=0.73412 contribution=-11.9%
+
+M1 SENSITIVITY — global hidden-stem exposure
+--------------------------------------------
+M1 aggregate: obs=204 exp=182.925 delta=+21.075 ratio=1.115 z=+1.392 p+=0.08871 p2=0.17742
+  year_stem   : obs= 40 exp= 38.451 delta= +1.549 ratio= 1.040 z=+0.263 p+=0.42012 contribution=+7.4%
+  year_branch : obs= 54 exp= 38.163 delta=+15.837 ratio= 1.415 z=+2.701 p+=0.00591 contribution=+75.1%
+  month_stem  : obs= 41 exp= 37.890 delta= +3.110 ratio= 1.082 z=+0.528 p+=0.32226 contribution=+14.8%
+  month_branch: obs= 40 exp= 38.421 delta= +1.579 ratio= 1.041 z=+0.271 p+=0.41874 contribution=+7.5%
+  day_branch  : obs= 29 exp= 30.000 delta= -1.000 ratio= 0.967 z=-0.185 p+=0.60077 contribution=-4.7%
+
+QA
+--
+M0 observed aggregate JC=201 (prior value 201: PASS).
+M0 exact calendar expectation=178.845 (prior reference ~178.845).
+
+INTERPRETATION GUARDRAILS
+-------------------------
+Position rows localize an already observed training signal; they are not five new hypotheses.
+M0 is primary; M1 is sensitivity.
+Historical TT holdout remains untouched by this diagnostic.

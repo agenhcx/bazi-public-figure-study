@@ -1,0 +1,30 @@
+CHESS SG->JC MECHANISM DIAGNOSTIC
+======================================================================
+Key comparison: unconditional JC enrichment vs JC enrichment conditional on exact SG count.
+
+2013_M_DISCOVERY
+  M0_5pos_mainqi: rho(SG,JC)=-0.032; JC uncond z=-0.533 p+=0.7134; conditional-on-SG z=-0.521 p+=0.7085; residual=-7.57
+  M1_5pos_hidden: rho(SG,JC)=-0.125; JC uncond z=-0.160 p+=0.5673; conditional-on-SG z=+0.139 p+=0.4508; residual=+2.36
+  M2_8char_mainqi: rho(SG,JC)=-0.110; JC uncond z=-0.612 p+=0.7288; conditional-on-SG z=-0.634 p+=0.7371; residual=-8.75
+  M3_8char_hidden: rho(SG,JC)=-0.118; JC uncond z=-0.376 p+=0.6431; conditional-on-SG z=+0.206 p+=0.4155; residual=+3.17
+  Month-order SG:
+    M0_5pos_mainqi: n_month_SG=54, JCmean SGmonth=0.444 vs other=0.452; cond-month z=-0.417 p+=0.6714
+    M1_5pos_hidden: n_month_SG=62, JCmean SGmonth=0.306 vs other=0.498; cond-month z=+0.054 p+=0.4853
+
+2023_M_FULL
+  M0_5pos_mainqi: rho(SG,JC)=-0.059; JC uncond z=-1.070 p+=0.8659; conditional-on-SG z=-0.737 p+=0.7786; residual=-10.53
+  M1_5pos_hidden: rho(SG,JC)=-0.126; JC uncond z=-0.373 p+=0.6523; conditional-on-SG z=+0.158 p+=0.4445; residual=+2.64
+  M2_8char_mainqi: rho(SG,JC)=-0.143; JC uncond z=-1.179 p+=0.8824; conditional-on-SG z=-0.800 p+=0.7896; residual=-10.84
+  M3_8char_hidden: rho(SG,JC)=-0.143; JC uncond z=-0.433 p+=0.6637; conditional-on-SG z=+0.581 p+=0.2801; residual=+8.83
+  Month-order SG:
+    M0_5pos_mainqi: n_month_SG=65, JCmean SGmonth=0.446 vs other=0.433; cond-month z=-1.019 p+=0.8538
+    M1_5pos_hidden: n_month_SG=73, JCmean SGmonth=0.356 vs other=0.484; cond-month z=-0.140 p+=0.5625
+
+2023_M_NEW_TARGET
+  M0_5pos_mainqi: rho(SG,JC)=-0.048; JC uncond z=+1.754 p+=0.0443; conditional-on-SG z=+1.986 p+=0.02693; residual=+28.36
+  M1_5pos_hidden: rho(SG,JC)=-0.090; JC uncond z=+2.137 p+=0.01942; conditional-on-SG z=+2.339 p+=0.0122; residual=+39.56
+  M2_8char_mainqi: rho(SG,JC)=-0.122; JC uncond z=+1.767 p+=0.03994; conditional-on-SG z=+2.274 p+=0.0128; residual=+30.89
+  M3_8char_hidden: rho(SG,JC)=-0.109; JC uncond z=+2.289 p+=0.01201; conditional-on-SG z=+2.139 p+=0.018; residual=+33.48
+  Month-order SG:
+    M0_5pos_mainqi: n_month_SG=69, JCmean SGmonth=0.580 vs other=0.507; cond-month z=+1.675 p+=0.05223
+    M1_5pos_hidden: n_month_SG=76, JCmean SGmonth=0.447 vs other=0.569; cond-month z=+2.248 p+=0.01429

@@ -1,0 +1,69 @@
+MUSIC MONTH-ORDER HIDDEN-STEM / HOUR SENSITIVITY V2
+==============================================================================
+
+Cohort construction reproduces frozen Music pipelines:
+hemisphere files -> transition-ambiguous date exclusion -> north only.
+
+Hour weights: 子=0.08333 丑=0.08333 寅=0.08333 卯=0.08333 辰=0.08333 巳=0.08333 午=0.08333 未=0.08333 申=0.08333 酉=0.08333 戌=0.08333 亥=0.08333
+
+COHORT QA
+---------
+1990: north N=12827, Music=820, dates=355, ambiguous_dates_excluded=10
+1991: north N=12008, Music=788, dates=355, ambiguous_dates_excluded=10
+1992: north N=11854, Music=698, dates=354, ambiguous_dates_excluded=12
+1993: north N=11495, Music=656, dates=355, ambiguous_dates_excluded=10
+1994: north N=11221, Music=621, dates=354, ambiguous_dates_excluded=11
+1995: north N=10318, Music=515, dates=353, ambiguous_dates_excluded=12
+
+1990-1992 pooled north: N=36689, Music=2306, dates=1064
+1993-1995 pooled north: N=33034, Music=1792, dates=1062
+
+SANITY CHECK TARGETS
+--------------------
+M5 M0: OR ~= 1.067784, p_one ~= 0.15669989
+M10 M0: OR ~= 1.019834, p_one ~= 0.42987605
+M10 cohort: N=33034, Music=1792, dates=1062
+
+------------------------------------------------------------------------------
+M5_1990_1992
+------------------------------------------------------------------------------
+M5_M0_mainqi: mean=0.101992 OR=1.067784 CI=[0.939951,1.213001] p_one=0.15669989 logOR_ratio_vs_M0=1.0000
+M5_M1_priority_6: mean=0.102129 OR=1.033400 CI=[0.908599,1.175342] p_one=0.30842536 logOR_ratio_vs_M0=0.5009
+M5_M1_share_6: mean=0.101652 OR=1.031598 CI=[0.903169,1.178289] p_one=0.32326003 logOR_ratio_vs_M0=0.4743
+M5_M1_any_6: mean=0.106599 OR=1.018514 CI=[0.896238,1.157473] p_one=0.38930137 logOR_ratio_vs_M0=0.2797
+M5_M2_priority_8: mean=0.104078 OR=1.038243 CI=[0.904571,1.191667] p_one=0.29677116 logOR_ratio_vs_M0=0.5722
+M5_M2_share_8: mean=0.103020 OR=1.039717 CI=[0.901568,1.199034] p_one=0.29616914 logOR_ratio_vs_M0=0.5939
+M5_M2_any_8: mean=0.113351 OR=1.019503 CI=[0.892263,1.164888] p_one=0.38821209 logOR_ratio_vs_M0=0.2945
+
+------------------------------------------------------------------------------
+M10_1993_1995
+------------------------------------------------------------------------------
+M10_M0_mainqi_nonfire: mean=0.065811 OR=1.019834 CI=[0.820188,1.268077] p_one=0.42987605 logOR_ratio_vs_M0=1.0000
+M10_M1_priority_6_nonfire: mean=0.077193 OR=1.052664 CI=[0.863883,1.282700] p_one=0.30538299 logOR_ratio_vs_M0=2.6133
+M10_M1_share_6_nonfire: mean=0.077163 OR=1.033370 CI=[0.843691,1.265691] p_one=0.37552601 logOR_ratio_vs_M0=1.6713
+M10_M1_any_6_nonfire: mean=0.080917 OR=1.049279 CI=[0.865819,1.271614] p_one=0.31185844 logOR_ratio_vs_M0=2.4493
+M10_M2_priority_8_nonfire: mean=0.077223 OR=1.050136 CI=[0.847799,1.300763] p_one=0.32708228 logOR_ratio_vs_M0=2.4908
+M10_M2_share_8_nonfire: mean=0.077553 OR=1.034297 CI=[0.830555,1.288018] p_one=0.38160143 logOR_ratio_vs_M0=1.7170
+M10_M2_any_8_nonfire: mean=0.085717 OR=1.039741 CI=[0.850440,1.271180] p_one=0.35194539 logOR_ratio_vs_M0=1.9843
+
+TRANSITION AUDIT — six-position PRIORITY rule
+---------------------------------------------
+M5_1990_1992
+  SG->SG: 3094/36689 = 8.4330%
+  SG->nonSG: 648/36689 = 1.7662%
+  nonSG->SG: 653/36689 = 1.7798%
+  nonSG->nonSG: 32294/36689 = 88.0209%
+
+M10_1993_1995
+  SG->SG: 2524/33034 = 7.6406%
+  SG->nonSG: 731/33034 = 2.2129%
+  nonSG->SG: 746/33034 = 2.2583%
+  nonSG->nonSG: 29033/33034 = 87.8882%
+
+INTERPRETATION
+--------------
+1) Do not interpret sensitivities unless M0 reproduces the frozen original result.
+2) Priority is primary exposure-aware sensitivity; Share/Any are required secondary sensitivities.
+3) Direction and effect-size attenuation/amplification matter more than p<0.05.
+4) Transition audit directly separates loss of main-qi Shangguan from gain of auxiliary Shangguan.
+5) M0 remains the original inferential result; these analyses are method sensitivities.

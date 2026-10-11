@@ -1,0 +1,75 @@
+CHESS TEN-GOD TEMPORAL ANALYSIS V1
+==================================================================================
+
+FROZEN DESIGN
+-------------
+Unique frozen Chess temporal roster N=1907.
+Birth years=1922-2011.
+Primary model=M0_5pos_mainqi.
+Primary object=player Ten-God residual from exact-birth-year calendar expectation.
+Primary statistic=Spearman rho(residual, birth year).
+Same-year temporal null simulations=20000.
+Frozen plan SHA256=9e278ffeb1fa7fa5841a1704159e8aa8ab41e99030a0e94a367eb89f15118ac7
+
+LOCKED CROSS-DOMAIN TRANSFER H1-H6 — M0 PLAYER-WEIGHTED
+------------------------------------------------------
+H1 [PRIMARY] 劫财 increases_with_birth_year: rho=+0.02198 p_dir=0.427529 Holm6=1 p2=0.448778 | equal-year rho=+0.13771 p2=0.345433
+H2 [SECONDARY] 比肩 decreases_with_birth_year: rho=-0.00661 p_dir=0.622869 Holm6=1 p2=0.79266 | equal-year rho=+0.10190 p2=0.472276
+H3 [SECONDARY] 食神 increases_with_birth_year: rho=-0.00088 p_dir=0.340083 Holm6=1 p2=0.967902 | equal-year rho=+0.07169 p2=0.60627
+H4 [SECONDARY] 伤官 decreases_with_birth_year: rho=+0.03819 p_dir=0.964452 Holm6=1 p2=0.0629469 | equal-year rho=-0.03489 p2=0.80981
+H5 [SECONDARY] 正官 increases_with_birth_year: rho=-0.01412 p_dir=0.717264 Holm6=1 p2=0.496375 | equal-year rho=-0.21561 p2=0.131543
+H6 [SECONDARY] 偏印 increases_with_birth_year: rho=+0.01610 p_dir=0.296585 Holm6=1 p2=0.447928 | equal-year rho=+0.10523 p2=0.456327
+
+ALL TEN GODS — M0 PRIMARY
+-------------------------
+偏财: player rho=+0.03857 z=+1.173 p2=0.128544 Holm10=0.899805 maxFWER=0.788061 | equal-year rho=+0.17649 p2=0.211739
+伤官: player rho=+0.03819 z=+1.810 p2=0.0629469 Holm10=0.562922 maxFWER=0.79796 | equal-year rho=-0.03489 p2=0.80981
+正财: player rho=+0.03594 z=+0.608 p2=0.272836 Holm10=1 maxFWER=0.853207 | equal-year rho=+0.15882 p2=0.262987
+劫财: player rho=+0.02198 z=+0.188 p2=0.448778 Holm10=1 maxFWER=0.99515 | equal-year rho=+0.13771 p2=0.345433
+偏印: player rho=+0.01610 z=+0.540 p2=0.447928 Holm10=1 maxFWER=0.9996 | equal-year rho=+0.10523 p2=0.456327
+食神: player rho=-0.00088 z=+0.411 p2=0.967902 Holm10=1 maxFWER=1 | equal-year rho=+0.07169 p2=0.60627
+比肩: player rho=-0.00661 z=+0.322 p2=0.79266 Holm10=1 maxFWER=1 | equal-year rho=+0.10190 p2=0.472276
+正官: player rho=-0.01412 z=-0.580 p2=0.496375 Holm10=1 maxFWER=0.99985 | equal-year rho=-0.21561 p2=0.131543
+七杀: player rho=-0.06288 z=-1.534 p2=0.0625469 Holm10=0.562922 maxFWER=0.132393 | equal-year rho=+0.04816 p2=0.734813
+正印: player rho=-0.06825 z=-2.384 p2=0.00894955 Holm10=0.0894955 maxFWER=0.0731963 | equal-year rho=-0.13538 p2=0.370531
+
+ALL-MODEL DIRECTION CHECK
+-------------------------
+比肩: M0=-0.0066 M1=-0.0294 M2=+0.0017 M3=-0.0120
+劫财: M0=+0.0220 M1=+0.0367 M2=+0.0126 M3=+0.0225
+食神: M0=-0.0009 M1=-0.0270 M2=-0.0102 M3=-0.0149
+伤官: M0=+0.0382 M1=-0.0237 M2=+0.0327 M3=+0.0137
+偏财: M0=+0.0386 M1=-0.0015 M2=+0.0312 M3=+0.0401
+正财: M0=+0.0359 M1=+0.0148 M2=+0.0379 M3=-0.0052
+七杀: M0=-0.0629 M1=-0.0225 M2=-0.0444 M3=-0.0308
+正官: M0=-0.0141 M1=+0.0149 M2=-0.0102 M3=+0.0332
+偏印: M0=+0.0161 M1=+0.0459 M2=+0.0085 M3=+0.0273
+正印: M0=-0.0682 M1=-0.0463 M2=-0.0507 M3=-0.0507
+
+FIXED WINDOWS — M0 ENRICHMENT RATIOS
+------------------------------------
+比肩: 1922-1924*=0.000 | 1925-1934=0.795 | 1935-1944=0.809 | 1945-1954=1.098 | 1955-1964=0.909 | 1965-1974=1.046 | 1975-1984=1.044 | 1985-1994=1.035 | 1995-2004=0.987 | 2005-2011*=0.939
+劫财: 1922-1924*=0.000 | 1925-1934=0.917 | 1935-1944=0.972 | 1945-1954=0.986 | 1955-1964=0.972 | 1965-1974=1.062 | 1975-1984=0.911 | 1985-1994=1.060 | 1995-2004=1.031 | 2005-2011*=0.888
+食神: 1922-1924*=1.872 | 1925-1934=1.346 | 1935-1944=0.643 | 1945-1954=0.955 | 1955-1964=0.946 | 1965-1974=0.907 | 1975-1984=1.041 | 1985-1994=0.907 | 1995-2004=0.989 | 2005-2011*=0.943
+伤官: 1922-1924*=2.122 | 1925-1934=0.609 | 1935-1944=1.222 | 1945-1954=1.035 | 1955-1964=0.959 | 1965-1974=0.910 | 1975-1984=1.075 | 1985-1994=1.096 | 1995-2004=1.157 | 2005-2011*=0.655
+偏财: 1922-1924*=0.000 | 1925-1934=1.061 | 1935-1944=1.075 | 1945-1954=0.703 | 1955-1964=0.955 | 1965-1974=1.037 | 1975-1984=0.889 | 1985-1994=0.921 | 1995-2004=1.058 | 2005-2011*=1.142
+正财: 1922-1924*=0.000 | 1925-1934=0.614 | 1935-1944=0.798 | 1945-1954=0.987 | 1955-1964=0.994 | 1965-1974=1.009 | 1975-1984=0.855 | 1985-1994=1.079 | 1995-2004=0.885 | 2005-2011*=1.135
+七杀: 1922-1924*=0.000 | 1925-1934=0.542 | 1935-1944=0.749 | 1945-1954=1.113 | 1955-1964=1.185 | 1965-1974=0.979 | 1975-1984=0.996 | 1985-1994=0.948 | 1995-2004=0.988 | 2005-2011*=0.775
+正官: 1922-1924*=4.371 | 1925-1934=0.925 | 1935-1944=1.656 | 1945-1954=1.160 | 1955-1964=1.000 | 1965-1974=0.963 | 1975-1984=1.106 | 1985-1994=0.994 | 1995-2004=1.140 | 2005-2011*=0.833
+偏印: 1922-1924*=0.000 | 1925-1934=1.612 | 1935-1944=1.117 | 1945-1954=0.944 | 1955-1964=1.012 | 1965-1974=1.024 | 1975-1984=1.012 | 1985-1994=1.016 | 1995-2004=0.909 | 2005-2011*=1.770
+正印: 1922-1924*=2.135 | 1925-1934=1.527 | 1935-1944=1.045 | 1945-1954=1.045 | 1955-1964=1.067 | 1965-1974=1.064 | 1975-1984=1.073 | 1985-1994=0.969 | 1995-2004=0.866 | 2005-2011*=0.839
+
+* partial edge window; descriptive only.
+
+GUARDRAILS
+----------
+1. Cross-domain temporal follow-up after TT temporal results were known.
+2. Only H1-H6 have locked directional transfer status.
+3. H1 劫财-up is the primary cross-domain temporal replication target.
+4. All ten Ten Gods are still reported.
+5. Fixed five-year-offset decade windows were frozen before Chess temporal reveal.
+6. No post-hoc breakpoint or favored decade is introduced.
+7. M0 is primary; M1-M3 are sensitivities.
+8. Source snapshot membership and birth year are not independent.
+9. Previously replicated Chess 伤官 selection enrichment is distinct from this temporal-slope test.
+10. Traditional period labels are interpretation only, not bin definitions.

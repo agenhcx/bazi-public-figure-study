@@ -1,0 +1,10 @@
+{
+  "analysis_role": "post-validation method sensitivity",
+  "target": "C7 Shangguan/Pianyin count vs Elo",
+  "hour_distribution": "uniform over 12 double-hours",
+  "day_stem_excluded_from_transparency": true,
+  "fallback": "main qi when no hidden stem exposed",
+  "priority_order": "main > middle > residual",
+  "hour_mc": 10000,
+  "seed": 20261006
+}

@@ -1,0 +1,48 @@
+TT TEN-GOD STAGE-1 DISCOVERY V1
+==============================================================================
+
+DESIGN
+------
+Input: C:\chenxi\bazi_project\1986wiki\table_tennis_players_1985_2008.csv
+N=384; birth years=1985-2008
+Holdout access: NONE
+Monte Carlo sims=200,000; seed=20261006
+
+Frozen theory targets use six-position notation for Chess comparability.
+For 食神/七杀 the Day Stem contributes zero, so 5pos and 6pos counts are identical.
+
+THEORY TARGETS
+--------------
+H1 食神 enrichment | origin=data-informed / traditional-compatible | obs=206 | exp=204.811 | ratio=1.0058 | z=+0.0867 | p1+=0.47554262 | Holm2=0.95108524
+H2 七杀 enrichment | origin=theory-driven pre-reveal | obs=204 | exp=205.159 | ratio=0.9944 | z=-0.0847 | p1+=0.54390728 | Holm2=0.95108524
+
+ALL TEN GODS — FIVE INFORMATIVE POSITIONS
+-----------------------------------------
+Positions: Year Stem, Year-Branch main qi, Month Stem,
+Month-Branch main qi, Day-Branch main qi. Day Stem excluded.
+
+劫财: obs=201 exp=178.845 ratio=1.1239 z=+1.7495 p1+=0.045699772 p2=0.091399543 Holm10=0.91399543
+正官: obs=190 exp=178.970 ratio=1.0616 z=+0.8739 p1+=0.20176399 p2=0.40352798 Holm10=1
+正印: obs=181 exp=179.585 ratio=1.0079 z=+0.1127 p1+=0.46651267 p2=0.93302533 Holm10=1
+食神: obs=206 exp=204.811 ratio=1.0058 z=+0.0879 p1+=0.47517762 p2=0.95035525 Holm10=1
+伤官: obs=179 exp=179.473 ratio=0.9974 z=-0.0363 p1+=0.52678237 p2=1 Holm10=1
+七杀: obs=204 exp=205.159 ratio=0.9944 z=-0.0883 p1+=0.54607727 p2=0.96524517 Holm10=1
+偏印: obs=202 exp=203.845 ratio=0.9909 z=-0.1342 p1+=0.56416718 p2=0.93010535 Holm10=1
+正财: obs=174 exp=179.229 ratio=0.9708 z=-0.4091 p1+=0.67034665 p2=0.71684642 Holm10=1
+比肩: obs=194 exp=205.137 ratio=0.9457 z=-0.8110 p1+=0.799421 p2=0.44436778 Holm10=1
+偏财: obs=189 exp=204.947 ratio=0.9222 z=-1.1646 p1+=0.88585557 p2=0.25798871 Holm10=1
+
+FROZEN DISCOVERY CANDIDATE RULE
+-------------------------------
+Winner = 劫财
+Winner Z = +1.749532
+Winner enrichment ratio = 1.123881
+Status = NEW data-derived candidate eligible for independent holdout freeze.
+
+INTERPRETATION GUARDRAILS
+-------------------------
+1) H1/H2 are interpreted separately from the exploratory 10-category scan.
+2) The exploratory winner is selected by calendar-adjusted Z, never by raw count.
+3) No new TT structural/Ten-God hypothesis may be mined from the historical holdout.
+4) Before reading holdout six-/five-position results, freeze the winner and validation rule.
+5) Main-qi coding is the primary cross-domain representation; hidden-stem/hour sensitivity comes later.

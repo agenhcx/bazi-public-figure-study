@@ -1,0 +1,90 @@
+CHESS JIE-CAI TEMPORAL + POSITION DIAGNOSTIC V1.3
+==============================================================================
+
+ROLE
+----
+Post-validation exploratory mechanism diagnostic.
+No new confirmatory hypothesis is created.
+
+TEMPORAL TREND
+--------------
+Directional question: later birth year -> MORE Jie-Cai.
+Primary = M0 5pos main qi.
+M1 hidden-stem = sensitivity.
+
+M0_mainqi | player_weighted | raw_count: rho=+0.01763 p_dir=0.220276 p2=0.440551 n=1907
+M0_mainqi | player_weighted | calendar_residual: rho=+0.00173 p_dir=0.471131 p2=0.942261 n=1907
+M0_mainqi | player_weighted | calendar_zresidual: rho=-0.01335 p_dir=0.719686 p2=0.560669 n=1907
+M0_mainqi | equal_weight_birth_year | mean_calendar_zresidual: rho=+0.15361 p_dir=0.0823584 p2=0.164717 n=84
+M1_hidden | player_weighted | raw_count: rho=+0.02982 p_dir=0.0953181 p2=0.190636 n=1907
+M1_hidden | player_weighted | calendar_residual: rho=+0.02594 p_dir=0.128837 p2=0.257675 n=1907
+M1_hidden | player_weighted | calendar_zresidual: rho=+0.00512 p_dir=0.408392 p2=0.816784 n=1907
+M1_hidden | equal_weight_birth_year | mean_calendar_zresidual: rho=+0.19482 p_dir=0.0363593 p2=0.0727185 n=84
+
+POSITION DECOMPOSITION
+----------------------
+Positive delta means more Jie-Cai than the same-birth-year calendar expectation.
+
+1994_M
+  M0_mainqi
+    year_stem: obs=0.0789 null=0.1000 deltaN=-10.42 ratio=0.7892 z=-1.565 p+=0.9536
+    year_branch: obs=0.0870 null=0.0998 deltaN=-6.30 ratio=0.8722 z=-0.950 p+=0.848
+    month_stem: obs=0.1134 null=0.1000 deltaN=+6.60 ratio=1.1335 z=+0.990 p+=0.1803
+    month_branch: obs=0.0749 null=0.1001 deltaN=-12.47 ratio=0.7479 z=-1.877 p+=0.9779
+    day_branch: obs=0.0709 null=0.0666 deltaN=+2.11 ratio=1.0642 z=+0.385 p+=0.3751
+  M1_hidden
+    year_stem: obs=0.0789 null=0.1000 deltaN=-10.42 ratio=0.7892 z=-1.560 p+=0.9531
+    year_branch: obs=0.0891 null=0.0995 deltaN=-5.15 ratio=0.8953 z=-0.769 p+=0.7997
+    month_stem: obs=0.1134 null=0.1000 deltaN=+6.60 ratio=1.1335 z=+0.991 p+=0.1801
+    month_branch: obs=0.0749 null=0.1002 deltaN=-12.52 ratio=0.7471 z=-1.877 p+=0.9777
+    day_branch: obs=0.0789 null=0.0771 deltaN=+0.93 ratio=1.0244 z=+0.153 p+=0.4615
+
+2013_M
+  M0_mainqi
+    year_stem: obs=0.1138 null=0.1002 deltaN=+6.71 ratio=1.1362 z=+1.001 p+=0.1763
+    year_branch: obs=0.1057 null=0.1004 deltaN=+2.62 ratio=1.0531 z=+0.387 p+=0.3701
+    month_stem: obs=0.0813 null=0.0997 deltaN=-9.03 ratio=0.8158 z=-1.358 p+=0.928
+    month_branch: obs=0.0833 null=0.1004 deltaN=-8.41 ratio=0.8298 z=-1.266 p+=0.9131
+    day_branch: obs=0.0671 null=0.0667 deltaN=+0.18 ratio=1.0054 z=+0.030 p+=0.5111
+  M1_hidden
+    year_stem: obs=0.1138 null=0.1002 deltaN=+6.71 ratio=1.1362 z=+1.007 p+=0.1752
+    year_branch: obs=0.1118 null=0.0999 deltaN=+5.86 ratio=1.1192 z=+0.887 p+=0.2051
+    month_stem: obs=0.0813 null=0.0997 deltaN=-9.03 ratio=0.8158 z=-1.354 p+=0.9267
+    month_branch: obs=0.0854 null=0.1007 deltaN=-7.54 ratio=0.8477 z=-1.134 p+=0.8883
+    day_branch: obs=0.0813 null=0.0788 deltaN=+1.21 ratio=1.0312 z=+0.197 p+=0.4437
+
+2023_M_FULL
+  M0_mainqi
+    year_stem: obs=0.1098 null=0.1001 deltaN=+4.87 ratio=1.0971 z=+0.721 p+=0.2531
+    year_branch: obs=0.0878 null=0.1004 deltaN=-6.28 ratio=0.8751 z=-0.935 p+=0.8443
+    month_stem: obs=0.0978 null=0.0994 deltaN=-0.82 ratio=0.9836 z=-0.123 p+=0.5696
+    month_branch: obs=0.0818 null=0.1002 deltaN=-9.19 ratio=0.8169 z=-1.369 p+=0.9293
+    day_branch: obs=0.0579 null=0.0667 deltaN=-4.42 ratio=0.8677 z=-0.787 p+=0.8078
+  M1_hidden
+    year_stem: obs=0.1098 null=0.1001 deltaN=+4.87 ratio=1.0971 z=+0.726 p+=0.2539
+    year_branch: obs=0.0838 null=0.0999 deltaN=-8.03 ratio=0.8394 z=-1.192 p+=0.8998
+    month_stem: obs=0.0978 null=0.0994 deltaN=-0.82 ratio=0.9836 z=-0.119 p+=0.5671
+    month_branch: obs=0.0918 null=0.1004 deltaN=-4.28 ratio=0.9148 z=-0.640 p+=0.761
+    day_branch: obs=0.0818 null=0.0781 deltaN=+1.85 ratio=1.0472 z=+0.305 p+=0.4023
+
+2023_M_NEW_TARGET
+  M0_mainqi
+    year_stem: obs=0.1437 null=0.1000 deltaN=+21.92 ratio=1.4378 z=+3.252 p+=0.0013
+    year_branch: obs=0.0918 null=0.1002 deltaN=-4.18 ratio=0.9167 z=-0.621 p+=0.7535
+    month_stem: obs=0.1118 null=0.0995 deltaN=+6.15 ratio=1.1234 z=+0.923 p+=0.1972
+    month_branch: obs=0.0938 null=0.0998 deltaN=-3.00 ratio=0.9401 z=-0.445 p+=0.6921
+    day_branch: obs=0.0758 null=0.0668 deltaN=+4.54 ratio=1.1357 z=+0.811 p+=0.2305
+  M1_hidden
+    year_stem: obs=0.1437 null=0.1000 deltaN=+21.92 ratio=1.4378 z=+3.259 p+=0.00132
+    year_branch: obs=0.0898 null=0.0998 deltaN=-5.00 ratio=0.9000 z=-0.745 p+=0.7917
+    month_stem: obs=0.1118 null=0.0995 deltaN=+6.15 ratio=1.1234 z=+0.920 p+=0.1979
+    month_branch: obs=0.0998 null=0.1000 deltaN=-0.09 ratio=0.9981 z=-0.020 p+=0.5275
+    day_branch: obs=0.1058 null=0.0777 deltaN=+14.07 ratio=1.3615 z=+2.352 p+=0.01414
+
+INTERPRETATION GUARDRAILS
+-------------------------
+1) Do not infer a 'modern Chess teamwork' mechanism unless the birth-year trend is positive after calendar adjustment.
+2) The key temporal result is M0 calendar-adjusted and equal-weight-birth-year, not raw count alone.
+3) Position decomposition is descriptive mechanism localization, not five new confirmatory tests.
+4) Compare NEW_TARGET with 2013/FULL: a shared enriched position is more informative than the same total produced by different positions.
+5) M1 hidden-stem results are sensitivity; M0 remains the primary representation.

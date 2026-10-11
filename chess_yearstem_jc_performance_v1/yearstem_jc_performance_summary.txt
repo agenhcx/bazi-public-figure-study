@@ -1,0 +1,42 @@
+CHESS NEW_TARGET YEAR-STEM JIE-CAI VS PERFORMANCE V1
+==============================================================================
+
+Population N=501
+Year-Stem Jie-Cai n=72 (14.37%)
+Non-Jie-Cai n=429
+
+Observed descriptive performance
+-------------------------------
+JC mean rating=2510.43; median=2497.00
+non-JC mean rating=2516.60; median=2502.00
+raw mean-rating difference JC - non-JC = -6.17
+
+JC mean Elo-z=-0.0754
+non-JC mean Elo-z=+0.0127
+Elo-z difference JC - non-JC = -0.0881
+
+JC mean rank percentile (higher=better)=0.4771
+non-JC mean rank percentile=0.5067
+rank-percentile difference = -0.0295
+
+JC top-10% share=8.33% (6/72)
+non-JC top-10% share=10.49% (45/429)
+JC top-20% share=15.28% (11/72)
+non-JC top-20% share=20.98% (90/429)
+
+Within-birth-year permutation test
+----------------------------------
+Null preserves the exact number of Year-Stem JC players in every birth year.
+Therefore this is a PERFORMANCE test conditional on the observed selection enrichment.
+
+PRIMARY Elo-z mean difference: obs=-0.08806, null=-0.06472, z=-0.219, p(stronger)=0.58223, p(weaker)=0.41863, p2=0.83726
+
+Raw rating mean difference: obs=-6.17, z=-0.219, p2=0.83726
+Rank-percentile mean difference: obs=-0.02952, z=-0.082, p2=0.93396
+
+Interpretation guardrail
+------------------------
+Selection and performance are distinct questions.
+A null performance result would mean Year-Stem JC may be overrepresented among selected players
+without predicting stronger Elo inside the selected NEW_TARGET cohort.
+Top-10% and top-20% shares are descriptive only and are not additional confirmatory tests.

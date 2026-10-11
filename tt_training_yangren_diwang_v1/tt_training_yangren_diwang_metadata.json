@@ -1,0 +1,30 @@
+{
+  "role": "posthoc_characterization",
+  "dataset": "TT training only",
+  "n": 384,
+  "calendar_engine": "lunar-python noon",
+  "null": "uniform Gregorian date within exact birth year",
+  "diwang_mapping": {
+    "甲": "卯",
+    "乙": "寅",
+    "丙": "午",
+    "丁": "巳",
+    "戊": "午",
+    "己": "巳",
+    "庚": "酉",
+    "辛": "申",
+    "壬": "子",
+    "癸": "亥"
+  },
+  "strict_yangren_stems": [
+    "丙",
+    "壬",
+    "庚",
+    "戊",
+    "甲"
+  ],
+  "holdout_accessed": false,
+  "year_diwang_independent_of_prior_jiecai": false,
+  "sims": 200000,
+  "seed": 20261008
+}

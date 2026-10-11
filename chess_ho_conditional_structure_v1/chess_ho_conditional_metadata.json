@@ -1,0 +1,24 @@
+{
+  "plan_file": "CHESS_HO_CONDITIONAL_STRUCTURE_PLAN_V1.md",
+  "plan_sha256": "0d7d654f58e6e6a1d23a5370ca4d8238965da47a19e212f680284c5a28c5763e",
+  "primary_cohort": "2023_M_NEW_TARGET",
+  "consistency_cohort": "2013_M_DISCOVERY",
+  "overlapping_sensitivity": "2023_M_FULL",
+  "primary_model": "M0",
+  "models": [
+    "M0",
+    "M1",
+    "M2",
+    "M3"
+  ],
+  "sims": 50000,
+  "seed": 20261009,
+  "targets": {
+    "T1": "Direct Resource",
+    "T2": "Indirect Resource",
+    "T3": "Any Resource",
+    "T4": "Seven Killings",
+    "T5": "Direct Officer"
+  },
+  "T5G": "Geng Day Master + Hurting Officer + Direct Officer"
+}

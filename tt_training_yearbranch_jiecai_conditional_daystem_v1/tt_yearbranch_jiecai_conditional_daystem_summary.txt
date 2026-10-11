@@ -1,0 +1,49 @@
+TT TRAINING YEAR-BRANCH JIE-CAI CONDITIONAL ON EXACT DAY STEM V1
+====================================================================================
+
+ROLE: post-hoc confound diagnostic.
+TRAINING ONLY. Historical holdout is not read.
+
+Training N=384
+Pillar recalculation mismatches=0
+
+UPSTREAM OBSERVED QA
+--------------------
+Observed M0 Year-Branch Jie-Cai=56 (expected upstream value 56: PASS)
+
+PRIMARY CONDITIONAL NULL
+------------------------
+Condition on exact Gregorian birth year + exact Day Stem.
+Observed=56
+Exact conditional expectation=55.119
+Delta=+0.881
+Enrichment ratio=1.016
+Analytic Poisson-binomial SD=2.856
+Analytic Z=+0.308
+Monte Carlo null mean=55.120
+Monte Carlo null SD=2.855
+Monte Carlo Z=+0.308
+p(enrichment)=0.44957
+p(depletion)=0.68483
+p(two-sided)=0.89914
+
+DAY-STEM CONTRIBUTIONS UNDER CONDITIONAL NULL
+---------------------------------------------
+己日主: n=50 obs=12 exp= 9.935 delta=+2.065 ratio=1.208 z=+1.50 share=+234.5%
+戊日主: n=40 obs=11 exp= 9.982 delta=+1.018 ratio=1.102 z=+0.82 share=+115.6%
+乙日主: n=37 obs= 8 exp= 7.318 delta=+0.682 ratio=1.093 z=+0.78 share=+77.5%
+壬日主: n=36 obs= 2 exp= 1.410 delta=+0.590 ratio=1.419 z=+0.82 share=+67.0%
+丙日主: n=33 obs= 6 exp= 5.559 delta=+0.441 ratio=1.079 z=+0.57 share=+50.1%
+辛日主: n=30 obs= 4 exp= 3.732 delta=+0.268 ratio=1.072 z=+0.43 share=+30.4%
+甲日主: n=38 obs= 4 exp= 3.734 delta=+0.266 ratio=1.071 z=+0.36 share=+30.2%
+庚日主: n=39 obs= 0 exp= 0.324 delta=-0.324 ratio=0.000 z=-0.60 share=-36.8%
+癸日主: n=39 obs= 5 exp= 6.268 delta=-1.268 ratio=0.798 z=-1.57 share=-144.0%
+丁日主: n=42 obs= 4 exp= 6.858 delta=-2.858 ratio=0.583 z=-2.89 share=-324.6%
+
+INTERPRETATION
+--------------
+This null removes Day-Master composition, including the extra Year-Branch opportunities of Earth Day Masters.
+If the signal collapses, the raw Year-Branch Jie-Cai excess was largely a derivative of Day-Master composition.
+If the signal remains, Year-Branch Jie-Cai contains residual information beyond Day-Master composition.
+Day-Stem rows are descriptive localization only.
+Historical TT holdout remains untouched.

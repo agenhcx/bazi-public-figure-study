@@ -1,0 +1,17 @@
+{
+  "role": "posthoc_decomposition",
+  "cohort": "2023_M_NEW_TARGET",
+  "condition": [
+    "same_Gregorian_birth_year",
+    "same_exact_Day_Stem",
+    "Year_Stem_is_Jie_Cai"
+  ],
+  "features": [
+    "ys_ms_combine_any",
+    "yang_dm_jc_combine_qisha",
+    "yin_dm_jc_combine_piancai"
+  ],
+  "sims": 200000,
+  "seed": 20261007,
+  "no_new_confirmatory_hypothesis": true
+}

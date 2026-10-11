@@ -1,0 +1,76 @@
+C7 HIDDEN-STEM / HOUR-PILLAR PERFORMANCE SENSITIVITY V1
+==============================================================================
+
+Original frozen C7 sanity targets (pooled sex-standardized Elo):
+FULL:       SG rho ~ +0.006 ; PY rho ~ -0.059
+NEW_TARGET: SG rho ~ +0.031 ; PY rho ~ +0.059
+
+DETERMINISTIC / EXPECTED-FEATURE CORRELATIONS
+---------------------------------------------
+FULL
+  SG_M0_mainqi_6: 伤官 n=703 rho=+0.005974 p2=0.874375
+  SG_M1_priority_6: 伤官 n=703 rho=+0.034135 p2=0.366146
+  SG_M1_share_6: 伤官 n=703 rho=+0.033978 p2=0.368356
+  SG_M1_any_6: 伤官 n=703 rho=+0.031951 p2=0.397637
+  SG_M2_mainqi_8_expected: 伤官 n=703 rho=-0.009920 p2=0.792891
+  SG_M3_priority_8_expected: 伤官 n=703 rho=+0.035704 p2=0.344516
+  SG_M3_share_8_expected: 伤官 n=703 rho=+0.030078 p2=0.425891
+  SG_M3_any_8_expected: 伤官 n=703 rho=+0.026385 p2=0.48489
+  PY_M0_mainqi_6: 偏印 n=703 rho=-0.058957 p2=0.11834
+  PY_M1_priority_6: 偏印 n=703 rho=-0.051118 p2=0.175797
+  PY_M1_share_6: 偏印 n=703 rho=-0.050216 p2=0.183547
+  PY_M1_any_6: 偏印 n=703 rho=-0.049464 p2=0.190211
+  PY_M2_mainqi_8_expected: 偏印 n=703 rho=-0.059781 p2=0.113276
+  PY_M3_priority_8_expected: 偏印 n=703 rho=-0.030748 p2=0.41565
+  PY_M3_share_8_expected: 偏印 n=703 rho=-0.025856 p2=0.493695
+  PY_M3_any_8_expected: 偏印 n=703 rho=-0.018389 p2=0.626442
+
+NEW_TARGET
+  SG_M0_mainqi_6: 伤官 n=701 rho=+0.030968 p2=0.412983
+  SG_M1_priority_6: 伤官 n=701 rho=+0.013595 p2=0.719365
+  SG_M1_share_6: 伤官 n=701 rho=+0.015990 p2=0.672567
+  SG_M1_any_6: 伤官 n=701 rho=+0.016363 p2=0.665378
+  SG_M2_mainqi_8_expected: 伤官 n=701 rho=+0.042992 p2=0.255634
+  SG_M3_priority_8_expected: 伤官 n=701 rho=+0.047506 p2=0.209024
+  SG_M3_share_8_expected: 伤官 n=701 rho=+0.033734 p2=0.372489
+  SG_M3_any_8_expected: 伤官 n=701 rho=+0.034613 p2=0.360155
+  PY_M0_mainqi_6: 偏印 n=701 rho=+0.059050 p2=0.118287
+  PY_M1_priority_6: 偏印 n=701 rho=+0.059064 p2=0.118202
+  PY_M1_share_6: 偏印 n=701 rho=+0.058809 p2=0.119796
+  PY_M1_any_6: 偏印 n=701 rho=+0.058407 p2=0.122356
+  PY_M2_mainqi_8_expected: 偏印 n=701 rho=+0.058727 p2=0.120316
+  PY_M3_priority_8_expected: 偏印 n=701 rho=+0.064042 p2=0.0902032
+  PY_M3_share_8_expected: 偏印 n=701 rho=+0.060631 p2=0.108737
+  PY_M3_any_8_expected: 偏印 n=701 rho=+0.061441 p2=0.104086
+
+RANDOM-HOUR MONTE CARLO (nonlinearity check)
+---------------------------------------------
+FULL
+  伤官 M2_mainqi: rho_med=+0.004215 mean=+0.004379 95%=[-0.035280,+0.044640] P(rho>0)=0.5876
+  伤官 M3_priority: rho_med=+0.028576 mean=+0.028509 95%=[-0.012753,+0.070629] P(rho>0)=0.9132
+  伤官 M3_share: rho_med=+0.027963 mean=+0.028068 95%=[-0.013564,+0.069543] P(rho>0)=0.9054
+  伤官 M3_any: rho_med=+0.026105 mean=+0.025962 95%=[-0.016116,+0.067922] P(rho>0)=0.8887
+  偏印 M2_mainqi: rho_med=-0.054933 mean=-0.054682 95%=[-0.093531,-0.015437] P(rho>0)=0.0030
+  偏印 M3_priority: rho_med=-0.043730 mean=-0.043500 95%=[-0.088002,+0.002253] P(rho>0)=0.0295
+  偏印 M3_share: rho_med=-0.042639 mean=-0.042693 95%=[-0.086859,+0.000752] P(rho>0)=0.0272
+  偏印 M3_any: rho_med=-0.041767 mean=-0.041614 95%=[-0.086518,+0.003582] P(rho>0)=0.0357
+
+NEW_TARGET
+  伤官 M2_mainqi: rho_med=+0.028701 mean=+0.028780 95%=[-0.013307,+0.070646] P(rho>0)=0.9094
+  伤官 M3_priority: rho_med=+0.014401 mean=+0.014504 95%=[-0.029655,+0.059446] P(rho>0)=0.7368
+  伤官 M3_share: rho_med=+0.014687 mean=+0.015032 95%=[-0.028478,+0.060234] P(rho>0)=0.7425
+  伤官 M3_any: rho_med=+0.015112 mean=+0.015125 95%=[-0.029482,+0.061007] P(rho>0)=0.7482
+  偏印 M2_mainqi: rho_med=+0.049213 mean=+0.049238 95%=[+0.009262,+0.089501] P(rho>0)=0.9916
+  偏印 M3_priority: rho_med=+0.047646 mean=+0.047742 95%=[+0.003882,+0.092240] P(rho>0)=0.9837
+  偏印 M3_share: rho_med=+0.046091 mean=+0.046105 95%=[+0.001184,+0.090800] P(rho>0)=0.9775
+  偏印 M3_any: rho_med=+0.045449 mean=+0.045463 95%=[+0.001399,+0.089496] P(rho>0)=0.9775
+
+INTERPRETATION GUARDRAILS
+-------------------------
+1) First verify M0 reproduces the frozen C7 correlations approximately.
+2) C7 remains a negative performance finding if SG/PY correlations remain near zero
+   across priority/share/any and the random-hour distribution.
+3) Do not promote a nominal p-value from one sensitivity rule.
+4) If a full-chart exposure model produces a materially nonzero correlation in both
+   FULL and independent NEW_TARGET with consistent sign, C7 must be revised.
+5) This analysis concerns within-elite performance only; it does not change C2 elite-selection enrichment.
