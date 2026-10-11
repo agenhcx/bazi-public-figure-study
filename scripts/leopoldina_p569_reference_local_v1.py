@@ -189,18 +189,25 @@ def classify_domain(d):
 def cache_path(batch_index):
     return CACHE / f"batch_{batch_index:04d}.json"
 
-def fetch_batch(batch_index, slugs):
+def fetch_batch(batch_index, members):
     cp = cache_path(batch_index)
+    cache_members = [{"slug": r["member_slug"], "qid": r["wikidata_qids"]} for r in members]
     if cp.exists():
         obj = json.loads(cp.read_text(encoding="utf-8"))
-        cached_slugs = obj.get("slugs", [])
-        if cached_slugs == slugs:
-            print(f"batch {batch_index}: cache hit ({len(slugs)} members)")
+        if obj.get("members", []) == cache_members:
+            print(f"batch {batch_index}: cache hit ({len(members)} members)")
             return obj.get("rows", [])
-        raise RuntimeError(f"Cache slug mismatch in {cp}; delete that cache file and rerun.")
+        raise RuntimeError(f"Cache member mismatch in {cp}; delete that cache file and rerun.")
 
-    values = " ".join(sparql_string(x) for x in slugs)
+    qids = []
+    for r in members:
+        qid = (r.get("wikidata_qids") or "").strip()
+        if not re.fullmatch(r"Q\\d+", qid):
+            raise RuntimeError(f"Expected one exact QID for {r['member_slug']}, got {qid!r}")
+        qids.append(qid)
+    values = " ".join("wd:" + q for q in qids)
     query = f"""
+PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 PREFIX p: <http://www.wikidata.org/prop/>
 PREFIX psv: <http://www.wikidata.org/prop/statement/value/>
@@ -208,7 +215,7 @@ PREFIX pr: <http://www.wikidata.org/prop/reference/>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX wikibase: <http://wikiba.se/ontology#>
 SELECT ?person ?memberId ?dob ?precision ?refNode ?refUrl ?statedIn WHERE {{
-  VALUES ?memberId {{ {values} }}
+  VALUES ?person {{ {values} }}
   ?person wdt:P10299 ?memberId ;
           p:P569 ?dobStatement .
   ?dobStatement psv:P569 ?dobNode .
@@ -223,8 +230,8 @@ SELECT ?person ?memberId ?dob ?precision ?refNode ?refUrl ?statedIn WHERE {{
 """
     rows = qlever_tsv(query)
     cp.parent.mkdir(parents=True, exist_ok=True)
-    cp.write_text(json.dumps({"slugs": slugs, "rows": rows}, ensure_ascii=False), encoding="utf-8")
-    print(f"batch {batch_index}: fetched {len(rows)} rows for {len(slugs)} members")
+    cp.write_text(json.dumps({"members": cache_members, "rows": rows}, ensure_ascii=False), encoding="utf-8")
+    print(f"batch {batch_index}: fetched {len(rows)} rows for {len(members)} members")
     return rows
 
 def main():
@@ -253,9 +260,10 @@ def main():
     CACHE.mkdir(parents=True, exist_ok=True)
 
     all_raw = []
-    sorted_slugs = sorted(candidate_by_slug)
-    total_batches = (len(sorted_slugs) + BATCH_SIZE - 1) // BATCH_SIZE
-    for batch_index, batch in enumerate(chunks(sorted_slugs, BATCH_SIZE)):
+    sorted_candidates = sorted(candidates, key=lambda r: r["member_slug"])
+    sorted_slugs = [r["member_slug"] for r in sorted_candidates]
+    total_batches = (len(sorted_candidates) + BATCH_SIZE - 1) // BATCH_SIZE
+    for batch_index, batch in enumerate(chunks(sorted_candidates, BATCH_SIZE)):
         rows = fetch_batch(batch_index, batch)
         all_raw.extend(rows)
         print(f"progress: {batch_index+1}/{total_batches} batches; raw rows={len(all_raw)}")
