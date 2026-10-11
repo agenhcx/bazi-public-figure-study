@@ -52,7 +52,15 @@ def extract_year(*values):
 
 def exact_iso_date(v):
     s = str(v or "").strip()
-    return bool(re.fullmatch(r"\d{4}-\d{2}-\d{2}", s))
+    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", s):
+        return False
+    if s[5:7] == "00" or s[8:10] == "00":
+        return False
+    try:
+        dt.date.fromisoformat(s)
+        return True
+    except ValueError:
+        return False
 
 
 def first_present(row, fields):
@@ -89,11 +97,15 @@ def load_nobel(path: Path):
         raise RuntimeError(f"Expected known birth year for all 658 Nobel people; missing {len(missing)}: {names}")
 
     years = [y for _, y in parsed]
-    exact_count = sum(
-        str(r.get("birth_date_exact") or "").strip() == "1" or exact_iso_date(r.get("birth_date"))
-        for r, _ in parsed
-    )
-    return rows, parsed, min(years), max(years), exact_count
+    exact_flag_count = sum(str(r.get("birth_date_exact") or "").strip() == "1" for r, _ in parsed)
+    exact_valid_date_count = sum(exact_iso_date(r.get("birth_date")) for r, _ in parsed)
+    if exact_flag_count != exact_valid_date_count:
+        raise RuntimeError(
+            f"Nobel exact-DOB flag/date disagreement: flag={exact_flag_count}, valid_dates={exact_valid_date_count}"
+        )
+    if exact_flag_count != 655:
+        raise RuntimeError(f"Expected 655 exact Nobel DOBs in enriched v1, got {exact_flag_count}")
+    return rows, parsed, min(years), max(years), exact_flag_count
 
 
 def summarize_candidate_file(label, path, dob_fields):
