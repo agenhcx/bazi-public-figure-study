@@ -8,7 +8,23 @@ YEAR=int(os.environ["ELECTION_YEAR"])
 ROSTER=Path("data/leopoldina_roster_freeze_v1/leopoldina_science_core_roster_freeze_v1.csv")
 OUT=Path("data/leopoldina_new_member_dob_shard_v1")
 UA="Mozilla/5.0 (compatible; bazi-public-figure-study/1.0; reproducibility research)"
-DIRECT_2009="https://levana.leopoldina.org/servlets/MCRFileNodeServlet/leopoldina_derivate_00308/2009_Leopoldina_Neugewaehlte_Mitglieder.pdf"
+OFFICIAL_PDF_URLS={
+  2009:"https://levana.leopoldina.org/servlets/MCRFileNodeServlet/leopoldina_derivate_00308/2009_Leopoldina_Neugewaehlte_Mitglieder.pdf",
+  2010:"https://www.leopoldina.org/fileadmin/Migrierte_Daten/Publikationen/Dokumente/01-59_NAL_Mitglieder-2010_Gesamt.pdf",
+  2011:"https://levana.leopoldina.org/servlets/MCRFileNodeServlet/leopoldina_derivate_00781/2011_Leopoldina_Neugewaehlte_Mitglieder.pdf",
+  2012:"https://www.leopoldina.org/fileadmin/Migrierte_Daten/Publikationen/Dokumente/Neugewaehlte_Mitglieder_2012.pdf",
+  2013:"https://www.leopoldina.org/fileadmin/Migrierte_Daten/Publikationen/Dokumente/Neugewaehlte_Mitglieder_2013_2.pdf",
+  2014:"https://www.leopoldina.org/fileadmin/Migrierte_Daten/Publikationen/Dokumente/Neugewaehlte_Mitglieder_2014_01.pdf",
+  2015:"",
+  2016:"https://www.leopoldina.org/fileadmin/Migrierte_Daten/Publikationen/Dokumente/Neugew%C3%A4hlte_Mitglieder_2016.pdf",
+  2017:"https://www.leopoldina.org/fileadmin/Migrierte_Daten/Publikationen/Dokumente/Neugewaehlte_Mitglieder_2017_01.pdf",
+  2018:"https://www.leopoldina.org/fileadmin/Migrierte_Daten/Publikationen/Dokumente/Neugewaehlte_Mitglieder_2018_01.pdf",
+  2019:"https://levana.leopoldina.org/servlets/MCRFileNodeServlet/leopoldina_derivate_00170/2019_Leopoldina_Neugewaehlte_Mitglieder.pdf",
+}
+PUBLICATION_LOCATORS={
+  y:f"https://www.leopoldina.org/ergebnisse-und-termine/publikationen/detail/neugewaehlte-mitglieder-{y}"
+  for y in range(2009,2020)
+}
 MONTH_MAP={
  "january":1,"jan":1,"januar":1,
  "february":2,"feb":2,"februar":2,
@@ -49,15 +65,9 @@ def fetch(url,accept="text/html,*/*",tries=5):
     raise RuntimeError(f"Fetch failed {url}: {err}")
 
 def discover_pdf(year):
-    if year==2009:return DIRECT_2009,"direct_known_official"
-    page=f"https://www.leopoldina.org/ergebnisse-und-termine/publikationen/detail/neugewaehlte-mitglieder-{year}"
-    final,b=fetch(page)
-    txt=b.decode("utf-8","replace")
-    hrefs=[html.unescape(x) for x in re.findall(r'href=["\']([^"\']+\.pdf(?:\?[^"\']*)?)["\']',txt,re.I)]
-    hrefs=[urllib.parse.urljoin(final,x) for x in hrefs]
-    if not hrefs:raise RuntimeError(f"No PDF href discovered from {page}")
-    preferred=[u for u in hrefs if re.search(r"neugewaehl|neugew[aä]hl|mitglieder",u,re.I)]
-    return (preferred[0] if preferred else hrefs[0]),page
+    if year not in OFFICIAL_PDF_URLS:
+        raise RuntimeError(f"Year outside frozen official-volume pass: {year}")
+    return OFFICIAL_PDF_URLS[year],PUBLICATION_LOCATORS[year]
 
 def dates(text):
     out=[]
