@@ -7,15 +7,37 @@
   "changed_rows": 6,
   "pending_rows": 2,
   "dataset_summary": {
-    "leopoldina_candidate": {"rows": 2407, "changed": 0, "pending": 0, "calendar_eligible": 2407},
-    "nas_science_core": {"rows": 2240, "changed": 1, "pending": 2, "calendar_eligible": 2238},
-    "nobel_science_exact": {"rows": 655, "changed": 3, "pending": 0, "calendar_eligible": 655},
-    "royal_society": {"rows": 2644, "changed": 2, "pending": 0, "calendar_eligible": 2644}
+    "leopoldina_candidate": {
+      "rows": 2407,
+      "changed": 0,
+      "pending": 0,
+      "calendar_eligible": 2407
+    },
+    "nas_science_core": {
+      "rows": 2240,
+      "changed": 1,
+      "pending": 2,
+      "calendar_eligible": 2238
+    },
+    "nobel_science_exact": {
+      "rows": 655,
+      "changed": 3,
+      "pending": 0,
+      "calendar_eligible": 655
+    },
+    "royal_society": {
+      "rows": 2644,
+      "changed": 2,
+      "pending": 0,
+      "calendar_eligible": 2644
+    }
   },
   "input_audit_sha256": "7b105c02082ac0e887043d9651a5eb08a4de24712e26eaeb8c613e817d4e0987",
   "adjudication_registry_sha256": "847c24696bce48810cf865de531daf60bc4dcdea51fae6381f577b42b9730188",
   "reviewed_local_overlay_summary_sha256": "4dd90ecdcda6346359af6aa6fe1a371709a204c57d619e5b92d007e658ce714e",
   "frozen_inputs_modified": 0,
   "bazi_variables_computed": 0,
-  "status": "closed_pre_unblinding"
+  "status": "calendar_layer_closed_pre_unblinding",
+  "cohort_dob_provenance_fully_closed": 0,
+  "note": "Calendar-model and absolute-date adjudication are closed; cohort-level DOB provenance/finalization remains governed by per-cohort freeze rules and must be complete before BaZi unblinding."
 }
