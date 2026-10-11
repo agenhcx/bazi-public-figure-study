@@ -72,6 +72,33 @@ def present(v):
     return str(v or "").strip() not in {"", "nan", "None", "null"}
 
 
+def extract_birth_year(v):
+    m = re.search(r"(?<!\\d)(1[0-9]{3}|20[0-9]{2})(?!\\d)", str(v or ""))
+    return int(m.group(1)) if m else None
+
+
+def derive_nobel_support_window(path: Path):
+    if not path.exists():
+        raise RuntimeError(
+            f"Frozen Nobel person-level roster not found: {path}. "
+            "Cannot apply --nobel-supported-window without the frozen Nobel roster."
+        )
+    rows = read_csv(path)
+    if len(rows) != 658:
+        raise RuntimeError(f"Expected 658 Nobel science people, got {len(rows)}")
+    ids = [str(r.get("laureate_id") or "").strip() for r in rows]
+    if len(set(ids)) != 658 or any(not x for x in ids):
+        raise RuntimeError("Nobel laureate_id uniqueness invariant failed")
+    years = []
+    for r in rows:
+        y = extract_birth_year(first_present(r, ["birth_date", "birth_year", "known_year"]))
+        if y is None:
+            name = first_present(r, ["full_name", "known_name", "name"]) or r.get("laureate_id", "")
+            raise RuntimeError(f"Missing Nobel birth year for {name}")
+        years.append(y)
+    return min(years), max(years), sha256(path)
+
+
 def first_present(row, names):
     for name in names:
         if name in row and present(row.get(name)):
@@ -750,6 +777,16 @@ def main():
     ap.add_argument("--out", default="data/dob_calendar_model_audit_v1_1")
     ap.add_argument("--limit", type=int, default=0, help="Optional per-loader smoke limit; 0 = full")
     ap.add_argument("--self-test", action="store_true")
+    ap.add_argument(
+        "--nobel-supported-window",
+        action="store_true",
+        help="Restrict audited rows to the min/max known birth year of the frozen 658-person Nobel science roster.",
+    )
+    ap.add_argument(
+        "--nobel-people",
+        default="data/nobel_science_enriched_v1/nobel_science_people.csv",
+        help="Frozen Nobel person-level roster used only to derive the birth-year support window.",
+    )
     args = ap.parse_args()
 
     if args.self_test:
@@ -765,6 +802,41 @@ def main():
     out_dir = Path(args.out)
     cache_dir = out_dir / "cache"
     records, input_meta = load_datasets(names, limit=args.limit)
+    birthyear_window = None
+    birthyear_filter_summary = {}
+    if args.nobel_supported_window:
+        npath = Path(args.nobel_people)
+        ymin, ymax, nsha = derive_nobel_support_window(npath)
+        birthyear_window = {
+            "source_path": str(npath),
+            "source_sha256": nsha,
+            "min_birth_year": ymin,
+            "max_birth_year": ymax,
+            "rule": f"{ymin} <= birth_year <= {ymax}",
+        }
+        before = defaultdict(int)
+        after = defaultdict(int)
+        excluded = defaultdict(int)
+        filtered = []
+        for rec in records:
+            ds = rec["dataset"]
+            before[ds] += 1
+            y = extract_birth_year(rec.get("stored_dob"))
+            if y is not None and ymin <= y <= ymax:
+                filtered.append(rec)
+                after[ds] += 1
+            else:
+                excluded[ds] += 1
+        records = filtered
+        birthyear_filter_summary = {
+            ds: {
+                "before_rows": before[ds],
+                "eligible_rows": after[ds],
+                "excluded_rows": excluded[ds],
+            }
+            for ds in sorted(before)
+        }
+        print(f"Nobel-supported birth-year window: {ymin}-{ymax}; retained {len(records)} audit rows")
     qids = sorted(set(q for r in records for q in r["qids"] if valid_qid(q)))
     print(f"Audit records={len(records)}; unique QIDs={len(qids)}")
     entities = cache_entity_batches(qids, cache_dir) if qids else {}
@@ -821,6 +893,9 @@ def main():
         "swedish_calendar_qid": SWEDISH_CALENDAR_QID,
         "requested_datasets": names,
         "input_metadata": input_meta,
+        "nobel_supported_birthyear_window_applied": int(bool(args.nobel_supported_window)),
+        "nobel_supported_birthyear_window": birthyear_window,
+        "birthyear_filter_summary": birthyear_filter_summary,
         "audit_rows": len(audited),
         "unique_qids_fetched": len(qids),
         "entity_qids_returned": len(entities),
