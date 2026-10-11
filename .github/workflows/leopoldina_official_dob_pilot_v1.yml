@@ -1,13 +1,6 @@
 name: Leopoldina Official DOB Pilot v1
 
 on:
-  pull_request:
-    branches: [main]
-    paths:
-      - 'scripts/leopoldina_official_dob_pilot_v1.py'
-      - '.github/workflows/leopoldina_official_dob_pilot_v1.yml'
-      - 'data/leopoldina_roster_freeze_v1/**'
-      - 'data/leopoldina_roster_freeze_v1.json'
   workflow_dispatch:
 
 permissions:
