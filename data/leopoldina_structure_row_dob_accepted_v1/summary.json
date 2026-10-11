@@ -1,0 +1,20 @@
+{
+  "dataset": "Leopoldina official structure-table exact-DOB checkpoint v1",
+  "source_run_id": 38098238875,
+  "source_artifact_id": 11686902779,
+  "source_artifact_name": "leopoldina-structure-row-dob-candidates-v2",
+  "source_artifact_zip_sha256": "f4835a21be2396bc0a45129c5f355bd1b016c18592c6ddc96e49be1da7176b69",
+  "candidate_rows": 62,
+  "candidate_members": 61,
+  "accepted_exact_dob": 58,
+  "rejected_identity_member_slugs": [
+    "rudolf-manfred-schmidt",
+    "klaus-peter",
+    "helmut-koch"
+  ],
+  "accepted_csv_sha256": "a34b05f9b50fcf62252e7949f3562ceec6250523dbd90e7e9da5555aa8925206",
+  "rejected_csv_sha256": "868569ce4bc8d5eb2c6dc6ad748611f185e2ba92507273ff81c069715b850d0f",
+  "adjudication_csv_sha256": "b06254ff5066961f6431f829c590fa9b3c2385fae3a46e737f4d83f03e16afdf",
+  "acceptance_rule": "Official annual Structure und Mitglieder table row must contain the frozen member identity before the first starred exact birth date; surname-first and given-name tokens must match locally. Same-name/generic-name collisions are resolved only with explicit section/location-compatible identity evidence.",
+  "bazi_variables_computed": 0
+}
