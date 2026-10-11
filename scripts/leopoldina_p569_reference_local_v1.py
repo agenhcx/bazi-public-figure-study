@@ -354,6 +354,7 @@ def main():
     summary_rows = []
     domain_counts = Counter()
     domain_class_counts = Counter()
+    stated_in_counts = Counter()
 
     for r in sorted_candidates:
         slug = r["member_slug"]
@@ -364,6 +365,8 @@ def main():
         for d in domains:
             domain_counts[d] += 1
             domain_class_counts[classify_domain(d)] += 1
+        for qid in a["stated_in_qids"]:
+            stated_in_counts[qid] += 1
 
         has_nonlibrary = int(any(classify_domain(d) == "nonlibrary_url" for d in domains))
         has_library = int(any(classify_domain(d) == "library_locator" for d in domains))
@@ -427,6 +430,16 @@ def main():
         ["domain", "candidate_rows", "domain_class"],
     )
 
+    stated_in_rows = [
+        {"stated_in_qid": qid, "candidate_rows": n}
+        for qid, n in stated_in_counts.most_common()
+    ]
+    write_csv(
+        OUT / "stated_in_qid_counts_v1.csv",
+        stated_in_rows,
+        ["stated_in_qid", "candidate_rows"],
+    )
+
     queues = defaultdict(list)
     for r in summary_rows:
         queues[r["provenance_queue"]].append(r)
@@ -451,6 +464,7 @@ def main():
         "candidate_rows_with_stated_in": sum(int(r["has_stated_in"]) for r in summary_rows),
         "queue_counts": {k: len(v) for k, v in sorted(queues.items())},
         "top_reference_domains": domain_counts.most_common(30),
+        "top_stated_in_qids": stated_in_counts.most_common(30),
         "domain_class_candidate_counts": dict(sorted(domain_class_counts.items())),
         "acceptance_rule": (
             "Inventory only. A P569 reference URL or stated-in claim is not accepted automatically. "
