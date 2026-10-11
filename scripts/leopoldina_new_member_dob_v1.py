@@ -107,34 +107,58 @@ def main():
     OUT.mkdir(parents=True,exist_ok=True)
     roster=[r for r in read_csv(ROSTER) if int(r["election_year"])==YEAR]
     pdf_url,locator=discover_pdf(YEAR)
-    _,b=fetch(pdf_url,"application/pdf,*/*")
-    if not b.startswith(b"%PDF"):raise RuntimeError(f"Not a PDF {pdf_url} bytes={len(b)}")
-    pdf=OUT/f"new_members_{YEAR}.pdf";pdf.write_bytes(b)
-    reader=PdfReader(str(pdf))
-    pages=[p.extract_text() or "" for p in reader.pages]
+    source_status="available"
+    source_error=""
+    b=b""
+    pages=[]
+
+    if not pdf_url:
+        source_status="no_verified_current_pdf_locator"
+    else:
+        try:
+            _,b=fetch(pdf_url,"application/pdf,*/*",tries=3)
+            if not b.startswith(b"%PDF"):
+                source_status="non_pdf_response"
+                source_error=f"response_bytes={len(b)}"
+            else:
+                pdf=OUT/f"new_members_{YEAR}.pdf";pdf.write_bytes(b)
+                reader=PdfReader(str(pdf))
+                pages=[p.extract_text() or "" for p in reader.pages]
+        except Exception as e:
+            source_status="transport_unavailable"
+            source_error=f"{type(e).__name__}: {e}"
+
     rows=[]
     for r in roster:
         matches=[]
-        for i,text in enumerate(pages):
-            if not page_is_target(text,r["member_slug"]):continue
-            ds=dates(text[:1800])
-            # Keep exact DOB-like starred dates only; old volumes use the star as birth marker.
-            for iso,raw in ds:
-                age=YEAR-int(iso[:4])
-                if 20<=age<=100:
-                    matches.append((iso,raw,i+1))
+        if source_status=="available":
+            for i,text in enumerate(pages):
+                if not page_is_target(text,r["member_slug"]):continue
+                ds=dates(text[:1800])
+                for iso,raw in ds:
+                    age=YEAR-int(iso[:4])
+                    if 20<=age<=100:
+                        matches.append((iso,raw,i+1))
         unique=sorted({m[0] for m in matches})
         accepted=unique[0] if len(unique)==1 else ""
         support=[m for m in matches if m[0]==accepted] if accepted else matches
+        if source_status!="available":
+            decision=f"unresolved_source_{source_status}"
+        elif accepted:
+            decision="accept_official_new_member_profile_exact_dob"
+        elif len(unique)>1:
+            decision="conflict_review"
+        else:
+            decision="unresolved_no_exact_birth_marker"
         rows.append({
           "member_slug":r["member_slug"],"display_name":r["display_name"],"class":r["class"],"section":r["section"],
           "election_year":YEAR,"candidate_dob":accepted,"candidate_count":len(unique),
           "raw_birth_marker":" | ".join(sorted({m[1] for m in support}))[:500],
           "pdf_page":" | ".join(str(x) for x in sorted({m[2] for m in support})),
-          "pdf_url":pdf_url,"publication_locator":locator,
-          "decision":"accept_official_new_member_profile_exact_dob" if accepted else ("conflict_review" if len(unique)>1 else "unresolved_no_exact_birth_marker"),
-          "bazi_variables_computed":0
+          "pdf_url":pdf_url,"publication_locator":locator,"source_status":source_status,"source_error":source_error,
+          "decision":decision,"bazi_variables_computed":0
         })
+
     fields=list(rows[0].keys()) if rows else ["member_slug"]
     cp=OUT/f"dob_candidates_{YEAR}.csv"
     with cp.open("w",encoding="utf-8-sig",newline="") as f:
@@ -143,9 +167,10 @@ def main():
     conflicts=[r for r in rows if r.get("decision")=="conflict_review"]
     summary={
       "dataset":"Leopoldina official new-member exact-DOB shard v1","election_year":YEAR,
-      "roster_targets":len(roster),"pdf_url":pdf_url,"pdf_pages":len(pages),"pdf_bytes":len(b),
+      "roster_targets":len(roster),"pdf_url":pdf_url,"source_status":source_status,"source_error":source_error,
+      "pdf_pages":len(pages),"pdf_bytes":len(b),
       "accepted_exact_dob":len(accepted),"conflicts":len(conflicts),"unresolved":len(rows)-len(accepted)-len(conflicts),
-      "acceptance_rule":"Exact day-month-year must appear with an asterisk birth marker on an official Leopoldina new-member profile page for the same frozen member; exactly one plausible date is required.",
+      "acceptance_rule":"Exact day-month-year must appear with an asterisk birth marker on an official Leopoldina new-member profile page for the same frozen member; exactly one plausible date is required. Unavailable or non-PDF official source responses remain unresolved rather than failing over to a weaker source.",
       "bazi_variables_computed":0
     }
     (OUT/f"summary_{YEAR}.json").write_text(__import__("json").dumps(summary,ensure_ascii=False,indent=2),encoding="utf-8")
