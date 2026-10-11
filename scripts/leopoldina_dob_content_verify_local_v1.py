@@ -490,50 +490,50 @@ def main():
     try:
         for pending_index, (k, r, u, kind, cls) in enumerate(pending, 1):
             meta, body, cache_hit = fetch(u)
-        text, parse_mode = body_to_text(body, meta.get("content_type",""))
-        hit, matched, snippet = find_date(text, r["candidate_exact_dob"]) if text else (0, "", "")
-        name_words = [fold(x) for x in re.findall(r"[A-Za-zÀ-ž'-]{4,}", r.get("display_name",""))]
-        ft = fold(text)
-        name_anchor_hit = int(any(w in ft for w in name_words[-3:])) if text and name_words else 0
-        status = (
-            "exact_date_text_match" if hit else
-            "pdf_needs_separate_verification" if parse_mode == "pdf_unparsed" else
-            "fetch_failed" if meta.get("error") else
-            "no_exact_date_text_match"
-        )
+            text, parse_mode = body_to_text(body, meta.get("content_type",""))
+            hit, matched, snippet = find_date(text, r["candidate_exact_dob"]) if text else (0, "", "")
+            name_words = [fold(x) for x in re.findall(r"[A-Za-zÀ-ž'-]{4,}", r.get("display_name",""))]
+            ft = fold(text)
+            name_anchor_hit = int(any(w in ft for w in name_words[-3:])) if text and name_words else 0
+            status = (
+                "exact_date_text_match" if hit else
+                "pdf_needs_separate_verification" if parse_mode == "pdf_unparsed" else
+                "fetch_failed" if meta.get("error") else
+                "no_exact_date_text_match"
+            )
             rec = {
                 "_attempt_key": k,
-            "member_slug": r.get("member_slug",""),
-            "display_name": r.get("display_name",""),
-            "wikidata_qid": r.get("wikidata_qid",""),
-            "candidate_exact_dob": r.get("candidate_exact_dob",""),
-            "stated_in_qid": r.get("stated_in_qid",""),
-            "stated_in_label": r.get("stated_in_label",""),
-            "resolver_policy_hint": r.get("source_policy_hint",""),
-            "policy_tier": r.get("policy_tier",""),
-            "single_source_sufficient": r.get("single_source_sufficient",""),
-            "independence_group": r.get("independence_group",""),
-            "discovery_route": r.get("discovery_route",""),
-            "effective_source_class": cls,
-            "url_kind": kind,
-            "url": u,
-            "domain": domain(u),
-            "http_status": meta.get("http_status",""),
-            "final_url": meta.get("final_url",""),
-            "content_type": meta.get("content_type",""),
-            "captured_bytes": meta.get("content_length_captured",0),
-            "body_sha256": meta.get("body_sha256",""),
-            "cache_hit": int(cache_hit),
-            "parse_mode": parse_mode,
-            "name_anchor_hit": name_anchor_hit,
-            "candidate_exact_date_text_match": hit,
-            "matched_variant": matched,
-            "evidence_snippet_folded": snippet,
-            "verification_status": status,
-            "fetch_error": meta.get("error",""),
-            "content_verified_machine": int(hit),
-            "final_exact_dob": "",
-            "acceptance_status": "not_adjudicated",
+                "member_slug": r.get("member_slug",""),
+                "display_name": r.get("display_name",""),
+                "wikidata_qid": r.get("wikidata_qid",""),
+                "candidate_exact_dob": r.get("candidate_exact_dob",""),
+                "stated_in_qid": r.get("stated_in_qid",""),
+                "stated_in_label": r.get("stated_in_label",""),
+                "resolver_policy_hint": r.get("source_policy_hint",""),
+                "policy_tier": r.get("policy_tier",""),
+                "single_source_sufficient": r.get("single_source_sufficient",""),
+                "independence_group": r.get("independence_group",""),
+                "discovery_route": r.get("discovery_route",""),
+                "effective_source_class": cls,
+                "url_kind": kind,
+                "url": u,
+                "domain": domain(u),
+                "http_status": meta.get("http_status",""),
+                "final_url": meta.get("final_url",""),
+                "content_type": meta.get("content_type",""),
+                "captured_bytes": meta.get("content_length_captured",0),
+                "body_sha256": meta.get("body_sha256",""),
+                "cache_hit": int(cache_hit),
+                "parse_mode": parse_mode,
+                "name_anchor_hit": name_anchor_hit,
+                "candidate_exact_date_text_match": hit,
+                "matched_variant": matched,
+                "evidence_snippet_folded": snippet,
+                "verification_status": status,
+                "fetch_error": meta.get("error",""),
+                "content_verified_machine": int(hit),
+                "final_exact_dob": "",
+                "acceptance_status": "not_adjudicated",
                 "bazi_variables_computed": 0,
             }
             append_progress(progress_path, rec)
