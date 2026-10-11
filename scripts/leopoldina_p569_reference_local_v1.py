@@ -24,6 +24,7 @@ UA = "bazi-public-figure-study/1.0 (Leopoldina local P569 provenance inventory; 
 BATCH_SIZE = int(os.environ.get("LEOPOLDINA_REF_BATCH_SIZE", "40"))
 SLEEP_SECONDS = float(os.environ.get("LEOPOLDINA_REF_SLEEP", "0.8"))
 LIMIT = int(os.environ.get("LEOPOLDINA_REF_LIMIT", "0"))
+WIKIDATA_MAXLAG = int(os.environ.get("WIKIDATA_MAXLAG", "15"))
 
 try:
     import certifi
@@ -89,7 +90,7 @@ def wikidata_entities(qids, retries=8):
         "props": "claims",
         "format": "json",
         "formatversion": "2",
-        "maxlag": "5",
+        "maxlag": str(WIKIDATA_MAXLAG),
     }).encode()
     last = None
     for attempt in range(retries):
@@ -109,8 +110,15 @@ def wikidata_entities(qids, retries=8):
             if isinstance(obj, dict) and obj.get("error"):
                 code = str(obj["error"].get("code", ""))
                 if code == "maxlag" and attempt + 1 < retries:
-                    delay = min(60.0, 2.0 ** attempt + 1.0)
-                    print(f"Wikidata maxlag; retry in {delay:.1f}s")
+                    try:
+                        reported_lag = float(obj["error"].get("lag", 0) or 0)
+                    except Exception:
+                        reported_lag = 0.0
+                    delay = max(5.0, min(60.0, reported_lag + 2.0))
+                    print(
+                        f"Wikidata maxlag={WIKIDATA_MAXLAG}s exceeded "
+                        f"(reported lag={reported_lag:.1f}s); retry in {delay:.1f}s"
+                    )
                     time.sleep(delay)
                     continue
                 raise RuntimeError(f"Wikidata API error: {obj['error']}")
@@ -452,6 +460,7 @@ def main():
         "input_candidate_rows": len(candidates),
         "input_candidate_sha256": sha256(IN),
         "batch_size": BATCH_SIZE,
+        "wikidata_maxlag_seconds": WIKIDATA_MAXLAG,
         "batch_count": total_batches,
         "cache_directory": str(CACHE),
         "entities_returned": len(entity_by_qid),
