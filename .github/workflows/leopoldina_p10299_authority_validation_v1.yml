@@ -1,13 +1,6 @@
 name: Leopoldina P10299 Authority Validation v1
 
 on:
-  pull_request:
-    branches: [main]
-    paths:
-      - 'scripts/leopoldina_p10299_authority_validation_v1.py'
-      - '.github/workflows/leopoldina_p10299_authority_validation_v1.yml'
-      - 'data/leopoldina_roster_freeze_v1/**'
-      - 'data/leopoldina_roster_freeze_v1.json'
   workflow_dispatch:
 
 permissions:
