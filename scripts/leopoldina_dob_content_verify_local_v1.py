@@ -314,6 +314,74 @@ def row_urls(row):
     return dedup
 
 
+
+def attempt_key(row, url):
+    payload = [
+        str(row.get("member_slug") or ""),
+        str(row.get("wikidata_qid") or ""),
+        str(row.get("candidate_exact_dob") or ""),
+        str(row.get("stated_in_qid") or ""),
+        str(row.get("independence_group") or ""),
+        str(url or ""),
+    ]
+    return hashlib.sha256(
+        json.dumps(payload, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+    ).hexdigest()
+
+
+def load_progress(progress_path: Path):
+    latest = {}
+    if not progress_path.exists():
+        return latest
+    with progress_path.open("r", encoding="utf-8") as f:
+        for lineno, line in enumerate(f, 1):
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                row = json.loads(line)
+            except json.JSONDecodeError as e:
+                raise RuntimeError(f"Corrupt progress JSONL at {progress_path}:{lineno}: {e}")
+            key = str(row.get("_attempt_key") or "")
+            if not re.fullmatch(r"[0-9a-f]{64}", key):
+                raise RuntimeError(f"Invalid checkpoint attempt key at {progress_path}:{lineno}")
+            latest[key] = row
+    return latest
+
+
+def append_progress(progress_path: Path, row):
+    progress_path.parent.mkdir(parents=True, exist_ok=True)
+    payload = json.dumps(row, ensure_ascii=False, separators=(",", ":"))
+    with progress_path.open("a", encoding="utf-8") as f:
+        f.write(payload + "\n")
+        f.flush()
+        os.fsync(f.fileno())
+
+
+def ensure_progress_meta(meta_path: Path, meta):
+    if meta_path.exists():
+        old = json.loads(meta_path.read_text(encoding="utf-8"))
+        for key in ("schema_version", "input_sha256", "year_min", "year_max"):
+            if old.get(key) != meta.get(key):
+                raise RuntimeError(
+                    f"Checkpoint metadata mismatch for {key}: "
+                    f"existing={old.get(key)!r}, current={meta.get(key)!r}. "
+                    "Use a different --out directory or --reset-progress."
+                )
+        return
+    meta_path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = meta_path.with_suffix(meta_path.suffix + ".tmp")
+    tmp.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
+    tmp.replace(meta_path)
+
+
+def reset_progress_files(out: Path):
+    for name in ("verification_progress_v1.jsonl", "verification_progress_meta_v1.json"):
+        p = out / name
+        if p.exists():
+            p.unlink()
+
+
 def main():
     global OUT, CACHE
     ap = argparse.ArgumentParser()
@@ -323,6 +391,8 @@ def main():
     ap.add_argument("--year-min", type=int, default=1835)
     ap.add_argument("--year-max", type=int, default=1985)
     ap.add_argument("--limit", type=int, default=0, help="Optional URL-attempt limit for a pilot; 0=all")
+    ap.add_argument("--retry-failed", action="store_true", help="Re-run previously checkpointed fetch_failed attempts only; successful/no-match attempts remain skipped")
+    ap.add_argument("--reset-progress", action="store_true", help="Delete only the output checkpoint journal/meta before starting; shared URL cache is preserved")
     ap.add_argument("--self-test", action="store_true")
     args = ap.parse_args()
 
@@ -333,6 +403,9 @@ def main():
         assert effective_class({"stated_in_qid":"Q29861311","stated_in_label":"SNAC","source_policy_hint":"content_source_candidate"}) == "locator_only"
         assert effective_class({"policy_tier":"A","stated_in_qid":"Q1050232"}) == "tier_a_candidate"
         assert effective_class({"policy_tier":"B","stated_in_qid":"Q1202222"}) == "tier_b_candidate"
+        k1 = attempt_key({"member_slug":"x","wikidata_qid":"Q1","candidate_exact_dob":"1900-01-01","stated_in_qid":"Q2","independence_group":"g"},"https://example.org/a")
+        k2 = attempt_key({"member_slug":"x","wikidata_qid":"Q1","candidate_exact_dob":"1900-01-01","stated_in_qid":"Q2","independence_group":"g"},"https://example.org/a")
+        assert k1 == k2 and len(k1) == 64
         print("Leopoldina content verifier self-test OK")
         return
 
@@ -340,6 +413,8 @@ def main():
     out = Path(args.out)
     OUT = out
     CACHE = Path(args.cache_dir) if args.cache_dir else out / "cache"
+    if args.reset_progress:
+        reset_progress_files(out)
     if not src.exists():
         raise RuntimeError(f"Missing {src}. Run source resolver first.")
 
@@ -374,9 +449,47 @@ def main():
         attempts = attempts[:args.limit]
 
     out.mkdir(parents=True, exist_ok=True)
-    verification = []
-    for i, (r, u, kind, cls) in enumerate(attempts, 1):
-        meta, body, cache_hit = fetch(u)
+    progress_path = out / "verification_progress_v1.jsonl"
+    progress_meta_path = out / "verification_progress_meta_v1.json"
+    progress_meta = {
+        "schema_version": 1,
+        "input": str(src),
+        "input_sha256": sha256_file(src),
+        "year_min": args.year_min,
+        "year_max": args.year_max,
+        "note": "Append-only per-URL checkpoint. Last row for an attempt key wins. Ctrl+C may repeat only the in-flight URL.",
+    }
+    ensure_progress_meta(progress_meta_path, progress_meta)
+    progress_latest = load_progress(progress_path)
+
+    attempt_keys = {}
+    for r, u, kind, cls in attempts:
+        k = attempt_key(r, u)
+        if k in attempt_keys:
+            raise RuntimeError(f"Duplicate attempt key after URL dedupe: {k}")
+        attempt_keys[k] = (r, u, kind, cls)
+
+    # Keep only checkpoint rows belonging to the current attempt universe.
+    verification_by_key = {
+        k: dict(v) for k, v in progress_latest.items() if k in attempt_keys
+    }
+    completed_before = len(verification_by_key)
+    pending = []
+    for k, tup in attempt_keys.items():
+        old = verification_by_key.get(k)
+        if old is None:
+            pending.append((k, *tup))
+        elif args.retry_failed and old.get("verification_status") == "fetch_failed":
+            pending.append((k, *tup))
+
+    print(
+        f"resume: total_attempts={len(attempts)} checkpointed={completed_before} "
+        f"pending={len(pending)} retry_failed={int(args.retry_failed)}"
+    )
+
+    try:
+        for pending_index, (k, r, u, kind, cls) in enumerate(pending, 1):
+            meta, body, cache_hit = fetch(u)
         text, parse_mode = body_to_text(body, meta.get("content_type",""))
         hit, matched, snippet = find_date(text, r["candidate_exact_dob"]) if text else (0, "", "")
         name_words = [fold(x) for x in re.findall(r"[A-Za-zÀ-ž'-]{4,}", r.get("display_name",""))]
@@ -388,7 +501,8 @@ def main():
             "fetch_failed" if meta.get("error") else
             "no_exact_date_text_match"
         )
-        verification.append({
+            rec = {
+                "_attempt_key": k,
             "member_slug": r.get("member_slug",""),
             "display_name": r.get("display_name",""),
             "wikidata_qid": r.get("wikidata_qid",""),
@@ -420,11 +534,36 @@ def main():
             "content_verified_machine": int(hit),
             "final_exact_dob": "",
             "acceptance_status": "not_adjudicated",
-            "bazi_variables_computed": 0,
-        })
-        print(f"{i}/{len(attempts)} {r.get('member_slug')} {domain(u)} {status} cache={int(cache_hit)}")
-        if not cache_hit and i < len(attempts):
-            time.sleep(SLEEP_SECONDS)
+                "bazi_variables_computed": 0,
+            }
+            append_progress(progress_path, rec)
+            verification_by_key[k] = rec
+            overall_done = len(verification_by_key)
+            print(
+                f"{overall_done}/{len(attempts)} (+{pending_index}/{len(pending)} this run) "
+                f"{r.get('member_slug')} {domain(u)} {status} cache={int(cache_hit)}"
+            )
+            if not cache_hit and pending_index < len(pending):
+                time.sleep(SLEEP_SECONDS)
+    except KeyboardInterrupt:
+        print(
+            f"\nInterrupted safely. Checkpointed {len(verification_by_key)}/{len(attempts)} attempts. "
+            "Re-run the same command to resume."
+        )
+        raise SystemExit(130)
+
+    verification = []
+    for k in attempt_keys:
+        if k in verification_by_key:
+            row = dict(verification_by_key[k])
+            row.pop("_attempt_key", None)
+            verification.append(row)
+
+    if len(verification) != len(attempts):
+        raise RuntimeError(
+            f"Run ended without interruption but checkpoint coverage is incomplete: "
+            f"{len(verification)}/{len(attempts)}"
+        )
 
     vfields = [
         "member_slug","display_name","wikidata_qid","candidate_exact_dob",
@@ -509,6 +648,11 @@ def main():
         "eligible_reference_rows": len(eligible),
         "eligible_unique_candidates": len(summary_rows),
         "url_attempts": len(verification),
+        "checkpoint_total_attempts": len(attempts),
+        "checkpoint_completed_attempts": len(verification),
+        "checkpoint_progress_file": str(progress_path),
+        "checkpoint_meta_file": str(progress_meta_path),
+        "run_complete": int(len(verification) == len(attempts)),
         "verification_status_counts": dict(sorted(status_counts.items())),
         "candidate_machine_evidence_counts": dict(sorted(evidence_counts.items())),
         "candidates_attempted": sum(int(x["verification_url_attempts"]) > 0 for x in summary_rows),
