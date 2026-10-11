@@ -24,6 +24,7 @@ SLEEP_SECONDS = float(os.environ.get("DOB_AUDIT_SLEEP", "0.6"))
 WIKIDATA_MAXLAG = int(os.environ.get("WIKIDATA_MAXLAG", "15"))
 JULIAN_CALENDAR_QID = "Q1985786"
 GREGORIAN_CALENDAR_QID = "Q1985727"
+SWEDISH_CALENDAR_QID = "Q1130275"
 
 try:
     import certifi
@@ -262,9 +263,33 @@ def julian_to_gregorian_date(year, month, day):
     return dt.date(gyear, gmonth, gday)
 
 
-def parse_wikidata_time(value):
+def swedish_to_gregorian_date(year, month, day):
+    # Sweden's special calendar was one day ahead of the Julian calendar
+    # from 1700-03-01 until the exceptional 1712-02-30 restored Julian dating.
+    if (year, month, day) == (1712, 2, 30):
+        return dt.date(1712, 3, 11)
+    d = dt.date(year, month, day)
+    if dt.date(1700, 3, 1) <= d <= dt.date(1712, 2, 29):
+        return julian_to_gregorian_date(year, month, day) - dt.timedelta(days=1)
+    return None
+
+
+def qualifier_entity_qids(claim):
+    out = set()
+    for snaks in (((claim or {}).get("qualifiers") or {}).values()):
+        for snak in snaks or []:
+            value = (((snak or {}).get("datavalue") or {}).get("value"))
+            if isinstance(value, dict):
+                qid = str(value.get("id") or "")
+                if valid_qid(qid):
+                    out.add(qid)
+    return sorted(out)
+
+
+def parse_wikidata_time(value, qualifier_qids=None):
     if not isinstance(value, dict):
         return None
+    qualifier_qids = sorted(set(qualifier_qids or []))
     raw = str(value.get("time") or "")
     precision = value.get("precision")
     calendar_qid = str(value.get("calendarmodel") or "").rsplit("/", 1)[-1]
@@ -277,22 +302,41 @@ def parse_wikidata_time(value):
     year, month, day = int(ys), int(ms), int(ds)
     raw_date = ""
     normalized = ""
+    method = ""
     if precision is not None and int(precision) >= 11:
-        try:
-            d = dt.date(year, month, day)
-            raw_date = d.isoformat()
-            if calendar_qid == JULIAN_CALENDAR_QID:
-                normalized = julian_to_gregorian_date(year, month, day).isoformat()
-            else:
-                normalized = raw_date
-        except ValueError:
-            pass
+        if (year, month, day) == (1712, 2, 30) and SWEDISH_CALENDAR_QID in qualifier_qids:
+            raw_date = "1712-02-30"
+            normalized = swedish_to_gregorian_date(year, month, day).isoformat()
+            method = "swedish_calendar_to_gregorian"
+        else:
+            try:
+                d = dt.date(year, month, day)
+                raw_date = d.isoformat()
+                if SWEDISH_CALENDAR_QID in qualifier_qids:
+                    converted = swedish_to_gregorian_date(year, month, day)
+                    if converted is not None:
+                        normalized = converted.isoformat()
+                        method = "swedish_calendar_to_gregorian"
+                    else:
+                        normalized = ""
+                        method = "unsupported_special_calendar_range"
+                elif calendar_qid == JULIAN_CALENDAR_QID:
+                    normalized = julian_to_gregorian_date(year, month, day).isoformat()
+                    method = "julian_to_gregorian"
+                else:
+                    normalized = raw_date
+                    method = "identity_nonjulian"
+            except ValueError:
+                pass
     return {
         "raw_time": raw,
         "precision": precision,
         "calendar_model_qid": calendar_qid,
         "raw_date": raw_date,
         "normalized_gregorian_date": normalized,
+        "normalization_method": method,
+        "qualifier_entity_qids": "|".join(qualifier_qids),
+        "special_calendar_qids": "|".join(q for q in qualifier_qids if q == SWEDISH_CALENDAR_QID),
     }
 
 
@@ -310,7 +354,8 @@ def extract_p569_claims(entity):
     claims = (((entity or {}).get("claims") or {}).get("P569", []) or [])
     for idx, claim in enumerate(claims):
         value = ((((claim or {}).get("mainsnak") or {}).get("datavalue") or {}).get("value"))
-        parsed = parse_wikidata_time(value)
+        qq = qualifier_entity_qids(claim)
+        parsed = parse_wikidata_time(value, qq)
         if not parsed:
             continue
         parsed["claim_index"] = idx
@@ -574,6 +619,7 @@ def audit_record(rec, entities):
     norm_dates = sorted(set(x["normalized_gregorian_date"] for x in exact if x.get("normalized_gregorian_date")))
     models = sorted(set(x["calendar_model_qid"] for x in exact if x.get("calendar_model_qid")))
     julian = [x for x in exact if x.get("calendar_model_qid") == JULIAN_CALENDAR_QID]
+    special = [x for x in exact if x.get("special_calendar_qids")]
     stored = rec["stored_dob"]
 
     if not qids:
@@ -591,7 +637,10 @@ def audit_record(rec, entities):
         if len(norm_dates) > 1:
             status = "aligned_but_multiple_exact_p569_dates"
             review = 1
-        elif any(x.get("calendar_model_qid") == JULIAN_CALENDAR_QID and x.get("raw_date") != stored for x in match_claims):
+        elif any(x.get("special_calendar_qids") and x.get("raw_date") != stored for x in match_claims):
+            status = "aligned_after_special_calendar_normalization"
+            review = 1
+        elif any(x.get("calendar_model_qid") == JULIAN_CALENDAR_QID and not x.get("special_calendar_qids") and x.get("raw_date") != stored for x in match_claims):
             status = "aligned_after_julian_normalization"
             review = 0
         elif any(x.get("calendar_model_qid") == GREGORIAN_CALENDAR_QID for x in match_claims):
@@ -600,8 +649,11 @@ def audit_record(rec, entities):
         else:
             status = "aligned_other_or_unspecified_calendar"
             review = 1
-    elif stored in [x.get("raw_date") for x in julian]:
-        status = "stored_raw_julian_needs_amendment"
+    elif stored in [x.get("raw_date") for x in special]:
+        status = "stored_matches_special_calendar_claim_requires_source_adjudication"
+        review = 1
+    elif stored in [x.get("raw_date") for x in julian if not x.get("special_calendar_qids")]:
+        status = "stored_matches_raw_julian_claim_requires_source_adjudication"
         review = 1
     else:
         status = "stored_date_not_in_current_p569"
@@ -624,6 +676,9 @@ def audit_record(rec, entities):
         "normalized_gregorian_dates": "|".join(norm_dates),
         "calendar_model_qids": "|".join(models),
         "has_julian_exact_claim": int(bool(julian)),
+        "has_special_calendar_claim": int(bool(special)),
+        "special_calendar_qids": "|".join(sorted(set(q for x in special for q in str(x.get("special_calendar_qids") or "").split("|") if q))),
+        "normalization_methods": "|".join(sorted(set(x.get("normalization_method") for x in exact if x.get("normalization_method")))),
         "julian_raw_dates": "|".join(sorted(set(x["raw_date"] for x in julian if x.get("raw_date")))),
         "julian_normalized_gregorian_dates": "|".join(sorted(set(x["normalized_gregorian_date"] for x in julian if x.get("normalized_gregorian_date")))),
         "audit_status": status,
@@ -637,7 +692,9 @@ def audit_record(rec, entities):
         exploded.append({
             "dataset": rec["dataset"], "record_key": rec["record_key"], "display_name": rec["display_name"],
             "stored_dob": stored, "qid": x["qid"], "claim_index": x["claim_index"], "rank": x["rank"],
-            "precision": x["precision"], "calendar_model_qid": x["calendar_model_qid"], "raw_time": x["raw_time"],
+            "precision": x["precision"], "calendar_model_qid": x["calendar_model_qid"],
+            "qualifier_entity_qids": x.get("qualifier_entity_qids", ""), "special_calendar_qids": x.get("special_calendar_qids", ""),
+            "normalization_method": x.get("normalization_method", ""), "raw_time": x["raw_time"],
             "raw_date": x["raw_date"], "normalized_gregorian_date": x["normalized_gregorian_date"],
             "bazi_variables_computed": 0,
         })
@@ -660,7 +717,9 @@ def dataset_summary(rows):
             "rows_with_exact_day_p569": sum(int(r["exact_day_p569_claim_count"]) > 0 for r in rr),
             "rows_with_julian_exact_claim": sum(int(r["has_julian_exact_claim"]) for r in rr),
             "aligned_after_julian_normalization": statuses.get("aligned_after_julian_normalization", 0),
-            "stored_raw_julian_needs_amendment": statuses.get("stored_raw_julian_needs_amendment", 0),
+            "aligned_after_special_calendar_normalization": statuses.get("aligned_after_special_calendar_normalization", 0),
+            "stored_matches_raw_julian_claim_requires_source_adjudication": statuses.get("stored_matches_raw_julian_claim_requires_source_adjudication", 0),
+            "stored_matches_special_calendar_claim_requires_source_adjudication": statuses.get("stored_matches_special_calendar_claim_requires_source_adjudication", 0),
             "stored_date_not_in_current_p569": statuses.get("stored_date_not_in_current_p569", 0),
             "review_rows": sum(int(r["needs_review"]) for r in rr),
             "status_counts_json": json.dumps(dict(sorted(statuses.items())), ensure_ascii=False, sort_keys=True),
@@ -676,6 +735,11 @@ def self_test():
            "calendarmodel": "http://www.wikidata.org/entity/Q1985786"}
     got = parse_wikidata_time(val)
     assert got["normalized_gregorian_date"] == "1876-01-10"
+    swe = {"time": "+1701-11-27T00:00:00Z", "precision": 11,
+           "calendarmodel": "http://www.wikidata.org/entity/Q1985786"}
+    got_swe = parse_wikidata_time(swe, [SWEDISH_CALENDAR_QID])
+    assert got_swe["normalized_gregorian_date"] == "1701-12-07"
+    assert got_swe["normalization_method"] == "swedish_calendar_to_gregorian"
     print("DOB calendar-model self-test OK")
 
 
@@ -683,7 +747,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--datasets", default="nobel,nas,royal_society,leopoldina,chess,table_tennis",
                     help="Comma-separated: nobel,nas,royal_society,leopoldina,chess,table_tennis")
-    ap.add_argument("--out", default="data/dob_calendar_model_audit_v1")
+    ap.add_argument("--out", default="data/dob_calendar_model_audit_v1_1")
     ap.add_argument("--limit", type=int, default=0, help="Optional per-loader smoke limit; 0 = full")
     ap.add_argument("--self-test", action="store_true")
     args = ap.parse_args()
@@ -717,17 +781,19 @@ def main():
     row_fields = [
         "dataset", "record_key", "display_name", "stored_dob", "source_path", "wikidata_qids", "qid_count", "qid_status",
         "bridge_property", "bridge_value", "p569_claim_count", "exact_day_p569_claim_count", "raw_exact_dates",
-        "normalized_gregorian_dates", "calendar_model_qids", "has_julian_exact_claim", "julian_raw_dates",
-        "julian_normalized_gregorian_dates", "audit_status", "needs_review", "input_note", "final_exact_dob_written",
+        "normalized_gregorian_dates", "calendar_model_qids", "has_julian_exact_claim", "has_special_calendar_claim",
+        "special_calendar_qids", "normalization_methods", "julian_raw_dates", "julian_normalized_gregorian_dates",
+        "audit_status", "needs_review", "input_note", "final_exact_dob_written",
         "bazi_variables_computed",
     ]
     write_csv(out_dir / "calendar_model_audit_rows_v1.csv", audited, row_fields)
     claim_fields = [
         "dataset", "record_key", "display_name", "stored_dob", "qid", "claim_index", "rank", "precision",
-        "calendar_model_qid", "raw_time", "raw_date", "normalized_gregorian_date", "bazi_variables_computed",
+        "calendar_model_qid", "qualifier_entity_qids", "special_calendar_qids", "normalization_method",
+        "raw_time", "raw_date", "normalized_gregorian_date", "bazi_variables_computed",
     ]
     write_csv(out_dir / "p569_claims_exploded_v1.csv", exploded, claim_fields)
-    write_csv(out_dir / "julian_claim_review_v1.csv", [r for r in audited if int(r["has_julian_exact_claim"])], row_fields)
+    write_csv(out_dir / "julian_claim_review_v1_1.csv", [r for r in audited if int(r["has_julian_exact_claim"]) or int(r["has_special_calendar_claim"])], row_fields)
     write_csv(out_dir / "date_or_identity_review_v1.csv", [r for r in audited if int(r["needs_review"])], row_fields)
 
     ds_summary = dataset_summary(audited)
@@ -740,23 +806,27 @@ def main():
                   ["cohort_key", "display_name", "bridge_property", "bridge_value", "wikidata_qids", "qid_count"])
 
     summary = {
-        "dataset": "Cross-study DOB calendar-model audit v1",
+        "dataset": "Cross-study DOB calendar-model audit v1.1",
         "audit_policy": (
             "Audit only. Wikidata identities use exact QIDs or exact external-ID bridges; no fuzzy matching. "
-            "Wikidata JSON P569 calendarmodel is preserved. Julian Q1985786 day-level dates are converted to "
-            "proleptic Gregorian absolute dates for comparison. No frozen DOB is automatically changed; any "
-            "stored raw-Julian or other conflict requires a separately versioned DOB amendment."
+            "Wikidata JSON P569 calendarmodel and entity-valued claim qualifiers are preserved. Ordinary Julian "
+            "Q1985786 day-level dates are converted to proleptic Gregorian absolute dates for comparison; the "
+            "Swedish-calendar Q1130275 sourcing circumstance uses its special 1700-1712 rule. A stored date matching "
+            "a raw historical-calendar claim is a source-adjudication trigger, not proof of error. No frozen DOB is "
+            "automatically changed; any correction requires a separately versioned DOB amendment."
         ),
         "date_coordinate": "proleptic Gregorian absolute date",
         "julian_calendar_qid": JULIAN_CALENDAR_QID,
         "gregorian_calendar_qid": GREGORIAN_CALENDAR_QID,
+        "swedish_calendar_qid": SWEDISH_CALENDAR_QID,
         "requested_datasets": names,
         "input_metadata": input_meta,
         "audit_rows": len(audited),
         "unique_qids_fetched": len(qids),
         "entity_qids_returned": len(entities),
         "rows_with_julian_exact_claim": sum(int(r["has_julian_exact_claim"]) for r in audited),
-        "stored_raw_julian_needs_amendment": sum(r["audit_status"] == "stored_raw_julian_needs_amendment" for r in audited),
+        "stored_matches_raw_julian_claim_requires_source_adjudication": sum(r["audit_status"] == "stored_matches_raw_julian_claim_requires_source_adjudication" for r in audited),
+        "stored_matches_special_calendar_claim_requires_source_adjudication": sum(r["audit_status"] == "stored_matches_special_calendar_claim_requires_source_adjudication" for r in audited),
         "rows_requiring_review": sum(int(r["needs_review"]) for r in audited),
         "dataset_summary": ds_summary,
         "automatic_dob_changes": 0,
