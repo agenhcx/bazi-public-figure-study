@@ -1,0 +1,38 @@
+{
+  "dataset": "Leopoldina official static new-member-volume exact-DOB checkpoint v1",
+  "accepted_exact_dob": 248,
+  "accepted_by_election_year": {
+    "2010": 37,
+    "2012": 33,
+    "2013": 40,
+    "2014": 35,
+    "2016": 34,
+    "2017": 31,
+    "2018": 38
+  },
+  "accepted_years": [
+    2010,
+    2012,
+    2013,
+    2014,
+    2016,
+    2017,
+    2018
+  ],
+  "blocked_or_unverified_years": [
+    2009,
+    2011,
+    2015,
+    2019
+  ],
+  "acceptance_rule": "Exact DOB is accepted only from a successfully retrieved official Leopoldina new-member PDF, on the frozen member's profile page, with the starred birth marker and unique plausible day-month-year. Rows are restricted to the immutable Leopoldina science-core roster.",
+  "accepted_csv_sha256": "783c73649c55ef99f165fc66d4419a00b4c71fc59f834d7e5a11ebd75582a0f5",
+  "source_state_csv_sha256": "4441b3a795a4147f114ef881011a6ca5ef8ddea1fd875a457885cdc6d82dddd3",
+  "source_artifact": {
+    "workflow_run_id": 38097235061,
+    "artifact_id": 11686950396,
+    "artifact_name": "leopoldina-new-member-dob-official-v1",
+    "artifact_zip_sha256": "a6ea29d60a2c6ba25c52e6b6a43934df15ad5674201a8c421cdb9af60b59f43d"
+  },
+  "bazi_variables_computed": 0
+}
