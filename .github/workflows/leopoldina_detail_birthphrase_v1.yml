@@ -1,0 +1,52 @@
+name: Leopoldina Official Detail Birth-Phrase Scan v1
+on:
+  push:
+    branches: [leopoldina-dob-official-v1]
+    paths:
+      - "scripts/leopoldina_detail_birthphrase_v1.py"
+      - "scripts/leopoldina_detail_birthphrase_consolidate_v1.py"
+      - ".github/workflows/leopoldina_detail_birthphrase_v1.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  collect:
+    strategy:
+      fail-fast: false
+      matrix:
+        shard_index: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      SHARD_INDEX: ${{ matrix.shard_index }}
+      SHARD_COUNT: 16
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python scripts/leopoldina_detail_birthphrase_v1.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: leopoldina-detail-birthphrase-s${{ matrix.shard_index }}
+          path: data/leopoldina_detail_birthphrase_shard_v1/
+  consolidate:
+    needs: collect
+    if: needs.collect.result == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: leopoldina-detail-birthphrase-s*
+          path: data/leopoldina_detail_birthphrase_inputs_v1
+          merge-multiple: false
+      - run: python scripts/leopoldina_detail_birthphrase_consolidate_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: leopoldina-detail-birthphrase-candidates-v1
+          path: data/leopoldina_detail_birthphrase_candidates_v1/
