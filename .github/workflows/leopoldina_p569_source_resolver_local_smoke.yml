@@ -27,6 +27,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - name: Calendar normalization self-check
+        run: python -c "import sys; sys.path.insert(0,'scripts'); import leopoldina_p569_reference_local_v1 as r; assert r.julian_to_gregorian_date(1875,12,29).isoformat()=='1876-01-10'; assert r.julian_to_gregorian_date(1906,5,30).isoformat()=='1906-06-12'; print('Julian-to-Gregorian normalization OK')"
       - name: Build candidate input
         run: python scripts/leopoldina_dob_local_v1.py
       - name: Build 40-row provenance cache
