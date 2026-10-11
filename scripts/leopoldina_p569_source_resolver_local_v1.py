@@ -42,6 +42,16 @@ KNOWN_LOCATOR_ONLY_SOURCE_QIDS = {
     "Q112122720",  # WorldCat Entities
 }
 
+# Some source items do not expose P1687 consistently even though their record-ID
+# property is unambiguous. Overrides only help reconstruct locator URLs; they do
+# not change source-policy status or acceptance.
+SOURCE_PROPERTY_OVERRIDES = {
+    "Q36578": ["P227"],      # GND ID
+    "Q19938912": ["P268"],   # BnF ID
+    "Q13550863": ["P691"],   # NL CR AUT ID
+    "Q112122720": ["P10832"], # WorldCat Entities ID
+}
+
 def read_csv(path: Path):
     with path.open("r", encoding="utf-8-sig", newline="") as f:
         return list(csv.DictReader(f))
@@ -373,7 +383,7 @@ def main():
         e = source_entities.get(qid, {})
         lbl = label(e)
         desc = description(e)
-        mains = entity_ids(e, "P1687")
+        mains = sorted(set(entity_ids(e, "P1687") + SOURCE_PROPERTY_OVERRIDES.get(qid, [])))
         source_main_props[qid] = mains
         prop_labels = []
         formatters = []
@@ -414,8 +424,12 @@ def main():
         for r in candidates
     }
 
+    drift_eligible_rows = 0
     for qid, r in candidate_by_qid.items():
-        entity = person_entities.get(qid, {})
+        if qid not in person_entities:
+            continue
+        drift_eligible_rows += 1
+        entity = person_entities[qid]
         claims = (((entity or {}).get("claims") or {}).get("P569", []) or [])
         candidate_dob = r["candidate_exact_dob"]
         matching_claims = []
@@ -556,6 +570,7 @@ def main():
         "stated_in_source_qids": len(source_qids),
         "source_entities_resolved": sum(q in source_entities for q in source_qids),
         "main_wikidata_properties_resolved": len(main_pids),
+        "candidate_rows_evaluated_from_person_cache": drift_eligible_rows,
         "candidate_p569_drift_rows": len(drift_rows),
         "resolved_reference_rows": len(reference_rows),
         "reference_rows_with_source_specific_id": len(source_record_rows),
