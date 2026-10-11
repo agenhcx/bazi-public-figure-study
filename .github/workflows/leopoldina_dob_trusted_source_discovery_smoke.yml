@@ -1,0 +1,25 @@
+name: Leopoldina DOB Trusted Source Discovery Smoke
+
+on:
+  pull_request:
+    paths:
+      - "LEOPOLDINA_DOB_TRUSTED_SOURCE_DISCOVERY_V2.md"
+      - "data/leopoldina_dob_source_policy_v1/**"
+      - "scripts/leopoldina_dob_trusted_source_discovery_v2.py"
+      - ".github/workflows/leopoldina_dob_trusted_source_discovery_smoke.yml"
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile discovery script
+        run: python -m py_compile scripts/leopoldina_dob_trusted_source_discovery_v2.py
+      - name: Run discovery self-test
+        run: python scripts/leopoldina_dob_trusted_source_discovery_v2.py --self-test
+      - name: Assert source policy invariants
+        run: python -c "import csv; r=list(csv.DictReader(open('data/leopoldina_dob_source_policy_v1/trusted_source_registry_v1.csv',encoding='utf-8-sig'))); assert r and all(x['policy_tier'] in {'A','B'} for x in r); assert all(x['allowed_properties'] for x in r); assert not any(x['source_qid'] in {'Q29861311','Q1201876','Q25328680','Q63056','Q98769076'} for x in r); print('trusted source policy invariants OK:',len(r))"
