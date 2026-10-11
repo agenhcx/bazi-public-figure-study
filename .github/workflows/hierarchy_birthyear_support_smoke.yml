@@ -1,0 +1,31 @@
+name: Hierarchy Birth-Year Support Smoke
+
+on:
+  pull_request:
+    paths:
+      - "HIERARCHY_COMMON_BIRTHYEAR_SUPPORT_PLAN_V1.md"
+      - "scripts/hierarchy_common_birthyear_support_v1.py"
+      - "scripts/dob_calendar_model_audit_v1.py"
+      - ".github/workflows/hierarchy_birthyear_support_smoke.yml"
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install TLS CA helper
+        run: python -m pip install certifi
+      - name: Build synthetic 658-person Nobel roster
+        run: python -c "import csv,pathlib; p=pathlib.Path('/tmp/nobel_science_people.csv'); f=p.open('w',encoding='utf-8-sig',newline=''); w=csv.DictWriter(f,fieldnames=['laureate_id','full_name','birth_date','birth_date_exact']); w.writeheader(); [w.writerow({'laureate_id':str(i+1),'full_name':f'Person {i+1}','birth_date':('1835-01-01' if i==0 else '1985' if i==657 else f'{1900+i%80}-01-01'),'birth_date_exact':('0' if i==657 else '1')}) for i in range(658)]; f.close()"
+      - name: Build support window
+        run: python scripts/hierarchy_common_birthyear_support_v1.py --nobel /tmp/nobel_science_people.csv --out /tmp/hierarchy_support
+      - name: Assert support-window invariants
+        run: python -c "import json; s=json.load(open('/tmp/hierarchy_support/nobel_birthyear_support_summary.json',encoding='utf-8')); assert s['nobel_unique_people']==658; assert s['nobel_min_birth_year']==1835; assert s['nobel_max_birth_year']==1985; assert s['bazi_variables_computed']==0; print('support-window invariants OK')"
+      - name: Audit filter smoke
+        run: python scripts/dob_calendar_model_audit_v1.py --datasets table_tennis --limit 20 --nobel-supported-window --nobel-people /tmp/nobel_science_people.csv --out /tmp/dob_window_smoke
+      - name: Assert audit filter invariants
+        run: python -c "import json; s=json.load(open('/tmp/dob_window_smoke/summary.json',encoding='utf-8')); assert s['nobel_supported_birthyear_window_applied']==1; assert s['nobel_supported_birthyear_window']['min_birth_year']==1835; assert s['nobel_supported_birthyear_window']['max_birth_year']==1985; assert s['bazi_variables_computed']==0; print('audit filter invariants OK')"
