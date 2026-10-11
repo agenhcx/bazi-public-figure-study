@@ -1,0 +1,41 @@
+name: Leopoldina Source Resolver Smoke
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/leopoldina_p569_source_resolver_local_v1.py'
+      - '.github/workflows/leopoldina_p569_source_resolver_local_smoke.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      LEOPOLDINA_REF_LIMIT: '40'
+      LEOPOLDINA_REF_BATCH_SIZE: '20'
+      LEOPOLDINA_REF_SLEEP: '0.2'
+      LEOPOLDINA_SOURCE_BATCH_SIZE: '20'
+      LEOPOLDINA_SOURCE_SLEEP: '0.2'
+      WIKIDATA_MAXLAG: '15'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Build candidate input
+        run: python scripts/leopoldina_dob_local_v1.py
+      - name: Build 40-row provenance cache
+        run: python scripts/leopoldina_p569_reference_local_v1.py
+      - name: Resolve stated-in sources
+        run: python scripts/leopoldina_p569_source_resolver_local_v1.py
+      - name: Upload smoke artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: leopoldina-p569-source-resolver-smoke
+          path: data/leopoldina_p569_source_resolver_local_v1/
+          if-no-files-found: error
