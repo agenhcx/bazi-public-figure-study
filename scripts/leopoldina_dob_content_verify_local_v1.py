@@ -17,7 +17,7 @@ import urllib.request
 from collections import Counter, defaultdict
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import urlparse, urljoin
 
 IN = Path("data/leopoldina_p569_source_resolver_local_v1/content_source_candidate_records_v1.csv")
 OUT = Path("data/leopoldina_dob_content_verify_local_v1")
@@ -122,40 +122,56 @@ def fetch(url: str, retries=4):
     body_path = CACHE / f"{key}.body"
     if meta_path.exists() and body_path.exists():
         meta = json.loads(meta_path.read_text(encoding="utf-8"))
-        return meta, body_path.read_bytes(), True
+        # Successful responses are stable/reusable. Failed responses are deliberately
+        # retried on later runs so transient blocks, redirects, TLS fixes, or VPN
+        # changes do not become permanent false negatives.
+        if not str(meta.get("error") or "").strip():
+            return meta, body_path.read_bytes(), True
 
     last = None
     for attempt in range(retries):
-        req = urllib.request.Request(
-            url,
-            headers={
-                "User-Agent": UA,
-                "Accept": "text/html,application/xhtml+xml,application/json,text/plain,application/xml,text/xml,application/pdf;q=0.8,*/*;q=0.5",
-                "Accept-Language": "en-US,en;q=0.9,de;q=0.8,fr;q=0.6",
-            },
-        )
         cert_errors = []
         for label, ctx in verified_contexts():
+            current_url = url
             try:
-                with urllib.request.urlopen(req, timeout=90, context=ctx) as r:
-                    body = r.read(MAX_BYTES + 1)
-                    truncated = int(len(body) > MAX_BYTES)
-                    if truncated:
-                        body = body[:MAX_BYTES]
-                    meta = {
-                        "url": url,
-                        "http_status": getattr(r, "status", 200),
-                        "final_url": r.geturl(),
-                        "content_type": str(r.headers.get("Content-Type") or ""),
-                        "content_length_captured": len(body),
-                        "truncated": truncated,
-                        "error": "",
-                        "tls_context": label,
-                        "body_sha256": sha256_bytes(body),
-                    }
-                    body_path.write_bytes(body)
-                    meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
-                    return meta, body, False
+                for redirect_index in range(7):
+                    req = urllib.request.Request(
+                        current_url,
+                        headers={
+                            "User-Agent": UA,
+                            "Accept": "text/html,application/xhtml+xml,application/json,text/plain,application/xml,text/xml,application/pdf;q=0.8,*/*;q=0.5",
+                            "Accept-Language": "en-US,en;q=0.9,de;q=0.8,fr;q=0.6",
+                        },
+                    )
+                    try:
+                        r = urllib.request.urlopen(req, timeout=90, context=ctx)
+                    except urllib.error.HTTPError as e:
+                        # A few scholarly sites return 307/308 in ways urllib does not
+                        # automatically follow. Follow only an explicit Location header.
+                        if e.code in {301, 302, 303, 307, 308} and e.headers.get("Location") and redirect_index < 6:
+                            current_url = urljoin(current_url, e.headers["Location"])
+                            continue
+                        raise
+                    with r:
+                        body = r.read(MAX_BYTES + 1)
+                        truncated = int(len(body) > MAX_BYTES)
+                        if truncated:
+                            body = body[:MAX_BYTES]
+                        meta = {
+                            "url": url,
+                            "http_status": getattr(r, "status", 200),
+                            "final_url": r.geturl(),
+                            "content_type": str(r.headers.get("Content-Type") or ""),
+                            "content_length_captured": len(body),
+                            "truncated": truncated,
+                            "error": "",
+                            "tls_context": label,
+                            "body_sha256": sha256_bytes(body),
+                        }
+                        body_path.write_bytes(body)
+                        meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
+                        return meta, body, False
+                raise RuntimeError(f"Too many redirects for {url}")
             except urllib.error.URLError as e:
                 reason = getattr(e, "reason", None)
                 if isinstance(reason, ssl.SSLCertVerificationError) or "CERTIFICATE_VERIFY_FAILED" in str(e):
@@ -444,6 +460,7 @@ def main():
             "pdf_review_rows": sum(x["verification_status"] == "pdf_needs_separate_verification" for x in vv),
             "fetch_failed_rows": sum(x["verification_status"] == "fetch_failed" for x in vv),
             "machine_evidence_status": (
+                "not_attempted" if not vv else
                 "tier_a_positive" if tier_a else
                 "two_plus_tier_b_positive" if len(tier_b) >= 2 else
                 "one_tier_b_positive" if len(tier_b) == 1 else
@@ -474,6 +491,8 @@ def main():
         "url_attempts": len(verification),
         "verification_status_counts": dict(sorted(status_counts.items())),
         "candidate_machine_evidence_counts": dict(sorted(evidence_counts.items())),
+        "candidates_attempted": sum(int(x["verification_url_attempts"]) > 0 for x in summary_rows),
+        "candidates_unattempted": sum(int(x["verification_url_attempts"]) == 0 for x in summary_rows),
         "candidates_with_any_machine_positive": sum(int(x["machine_exact_date_positive_rows"]) > 0 for x in summary_rows),
         "candidates_with_tier_a_positive": sum(int(x["positive_tier_a_source_count"]) > 0 for x in summary_rows),
         "candidates_with_two_plus_tier_b_positive": sum(int(x["positive_tier_b_source_count"]) >= 2 for x in summary_rows),
