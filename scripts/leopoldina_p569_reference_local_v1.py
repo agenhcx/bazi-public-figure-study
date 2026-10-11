@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import csv
+import datetime as dt
 import hashlib
 import json
 import os
@@ -18,10 +19,10 @@ from urllib.parse import urlparse
 IN = Path("data/leopoldina_dob_local_v1/candidate_unique_day_p569_v1.csv")
 OUT = Path("data/leopoldina_p569_reference_local_v1")
 CACHE = OUT / "cache"
-QLEVER = "https://qlever.dev/api/wikidata"
+WIKIDATA_API = "https://www.wikidata.org/w/api.php"
 UA = "bazi-public-figure-study/1.0 (Leopoldina local P569 provenance inventory; no BaZi computation)"
-BATCH_SIZE = int(os.environ.get("LEOPOLDINA_REF_BATCH_SIZE", "50"))
-SLEEP_SECONDS = float(os.environ.get("LEOPOLDINA_REF_SLEEP", "1.5"))
+BATCH_SIZE = int(os.environ.get("LEOPOLDINA_REF_BATCH_SIZE", "40"))
+SLEEP_SECONDS = float(os.environ.get("LEOPOLDINA_REF_SLEEP", "0.8"))
 LIMIT = int(os.environ.get("LEOPOLDINA_REF_LIMIT", "0"))
 
 try:
@@ -30,24 +31,12 @@ except ImportError:
     certifi = None
 
 LIBRARY_DOMAINS = {
-    "d-nb.info",
-    "lobid.org",
-    "id.loc.gov",
-    "loc.gov",
-    "viaf.org",
-    "data.bnf.fr",
-    "catalogue.bnf.fr",
-    "idref.fr",
-    "catalogue.bnf.fr",
-    "aleph.nkp.cz",
+    "d-nb.info", "lobid.org", "id.loc.gov", "loc.gov", "viaf.org",
+    "data.bnf.fr", "catalogue.bnf.fr", "idref.fr", "aleph.nkp.cz",
 }
 WIKI_DOMAINS = {
-    "wikidata.org",
-    "www.wikidata.org",
-    "wikipedia.org",
-    "de.wikipedia.org",
-    "en.wikipedia.org",
-    "commons.wikimedia.org",
+    "wikidata.org", "www.wikidata.org", "wikipedia.org",
+    "de.wikipedia.org", "en.wikipedia.org", "commons.wikimedia.org",
 }
 
 def read_csv(path: Path):
@@ -93,24 +82,39 @@ def urlopen_verified(req, timeout):
         f"Details: {detail}"
     )
 
-def qlever_tsv(query: str, retries=8):
-    body = urllib.parse.urlencode({"query": query, "action": "tsv_export"}).encode()
+def wikidata_entities(qids, retries=8):
+    data = urllib.parse.urlencode({
+        "action": "wbgetentities",
+        "ids": "|".join(qids),
+        "props": "claims",
+        "format": "json",
+        "formatversion": "2",
+        "maxlag": "5",
+    }).encode()
     last = None
     for attempt in range(retries):
         req = urllib.request.Request(
-            QLEVER,
-            data=body,
+            WIKIDATA_API,
+            data=data,
             method="POST",
             headers={
                 "User-Agent": UA,
+                "Accept": "application/json",
                 "Content-Type": "application/x-www-form-urlencoded",
-                "Accept": "text/tab-separated-values",
             },
         )
         try:
-            with urlopen_verified(req, timeout=240) as r:
-                raw = r.read().decode("utf-8-sig")
-            break
+            with urlopen_verified(req, timeout=120) as r:
+                obj = json.loads(r.read().decode("utf-8"))
+            if isinstance(obj, dict) and obj.get("error"):
+                code = str(obj["error"].get("code", ""))
+                if code == "maxlag" and attempt + 1 < retries:
+                    delay = min(60.0, 2.0 ** attempt + 1.0)
+                    print(f"Wikidata maxlag; retry in {delay:.1f}s")
+                    time.sleep(delay)
+                    continue
+                raise RuntimeError(f"Wikidata API error: {obj['error']}")
+            return obj
         except urllib.error.HTTPError as e:
             last = e
             if attempt + 1 >= retries or e.code not in {429, 500, 502, 503, 504}:
@@ -119,57 +123,21 @@ def qlever_tsv(query: str, retries=8):
             try:
                 delay = float(retry_after)
             except Exception:
-                delay = min(90.0, 2.0 ** attempt + 1.0)
-            print(f"QLever HTTP {e.code}; retry in {delay:.1f}s")
+                delay = min(60.0, 2.0 ** attempt + 1.0)
+            print(f"Wikidata HTTP {e.code}; retry in {delay:.1f}s")
             time.sleep(delay)
         except urllib.error.URLError as e:
             last = e
             if attempt + 1 >= retries:
                 raise
             delay = min(60.0, 2.0 ** attempt + 1.0)
-            print(f"QLever network error; retry in {delay:.1f}s: {e}")
+            print(f"Wikidata network error; retry in {delay:.1f}s: {e}")
             time.sleep(delay)
-    else:
-        raise RuntimeError(f"QLever failed after retries: {last}")
-
-    rr = list(csv.reader(raw.splitlines(), delimiter="\t"))
-    if not rr:
-        return []
-    headers = [x.lstrip("?").strip() for x in rr[0]]
-    out = []
-    for row in rr[1:]:
-        if not row:
-            continue
-        row += [""] * (len(headers) - len(row))
-        item = {}
-        for i, h in enumerate(headers):
-            v = (row[i] or "").strip()
-            if v.startswith("<") and v.endswith(">"):
-                v = v[1:-1]
-            elif v.startswith('"'):
-                m = re.match(r'^"(.*)"(?:\^\^<[^>]+>|@[A-Za-z-]+)?$', v)
-                if m:
-                    v = m.group(1)
-            item[h] = v
-        out.append(item)
-    return out
+    raise RuntimeError(f"Wikidata API failed after retries: {last}")
 
 def chunks(seq, n):
     for i in range(0, len(seq), n):
         yield seq[i:i+n]
-
-def sparql_string(s):
-    return '"' + s.replace("\\", "\\\\").replace('"', '\\"') + '"'
-
-def parse_date(v):
-    m = re.search(r"([12]\d{3})-(\d{2})-(\d{2})", v or "")
-    return m.group(0) if m else ""
-
-def as_int(v):
-    try:
-        return int(float(str(v)))
-    except Exception:
-        return None
 
 def domain(url):
     try:
@@ -186,6 +154,49 @@ def classify_domain(d):
         return "wiki_nonindependent"
     return "nonlibrary_url"
 
+def valid_qid(v):
+    return bool(re.fullmatch(r"Q\d+", str(v or "").strip()))
+
+def normalize_wikidata_time(value):
+    if not isinstance(value, dict):
+        return "", None
+    raw = str(value.get("time") or "")
+    precision = value.get("precision")
+    m = re.match(r"^[+-]([12]\d{3})-(\d{2})-(\d{2})T", raw)
+    if not m:
+        return "", precision
+    try:
+        d = dt.date(int(m.group(1)), int(m.group(2)), int(m.group(3))).isoformat()
+    except ValueError:
+        return "", precision
+    return d, precision
+
+def snak_values(reference, prop):
+    snaks = (reference or {}).get("snaks", {})
+    vals = []
+    for snak in snaks.get(prop, []) or []:
+        dv = (snak or {}).get("datavalue")
+        if not isinstance(dv, dict):
+            continue
+        vals.append(dv.get("value"))
+    return vals
+
+def reference_urls(reference):
+    out = []
+    for v in snak_values(reference, "P854"):
+        if isinstance(v, str) and v.strip():
+            out.append(v.strip())
+    return sorted(set(out))
+
+def reference_stated_in(reference):
+    out = []
+    for v in snak_values(reference, "P248"):
+        if isinstance(v, dict):
+            qid = str(v.get("id") or "").strip()
+            if valid_qid(qid):
+                out.append(qid)
+    return sorted(set(out))
+
 def cache_path(batch_index):
     return CACHE / f"batch_{batch_index:04d}.json"
 
@@ -196,49 +207,29 @@ def fetch_batch(batch_index, members):
         obj = json.loads(cp.read_text(encoding="utf-8"))
         if obj.get("members", []) == cache_members:
             print(f"batch {batch_index}: cache hit ({len(members)} members)")
-            return obj.get("rows", [])
+            return obj.get("api_response", {})
         raise RuntimeError(f"Cache member mismatch in {cp}; delete that cache file and rerun.")
 
     qids = []
     for r in members:
         qid = (r.get("wikidata_qids") or "").strip()
-        if not re.fullmatch(r"Q\d+", qid):
+        if not valid_qid(qid):
             raise RuntimeError(f"Expected one exact QID for {r['member_slug']}, got {qid!r}")
         qids.append(qid)
-    values = " ".join("wd:" + q for q in qids)
-    query = f"""
-PREFIX wd: <http://www.wikidata.org/entity/>
-PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-PREFIX p: <http://www.wikidata.org/prop/>
-PREFIX psv: <http://www.wikidata.org/prop/statement/value/>
-PREFIX pr: <http://www.wikidata.org/prop/reference/>
-PREFIX prov: <http://www.w3.org/ns/prov#>
-PREFIX wikibase: <http://wikiba.se/ontology#>
-SELECT ?person ?memberId ?dob ?precision ?refNode ?refUrl ?statedIn WHERE {{
-  VALUES ?person {{ {values} }}
-  ?person wdt:P10299 ?memberId ;
-          p:P569 ?dobStatement .
-  ?dobStatement psv:P569 ?dobNode .
-  ?dobNode wikibase:timeValue ?dob ;
-           wikibase:timePrecision ?precision .
-  OPTIONAL {{
-    ?dobStatement prov:wasDerivedFrom ?refNode .
-    OPTIONAL {{ ?refNode pr:P854 ?refUrl . }}
-    OPTIONAL {{ ?refNode pr:P248 ?statedIn . }}
-  }}
-}}
-"""
-    rows = qlever_tsv(query)
+
+    obj = wikidata_entities(qids)
     cp.parent.mkdir(parents=True, exist_ok=True)
-    cp.write_text(json.dumps({"members": cache_members, "rows": rows}, ensure_ascii=False), encoding="utf-8")
-    print(f"batch {batch_index}: fetched {len(rows)} rows for {len(members)} members")
-    return rows
+    cp.write_text(
+        json.dumps({"members": cache_members, "api_response": obj}, ensure_ascii=False),
+        encoding="utf-8",
+    )
+    print(f"batch {batch_index}: fetched {len(qids)} entities")
+    return obj
 
 def main():
     if not IN.exists():
-        raise RuntimeError(
-            f"Missing {IN}. Run python scripts/leopoldina_dob_local_v1.py first."
-        )
+        raise RuntimeError(f"Missing {IN}. Run python scripts/leopoldina_dob_local_v1.py first.")
+
     candidates = read_csv(IN)
     if LIMIT > 0:
         candidates = candidates[:LIMIT]
@@ -247,7 +238,10 @@ def main():
     if LIMIT == 0 and len(candidates) != 2497:
         raise RuntimeError(f"Expected 2497 v1 candidates, got {len(candidates)}")
 
-    required = {"member_slug", "candidate_exact_dob", "wikidata_qids", "display_name", "deceased_marker", "election_year"}
+    required = {
+        "member_slug", "candidate_exact_dob", "wikidata_qids",
+        "display_name", "deceased_marker", "election_year",
+    }
     missing = required - set(candidates[0])
     if missing:
         raise RuntimeError(f"Candidate CSV missing required columns: {sorted(missing)}")
@@ -255,18 +249,35 @@ def main():
     candidate_by_slug = {r["member_slug"]: r for r in candidates}
     if len(candidate_by_slug) != len(candidates):
         raise RuntimeError("Candidate member_slug is not unique")
+    qid_to_slug = {}
+    for r in candidates:
+        qid = (r["wikidata_qids"] or "").strip()
+        if not valid_qid(qid):
+            raise RuntimeError(f"Expected one QID for {r['member_slug']}, got {qid!r}")
+        if qid in qid_to_slug:
+            raise RuntimeError(f"QID {qid} maps to multiple candidate slugs")
+        qid_to_slug[qid] = r["member_slug"]
 
     OUT.mkdir(parents=True, exist_ok=True)
     CACHE.mkdir(parents=True, exist_ok=True)
 
-    all_raw = []
     sorted_candidates = sorted(candidates, key=lambda r: r["member_slug"])
-    sorted_slugs = [r["member_slug"] for r in sorted_candidates]
     total_batches = (len(sorted_candidates) + BATCH_SIZE - 1) // BATCH_SIZE
+    entity_by_qid = {}
+
     for batch_index, batch in enumerate(chunks(sorted_candidates, BATCH_SIZE)):
-        rows = fetch_batch(batch_index, batch)
-        all_raw.extend(rows)
-        print(f"progress: {batch_index+1}/{total_batches} batches; raw rows={len(all_raw)}")
+        obj = fetch_batch(batch_index, batch)
+        entities = obj.get("entities", {})
+        if isinstance(entities, list):
+            entity_items = [(str(x.get("id") or ""), x) for x in entities]
+        elif isinstance(entities, dict):
+            entity_items = list(entities.items())
+        else:
+            raise RuntimeError(f"Unexpected Wikidata entities payload in batch {batch_index}")
+        for qid, entity in entity_items:
+            if qid in qid_to_slug:
+                entity_by_qid[qid] = entity
+        print(f"progress: {batch_index+1}/{total_batches} batches; cached entities={len(entity_by_qid)}")
         if batch_index + 1 < total_batches:
             time.sleep(SLEEP_SECONDS)
 
@@ -274,55 +285,78 @@ def main():
         "reference_nodes": set(),
         "reference_urls": set(),
         "stated_in_qids": set(),
-        "matching_statement_rows": 0,
         "other_day_p569_dates": set(),
+        "matching_claim_count": 0,
     })
     exploded = []
 
-    for x in all_raw:
-        slug = (x.get("memberId") or "").strip()
-        if slug not in candidate_by_slug:
-            continue
-        candidate = candidate_by_slug[slug]["candidate_exact_dob"]
-        d = parse_date(x.get("dob", ""))
-        p = as_int(x.get("precision"))
-        if not d or p is None or p < 11:
-            continue
-        if d != candidate:
-            agg[slug]["other_day_p569_dates"].add(d)
-            continue
+    for qid, slug in qid_to_slug.items():
+        r = candidate_by_slug[slug]
+        entity = entity_by_qid.get(qid, {})
+        claims = ((entity or {}).get("claims") or {}).get("P569", []) or []
+        for claim in claims:
+            mainsnak = (claim or {}).get("mainsnak") or {}
+            dv = mainsnak.get("datavalue") or {}
+            value = dv.get("value")
+            dob, precision = normalize_wikidata_time(value)
+            if not dob or precision is None or int(precision) < 11:
+                continue
+            if dob != r["candidate_exact_dob"]:
+                agg[slug]["other_day_p569_dates"].add(dob)
+                continue
 
-        ref_node = (x.get("refNode") or "").strip()
-        ref_url = (x.get("refUrl") or "").strip()
-        stated = (x.get("statedIn") or "").strip().rsplit("/", 1)[-1]
-        if ref_node:
-            agg[slug]["reference_nodes"].add(ref_node)
-        if ref_url:
-            agg[slug]["reference_urls"].add(ref_url)
-        if stated:
-            agg[slug]["stated_in_qids"].add(stated)
-        agg[slug]["matching_statement_rows"] += 1
+            agg[slug]["matching_claim_count"] += 1
+            references = (claim or {}).get("references") or []
+            for reference in references:
+                ref_hash = str((reference or {}).get("hash") or "").strip()
+                urls = reference_urls(reference)
+                stated = reference_stated_in(reference)
+                if ref_hash:
+                    agg[slug]["reference_nodes"].add(ref_hash)
+                agg[slug]["reference_urls"].update(urls)
+                agg[slug]["stated_in_qids"].update(stated)
 
-        exploded.append({
-            "member_slug": slug,
-            "display_name": candidate_by_slug[slug]["display_name"],
-            "candidate_exact_dob": candidate,
-            "wikidata_qids": candidate_by_slug[slug]["wikidata_qids"],
-            "ref_node": ref_node,
-            "ref_url": ref_url,
-            "ref_domain": domain(ref_url),
-            "ref_domain_class": classify_domain(domain(ref_url)),
-            "stated_in_qid": stated,
-            "accepted_exact_dob": "",
-            "bazi_variables_computed": 0,
-        })
+                if not urls and not stated:
+                    exploded.append({
+                        "member_slug": slug,
+                        "display_name": r["display_name"],
+                        "candidate_exact_dob": r["candidate_exact_dob"],
+                        "wikidata_qids": qid,
+                        "ref_hash": ref_hash,
+                        "ref_url": "",
+                        "ref_domain": "",
+                        "ref_domain_class": "no_url",
+                        "stated_in_qid": "",
+                        "accepted_exact_dob": "",
+                        "bazi_variables_computed": 0,
+                    })
+                else:
+                    if not urls:
+                        urls = [""]
+                    if not stated:
+                        stated = [""]
+                    for u in urls:
+                        for s in stated:
+                            exploded.append({
+                                "member_slug": slug,
+                                "display_name": r["display_name"],
+                                "candidate_exact_dob": r["candidate_exact_dob"],
+                                "wikidata_qids": qid,
+                                "ref_hash": ref_hash,
+                                "ref_url": u,
+                                "ref_domain": domain(u),
+                                "ref_domain_class": classify_domain(domain(u)),
+                                "stated_in_qid": s,
+                                "accepted_exact_dob": "",
+                                "bazi_variables_computed": 0,
+                            })
 
     summary_rows = []
     domain_counts = Counter()
     domain_class_counts = Counter()
 
-    for slug in sorted_slugs:
-        r = candidate_by_slug[slug]
+    for r in sorted_candidates:
+        slug = r["member_slug"]
         a = agg[slug]
         urls = sorted(a["reference_urls"])
         domains = sorted({domain(u) for u in urls if domain(u)})
@@ -339,11 +373,11 @@ def main():
         has_stated = int(bool(a["stated_in_qids"]))
 
         if has_nonlibrary:
-            provenance_queue = "inspect_nonlibrary_reference_url"
+            queue = "inspect_nonlibrary_reference_url"
         elif has_library or has_wiki or has_stated or has_any_ref:
-            provenance_queue = "locator_or_reference_only"
+            queue = "locator_or_reference_only"
         else:
-            provenance_queue = "no_reference_metadata"
+            queue = "no_reference_metadata"
 
         summary_rows.append({
             "member_slug": slug,
@@ -352,6 +386,7 @@ def main():
             "election_year": r["election_year"],
             "wikidata_qids": r["wikidata_qids"],
             "candidate_exact_dob": r["candidate_exact_dob"],
+            "matching_claim_count": a["matching_claim_count"],
             "reference_node_count": len(a["reference_nodes"]),
             "reference_url_count": len(urls),
             "reference_urls": "|".join(urls),
@@ -366,7 +401,7 @@ def main():
             "has_wiki_reference_url": has_wiki,
             "has_stated_in": has_stated,
             "other_day_p569_dates": "|".join(sorted(a["other_day_p569_dates"])),
-            "provenance_queue": provenance_queue,
+            "provenance_queue": queue,
             "final_exact_dob": "",
             "acceptance_status": "not_adjudicated",
             "bazi_variables_computed": 0,
@@ -376,9 +411,9 @@ def main():
     write_csv(OUT / "candidate_reference_summary_v1.csv", summary_rows, fields)
 
     exploded_fields = [
-        "member_slug","display_name","candidate_exact_dob","wikidata_qids",
-        "ref_node","ref_url","ref_domain","ref_domain_class","stated_in_qid",
-        "accepted_exact_dob","bazi_variables_computed"
+        "member_slug", "display_name", "candidate_exact_dob", "wikidata_qids",
+        "ref_hash", "ref_url", "ref_domain", "ref_domain_class", "stated_in_qid",
+        "accepted_exact_dob", "bazi_variables_computed",
     ]
     write_csv(OUT / "reference_inventory_exploded_v1.csv", exploded, exploded_fields)
 
@@ -386,7 +421,11 @@ def main():
         {"domain": d, "candidate_rows": n, "domain_class": classify_domain(d)}
         for d, n in domain_counts.most_common()
     ]
-    write_csv(OUT / "reference_domain_counts_v1.csv", domain_rows, ["domain","candidate_rows","domain_class"])
+    write_csv(
+        OUT / "reference_domain_counts_v1.csv",
+        domain_rows,
+        ["domain", "candidate_rows", "domain_class"],
+    )
 
     queues = defaultdict(list)
     for r in summary_rows:
@@ -396,12 +435,14 @@ def main():
 
     summary = {
         "dataset": "Leopoldina local P569 reference provenance inventory v1",
+        "source_api": "Wikidata MediaWiki API wbgetentities, props=claims",
         "input_candidate_rows": len(candidates),
         "input_candidate_sha256": sha256(IN),
         "batch_size": BATCH_SIZE,
         "batch_count": total_batches,
         "cache_directory": str(CACHE),
-        "raw_query_rows": len(all_raw),
+        "entities_returned": len(entity_by_qid),
+        "candidate_rows_with_matching_p569_claim": sum(int(r["matching_claim_count"] > 0) for r in summary_rows),
         "candidate_rows_with_any_reference_node": sum(int(r["has_any_reference_node"]) for r in summary_rows),
         "candidate_rows_with_any_reference_url": sum(int(r["has_any_reference_url"]) for r in summary_rows),
         "candidate_rows_with_nonlibrary_reference_url": sum(int(r["has_nonlibrary_reference_url"]) for r in summary_rows),
@@ -418,7 +459,10 @@ def main():
         "final_exact_dob_written": 0,
         "bazi_variables_computed": 0,
     }
-    (OUT / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
+    (OUT / "summary.json").write_text(
+        json.dumps(summary, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
     print(json.dumps(summary, ensure_ascii=False, indent=2))
 
 if __name__ == "__main__":
