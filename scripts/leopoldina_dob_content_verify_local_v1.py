@@ -11,6 +11,7 @@ import os
 import re
 import ssl
 import time
+import tempfile
 import unicodedata
 import urllib.error
 import urllib.request
@@ -406,6 +407,22 @@ def main():
         k1 = attempt_key({"member_slug":"x","wikidata_qid":"Q1","candidate_exact_dob":"1900-01-01","stated_in_qid":"Q2","independence_group":"g"},"https://example.org/a")
         k2 = attempt_key({"member_slug":"x","wikidata_qid":"Q1","candidate_exact_dob":"1900-01-01","stated_in_qid":"Q2","independence_group":"g"},"https://example.org/a")
         assert k1 == k2 and len(k1) == 64
+        with tempfile.TemporaryDirectory() as td:
+            td = Path(td)
+            pp = td / "progress.jsonl"
+            mp = td / "meta.json"
+            meta = {"schema_version":1,"input_sha256":"abc","year_min":1835,"year_max":1985}
+            ensure_progress_meta(mp, meta)
+            append_progress(pp, {"_attempt_key":k1,"verification_status":"exact_date_text_match"})
+            loaded = load_progress(pp)
+            assert loaded[k1]["verification_status"] == "exact_date_text_match"
+            ensure_progress_meta(mp, dict(meta))
+            try:
+                ensure_progress_meta(mp, {**meta, "input_sha256":"different"})
+            except RuntimeError:
+                pass
+            else:
+                raise AssertionError("checkpoint metadata mismatch was not rejected")
         print("Leopoldina content verifier self-test OK")
         return
 
