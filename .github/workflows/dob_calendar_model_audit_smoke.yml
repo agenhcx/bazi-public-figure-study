@@ -1,0 +1,30 @@
+name: DOB Calendar Model Audit Smoke
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "scripts/dob_calendar_model_audit_v1.py"
+      - "DOB_CALENDAR_MODEL_AUDIT_PLAN_V1.md"
+      - ".github/workflows/dob_calendar_model_audit_smoke.yml"
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install TLS CA helper
+        run: python -m pip install certifi
+      - name: Calendar conversion self-test
+        run: python scripts/dob_calendar_model_audit_v1.py --self-test
+      - name: Audit 20 table-tennis rows
+        run: python scripts/dob_calendar_model_audit_v1.py --datasets table_tennis --limit 20 --out data/dob_calendar_model_audit_smoke_v1
+      - name: Assert audit-only invariants
+        run: python -c "import json; s=json.load(open('data/dob_calendar_model_audit_smoke_v1/summary.json',encoding='utf-8')); assert s['bazi_variables_computed']==0; assert s['automatic_dob_changes']==0; assert s['audit_rows']==20; print('audit-only invariants OK')"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dob-calendar-model-audit-smoke
+          path: data/dob_calendar_model_audit_smoke_v1
