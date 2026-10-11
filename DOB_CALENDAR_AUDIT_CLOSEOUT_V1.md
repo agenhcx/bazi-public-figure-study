@@ -2,7 +2,9 @@
 
 ## Scope
 
-This closeout freezes the date-quality layer for the primary Professor -> Academy -> Nobel hierarchy study **before any BaZi variable computation or inspection**.
+This closeout freezes the **calendar-model / absolute-date normalization layer** for the primary Professor -> Academy -> Nobel hierarchy study **before any BaZi variable computation or inspection**.
+
+It does **not** declare all cohort-level DOB provenance collection complete. Each cohort still remains subject to its own provenance/final-DOB freeze rules. In particular, a candidate-stage DOB row is not promoted to final merely because its calendar normalization is internally consistent.
 
 Primary hierarchy birth-year support was preregistered as the min/max known birth year of the frozen 658-person Nobel science cohort:
 
@@ -98,4 +100,4 @@ From this point forward:
 4. Any further DOB correction requires a new versioned amendment with source evidence.
 5. Do not retroactively change this v1 closeout after BaZi unblinding; later corrections must be logged as amendments.
 
-**DOB/calendar collection and adjudication are considered closed for the primary hierarchy study v1.**
+**The calendar-model / absolute-date adjudication layer is considered closed for the primary hierarchy study v1. Cohort-level DOB provenance collection must still be completed and frozen before any BaZi unblinding.**
