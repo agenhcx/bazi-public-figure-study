@@ -6,6 +6,7 @@ import datetime as dt
 import hashlib
 import json
 import re
+import ssl
 import time
 import urllib.error
 import urllib.parse
@@ -18,6 +19,38 @@ FREEZE = Path("data/leopoldina_roster_freeze_v1.json")
 OUT = Path("data/leopoldina_dob_local_v1")
 QLEVER = "https://qlever.dev/api/wikidata"
 UA = "bazi-public-figure-study/1.0 (Leopoldina local DOB candidate collection; no BaZi computation)"
+
+try:
+    import certifi
+except ImportError:
+    certifi = None
+
+def verified_tls_contexts():
+    contexts = []
+    if certifi is not None:
+        contexts.append(("certifi", ssl.create_default_context(cafile=certifi.where())))
+    contexts.append(("system", ssl.create_default_context()))
+    return contexts
+
+def urlopen_verified(req, timeout):
+    cert_errors = []
+    for label, context in verified_tls_contexts():
+        try:
+            return urllib.request.urlopen(req, timeout=timeout, context=context)
+        except urllib.error.URLError as e:
+            reason = getattr(e, "reason", None)
+            if isinstance(reason, ssl.SSLCertVerificationError) or "CERTIFICATE_VERIFY_FAILED" in str(e):
+                cert_errors.append(f"{label}: {e}")
+                continue
+            raise
+    detail = " | ".join(cert_errors) if cert_errors else "unknown certificate error"
+    hint = (
+        "TLS certificate verification failed with every trusted CA source. "
+        "Run: python -m pip install --upgrade certifi . "
+        "If it still fails, a VPN/proxy/security product may be presenting an expired HTTPS certificate; "
+        "fix or disable that interception rather than disabling certificate verification."
+    )
+    raise RuntimeError(f"{hint} Details: {detail}")
 
 def read_csv(path: Path):
     with path.open("r", encoding="utf-8-sig", newline="") as f:
@@ -52,7 +85,7 @@ def qlever_tsv(query: str, retries=8):
             },
         )
         try:
-            with urllib.request.urlopen(req, timeout=300) as r:
+            with urlopen_verified(req, timeout=300) as r:
                 raw = r.read().decode("utf-8-sig")
             break
         except (urllib.error.HTTPError, urllib.error.URLError) as e:
