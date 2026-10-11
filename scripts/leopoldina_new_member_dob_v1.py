@@ -116,7 +116,10 @@ def main():
     b=b""
     pages=[]
 
-    if not pdf_url:
+    if YEAR in {2009,2011,2019}:
+        source_status="official_archive_pow_blocked"
+        source_error="Levana redirects GitHub Actions requests for both record and direct PDF URLs to a proof-of-work security challenge; official URL retained as locator only."
+    elif not pdf_url:
         source_status="no_verified_current_pdf_locator"
     else:
         try:
