@@ -1,0 +1,37 @@
+name: T5 theory correction v1
+
+on:
+  push:
+    branches:
+      - t5-theory-correction-v1
+    paths:
+      - 'studies/chess/t5_theory_correction_v1/**'
+      - '.github/workflows/t5_theory_correction_v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip && python -m pip install numpy pandas sxtwl
+      - name: Run correction
+        run: python studies/chess/t5_theory_correction_v1/run_t5_theory_correction_v1.py
+      - name: Show summary
+        if: always()
+        run: cat studies/chess/t5_theory_correction_v1/t5_theory_correction_summary.txt || true
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: t5-theory-correction-v1-results
+          path: |
+            studies/chess/t5_theory_correction_v1/t5_theory_correction_summary.txt
+            studies/chess/t5_theory_correction_v1/t5_theory_correction_results.json
