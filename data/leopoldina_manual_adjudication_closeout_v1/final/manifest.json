@@ -1,0 +1,99 @@
+{
+  "dataset": "leopoldina-manual-adjudication-closeout-v1",
+  "frozen_date": "2026-10-14",
+  "script_version": "leopoldina-manual-adjudication-closeout-v1",
+  "files": {
+    "accepted_candidate_dobs_v1_1.csv": {
+      "sha256": "1b618c393c12e71ac01c23680a5cead92ca32038b99914623b2eaadad3d71822",
+      "bytes": 186895
+    },
+    "accepted_exact_dob_combined_primary_v1_1.csv": {
+      "sha256": "d54d35c808d744b6fa39995ea5cd75724fa0aceea5af72126ebc750fbe51519e",
+      "bytes": 151954
+    },
+    "archive_exceptions_v1.csv": {
+      "sha256": "44adb37054a088ca279eb0bfe4d4c7c02b57fe85fcdfa07deef5ec5ed1e33b58",
+      "bytes": 673
+    },
+    "candidate_dob_correction_overlay_v1_1.csv": {
+      "sha256": "6ee80187e4fc75219d90e3c32d3367e9940a06e13e120956f3dc08271fca9f7d",
+      "bytes": 664
+    },
+    "candidate_final_dob_adjudication_v1_1.csv": {
+      "sha256": "21f1a60744ea7dac52cba781108e61b148ef27db0a2f7794222189aebcd5c937",
+      "bytes": 625246
+    },
+    "conflict_adjudications_v1.csv": {
+      "sha256": "a119f78004922f51bdd0606081abfe5d1129e5f064d32549614ddbe410627c1f",
+      "bytes": 1267
+    },
+    "excluded_invalid_candidate_records_v1.csv": {
+      "sha256": "bc0c2e65afe8eecb3fec36a10f5a8e363952e25e7d09865a1a03a106e62348f8",
+      "bytes": 754
+    },
+    "final_dob_adjudication_rules_v1_1.json": {
+      "sha256": "ac76d7df9460623b5946790930258c1c549cbdb067db02e612a5673616c827ef",
+      "bytes": 2084
+    },
+    "manual_followup_missingness_freeze_v1_1.json": {
+      "sha256": "ee37307ac582ffe3404a42414fd5fdabdd0c4f50b4ce1b638d78f7346f7ce6a8",
+      "bytes": 1206
+    },
+    "manual_source_domain_registry_addendum_v1.csv": {
+      "sha256": "9aa3cdc081165b50b4afdd9b6cc0531b65103e687f9b0687deb940cbd1fe0acc",
+      "bytes": 444
+    },
+    "manual_source_domain_registry_v1_1.csv": {
+      "sha256": "28ceb6c06df0a8909832854a327e8766ad36fa12f45ec16209cbc44b95e9114a",
+      "bytes": 5632
+    },
+    "manual_source_evidence_ledger_v1.csv": {
+      "sha256": "e5ff8fc36ccdf09905105040f61eb7d21c9be579306059488d6996566d0ae809",
+      "bytes": 35076
+    },
+    "manual_source_policy_categories_v1.csv": {
+      "sha256": "628a8f7212af7e42abd20522e21c92042542cf7f236c1ed887bc2649a9222927",
+      "bytes": 2792
+    },
+    "official_master_candidate_mismatch_review_v1_1.csv": {
+      "sha256": "47b505a53dd0ed209e4806a730904a7009a35a0a9b76c932cb374a341a17827b",
+      "bytes": 2342
+    },
+    "official_master_mismatch_adjudications_v1.csv": {
+      "sha256": "e4982a1a97dcca86a0af3c033a6313faec40e00215118711bf7730ded4afa379",
+      "bytes": 4448
+    },
+    "official_only_accepted_dobs_v1_1.csv": {
+      "sha256": "0a879cc2cf0a7fdf2f39ca0fbb4f0d514152f93d339c8c2eeb944fd51d3972aa",
+      "bytes": 21978
+    },
+    "summary.json": {
+      "sha256": "ab64051b8d3fc90d1aa407ce55b43971070f9e12a6fb09004e091629b27c3685",
+      "bytes": 3713
+    },
+    "unresolved_candidate_dobs_v1_1.csv": {
+      "sha256": "2ffd2ea29669e7f4567368dd55806726b949e104677792f79dbb401211bb6084",
+      "bytes": 438239
+    }
+  },
+  "invariants": {
+    "upstream_candidate_rows": 2407,
+    "upstream_accepted_candidates": 721,
+    "upstream_unresolved_candidates": 1686,
+    "upstream_official_only": 52,
+    "upstream_combined": 773,
+    "upstream_mismatch_holds": 5,
+    "decision_rows": 5,
+    "accepted_candidate_rows": 724,
+    "unresolved_candidate_rows": 1681,
+    "excluded_invalid_candidate_rows": 2,
+    "official_only_accepted_rows": 54,
+    "combined_accepted_rows": 778,
+    "remaining_mismatch_holds": 0,
+    "automatic_acceptance_rows": 668,
+    "manual_or_prior_explicit_acceptance_rows": 110,
+    "candidate_date_corrections_total": 3,
+    "new_candidate_date_corrections": 2,
+    "identity_or_crosswalk_exclusions": 2
+  }
+}

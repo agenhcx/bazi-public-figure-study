@@ -1,0 +1,58 @@
+{
+  "dataset": "leopoldina-manual-adjudication-freeze-v1",
+  "frozen_date": "2026-10-14",
+  "primary_birthyear_window": [
+    1835,
+    1985
+  ],
+  "candidate_adjudication_rows": 2407,
+  "candidate_final_evidence_status_counts": {
+    "no_machine_positive": 521,
+    "no_trusted_source_record": 781,
+    "not_attempted": 4,
+    "one_tier_b_positive": 380,
+    "tier_a_positive": 603,
+    "two_plus_tier_b_positive": 118
+  },
+  "accepted_candidate_rows": 721,
+  "unresolved_candidate_rows": 1686,
+  "accepted_candidate_route_counts": {
+    "machine_tier_a": 398,
+    "machine_two_plus_tier_b": 115,
+    "manual_conflict_corrected_overlay": 1,
+    "manual_conflict_resolved": 3,
+    "official_new_member_profile_same_date": 155,
+    "round1_manual_policy_extension": 40,
+    "targeted_manual_followup": 9
+  },
+  "official_same_date_tier_a_overlays": 155,
+  "official_candidate_mismatch_holds": 5,
+  "official_only_accepted_primary_rows": 52,
+  "official_records_outside_primary_window": 1,
+  "accepted_exact_dob_combined_primary_rows": 773,
+  "resolved_manual_conflicts": 4,
+  "approved_candidate_dob_corrections": 1,
+  "archive_exceptions": 1,
+  "archive_exception_states": {
+    "official_live_page_archive_exception_http_403": 1
+  },
+  "manual_followup_closed": 1,
+  "open_ended_person_search_allowed": 0,
+  "prior_frozen_inputs_modified": 0,
+  "final_exact_dob_written_in_new_overlay": 773,
+  "automatic_acceptance_rows": 668,
+  "manual_or_prior_explicit_acceptance_rows": 105,
+  "bazi_variables_computed": 0,
+  "warning": "This is a versioned adjudication overlay. It does not rewrite prior candidate, source-verification, or official-profile input files. The five official/candidate mismatches remain held and are not in the accepted combined table.",
+  "input_sha256": {
+    "base": "a3c167bddf80f9a1adc0943208954774cbb7eed955956aad690fefe86d34fb4e",
+    "machine": "8dc28ceca6665fc788e0aba4737f7c95b25dec7b509fc5ef07dd4f3a06a176e4",
+    "official": "c32a4de602fc7b0499d5e52f6a7e4d5e6e419152b5669f5a23eab0b48d4499cb",
+    "delta": "36404bc8a4f1384b6de001224de8f9e8aa6986d147e93b3bfb29f86a5cc2eb15",
+    "positive_review": "055506750259fb5b9b18c395153faf288a2e287c07252c6ce2efbfca0753adc4",
+    "policy_candidates": "31dacd4c24da96c1452fe16c2f830ddfa164d5b96840329ff47ae11ca73fd586",
+    "round2_review": "0c780c41774cfe8fa9d43e20f0b46e46885c001ac5ed10ce378614c964bd4752",
+    "round3_review": "6c355a012a5beb29ee952a31079079cc52bd7219093c02ea325a9e5e55d4e41f",
+    "round4_review": "cb0a8ffec907251dfb825d0059fee62e9b14b71534a59dac2c9303dafb633222"
+  }
+}

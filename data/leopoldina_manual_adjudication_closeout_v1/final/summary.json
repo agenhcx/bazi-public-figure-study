@@ -1,0 +1,74 @@
+{
+  "dataset": "leopoldina-manual-adjudication-closeout-v1",
+  "frozen_date": "2026-10-14",
+  "primary_birthyear_window": [
+    1835,
+    1985
+  ],
+  "candidate_adjudication_rows": 2407,
+  "candidate_final_evidence_status_counts": {
+    "excluded_invalid_identity_or_crosswalk": 2,
+    "no_machine_positive": 520,
+    "no_trusted_source_record": 778,
+    "not_attempted": 4,
+    "one_tier_b_positive": 379,
+    "tier_a_positive": 606,
+    "two_plus_tier_b_positive": 118
+  },
+  "accepted_candidate_rows": 724,
+  "unresolved_candidate_rows": 1681,
+  "excluded_invalid_candidate_rows": 2,
+  "candidate_partition_complete": 1,
+  "accepted_candidate_route_counts": {
+    "machine_tier_a": 398,
+    "machine_two_plus_tier_b": 115,
+    "manual_conflict_corrected_overlay": 1,
+    "manual_conflict_resolved": 3,
+    "manual_official_mismatch_corrected_overlay": 2,
+    "manual_official_mismatch_resolved": 1,
+    "official_new_member_profile_same_date": 155,
+    "round1_manual_policy_extension": 40,
+    "targeted_manual_followup": 9
+  },
+  "official_only_accepted_primary_rows": 54,
+  "official_only_route_counts": {
+    "official_new_member_profile_only": 52,
+    "official_profile_resolved_crosswalk": 1,
+    "official_profile_resolved_identity_collision": 1
+  },
+  "accepted_exact_dob_combined_primary_rows": 778,
+  "official_candidate_mismatch_rows_resolved": 5,
+  "official_candidate_mismatch_holds_remaining": 0,
+  "candidate_date_corrections_total": 3,
+  "candidate_date_corrections_added_in_closeout": 2,
+  "identity_or_crosswalk_candidate_exclusions": 2,
+  "archive_exceptions": 1,
+  "archive_exception_states": {
+    "official_live_page_archive_exception_http_403": 1
+  },
+  "manual_followup_closed": 1,
+  "open_ended_person_search_allowed": 0,
+  "prior_frozen_inputs_modified": 0,
+  "final_exact_dob_written_in_new_overlay": 778,
+  "automatic_acceptance_rows": 668,
+  "manual_or_prior_explicit_acceptance_rows": 110,
+  "bazi_variables_computed": 0,
+  "warning": "Versioned closeout overlay only. Wrong-entity/crosswalk candidate records are excluded rather than silently reassigned; all superseded dates and source conflicts remain in provenance. No prior frozen file was rewritten.",
+  "input_sha256": {
+    "upstream_summary": "9e6936809091eb1af5758f9f0673bc41adb7d69bbf0553678365add338253077",
+    "upstream_candidates": "8c67a2d75d205576cb69fa92898a3a8cedaf3aed7d7e4c3b9b3fcacfc7cbf8d6",
+    "upstream_official_only": "dbbf381aeafb38a6fe08499e357b52090c4f1722ddec0caa3a08013404483bb0",
+    "upstream_combined": "cf77d32701969d2f6c2403fc59af822af88724e7d0acd47e2bc8a5dd7e65a14e",
+    "upstream_mismatch": "306895fa33ce12fc8c02df204571b50fad9e8dc10275a3e6a44683a3101d558e",
+    "upstream_domain_registry": "24078f5620d86a7954b17dcbb3568979ebe5c891b90062051f08acbcfc7540ba",
+    "upstream_policy_categories": "628a8f7212af7e42abd20522e21c92042542cf7f236c1ed887bc2649a9222927",
+    "upstream_archive_exceptions": "44adb37054a088ca279eb0bfe4d4c7c02b57fe85fcdfa07deef5ec5ed1e33b58",
+    "upstream_conflicts": "a119f78004922f51bdd0606081abfe5d1129e5f064d32549614ddbe410627c1f",
+    "upstream_evidence_ledger": "e5ff8fc36ccdf09905105040f61eb7d21c9be579306059488d6996566d0ae809",
+    "upstream_missingness": "a5d8abbecb84018cb59e5b6c903d19d63d277131ac26b9738b9e60f8fea5e11c",
+    "upstream_rules": "f8d66c8e3a515389b964f32c47247ae27506082045b79d8271568fe43923c466",
+    "official_master": "c32a4de602fc7b0499d5e52f6a7e4d5e6e419152b5669f5a23eab0b48d4499cb",
+    "decisions": "e4982a1a97dcca86a0af3c033a6313faec40e00215118711bf7730ded4afa379",
+    "domain_addendum": "9aa3cdc081165b50b4afdd9b6cc0531b65103e687f9b0687deb940cbd1fe0acc"
+  }
+}

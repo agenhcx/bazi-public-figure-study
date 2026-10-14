@@ -1,0 +1,25 @@
+{
+  "dataset": "leopoldina-final-dob-adjudication-rules-v1-1",
+  "frozen_date": "2026-10-14",
+  "primary_birthyear_min": 1835,
+  "primary_birthyear_max": 1985,
+  "acceptance_rules": [
+    "Accept a candidate exact DOB when at least one verified Tier A independence group supports it and no unresolved trusted exact-date conflict exists.",
+    "Accept a candidate exact DOB when at least two verified, independent Tier B groups support it and no unresolved trusted exact-date conflict exists.",
+    "An official Leopoldina new-member profile exact DOB is Tier A. It may accept a same-slug, same-name, same-date candidate or create an official-only accepted record. A date mismatch is never merged automatically.",
+    "Manually adjudicated conflicts override the generic conflict hold only for the explicitly frozen person and date.",
+    "Copied, locator-only, Wikipedia/DBpedia-derived, or non-independent content never creates an evidence group.",
+    "Language versions and mirrors within one content family count as one independence group."
+  ],
+  "conflict_override_rule": "Any non-adjudicated trusted exact-date conflict blocks acceptance regardless of tier.",
+  "archive_exception_rule": "A manually verified official page blocked by HTTP 403 may be retained as an explicit archive exception; it must never be represented as locally archived raw content.",
+  "prior_inputs_modified": 0,
+  "bazi_variables_computed": 0,
+  "closeout_additions": [
+    "A frozen official/candidate mismatch may be resolved only by an explicit person-level adjudication row.",
+    "A wrong-entity or invalid-crosswalk candidate is excluded from candidate analysis and preserved as provenance; a verified official member record may be accepted without assigning an unverified replacement QID.",
+    "Candidate date corrections are applied only through versioned overlays; the superseded candidate value remains in provenance.",
+    "No remaining official/candidate mismatch is silently merged by member_slug alone."
+  ],
+  "remaining_official_candidate_mismatch_holds": 0
+}
