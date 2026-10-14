@@ -1,0 +1,33 @@
+name: Leopoldina Coverage Missingness Freeze v1
+
+on:
+  pull_request:
+    paths:
+      - "data/leopoldina_roster_freeze_v1/**"
+      - "data/leopoldina_roster_freeze_v1.json"
+      - "data/leopoldina_manual_adjudication_closeout_v1/**"
+      - "scripts/freeze_leopoldina_coverage_missingness_v1.py"
+      - "LEOPOLDINA_COVERAGE_MISSINGNESS_FREEZE_PLAN_V1.md"
+      - ".github/workflows/leopoldina_coverage_missingness_freeze_v1.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  freeze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run offline self-test
+        run: python scripts/freeze_leopoldina_coverage_missingness_v1.py --self-test
+      - name: Build deterministic coverage and missingness freeze
+        run: python scripts/freeze_leopoldina_coverage_missingness_v1.py
+      - name: Upload freeze candidate
+        uses: actions/upload-artifact@v4
+        with:
+          name: leopoldina-coverage-missingness-freeze-v1
+          path: data/leopoldina_coverage_missingness_freeze_v1/

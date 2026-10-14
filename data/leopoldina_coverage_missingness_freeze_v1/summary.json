@@ -1,0 +1,84 @@
+{
+  "dataset": "leopoldina-coverage-missingness-freeze-v1",
+  "builder_revision": "member-qid-provenance-hotfix-v1.1",
+  "frozen_date": "2026-10-14",
+  "source_closeout_tag": "leopoldina-manual-dob-closeout-v1",
+  "primary_birthyear_window": [
+    1835,
+    1985
+  ],
+  "universe_definitions": {
+    "roster_universe": "All 2,888 frozen Leopoldina Class I-III members elected through 2025.",
+    "candidate_universe": "The 2,407 exact-day P569 candidates inside the 1835-1985 birthyear window, before evidence acceptance.",
+    "accepted_primary_universe": "The 778 final exact-DOB records accepted inside the 1835-1985 window after the frozen closeout overlay."
+  },
+  "counts": {
+    "roster_rows": 2888,
+    "candidate_adjudication_rows": 2407,
+    "accepted_candidate_rows": 724,
+    "unresolved_candidate_rows": 1681,
+    "excluded_invalid_candidate_rows": 2,
+    "official_only_accepted_rows": 54,
+    "official_only_rows_overlapping_candidate_universe": 2,
+    "candidate_or_official_primary_evidence_union_members": 2459,
+    "roster_members_without_primary_candidate_or_official_acceptance_record": 429,
+    "accepted_exact_dob_combined_primary_rows": 778,
+    "automatic_acceptance_rows": 668,
+    "manual_or_prior_explicit_acceptance_rows": 110
+  },
+  "rates": {
+    "accepted_primary_inclusion_rate_full_roster": 0.269391,
+    "accepted_primary_inclusion_percent_full_roster": 26.939,
+    "candidate_acceptance_rate_all_candidates": 0.300789,
+    "candidate_acceptance_percent_all_candidates": 30.079,
+    "candidate_acceptance_rate_excluding_invalid_crosswalks": 0.30104,
+    "candidate_acceptance_percent_excluding_invalid_crosswalks": 30.104
+  },
+  "member_missingness_state_counts": {
+    "accepted_candidate_primary": 724,
+    "accepted_official_after_candidate_exclusion": 2,
+    "accepted_official_only_primary": 52,
+    "no_primary_candidate_or_official_acceptance": 429,
+    "unresolved_primary_candidate": 1681
+  },
+  "edge_case_audit_counts": {
+    "accepted_versioned_dob_overlay": 3,
+    "candidate_excluded_official_record_accepted": 2
+  },
+  "qid_provenance_counts": {
+    "accepted_primary_rows_with_verified_wikidata_qid": 724,
+    "accepted_primary_rows_without_verified_wikidata_qid": 54,
+    "excluded_candidate_qids_preserved_only_in_candidate_wikidata_qid": 2,
+    "excluded_candidate_qid_leaks_into_analysis_wikidata_qid": 0
+  },
+  "stratifications_frozen": [
+    "class",
+    "section",
+    "deceased_marker",
+    "election_era: <=1900, 1901-1950, 1951-2000, 2001-2025",
+    "election_decade",
+    "class x election_era",
+    "candidate birth year and birth decade",
+    "accepted birth year and birth decade (descriptive numerator only)",
+    "acceptance route",
+    "candidate final evidence status"
+  ],
+  "interpretation_guardrail": "The 778/2888 quantity is the accepted primary-window inclusion rate, not an all-years DOB availability rate. Members without an accepted 1835-1985 exact DOB include unresolved in-window candidates, people with no exact-day candidate, and potentially people outside the primary birthyear window.",
+  "candidate_missingness_guardrail": "Candidate acceptance rates condition on entering the exact-day P569 candidate universe and therefore do not measure full-roster DOB coverage.",
+  "inferential_tests_run": 0,
+  "missingness_model_fit": 0,
+  "bazi_variables_computed": 0,
+  "prior_frozen_inputs_modified": 0,
+  "open_ended_person_search_allowed": 0,
+  "input_sha256": {
+    "roster_csv": "c17e9297c6c3c7945381034bb48ca4e86582ff9c896fcd69ec3d31add354402a",
+    "roster_metadata": "4adad18dbc583afece1d4a69439a506aee55e968a2b6d169bc674044f38e53af",
+    "closeout_summary": "ab64051b8d3fc90d1aa407ce55b43971070f9e12a6fb09004e091629b27c3685",
+    "closeout_manifest": "f220a9e9f29e508afda1b4aa0de066dbc08c90e2e3a8444c96042e95b445ddcf",
+    "candidate_adjudication": "21f1a60744ea7dac52cba781108e61b148ef27db0a2f7794222189aebcd5c937",
+    "accepted_combined": "d54d35c808d744b6fa39995ea5cd75724fa0aceea5af72126ebc750fbe51519e",
+    "official_only_accepted": "0a879cc2cf0a7fdf2f39ca0fbb4f0d514152f93d339c8c2eeb944fd51d3972aa",
+    "unresolved_candidates": "2ffd2ea29669e7f4567368dd55806726b949e104677792f79dbb401211bb6084",
+    "excluded_candidates": "bc0c2e65afe8eecb3fec36a10f5a8e363952e25e7d09865a1a03a106e62348f8"
+  }
+}

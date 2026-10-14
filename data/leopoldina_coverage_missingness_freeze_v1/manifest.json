@@ -1,0 +1,102 @@
+{
+  "dataset": "leopoldina-coverage-missingness-freeze-v1",
+  "builder_revision": "member-qid-provenance-hotfix-v1.1",
+  "frozen_date": "2026-10-14",
+  "source_closeout_tag": "leopoldina-manual-dob-closeout-v1",
+  "inputs": {
+    "roster_csv": "c17e9297c6c3c7945381034bb48ca4e86582ff9c896fcd69ec3d31add354402a",
+    "roster_metadata": "4adad18dbc583afece1d4a69439a506aee55e968a2b6d169bc674044f38e53af",
+    "closeout_summary": "ab64051b8d3fc90d1aa407ce55b43971070f9e12a6fb09004e091629b27c3685",
+    "closeout_manifest": "f220a9e9f29e508afda1b4aa0de066dbc08c90e2e3a8444c96042e95b445ddcf",
+    "candidate_adjudication": "21f1a60744ea7dac52cba781108e61b148ef27db0a2f7794222189aebcd5c937",
+    "accepted_combined": "d54d35c808d744b6fa39995ea5cd75724fa0aceea5af72126ebc750fbe51519e",
+    "official_only_accepted": "0a879cc2cf0a7fdf2f39ca0fbb4f0d514152f93d339c8c2eeb944fd51d3972aa",
+    "unresolved_candidates": "2ffd2ea29669e7f4567368dd55806726b949e104677792f79dbb401211bb6084",
+    "excluded_candidates": "bc0c2e65afe8eecb3fec36a10f5a8e363952e25e7d09865a1a03a106e62348f8"
+  },
+  "outputs": {
+    "member_level_primary_window_coverage_v1.csv": {
+      "sha256": "9b6e086402982ab79bf1a06a86426a417bd7d8fa2b0841e78ac17e7a4fc83b82",
+      "bytes": 1074077
+    },
+    "coverage_overall_v1.csv": {
+      "sha256": "257a419153f435faa472925c674f1bf65a4e9f17cf99d79b8f8f3bf4eb58f86e",
+      "bytes": 628
+    },
+    "coverage_by_class_v1.csv": {
+      "sha256": "406c54f31cfba415b0e75d1d479f44c7303974931ab6fa58c1e91101abfc2c9b",
+      "bytes": 911
+    },
+    "coverage_by_section_v1.csv": {
+      "sha256": "b217b9f8477e83202ff6c919c66fa19aadb4721ed363bd7a04d0269d40fb3267",
+      "bytes": 3062
+    },
+    "coverage_by_deceased_status_v1.csv": {
+      "sha256": "35ec539d936c5467e3c19c6c2df6a90cdd45dbc6c2d124170e59f9e817724f9a",
+      "bytes": 741
+    },
+    "coverage_by_election_era_v1.csv": {
+      "sha256": "fb69f446d0eb25a1a828ae7afbeca9f0f449d1d5d496de7acbbe94e86618c031",
+      "bytes": 965
+    },
+    "coverage_by_election_decade_v1.csv": {
+      "sha256": "b2f21707c50067e6d02e39155284f716313f3d926b8dae3d96e0490e8d3c4cd0",
+      "bytes": 2424
+    },
+    "coverage_by_class_election_era_v1.csv": {
+      "sha256": "b946cb7992af63e54d2bb8552a1256109a8f1cafc6a5220e3141f27991567710",
+      "bytes": 2838
+    },
+    "candidate_acceptance_by_birth_year_v1.csv": {
+      "sha256": "6205b2bf1f8bb1e63c07b2201e06620698bdab59b94fbcc89961ae23b035dec9",
+      "bytes": 7743
+    },
+    "candidate_acceptance_by_birth_decade_v1.csv": {
+      "sha256": "fe53a22a9dd1ec2a1728b12ede120024be9cb5dab65e9fbb364a57c367ba4a7f",
+      "bytes": 1103
+    },
+    "accepted_primary_by_birth_year_v1.csv": {
+      "sha256": "c8a95cd030dd967b42de047c2f2279fdf48943d76b87a8e8c85d3ecebeff4c49",
+      "bytes": 2784
+    },
+    "accepted_primary_by_birth_decade_v1.csv": {
+      "sha256": "2fc95abf209891b350643734e63263bf2597beb3e27dcb60dc9587f411633faa",
+      "bytes": 487
+    },
+    "accepted_route_counts_v1.csv": {
+      "sha256": "d8b5b60b8df40990045fb8642ba412cc87af932224eb649aa1d1f496f9211b41",
+      "bytes": 691
+    },
+    "candidate_evidence_status_counts_v1.csv": {
+      "sha256": "2bba6014af2f29155e7212e5edd348dda879c5e6ba35dfde1224121941f06b04",
+      "bytes": 381
+    },
+    "edge_case_audit_v1.csv": {
+      "sha256": "d3b63458916c8dff0044b4bad3f35cca616f99cc5a7c38ce360c6cf8b61e9e9b",
+      "bytes": 1183
+    },
+    "summary.json": {
+      "sha256": "9fbd513d909f4cbf94f82c19968d04fcafa6bf11c9cceacc687086db811b1542",
+      "bytes": 4375
+    },
+    "README.md": {
+      "sha256": "466392723b7020012d86e9a8bf8e12ad024d2519787e1bc385dfb7a50de38cab",
+      "bytes": 2411
+    }
+  },
+  "invariants": {
+    "roster_rows": 2888,
+    "candidate_partition_complete": 1,
+    "accepted_combined_decomposition_complete": 1,
+    "member_rows_equal_roster_rows": 1,
+    "accepted_slugs_unique": 1,
+    "candidate_slugs_unique": 1,
+    "all_accepted_inside_primary_window": 1,
+    "accepted_primary_rows_without_verified_wikidata_qid": 54,
+    "excluded_candidate_qids_preserved_only_in_candidate_wikidata_qid": 2,
+    "excluded_candidate_qid_leaks_into_analysis_wikidata_qid": 0,
+    "inferential_tests_run": 0,
+    "bazi_variables_computed": 0,
+    "prior_frozen_inputs_modified": 0
+  }
+}
