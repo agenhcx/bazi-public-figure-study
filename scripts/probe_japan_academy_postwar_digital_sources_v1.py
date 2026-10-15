@@ -141,7 +141,7 @@ def source_priority(source_class: str, title: str, pid: str) -> str:
 def self_test() -> None:
     assert normalize_pid("2934795.0") == "2934795"
     assert normalize_pid("2988196") == "2988196"
-    sample = b'{"label":"x","ranges":[{"label":"第二 役員、会員、客員名簿"}],"sequences":[{"canvases":[1,2]}]}'
+    sample = '{"label":"x","ranges":[{"label":"第二 役員、会員、客員名簿"}],"sequences":[{"canvases":[1,2]}]}'.encode("utf-8")
     m = manifest_metrics(sample)
     assert m["manifest_json_parsed"] == 1
     assert m["manifest_canvas_count"] == 2
