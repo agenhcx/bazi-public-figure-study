@@ -1,0 +1,52 @@
+{
+  "dataset": "japan-academy-broad-section-degree-rule-freeze-v1",
+  "source_snapshot_date": "2026-10-15",
+  "rule_definition": "For formal Japan/Imperial Academy members whose upstream frozen status is 'degree_suggested_section_ii_not_frozen' (single science degree marker only), classify broad Section II membership only. Do not assign exact subsections 4-7. Mixed, blank, or unmapped degree markers are not covered.",
+  "linked_detail_validation": {
+    "evaluable_single_science_or_humanities_markers": 106,
+    "matches": 106,
+    "mismatches": 0,
+    "single_science_markers_official_section2": 65,
+    "humanities_social_markers_official_section1": 41
+  },
+  "independent_imperial_roster_validation": {
+    "degree_rule_rows_confirmed_section2": 86,
+    "degree_rule_rows_confirmed_section1": 0
+  },
+  "combined_single_science_marker_section2_confirmations": 151,
+  "combined_observed_broad_section_mismatches": 0,
+  "postwar_unresolved_input_rows": 239,
+  "accepted_section2_by_frozen_degree_rule_rows": 199,
+  "remaining_other_official_source_required_rows": 40,
+  "accepted_partition_counts": {
+    "1985plus_official_web_or_later_directory_scope": 31,
+    "overlaps_1948_1967_ichiran_scope": 102,
+    "post1967_pre1985_member_directory_scope": 62,
+    "pre1948_gap_or_other_official_source": 4
+  },
+  "remaining_partition_counts": {
+    "1985plus_official_web_or_later_directory_scope": 10,
+    "overlaps_1948_1967_ichiran_scope": 18,
+    "post1967_pre1985_member_directory_scope": 11,
+    "pre1948_gap_or_other_official_source": 1
+  },
+  "guardrails": [
+    "This rule assigns broad Section II only; it never assigns exact subsection 4-7.",
+    "Mixed degree markers are not accepted by this rule.",
+    "Blank or unmapped degree markers remain unresolved.",
+    "The 5 exact-subsection validation mismatches do not invalidate the broad-section rule because all remained official Section II.",
+    "No final roster is frozen in this layer.",
+    "No DOB collection or BaZi computation is started in this layer."
+  ],
+  "final_roster_rows_written": 0,
+  "final_roster_frozen": 0,
+  "dob_collection_started": 0,
+  "bazi_variables_computed": 0,
+  "input_sha256": {
+    "roster_discovery_review_summary": "b0ba69fa62076e705a842796984e7e3533b7d09a241213b4591d68da387763fc",
+    "imperial_accepted_section2": "ea0ffa2498310684da0a9bcfe2a01d9fa744c83b587d32d9d7626173f7af23aa",
+    "imperial_excluded_section1": "2c6ad9fc0f6c4c124e128c8552ab5ad7ce282ed4f3b5334a7739d511cada6787",
+    "postwar_unresolved_partition": "87cb0c1fcd03924dae37ed1b4d11ef99a2a9e32aae65815e8ac01158f50da278"
+  },
+  "next_action": "Collect direct official section evidence only for the remaining 40 rows; retain direct-evidence-only versus expanded-degree-rule cohort routes for later sensitivity analysis."
+}
