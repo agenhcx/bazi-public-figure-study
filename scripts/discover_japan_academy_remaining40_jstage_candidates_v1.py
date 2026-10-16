@@ -213,7 +213,7 @@ class Fetcher:
             return b"", "network_error"
 
 def self_test() -> None:
-    sample = b'''<?xml version="1.0" encoding="UTF-8"?>
+    sample = '''<?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"
  xmlns:prism="http://prismstandard.org/namespaces/basic/2.0/"
  xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">
@@ -228,7 +228,7 @@ def self_test() -> None:
   <prism:startingPage>1</prism:startingPage><prism:endingPage>5</prism:endingPage>
   <pubyear>2007</pubyear><prism:doi>10.2183/tja.test</prism:doi>
  </entry>
-</feed>'''
+</feed>'''.encode("utf-8")
     total, start, status, message, rows = parse_api(sample)
     assert total == 1 and start == 1 and status == "0"
     assert rows[0]["article_title_ja"] == "故都留重人会員追悼の辞"
