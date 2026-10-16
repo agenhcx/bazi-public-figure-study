@@ -1,0 +1,21 @@
+{
+  "dataset": "japan-academy-remaining40-explicit-source-policy-freeze-v1",
+  "source_snapshot_date": "2026-10-16",
+  "input_members": 40,
+  "search_plan_rows": 80,
+  "tier_a_rule": "Japan Academy first-party explicit division/subsection",
+  "tier_b_rule": "institutional explicit Japan Academy division/subsection with clear identity",
+  "tier_c_rule": "discovery/review only; cannot resolve section by itself",
+  "discipline_inference_allowed": 0,
+  "search_snippet_acceptance_allowed": 0,
+  "science_council_division_confusion_allowed": 0,
+  "direct_section_evidence_accepted": 0,
+  "final_roster_rows_written": 0,
+  "final_roster_frozen": 0,
+  "dob_collection_started": 0,
+  "bazi_variables_computed": 0,
+  "input_sha256": {
+    "remaining40_queue": "bd81f0b4d994833fa5d0d5b04e2dcd036f0670b87aecdcfa08ce9df159acda11"
+  },
+  "next_action": "Discover Tier-A/Tier-B candidate URLs, fetch/archive underlying sources, and adjudicate only explicit Japan Academy division/subsection statements."
+}

@@ -1,0 +1,28 @@
+{
+  "dataset": "japan-academy-remaining40-explicit-source-policy-freeze-v1",
+  "source_snapshot_date": "2026-10-16",
+  "source_tiers": [
+    {
+      "tier": "A",
+      "acceptance": "accept_if_explicit",
+      "definition": "Japan Academy first-party HTML/PDF/publication explicitly states Japan Academy Section I/II or subsection for the exact person."
+    },
+    {
+      "tier": "B",
+      "acceptance": "accept_if_explicit_and_identity_clear",
+      "definition": "Government, university, museum/archive, or recognized academic/professional society source explicitly states the exact person's Japan Academy division/subsection; it must clearly refer to Japan Academy, not the Science Council of Japan or another organization."
+    },
+    {
+      "tier": "C",
+      "acceptance": "review_only_not_accept",
+      "definition": "Publisher, newspaper, encyclopedia, personal site, blog, search-result snippet, or other non-institutional source. May discover leads but cannot by itself resolve section."
+    }
+  ],
+  "reject_rules": [
+    "Do not infer Section I/II from degree marker, specialty, faculty affiliation, prize field, publication topic, or co-occurrence with known members.",
+    "Do not treat Science Council of Japan division labels as Japan Academy section evidence.",
+    "Do not accept a search-engine snippet without fetching and preserving the underlying source.",
+    "Do not accept a source that says only Japan Academy member without an explicit Japan Academy division/subsection.",
+    "Do not reinterpret absence from a roster or webpage as Section I, Section II, or non-membership."
+  ]
+}
