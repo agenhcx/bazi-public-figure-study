@@ -25,6 +25,8 @@ DEFAULT_OUT = Path("data/japan_academy_remaining40_official_html_discovery_v1")
 UA = "bazi-public-figure-study/1.0 (Japan Academy remaining-40 official evidence discovery; no DOB/BaZi computation)"
 SLEEP = 0.20
 MAX_PAGES = 1400
+DEFAULT_PROGRESS_EVERY = 20
+ROBOTS_TIMEOUT = 15
 
 SEEDS = [
     f"{BASE}/japanese/sitemap/index.html",
@@ -139,12 +141,23 @@ class Fetcher:
         self.refresh = refresh
         self.records: list[dict[str, Any]] = []
         self.rp = urllib.robotparser.RobotFileParser()
-        self.rp.set_url(f"{BASE}/robots.txt")
+        robots_url = f"{BASE}/robots.txt"
+        self.rp.set_url(robots_url)
+        print(f"[startup] loading robots.txt timeout={ROBOTS_TIMEOUT}s url={robots_url}", flush=True)
         try:
-            self.rp.read()
+            req = urllib.request.Request(robots_url, headers={"User-Agent": UA})
+            with urllib.request.urlopen(req, timeout=ROBOTS_TIMEOUT) as resp:
+                robots_body = resp.read(512 * 1024)
+            self.rp.parse(robots_body.decode("utf-8", errors="replace").splitlines())
             self.robots_state = "loaded"
-        except Exception:
+            print(f"[startup] robots.txt loaded bytes={len(robots_body)}", flush=True)
+        except Exception as e:
             self.robots_state = "unavailable"
+            print(
+                f"[startup] robots.txt unavailable: {type(e).__name__}: {e}; "
+                "continuing with same-origin crawl",
+                flush=True,
+            )
 
     def get(self, url: str) -> tuple[bytes, str, str]:
         key = sha256_bytes(url.encode("utf-8"))
@@ -198,20 +211,69 @@ def self_test() -> None:
     assert canonical_url("../publishing/transactions.html", f"{BASE}/japanese/members/index.html").startswith(BASE)
     print("SELF-TEST OK: official-site parsing, name normalization, section extraction, and URL canonicalization are consistent")
 
-def run(inp: Path, out: Path, refresh: bool = False, max_pages: int = MAX_PAGES) -> None:
+def run(inp: Path, out: Path, refresh: bool = False, max_pages: int = MAX_PAGES, progress_every: int = DEFAULT_PROGRESS_EVERY) -> None:
     if not inp.exists():
         raise FileNotFoundError(inp)
     members = read_csv(inp)
     if len(members) != 40:
         raise RuntimeError(f"Expected 40 members, found {len(members)}")
 
+    if progress_every < 1:
+        raise ValueError("progress_every must be >= 1")
+
+    out.mkdir(parents=True, exist_ok=True)
     targets = {r["member_key"]: r for r in members}
+    print(
+        f"[startup] targets={len(members)} max_pages={max_pages} "
+        f"progress_every={progress_every} output={out}",
+        flush=True,
+    )
     fetcher = Fetcher(out, refresh=refresh)
     q = deque(SEEDS + sorted({r.get("official_index_url","") for r in members if r.get("official_index_url")}))
     seen: set[str] = set()
     page_hits: list[dict[str, Any]] = []
     explicit: list[dict[str, Any]] = []
     pdf_links: list[dict[str, Any]] = []
+    started = time.monotonic()
+    last_reported = 0
+
+    def emit_progress(force: bool = False) -> None:
+        nonlocal last_reported
+        visited = len(seen)
+        if not force and visited - last_reported < progress_every:
+            return
+        states = Counter(x["state"] for x in fetcher.records)
+        elapsed = time.monotonic() - started
+        progress = {
+            "dataset": SCRIPT_VERSION,
+            "run_status": "running",
+            "visited": visited,
+            "max_pages": max_pages,
+            "queued_urls": len(q),
+            "fetch_state_counts": dict(sorted(states.items())),
+            "name_hit_rows": len(page_hits),
+            "members_with_any_name_hit": len({x["member_key"] for x in page_hits}),
+            "explicit_candidate_rows_so_far": len(explicit),
+            "members_with_explicit_candidate_so_far": len({x["member_key"] for x in explicit}),
+            "pdf_links_so_far": len(pdf_links),
+            "elapsed_seconds": round(elapsed, 1),
+        }
+        write_json(out / "progress.json", progress)
+        print(
+            "[progress] "
+            f"visited={visited}/{max_pages} queued={len(q)} "
+            f"fetched={states.get('fetched', 0)} "
+            f"cached={states.get('cached_hash_verified', 0)} "
+            f"robots={states.get('robots_disallowed', 0)} "
+            f"http_error={states.get('http_error', 0)} "
+            f"network_error={states.get('network_error', 0)} "
+            f"name_hits={len(page_hits)} explicit={len(explicit)} "
+            f"pdf_links={len(pdf_links)} elapsed={elapsed:.1f}s",
+            flush=True,
+        )
+        last_reported = visited
+
+    print(f"[start] initial_queue={len(q)} cache_dir={fetcher.cache}", flush=True)
 
     while q and len(seen) < max_pages:
         url = canonical_url(q.popleft(), BASE)
@@ -220,10 +282,12 @@ def run(inp: Path, out: Path, refresh: bool = False, max_pages: int = MAX_PAGES)
         seen.add(url)
         body, ctype, state = fetcher.get(url)
         if not body or "html" not in ctype.lower():
+            emit_progress()
             continue
         try:
             text = body.decode("utf-8", errors="replace")
         except Exception:
+            emit_progress()
             continue
         parser = PageParser()
         parser.feed(text)
@@ -292,6 +356,10 @@ def run(inp: Path, out: Path, refresh: bool = False, max_pages: int = MAX_PAGES)
             if allowed_url(cu) and cu not in seen:
                 q.append(cu)
 
+        emit_progress()
+
+    emit_progress(force=True)
+
     # deduplicate exact evidence rows
     dedup = {}
     for r in explicit:
@@ -323,7 +391,6 @@ def run(inp: Path, out: Path, refresh: bool = False, max_pages: int = MAX_PAGES)
             "bazi_variables_computed": 0,
         })
 
-    out.mkdir(parents=True, exist_ok=True)
     write_csv(out / "official_html_page_hits_v1.csv", page_hits)
     write_csv(out / "machine_positive_explicit_section_review_v1.csv", explicit)
     write_csv(out / "official_pdf_link_queue_v1.csv", pdf_links)
@@ -357,6 +424,20 @@ def run(inp: Path, out: Path, refresh: bool = False, max_pages: int = MAX_PAGES)
         "next_action": "Manually review explicit same-block candidates, then separately fetch only queued official PDFs likely to contain direct section evidence.",
     }
     write_json(out / "summary.json", summary)
+    write_json(out / "progress.json", {
+        "dataset": SCRIPT_VERSION,
+        "run_status": "complete",
+        "visited": len(seen),
+        "max_pages": max_pages,
+        "queued_urls_remaining": len(q),
+        "fetch_state_counts": summary["fetch_state_counts"],
+        "name_hit_rows": len(page_hits),
+        "members_with_any_name_hit": summary["members_with_any_name_hit"],
+        "explicit_candidate_rows": len(explicit),
+        "members_with_explicit_candidate": summary["members_with_explicit_same_block_candidate"],
+        "pdf_link_review_rows": len(pdf_links),
+        "elapsed_seconds": round(time.monotonic() - started, 1),
+    })
     print(json.dumps(summary, ensure_ascii=False, indent=2))
 
 def main() -> int:
@@ -365,12 +446,19 @@ def main() -> int:
     ap.add_argument("--out", default=str(DEFAULT_OUT))
     ap.add_argument("--refresh", action="store_true")
     ap.add_argument("--max-pages", type=int, default=MAX_PAGES)
+    ap.add_argument("--progress-every", type=int, default=DEFAULT_PROGRESS_EVERY)
     ap.add_argument("--self-test", action="store_true")
     args = ap.parse_args()
     if args.self_test:
         self_test()
         return 0
-    run(Path(args.input), Path(args.out), refresh=args.refresh, max_pages=args.max_pages)
+    run(
+        Path(args.input),
+        Path(args.out),
+        refresh=args.refresh,
+        max_pages=args.max_pages,
+        progress_every=args.progress_every,
+    )
     return 0
 
 if __name__ == "__main__":
