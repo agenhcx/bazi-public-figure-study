@@ -6,6 +6,8 @@ import csv
 import hashlib
 import json
 import re
+import shutil
+import subprocess
 import time
 import urllib.error
 import urllib.request
@@ -22,6 +24,7 @@ EXPECTED_ROWS = 3
 UA = "bazi-public-figure-study/1.0 (noncommercial research; Powered by J-STAGE)"
 TIMEOUT = 90
 MAX_BYTES = 80 * 1024 * 1024
+CURL_MAX_TIME = 600
 
 def read_csv(path: Path) -> list[dict[str, str]]:
     with path.open("r", encoding="utf-8-sig", newline="") as f:
@@ -53,12 +56,17 @@ def safe_pdf_name(doi: str) -> str:
     s = re.sub(r"[^A-Za-z0-9._-]+", "_", str(doi or "")).strip("._")
     return (s or "article") + ".pdf"
 
+def pdf_integrity_ok(body: bytes) -> bool:
+    return bool(body.startswith(b"%PDF-") and b"%%EOF" in body[-65536:])
+
 def self_test() -> None:
     assert safe_pdf_name("10.2183/tja1948.36.suppl_1") == "10.2183_tja1948.36.suppl_1.pdf"
     assert safe_pdf_name("10.2183/tja1948.50.129").endswith(".pdf")
-    print("SELF-TEST OK: P1 PDF filename normalization is consistent")
+    assert pdf_integrity_ok(b"%PDF-1.4\n1 0 obj\nendobj\n%%EOF\n")
+    assert not pdf_integrity_ok(b"%PDF-1.4\n1 0 obj\n")
+    print("SELF-TEST OK: P1 PDF filename normalization and integrity checks are consistent")
 
-def fetch_pdf(url: str) -> tuple[bytes, int, str]:
+def fetch_pdf_urllib(url: str) -> tuple[bytes, int, str]:
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/pdf,*/*;q=0.8"})
     with urllib.request.urlopen(req, timeout=TIMEOUT) as resp:
         status = getattr(resp, "status", 200)
@@ -67,6 +75,52 @@ def fetch_pdf(url: str) -> tuple[bytes, int, str]:
     if len(body) > MAX_BYTES:
         raise RuntimeError(f"PDF exceeds MAX_BYTES={MAX_BYTES}")
     return body, status, ctype
+
+def fetch_pdf_curl(url: str, path: Path) -> tuple[bytes, int, str]:
+    curl = shutil.which("curl.exe") or shutil.which("curl")
+    if not curl:
+        raise RuntimeError("curl/curl.exe not found for fallback download")
+
+    tmp = path.with_suffix(path.suffix + ".part")
+    cmd = [
+        curl,
+        "--fail",
+        "--location",
+        "--retry", "5",
+        "--retry-all-errors",
+        "--connect-timeout", "30",
+        "--max-time", str(CURL_MAX_TIME),
+        "--continue-at", "-",
+        "--silent",
+        "--show-error",
+        "--output", str(tmp),
+        url,
+    ]
+    proc = subprocess.run(cmd, capture_output=True, text=True, check=False)
+    if proc.returncode != 0:
+        raise RuntimeError(f"curl failed rc={proc.returncode}: {(proc.stderr or proc.stdout).strip()}")
+
+    body = tmp.read_bytes()
+    if len(body) > MAX_BYTES:
+        raise RuntimeError(f"PDF exceeds MAX_BYTES={MAX_BYTES}")
+    if not pdf_integrity_ok(body):
+        raise RuntimeError(f"curl download incomplete_or_invalid bytes={len(body)}")
+
+    tmp.replace(path)
+    return body, 200, "application/pdf"
+
+def fetch_pdf_with_fallback(url: str, path: Path) -> tuple[bytes, int, str, str, str]:
+    urllib_error = ""
+    try:
+        body, status, ctype = fetch_pdf_urllib(url)
+        if not pdf_integrity_ok(body):
+            raise RuntimeError(f"urllib download incomplete_or_invalid bytes={len(body)}")
+        return body, status, ctype, "urllib", ""
+    except Exception as e:
+        urllib_error = f"{type(e).__name__}: {e}"
+
+    body, status, ctype = fetch_pdf_curl(url, path)
+    return body, status, ctype, "curl_fallback", urllib_error
 
 def run(inp: Path, out: Path, refresh: bool = False) -> None:
     if not inp.exists():
@@ -103,19 +157,31 @@ def run(inp: Path, out: Path, refresh: bool = False) -> None:
         status: int | str = ""
         ctype = ""
         error = ""
+        fetch_transport = ""
+        urllib_primary_error = ""
 
         try:
             if path.exists() and not refresh:
                 body = path.read_bytes()
-                state = "cached_local"
+                if pdf_integrity_ok(body):
+                    state = "cached_local"
+                    fetch_transport = "local_cache"
+                else:
+                    path.unlink()
+                    body, status, ctype, fetch_transport, urllib_primary_error = fetch_pdf_with_fallback(url, path)
+                    state = "fetched_curl_fallback" if fetch_transport == "curl_fallback" else "fetched"
+                    if fetch_transport != "curl_fallback":
+                        path.write_bytes(body)
             else:
-                body, status, ctype = fetch_pdf(url)
-                path.write_bytes(body)
-                state = "fetched"
+                body, status, ctype, fetch_transport, urllib_primary_error = fetch_pdf_with_fallback(url, path)
+                state = "fetched_curl_fallback" if fetch_transport == "curl_fallback" else "fetched"
+                if fetch_transport != "curl_fallback":
+                    path.write_bytes(body)
 
             pdf_magic_ok = int(body.startswith(b"%PDF-"))
-            if not pdf_magic_ok:
-                error = "downloaded_body_missing_pdf_magic"
+            pdf_eof_ok = int(b"%%EOF" in body[-65536:])
+            if not pdf_integrity_ok(body):
+                error = "downloaded_body_failed_pdf_integrity_check"
                 state = "invalid_pdf"
         except urllib.error.HTTPError as e:
             body = b""
@@ -123,11 +189,13 @@ def run(inp: Path, out: Path, refresh: bool = False) -> None:
             status = e.code
             error = f"{e.code} {e.reason}"
             pdf_magic_ok = 0
+            pdf_eof_ok = 0
         except Exception as e:
             body = b""
             state = "error"
             error = f"{type(e).__name__}: {e}"
             pdf_magic_ok = 0
+            pdf_eof_ok = 0
 
         inventory.append({
             "doi": doi,
@@ -142,6 +210,9 @@ def run(inp: Path, out: Path, refresh: bool = False) -> None:
             "bytes": len(body),
             "sha256": sha256_bytes(body) if body else "",
             "pdf_magic_ok": pdf_magic_ok,
+            "pdf_eof_ok": pdf_eof_ok,
+            "fetch_transport": fetch_transport,
+            "urllib_primary_error": urllib_primary_error,
             "error": error,
             "text_extraction_performed": 0,
             "ocr_performed": 0,
@@ -159,7 +230,7 @@ def run(inp: Path, out: Path, refresh: bool = False) -> None:
 
     write_csv(out / "p1_pdf_fetch_inventory_v1.csv", inventory)
 
-    ok = [r for r in inventory if r["pdf_magic_ok"] == 1]
+    ok = [r for r in inventory if r["pdf_magic_ok"] == 1 and r["pdf_eof_ok"] == 1]
     summary = {
         "dataset": SCRIPT_VERSION,
         "source_snapshot_date": SOURCE_SNAPSHOT_DATE,
