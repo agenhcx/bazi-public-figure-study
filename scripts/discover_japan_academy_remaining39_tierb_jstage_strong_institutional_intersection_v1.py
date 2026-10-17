@@ -32,6 +32,9 @@ EXPECTED_MEMBERS = 23
 COUNT = 100
 MAX_PAGES_PER_QUERY = 20
 SLEEP_SECONDS = 0.30
+RETRY_ATTEMPTS = 6
+RETRY_BACKOFF_SECONDS = (2, 4, 8, 16, 24)
+RETRIABLE_HTTP_CODES = {429, 500, 502, 503, 504}
 UA = "bazi-public-figure-study/1.0 (noncommercial research; Powered by J-STAGE)"
 
 # Institution-specific section/subsection phrases only.
@@ -165,48 +168,75 @@ class Fetcher:
                     "http_status": meta.get("http_status", ""),
                     "bytes": len(body),
                     "sha256": meta.get("sha256", ""),
+                    "attempts": 0,
+                    "retry_errors": "",
                     "error": "",
                 })
                 return body, "cached_hash_verified"
 
-        req = urllib.request.Request(url, headers={"User-Agent": UA})
-        try:
-            with urllib.request.urlopen(req, timeout=45) as resp:
-                body = resp.read(8 * 1024 * 1024)
-                status = getattr(resp, "status", 200)
-            meta = {"url": url, "http_status": status, "sha256": sha256_bytes(body)}
-            bp.write_bytes(body)
-            mp.write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-            self.records.append({
-                "url": url,
-                "state": "fetched",
-                "http_status": status,
-                "bytes": len(body),
-                "sha256": meta["sha256"],
-                "error": "",
-            })
-            time.sleep(SLEEP_SECONDS)
-            return body, "fetched"
-        except urllib.error.HTTPError as e:
-            self.records.append({
-                "url": url,
-                "state": "http_error",
-                "http_status": e.code,
-                "bytes": 0,
-                "sha256": "",
-                "error": f"{e.code} {e.reason}",
-            })
-            return b"", "http_error"
-        except Exception as e:
-            self.records.append({
-                "url": url,
-                "state": "network_error",
-                "http_status": "",
-                "bytes": 0,
-                "sha256": "",
-                "error": f"{type(e).__name__}: {e}",
-            })
-            return b"", "network_error"
+        retry_errors: list[str] = []
+        for attempt in range(1, RETRY_ATTEMPTS + 1):
+            req = urllib.request.Request(url, headers={"User-Agent": UA})
+            try:
+                with urllib.request.urlopen(req, timeout=45) as resp:
+                    body = resp.read(8 * 1024 * 1024)
+                    status = getattr(resp, "status", 200)
+                meta = {"url": url, "http_status": status, "sha256": sha256_bytes(body)}
+                bp.write_bytes(body)
+                mp.write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+                state = "fetched" if attempt == 1 else "fetched_after_retry"
+                self.records.append({
+                    "url": url,
+                    "state": state,
+                    "http_status": status,
+                    "bytes": len(body),
+                    "sha256": meta["sha256"],
+                    "attempts": attempt,
+                    "retry_errors": " | ".join(retry_errors),
+                    "error": "",
+                })
+                time.sleep(SLEEP_SECONDS)
+                return body, state
+            except urllib.error.HTTPError as e:
+                msg = f"attempt={attempt}: HTTPError {e.code} {e.reason}"
+                retry_errors.append(msg)
+                if e.code not in RETRIABLE_HTTP_CODES or attempt >= RETRY_ATTEMPTS:
+                    self.records.append({
+                        "url": url,
+                        "state": "http_error",
+                        "http_status": e.code,
+                        "bytes": 0,
+                        "sha256": "",
+                        "attempts": attempt,
+                        "retry_errors": " | ".join(retry_errors),
+                        "error": f"{e.code} {e.reason}",
+                    })
+                    return b"", "http_error"
+            except Exception as e:
+                msg = f"attempt={attempt}: {type(e).__name__}: {e}"
+                retry_errors.append(msg)
+                if attempt >= RETRY_ATTEMPTS:
+                    self.records.append({
+                        "url": url,
+                        "state": "network_error",
+                        "http_status": "",
+                        "bytes": 0,
+                        "sha256": "",
+                        "attempts": attempt,
+                        "retry_errors": " | ".join(retry_errors),
+                        "error": f"{type(e).__name__}: {e}",
+                    })
+                    return b"", "network_error"
+
+            delay = RETRY_BACKOFF_SECONDS[min(attempt - 1, len(RETRY_BACKOFF_SECONDS) - 1)]
+            print(
+                f"[retry] attempt={attempt}/{RETRY_ATTEMPTS} delay={delay}s url={url} "
+                f"last_error={retry_errors[-1]}",
+                flush=True,
+            )
+            time.sleep(delay)
+
+        raise RuntimeError("unreachable retry loop exit")
 
 def self_test() -> None:
     sample = '''<?xml version="1.0" encoding="UTF-8"?>
@@ -228,6 +258,7 @@ def self_test() -> None:
     assert rows[0]["cdjournal"] == "jjom"
     assert "日本学士院第二部部長" in STRONG_TERMS
     assert "日本学士院第六分科" in STRONG_TERMS
+    assert 502 in RETRIABLE_HTTP_CODES and RETRY_ATTEMPTS >= 2
     u = build_url("日本学士院第二部", 1)
     assert "%E6%97%A5%E6%9C%AC%E5%AD%A6%E5%A3%AB%E9%99%A2%E7%AC%AC%E4%BA%8C%E9%83%A8" in u
     print("SELF-TEST OK: Tier-B strong institutional phrases and J-STAGE parser are consistent")
@@ -395,6 +426,9 @@ def run(candidate_path: Path, out: Path, refresh: bool = False) -> None:
         "query_families_completed": total_families,
         "api_pages_fetched_or_cached": len(query_inventory),
         "fetch_state_counts": dict(sorted(Counter(r["state"] for r in fetcher.records).items())),
+        "retrieval_complete": int(not any(r["state"] in {"http_error", "network_error"} for r in fetcher.records)),
+        "failed_query_pages": sum(r["state"] in {"http_error", "network_error"} for r in fetcher.records),
+        "queries_recovered_after_retry": sum(r["state"] == "fetched_after_retry" for r in fetcher.records),
         "unique_candidate_articles_with_strong_institutional_phrase": len(rows_out),
         "unique_target_members_covered": len({
             key
@@ -419,8 +453,10 @@ def run(candidate_path: Path, out: Path, refresh: bool = False) -> None:
             "tierb_jstage_institutional_candidates_v1": sha256_file(candidate_path),
         },
         "next_action": (
-            "If the intersection queue is small, fetch only those article PDFs and inspect exact target-name/section wording. "
-            "Preserve unresolved status unless the source directly binds the target person to Japan Academy Section I/II or a subsection."
+            "First require retrieval_complete=1. If any query pages still fail, rerun without --refresh so successful cache entries are reused "
+            "and only failed requests are retried. Once complete, fetch only the small intersection PDF queue and inspect exact "
+            "target-name/section wording. Preserve unresolved status unless the source directly binds the target person to "
+            "Japan Academy Section I/II or a subsection."
         ),
     }
     write_json(out / "summary.json", summary)
