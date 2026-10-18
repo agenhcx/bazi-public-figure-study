@@ -1,0 +1,34 @@
+name: France Leridon future master file schema-probe synthetic smoke v1
+
+on:
+  push:
+    branches:
+      - france-leridon-data-access-and-local-schema-probe-v1
+    paths:
+      - scripts/france_leridon_original_file_schema_probe_v1.py
+      - .github/workflows/france_leridon_schema_probe_synthetic_smoke_v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  original-format-schema-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Syntax check and synthetic CSV/XLSX source-only schema validation
+        run: python -m py_compile scripts/france_leridon_original_file_schema_probe_v1.py && python scripts/france_leridon_original_file_schema_probe_v1.py --fixture-check
+      - name: Confirm no original master is presumed downloaded
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          s=Path("scripts/france_leridon_original_file_schema_probe_v1.py").read_text(encoding="utf-8")
+          assert "accepted_DOB_count" in s
+          assert "original_3218_person_index_independently_authenticated" in s
+          print("Original Academy master file is not part of the test, and must be separately lawfully obtained.")
+          PY
