@@ -183,6 +183,19 @@ def match_person(docid:str,person:dict,pages:list[str])->dict:
     content=normalize(pages[page])
     sought=normalize(person["person_name_printed_visual_review"])
     exact=bool(re.search(r"(?<![a-z0-9])"+re.escape(sought)+r"(?![a-z0-9])",content))
+    match_status="NAME_ON_SOURCE_PAGE" if exact else "PAGE_TEXT_MISMATCH_REVIEW"
+    # 2020 PDF extracts the person name fused to the next job title:
+    # "... PALANQUE<hyphen>DELABROUILLEDirectrice ...".
+    # The source PDF (p.1) was visually checked. Only this one identity and
+    # specific immediately adjacent occupation are allowed this repair.
+    if not exact and docid=="FR2020" and person["person_name_printed_visual_review"]=="Nathalie Palanque-Delabrouille":
+        fused=re.search(
+            r"(?<![a-z0-9])nathalie palanque delabrouille(?=directrice(?:\\b|\\s))",
+            content,
+        )
+        if fused:
+            exact=True
+            match_status="PDF_FUSED_NAME_JOB_FIRSTPARTY_VISUAL_QA"
     return {
         "source_document_id":docid,
         "person":person["person_name_printed_visual_review"],
@@ -191,7 +204,7 @@ def match_person(docid:str,person:dict,pages:list[str])->dict:
         "election_exact_day_verified":0,
         "science_section_in_source":person["science_section_in_source"],
         "source_page_zero_based":page,
-        "match_status":"NAME_ON_SOURCE_PAGE" if exact else "PAGE_TEXT_MISMATCH_REVIEW",
+        "match_status":match_status,
         "name_matched":int(exact),
         "source_DOB_precision":"absent_in_election_pdf",
         "source_DOB_claim":"",
@@ -303,6 +316,7 @@ def run(mode:str,sources:list[dict],people:list[dict],out:Path,limit:int,
         "person_name_records_checked":len(outrows),
         "person_names_verified_from_firstparty":sum(x["name_matched"] for x in outrows),
         "person_names_unmatched":len(unmatched),
+        "unmatched_person_identity_leads":[{"source":x["source_document_id"],"person":x["person"],"page":x["source_page_zero_based"]} for x in unmatched],
         "source_PDF_birthdays_found":0,
         "first_party_elected_member_candidate_rows":sum(x["name_matched"] for x in outrows),
         "foreign_2021_associate_negative_control_excluded":True,
