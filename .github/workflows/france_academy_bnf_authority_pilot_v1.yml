@@ -23,17 +23,3 @@ jobs:
         run: python scripts/france_academy_bnf_authority_pilot_v1.py --fixture-check
       - name: Dry-run frozen 17 source-reference subset
         run: python scripts/france_academy_bnf_authority_pilot_v1.py --dry-run --limit 5
-      - name: Temporary bounded 17-person BnF authority source pilot
-        if: matrix.py == '3.10'
-        run: |
-          python scripts/france_academy_bnf_authority_pilot_v1.py --limit 17 --timeout 18 --out local_runs/bnf_one_person_web_pilot
-          python - <<'PY'
-          import json,csv
-          p='local_runs/bnf_one_person_web_pilot/'
-          j=json.load(open(p+'summary.json',encoding='utf8'))
-          a=list(csv.DictReader(open(p+'person_source_audit_v1.csv',encoding='utf-8-sig')))
-          b=list(csv.DictReader(open(p+'bnf_authority_source_leads_v1.csv',encoding='utf-8-sig')))
-          print('BNF_PUBLIC_PILOT', {'outcomes':j['source_outcome_counts'],'observed_records':len(b),'date_comparisons':j['date_comparisons'],'source_independence_warning':j['sources_may_not_be_independent']})
-          print('BNF_PERSON_STATUS',[{'id':x.get('id'), 'status':x.get('status'),'error':x.get('error','')} for x in a])
-          print('BNF_17_DATE_COMPARISONS',[{'id':x.get('cths_person_id'),'bnf_dob':x.get('bnf_date_of_birth_claim'),'cths_dob':x.get('cths_dob_claim'),'comparison':x.get('dob_comparison'),'ref':x.get('bnf_catalogue_url'),'from_cths':x.get('bnf_source_cites_cths'),'from_matchid':x.get('bnf_source_cites_matchid')} for x in b])
-          PY
