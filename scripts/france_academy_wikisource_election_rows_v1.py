@@ -13,7 +13,7 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 from france_academy_wikisource_index_preflight_v1 import read_one,build_urls,TRIAL
 
-VERSION="france-academy-wikisource-original-journal-index-election-source-v1_1"
+VERSION="france-academy-wikisource-original-journal-index-election-source-v1_2"
 CTHS="data/france_academy_cths_profile_dob_harvest_v1/cths_dob_claims_all_targets_candidate_only_v1.csv"
 OUT="local_runs/france_academy_wikisource_election_index_v1"
 FIELDS=["original_journal_issuer","transcription_site","year","original_volume","printed_election_page","page_reconstructed_from_continuation_row",
@@ -58,6 +58,11 @@ def role_of(line):
 def person_of(line):
     # One named person elected; other people after "en remplacement de" are not elected.
     m=re.search(r"\bM\.\s+(.{2,125}?)\s+est\s+[ée]lu(?:e)?\b",line,re.I)
+    if not m:
+        # Historical volumes also explicitly elect foreign associates as
+        # "Sir Ernest Rutherford est élu Associé étranger" (Tome 185, p1424).
+        # Do NOT drop this person because the M. honorific is absent.
+        m=re.search(r"\b(?:Sir|Lady|Lord|Mme|Mlle)\s+(.{2,125}?)\s+est\s+[ée]lu(?:e)?\b",line,re.I)
     if not m:return ""
     name=re.sub(r"\s+"," ",m.group(1)).strip(" ;,-.")
     if not name or len(name)>110 or " et " in name.lower():return ""
@@ -137,6 +142,7 @@ def smoke():
          "FULL_SECTION_MEMBER","CORRESPONDENT","FULL_NONRESIDENT_MEMBER","OFFICE_ELECTION_NOT_NEW_MEMBER"]
     assert [x["printed_election_page"] for x in found]==["303","551","1366","1400"]
     assert found[0]["transcribed_elected_person_name"]=="Camille Matignon"
+    assert person_of("— Sir Ernest Rutherford est élu Associé étranger en remplacement de Walcott")=="Ernest Rutherford"
     assert found[0]["transcribed_science_section"]=="chimie"
     assert found[1]["transcribed_elected_person_name"]=="Léon Fredericq"
     assert norm("ÉMILE Picard")=="emile picard"
