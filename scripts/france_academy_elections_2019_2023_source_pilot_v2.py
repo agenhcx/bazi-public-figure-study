@@ -184,21 +184,17 @@ def match_person(docid:str,person:dict,pages:list[str])->dict:
     sought=normalize(person["person_name_printed_visual_review"])
     exact=bool(re.search(r"(?<![a-z0-9])"+re.escape(sought)+r"(?![a-z0-9])",content))
     match_status="NAME_ON_SOURCE_PAGE" if exact else "PAGE_TEXT_MISMATCH_REVIEW"
+    # The 2020 press PDF is typeset with a two-column name/job table.
+    # Sorted text interleaves job text between Nathalie's two surname lines:
+    # 'cosmologie experimentale nathalie palanque directrice de recherche ...
+    #    lois delabrouille fondamentales ...'
+    # This one exact person+section and bounded interleaving is visual-QA only;
+    # do not relax matching for any other name.
     if not exact and docid=="FR2020" and person["person_name_printed_visual_review"]=="Nathalie Palanque-Delabrouille":
-        idx=content.find("palanque")
-        print("FR2020 first-party broken PDF text-layer excerpt:",repr(content[max(0,idx-75):idx+220]) if idx>=0 else "Palanque not found",flush=True)
-    # 2020 PDF extracts the person name fused to the next job title:
-    # "... PALANQUE<hyphen>DELABROUILLEDirectrice ...".
-    # The source PDF (p.1) was visually checked. Only this one identity and
-    # specific immediately adjacent occupation are allowed this repair.
-    if not exact and docid=="FR2020" and person["person_name_printed_visual_review"]=="Nathalie Palanque-Delabrouille":
-        fused=re.search(
-            r"(?<![a-z0-9])nathalie palanque delabrouille(?=directrice(?:\b|\s))",
-            content,
-        )
-        if fused:
+        pattern=r"\bcosmologie experimentale\b.{0,60}\bnathalie palanque\b.{0,120}\bdelabrouille\b"
+        if re.search(pattern,content):
             exact=True
-            match_status="PDF_FUSED_NAME_JOB_FIRSTPARTY_VISUAL_QA"
+            match_status="PDF_INTERLEAVED_TWO_COLUMN_NAME_VISUAL_QA"
     return {
         "source_document_id":docid,
         "person":person["person_name_printed_visual_review"],
