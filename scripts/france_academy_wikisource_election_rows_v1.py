@@ -13,10 +13,10 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 from france_academy_wikisource_index_preflight_v1 import read_one,build_urls,TRIAL
 
-VERSION="france-academy-wikisource-original-journal-index-election-source-v1"
+VERSION="france-academy-wikisource-original-journal-index-election-source-v1_1"
 CTHS="data/france_academy_cths_profile_dob_harvest_v1/cths_dob_claims_all_targets_candidate_only_v1.csv"
 OUT="local_runs/france_academy_wikisource_election_index_v1"
-FIELDS=["original_journal_issuer","transcription_site","year","original_volume","printed_election_page",
+FIELDS=["original_journal_issuer","transcription_site","year","original_volume","printed_election_page","page_reconstructed_from_continuation_row",
         "transcription_url","source_html_sha256","transcribed_elected_person_name",
         "transcribed_election_type","transcribed_science_section","event_evidence_class",
         "cths_562_exact_name_candidate_id","cths_562_name_match_status",
@@ -63,9 +63,15 @@ def person_of(line):
     if not name or len(name)>110 or " et " in name.lower():return ""
     return name
 def section_of(line):
-    m=re.search(r"(?:pour\s+la\s+section|de\s+la\s+section|dans\s+la\s+section|section)\s+d[eu']?\s*([A-Za-zÀ-ÿ\s\-]{3,100})",line,re.I)
-    if m:return re.split(r"\s*(?:,|;|en remplacement|décédé|d[eé]c[eé]d[eé]e)",m.group(1),maxsplit=1,flags=re.I)[0].strip()[:80]
-    if "division des Applications" in line:return "Applications de la science à l'industrie"
+    # Use the elected person's subject section, not a replacement person's role.
+    # Preserve original French labels, but do not guess a section when absent.
+    elected=re.split(r"\ben remplacement\b",line,maxsplit=1,flags=re.I)[0]
+    m=re.search(r"\bsection\s+(?:de\s+|d['’])(.+?)(?:[,;.]|$)",elected,re.I)
+    if m:
+        section=re.sub(r"\s+"," ",m.group(1)).strip(" -")
+        return section[:100]
+    m=re.search(r"\bdivision\s+des\s+(.+?)(?:[,;.]|$)",elected,re.I)
+    if m:return "division des "+m.group(1).strip()[:95]
     return ""
 def extract_from_html(raw,year,vol):
     soup=BeautifulSoup(raw,"html.parser")
@@ -87,6 +93,18 @@ def extract_from_html(raw,year,vol):
                 current="ELECTIONS"
             else:current="OTHER"
         if current!="ELECTIONS":continue
+        # Split across adjacent index rows: e.g. 1926 Fredericq
+        # ends in "en remplacement de" and next line lists Bergonié, page 551.
+        if actual and not actual[-1]["printed_election_page"] and not headings:
+            trailing_page=" ".join(cells[1].get_text(" ",strip=True).split()) if len(cells)>1 else ""
+            if not trailing_page and re.fullmatch(r"\d{1,5}",line):
+                trailing_page=line
+            if (re.fullmatch(r"\d{1,5}",trailing_page) and
+                not re.search(r"\b(est|a été|sont)\s+élu",line,re.I) and
+                (line.startswith(("M.","MM.","Mme","Mlle")) or re.fullmatch(r"\d{1,5}",line))):
+                actual[-1]["printed_election_page"]=trailing_page
+                actual[-1]["page_reconstructed_from_continuation_row"]="1"
+                continue
         if not re.search(r"\b(est|a été|sont)\s+élu",line,re.I):continue
         category=role_of(line)
         if not category:continue
@@ -95,6 +113,7 @@ def extract_from_html(raw,year,vol):
         elected=person_of(line)
         actual.append({"year":str(year),"original_volume":str(vol),
                        "printed_election_page":page,
+                       "page_reconstructed_from_continuation_row":"0",
                        "transcribed_elected_person_name":elected,
                        "transcribed_election_type":category,
                        "transcribed_science_section":section_of(line),
@@ -118,6 +137,7 @@ def smoke():
          "FULL_SECTION_MEMBER","CORRESPONDENT","FULL_NONRESIDENT_MEMBER","OFFICE_ELECTION_NOT_NEW_MEMBER"]
     assert [x["printed_election_page"] for x in found]==["303","551","1366","1400"]
     assert found[0]["transcribed_elected_person_name"]=="Camille Matignon"
+    assert found[0]["transcribed_science_section"]=="chimie"
     assert found[1]["transcribed_elected_person_name"]=="Léon Fredericq"
     assert norm("ÉMILE Picard")=="emile picard"
     assert found[0]["frozen_french_academy_full_membership_accepted"]=="0"
@@ -158,6 +178,7 @@ def main():
                "headings_present":len(heads),"elections_section_headings":[h for h in heads if h.startswith("election")][:12],
                "election_rows":len(found),"event_types":dict(stat),
                "printed_pages_missing":sum(not x["printed_election_page"] for x in found),
+               "printed_pages_recovered_from_continuation":sum(x["page_reconstructed_from_continuation_row"]=="1" for x in found),
                "rows_unparsed_person":sum(not x["transcribed_elected_person_name"] for x in found),
                "source_is_wikisource_transcription":True,"original_event_pages_opened":0}
         source_audit.append(audit)
