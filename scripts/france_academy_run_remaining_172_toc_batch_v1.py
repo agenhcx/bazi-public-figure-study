@@ -93,5 +93,17 @@ def main():
             "accepted_birthdates":0,"bazi_variables_computed":0}
     (output/"source_only_shard_checkpoint_v1.json").write_text(
         json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    # Re-read cached HTML with exact SHA256 verification, no additional requests.
+    # Preserve per-person source event evidence alongside volume-level counts.
+    from france_academy_offline_source_toc_event_ledger_v1 import main as person_ledger_main
+    saved_argv=sys.argv[:]
+    try:
+        sys.argv=["person-event-ledger","--source-dir",str(output),"--out",str(output)]
+        person_ledger_main()
+    finally:
+        sys.argv=saved_argv
+    event_summary=json.loads((output/"person_event_ledger_summary_v1.json").read_text(encoding="utf-8"))
+    if event_summary["parsed_event_rows"]!=record["sample_election_event_candidates"]:
+        raise RuntimeError("Person event ledger count differs from source volume summary")
     print("SHARD",json.dumps(report,ensure_ascii=False))
 if __name__=="__main__":main()
