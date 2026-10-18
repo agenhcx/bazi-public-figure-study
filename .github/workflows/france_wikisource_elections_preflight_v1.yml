@@ -9,7 +9,7 @@ on:
       - '.github/workflows/france_wikisource_elections_preflight_v1.yml'
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 jobs:
   five-volume-election-records:
     runs-on: ubuntu-latest
@@ -24,10 +24,19 @@ jobs:
       - name: Compile and run source-only fixtures
         run: python -m py_compile scripts/france_academy_wikisource_election_rows_v1.py && python scripts/france_academy_wikisource_election_rows_v1.py --fixture-check
       - name: Extract candidate member-class and election-page evidence from 5 historical volumes
-        run: python scripts/france_academy_wikisource_election_rows_v1.py --limit 5
+        run: python scripts/france_academy_wikisource_election_rows_v1.py --limit 5 --out data/france_academy_wikisource_election_pilot_v1
       - name: Preserve source-only diagnostics and event candidates
         uses: actions/upload-artifact@v4
         with:
           name: france-academy-five-comptes-rendus-index-events-v1
-          path: local_runs/france_academy_wikisource_election_index_v1/
+          path: data/france_academy_wikisource_election_pilot_v1/
           retention-days: 40
+      - name: Checkpoint factual index-event metadata onto this source branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/france_academy_wikisource_election_pilot_v1/
+          if ! git diff --cached --quiet; then
+            git commit -m "Checkpoint five historical Academy election-index transcripts (candidate events and provenance only)"
+            git push origin HEAD:france-wikisource-election-index-pilot-v1-20261018
+          fi
