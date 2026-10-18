@@ -16,7 +16,7 @@ from france_academy_wikisource_legacy_election_headings_v1 import parse_html
 from france_academy_wikisource_election_rows_v1 import identity_key
 from france_academy_vote_decree_index_link_v1 import parse_decrees as old_parse_decrees
 
-VERSION="france-academy-cross-volume-vote-decree-index-v2"
+VERSION="france-academy-cross-volume-vote-decree-index-v2_1"
 YEAR_PAIRS=[(1926,182,183),(1934,198,199)]
 OUT=Path("data/france_academy_cross_volume_vote_decree_pilot_v2")
 MEMBER_ROLES={"FULL_SECTION_MEMBER","FULL_ACADEMICIAN_LIBRE","FULL_NONRESIDENT_MEMBER"}
@@ -64,7 +64,13 @@ def parse_all_decrees(raw):
     original=old_parse_decrees(raw)
     supplemental=approvals_also_lowercase(raw)
     merged={}
-    for row in original+supplemental:
+    for raw_row in original+supplemental:
+        if not raw_row["name"]:continue
+        row=dict(raw_row)
+        # Secondary generic decoder may keep a role suffix in the name:
+        # "Pierre Weiss parmi les membres non résidants" is NOT a second person.
+        row["name"]=re.split(r"\s+(?:parmi\s+les\s+membres|dans\s+la\s+section|dans\s+la\s+division|comme\s+membre)\b",
+                             row["name"],maxsplit=1,flags=re.I)[0].strip()
         if not row["name"]:continue
         k=(identity_key(row["name"]),row["page"])
         if k not in merged:merged[k]=row
@@ -146,6 +152,13 @@ def fixture():
        " non résidants</td><td>5</td></tr></table>").encode("utf-8")
     parsed=approvals_also_lowercase(h)
     assert [d["name"] for d in parsed]==["Paul Langevin","Pierre Weiss"],parsed
+    # Verify old decoder and new inline decoder are de-duplicated by
+    # original person + notice page; do not double count a single decree.
+    singular=("<table><tr><td><span class=\"sc\">Décret</span>. — "
+              "Approuvant l’élection de M. Pierre Weiss parmi les membres non résidants, "
+              "en remplacement de M. G. Gouy</td><td>5</td></tr></table>").encode("utf-8")
+    assert len(parse_all_decrees(singular))==1
+    assert parse_all_decrees(singular)[0]["name"]=="Pierre Weiss"
     assert [d["page"] for d in parsed]==["5","5"]
     a=identity_source(182,1926,[vote("Pierre Weiss","FULL_NONRESIDENT_MEMBER",1511)],[])
     b=identity_source(183,1926,[],[approval("Pierre Weiss",5)])
