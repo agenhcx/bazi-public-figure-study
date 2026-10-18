@@ -1,0 +1,58 @@
+name: France Academy selected official election source union smoke v1
+
+on:
+  push:
+    branches:
+      - france-academy-election-2019-2023-pilot-v2
+    paths:
+      - scripts/france_academy_firstparty_election_union_v1.py
+      - .github/workflows/france_academy_firstparty_election_union_v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  offline-union:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check compile and source-verified selected election union, no network
+        run: python -m py_compile scripts/france_academy_firstparty_election_union_v1.py && python scripts/france_academy_firstparty_election_union_v1.py
+      - name: Assert 160 sources and zero premature study DOBs
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("data/france_academy_firstparty_elected_union_v1/summary.json")
+          d=json.loads(p.read_text(encoding="utf-8"))
+          assert d["selected_firstparty_election_records"]==160
+          assert d["govt_approval_independently_verified"]==36
+          assert d["selected_official_document_DOB_claim_precision"].get("exact_day")==21
+          assert d["selected_official_document_DOB_claim_precision"].get("year_only")==10
+          assert d["bazi_variables_computed"]==0
+          assert not d["final_official_institutional_historical_roster_frozen"]
+          PY
+      - name: Archive compact selected official cohort union
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: france-academy-firstparty-selected-cohort-union-v1
+          path: data/france_academy_firstparty_elected_union_v1/
+          if-no-files-found: warn
+          retention-days: 30
+      - name: Checkpoint source-level union and collisions without original PDFs
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/france_academy_firstparty_elected_union_v1/
+          if ! git diff --cached --quiet; then
+            git commit -m "Checkpoint 160 first-party election source identities and precision audit, without cohort unblinding"
+            git pull --rebase origin france-academy-election-2019-2023-pilot-v2
+            git push origin HEAD:france-academy-election-2019-2023-pilot-v2
+          fi
