@@ -27,7 +27,8 @@ jobs:
       - name: Temporary inspect early 1835 election HTML markup
         run: |
           python - <<'PY'
-          import re
+          import re,sys
+          sys.path.insert(0,'scripts')
           from bs4 import BeautifulSoup
           from france_academy_wikisource_index_preflight_v1 import build_urls,read_one
           _,_,b=read_one(build_urls(1,1835)['wiki'],900000)
