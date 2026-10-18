@@ -26,31 +26,6 @@ jobs:
         run: python -m py_compile scripts/france_academy_wikisource_legacy_election_headings_v1.py && python scripts/france_academy_wikisource_legacy_election_headings_v1.py --fixture-check
       - name: Probe limited 1835/1856 volumes 1 42 43
         run: python scripts/france_academy_wikisource_legacy_election_headings_v1.py --limit 3 --delay 1.5 --out data/france_academy_1856_nomination_grammar_pilot_v1
-      - name: Temporary inspect 1856 Tome 42 historical nomination DOM
-        run: |
-          python - <<'PY'
-          import re,sys
-          sys.path.insert(0,'scripts')
-          from bs4 import BeautifulSoup
-          from france_academy_wikisource_index_preflight_v1 import read_one,build_urls
-          from france_academy_wikisource_legacy_election_headings_v1 import parse_html
-          _,_,data=read_one(build_urls(42,1856)['wiki'],950000)
-          soup=BeautifulSoup(data,'html.parser')
-          print('VOL42_DOM_COUNTS', {'bytes':len(data),'trs':len(soup.find_all('tr')),'tableItems':len(soup.select('div.tableItem'))})
-          for needle in ('NOMINATIONS','Nominations','Jobert','Bertrand','Guyon'):
-              matches=soup.find_all(string=re.compile(re.escape(needle),re.I))
-              print('VOL42_MATCH',needle,'count',len(matches))
-              for node in matches[:3]:
-                  ancestor=node.parent
-                  chain=[]
-                  for i in range(4):
-                      if ancestor is None:break
-                      chain.append({'tag':ancestor.name,'class':ancestor.get('class'),'text':ancestor.get_text(' ',strip=True)[:235]})
-                      ancestor=ancestor.parent
-                  print('VOL42_NODE',needle,chain)
-          ev,heads=parse_html(data,42,1856)
-          print('VOL42_PARSE',len(ev),heads[:10])
-          PY
       - name: Assert real Hermite and W Hooker with no accepted members
         run: |
           python - <<'PY'
@@ -64,19 +39,57 @@ jobs:
           assert any(r['elected_name_candidate']=='W. Hooker' and r['election_role_candidate']=='CORRESPONDENT' and r['original_printed_volume_page']=='1143' for r in target)
           assert j['accepted_french_full_members']==0 and j['accepted_study_birthdates']==0 and j['bazi_variables_computed']==0
           PY
-      - name: Preserve nominated member candidate source metadata
+      - name: Verify 1856 imperial approval-index decoder (no network)
+        run: python -m py_compile scripts/france_academy_1856_imperial_decree_index_v1.py && python scripts/france_academy_1856_imperial_decree_index_v1.py --fixture-check
+      - name: Source query 1856 imperial decree records for volumes 42 and 43
+        run: python scripts/france_academy_1856_imperial_decree_index_v1.py --limit 2 --delay 1.5
+      - name: Assert exact name-linked and unresolved abbreviated approvals remain separate
+        run: |
+          python - <<'PY'
+          import json,csv
+          p='data/france_academy_1856_imperial_decree_index_v1/'
+          x=json.load(open(p+'summary.json',encoding='utf8'))
+          with open(p+'imperial_1856_appointment_decree_chain_candidates_v1.csv',encoding='utf-8-sig',newline='') as f: r=list(csv.DictReader(f))
+          print('IMPERIAL_1856',{'nominees':x['appointment_records'],'decrees':x['decree_index_name_claims'],'exact':x['exact_name_links'],'alias_review':x['unmatched_decree_name_forms']})
+          assert x['appointment_records']==9
+          assert x['decree_index_name_claims']==4
+          assert x['exact_name_links']>=2
+          assert any(y['appointment_name_original_index']=='Hermite' and y['decree_original_page']=='169' and y['appointment_original_page']=='85' for y in r)
+          assert x['approval_decree_original_pages_opened']==0 and x['accepted_member_persons']==0
+          assert x['accepted_birthdates']==0 and x['bazi_variables_computed']==0
+          PY
+      - name: Validate frozen 172-volume plan and dry-run shard zero (no network)
+        run: python scripts/france_academy_run_remaining_172_toc_batch_v1.py --fixture-check && python scripts/france_academy_run_remaining_172_toc_batch_v1.py --shard 0
+      - name: Query first 16 never-probed journal TOCs as pre-frozen shard zero
+        run: python scripts/france_academy_run_remaining_172_toc_batch_v1.py --shard 0 --run --delay 1.5 --out-root data/france_academy_remaining_172_toc_batch_v1
+      - name: Assert 16 targets unchanged and source-only classifications
+        run: |
+          python - <<'PY'
+          import json
+          p='data/france_academy_remaining_172_toc_batch_v1/shard_00/'
+          r=json.load(open(p+'source_only_shard_checkpoint_v1.json',encoding='utf8'))
+          print('SHARD_ZERO',r)
+          assert r['shard']==0 and len(r['volumes'])==16
+          assert r['original_event_pages_inspected']==0 and r['accepted_memberships']==0 and r['accepted_birthdates']==0
+          assert r['bazi_variables_computed']==0
+          PY
+
+      - name: Preserve appointed and imperial decree source metadata plus shard zero
         uses: actions/upload-artifact@v4
         with:
           name: france-academy-1856-appointment-source-pilot-v1
-          path: data/france_academy_1856_nomination_grammar_pilot_v1/
+          path: |
+            data/france_academy_1856_nomination_grammar_pilot_v1/
+            data/france_academy_1856_imperial_decree_index_v1/
+            data/france_academy_remaining_172_toc_batch_v1/shard_00/
           retention-days: 45
       - name: Commit source-only 1856 grammar pilot to this branch
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/france_academy_1856_nomination_grammar_pilot_v1/
+          git add data/france_academy_1856_nomination_grammar_pilot_v1/ data/france_academy_1856_imperial_decree_index_v1/ data/france_academy_remaining_172_toc_batch_v1/shard_00/
           if ! git diff --cached --quiet; then
-            git commit -m 'Checkpoint 1856 Hermite member nomination and Hooker correspondent index evidence'
+            git commit -m 'Checkpoint 1856 Academy appointments+imperial decrees and 16 pre-frozen historical TOC targets'
             git fetch origin france-academy-1856-nominations-shard0-v1-20261018
             git rebase origin/france-academy-1856-nominations-shard0-v1-20261018
             git push origin HEAD:france-academy-1856-nominations-shard0-v1-20261018
