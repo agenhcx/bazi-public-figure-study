@@ -91,6 +91,7 @@ def parse_category_json(raw):
     rows=[]
     for item in (obj.get("query") or {}).get("categorymembers",[]):
         title=item.get("title","")
+        if not title.startswith("Livre:"):continue
         match=TITLE.search(title)
         if not match:continue
         n,y=int(match.group(1)),int(match.group(2))
@@ -106,7 +107,7 @@ def get_category(cache,offline,timeout,delay,last_request):
     cont={}
     for page in range(1,5):
         params={"action":"query","format":"json","formatversion":"2",
-                "list":"categorymembers","cmtitle":CAT,"cmnamespace":"104","cmlimit":"500"}
+                "list":"categorymembers","cmtitle":CAT,"cmlimit":"500"}
         params.update(cont)
         url=API+"?"+urllib.parse.urlencode(params)
         key="category_page_"+str(page)+".json"
