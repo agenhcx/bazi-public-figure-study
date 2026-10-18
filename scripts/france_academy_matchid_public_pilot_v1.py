@@ -26,7 +26,7 @@ from france_academy_insee_death_crosswalk_v1 import (
     load_targets, parse_cths_name, norm, official_date, sha_file, write_csv
 )
 
-VERSION = "france-academy-matchid-public-source-only-pilot-v1_2"
+VERSION = "france-academy-matchid-public-source-only-pilot-v1_3"
 ENDPOINT = "https://deces.matchid.io/deces/api/v1/search"
 DEFAULT_CTHS = "data/france_academy_cths_profile_dob_harvest_v1/cths_dob_claims_all_targets_candidate_only_v1.csv"
 DEFAULT_ROLES = "data/france_academy_cths_society_role_repair_v1_1/cths_academy_membership_candidates_corrected_v1_1.csv"
@@ -84,17 +84,20 @@ def selected_targets(cths: str, roles: str, priority: str, ids: str, limit: int)
 
 
 def search_params(t: dict, parsed: tuple[str, str]):
-    """Use the documented simplest GET /search?q=Firstname+Lastname route.
+    """Validated matchID advanced GET /search: name + compact birth-year range.
 
-    No birth-date range is sent to the API: results are checked against the
-    frozen CTHS birth and death years LOCALLY, and never automatically accepted.
-    The 20-result first page may be incomplete for common names.
+    API live 2026-10-18: q + birthDate => HTTP400 (mixed simple/complex);
+    firstName + lastName + `01/01/YYYY - 31/12/YYYY` => HTTP400 (invalid date);
+    firstName + lastName + `01/01/YYYY-31/12/YYYY` => HTTP200.
+    All returned identities and dates still require LOCAL independent checks.
     """
     surname, first_name = parsed
     year = int(t["birthyear"])
     if not 1835 <= year <= 1985:
         raise ValueError("Unexpected birthyear outside frozen research support")
-    return {"q": f"{first_name} {surname}", "size": "20", "page": "1"}
+    return {"firstName": first_name, "lastName": surname,
+            "birthDate": f"01/01/{year:04d}-31/12/{year:04d}",
+            "size": "20", "page": "1"}
 
 
 def unpack_hits(obj):
@@ -148,8 +151,7 @@ def first_record(person, t, params, queryhash, reshash):
     birthplace = birth.get("location") if isinstance(birth.get("location"), dict) else {}
     city = get_field(birthplace, ("city",))
     record_id = get_field(src, ("id",))
-    # Name in query is first name followed by surname (rather than reverse).
-    query_given, query_surname = params["q"].split(" ", 1)
+    query_given, query_surname = params["firstName"], params["lastName"]
     same_name = (norm(lname) == norm(query_surname)
                  and bool(norm(fname).split())
                  and norm(fname).split()[0] == norm(query_given).split()[0])
@@ -343,7 +345,8 @@ def fixtures():
          "deathyear": "1992", "dob": "", "class": "full_like_only_candidate"}
     parsed = parse_cths_name(t["name"])
     p = search_params(t, parsed)
-    assert p["q"] == "jean dieudonne" and "birthDate" not in p
+    assert p["firstName"] == "jean" and p["lastName"] == "dieudonne"
+    assert p["birthDate"] == "01/01/1906-31/12/1906" and "q" not in p
     # Use ACTUAL published OpenAPI Person / Result nesting, not invented fields.
     example = {"request": p, "response": {"total": 1, "size": 1, "page": 1,
                "persons": [{"id": "original-record", "name": {"first": ["Jean", "Pierre"], "last": "Dieudonne"},
