@@ -59,7 +59,7 @@ def main():
     for p in (83,84,85,169):
         if a[p]["source_preview_sha256"]!=b[p]["source_image_sha256"] or a[p]["frame"]!=b[p]["djvu_frame"]:
             raise RuntimeError("Original scan SHA or frame mismatch "+str(p))
-    if original_review["accepted_full_members_added"] or original_review["exact_DOB_accepted"] or original_review["bazi_variables_computed"]:
+    if original_review["accepted_full_members_added"] or original_review["accepted_exact_birthdays_added"] or original_review["bazi_variables_computed"]:
         raise RuntimeError("Original scanned evidence incorrectly accepted into cohort")
     if not original_review["pages"][1]["event_evidence_type"]=="ORIGINAL_ELECTION_VOTE_VERIFIED":
         raise RuntimeError("Incorrect 1856 source vote page adjudication")
