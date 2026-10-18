@@ -1,0 +1,42 @@
+name: France CTHS offline birthfield parser smoke v1_1
+
+on:
+  push:
+    branches:
+      - france-cths-offline-birthdate-parser-v1_1
+    paths:
+      - scripts/france_academy_cths_birthfield_recovery_v1_1.py
+      - .github/workflows/france_academy_cths_birthfield_recovery_smoke_v1_1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-source-field-parser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check syntax
+        run: python -m py_compile scripts/france_academy_cths_birthfield_recovery_v1_1.py
+      - name: Parse frozen CTHS Naissance field, without any network access
+        run: python scripts/france_academy_cths_birthfield_recovery_v1_1.py
+      - name: Audit expected 28 ordinal corrections and unresolved status
+        shell: bash
+        run: |
+          python -c 'import json; d=json.load(open("local_runs/france_academy_cths_birthfield_recovery_v1_1/summary.json",encoding="utf-8")); assert d["network_requests"]==0 and d["new_1er_day_candidates"]==28 and d["typo_corrected_provisional_DOB_candidates"]==2 and d["CTHS_exact_date_claims_with_unambiguous_date_syntax"]==557 and d["possible_CTHS_exact_date_claims_after_typo_review"]==559 and d["unique_people_in_remaining_manual_review"]==9 and d["independent_DOB_evidence_accepted"]==0 and d["bazi_variables_computed"]==0; print("All frozen-source parser assertions passed")'
+      - name: Upload summary and small exception-only ledgers
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: france-academy-cths-1er-parser-delta-v1-1
+          path: |
+            local_runs/france_academy_cths_birthfield_recovery_v1_1/summary.json
+            local_runs/france_academy_cths_birthfield_recovery_v1_1/birthfield_parser_delta_33_v1_1.csv
+            local_runs/france_academy_cths_birthfield_recovery_v1_1/manual_review_remaining_9_v1_1.csv
+          if-no-files-found: warn
+          retention-days: 30
