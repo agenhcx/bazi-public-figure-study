@@ -1,0 +1,61 @@
+name: France Academy CTHS 562-source bibliography audit offline v1
+
+on:
+  push:
+    branches:
+      - france-cths-562-original-citation-audit-v1
+    paths:
+      - scripts/france_academy_cths_original_citation_audit_v1.py
+      - .github/workflows/france_academy_cths_original_citation_audit_v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sha-and-source-ledger:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install HTML parsing and encoding correction only
+        run: python -m pip install --disable-pip-version-check beautifulsoup4==4.12.3 ftfy==6.3.1
+      - name: Validate and extract CTHS citation source categories entirely offline
+        run: python -m py_compile scripts/france_academy_cths_original_citation_audit_v1.py && python scripts/france_academy_cths_original_citation_audit_v1.py
+      - name: Assert SHA-audited 562 original profiles and no DOB/category acceptance
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open("data/france_academy_cths_historical_source_citation_audit_v1/summary.json",encoding="utf-8"))
+          assert d["CTHS_people"]==562
+          assert d["raw_cths_archived_biographies_verified"]==562
+          assert d["offline_network_requests"]==0
+          assert d["accepted_exact_DOB_count"]==0
+          assert d["accepted_official_membership_count"]==0
+          assert d["bazi_variables_computed"]==0
+          print("All source fields classified without recrawling.")
+          PY
+      - name: Archive compact evidence metadata and source priorities
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: france-academy-cths-562-citation-origin-audit-v1
+          path: data/france_academy_cths_historical_source_citation_audit_v1/
+          if-no-files-found: warn
+          retention-days: 60
+      - name: Checkpoint noncopyrighted bibliography flags, not original HTML content
+        if: success()
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/france_academy_cths_historical_source_citation_audit_v1/
+          if ! git diff --cached --quiet; then
+            git commit -m "Checkpoint 562 French Academy CTHS source-citation category and 160 first-party identity overlap audit"
+            git pull --rebase origin france-cths-562-original-citation-audit-v1
+            git push origin HEAD:france-cths-562-original-citation-audit-v1
+          fi
