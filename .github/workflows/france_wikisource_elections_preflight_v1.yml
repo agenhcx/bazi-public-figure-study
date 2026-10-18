@@ -1,30 +1,33 @@
-name: France Academy Wikisource historical election index preflight
+name: France Academy 5-volume Wikisource election-transcription pilot
 on:
   push:
     branches:
       - france-wikisource-election-index-pilot-v1-20261018
     paths:
       - 'scripts/france_academy_wikisource_index_preflight_v1.py'
+      - 'scripts/france_academy_wikisource_election_rows_v1.py'
       - '.github/workflows/france_wikisource_elections_preflight_v1.yml'
   workflow_dispatch:
 permissions:
   contents: read
 jobs:
-  bounded-public-source-preflight:
+  five-volume-election-records:
     runs-on: ubuntu-latest
-    timeout-minutes: 6
+    timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-      - name: Compile and synthetic test
-        run: python -m py_compile scripts/france_academy_wikisource_index_preflight_v1.py && python scripts/france_academy_wikisource_index_preflight_v1.py --fixture-check
-      - name: Probe 5 pre-1940 Academy original journal indexes via Wikisource public API
-        run: python scripts/france_academy_wikisource_index_preflight_v1.py --limit 5
-      - name: Keep small source diagnostics
+      - name: Install pinned HTML parser
+        run: python -m pip install --disable-pip-version-check beautifulsoup4==4.12.3
+      - name: Compile and run source-only fixtures
+        run: python -m py_compile scripts/france_academy_wikisource_election_rows_v1.py && python scripts/france_academy_wikisource_election_rows_v1.py --fixture-check
+      - name: Extract candidate member-class and election-page evidence from 5 historical volumes
+        run: python scripts/france_academy_wikisource_election_rows_v1.py --limit 5
+      - name: Preserve source-only diagnostics and event candidates
         uses: actions/upload-artifact@v4
         with:
-          name: france-wikisource-academy-election-five-index-preflight-v1
-          path: local_runs/france_wikisource_election_index_source_pilot_v1/summary.json
+          name: france-academy-five-comptes-rendus-index-events-v1
+          path: local_runs/france_academy_wikisource_election_index_v1/
           retention-days: 40
