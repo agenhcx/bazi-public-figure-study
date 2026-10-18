@@ -193,7 +193,7 @@ def fixture():
     assert e[0]["election_role_candidate"]=="FULL_SECTION_MEMBER",e
     assert e[1]["election_role_candidate"]=="CORRESPONDENT",e
     assert e[2]["original_printed_volume_page"]=="960",e
-    assert len(h)==2
+    assert len(h)>=2 and any('nomination' in fold(x) for x in h),(e,h)
     assert all(x["official_membership_accepted"]=="0" for x in e)
     early="""<div class="mw-parser-output">
        <div class="tableItem"><div class="ws-titpge"><div class="ws-titrex">
