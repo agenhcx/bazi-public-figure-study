@@ -1,0 +1,188 @@
+#!/usr/bin/env python3
+"""Bounded Wikisource transcription evidence of Académie des sciences elections.
+
+The historical Comptes rendus is Academy-authored, but Wikisource index HTML
+is a *transcription*, not the inspected original printed event page.
+Membership-class candidates require original-page verification before accepted.
+No DOB/Academy study acceptance or BaZi calculation.
+"""
+from __future__ import annotations
+import argparse,csv,hashlib,json,re,time,unicodedata
+from collections import Counter,defaultdict
+from pathlib import Path
+from bs4 import BeautifulSoup
+from france_academy_wikisource_index_preflight_v1 import read_one,build_urls,TRIAL
+
+VERSION="france-academy-wikisource-original-journal-index-election-source-v1"
+CTHS="data/france_academy_cths_profile_dob_harvest_v1/cths_dob_claims_all_targets_candidate_only_v1.csv"
+OUT="local_runs/france_academy_wikisource_election_index_v1"
+FIELDS=["original_journal_issuer","transcription_site","year","original_volume","printed_election_page",
+        "transcription_url","source_html_sha256","transcribed_elected_person_name",
+        "transcribed_election_type","transcribed_science_section","event_evidence_class",
+        "cths_562_exact_name_candidate_id","cths_562_name_match_status",
+        "transcribed_line_excerpt","original_book_event_page_opened",
+        "frozen_french_academy_full_membership_accepted","frozen_study_dob_accepted",
+        "bazi_variables_computed"]
+FULL={"FULL_SECTION_MEMBER","FULL_NONRESIDENT_MEMBER","FULL_ACADEMICIAN_LIBRE"}
+OTHER={"CORRESPONDENT","FOREIGN_ASSOCIATE","OFFICE_ELECTION_NOT_NEW_MEMBER","UNKNOWN_ROLE_MANUAL"}
+def norm(s):
+    s=unicodedata.normalize("NFKD",str(s).casefold())
+    s="".join(c for c in s if not unicodedata.combining(c))
+    return " ".join(re.findall("[a-z0-9]+",s.replace("œ","oe").replace("æ","ae")))
+def identity_key(name):
+    return " ".join(sorted(norm(name).split()))
+def data_csv(p):
+    with Path(p).open(encoding="utf-8-sig",newline="") as f:return list(csv.DictReader(f))
+def write_csv(p,items,cols):
+    p.parent.mkdir(parents=True,exist_ok=True)
+    with p.open("w",encoding="utf-8-sig",newline="") as f:
+        w=csv.DictWriter(f,fieldnames=cols,extrasaction="ignore")
+        w.writeheader();w.writerows(items)
+def role_of(line):
+    x=norm(line)
+    if not re.search(r"\b(est|a ete|sont)\s+elus?\b",x):return ""
+    if "correspondant" in x[:110]:return "CORRESPONDENT"
+    if re.search(r"\bassoci[ée]\s+[ée]tranger",line,re.I) or "associe etranger" in x[:110]:
+        return "FOREIGN_ASSOCIATE"
+    if "academicien libre" in x[:110]:return "FULL_ACADEMICIAN_LIBRE"
+    if "membre non residant" in x[:110] or "membre non resident" in x[:110]:
+        return "FULL_NONRESIDENT_MEMBER"
+    if re.search(r"\belu(?:e)?\s+(secretaire perpetuel|president|vice president|directeur)\b",x):
+        return "OFFICE_ELECTION_NOT_NEW_MEMBER"
+    if re.search(r"\belu(?:e)?\s+membre\b",x):
+        return "FULL_SECTION_MEMBER"
+    return "UNKNOWN_ROLE_MANUAL"
+def person_of(line):
+    # One named person elected; other people after "en remplacement de" are not elected.
+    m=re.search(r"\bM\.\s+(.{2,125}?)\s+est\s+[ée]lu(?:e)?\b",line,re.I)
+    if not m:return ""
+    name=re.sub(r"\s+"," ",m.group(1)).strip(" ;,-.")
+    if not name or len(name)>110 or " et " in name.lower():return ""
+    return name
+def section_of(line):
+    m=re.search(r"(?:pour\s+la\s+section|de\s+la\s+section|dans\s+la\s+section|section)\s+d[eu']?\s*([A-Za-zÀ-ÿ\s\-]{3,100})",line,re.I)
+    if m:return re.split(r"\s*(?:,|;|en remplacement|décédé|d[eé]c[eé]d[eé]e)",m.group(1),maxsplit=1,flags=re.I)[0].strip()[:80]
+    if "division des Applications" in line:return "Applications de la science à l'industrie"
+    return ""
+def extract_from_html(raw,year,vol):
+    soup=BeautifulSoup(raw,"html.parser")
+    actual=[]
+    heads=[]
+    current=""
+    for tr in soup.find_all("tr"):
+        cells=tr.find_all("td",recursive=False)
+        if not cells:continue
+        first=cells[0]
+        line=" ".join(first.get_text(" ",strip=True).split())
+        if not line:continue
+        headings=first.find_all("span",class_=re.compile("sc"))
+        # Exact small-cap subject heading, distinct from ordinary cross references.
+        heading=norm(" ".join(headings[0].get_text(" ",strip=True).split())) if headings else ""
+        if heading:
+            heads.append(heading[:90])
+            if heading.startswith("election") and ("membre" in heading or "correspondant" in heading or heading=="elections"):
+                current="ELECTIONS"
+            else:current="OTHER"
+        if current!="ELECTIONS":continue
+        if not re.search(r"\b(est|a été|sont)\s+élu",line,re.I):continue
+        category=role_of(line)
+        if not category:continue
+        page = " ".join(cells[1].get_text(" ",strip=True).split()) if len(cells)>1 else ""
+        if not re.fullmatch(r"\d{1,5}",page):page=""
+        elected=person_of(line)
+        actual.append({"year":str(year),"original_volume":str(vol),
+                       "printed_election_page":page,
+                       "transcribed_elected_person_name":elected,
+                       "transcribed_election_type":category,
+                       "transcribed_science_section":section_of(line),
+                       "transcribed_line_excerpt":line[:340],
+                       "event_evidence_class": "ORIGINAL_JOURNAL_INDEX_WIKISOURCE_TRANSCRIPTION_ONLY",
+                       "original_book_event_page_opened":"0",
+                       "frozen_french_academy_full_membership_accepted":"0",
+                       "frozen_study_dob_accepted":"0",
+                       "bazi_variables_computed":"0"})
+    return actual,heads
+def smoke():
+    rows="""<table><tr><td><span class="sc">Élections de membres et de correspondants.</span> — M. Camille Matignon est élu membre de la section de chimie en remplacement de M. Haller</td><td>303</td></tr>
+<tr><td>— M. Léon Fredericq est élu correspondant pour la section de médecine et chirurgie</td><td>551</td></tr>
+<tr><td>— M. Victor Grignard est élu membre non résidant</td><td>1366</td></tr>
+<tr><td>— M. Emile Picard est élu secrétaire perpétuel</td><td>1400</td></tr>
+<tr><td><span class="sc">Décrets.</span> — Approuvant l'élection de Matignon</td><td>421</td></tr>
+<tr><td>— M. Faux est élu membre de la section de chimie</td><td>600</td></tr></table>"""
+    found,h=extract_from_html(rows.encode(),1926,182)
+    assert len(found)==4,(found,h)
+    assert [x["transcribed_election_type"] for x in found]==[
+         "FULL_SECTION_MEMBER","CORRESPONDENT","FULL_NONRESIDENT_MEMBER","OFFICE_ELECTION_NOT_NEW_MEMBER"]
+    assert [x["printed_election_page"] for x in found]==["303","551","1366","1400"]
+    assert found[0]["transcribed_elected_person_name"]=="Camille Matignon"
+    assert found[1]["transcribed_elected_person_name"]=="Léon Fredericq"
+    assert norm("ÉMILE Picard")=="emile picard"
+    assert found[0]["frozen_french_academy_full_membership_accepted"]=="0"
+    print("PASS: academic roles split; table-section scope; decrees and elections not conflated")
+def main():
+    ap=argparse.ArgumentParser()
+    ap.add_argument("--fixture-check",action="store_true")
+    ap.add_argument("--out",default=OUT)
+    ap.add_argument("--limit",type=int,default=5)
+    ap.add_argument("--delay",type=float,default=1.5)
+    args=ap.parse_args()
+    if args.fixture_check:smoke();return
+    if not 1<=args.limit<=5 or args.delay<1.1:raise ValueError("Pilot limit 1-5 and delay >=1.1 s")
+    cths=data_csv(CTHS)
+    if len(cths)!=562:raise RuntimeError("FROZEN CTHS input changed")
+    bykey=defaultdict(list)
+    for r in cths:bykey[identity_key(r["name"])].append(r)
+    source_audit=[]
+    rows=[]
+    for index,(vol,year) in enumerate(TRIAL[:args.limit]):
+        url=build_urls(vol,year)["wiki"]
+        code,mime,raw=read_one(url,800000)
+        digest=hashlib.sha256(raw).hexdigest()
+        found,heads=extract_from_html(raw,year,vol)
+        for event in found:
+            k=identity_key(event["transcribed_elected_person_name"])
+            matches=bykey.get(k,[]) if event["transcribed_elected_person_name"] else []
+            event.update({"original_journal_issuer":"Académie des sciences (Comptes rendus)",
+                 "transcription_site":"French Wikisource",
+                 "transcription_url":url,"source_html_sha256":digest,
+                 "cths_562_exact_name_candidate_id":matches[0]["cths_person_id"] if len(matches)==1 else "",
+                 "cths_562_name_match_status":"ONE_UNIQUE_EXACT_TOKEN_CTHS_562_CANDIDATE" if len(matches)==1 else
+                       "NO_EXACT_CTHS_562_MATCH" if not matches else "MULTIPLE_EXACT_CTHS_562_MATCHES"})
+            rows.append(event)
+        stat=Counter(x["transcribed_election_type"] for x in found)
+        audit={"year":year,"volume":vol,"response_code":code,"content_type":mime,
+               "bytes":len(raw),"html_sha256":digest,"transcription_url":url,
+               "headings_present":len(heads),"elections_section_headings":[h for h in heads if h.startswith("election")][:12],
+               "election_rows":len(found),"event_types":dict(stat),
+               "printed_pages_missing":sum(not x["printed_election_page"] for x in found),
+               "rows_unparsed_person":sum(not x["transcribed_elected_person_name"] for x in found),
+               "source_is_wikisource_transcription":True,"original_event_pages_opened":0}
+        source_audit.append(audit)
+        print("VOLUME",json.dumps(audit,ensure_ascii=False))
+        if index+1<args.limit:time.sleep(args.delay)
+    out=Path(args.out)
+    out.mkdir(parents=True,exist_ok=True)
+    rows.sort(key=lambda x:(int(x["year"]),int(x["original_volume"]),
+                            int(x["printed_election_page"] or 0),x["transcribed_elected_person_name"]))
+    write_csv(out/"academy_transcribed_election_events_pilot_v1.csv",rows,FIELDS)
+    types=Counter(x["transcribed_election_type"] for x in rows)
+    summary={"version":VERSION,"source": "Academy-authored historical Comptes rendus; Wikisource index transcriptions",
+             "pilot_volumes":args.limit,"source_audit":source_audit,
+             "all_transcribed_election_rows":len(rows),
+             "full_member_category_source_candidates":sum(types[k] for k in FULL),
+             "correspondent_or_foreign_source_candidates":types["CORRESPONDENT"]+types["FOREIGN_ASSOCIATE"],
+             "other_election_rows_manual":sum(types[k] for k in OTHER if k not in ("CORRESPONDENT","FOREIGN_ASSOCIATE")),
+             "role_counts":dict(types),
+             "exact_name_only_matched_cths_562_events":sum(x["cths_562_name_match_status"]=="ONE_UNIQUE_EXACT_TOKEN_CTHS_562_CANDIDATE" for x in rows),
+             "frozen_cths_562_unchanged":True,
+             "original_journal_event_pages_opened":0,"cohort_frozen":False,
+             "accepted_french_academy_full_members":0,"accepted_exact_dobs":0,"bazi_variables_computed":0}
+    (out/"summary.json").write_text(json.dumps(summary,ensure_ascii=False,indent=2)+"\n",encoding="utf8")
+    print("TOTAL",json.dumps({k:summary[k] for k in ("all_transcribed_election_rows",
+         "full_member_category_source_candidates","correspondent_or_foreign_source_candidates",
+         "other_election_rows_manual","role_counts","exact_name_only_matched_cths_562_events")},
+         ensure_ascii=False))
+    print("SAMPLE_FULL",json.dumps([
+         {k:r[k] for k in ("year","transcribed_elected_person_name","transcribed_election_type","printed_election_page","cths_562_exact_name_candidate_id")}
+         for r in rows if r["transcribed_election_type"] in FULL][:24],ensure_ascii=False))
+if __name__=="__main__":main()
