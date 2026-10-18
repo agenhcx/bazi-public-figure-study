@@ -42,7 +42,8 @@ COLS = ["volume","year","expected_season","wikisource_book_title","wikisource_bo
         "full_like_event_rows_in_sample","correspondent_foreign_event_rows_in_sample",
         "original_printed_election_pages_directly_inspected",
         "study_membership_accepted","study_DOB_accepted","bazi_variables_computed"]
-FULL = {"FULL_SECTION_MEMBER","FULL_NONRESIDENT_MEMBER","FULL_ACADEMICIAN_LIBRE"}
+FULL = {"FULL_SECTION_MEMBER","FULL_NONRESIDENT_MEMBER","FULL_ACADEMICIAN_LIBRE",
+        "FULL_SECTION_MEMBER_CONTEXTUAL_NOMINATION"}
 OTHER = {"CORRESPONDENT","FOREIGN_ASSOCIATE"}
 
 
@@ -250,7 +251,8 @@ def synthetic():
     assert o[208]["status"]=="OFFICIAL_1939_JOINT_LINK_TWO_VOLUMES"
     assert o[211]["url"]=="https://gallica.bnf.fr/b"
     assert years[1940]["original_archive_links_in_annual_row"]==2
-    print("PASS: 211 expected volumes, category metadata, official volume mapping, 1939 shared link and no study inclusion")
+    assert "FULL_SECTION_MEMBER_CONTEXTUAL_NOMINATION" in FULL
+    print("PASS: 211 expected volumes, category mapping, 1856 contextual member nomination and no study inclusion")
 
 
 def main():

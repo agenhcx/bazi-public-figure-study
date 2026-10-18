@@ -1,0 +1,136 @@
+name: France Academy 1856 historical nomination grammar and decree QA
+on:
+  push:
+    branches:
+      - france-academy-1856-nominations-shard0-v1-20261018
+    paths:
+      - 'scripts/france_academy_wikisource_legacy_election_headings_v1.py'
+      - 'scripts/france_academy_wikisource_election_rows_v1.py'
+      - 'scripts/france_academy_comptes_rendus_211_volume_inventory_v1.py'
+      - 'scripts/france_academy_run_remaining_172_toc_batch_v1.py'
+      - 'scripts/france_academy_offline_source_toc_event_ledger_v1.py'
+      - 'scripts/france_academy_cumulative_56_source_probe_audit_v1.py'
+      - 'scripts/france_academy_1856_imperial_decree_index_v1.py'
+      - '.github/workflows/france_academy_1856_nomination_and_shard0_v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  original-nomination-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install pinned HTML source reader
+        run: python -m pip install --disable-pip-version-check beautifulsoup4==4.12.3
+      - name: Test honorific and regular Academy election indexes offline
+        run: python scripts/france_academy_wikisource_election_rows_v1.py --fixture-check
+      - name: Run synthetic modern and 1856 nomination regression
+        run: python -m py_compile scripts/france_academy_wikisource_legacy_election_headings_v1.py && python scripts/france_academy_wikisource_legacy_election_headings_v1.py --fixture-check
+      - name: Probe limited 1835/1856 volumes 1 42 43
+        run: python scripts/france_academy_wikisource_legacy_election_headings_v1.py --limit 3 --delay 1.5 --out data/france_academy_1856_nomination_grammar_pilot_v1
+      - name: Assert real Hermite and W Hooker with no accepted members
+        run: |
+          python - <<'PY'
+          import csv,json
+          root='data/france_academy_1856_nomination_grammar_pilot_v1/'
+          j=json.load(open(root+'summary.json',encoding='utf8'))
+          with open(root+'historical_nominations_elections_candidates_v1.csv',encoding='utf-8-sig',newline='') as f: rows=list(csv.DictReader(f))
+          target=[r for r in rows if r['volume']=='43' and r['year']=='1856']
+          print('LIVE_1856',[(r['elected_name_candidate'],r['election_role_candidate'],r['original_printed_volume_page'],r['source_action_wording']) for r in target])
+          assert any(r['elected_name_candidate']=='Hermite' and r['original_printed_volume_page']=='85' and r['source_action_wording']=='EST_NOMME_TRANSCRIBED' for r in target)
+          assert any(r['elected_name_candidate']=='W. Hooker' and r['election_role_candidate']=='CORRESPONDENT' and r['original_printed_volume_page']=='1143' for r in target)
+          assert j['accepted_french_full_members']==0 and j['accepted_study_birthdates']==0 and j['bazi_variables_computed']==0
+          PY
+      - name: Verify 1856 imperial approval-index decoder (no network)
+        run: python -m py_compile scripts/france_academy_1856_imperial_decree_index_v1.py && python scripts/france_academy_1856_imperial_decree_index_v1.py --fixture-check
+      - name: Source query 1856 imperial decree records for volumes 42 and 43
+        run: python scripts/france_academy_1856_imperial_decree_index_v1.py --limit 2 --delay 1.5
+      - name: Assert exact name-linked and unresolved abbreviated approvals remain separate
+        run: |
+          python - <<'PY'
+          import json,csv
+          p='data/france_academy_1856_imperial_decree_index_v1/'
+          x=json.load(open(p+'summary.json',encoding='utf8'))
+          with open(p+'imperial_1856_appointment_decree_chain_candidates_v1.csv',encoding='utf-8-sig',newline='') as f: r=list(csv.DictReader(f))
+          print('IMPERIAL_1856',{'nominees':x['appointment_records'],'decrees':x['decree_index_name_claims'],'exact':x['exact_name_links'],'alias_review':x['unmatched_decree_name_forms']})
+          assert x['appointment_records']==9
+          assert x['decree_index_name_claims']==4
+          assert x['exact_name_links']>=2
+          assert any(y['appointment_name_original_index']=='Hermite' and y['decree_original_page']=='169' and y['appointment_original_page']=='85' for y in r)
+          assert x['approval_decree_original_pages_opened']==0 and x['accepted_member_persons']==0
+          assert x['accepted_birthdates']==0 and x['bazi_variables_computed']==0
+          PY
+      - name: Test original Academy volume mapping and contextual nominee role counter
+        run: python scripts/france_academy_comptes_rendus_211_volume_inventory_v1.py --fixture-check
+      - name: Validate frozen 172-volume plan and dry-run shard zero (no network)
+        run: python scripts/france_academy_run_remaining_172_toc_batch_v1.py --fixture-check && python scripts/france_academy_run_remaining_172_toc_batch_v1.py --shard 0
+      - name: Test offline individual event ledger before bulk source capture
+        run: python -m py_compile scripts/france_academy_offline_source_toc_event_ledger_v1.py && python scripts/france_academy_offline_source_toc_event_ledger_v1.py --fixture-check
+
+      - name: Query first 16 never-probed journal TOCs as pre-frozen shard zero
+        run: python scripts/france_academy_run_remaining_172_toc_batch_v1.py --shard 0 --run --delay 1.5 --out-root data/france_academy_remaining_172_toc_batch_v1
+      - name: Assert 16 targets unchanged and source-only classifications
+        run: |
+          python - <<'PY'
+          import json
+          p='data/france_academy_remaining_172_toc_batch_v1/shard_00/'
+          r=json.load(open(p+'source_only_shard_checkpoint_v1.json',encoding='utf8'))
+          print('SHARD_ZERO',r)
+          assert r['shard']==0 and len(r['volumes'])==16
+          assert r['original_event_pages_inspected']==0 and r['accepted_memberships']==0 and r['accepted_birthdates']==0
+          assert r['bazi_variables_computed']==0
+          individual=json.load(open(p+'person_event_ledger_summary_v1.json',encoding='utf8'))
+          assert individual['parsed_event_rows']==r['parsed_candidate_event_rows']
+          assert individual['source_200_bytes_checked']+individual['other_TOC_statuses_not_election_zero']==16
+          assert individual['original_event_pages_directly_inspected']==0
+          assert individual['accepted_french_members']==0 and individual['accepted_DOBs']==0
+          import csv
+          with open(p+'verified_transcribed_person_event_candidates_v1.csv',encoding='utf-8-sig',newline='') as f: candidates=list(csv.DictReader(f))
+          assert len(candidates)==individual['parsed_event_rows']
+          assert all(r['name_as_transcribed'] for r in candidates), 'Missing elected person; flag manual reconstruction'
+          rutherford=[r for r in candidates if r['name_as_transcribed']=='Ernest Rutherford']
+          assert len(rutherford)==1 and rutherford[0]['member_role_source_candidate']=='FOREIGN_ASSOCIATE' and rutherford[0]['volume']=='185'
+          print('PERSON_EVENT_LEDGER', {'rows':individual['parsed_event_rows'],'classes':individual['event_classes']})
+          PY
+
+      - name: Offline cumulative 56-volume probe and candidate event reconciliation
+        run: python -m py_compile scripts/france_academy_cumulative_56_source_probe_audit_v1.py && python scripts/france_academy_cumulative_56_source_probe_audit_v1.py --fixture-check && python scripts/france_academy_cumulative_56_source_probe_audit_v1.py
+      - name: Assert corrected historical source availability and no duplicate 1856 records
+        run: |
+          python - <<'PY'
+          import json
+          s=json.load(open('data/france_academy_1856_nomination_grammar_pilot_v1/cumulative_56_source_summary_v1.json',encoding='utf-8'))
+          assert s['distinct_TOC_volumes_actually_probed']==56
+          assert s['technical_statuses']['HTTP_200']==39 and s['technical_statuses']['HTTP_404']==17
+          assert s['candidate_index_election_and_nomination_event_rows']==141
+          assert s['remaining_never_probed_TOC_volumes']==155
+          assert s['accepted_study_members']==0 and s['accepted_exact_birthdays']==0 and s['bazi_variables_computed']==0
+          print('PASS_CUMULATIVE',s)
+          PY
+
+      - name: Preserve appointed/imperial, shard-zero per-person and cumulative source audits
+        uses: actions/upload-artifact@v4
+        with:
+          name: france-academy-1856-appointment-source-pilot-v1
+          path: |
+            data/france_academy_1856_nomination_grammar_pilot_v1/
+            data/france_academy_1856_imperial_decree_index_v1/
+            data/france_academy_remaining_172_toc_batch_v1/shard_00/
+          retention-days: 45
+      - name: Commit source-only 1856 grammar pilot to this branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/france_academy_1856_nomination_grammar_pilot_v1/ data/france_academy_1856_imperial_decree_index_v1/ data/france_academy_remaining_172_toc_batch_v1/shard_00/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Checkpoint 1856 Academy appointments+imperial decrees and 16 pre-frozen historical TOC targets'
+            git fetch origin france-academy-1856-nominations-shard0-v1-20261018
+            git rebase origin/france-academy-1856-nominations-shard0-v1-20261018
+            git push origin HEAD:france-academy-1856-nominations-shard0-v1-20261018
+          fi
