@@ -83,7 +83,22 @@ jobs:
           print('PERSON_EVENT_LEDGER', {'rows':individual['parsed_event_rows'],'classes':individual['event_classes']})
           PY
 
-      - name: Preserve appointed and imperial decree source metadata plus shard zero
+      - name: Offline cumulative 56-volume probe and candidate event reconciliation
+        run: python -m py_compile scripts/france_academy_cumulative_56_source_probe_audit_v1.py && python scripts/france_academy_cumulative_56_source_probe_audit_v1.py --fixture-check && python scripts/france_academy_cumulative_56_source_probe_audit_v1.py
+      - name: Assert corrected historical source availability and no duplicate 1856 records
+        run: |
+          python - <<'PY'
+          import json
+          s=json.load(open('data/france_academy_1856_nomination_grammar_pilot_v1/cumulative_56_source_summary_v1.json',encoding='utf-8'))
+          assert s['distinct_TOC_volumes_actually_probed']==56
+          assert s['technical_statuses']['HTTP_200']==39 and s['technical_statuses']['HTTP_404']==17
+          assert s['candidate_index_election_and_nomination_event_rows']==141
+          assert s['remaining_never_probed_TOC_volumes']==155
+          assert s['accepted_study_members']==0 and s['accepted_exact_birthdays']==0 and s['bazi_variables_computed']==0
+          print('PASS_CUMULATIVE',s)
+          PY
+
+      - name: Preserve appointed/imperial, shard-zero per-person and cumulative source audits
         uses: actions/upload-artifact@v4
         with:
           name: france-academy-1856-appointment-source-pilot-v1
