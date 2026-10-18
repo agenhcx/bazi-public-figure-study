@@ -60,6 +60,10 @@ def normalize(s:str)->str:
     s="".join(ch for ch in s if not unicodedata.combining(ch))
     return " ".join(re.findall(r"[a-z0-9]+",s))
 
+def fold_text(s:str)->str:
+    s=unicodedata.normalize("NFKD",s.casefold())
+    return "".join(ch for ch in s if not unicodedata.combining(ch))
+
 def count_assertions(gold:list[dict],sources:list[dict])->dict:
     counts=Counter(x["source_document_id"] for x in gold)
     if dict(counts)!=EXPECTED_COUNTS:
@@ -133,9 +137,11 @@ def extract_candidate(pages:list[str],r:dict)->dict:
     txt=pages[page]
     name=r["person_name_transcribed"]
     compact=" ".join(txt.replace("\u00ad","").split())
-    # Strict name anchor and known expected page, not an arbitrary person/date elsewhere.
-    name_pattern=re.escape(name).replace(r"\ ",r"\s+")
-    name_m=re.search(r"(?<!\w)"+name_pattern+r"(?!\w)",compact,re.I)
+    search_text=fold_text(compact)
+    # Fold accents on both names, because some official typeset PDFs remove
+    # accents (Benoît / Benoit) but still require full name token matches.
+    name_pattern=re.escape(fold_text(name)).replace(r"\ ",r"\s+")
+    name_m=re.search(r"(?<!\w)"+name_pattern+r"(?!\w)",search_text,re.I)
     if not name_m:
         return {"verification":"NAME_NOT_FOUND_ON_EXPECTED_PAGE","page_index":page,"pdf_birth_raw":"",
                 "pdf_birth_candidate":"","pdf_text_name_present":0}
@@ -145,7 +151,7 @@ def extract_candidate(pages:list[str],r:dict)->dict:
                 "pdf_birth_candidate":"","pdf_text_name_present":1}
     # Only scan <=80 characters immediately after the matched person's name.
     # This excludes a past/future president or unrelated biography DOB.
-    span=compact[name_m.end():name_m.end()+110]
+    span=search_text[name_m.end():name_m.end()+110]
     if docid=="FR2014":
         m=re.match(r"\s*,\s*"+YEAR_REG,span,re.I)
         if not m:
@@ -163,7 +169,7 @@ def extract_candidate(pages:list[str],r:dict)->dict:
                     "pdf_birth_candidate":"","pdf_text_name_present":1}
         raw_date=m.group("raw")
         day_text=m.group("day")
-        day=1 if day_text.startswith("1e") else int(day_text)
+        day=1 if re.fullmatch(r"1\s*(?:er|e|ᵉ)?",day_text) else int(day_text)
         month=MONTHS.get(normalize(m.group("month")))
         year=int(m.group("year"))
         try:
@@ -236,7 +242,7 @@ def audit(out:Path,records:list[dict],sources:list[dict],mode:str,limit:int,
         try:
             if p.is_file() and (mode=="offline" or resume):
                 raw=p.read_bytes();actualsha=sha(raw)
-                if not raw.startswith(b"%PDF-"):
+                if not meta.exists():\n                    raise RuntimeError("Cached PDF lacks immutable metadata/URL audit")\n                if not raw.startswith(b"%PDF-"):
                     raise RuntimeError("Cached file not a PDF")
                 if meta.exists():
                     prior=json.loads(meta.read_text(encoding="utf-8"))
@@ -314,7 +320,7 @@ def audit(out:Path,records:list[dict],sources:list[dict],mode:str,limit:int,
         "version":"france-academy-official-election-pdf-source-pilot-v1",
         "mode":mode,
         "generated_utc":dt.datetime.now(dt.timezone.utc).isoformat(),
-        "site_requests_at_most":limit if mode=="fetch" else 0,
+        "http_attempts_upper_bound":limit*retries if mode=="fetch" else 0,
         "selected_full_election_documents":len([x for x in source_rows if x["document_id"]!="NEG2022AE"]),
         "downloaded_or_reused_documents":sum(x["status"] in {"FETCHED_AND_CACHED","REUSED_VERIFIED_LOCAL_CACHE"} for x in source_rows),
         "blocked_or_unexpected_documents":sum(x["status"]=="SOURCE_UNAVAILABLE_OR_UNEXPECTED" for x in source_rows),
