@@ -40,7 +40,7 @@ FOREIGN = re.compile(
 )
 CORRESPONDENT = re.compile(r"\bcorrespondante?\b")
 FULL = re.compile(
-    r"\b(?:academicienne?(?:\s+libre)?|membre\s+libre|membre\s+(?:non[- ]residant|residant|titulaire)|"
+    r"\b(?:academicien(?:ne)?(?:\s+libre)?|membre\s+libre|membre\s+(?:non[- ]residant|residant|titulaire)|"
     r"membre\b(?!\s+(?:associee?|correspondante?|etrangere?)))"
 )
 
