@@ -134,8 +134,10 @@ def main()->int:
         raise RuntimeError("Conflict set changed")
     args.out.mkdir(parents=True,exist_ok=True)
     write(args.out/"nine_person_source_qc.csv",detail,list(detail[0]))
-    review=[r for r in detail if r["cths_person_id"] not in (DATE_EXTERNAL & (MEMBER_FIRSTPARTY|MEMBER_INSTITUTIONAL))]
-    # Separate test pass from final scientific acceptance: verified evidence is NOT a frozen study dataset.
+    review=[r for r in detail if r["cths_person_id"] not in (DATE_EXTERNAL & MEMBER_FIRSTPARTY)]
+    # Keep Abragam in the review list: 1973 institutionally corroborated full election,
+    # but the CTHS 1976 foreign-associate record conflicts with that narrative.
+    # Separate source evidence from final scientific cohort acceptance.
     write(args.out/"unresolved_status_or_dob_review.csv",review,list(detail[0]))
     summary={
         "audit":"france-academy-cths-nine-source-adjudication-v1_2",
@@ -152,7 +154,8 @@ def main()->int:
         "provisional_foreign_member_only_people":len(existing_provisional_foreign),
         "provisional_corresponding_only_people":len(existing_provisional_corr),
         "unresolved_conflicting_DOB_people":len(existing_conflicts),
-        "strict_source_evidence_both_covered_people":len(DATE_EXTERNAL & (MEMBER_FIRSTPARTY|MEMBER_INSTITUTIONAL)),
+        "institutionally_corrob_member_and_DOB_people":len(DATE_EXTERNAL & (MEMBER_FIRSTPARTY|MEMBER_INSTITUTIONAL)),
+        "Academy_firstparty_member_and_external_DOB_people":len(DATE_EXTERNAL & MEMBER_FIRSTPARTY),
         "unresolved_status_or_dob_review_people":len(review),
         "final_frozen_study_DOB_accepted":0,
         "final_frozen_study_cohort_admitted":0,
