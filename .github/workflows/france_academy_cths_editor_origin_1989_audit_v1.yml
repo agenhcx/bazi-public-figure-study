@@ -1,0 +1,60 @@
+name: France CTHS archival editor and 1989 original-page attribution (offline)
+on:
+  pull_request:
+    paths:
+      - 'scripts/france_academy_cths_editor_credit_1989_page_audit_v1.py'
+      - '.github/workflows/france_academy_cths_editor_origin_1989_audit_v1.yml'
+      - 'FRANCE_ACADEMY_CTHS_EDITOR_AND_1989_PAGES_V1.md'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  archived-source-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install pinned source parsing helpers
+        run: python -m pip install --disable-pip-version-check beautifulsoup4==4.12.3 ftfy==6.3.1
+      - name: Synthetic verify literal Rédacteur(s) and 1989 page locator
+        run: python scripts/france_academy_cths_editor_credit_1989_page_audit_v1.py --fixture-check
+      - name: SHA-verify and reparse 562 existing CTHS archived HTML pages without network
+        run: python scripts/france_academy_cths_editor_credit_1989_page_audit_v1.py
+      - name: Verify source-only freeze and original directory lead counts
+        run: |
+          python - <<'PY'
+          import json
+          p='data/france_academy_cths_editor_origin_audit_v1/summary.json'
+          d=json.load(open(p,encoding='utf-8'))
+          assert d['offline_network_requests']==0
+          assert d['cths_source_562_reverified']==562
+          assert d['selected_rows']==562
+          assert d['priority_1989_people_in_output']==17
+          assert d['original_1989_book_pages_opened']==0
+          assert d['official_full_member_study_accepted']==0
+          assert d['study_exact_dob_accepted']==0
+          assert d['bazi_variables_computed']==0
+          print('PASSED offline author credit and printed-page source-only gate')
+          PY
+      - name: Upload compact source evidence outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: france-cths-562-editor-credit-1989-print-page-source-only
+          path: data/france_academy_cths_editor_origin_audit_v1/
+          retention-days: 45
+      - name: Checkpoint metadata-only output to PR branch
+        if: github.event_name == 'pull_request'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/france_academy_cths_editor_origin_audit_v1/
+          if ! git diff --cached --quiet; then
+            git commit -m "Checkpoint 562 SHA-verified CTHS editor-attribution and 17 original 1989 directory page leads"
+            git push origin HEAD:${{ github.head_ref }}
+          fi
