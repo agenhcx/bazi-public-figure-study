@@ -24,6 +24,25 @@ jobs:
         run: python -m pip install --disable-pip-version-check beautifulsoup4==4.12.3
       - name: Offline synthetic regression for 1835 and 1880 headings
         run: python -m py_compile scripts/france_academy_wikisource_legacy_election_headings_v1.py && python scripts/france_academy_wikisource_legacy_election_headings_v1.py --fixture-check
+      - name: Temporary inspect early 1835 election HTML markup
+        run: |
+          python - <<'PY'
+          import re
+          from bs4 import BeautifulSoup
+          from france_academy_wikisource_index_preflight_v1 import build_urls,read_one
+          _,_,b=read_one(build_urls(1,1835)['wiki'],900000)
+          soup=BeautifulSoup(b,'html.parser')
+          matches=soup.find_all(string=re.compile('Élections|Élie de Beaumont|est élu membre',re.I))
+          print('EARLY_DOM_COUNT',len(matches))
+          for node in matches[:15]:
+              anc=node.parent
+              chain=[]
+              for _ in range(5):
+                  if anc is None:break
+                  chain.append({'tag':anc.name,'class':anc.get('class'),'id':anc.get('id'),'text':anc.get_text(' ',strip=True)[:175]})
+                  anc=anc.parent
+              print('EARLY_DOM',str(node)[:190],chain)
+          PY
       - name: Bounded public source query 1835 1862 1880 1926
         run: python scripts/france_academy_wikisource_legacy_election_headings_v1.py --limit 4
       - name: Upload role and event provenance (not source text)
