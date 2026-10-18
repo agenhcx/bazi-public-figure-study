@@ -60,6 +60,9 @@ jobs:
           PY
       - name: Validate frozen 172-volume plan and dry-run shard zero (no network)
         run: python scripts/france_academy_run_remaining_172_toc_batch_v1.py --fixture-check && python scripts/france_academy_run_remaining_172_toc_batch_v1.py --shard 0
+      - name: Test offline individual event ledger before bulk source capture
+        run: python -m py_compile scripts/france_academy_offline_source_toc_event_ledger_v1.py && python scripts/france_academy_offline_source_toc_event_ledger_v1.py --fixture-check
+
       - name: Query first 16 never-probed journal TOCs as pre-frozen shard zero
         run: python scripts/france_academy_run_remaining_172_toc_batch_v1.py --shard 0 --run --delay 1.5 --out-root data/france_academy_remaining_172_toc_batch_v1
       - name: Assert 16 targets unchanged and source-only classifications
@@ -72,6 +75,12 @@ jobs:
           assert r['shard']==0 and len(r['volumes'])==16
           assert r['original_event_pages_inspected']==0 and r['accepted_memberships']==0 and r['accepted_birthdates']==0
           assert r['bazi_variables_computed']==0
+          individual=json.load(open(p+'person_event_ledger_summary_v1.json',encoding='utf8'))
+          assert individual['parsed_event_rows']==r['parsed_candidate_event_rows']
+          assert individual['source_200_bytes_checked']+individual['other_TOC_statuses_not_election_zero']==16
+          assert individual['original_event_pages_directly_inspected']==0
+          assert individual['accepted_french_members']==0 and individual['accepted_DOBs']==0
+          print('PERSON_EVENT_LEDGER', {'rows':individual['parsed_event_rows'],'classes':individual['event_classes']})
           PY
 
       - name: Preserve appointed and imperial decree source metadata plus shard zero
