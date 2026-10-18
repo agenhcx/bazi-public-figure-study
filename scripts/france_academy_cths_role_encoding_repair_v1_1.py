@@ -16,6 +16,7 @@ from collections import Counter
 from pathlib import Path
 
 from ftfy import fix_text
+from france_academy_cths_society_roster_v1 import parse_roster
 
 RULE_VERSION = "france-academy-cths-society-role-encoding-repair-v1_1"
 MIN_YEAR, MAX_YEAR = 1835, 1985
@@ -91,7 +92,11 @@ def main():
     out=Path(args.out_folder);out.mkdir(parents=True,exist_ok=True)
     input_path=source/"cths_academy_society_membership_candidates_v1.csv"
     input_bytes=input_path.read_bytes()
-    people=read_csv(input_path)
+    original_summary=json.loads((source/'summary.json').read_text(encoding='utf-8'))
+    source_snapshot=source/'raw_html'/(original_summary['source_html_sha256']+'.html')
+    # Re-read archived UTF-8 *as text* to avoid BeautifulSoup's incorrect encoding guess on raw bytes.
+    # The old CSV has e.g. ÃĐtranger from a bad charset guess, which ftfy cannot safely infer.
+    people, roster_parse_audit=parse_roster(source_snapshot.read_bytes().decode('utf-8'))
     fixed=[]
     for p in people:
         note=fix_text(p["membership_note_raw"])
@@ -144,7 +149,9 @@ def main():
     report={
         "rule_version":RULE_VERSION,
         "source_v1_sha256_csv":hashlib.sha256(input_bytes).hexdigest(),
-        "source_html_sha256":json.loads((source/"summary.json").read_text(encoding="utf-8"))["source_html_sha256"],
+        "source_html_sha256":original_summary["source_html_sha256"],
+        "source_utf8_decoded_before_parser":True,
+        "source_raw_roster_parse_audit":roster_parse_audit,
         "created_utc":dt.datetime.now(dt.timezone.utc).isoformat(),
         "input_people":len(people),
         "fixed_name_strings":sum(r["name_text_changed"] for r in fixed),
