@@ -18,12 +18,12 @@ from bs4 import BeautifulSoup
 from france_academy_wikisource_index_preflight_v1 import build_urls,read_one
 from france_academy_wikisource_election_rows_v1 import role_of,section_of,person_of,identity_key,extract_from_html
 
-VERSION="france-academy-legacy-heading-wikisource-source-only-v1_5"
+VERSION="france-academy-legacy-heading-wikisource-source-only-v1_6"
 VOLUMES=[(1,1835),(42,1856),(43,1856),(91,1880),(182,1926)]
 CTHS="data/france_academy_cths_profile_dob_harvest_v1/cths_dob_claims_all_targets_candidate_only_v1.csv"
 OUT=Path("data/france_academy_wikisource_legacy_heading_pilot_v1")
 FIELDS=["volume","year","elected_name_candidate","election_role_candidate","source_action_wording",
-        "science_section_candidate","original_printed_volume_page",
+        "science_section_candidate","original_printed_volume_page","source_printed_page_references",
         "source_table_url","source_html_sha256",
         "cths_562_exact_name_candidate_id","match_status",
         "source_evidence_tier","original_election_printed_page_opened",
@@ -70,6 +70,14 @@ def nomination_section(line):
     m=re.search(r"\bsection\s+(?:de\s+|d['’])(.+?)(?:\s+par\s+suite\b|\s+en\s+remplacement\b|[,.;]|$)",line,re.I)
     return " ".join(m.group(1).split())[:90] if m else ""
 
+def page_references(s):
+    """Keep multi-page original TOC locators as ONE event, e.g. 510 et 618."""
+    original=" ".join(str(s or "").split())
+    if not re.fullmatch(r"\d{1,5}(?:\s*(?:,|;|et)\s*\d{1,5})*",original,re.I):
+        return ("",original[:90])
+    nums=re.findall(r"\d{1,5}",original)
+    return (nums[0],"|".join(nums))
+
 def parse_html(raw,volume,year):
     """Parse TR and div.tableItem representations independently and deduplicate.
 
@@ -88,6 +96,7 @@ def parse_html(raw,volume,year):
              "source_action_wording":"EST_ELU_TRANSCRIBED",
              "science_section_candidate":x["transcribed_science_section"],
              "original_printed_volume_page":x["printed_election_page"],
+             "source_printed_page_references":x["printed_election_page"],
              "source_evidence_tier":"WIKISOURCE_INDEX_TRANSCRIPTION_NOT_ORIGINAL_EVENT_PAGE",
              "original_election_printed_page_opened":"0",
              "official_membership_accepted":"0","exact_dob_accepted":"0",
@@ -102,10 +111,10 @@ def parse_html(raw,volume,year):
         first=cells[0]
         line=" ".join(first.get_text(" ",strip=True).split())
         page=" ".join(cells[1].get_text(" ",strip=True).split()) if len(cells)>1 else ""
-        if not re.fullmatch(r"\d{1,5}",page):page=""
+        page,page_refs=page_references(page)
         sc=first.find("span",class_=re.compile(r"sc",re.I))
         heading=" ".join(sc.get_text(" ",strip=True).split()) if sc else ""
-        table_rows.append((line,page,heading))
+        table_rows.append((line,page,heading,page_refs))
     legacy_rows=[]
     for item in soup.select("div.tableItem"):
         div=item.select_one(".ws-titrex")
@@ -115,9 +124,10 @@ def parse_html(raw,volume,year):
         full=" ".join(page_container.get_text(" ",strip=True).split()) if page_container else ""
         match=re.search(r"\b(\d{1,5})\s*$",full)
         page=match.group(1) if match else ""
+        page_refs=page
         sc=div.find("span",class_=re.compile("sc",re.I))
         heading=" ".join(sc.get_text(" ",strip=True).split()) if sc else ""
-        legacy_rows.append((line,page,heading))
+        legacy_rows.append((line,page,heading,page_refs))
 
     def add_unique(candidate):
         # Duplicate markup or a modern indexed row plus our fallback may
@@ -132,12 +142,14 @@ def parse_html(raw,volume,year):
                 p2=candidate["original_printed_volume_page"]
                 if not p1 or not p2 or p1==p2:
                     if not p1 and p2:x["original_printed_volume_page"]=p2
+                    if not x.get("source_printed_page_references") and candidate.get("source_printed_page_references"):
+                        x["source_printed_page_references"]=candidate["source_printed_page_references"]
                     return
         events.append(candidate)
 
     for logical in (table_rows,legacy_rows):
         in_events=False
-        for line,page,decorated in logical:
+        for line,page,decorated,page_refs in logical:
             if not line:continue
             prefix=line.split("—",1)[0].strip(" .")
             head_candidate=prefix if event_heading(prefix) else decorated
@@ -167,6 +179,7 @@ def parse_html(raw,volume,year):
                 "source_action_wording":"EST_NOMME_TRANSCRIBED" if nominated else "EST_ELU_TRANSCRIBED",
                 "science_section_candidate":(nomination_section(line) if nominated else section_of(line).strip(" )")),
                 "original_printed_volume_page":page,
+                "source_printed_page_references":page_refs,
                 "source_evidence_tier":"WIKISOURCE_INDEX_TRANSCRIPTION_NOT_ORIGINAL_EVENT_PAGE",
                 "original_election_printed_page_opened":"0",
                 "official_membership_accepted":"0","exact_dob_accepted":"0",
@@ -230,6 +243,9 @@ def fixture():
     assert len(mixed_results)==len(nominated),(mixed_results,nominated)
     assert [x["elected_name_candidate"] for x in mixed_results]==["Hermite","W. Hooker","Guyon"]
     assert all(x["original_election_printed_page_opened"]=="0" for x in mixed_results)
+    assert page_references("510 et 618")==("510","510|618")
+    assert page_references("725 et 798")==("725","725|798")
+    assert page_references("509")==("509","509")
 
     print("PASS: 1835 election, 1856 est nommé in nominations, 1880/1926 elections; candidatures/decrees excluded")
 
