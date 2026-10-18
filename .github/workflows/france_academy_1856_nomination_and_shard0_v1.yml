@@ -26,6 +26,31 @@ jobs:
         run: python -m py_compile scripts/france_academy_wikisource_legacy_election_headings_v1.py && python scripts/france_academy_wikisource_legacy_election_headings_v1.py --fixture-check
       - name: Probe limited 1835/1856 volumes 1 42 43
         run: python scripts/france_academy_wikisource_legacy_election_headings_v1.py --limit 3 --delay 1.5 --out data/france_academy_1856_nomination_grammar_pilot_v1
+      - name: Temporary inspect 1856 Tome 42 historical nomination DOM
+        run: |
+          python - <<'PY'
+          import re,sys
+          sys.path.insert(0,'scripts')
+          from bs4 import BeautifulSoup
+          from france_academy_wikisource_index_preflight_v1 import read_one,build_urls
+          from france_academy_wikisource_legacy_election_headings_v1 import parse_html
+          _,_,data=read_one(build_urls(42,1856)['wiki'],950000)
+          soup=BeautifulSoup(data,'html.parser')
+          print('VOL42_DOM_COUNTS', {'bytes':len(data),'trs':len(soup.find_all('tr')),'tableItems':len(soup.select('div.tableItem'))})
+          for needle in ('NOMINATIONS','Nominations','Jobert','Bertrand','Guyon'):
+              matches=soup.find_all(string=re.compile(re.escape(needle),re.I))
+              print('VOL42_MATCH',needle,'count',len(matches))
+              for node in matches[:3]:
+                  ancestor=node.parent
+                  chain=[]
+                  for i in range(4):
+                      if ancestor is None:break
+                      chain.append({'tag':ancestor.name,'class':ancestor.get('class'),'text':ancestor.get_text(' ',strip=True)[:235]})
+                      ancestor=ancestor.parent
+                  print('VOL42_NODE',needle,chain)
+          ev,heads=parse_html(data,42,1856)
+          print('VOL42_PARSE',len(ev),heads[:10])
+          PY
       - name: Assert real Hermite and W Hooker with no accepted members
         run: |
           python - <<'PY'
