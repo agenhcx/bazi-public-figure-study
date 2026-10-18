@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   wikidata-identity-discovery:
@@ -28,6 +28,8 @@ jobs:
         run: python -m py_compile scripts/france_academy_wikidata_candidate_discovery_v1.py
       - name: Collect source-tagged identity candidates from public Wikidata
         run: python scripts/france_academy_wikidata_candidate_discovery_v1.py --strict
+      - name: Summarize candidate year support and missingness without admitting members
+        run: python scripts/france_academy_candidate_birthyear_triage_v1.py
       - name: Archive raw SPARQL snapshots and provenance
         if: always()
         uses: actions/upload-artifact@v4
@@ -36,3 +38,16 @@ jobs:
           path: data/france_academy_wikidata_candidate_discovery_v1/
           if-no-files-found: warn
           retention-days: 90
+      - name: Checkpoint candidate-only data and source snapshots on discovery branch
+        if: success()
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/france_academy_wikidata_candidate_discovery_v1/
+          if ! git diff --cached --quiet; then
+            git commit -m "Checkpoint French Academy unverified identity candidates and source snapshots v1"
+            git push origin HEAD:france-academy-source-pilot-v1
+          else
+            echo "No changes to checkpoint"
+          fi
