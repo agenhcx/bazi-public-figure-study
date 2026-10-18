@@ -1,5 +1,5 @@
 {
-  "version": "france-academy-legacy-heading-wikisource-source-only-v1_4",
+  "version": "france-academy-legacy-heading-wikisource-source-only-v1_5",
   "source_volumes": [
     1,
     42,
@@ -11,7 +11,7 @@
       "year": 1835,
       "status": 200,
       "bytes": 684317,
-      "source_html_sha256": "009eebcb4958317356a2233e0cc5bda84c693dd0d05cf6ba8a127f7f2bb149ad",
+      "source_html_sha256": "0f486ac2a5195755b59f608067d77ef3c93462f3b1a5274454928f589d368638",
       "source_url": "https://fr.wikisource.org/wiki/Comptes_rendus_de_l%E2%80%99Acad%C3%A9mie_des_sciences/Tome_1%2C_1835/Table_des_mati%C3%A8res",
       "recognized_election_headings": [
         "Élections"
@@ -27,12 +27,18 @@
       "year": 1856,
       "status": 200,
       "bytes": 237107,
-      "source_html_sha256": "fdea827a7023264621058c181231633fd039176ac395527331e4a8b0f6f5cbcc",
+      "source_html_sha256": "01c85dca0bb58aa62d43aac605a6231b5601bc81c06571a5eb9be125f5d70c75",
       "source_url": "https://fr.wikisource.org/wiki/Comptes_rendus_de_l%E2%80%99Acad%C3%A9mie_des_sciences/Tome_42%2C_1856/Table_des_mati%C3%A8res",
-      "recognized_election_headings": [],
-      "event_rows": 0,
-      "full_like_event_rows": 0,
-      "corresponding_foreign_event_rows": 0,
+      "recognized_election_headings": [
+        "elections",
+        "nominations",
+        "Élections",
+        "NOMINATIONS de Membres et de Correspondants de l’Académie",
+        "Nominations"
+      ],
+      "event_rows": 7,
+      "full_like_event_rows": 3,
+      "corresponding_foreign_event_rows": 4,
       "unparsed_person_count": 0,
       "source_is_index_transcription_only": true
     },
@@ -41,7 +47,7 @@
       "year": 1856,
       "status": 200,
       "bytes": 192535,
-      "source_html_sha256": "7b5c112e6753c3216b9cc4789401687273bb13199fdb7879514f20bdf64da471",
+      "source_html_sha256": "4dbfce59f3e3bbe417293d4329ef30025b1efcb157a524034471024dfc1e3b64",
       "source_url": "https://fr.wikisource.org/wiki/Comptes_rendus_de_l%E2%80%99Acad%C3%A9mie_des_sciences/Tome_43%2C_1856/Table_des_mati%C3%A8res",
       "recognized_election_headings": [
         "NOMINATIONS de Membres et de Correspondants de l’Académie"
@@ -53,9 +59,9 @@
       "source_is_index_transcription_only": true
     }
   ],
-  "candidate_event_rows": 3,
-  "full_like_event_candidates": 2,
-  "correspondent_foreign_candidates": 1,
+  "candidate_event_rows": 10,
+  "full_like_event_candidates": 5,
+  "correspondent_foreign_candidates": 5,
   "specific_frozen_1835_1880_names_not_study_accepted": true,
   "original_printed_event_pages_opened": 0,
   "accepted_french_full_members": 0,
