@@ -1,0 +1,79 @@
+name: France Academy official-election PDF local-first pilot v1
+
+on:
+  push:
+    branches:
+      - france-academy-official-election-doc-pilot-v1
+    paths:
+      - scripts/france_academy_official_pdf_source_pilot_v1.py
+      - .github/workflows/france_academy_official_pdf_source_pilot_v1.yml
+      - data/france_academy_official_election_pdf_pilot_v1/source_document_inventory_v1.csv
+      - data/france_academy_official_election_pdf_pilot_v1/official_election_name_DOB_transcription_v1.csv
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  pilot:
+    name: Verify 66 first-party name/date assertions across four election PDFs
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install minimal PDF source reader
+        run: python -m pip install --disable-pip-version-check requests==2.32.3 pymupdf==1.26.5
+      - name: Check syntax and frozen 66-person gold source metadata without network
+        run: python -m py_compile scripts/france_academy_official_pdf_source_pilot_v1.py && python scripts/france_academy_official_pdf_source_pilot_v1.py --fixture-check
+      - name: Test four whitelisted historical Academy PDFs (2011, 2013, 2014, 2017)
+        run: python scripts/france_academy_official_pdf_source_pilot_v1.py --fetch --limit 4 --resume --delay 1.2 --timeout 22 --retries 2
+      - name: Validate 2011 names/dates only when original press release fetched
+        if: success()
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          s=json.loads(Path("local_runs/france_academy_official_pdf_pilot_v1/summary.json").read_text(encoding="utf-8"))
+          print("Official source replay status:",s["per_person_parse_status"])
+          assert s["bazi_variables_computed"]==0
+          assert s["independent_exact_DOB_provenance_accepted"]==0
+          assert s["foreign_associate_negative_control_excluded"]
+          assert s["selected_full_election_documents"]==4
+          assert s["downloaded_or_reused_documents"]==4
+          assert s["name_and_role_source_matched"]==66, s["name_or_DOB_unmatched"]
+          assert s["source_exact_DOB_claims_parsed"]==21
+          assert s["per_person_parse_status"].get("YEAR_ONLY_SOURCE_MATCH",0)==10
+          print("Source fetch may be selectively blocked; read error audit for each document.")
+          PY
+      - name: Checkpoint source URLs hashes and person-level QA, excluding raw PDFs
+        if: success()
+        shell: bash
+        run: |
+          dest=data/france_academy_official_election_pdf_pilot_v1/source_replay_validation_v1
+          mkdir -p "$dest"
+          cp local_runs/france_academy_official_pdf_pilot_v1/summary.json "$dest/summary.json"
+          cp local_runs/france_academy_official_pdf_pilot_v1/source_fetch_audit_v1.csv "$dest/source_fetch_audit_v1.csv"
+          cp local_runs/france_academy_official_pdf_pilot_v1/candidate_person_evidence_v1.csv "$dest/candidate_person_evidence_v1.csv"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$dest"
+          if ! git diff --cached --quiet; then
+            git commit -m "Checkpoint France Academy four PDF source hash validation, 66 first-party election identities"
+            git pull --rebase origin france-academy-official-election-doc-pilot-v1
+            git push origin HEAD:france-academy-official-election-doc-pilot-v1
+          fi
+      - name: Keep only compact source status and people-level review results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: france-academy-four-sessions-official-source-pilot-v1
+          path: |
+            local_runs/france_academy_official_pdf_pilot_v1/summary.json
+            local_runs/france_academy_official_pdf_pilot_v1/source_fetch_audit_v1.csv
+            local_runs/france_academy_official_pdf_pilot_v1/candidate_person_evidence_v1.csv
+          if-no-files-found: warn
+          retention-days: 30
