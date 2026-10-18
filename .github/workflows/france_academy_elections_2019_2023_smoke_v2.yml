@@ -1,0 +1,58 @@
+name: France Academy 2019-2023 first-party PDF source smoke v2
+
+on:
+  push:
+    branches:
+      - france-academy-election-2019-2023-pilot-v2
+    paths:
+      - scripts/france_academy_elections_2019_2023_source_pilot_v2.py
+      - .github/workflows/france_academy_elections_2019_2023_smoke_v2.yml
+      - data/france_academy_elections_2019_2023_pilot_v2/source_inventory_v2.csv
+      - data/france_academy_elections_2019_2023_pilot_v2/golden_58_official_member_names_v2.csv
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-document-pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install source-text PDF parser
+        run: python -m pip install --disable-pip-version-check requests==2.32.3 pymupdf==1.26.5
+      - name: Compile and validate 58 first-party electee name references OFFLINE
+        run: python -m py_compile scripts/france_academy_elections_2019_2023_source_pilot_v2.py && python scripts/france_academy_elections_2019_2023_source_pilot_v2.py --fixture-check
+      - name: Fetch only first two historical Academy source documents
+        run: python scripts/france_academy_elections_2019_2023_source_pilot_v2.py --fetch --limit 2 --resume --delay 1.0 --timeout 20 --retries 2
+      - name: Source-name and negative-control assertions
+        if: success()
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("local_runs/france_academy_elections_2019_2023_v2/summary.json")
+          s=json.loads(p.read_text(encoding="utf-8"))
+          assert s["regular_pdf_documents_verified"]==2
+          assert s["person_names_verified_from_firstparty"]==22
+          assert s["person_names_unmatched"]==0
+          assert s["foreign_2021_associate_negative_control_excluded"]
+          assert s["source_PDF_birthdays_found"]==0
+          assert s["bazi_variables_computed"]==0
+          PY
+      - name: Archive compact source and unmatched-name audit only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: france-academy-2019-2020-source-pilot-v2
+          path: |
+            local_runs/france_academy_elections_2019_2023_v2/summary.json
+            local_runs/france_academy_elections_2019_2023_v2/source_fetch_audit_v2.csv
+            local_runs/france_academy_elections_2019_2023_v2/unmatched_names_v2.csv
+            local_runs/france_academy_elections_2019_2023_v2/candidate_official_member_election_v2.csv
+          if-no-files-found: warn
+          retention-days: 30
