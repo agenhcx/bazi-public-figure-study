@@ -13,7 +13,7 @@ from pathlib import Path
 from france_academy_1839_1927_original_scan_audit_v1 import book_title,book_url,frames_from_book,preview_query
 from france_academy_1856_commons_original_preview_v1 import request,get_metadata
 
-V="france-academy-1839-1927-supplement-original-facsimile-v1"
+V="france-academy-1839-1927-supplement-original-facsimile-v1_1"
 TARGETS=[{"vol":8,"year":1839,"print":874,"person":"Joseph Liouville",
           "stage":"ACADEMY_ELECTION_VOTE_RESULT_CONTINUATION"},
          {"vol":184,"year":1927,"print":1516,"person":"Charles Fabry",
@@ -87,11 +87,19 @@ def main():
             row["frame"]=frame
             # Up to 2 bounded Commons metadata requests, first full and then
             # reduced-width if preview failed; no unbounded retry loops.
-            for width in (850,480):
+            # Some original DjVu volumes are stored as LOCAL files on
+            # fr.wikisource.org rather than shared Commons. Commons "missing"
+            # does NOT mean the original file or elected person is absent.
+            # Try Commons once, then its genuine local-file hosting project.
+            for provider,width in (("commons",850),("fr_wikisource_local",850),("fr_wikisource_local",480)):
                 wait()
                 url=preview_query(book,frame).replace("iiurlwidth=1150","iiurlwidth="+str(width))
+                if provider=="fr_wikisource_local":
+                    url=url.replace("https://commons.wikimedia.org/w/api.php",
+                                    "https://fr.wikisource.org/w/api.php")
                 body,http,ctype=request(url,850000,a.timeout)
                 if http!=200:raise ValueError("Non-200 Commons imageinfo")
+                row["original_imageinfo_api_provider_last_checked"]=provider
                 row["commons_last_metadata_sha256"]=hashit(body)
                 row["commons_last_metadata_diagnostic"]=thumbnail_error_diagnostic(body,frame)
                 try:
@@ -100,7 +108,8 @@ def main():
                     row["commons_last_parse_error"]=type(e).__name__+":"+str(e)[:200]
                     row["status"]="COMMONS_THUMBNAIL_NOT_AVAILABLE_NEED_ALT_SOURCE"
                     continue
-                row.update({"Commons_original_source":info["djvu_source_url"],
+                row.update({"actual_file_host_api_provider":provider,
+                            "Commons_original_source":info["djvu_source_url"],
                             "original_public_thumbnail_url":info["thumbnail_url"],
                             "DJVU_book_pagecount":info["page_count"],
                             "thumbnail_requested_width":width,
