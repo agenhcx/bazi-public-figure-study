@@ -1,0 +1,44 @@
+name: France Academy CTHS DOB source queue v1
+
+on:
+  push:
+    branches:
+      - france-academy-cths-roster-v1
+    paths:
+      - scripts/france_academy_cths_dob_collection_queue_v1.py
+      - .github/workflows/france_academy_cths_dob_collection_queue_v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  create-provenance-queue:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate and create source-fetch shards, no DOB acceptance
+        run: python -m py_compile scripts/france_academy_cths_dob_collection_queue_v1.py && python scripts/france_academy_cths_dob_collection_queue_v1.py
+      - name: Upload source-fetch queues and manifest
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: france-academy-cths-provenance-dob-fetch-queue-v1
+          path: data/france_academy_cths_dob_collection_queue_v1/
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Checkpoint deterministic source queue
+        if: success()
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/france_academy_cths_dob_collection_queue_v1/
+          if ! git diff --cached --quiet; then
+            git commit -m "Checkpoint French Academy historical DOB source-fetch queue v1"
+            git push origin HEAD:france-academy-cths-roster-v1
+          fi
