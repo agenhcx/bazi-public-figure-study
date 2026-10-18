@@ -31,3 +31,18 @@ Project root: `C:\chenxi\bazi_project\1986wiki`. Local CTHS input files must exi
 For unambiguous-looking matches, the status remains `UNIQUE_INSEE_LEAD_MANUAL`: **not** accepted DOB, **not** verified French full-member status. Compare against Academy election documentation and independent biographies, and manually adjudicate foreign birth-calendar conventions (e.g. Łódź 1908), variant surnames, aliases, and same-name identities.
 
 This program does not parse or calculate BaZi, construct statistical hypotheses, or change the frozen France Academy source acceptance flags.
+
+## ZIP preflight and failed downloads (v1_1, 2026-10-18)
+
+An actual Windows curl invocation successfully wrote 7.25 MB but Python raised zipfile.BadZipFile. The official INSEE decade page explicitly describes the 1990–1999 source as **133 Mo (ZIP)**, and the direct URL on that page remains https://www.insee.fr/fr/statistiques/fichier/4769950/deces-1990-1999-csv.zip . A completed curl transfer does not prove a ZIP is valid. We do not have the 7.25 MB file's magic bytes, so we cannot yet distinguish HTML/proxy interception from a partial ZIP download.
+
+With the latest \`main\`, FIRST run this lightweight source diagnosis (no network, no roster scan):
+
+\`python .\scripts\france_academy_insee_death_crosswalk_v1.py --inspect-zip .\external\insee\deces-1990-1999-csv.zip\`
+
+- \`valid_zip=true\`: ZIP directory exists; this does not certify official integrity. Compare file size to the official advertised ~133 MB and check ZIP member-list and contents before bulk analysis.
+- \`reason=html_or_xml_instead_of_zip_check_http_proxy_or_site_error\`: downloaded website/proxy response, not archival data. Save HTTP headers, try official INSEE page through an ordinary browser instead.
+- \`reason=zip_header_but_missing_directory_possible_truncated_download\`: likely incomplete ZIP. Only use resume when the endpoint supports HTTP ranges and the head bytes really are \`PK\`; do not append to HTML.
+- Other reasons: inspect the saved beginning and HTTP status/Content-Type from the download. Delete corrupt file only AFTER diagnosing it.
+
+If the official INSEE bulk transfer is very slow or unavailable, the public <https://deces.matchid.io/> search UI can be used to check a small number of historical people. Its documented API allows limited unauthenticated searches and a **free token** after signup for larger/bulk queries, subject to rate limits. See <https://matchid.io/link-api> . This is a third-party redistributed/indexed INSEE data service, not original 1989 French Academy member-class evidence; all identity and DOB claims still need independent review.

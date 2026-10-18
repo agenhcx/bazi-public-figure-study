@@ -20,7 +20,7 @@ import zipfile
 from collections import Counter, defaultdict
 from pathlib import Path
 
-VERSION = "france-academy-insee-public-deaths-source-only-v1"
+VERSION = "france-academy-insee-public-deaths-source-only-v1_1"
 DEFAULT_CTHS = "data/france_academy_cths_profile_dob_harvest_v1/cths_dob_claims_all_targets_candidate_only_v1.csv"
 DEFAULT_ROLES = "data/france_academy_cths_society_role_repair_v1_1/cths_academy_membership_candidates_corrected_v1_1.csv"
 OUTPUT_COLUMNS = ["cths_person_id", "cths_name", "cths_birthyear", "cths_deathyear_candidate", "cths_exact_dob_candidate", "cths_membership_class_provisional", "insee_dob_claim", "insee_deathdate_claim", "insee_birthplace", "insee_name", "source_file", "source_zip_sha256", "source_member", "source_record_sha256", "record_match_rule", "dob_comparison", "person_match_status", "french_academy_full_member_accepted", "exact_dob_accepted", "bazi_variables_computed"]
@@ -64,6 +64,44 @@ def official_date(s):
         return parsed.isoformat(), digits
     except ValueError:
         return "", digits
+
+
+def inspect_zip(path):
+    """Inspect first bytes and ZIP central directory without reading the full dataset.
+
+    This is a safety check, not a cryptographic authenticity verification. INSEE's
+    1990-1999 decadal ZIP is listed at approximately 133 MB as of 2026.
+    """
+    path = Path(path)
+    if not path.exists():
+        return {"path": str(path), "valid_zip": False, "reason": "file_missing"}
+    if not path.is_file():
+        return {"path": str(path), "valid_zip": False, "reason": "not_a_file"}
+    size = path.stat().st_size
+    with path.open("rb") as f:
+        head = f.read(256)
+    sample = head[:80].decode("utf-8", errors="replace")
+    printable = "".join(c if c.isprintable() else " " for c in sample)
+    sig = head.startswith((b"PK\x03\x04", b"PK\x05\x06", b"PK\x07\x08"))
+    valid = zipfile.is_zipfile(path)
+    if valid:
+        reason = "valid_zip_directory"  # Not proof of the issuer, byte-for-byte completeness or licensing.
+    elif head.lstrip().lower().startswith((b"<!doctype html", b"<html", b"<?xml")) or b"<html" in head[:256].lower():
+        reason = "html_or_xml_instead_of_zip_check_http_proxy_or_site_error"
+    elif sig:
+        reason = "zip_header_but_missing_directory_possible_truncated_download"
+    else:
+        reason = "not_zip_content_check_http_response_and_download"
+    return {"path": str(path), "bytes": size, "magic_hex": head[:16].hex(),
+            "first_80_printable": printable, "has_pk_signature": sig,
+            "valid_zip": valid, "reason": reason}
+
+
+def require_valid_zip(path):
+    report = inspect_zip(path)
+    if not report["valid_zip"]:
+        raise ValueError("INSEE input is not a usable ZIP: " + json.dumps(report, ensure_ascii=False)
+                         + "; do not retry roster matching on this file. Re-download from the official INSEE page and verify the ZIP before scanning.")
 
 
 def sha_file(path):
@@ -179,6 +217,7 @@ def record_identifiers(name):
 
 def crosswalk_one(path, targets_by_name, outdir, target_source_fingerprint):
     path = Path(path)
+    require_valid_zip(path)
     digest = sha_file(path)
     # Cache must include the CTHS roster and role-source hashes, not only the INSEE ZIP.
     cache_key = hashlib.sha256((VERSION + ":" + digest + ":" + target_source_fingerprint).encode()).hexdigest()
@@ -324,6 +363,18 @@ def fixture_check():
                  "SAINT GAULTIER".ljust(30) + "FRANCE".ljust(30) + "19910111" + "75101" + "001234567")
         assert len(fixed) == 176
         fixed_parsed = list(parse_csv_records(io.BytesIO((fixed + "\n").encode("ascii")), "utf-8-sig"))
+        assert inspect_zip(z)["valid_zip"]
+        html = base / "fake.zip"
+        html.write_text("<!DOCTYPE html><html><body>Access denied</body></html>", encoding="utf-8")
+        assert inspect_zip(html)["reason"] == "html_or_xml_instead_of_zip_check_http_proxy_or_site_error"
+        try:
+            require_valid_zip(html)
+            raise AssertionError("Incorrectly accepted an HTML error file as a ZIP")
+        except ValueError:
+            pass
+        truncated = base / "partial.zip"
+        truncated.write_bytes(b"PK\x03\x04" + bytes(512))
+        assert inspect_zip(truncated)["reason"] == "zip_header_but_missing_directory_possible_truncated_download"
         assert len(fixed_parsed) == 1 and fixed_parsed[0]["birth"] == "19141001"
         assert record_identifiers(fixed_parsed[0]["name"]) == ("dubost", "charles")
         assert parse_cths_name("VERNEJOUL Robert de") == ("vernejoul", "robert")
@@ -338,9 +389,17 @@ def main():
     ap.add_argument("--insee-zip", action="append", default=[], help="Repeat to supply multiple locally downloaded official INSEE ZIPs")
     ap.add_argument("--out", default="local_runs/france_academy_insee_public_deaths_v1")
     ap.add_argument("--fixture-check", action="store_true")
+    ap.add_argument("--inspect-zip", action="append", default=[], help="Check whether a downloaded INSEE file is a real ZIP without scanning it")
     a = ap.parse_args()
     if a.fixture_check:
         fixture_check()
+        return
+    if a.inspect_zip:
+        reports = [inspect_zip(Path(p)) for p in a.inspect_zip]
+        for report in reports:
+            print(json.dumps(report, ensure_ascii=False, indent=2))
+        if not all(r["valid_zip"] for r in reports):
+            raise SystemExit(2)
         return
     if not a.insee_zip:
         ap.error("At least one --insee-zip path is required for a real run (or use --fixture-check)")
