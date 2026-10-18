@@ -1,0 +1,72 @@
+name: France Academy Hermite page locator and historical source shard 01
+on:
+  push:
+    branches:
+      - france-academy-1856-facsimile-and-shard01-v1-20261018
+    paths:
+      - 'scripts/france_academy_1856_scan_locator_v1.py'
+      - '.github/workflows/france_academy_1856_facsimile_shard01_v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  source-index-and-16-volume-shard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install bounded public HTML parser
+        run: python -m pip install --disable-pip-version-check beautifulsoup4==4.12.3
+      - name: Compile source and test no-network fixed source/HTML fixtures
+        run: python -m py_compile scripts/france_academy_1856_scan_locator_v1.py scripts/france_academy_run_remaining_172_toc_batch_v1.py scripts/france_academy_offline_source_toc_event_ledger_v1.py && python scripts/france_academy_1856_scan_locator_v1.py --fixture-check && python scripts/france_academy_run_remaining_172_toc_batch_v1.py --fixture-check
+      - name: Resolve original 1856 Hermite election vs imperial decree Page links
+        run: python scripts/france_academy_1856_scan_locator_v1.py --delay 1.3 --timeout 20
+      - name: Dry-run prespecified historical Academy volume shard 01 (no network)
+        run: python scripts/france_academy_run_remaining_172_toc_batch_v1.py --shard 1
+      - name: Collect exactly 16 new period-balanced TOCs and same-source individual event rows
+        run: python scripts/france_academy_run_remaining_172_toc_batch_v1.py --shard 1 --run --delay 1.5 --out-root data/france_academy_remaining_172_toc_batch_v1
+      - name: Check source integrity, duplicates, and strictly zero study admissions
+        run: |
+          python - <<'PY'
+          import json,csv
+          root='data/france_academy_remaining_172_toc_batch_v1/shard_01/'
+          s=json.load(open(root+'summary.json',encoding='utf8'))
+          m=json.load(open(root+'source_only_shard_checkpoint_v1.json',encoding='utf8'))
+          v=json.load(open(root+'person_event_ledger_summary_v1.json',encoding='utf8'))
+          scan=json.load(open('data/france_academy_1856_original_image_page_locator_v1/1856_hermite_nomination_and_imperial_decree_scan_locator_v1.json',encoding='utf8'))
+          assert s['table_probes_completed']==16 and s['category_volume_count']==211
+          assert len(m['volumes'])==16 and m['shard']==1
+          assert sorted(m['volumes'])==s['table_of_contents_probed_volumes']
+          assert v['parsed_event_rows']==s['sample_election_event_candidates']
+          assert v['source_200_bytes_checked']+v['other_TOC_statuses_not_election_zero']==16
+          with open(root+'verified_transcribed_person_event_candidates_v1.csv',encoding='utf-8-sig',newline='') as f: rows=list(csv.DictReader(f))
+          assert len(rows)==v['parsed_event_rows']
+          assert all(r['official_member_status_accepted']=='0' and r['exact_dob_accepted']=='0' and r['bazi_variables_computed']=='0' for r in rows)
+          assert scan['original_scanned_pages_directly_visually_inspected']==0 and scan['legal_approval_documents_inspected']==0
+          print('SHARD_01_SUMMARY',{'volumes':16,'http':s['table_probe_http_status'],'candidates':len(rows),'empty_person_names_manual':sum(not r['name_as_transcribed'] for r in rows),'roles':v['event_classes']})
+          print('HERMITE_PAGE_MAPPING',[(r.get('original_printed_page'),r.get('explicit_pagelist_mapping_candidates'),r.get('fetch_status')) for r in scan['records']])
+          PY
+      - name: Preserve compact evidence and no original scan images
+        uses: actions/upload-artifact@v4
+        with:
+          name: france-academy-1856-page-locator-and-shard01-v1
+          path: |
+            data/france_academy_1856_original_image_page_locator_v1/
+            data/france_academy_remaining_172_toc_batch_v1/shard_01/
+          retention-days: 45
+      - name: Commit only metadata and transcript event candidate leads
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/france_academy_1856_original_image_page_locator_v1/ data/france_academy_remaining_172_toc_batch_v1/shard_01/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Checkpoint public 1856 facsimile links and shard01 historical Academy event candidates'
+            git fetch origin france-academy-1856-facsimile-and-shard01-v1-20261018
+            git rebase origin/france-academy-1856-facsimile-and-shard01-v1-20261018
+            git push origin HEAD:france-academy-1856-facsimile-and-shard01-v1-20261018
+          fi
