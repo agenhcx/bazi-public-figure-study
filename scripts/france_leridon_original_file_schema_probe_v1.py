@@ -348,7 +348,6 @@ def test_fixture()->None:
     # only XML shared strings, does not contain real people or source data.
     with tempfile.TemporaryDirectory() as tmp:
         p=Path(tmp)/"synthetic.xlsx"
-        def sref(a):return "<c r=\\""+a+"\\" t=\\"inlineStr\\"><is><t>"+a+"</t></is></c>"
         sheet_rows=[]
         for i,line in enumerate([fieldnames,["A A","correspondant 1900","membre 1950","","1901-02-21","1900-01-01","","0","0"]],1):
             vals=[]
