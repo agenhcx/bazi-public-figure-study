@@ -1,0 +1,87 @@
+name: France Academy CTHS candidate DOB archive harvest v1
+
+on:
+  push:
+    branches:
+      - france-academy-cths-roster-v1
+    paths:
+      - scripts/france_academy_cths_dob_source_harvest_v1.py
+      - .github/workflows/france_academy_cths_dob_source_harvest_v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  source-shards:
+    name: Harvest CTHS bio source shard ${{ matrix.shard }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        shard: [0, 1, 2, 3]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install minimal HTML and encoding helpers
+        run: python -m pip install --disable-pip-version-check requests==2.32.3 beautifulsoup4==4.12.3 ftfy==6.3.1
+      - name: Syntax verification
+        run: python -m py_compile scripts/france_academy_cths_dob_source_harvest_v1.py
+      - name: Capture public source page and parse candidate DOB without acceptance
+        run: python scripts/france_academy_cths_dob_source_harvest_v1.py --collect-shard ${{ matrix.shard }} --delay 1.1 --timeout 28
+      - name: Upload raw source HTML and page digests for shard
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cths-birth-source-shard-${{ matrix.shard }}
+          path: data/france_academy_cths_profile_dob_harvest_v1/shard_${{ matrix.shard }}/
+          if-no-files-found: warn
+          retention-days: 90
+
+  archive-and-audit:
+    needs: source-shards
+    name: Audit full 562-person completeness and checkpoint compressed source archive
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install parser dependencies
+        run: python -m pip install --disable-pip-version-check requests==2.32.3 beautifulsoup4==4.12.3 ftfy==6.3.1
+      - name: Download all four shard artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: cths-birth-source-shard-*
+          path: worktree/cths-shard-artifacts
+          merge-multiple: false
+      - name: Validate all identities and archive SHA256-named original HTML evidence
+        run: python scripts/france_academy_cths_dob_source_harvest_v1.py --consolidate-from worktree/cths-shard-artifacts
+      - name: Upload consolidated audit and source bundle
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: france-academy-cths-dob-claims-and-raw-evidence-v1
+          path: |
+            data/france_academy_cths_profile_dob_harvest_v1/cths_dob_claims_all_targets_candidate_only_v1.csv
+            data/france_academy_cths_profile_dob_harvest_v1/birthdate_parse_coverage_by_birth_decade_v1.csv
+            data/france_academy_cths_profile_dob_harvest_v1/cths_profile_source_html_sha256_bundle_v1.tar.gz
+            data/france_academy_cths_profile_dob_harvest_v1/summary.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Persist candidate DOB audit and original-source archive on research branch
+        if: success()
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/france_academy_cths_profile_dob_harvest_v1/cths_dob_claims_all_targets_candidate_only_v1.csv data/france_academy_cths_profile_dob_harvest_v1/birthdate_parse_coverage_by_birth_decade_v1.csv data/france_academy_cths_profile_dob_harvest_v1/cths_profile_source_html_sha256_bundle_v1.tar.gz data/france_academy_cths_profile_dob_harvest_v1/summary.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Checkpoint raw and SHA-audited CTHS historical DOB candidate evidence for 562 member leads"
+            git push origin HEAD:france-academy-cths-roster-v1
+          fi
