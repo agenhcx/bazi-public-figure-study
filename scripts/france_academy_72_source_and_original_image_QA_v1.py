@@ -53,8 +53,8 @@ def main():
         raise RuntimeError("Cumulative ledger summary invalid")
     a={x["printed_page"]:x for x in images["records"]}
     b={x["printed_page"]:x for x in original_review["pages"]}
-    if set(a)!=set(b)!={83,84,85,169}:
-        # This expression's equality intentionally does NOT collapse source subsets.
+    if set(a)!=set(b) or set(a)!={83,84,85,169}:
+        # Four original printed page snapshots must be identical across source sources.
         raise RuntimeError("Original four-page evidence mismatch")
     for p in (83,84,85,169):
         if a[p]["source_preview_sha256"]!=b[p]["source_image_sha256"] or a[p]["frame"]!=b[p]["djvu_frame"]:
