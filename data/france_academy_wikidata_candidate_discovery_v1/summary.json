@@ -1,0 +1,37 @@
+{
+  "version": "france-academy-wikidata-identity-candidates-v1",
+  "snapshot_date_utc": "2026-10-18T01:03:19.526092+00:00",
+  "endpoint": "https://query.wikidata.org/sparql",
+  "requests": [
+    {
+      "source": "official_id_P6282",
+      "request_url": "https://query.wikidata.org/sparql?query=%0ASELECT+%3Fperson+%3FmemberId+%3Fdob+%3FnameFr+%3FnameEn+WHERE+%7B%0A++%3Fperson+%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fdirect%2FP6282%3E+%3FmemberId+.%0A+",
+      "http_status": 200,
+      "bindings": 555,
+      "response_sha256": "a370042c6feac52ee1214e2c6a80be86babb6aabe28507b1d0c5d900785dab5a",
+      "attempt": 1
+    },
+    {
+      "source": "membership_P463_Q188771",
+      "request_url": "https://query.wikidata.org/sparql?query=%0ASELECT+%3Fperson+%3Fdob+%3FnameFr+%3FnameEn+WHERE+%7B%0A++%3Fperson+%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fdirect%2FP463%3E+%3Chttp%3A%2F%2Fwww.wikidata.o",
+      "http_status": 200,
+      "bindings": 2207,
+      "response_sha256": "f67650af7951008bf814ebc4f0e67eaebbab3983b0502a12d4be217b854206f0",
+      "attempt": 1
+    }
+  ],
+  "candidate_people": 2220,
+  "route_intersection_counts": {
+    "membership_P463_Q188771": 1685,
+    "membership_P463_Q188771 + official_id_P6282": 472,
+    "official_id_P6282": 63
+  },
+  "any_official_id_claim": 535,
+  "any_birthyear_claim": 2199,
+  "accepted_full_members": 0,
+  "accepted_exact_dobs": 0,
+  "historical_roster_complete": false,
+  "final_roster_frozen": false,
+  "bazi_variables_computed": 0,
+  "read_me": "Candidate discovery only. No full member, exact DOB, election year or historical status was verified by official sources."
+}

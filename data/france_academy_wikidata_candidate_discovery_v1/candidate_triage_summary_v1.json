@@ -1,0 +1,26 @@
+{
+  "script": "france-academy-candidate-birthyear-triage-v1",
+  "generated_utc": "2026-10-18T01:03:19.618723+00:00",
+  "study_support_birthyears": [
+    1835,
+    1985
+  ],
+  "candidate_source_rows": 2220,
+  "candidate_birthyear_status_counts": {
+    "candidate_before_window": 889,
+    "candidate_in_primary_year_window": 1288,
+    "conflicting_birthyears_manual_review": 21,
+    "birthyear_missing": 21,
+    "candidate_after_window": 1
+  },
+  "candidate_discovery_route_counts": {
+    "membership_P463_Q188771": 1685,
+    "membership_P463_Q188771 | official_id_P6282": 472,
+    "official_id_P6282": 63
+  },
+  "verified_full_members": 0,
+  "verified_exact_dobs": 0,
+  "final_roster_frozen": false,
+  "bazi_variables_computed": 0,
+  "warning": "This is coverage of unverified Wikidata identity candidates, NOT DOB coverage of an accepted Academy cohort."
+}
