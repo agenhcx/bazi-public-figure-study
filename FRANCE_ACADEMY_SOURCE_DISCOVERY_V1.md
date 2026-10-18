@@ -48,3 +48,26 @@ Source references:
 - https://www.academie-sciences.fr/nos-archives-le-patrimoine-scientifique-de-lacademie
 
 `bazi_variables_computed=0`.
+
+## Pilot result and fallback, 2026-10-17 / UTC 2026-10-18
+
+1. Official homepage pilot GitHub Actions run: https://github.com/agenhcx/bazi-public-figure-study/actions/runs/39084651663
+   - Python compilation and dependencies succeeded; official member list URL returned **HTTP 403 Forbidden** from GitHub runner.
+   - Therefore **zero official profiles were retrieved or validated**. Failure audit uploaded; do not classify this as a zero-member roster.
+   - This is a site access limit for the runner; don't bypass access controls.
+2. Public Wikidata candidate discovery run: https://github.com/agenhcx/bazi-public-figure-study/actions/runs/39084865512
+   - P6282 official-member-profile ID: 555 SPARQL bindings (535 distinct QIDs after union).
+   - P463=Q188771 membership statement: 2,207 SPARQL bindings (some duplicate DOB values).
+   - Union unique persons/QIDs: **2,220**; P463-only 1,685; both routes 472; P6282-only 63.
+   - At least one Wikidata date with a parseable birth year: **2,199 candidate QIDs**.
+   - These are **candidate identity facts from Wikidata**, not source-verified Academy membership class, election-year, or accepted exact DOB. No full member is certified by this collection stage.
+   - Reproducible source snapshots and SHA-256 plus candidate identity CSV and primary-window triage are stored in the run artifact / discovery branch if checkpointing succeeds.
+3. Historic printed fourth edition independently catalogued by the BnF: *Index biographique de l'Académie des sciences : du 22 décembre 1666 au 1er octobre 1978*, 4e éd., Gauthier-Villars, **1979**, **513 pp.** Bibliography https://catalogue.bnf.fr/ark:/12148/cb34645901t . This supersedes the 1968 print index for election-era coverage if a legally accessible digitization or library copy can be secured. Neither copy has been downloaded or treated as audited data.
+4. FranceArchives lists institution member links https://francearchives.gouv.fr/fr/agent/214713620 but that authority description is sourced to Wikidata; do **not** call it independent cross-validation merely because it is a French archive website.
+
+### Immediate next QA path
+
+- Inspect year triage and profile ID candidates and define an auditable official/institutional **full-member evidence** ledger with fields: QID, original status wording, election year, official/third-party URL, capture/hash, acceptance tier, conflicts.
+- Until primary full-membership status is proven, all 2,220 remain **outside accepted cohort counts**. Any P569 DOB is also only a candidate, never accepted exact DOB without its underlying provenance.
+- Acquire 1979 index / official historic member file via legitimate public or library access, then match identities and transitions; reconcile the later 1979-2025 historical and recent elections.
+- The complete institution-level roster, exact DOB, evidence-based missingness and hashes must be frozen; pre-unblinding remains absolute.
