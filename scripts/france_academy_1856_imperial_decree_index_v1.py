@@ -57,7 +57,7 @@ def decree_nominees(raw):
         # The 1856 upper-half source opens with a collective decree header,
         # followed by three person entries. Its second half instead has a
         # singular inline decree confirming Hermite.
-        m=(re.search(r"\bdecret\s+confirmant\s+la\s+nomination\s+de\s+M\.\s+(.+)",line,re.I)
+        m=(re.search(r"\bd[ée]cret\s+confirmant\s+la\s+nomination\s+de\s+M\.\s+(.+)",line,re.I)
            or re.search(r"(?:^|[—–]\s*)la\s+nomination\s+de\s+M\.\s+(.+)",line,re.I)
            or re.search(r"^[—–]\s*de\s+M\.\s+(.+)",line,re.I))
         if not m:continue
