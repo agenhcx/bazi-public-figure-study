@@ -18,7 +18,7 @@ from bs4 import BeautifulSoup
 from france_academy_wikisource_index_preflight_v1 import build_urls,read_one
 from france_academy_wikisource_election_rows_v1 import role_of,section_of,person_of,identity_key,extract_from_html
 
-VERSION="france-academy-legacy-heading-wikisource-source-only-v1_4"
+VERSION="france-academy-legacy-heading-wikisource-source-only-v1_5"
 VOLUMES=[(1,1835),(42,1856),(43,1856),(91,1880),(182,1926)]
 CTHS="data/france_academy_cths_profile_dob_harvest_v1/cths_dob_claims_all_targets_candidate_only_v1.csv"
 OUT=Path("data/france_academy_wikisource_legacy_heading_pilot_v1")
@@ -71,89 +71,107 @@ def nomination_section(line):
     return " ".join(m.group(1).split())[:90] if m else ""
 
 def parse_html(raw,volume,year):
-    """Parse either legacy div.tableItem or modern table tr without double counting."""
+    """Parse TR and div.tableItem representations independently and deduplicate.
+
+    Some Wikisource historical pages (e.g. Tome 42/1856) contain BOTH:
+    choosing div.tableItem if one exists drops the actual election records
+    stored in the <tr> table. Preserve the tested modern index parser's
+    reconstructed page numbers as the first source of election records.
+    """
     soup=BeautifulSoup(raw,"html.parser")
-    content=soup.select_one(".mw-parser-output") or soup
     events=[];headings=[]
     old,modern_headings=extract_from_html(raw,year,volume)
-    if old:
-        # Reuse the already regression-tested 20th-century parser, including
-        # reconstructed pages that were split across adjacent index lines.
-        for x in old:
-            events.append({"volume":str(volume),"year":str(year),
-                  "elected_name_candidate":x["transcribed_elected_person_name"],
-                  "election_role_candidate":x["transcribed_election_type"],
-                  "source_action_wording":"EST_ELU_TRANSCRIBED",
-                  "science_section_candidate":x["transcribed_science_section"],
-                  "original_printed_volume_page":x["printed_election_page"],
-                  "source_evidence_tier":"WIKISOURCE_INDEX_TRANSCRIPTION_NOT_ORIGINAL_EVENT_PAGE",
-                  "original_election_printed_page_opened":"0",
-                  "official_membership_accepted":"0","exact_dob_accepted":"0",
-                  "bazi_variables_computed":"0"})
-        return events,[h for h in modern_headings if h.startswith(("election","nomination"))]
-    if soup.select("div.tableItem"):
-        logical=[]
-        for item in soup.select("div.tableItem"):
-            div=item.select_one(".ws-titrex")
-            if div is None:continue
-            line=" ".join(div.get_text(" ",strip=True).split())
-            # A legacy tableItem's "ws-titpge" contains title plus final page,
-            # not necessarily a single td separate from title.
-            pg=item.select_one(".ws-titpge")
-            full=" ".join(pg.get_text(" ",strip=True).split()) if pg else ""
-            match=re.search(r"\b(\d{1,5})\s*$",full)
-            page=match.group(1) if match else ""
-            sc=div.find("span",class_=re.compile("sc",re.I))
-            header=" ".join(sc.get_text(" ",strip=True).split()) if sc else ""
-            logical.append((line,page,header))
-    else:
-        logical=[]
-        for tr in content.find_all("tr"):
-            cells=tr.find_all("td",recursive=False)
-            if not cells:continue
-            line=" ".join(cells[0].get_text(" ",strip=True).split())
-            page=" ".join(cells[1].get_text(" ",strip=True).split()) if len(cells)>1 else ""
-            if not re.fullmatch(r"\d{1,5}",page):page=""
-            span=cells[0].find("span",class_=re.compile("sc",re.I))
-            header=" ".join(span.get_text(" ",strip=True).split()) if span else ""
-            logical.append((line,page,header))
-    in_events=False
-    for line,page,decorated in logical:
-        if not line:continue
-        # The heading is typically a decorated smallcaps span, but the
-        # earliest years may show raw "Élections. — ..." in ws-titrex.
-        # Older transcriptions sometimes small-cap only "NOMINATIONS"
-        # while the complete phrase is in the line. Never decide from the
-        # isolated decorated token if the full heading is recoverable.
-        prefix=line.split("—",1)[0].strip(" .")
-        head_candidate=(prefix if event_heading(prefix) else decorated)
-        is_named_correspondent_nomination=bool(
-            fold(decorated).strip(" .")=="nominations" and
-            re.search(r"\best\s+nomm[ée]e?\b",line,re.I) and
-            re.search(r"\bcorrespondant\b",line,re.I))
-        if event_heading(head_candidate) or is_named_correspondent_nomination:
-            in_events=True
-            headings.append(head_candidate[:120] if event_heading(head_candidate) else prefix[:120])
-        elif decorated and not event_heading(decorated):
-            in_events=False
-        elif line.startswith(("Candidatures.","Prix.","Décrets.","Décret.","Nécrologie.","Décès.")):
-            in_events=False
-        if not in_events:continue
-        nominated=bool(re.search(r"\best\s+nomm[ée]e?\b",line,re.I))
-        elected=bool(re.search(r"\b(est|a été|sont)\s+élu",line,re.I))
-        if not (nominated or elected):continue
-        role=nomination_role(line) if nominated else role_of(line)
-        if not role:continue
-        name=nominated_name_from_line(line) if nominated else name_from_line(line)
+    for x in old:
         events.append({"volume":str(volume),"year":str(year),
-          "elected_name_candidate":name,"election_role_candidate":role,
-          "source_action_wording":"EST_NOMME_TRANSCRIBED" if nominated else "EST_ELU_TRANSCRIBED",
-          "science_section_candidate":(nomination_section(line) if nominated else section_of(line).strip(" )")),
-          "original_printed_volume_page":page if re.fullmatch(r"\d{1,5}",page) else "",
-          "source_evidence_tier":"WIKISOURCE_INDEX_TRANSCRIPTION_NOT_ORIGINAL_EVENT_PAGE",
-          "original_election_printed_page_opened":"0",
-          "official_membership_accepted":"0","exact_dob_accepted":"0",
-          "bazi_variables_computed":"0"})
+             "elected_name_candidate":x["transcribed_elected_person_name"],
+             "election_role_candidate":x["transcribed_election_type"],
+             "source_action_wording":"EST_ELU_TRANSCRIBED",
+             "science_section_candidate":x["transcribed_science_section"],
+             "original_printed_volume_page":x["printed_election_page"],
+             "source_evidence_tier":"WIKISOURCE_INDEX_TRANSCRIPTION_NOT_ORIGINAL_EVENT_PAGE",
+             "original_election_printed_page_opened":"0",
+             "official_membership_accepted":"0","exact_dob_accepted":"0",
+             "bazi_variables_computed":"0"})
+    headings.extend(h for h in modern_headings if h.startswith(("election","nomination")))
+
+    # List two distinct possible containers, neither supersedes the other.
+    table_rows=[]
+    for tr in soup.find_all("tr"):
+        cells=tr.find_all("td",recursive=False)
+        if not cells:continue
+        first=cells[0]
+        line=" ".join(first.get_text(" ",strip=True).split())
+        page=" ".join(cells[1].get_text(" ",strip=True).split()) if len(cells)>1 else ""
+        if not re.fullmatch(r"\d{1,5}",page):page=""
+        sc=first.find("span",class_=re.compile(r"sc",re.I))
+        heading=" ".join(sc.get_text(" ",strip=True).split()) if sc else ""
+        table_rows.append((line,page,heading))
+    legacy_rows=[]
+    for item in soup.select("div.tableItem"):
+        div=item.select_one(".ws-titrex")
+        if div is None:continue
+        line=" ".join(div.get_text(" ",strip=True).split())
+        page_container=item.select_one(".ws-titpge")
+        full=" ".join(page_container.get_text(" ",strip=True).split()) if page_container else ""
+        match=re.search(r"\b(\d{1,5})\s*$",full)
+        page=match.group(1) if match else ""
+        sc=div.find("span",class_=re.compile("sc",re.I))
+        heading=" ".join(sc.get_text(" ",strip=True).split()) if sc else ""
+        legacy_rows.append((line,page,heading))
+
+    def add_unique(candidate):
+        # Duplicate markup or a modern indexed row plus our fallback may
+        # repeat the exact SAME person and role. Keep the record with
+        # its recovered page; if two nonempty DIFFERENT pages occur,
+        # retain both as separate manual-review events.
+        for x in events:
+            if (fold(x["elected_name_candidate"])==fold(candidate["elected_name_candidate"]) and
+                x["election_role_candidate"]==candidate["election_role_candidate"] and
+                x["source_action_wording"]==candidate["source_action_wording"]):
+                p1=x["original_printed_volume_page"]
+                p2=candidate["original_printed_volume_page"]
+                if not p1 or not p2 or p1==p2:
+                    if not p1 and p2:x["original_printed_volume_page"]=p2
+                    return
+        events.append(candidate)
+
+    for logical in (table_rows,legacy_rows):
+        in_events=False
+        for line,page,decorated in logical:
+            if not line:continue
+            prefix=line.split("—",1)[0].strip(" .")
+            head_candidate=prefix if event_heading(prefix) else decorated
+            is_named_correspondent_nomination=bool(
+                fold(decorated).strip(" .")=="nominations" and
+                re.search(r"\best\s+nomm[ée]e?\b",line,re.I) and
+                re.search(r"\bcorrespondant\b",line,re.I))
+            if event_heading(head_candidate) or is_named_correspondent_nomination:
+                in_events=True
+                header=head_candidate if event_heading(head_candidate) else prefix
+                if header not in headings:headings.append(header[:120])
+            elif decorated:
+                in_events=False
+            elif fold(prefix).startswith(("candidatures","prix","decrets","decret","necrologie","deces")):
+                in_events=False
+            if not in_events:continue
+            nominated=bool(re.search(r"\best\s+nomm[ée]e?\b",line,re.I))
+            elected=bool(re.search(r"\b(est|a été|sont)\s+élu",line,re.I))
+            if not (nominated or elected):continue
+            role=nomination_role(line) if nominated else role_of(line)
+            if not role:continue
+            name=nominated_name_from_line(line) if nominated else name_from_line(line)
+            # Quarantine unparsed identities; do not infer people from heading.
+            if not name:continue
+            candidate={"volume":str(volume),"year":str(year),
+                "elected_name_candidate":name,"election_role_candidate":role,
+                "source_action_wording":"EST_NOMME_TRANSCRIBED" if nominated else "EST_ELU_TRANSCRIBED",
+                "science_section_candidate":(nomination_section(line) if nominated else section_of(line).strip(" )")),
+                "original_printed_volume_page":page,
+                "source_evidence_tier":"WIKISOURCE_INDEX_TRANSCRIPTION_NOT_ORIGINAL_EVENT_PAGE",
+                "original_election_printed_page_opened":"0",
+                "official_membership_accepted":"0","exact_dob_accepted":"0",
+                "bazi_variables_computed":"0"}
+            add_unique(candidate)
     return events,headings
 
 def write_csv(p,rows,fields):
@@ -207,6 +225,12 @@ def fixture():
     assert nominated[0]["source_action_wording"]=="EST_NOMME_TRANSCRIBED"
     assert nominated[0]["science_section_candidate"]=="Géométrie"
     assert all(x["official_membership_accepted"]=="0" for x in nominated)
+    mixed=('<div class="tableItem"><div class="ws-titrex">Unrelated botanical index</div></div>'+nomination_html)
+    mixed_results,_=parse_html(mixed.encode("utf-8"),43,1856)
+    assert len(mixed_results)==len(nominated),(mixed_results,nominated)
+    assert [x["elected_name_candidate"] for x in mixed_results]==["Hermite","W. Hooker","Guyon"]
+    assert all(x["original_election_printed_page_opened"]=="0" for x in mixed_results)
+
     print("PASS: 1835 election, 1856 est nommé in nominations, 1880/1926 elections; candidatures/decrees excluded")
 
 def main():
