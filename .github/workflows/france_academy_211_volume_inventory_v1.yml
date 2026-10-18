@@ -57,6 +57,8 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add data/france_academy_comptes_rendus_211_volume_inventory_v1/ data/france_academy_comptes_rendus_211_volume_holdout_v1/
           if ! git diff --cached --quiet; then
-            git commit -m 'Checkpoint official and Wikisource 211-volume journal inventory plus 11 source-availability probes'
+            git commit -m 'Checkpoint Academy 211-volume inventory plus 11 discovery and 12 holdout source probes'
+            git fetch origin france-academy-211-volume-coverage-audit-v1-20261018
+            git rebase origin/france-academy-211-volume-coverage-audit-v1-20261018
             git push origin HEAD:france-academy-211-volume-coverage-audit-v1-20261018
           fi
