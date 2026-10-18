@@ -32,3 +32,6 @@ music_daymaster_results/music_people_with_daymaster.csv
 
 # Private local audit runs and bulky caches are never auto-committed
 local_runs/
+
+# Public INSEE source archives are downloaded locally only (never commit bulk register data)
+external/insee/
