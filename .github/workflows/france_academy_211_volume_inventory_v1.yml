@@ -1,0 +1,64 @@
+name: France Academy 211-volume inventory plus 12 holdout TOCs
+on:
+  push:
+    branches:
+      - france-academy-211-volume-coverage-audit-v1-20261018
+    paths:
+      - 'scripts/france_academy_comptes_rendus_211_volume_inventory_v1.py'
+      - '.github/workflows/france_academy_211_volume_inventory_v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  original-volume-inventory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install pinned HTML parser
+        run: python -m pip install --disable-pip-version-check beautifulsoup4==4.12.3
+      - name: Compile and run no-network synthetic volume/source tests
+        run: python -m py_compile scripts/france_academy_comptes_rendus_211_volume_inventory_v1.py && python scripts/france_academy_comptes_rendus_211_volume_inventory_v1.py --fixture-check
+      - name: Run bounded 211 volume catalog and 11 source-table availability probes
+        run: python scripts/france_academy_comptes_rendus_211_volume_inventory_v1.py --max-table-probes 11
+      - name: Independent period-spread holdout 12 additional volumes
+        run: python scripts/france_academy_comptes_rendus_211_volume_inventory_v1.py --sample-volumes 2,21,55,92,120,122,137,159,169,183,199,210 --max-table-probes 12 --out data/france_academy_comptes_rendus_211_volume_holdout_v1
+      - name: Check scientific and provenance invariants
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open('data/france_academy_comptes_rendus_211_volume_inventory_v1/summary.json',encoding='utf8'))
+          assert d['category_volume_count']==211 and d['volume_range_1_to_211_complete']
+          assert d['no_original_book_election_pages_scanned']
+          assert d['no_full_member_roster_completeness_claim']
+          assert d['accepted_full_memberships']==0 and d['accepted_exact_dobs']==0 and d['bazi_variables_computed']==0
+          h=json.load(open('data/france_academy_comptes_rendus_211_volume_holdout_v1/summary.json',encoding='utf8'))
+          assert h['category_volume_count']==211 and h['table_probes_completed']==12
+          assert h['accepted_full_memberships']==0 and h['accepted_exact_dobs']==0 and h['bazi_variables_computed']==0
+          assert h['no_original_book_election_pages_scanned']
+          print('211 source volumes indexed; 11 pilot plus 12 holdout TOCs independently checked; no study acceptance')
+          PY
+      - name: Preserve source-only evidence artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: france-academy-211-volume-inventory-pilot-v1
+          path: |
+            data/france_academy_comptes_rendus_211_volume_inventory_v1/
+            data/france_academy_comptes_rendus_211_volume_holdout_v1/
+          retention-days: 45
+      - name: Checkpoint compact source URL inventory, no original copyrighted full scans
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/france_academy_comptes_rendus_211_volume_inventory_v1/ data/france_academy_comptes_rendus_211_volume_holdout_v1/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Checkpoint Academy 211-volume inventory plus 11 discovery and 12 holdout source probes'
+            git fetch origin france-academy-211-volume-coverage-audit-v1-20261018
+            git rebase origin/france-academy-211-volume-coverage-audit-v1-20261018
+            git push origin HEAD:france-academy-211-volume-coverage-audit-v1-20261018
+          fi
