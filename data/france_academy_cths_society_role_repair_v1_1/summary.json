@@ -1,0 +1,36 @@
+{
+  "rule_version": "france-academy-cths-society-role-encoding-repair-v1_1",
+  "source_v1_sha256_csv": "f455e88f54cc0ac9e7d926dec1eb6db166b9d4066c6e72aa71f7271d3046286b",
+  "source_html_sha256": "542001a28878b83ef4acfdb3362e8249b6b10110caccf51ccb2901a45a69f9f1",
+  "source_decoding_strategy": "cp1252_then_ftfy_fix_text_per_field",
+  "source_raw_roster_parse_audit": {
+    "advertised_count_mentions": [
+      "2177"
+    ],
+    "savant_links_raw": 2144,
+    "distinct_cths_person_ids": 2144
+  },
+  "created_utc": "2026-10-18T01:17:06.702845+00:00",
+  "input_people": 2144,
+  "fixed_name_strings": 451,
+  "fixed_membership_note_strings": 1287,
+  "classification_candidate_counts": {
+    "correspondent_then_full_candidate": 138,
+    "foreign_corresponding_only_candidate": 108,
+    "full_and_foreign_mixed_manual": 5,
+    "full_like_only_candidate": 729,
+    "correspondent_only_candidate": 951,
+    "foreign_only_candidate": 166,
+    "unresolved_membership_type": 47
+  },
+  "candidate_birthyears_inside_1835_1985": 1325,
+  "mixed_or_unresolved_review_rows": 52,
+  "advertised_cths_members": 2177,
+  "extracted_unique_cths_profile_links": 2144,
+  "advertised_minus_extracted": 33,
+  "remaining_gap_state": "unresolved; do not assert these 33 are excluded/nonexistent until separately audited",
+  "full_membership_accepted": 0,
+  "exact_dobs_accepted": 0,
+  "bazi_variables_computed": 0,
+  "source_warning": "CTHS metadata is secondary, dates may borrow Wiki; use official membership status and independent DOB provenance before cohort inclusion. Historical mixed role must be manually inspected."
+}
