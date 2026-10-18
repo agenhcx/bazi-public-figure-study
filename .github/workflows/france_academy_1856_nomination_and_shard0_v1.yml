@@ -1,0 +1,58 @@
+name: France Academy 1856 historical nomination grammar and decree QA
+on:
+  push:
+    branches:
+      - france-academy-1856-nominations-shard0-v1-20261018
+    paths:
+      - 'scripts/france_academy_wikisource_legacy_election_headings_v1.py'
+      - '.github/workflows/france_academy_1856_nomination_and_shard0_v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  original-nomination-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install pinned HTML source reader
+        run: python -m pip install --disable-pip-version-check beautifulsoup4==4.12.3
+      - name: Run synthetic modern and 1856 nomination regression
+        run: python -m py_compile scripts/france_academy_wikisource_legacy_election_headings_v1.py && python scripts/france_academy_wikisource_legacy_election_headings_v1.py --fixture-check
+      - name: Probe limited 1835/1856 volumes 1 42 43
+        run: python scripts/france_academy_wikisource_legacy_election_headings_v1.py --limit 3 --delay 1.5 --out data/france_academy_1856_nomination_grammar_pilot_v1
+      - name: Assert real Hermite and W Hooker with no accepted members
+        run: |
+          python - <<'PY'
+          import csv,json
+          root='data/france_academy_1856_nomination_grammar_pilot_v1/'
+          j=json.load(open(root+'summary.json',encoding='utf8'))
+          with open(root+'historical_nominations_elections_candidates_v1.csv',encoding='utf-8-sig',newline='') as f: rows=list(csv.DictReader(f))
+          target=[r for r in rows if r['volume']=='43' and r['year']=='1856']
+          print('LIVE_1856',[(r['elected_name_candidate'],r['election_role_candidate'],r['original_printed_volume_page'],r['source_action_wording']) for r in target])
+          assert any(r['elected_name_candidate']=='Hermite' and r['original_printed_volume_page']=='85' and r['source_action_wording']=='EST_NOMME_TRANSCRIBED' for r in target)
+          assert any(r['elected_name_candidate']=='W. Hooker' and r['election_role_candidate']=='CORRESPONDENT' and r['original_printed_volume_page']=='1143' for r in target)
+          assert j['accepted_french_full_members']==0 and j['accepted_study_birthdates']==0 and j['bazi_variables_computed']==0
+          PY
+      - name: Preserve nominated member candidate source metadata
+        uses: actions/upload-artifact@v4
+        with:
+          name: france-academy-1856-appointment-source-pilot-v1
+          path: data/france_academy_1856_nomination_grammar_pilot_v1/
+          retention-days: 45
+      - name: Commit source-only 1856 grammar pilot to this branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/france_academy_1856_nomination_grammar_pilot_v1/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Checkpoint 1856 Hermite member nomination and Hooker correspondent index evidence'
+            git fetch origin france-academy-1856-nominations-shard0-v1-20261018
+            git rebase origin/france-academy-1856-nominations-shard0-v1-20261018
+            git push origin HEAD:france-academy-1856-nominations-shard0-v1-20261018
+          fi
