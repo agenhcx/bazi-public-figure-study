@@ -1,0 +1,454 @@
+ 
+  
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    		<meta http-equiv="content-type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />		<meta name="viewport" content="width=device-width, initial-scale=1">		<meta name="author" content="Olivier Drut">		<meta name="robots" content="index, follow"> 		<script src="../library/js/jquery/jquery-1.11.1.min.js" type="text/javascript"></script>		<link href='//fonts.googleapis.com/css?family=Asap' rel='stylesheet'>		<link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'> 		<link rel="stylesheet" href="../css/layout.css">		<link rel="stylesheet" href="../css/fonts.css">		<link rel="stylesheet" href="../css/liste.css">		<link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">		 <script type="text/javascript" src="../library/js/jq-sticky-anything/jq-sticky-anything.min.js"></script> 		<script> 	     $(window).load(function(){			$('#nav-bar').stickThis({ 	       top:            0,		    // top position of sticky element, measured from 'ceiling' 	       minscreenwidth: 800,		    // element will not be sticky when viewport width smaller than this 	       maxscreenwidth: 999999,		// element will not be sticky when viewport width larger than this   	      zindex:         1,		    // z-index value of sticky element 	       debugmode:      false,      // when true, errors will be logged to console 	       pushup:         ''          // another (unique) element on the page that will 'push up' the sticky element 	 		  }); 		   }); 		</script> 		    		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" /> <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>  	<!-- Add jQuery library -->	<!-- Add fancyBox main JS and CSS files -->	<script type="text/javascript" src="../library/js/fancybox/source/jquery.fancybox.js?v=2.1.4"></script>	<link rel="stylesheet" type="text/css" href="../library/js/fancybox/source/jquery.fancybox.css?v=2.1.4" media="screen" />	<script type="text/javascript">		$(document).ready(function() {			$('.myfancybox').fancybox({	'width'				: 900,	'height'			: 600,	'autoSize'			: true,     'autoDimensions' : true, 	'transitionIn'		: 'none',	'transitionOut'		: 'none',	'type'				: 'iframe',	'titleShow'			: false, 		    	 	}); });	</script>   
+
+ <script type="text/javascript">
+function setCookie(c_name, value, expiredays) {
+ 
+var exdate=new Date();
+exdate.setDate(exdate.getDate()+expiredays);
+document.cookie=c_name+ "=" +escape(value)+
+((expiredays==null) ? "" : ";expires="+exdate.toGMTString());
+ 
+}
+
+
+function ajax_data( my_element_id, my_str )// récup de données dans la base mysql
+{
+if (window.XMLHttpRequest)  {  xmlhttp=new XMLHttpRequest();  }// code for IE7+, Firefox, Chrome, Opera, Safari
+else
+  { xmlhttp=new ActiveXObject("Microsoft.XMLHTTP"); }// code for IE6, IE5
+
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    { document.getElementById(my_element_id).innerHTML=xmlhttp.responseText; }
+  }
+
+if (my_str.substr(0,16) == 'q=reunion_detail' ) { xmlhttp.open("GET","../priv/reunion.php?"+my_str,true);}
+else if (my_str.substr(0,16) == 'q=congres_expand' ) { xmlhttp.open("GET","../co/getdata.php?"+my_str,true);}
+else if (my_str.substr(0,16) == 'q=domaine_expand' ) { xmlhttp.open("GET","../ed/getdata.php?"+my_str,true);}
+else { xmlhttp.open("GET","../library/getdata.php?"+my_str,true);}
+
+xmlhttp.send();
+}
+</script>
+  
+
+
+   <script type="text/javascript" language="javascript">
+function win_open(nUrl,nNom,w,h,nScroll){
+  var winl = (screen.width) ? (screen.width-w)/2 : 0;
+  var wint = (screen.height) ? (screen.height-h)/2 : 0;
+  var options = 'width='+w+',height='+h+',top='+wint+',left='+winl+',scrollbars='+nScroll+',resizable=yes, location=yes, toolbar= yes';
+  fen=window.open(nUrl,nNom,options);
+ fen.window.focus(); 
+}
+</script>
+ 
+           
+     <title>CTHS - DEHEUVELS Paul</title>
+
+<style type="text/css">
+	#center	{ width: 100%; margin:  10px; }
+	.title	{   margin-bottom: 10px; margin-top: 10px; }
+	.block_legend	{   font-size: 1.1em; color: #BD0036}
+a:link {  font-weight: bold;  text-decoration: none;  color: #004080; }
+.societe_ligne {margin-bottom: 5px; }
+#societes{border-width: 70%; clear: none; float: left;}
+#signature{border-width: 28%; clear: none; float: right;}
+fieldset	{ width: 95%;  }
+#photo	{ clear: none; float: left;margin-right: 10px; }
+.proso_corresp_ligne	{ margin-bottom: 25px; clear: both; float: left; }
+.fieldset_demi	{ width: 45%; clear: none; float: left; margin-left: 20px;  }
+ #cths_droits	{ width: 100%; clear: both; float: left; }
+
+.myButton {width: 250px; }
+</style>
+
+</head>
+
+<body>
+          <div id="header">
+            <div class="container">
+                <style type="text/css">  		#header a {  text-decoration: none; }		#cths_logo {  margin-left: 10px;  vertical-align: middle; float: left; }  		#header_title {  margin-left: 50px;  font-size: 1.2em;  float: left; margin-top: 18px; line-height: 25px;} 		#header_icons {  margin-right: 10px;  margin-top: 20px;  text-align: right;  float: right;  } 		.icon {vertical-align: middle;  }.header_1{margin-bottom: 20px;  font-size: 1.2em;}.header_2{margin-top: 10px; font-size: 0.9em;}</style>   <img class= baseline id="cths_logo" src="../images/logo-enc.png" alt="cths_logo" width="167" height="80" /><span id=header_title class=no_mobile><center>	<span class=header_1>Comité des travaux historiques et scientifiques</span><br>	<span class=header_2>Institut rattaché à l’École nationale des chartes</span></center></span><span id=header_icons>	  
+<a class=redlink href='../hi/secretariat.php'><span class='fa-2x'><i class='fa fa-envelope fa-fw' title='Formulaire de contact'></i> </a><a class=redlink href='../rss/rss.php'  target='_blank'><span class='fa-2x'><i class='fa fa-rss fa-fw' title='Flux RSS'></i></a><a class=redlink href='https://twitter.com/cths_Paris'  target='_blank'><span class='fa-2x'><i class='fa fa-twitter fa-fw'  title='Le compte Twitter du CTHS'></i></a><a  class=no_mobile class=redlink href='https://cths.fr/priv/login.php'><span class='fa-2x'><i class='fa fa-lock fa-fw'  title='Espace Membres'></i></a><br> <a href=/hi/accessibilite.php>Accessibilité (partiellement conforme)</a>   
+  </span>            </div>
+        </div>
+        <div class="container">
+            <div id="nav-bar">
+                <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<! html xmlns="http://www.w3.org/1999/xhtml">
+
+ 
+<style type="text/css" media="print" >
+#nav {	display: none;}
+</style>
+
+<style type="text/css" media="screen" >
+  .fa { font-size: 0.8em;} 
+  
+  #nav {
+	padding-left: 0px;
+	padding-bottom: 0;
+	padding-right: 0px;
+	padding-top: 7px;
+	border-bottom-color: #6d6d6d;
+	border-left-style: none;
+	border-bottom-style: solid;
+	border-right-style: none;
+	border-top-style: none;
+	border-left-width: 0px;
+	border-bottom-width: 1px;
+	border-right-width: 0px;
+	border-top-width: 0px;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 0;
+	
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+
+	background: #CCCCCC; /* for non-css3 browsers */
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#EEEEEE'); /* for IE, dégradé barre de menu principale */
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#EEEEEE)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #FFFFFF,  #EEEEEE); /* for firefox 3.6+ */
+	width : 99%;
+}
+  
+#nav li {
+	padding-left: 0;
+	padding-bottom: 8px;
+	padding-right: 0;
+	font-size: 1.2em;
+	margin-bottom: 0;
+	margin-right: 0px;
+	float: left;
+	position: relative;
+	list-style: none;
+}
+ /* main level link */
+#nav a {
+	font-weight: bold;
+	color: #333333;
+	text-decoration: none;
+	display: block;
+	padding:  8px 20px;
+	margin: 0;
+	-webkit-border-radius: 1.6em;
+	-moz-border-radius: 1.6em;
+ }
+/* main level link hover */
+#nav .current a, #nav li:hover > a {
+	background: #d1d1d1; /* for non-css3 browsers */
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f1f1f1', endColorstr='#bbbbbb'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#f1f1f1), to(#bbbbbb)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #f1f1f1,  #bbbbbb); /* for firefox 3.6+ */
+
+	color: #444444;
+	border-top: solid 1px #f8f8f8;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
+}
+/* sub levels link hover */
+#nav ul li:hover a, #nav li:hover li a {
+	background: none;
+	border: none;
+	/* color: #666;  couleur police déroulants */
+	color: #333;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+}
+#nav ul a:hover {
+	background: #0399d4 !important; /* for non-css3 browsers */
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#BC3315', endColorstr='#BD3414'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#BC3315), to(#BD3414)) !important; /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #BC3315,  #BD3414) !important; /* for firefox 3.6+ */
+
+	color: #fff !important;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+}
+/* level 2 list */
+#nav ul {
+	background: #ddd; /* for non-css3 browsers */
+	/*filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#cfcfcf'); /* for IE */
+	                                             
+	                                                                                                                   
+	line-height: 20px;
+	                                             
+	                                                                                                                   
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee'); /* for IE , dégradé du menu déroulant */
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#cfcfcf)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #fff,  #cfcfcf); /* for firefox 3.6+ */
+
+	display: none;
+	margin: 0;
+	padding: 0;
+	width: 400px; /* si modif, reporter en #nav ul ul { pour décaler la sous liste en conséquence  */
+	position: absolute;
+	top: 35px;
+	left: 0;
+	border: solid 1px #b4b4b4;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+}
+/* dropdown */
+#nav li:hover > ul {
+	display: block;
+}
+#nav ul li {
+	font-size: 0.9em;
+	float: none;
+	margin: 0;
+	padding: 0;
+}
+#nav ul a {
+ 	text-shadow: 0 1px 1px rgba(255, 255, 255, .9);
+}
+/* level 3+ list */
+#nav ul ul {
+	left: 231px;
+	top: -3px;
+}
+ 
+/* clearfix */
+#nav:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+#nav {
+	display: inline-block;
+}
+html[xmlns] #nav {
+	display: block;
+}
+* html #nav {
+	height: 1%;
+}
+
+
+
+
+@media (max-width: 1000px) /* masquer en dessous de 1000px  */
+{.no_1000px { display: none; } }
+
+@media (max-width: 1200px) /* réduire fonte en dessous de 1200px  */
+{
+  #nav li {		font-size:0.95em; }
+   #nav .menu_line {		font-size:1.3em; }
+}
+ 
+
+
+
+@media (max-width: 0.720px)
+{
+#nav li {
+	position: static;
+	float: none;
+	list-style: none;
+}
+#nav ul {
+ 	                                                                                                                   
+	line-height: 30px;
+	                                             
+ 	 	width: 250px; /* si modif, reporter en #nav ul ul { pour décaler la sous liste en conséquence  */
+	position: static;
+	top: 35px;
+	 }
+ 
+}
+
+@media (max-width: 720px){ 
+
+/*  #nav ul li { visibility: hidden; display: none; }masquer les lignes de menus sur les smartphones  */
+ #nav a { padding: 4px; }
+}
+
+.menu_large { display: inline; }
+.menu_small { display: none; }
+@media (max-width: 600px){ 
+  .menu_large {  display: none; } 
+  .menu_small {  display: inline; }
+  }
+
+ </style>
+
+
+<a name="top"></a>
+<ul id="nav">
+	<! Home  >
+ 	<li ><a href="../index.php"><i class="fa fa-home"></i></a>
+	
+	<! LE CTHS  >
+	<li ><a href="../hi/index.php">
+	<span class="menu_large">Le CTHS </span><span class="menu_small">CTHS </span>
+	 	<span class="menu_large"><i class="sm-caret fa fa-angle-down"  ></i></span></a>
+		<ul>
+										<li><a class=menu_line href="../hi/index.php">• Qu'est-ce que le CTHS ?</a></li>
+										<li><a class=menu_line href="../hi/historique.php">• Histoire du CTHS</a></li>
+										<li><a class=menu_line href="../hi/section.php">• Membres du CTHS</a></li>
+										<li><a class=menu_line href="../hi/commission.php">• Commission de publication du CTHS</a></li> 									
+ 										<li><a class=menu_line href="../hi/secretariat.php">• Contacts</a></li>
+										<li><a class=menu_line href="../hi/statuts.php">• Les statuts du CTHS</a></li>
+										<li><a class=menu_line href="../hi/reglement.php">• Le règlement intérieur du CTHS</a></li>
+ 													<li class=no_mobile><a class=menu_line href="https://cths.fr/priv/login.php">• Accès Membres</a></li>
+			 		</ul>
+	</li>
+	
+	
+
+	<! editions  >
+	<li ><a href="../ed/index.php">
+	Éditions  
+	<span class="menu_large"><i class="sm-caret fa fa-angle-down"  ></i></span></a>
+		<ul>
+										<li><a class=menu_line href="../ed/index.php">• Présentation des éditions du CTHS</a></li>
+										<li><a class=menu_line href="../ed/selec.php?sc=ed">• Catalogue</a></li>
+										<li><a class=menu_line href="../ed/instructions.php">• Instructions aux auteurs</a></li>
+										<li><a class=menu_line href="../ed/collections.php">• Les collections du CTHS</a></li> 
+																			
+ 					</ul>
+	</li>
+	
+	
+		<! Sociétés savantes  >
+	<li class="current" ><a href="../an/index.php">
+	<span class="menu_large">Sociétés savantes  </span><span class="menu_small">Sociétés </span> 
+	<span class="menu_large"><i class="sm-caret fa fa-angle-down"  ></i></span></a>
+		<ul>
+										<li><a class=menu_line href="../an/index.php">• Présentation</a></li>
+										<li><a class=menu_line href="../an/annuaire.php">• Annuaire des sociétés savantes</a></li>
+										<li><a class=menu_line href="../ed/liste.php?sc=pe">• Publications des sociétés savantes</a></li> 									
+										<li><a class=menu_line href="../an/prosopographie.php">• Base prosopographique: La France savante</a></li> 									
+										<li><a class=menu_line href="../an/liaison.php">• Bulletin de liaison des sociétés savantes</a></li>
+		</ul>
+	</li>
+
+
+ 	
+	<! Congres  >
+   
+  	<li > <a href="../co/index.php">
+  	<span class="menu_large">Congrès annuel </span><span class="menu_small">Congrès </span> 
+	<span class="menu_large"><i class="sm-caret fa fa-angle-down"  ></i></span></a>
+ 	 			<ul>
+ 				<li><a class=menu_line href="../co/index.php">• Présentation</a></li> 
+ 				<li><a class=menu_line href="../co/congres.php">• 151<sup>e</sup> congr&egrave;s, Lyon, 10-14 mai 2027</a></li>
+ 				<li><a class=menu_line href="../co/liste.php">• Tous les congrès du CTHS</a></li> 
+  							<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;------------------------------</li> 	  				<li><a class=menu_line href="../ed/liste.php?monocrit=c&collection=actes">• Actes des congrès du cths</a></li>
+				<li><a class=menu_line href="../co/instructions.php">• Instructions aux auteurs</a></li>
+  				
+  				
+  						</ul>
+	</li>
+ 	
+
+	<! prix de thèse  >
+	<div class=no_1000px>
+    	<li > <a href="../pt/index.php">Fondation et prix  
+	<span class="menu_large"><i class="sm-caret fa fa-angle-down"  ></i></span></a>
+ 	 			<ul>
+ 				<li><a class=menu_line href="../pt/index.php">• Prix de thèses</a></li>
+				<li><a class=menu_line href="../pt/index.php?id=fondation">• Fondation et autres prix</a></li>
+		</ul>
+	</li>
+ 	</div class=no_1000px>
+
+
+	
+	<! actualité  >
+	 	<li > <a href="../ac/index.php">
+	<span class="menu_large">Actualité</span><span class="menu_small">Actu... </span>  
+	<span class="menu_large"><i class="sm-caret fa fa-angle-down"  ></i></span></a>
+ 	 			<ul>
+										<li><a class=menu_line href="../ac/index.php">• Actualité du CTHS</a></li>
+										<li><a class=menu_line href="../ac/index.php?sc=ag">• L'agenda du CTHS</a></li>
+										<li><a class=menu_line href="../ac/index.php?sc=pr">• Revue de presse</a></li>
+		</ul>
+	</li>
+
+ 	
+	<! topographique  >
+ 
+	<li><a href="https://dicotopo.cths.fr" target=_blank>
+	  	<span class="menu_large">Topographie</span><span class="menu_small">Topo.</span> 
+  
+	<span class="menu_large"><i class="sm-caret fa fa-angle-down"  ></i></span></a>
+			<ul>
+			<li><a class=menu_line href="https://dicotopo.cths.fr" target="topo">Dictionnaire topographique</a></li>
+		</ul>
+ </li>
+	</dim class=no_mobile>
+ 
+
+ 
+
+
+  
+
+
+</ul>
+ 
+            </div>
+        </div>
+        <hr>
+ 
+        <div class="content">
+            <div class="container">
+            <div id="ariane">
+                <a href=../index.php>Accueil</a> &nbsp;&nbsp; &nbsp;&nbsp;
+                <img src="../images/car_bleu.gif" width="10" height="10" /> <a href=index.php>Sociétés savantes</a> &nbsp;&nbsp;
+                <img src="../images/car_bleu.gif" width="10" height="10" /> <a href=prosopographie.php>Annuaire prosopographique : recherche</a> &nbsp;&nbsp;
+                                 <img src="../images/car_bleu.gif" width="10" height="10" /> DEHEUVELS Paul </div>
+                 <div id="center">
+
+<div class= title><h2>DEHEUVELS <span class=normal><strong>Paul</strong> </span class=normal><span class=normal></h2></div class= title> 
+Naissance: 11 mars 1948 à Istanbul, Turquie - Décès: 30 janvier 2026 à Bourg-la-Reine (Hauts-de-Seine)<br><br> 
+
+							 <fieldset id="fieldset_societes">
+                       				 <legend class="block_legend"> Société(s)</legend> 
+                       				 <div id =societes> <div class =societe_ligne><A HREF="societe.php?id=506" >Académie des sciences </A> : Correspondant (1996-2000), membre (2000-2026)de la section des sciences mécaniques, 1996-2026</div class =societe_ligne></div id =societes><div id =signature></div id =signature></fieldset><fieldset id="fieldset_biographie">
+                       				 <legend class="block_legend">Biographie</legend> 
+                       				 <div id =photo> </div id =photo>
+                       				 <div id =biographie> <div class=detail id=proso_bio_detail>Fils de René Deheuvels, Paul naît en 1948 à Istanbul où son père est professeur au lycée de Galatasaray et où sa mère est fille du consul général de France.<br />
+<br />
+Il intègre l'Ecole normale supérieure - où l'avait précédé son père -, est agrégé de mathématiques en 1969 et docteur d'Etat en 1974. <br />
+<br />
+Il fait toute sa carrière à l'université Paris VI (Jussieu, Pierre-et-Marie-Curie).  Il est l'un des meilleurs spécialistes de la statistique théorique et la théorie des probabilités, notamment dans les domaines de la théorie des valeurs extrêmes, des processus empiriques et de quantiles, de l’estimation non paramétrique, des copules, des lois limites et des approximations fortes.<br />
+<br />
+Il a reçu le prix Pierre-Simon de Laplace, de la Société française de statistique en 2007. Des Mélanges lui sont remis en 2015.<br />
+<br />
+Il est élu correspondant de l’Académie des sciences en 1996, puis membre en 2000 (section des Sciences mécaniques et informatiques et inter-section des applications des sciences).
+ </div class=detail id=proso_bio_detail></div id =biographie></fieldset><fieldset id="fieldset_sources_biographiques"> <legend class="block_legend">Sources biographiques</legend>    <div id =proso_sources_biographiques>  *Notice de l'Académie des sciences : https://www.academie-sciences.fr/paul-deheuvels
+</div id =proso_sources_biographiques></fieldset><fieldset id="fieldset_bibliographie"> <legend class="block_legend">Bibliographie</legend>    <div id =proso_biblio_detail>  Plus de 160 publications scientifiques et de plusieurs ouvrages de référence
+ </div id =proso_biblio_detail></fieldset><div id=cths_droits>R&eacute;dacteur(s) de la notice : Rémi Mathis<br>Fiche créée le 12/02/2026 - Dernière mise à jour le 16/02/2026<br> © copyright CTHS-La France savante.</div>
+						 							
+	 
+ 
+
+
+ 	
+
+
+					
+                 
+                 
+               </div>
+        </div>
+  </body>
+
+</html>
