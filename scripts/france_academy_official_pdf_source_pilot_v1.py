@@ -38,6 +38,21 @@ WHITELIST_DOMAINS={"www.academie-sciences.fr","academie-sciences.fr",
 MONTHS={m:i for i,m in enumerate(
     "janvier fevrier mars avril mai juin juillet aout septembre octobre novembre decembre".split(),1)}
 MONTH_RE="|".join(MONTHS)
+# The original 2013 PDF's visual index is correct, but its text layer loses
+# the INITIAL CAPITAL of these eight surnames (verified against printed p.3).
+# Recovery is permitted only for these exact person + damaged suffix + index
+# page-number triples. New anomalies remain unresolved rather than guessed.
+FONT_GLYPH_2013={
+    "Laure Saint-Raymond":("Laure aint-Raymond",20),
+    "Barbara Romanowicz":("Barbara omanowicz",19),
+    "Odile Eisenstein":("Odile isenstein",11),
+    "Geneviève Almouzni":("Geneviève lmouzni",6),
+    "Antoine Danchin":("Antoine anchin",9),
+    "Brigitte Kieffer":("Brigitte ieffer",14),
+    "Michel Delseny":("Michel elseny",10),
+    "Patrick Mehlen":("Patrick ehlen",18),
+}
+
 BIRTH_REG=r"(?P<raw>n[ée]e?\s+(?:le\s+)?(?P<day>1(?:er|e)?|[2-9]|[12]\d|3[01])\s+(?P<month>"+MONTH_RE+r")\s*(?P<year>1[89]\d{2}|20\d{2}))"
 YEAR_REG=r"n[ée]e?\s+en\s+(?P<year>1[89]\d{2}|20\d{2})"
 
@@ -152,6 +167,16 @@ def extract_candidate(pages:list[str],r:dict)->dict:
         if matched:
             return {"verification":"OFFICIAL_NAME_ONLY_CONFIRMED","page_index":page,
                     "pdf_birth_raw":"","pdf_birth_candidate":"","pdf_text_name_present":1}
+    if not name_m and docid=="FR2013" and name in FONT_GLYPH_2013:
+        damaged,printed_page=FONT_GLYPH_2013[name]
+        target=normalize(damaged)+f" p {printed_page}"
+        # Checks a complete corrupted name and its printed individual-profile
+        # page number, not just a surname fragment or approximate similarity.
+        if re.search(r"(?<![a-z0-9])"+re.escape(target)+r"(?![a-z0-9])",
+                     normalize(search_text)):
+            return {"verification":"PDF_FONT_INITIAL_MISSING_VISUALLY_QA_RECOVERED",
+                    "page_index":page,"pdf_birth_raw":"",
+                    "pdf_birth_candidate":"","pdf_text_name_present":1}
     if not name_m:
         return {"verification":"NAME_NOT_FOUND_ON_EXPECTED_PAGE","page_index":page,"pdf_birth_raw":"",
                 "pdf_birth_candidate":"","pdf_text_name_present":0}
@@ -289,7 +314,7 @@ def audit(out:Path,records:list[dict],sources:list[dict],mode:str,limit:int,
             successes=0; date_successes=0
             for person in rowmap[docid]:
                 rec=extract_candidate(pages,person)
-                accepted=rec["verification"] in {"OFFICIAL_NAME_ONLY_CONFIRMED","YEAR_ONLY_SOURCE_MATCH",
+                accepted=rec["verification"] in {"OFFICIAL_NAME_ONLY_CONFIRMED","PDF_FONT_INITIAL_MISSING_VISUALLY_QA_RECOVERED","YEAR_ONLY_SOURCE_MATCH",
                            "PDF_EXACT_DATE_CONFIRMED","PDF_ORDINAL_1e_REQUIRES_REVIEW"}
                 successes+=int(accepted)
                 date_successes+=int(rec["verification"] in {"PDF_EXACT_DATE_CONFIRMED","PDF_ORDINAL_1e_REQUIRES_REVIEW"})
