@@ -77,3 +77,27 @@ Preferred PowerShell commands from the repository root, all **single-line**:
 Only AFTER seeing a real \`HTTP_200_JSON\`, correctly parsed \`response.persons\`, and source-hash audit, consider \`--limit 10\`. If the service still returns 400/422, inspect the ONE-row local \`person_query_status_v1.csv\` including \`error_preview\` before changing anything else. Prior 10-person runs cannot be treated as evidence of unavailable subjects.
 
 The published Swagger spec is https://deces.matchid.io/deces/api/v1/docs/swagger.json and matches https://matchid.io/link-api , which documents the \`q=Georges Pompidou\` GET example.
+
+
+## v1_3 live-validated query — replaces v1_2 q-only proposal
+
+In GitHub Actions on 2026-10-18 UTC, at most one query per test, matchID gave these **observed** statuses:
+
+| GET query mode | HTTP status | Response |
+|---|---|---|
+| \`q=jean dieudonne&size=20\` | 200 | 20 candidates on first page |
+| \`q=jean dieudonne&birthDate=01/01/1906 - 31/12/1906\` | 400 | invalid birthDate value |
+| \`q=jean dieudonne&birthDate=01/01/1906-31/12/1906\` | 400 | simple and complex request at same time |
+| **\`firstName=jean&lastName=dieudonne&birthDate=01/01/1906-31/12/1906&size=20\`** | **200** | **3 candidates, API total=3** |
+
+So the actual production query now uses the **last** validated advanced form: independent name fields, a compact whole-year date range WITHOUT spaces around the hyphen, and NO \`q\`. Year filtering at query-time reduces false positives; local birth-year/death-year, name and identity checks are still mandatory. The v1_3 script has a NEW cache namespace; failed v1 and q-only v1_2 caches remain untouched and are not reused.
+
+The interface returns candidates, **not** automatically accepted DOBs or Academy full members. For the first Windows trial after the change, run one source query and inspect the status and source candidates:
+
+\`git pull --ff-only\`
+
+\`python .\scripts\france_academy_matchid_public_pilot_v1.py --fixture-check\`
+
+\`python .\scripts\france_academy_matchid_public_pilot_v1.py --limit 1\`
+
+Then send only \`local_runs\france_academy_matchid_public_pilot_v1\summary.json\`, \`person_query_status_v1.csv\`, and \`matchid_source_candidates_v1.csv\` for the ONE target. DO NOT rerun all 10 until the first real dataset has been manually inspected. Future matching of 562 source leads remains separate from the complete institutional denominator and from the global freeze.
