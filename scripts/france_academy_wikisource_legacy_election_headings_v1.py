@@ -18,7 +18,7 @@ from bs4 import BeautifulSoup
 from france_academy_wikisource_index_preflight_v1 import build_urls,read_one
 from france_academy_wikisource_election_rows_v1 import role_of,section_of,person_of,identity_key,extract_from_html
 
-VERSION="france-academy-legacy-heading-wikisource-source-only-v1_2"
+VERSION="france-academy-legacy-heading-wikisource-source-only-v1_3"
 VOLUMES=[(1,1835),(54,1862),(91,1880),(182,1926)]
 CTHS="data/france_academy_cths_profile_dob_harvest_v1/cths_dob_claims_all_targets_candidate_only_v1.csv"
 OUT=Path("data/france_academy_wikisource_legacy_heading_pilot_v1")
@@ -59,7 +59,7 @@ def parse_html(raw,volume,year):
                   "original_election_printed_page_opened":"0",
                   "official_membership_accepted":"0","exact_dob_accepted":"0",
                   "bazi_variables_computed":"0"})
-        return events,modern_headings
+        return events,[h for h in modern_headings if h.startswith(("election","nomination"))]
     if soup.select("div.tableItem"):
         logical=[]
         for item in soup.select("div.tableItem"):
@@ -106,7 +106,7 @@ def parse_html(raw,volume,year):
         name=name_from_line(line)
         events.append({"volume":str(volume),"year":str(year),
           "elected_name_candidate":name,"election_role_candidate":role,
-          "science_section_candidate":section_of(line),
+          "science_section_candidate":section_of(line).strip(" )"),
           "original_printed_volume_page":page if re.fullmatch(r"\d{1,5}",page) else "",
           "source_evidence_tier":"WIKISOURCE_INDEX_TRANSCRIPTION_NOT_ORIGINAL_EVENT_PAGE",
           "original_election_printed_page_opened":"0",
