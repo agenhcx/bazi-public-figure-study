@@ -1,0 +1,60 @@
+name: France 1927 Charles Fabry original election vote and decree source pages
+on:
+  push:
+    branches:
+      - france-academy-shard02-and-original-events-v1-20261018
+    paths:
+      - 'scripts/france_academy_generic_original_page_source_v1.py'
+      - '.github/workflows/france_academy_fabry_original_vote_decree_v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  source-pages:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install pinned original historical source reader
+        run: python -m pip install --disable-pip-version-check beautifulsoup4==4.12.3
+      - name: Compile and test arbitrary original book locator without network
+        run: python -m py_compile scripts/france_academy_generic_original_page_source_v1.py && python scripts/france_academy_generic_original_page_source_v1.py --fixture-check
+      - name: Fetch original Fabry 1927 vote-result p1517 and decree approval p1609 scanned images
+        run: python scripts/france_academy_generic_original_page_source_v1.py --volume 184 --year 1927 --pages 1517,1609 --download --delay 1.5
+      - name: Check original image provenance and no membership acceptance
+        run: |
+          python - <<'PY'
+          import json
+          p='data/france_academy_fabry_1927_original_vote_decree_v1/original_source_page_scan_metadata_v1.json'
+          s=json.load(open(p,encoding='utf8'))
+          assert len(s['records'])==2
+          assert {x['printed_page_label'] for x in s['records']}=={1517,1609}
+          assert s['accepted_regular_academy_members']==s['accepted_DOBs']==s['bazi_variables_computed']==0
+          assert s['original_scan_visually_interpreted_in_script']==0
+          print('FABRY_FIRSTPARTY_IMAGES',[(r['printed_page_label'],r.get('djvu_frame'),r.get('scan_image_host'),r['status'],r.get('image_bytes')) for r in s['records']])
+          PY
+      - name: Preserve original public-domain scan JPGs temporarily for human inspection
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: france-academy-1927-fabry-vote-result-and-decree-original-source-previews-v1
+          path: local_runs/france_academy_fabry_1927_original_scan_previews_v1/*.jpg
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Commit SHA and original scanned page mapping only, not copyrighted original images
+        if: success()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/france_academy_fabry_1927_original_vote_decree_v1/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Record original 1927 Fabry Academy vote and government decree source page hashes'
+            git fetch origin france-academy-shard02-and-original-events-v1-20261018
+            git rebase origin/france-academy-shard02-and-original-events-v1-20261018
+            git push origin HEAD:france-academy-shard02-and-original-events-v1-20261018
+          fi
