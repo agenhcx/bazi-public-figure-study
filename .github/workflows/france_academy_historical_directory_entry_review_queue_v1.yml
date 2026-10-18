@@ -1,0 +1,57 @@
+name: France Academy historical directory 130-person QA queue v1
+
+on:
+  push:
+    branches:
+      - france-cths-562-original-citation-audit-v1
+    paths:
+      - scripts/france_academy_historical_directory_entry_review_queue_v1.py
+      - .github/workflows/france_academy_historical_directory_entry_review_queue_v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  offline-evidence-priority:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Offline original Academy directory source-priority review
+        run: python -m py_compile scripts/france_academy_historical_directory_entry_review_queue_v1.py && python scripts/france_academy_historical_directory_entry_review_queue_v1.py
+      - name: Verify 130 source leads, original book pages still pending
+        run: |
+          python - <<'PY'
+          import json
+          p="data/france_academy_cths_historical_source_citation_audit_v1/historical_directory_entry_review_v1/summary.json"
+          r=json.load(open(p,encoding="utf-8"))
+          assert r["cited_historical_directory_people"]==130
+          assert r["primary_rank_family_counts"].get("1989_MEMBER_ONLY_DIRECTORY")==17
+          assert r["source_directory_entry_actually_opened_by_this_script"]==0
+          assert r["people_with_accepted_independent_DOB"]==0
+          assert r["bazi_variables_computed"]==0
+          print("Directory source-check priorities frozen; DOB source acceptance remains zero.")
+          PY
+      - name: Upload small first-20 review queue, full CSV manifest and summary
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: france-academy-historical-directory-130-citation-review-v1
+          path: data/france_academy_cths_historical_source_citation_audit_v1/historical_directory_entry_review_v1/
+          if-no-files-found: warn
+          retention-days: 60
+      - name: Checkpoint source-only priority queue on working branch
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/france_academy_cths_historical_source_citation_audit_v1/historical_directory_entry_review_v1/
+          if ! git diff --cached --quiet; then
+            git commit -m "Checkpoint 130 historic Academy source citation leads and 20 priority checks"
+            git pull --rebase origin france-cths-562-original-citation-audit-v1
+            git push origin HEAD:france-cths-562-original-citation-audit-v1
+          fi
