@@ -1,0 +1,22 @@
+{
+  "version": "france-academy-cths-profile-dob-raw-harvest-v1",
+  "created_utc": "2026-10-18T01:35:20.654090+00:00",
+  "expected_target_people": 562,
+  "processed_people": 562,
+  "source_raw_page_files_count": 562,
+  "raw_html_archive": "cths_profile_source_html_sha256_bundle_v1.tar.gz",
+  "raw_html_bundle_sha256": "6258a366f69e120395450420fee8ae2587d586cb5db153937d1ef45267468811",
+  "parse_quality_counts": {
+    "candidate_exact_day": 529,
+    "birth_metadata_nonexact_or_unparsed": 32,
+    "no_birth_metadata_detected": 1
+  },
+  "candidate_exact_iso_count": 529,
+  "candidate_year_mismatch": 0,
+  "source_fetch_error_count": 0,
+  "accepted_exact_dob_count": 0,
+  "accepted_full_membership_status_count": 0,
+  "no_independent_source_check": true,
+  "bazi_variables_computed": 0,
+  "warning": "CTHS exact DOB claims and sources are candidates only; verify original provenance and confirm official full-member election status before adding to science hierarchy study."
+}

@@ -1,0 +1,49 @@
+name: France Academy CTHS role repair audit v1_1
+
+on:
+  push:
+    branches:
+      - france-academy-cths-roster-v1
+    paths:
+      - scripts/france_academy_cths_role_encoding_repair_v1_1.py
+      - .github/workflows/france_academy_cths_role_repair_v1_1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  offline-repair:
+    name: Repair CTHS double encoding and test foreign/member classification
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install ftfy
+        run: python -m pip install --disable-pip-version-check ftfy==6.3.1 requests==2.32.3 beautifulsoup4==4.12.3
+      - name: Syntax check
+        run: python -m py_compile scripts/france_academy_cths_role_encoding_repair_v1_1.py
+      - name: Reclassify candidates with immutable source references
+        run: python scripts/france_academy_cths_role_encoding_repair_v1_1.py
+      - name: Upload audit and review queue
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: france-academy-cths-role-repair-v1-1
+          path: data/france_academy_cths_society_role_repair_v1_1/
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Checkpoint corrected role evidence on working branch
+        if: success()
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/france_academy_cths_society_role_repair_v1_1/
+          if ! git diff --cached --quiet; then
+            git commit -m "Checkpoint repaired French Academy CTHS candidate role statuses v1_1"
+            git push origin HEAD:france-academy-cths-roster-v1
+          fi

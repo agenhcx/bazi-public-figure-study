@@ -1,0 +1,31 @@
+{
+  "version": "france-academy-cths-wikidata-strict-identity-crosswalk-v1",
+  "created_utc": "2026-10-18T01:20:07.475015+00:00",
+  "cths_people": 2144,
+  "wikidata_qids": 2220,
+  "strict_unique_name_and_birthyear_candidate_links": 970,
+  "unresolved_cths_people": 1174,
+  "matches_by_cths_role_candidate": {
+    "correspondent_then_full_candidate": 94,
+    "full_and_foreign_mixed_manual": 3,
+    "full_like_only_candidate": 514,
+    "foreign_corresponding_only_candidate": 30,
+    "correspondent_only_candidate": 209,
+    "foreign_only_candidate": 96,
+    "unresolved_membership_type": 24
+  },
+  "statuses": {
+    "unique_token_name_and_year_candidate": 970,
+    "no_exact_token_name": 1137,
+    "exact_name_year_mismatch_manual_review": 15,
+    "exact_name_wd_year_missing_or_conflict": 5,
+    "exact_name_but_cths_birthyear_missing": 1,
+    "nonunique_identity_quarantined": 16
+  },
+  "many_to_one_identity_conflicts": 8,
+  "matching_rule": "alphabetized normalized name tokens + one unique matching birth year on both sides; no fuzzy/surname-only matching",
+  "full_membership_accepted": 0,
+  "exact_dobs_accepted": 0,
+  "bazi_variables_computed": 0,
+  "WARNING": "Crosswalk is identity candidate only; CTHS and Wikidata may not be independent DOB sources."
+}
