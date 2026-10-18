@@ -20,7 +20,7 @@ from bs4 import BeautifulSoup
 from ftfy import fix_text
 from france_academy_cths_original_citation_audit_v1 import fold
 
-V = "france-academy-cths-562-editor-origin-source-only-v1"
+V = "france-academy-cths-562-editor-origin-source-only-v1_1"
 DATA = Path("data/france_academy_cths_profile_dob_harvest_v1")
 SOURCES = DATA / "cths_dob_claims_all_targets_candidate_only_v1.csv"
 MANIFEST = DATA / "summary.json"
@@ -33,7 +33,7 @@ ACADEMY = re.compile(r"\bacademie\s+des\s+sciences\b")
 R1989 = re.compile(r"repertoire\s+biographique.{0,155}\bacademie\s+des\s+sciences.{0,150}\b1989\b", re.I)
 PAGE = re.compile(r"\b1989\s*[,;]?\s*p(?:ages?)?\.?\s*(\d{1,3})(?:\s*[-–]\s*(\d{1,3}))?", re.I)
 COLS = ["cths_person_id","cths_name","cths_birthyear","cths_membership_class_provisional",
-        "cths_editor_credit_category","cths_editor_credit_short",
+        "cths_editor_credit_category","institutional_editor_credit_tier","cths_editor_credit_short",
         "credit_field_parse_status","cths_1989_directory_cited","cths_1989_print_page_range_candidate",
         "original_1989_directory_entry_opened","cths_profile_url","cths_html_sha256",
         "academy_full_membership_accepted","exact_dob_accepted","bazi_variables_computed"]
@@ -91,7 +91,10 @@ def extract(raw):
             p1=int(m.group(1));p2=int(m.group(2) or p1)
             if 1<=p1<=999 and p1<=p2<=999:
                 page=str(p1)+("-"+str(p2) if p2!=p1 else "")
-    return {"category":category,"credit":credit,"status":parser_status,
+    institutional_tier=("ACADEMY_EXPLICIT" if category=="ACADEMY_CREDITED_NOTICE_CANDIDATE" else
+                        "INSTITUT_UMBRELLA_EXPLICIT" if parser_status=="FIELD_BOUNDED_TO_FICHE_CREEE" and "institut de france" in credit else
+                        "OTHER_NAMED_EDITOR" if category=="OTHER_CREDITED_NOTICE" else "NONE_OR_UNCERTAIN")
+    return {"category":category,"institutional_tier":institutional_tier,"credit":credit,"status":parser_status,
             "cited1989":int(cited),"page1989":page}
 
 
@@ -108,6 +111,8 @@ def synthetic():
     assert found["page1989"]=="81-82" and found["cited1989"]==1
     second=extract(sample("Répertoire biographique des membres et membres correspondants de l'Académie des Sciences, 1993").replace("Académie des sciences, Bruno Delmas","Autre historien").encode("utf-8"))
     assert second["category"]=="OTHER_CREDITED_NOTICE" and second["cited1989"]==0
+    umbrella=extract(sample("Répertoire biographique des membres de l\'Académie des Sciences, Paris, 1989, p. 81-82").replace("Académie des sciences, Bruno Delmas","Institut de France, Bruno Delmas").encode("utf-8"))
+    assert umbrella["institutional_tier"]=="INSTITUT_UMBRELLA_EXPLICIT"
     third=extract(b"<html><body>Biography no explicit editor. Fiche creee le 2012</body></html>")
     assert third["category"]=="NO_EXPLICIT_EDITOR_CREDIT"
     print("PASS: literal Rédacteur(s), editor-field boundary, 1989 source page, no false membership acceptance")
@@ -158,6 +163,7 @@ def main():
             "cths_birthyear":person["CTHS_roster_year_provisional"],
             "cths_membership_class_provisional":person["CTHS_roster_membership_class_provisional"],
             "cths_editor_credit_category":s["category"],
+            "institutional_editor_credit_tier":s["institutional_tier"],
             "cths_editor_credit_short":s["credit"],
             "credit_field_parse_status":s["status"],
             "cths_1989_directory_cited":int(pid in subset1989),
@@ -175,6 +181,9 @@ def main():
     output(out/"cths_1989_member_only_17_print_page_locator_v1.csv",pick,COLS)
     counts=Counter(x["cths_editor_credit_category"] for x in rows)
     base1989=Counter(x["cths_editor_credit_category"] for x in pick)
+    tiers=Counter(x["institutional_editor_credit_tier"] for x in rows)
+    tiers1989=Counter(x["institutional_editor_credit_tier"] for x in pick)
+    credited=sum(tiers[k] for k in ("ACADEMY_EXPLICIT","INSTITUT_UMBRELLA_EXPLICIT"))
     pages=sum(bool(x["cths_1989_print_page_range_candidate"]) for x in pick)
     if any(x["academy_full_membership_accepted"]!="0" or x["exact_dob_accepted"]!="0" or x["bazi_variables_computed"]!="0" for x in rows):
         raise RuntimeError("Study admission changed during editor metadata audit")
@@ -184,6 +193,9 @@ def main():
         "selected_rows":len(rows),"priority_1989_people_in_output":len(pick),
         "academy_editor_credit_counts":dict(counts),
         "1989_priority_editor_credit_counts":dict(base1989),
+        "institutional_editor_tier_counts":dict(tiers),
+        "1989_priority_institutional_editor_tier_counts":dict(tiers1989),
+        "academy_or_institut_editor_credited":credited,
         "1989_priority_people_with_candidate_original_book_page":pages,
         "old_v1_editor_credit_zero_was_parser_false_negative_candidate":True,
         "source_archive_sha256":digest_file(ARCHIVE),
@@ -196,7 +208,7 @@ def main():
     print("SUMMARY",json.dumps(summary,ensure_ascii=False))
     print("1989_ORIGINAL_PAGE_LEADS",json.dumps([
         {"id":x["cths_person_id"],"name":x["cths_name"],
-         "academy_editor":x["cths_editor_credit_category"],"printed_page":x["cths_1989_print_page_range_candidate"]}
+         "academy_editor":x["cths_editor_credit_category"],"institutional_tier":x["institutional_editor_credit_tier"],"printed_page":x["cths_1989_print_page_range_candidate"]}
         for x in pick],ensure_ascii=False))
 
 
