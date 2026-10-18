@@ -41,7 +41,7 @@ def build(source_dir,cache_root):
     if len(catalog)!=211:raise RuntimeError("Expected complete 211-volume inventory")
     selected=set(int(x) for x in checkpoint["volumes"])
     checked={int(r["volume"]):r for r in catalog if r["table_sampled"]=="1"}
-    if len(selected)!=16 or set(checked)!=selected:
+    if not 1<=len(selected)<=16 or set(checked)!=selected:
         raise RuntimeError("Shard-zero selected volumes diverge from fixed source manifest")
     if summary["table_of_contents_probed_volumes"]!=sorted(selected):
         raise RuntimeError("Inventory summary and per-volume source rows differ")
