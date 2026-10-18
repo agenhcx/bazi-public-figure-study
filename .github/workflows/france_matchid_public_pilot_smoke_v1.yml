@@ -23,18 +23,18 @@ jobs:
         run: python scripts/france_academy_matchid_public_pilot_v1.py --fixture-check
       - name: Real roster dry-run without network
         run: python scripts/france_academy_matchid_public_pilot_v1.py --dry-run --limit 10
-      - name: Temporary compact birthDate range validation probe
+      - name: Temporary advanced name plus compact birthDate range probe
         if: matrix.python-version == '3.10'
         run: |
           python - <<'PY'
           import json, urllib.request, urllib.error, urllib.parse
-          params = {"q": "jean dieudonne", "birthDate": "01/01/1906-31/12/1906", "size": "20"}
+          params = {"firstName": "jean", "lastName": "dieudonne", "birthDate": "01/01/1906-31/12/1906", "size": "20"}
           req = urllib.request.Request("https://deces.matchid.io/deces/api/v1/search?" + urllib.parse.urlencode(params), headers={"Accept": "application/json", "User-Agent": "bazi-public-figure-study/1.0 (bounded source validation)"})
           try:
               with urllib.request.urlopen(req, timeout=15) as response:
                   doc = json.loads(response.read(200000))
               info = doc.get("response", {})
-              print("COMPACT_FILTER_PROBE", {"http": 200, "reported_total": info.get("total"), "persons_this_page": len(info.get("persons", [])), "msg": str(doc.get("msg", ""))[:120]})
+              print("ADVANCED_FILTER_PROBE", {"http": 200, "reported_total": info.get("total"), "persons_this_page": len(info.get("persons", [])), "msg": str(doc.get("msg", ""))[:120]})
           except urllib.error.HTTPError as e:
               print("COMPACT_FILTER_PROBE", {"http": e.code, "error_body": e.read(600).decode("utf-8", "replace")[:350]})
           except urllib.error.URLError as e:
