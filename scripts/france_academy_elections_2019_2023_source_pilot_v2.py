@@ -190,7 +190,7 @@ def match_person(docid:str,person:dict,pages:list[str])->dict:
     # specific immediately adjacent occupation are allowed this repair.
     if not exact and docid=="FR2020" and person["person_name_printed_visual_review"]=="Nathalie Palanque-Delabrouille":
         fused=re.search(
-            r"(?<![a-z0-9])nathalie palanque delabrouille(?=directrice(?:\\b|\\s))",
+            r"(?<![a-z0-9])nathalie palanque delabrouille(?=directrice(?:\b|\s))",
             content,
         )
         if fused:
