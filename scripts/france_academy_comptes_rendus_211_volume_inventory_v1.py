@@ -43,7 +43,7 @@ COLS = ["volume","year","expected_season","wikisource_book_title","wikisource_bo
         "original_printed_election_pages_directly_inspected",
         "study_membership_accepted","study_DOB_accepted","bazi_variables_computed"]
 FULL = {"FULL_SECTION_MEMBER","FULL_NONRESIDENT_MEMBER","FULL_ACADEMICIAN_LIBRE",
-        "FULL_SECTION_MEMBER_CONTEXTUAL_NOMINATION"}
+        "FULL_SECTION_MEMBER_CONTEXTUAL_NOMINATION","FULL_SECTION_MEMBER_CONTEXTUAL_ELECTION"}
 OTHER = {"CORRESPONDENT","FOREIGN_ASSOCIATE"}
 
 
