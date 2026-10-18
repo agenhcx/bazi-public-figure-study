@@ -1,0 +1,58 @@
+name: France Academy 16 historical volume TOC source batch
+on:
+  push:
+    branches:
+      - france-academy-unprobed-16-volume-batch-v1-20261018
+    paths:
+      - '.github/workflows/france_academy_16_new_volume_tocs_v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  new-source-batch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install pinned HTML parser
+        run: python -m pip install --disable-pip-version-check beautifulsoup4==4.12.3
+      - name: Offline synthetic tests
+        run: python scripts/france_academy_comptes_rendus_211_volume_inventory_v1.py --fixture-check && python scripts/france_academy_wikisource_legacy_election_headings_v1.py --fixture-check
+      - name: Run 16 disjoint source TOC probes across seven historical epochs
+        run: python scripts/france_academy_comptes_rendus_211_volume_inventory_v1.py --sample-volumes 4,24,43,61,72,89,101,117,130,144,154,164,172,186,194,206 --max-table-probes 16 --delay 1.5 --out data/france_academy_unprobed_16_volume_batch_v1
+      - name: Validate 16 disjoint selected volumes and all source-only gates
+        run: |
+          python - <<'PY'
+          import csv,json
+          p='data/france_academy_unprobed_16_volume_batch_v1/'
+          j=json.load(open(p+'summary.json',encoding='utf-8'))
+          expected=[4,24,43,61,72,89,101,117,130,144,154,164,172,186,194,206]
+          assert j['category_volume_count']==211
+          assert j['table_of_contents_probed_volumes']==expected
+          assert j['table_probes_completed']==16
+          assert j['accepted_full_memberships']==0 and j['accepted_exact_dobs']==0 and j['bazi_variables_computed']==0
+          assert j['no_original_book_election_pages_scanned']
+          print('PASS: 16 disjoint historical volume TOC probes (source-only)')
+          PY
+      - name: Archive modest source audit metadata
+        uses: actions/upload-artifact@v4
+        with:
+          name: france-academy-16-unprobed-volumes-source-only-v1
+          path: data/france_academy_unprobed_16_volume_batch_v1/
+          retention-days: 45
+      - name: Checkpoint compact source and result inventory
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/france_academy_unprobed_16_volume_batch_v1/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Checkpoint 16 disjoint 1835-1940 Academy TOC source checks and event-candidate counts'
+            git fetch origin france-academy-unprobed-16-volume-batch-v1-20261018
+            git rebase origin/france-academy-unprobed-16-volume-batch-v1-20261018
+            git push origin HEAD:france-academy-unprobed-16-volume-batch-v1-20261018
+          fi
