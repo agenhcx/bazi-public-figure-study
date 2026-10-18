@@ -1,0 +1,36 @@
+{
+  "version": "france-academy-1994-gallica-digital-index-access-pilot-v1",
+  "audit_utc": "2026-10-18T03:42:27.814808+00:00",
+  "mode": "probe",
+  "number_of_endpoints_selected": 3,
+  "number_of_source_requests": 3,
+  "usable_api_responses": 0,
+  "api_endpoint_status": [
+    {
+      "id": "oai_metadata",
+      "state": "BLOCKED_OR_RATE_LIMITED",
+      "http_status": 403,
+      "sha256": "",
+      "metadata": {}
+    },
+    {
+      "id": "iiif_manifest",
+      "state": "BLOCKED_OR_RATE_LIMITED",
+      "http_status": 403,
+      "sha256": "",
+      "metadata": {}
+    },
+    {
+      "id": "ocr_full_text",
+      "state": "BLOCKED_OR_RATE_LIMITED",
+      "http_status": 403,
+      "sha256": "",
+      "metadata": {}
+    }
+  ],
+  "digitized_1994_index_data_not_yet_parsed_for_members": true,
+  "accepted_exact_dob": 0,
+  "accepted_full_member": 0,
+  "bazi_variables_computed": 0,
+  "warning": "A digitized-catalogue pointer and successful API response alone do NOT certify any person-level birthdate or Academy member class. HTTP403 must not be bypassed."
+}
