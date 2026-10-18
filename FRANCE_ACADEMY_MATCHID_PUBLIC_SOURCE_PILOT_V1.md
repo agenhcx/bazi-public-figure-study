@@ -49,4 +49,31 @@ No BaZi features, no acceptance or member-status promotions are computed. A sing
 
 ## Pilot verification status
 
-Fixtures validate representative JSON envelope and exact comparison; **no live matchID API query has been executed by the author of this checkpoint**. The first local Windows real search must confirm the API response schema and documented public unauthenticated availability. If it is denied or incompatible, report the status without inventing records. 
+Fixtures validate representative JSON envelope and exact comparison; **no live matchID API query has been executed by the author of this checkpoint**. The first local Windows real search must confirm the API response schema and documented public unauthenticated availability. If it is denied or incompatible, report the status without inventing records.
+
+
+## v1_2 correction after actual Windows pilot (2026-10-18)
+
+The user's first live pilot returned **10/10 API failures**: 6 HTTP 400, 3 HTTP 422, and 1 URL error, zero successfully parsed responses. These are NOT ten genuine "no deceased person" observations and cannot be counted as uncovered DOBs.
+
+Code changes in v1_2:
+- Replace the unvalidated structured query (\`firstName\`, \`lastName\`, whole-year \`birthDate\` range, \`fuzzy=false\`) with matchID's **documented simplest GET query: \`q=firstName lastName\`**, first page of 20. Birth and death year are compared LOCALLY; a page with \`total>20\` is explicitly not complete.
+- Parse the **published OpenAPI schema**: \`response.persons[]\`, \`name.first\` and \`name.last\`, \`birth.date\`, \`death.date\`, \`birth.location.city\`. The previous unrecognized JSON envelope must never imply zero results. The simple q query is still an unconfirmed live request until tested.
+- Save sanitized, bounded HTTP error response details in \`person_query_status_v1.csv\` (\`error_preview\`) and \`_responses\` cache. Suppress the Authorization header and complete URLs in reporting.
+- **Stop immediately at the first HTTP/connection/schema failure**, rather than sending 10 erroneous requests.
+- New version + new q fields create a different cache key: previous 400/422 results remain archived but are NOT reused by the v1_2 query. A successful v1_2 query is reused, and an error is retried only if the researcher explicitly uses \`--refetch\`.
+- All DOB, Academy full-member and BaZi study-acceptance flags remain zero.
+
+Preferred PowerShell commands from the repository root, all **single-line**:
+
+\`git pull --ff-only\`
+
+\`python .\scripts\france_academy_matchid_public_pilot_v1.py --fixture-check\`
+
+\`python .\scripts\france_academy_matchid_public_pilot_v1.py --dry-run --limit 1\`
+
+\`python .\scripts\france_academy_matchid_public_pilot_v1.py --limit 1\`
+
+Only AFTER seeing a real \`HTTP_200_JSON\`, correctly parsed \`response.persons\`, and source-hash audit, consider \`--limit 10\`. If the service still returns 400/422, inspect the ONE-row local \`person_query_status_v1.csv\` including \`error_preview\` before changing anything else. Prior 10-person runs cannot be treated as evidence of unavailable subjects.
+
+The published Swagger spec is https://deces.matchid.io/deces/api/v1/docs/swagger.json and matches https://matchid.io/link-api , which documents the \`q=Georges Pompidou\` GET example.
