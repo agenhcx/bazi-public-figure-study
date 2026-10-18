@@ -57,7 +57,7 @@ def page_link_diagnostics(raw):
         matches=[]
         for elem in soup.find_all(["a","span","b"]):
             if elem.get_text(" ",strip=True)!=target:continue
-            if any(elem.find(["a","span","b"])):continue
+            if elem.find(["a","span","b"]) is not None:continue
             matches.append({"tag":elem.name,
                 "href":str(elem.get("href",""))[:200],
                 "title":str(elem.get("title",""))[:160],
