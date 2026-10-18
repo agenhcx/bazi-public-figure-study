@@ -34,25 +34,25 @@ EXCLUDED_SLUGS = {
     "nos-archives", "librairie", "actualites-et-evenements", "nous-contacter",
 }
 FULL_RE = re.compile(
-    r"\\b[ée]lu(?:e)?\\s+(?:acad[ée]micien(?:ne)?|membre\\s+titulaire|membre\\s+de\\s+l.acad[ée]mie)\\b"
-    r"[^\\n\\r]{0,70}?\\b(?:en|le)\\s+[^\\n\\r]{0,30}?(?P<year>(?:18|19|20)\\d{2})\\b",
+    r"\b[ée]lu(?:e)?\s+(?:acad[ée]micien(?:ne)?|membre\s+titulaire|membre\s+de\s+l.acad[ée]mie)\b"
+    r"[^\n\r]{0,70}?\b(?:en|le)\s+[^\n\r]{0,30}?(?P<year>(?:18|19|20)\d{2})\b",
     re.I,
 )
 FOREIGN_RE = re.compile(
-    r"\\b[ée]lu(?:e)?\\s+associ[ée](?:e)?\\s+[ée]trang[èe]r(?:e)?\\b"
-    r"[^\\n\\r]{0,70}?(?P<year>(?:18|19|20)\\d{2})\\b",
+    r"\b[ée]lu(?:e)?\s+associ[ée](?:e)?\s+[ée]trang[èe]r(?:e)?\b"
+    r"[^\n\r]{0,70}?(?P<year>(?:18|19|20)\d{2})\b",
     re.I,
 )
 CORRESP_RE = re.compile(
-    r"\\b[ée]lu(?:e)?\\s+correspondant(?:e)?\\b"
-    r"[^\\n\\r]{0,70}?(?P<year>(?:18|19|20)\\d{2})\\b",
+    r"\b[ée]lu(?:e)?\s+correspondant(?:e)?\b"
+    r"[^\n\r]{0,70}?(?P<year>(?:18|19|20)\d{2})\b",
     re.I,
 )
 BIRTH_RE = re.compile(
-    r"(?:Date de naissance|Date of birth)\\s*:\\s*(?P<value>[^\\n]{1,80})",
+    r"(?:Date de naissance|Date of birth)\s*:\s*(?P<value>[^\n]{1,80})",
     re.I,
 )
-YEAR_RE = re.compile(r"\\b(1[6789]\\d{2}|20[012]\\d)\\b")
+YEAR_RE = re.compile(r"\b(1[6789]\d{2}|20[012]\d)\b")
 
 
 def sha(b: bytes) -> str:
@@ -68,7 +68,7 @@ def write_csv(path: Path, rows: list[dict], columns: list[str]) -> None:
 
 
 def write_json(path: Path, value: dict) -> None:
-    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
 def looks_like_person_name(value: str) -> bool:
@@ -138,7 +138,7 @@ def member_record(html: bytes, link: dict, source_sha: str) -> dict | None:
         if value.lower() in {"biographie", "biography", "partager avec:", "share with:"}:
             header_lines = header_lines[:i]
             break
-    header = "\\n".join(header_lines)
+    header = "\n".join(header_lines)
     # Do not turn an unverified historical-display label into accepted full membership.
     full = FULL_RE.search(header)
     foreign = FOREIGN_RE.search(header)
@@ -213,7 +213,7 @@ def main() -> int:
             digest = sha(body)
             (raw / (digest + ".html")).write_bytes(body)
             links = extract_index_links(body)
-            signature = sha("\\n".join(sorted(x["profile_url"] for x in links)).encode())
+            signature = sha("\n".join(sorted(x["profile_url"] for x in links)).encode())
             repeated = signature in page_signatures
             page_signatures.add(signature)
             listing_rows.append({"page": page, "url": url, "status": status, "sha256": digest,
