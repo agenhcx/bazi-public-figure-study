@@ -122,10 +122,18 @@ def parse_html(raw,volume,year):
         if not line:continue
         # The heading is typically a decorated smallcaps span, but the
         # earliest years may show raw "Élections. — ..." in ws-titrex.
-        head_candidate=decorated or (line.split(".",1)[0] if "—" in line else "")
-        if event_heading(head_candidate):
+        # Older transcriptions sometimes small-cap only "NOMINATIONS"
+        # while the complete phrase is in the line. Never decide from the
+        # isolated decorated token if the full heading is recoverable.
+        prefix=line.split("—",1)[0].strip(" .")
+        head_candidate=(prefix if event_heading(prefix) else decorated)
+        is_named_correspondent_nomination=bool(
+            fold(decorated).strip(" .")=="nominations" and
+            re.search(r"\best\s+nomm[ée]e?\b",line,re.I) and
+            re.search(r"\bcorrespondant\b",line,re.I))
+        if event_heading(head_candidate) or is_named_correspondent_nomination:
             in_events=True
-            headings.append(head_candidate[:120])
+            headings.append(head_candidate[:120] if event_heading(head_candidate) else prefix[:120])
         elif decorated and not event_heading(decorated):
             in_events=False
         elif line.startswith(("Candidatures.","Prix.","Décrets.","Décret.","Nécrologie.","Décès.")):
