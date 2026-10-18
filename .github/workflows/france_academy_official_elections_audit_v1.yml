@@ -1,0 +1,46 @@
+name: France Academy official elections 2024-25 identity audit v1
+
+on:
+  push:
+    branches:
+      - france-academy-cths-roster-v1
+    paths:
+      - scripts/france_academy_recent_official_vs_candidates_v1.py
+      - .github/workflows/france_academy_official_elections_audit_v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  official-elections-identity-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Syntax and identity-audit validation
+        run: python -m py_compile scripts/france_academy_recent_official_vs_candidates_v1.py
+      - name: Cross-check official electee names without accepting DOB
+        run: python scripts/france_academy_recent_official_vs_candidates_v1.py
+      - name: Upload official roster and strict matches
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: france-academy-official-2024-25-identity-audit-v1
+          path: data/france_academy_official_elected_2024_2025_v1/
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Checkpoint official election crosswalk
+        if: success()
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/france_academy_official_elected_2024_2025_v1/
+          if ! git diff --cached --quiet; then
+            git commit -m "Checkpoint France Academy JORF election identity crosswalk, 2024-2025"
+            git push origin HEAD:france-academy-cths-roster-v1
+          fi
