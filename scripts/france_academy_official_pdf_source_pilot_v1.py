@@ -142,6 +142,16 @@ def extract_candidate(pages:list[str],r:dict)->dict:
     # accents (Benoît / Benoit) but still require full name token matches.
     name_pattern=re.escape(fold_text(name)).replace(r"\ ",r"\s+")
     name_m=re.search(r"(?<!\w)"+name_pattern+r"(?!\w)",search_text,re.I)
+    if not name_m and docid in {"FR2013","FR2017"}:
+        # Official booklets sometimes split a name across typography/font spans,
+        # or replace hyphens with whitespace. For name-only sources, matching
+        # a complete normalized person name on the known roster page suffices.
+        src_tokens=normalize(search_text)
+        person_tokens=normalize(name)
+        matched=re.search(r"(?<![a-z0-9])"+re.escape(person_tokens)+r"(?![a-z0-9])",src_tokens)
+        if matched:
+            return {"verification":"OFFICIAL_NAME_ONLY_CONFIRMED","page_index":page,
+                    "pdf_birth_raw":"","pdf_birth_candidate":"","pdf_text_name_present":1}
     if not name_m:
         return {"verification":"NAME_NOT_FOUND_ON_EXPECTED_PAGE","page_index":page,"pdf_birth_raw":"",
                 "pdf_birth_candidate":"","pdf_text_name_present":0}
@@ -328,6 +338,11 @@ def audit(out:Path,records:list[dict],sources:list[dict],mode:str,limit:int,
         "blocked_or_unexpected_documents":sum(x["status"]=="SOURCE_UNAVAILABLE_OR_UNEXPECTED" for x in source_rows),
         "person_source_assertions_replayed":len(extracted),
         "per_person_parse_status":dict(status),
+        "name_or_DOB_unmatched": [
+            {"document_id":row["document_id"],"person_name":row["person_name"],
+             "status":row["validation_status"]}
+            for row in extracted if not row["official_election_identity_source_verified"]
+        ],
         "name_and_role_source_matched":sum(int(x["official_election_identity_source_verified"]) for x in extracted),
         "source_exact_DOB_claims_parsed":sum(x["validation_status"] in {"PDF_EXACT_DATE_CONFIRMED","PDF_ORDINAL_1e_REQUIRES_REVIEW"} for x in extracted),
         "foreign_associate_negative_control_excluded":True,
