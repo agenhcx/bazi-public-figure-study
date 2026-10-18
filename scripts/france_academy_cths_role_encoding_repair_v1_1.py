@@ -94,9 +94,10 @@ def main():
     input_bytes=input_path.read_bytes()
     original_summary=json.loads((source/'summary.json').read_text(encoding='utf-8'))
     source_snapshot=source/'raw_html'/(original_summary['source_html_sha256']+'.html')
-    # Re-read archived UTF-8 *as text* to avoid BeautifulSoup's incorrect encoding guess on raw bytes.
-    # The old CSV has e.g. ÃĐtranger from a bad charset guess, which ftfy cannot safely infer.
-    people, roster_parse_audit=parse_roster(source_snapshot.read_bytes().decode('utf-8'))
+    # The source is mixed/invalid UTF-8 despite a UTF-8 HTML meta tag. Decode as
+    # cp1252 with replacement of the rare undefined bytes; ftfy repairs fieldwise.
+    # Never use BeautifulSoup's probabilistic charset guess (produced ÃĐtranger).
+    people, roster_parse_audit=parse_roster(source_snapshot.read_bytes().decode('cp1252',errors='replace'))
     fixed=[]
     for p in people:
         note=fix_text(p["membership_note_raw"])
@@ -150,7 +151,7 @@ def main():
         "rule_version":RULE_VERSION,
         "source_v1_sha256_csv":hashlib.sha256(input_bytes).hexdigest(),
         "source_html_sha256":original_summary["source_html_sha256"],
-        "source_utf8_decoded_before_parser":True,
+        "source_decoding_strategy":"cp1252_then_ftfy_fix_text_per_field",
         "source_raw_roster_parse_audit":roster_parse_audit,
         "created_utc":dt.datetime.now(dt.timezone.utc).isoformat(),
         "input_people":len(people),
