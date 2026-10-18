@@ -44,6 +44,20 @@ jobs:
           assert s["selected_full_election_documents"]==2
           print("Source fetch may be selectively blocked; read error audit for each document.")
           PY
+      - name: Diagnose PDF text ordering only for unrecognized 2013 names
+        if: always()
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import fitz, csv
+          root=Path("local_runs/france_academy_official_pdf_pilot_v1")
+          pdf=root/"cache"/"FR2013.pdf"
+          if pdf.is_file():
+              d=fitz.open(pdf)
+              for idx,line in enumerate(d[2].get_text("text",sort=True).splitlines()[:130]):
+                  print(f"2013_P2_TEXT[{idx}]: {line!r}")
+          PY
       - name: Keep only compact source status and people-level review results
         if: always()
         uses: actions/upload-artifact@v4
