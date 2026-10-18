@@ -1,0 +1,40 @@
+name: France Academy local-only source audit smoke v1
+
+on:
+  push:
+    branches:
+      - france-local-audit-first-v1
+    paths:
+      - scripts/france_academy_cths_local_audit_v1.py
+      - .github/workflows/france_academy_local_only_smoke_v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-integrity-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check local runner syntax
+        run: python -m py_compile scripts/france_academy_cths_local_audit_v1.py
+      - name: Verify all 562 previously archived CTHS biographies without network
+        run: python scripts/france_academy_cths_local_audit_v1.py
+      - name: Assert exact source census and no acceptance or unblinding
+        run: |
+          python -c 'import json; d=json.load(open("local_runs/france_academy_cths_source_audit_v1/summary.json",encoding="utf-8")); assert d["persons_checked"]==562 and d["CTHS_source_claims_parseable_exact"]==529 and d["raw_source_integrity"]["complete"] and d["raw_source_integrity"]["individual_source_pages_verified"]==562 and d["verified_independent_DOB_count"]==0 and d["bazi_variables_computed"]==0; print("Verified: 562 original pages, 529 candidate exact claims, still no unblinding")'
+      - name: Upload only compact summary and exception queue
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: france-academy-offline-local-audit-smoke-v1
+          path: |
+            local_runs/france_academy_cths_source_audit_v1/summary.json
+            local_runs/france_academy_cths_source_audit_v1/source_and_membership_review_queue.csv
+          if-no-files-found: warn
+          retention-days: 30
