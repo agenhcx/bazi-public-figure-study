@@ -1,0 +1,57 @@
+name: France Academy official-election PDF local-first pilot v1
+
+on:
+  push:
+    branches:
+      - france-academy-official-election-doc-pilot-v1
+    paths:
+      - scripts/france_academy_official_pdf_source_pilot_v1.py
+      - .github/workflows/france_academy_official_pdf_source_pilot_v1.yml
+      - data/france_academy_official_election_pdf_pilot_v1/**
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pilot:
+    name: Verify frozen golden references and two official PDF sources
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install minimal PDF source reader
+        run: python -m pip install --disable-pip-version-check requests==2.32.3 pymupdf==1.26.5
+      - name: Check syntax and frozen 66-person gold source metadata without network
+        run: python -m py_compile scripts/france_academy_official_pdf_source_pilot_v1.py && python scripts/france_academy_official_pdf_source_pilot_v1.py --fixture-check
+      - name: Attempt only 2011 and 2013 official PDF sources with documented source errors
+        run: python scripts/france_academy_official_pdf_source_pilot_v1.py --fetch --limit 2 --resume --delay 1.2 --timeout 22 --retries 2
+      - name: Validate 2011 names/dates only when original press release fetched
+        if: success()
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          s=json.loads(Path("local_runs/france_academy_official_pdf_pilot_v1/summary.json").read_text(encoding="utf-8"))
+          print("Official source replay status:",s["per_person_parse_status"])
+          assert s["bazi_variables_computed"]==0
+          assert s["independent_exact_DOB_provenance_accepted"]==0
+          assert s["foreign_associate_negative_control_excluded"]
+          assert s["selected_full_election_documents"]==2
+          print("Source fetch may be selectively blocked; read error audit for each document.")
+          PY
+      - name: Keep only compact source status and people-level review results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: france-academy-2011-2013-official-source-pilot-v1
+          path: |
+            local_runs/france_academy_official_pdf_pilot_v1/summary.json
+            local_runs/france_academy_official_pdf_pilot_v1/source_fetch_audit_v1.csv
+            local_runs/france_academy_official_pdf_pilot_v1/candidate_person_evidence_v1.csv
+          if-no-files-found: warn
+          retention-days: 30
