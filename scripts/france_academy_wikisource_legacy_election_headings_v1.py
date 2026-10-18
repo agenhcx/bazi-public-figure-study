@@ -18,7 +18,7 @@ from bs4 import BeautifulSoup
 from france_academy_wikisource_index_preflight_v1 import build_urls,read_one
 from france_academy_wikisource_election_rows_v1 import role_of,section_of,person_of,identity_key,extract_from_html
 
-VERSION="france-academy-legacy-heading-wikisource-source-only-v1_1"
+VERSION="france-academy-legacy-heading-wikisource-source-only-v1_2"
 VOLUMES=[(1,1835),(54,1862),(91,1880),(182,1926)]
 CTHS="data/france_academy_cths_profile_dob_harvest_v1/cths_dob_claims_all_targets_candidate_only_v1.csv"
 OUT=Path("data/france_academy_wikisource_legacy_heading_pilot_v1")
@@ -60,9 +60,9 @@ def parse_html(raw,volume,year):
                   "official_membership_accepted":"0","exact_dob_accepted":"0",
                   "bazi_variables_computed":"0"})
         return events,modern_headings
-    if content.select("div.tableItem"):
+    if soup.select("div.tableItem"):
         logical=[]
-        for item in content.select("div.tableItem"):
+        for item in soup.select("div.tableItem"):
             div=item.select_one(".ws-titrex")
             if div is None:continue
             line=" ".join(div.get_text(" ",strip=True).split())
@@ -148,6 +148,8 @@ def fixture():
     assert legacy[0]["elected_name_candidate"]=="Élie de Beaumont",legacy
     assert legacy[0]["original_printed_volume_page"]=="515",legacy
     assert legacy[0]["election_role_candidate"]=="FULL_SECTION_MEMBER",legacy
+    outside=early.replace('<div class="mw-parser-output">','<main class="content">').replace('</div></div></div>','</div></div></main>')
+    assert len(parse_html(outside.encode(),1,1835)[0])==1
     print("PASS: legacy div.tableItem 1835 election, 1880 Nominations, 1926 regression, no false membership")
 
 def main():
