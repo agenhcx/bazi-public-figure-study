@@ -16,9 +16,9 @@ from collections import Counter,defaultdict
 from pathlib import Path
 from bs4 import BeautifulSoup
 from france_academy_wikisource_index_preflight_v1 import build_urls,read_one
-from france_academy_wikisource_election_rows_v1 import role_of,section_of,person_of,identity_key
+from france_academy_wikisource_election_rows_v1 import role_of,section_of,person_of,identity_key,extract_from_html
 
-VERSION="france-academy-legacy-heading-wikisource-source-only-v1"
+VERSION="france-academy-legacy-heading-wikisource-source-only-v1_1"
 VOLUMES=[(1,1835),(54,1862),(91,1880),(182,1926)]
 CTHS="data/france_academy_cths_profile_dob_harvest_v1/cths_dob_claims_all_targets_candidate_only_v1.csv"
 OUT=Path("data/france_academy_wikisource_legacy_heading_pilot_v1")
@@ -41,40 +41,73 @@ def name_from_line(line):
     raw=re.sub(r"\bM\.\s*\(\s*M\.\s*\)\s*","M. ",raw,flags=re.I)
     return person_of(raw)
 def parse_html(raw,volume,year):
+    """Parse either legacy div.tableItem or modern table tr without double counting."""
     soup=BeautifulSoup(raw,"html.parser")
     content=soup.select_one(".mw-parser-output") or soup
     events=[];headings=[]
+    old,modern_headings=extract_from_html(raw,year,volume)
+    if old:
+        # Reuse the already regression-tested 20th-century parser, including
+        # reconstructed pages that were split across adjacent index lines.
+        for x in old:
+            events.append({"volume":str(volume),"year":str(year),
+                  "elected_name_candidate":x["transcribed_elected_person_name"],
+                  "election_role_candidate":x["transcribed_election_type"],
+                  "science_section_candidate":x["transcribed_science_section"],
+                  "original_printed_volume_page":x["printed_election_page"],
+                  "source_evidence_tier":"WIKISOURCE_INDEX_TRANSCRIPTION_NOT_ORIGINAL_EVENT_PAGE",
+                  "original_election_printed_page_opened":"0",
+                  "official_membership_accepted":"0","exact_dob_accepted":"0",
+                  "bazi_variables_computed":"0"})
+        return events,modern_headings
+    if content.select("div.tableItem"):
+        logical=[]
+        for item in content.select("div.tableItem"):
+            div=item.select_one(".ws-titrex")
+            if div is None:continue
+            line=" ".join(div.get_text(" ",strip=True).split())
+            # A legacy tableItem's "ws-titpge" contains title plus final page,
+            # not necessarily a single td separate from title.
+            pg=item.select_one(".ws-titpge")
+            full=" ".join(pg.get_text(" ",strip=True).split()) if pg else ""
+            match=re.search(r"\b(\d{1,5})\s*$",full)
+            page=match.group(1) if match else ""
+            sc=div.find("span",class_=re.compile("sc",re.I))
+            header=" ".join(sc.get_text(" ",strip=True).split()) if sc else ""
+            logical.append((line,page,header))
+    else:
+        logical=[]
+        for tr in content.find_all("tr"):
+            cells=tr.find_all("td",recursive=False)
+            if not cells:continue
+            line=" ".join(cells[0].get_text(" ",strip=True).split())
+            page=" ".join(cells[1].get_text(" ",strip=True).split()) if len(cells)>1 else ""
+            if not re.fullmatch(r"\d{1,5}",page):page=""
+            span=cells[0].find("span",class_=re.compile("sc",re.I))
+            header=" ".join(span.get_text(" ",strip=True).split()) if span else ""
+            logical.append((line,page,header))
     in_events=False
-    for tr in content.find_all("tr"):
-        cells=tr.find_all("td",recursive=False)
-        if not cells:continue
-        line=" ".join(cells[0].get_text(" ",strip=True).split())
+    for line,page,decorated in logical:
         if not line:continue
-        span=cells[0].find("span",class_=re.compile(r"sc",re.I))
-        decorated=" ".join(span.get_text(" ",strip=True).split()) if span else ""
-        # Detect explicit subject headings, including raw "Élections." and
-        # 1880 variant "Nominations de membres et de correspondants ..."
-        heading_text=decorated or (line.split(". —",1)[0] if "—" in line else "")
-        if event_heading(heading_text):
-            in_events=True;headings.append(heading_text[:120])
+        # The heading is typically a decorated smallcaps span, but the
+        # earliest years may show raw "Élections. — ..." in ws-titrex.
+        head_candidate=decorated or (line.split(".",1)[0] if "—" in line else "")
+        if event_heading(head_candidate):
+            in_events=True
+            headings.append(head_candidate[:120])
         elif decorated and not event_heading(decorated):
             in_events=False
-        elif (line.startswith(("Candidatures.","Prix.","Décrets.","Décret.","Nécrologie.","Décès."))
-              or (line.startswith("Nominations.") and not event_heading(line))):
+        elif line.startswith(("Candidatures.","Prix.","Décrets.","Décret.","Nécrologie.","Décès.")):
             in_events=False
         if not in_events:continue
         if not re.search(r"\b(est|a été|sont)\s+élu",line,re.I):continue
         role=role_of(line)
-        if not role:return_ = ""  # prevent unclassified entries from auto-promoting
-        else:return_ = role
-        if not return_:continue
+        if not role:continue
         name=name_from_line(line)
-        page=" ".join(cells[1].get_text(" ",strip=True).split()) if len(cells)>1 else ""
-        if not re.fullmatch(r"\d{1,5}",page):page=""
         events.append({"volume":str(volume),"year":str(year),
           "elected_name_candidate":name,"election_role_candidate":role,
           "science_section_candidate":section_of(line),
-          "original_printed_volume_page":page,
+          "original_printed_volume_page":page if re.fullmatch(r"\d{1,5}",page) else "",
           "source_evidence_tier":"WIKISOURCE_INDEX_TRANSCRIPTION_NOT_ORIGINAL_EVENT_PAGE",
           "original_election_printed_page_opened":"0",
           "official_membership_accepted":"0","exact_dob_accepted":"0",
@@ -102,7 +135,20 @@ def fixture():
     assert e[2]["original_printed_volume_page"]=="960",e
     assert len(h)==2
     assert all(x["official_membership_accepted"]=="0" for x in e)
-    print("PASS: 1835 Élections, 1880 Nominations, Monsieur abbreviation, decrees and office votes separated")
+    early="""<div class="mw-parser-output">
+       <div class="tableItem"><div class="ws-titpge"><div class="ws-titrex">
+       <span class="sc">Élections</span>. — M. Élie de Beaumont est élu membre de l’Académie des Sciences
+       (section de minéralogie et de géologie), en remplacement de M. Lelièvre.
+       </div> 515 </div></div>
+       <div class="tableItem"><div class="ws-titpge"><div class="ws-titrex">
+       <span class="sc">Électricité</span>. — Sur le courant.
+       </div> 16 </div></div></div>"""
+    legacy,h2=parse_html(early.encode(),1,1835)
+    assert len(legacy)==1,(legacy,h2)
+    assert legacy[0]["elected_name_candidate"]=="Élie de Beaumont",legacy
+    assert legacy[0]["original_printed_volume_page"]=="515",legacy
+    assert legacy[0]["election_role_candidate"]=="FULL_SECTION_MEMBER",legacy
+    print("PASS: legacy div.tableItem 1835 election, 1880 Nominations, 1926 regression, no false membership")
 
 def main():
     ap=argparse.ArgumentParser()
