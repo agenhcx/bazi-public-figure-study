@@ -15,7 +15,7 @@ permissions:
 
 jobs:
   pilot:
-    name: Verify frozen golden references and two official PDF sources
+    name: Verify 66 first-party name/date assertions across four election PDFs
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
@@ -27,8 +27,8 @@ jobs:
         run: python -m pip install --disable-pip-version-check requests==2.32.3 pymupdf==1.26.5
       - name: Check syntax and frozen 66-person gold source metadata without network
         run: python -m py_compile scripts/france_academy_official_pdf_source_pilot_v1.py && python scripts/france_academy_official_pdf_source_pilot_v1.py --fixture-check
-      - name: Attempt only 2011 and 2013 official PDF sources with documented source errors
-        run: python scripts/france_academy_official_pdf_source_pilot_v1.py --fetch --limit 2 --resume --delay 1.2 --timeout 22 --retries 2
+      - name: Test four whitelisted historical Academy PDFs (2011, 2013, 2014, 2017)
+        run: python scripts/france_academy_official_pdf_source_pilot_v1.py --fetch --limit 4 --resume --delay 1.2 --timeout 22 --retries 2
       - name: Validate 2011 names/dates only when original press release fetched
         if: success()
         shell: bash
@@ -41,28 +41,18 @@ jobs:
           assert s["bazi_variables_computed"]==0
           assert s["independent_exact_DOB_provenance_accepted"]==0
           assert s["foreign_associate_negative_control_excluded"]
-          assert s["selected_full_election_documents"]==2
+          assert s["selected_full_election_documents"]==4
+          assert s["downloaded_or_reused_documents"]==4
+          assert s["name_and_role_source_matched"]==66, s["name_or_DOB_unmatched"]
+          assert s["source_exact_DOB_claims_parsed"]==21
+          assert s["per_person_parse_status"].get("YEAR_ONLY_SOURCE_MATCH",0)==10
           print("Source fetch may be selectively blocked; read error audit for each document.")
-          PY
-      - name: Diagnose PDF text ordering only for unrecognized 2013 names
-        if: always()
-        shell: bash
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          import fitz, csv
-          root=Path("local_runs/france_academy_official_pdf_pilot_v1")
-          pdf=root/"cache"/"FR2013.pdf"
-          if pdf.is_file():
-              d=fitz.open(pdf)
-              for idx,line in enumerate(d[2].get_text("text",sort=True).splitlines()[:130]):
-                  print(f"2013_P2_TEXT[{idx}]: {line!r}")
           PY
       - name: Keep only compact source status and people-level review results
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: france-academy-2011-2013-official-source-pilot-v1
+          name: france-academy-four-sessions-official-source-pilot-v1
           path: |
             local_runs/france_academy_official_pdf_pilot_v1/summary.json
             local_runs/france_academy_official_pdf_pilot_v1/source_fetch_audit_v1.csv
