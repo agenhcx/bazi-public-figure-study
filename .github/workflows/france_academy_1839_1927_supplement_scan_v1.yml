@@ -1,0 +1,57 @@
+name: France Academy Liouville 1839 vote continuation and Fabry 1927 source debug
+on:
+  push:
+    branches:
+      - france-academy-shard02-and-original-events-v1-20261018
+    paths:
+      - 'scripts/france_academy_1839_1927_source_supplement_v1.py'
+      - '.github/workflows/france_academy_1839_1927_supplement_scan_v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  two-bounded-original-source-pages:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install HTML original journal metadata parser
+        run: python -m pip install --disable-pip-version-check beautifulsoup4==4.12.3
+      - name: Compile source-only and test Commons thumbnail diagnostics without network
+        run: python -m py_compile scripts/france_academy_1839_1927_source_supplement_v1.py && python scripts/france_academy_1839_1927_source_supplement_v1.py --fixture-check
+      - name: Request 1839 p874 and 1927 p1516 Commons source image metadata, preview where available
+        run: python scripts/france_academy_1839_1927_source_supplement_v1.py --download --delay 1.5
+      - name: Record explicit unknown state if source preview absent
+        run: |
+          python - <<'PY'
+          import json
+          j=json.load(open('data/france_academy_1839_1927_original_supplement_v1/Liouville_vote_and_Fabry_original_page_supplement_v1.json',encoding='utf8'))
+          assert len(j['source_records'])==2 and j['new_final_full_members']==0 and j['new_final_birth_dates']==0
+          assert j['original_pages_visually_interpreted_by_script']==0 and j['bazi_feature_count']==0
+          print('SUPPLEMENT_HISTORICAL_PAGES',[(x['person'],x['printed_page'],x['status'],x.get('commons_last_parse_error')) for x in j['source_records']])
+          PY
+      - name: Save downloaded public-domain archival images temporarily, not in GitHub source repository
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: france-academy-liouville-1839-vote-result-and-fabry-1927-originals-v1
+          path: local_runs/france_academy_1839_1927_original_supplement_v1/*.jpg
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Checkpoint only original source image locator, SHA and error diagnostics
+        if: success()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/france_academy_1839_1927_original_supplement_v1/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Preserve Liouville 1839 p874 vote result and Fabry 1927 original facsimile source diagnostics'
+            git fetch origin france-academy-shard02-and-original-events-v1-20261018
+            git rebase origin/france-academy-shard02-and-original-events-v1-20261018
+            git push origin HEAD:france-academy-shard02-and-original-events-v1-20261018
+          fi

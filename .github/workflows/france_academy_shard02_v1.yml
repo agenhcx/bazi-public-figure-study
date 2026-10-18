@@ -1,0 +1,66 @@
+name: France Academy historical TOC Shard02 public-source census
+on:
+  push:
+    branches:
+      - france-academy-shard02-and-original-events-v1-20261018
+    paths:
+      - '.github/workflows/france_academy_shard02_v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  source-only-shard02:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install historical HTML parser
+        run: python -m pip install --disable-pip-version-check beautifulsoup4==4.12.3
+      - name: Check frozen 172 source targets and existing parser fixtures without network
+        run: python scripts/france_academy_run_remaining_172_toc_batch_v1.py --fixture-check && python scripts/france_academy_wikisource_legacy_election_headings_v1.py --fixture-check && python scripts/france_academy_wikisource_election_rows_v1.py --fixture-check
+      - name: Preview exact Shard02 source volumes without network
+        run: python scripts/france_academy_run_remaining_172_toc_batch_v1.py --shard 2
+      - name: Request only 16 prespecified historical Academy TOCs
+        run: python scripts/france_academy_run_remaining_172_toc_batch_v1.py --shard 2 --run --delay 1.5 --out-root data/france_academy_remaining_172_toc_batch_v1
+      - name: Audit 16 source statuses, exact SHA replays and individual event evidence
+        run: |
+          python - <<'PY'
+          import csv,json
+          folder='data/france_academy_remaining_172_toc_batch_v1/shard_02/'
+          s=json.load(open(folder+'summary.json',encoding='utf8'))
+          check=json.load(open(folder+'source_only_shard_checkpoint_v1.json',encoding='utf8'))
+          ledger=json.load(open(folder+'person_event_ledger_summary_v1.json',encoding='utf8'))
+          with open(folder+'verified_transcribed_person_event_candidates_v1.csv',encoding='utf-8-sig',newline='') as f: rows=list(csv.DictReader(f))
+          expected=[9,10,37,38,67,68,98,99,127,128,129,157,160,161,189,190]
+          assert s['table_of_contents_probed_volumes']==expected
+          assert s['table_probes_completed']==16 and s['category_volume_count']==211
+          assert check['shard']==2 and sorted(check['volumes'])==expected
+          assert ledger['parsed_event_rows']==len(rows)==s['sample_election_event_candidates']
+          assert ledger['source_200_bytes_checked']+ledger['other_TOC_statuses_not_election_zero']==16
+          assert all(x['source_sha256_verified_against_inventory']=='1' for x in rows)
+          assert all(x['official_member_status_accepted']=='0' and x['exact_dob_accepted']=='0' and x['bazi_variables_computed']=='0' for x in rows)
+          assert ledger['accepted_french_members']==ledger['accepted_DOBs']==ledger['bazi_variables_computed']==0
+          print('SHARD02_OBSERVED',json.dumps({'volumes':expected,'statuses':s['table_probe_http_status'],'heading_count':s['table_probe_election_heading_count'],'events':len(rows),'roles':ledger['event_classes'],'empty_people':sum(not r['name_as_transcribed'] for r in rows),'CTHS_562_strict_links':ledger['cths_562_unique_exact_name_event_candidates']},ensure_ascii=False))
+          PY
+      - name: Save small source metadata and person-level events as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: france-academy-shard02-toc-and-person-event-source-only-v1
+          path: data/france_academy_remaining_172_toc_batch_v1/shard_02/
+          retention-days: 45
+      - name: Checkpoint only source metadata and provisional historical event leads
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/france_academy_remaining_172_toc_batch_v1/shard_02/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Checkpoint frozen Shard02 public Academy TOC source QA and original index event rows'
+            git fetch origin france-academy-shard02-and-original-events-v1-20261018
+            git rebase origin/france-academy-shard02-and-original-events-v1-20261018
+            git push origin HEAD:france-academy-shard02-and-original-events-v1-20261018
+          fi

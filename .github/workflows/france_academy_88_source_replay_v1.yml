@@ -1,0 +1,50 @@
+name: France Academy 88-volume cumulative source audit
+on:
+  push:
+    branches:
+      - france-academy-shard02-and-original-events-v1-20261018
+    paths:
+      - 'scripts/france_academy_cumulative_88_volume_source_QA_v1.py'
+      - '.github/workflows/france_academy_88_source_replay_v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  reproduce-source-metadata:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Compile and synthetic-test source-only reconciliation
+        run: python -m py_compile scripts/france_academy_cumulative_88_volume_source_QA_v1.py && python scripts/france_academy_cumulative_88_volume_source_QA_v1.py --fixture-check
+      - name: Reproduce 88 distinct attempted volumes and candidate-event counts offline
+        run: python scripts/france_academy_cumulative_88_volume_source_QA_v1.py
+      - name: Check source totals, missingness and no accepted members
+        run: |
+          python - <<'PY'
+          import json
+          j=json.load(open('data/france_academy_remaining_172_toc_batch_v1/cumulative_88_source_summary_v1.json',encoding='utf8'))
+          assert j['unique_volumes_ever_TOC_probed']==88
+          assert j['TOC_page_status_count']=={'HTTP_200':63,'HTTP_404':25}
+          assert j['candidate_original_journal_INDEX_events_including_all_roles_and_offices']==224
+          assert j['remaining_TOC_endpoints_never_tested']==123
+          assert j['new_source_only_full_members_accepted']==0 and j['new_birthdays_accepted']==0
+          assert j['bazi_variables_computed']==0
+          print('PASS_CUMULATIVE',j['TOC_page_status_count'])
+          PY
+      - name: Checkpoint compact SHA-reproducible source metadata
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/france_academy_remaining_172_toc_batch_v1/cumulative_88_source_checked_unique_volumes_v1.csv data/france_academy_remaining_172_toc_batch_v1/cumulative_88_source_summary_v1.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Reconcile 88 historical volume TOC source probes and 224 index event leads'
+            git fetch origin france-academy-shard02-and-original-events-v1-20261018
+            git rebase origin/france-academy-shard02-and-original-events-v1-20261018
+            git push origin HEAD:france-academy-shard02-and-original-events-v1-20261018
+          fi
