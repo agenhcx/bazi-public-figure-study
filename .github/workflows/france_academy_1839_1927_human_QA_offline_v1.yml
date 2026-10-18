@@ -1,0 +1,37 @@
+name: France Academy six first-party scans plus 88 volume source provenance QA
+on:
+  push:
+    branches:
+      - france-academy-shard02-and-original-events-v1-20261018
+    paths:
+      - 'scripts/france_academy_1839_1927_original_event_QA_v1.py'
+      - 'FRANCE_ACADEMY_SHARD02_LIOUVILLE_FABRY_ORIGINAL_EVENT_QA_V1.md'
+      - '.github/workflows/france_academy_1839_1927_human_QA_offline_v1.yml'
+  workflow_dispatch:
+jobs:
+  offline-verified-originals:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.10','3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Compile and reproduce six source-image SHA and two original election-stage audits
+        run: python -m py_compile scripts/france_academy_1839_1927_original_event_QA_v1.py && python scripts/france_academy_1839_1927_original_event_QA_v1.py
+      - name: Validate five potentially misleading zero-result TOC parse cases
+        run: |
+          python - <<'PY'
+          import csv
+          p='data/france_academy_remaining_172_toc_batch_v1/shard_02/shard02_source_parser_false_zero_review_queue_v1.csv'
+          with open(p,encoding='utf-8-sig',newline='') as f:rows=list(csv.DictReader(f))
+          assert len(rows)==5
+          assert {int(x['volume']) for x in rows}=={37,98,128,160,161}
+          assert sum(x['error_class']=='READABLE_ELECTION_HEADING_ZERO_PERSON_PARSER_SUSPECT' for x in rows)==3
+          assert all(x['source_historical_member_absence_claim']=='NOT_ALLOWED' for x in rows)
+          assert all(x['full_member_study_accepted']==x['DOB_accepted']==x['bazi_calculated']=='0' for x in rows)
+          print('PASS: five readable historical source zero-parser edge cases quarantined, not treated as absence')
+          PY
