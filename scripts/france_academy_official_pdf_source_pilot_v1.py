@@ -242,7 +242,9 @@ def audit(out:Path,records:list[dict],sources:list[dict],mode:str,limit:int,
         try:
             if p.is_file() and (mode=="offline" or resume):
                 raw=p.read_bytes();actualsha=sha(raw)
-                if not meta.exists():\n                    raise RuntimeError("Cached PDF lacks immutable metadata/URL audit")\n                if not raw.startswith(b"%PDF-"):
+                if not meta.exists():
+                    raise RuntimeError("Cached PDF lacks immutable metadata/URL audit")
+                if not raw.startswith(b"%PDF-"):
                     raise RuntimeError("Cached file not a PDF")
                 if meta.exists():
                     prior=json.loads(meta.read_text(encoding="utf-8"))
