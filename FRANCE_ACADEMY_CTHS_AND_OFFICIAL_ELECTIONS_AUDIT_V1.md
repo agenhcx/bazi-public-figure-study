@@ -42,3 +42,15 @@ The script for source harvest retains person ID, literal profile URL, raw SHA-25
 3. Obtain the institutional 1989 official member-only biographical directory and 1979 index, or equally reliable first-party historical roster records. The library listings are known but **their full pages have not been downloaded or certified here**.
 4. Extend official ratified election lists before 2024, reconcile historical vs recent/deceased and enforce 2025 election cutoff.
 5. Freeze France roster, exact DOB ledger, unresolved/conflict list, source coverage/missingness stratification and immutable hashes. Until the global collection freeze, do not compute or look at BaZi outputs.
+
+
+## Completed 562-person source harvest (run 2026-10-18 UTC)
+
+- All four source-fetch shards finished successfully: source https://github.com/agenhcx/bazi-public-figure-study/actions/runs/39086523604 .
+- The original archive job successfully consolidated 562 entries but its git push was rejected as non-fast-forward because other peer-review documentation had advanced the source branch in the meantime. The **reconciliation run** https://github.com/agenhcx/bazi-public-figure-study/actions/runs/39086741592 downloaded the same four original source artifacts, audited all identities/hashes again, and committed them onto the branch head. The one-off recheckpoint workflow was removed after success.
+- Original CTHS person webpages: **562/562 fetched successfully**, no fetch errors, no duplicate person IDs.
+- **529/562 (94.13%)** CTHS biography assertions were parsed to calendar-valid exact ISO dates. **32** were nonexact/unparsed in the birth metadata and **1** had no birth metadata detected. **Zero** conflicts with the CTHS roster birth year were detected by the parser.
+- A SHA-256 digest is attached to each source page. The full raw capture exists as a compressed archival bundle; public release/redistribution of CTHS biographies and site HTML should be checked against the original site's terms/rights before any formal public research-data publication.
+- Source archive SHA256: 6258a366f69e120395450420fee8ae2587d586cb5db153937d1ef45267468811.
+- Deterministic outputs: data/france_academy_cths_profile_dob_harvest_v1/cths_dob_claims_all_targets_candidate_only_v1.csv, birthdate_parse_coverage_by_birth_decade_v1.csv, and summary.json.
+- Importantly **529 is NOT accepted exact DOB coverage**. The 529 dates are CTHS claims, possibly sourced from Wikipedia, subject to individual source and calendar/canonical-identity checks. Verified independent DOBs in this new capture remain **zero**. Confirmed historical membership class in the main sample remains **zero** until formal adjudication. No study outcomes have been computed.
