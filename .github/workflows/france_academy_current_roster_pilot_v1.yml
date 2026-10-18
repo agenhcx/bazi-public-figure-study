@@ -1,0 +1,52 @@
+name: France Academy official-source roster pilot v1
+
+on:
+  push:
+    branches:
+      - france-academy-source-pilot-v1
+    paths:
+      - scripts/france_academy_current_roster_pilot_v1.py
+      - .github/workflows/france_academy_current_roster_pilot_v1.yml
+  workflow_dispatch:
+    inputs:
+      max_pages:
+        description: Maximum official listing pages to inspect (pilot, 1-60)
+        default: '3'
+        required: true
+        type: string
+      max_profiles:
+        description: Maximum official profiles to inspect (pilot, 1-2000)
+        default: '45'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  official-modern-roster-pilot:
+    name: Audit official member-profile category and birth-year metadata
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      MAX_PAGES: ${{ github.event.inputs.max_pages || '3' }}
+      MAX_PROFILES: ${{ github.event.inputs.max_profiles || '45' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install minimal crawler dependencies
+        run: python -m pip install --disable-pip-version-check requests==2.32.3 beautifulsoup4==4.12.3
+      - name: Validate pilot syntax
+        run: python -m py_compile scripts/france_academy_current_roster_pilot_v1.py
+      - name: Crawl a bounded number of current official member profiles
+        run: python scripts/france_academy_current_roster_pilot_v1.py --max-pages "$MAX_PAGES" --max-profiles "$MAX_PROFILES" --delay 0.65 --strict
+      - name: Upload raw HTML evidence, parsed candidates, and audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: france-academy-modern-official-pilot-v1
+          path: data/france_academy_current_roster_pilot_v1/
+          if-no-files-found: warn
+          retention-days: 90
