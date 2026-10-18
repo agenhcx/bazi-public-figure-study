@@ -1,0 +1,61 @@
+name: France Leridon 1666-2016 member file provenance pilot v1
+
+on:
+  push:
+    branches:
+      - france-leridon-academy-master-index-pilot-v1
+    paths:
+      - scripts/france_academy_leridon_2022_source_pilot_v1.py
+      - .github/workflows/france_academy_leridon_source_pilot_v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  pre-blind-source-paper-pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install PDF text reader and HTTP client
+        run: python -m pip install --disable-pip-version-check requests==2.32.3 pymupdf==1.26.5
+      - name: Check citation/host fixtures offline
+        run: python -m py_compile scripts/france_academy_leridon_2022_source_pilot_v1.py && python scripts/france_academy_leridon_2022_source_pilot_v1.py --fixture-check
+      - name: Read ONLY two legit open manuscript source URLs; no access-control bypass
+        run: python scripts/france_academy_leridon_2022_source_pilot_v1.py --probe
+      - name: Assert no original member master data or BaZi variable accepted
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path("data/france_academy_leridon_historical_master_source_pilot_v1/summary.json").read_text(encoding="utf-8"))
+          assert d["number_of_http_requests"]==2
+          assert d["individual_level_academy_roster_retrieved"] is False
+          assert d["historical_member_category_adjudications"]==0
+          assert d["accepted_person_DOBs"]==0
+          assert d["bazi_variables_computed"]==0
+          print("Source preview checked; no study unblinding")
+          PY
+      - name: Archive source status and short methodology markers
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: france-leridon-2022-manuscript-methods-pilot-v1
+          path: data/france_academy_leridon_historical_master_source_pilot_v1/summary.json
+          if-no-files-found: warn
+          retention-days: 60
+      - name: Checkpoint reproducible source metadata only
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/france_academy_leridon_historical_master_source_pilot_v1/summary.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Record Henri Leridon 2022 Academy master prosopography source access and methodology status"
+            git pull --rebase origin france-leridon-academy-master-index-pilot-v1
+            git push origin HEAD:france-leridon-academy-master-index-pilot-v1
+          fi

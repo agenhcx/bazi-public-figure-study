@@ -1,0 +1,57 @@
+name: France Academy Leridon 2022 annex dataset-schema audit v1
+
+on:
+  push:
+    branches:
+      - france-leridon-academy-master-index-pilot-v1
+    paths:
+      - scripts/france_academy_leridon_appendix_methods_v1.py
+      - .github/workflows/france_academy_leridon_appendix_methods_v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  annex-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install official source parser
+        run: python -m pip install --disable-pip-version-check requests==2.32.3 pymupdf==1.26.5
+      - name: Compile + read only exact SHA-pinned 2022 methodology annex
+        run: python -m py_compile scripts/france_academy_leridon_appendix_methods_v1.py && python scripts/france_academy_leridon_appendix_methods_v1.py
+      - name: Check no Academy historic person-level data obtained
+        run: |
+          python - <<'PY'
+          import json
+          p="data/france_academy_leridon_historical_master_source_pilot_v1/appendix_methodology_summary.json"
+          r=json.load(open(p,encoding="utf-8"))
+          assert r["individually_named_3218_academy_people_retrieved"]==0
+          assert not r["full_individual_excel_file_obtained"]
+          assert r["bazi_variables_computed"]==0
+          print("Only article methodology read, not master raw people dataset")
+          PY
+      - name: Upload methodology page references only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: france-academy-leridon-2022-annex-source-fields-v1
+          path: data/france_academy_leridon_historical_master_source_pilot_v1/appendix_methodology_summary.json
+          if-no-files-found: warn
+          retention-days: 45
+      - name: Commit source methods evidence, not original PDF
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/france_academy_leridon_historical_master_source_pilot_v1/appendix_methodology_summary.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Checkpoint Leridon historical Academy person-file source-methodology audit"
+            git pull --rebase origin france-leridon-academy-master-index-pilot-v1
+            git push origin HEAD:france-leridon-academy-master-index-pilot-v1
+          fi

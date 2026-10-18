@@ -1,0 +1,88 @@
+{
+  "version": "france-academy-leridon-2022-master-archive-source-pilot-v1",
+  "checked_utc": "2026-10-18T03:51:06.181198+00:00",
+  "paper_metadata": {
+    "title": "Démographie de l'Académie des sciences (Institut de France) de 1666 à 2017, et perspectives",
+    "author": "Henri Leridon",
+    "journal": "Archives Internationales d'Histoire des Sciences",
+    "year": 2022,
+    "doi": "10.1484/J.ARIHS.5.129761",
+    "paper_is_same_as_member_file": false,
+    "member_file_annex_period": "1666-2016",
+    "archive_homepage": "https://archives.academie-sciences.fr/",
+    "archive_entry_discovered_unverified": "https://archives.academie-sciences.fr/n/fichier-des-membres-de-l-academie-issu-de-l-index-biographique-par-henri-leridon/n:155"
+  },
+  "probed_exactly_two_hosts": true,
+  "number_of_http_requests": 2,
+  "source_statuses": [
+    {
+      "source_host_id": "ined_archined",
+      "source_url": "https://archined.ined.fr/download/publication/AYLe1nW7eogrXWkVh1EU/c5471953cdf142a46ed91c363bd115531661789184620.pdf",
+      "status": "NETWORK_OR_PARSER_ERROR",
+      "http_code": null,
+      "pdf_sha256": "",
+      "pdf_page_count": 0,
+      "pdf_pages_with_methods_markers": [],
+      "error": "ConnectionError: HTTPSConnectionPool(host='archined.ined.fr', port=443): Max retries exceeded with url: /download/publication/AYLe1nW7eogrXWkVh1EU/c5471953cdf142a46ed91c363bd115531661789184620.pdf "
+    },
+    {
+      "source_host_id": "hal_open_archive",
+      "source_url": "https://hal.science/hal-03763832v1/file/Leridon_Demographie-Academie-des-Sciences_version-AA_01-2022.pdf",
+      "status": "OPEN_MANUSCRIPT_RETRIEVED",
+      "http_code": 200,
+      "pdf_sha256": "04ac1259f3488a0b88f9fbb4befd238df2f298821a65bf59e7dd7f1ec8f6b752",
+      "pdf_page_count": 41,
+      "pdf_pages_with_methods_markers": [
+        {
+          "pdf_page_zero_based": 3,
+          "marker_contexts": [
+            {
+              "term": "1039",
+              "nearby": "2. 1 LERIDON, « Démographie d’une Académie », 2004, p. 83-116. L’analyse portait sur 1039 membres, contre 3218 dans le présent article. 2 Nous connaissons peu d’études quantitatives (publiées) de ce type sur d’autres académies. Mentionnons VERON, « L’Académie française et la"
+            }
+          ]
+        },
+        {
+          "pdf_page_zero_based": 34,
+          "marker_contexts": [
+            {
+              "term": "ANNEXE",
+              "nearby": "34 ANNEXE Note sur la numérisation des notices pour l’ensemble des personnes ayant appartenu à l’Académie des sciences, de 1666 à 2016 Le fichier numérique complet sera prochainement disponible"
+            },
+            {
+              "term": "numérisation des notices",
+              "nearby": "34 ANNEXE Note sur la numérisation des notices pour l’ensemble des personnes ayant appartenu à l’Académie des sciences, de 1666 à 2016 Le fichier numérique complet sera prochainement disponible sur le site des Ar"
+            },
+            {
+              "term": "2018-2020",
+              "nearby": " manuelle, et le fichier résultant (en Excel) comportait 1039 Membres. b) L’étude de 2018-2020 L’analyse portait cette fois sur toutes les personnes enregistrées à l’Académie des sciences, quel qu’en soit le statut, et tirait parti de la publication par l’académie d’un gros "
+            },
+            {
+              "term": "2002-2004",
+              "nearby": "inement disponible sur le site des Archives de l’Académie des sciences a) L’étude de 2002-2004 Le travail publié en 2004 ne portait que sur les Membres au sens strict : pensionnaires, Membres (résidants ou non), académiciens, académiciens libres, hors Cadas (Conseil pour les"
+            },
+            {
+              "term": "fichier numérique complet",
+              "nearby": "’ensemble des personnes ayant appartenu à l’Académie des sciences, de 1666 à 2016 Le fichier numérique complet sera prochainement disponible sur le site des Archives de l’Académie des sciences a) L’étude de 2002-2004 Le travail publié en 2004 ne portait que sur les Membres a"
+            },
+            {
+              "term": "1039",
+              "nearby": " soins) de façon entièrement manuelle, et le fichier résultant (en Excel) comportait 1039 Membres. b) L’étude de 2018-2020 L’analyse portait cette fois sur toutes les personnes enregistrées à l’Académie des sciences, quel qu’en soit le statut, et tirait parti de la publicati"
+            },
+            {
+              "term": "Membres au sens strict",
+              "nearby": "es sciences a) L’étude de 2002-2004 Le travail publié en 2004 ne portait que sur les Membres au sens strict : pensionnaires, Membres (résidants ou non), académiciens, académiciens libres, hors Cadas (Conseil pour les applications de l’Académie de sciences). Les sources des n"
+            }
+          ]
+        }
+      ],
+      "error": ""
+    }
+  ],
+  "pdfs_retrieved": 1,
+  "individual_level_academy_roster_retrieved": false,
+  "historical_member_category_adjudications": 0,
+  "accepted_person_DOBs": 0,
+  "bazi_variables_computed": 0,
+  "note": "Annex methodology extraction is NOT retrieval of underlying Academy member Excel/file; 2004 strict-only and later all-status datasets have different denominators."
+}

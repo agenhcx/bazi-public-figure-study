@@ -1,0 +1,61 @@
+name: France Academy 2016 printed index mentions offline CTHS addendum v1
+
+on:
+  push:
+    branches:
+      - france-leridon-academy-master-index-pilot-v1
+    paths:
+      - scripts/france_academy_cths_2016_index_citation_addendum_v1.py
+      - .github/workflows/france_cths_2016_index_citation_addendum_v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  citation-addendum:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install HTML parser and mixed encoding helpers
+        run: python -m pip install --disable-pip-version-check beautifulsoup4==4.12.3 ftfy==6.3.1
+      - name: Offline 2016 printed index lead check for 562 existing CTHS source snapshots
+        run: python -m py_compile scripts/france_academy_cths_2016_index_citation_addendum_v1.py && python scripts/france_academy_cths_2016_index_citation_addendum_v1.py
+      - name: Verify no original historical roster or birthdates newly accepted
+        run: |
+          python - <<'PY'
+          import json
+          f="data/france_academy_leridon_historical_master_source_pilot_v1/cths_2016_index_citation_summary_v1.json"
+          r=json.load(open(f,encoding="utf-8"))
+          assert r["cths_sha_audited_people"]==562
+          assert r["offline_network_requests"]==0
+          assert r["original_2016_index_entries_directly_seen"]==0
+          assert r["underlying_2016_DOBs_verified"]==0
+          assert r["underlying_2016_membership_statuses_verified"]==0
+          assert r["bazi_variables_computed"]==0
+          PY
+      - name: Upload only minimal source-citation metadata
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: france-academy-cths-2016-original-index-bibliography-v1
+          path: |
+            data/france_academy_leridon_historical_master_source_pilot_v1/cths_2016_index_citation_summary_v1.json
+            data/france_academy_leridon_historical_master_source_pilot_v1/cths_2016_index_bibliographic_leads_addendum_v1.csv
+          if-no-files-found: warn
+          retention-days: 45
+      - name: Checkpoint source addendum without raw HTML
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/france_academy_leridon_historical_master_source_pilot_v1/cths_2016_index*
+          if ! git diff --cached --quiet; then
+            git commit -m "Checkpoint 2016 official Academy index citations from 562 archived CTHS biographies"
+            git pull --rebase origin france-leridon-academy-master-index-pilot-v1
+            git push origin HEAD:france-leridon-academy-master-index-pilot-v1
+          fi
