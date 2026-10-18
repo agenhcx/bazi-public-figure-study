@@ -1,0 +1,25 @@
+name: France BnF 1989 directory lead provenance pilot
+on:
+  pull_request:
+    paths:
+      - 'scripts/france_academy_bnf_authority_pilot_v1.py'
+      - 'FRANCE_ACADEMY_ROCHE_BNF_AND_CIVIL_ARCHIVE_PUBLIC_SOURCE_V1.md'
+      - '.github/workflows/france_academy_bnf_authority_pilot_v1.yml'
+  workflow_dispatch:
+jobs:
+  source-audit-smoke:
+    strategy:
+      matrix:
+        py: ['3.10','3.13']
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.py }}
+      - name: Compile source-only script
+        run: python -m py_compile scripts/france_academy_bnf_authority_pilot_v1.py
+      - name: Test parser with synthetic BnF source
+        run: python scripts/france_academy_bnf_authority_pilot_v1.py --fixture-check
+      - name: Dry-run frozen 17 source-reference subset
+        run: python scripts/france_academy_bnf_authority_pilot_v1.py --dry-run --limit 5
