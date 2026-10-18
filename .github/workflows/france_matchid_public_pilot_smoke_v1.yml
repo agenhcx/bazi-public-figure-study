@@ -23,20 +23,20 @@ jobs:
         run: python scripts/france_academy_matchid_public_pilot_v1.py --fixture-check
       - name: Real roster dry-run without network
         run: python scripts/france_academy_matchid_public_pilot_v1.py --dry-run --limit 10
-      - name: Temporary advanced name plus compact birthDate range probe
+      - name: Temporary one-person v1_3 full-pipeline public source probe
         if: matrix.python-version == '3.10'
         run: |
+          python scripts/france_academy_matchid_public_pilot_v1.py --limit 1 --timeout 15 --out local_runs/france_matchid_v1_3_one_person_probe
           python - <<'PY'
-          import json, urllib.request, urllib.error, urllib.parse
-          params = {"firstName": "jean", "lastName": "dieudonne", "birthDate": "01/01/1906-31/12/1906", "size": "20"}
-          req = urllib.request.Request("https://deces.matchid.io/deces/api/v1/search?" + urllib.parse.urlencode(params), headers={"Accept": "application/json", "User-Agent": "bazi-public-figure-study/1.0 (bounded source validation)"})
-          try:
-              with urllib.request.urlopen(req, timeout=15) as response:
-                  doc = json.loads(response.read(200000))
-              info = doc.get("response", {})
-              print("ADVANCED_FILTER_PROBE", {"http": 200, "reported_total": info.get("total"), "persons_this_page": len(info.get("persons", [])), "msg": str(doc.get("msg", ""))[:120]})
-          except urllib.error.HTTPError as e:
-              print("COMPACT_FILTER_PROBE", {"http": e.code, "error_body": e.read(600).decode("utf-8", "replace")[:350]})
-          except urllib.error.URLError as e:
-              print("COMPACT_FILTER_PROBE", {"network_error": str(e.reason)[:200]})
+          import csv, collections
+          p = 'local_runs/france_matchid_v1_3_one_person_probe/'
+          with open(p + 'person_query_status_v1.csv', encoding='utf-8-sig', newline='') as f:
+              x = next(csv.DictReader(f))
+          with open(p + 'matchid_source_candidates_v1.csv', encoding='utf-8-sig', newline='') as f:
+              rows = list(csv.DictReader(f))
+          print('V1_3_LIVE', {'http_status': x.get('query_status'), 'api_total': x.get('api_total_claim'),
+                'parsed_hits': x.get('parsed_hit_count'), 'source_rows': len(rows),
+                'strict_name_year': sum(y['name_birthyear_comparison'] == 'STRICT_NAME_AND_YEAR_CANDIDATE' for y in rows),
+                'strict_and_deathyear': sum(y['name_birthyear_comparison'] == 'STRICT_NAME_AND_YEAR_CANDIDATE' and y['deathyear_comparison'] == 'DEATHYEAR_AGREES_CTHS' for y in rows),
+                'error': x.get('error_preview', '')[:250]})
           PY
