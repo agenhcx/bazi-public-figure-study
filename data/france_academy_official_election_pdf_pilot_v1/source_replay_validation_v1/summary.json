@@ -1,0 +1,25 @@
+{
+  "version": "france-academy-official-election-pdf-source-pilot-v1",
+  "mode": "fetch",
+  "generated_utc": "2026-10-18T02:26:13.836146+00:00",
+  "http_attempts_upper_bound": 8,
+  "selected_full_election_documents": 4,
+  "downloaded_or_reused_documents": 4,
+  "blocked_or_unexpected_documents": 0,
+  "person_source_assertions_replayed": 66,
+  "per_person_parse_status": {
+    "PDF_EXACT_DATE_CONFIRMED": 20,
+    "PDF_ORDINAL_1e_REQUIRES_REVIEW": 1,
+    "OFFICIAL_NAME_ONLY_CONFIRMED": 27,
+    "PDF_FONT_INITIAL_MISSING_VISUALLY_QA_RECOVERED": 8,
+    "YEAR_ONLY_SOURCE_MATCH": 10
+  },
+  "name_or_DOB_unmatched": [],
+  "name_and_role_source_matched": 66,
+  "source_exact_DOB_claims_parsed": 21,
+  "foreign_associate_negative_control_excluded": true,
+  "independent_exact_DOB_provenance_accepted": 0,
+  "cohort_roster_finalized": false,
+  "bazi_variables_computed": 0,
+  "WARNING": "Small official-source replay only. Names/dates not automatically promoted to study. Blocked sources must be retried from legitimate local access and never counted as zero names."
+}
