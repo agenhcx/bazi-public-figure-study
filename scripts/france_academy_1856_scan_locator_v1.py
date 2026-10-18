@@ -12,7 +12,7 @@ import urllib.parse,urllib.request,urllib.error
 from pathlib import Path
 from bs4 import BeautifulSoup
 
-VERSION="france-academy-1856-hermite-facsimile-location-probe-v1"
+VERSION="france-academy-1856-hermite-facsimile-location-probe-v1_1"
 BOOK="Comptes rendus hebdomadaires des séances de l’Académie des sciences, tome 043, 1856.djvu"
 ROOT="https://fr.wikisource.org/wiki/"
 TARGETS=[
@@ -50,6 +50,24 @@ def map_index_html(raw):
         pairs.setdefault(int(label),set()).add((int(m.group(2)),href))
     return {k:[{"djvu_frame_number":page,"public_page_url":url} for page,url in sorted(v)]
             for k,v in pairs.items()}
+def page_link_diagnostics(raw):
+    soup=BeautifulSoup(raw,"html.parser")
+    answer={}
+    for target in ("85","169"):
+        matches=[]
+        for elem in soup.find_all(["a","span","b"]):
+            if elem.get_text(" ",strip=True)!=target:continue
+            if any(elem.find(["a","span","b"])):continue
+            matches.append({"tag":elem.name,
+                "href":str(elem.get("href",""))[:200],
+                "title":str(elem.get("title",""))[:160],
+                "class":" ".join(elem.get("class",[]))[:130],
+                "parent_tag":elem.parent.name if elem.parent else "",
+                "parent_html":str(elem.parent)[:260] if elem.parent else ""})
+            if len(matches)>=6:break
+        answer[target]=matches
+    return answer
+
 def scan_page_metadata(raw):
     soup=BeautifulSoup(raw,"html.parser")
     page_title=(soup.title.get_text(" ",strip=True) if soup.title else "")[:190]
@@ -89,10 +107,12 @@ def main():
         if status!=200:raise ValueError("Book page HTTP not 200")
         book_hash=hashlib.sha256(raw).hexdigest()
         mapping=map_index_html(raw)
+        link_diagnostics=page_link_diagnostics(raw)
         for i,t in enumerate(TARGETS):
             found=mapping.get(t["original_printed_page"],[])
             record={**t,"public_book_index":url,"book_html_sha256":book_hash,
                  "explicit_pagelist_mapping_candidates":found,
+                 "book_page_label_HTML_diagnostics":link_diagnostics.get(str(t["original_printed_page"]),[]),
                  "pagelist_mapping_unique":len(found)==1,
                  "source_index_not_a_direct_page_image":True,
                  "original_event_scan_visually_verified":False,
