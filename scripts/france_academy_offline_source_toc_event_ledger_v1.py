@@ -116,7 +116,7 @@ def main():
     events,audit=build(a.source_dir,a.cache_root)
     write_csv(a.out/"verified_transcribed_person_event_candidates_v1.csv",events,FIELDS)
     full_like={"FULL_SECTION_MEMBER","FULL_NONRESIDENT_MEMBER","FULL_ACADEMICIAN_LIBRE",
-               "FULL_SECTION_MEMBER_CONTEXTUAL_NOMINATION"}
+               "FULL_SECTION_MEMBER_CONTEXTUAL_NOMINATION","FULL_SECTION_MEMBER_CONTEXTUAL_ELECTION"}
     roles=Counter(r["member_role_source_candidate"] for r in events)
     metric={"version":VERSION,
         "source_sha256":hashlib.sha256((a.source_dir/"academy_original_wikisource_211_volume_inventory_v1.csv").read_bytes()).hexdigest(),

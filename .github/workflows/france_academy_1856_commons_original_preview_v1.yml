@@ -1,0 +1,62 @@
+name: France 1856 Hermite original Commons facsimile neighbors QC
+on:
+  push:
+    branches:
+      - france-academy-1856-facsimile-and-shard01-v1-20261018
+    paths:
+      - 'scripts/france_academy_1856_commons_original_preview_v1.py'
+      - '.github/workflows/france_academy_1856_commons_original_preview_v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  two-source-facsimile-pages:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install HTML parser
+        run: python -m pip install --disable-pip-version-check beautifulsoup4==4.12.3
+      - name: Test exact printed page to DjVu frame mapping and nonadmission
+        run: python -m py_compile scripts/france_academy_1856_commons_original_preview_v1.py && python scripts/france_academy_1856_commons_original_preview_v1.py --fixture-check
+      - name: Request exactly two public Commons scanned-page previews
+        run: python scripts/france_academy_1856_commons_original_preview_v1.py --download --neighbors --delay 1.5
+      - name: Verify metadata never claims visual approval or final admission
+        run: |
+          python - <<'PY'
+          import json
+          p='data/france_academy_1856_commons_original_page_map_v1/source_preview_metadata_v1.json'
+          j=json.load(open(p,encoding='utf8'))
+          assert len(j['records'])==4
+          assert {x['printed_page'] for x in j['records']}=={83,84,85,169}
+          assert all(x['unique_page_frame_mapping'] for x in j['records'])
+          assert j['source_images_visually_interpreted']==0
+          assert j['legal_government_approvals_adjudicated']==0
+          assert j['accepted_memberships']==0 and j['accepted_DOB']==0 and j['bazi_variables_computed']==0
+          print('SOURCE_PREVIEW_QA',[(x['printed_page'],x.get('frame'),x['status'],x.get('preview_bytes')) for x in j['records']])
+          PY
+      - name: Preserve only two small source scan JPEGs privately for later visual checking
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: france-1856-hermite-two-public-original-page-previews
+          path: local_runs/france_1856_hermite_scan_preview_v1/*.jpg
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Checkpoint source metadata only
+        if: success()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/france_academy_1856_commons_original_page_map_v1/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Pin public French Academy 1856 original scan source frames 83-85 and 169 for visual QA'
+            git fetch origin france-academy-1856-facsimile-and-shard01-v1-20261018
+            git rebase origin/france-academy-1856-facsimile-and-shard01-v1-20261018
+            git push origin HEAD:france-academy-1856-facsimile-and-shard01-v1-20261018
+          fi

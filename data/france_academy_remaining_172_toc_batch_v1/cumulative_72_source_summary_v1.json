@@ -1,0 +1,37 @@
+{
+  "version": "france-academy-72-distinct-Toc-source-reconciliation-v1",
+  "sources": [
+    {
+      "file": "data/france_academy_1856_nomination_grammar_pilot_v1/cumulative_56_source_checked_volume_coverage_v1.csv",
+      "source_volume_rows": 56
+    },
+    {
+      "file": "data/france_academy_remaining_172_toc_batch_v1/shard_01/academy_original_wikisource_211_volume_inventory_v1.csv",
+      "source_volume_rows": 16
+    }
+  ],
+  "total_book_volumes_in_historical_frame": 211,
+  "original_source_index_unique_volumes_checked": 72,
+  "actual_TOC_http_200": 51,
+  "actual_TOC_http_404": 21,
+  "historical_index_event_candidate_rows": 189,
+  "remaining_never_probed_TOC_volumes": 139,
+  "shard01_exact_event_name_rows": 48,
+  "shard01_event_roles": {
+    "FULL_SECTION_MEMBER_CONTEXTUAL_ELECTION": 1,
+    "CORRESPONDENT": 26,
+    "FULL_SECTION_MEMBER": 17,
+    "FULL_ACADEMICIAN_LIBRE": 1,
+    "OFFICE_ELECTION_NOT_NEW_MEMBER": 1,
+    "FOREIGN_ASSOCIATE": 2
+  },
+  "shard01_full_like_index_event_candidates": 19,
+  "shard01_new_CTHS_562_strict_exact_name_candidate_events": 2,
+  "one_nonmember_internal_office_event_excluded_from_full_like_category": true,
+  "one_historical_contextual_member_election_class_preserved": true,
+  "Hermite_1856_direct_four_page_visual_original_QA_separate": true,
+  "membership_accepted": 0,
+  "exact_DOB_accepted": 0,
+  "bazi_features_computed": 0,
+  "note": "189 is a count of transcribed historical election/nomination/office-like index event rows, NOT a count of unique full Académie members; 139 unprobed and 21 TOC404 do not mean historical absence."
+}

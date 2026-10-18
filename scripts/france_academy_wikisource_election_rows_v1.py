@@ -13,7 +13,7 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 from france_academy_wikisource_index_preflight_v1 import read_one,build_urls,TRIAL
 
-VERSION="france-academy-wikisource-original-journal-index-election-source-v1_2"
+VERSION="france-academy-wikisource-original-journal-index-election-source-v1_3"
 CTHS="data/france_academy_cths_profile_dob_harvest_v1/cths_dob_claims_all_targets_candidate_only_v1.csv"
 OUT="local_runs/france_academy_wikisource_election_index_v1"
 FIELDS=["original_journal_issuer","transcription_site","year","original_volume","printed_election_page","page_reconstructed_from_continuation_row",
@@ -54,10 +54,14 @@ def role_of(line):
     if re.search(r"\b(secretaire perpetuel|president|vice president|directeur)\b",clause):
         return "OFFICE_ELECTION_NOT_NEW_MEMBER"
     if re.search(r"\bmembre\b",clause):return "FULL_SECTION_MEMBER"
+    # 1839 index: elected "pour la place vacante dans la section".
+    # Role is CONTEXTUAL, not an approved original full-membership class.
+    if "place vacante" in clause and "section" in clause:
+        return "FULL_SECTION_MEMBER_CONTEXTUAL_ELECTION"
     return "UNKNOWN_ROLE_MANUAL"
 def person_of(line):
     # One named person elected; other people after "en remplacement de" are not elected.
-    m=re.search(r"\bM\.\s+(.{2,125}?)\s+est\s+[ée]lu(?:e)?\b",line,re.I)
+    m=re.search(r"\bM(?:\.|\s)\s*(.{2,125}?)\s+est\s+[ée]lu(?:e)?\b",line,re.I)
     if not m:
         # Historical volumes also explicitly elect foreign associates as
         # "Sir Ernest Rutherford est élu Associé étranger" (Tome 185, p1424).
@@ -143,6 +147,8 @@ def smoke():
     assert [x["printed_election_page"] for x in found]==["303","551","1366","1400"]
     assert found[0]["transcribed_elected_person_name"]=="Camille Matignon"
     assert person_of("— Sir Ernest Rutherford est élu Associé étranger en remplacement de Walcott")=="Ernest Rutherford"
+    assert person_of("— M Owen est élu correspondant pour la section d’Anatomie")=="Owen"
+    assert role_of("— M. Boussingault est élu pour la place vacante dans la section d’Économie rurale")=="FULL_SECTION_MEMBER_CONTEXTUAL_ELECTION"
     assert found[0]["transcribed_science_section"]=="chimie"
     assert found[1]["transcribed_elected_person_name"]=="Léon Fredericq"
     assert norm("ÉMILE Picard")=="emile picard"

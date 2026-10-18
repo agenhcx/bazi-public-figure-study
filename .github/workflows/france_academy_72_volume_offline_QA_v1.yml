@@ -1,0 +1,27 @@
+name: France 1856 original scan and 72-volume cumulative source QA
+on:
+  push:
+    branches:
+      - france-academy-1856-facsimile-and-shard01-v1-20261018
+    paths:
+      - 'scripts/france_academy_72_source_and_original_image_QA_v1.py'
+      - '.github/workflows/france_academy_72_volume_offline_QA_v1.yml'
+      - 'FRANCE_ACADEMY_1856_FIRSTPARTY_SCAN_HERMITE_AND_SHARD01_V1.md'
+  workflow_dispatch:
+jobs:
+  pure-offline-source-consistency:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.10','3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install pinned original journal HTML parser
+        run: python -m pip install --disable-pip-version-check beautifulsoup4==4.12.3
+      - name: Verify historical nomination and source grammar safely offline
+        run: python scripts/france_academy_wikisource_election_rows_v1.py --fixture-check && python scripts/france_academy_1856_commons_original_preview_v1.py --fixture-check && python scripts/france_academy_run_remaining_172_toc_batch_v1.py --fixture-check
+      - name: Reconcile distinct 72 volumes, 189 candidate events, 4 directly viewed original scans
+        run: python -m py_compile scripts/france_academy_72_source_and_original_image_QA_v1.py && python scripts/france_academy_72_source_and_original_image_QA_v1.py
