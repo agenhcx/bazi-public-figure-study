@@ -39,18 +39,21 @@ def write_csv(p,items,cols):
         w=csv.DictWriter(f,fieldnames=cols,extrasaction="ignore")
         w.writeheader();w.writerows(items)
 def role_of(line):
-    x=norm(line)
-    if not re.search(r"\b(est|a ete|sont)\s+elus?\b",x):return ""
-    if "correspondant" in x[:110]:return "CORRESPONDENT"
-    if re.search(r"\bassoci[ée]\s+[ée]tranger",line,re.I) or "associe etranger" in x[:110]:
-        return "FOREIGN_ASSOCIATE"
-    if "academicien libre" in x[:110]:return "FULL_ACADEMICIAN_LIBRE"
-    if "membre non residant" in x[:110] or "membre non resident" in x[:110]:
+    # Classify ONLY the predicate following "est élu"; a section heading
+    # mentioning "membres et correspondants" must NOT turn the full election
+    # into a corresponding election. Replacement names must also be ignored.
+    full=norm(line)
+    m=re.search(r"\b(est|a ete|sont)\s+elue?s?\b",full)
+    if not m:return ""
+    clause=re.split(r"\ben remplacement\b|\bdecede\b",full[m.end():],maxsplit=1)[0]
+    if re.search(r"\bcorrespondant\b",clause):return "CORRESPONDENT"
+    if "associe etranger" in clause:return "FOREIGN_ASSOCIATE"
+    if "academicien libre" in clause:return "FULL_ACADEMICIAN_LIBRE"
+    if "membre non residant" in clause or "membre non resident" in clause:
         return "FULL_NONRESIDENT_MEMBER"
-    if re.search(r"\belu(?:e)?\s+(secretaire perpetuel|president|vice president|directeur)\b",x):
+    if re.search(r"\b(secretaire perpetuel|president|vice president|directeur)\b",clause):
         return "OFFICE_ELECTION_NOT_NEW_MEMBER"
-    if re.search(r"\belu(?:e)?\s+membre\b",x):
-        return "FULL_SECTION_MEMBER"
+    if re.search(r"\bmembre\b",clause):return "FULL_SECTION_MEMBER"
     return "UNKNOWN_ROLE_MANUAL"
 def person_of(line):
     # One named person elected; other people after "en remplacement de" are not elected.
