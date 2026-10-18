@@ -6,6 +6,11 @@ on:
     paths:
       - 'scripts/france_academy_wikisource_legacy_election_headings_v1.py'
       - 'scripts/france_academy_wikisource_election_rows_v1.py'
+      - 'scripts/france_academy_comptes_rendus_211_volume_inventory_v1.py'
+      - 'scripts/france_academy_run_remaining_172_toc_batch_v1.py'
+      - 'scripts/france_academy_offline_source_toc_event_ledger_v1.py'
+      - 'scripts/france_academy_cumulative_56_source_probe_audit_v1.py'
+      - 'scripts/france_academy_1856_imperial_decree_index_v1.py'
       - '.github/workflows/france_academy_1856_nomination_and_shard0_v1.yml'
   workflow_dispatch:
 permissions:
@@ -61,6 +66,8 @@ jobs:
           assert x['approval_decree_original_pages_opened']==0 and x['accepted_member_persons']==0
           assert x['accepted_birthdates']==0 and x['bazi_variables_computed']==0
           PY
+      - name: Test original Academy volume mapping and contextual nominee role counter
+        run: python scripts/france_academy_comptes_rendus_211_volume_inventory_v1.py --fixture-check
       - name: Validate frozen 172-volume plan and dry-run shard zero (no network)
         run: python scripts/france_academy_run_remaining_172_toc_batch_v1.py --fixture-check && python scripts/france_academy_run_remaining_172_toc_batch_v1.py --shard 0
       - name: Test offline individual event ledger before bulk source capture
