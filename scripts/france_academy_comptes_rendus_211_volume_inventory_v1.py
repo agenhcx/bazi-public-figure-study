@@ -23,10 +23,10 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 from bs4 import BeautifulSoup
-from france_academy_wikisource_election_rows_v1 import extract_from_html
+from france_academy_wikisource_legacy_election_headings_v1 import parse_html as extract_legacy_aware
 from france_academy_wikisource_index_preflight_v1 import build_urls
 
-VERSION = "france-academy-211-comptes-rendus-volume-inventory-v1"
+VERSION = "france-academy-211-comptes-rendus-volume-inventory-v1_1"
 CAT = "Catégorie:Index - Comptes rendus hebdomadaires des séances de l’Académie des sciences"
 API = "https://fr.wikisource.org/w/api.php"
 OFFICIAL = "https://comptes-rendus.academie-sciences.fr/page/consulter-les-anciens-numeros-1835-1996_fr/"
@@ -215,16 +215,16 @@ def probe_table(row,cache,offline,timeout,delay,last_request):
     row["table_sampled"]="1"
     try:
         raw,state=get_cached(row["wikisource_table_url"],path,offline,timeout,delay,last_request)
-        events,heads=extract_from_html(raw,y,v)
+        events,heads=extract_legacy_aware(raw,v,y)
         soup=BeautifulSoup(raw,"html.parser")
         text=" ".join(soup.get_text(" ",strip=True).split())
-        relevant=[h for h in heads if h.startswith("election")]
+        relevant=[h for h in heads if h.casefold().startswith(("election","élection","nomination"))]
         row.update({"table_http_status":state,"table_html_sha256":sha(raw),
                     "table_body_readable":"1" if len(text)>=500 else "0",
                     "election_heading_detected":"1" if relevant else "0",
                     "transcribed_election_rows":str(len(events)),
-                    "full_like_event_rows_in_sample":str(sum(e["transcribed_election_type"] in FULL for e in events)),
-                    "correspondent_foreign_event_rows_in_sample":str(sum(e["transcribed_election_type"] in OTHER for e in events))})
+                    "full_like_event_rows_in_sample":str(sum(e["election_role_candidate"] in FULL for e in events)),
+                    "correspondent_foreign_event_rows_in_sample":str(sum(e["election_role_candidate"] in OTHER for e in events))})
     except (urllib.error.HTTPError,urllib.error.URLError,TimeoutError,ValueError,FileNotFoundError) as exc:
         row.update({"table_http_status":"HTTP_"+str(exc.code) if isinstance(exc,urllib.error.HTTPError)
                     else type(exc).__name__,"table_body_readable":"UNDETERMINED",
@@ -318,6 +318,7 @@ def main():
        "sample_election_event_candidates":sum(int(x["transcribed_election_rows"] or 0) for x in probes),
        "unprobed_volumes_not_claimed_readable":211-len(probes),
        "source_tier":"ORIGINAL_ACADEMY_JOURNAL_OFFICIAL_VOLUME_LINKS_PLUS_WIKISOURCE_BOOK_ENTRIES;SAMPLE_TABLES_ONLY",
+       "early_heading_parser":"Recognizes 1835 div.tableItem Elections and 1880 Nominations as well as later tables; positive events only source candidates",
        "no_original_book_election_pages_scanned":True,
        "no_full_member_roster_completeness_claim":True,
        "accepted_full_memberships":0,"accepted_exact_dobs":0,"bazi_variables_computed":0
