@@ -1,0 +1,83 @@
+{
+  "version": "france-academy-source-checkpoint-v2",
+  "parser_version": "france-academy-legacy-heading-wikisource-source-only-v1_9",
+  "input_SHA256": {
+    "data/france_academy_source_checkpoint_v2/cumulative_source_checked_unique_volumes_v2.csv": "4d3b6ccd7d5afa6814b611828c4341347019d20bcc05c4837d2f2c0199605404",
+    "data/france_academy_unprobed_16_volume_batch_v1/remaining_172_toc_shard_plan_v1.csv": "0a1cba241de6c3e0a572a5af41deca11aa554441c6f12aaa990c7a97b6fe5203",
+    "data/france_academy_remaining_172_toc_batch_v1/shard_04/academy_original_wikisource_211_volume_inventory_v1.csv": "b16674817f07deacc46549114bc75a3e7bf4470576bf31ae4dc5055dcf0cb07b",
+    "data/france_academy_remaining_172_toc_batch_v1/shard_04/summary.json": "2dc2f545caa53d81485cf857041b11f2fa16ccc8940f54d2b1e5b7d0b4d3c12d",
+    "data/france_academy_remaining_172_toc_batch_v1/shard_04/source_only_shard_checkpoint_v1.json": "8c197268672ebfcd3dab3feda5d0667fc8d98ac2c91bc1b78c926ae4105ed341",
+    "data/france_academy_remaining_172_toc_batch_v1/shard_04/person_event_ledger_summary_v1.json": "d3c62106087a101c64844add014f6ae9ce2666aeb5274d36eb0ef4b043e033fb",
+    "data/france_academy_remaining_172_toc_batch_v1/shard_04/verified_transcribed_person_event_candidates_v1.csv": "aa1d24b107e8d941a0ba42dfdb956e7a7f7be313166888dc1978703cd3617fb1"
+  },
+  "previous_unique_volumes": 104,
+  "previous_index_event_rows": 299,
+  "reparsed_prior_volumes": [],
+  "revision_previous_event_rows": 0,
+  "revision_reparsed_event_rows": 0,
+  "grammar_revision_net_added_index_events": 0,
+  "revision_role_counts": {},
+  "new_frozen_shard": 4,
+  "new_frozen_shard_volumes": 15,
+  "new_shard_index_event_rows": 70,
+  "new_shard_role_counts": {
+    "FULL_SECTION_MEMBER_CONTEXTUAL_NOMINATION": 3,
+    "CORRESPONDENT": 38,
+    "FOREIGN_ASSOCIATE": 9,
+    "FULL_ACADEMICIAN_LIBRE": 5,
+    "FULL_SECTION_MEMBER": 14,
+    "OFFICE_ELECTION_NOT_NEW_MEMBER": 1
+  },
+  "unique_volumes_ever_TOC_probed": 119,
+  "TOC_page_status_count": {
+    "HTTP_200": 83,
+    "HTTP_404": 36
+  },
+  "candidate_original_journal_INDEX_events_including_all_roles_and_offices": 369,
+  "remaining_TOC_endpoints_never_tested": 92,
+  "failed_source_event_count": "UNKNOWN_NOT_ZERO",
+  "counts_are_source_events_not_unique_people": true,
+  "original_scan_evidence_not_inferred_from_TOC": true,
+  "accepted_memberships": 0,
+  "accepted_exact_dobs": 0,
+  "bazi_variables_computed": 0,
+  "network_requests": 0,
+  "output_SHA256": {
+    "cumulative_source_checked_unique_volumes_v2.csv": "7b5226e7648098cb13a5a363bf6329d044d4dbbb944064a49b3b6f61cd994206",
+    "remaining_source_queue_v2.csv": "996ac6097a330450454ab08d3dd58d0042761cb375dcd6c0e791bb30d201e2ee",
+    "added_or_reparsed_index_events_v2.csv": "835edd1f482d7becce39cab7c6f514e6fb6bd61f28069ca9b7da767b614197b5"
+  },
+  "frozen_shard_resume": {
+    "frozen_volumes": [
+      41,
+      71,
+      103,
+      133,
+      165,
+      195,
+      14,
+      42,
+      73,
+      104,
+      134,
+      166,
+      196,
+      15,
+      44,
+      74
+    ],
+    "reused_prior_volumes": [
+      42
+    ],
+    "baseline_sha256": "4d3b6ccd7d5afa6814b611828c4341347019d20bcc05c4837d2f2c0199605404",
+    "reused_prior_source_records": [
+      {
+        "volume": 42,
+        "year": "1856",
+        "technical_status": "HTTP_200",
+        "parsed_index_event_rows": "7",
+        "source_html_sha256": "2e6b32b56a5ff5ea28c4aef52ada56218d9dc10a5c5ecd5539e58d4d2af4d6f9"
+      }
+    ]
+  }
+}

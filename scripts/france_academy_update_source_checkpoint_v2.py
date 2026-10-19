@@ -55,8 +55,11 @@ def csv_bytes(items,fields):
     writer.writeheader();writer.writerows(items)
     return stream.getvalue().encode("utf-8-sig")
 
-def read_baseline(path):
+def read_baseline(path,require_v2=False):
     original=rows(path);unique(original,"Baseline");gates(original)
+    legacy=path.name==BASELINE.name and not require_v2
+    if not legacy:
+        require(original and set(FIELDS)<=set(original[0]),"Incomplete v2 baseline columns")
     result=[]
     for old in original:
         r={k:old.get(k,"") for k in FIELDS}
@@ -68,12 +71,52 @@ def read_baseline(path):
         require(n.isdigit() if r["technical_status"]=="HTTP_200" else n=="",
                 "Baseline failed/unknown source must not carry a zero count: "+r["volume"])
         require(r["original_event_page_verified"]=="0","Baseline is not index-only")
+        if not legacy:
+            require(r["year"].isdigit() and int(r["year"])==1835+int(r["volume"])//2,"Malformed baseline year")
+            require(r["technical_status"] not in ("","NOT_CHECKED","NOT_YET_PROBED","HTTP_403","HTTP_429"),"Unfinished/blocked baseline source")
+            require(len(r["technical_status"])==8 and r["technical_status"].startswith("HTTP_") and r["technical_status"][5:].isdigit(),"Malformed baseline status")
+            digest=r["source_html_sha256"]
+            if r["technical_status"]=="HTTP_200" or digest:
+                require(len(digest)==64 and all(c in "0123456789abcdef" for c in digest),"Missing/malformed baseline source SHA")
         result.append(r)
-    if path.name==BASELINE.name:
+    if legacy:
         require(len(result)==88 and counts(result)==224,"Frozen 88-volume/224-event baseline changed")
     else:
-        require(original and "source_html_sha256" in original[0],"Expected a v2 cumulative baseline")
+        manifest=load(path.parent/"summary.json");gates(manifest)
+        require(manifest.get("version")==VERSION,"Expected a v2 baseline summary")
+        require(manifest.get("output_SHA256",{}).get("cumulative_source_checked_unique_volumes_v2.csv")==sha(path),"Baseline CSV SHA differs from its summary")
+        require(manifest.get("unique_volumes_ever_TOC_probed")==len(result),"Baseline is missing or adding volume records")
+        require(manifest.get("candidate_original_journal_INDEX_events_including_all_roles_and_offices")==counts(result),"Baseline event total differs from summary")
+        require(manifest.get("TOC_page_status_count")==dict(Counter(r["technical_status"] for r in result)),"Baseline source statuses differ from summary")
+        require(manifest.get("remaining_TOC_endpoints_never_tested")==211-len(result),"Baseline remaining count differs from frame")
+        require(all(manifest.get(k)==0 for k in ("accepted_memberships","accepted_exact_dobs","bazi_variables_computed")),"Baseline summary gates absent")
     return result
+
+RESUME_FIELDS=("frozen_volumes","reused_prior_volumes","baseline_sha256","reused_prior_source_records")
+
+def baseline_resume(frozen,path):
+    """Derive new requests and explicit prior-source provenance, in frozen order."""
+    require(sha(PLAN)==PLAN_SHA,"Frozen 172-volume plan bytes changed")
+    prior=unique(read_baseline(path,require_v2=True),"Resume baseline")
+    reused=[v for v in frozen if v in prior]
+    records=[dict(volume=v,**{k:prior[v][k] for k in (
+        "year","technical_status","parsed_index_event_rows","source_html_sha256")}) for v in reused]
+    return [v for v in frozen if v not in prior],{
+        "frozen_volumes":list(frozen),"reused_prior_volumes":reused,
+        "baseline_sha256":sha(path),"reused_prior_source_records":records}
+
+def validate_shard_selection(checkpoint,selected,previous_ids,baseline_path,frozen):
+    """Recompute the complete frozen-minus-baseline set; omission is not reuse."""
+    expected=[v for v in frozen if v not in previous_ids]
+    reused=[v for v in frozen if v in previous_ids]
+    provenance={}
+    if reused or any(k in checkpoint for k in RESUME_FIELDS):
+        new,provenance=baseline_resume(frozen,baseline_path)
+        require(new==expected,"Baseline changed while selecting new volumes")
+        require(all(checkpoint.get(k)==provenance[k] for k in RESUME_FIELDS),"Missing/mismatched baseline reuse provenance")
+    require(expected and checkpoint["volumes"]==expected,"New shard must include every frozen-minus-baseline volume in order")
+    require(len(selected)==len(expected) and set(selected)==set(expected),"Inventory differs from the complete new-volume selection")
+    return provenance
 
 def verify_batch(folder,cache_root):
     catalog=rows(folder/FILES[0]);summary=load(folder/FILES[1]);checkpoint=load(folder/FILES[2])
@@ -124,7 +167,7 @@ def main():
     baseline=read_baseline(args.baseline);combined=unique(baseline,"Baseline")
     old_total=counts(baseline);previous_ids=set(combined)
     input_hashes={label(args.baseline):sha(args.baseline),label(PLAN):sha(PLAN)}
-    revised_events=[];new_events=[];revised_ids=[];replacement_old_total=0
+    revised_events=[];new_events=[];revised_ids=[];replacement_old_total=0;resume_provenance={}
     groups=[]
     if args.revision_dir:groups.append(("REPARSED_PRIOR_SOURCE",args.revision_dir))
     groups.append(("NEW_FROZEN_SHARD",args.shard_dir))
@@ -140,9 +183,10 @@ def main():
             replacement_old_total=counts([combined[v] for v in revised_ids])
         else:
             shard=int(checkpoint["shard"])
-            expected=[int(r["volume"]) for r in sorted(plan,key=lambda r:int(r["sequence"])) if int(r["shard"])==shard]
-            require(expected and checkpoint["volumes"]==expected,"New shard differs from the frozen plan")
-            require(not(set(selected)&previous_ids),"New shard overlaps previously probed volumes")
+            frozen=[int(r["volume"]) for r in sorted(plan,key=lambda r:int(r["sequence"])) if int(r["shard"])==shard]
+            resume_provenance=validate_shard_selection(checkpoint,selected,previous_ids,args.baseline,frozen)
+            if resume_provenance:
+                require(resume_provenance["baseline_sha256"]==input_hashes[label(args.baseline)],"Baseline changed during verification")
             require(all(r["year"]==plan_by[v]["year"] and r["wikisource_table_url"]==plan_by[v]["wikisource_table_url"] for v,r in selected.items()),"Source URLs/year differ from frozen plan")
             new_events=events
         for v,source in selected.items():
@@ -178,6 +222,8 @@ def main():
         "counts_are_source_events_not_unique_people":True,"original_scan_evidence_not_inferred_from_TOC":True,
         "accepted_memberships":0,"accepted_exact_dobs":0,"bazi_variables_computed":0,"network_requests":0,
         "output_SHA256":{name:hashlib.sha256(data).hexdigest() for name,data in payloads.items()}}
+    if resume_provenance.get("reused_prior_volumes"):
+        summary["frozen_shard_resume"]=resume_provenance
     payloads["summary.json"]=(json.dumps(summary,ensure_ascii=False,indent=2)+"\n").encode("utf-8")
     for name,data in payloads.items():
         path=args.out/name
