@@ -1,0 +1,83 @@
+{
+  "version": "france-academy-three-TOC-false-zeros-evidence-overlay-v1",
+  "scope": "exactly 3 historical journal TOC pages, formerly incorrectly parsed as no events",
+  "original_frozen_shard02_source_rows_not_overwritten": true,
+  "sources": [
+    {
+      "volume": 37,
+      "year": 1853,
+      "source_status": 200,
+      "source_SHA256": "a07cf8ceae47ec11f2a61f360002c94d214abd9fc3e3884571a31fcf7175725e",
+      "prior_shard02_SHA256": "f1b2c4bf5b5136e8d248a79e303548a4f21e16ab6d7d3e027d2bf6704d784eab",
+      "source_changed": true,
+      "source_URL": "https://fr.wikisource.org/wiki/Comptes_rendus_de_l%E2%80%99Acad%C3%A9mie_des_sciences/Tome_37%2C_1853/Table_des_mati%C3%A8res",
+      "recognized_headings": [
+        "nominations",
+        "Nominations"
+      ],
+      "parsed_event_candidates": 1,
+      "event_role_counts": {
+        "OFFICE_ELECTION_NOT_NEW_MEMBER": 1
+      },
+      "source_transcript_header_year_may_be_mislabeled": true,
+      "original_election_event_pages_directly_opened": 0
+    },
+    {
+      "volume": 98,
+      "year": 1884,
+      "source_status": 200,
+      "source_SHA256": "349f552666e6ea7c5a3765a6a1860ef623f85140d3ab8f89ae42b6654bc7ec6d",
+      "prior_shard02_SHA256": "758e3dae763ef17a04c093271d828c029a51bf1f074670d26b042c8938de9d29",
+      "source_changed": true,
+      "source_URL": "https://fr.wikisource.org/wiki/Comptes_rendus_de_l%E2%80%99Acad%C3%A9mie_des_sciences/Tome_98%2C_1884/Table_des_mati%C3%A8res",
+      "recognized_headings": [
+        "nominations de membres et correspondants de l academie",
+        "Nominations de membres et correspondants de l’académie"
+      ],
+      "parsed_event_candidates": 6,
+      "event_role_counts": {
+        "FULL_ACADEMICIAN_LIBRE": 3,
+        "FULL_SECTION_MEMBER": 2,
+        "CORRESPONDENT": 1
+      },
+      "source_transcript_header_year_may_be_mislabeled": false,
+      "original_election_event_pages_directly_opened": 0
+    },
+    {
+      "volume": 128,
+      "year": 1899,
+      "source_status": 200,
+      "source_SHA256": "2de75f528c9be8630efcfb1412549822618bdb00be06beb14349d3cf962b2eaa",
+      "prior_shard02_SHA256": "79285f4e0c67c332d7ee08c6a5ed29552885382a0e9646910d0810ca5fe42fc9",
+      "source_changed": true,
+      "source_URL": "https://fr.wikisource.org/wiki/Comptes_rendus_de_l%E2%80%99Acad%C3%A9mie_des_sciences/Tome_128%2C_1899/Table_des_mati%C3%A8res",
+      "recognized_headings": [
+        "nominations de membres et correspondants de l academie",
+        "Nominations de membres et correspondants de l’académie"
+      ],
+      "parsed_event_candidates": 7,
+      "event_role_counts": {
+        "CORRESPONDENT": 5,
+        "FULL_SECTION_MEMBER": 2
+      },
+      "source_transcript_header_year_may_be_mislabeled": false,
+      "original_election_event_pages_directly_opened": 0
+    }
+  ],
+  "source_html_read_success_count": 3,
+  "event_candidate_rows_recovered": 14,
+  "role_counts": {
+    "OFFICE_ELECTION_NOT_NEW_MEMBER": 1,
+    "FULL_ACADEMICIAN_LIBRE": 3,
+    "FULL_SECTION_MEMBER": 4,
+    "CORRESPONDENT": 6
+  },
+  "full_like_source_rows": 7,
+  "correspondent_rows": 6,
+  "office_elections_not_new_full_members": 1,
+  "record_is_office_only_in_1853": true,
+  "original_event_pages_opened": 0,
+  "study_member_acceptance": 0,
+  "study_dob_acceptance": 0,
+  "bazi_features": 0
+}
