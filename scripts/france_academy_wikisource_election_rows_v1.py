@@ -67,8 +67,13 @@ def person_of(line):
         # "Sir Ernest Rutherford est élu Associé étranger" (Tome 185, p1424).
         # Do NOT drop this person because the M. honorific is absent.
         m=re.search(r"\b(?:Sir|Lady|Lord|Mme|Mlle)\s+(.{2,125}?)\s+est\s+[ée]lu(?:e)?\b",line,re.I)
+    if not m:
+        # 1899: a historical entry may identify a priest by title only:
+        # "Le R. P. Colin est élu Correspondant". Preserve the literal
+        # source form; do NOT invent or infer his given names.
+        m=re.search(r"\\b(Le\\s+R\\.\\s*P\\.\\s+.{2,120}?)\\s+est\\s+[ée]lu(?:e)?\\b",line,re.I)
     if not m:return ""
-    name=re.sub(r"\s+"," ",m.group(1)).strip(" ;,-.")
+    name=re.sub(r"\\s+"," ",m.group(1)).strip(" ;,-.")
     if not name or len(name)>110 or " et " in name.lower():return ""
     return name
 def section_of(line):
@@ -150,6 +155,7 @@ def smoke():
     assert person_of("— M Owen est élu correspondant pour la section d’Anatomie")=="Owen"
     assert role_of("— M. Boussingault est élu pour la place vacante dans la section d’Économie rurale")=="FULL_SECTION_MEMBER_CONTEXTUAL_ELECTION"
     assert role_of("— M. Haton de la Goupillière est élu Membre libre en remplacement de M. de la Gournerie")=="FULL_ACADEMICIAN_LIBRE"
+    assert person_of("— Le R. P. Colin est élu Correspondant pour la Section de Géographie et Navigation")=="Le R. P. Colin"
     assert found[0]["transcribed_science_section"]=="chimie"
     assert found[1]["transcribed_elected_person_name"]=="Léon Fredericq"
     assert norm("ÉMILE Picard")=="emile picard"
