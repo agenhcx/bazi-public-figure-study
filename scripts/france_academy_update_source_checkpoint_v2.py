@@ -12,6 +12,7 @@ from collections import Counter
 from pathlib import Path
 from france_academy_offline_source_toc_event_ledger_v1 import build, FIELDS as EVENT_FIELDS
 from france_academy_wikisource_legacy_election_headings_v1 import VERSION as PARSER_VERSION
+from france_academy_wikisource_index_preflight_v1 import build_urls
 
 VERSION="france-academy-source-checkpoint-v2"
 REPO=Path(__file__).resolve().parents[1]
@@ -19,6 +20,10 @@ BASE=Path("data/france_academy_remaining_172_toc_batch_v1")
 BASELINE=BASE/"cumulative_88_source_checked_unique_volumes_v1.csv"
 PLAN=Path("data/france_academy_unprobed_16_volume_batch_v1/remaining_172_toc_shard_plan_v1.csv")
 PLAN_SHA="0a1cba241de6c3e0a572a5af41deca11aa554441c6f12aaa990c7a97b6fe5203"
+P1_REVISION_VERSION="france-academy-legacy-p1-revision-v1"
+P1_VOLUMES=[3,35,94,124,125]
+P1_REVIEW_QUEUE=Path("data/france_academy_source_review_queue_v1/legacy_zero_event_review_queue_v1.csv")
+P1_REVIEW_QUEUE_SHA="6481b2b28df751b37ee1845dc6db643ea0c5133a3c83244caf7d3bc1b4872ecc"
 FILES=["academy_original_wikisource_211_volume_inventory_v1.csv","summary.json",
        "source_only_shard_checkpoint_v1.json","person_event_ledger_summary_v1.json",
        "verified_transcribed_person_event_candidates_v1.csv"]
@@ -118,6 +123,28 @@ def validate_shard_selection(checkpoint,selected,previous_ids,baseline_path,froz
     require(len(selected)==len(expected) and set(selected)==set(expected),"Inventory differs from the complete new-volume selection")
     return provenance
 
+def validate_revision_selection(checkpoint,selected,previous_ids,baseline_sha):
+    """Bind revised source identities and the frozen P1 scope to their inputs."""
+    require(set(selected)<=previous_ids,"Revision attempted to add an unprobed volume")
+    require(all(status(r["table_http_status"])=="HTTP_200" for r in selected.values()),"A failed fetch cannot replace prior evidence")
+    for v,r in selected.items():
+        year=1835+v//2
+        require(r.get("year")==str(year) and r.get("wikisource_table_url")==build_urls(v,year)["wiki"],
+                "Revision source URL/year differs from canonical volume: "+str(v))
+    version=checkpoint.get("version")
+    if version=="france-academy-shard02-grammar-revision-v2":
+        require(set(selected)=={37,98,128},"Shard02 grammar revision scope changed")
+    if version==P1_REVISION_VERSION:
+        require(checkpoint.get("volumes")==P1_VOLUMES and set(selected)==set(P1_VOLUMES),
+                "P1 revision must contain the five frozen volumes in order")
+        require(checkpoint.get("baseline_sha256")==baseline_sha,"P1 revision baseline SHA differs from input baseline")
+        require(checkpoint.get("review_queue")==P1_REVIEW_QUEUE.as_posix(),"P1 revision review queue path changed")
+        queue=REPO/P1_REVIEW_QUEUE
+        require(sha(queue)==P1_REVIEW_QUEUE_SHA,"Frozen P1 review queue bytes changed")
+        require(checkpoint.get("review_queue_sha256")==P1_REVIEW_QUEUE_SHA,"P1 revision review queue SHA differs from frozen queue")
+        return {label(queue):P1_REVIEW_QUEUE_SHA}
+    return {}
+
 def verify_batch(folder,cache_root):
     catalog=rows(folder/FILES[0]);summary=load(folder/FILES[1]);checkpoint=load(folder/FILES[2])
     ledger=load(folder/FILES[3]);stored=rows(folder/FILES[4])
@@ -175,10 +202,8 @@ def main():
         selected,events,checkpoint,hashes=verify_batch(folder,args.cache_root)
         input_hashes.update(hashes)
         if kind=="REPARSED_PRIOR_SOURCE":
-            require(set(selected)<=previous_ids,"Revision attempted to add an unprobed volume")
-            if checkpoint.get("version")=="france-academy-shard02-grammar-revision-v2":
-                require(set(selected)=={37,98,128},"Shard02 grammar revision scope changed")
-            require(all(status(r["table_http_status"])=="HTTP_200" for r in selected.values()),"A failed fetch cannot replace prior evidence")
+            input_hashes.update(validate_revision_selection(checkpoint,selected,previous_ids,
+                input_hashes[label(args.baseline)]))
             revised_ids=sorted(selected);revised_events=events
             replacement_old_total=counts([combined[v] for v in revised_ids])
         else:
