@@ -18,7 +18,7 @@ from bs4 import BeautifulSoup
 from france_academy_wikisource_index_preflight_v1 import build_urls,read_one
 from france_academy_wikisource_election_rows_v1 import role_of,section_of,person_of,identity_key,extract_from_html
 
-VERSION="france-academy-legacy-heading-wikisource-source-only-v1_6"
+VERSION="france-academy-legacy-heading-wikisource-source-only-v1_7"
 VOLUMES=[(1,1835),(42,1856),(43,1856),(91,1880),(182,1926)]
 CTHS="data/france_academy_cths_profile_dob_harvest_v1/cths_dob_claims_all_targets_candidate_only_v1.csv"
 OUT=Path("data/france_academy_wikisource_legacy_heading_pilot_v1")
@@ -35,7 +35,13 @@ def fold(s):
     return "".join(c for c in s if not unicodedata.combining(c))
 def event_heading(s):
     x=fold(s)
-    return bool(re.match(r"^(?:elections?(?: de membres)?|nominations? de membres et de correspondants(?: de l.academie)?)\b",x))
+    # 1884/1899: "Nominations de membres et correspondants" (WITHOUT
+    # second "de"). 1853: bare "Nominations" contains an election to
+    # Secrétaire perpétuel -- an OFFICE event, never a new regular member.
+    # Accept the section heading only; classify EACH explicit action clause.
+    return bool(re.match(
+        r"^(?:elections?(?: de membres)?|nominations?(?: de membres(?: et (?:de )?correspondants(?: de l.academie)?)?)?)\\b",
+        x))
 def name_from_line(line):
     raw=re.sub(r"\bM\.\s*\(\s*Monsieur\s*\)\s*","M. ",line,flags=re.I)
     raw=re.sub(r"\bM\.\s*\(\s*M\.\s*\)\s*","M. ",raw,flags=re.I)
@@ -246,6 +252,22 @@ def fixture():
     assert page_references("510 et 618")==("510","510|618")
     assert page_references("725 et 798")==("725","725|798")
     assert page_references("509")==("509","509")
+    headings_variant="""<table>
+      <tr><td><span class="sc">Nominations de membres et correspondants de l’académie.</span> — M. Haton de la Goupillière est élu Membre libre en remplacement de feu M. de la Gournerie</td><td>131</td></tr>
+      <tr><td>— M. Darboux est élu Membre de la Section de Géométrie, en remplacement de M. Puiseux</td><td>552</td></tr>
+      <tr><td>— M. Salmon est élu Correspondant, pour la Section de Géométrie, en remplacement de M. Spottiswoode</td><td>1516</td></tr>
+      <tr><td><span class="sc">Astrologie.</span> — M. Faussaire est élu membre du Jury des prix</td><td>1517</td></tr>
+      </table>"""
+    variant,_=parse_html(headings_variant.encode("utf-8"),98,1884)
+    assert [(r["elected_name_candidate"],r["election_role_candidate"]) for r in variant]==[
+        ("Haton de la Goupillière","FULL_ACADEMICIAN_LIBRE"),
+        ("Darboux","FULL_SECTION_MEMBER"),("Salmon","CORRESPONDENT")],variant
+    office_html="""<table><tr><td><span class="sc">Nominations.</span> — M. Élie de Beaumont est élu à la place de Secrétaire perpétuel pour les Sciences mathématiques</td><td>938</td></tr></table>"""
+    office,_=parse_html(office_html.encode("utf-8"),37,1853)
+    assert len(office)==1 and office[0]["election_role_candidate"]=="OFFICE_ELECTION_NOT_NEW_MEMBER",office
+    assert event_heading("Nominations de membres et correspondants de l’académie.")
+    assert not event_heading("Nominations de candidats aux concours")
+
 
     print("PASS: 1835 election, 1856 est nommé in nominations, 1880/1926 elections; candidatures/decrees excluded")
 
