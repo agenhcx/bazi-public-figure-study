@@ -1,0 +1,66 @@
+name: France Academy three legacy nomination TOC recovery
+on:
+  push:
+    branches:
+      - france-historic-nominations-shard03-v1-20261018
+    paths:
+      - 'scripts/france_academy_wikisource_legacy_election_headings_v1.py'
+      - 'scripts/france_academy_wikisource_election_rows_v1.py'
+      - 'scripts/france_academy_reaudit_three_nomination_zero_tocs_v1.py'
+      - '.github/workflows/france_academy_legacy_zero_TOCs_v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  source-grammar-and-three-tocs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install pinned HTML parsing dependency
+        run: python -m pip install --disable-pip-version-check beautifulsoup4==4.12.3
+      - name: Compile and validate historic grammar with zero network
+        run: python -m py_compile scripts/france_academy_wikisource_legacy_election_headings_v1.py scripts/france_academy_wikisource_election_rows_v1.py scripts/france_academy_reaudit_three_nomination_zero_tocs_v1.py && python scripts/france_academy_wikisource_election_rows_v1.py --fixture-check && python scripts/france_academy_wikisource_legacy_election_headings_v1.py --fixture-check && python scripts/france_academy_reaudit_three_nomination_zero_tocs_v1.py --fixture-check
+      - name: Three bounded real public TOC source re-reads preserving originals
+        run: python scripts/france_academy_reaudit_three_nomination_zero_tocs_v1.py --limit 3 --delay 1.5
+      - name: Verify 1853 office and 1884/1899 full member category split
+        run: |
+          python - <<'PY'
+          import csv,json
+          p='data/france_academy_nominations_37_98_128_recovery_v1/'
+          j=json.load(open(p+'summary.json',encoding='utf8'))
+          with open(p+'recovered_historical_nomination_election_index_events_v1.csv',encoding='utf-8-sig',newline='') as f: a=list(csv.DictReader(f))
+          print('AUDITED_3_OLD_TOCS',j['role_counts'],[(x.get('volume'),x.get('parsed_event_candidates'),x.get('source_status')) for x in j['sources']])
+          assert j['source_html_read_success_count']==3
+          assert j['event_candidate_rows_recovered']==14,len(a)
+          assert j['full_like_source_rows']==7
+          assert j['correspondent_rows']==6
+          assert j['office_elections_not_new_full_members']==1
+          assert len([r for r in a if r['volume']=='37'])==1
+          assert next(r for r in a if r['volume']=='37')['role_source_candidate']=='OFFICE_ELECTION_NOT_NEW_MEMBER'
+          assert {r['name_source_form'] for r in a if r['volume']=='128'} >= {'Mendelejeff','Prillieux','Le R. P. Colin'}
+          assert sum(r['role_source_candidate']=='FULL_ACADEMICIAN_LIBRE' for r in a if r['volume']=='98')==3
+          assert all(r['accepted_full_member']==r['accepted_DOB']==r['bazi_features_computed']=='0' for r in a)
+          PY
+      - name: Preserve limited public historical source-only index rows
+        uses: actions/upload-artifact@v4
+        with:
+          name: france-academy-1853-1884-1899-TOC-grammar-recovery-v1
+          path: data/france_academy_nominations_37_98_128_recovery_v1/
+          retention-days: 45
+      - name: Checkpoint compact source-only evidence to research branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/france_academy_nominations_37_98_128_recovery_v1/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Recover original 1853 office, 1884 and 1899 election index transcriptions'
+            git fetch origin france-historic-nominations-shard03-v1-20261018
+            git rebase origin/france-historic-nominations-shard03-v1-20261018
+            git push origin HEAD:france-historic-nominations-shard03-v1-20261018
+          fi
