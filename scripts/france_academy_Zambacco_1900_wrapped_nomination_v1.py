@@ -68,6 +68,16 @@ def main():
     parsed,heads=parse_html(raw,131,1900)
     current=[x for x in parsed if x["elected_name_candidate"]=="Zambacco"]
     if len(current)!=1 or current[0]["election_role_candidate"]!="CORRESPONDENT" or current[0]["original_printed_volume_page"]!="22":
+        soup=BeautifulSoup(raw,"html.parser")
+        allrows=soup.find_all("tr")
+        diagnostics=[]
+        for i,tr in enumerate(allrows):
+            if "Zambacco" not in tr.get_text(" ",strip=True):continue
+            for adj in allrows[max(0,i-1):i+4]:
+                td=adj.find_all("td",recursive=False)
+                diagnostics.append({"cells":[x.get_text(" ",strip=True)[:350] for x in td],
+                                    "html_excerpt":str(adj)[:1050]})
+        print("ORIGINAL_ZAMBACCO_HTML_DOM",json.dumps(diagnostics,ensure_ascii=False),flush=True)
         raise RuntimeError("Did not confirm original second-row role and printed page in live 1900 text: "+repr(current))
     pair=source_two_rows(raw)
     if len(pair)!=1 or "Correspondant" not in pair[0][1]:
