@@ -1,0 +1,58 @@
+{
+  "version": "france-academy-legacy-zero-event-source-review-v1",
+  "baseline_cumulative_inventory": "data/france_academy_source_checkpoint_v2/cumulative_source_checked_unique_volumes_v2.csv",
+  "baseline_source_sha256": "4d3b6ccd7d5afa6814b611828c4341347019d20bcc05c4837d2f2c0199605404",
+  "baseline_unique_volumes": 104,
+  "baseline_index_event_rows": 299,
+  "scope": "Previously visited readable HTTP200 sources with stored zero parsed events; excludes Shard04 and later results.",
+  "review_items": 21,
+  "priority_counts": {
+    "P1_HEADING_PRESENT_ZERO_PARSE": 5,
+    "P2_NO_RECOGNIZED_HEADING": 16
+  },
+  "heading_present_volumes": [
+    3,
+    35,
+    94,
+    124,
+    125
+  ],
+  "no_recognized_heading_volumes": [
+    54,
+    55,
+    61,
+    65,
+    72,
+    93,
+    117,
+    120,
+    121,
+    130,
+    136,
+    144,
+    159,
+    160,
+    161,
+    183
+  ],
+  "previous_shard02_unresolved_volumes": [
+    160,
+    161
+  ],
+  "review_status": "UNRESOLVED_NOT_CONFIRMED_OMISSION",
+  "same_sha_source_inventory_match_required": true,
+  "matched_inventory_sha256": {
+    "data/france_academy_comptes_rendus_211_volume_holdout_v1/academy_original_wikisource_211_volume_inventory_v1.csv": "fa49c1b599d4be063def59bc7c72d9de7f1b07826800e4efff9d5e42a03032a5",
+    "data/france_academy_comptes_rendus_211_volume_inventory_v1/academy_original_wikisource_211_volume_inventory_v1.csv": "ac77e4ded7c0864b7ab54a1e4cfb506f1c4ae8529687941cd8b2b6b99c85e465",
+    "data/france_academy_remaining_172_toc_batch_v1/shard_00/academy_original_wikisource_211_volume_inventory_v1.csv": "60fdbad0d2cd23631ce87b5ee64adfa80489aa7558b07502f704cc6c1853cfee",
+    "data/france_academy_remaining_172_toc_batch_v1/shard_01/academy_original_wikisource_211_volume_inventory_v1.csv": "2a64f73302aa06e02aef26ece76e16bc35e3c3413db4a7bfba982f9a885ee00b",
+    "data/france_academy_remaining_172_toc_batch_v1/shard_02/academy_original_wikisource_211_volume_inventory_v1.csv": "8e75ac7624f3dc60c904546ef5d9494298d133395b369f52d0656f7a40b719fe",
+    "data/france_academy_unprobed_16_volume_batch_v1/academy_original_wikisource_211_volume_inventory_v1.csv": "382ea51039961f359151013f72cb2234fc5e0b936a7ecb3c53437d563deaf7ca"
+  },
+  "output_csv_sha256": "6481b2b28df751b37ee1845dc6db643ea0c5133a3c83244caf7d3bc1b4872ecc",
+  "zero_elections_inferred": 0,
+  "accepted_memberships": 0,
+  "accepted_exact_dobs": 0,
+  "bazi_variables_computed": 0,
+  "network_requests": 0
+}

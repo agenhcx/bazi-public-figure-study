@@ -54,18 +54,25 @@ def main():
     p.add_argument("--offline",action="store_true",help="Only reuse cached HTML responses")
     p.add_argument("--delay",type=float,default=1.5)
     p.add_argument("--out-root",type=Path,default=ROOT)
+    p.add_argument("--baseline",type=Path,help="Validated v2 cumulative checkpoint; reuse already-probed frozen volumes")
     args=p.parse_args()
     if args.fixture_check:test();return
     groups=select()
     if args.shard not in groups or args.delay<1.5:raise ValueError("Shard must be 0..10, rate >=1.5 seconds")
-    selected=groups[args.shard]
+    selected=groups[args.shard];resume_provenance={}
+    if args.baseline:
+        from france_academy_update_source_checkpoint_v2 import baseline_resume
+        selected,resume_provenance=baseline_resume(groups[args.shard],args.baseline)
     if not args.run:
-        print(json.dumps({"version":V,"shard":args.shard,"volumes":selected,
+        report={"version":V,"shard":args.shard,"volumes":selected,
             "required_table_requests_max":len(selected),
-            "required_requests_max":len(selected)+5,"live_network_requests":0,
+            "required_requests_max":len(selected)+5 if selected else 0,"live_network_requests":0,
             "original_scanned_election_pages_inspected":0,
-            "accepted_memberships":0,"bazi_variables_computed":0},ensure_ascii=False))
+            "accepted_memberships":0,"bazi_variables_computed":0}
+        report.update(resume_provenance)
+        print(json.dumps(report,ensure_ascii=False))
         return
+    if not selected:raise RuntimeError("All frozen shard volumes already probed; no new source run is needed")
     output=args.out_root/f"shard_{args.shard:02d}"
     before=sys.argv[:]
     try:
@@ -87,6 +94,9 @@ def main():
         raise RuntimeError("Accidental study acceptance detected")
     if record["table_probe_http_status"].get("HTTP_429") or record["table_probe_http_status"].get("HTTP_403"):
         raise RuntimeError("Source rate-limit/access block: do not automatically retry")
+    if args.baseline:
+        _,current_provenance=baseline_resume(groups[args.shard],args.baseline)
+        if current_provenance!=resume_provenance:raise RuntimeError("Baseline changed during the source run")
     report={"version":V,"shard":args.shard,"volumes":selected,
             "table_http_counts":record["table_probe_http_status"],
             "recognized_election_headings":record["table_probe_election_heading_count"],
@@ -94,6 +104,7 @@ def main():
             "missing_or_unparsed_not_historical_zero":True,
             "original_event_pages_inspected":0,"accepted_memberships":0,
             "accepted_birthdates":0,"bazi_variables_computed":0}
+    report.update(resume_provenance)
     (output/"source_only_shard_checkpoint_v1.json").write_text(
         json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     # Re-read cached HTML with exact SHA256 verification, no additional requests.

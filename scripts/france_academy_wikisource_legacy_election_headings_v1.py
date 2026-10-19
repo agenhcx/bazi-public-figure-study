@@ -18,7 +18,7 @@ from bs4 import BeautifulSoup
 from france_academy_wikisource_index_preflight_v1 import build_urls,read_one
 from france_academy_wikisource_election_rows_v1 import role_of,section_of,person_of,identity_key,extract_from_html
 
-VERSION="france-academy-legacy-heading-wikisource-source-only-v1_8"
+VERSION="france-academy-legacy-heading-wikisource-source-only-v1_9"
 VOLUMES=[(1,1835),(42,1856),(43,1856),(91,1880),(182,1926)]
 CTHS="data/france_academy_cths_profile_dob_harvest_v1/cths_dob_claims_all_targets_candidate_only_v1.csv"
 OUT=Path("data/france_academy_wikisource_legacy_heading_pilot_v1")
@@ -35,8 +35,12 @@ def fold(s):
     return "".join(c for c in s if not unicodedata.combining(c))
 def event_heading(s):
     x=fold(s)
-    # Tomes 98 (1884) and 128 (1899) omit the second "de" in the heading.
-    return bool(re.match(r"^(?:elections?(?: de membres)?|nominations? de membres et (?:de )?correspondants(?: de l.academie)?)\b",x))
+    # 98/128 omit the second "de"; 14 uses "ou de correspondants";
+    # 74 explicitly inserts "d'associés étrangers" in the membership list.
+    return bool(re.match(
+        r"^(?:elections?(?: de membres)?|nominations? de membres(?: "
+        r"(?:et|ou) (?:de )?correspondants|,\s*d.associes etrangers et de correspondants)"
+        r"(?: de l.academie)?)\b",x))
 def name_from_line(line):
     raw=re.sub(r"\bM\.\s*\(\s*Monsieur\s*\)\s*","M. ",line,flags=re.I)
     raw=re.sub(r"\bM\.\s*\(\s*M\.\s*\)\s*","M. ",raw,flags=re.I)
@@ -45,6 +49,10 @@ def nominated_name_from_line(line):
     """Retrieve ONLY the named appointee preceding est nommé/e, not a predecessor."""
     raw=re.sub(r"\bM\.\s*\(\s*Monsieur\s*\)\s*","M. ",line,flags=re.I)
     m=re.search(r"\bM\.\s+(.{2,140}?)\s+est\s+nomm[ée]e?\b",raw,re.I)
+    if not m:
+        # Tome 44: "Le P. Secchi est nommé Correspondant". The absent M.
+        # honorific must not erase this explicitly named appointment.
+        m=re.search(r"\bLe\s+P\.\s+(.{2,140}?)\s+est\s+nomm[ée]e?\b",raw,re.I)
     if not m:return ""
     result=" ".join(m.group(1).split()).strip(" ,;.-")
     return result if len(result)<=110 and " et " not in result.casefold() else ""
@@ -63,7 +71,7 @@ def nomination_role(line):
     if "academicien libre" in tail:return "FULL_ACADEMICIAN_LIBRE"
     if "membre non resid" in tail:return "FULL_NONRESIDENT_MEMBER"
     if re.search(r"\bmembre(?:s)?\s+de\s+l.academie\b|\bmembre\b",tail):return "FULL_SECTION_MEMBER"
-    if re.search(r"\ba\s+la\s+place\s+vacante\s+dans\s+la\s+section\b",tail):
+    if re.search(r"\ba\s+la\s+place\s+(?:devenue\s+)?vacante\s+dans\s+la\s+section\b",tail):
         return "FULL_SECTION_MEMBER_CONTEXTUAL_NOMINATION"
     return "NOMINATION_UNKNOWN_MEMBER_CLASS_MANUAL"
 
@@ -129,6 +137,42 @@ def split_correspondent_row(tr,line,page):
     if not re.fullmatch(r"\d{1,5}",number):return line,page
     return line+" "+continuation,number
 
+def literal_wikitable_rows(soup):
+    """Read the explicit unrendered membership table observed in Tome 74.
+
+    Require a recognized small-cap membership heading outside an existing
+    TR/tableItem and literal wikitable row/cell delimiters in its paragraph.
+    Stop at the next subject and require an explicit numeric page cell;
+    partial or unrelated prose must not become an inferred election row.
+    """
+    rows=[];seen=set()
+    for sc in soup.find_all("span",class_=re.compile(r"sc",re.I)):
+        heading=" ".join(sc.get_text(" ",strip=True).split())
+        if not event_heading(heading):continue
+        if sc.find_parent("tr") or sc.find_parent("div",class_="tableItem"):continue
+        paragraph=sc.find_parent("p")
+        if paragraph is None or id(paragraph) in seen:continue
+        seen.add(id(paragraph))
+        text=paragraph.get_text(" ",strip=True)
+        if "|-" not in text:continue
+        active=False
+        for piece in re.split(r"\|\s*-\s*",text):
+            piece=piece.strip()
+            if not piece.startswith("|"):continue
+            cells=piece[1:].strip().rsplit("|",1)
+            line=" ".join(cells[0].split())
+            prefix=line.split("—",1)[0].strip(" .")
+            starts=event_heading(prefix)
+            if starts:active=True
+            elif not active:continue
+            elif not line.startswith("—"):break
+            page,refs=page_references(cells[1] if len(cells)==2 else "")
+            if not page:
+                if starts:rows.append((prefix,"",prefix,""))
+                continue
+            rows.append((line,page,prefix if starts else "",refs))
+    return rows
+
 def parse_html(raw,volume,year):
     """Parse TR and div.tableItem representations independently and deduplicate.
 
@@ -169,7 +213,9 @@ def parse_html(raw,volume,year):
         table_rows.append((line,page,heading,page_refs))
     legacy_rows=[]
     for item in soup.select("div.tableItem"):
-        div=item.select_one(".ws-titrex")
+        # Tome 14 uses the same page container with ws-titre, not ws-titrex.
+        # Prefer the established layout when both are present.
+        div=item.select_one(".ws-titrex") or item.select_one(".ws-titre")
         if div is None:continue
         line=" ".join(div.get_text(" ",strip=True).split())
         page_container=item.select_one(".ws-titpge")
@@ -199,7 +245,7 @@ def parse_html(raw,volume,year):
                     return
         events.append(candidate)
 
-    for logical in (table_rows,legacy_rows):
+    for logical in (table_rows,legacy_rows,literal_wikitable_rows(soup)):
         in_events=False
         office_only=False
         for line,page,decorated,page_refs in logical:
@@ -428,7 +474,93 @@ def fixture():
         "original_election_printed_page_opened","official_membership_accepted",
         "exact_dob_accepted","bazi_variables_computed"))
 
-    print("PASS: historical fixtures; 1853 office scope; 1855/1900 bare nominations and bounded split row; 1884/1899 member-libre and clergy names; source-only gates")
+    fixture_shard04()
+    print("PASS: historical fixtures; office scope; bare/literal nomination tables; bounded split rows; explicit clergy names; source-only gates")
+
+def fixture_shard04():
+    # Exact appointment wording from the Tome 14 div.tableItem source.
+    actual14=[
+        ("<span class='sc'>Nominations</span> <i>de membres ou de correspondants de l’Académie.</i> — M. Payen est nommé à la place devenue vacante dans la Section d’Économie rurale, par suite de la mort de M. Audouin", "59"),
+        ("— M. Girardin est nommé correspondant de l’Académie, Section d’Économie rurale.", "156"),
+        ("— M. Francœur est nommé à une place d’Académicien libre, en remplacement de M. Costaz", "578"),
+        ("— M. d’Omalius-d’Halloy est nommé correspondant de l’Académie, pour la Section de Minéralogie et de Géologie.", "579"),
+        ("— M. Œrstedt est nommé à une place d’associé étranger de l’Académie, vacante par suite de la mort de M. de Candolle", "568"),
+        ("— M. Del Rio est nommé correspondant de l’Académie, pour la Section de Minéralogie et de Géologie.", "679"),
+        ("— M. Burdin est nommé correspondant, pour la Section de Mécanique.", "680"),
+        ("— M. Forbes est nommé correspondant de l’Académie, pour la Section de Physique.", "788"),
+        ("— M. Wheatstone est nommé correspondant de l’Académie, pour la Section de Physique.", "862"),
+        ("<span class='sc'>Nominations de candidats aux places pour lesquelles l’Académie est appelée à faire une présentation.</span> — M. Manzini est désigné par la voie du scrutin comme le candidat qui sera présenté par l’Académie", "400"),
+        # Synthetic negative: this is outside the preceding membership scope.
+        ("— M. Exemple est nommé Membre de la Section de Physique", "401")]
+    tome14="".join("<div class='tableItem'><div class='ws-titpge'><div class='ws-titre'>"+
+        line+"</div><div class='ws-noexport, ws-page'><span>"+page+
+        "</span></div></div></div>" for line,page in actual14)
+    recovered14,_=parse_html(tome14.encode("utf-8"),14,1842)
+    assert [(r["elected_name_candidate"],r["election_role_candidate"],r["original_printed_volume_page"]) for r in recovered14]==[
+        ("Payen","FULL_SECTION_MEMBER_CONTEXTUAL_NOMINATION","59"),
+        ("Girardin","CORRESPONDENT","156"),
+        ("Francœur","FULL_ACADEMICIAN_LIBRE","578"),
+        ("d’Omalius-d’Halloy","CORRESPONDENT","579"),
+        ("Œrstedt","FOREIGN_ASSOCIATE","568"),
+        ("Del Rio","CORRESPONDENT","679"),
+        ("Burdin","CORRESPONDENT","680"),
+        ("Forbes","CORRESPONDENT","788"),
+        ("Wheatstone","CORRESPONDENT","862")],recovered14
+    assert not event_heading("Nominations de candidats aux places")
+
+    # The source actually displays these literal wikitable markers in a P;
+    # no original printed page or source text has been reconstructed by OCR.
+    tome74="""<p>
+| — M. E. Alix adresse une Note sur l’existence du nerf dépresseur chez l’hippopotame
+| 557
+|-
+| <span class="sc">Nominations de membres, d’associés étrangers et de correspondants de l’académie</span>. — M. de Quatrefages est élu Vice-Président pour l’année 1872
+| 13
+|-
+| — M. Hervé-Mangon est élu Membre de la Section d’Économie rurale, en remplacement de feu M. Payen | 30
+|-
+| — M. Agassiz est nommé Associé étranger, en remplacement de feu M. Murchison | 589
+|-
+| — M. Airy est nommé Associé étranger, en remplacement de feu Sir John Herschel | 589
+|-
+| — M. Rolland est nommé Membre de la Section de Mécanique, en remplacement de feu M. Piobert | 794
+|-
+| — M. l’abbé A. David est élu Correspondant, pour la Section de Géographie et Navigation, en remplacement de M. d’Abbadie, élu Membre de l’Académie
+| 924
+|-
+| — M. Ledieu est élu Correspondant, pour la Section de Géographie et Navigation, en remplacement de M. le prince Demidoff | 924
+|-
+| — M. Tresca est nommé Membre de la Section de Mécanique, en remplacement de M. Combes | 1320
+|-
+| — M. Sédillot est élu Membre de la Section de Médecine et de Chirurgie, en remplacement de M. Stan. Laugier | 1550
+|-
+| <span class="sc">École polytechnique</span>. — M. Serret est nommé Membre du Conseil de perfectionnement de l’École Polytechnique, en remplacement de feu M. Combes | 269
+|-
+| — M. Exemple est nommé Membre de la Section de Physique | 270
+|-</p>"""
+    recovered74,_=parse_html(tome74.encode("utf-8"),74,1872)
+    expected74=[
+        ("de Quatrefages","OFFICE_ELECTION_NOT_NEW_MEMBER","13"),
+        ("Hervé-Mangon","FULL_SECTION_MEMBER","30"),
+        ("Agassiz","FOREIGN_ASSOCIATE","589"),
+        ("Airy","FOREIGN_ASSOCIATE","589"),
+        ("Rolland","FULL_SECTION_MEMBER","794"),
+        ("l’abbé A. David","CORRESPONDENT","924"),
+        ("Ledieu","CORRESPONDENT","924"),
+        ("Tresca","FULL_SECTION_MEMBER","1320"),
+        ("Sédillot","FULL_SECTION_MEMBER","1550")]
+    assert [(r["elected_name_candidate"],r["election_role_candidate"],r["original_printed_volume_page"]) for r in recovered74]==expected74,recovered74
+    partial,_=parse_html(tome74.replace("| 1550","| page unreadable").encode("utf-8"),74,1872)
+    assert [(r["elected_name_candidate"],r["election_role_candidate"],r["original_printed_volume_page"]) for r in partial]==expected74[:-1],partial
+
+    # Tome 44's explicit priest honorific and relative section wording.
+    secchi="""<table><tr><td><span class="sc">Nominations de membres et de correspondants de l’académie</span>. — Le P. Secchi est nommé Correspondant, même Section, en remplacement de sir John Herschel, élu à une place d’Associé étranger</td><td>970</td></tr></table>"""
+    recovered44,_=parse_html(secchi.encode("utf-8"),44,1857)
+    assert len(recovered44)==1,recovered44
+    assert (recovered44[0]["elected_name_candidate"],recovered44[0]["election_role_candidate"],recovered44[0]["original_printed_volume_page"],recovered44[0]["science_section_candidate"])==("Secchi","CORRESPONDENT","970",""),recovered44
+    assert all(r[field]=="0" for r in recovered14+recovered74+recovered44 for field in (
+        "original_election_printed_page_opened","official_membership_accepted",
+        "exact_dob_accepted","bazi_variables_computed"))
 
 def main():
     ap=argparse.ArgumentParser()
