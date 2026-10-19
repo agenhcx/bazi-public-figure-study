@@ -1,0 +1,98 @@
+{
+  "version": "france-academy-source-review-queue-v2",
+  "input_SHA256": {
+    "data/france_academy_source_review_queue_v1/legacy_zero_event_review_queue_v1.csv": "6481b2b28df751b37ee1845dc6db643ea0c5133a3c83244caf7d3bc1b4872ecc",
+    "data/france_academy_source_review_queue_v1/summary.json": "75b6d8352f25be87570985f087f6631e5ff05e241bc1e560379c1f2efe1c9592",
+    "data/france_academy_source_checkpoint_v4/cumulative_source_checked_unique_volumes_v2.csv": "5d1b4824531ca6545eaaac05de0230615151a73effded364c371139b8d074968",
+    "data/france_academy_source_checkpoint_v4/summary.json": "a99febf1f026f019ebd5e2040a86d6d10f3239f38432257e01b0d08eb50edd84",
+    "data/france_academy_legacy_p1_review_v1/academy_original_wikisource_211_volume_inventory_v1.csv": "355023bf944b96182c93bd40b047732b8c2091adcdb1186840eeeb4c511809e9",
+    "data/france_academy_legacy_p1_review_v1/verified_transcribed_person_event_candidates_v1.csv": "1131cb545578a8375889948f04714890021883e6310be293b7431b1286e1cc9f",
+    "data/france_academy_legacy_p1_review_v1/summary.json": "8ba502dd94d3ba0c9d2fdab854d383e420a8073633a2d7771c878abe381d1139",
+    "data/france_academy_legacy_p1_review_v1/source_only_shard_checkpoint_v1.json": "631393df08cbb7ef93e7efc2b34e84891ec76f86b38123d6c86bb2e61401e24a",
+    "data/france_academy_legacy_p1_review_v1/person_event_ledger_summary_v1.json": "026d61b2877a13cbd0e46401ddebed1623eb9c7524fca5254d027cf91d7dbe65",
+    "data/france_academy_legacy_p1_review_v1/first_capture_and_baseline_comparison_v1.json": "1caf20e6251fbddab66473e21646f878f6319637242abd7d78af0b8268c59a49"
+  },
+  "prior_review_items": 21,
+  "resolved_P1_items": 5,
+  "remaining_P2_items": 16,
+  "resolved_P1_volumes": [
+    3,
+    35,
+    94,
+    124,
+    125
+  ],
+  "remaining_P2_volumes": [
+    54,
+    55,
+    61,
+    65,
+    72,
+    93,
+    117,
+    120,
+    121,
+    130,
+    136,
+    144,
+    159,
+    160,
+    161,
+    183
+  ],
+  "P1_baseline_stored_event_rows": 0,
+  "P1_first_v1_9_reparse_event_rows": 16,
+  "P1_final_event_rows": 23,
+  "P1_event_delta_vs_stored_baseline": 23,
+  "P1_same_new_source_bytes_parser_event_delta": 7,
+  "P1_final_event_rows_by_volume": {
+    "3": 1,
+    "35": 3,
+    "94": 6,
+    "124": 10,
+    "125": 3
+  },
+  "P1_final_event_classes": {
+    "CORRESPONDENT": 9,
+    "FULL_ACADEMICIAN_LIBRE": 2,
+    "FULL_SECTION_MEMBER": 11,
+    "FOREIGN_ASSOCIATE": 1
+  },
+  "P1_full_like_event_candidates": 13,
+  "P1_new_parser_rule_volumes": [
+    3,
+    94
+  ],
+  "P1_existing_rule_reparse_volumes": [
+    35,
+    124,
+    125
+  ],
+  "P1_changed_source_html_sha256_volumes": [
+    3,
+    35,
+    94,
+    124,
+    125
+  ],
+  "P1_changed_source_html_sha256_count": 5,
+  "P1_new_volume_count": 0,
+  "same_old_snapshot_bytes_claimed": false,
+  "resolution_scope": "Stored zero-event records resolved against new SHA-verified source snapshots; original event scans and accepted membership remain unverified.",
+  "remaining_P2_review_status": "UNRESOLVED_NOT_CONFIRMED_OMISSION",
+  "remaining_P2_rows_preserve_all_v1_fields_and_values": true,
+  "remaining_P2_fresh_source_review_performed": false,
+  "current_cumulative_unique_volumes": 135,
+  "current_cumulative_index_event_rows": 452,
+  "counts_are_source_events_not_unique_people": true,
+  "zero_elections_inferred": 0,
+  "original_event_pages_directly_inspected": 0,
+  "accepted_memberships": 0,
+  "accepted_exact_dobs": 0,
+  "bazi_variables_computed": 0,
+  "network_requests": 0,
+  "output_SHA256": {
+    "resolved_p1_zero_event_dispositions_v2.csv": "7d0c74a59ef896e131db1f32a339dd10da8a4b2707cba849b29686a86028addf",
+    "pending_p2_source_review_queue_v2.csv": "6bb32085c70271c4884d9d693ab2aebeae3d5eaf7a84f0dab01f65cbd867f300"
+  }
+}

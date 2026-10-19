@@ -1,0 +1,56 @@
+{
+  "version": "france-academy-shard05-final-source-review-v1",
+  "parser_before": "france-academy-legacy-heading-wikisource-source-only-v1_9",
+  "parser_after": "france-academy-legacy-heading-wikisource-source-only-v1_10",
+  "input_SHA256": {
+    "data/france_academy_remaining_172_toc_batch_v1/shard_05/first_capture_person_events_v1.csv": "134e7d431aba768aebb5cb53f8dbd0963f0a00bd810ba8f1bcf05000750f5938",
+    "data/france_academy_remaining_172_toc_batch_v1/shard_05/verified_transcribed_person_event_candidates_v1.csv": "2695f81d552028a1e848965d809d13bda4c770b0cad420ccf5e9251b9c04ecfb"
+  },
+  "candidate_events_before": 60,
+  "candidate_events_after": 60,
+  "events_added_by_this_classification_review": 0,
+  "unchanged_event_rows_all_fields": 58,
+  "role_only_changes": [
+    {
+      "volume": 17,
+      "name_as_transcribed": "Mauvais",
+      "first_printed_page_candidate": "1164",
+      "source_html_sha256": "bcbb697a02e8c93b30ae2f666b0d9024dc80e5ea70dc5f4f245ff91cbe105c84",
+      "changed_fields": {
+        "member_role_source_candidate": {
+          "before": "NOMINATION_UNKNOWN_MEMBER_CLASS_MANUAL",
+          "after": "FULL_SECTION_MEMBER_CONTEXTUAL_NOMINATION"
+        }
+      },
+      "adjudication": "EXPLICIT_SECTION_VACANCY_UNDER_MEMBER_NOMINATIONS_HEADING;CONTEXTUAL_ROLE_ONLY"
+    },
+    {
+      "volume": 17,
+      "name_as_transcribed": "Morin",
+      "first_printed_page_candidate": "1327",
+      "source_html_sha256": "bcbb697a02e8c93b30ae2f666b0d9024dc80e5ea70dc5f4f245ff91cbe105c84",
+      "changed_fields": {
+        "member_role_source_candidate": {
+          "before": "NOMINATION_UNKNOWN_MEMBER_CLASS_MANUAL",
+          "after": "FULL_SECTION_MEMBER_CONTEXTUAL_NOMINATION"
+        }
+      },
+      "adjudication": "EXPLICIT_SECTION_VACANCY_UNDER_MEMBER_NOMINATIONS_HEADING;CONTEXTUAL_ROLE_ONLY"
+    }
+  ],
+  "final_role_counts": {
+    "FULL_SECTION_MEMBER": 16,
+    "FULL_SECTION_MEMBER_CONTEXTUAL_NOMINATION": 2,
+    "FULL_ACADEMICIAN_LIBRE": 1,
+    "CORRESPONDENT": 38,
+    "FOREIGN_ASSOCIATE": 3
+  },
+  "readable_source_htmls_sha_checked": 10,
+  "readable_membership_columns_reviewed": 10,
+  "unreviewed_original_printed_election_pages": true,
+  "source_names_preserved_as_transcribed": true,
+  "original_member_election_pages_opened": 0,
+  "accepted_memberships": 0,
+  "accepted_exact_dobs": 0,
+  "bazi_variables_computed": 0
+}
