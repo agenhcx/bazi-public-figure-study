@@ -1,0 +1,301 @@
+{
+  "version": "france-academy-shard07-final-source-review-v1",
+  "parser_before": "france-academy-legacy-heading-wikisource-source-only-v1_11",
+  "parser_after": "france-academy-legacy-heading-wikisource-source-only-v1_12",
+  "input_SHA256": {
+    "data/france_academy_remaining_172_toc_batch_v1/shard_07/first_capture_person_events_v1.csv": "08760872043641fca930cb873f09a339ca9c99f87a3f79962f82cdc3916a2026",
+    "data/france_academy_remaining_172_toc_batch_v1/shard_07/verified_transcribed_person_event_candidates_v1.csv": "018276f003715d640d54192995a64704bb282d57cb45567a0d2aa65fd9d64da0",
+    "data/france_academy_remaining_172_toc_batch_v1/shard_07/first_capture_source_review_v1.json": "461f470e4391754b324d1c4349bf2c54b165289723791da9a5794bfc644a1942",
+    "data/france_academy_shard07_source_snapshot_v1/source_cache_v1.tar.gz": "a24e25e11b4b92741b25a55e34dccf160d305bae72879737c6b9c0f5fe654e38"
+  },
+  "same_source_bytes_before_and_after": true,
+  "candidate_events_before": 60,
+  "candidate_events_after": 61,
+  "events_added": 2,
+  "events_removed": 1,
+  "added_event_rows": [
+    {
+      "volume": "49",
+      "year": "1859",
+      "name_as_transcribed": "Denis, de Commercy",
+      "member_role_source_candidate": "CORRESPONDENT",
+      "original_action_wording": "EST_NOMME_TRANSCRIBED",
+      "science_section_transcribed": "Médecine et Chirurgie",
+      "first_printed_page_candidate": "935",
+      "all_printed_pages_indexed": "935",
+      "wikisource_table_url": "https://fr.wikisource.org/wiki/Comptes_rendus_de_l%E2%80%99Acad%C3%A9mie_des_sciences/Tome_49%2C_1859/Table_des_mati%C3%A8res",
+      "source_html_sha256": "ce38d5fe83dddf2fde211612110407dccc7a3af267bf50db798c2b2719deddc0",
+      "source_sha256_verified_against_inventory": "1",
+      "cths_562_exact_name_candidate_id": "",
+      "name_matching_status": "NO_EXACT_CTHS_562_MATCH",
+      "origin_source_tier": "WIKISOURCE_ACADEMY_PRINTED_INDEX_TRANSCRIPTION_NOT_ORIGINAL_EVENT_SCAN",
+      "original_member_election_page_opened": "0",
+      "official_member_status_accepted": "0",
+      "exact_dob_accepted": "0",
+      "bazi_variables_computed": "0"
+    },
+    {
+      "volume": "110",
+      "year": "1890",
+      "name_as_transcribed": "Lord Rayleigh",
+      "member_role_source_candidate": "CORRESPONDENT",
+      "original_action_wording": "EST_NOMME_TRANSCRIBED",
+      "science_section_transcribed": "Physique",
+      "first_printed_page_candidate": "508",
+      "all_printed_pages_indexed": "508",
+      "wikisource_table_url": "https://fr.wikisource.org/wiki/Comptes_rendus_de_l%E2%80%99Acad%C3%A9mie_des_sciences/Tome_110%2C_1890/Table_des_mati%C3%A8res",
+      "source_html_sha256": "23295c54547b1f580e83d3d62c35f952c8de0da124cc94056beed86252d135a5",
+      "source_sha256_verified_against_inventory": "1",
+      "cths_562_exact_name_candidate_id": "",
+      "name_matching_status": "NO_EXACT_CTHS_562_MATCH",
+      "origin_source_tier": "WIKISOURCE_ACADEMY_PRINTED_INDEX_TRANSCRIPTION_NOT_ORIGINAL_EVENT_SCAN",
+      "original_member_election_page_opened": "0",
+      "official_member_status_accepted": "0",
+      "exact_dob_accepted": "0",
+      "bazi_variables_computed": "0"
+    }
+  ],
+  "removed_event_rows": [
+    {
+      "volume": "50",
+      "year": "1860",
+      "name_as_transcribed": "Milne Edwards",
+      "member_role_source_candidate": "OFFICE_ELECTION_NOT_NEW_MEMBER",
+      "original_action_wording": "EST_ELU_TRANSCRIBED",
+      "science_section_transcribed": "",
+      "first_printed_page_candidate": "13",
+      "all_printed_pages_indexed": "13",
+      "wikisource_table_url": "https://fr.wikisource.org/wiki/Comptes_rendus_de_l%E2%80%99Acad%C3%A9mie_des_sciences/Tome_50%2C_1860/Table_des_mati%C3%A8res",
+      "source_html_sha256": "14bf5212b9fbf25e73123725f57e1531fa71b1f8d6ad2a6bcbc31475e9ca1bf1",
+      "source_sha256_verified_against_inventory": "1",
+      "cths_562_exact_name_candidate_id": "",
+      "name_matching_status": "NO_EXACT_CTHS_562_MATCH",
+      "origin_source_tier": "WIKISOURCE_ACADEMY_PRINTED_INDEX_TRANSCRIPTION_NOT_ORIGINAL_EVENT_SCAN",
+      "original_member_election_page_opened": "0",
+      "official_member_status_accepted": "0",
+      "exact_dob_accepted": "0",
+      "bazi_variables_computed": "0"
+    }
+  ],
+  "existing_event_rows_with_field_changes": [],
+  "unchanged_existing_event_rows_all_fields": 59,
+  "final_role_counts": {
+    "CORRESPONDENT": 39,
+    "FULL_SECTION_MEMBER": 12,
+    "NOMINATION_UNKNOWN_MEMBER_CLASS_MANUAL": 1,
+    "FULL_ACADEMICIAN_LIBRE": 3,
+    "FOREIGN_ASSOCIATE": 5,
+    "OFFICE_ELECTION_NOT_NEW_MEMBER": 1
+  },
+  "readable_source_htmls_sha_checked": 13,
+  "readable_source_tables_reviewed": 13,
+  "source_table_reviews": [
+    {
+      "volume": 22,
+      "year": 1846,
+      "status": "HTTP_200",
+      "replay_table_status": "LOCAL_CACHE",
+      "source_html_sha256": "2580a30c6d166deac0c222eff7471fef4400479ce5d1653e18d621cafb3ca624",
+      "events_before": "7",
+      "events_after": "7",
+      "disposition": "READABLE_TOC_EVENT_ROWS_REVIEWED"
+    },
+    {
+      "volume": 23,
+      "year": 1846,
+      "status": "HTTP_200",
+      "replay_table_status": "LOCAL_CACHE",
+      "source_html_sha256": "a740bcb0ff77dcbecf74cc555f40b6cee2e3ec9280ec6cc37ccd8d9afbbfdd81",
+      "events_before": "0",
+      "events_after": "0",
+      "disposition": "NO_EXPLICIT_MEMBER_ELECTION_ENTRY_IN_READABLE_TOC_APPROVAL_ONLY_NOT_HISTORICAL_ZERO"
+    },
+    {
+      "volume": 25,
+      "year": 1847,
+      "status": "HTTP_200",
+      "replay_table_status": "LOCAL_CACHE",
+      "source_html_sha256": "89553c099aeb95e58372dd1f53bea9a3fe527b114a710eac09405a8bf2ed4fd1",
+      "events_before": "2",
+      "events_after": "2",
+      "disposition": "READABLE_TOC_EVENT_ROWS_REVIEWED"
+    },
+    {
+      "volume": 49,
+      "year": 1859,
+      "status": "HTTP_200",
+      "replay_table_status": "LOCAL_CACHE",
+      "source_html_sha256": "ce38d5fe83dddf2fde211612110407dccc7a3af267bf50db798c2b2719deddc0",
+      "events_before": "0",
+      "events_after": "1",
+      "disposition": "READABLE_TOC_EVENT_ROWS_REVIEWED"
+    },
+    {
+      "volume": 50,
+      "year": 1860,
+      "status": "HTTP_200",
+      "replay_table_status": "LOCAL_CACHE",
+      "source_html_sha256": "14bf5212b9fbf25e73123725f57e1531fa71b1f8d6ad2a6bcbc31475e9ca1bf1",
+      "events_before": "9",
+      "events_after": "8",
+      "disposition": "READABLE_TOC_EVENT_ROWS_REVIEWED"
+    },
+    {
+      "volume": 51,
+      "year": 1860,
+      "status": "HTTP_200",
+      "replay_table_status": "LOCAL_CACHE",
+      "source_html_sha256": "1787e1140f2bbc1fbaf3710a374813078230170f412d35b50311b36e6ce0ed80",
+      "events_before": "2",
+      "events_after": "2",
+      "disposition": "READABLE_TOC_EVENT_ROWS_REVIEWED"
+    },
+    {
+      "volume": 79,
+      "year": 1874,
+      "status": "HTTP_200",
+      "replay_table_status": "LOCAL_CACHE",
+      "source_html_sha256": "39492ac7935ea3c490d1351fb8a58ae6e2a899d367da2dfc22bddbd56ced6258",
+      "events_before": "2",
+      "events_after": "2",
+      "disposition": "READABLE_TOC_EVENT_ROWS_REVIEWED"
+    },
+    {
+      "volume": 80,
+      "year": 1875,
+      "status": "HTTP_200",
+      "replay_table_status": "LOCAL_CACHE",
+      "source_html_sha256": "5627df732a3ffbbb3d5f0f75f42e831341f2012e3d2c48a7e18883a2ae38b112",
+      "events_before": "7",
+      "events_after": "7",
+      "disposition": "READABLE_TOC_EVENT_ROWS_REVIEWED"
+    },
+    {
+      "volume": 110,
+      "year": 1890,
+      "status": "HTTP_200",
+      "replay_table_status": "LOCAL_CACHE",
+      "source_html_sha256": "23295c54547b1f580e83d3d62c35f952c8de0da124cc94056beed86252d135a5",
+      "events_before": "7",
+      "events_after": "8",
+      "disposition": "READABLE_TOC_EVENT_ROWS_REVIEWED"
+    },
+    {
+      "volume": 111,
+      "year": 1890,
+      "status": "HTTP_404",
+      "replay_table_status": "HTTP_404",
+      "source_html_sha256": "",
+      "events_before": "",
+      "events_after": "",
+      "disposition": "HTTP404_UNKNOWN_NOT_ZERO"
+    },
+    {
+      "volume": 142,
+      "year": 1906,
+      "status": "HTTP_200",
+      "replay_table_status": "LOCAL_CACHE",
+      "source_html_sha256": "8053fc8a8d0dd64e168896f9310883e356b36f2e7ec1779efcbe06918974a13b",
+      "events_before": "5",
+      "events_after": "5",
+      "disposition": "READABLE_TOC_EVENT_ROWS_REVIEWED"
+    },
+    {
+      "volume": 143,
+      "year": 1906,
+      "status": "HTTP_200",
+      "replay_table_status": "LOCAL_CACHE",
+      "source_html_sha256": "f3b036fbba1e0346e24ae312d48b3c5e1cc0627be48679665ba3ca4240d7898a",
+      "events_before": "1",
+      "events_after": "1",
+      "disposition": "READABLE_TOC_EVENT_ROWS_REVIEWED"
+    },
+    {
+      "volume": 175,
+      "year": 1922,
+      "status": "HTTP_200",
+      "replay_table_status": "LOCAL_CACHE",
+      "source_html_sha256": "9642f2f273910b77f52fd85707370f4333e6c8d77d1e63e8a3b00d4fa9f9a297",
+      "events_before": "5",
+      "events_after": "5",
+      "disposition": "READABLE_TOC_EVENT_ROWS_REVIEWED"
+    },
+    {
+      "volume": 176,
+      "year": 1923,
+      "status": "HTTP_200",
+      "replay_table_status": "LOCAL_CACHE",
+      "source_html_sha256": "17bbbb030574a3613af3ebfbf536873d35f9a5b9678b4039c5813a577a7de67b",
+      "events_before": "13",
+      "events_after": "13",
+      "disposition": "READABLE_TOC_EVENT_ROWS_REVIEWED"
+    },
+    {
+      "volume": 204,
+      "year": 1937,
+      "status": "HTTP_404",
+      "replay_table_status": "HTTP_404",
+      "source_html_sha256": "",
+      "events_before": "",
+      "events_after": "",
+      "disposition": "HTTP404_UNKNOWN_NOT_ZERO"
+    },
+    {
+      "volume": 205,
+      "year": 1937,
+      "status": "HTTP_404",
+      "replay_table_status": "HTTP_404",
+      "source_html_sha256": "",
+      "events_before": "",
+      "events_after": "",
+      "disposition": "HTTP404_UNKNOWN_NOT_ZERO"
+    }
+  ],
+  "source_review_findings": [
+    {
+      "volume": 49,
+      "added_events": 1,
+      "reason": "The bare Nominations heading announces future appointments for all three Academy membership classes. The following row explicitly appoints Denis, de Commercy, as a correspondent at printed page 935."
+    },
+    {
+      "volume": 110,
+      "added_events": 1,
+      "reason": "The explicit correspondent appointment at printed page 508 includes the honorific Lord. Lord Rayleigh is preserved as transcribed."
+    },
+    {
+      "volume": 50,
+      "removed_events": 1,
+      "reason": "Unstyled uppercase independent subject headings close the membership column. Milne Edwards, vice-president at page 13, belongs to the separate presidency heading and is removed from this batch ledger."
+    },
+    {
+      "volume": 23,
+      "added_events": 0,
+      "reason": "The readable TOC has no explicit membership election or appointment section; the Jacobi royal confirmation at printed page 57 is not counted as another election. This is a TOC disposition, not a historical no-election conclusion."
+    },
+    {
+      "volume": 22,
+      "added_events": 0,
+      "reason": "Jacobi at printed page 920 is transcribed as associe libre, while the Tome 23 approval says associe etranger. The existing UNKNOWN role remains unchanged pending original-event-page verification."
+    }
+  ],
+  "pending_original_event_page_checks": [
+    {
+      "volume": 22,
+      "year": 1846,
+      "name_as_transcribed": "Jacobi",
+      "printed_page_candidate": "920",
+      "source_role_phrase": "associé libre",
+      "related_volume": 23,
+      "related_year": 1846,
+      "related_approval_page_candidate": "57",
+      "related_approval_role_phrase": "associé étranger",
+      "disposition": "ROLE_WORDING_REQUIRES_ORIGINAL_EVENT_PAGE_REVIEW_NOT_AUTOMATICALLY_RESOLVED",
+      "accepted_membership": 0
+    }
+  ],
+  "source_names_preserved_as_transcribed": true,
+  "original_member_election_pages_opened": 0,
+  "accepted_memberships": 0,
+  "accepted_exact_dobs": 0,
+  "bazi_variables_computed": 0
+}
