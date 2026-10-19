@@ -63,7 +63,7 @@ def nomination_role(line):
     tail=fold(re.split(r"\ben remplacement de\b|\bpar suite du deces de\b",line[m.end():],maxsplit=1,flags=re.I)[0])
     if re.search(r"\bcorrespondant(?:e)?\b",tail):return "CORRESPONDENT"
     if "associe etranger" in tail:return "FOREIGN_ASSOCIATE"
-    if "academicien libre" in tail:return "FULL_ACADEMICIAN_LIBRE"
+    if "academicien libre" in tail or "membre libre" in tail:return "FULL_ACADEMICIAN_LIBRE"
     if "membre non resid" in tail:return "FULL_NONRESIDENT_MEMBER"
     if re.search(r"\bmembre(?:s)?\s+de\s+l.academie\b|\bmembre\b",tail):return "FULL_SECTION_MEMBER"
     if re.search(r"\ba\s+la\s+place\s+vacante\s+dans\s+la\s+section\b",tail):
