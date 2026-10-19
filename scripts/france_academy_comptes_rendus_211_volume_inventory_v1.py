@@ -50,6 +50,14 @@ OTHER = {"CORRESPONDENT","FOREIGN_ASSOCIATE"}
 def sha(b):return hashlib.sha256(b).hexdigest()
 
 
+def write_json_atomic(path,value):
+    path=Path(path)
+    path.parent.mkdir(parents=True,exist_ok=True)
+    temp=path.with_suffix(path.suffix+".part")
+    temp.write_text(json.dumps(value,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    temp.replace(path)
+
+
 def fetch(url,timeout):
     req=urllib.request.Request(url,headers={"User-Agent":UA,"Accept":"application/json,text/html;q=0.9"})
     with urllib.request.urlopen(req,timeout=timeout) as rsp:
@@ -62,13 +70,28 @@ def get_cached(url,path,offline,timeout,delay,last_request):
     path=Path(path)
     if path.is_file():
         return path.read_bytes(),"LOCAL_CACHE"
+    status_path=path.with_suffix(path.suffix+".http.json")
+    if status_path.is_file():
+        status=json.loads(status_path.read_text(encoding="utf-8"))
+        if status.get("url")!=url or status.get("http_status")!=404:
+            raise ValueError("Invalid cached HTTP response identity: "+str(status_path))
+        raise urllib.error.HTTPError(url,404,"Persisted HTTP 404; election content unknown",None,None)
     if offline:
         raise FileNotFoundError("Offline cache missing (do not silently imply absence): "+str(path))
     if last_request[0] is not None:
         time.sleep(max(0,delay-(time.monotonic()-last_request[0])))
     last_request[0]=time.monotonic()
-    body,code,_=fetch(url,timeout)
-    if code!=200:raise ValueError("HTTP "+str(code))
+    try:
+        body,code,_=fetch(url,timeout)
+        if code!=200:raise urllib.error.HTTPError(url,code,"Unexpected source HTTP status",None,None)
+    except urllib.error.HTTPError as exc:
+        # A missing endpoint is reusable evidence, never a zero-election result.
+        # Access/rate-limit failures are never cached as successful responses.
+        if exc.code==404:
+            write_json_atomic(status_path,{"url":url,"http_status":404,
+                "observed_at_utc":time.strftime("%Y-%m-%dT%H:%M:%SZ",time.gmtime()),
+                "election_content":"UNKNOWN_NOT_ZERO"})
+        raise
     path.parent.mkdir(parents=True,exist_ok=True)
     temp=path.with_suffix(path.suffix+".part")
     temp.write_bytes(body)
@@ -204,34 +227,39 @@ def create_inventory(category,official):
 
 def write_csv(path,rows,cols):
     path.parent.mkdir(parents=True,exist_ok=True)
-    with path.open("w",newline="",encoding="utf-8-sig") as f:
+    temp=path.with_suffix(path.suffix+".part")
+    with temp.open("w",newline="",encoding="utf-8-sig") as f:
         w=csv.DictWriter(f,fieldnames=cols,extrasaction="ignore")
         w.writeheader()
         w.writerows(rows)
+    temp.replace(path)
 
 
 def probe_table(row,cache,offline,timeout,delay,last_request):
     v,y=row["volume"],row["year"]
     path=cache/("table_"+str(v)+"_"+str(y)+".html")
-    row["table_sampled"]="1"
+    row["table_sampled"]="0"
     try:
         raw,state=get_cached(row["wikisource_table_url"],path,offline,timeout,delay,last_request)
         events,heads=extract_legacy_aware(raw,v,y)
         soup=BeautifulSoup(raw,"html.parser")
         text=" ".join(soup.get_text(" ",strip=True).split())
         relevant=[h for h in heads if h.casefold().startswith(("election","élection","nomination"))]
-        row.update({"table_http_status":state,"table_html_sha256":sha(raw),
+        row.update({"table_sampled":"1","table_http_status":state,"table_html_sha256":sha(raw),
                     "table_body_readable":"1" if len(text)>=500 else "0",
                     "election_heading_detected":"1" if relevant else "0",
                     "transcribed_election_rows":str(len(events)),
                     "full_like_event_rows_in_sample":str(sum(e["election_role_candidate"] in FULL for e in events)),
                     "correspondent_foreign_event_rows_in_sample":str(sum(e["election_role_candidate"] in OTHER for e in events))})
     except (urllib.error.HTTPError,urllib.error.URLError,TimeoutError,ValueError,FileNotFoundError) as exc:
-        row.update({"table_http_status":"HTTP_"+str(exc.code) if isinstance(exc,urllib.error.HTTPError)
+        row.update({"table_sampled":"1" if isinstance(exc,urllib.error.HTTPError) and exc.code==404 else "0",
+                    "table_http_status":"HTTP_"+str(exc.code) if isinstance(exc,urllib.error.HTTPError)
                     else type(exc).__name__,"table_body_readable":"UNDETERMINED",
                     "election_heading_detected":"UNDETERMINED",
                     "transcribed_election_rows":"","full_like_event_rows_in_sample":"",
                     "correspondent_foreign_event_rows_in_sample":""})
+        if (isinstance(exc,urllib.error.HTTPError) and exc.code in (403,429)) or isinstance(exc,FileNotFoundError):
+            raise
 
 
 def synthetic():
@@ -280,52 +308,82 @@ def main():
         return
     cache=Path("local_runs/france_academy_211_volume_inventory_source_cache_v1")
     last_request=[None]
-    category,cat_pages=get_category(cache,args.offline,args.timeout,args.delay,last_request)
-    check_inventory(category)
-    original_raw,_=get_cached(OFFICIAL,cache/"official_journal_archive.html",args.offline,
-                              args.timeout,args.delay,last_request)
+    progress={"selected_volumes":samples,"completed_volumes":[],
+              "run_status":"INITIALIZING","run_complete":False,
+              "incomplete_selected_volumes":samples}
+    write_json_atomic(args.out/"source_run_progress_v1.json",progress)
+    try:
+        category,cat_pages=get_category(cache,args.offline,args.timeout,args.delay,last_request)
+        check_inventory(category)
+        original_raw,_=get_cached(OFFICIAL,cache/"official_journal_archive.html",args.offline,
+                                  args.timeout,args.delay,last_request)
+    except Exception as exc:
+        progress["run_status"]="STOPPED_"+("HTTP_"+str(exc.code) if isinstance(exc,urllib.error.HTTPError) else type(exc).__name__)
+        write_json_atomic(args.out/"source_run_progress_v1.json",progress)
+        raise
     official,coverage=parse_official(original_raw)
     inventory=create_inventory(category,official)
     category_digest=hashlib.sha256("".join(p["sha256"] for p in cat_pages).encode()).hexdigest()
     for r in inventory:r["category_evidence_sha256"]=category_digest
+    def checkpoint(run_status):
+        assert len(inventory)==211 and all(r["study_membership_accepted"]=="0" and
+            r["study_DOB_accepted"]=="0" and r["bazi_variables_computed"]=="0" and
+            r["original_printed_election_pages_directly_inspected"]=="0" for r in inventory)
+        args.out.mkdir(parents=True,exist_ok=True)
+        write_csv(args.out/"academy_original_wikisource_211_volume_inventory_v1.csv",inventory,COLS)
+        link_status=Counter(r["official_link_mapping_status"] for r in inventory)
+        probes=[r for r in inventory if r["table_sampled"]=="1"]
+        summary={
+           "version":VERSION,
+           "historic_period": [1835,1940],
+           "official_site":OFFICIAL,
+           "official_site_sha256":sha(original_raw),
+           "official_years_with_annual_rows":len(coverage),
+           "official_archive_link_status":dict(link_status),
+           "wikisource_category":CAT,
+           "category_source_pages":cat_pages,
+           "category_volume_count":len(inventory),
+           "volume_range_1_to_211_complete":True,
+           "expected_year_count":106,
+           "table_of_contents_probed_volumes":[x["volume"] for x in probes],
+           "table_probes_completed":len(probes),
+           "table_probe_http_status":dict(Counter(x["table_http_status"] for x in probes)),
+           "table_probe_readable_count":sum(x["table_body_readable"]=="1" for x in probes),
+           "table_probe_election_heading_count":sum(x["election_heading_detected"]=="1" for x in probes),
+           "sample_election_event_candidates":sum(int(x["transcribed_election_rows"] or 0) for x in probes),
+           "unprobed_volumes_not_claimed_readable":211-len(probes),
+           "source_tier":"ORIGINAL_ACADEMY_JOURNAL_OFFICIAL_VOLUME_LINKS_PLUS_WIKISOURCE_BOOK_ENTRIES;SAMPLE_TABLES_ONLY",
+           "early_heading_parser":"Recognizes 1835 div.tableItem Elections and 1880 Nominations as well as later tables; positive events only source candidates",
+           "no_original_book_election_pages_scanned":True,
+           "no_full_member_roster_completeness_claim":True,
+           "accepted_full_memberships":0,"accepted_exact_dobs":0,"bazi_variables_computed":0
+        }
+        summary["selected_table_volumes"]=samples
+        summary["incomplete_selected_volumes"]=sorted(set(samples)-{x["volume"] for x in probes})
+        summary["run_status"]=run_status
+        summary["run_complete"]=run_status=="COMPLETED" and not summary["incomplete_selected_volumes"]
+        write_json_atomic(args.out/"summary.json",summary)
+        write_json_atomic(args.out/"source_run_progress_v1.json",{
+            "selected_volumes":samples,"completed_volumes":[x["volume"] for x in probes],
+            "run_status":run_status,"run_complete":summary["run_complete"],
+            "incomplete_selected_volumes":summary["incomplete_selected_volumes"]})
+        return summary
+
+    checkpoint("IN_PROGRESS")
     for v in samples:
         row=inventory[v-1]
-        probe_table(row,cache,args.offline,args.timeout,args.delay,last_request)
+        try:
+            probe_table(row,cache,args.offline,args.timeout,args.delay,last_request)
+        except Exception:
+            checkpoint("STOPPED_"+row["table_http_status"])
+            raise
         print("TABLE",row["volume"],row["year"],row["table_http_status"],
               row["election_heading_detected"],row["transcribed_election_rows"],flush=True)
-    assert len(inventory)==211 and all(r["study_membership_accepted"]=="0" and
-        r["study_DOB_accepted"]=="0" and r["bazi_variables_computed"]=="0" and
-        r["original_printed_election_pages_directly_inspected"]=="0" for r in inventory)
-    args.out.mkdir(parents=True,exist_ok=True)
-    write_csv(args.out/"academy_original_wikisource_211_volume_inventory_v1.csv",inventory,COLS)
-    link_status=Counter(r["official_link_mapping_status"] for r in inventory)
-    probes=[r for r in inventory if r["table_sampled"]=="1"]
-    summary={
-       "version":VERSION,
-       "historic_period": [1835,1940],
-       "official_site":OFFICIAL,
-       "official_site_sha256":sha(original_raw),
-       "official_years_with_annual_rows":len(coverage),
-       "official_archive_link_status":dict(link_status),
-       "wikisource_category":CAT,
-       "category_source_pages":cat_pages,
-       "category_volume_count":len(inventory),
-       "volume_range_1_to_211_complete":True,
-       "expected_year_count":106,
-       "table_of_contents_probed_volumes":[x["volume"] for x in probes],
-       "table_probes_completed":len(probes),
-       "table_probe_http_status":dict(Counter(x["table_http_status"] for x in probes)),
-       "table_probe_readable_count":sum(x["table_body_readable"]=="1" for x in probes),
-       "table_probe_election_heading_count":sum(x["election_heading_detected"]=="1" for x in probes),
-       "sample_election_event_candidates":sum(int(x["transcribed_election_rows"] or 0) for x in probes),
-       "unprobed_volumes_not_claimed_readable":211-len(probes),
-       "source_tier":"ORIGINAL_ACADEMY_JOURNAL_OFFICIAL_VOLUME_LINKS_PLUS_WIKISOURCE_BOOK_ENTRIES;SAMPLE_TABLES_ONLY",
-       "early_heading_parser":"Recognizes 1835 div.tableItem Elections and 1880 Nominations as well as later tables; positive events only source candidates",
-       "no_original_book_election_pages_scanned":True,
-       "no_full_member_roster_completeness_claim":True,
-       "accepted_full_memberships":0,"accepted_exact_dobs":0,"bazi_variables_computed":0
-    }
-    (args.out/"summary.json").write_text(json.dumps(summary,indent=2,ensure_ascii=False)+"\n",encoding="utf8")
+        checkpoint("IN_PROGRESS")
+    summary=checkpoint("COMPLETED")
+    if not summary["run_complete"]:
+        checkpoint("INCOMPLETE")
+        raise RuntimeError("Source shard incomplete: "+str(summary["incomplete_selected_volumes"]))
     print("SUMMARY",json.dumps(summary,ensure_ascii=False))
 
 

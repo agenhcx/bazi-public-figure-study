@@ -61,7 +61,8 @@ def main():
     selected=groups[args.shard]
     if not args.run:
         print(json.dumps({"version":V,"shard":args.shard,"volumes":selected,
-            "required_requests_max":len(selected),"live_network_requests":0,
+            "required_table_requests_max":len(selected),
+            "required_requests_max":len(selected)+5,"live_network_requests":0,
             "original_scanned_election_pages_inspected":0,
             "accepted_memberships":0,"bazi_variables_computed":0},ensure_ascii=False))
         return
@@ -76,6 +77,8 @@ def main():
     finally:
         sys.argv=before
     record=json.loads((output/"summary.json").read_text(encoding="utf-8"))
+    if not record.get("run_complete",False):
+        raise RuntimeError("Source shard incomplete; inspect source_run_progress_v1.json")
     if record["table_of_contents_probed_volumes"]!=sorted(selected):
         raise RuntimeError("Output sampled volume set is not the selected frozen shard")
     if record["category_volume_count"]!=211 or record["table_probes_completed"]!=len(selected):

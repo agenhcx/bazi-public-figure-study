@@ -18,7 +18,7 @@ from bs4 import BeautifulSoup
 from france_academy_wikisource_index_preflight_v1 import build_urls,read_one
 from france_academy_wikisource_election_rows_v1 import role_of,section_of,person_of,identity_key,extract_from_html
 
-VERSION="france-academy-legacy-heading-wikisource-source-only-v1_6"
+VERSION="france-academy-legacy-heading-wikisource-source-only-v1_8"
 VOLUMES=[(1,1835),(42,1856),(43,1856),(91,1880),(182,1926)]
 CTHS="data/france_academy_cths_profile_dob_harvest_v1/cths_dob_claims_all_targets_candidate_only_v1.csv"
 OUT=Path("data/france_academy_wikisource_legacy_heading_pilot_v1")
@@ -35,7 +35,8 @@ def fold(s):
     return "".join(c for c in s if not unicodedata.combining(c))
 def event_heading(s):
     x=fold(s)
-    return bool(re.match(r"^(?:elections?(?: de membres)?|nominations? de membres et de correspondants(?: de l.academie)?)\b",x))
+    # Tomes 98 (1884) and 128 (1899) omit the second "de" in the heading.
+    return bool(re.match(r"^(?:elections?(?: de membres)?|nominations? de membres et (?:de )?correspondants(?: de l.academie)?)\b",x))
 def name_from_line(line):
     raw=re.sub(r"\bM\.\s*\(\s*Monsieur\s*\)\s*","M. ",line,flags=re.I)
     raw=re.sub(r"\bM\.\s*\(\s*M\.\s*\)\s*","M. ",raw,flags=re.I)
@@ -78,6 +79,56 @@ def page_references(s):
     nums=re.findall(r"\d{1,5}",original)
     return (nums[0],"|".join(nums))
 
+def explicit_named_academy_event(line):
+    """Bare Nominations needs a named person AND explicit Academy role.
+
+    Tome 40 opens with an appointed section member, while Tome 131 opens
+    with an elected correspondent. A generic commission membership or an
+    unknown role must not open the member-event scope.
+    """
+    nominated=bool(re.search(r"\best\s+nomm[ée]e?\b",line,re.I))
+    name=nominated_name_from_line(line) if nominated else name_from_line(line)
+    role=nomination_role(line) if nominated else role_of(line)
+    if not name:return False
+    if role in CORR|{"FULL_ACADEMICIAN_LIBRE","FULL_NONRESIDENT_MEMBER"}:
+        return True
+    if role!="FULL_SECTION_MEMBER":return False
+    action=re.search(r"\best\s+(?:nomm[ée]e?|[ée]lue?)\b",line,re.I)
+    if not action:return False
+    clause=re.split(r"\ben remplacement\b",fold(line[action.end():]),maxsplit=1)[0]
+    return bool(re.search(r"\bmembre\s+de\s+(?:la\s+section|l.academie)\b",clause))
+
+def split_correspondent_row(tr,line,page):
+    """Recover the observed Tome 131 transclusion split, without guessing.
+
+    The last row of a table ends in 'M. Zambacco est élu'. Its explicit
+    correspondent/section predicate is unwrapped text between that table
+    and the next, whose first row contains only the printed page number.
+    Require all three adjacent source fragments; otherwise leave unchanged.
+    """
+    if page or not re.search(r"\best\s+[ée]lue?\s*$",line,re.I):return line,page
+    if not name_from_line(line):return line,page
+    table=tr.find_parent("table")
+    if table is None or table.find_all("tr")[-1] is not tr:return line,page
+    pieces=[];following=None
+    for i,sibling in enumerate(table.next_siblings):
+        if i>=8:return line,page
+        tag=getattr(sibling,"name",None)
+        if tag=="table":following=sibling;break
+        if tag not in (None,"span"):return line,page
+        pieces.append(sibling.get_text(" ",strip=True) if tag else str(sibling))
+    continuation=" ".join(" ".join(pieces).split())
+    if following is None or not re.fullmatch(
+            r"Correspondant\s+pour\s+la\s+Section\s+(?:de\s+|d['’])[^.;\d]+\.?",
+            continuation,re.I):return line,page
+    first_row=following.find("tr")
+    if first_row is None:return line,page
+    cells=first_row.find_all("td",recursive=False)
+    if len(cells)!=1:return line,page
+    number=cells[0].get_text(" ",strip=True)
+    if not re.fullmatch(r"\d{1,5}",number):return line,page
+    return line+" "+continuation,number
+
 def parse_html(raw,volume,year):
     """Parse TR and div.tableItem representations independently and deduplicate.
 
@@ -111,6 +162,7 @@ def parse_html(raw,volume,year):
         first=cells[0]
         line=" ".join(first.get_text(" ",strip=True).split())
         page=" ".join(cells[1].get_text(" ",strip=True).split()) if len(cells)>1 else ""
+        line,page=split_correspondent_row(tr,line,page)
         page,page_refs=page_references(page)
         sc=first.find("span",class_=re.compile(r"sc",re.I))
         heading=" ".join(sc.get_text(" ",strip=True).split()) if sc else ""
@@ -149,16 +201,24 @@ def parse_html(raw,volume,year):
 
     for logical in (table_rows,legacy_rows):
         in_events=False
+        office_only=False
         for line,page,decorated,page_refs in logical:
             if not line:continue
             prefix=line.split("—",1)[0].strip(" .")
             head_candidate=prefix if event_heading(prefix) else decorated
-            is_named_correspondent_nomination=bool(
+            is_named_member_nomination=bool(
                 fold(decorated).strip(" .")=="nominations" and
-                re.search(r"\best\s+nomm[ée]e?\b",line,re.I) and
-                re.search(r"\bcorrespondant\b",line,re.I))
-            if event_heading(head_candidate) or is_named_correspondent_nomination:
+                explicit_named_academy_event(line))
+            # Tome 37 p938 has a bare Nominations heading for an explicit
+            # secretary election. It opens only an OFFICE scope: it must not
+            # make bare nominations a generic source of new full members.
+            is_named_office_election=bool(
+                fold(decorated).strip(" .")=="nominations" and
+                role_of(line)=="OFFICE_ELECTION_NOT_NEW_MEMBER" and
+                name_from_line(line))
+            if event_heading(head_candidate) or is_named_member_nomination or is_named_office_election:
                 in_events=True
+                office_only=is_named_office_election and not event_heading(head_candidate)
                 header=head_candidate if event_heading(head_candidate) else prefix
                 if header not in headings:headings.append(header[:120])
             elif decorated:
@@ -171,6 +231,7 @@ def parse_html(raw,volume,year):
             if not (nominated or elected):continue
             role=nomination_role(line) if nominated else role_of(line)
             if not role:continue
+            if office_only and role!="OFFICE_ELECTION_NOT_NEW_MEMBER":continue
             name=nominated_name_from_line(line) if nominated else name_from_line(line)
             # Quarantine unparsed identities; do not infer people from heading.
             if not name:continue
@@ -247,7 +308,127 @@ def fixture():
     assert page_references("725 et 798")==("725","725|798")
     assert page_references("509")==("509","509")
 
-    print("PASS: 1835 election, 1856 est nommé in nominations, 1880/1926 elections; candidatures/decrees excluded")
+    # Source-derived regression: both readable TOCs formerly returned zero
+    # people because their heading says "et correspondants", without "de".
+    # Preserve the transcribed names, class distinctions and original pages.
+    tome98="""<table>
+       <tr><td><span class="sc">Nominations de membres et correspondants de l’académie.</span> — M. Haton de la Goupillière est élu Membre libre en remplacement de feu M. de la Gournerie</td><td>131</td></tr>
+       <tr><td>— M. Darboux est élu Membre de la Section de Géométrie, en remplacement de M. Puiseux</td><td>552</td></tr>
+       <tr><td>— M. de Jonquières est élu Membre libre, en remplacement de feu M. Breguet</td><td>713</td></tr>
+       <tr><td>— M. Bouquet de la Grye est élu Membre de la Section de Géographie et Navigation, en remplacement de feu M. Yvon Villarceau</td><td>865</td></tr>
+       <tr><td>— M. Cailletet est élu Membre libre, en remplacement de feu M. du Moncel</td><td>1311</td></tr>
+       <tr><td>— M. Salmon est élu Correspondant, pour la Section de Géométrie, en remplacement de feu M. Spottiswoode</td><td>1516</td></tr>
+       <tr><td><span class="sc">Observatoires.</span> — Nécessité de la création d’une succursale de l’Observatoire hors de Paris. Note de M. Mouchez</td><td>257</td></tr></table>"""
+    recovered98,_=parse_html(tome98.encode("utf-8"),98,1884)
+    assert [(r["elected_name_candidate"],r["election_role_candidate"],r["original_printed_volume_page"]) for r in recovered98]==[
+        ("Haton de la Goupillière","FULL_ACADEMICIAN_LIBRE","131"),
+        ("Darboux","FULL_SECTION_MEMBER","552"),
+        ("de Jonquières","FULL_ACADEMICIAN_LIBRE","713"),
+        ("Bouquet de la Grye","FULL_SECTION_MEMBER","865"),
+        ("Cailletet","FULL_ACADEMICIAN_LIBRE","1311"),
+        ("Salmon","CORRESPONDENT","1516")],recovered98
+    tome128="""<table>
+       <tr><td><span class="sc">Nominations de membres et correspondants de l’académie.</span> — M. Mendelejeff est élu Correspondant pour la Section de Chimie, en remplacement de M. Kékulé</td><td>215</td></tr>
+       <tr><td>— M. Roux est élu Membre de la Section d’Économie rurale, en remplacement de feu M. Aimé Girard</td><td>268</td></tr>
+       <tr><td>— M. Ray Lankester est élu Correspondant pour la Section d’Anatomie et Zoologie, en remplacement de M. Loven</td><td>543</td></tr>
+       <tr><td>— M. Lortet est élu Correspondant pour la Section d’Anatomie et Zoologie, en remplacement de M. Steenstrup</td><td>543</td></tr>
+       <tr><td>— M. Helmert est élu Correspondant pour la Section de Géographie et Navigation, en remplacement de Sir George-Henry Richards</td><td>582</td></tr>
+       <tr><td>— Le R. P. Colin est élu Correspondant pour la Section de Géographie et Navigation, en remplacement de M. Manen</td><td>656</td></tr>
+       <tr><td>— M. Prillieux est élu Membre de la Section de Botanique, en remplacement de M. Naudin</td><td>1146</td></tr>
+       <tr><td><span class="sc">Observatoires.</span> — Note de M. Faye, accompagnant la présentation du Tome I des Annales de l’Observatoire de Nice</td><td>265</td></tr>
+       <tr><td>— Le R. P. Autre est élu Membre de la commission locale</td><td>266</td></tr></table>"""
+    recovered128,_=parse_html(tome128.encode("utf-8"),128,1899)
+    assert [(r["elected_name_candidate"],r["election_role_candidate"],r["original_printed_volume_page"]) for r in recovered128]==[
+        ("Mendelejeff","CORRESPONDENT","215"),
+        ("Roux","FULL_SECTION_MEMBER","268"),
+        ("Ray Lankester","CORRESPONDENT","543"),
+        ("Lortet","CORRESPONDENT","543"),
+        ("Helmert","CORRESPONDENT","582"),
+        ("Colin","CORRESPONDENT","656"),
+        ("Prillieux","FULL_SECTION_MEMBER","1146")],recovered128
+    assert all(r[field]=="0" for r in recovered98+recovered128 for field in (
+        "original_election_printed_page_opened","official_membership_accepted",
+        "exact_dob_accepted","bazi_variables_computed"))
+    assert not event_heading("Nominations"),"Bare nominations still require an explicit bounded rule"
+    tome37="""<table>
+       <tr><td><span class="sc">Nominations</span>. — M. <i>Élie de Beaumont</i> est élu à la place de Secrétaire perpétuel pour les Sciences mathématiques, place vacante par suite du décès de M. <i>Arago</i></td><td>938</td></tr>
+       <tr><td>— M. Faux est élu Membre de la Section de Géométrie</td><td>939</td></tr>
+       <tr><td><span class="sc">Organographie et Organogénie végétales</span>. — Carpographie anatomique ; Note de M. Lestiboudois</td><td>69</td></tr></table>"""
+    # The synthetic next member line tests the deliberately restricted office
+    # scope, rather than legitimizing every event under bare Nominations.
+    recovered37,_=parse_html(tome37.encode("utf-8"),37,1853)
+    assert len(recovered37)==1,recovered37
+    assert (recovered37[0]["elected_name_candidate"],recovered37[0]["election_role_candidate"],recovered37[0]["original_printed_volume_page"])==(
+        "Élie de Beaumont","OFFICE_ELECTION_NOT_NEW_MEMBER","938"),recovered37
+    assert all(recovered37[0][field]=="0" for field in (
+        "original_election_printed_page_opened","official_membership_accepted",
+        "exact_dob_accepted","bazi_variables_computed"))
+
+    # Actual Shard03 source wording: bare Nominations can also begin with
+    # an explicitly appointed full section member. Subsequent external
+    # candidate recommendations are not Academy membership elections.
+    tome40="""<table>
+       <tr><td><span class="sc">Nominations</span>. — M. Delaunay est nommé Membre de la Section d’Astronomie en remplacement de M. Mauvais</td><td>567</td></tr>
+       <tr><td>— M. Daussy est nommé Membre de l’Académie, Section de Géographie et Navigation, en remplacement de feu M. Beautemps-Beaupré</td><td>829</td></tr>
+       <tr><td><span class="sc">Nominations</span>. — M. Jules Cloquet est nommé Membre de la Section de Médecine et Chirurgie en remplacement de feu M. Lallemand</td><td>1233</td></tr>
+       <tr><td>— M. Haussmann est nommé Correspondant de l’Académie, Section de Minéralogie et Géologie</td><td>410</td></tr>
+       <tr><td>— M. Malaguti est nommé Correspondant de l’Académie pour la Section de Chimie</td><td>524</td></tr>
+       <tr><td>— M. Bonnet est nommé Correspondant de l’Académie, Section de Médecine et de Chirurgie</td><td>933</td></tr>
+       <tr><td>— M. Delezenne est nommé Correspondant de l’Académie pour la Section de Physique en remplacement de M. de Haldat</td><td>1213</td></tr>
+       <tr><td>— L’Académie désigne, par la voie du scrutin, comme candidats pour la place vacante au Bureau des Longitudes, par suite de la mort de M. l’amiral Baudin, en première ligne M. Duperrey, en seconde ligne M. Jacquinot</td><td>285</td></tr>
+       <tr><td>— L’Académie désigne par la voie du scrutin comme candidats pour la chaire d’Histoire naturelle (corps organisés) vacante au Collége de France par suite du décès de M. Duvernoy, en première ligne M. Flourens, en seconde ligne M. Valenciennes</td><td>1097</td></tr>
+       <tr><td>— L’Académie désigne par la voie du scrutin comme candidats pour la chaire d’Anatomie comparée, vacante au Muséum d’Histoire, en première ligne M. Serres, en seconde ligne M. Gratiolet</td><td>1165</td></tr>
+       <tr><td>— L’Académie désigne par la voie du scrutin comme candidats pour une place vacante au Bureau des Longitudes, en première ligne M. Yvon Villarceau, en seconde ligne M. Goujon</td><td>1213</td></tr></table>"""
+    recovered40,_=parse_html(tome40.encode("utf-8"),40,1855)
+    assert [(r["elected_name_candidate"],r["election_role_candidate"],r["original_printed_volume_page"]) for r in recovered40]==[
+        ("Delaunay","FULL_SECTION_MEMBER","567"),
+        ("Daussy","FULL_SECTION_MEMBER","829"),
+        ("Jules Cloquet","FULL_SECTION_MEMBER","1233"),
+        ("Haussmann","CORRESPONDENT","410"),
+        ("Malaguti","CORRESPONDENT","524"),
+        ("Bonnet","CORRESPONDENT","933"),
+        ("Delezenne","CORRESPONDENT","1213")],recovered40
+
+    # Exact source structure around the Tome 131 transclusion page break:
+    # the role is outside either table, while the page occupies a single cell.
+    tome131="""<table><tbody>
+       <tr><td><span class="sc">Nominations</span>. — M. <i>Zambacco</i> est élu
+       </td></tr></tbody></table> <span><span class="pagenum ws-pagenum" id="TdM" title="Page:Comptes rendus hebdomadaires des séances de l’Académie des sciences, tome 131, 1900.djvu/1341"></span></span>
+       Correspondant pour la Section de Médecine et Chirurgie
+       <table><tbody><tr><td>22</td></tr>
+       <tr><td>— M. Czerny est élu Correspondant pour la Section de Médecine et Chirurgie.</td><td>96</td></tr>
+       <tr><td>— M. Lipschitz est élu Correspondant pour la Section de Géométrie</td><td>169</td></tr>
+       <tr><td>— M. Duhem est élu Correspondant pour la Section de Mécanique</td><td>325</td></tr>
+       <tr><td>— M. Joseph Hooker est élu Associé étranger, en remplacement de M. Bunsen</td><td>825</td></tr>
+       <tr><td>— M. Klein est élu Correspondant pour la Section de Minéralogie</td><td>825</td></tr>
+       <tr><td>— M. Haller est élu Membre de la Section de Chimie, en remplacement de M. Ed. Grimaux</td><td>865</td></tr>
+       <tr><td>— M. P. Painlevé est élu Membre de la Section de Géométrie, en remplacement de M. Darboux, nommé Secrétaire perpétuel</td><td>976</td></tr>
+       <tr><td>— M. Dedekind est élu Correspondant pour la Section de Géométrie</td><td>1286</td></tr>
+       <tr><td>— M. Strasburger est élu Correspondant pour la Section de Botanique</td><td>1286</td></tr>
+       <tr><td><span class="sc">Observatoires</span>. — Sur l’observatoire du mont Etna ; par M. Janssen</td><td>317</td></tr></tbody></table>"""
+    recovered131,_=parse_html(tome131.encode("utf-8"),131,1900)
+    assert [(r["elected_name_candidate"],r["election_role_candidate"],r["original_printed_volume_page"]) for r in recovered131]==[
+        ("Zambacco","CORRESPONDENT","22"),
+        ("Czerny","CORRESPONDENT","96"),
+        ("Lipschitz","CORRESPONDENT","169"),
+        ("Duhem","CORRESPONDENT","325"),
+        ("Joseph Hooker","FOREIGN_ASSOCIATE","825"),
+        ("Klein","CORRESPONDENT","825"),
+        ("Haller","FULL_SECTION_MEMBER","865"),
+        ("P. Painlevé","FULL_SECTION_MEMBER","976"),
+        ("Dedekind","CORRESPONDENT","1286"),
+        ("Strasburger","CORRESPONDENT","1286")],recovered131
+    # Do not invent the missing role or page when a source fragment is absent.
+    assert not parse_html(tome131.replace(
+        "Correspondant pour la Section de Médecine et Chirurgie\n", "\n",1).encode("utf-8"),131,1900)[0]
+    assert not parse_html(tome131.replace(
+        "<tr><td>22</td></tr>","<tr><td>unresolved</td></tr>",1).encode("utf-8"),131,1900)[0]
+    assert not explicit_named_academy_event("M. Exemple est élu Membre de la Commission des prix")
+    assert all(r[field]=="0" for r in recovered40+recovered131 for field in (
+        "original_election_printed_page_opened","official_membership_accepted",
+        "exact_dob_accepted","bazi_variables_computed"))
+
+    print("PASS: historical fixtures; 1853 office scope; 1855/1900 bare nominations and bounded split row; 1884/1899 member-libre and clergy names; source-only gates")
 
 def main():
     ap=argparse.ArgumentParser()
