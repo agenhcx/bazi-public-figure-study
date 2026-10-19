@@ -1,0 +1,79 @@
+name: France Academy pre-frozen Shard03 period-spread TOC source pilot
+on:
+  push:
+    branches:
+      - france-historic-nominations-shard03-v1-20261018
+    paths:
+      - '.github/workflows/france_academy_shard03_source_v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  bounded-16-source-events:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install pinned public HTML source reader
+        run: python -m pip install --disable-pip-version-check beautifulsoup4==4.12.3
+      - name: Test 1835/1856/1884/1899 and 20th-century election grammar without networking
+        run: python scripts/france_academy_wikisource_legacy_election_headings_v1.py --fixture-check && python scripts/france_academy_wikisource_election_rows_v1.py --fixture-check && python scripts/france_academy_run_remaining_172_toc_batch_v1.py --fixture-check
+      - name: Dry-run immutable 16-volume historical source plan for Shard 03
+        run: python scripts/france_academy_run_remaining_172_toc_batch_v1.py --shard 3
+      - name: Read exactly 16 official-indexed historical journal TOCs with SHA checks
+        run: python scripts/france_academy_run_remaining_172_toc_batch_v1.py --shard 3 --run --delay 1.5 --out-root data/france_academy_remaining_172_toc_batch_v1
+      - name: Preserve candidate events and quarantine suspect zero-parser TOCs
+        run: |
+          python - <<'PY'
+          import csv,json
+          from pathlib import Path
+          root=Path('data/france_academy_remaining_172_toc_batch_v1/shard_03')
+          summary=json.load(open(root/'summary.json',encoding='utf-8'))
+          checkpoint=json.load(open(root/'source_only_shard_checkpoint_v1.json',encoding='utf-8'))
+          ledger=json.load(open(root/'person_event_ledger_summary_v1.json',encoding='utf-8'))
+          with open(root/'academy_original_wikisource_211_volume_inventory_v1.csv',encoding='utf-8-sig',newline='') as f: sources=list(csv.DictReader(f))
+          with open(root/'verified_transcribed_person_event_candidates_v1.csv',encoding='utf-8-sig',newline='') as f: rows=list(csv.DictReader(f))
+          expected=[11,12,13,39,40,69,70,100,102,131,132,162,163,191,192,193]
+          assert summary['table_of_contents_probed_volumes']==expected
+          assert checkpoint['shard']==3 and sorted(checkpoint['volumes'])==expected
+          assert ledger['parsed_event_rows']==len(rows)==summary['sample_election_event_candidates']
+          assert ledger['source_200_bytes_checked']+ledger['other_TOC_statuses_not_election_zero']==16
+          assert all(x['source_sha256_verified_against_inventory']=='1' for x in rows)
+          assert all(x['official_member_status_accepted']==x['exact_dob_accepted']==x['bazi_variables_computed']=='0' for x in rows)
+          assert ledger['accepted_french_members']==ledger['accepted_DOBs']==ledger['bazi_variables_computed']==0
+          suspects=[]
+          for x in sources:
+            if x['table_sampled']!='1':continue
+            if x['table_http_status']=='HTTP_200' and x['transcribed_election_rows']=='0':
+              suspects.append({'volume':x['volume'],'year':x['year'],'heading':x['election_heading_detected'],
+                  'source_SHA256':x['table_html_sha256'],'source_url':x['wikisource_table_url'],
+                  'review_status':'READABLE_TOC_PARSER_ZERO_NOT_EVIDENCE_OF_NO_ELECTION'})
+          with open(root/'shard03_zero_parser_manual_source_queue_v1.csv','w',encoding='utf-8-sig',newline='') as f:
+            w=csv.DictWriter(f,fieldnames=['volume','year','heading','source_SHA256','source_url','review_status'])
+            w.writeheader();w.writerows(suspects)
+          print('SHARD03',json.dumps({'volumes':expected,'HTTP':summary['table_probe_http_status'],'event_candidates':len(rows),
+            'roles':ledger['event_classes'],'CTHS_unique_name_leads':ledger['cths_562_unique_exact_name_event_candidates'],
+            'zero_parser_review':suspects,'unnamed_event_sources':[(x['volume'],x['first_printed_page_candidate']) for x in rows if not x['name_as_transcribed']]},ensure_ascii=False))
+          PY
+      - name: Preserve source-only historical member-event evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: france-academy-frozen-shard03-provenance-events
+          path: data/france_academy_remaining_172_toc_batch_v1/shard_03/
+          retention-days: 45
+      - name: Git-checkpoint source metadata without raw HTML pages
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/france_academy_remaining_172_toc_batch_v1/shard_03/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Checkpoint 16 Shard03 historical French Academy TOC source events'
+            git fetch origin france-historic-nominations-shard03-v1-20261018
+            git rebase origin/france-historic-nominations-shard03-v1-20261018
+            git push origin HEAD:france-historic-nominations-shard03-v1-20261018
+          fi
