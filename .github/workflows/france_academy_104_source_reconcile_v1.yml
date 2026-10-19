@@ -1,0 +1,67 @@
+name: France Academy 104 historical volume source reconciliation with 299 event-index candidates
+on:
+  push:
+    branches:
+      - france-historic-nominations-shard03-v1-20261018
+    paths:
+      - 'scripts/france_academy_cumulative_104_source_QA_v1.py'
+      - '.github/workflows/france_academy_104_source_reconcile_v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  offline-cumulative-source-invariants:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.10','3.13']
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Compile source-only metadata join and run invariant fixture
+        run: python -m py_compile scripts/france_academy_cumulative_104_source_QA_v1.py && python scripts/france_academy_cumulative_104_source_QA_v1.py --fixture-check
+      - name: Rebuild 104 audited source volumes and 299 indexed event occurrences WITHOUT network
+        run: python scripts/france_academy_cumulative_104_source_QA_v1.py
+      - name: Verify no old source snapshots or historical birth data were modified
+        run: |
+          python - <<'PY'
+          import json,csv
+          root='data/france_academy_remaining_172_toc_batch_v1/'
+          j=json.load(open(root+'cumulative_104_source_summary_v1.json',encoding='utf8'))
+          with open(root+'cumulative_104_source_checked_volume_evidence_v1.csv',encoding='utf-8-sig',newline='') as f: vols=list(csv.DictReader(f))
+          with open(root+'shard_03/Zambacco_corrected_61_historical_event_evidence_overlay_v1.csv',encoding='utf-8-sig',newline='') as f: people=list(csv.DictReader(f))
+          assert len(vols)==104 and len({x['volume'] for x in vols})==104
+          assert j['TOC_source_HTTP_status']=={'HTTP_200':72,'HTTP_404':32}
+          assert j['TOC_index_event_candidate_rows']==299 and j['remaining_original_volume_TOCPages_never_checked']==107
+          assert len(people)==61 and j['in_new_fixed_Shard03_roles_after_Zambacco']['CORRESPONDENT']==47
+          assert len([x for x in people if x['role_followup_overlay_applied']=='1'])==1
+          assert j['members_accepted_in_analytical_cohort']==j['exact_birthdays_accepted']==j['bazi_features_computed']==0
+          print('PASS 104 independent journal sources, 299 INDEX event appearances and no scientific cohort admission')
+          PY
+      - name: Preserve new cumulative source-only metadata
+        if: matrix.python-version == '3.10'
+        uses: actions/upload-artifact@v4
+        with:
+          name: france-academy-104-TOC-corrected-source-overlay-v1
+          path: |
+            data/france_academy_remaining_172_toc_batch_v1/cumulative_104_source_checked_volume_evidence_v1.csv
+            data/france_academy_remaining_172_toc_batch_v1/cumulative_104_source_summary_v1.json
+            data/france_academy_remaining_172_toc_batch_v1/shard_03/Zambacco_corrected_61_historical_event_evidence_overlay_v1.csv
+          retention-days: 45
+      - name: Commit derived overlay only after reproducibility passes
+        if: matrix.python-version == '3.10'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/france_academy_remaining_172_toc_batch_v1/cumulative_104_source_checked_volume_evidence_v1.csv data/france_academy_remaining_172_toc_batch_v1/cumulative_104_source_summary_v1.json data/france_academy_remaining_172_toc_batch_v1/shard_03/Zambacco_corrected_61_historical_event_evidence_overlay_v1.csv
+          if ! git diff --cached --quiet; then
+            git commit -m 'Checkpoint 104 distinct Academy source volumes and 299 candidate index events preserving all historical inputs'
+            git fetch origin france-historic-nominations-shard03-v1-20261018
+            git rebase origin/france-historic-nominations-shard03-v1-20261018
+            git push origin HEAD:france-historic-nominations-shard03-v1-20261018
+          fi
