@@ -11,9 +11,9 @@ import argparse,csv,hashlib,json,time,re,urllib.error
 from pathlib import Path
 from bs4 import BeautifulSoup
 from france_academy_wikisource_index_preflight_v1 import build_urls,read_one
-from france_academy_wikisource_legacy_election_headings_v1 import parse_html
+from france_academy_wikisource_legacy_election_headings_v1 import parse_html,source_cross_table_role_continuations
 
-V="france-academy-1900-Zambacco-two-index-row-join-QA-v1"
+V="france-academy-1900-Zambacco-two-index-row-join-QA-v1_1"
 ORIGINAL=Path("data/france_academy_remaining_172_toc_batch_v1/shard_03")
 OUT=Path("data/france_academy_shard03_Zambacco_source_overlay_v1")
 COLS=["volume","year","source_name_form","original_SHARD03_role","new_conservative_role",
@@ -28,6 +28,8 @@ def readcsv(p):
     with p.open(encoding="utf-8-sig",newline="") as f:return list(csv.DictReader(f))
 def source_two_rows(raw):
     soup=BeautifulSoup(raw,"html.parser")
+    cross=[(x["first_row_text"],x["role_text"]+" | "+x["page"]) for x in source_cross_table_role_continuations(soup) if x["name"]=="Zambacco"]
+    if cross:return cross
     result=[]
     trs=soup.find_all("tr")
     for i,tr in enumerate(trs):
@@ -48,6 +50,12 @@ def fixture():
     assert len(p)==1 and p[0]["elected_name_candidate"]=="Zambacco",p
     assert p[0]["election_role_candidate"]=="CORRESPONDENT" and p[0]["original_printed_volume_page"]=="22",p
     assert len(source_two_rows(html))==1
+    broken=("<table><tr><td><span class='sc'>Nominations.</span> — M. Zambacco est élu</td></tr></table>"
+       "<span class='pagenum'></span> Correspondant pour la Section de Médecine et Chirurgie "
+       "<table><tr><td>22</td></tr></table>").encode("utf8")
+    assert len(source_two_rows(broken))==1
+    assert "Correspondant" in source_two_rows(broken)[0][1]
+
     print("PASS: adjacent explicit member-role continuation joins only one source election")
 def main():
     ap=argparse.ArgumentParser()
