@@ -1,0 +1,64 @@
+name: France Academy 1853 office 1884 libre/section and 1899 full-member original page checks
+on:
+  push:
+    branches:
+      - france-historic-nominations-shard03-v1-20261018
+    paths:
+      - '.github/workflows/france_academy_1853_1884_1899_original_pages_v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  bounded-primary-printed-page-previews:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install pinned historical HTML source parser
+        run: python -m pip install --disable-pip-version-check beautifulsoup4==4.12.3
+      - name: Validate original print page to DjVu frame mapper without networking
+        run: python scripts/france_academy_generic_original_page_source_v1.py --fixture-check
+      - name: Inspect 1853 Tome37 p938 Secrétaire perpétuel OFFICE election source
+        run: python scripts/france_academy_generic_original_page_source_v1.py --volume 37 --year 1853 --pages 938 --download --out data/france_academy_1853_1884_1899_original_page_pilot_v1/tome037 --images local_runs/france_academy_1853_1884_1899_original_images
+      - name: Inspect 1884 Tome98 p131 libre member vs p552 ordinary section
+        run: python scripts/france_academy_generic_original_page_source_v1.py --volume 98 --year 1884 --pages 131,552 --download --out data/france_academy_1853_1884_1899_original_page_pilot_v1/tome098 --images local_runs/france_academy_1853_1884_1899_original_images
+      - name: Inspect 1899 Tome128 p268 Roux elected section member
+        run: python scripts/france_academy_generic_original_page_source_v1.py --volume 128 --year 1899 --pages 268 --download --out data/france_academy_1853_1884_1899_original_page_pilot_v1/tome128 --images local_runs/france_academy_1853_1884_1899_original_images
+      - name: Enforce signed-decree/nonacceptance boundaries and source status recording
+        run: |
+          python - <<'PY'
+          import json
+          base='data/france_academy_1853_1884_1899_original_page_pilot_v1/'
+          cases={'tome037':{938},'tome098':{131,552},'tome128':{268}}
+          for folder,expected in cases.items():
+            s=json.load(open(base+folder+'/original_source_page_scan_metadata_v1.json',encoding='utf-8'))
+            assert {x['printed_page_label'] for x in s['records']}==expected
+            assert s['accepted_regular_academy_members']==s['accepted_DOBs']==s['bazi_variables_computed']==0
+            assert s['original_scan_visually_interpreted_in_script']==0
+            print('HISTORIC_ORIGINAL_FRAME_STATUS',folder,[(x['printed_page_label'],x.get('djvu_frame'),x['status'],x.get('image_bytes')) for x in s['records']])
+          PY
+      - name: Preserve a few historical source previews for direct visual research review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: france-academy-1853-1884-1899-four-original-image-previews
+          path: local_runs/france_academy_1853_1884_1899_original_images/*.jpg
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Checkpoint public source links SHA and initial unreviewed status only
+        if: success()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/france_academy_1853_1884_1899_original_page_pilot_v1/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Record four historical office libre and full-member original Académie page scan source locators'
+            git fetch origin france-historic-nominations-shard03-v1-20261018
+            git rebase origin/france-historic-nominations-shard03-v1-20261018
+            git push origin HEAD:france-historic-nominations-shard03-v1-20261018
+          fi
