@@ -78,6 +78,10 @@ def main():
                 diagnostics.append({"cells":[x.get_text(" ",strip=True)[:350] for x in td],
                                     "html_excerpt":str(adj)[:1050]})
         print("ORIGINAL_ZAMBACCO_HTML_DOM",json.dumps(diagnostics,ensure_ascii=False),flush=True)
+        rawhtml=raw.decode("utf-8","replace")
+        pos=rawhtml.find("Zambacco</i> est élu")
+        if pos<0:pos=rawhtml.find("Zambacco")
+        print("ORIGINAL_ZAMBACCO_HTML_NEIGHBORS",rawhtml[max(0,pos-190):pos+690] if pos>=0 else "NO_HTML_TEXT",flush=True)
         raise RuntimeError("Did not confirm original second-row role and printed page in live 1900 text: "+repr(current))
     pair=source_two_rows(raw)
     if len(pair)!=1 or "Correspondant" not in pair[0][1]:
