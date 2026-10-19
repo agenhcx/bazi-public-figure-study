@@ -18,7 +18,7 @@ from bs4 import BeautifulSoup
 from france_academy_wikisource_index_preflight_v1 import build_urls,read_one
 from france_academy_wikisource_election_rows_v1 import role_of,section_of,person_of,identity_key,extract_from_html
 
-VERSION="france-academy-legacy-heading-wikisource-source-only-v1_8"
+VERSION="france-academy-legacy-heading-wikisource-source-only-v1_9"
 VOLUMES=[(1,1835),(42,1856),(43,1856),(91,1880),(182,1926)]
 CTHS="data/france_academy_cths_profile_dob_harvest_v1/cths_dob_claims_all_targets_candidate_only_v1.csv"
 OUT=Path("data/france_academy_wikisource_legacy_heading_pilot_v1")
@@ -81,6 +81,65 @@ def page_references(s):
         return ("",original[:90])
     nums=re.findall(r"\d{1,5}",original)
     return (nums[0],"|".join(nums))
+
+def source_cross_table_role_continuations(soup):
+    """Return only demonstrably adjacent election-role+page source fragments.
+
+    Wikisource Tome 131/1900 has malformed historical HTML:
+       ... <tr><td>Nominations. — M. Zambacco est élu</td></tr></table>
+       <span class=pagenum ...></span> Correspondant pour la Section ...
+       <table><tr><td>22</td></tr><tr><td>M. Czerny...</td> ...
+    The role text is a RAW sibling between two distinct tables, not a <tr>.
+    Require: previous last table row explicitly ends with "est élu/nommé",
+    a short role-bearing inter-table string, and next table's first numeric
+    page-only row. Never join across an unrelated heading or page block.
+    """
+    out=[]
+    for table in soup.find_all("table"):
+        trs=table.find_all("tr")
+        if not trs:continue
+        last=trs[-1]
+        cells=last.find_all("td",recursive=False)
+        if len(cells)!=1:continue
+        first=" ".join(cells[0].get_text(" ",strip=True).split())
+        if not re.search(r"\best\s+(?:élu|nommé)\s*[.;]?$",first,re.I):continue
+        is_nom=bool(re.search(r"\best\s+nomm[ée]e?\s*[.;]?$",first,re.I))
+        name=nominated_name_from_line(first) if is_nom else name_from_line(first)
+        if not name:continue
+        rawloose=[]
+        next_table=None
+        for sibling in table.next_siblings:
+            tag=getattr(sibling,"name",None)
+            if tag=="table":
+                next_table=sibling;break
+            if tag in ("span","br","wbr"):continue
+            if tag is None:
+                txt=str(sibling)
+            elif tag in ("p","div"):
+                txt=sibling.get_text(" ",strip=True)
+            else:
+                break
+            if txt.strip():rawloose.append(txt.strip())
+            if len(" ".join(rawloose))>250:break
+        if next_table is None:continue
+        fragment=" ".join(" ".join(rawloose).split())
+        m=re.match(r"^(Correspondant(?:e)?|Membre libre|Membre|Associé étranger|Académicien libre)\b",fragment,re.I)
+        if not m or len(fragment)>240:continue
+        rows=next_table.find_all("tr")
+        if not rows:continue
+        nextcells=rows[0].find_all("td",recursive=False)
+        if len(nextcells)!=1:continue
+        page=" ".join(nextcells[0].get_text(" ",strip=True).split())
+        if not re.fullmatch(r"\d{1,5}",page):continue
+        tag=fold(m.group(1))
+        role=("CORRESPONDENT" if tag.startswith("correspondant") else
+              "FULL_ACADEMICIAN_LIBRE" if "libre" in tag else
+              "FOREIGN_ASSOCIATE" if tag.startswith("associe") else "FULL_SECTION_MEMBER")
+        out.append({"name":name,"role":role,"page":page,
+                    "role_text":fragment,"first_row_text":first,
+                    "section":nomination_section(fragment) if is_nom else
+                              section_of("M. X est élu "+fragment)})
+    return out
 
 def parse_html(raw,volume,year):
     """Parse TR and div.tableItem representations independently and deduplicate.
@@ -221,6 +280,18 @@ def parse_html(raw,volume,year):
             pending_unnamed_role=(linked if linked["election_role_candidate"] in
                 ("UNKNOWN_ROLE_MANUAL","NOMINATION_UNKNOWN_MEMBER_CLASS_MANUAL")
                 and not linked["original_printed_volume_page"] else None)
+    for row in source_cross_table_role_continuations(soup):
+        matches=[x for x in events if fold(x["elected_name_candidate"])==fold(row["name"])
+                 and not x["original_printed_volume_page"]
+                 and x["election_role_candidate"] in
+                    ("UNKNOWN_ROLE_MANUAL","NOMINATION_UNKNOWN_MEMBER_CLASS_MANUAL")]
+        if len(matches)!=1:continue
+        ev=matches[0]
+        ev["election_role_candidate"]=row["role"]
+        ev["original_printed_volume_page"]=row["page"]
+        ev["source_printed_page_references"]=row["page"]
+        ev["science_section_candidate"]=row["section"]
+        ev["joined_role_and_page_across_table_break"]="1"
     return events,headings
 
 def write_csv(p,rows,fields):
@@ -308,6 +379,16 @@ def fixture():
     assert split[0]["original_printed_volume_page"]=="22",split
     assert split[0]["joined_role_page_from_next_index_row"]=="1",split
     assert "Médecine" in split[0]["science_section_candidate"],split
+    split_tables="""<table><tr><td><span class="sc">Nominations.</span> — M. Zambacco est élu</td></tr></table>
+       <span class="pagenum ws-pagenum"></span>
+       Correspondant pour la Section de Médecine et Chirurgie
+       <table><tr><td>22</td></tr><tr><td>— M. Czerny est élu Correspondant pour la Section de Médecine</td><td>96</td></tr></table>"""
+    split2,_=parse_html(split_tables.encode("utf-8"),131,1900)
+    assert len(split2)==2,split2
+    assert split2[0]["elected_name_candidate"]=="Zambacco" and split2[0]["election_role_candidate"]=="CORRESPONDENT",split2
+    assert split2[0]["original_printed_volume_page"]=="22" and split2[0]["joined_role_and_page_across_table_break"]=="1",split2
+    assert len(source_cross_table_role_continuations(BeautifulSoup(split_tables,"html.parser")))==1
+
     split_bad=split_html.replace("Correspondant pour la Section de Médecine et Chirurgie","Sur le travail du professeur Zambacco")
     not_joined,_=parse_html(split_bad.encode("utf-8"),131,1900)
     assert len(not_joined)==1 and not_joined[0]["election_role_candidate"]=="UNKNOWN_ROLE_MANUAL"
