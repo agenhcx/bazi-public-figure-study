@@ -1,0 +1,60 @@
+name: France 1853 secretariat and 1884 libre election ballot continuation scans
+on:
+  push:
+    branches:
+      - france-historic-nominations-shard03-v1-20261018
+    paths:
+      - '.github/workflows/france_academy_1853_1884_continuation_pages_v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  two-source-continuation-original-pages:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install public-domain journal page HTML parser
+        run: python -m pip install --disable-pip-version-check beautifulsoup4==4.12.3
+      - name: Test bounded generic source page/number mapper
+        run: python scripts/france_academy_generic_original_page_source_v1.py --fixture-check
+      - name: Check 1853 tome37 secretary perpetual election continuation original p939
+        run: python scripts/france_academy_generic_original_page_source_v1.py --volume 37 --year 1853 --pages 939 --download --out data/france_academy_1853_1884_continuation_pages_v1/tome037 --images local_runs/france_academy_1853_1884_continuation_images
+      - name: Check 1884 tome98 Haton libre election continuation original p132
+        run: python scripts/france_academy_generic_original_page_source_v1.py --volume 98 --year 1884 --pages 132 --download --out data/france_academy_1853_1884_continuation_pages_v1/tome098 --images local_runs/france_academy_1853_1884_continuation_images
+      - name: Verify original page-source statuses without declaring final admissions
+        run: |
+          python - <<'PY'
+          import json
+          for tome,page in [('tome037',939),('tome098',132)]:
+            f='data/france_academy_1853_1884_continuation_pages_v1/'+tome+'/original_source_page_scan_metadata_v1.json'
+            r=json.load(open(f,encoding='utf8'))
+            assert len(r['records'])==1 and r['records'][0]['printed_page_label']==page
+            assert r['accepted_regular_academy_members']==r['accepted_DOBs']==r['bazi_variables_computed']==0
+            print('PAGE_CONTINUATION_QA',tome,page,r['records'][0]['status'],r['records'][0].get('djvu_frame'),r['records'][0].get('image_bytes'))
+          PY
+      - name: Preserve public 1853/1884 page scans temporarily for direct visual checking
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: france-academy-1853-1884-two-continuation-source-images
+          path: local_runs/france_academy_1853_1884_continuation_images/*.jpg
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Save original facsimile URL SHA and unreviewed status only
+        if: success()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/france_academy_1853_1884_continuation_pages_v1/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Record original 1853 secretary and 1884 libre ballot continuation page source SHA metadata'
+            git fetch origin france-historic-nominations-shard03-v1-20261018
+            git rebase origin/france-historic-nominations-shard03-v1-20261018
+            git push origin HEAD:france-historic-nominations-shard03-v1-20261018
+          fi
