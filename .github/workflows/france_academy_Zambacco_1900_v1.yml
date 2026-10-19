@@ -1,0 +1,53 @@
+name: France 1900 Zambacco wrapped Correspondant index event
+on:
+  push:
+    branches:
+      - france-historic-nominations-shard03-v1-20261018
+    paths:
+      - 'scripts/france_academy_Zambacco_1900_wrapped_nomination_v1.py'
+      - '.github/workflows/france_academy_Zambacco_1900_v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  original-two-line-source-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install pinned source HTML parser
+        run: python -m pip install --disable-pip-version-check beautifulsoup4==4.12.3
+      - name: Run synthetic two-row role+page regression with no network
+        run: python -m py_compile scripts/france_academy_Zambacco_1900_wrapped_nomination_v1.py && python scripts/france_academy_wikisource_legacy_election_headings_v1.py --fixture-check && python scripts/france_academy_Zambacco_1900_wrapped_nomination_v1.py --fixture-check
+      - name: Read one original 1900 public TOC and pin source correction
+        run: python scripts/france_academy_Zambacco_1900_wrapped_nomination_v1.py
+      - name: Preserve and check existing 61 event/zero-admission source frame
+        run: |
+          python - <<'PY'
+          import json,csv
+          p='data/france_academy_shard03_Zambacco_source_overlay_v1/'
+          j=json.load(open(p+'summary.json',encoding='utf8'))
+          with open(p+'Zambacco_1900_single_event_source_role_correction_v1.csv',encoding='utf-8-sig',newline='') as f: r=list(csv.DictReader(f))
+          assert len(r)==1 and r[0]['new_conservative_role']=='CORRESPONDENT'
+          assert r[0]['new_original_printed_page_claim']=='22'
+          assert j['original_shard03_event_rows']==61 and j['original_index_event_count_change']==0
+          assert j['new_role_counts_for_61_shard03_events']=={'UNKNOWN_ROLE_MANUAL':0,'CORRESPONDENT':47}
+          assert j['membership_accepted']==j['birthdate_accepted']==j['bazi_features']==0
+          print('AUDIT_WRAPPED_HISTORICAL_ROLE',r[0]['first_source_row_excerpt'],r[0]['second_continuation_excerpt'])
+          PY
+      - name: Record additive source correction (never overwrite original source record)
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/france_academy_shard03_Zambacco_source_overlay_v1/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Add 1900 Zambacco Correspondant continuation row and page22 correction overlay'
+            git fetch origin france-historic-nominations-shard03-v1-20261018
+            git rebase origin/france-historic-nominations-shard03-v1-20261018
+            git push origin HEAD:france-historic-nominations-shard03-v1-20261018
+          fi
