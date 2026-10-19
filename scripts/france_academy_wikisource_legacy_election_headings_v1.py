@@ -18,7 +18,7 @@ from bs4 import BeautifulSoup
 from france_academy_wikisource_index_preflight_v1 import build_urls,read_one
 from france_academy_wikisource_election_rows_v1 import role_of,section_of,person_of,identity_key,extract_from_html
 
-VERSION="france-academy-legacy-heading-wikisource-source-only-v1_7"
+VERSION="france-academy-legacy-heading-wikisource-source-only-v1_8"
 VOLUMES=[(1,1835),(42,1856),(43,1856),(91,1880),(182,1926)]
 CTHS="data/france_academy_cths_profile_dob_harvest_v1/cths_dob_claims_all_targets_candidate_only_v1.csv"
 OUT=Path("data/france_academy_wikisource_legacy_heading_pilot_v1")
@@ -148,11 +148,13 @@ def parse_html(raw,volume,year):
                     if not p1 and p2:x["original_printed_volume_page"]=p2
                     if not x.get("source_printed_page_references") and candidate.get("source_printed_page_references"):
                         x["source_printed_page_references"]=candidate["source_printed_page_references"]
-                    return
+                    return x
         events.append(candidate)
+        return candidate
 
     for logical in (table_rows,legacy_rows):
         in_events=False
+        pending_unnamed_role=None
         for line,page,decorated,page_refs in logical:
             if not line:continue
             prefix=line.split("—",1)[0].strip(" .")
@@ -169,7 +171,34 @@ def parse_html(raw,volume,year):
                 in_events=False
             elif fold(prefix).startswith(("candidatures","prix","decrets","decret","necrologie","deces")):
                 in_events=False
-            if not in_events:continue
+            if not in_events:
+                pending_unnamed_role=None
+                continue
+            # Original journal TOC layout may split a SINGLE event into:
+            # "Nominations. — M. Zambacco est élu" (no page/category),
+            # followed immediately by "Correspondant pour la Section ... | 22".
+            # Only join directly adjacent rows, with an explicit member-role
+            # word and an actual printed-page column. Never guess the role.
+            if pending_unnamed_role is not None:
+                cont=fold(line).lstrip("—–- ").strip()
+                mrole=re.match(r"^(correspondant(?:e)?|membre libre|membre|associe etranger|academicien libre)\b",cont)
+                if (not decorated and mrole and page and
+                    pending_unnamed_role["election_role_candidate"] in
+                      ("UNKNOWN_ROLE_MANUAL","NOMINATION_UNKNOWN_MEMBER_CLASS_MANUAL")):
+                    tag=mrole.group(1)
+                    classification=("CORRESPONDENT" if tag.startswith("correspondant") else
+                      "FULL_ACADEMICIAN_LIBRE" if "libre" in tag else
+                      "FOREIGN_ASSOCIATE" if tag.startswith("associe") else "FULL_SECTION_MEMBER")
+                    pending_unnamed_role["election_role_candidate"]=classification
+                    pending_unnamed_role["original_printed_volume_page"]=page
+                    pending_unnamed_role["source_printed_page_references"]=page_refs or page
+                    pending_unnamed_role["science_section_candidate"]=(
+                        nomination_section(line) if pending_unnamed_role["source_action_wording"]=="EST_NOMME_TRANSCRIBED"
+                        else section_of("M. X est élu "+line))
+                    pending_unnamed_role["joined_role_page_from_next_index_row"]="1"
+                    pending_unnamed_role=None
+                    continue
+                pending_unnamed_role=None
             nominated=bool(re.search(r"\best\s+nomm[ée]e?\b",line,re.I))
             elected=bool(re.search(r"\b(est|a été|sont)\s+élu",line,re.I))
             if not (nominated or elected):continue
@@ -188,7 +217,10 @@ def parse_html(raw,volume,year):
                 "original_election_printed_page_opened":"0",
                 "official_membership_accepted":"0","exact_dob_accepted":"0",
                 "bazi_variables_computed":"0"}
-            add_unique(candidate)
+            linked=add_unique(candidate)
+            pending_unnamed_role=(linked if linked["election_role_candidate"] in
+                ("UNKNOWN_ROLE_MANUAL","NOMINATION_UNKNOWN_MEMBER_CLASS_MANUAL")
+                and not linked["original_printed_volume_page"] else None)
     return events,headings
 
 def write_csv(p,rows,fields):
@@ -265,6 +297,20 @@ def fixture():
     assert len(office)==1 and office[0]["election_role_candidate"]=="OFFICE_ELECTION_NOT_NEW_MEMBER",office
     assert event_heading("Nominations de membres et correspondants de l’académie.")
     assert not event_heading("Nominations de candidats aux concours")
+    split_html="""<table>
+      <tr><td><span class="sc">Nominations.</span> — M. Zambacco est élu</td><td></td></tr>
+      <tr><td>Correspondant pour la Section de Médecine et Chirurgie</td><td>22</td></tr>
+      <tr><td><span class="sc">Physique.</span> — M. Faux est élu membre d'un jury</td><td>23</td></tr>
+      </table>"""
+    split,_=parse_html(split_html.encode("utf-8"),131,1900)
+    assert len(split)==1 and split[0]["elected_name_candidate"]=="Zambacco",split
+    assert split[0]["election_role_candidate"]=="CORRESPONDENT",split
+    assert split[0]["original_printed_volume_page"]=="22",split
+    assert split[0]["joined_role_page_from_next_index_row"]=="1",split
+    assert "Médecine" in split[0]["science_section_candidate"],split
+    split_bad=split_html.replace("Correspondant pour la Section de Médecine et Chirurgie","Sur le travail du professeur Zambacco")
+    not_joined,_=parse_html(split_bad.encode("utf-8"),131,1900)
+    assert len(not_joined)==1 and not_joined[0]["election_role_candidate"]=="UNKNOWN_ROLE_MANUAL"
 
 
     print("PASS: 1835 election, 1856 est nommé in nominations, 1880/1926 elections; candidatures/decrees excluded")
