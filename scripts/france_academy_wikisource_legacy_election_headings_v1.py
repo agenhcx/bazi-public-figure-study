@@ -34,14 +34,12 @@ def fold(s):
     s=unicodedata.normalize("NFKD",str(s).casefold())
     return "".join(c for c in s if not unicodedata.combining(c))
 def event_heading(s):
-    x=fold(s)
-    # 1884/1899: "Nominations de membres et correspondants" (WITHOUT
-    # second "de"). 1853: bare "Nominations" contains an election to
-    # Secrétaire perpétuel -- an OFFICE event, never a new regular member.
-    # Accept the section heading only; classify EACH explicit action clause.
-    return bool(re.match(
-        r"^(?:elections?(?: de membres)?|nominations?(?: de membres(?: et (?:de )?correspondants(?: de l.academie)?)?)?)\\b",
-        x))
+    x=" ".join(fold(s).strip(" .:—-").split())
+    # Heading classification is EXACT, so "Nominations de candidats"
+    # cannot start a false election section.
+    # 1884/1899 omit "de" before correspondants, 1853 has just "Nominations".
+    pat=r"^(?:elections?|nominations?)(?: de membres(?: et (?:de )?correspondants(?: de l.academie)?)?)?$"
+    return bool(re.fullmatch(pat,x))
 def name_from_line(line):
     raw=re.sub(r"\bM\.\s*\(\s*Monsieur\s*\)\s*","M. ",line,flags=re.I)
     raw=re.sub(r"\bM\.\s*\(\s*M\.\s*\)\s*","M. ",raw,flags=re.I)
