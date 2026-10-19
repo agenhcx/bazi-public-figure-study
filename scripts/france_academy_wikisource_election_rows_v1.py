@@ -71,9 +71,9 @@ def person_of(line):
         # 1899: a historical entry may identify a priest by title only:
         # "Le R. P. Colin est élu Correspondant". Preserve the literal
         # source form; do NOT invent or infer his given names.
-        m=re.search(r"\\b(Le\\s+R\\.\\s*P\\.\\s+.{2,120}?)\\s+est\\s+[ée]lu(?:e)?\\b",line,re.I)
+        m=re.search(r"\b(Le\s+R\.\s*P\.\s+.{2,120}?)\s+est\s+[ée]lu(?:e)?\b",line,re.I)
     if not m:return ""
-    name=re.sub(r"\\s+"," ",m.group(1)).strip(" ;,-.")
+    name=re.sub(r"\s+"," ",m.group(1)).strip(" ;,-.")
     if not name or len(name)>110 or " et " in name.lower():return ""
     return name
 def section_of(line):
