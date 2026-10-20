@@ -1,0 +1,89 @@
+name: France Academy P2 source revision replay
+on:
+  push:
+    branches:
+      - france-academy-p2-source-v1-20261020
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  offline-source-replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    strategy:
+      matrix:
+        python-version: ['3.10', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install pinned parser dependency
+        run: python -m pip install --disable-pip-version-check beautifulsoup4==4.12.3
+      - name: Check source grammar and all thirty-two source integrity regressions
+        run: |
+          python scripts/france_academy_wikisource_election_rows_v1.py --fixture-check
+          python scripts/france_academy_wikisource_legacy_election_headings_v1.py --fixture-check
+          python -m unittest discover -s scripts -p 'test_france_academy_*resume*.py' -v
+          python scripts/test_france_academy_p1_revision_v1.py -v
+          python scripts/test_france_academy_p2_revision_v1.py -v
+      - name: Restore previous and current checksum-verified source snapshots
+        run: |
+          python scripts/france_academy_source_cache_bundle_v1.py --restore data/france_academy_shard03_source_snapshot_v1/source_cache_v1.tar.gz
+          python scripts/france_academy_source_cache_bundle_v1.py --restore data/france_academy_shard04_source_snapshot_v1/source_cache_v1.tar.gz
+          python scripts/france_academy_source_cache_bundle_v1.py --restore data/france_academy_shard05_p1_source_snapshot_v1/source_cache_v1.tar.gz
+          python scripts/france_academy_source_cache_bundle_v1.py --restore data/france_academy_shard06_source_snapshot_v1/source_cache_v1.tar.gz
+          python scripts/france_academy_source_cache_bundle_v1.py --restore data/france_academy_shard07_source_snapshot_v1/source_cache_v1.tar.gz
+          python scripts/france_academy_source_cache_bundle_v1.py --restore data/france_academy_shard08_source_snapshot_v1/source_cache_v1.tar.gz
+          python scripts/france_academy_source_cache_bundle_v1.py --restore data/france_academy_shard09_source_snapshot_v1/source_cache_v1.tar.gz
+          python scripts/france_academy_source_cache_bundle_v1.py --restore data/france_academy_shard10_source_snapshot_v1/source_cache_v1.tar.gz
+          python scripts/france_academy_source_cache_bundle_v1.py --restore data/france_academy_legacy_p2_source_snapshot_v1/source_cache_v1.tar.gz
+      - name: Verify all ten preserved source ledgers remain unchanged
+        run: |
+          python - <<'PY'
+          import sys
+          from pathlib import Path
+          sys.path.insert(0, 'scripts')
+          from france_academy_update_source_checkpoint_v2 import verify_batch
+          cache = Path('local_runs/france_academy_211_volume_inventory_source_cache_v1')
+          batches = [
+              ('data/france_academy_shard02_grammar_review_v2', 14),
+              ('data/france_academy_remaining_172_toc_batch_v1/shard_03', 61),
+              ('data/france_academy_remaining_172_toc_batch_v1/shard_04', 70),
+              ('data/france_academy_legacy_p1_review_v1', 23),
+              ('data/france_academy_remaining_172_toc_batch_v1/shard_05', 60),
+              ('data/france_academy_remaining_172_toc_batch_v1/shard_06', 58),
+              ('data/france_academy_remaining_172_toc_batch_v1/shard_07', 61),
+              ('data/france_academy_remaining_172_toc_batch_v1/shard_08', 51),
+              ('data/france_academy_remaining_172_toc_batch_v1/shard_09', 53),
+              ('data/france_academy_remaining_172_toc_batch_v1/shard_10', 63),
+          ]
+          for folder, expected_count in batches:
+              _, events, _, _ = verify_batch(Path(folder), cache)
+              assert len(events) == expected_count, folder
+          print('PASS: all prior ten batches / 514 source events retain their exact fields')
+          PY
+      - name: Replay all 16 frozen P2 sources offline against the unchanged v9 baseline
+        run: python scripts/france_academy_run_legacy_p2_review_v1.py --baseline data/france_academy_source_checkpoint_v9/cumulative_source_checked_unique_volumes_v2.csv --run --offline --out local_runs/france_academy_legacy_p2_ci_replay
+      - name: Compare offline P2 ledger to committed source results
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import filecmp
+          name = 'verified_transcribed_person_event_candidates_v1.csv'
+          assert filecmp.cmp(Path('data/france_academy_legacy_p2_review_v1')/name, Path('local_runs/france_academy_legacy_p2_ci_replay')/name, shallow=False)
+          print('PASS: P2 source event rows are byte-identical; count comes from verified evidence')
+          PY
+      - name: Verify current source SHA and apply only the frozen prior-source revision
+        run: python scripts/france_academy_update_source_checkpoint_v2.py --baseline data/france_academy_source_checkpoint_v9/cumulative_source_checked_unique_volumes_v2.csv --revision-only --revision-dir data/france_academy_legacy_p2_review_v1 --out local_runs/france_academy_legacy_p2_checkpoint_ci_replay
+      - name: Compare reproduced cumulative checkpoint to committed checkpoint
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import filecmp
+          expected = Path('data/france_academy_source_checkpoint_v10')
+          actual = Path('local_runs/france_academy_legacy_p2_checkpoint_ci_replay')
+          for name in ['cumulative_source_checked_unique_volumes_v2.csv', 'summary.json', 'remaining_source_queue_v2.csv', 'added_or_reparsed_index_events_v2.csv']:
+              assert filecmp.cmp(expected/name, actual/name, shallow=False), name
+          print('PASS: deterministic revision-only checkpoint; no new volume and no source request')
+          PY

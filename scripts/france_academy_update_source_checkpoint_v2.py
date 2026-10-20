@@ -24,6 +24,12 @@ P1_REVISION_VERSION="france-academy-legacy-p1-revision-v1"
 P1_VOLUMES=[3,35,94,124,125]
 P1_REVIEW_QUEUE=Path("data/france_academy_source_review_queue_v1/legacy_zero_event_review_queue_v1.csv")
 P1_REVIEW_QUEUE_SHA="6481b2b28df751b37ee1845dc6db643ea0c5133a3c83244caf7d3bc1b4872ecc"
+P2_REVISION_VERSION="france-academy-legacy-p2-revision-v1"
+P2_VOLUMES=[54,55,61,65,72,93,117,120,121,130,136,144,159,160,161,183]
+P2_BASELINE=Path("data/france_academy_source_checkpoint_v9/cumulative_source_checked_unique_volumes_v2.csv")
+P2_BASELINE_SHA="529d6d9e6460e639124428097a1bc45066191c10c56cdf0953495d11b9f0a94d"
+P2_REVIEW_QUEUE=Path("data/france_academy_source_review_queue_v2/pending_p2_source_review_queue_v2.csv")
+P2_REVIEW_QUEUE_SHA="6bb32085c70271c4884d9d693ab2aebeae3d5eaf7a84f0dab01f65cbd867f300"
 FILES=["academy_original_wikisource_211_volume_inventory_v1.csv","summary.json",
        "source_only_shard_checkpoint_v1.json","person_event_ledger_summary_v1.json",
        "verified_transcribed_person_event_candidates_v1.csv"]
@@ -123,8 +129,40 @@ def validate_shard_selection(checkpoint,selected,previous_ids,baseline_path,froz
     require(len(selected)==len(expected) and set(selected)==set(expected),"Inventory differs from the complete new-volume selection")
     return provenance
 
-def validate_revision_selection(checkpoint,selected,previous_ids,baseline_sha):
-    """Bind revised source identities and the frozen P1 scope to their inputs."""
+def p2_revision_provenance(baseline,baseline_sha):
+    """Bind the one frozen P2 review to v9 and its immutable historical sources."""
+    require(baseline_sha==P2_BASELINE_SHA,"P2 requires the frozen v9 baseline SHA")
+    prior=unique(baseline,"P2 baseline")
+    require(set(prior)==set(range(1,212)) and counts(baseline)==738,"P2 baseline must contain 211 volumes / 738 events")
+    queue_path=REPO/P2_REVIEW_QUEUE
+    require(sha(queue_path)==P2_REVIEW_QUEUE_SHA,"Frozen P2 review queue bytes changed")
+    queue=rows(queue_path);gates(queue)
+    require([int(r["volume"]) for r in queue]==P2_VOLUMES,"P2 review queue order changed")
+    records=[]
+    for item in queue:
+        v=int(item["volume"]);old=prior[v]
+        require(item["review_status"]=="UNRESOLVED_NOT_CONFIRMED_OMISSION" and
+                item["year"]==old["year"]==str(1835+v//2) and
+                item["technical_http_status"]==old["technical_status"]=="HTTP_200" and
+                item["parsed_index_event_rows"]==old["parsed_index_event_rows"]=="0" and
+                item["baseline_source_html_sha256"]==old["source_html_sha256"],
+                "P2 historical source differs from frozen baseline/queue: "+str(v))
+        require(item["zero_elections_inferred"]==item["original_event_page_verified"]=="0",
+                "P2 queue must remain source-only and unresolved")
+        records.append(dict(volume=v,**{k:old[k] for k in (
+            "year","technical_status","parsed_index_event_rows","source_html_sha256")}))
+    return {"baseline_sha256":baseline_sha,"review_queue":P2_REVIEW_QUEUE.as_posix(),
+            "review_queue_sha256":P2_REVIEW_QUEUE_SHA,"prior_source_records":records}
+
+def p2_source_comparison(prior_source_records,selected):
+    """Compare recorded historical hashes with current bytes; do not claim old bytes exist."""
+    return [{"volume":r["volume"],"baseline_source_html_sha256":r["source_html_sha256"],
+             "current_source_html_sha256":selected[r["volume"]]["table_html_sha256"],
+             "source_bytes_identical":r["source_html_sha256"]==selected[r["volume"]]["table_html_sha256"]}
+            for r in prior_source_records]
+
+def validate_revision_selection(checkpoint,selected,previous_ids,baseline_sha,baseline=None):
+    """Bind revised source identities and recognized frozen revision scopes to inputs."""
     require(set(selected)<=previous_ids,"Revision attempted to add an unprobed volume")
     require(all(status(r["table_http_status"])=="HTTP_200" for r in selected.values()),"A failed fetch cannot replace prior evidence")
     for v,r in selected.items():
@@ -132,6 +170,8 @@ def validate_revision_selection(checkpoint,selected,previous_ids,baseline_sha):
         require(r.get("year")==str(year) and r.get("wikisource_table_url")==build_urls(v,year)["wiki"],
                 "Revision source URL/year differs from canonical volume: "+str(v))
     version=checkpoint.get("version")
+    require(version in ("france-academy-shard02-grammar-revision-v2",P1_REVISION_VERSION,P2_REVISION_VERSION),
+            "Unrecognized source revision version")
     if version=="france-academy-shard02-grammar-revision-v2":
         require(set(selected)=={37,98,128},"Shard02 grammar revision scope changed")
     if version==P1_REVISION_VERSION:
@@ -143,6 +183,21 @@ def validate_revision_selection(checkpoint,selected,previous_ids,baseline_sha):
         require(sha(queue)==P1_REVIEW_QUEUE_SHA,"Frozen P1 review queue bytes changed")
         require(checkpoint.get("review_queue_sha256")==P1_REVIEW_QUEUE_SHA,"P1 revision review queue SHA differs from frozen queue")
         return {label(queue):P1_REVIEW_QUEUE_SHA}
+    if version==P2_REVISION_VERSION:
+        require(checkpoint.get("volumes")==P2_VOLUMES and set(selected)==set(P2_VOLUMES),
+                "P2 revision must contain the sixteen frozen volumes in order")
+        require("shard" not in checkpoint,"P2 is a prior-source revision, not a new shard")
+        require(baseline is not None,"P2 requires the actual validated baseline records")
+        provenance=p2_revision_provenance(baseline,baseline_sha)
+        require(all(checkpoint.get(k)==v for k,v in provenance.items()),"P2 baseline/queue/historical source provenance differs")
+        comparison=p2_source_comparison(provenance["prior_source_records"],selected)
+        require(checkpoint.get("source_sha256_comparison")==comparison,"P2 old/current source SHA comparison differs")
+        require(all(checkpoint.get(k)==0 for k in (
+            "original_event_pages_inspected","accepted_memberships","accepted_birthdates","bazi_variables_computed")),
+            "P2 checkpoint gates absent")
+        require(all(r.get("original_printed_election_pages_directly_inspected")=="0" for r in selected.values()),
+                "P2 inventory is not index-only")
+        return {P2_REVIEW_QUEUE.as_posix():P2_REVIEW_QUEUE_SHA}
     return {}
 
 def verify_batch(folder,cache_root):
@@ -184,10 +239,13 @@ def main():
     ap=argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--baseline",type=Path,default=BASELINE)
     ap.add_argument("--revision-dir",type=Path,default=None)
-    ap.add_argument("--shard-dir",type=Path,default=BASE/"shard_03")
+    ap.add_argument("--shard-dir",type=Path,default=None)
+    ap.add_argument("--revision-only",action="store_true",help="Apply the frozen P2 revision without a new shard")
     ap.add_argument("--cache-root",type=Path,default=Path("local_runs/france_academy_211_volume_inventory_source_cache_v1"))
     ap.add_argument("--out",type=Path,default=Path("data/france_academy_source_checkpoint_v2"))
     args=ap.parse_args()
+    require(not args.revision_only or (args.revision_dir is not None and args.shard_dir is None),
+            "--revision-only requires --revision-dir and forbids --shard-dir")
     require(sha(PLAN)==PLAN_SHA,"Frozen 172-volume plan bytes changed")
     plan=rows(PLAN);gates(plan);plan_by=unique(plan,"Plan")
     require(len(plan)==172,"Expected 172 frozen plan rows")
@@ -195,15 +253,17 @@ def main():
     old_total=counts(baseline);previous_ids=set(combined)
     input_hashes={label(args.baseline):sha(args.baseline),label(PLAN):sha(PLAN)}
     revised_events=[];new_events=[];revised_ids=[];replacement_old_total=0;resume_provenance={}
-    groups=[]
+    groups=[];shard=None;new_shard_volume_count=0
     if args.revision_dir:groups.append(("REPARSED_PRIOR_SOURCE",args.revision_dir))
-    groups.append(("NEW_FROZEN_SHARD",args.shard_dir))
+    if not args.revision_only:groups.append(("NEW_FROZEN_SHARD",args.shard_dir or BASE/"shard_03"))
     for kind,folder in groups:
         selected,events,checkpoint,hashes=verify_batch(folder,args.cache_root)
         input_hashes.update(hashes)
         if kind=="REPARSED_PRIOR_SOURCE":
+            require((checkpoint.get("version")==P2_REVISION_VERSION)==args.revision_only,
+                    "Frozen P2 requires --revision-only; this mode cannot substitute another revision")
             input_hashes.update(validate_revision_selection(checkpoint,selected,previous_ids,
-                input_hashes[label(args.baseline)]))
+                input_hashes[label(args.baseline)],baseline))
             revised_ids=sorted(selected);revised_events=events
             replacement_old_total=counts([combined[v] for v in revised_ids])
         else:
@@ -214,6 +274,7 @@ def main():
                 require(resume_provenance["baseline_sha256"]==input_hashes[label(args.baseline)],"Baseline changed during verification")
             require(all(r["year"]==plan_by[v]["year"] and r["wikisource_table_url"]==plan_by[v]["wikisource_table_url"] for v,r in selected.items()),"Source URLs/year differ from frozen plan")
             new_events=events
+            new_shard_volume_count=len(selected)
         for v,source in selected.items():
             old=combined.get(v);s=status(source["table_http_status"])
             combined[v]={"volume":str(v),"year":source["year"],
@@ -239,7 +300,7 @@ def main():
         "reparsed_prior_volumes":revised_ids,"revision_previous_event_rows":replacement_old_total,
         "revision_reparsed_event_rows":len(revised_events),"grammar_revision_net_added_index_events":delta,
         "revision_role_counts":roles(revised_events),"new_frozen_shard":shard,
-        "new_frozen_shard_volumes":len(selected),"new_shard_index_event_rows":len(new_events),
+        "new_frozen_shard_volumes":new_shard_volume_count,"new_shard_index_event_rows":len(new_events),
         "new_shard_role_counts":roles(new_events),"unique_volumes_ever_TOC_probed":len(cumulative),
         "TOC_page_status_count":dict(Counter(r["technical_status"] for r in cumulative)),
         "candidate_original_journal_INDEX_events_including_all_roles_and_offices":total,
@@ -249,6 +310,14 @@ def main():
         "output_SHA256":{name:hashlib.sha256(data).hexdigest() for name,data in payloads.items()}}
     if resume_provenance.get("reused_prior_volumes"):
         summary["frozen_shard_resume"]=resume_provenance
+    if args.revision_only:
+        require(set(combined)==previous_ids,"A revision-only checkpoint cannot add or remove volumes")
+        summary["revision_only"]=True
+        summary["source_revision_net_added_index_events"]=delta
+        summary["revision_delta_semantics"]="CURRENT_SOURCE_REPLACEMENT_EVENT_DELTA_NOT_ISOLATED_GRAMMAR_EFFECT"
+        comparison=checkpoint["source_sha256_comparison"]
+        same=sum(r["source_bytes_identical"] for r in comparison)
+        summary["revision_source_sha256_comparison_counts"]={"same":same,"different":len(comparison)-same}
     payloads["summary.json"]=(json.dumps(summary,ensure_ascii=False,indent=2)+"\n").encode("utf-8")
     for name,data in payloads.items():
         path=args.out/name

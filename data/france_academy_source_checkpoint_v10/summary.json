@@ -1,0 +1,75 @@
+{
+  "version": "france-academy-source-checkpoint-v2",
+  "parser_version": "france-academy-legacy-heading-wikisource-source-only-v1_16",
+  "input_SHA256": {
+    "data/france_academy_source_checkpoint_v9/cumulative_source_checked_unique_volumes_v2.csv": "529d6d9e6460e639124428097a1bc45066191c10c56cdf0953495d11b9f0a94d",
+    "data/france_academy_unprobed_16_volume_batch_v1/remaining_172_toc_shard_plan_v1.csv": "0a1cba241de6c3e0a572a5af41deca11aa554441c6f12aaa990c7a97b6fe5203",
+    "data/france_academy_legacy_p2_review_v1/academy_original_wikisource_211_volume_inventory_v1.csv": "98c8296d286b90c8213f7d75622f49907c0dc4cbef0845d4758b9b0bb5069961",
+    "data/france_academy_legacy_p2_review_v1/summary.json": "1d946f72ac8138364dcfcfb9c9c1f854ad2dd7278fc3d7398c1a41005b8d7402",
+    "data/france_academy_legacy_p2_review_v1/source_only_shard_checkpoint_v1.json": "2f51dedb14fc964a854ca51941551e0b62112c37412d69336d4796d6197c3597",
+    "data/france_academy_legacy_p2_review_v1/person_event_ledger_summary_v1.json": "aca37d78fdbfaae3e32b8e67d7305dd1ba8361bc4db845223c5f432a5662b1ea",
+    "data/france_academy_legacy_p2_review_v1/verified_transcribed_person_event_candidates_v1.csv": "86692197b3f83986e9f7da26cd749e25d38710111f299ee8629b86ed93035269",
+    "data/france_academy_source_review_queue_v2/pending_p2_source_review_queue_v2.csv": "6bb32085c70271c4884d9d693ab2aebeae3d5eaf7a84f0dab01f65cbd867f300"
+  },
+  "previous_unique_volumes": 211,
+  "previous_index_event_rows": 738,
+  "reparsed_prior_volumes": [
+    54,
+    55,
+    61,
+    65,
+    72,
+    93,
+    117,
+    120,
+    121,
+    130,
+    136,
+    144,
+    159,
+    160,
+    161,
+    183
+  ],
+  "revision_previous_event_rows": 0,
+  "revision_reparsed_event_rows": 73,
+  "grammar_revision_net_added_index_events": 73,
+  "revision_role_counts": {
+    "CORRESPONDENT": 44,
+    "FULL_SECTION_MEMBER": 13,
+    "FULL_SECTION_MEMBER_CONTEXTUAL_NOMINATION": 1,
+    "FULL_ACADEMICIAN_LIBRE": 6,
+    "FOREIGN_ASSOCIATE": 6,
+    "OFFICE_ELECTION_NOT_NEW_MEMBER": 3
+  },
+  "new_frozen_shard": null,
+  "new_frozen_shard_volumes": 0,
+  "new_shard_index_event_rows": 0,
+  "new_shard_role_counts": {},
+  "unique_volumes_ever_TOC_probed": 211,
+  "TOC_page_status_count": {
+    "HTTP_200": 149,
+    "HTTP_404": 62
+  },
+  "candidate_original_journal_INDEX_events_including_all_roles_and_offices": 811,
+  "remaining_TOC_endpoints_never_tested": 0,
+  "failed_source_event_count": "UNKNOWN_NOT_ZERO",
+  "counts_are_source_events_not_unique_people": true,
+  "original_scan_evidence_not_inferred_from_TOC": true,
+  "accepted_memberships": 0,
+  "accepted_exact_dobs": 0,
+  "bazi_variables_computed": 0,
+  "network_requests": 0,
+  "output_SHA256": {
+    "cumulative_source_checked_unique_volumes_v2.csv": "67e770ed05a8eb0a20d93b60e80bae5b5bf1942f25c7e90e19b5b2ac36815459",
+    "remaining_source_queue_v2.csv": "371b1264452a9f6efc92b67b00c4951299078585d408c21e1bf4e10bd855eebd",
+    "added_or_reparsed_index_events_v2.csv": "e54b15582560937ef4f72a6b3007b35127ffbe3afb02cb7f0571b43e4511491f"
+  },
+  "revision_only": true,
+  "source_revision_net_added_index_events": 73,
+  "revision_delta_semantics": "CURRENT_SOURCE_REPLACEMENT_EVENT_DELTA_NOT_ISOLATED_GRAMMAR_EFFECT",
+  "revision_source_sha256_comparison_counts": {
+    "same": 0,
+    "different": 16
+  }
+}
