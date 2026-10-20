@@ -18,7 +18,7 @@ from bs4 import BeautifulSoup
 from france_academy_wikisource_index_preflight_v1 import build_urls,read_one
 from france_academy_wikisource_election_rows_v1 import role_of,section_of,person_of,identity_key,extract_from_html
 
-VERSION="france-academy-legacy-heading-wikisource-source-only-v1_15"
+VERSION="france-academy-legacy-heading-wikisource-source-only-v1_16"
 VOLUMES=[(1,1835),(42,1856),(43,1856),(91,1880),(182,1926)]
 CTHS="data/france_academy_cths_profile_dob_harvest_v1/cths_dob_claims_all_targets_candidate_only_v1.csv"
 OUT=Path("data/france_academy_wikisource_legacy_heading_pilot_v1")
@@ -105,18 +105,39 @@ def nomination_section(line):
     return " ".join(m.group(1).split())[:90] if m else ""
 
 def source_election_details(line,role=None,section=None):
-    """Retain the two explicit role/replacement forms printed in Tome 151."""
+    """Retain the explicit role/Section forms observed in 130, 144 and 151."""
     if role is None:role=role_of(line)
     if section is None:section=section_of(line).strip(" )")
     if role=="FULL_SECTION_MEMBER" and re.search(
             r"\best\s+élu\s+Membre\s+de\s+la\s+Section\s+des\s+Académiciens\s+libres\b",line,re.I):
         role="FULL_ACADEMICIAN_LIBRE"
     if role=="CORRESPONDENT" and re.search(
-            r"\best\s+élu\s+Correspondant\s+dans\s+la\s+Section\s+(?:de\s+|d['’]).+?"
+            r"\best\s+élu\s+Correspondant\s+(?:dans|pour)\s+la\s+Section\s+(?:de\s+|d['’]).+?"
             r"\s+à\s+la\s+place\s+de\s+M\.",line,re.I):
         before=re.split(r"\s+à\s+la\s+place\s+de\s+M\.",line,maxsplit=1,flags=re.I)[0]
         section=section_of(before).strip(" )")
+    if role=="CORRESPONDENT" and not section:
+        # Tome 130's "Section’de Mécanique" uses an apostrophe between
+        # Section and de. Read the explicit subject without editing source.
+        before=re.split(r"\ben remplacement\b|\s+à\s+la\s+place\s+de\b",line,maxsplit=1,flags=re.I)[0]
+        match=re.search(r"\best\s+élu\s+Correspondant\s+pour\s+la\s+Section[’']de\s+([^,.;]+)\.?$",before,re.I)
+        if match:section=" ".join(match.group(1).split())
     return role,section
+
+def inline_election_page(tr,line,page):
+    """Read Tome 117's complete correspondent sentence followed by .157.
+
+    The source has exactly two cells, an empty page cell, and an integer
+    joined to the sentence's terminal period. Other numbers, partial
+    predicates and rows lacking that separate empty page cell do not qualify.
+    """
+    cells=tr.find_all("td",recursive=False)
+    if page or len(cells)!=2 or cells[1].get_text(" ",strip=True):return line,page
+    match=re.fullmatch(
+        r"(—\s+M\.\s+.{2,110}?\s+est\s+élu\s+Correspondant\s+pour\s+la\s+Section\s+"
+        r"(?:de\s+|d['’])[^.;\d]+\.)"r"(\d{1,5})",line,re.I)
+    if not match or not name_from_line(match.group(1)):return line,page
+    return match.group(1),match.group(2)
 
 def page_references(s):
     """Keep multi-page original TOC locators as ONE event, e.g. 510 et 618."""
@@ -235,6 +256,35 @@ def split_nomination_row(tr,line,page):
     first_row=following.find("tr")
     if first_row is None:return line,page
     cells=first_row.find_all("td",recursive=False)
+    if len(cells)!=1:return line,page
+    number=cells[0].get_text(" ",strip=True)
+    if not re.fullmatch(r"\d{1,5}",number):return line,page
+    return line+" "+continuation,number
+
+def split_office_replacement_row(tr,line,page):
+    """Complete Tome 130's secretary election and adjacent predecessor/page.
+
+    Require a named secretary, a last-table-row replacement clause,
+    only its adjacent predecessor text, and a first single-cell page in
+    the next table. The event stays an office, with no inferred Section.
+    """
+    if page or not name_from_line(line) or role_of(line)!="OFFICE_ELECTION_NOT_NEW_MEMBER":return line,page
+    if not re.search(r"\best\s+élu\s+Secrétaire\s+perpétuel\b.+\ben\s+remplacement\s+de\s*$",line,re.I):return line,page
+    table=tr.find_parent("table")
+    if table is None or table.find_all("tr")[-1] is not tr:return line,page
+    pieces=[];following=None
+    for i,sibling in enumerate(table.next_siblings):
+        if i>=8:return line,page
+        tag=getattr(sibling,"name",None)
+        if tag=="table":following=sibling;break
+        if tag not in (None,"span","i"):return line,page
+        part=sibling.get_text(" ",strip=True) if tag else str(sibling)
+        if tag=="span" and part:return line,page
+        pieces.append(part)
+    continuation=" ".join(" ".join(pieces).split())
+    if following is None or not re.fullmatch(r"M\.\s+[^;\d]+",continuation):return line,page
+    first_row=following.find("tr")
+    cells=first_row.find_all("td",recursive=False) if first_row else []
     if len(cells)!=1:return line,page
     number=cells[0].get_text(" ",strip=True)
     if not re.fullmatch(r"\d{1,5}",number):return line,page
@@ -473,8 +523,10 @@ def parse_html(raw,volume,year):
         first=cells[0]
         line=" ".join(first.get_text(" ",strip=True).split())
         page=" ".join(cells[1].get_text(" ",strip=True).split()) if len(cells)>1 else ""
+        line,page=inline_election_page(tr,line,page)
         line,page=split_correspondent_row(tr,line,page)
         line,page=split_nomination_row(tr,line,page)
+        line,page=split_office_replacement_row(tr,line,page)
         line,page=split_member_division_row(tr,line,page)
         page,page_refs=page_references(page)
         sc=first.find("span",class_=re.compile(r"sc",re.I))
@@ -547,8 +599,9 @@ def parse_html(raw,volume,year):
                 fold(decorated).strip(" .")=="nominations" and
                 explicit_named_academy_event(line))
             # Tome 37 p938 has a bare Nominations heading for an explicit
-            # secretary election. It opens only an OFFICE scope: it must not
-            # make bare nominations a generic source of new full members.
+            # secretary election. Initially it opens only an OFFICE scope;
+            # a later explicit Academy-member continuation can establish
+            # the mixed column actually printed in Tome 144.
             is_named_office_election=bool(
                 fold(decorated).strip(" .")=="nominations" and
                 role_of(line)=="OFFICE_ELECTION_NOT_NEW_MEMBER" and
@@ -590,6 +643,13 @@ def parse_html(raw,volume,year):
                 name=nominated_name_from_line(line) if nominated else name_from_line(line)
                 wording="EST_NOMME_TRANSCRIBED" if nominated else "EST_ELU_TRANSCRIBED"
             if not role:continue
+            if (office_only and name and page and role=="FULL_SECTION_MEMBER" and
+                    line.startswith("—") and re.search(
+                        r"\best\s+élu\s+Membre\s+de\s+l.Académie\b",line,re.I)):
+                # Tome 144 names Douvillé as Membre de l'Académie after its
+                # secretary. A bare Section or commission membership does
+                # not establish this continuation of the Academy column.
+                office_only=False
             if office_only and role!="OFFICE_ELECTION_NOT_NEW_MEMBER":continue
             if correspondent_only and role!="CORRESPONDENT":continue
             # Quarantine unparsed identities; do not infer people from heading.
@@ -787,6 +847,7 @@ def fixture():
     fixture_shard08()
     fixture_shard09()
     fixture_shard10()
+    fixture_legacy_p2()
     print("PASS: historical fixtures; office scope; bare/literal nomination tables; bounded split rows; explicit clergy names; source-only gates")
 
 def fixture_shard04():
@@ -1368,6 +1429,96 @@ def fixture_shard10():
         "CORRESPONDENT","Anatomie et Zoologie","912"),francotte
     assert source_election_details("M. Exemple est élu Membre de la Section de Physique en remplacement de M. Autre, Membre de la Section des Académiciens libres")[0]=="FULL_SECTION_MEMBER"
     assert all(r[field]=="0" for r in recovered58+recovered59+recovered60+recovered151 for field in (
+        "original_election_printed_page_opened","official_membership_accepted",
+        "exact_dob_accepted","bazi_variables_computed"))
+
+def fixture_legacy_p2():
+    # Tome 117 tr417-423: Ludwig's literal .157 remains in the text cell
+    # while the separate page cell is empty. The event count stays five.
+    ludwig='<tr><td>— M. <i>Ludwig</i> est élu Correspondant pour la Section de Médecine et Chirurgie.157</td><td></td></tr>'
+    tome117="""<table>
+       <tr><td><span class="sc">Nominations de membres et correspondants de l’académie</span>. — M. <i>Bichat</i> est élu Correspondant pour la Section de Physique</td><td>91</td></tr>"""+ludwig+"""
+       <tr><td>— M. <i>Potain</i> est nommé Membre de la Section de Médecine et Chirurgie, en remplacement de M. <i>Charcot</i></td><td>572</td></tr>
+       <tr><td>— M. <i>Rollet</i> est élu Correspondant, pour la Section de Médecine et Chirurgie, en remplacement de M. <i>Palasciano</i></td><td>610</td></tr>
+       <tr><td>— M. <i>Riggenbach</i> est élu Correspondant, pour la Section de Mécanique, en remplacement de feu M. <i>Colladon</i></td><td>781</td></tr>
+       <tr><td>O</td><td></td></tr>
+       <tr><td><span class="sc">Observatoires</span>. — M. le <i>Secrétaire perpétuel</i> signale les Annales de l’observatoire météorologique du mont Blanc</td><td>458</td></tr></table>"""
+    recovered117,_=parse_html(tome117.encode("utf-8"),117,1893)
+    assert len(recovered117)==5,recovered117
+    row=next(r for r in recovered117 if r["elected_name_candidate"]=="Ludwig")
+    assert (row["election_role_candidate"],row["source_action_wording"],
+            row["science_section_candidate"],row["original_printed_volume_page"],
+            row["source_printed_page_references"])==(
+        "CORRESPONDENT","EST_ELU_TRANSCRIBED","Médecine et Chirurgie","157","157"),row
+    for incomplete in (
+            tome117.replace(".157"," 157"),
+            tome117.replace(ludwig,ludwig.replace("<td></td>","")),
+            tome117.replace(ludwig,ludwig.replace("<td></td>","<td>unresolved</td>"))):
+        rows,_=parse_html(incomplete.encode("utf-8"),117,1893)
+        row=next(r for r in rows if r["elected_name_candidate"]=="Ludwig")
+        assert not row["original_printed_volume_page"],row
+    assert not parse_html(tome117.replace("Nominations de membres et correspondants de l’académie",
+        "Correspondance").encode("utf-8"),117,1893)[0]
+
+    # Selected actual Tome 130 rows, keeping the original tr644/645 table
+    # split and predecessor markup. Darboux is an office, not a new member.
+    tome130="""<table><tbody>
+       <tr><td><span class="sc">Nominations</span>. — M. <i>Zeathen</i> est élu Correspondant pour la Section de Géométrie</td><td>156</td></tr>
+       <tr><td>— M. <i>Darboux</i> est élu Secrétaire perpétuel pour les Sections de Sciences mathématiques, en remplacement de</td></tr></tbody></table>
+       <span><span class="pagenum ws-pagenum" id="TdM" title="Page:Comptes rendus hebdomadaires des séances de l’Académie des sciences, tome 130, 1900.djvu/1817"></span></span>
+       M. <i>Joseph Bertrand</i>
+       <table><tbody><tr><td>1369</td></tr>
+       <tr><td>— M. <i>Joannès Chatin</i> est élu Membre de la Section d’Anatomie et Zoologie, en remplacement de M. <i>Blanchard</i></td><td>1370</td></tr>
+       <tr><td>— M. <i>Bazin</i> est élu Correspondant pour la Section’de Mécanique</td><td>1740</td></tr>
+       <tr><td>O</td></tr>
+       <tr><td><span class="sc">Observatoires</span>. — Présentation des premières publications des Observatoires de Potsdam et de Paris, relatives à la Carte photographique du Ciel ; par M. <i>Loewy</i></td><td>154</td></tr></tbody></table>"""
+    recovered130,_=parse_html(tome130.encode("utf-8"),130,1900)
+    assert len(recovered130)==4,recovered130
+    darboux=next(r for r in recovered130 if r["elected_name_candidate"]=="Darboux")
+    assert (darboux["election_role_candidate"],darboux["science_section_candidate"],
+            darboux["original_printed_volume_page"],darboux["source_printed_page_references"])==(
+        "OFFICE_ELECTION_NOT_NEW_MEMBER","","1369","1369"),darboux
+    bazin=next(r for r in recovered130 if r["elected_name_candidate"]=="Bazin")
+    assert (bazin["election_role_candidate"],bazin["science_section_candidate"],bazin["original_printed_volume_page"])==(
+        "CORRESPONDENT","Mécanique","1740"),bazin
+    for incomplete in (
+            tome130.replace("M. <i>Joseph Bertrand</i>",""),
+            tome130.replace("<tr><td>1369</td></tr>","<tr><td>unresolved</td></tr>"),
+            tome130.replace("M. <i>Joseph Bertrand</i>",'<span class="sc">Observatoires</span> M. <i>Joseph Bertrand</i>')):
+        rows,_=parse_html(incomplete.encode("utf-8"),130,1900)
+        row=next(r for r in rows if r["elected_name_candidate"]=="Darboux")
+        assert row["election_role_candidate"]=="OFFICE_ELECTION_NOT_NEW_MEMBER" and not row["original_printed_volume_page"],row
+
+    # Tome 144 tr668-675 is one mixed Nominations column. Douvillé's
+    # explicit Membre de l'Académie continuation establishes membership
+    # after the secretary; the later Nomographie heading closes the scope.
+    office='<tr><td><span class="sc">Nominations</span>. — M. <i>A. de Lapparent</i> est élu Secrétaire perpétuel pour les Sciences physiques, en remplacement de M. <i>Berthelot</i></td><td>1026</td></tr>'
+    douville='<tr><td>— M. <i>H. Douvillé</i> est élu Membre de l’Académie à la place devenue vacante, dans la Section de Minéralogie, par le décès de M. <i>Marcel Bertrand</i></td><td>881</td></tr>'
+    boundary='<tr><td><span class="sc">Nomographie</span>. — Sur la représentation par points alignés de l’équation d’ordre nomographique 3 la plus générale ; par M. <i>Maurice d’Ocagne</i></td><td>190</td></tr>'
+    tome144="<table>"+office+douville+"""
+       <tr><td>— M. <i>Henry Le Chatelier</i> est élu Membre de l’Académie à la place devenue vacante, dans la Section de Chimie, par le décès de M. <i>Henri Moissan</i></td><td>958</td></tr>
+       <tr><td>— M. le Prince <i>Roland Bonaparte</i> est élu Membre libre de l’Académie en remplacement de M. <i>Raphaël Bischoffsheim</i></td><td>249</td></tr>
+       <tr><td>— M. <i>J. Tannery</i> est élu Membre libre de l’Académie en remplacement de M. <i>Brouardel</i></td><td>554</td></tr>
+       <tr><td>— M. <i>J. Carpentier</i> est élu Membre libre de l’Académie en remplacement de M. <i>A. Laussedat</i></td><td>1017</td></tr>
+       <tr><td>— M. <i>Aimé Witz</i> est élu Correspondant pour la Section de Mécanique à la place de M. <i>L. Boltzmann,</i> décédé.</td><td>791</td></tr>"""+boundary+"</table>"
+    recovered144,_=parse_html(tome144.encode("utf-8"),144,1907)
+    assert [(r["elected_name_candidate"],r["election_role_candidate"],r["original_printed_volume_page"]) for r in recovered144]==[
+        ("A. de Lapparent","OFFICE_ELECTION_NOT_NEW_MEMBER","1026"),
+        ("H. Douvillé","FULL_SECTION_MEMBER","881"),("Henry Le Chatelier","FULL_SECTION_MEMBER","958"),
+        ("le Prince Roland Bonaparte","FULL_ACADEMICIAN_LIBRE","249"),("J. Tannery","FULL_ACADEMICIAN_LIBRE","554"),
+        ("J. Carpentier","FULL_ACADEMICIAN_LIBRE","1017"),("Aimé Witz","CORRESPONDENT","791")],recovered144
+    assert [r["science_section_candidate"] for r in recovered144]==[
+        "","Minéralogie","Chimie","","","","Mécanique"],recovered144
+    assert all(r["source_action_wording"]=="EST_ELU_TRANSCRIBED" for r in recovered144)
+    # A Section-only or commission appointment does not supply the observed
+    # explicit Academy-member continuation. Nor may it cross the next topic.
+    restricted="<table>"+office+"""
+       <tr><td>— M. Exemple est élu Membre de la Section de Géométrie</td><td>1027</td></tr>
+       <tr><td>— M. Autre est élu Membre de la Commission des prix</td><td>1028</td></tr>"""+boundary+douville+"</table>"
+    assert len(parse_html(restricted.encode("utf-8"),144,1907)[0])==1
+    assert not parse_html(tome144.replace('<span class="sc">Nominations</span>',
+        '<span class="sc">Présidence de l’académie</span>').encode("utf-8"),144,1907)[0]
+    assert all(r[field]=="0" for r in recovered117+recovered130+recovered144 for field in (
         "original_election_printed_page_opened","official_membership_accepted",
         "exact_dob_accepted","bazi_variables_computed"))
 
