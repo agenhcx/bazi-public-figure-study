@@ -1,0 +1,417 @@
+{
+  "version": "france-academy-shard10-final-source-review-v1",
+  "parser_before": "france-academy-legacy-heading-wikisource-source-only-v1_14",
+  "parser_after": "france-academy-legacy-heading-wikisource-source-only-v1_15",
+  "input_SHA256": {
+    "data/france_academy_remaining_172_toc_batch_v1/shard_10/first_capture_person_events_v1.csv": "34d7c51add29d6624a3436d0a823b66d3cee4d0fef7c0fd670882f0821ac1f84",
+    "data/france_academy_remaining_172_toc_batch_v1/shard_10/verified_transcribed_person_event_candidates_v1.csv": "f8b9b3718e59a81cd414f5c48026932da45a30a55f046028c0eb2ca8451eeb5b",
+    "data/france_academy_remaining_172_toc_batch_v1/shard_10/first_capture_source_review_v1.json": "97626d4882d8983d846614fd9c4c06c510813f82a449a0289882c30afdd45aef",
+    "data/france_academy_shard10_source_snapshot_v1/source_cache_v1.tar.gz": "c2c6e6e568acbd839bc9378162719837968e016d7ac37d883302f5caa2915c36"
+  },
+  "same_source_bytes_before_and_after": true,
+  "candidate_events_before": 54,
+  "candidate_events_after": 63,
+  "events_added": 9,
+  "events_removed": 0,
+  "added_event_rows": [
+    {
+      "volume": "59",
+      "year": "1864",
+      "name_as_transcribed": "de La Rive",
+      "member_role_source_candidate": "FOREIGN_ASSOCIATE",
+      "original_action_wording": "EST_ELU_TRANSCRIBED",
+      "science_section_transcribed": "",
+      "first_printed_page_candidate": "68",
+      "all_printed_pages_indexed": "68",
+      "wikisource_table_url": "https://fr.wikisource.org/wiki/Comptes_rendus_de_l%E2%80%99Acad%C3%A9mie_des_sciences/Tome_59%2C_1864/Table_des_mati%C3%A8res",
+      "source_html_sha256": "014745654ab0879b2c977d92db5492dfa0a3b7c0f16282c091df645d241e5ece",
+      "source_sha256_verified_against_inventory": "1",
+      "cths_562_exact_name_candidate_id": "",
+      "name_matching_status": "NO_EXACT_CTHS_562_MATCH",
+      "origin_source_tier": "WIKISOURCE_ACADEMY_PRINTED_INDEX_TRANSCRIPTION_NOT_ORIGINAL_EVENT_SCAN",
+      "original_member_election_page_opened": "0",
+      "official_member_status_accepted": "0",
+      "exact_dob_accepted": "0",
+      "bazi_variables_computed": "0"
+    },
+    {
+      "volume": "60",
+      "year": "1865",
+      "name_as_transcribed": "Foucault",
+      "member_role_source_candidate": "FULL_SECTION_MEMBER_CONTEXTUAL_ELECTION",
+      "original_action_wording": "EST_PROCLAME_ELU_TRANSCRIBED",
+      "science_section_transcribed": "Mécanique",
+      "first_printed_page_candidate": "154",
+      "all_printed_pages_indexed": "154",
+      "wikisource_table_url": "https://fr.wikisource.org/wiki/Comptes_rendus_de_l%E2%80%99Acad%C3%A9mie_des_sciences/Tome_60%2C_1865/Table_des_mati%C3%A8res",
+      "source_html_sha256": "3b1489eea7814383afc45759ebcd2438db7a7c723c1e13acd44ece0f253751f5",
+      "source_sha256_verified_against_inventory": "1",
+      "cths_562_exact_name_candidate_id": "",
+      "name_matching_status": "NO_EXACT_CTHS_562_MATCH",
+      "origin_source_tier": "WIKISOURCE_ACADEMY_PRINTED_INDEX_TRANSCRIPTION_NOT_ORIGINAL_EVENT_SCAN",
+      "original_member_election_page_opened": "0",
+      "official_member_status_accepted": "0",
+      "exact_dob_accepted": "0",
+      "bazi_variables_computed": "0"
+    },
+    {
+      "volume": "60",
+      "year": "1865",
+      "name_as_transcribed": "de Vergnette-Lamotte",
+      "member_role_source_candidate": "CORRESPONDENT",
+      "original_action_wording": "SONT_NOMMES_HEADER_TRANSCRIBED",
+      "science_section_transcribed": "Économie rurale",
+      "first_printed_page_candidate": "397",
+      "all_printed_pages_indexed": "397",
+      "wikisource_table_url": "https://fr.wikisource.org/wiki/Comptes_rendus_de_l%E2%80%99Acad%C3%A9mie_des_sciences/Tome_60%2C_1865/Table_des_mati%C3%A8res",
+      "source_html_sha256": "3b1489eea7814383afc45759ebcd2438db7a7c723c1e13acd44ece0f253751f5",
+      "source_sha256_verified_against_inventory": "1",
+      "cths_562_exact_name_candidate_id": "",
+      "name_matching_status": "NO_EXACT_CTHS_562_MATCH",
+      "origin_source_tier": "WIKISOURCE_ACADEMY_PRINTED_INDEX_TRANSCRIPTION_NOT_ORIGINAL_EVENT_SCAN",
+      "original_member_election_page_opened": "0",
+      "official_member_status_accepted": "0",
+      "exact_dob_accepted": "0",
+      "bazi_variables_computed": "0"
+    },
+    {
+      "volume": "60",
+      "year": "1865",
+      "name_as_transcribed": "Braun",
+      "member_role_source_candidate": "CORRESPONDENT",
+      "original_action_wording": "SONT_NOMMES_HEADER_TRANSCRIBED",
+      "science_section_transcribed": "Botanique",
+      "first_printed_page_candidate": "545",
+      "all_printed_pages_indexed": "545",
+      "wikisource_table_url": "https://fr.wikisource.org/wiki/Comptes_rendus_de_l%E2%80%99Acad%C3%A9mie_des_sciences/Tome_60%2C_1865/Table_des_mati%C3%A8res",
+      "source_html_sha256": "3b1489eea7814383afc45759ebcd2438db7a7c723c1e13acd44ece0f253751f5",
+      "source_sha256_verified_against_inventory": "1",
+      "cths_562_exact_name_candidate_id": "",
+      "name_matching_status": "NO_EXACT_CTHS_562_MATCH",
+      "origin_source_tier": "WIKISOURCE_ACADEMY_PRINTED_INDEX_TRANSCRIPTION_NOT_ORIGINAL_EVENT_SCAN",
+      "original_member_election_page_opened": "0",
+      "official_member_status_accepted": "0",
+      "exact_dob_accepted": "0",
+      "bazi_variables_computed": "0"
+    },
+    {
+      "volume": "60",
+      "year": "1865",
+      "name_as_transcribed": "Weber",
+      "member_role_source_candidate": "CORRESPONDENT",
+      "original_action_wording": "SONT_NOMMES_HEADER_TRANSCRIBED",
+      "science_section_transcribed": "Physique",
+      "first_printed_page_candidate": "660",
+      "all_printed_pages_indexed": "660",
+      "wikisource_table_url": "https://fr.wikisource.org/wiki/Comptes_rendus_de_l%E2%80%99Acad%C3%A9mie_des_sciences/Tome_60%2C_1865/Table_des_mati%C3%A8res",
+      "source_html_sha256": "3b1489eea7814383afc45759ebcd2438db7a7c723c1e13acd44ece0f253751f5",
+      "source_sha256_verified_against_inventory": "1",
+      "cths_562_exact_name_candidate_id": "",
+      "name_matching_status": "NO_EXACT_CTHS_562_MATCH",
+      "origin_source_tier": "WIKISOURCE_ACADEMY_PRINTED_INDEX_TRANSCRIPTION_NOT_ORIGINAL_EVENT_SCAN",
+      "original_member_election_page_opened": "0",
+      "official_member_status_accepted": "0",
+      "exact_dob_accepted": "0",
+      "bazi_variables_computed": "0"
+    },
+    {
+      "volume": "60",
+      "year": "1865",
+      "name_as_transcribed": "Hofmeister",
+      "member_role_source_candidate": "CORRESPONDENT",
+      "original_action_wording": "SONT_NOMMES_HEADER_TRANSCRIBED",
+      "science_section_transcribed": "Botanique",
+      "first_printed_page_candidate": "762",
+      "all_printed_pages_indexed": "762",
+      "wikisource_table_url": "https://fr.wikisource.org/wiki/Comptes_rendus_de_l%E2%80%99Acad%C3%A9mie_des_sciences/Tome_60%2C_1865/Table_des_mati%C3%A8res",
+      "source_html_sha256": "3b1489eea7814383afc45759ebcd2438db7a7c723c1e13acd44ece0f253751f5",
+      "source_sha256_verified_against_inventory": "1",
+      "cths_562_exact_name_candidate_id": "",
+      "name_matching_status": "NO_EXACT_CTHS_562_MATCH",
+      "origin_source_tier": "WIKISOURCE_ACADEMY_PRINTED_INDEX_TRANSCRIPTION_NOT_ORIGINAL_EVENT_SCAN",
+      "original_member_election_page_opened": "0",
+      "official_member_status_accepted": "0",
+      "exact_dob_accepted": "0",
+      "bazi_variables_computed": "0"
+    },
+    {
+      "volume": "60",
+      "year": "1865",
+      "name_as_transcribed": "O. Struve",
+      "member_role_source_candidate": "CORRESPONDENT",
+      "original_action_wording": "SONT_NOMMES_HEADER_TRANSCRIBED",
+      "science_section_transcribed": "Astronomie",
+      "first_printed_page_candidate": "1012",
+      "all_printed_pages_indexed": "1012",
+      "wikisource_table_url": "https://fr.wikisource.org/wiki/Comptes_rendus_de_l%E2%80%99Acad%C3%A9mie_des_sciences/Tome_60%2C_1865/Table_des_mati%C3%A8res",
+      "source_html_sha256": "3b1489eea7814383afc45759ebcd2438db7a7c723c1e13acd44ece0f253751f5",
+      "source_sha256_verified_against_inventory": "1",
+      "cths_562_exact_name_candidate_id": "",
+      "name_matching_status": "NO_EXACT_CTHS_562_MATCH",
+      "origin_source_tier": "WIKISOURCE_ACADEMY_PRINTED_INDEX_TRANSCRIPTION_NOT_ORIGINAL_EVENT_SCAN",
+      "original_member_election_page_opened": "0",
+      "official_member_status_accepted": "0",
+      "exact_dob_accepted": "0",
+      "bazi_variables_computed": "0"
+    },
+    {
+      "volume": "60",
+      "year": "1865",
+      "name_as_transcribed": "Plantamour",
+      "member_role_source_candidate": "CORRESPONDENT",
+      "original_action_wording": "SONT_NOMMES_HEADER_TRANSCRIBED",
+      "science_section_transcribed": "Astronomie",
+      "first_printed_page_candidate": "1067",
+      "all_printed_pages_indexed": "1067",
+      "wikisource_table_url": "https://fr.wikisource.org/wiki/Comptes_rendus_de_l%E2%80%99Acad%C3%A9mie_des_sciences/Tome_60%2C_1865/Table_des_mati%C3%A8res",
+      "source_html_sha256": "3b1489eea7814383afc45759ebcd2438db7a7c723c1e13acd44ece0f253751f5",
+      "source_sha256_verified_against_inventory": "1",
+      "cths_562_exact_name_candidate_id": "",
+      "name_matching_status": "NO_EXACT_CTHS_562_MATCH",
+      "origin_source_tier": "WIKISOURCE_ACADEMY_PRINTED_INDEX_TRANSCRIPTION_NOT_ORIGINAL_EVENT_SCAN",
+      "original_member_election_page_opened": "0",
+      "official_member_status_accepted": "0",
+      "exact_dob_accepted": "0",
+      "bazi_variables_computed": "0"
+    },
+    {
+      "volume": "60",
+      "year": "1865",
+      "name_as_transcribed": "Clausius",
+      "member_role_source_candidate": "CORRESPONDENT",
+      "original_action_wording": "SONT_NOMMES_HEADER_TRANSCRIBED",
+      "science_section_transcribed": "Mécanique",
+      "first_printed_page_candidate": "1126",
+      "all_printed_pages_indexed": "1126",
+      "wikisource_table_url": "https://fr.wikisource.org/wiki/Comptes_rendus_de_l%E2%80%99Acad%C3%A9mie_des_sciences/Tome_60%2C_1865/Table_des_mati%C3%A8res",
+      "source_html_sha256": "3b1489eea7814383afc45759ebcd2438db7a7c723c1e13acd44ece0f253751f5",
+      "source_sha256_verified_against_inventory": "1",
+      "cths_562_exact_name_candidate_id": "",
+      "name_matching_status": "NO_EXACT_CTHS_562_MATCH",
+      "origin_source_tier": "WIKISOURCE_ACADEMY_PRINTED_INDEX_TRANSCRIPTION_NOT_ORIGINAL_EVENT_SCAN",
+      "original_member_election_page_opened": "0",
+      "official_member_status_accepted": "0",
+      "exact_dob_accepted": "0",
+      "bazi_variables_computed": "0"
+    }
+  ],
+  "removed_event_rows": [],
+  "existing_event_rows_with_field_changes": [
+    {
+      "volume": 58,
+      "name_as_transcribed": "Parade",
+      "changed_fields": {
+        "science_section_transcribed": {
+          "before": "",
+          "after": "Économie rurale"
+        },
+        "first_printed_page_candidate": {
+          "before": "",
+          "after": "193"
+        },
+        "all_printed_pages_indexed": {
+          "before": "",
+          "after": "193"
+        }
+      },
+      "source_html_sha256": "95ef33cde3b972fec5b571c8c68a310ba989091f169739348aa4ada7d752885c"
+    },
+    {
+      "volume": 151,
+      "name_as_transcribed": "L. Teisserenc de Bort",
+      "changed_fields": {
+        "member_role_source_candidate": {
+          "before": "FULL_SECTION_MEMBER",
+          "after": "FULL_ACADEMICIAN_LIBRE"
+        }
+      },
+      "source_html_sha256": "9975e3e147ce97ff3829080daa9643e09c7152745cc21b6fd7c529a99c864d1e"
+    },
+    {
+      "volume": 151,
+      "name_as_transcribed": "Francotte",
+      "changed_fields": {
+        "science_section_transcribed": {
+          "before": "Anatomie et Zoologie à la place de M",
+          "after": "Anatomie et Zoologie"
+        }
+      },
+      "source_html_sha256": "9975e3e147ce97ff3829080daa9643e09c7152745cc21b6fd7c529a99c864d1e"
+    }
+  ],
+  "unchanged_existing_event_rows_all_fields": 51,
+  "final_role_counts": {
+    "CORRESPONDENT": 39,
+    "FULL_SECTION_MEMBER": 14,
+    "FOREIGN_ASSOCIATE": 4,
+    "FULL_SECTION_MEMBER_CONTEXTUAL_ELECTION": 1,
+    "FULL_ACADEMICIAN_LIBRE": 5
+  },
+  "readable_source_htmls_sha_checked": 10,
+  "readable_source_tables_reviewed": 10,
+  "source_table_reviews": [
+    {
+      "volume": 31,
+      "year": 1850,
+      "status": "HTTP_404",
+      "replay_table_status": "HTTP_404",
+      "source_html_sha256": "",
+      "events_before": "",
+      "events_after": "",
+      "disposition": "HTTP404_UNKNOWN_NOT_ZERO"
+    },
+    {
+      "volume": 58,
+      "year": 1864,
+      "status": "HTTP_200",
+      "replay_table_status": "LOCAL_CACHE",
+      "source_html_sha256": "95ef33cde3b972fec5b571c8c68a310ba989091f169739348aa4ada7d752885c",
+      "events_before": "5",
+      "events_after": "5",
+      "disposition": "READABLE_TOC_EVENT_ROWS_REVIEWED"
+    },
+    {
+      "volume": 59,
+      "year": 1864,
+      "status": "HTTP_200",
+      "replay_table_status": "LOCAL_CACHE",
+      "source_html_sha256": "014745654ab0879b2c977d92db5492dfa0a3b7c0f16282c091df645d241e5ece",
+      "events_before": "0",
+      "events_after": "1",
+      "disposition": "READABLE_TOC_EVENT_ROWS_REVIEWED"
+    },
+    {
+      "volume": 60,
+      "year": 1865,
+      "status": "HTTP_200",
+      "replay_table_status": "LOCAL_CACHE",
+      "source_html_sha256": "3b1489eea7814383afc45759ebcd2438db7a7c723c1e13acd44ece0f253751f5",
+      "events_before": "1",
+      "events_after": "9",
+      "disposition": "READABLE_TOC_EVENT_ROWS_REVIEWED"
+    },
+    {
+      "volume": 86,
+      "year": 1878,
+      "status": "HTTP_200",
+      "replay_table_status": "LOCAL_CACHE",
+      "source_html_sha256": "72a09f886872ffc9130493d77915c5b5eee2eff10261392b14b053efbe60f46c",
+      "events_before": "6",
+      "events_after": "6",
+      "disposition": "READABLE_TOC_EVENT_ROWS_REVIEWED"
+    },
+    {
+      "volume": 87,
+      "year": 1878,
+      "status": "HTTP_200",
+      "replay_table_status": "LOCAL_CACHE",
+      "source_html_sha256": "1a9f8752ac866094758a88b4d5dc5cd96f746e74b1c5ca4d709ba1b590067d59",
+      "events_before": "5",
+      "events_after": "5",
+      "disposition": "READABLE_TOC_EVENT_ROWS_REVIEWED"
+    },
+    {
+      "volume": 88,
+      "year": 1879,
+      "status": "HTTP_200",
+      "replay_table_status": "LOCAL_CACHE",
+      "source_html_sha256": "f82c9066e6b411230cdaebbca66f3ebc23b70d6cc11b26e5af25746387f02d2e",
+      "events_before": "18",
+      "events_after": "18",
+      "disposition": "READABLE_TOC_EVENT_ROWS_REVIEWED"
+    },
+    {
+      "volume": 90,
+      "year": 1880,
+      "status": "HTTP_200",
+      "replay_table_status": "LOCAL_CACHE",
+      "source_html_sha256": "cecf8c2fbdf875ab1d9d9e494430ab1d369c2d4886a04fcf2a3adb80e33e155d",
+      "events_before": "4",
+      "events_after": "4",
+      "disposition": "READABLE_TOC_EVENT_ROWS_REVIEWED"
+    },
+    {
+      "volume": 118,
+      "year": 1894,
+      "status": "HTTP_200",
+      "replay_table_status": "LOCAL_CACHE",
+      "source_html_sha256": "4c9b7124ec81f2ef09745de7acc4418a0ad2cd6d83cbdc7742a4f8c671bddd89",
+      "events_before": "8",
+      "events_after": "8",
+      "disposition": "READABLE_TOC_EVENT_ROWS_REVIEWED"
+    },
+    {
+      "volume": 119,
+      "year": 1894,
+      "status": "HTTP_200",
+      "replay_table_status": "LOCAL_CACHE",
+      "source_html_sha256": "d1c3a0755be97665a02b7605aabebbad7bca333a5d3e9f19c4c60d0392b1637a",
+      "events_before": "1",
+      "events_after": "1",
+      "disposition": "READABLE_TOC_EVENT_ROWS_REVIEWED"
+    },
+    {
+      "volume": 150,
+      "year": 1910,
+      "status": "HTTP_404",
+      "replay_table_status": "HTTP_404",
+      "source_html_sha256": "",
+      "events_before": "",
+      "events_after": "",
+      "disposition": "HTTP404_UNKNOWN_NOT_ZERO"
+    },
+    {
+      "volume": 151,
+      "year": 1910,
+      "status": "HTTP_200",
+      "replay_table_status": "LOCAL_CACHE",
+      "source_html_sha256": "9975e3e147ce97ff3829080daa9643e09c7152745cc21b6fd7c529a99c864d1e",
+      "events_before": "6",
+      "events_after": "6",
+      "disposition": "READABLE_TOC_EVENT_ROWS_REVIEWED"
+    }
+  ],
+  "source_review_findings": [
+    {
+      "volume": 59,
+      "added_events": 1,
+      "reason": "The explicit Academy-members nomination heading omits et de Correspondants. Its de La Rive foreign-associate election at printed page 68 is a source-attested membership event."
+    },
+    {
+      "volume": 60,
+      "added_events": 1,
+      "reason": "The immediately preceding row describes the same Mechanics membership election and its tied ballot on 16 January (page 101). The adjacent next-session row explicitly proclaims Foucault elected on 23 January (page 154). Preserve contextual membership role and EST_PROCLAME_ELU_TRANSCRIBED; count only the winning event, not the tied ballot or its other candidate. Mechanics is supported by that bounded same-election context, not an unrelated section reference."
+    },
+    {
+      "volume": 60,
+      "added_events": 7,
+      "reason": "The explicit Sont nommés Correspondants de l’Académie header governs seven consecutive named entries: de Vergnette-Lamotte 397, Braun 545, Weber 660, Hofmeister 762, O. Struve 1012, Plantamour 1067 and Clausius 1126. The final entry lacks a dash. Preserve SONT_NOMMES_HEADER_TRANSCRIBED for all seven; do not invent an individual appointment verb. The following alphabetical O boundary terminates the group."
+    },
+    {
+      "volume": 58,
+      "added_events": 0,
+      "reason": "The existing Parade correspondent appointment is split after Correspondant de. The immediately adjoining continuation supplies Économie rurale and printed page 193. Repair the section and both page locator fields without adding an event."
+    },
+    {
+      "volume": 151,
+      "added_events": 0,
+      "reason": "L. Teisserenc de Bort page 847 explicitly belongs to the Section des Académiciens libres. Correct the generic full-section role to FULL_ACADEMICIAN_LIBRE while preserving the source name and blank science section."
+    },
+    {
+      "volume": 151,
+      "added_events": 0,
+      "reason": "Francotte page 912 has section Anatomie et Zoologie followed by the replacement phrase à la place de M. Van Beneden. End the section field before that replacement phrase; preserve all other fields."
+    },
+    {
+      "volume": 88,
+      "added_events": 0,
+      "reason": "Review covered both ordinary table rows and the additional tableItem elements of this mixed DOM. All 18 event rows and their heading boundaries agree with the source; no extra membership event is justified."
+    }
+  ],
+  "pending_original_event_page_checks": [],
+  "source_names_preserved_as_transcribed": true,
+  "original_member_election_pages_opened": 0,
+  "accepted_memberships": 0,
+  "accepted_exact_dobs": 0,
+  "bazi_variables_computed": 0
+}
