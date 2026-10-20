@@ -18,7 +18,7 @@ from bs4 import BeautifulSoup
 from france_academy_wikisource_index_preflight_v1 import build_urls,read_one
 from france_academy_wikisource_election_rows_v1 import role_of,section_of,person_of,identity_key,extract_from_html
 
-VERSION="france-academy-legacy-heading-wikisource-source-only-v1_13"
+VERSION="france-academy-legacy-heading-wikisource-source-only-v1_14"
 VOLUMES=[(1,1835),(42,1856),(43,1856),(91,1880),(182,1926)]
 CTHS="data/france_academy_cths_profile_dob_harvest_v1/cths_dob_claims_all_targets_candidate_only_v1.csv"
 OUT=Path("data/france_academy_wikisource_legacy_heading_pilot_v1")
@@ -48,10 +48,17 @@ def name_from_line(line):
     raw=re.sub(r"\bM\.\s*\(\s*M\.\s*\)\s*","M. ",raw,flags=re.I)
     result=person_of(raw)
     if result:return result
-    # Tome 178 prints "Sur William Pope", not "Sir". Preserve its source
-    # spelling as a candidate instead of silently correcting the honorific.
+    # Tome 178 prints "Sur William Pope", not "Sir"; Tome 148 uses
+    # "S. A. S. Albert Ier, prince de Monaco". Preserve these source strings.
     body=raw.split("—",1)[-1].strip()
-    match=re.match(r"(Sur\s+.{2,110}?)\s+est\s+élu\b",body,re.I)
+    match=re.match(r"((?:Sur|S\.\s*A\.\s*S\.)\s+.{2,110}?),?\s+est\s+élu\b",body,re.I)
+    if match:
+        name=" ".join(match.group(1).split()).strip(" ,;.-")
+        # get_text inserts a separator between </i> and this source comma.
+        return re.sub(r"\s+,",",",name) if re.match(r"S\.\s*A\.\s*S\.",name,re.I) else name
+    # Tome 85 has the singular predicate "MM. Cailletet est élu". Accept
+    # only its single name token, not a plural list of elected people.
+    match=re.match(r"MM\.\s+([^\s,;]{2,110})\s+est\s+élu\b",body,re.I)
     return " ".join(match.group(1).split()).strip(" ,;.-") if match else ""
 def nominated_name_from_line(line):
     """Retrieve ONLY the named appointee preceding est nommé/e, not a predecessor."""
@@ -65,6 +72,10 @@ def nominated_name_from_line(line):
         # Tome 110 explicitly says Lord Rayleigh. Preserve that transcribed
         # honorific; do not expand or silently normalize this identity.
         m=re.search(r"\b(Lord\s+.{2,140}?)\s+est\s+nomm[ée]e?\b",raw,re.I)
+    if not m:
+        # Tome 84 explicitly appoints "Sa Majesté don Pedro d’Alcantara".
+        # Preserve this title and the source's feminine "est nommée".
+        m=re.search(r"\b(Sa\s+Majesté\s+.{2,140}?)\s+est\s+nomm[ée]e?\b",raw,re.I)
     if not m:return ""
     result=" ".join(m.group(1).split()).strip(" ,;.-")
     return result if len(result)<=110 and " et " not in result.casefold() else ""
@@ -173,17 +184,19 @@ def split_correspondent_row(tr,line,page):
     return line+" "+continuation,number
 
 def split_nomination_row(tr,line,page):
-    """Join only the two complete nomination splits observed in Shard06.
+    """Join only the complete nomination splits observed in source.
 
     Tome 77 continues a named free-member appointment; Tome 109 continues
-    a correspondent's replacement clause. Both put the explicit page in
-    the next table's first, single-cell row. Missing or unrelated fragments
-    leave the original partial record unchanged.
+    a correspondent's replacement clause; Tome 56 has an explicit
+    correspondent followed by "de la même Section" and its replacement.
+    All put the explicit page in the next table's first, single-cell row.
+    Missing or unrelated fragments leave the partial record unchanged.
     """
     if page or not nominated_name_from_line(line):return line,page
     free_member=bool(re.search(r"\best\s+nomm[ée]e?\s+à\s+la\s+place\s+de\s*$",line,re.I))
     correspondent=bool(nomination_role(line)=="CORRESPONDENT" and re.search(r",\s*en\s*$",line,re.I))
-    if not (free_member or correspondent):return line,page
+    same_section=bool(re.search(r"\best\s+nomm[ée]e?\s+Correspondant\s*$",line,re.I))
+    if not (free_member or correspondent or same_section):return line,page
     table=tr.find_parent("table")
     if table is None or table.find_all("tr")[-1] is not tr:return line,page
     pieces=[];following=None
@@ -198,6 +211,7 @@ def split_nomination_row(tr,line,page):
         pieces.append(part)
     continuation=" ".join(" ".join(pieces).split())
     pattern=(r"Membre libre laissée vacante par le décès de M\.\s+[^;\d]+" if free_member
+             else r"de la même Section en remplacement de feu M\.\s+[^;\d]+" if same_section
              else r"remplacement de feu M\.\s+[^;\d]+")
     if following is None or not re.fullmatch(pattern,continuation,re.I):return line,page
     first_row=following.find("tr")
@@ -280,14 +294,23 @@ def nominal_index_entry(line,scope,page):
     if free and scope=="ELECTION":
         name=free.group(1);role="FULL_ACADEMICIAN_LIBRE";section=""
     else:
+        # Tome 57 omits the appointment verb and names "la même Section".
+        # The explicit correspondent role is usable; its section is not
+        # supplied by inference from the preceding Neumann entry.
+        relative=re.fullmatch(
+            r"M\.\s+(.{2,110}?)\s+Correspondant\s+de\s+la\s+même\s+Section,\s+"
+            r"en\s+remplacement\s+de\s+[^;]+",body,re.I) if scope=="NOMINATION" else None
         match=re.fullmatch(
             r"M\.\s+(.{2,110}?),?\s+(correspondant|membre)\s+"
             r"(?:d[ée]\s+la|pour\s+la)\s+section\s+(?:de\s+|d['’])"
             r"([^,;]+),\s+en\s+remplacement\s+de\s+[^;]+",body,re.I)
-        if not match:return None
-        name=match.group(1)
-        role="CORRESPONDENT" if fold(match.group(2))=="correspondant" else "FULL_SECTION_MEMBER"
-        section=" ".join(match.group(3).split())[:90]
+        if relative:
+            name=relative.group(1);role="CORRESPONDENT";section=""
+        elif match:
+            name=match.group(1)
+            role="CORRESPONDENT" if fold(match.group(2))=="correspondant" else "FULL_SECTION_MEMBER"
+            section=" ".join(match.group(3).split())[:90]
+        else:return None
     name=" ".join(name.split()).strip(" ,;.-")
     if not name or " et " in fold(name) or re.search(
             r"\b(?:est|sont|ete|elu|nomme|candidat|candidats|adresse|demande|prie|propose|presente)\b",fold(name)):
@@ -678,6 +701,7 @@ def fixture():
     fixture_shard06()
     fixture_shard07()
     fixture_shard08()
+    fixture_shard09()
     print("PASS: historical fixtures; office scope; bare/literal nomination tables; bounded split rows; explicit clergy names; source-only gates")
 
 def fixture_shard04():
@@ -1044,6 +1068,110 @@ def fixture_shard08():
         row=next(r for r in rows if r["elected_name_candidate"]=="Charles Rabut")
         assert not row["science_section_candidate"],row
     assert all(r[field]=="0" for r in recovered83+recovered112+recovered178 for field in (
+        "original_election_printed_page_opened","official_membership_accepted",
+        "exact_dob_accepted","bazi_variables_computed"))
+
+def fixture_shard09():
+    # Tome 56, membership tr546 and tr553-557. Mac Leur's first source
+    # table ends after Correspondant; only the adjacent continuation and
+    # the next table's first numeric cell identify its printed page.
+    tome56="""<table><tbody>
+       <tr><td>NOMINATIONS <i>de Membres et de Correspondants de l’Académie.</i> — M. <i>Edm. Becquerel</i> est nommé Membre de l’Académie (Section de Physique) en remplacement de feu M. <i>Despretz.</i></td><td>945</td></tr>
+       <tr><td>— M. <i>Mac Leur</i> est nommé Correspondant</td></tr></tbody></table>
+       <span><span class="pagenum ws-pagenum" id="TdM" title="Page:Comptes rendus hebdomadaires des séances de l’Académie des sciences, tome 056, 1863.djvu/1286"></span></span>
+       de la même Section en remplacement de feu M. <i>Bond.</i>
+       <table><tbody><tr><td>765</td></tr>
+       <tr><td>— M. <i>Schoenbein</i> est nommé Correspondant de la Section de Chimie en remplacement de M. <i>Liebig,</i> devenu Associé étranger.</td><td>765</td></tr>
+       <tr><td>NOMINATIONS <i>de candidats pour les places auxquelles l’Académie est appelée à présenter.</i> — L’Académie, sur l’invitation de M. <i>le Ministre de l’Instruction publique,</i> élit par voie de scrutin deux candidats pour une place vacante au Bureau des Longitudes : candidat présenté en première ligne, M. <i>Lamé ;</i> candidat présenté en seconde ligne, M. <i>de Tessan.</i></td><td>1150</td></tr>
+       <tr><td><span class="sc">Optique</span>. — Mémoire sur les dix-sept premiers arcs-en-ciel de l’eau ; par M. <i>Billet.</i></td><td>999</td></tr></tbody></table>"""
+    recovered56,_=parse_html(tome56.encode("utf-8"),56,1863)
+    assert len(recovered56)==3,recovered56
+    mac=next(r for r in recovered56 if r["elected_name_candidate"]=="Mac Leur")
+    assert (mac["election_role_candidate"],mac["source_action_wording"],
+            mac["original_printed_volume_page"],mac["source_printed_page_references"],
+            mac["science_section_candidate"])==("CORRESPONDENT","EST_NOMME_TRANSCRIBED","765","765",""),mac
+    for incomplete in (
+            tome56.replace("de la même Section en remplacement de feu M. <i>Bond.</i>",""),
+            tome56.replace("<tr><td>765</td></tr>","<tr><td>unresolved</td></tr>"),
+            tome56.replace("de la même Section en remplacement",'<span class="sc">Optique</span> de la même Section en remplacement')):
+        rows,_=parse_html(incomplete.encode("utf-8"),56,1863)
+        row=next(r for r in rows if r["elected_name_candidate"]=="Mac Leur")
+        assert not row["original_printed_volume_page"] and not row["science_section_candidate"],row
+
+    # Tome 57, tr359-365. Sylvester is an explicit correspondent noun
+    # phrase, without an appointment verb or independently named Section.
+    tome57="""<table>
+       <tr><td>NOMINATIONS <i>de Membres et de Correspondants de l’Académie</i>. — M. <i>Naudin</i> est nommé Membre de l’Académie, Section de Botanique, en remplacement de feu M. <i>Moquin Tandon</i></td><td>977</td></tr>
+       <tr><td>— M. <i>Favre</i> est nommé Correspondant de la Section de Chimie, en remplacement de feu M. <i>Desormes</i></td><td>206</td></tr>
+       <tr><td>— M. <i>Neumann</i> Correspondant de la Section de Géométrie, en remplacement de feu M. <i>Ostrogradski</i></td><td>903</td></tr>
+       <tr><td>— M. <i>Sylvester</i> Correspondant de la même Section, en remplacement de feu M. <i>Steiner</i></td><td>945</td></tr>
+       <tr><td>— M. <i>Lawrence</i> Correspondant de la Section de Médecine et de Chirurgie, en remplacement de feu M. <i>B. Brodie</i></td><td>1008</td></tr>
+       <tr><td><span class="sc">Opium</span>. — Sur les réactions qui aident à déceler la présence de l’opium ou de la morphine ; Note de M. <i>Vincent</i></td><td>440</td></tr></table>"""
+    recovered57,_=parse_html(tome57.encode("utf-8"),57,1863)
+    assert len(recovered57)==5,recovered57
+    sylvester=next(r for r in recovered57 if r["elected_name_candidate"]=="Sylvester")
+    assert (sylvester["election_role_candidate"],sylvester["source_action_wording"],
+            sylvester["original_printed_volume_page"],sylvester["science_section_candidate"])==(
+        "CORRESPONDENT","NOMINAL_NOMINATION_INDEX_ENTRY_TRANSCRIBED","945",""),sylvester
+    without_page,_=parse_html(tome57.replace("<td>945</td>","<td>unresolved</td>").encode("utf-8"),57,1863)
+    assert all(r["elected_name_candidate"]!="Sylvester" for r in without_page),without_page
+    external57=tome57.replace("de Membres et de Correspondants de l’Académie",
+        "de candidats pour les places auxquelles l’Académie est appelée à présenter")
+    assert not parse_html(external57.encode("utf-8"),57,1863)[0]
+
+    # Tome 84, tr563-569: the observed royal title precedes est nommée.
+    tome84="""<table>
+       <tr><td><span class="sc">Nominations de membres et de correspondants de l’académie</span>. — M. <i>Van Tieghem</i> est élu Membre de la Section de Botanique, en remplacement de feu M. Ad. Brongniart</td><td>72</td></tr>
+       <tr><td>— M. <i>Lory</i> est élu Correspondant, pour la Section de Minéralogie, en remplacement de feu M. Naumann</td><td>294</td></tr>
+       <tr><td>— M. <i>H. Debray</i> est élu Membre de la Section de Chimie, en remplacement de feu M. Balard</td><td>369</td></tr>
+       <tr><td>— M. <i>Hébert</i> est élu Membre de la Section de Minéralogie, en remplacement de feu M. Ch. Sainte-Claire Deville</td><td>538</td></tr>
+       <tr><td>— Sa Majesté <i>don Pedro d’Alcantara</i> est nommée Associé étranger, en remplacement de feu M. Ehrenberg</td><td>1488</td></tr>
+       <tr><td><span class="sc">Observatoires</span>. — M. <i>Le Verrier</i> fait hommage à l’Académie du tome XIII de la partie des Mémoires des "Annales de l’Observatoire de Paris"</td><td>368</td></tr></table>"""
+    recovered84,_=parse_html(tome84.encode("utf-8"),84,1877)
+    assert len(recovered84)==5,recovered84
+    pedro=next(r for r in recovered84 if r["original_printed_volume_page"]=="1488")
+    assert (pedro["elected_name_candidate"],pedro["election_role_candidate"],pedro["source_action_wording"])==(
+        "Sa Majesté don Pedro d’Alcantara","FOREIGN_ASSOCIATE","EST_NOMME_TRANSCRIBED"),pedro
+    external84=tome84.replace("Nominations de membres et de correspondants de l’académie","Décrets")
+    assert not parse_html(external84.encode("utf-8"),84,1877)[0]
+
+    # Tome 85, tr573-578: preserve Godron's transcribed Correspoudant as
+    # UNKNOWN pending original-page review. Pedro's thanks are not a new
+    # event; MM. Cailletet has a single name and a singular election verb.
+    tome85="""<table>
+       <tr><td><span class="sc">Nominations de membres et correspondants</span>. — M. <i>Godron</i> est élu Correspoudant, pour la Section de Botanique, en remplacement de feu M. <i>Lestiboudois</i></td><td>24</td></tr>
+       <tr><td>— <i>S. M. Don Pedro d’Alcantara</i>, empereur du Brésil, élu Associé étranger dans la séance du 25 juin, adresse ses remercîments à l’Académie</td><td>128</td></tr>
+       <tr><td>— M. <i>Thomson</i> est élu Associé étranger, en remplacement de feu M. <i>de Baer</i></td><td>1042</td></tr>
+       <tr><td>— MM. <i>Cailletet</i> est élu Correspondant, pour la Section de Minéralogie, en remplacement de feu <i>d’Omalius d’Halloy</i></td><td>1141</td></tr>
+       <tr><td><span class="sc">Observatoires</span>. — M. le <i>Secrétaire perpétuel</i> signale, parmi les pièces imprimées de la Correspondance, diverses publications de l’Observatoire météorologique et magnétique des Pères de la Compagnie de Jésus, à Zi-Ka-Wei, près de Chang-Haï (Chine)</td><td>934</td></tr></table>"""
+    recovered85,_=parse_html(tome85.encode("utf-8"),85,1877)
+    assert len(recovered85)==3,recovered85
+    assert next(r for r in recovered85 if r["elected_name_candidate"]=="Godron")["election_role_candidate"]=="UNKNOWN_ROLE_MANUAL"
+    cailletet=next(r for r in recovered85 if r["elected_name_candidate"]=="Cailletet")
+    assert (cailletet["election_role_candidate"],cailletet["original_printed_volume_page"],
+            cailletet["science_section_candidate"])==("CORRESPONDENT","1141","Minéralogie"),cailletet
+    multiple85=tome85.replace("MM. <i>Cailletet</i> est élu","MM. <i>Cailletet et Exemple</i> est élu")
+    assert len(parse_html(multiple85.encode("utf-8"),85,1877)[0])==2
+
+    # Tome 148, tr455-463: keep the complete royal name/title string.
+    tome148="""<table>
+       <tr><td>ÉLECTIONS. — M. <i>Mangin</i> est élu Membre de la Section de Botanique en remplacement de M. <i>Ph. van Tieghem</i>.</td><td>215</td></tr>
+       <tr><td>— M. <i>Jungfleisch</i> est élu Membre de la Section de Chimie, en remplacement de M. <i>A. Ditte</i>, décédé</td><td>394</td></tr>
+       <tr><td>— M. <i>Termier</i> est élu Membre de la Section de Minéralogie, en remplacement de M. <i>A. Gaudry,</i> décédé</td><td>759</td></tr>
+       <tr><td>— S. A. S. <i>Albert Ier</i>, prince de Monaco, est élu Associé étranger, en remplacement de Lord <i>Kelvin,</i> décédé</td><td>821</td></tr>
+       <tr><td>— M. <i>Zirkel</i> est élu Correspondant pour la Section de Minéralogie, en remplacement de M. <i>Carl Klein,</i> décédé.</td><td>24</td></tr>
+       <tr><td>— M. <i>W. Kilian</i> est élu Correspondant pour la Section de Minéralogie en remplacement de M. <i>Peron</i>, décédé.</td><td>145</td></tr>
+       <tr><td>— M. <i>Boudier</i> est élu Correspondant dans la Section de Botanique, en remplacement de M. <i>Masters</i>, décédé</td><td>821</td></tr>
+       <tr><td>— M. <i>Wiesner</i> est élu Correspondant dans la Section de Botanique, en remplacement de M. <i>Clos</i>, décédé</td><td>901</td></tr>
+       <tr><td>ÉLECTRICITÉ.</td></tr></table>"""
+    recovered148,_=parse_html(tome148.encode("utf-8"),148,1909)
+    assert len(recovered148)==8,recovered148
+    albert=next(r for r in recovered148 if r["elected_name_candidate"].startswith("S. A. S."))
+    assert (albert["elected_name_candidate"],albert["election_role_candidate"],
+            albert["source_action_wording"],albert["original_printed_volume_page"])==(
+        "S. A. S. Albert Ier, prince de Monaco","FOREIGN_ASSOCIATE","EST_ELU_TRANSCRIBED","821"),albert
+    assert not parse_html(tome148.replace("ÉLECTIONS.","ÉLECTRICITÉ.").encode("utf-8"),148,1909)[0]
+    assert all(r[field]=="0" for r in recovered56+recovered57+recovered84+recovered85+recovered148 for field in (
         "original_election_printed_page_opened","official_membership_accepted",
         "exact_dob_accepted","bazi_variables_computed"))
 
