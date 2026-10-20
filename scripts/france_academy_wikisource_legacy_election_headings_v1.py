@@ -18,7 +18,7 @@ from bs4 import BeautifulSoup
 from france_academy_wikisource_index_preflight_v1 import build_urls,read_one
 from france_academy_wikisource_election_rows_v1 import role_of,section_of,person_of,identity_key,extract_from_html
 
-VERSION="france-academy-legacy-heading-wikisource-source-only-v1_12"
+VERSION="france-academy-legacy-heading-wikisource-source-only-v1_13"
 VOLUMES=[(1,1835),(42,1856),(43,1856),(91,1880),(182,1926)]
 CTHS="data/france_academy_cths_profile_dob_harvest_v1/cths_dob_claims_all_targets_candidate_only_v1.csv"
 OUT=Path("data/france_academy_wikisource_legacy_heading_pilot_v1")
@@ -36,16 +36,23 @@ def fold(s):
 def event_heading(s):
     x=fold(s)
     # 98/128 omit the second "de"; 94 uses "des correspondants";
+    # 83 uses "Nomination des membres";
     # 14 uses "ou de correspondants";
     # 74 explicitly inserts "d'associés étrangers" in the membership list.
     return bool(re.match(
-        r"^(?:elections?(?: de membres)?|nominations? de membres(?: "
+        r"^(?:elections?(?: de membres)?|nominations? des? membres(?: "
         r"(?:et|ou) (?:des? )?correspondants|,\s*d.associes etrangers et de correspondants)"
         r"(?: de l.academie)?)\b",x))
 def name_from_line(line):
     raw=re.sub(r"\bM\.\s*\(\s*Monsieur\s*\)\s*","M. ",line,flags=re.I)
     raw=re.sub(r"\bM\.\s*\(\s*M\.\s*\)\s*","M. ",raw,flags=re.I)
-    return person_of(raw)
+    result=person_of(raw)
+    if result:return result
+    # Tome 178 prints "Sur William Pope", not "Sir". Preserve its source
+    # spelling as a candidate instead of silently correcting the honorific.
+    body=raw.split("—",1)[-1].strip()
+    match=re.match(r"(Sur\s+.{2,110}?)\s+est\s+élu\b",body,re.I)
+    return " ".join(match.group(1).split()).strip(" ,;.-") if match else ""
 def nominated_name_from_line(line):
     """Retrieve ONLY the named appointee preceding est nommé/e, not a predecessor."""
     raw=re.sub(r"\bM\.\s*\(\s*Monsieur\s*\)\s*","M. ",line,flags=re.I)
@@ -201,6 +208,64 @@ def split_nomination_row(tr,line,page):
     if not re.fullmatch(r"\d{1,5}",number):return line,page
     return line+" "+continuation,number
 
+def split_member_division_row(tr,line,page):
+    """Complete Tome 178's named member/division/page transclusion split.
+
+    The existing section extractor explicitly supports division des. Do
+    not supply it unless both the adjacent division text and single-cell
+    printed page are present at the actual end/start of their tables.
+    """
+    if page or not name_from_line(line) or not re.search(r"\best\s+élu\s+membre\s+de\s*$",line,re.I):return line,page
+    table=tr.find_parent("table")
+    if table is None or table.find_all("tr")[-1] is not tr:return line,page
+    pieces=[];following=None
+    for i,sibling in enumerate(table.next_siblings):
+        if i>=8:return line,page
+        tag=getattr(sibling,"name",None)
+        if tag=="table":following=sibling;break
+        if tag not in (None,"span"):return line,page
+        part=sibling.get_text(" ",strip=True) if tag else str(sibling)
+        if tag=="span" and part:return line,page
+        pieces.append(part)
+    continuation=" ".join(" ".join(pieces).split())
+    if following is None or not re.fullmatch(r"la division des [^.;\d]+",continuation,re.I):return line,page
+    first_row=following.find("tr")
+    if first_row is None:return line,page
+    cells=first_row.find_all("td",recursive=False)
+    if len(cells)!=1:return line,page
+    number=cells[0].get_text(" ",strip=True)
+    if not re.fullmatch(r"\d{1,5}",number):return line,page
+    return line+" "+continuation,number
+
+def floating_table_item_row(item):
+    """Read Tome 112's old tableDots/tablePage floating layout.
+
+    Both unique structural slots must belong to this tableItem. The title
+    is the sibling immediately before the dots wrapper, never the entire
+    page or surrounding prose. An incomplete page can preserve a heading
+    boundary but must not create a new event with an inferred locator.
+    """
+    dots=item.select(".tableDots");pages=item.select(".tablePage")
+    if len(dots)!=1 or len(pages)!=1:return None
+    dots,page_node=dots[0],pages[0]
+    if any(node.find_parent("div",class_="tableItem") is not item for node in (dots,page_node)):return None
+    if any("ws-noexport" not in node.parent.get("class",[]) for node in (dots,page_node)):return None
+    title=dots.parent.find_previous_sibling("div")
+    if title is None or title.parent is not dots.parent.parent:return None
+    if title.find_parent("div",class_="tableItem") is not item or title.select_one(".tablePage, .tableDots"):return None
+    line=" ".join(title.get_text(" ",strip=True).split())
+    if not line:return None
+    page,refs=page_references(page_node.get_text(" ",strip=True))
+    sc=title.find("span",class_=re.compile("sc",re.I))
+    heading=" ".join(sc.get_text(" ",strip=True).split()) if sc else ""
+    if not page:
+        prefix=line.split("—",1)[0].strip(" .")
+        if event_heading(prefix):line=prefix
+        elif heading:line=heading
+        else:return None
+        refs=""
+    return line,page,heading,refs
+
 def nominal_index_entry(line,scope,page):
     """Read explicit member-role noun phrases inside a membership heading.
 
@@ -277,8 +342,14 @@ def parse_html(raw,volume,year):
     events=[];headings=[]
     old,modern_headings=extract_from_html(raw,year,volume)
     for x in old:
+        name=x["transcribed_elected_person_name"]
+        excerpt=x.get("transcribed_line_excerpt","")
+        if not name and re.match(r"^—\s+Sur\s+",excerpt):
+            # Repair this existing modern record in place. Adding a separate
+            # legacy row would leave a duplicate anonymous event behind.
+            name=name_from_line(excerpt)
         events.append({"volume":str(volume),"year":str(year),
-             "elected_name_candidate":x["transcribed_elected_person_name"],
+             "elected_name_candidate":name,
              "election_role_candidate":x["transcribed_election_type"],
              "source_action_wording":"EST_ELU_TRANSCRIBED",
              "science_section_candidate":x["transcribed_science_section"],
@@ -300,6 +371,7 @@ def parse_html(raw,volume,year):
         page=" ".join(cells[1].get_text(" ",strip=True).split()) if len(cells)>1 else ""
         line,page=split_correspondent_row(tr,line,page)
         line,page=split_nomination_row(tr,line,page)
+        line,page=split_member_division_row(tr,line,page)
         page,page_refs=page_references(page)
         sc=first.find("span",class_=re.compile(r"sc",re.I))
         heading=" ".join(sc.get_text(" ",strip=True).split()) if sc else ""
@@ -309,7 +381,10 @@ def parse_html(raw,volume,year):
         # Tome 14 uses the same page container with ws-titre, not ws-titrex.
         # Prefer the established layout when both are present.
         div=item.select_one(".ws-titrex") or item.select_one(".ws-titre")
-        if div is None:continue
+        if div is None:
+            floating=floating_table_item_row(item)
+            if floating:legacy_rows.append(floating)
+            continue
         line=" ".join(div.get_text(" ",strip=True).split())
         page_container=item.select_one(".ws-titpge")
         full=" ".join(page_container.get_text(" ",strip=True).split()) if page_container else ""
@@ -335,6 +410,10 @@ def parse_html(raw,volume,year):
                     if not p1 and p2:x["original_printed_volume_page"]=p2
                     if not x.get("source_printed_page_references") and candidate.get("source_printed_page_references"):
                         x["source_printed_page_references"]=candidate["source_printed_page_references"]
+                    # A completed adjacent continuation may also recover the
+                    # explicit section/division omitted by the first parser.
+                    if p1 and p2 and p1==p2 and not x.get("science_section_candidate") and candidate.get("science_section_candidate"):
+                        x["science_section_candidate"]=candidate["science_section_candidate"]
                     return
         events.append(candidate)
 
@@ -374,7 +453,7 @@ def parse_html(raw,volume,year):
                 correspondent_only=is_named_correspondent
                 reminder_only=is_membership_reminder
                 nominal_scope=""
-                if re.match(r"^(?:elections?|nominations?) de membres\b",fold(head_candidate)):
+                if re.match(r"^(?:elections?|nominations?) des? membres\b",fold(head_candidate)):
                     nominal_scope="ELECTION" if fold(head_candidate).startswith("election") else "NOMINATION"
                 header=head_candidate if event_heading(head_candidate) else prefix
                 if header not in headings:headings.append(header[:120])
@@ -598,6 +677,7 @@ def fixture():
     fixture_shard05()
     fixture_shard06()
     fixture_shard07()
+    fixture_shard08()
     print("PASS: historical fixtures; office scope; bare/literal nomination tables; bounded split rows; explicit clergy names; source-only gates")
 
 def fixture_shard04():
@@ -888,6 +968,82 @@ def fixture_shard07():
     approval="""<table><tr><td>ORDONNANCE ROYALE confirmant la nomination de M. Jacobi en qualité d’associé étranger de l’Académie des Sciences.</td><td>57</td></tr></table>"""
     assert not parse_html(approval.encode("utf-8"),23,1846)[0]
     assert all(r[field]=="0" for r in recovered49+recovered50+recovered110 for field in (
+        "original_election_printed_page_opened","official_membership_accepted",
+        "exact_dob_accepted","bazi_variables_computed"))
+
+def fixture_shard08():
+    tome83="""<table>
+       <tr><td><span class="sc">Nomination des membres et correspondants de l’académie</span>. — M. <i>Favé</i> est élu à la place d’Académicien libre laissée vacante par le décès de M. <i>A.-P. Séguier</i></td><td>125</td></tr>
+       <tr><td>— M. le général <i>Favé</i> adresse ses remercîments à l’Académie</td><td>312</td></tr>
+       <tr><td><span class="sc">Observations météorologiques de montsouris</span></td><td>94</td></tr></table>"""
+    recovered83,_=parse_html(tome83.encode("utf-8"),83,1876)
+    assert [(r["elected_name_candidate"],r["election_role_candidate"],r["original_printed_volume_page"]) for r in recovered83]==[
+        ("Favé","FULL_ACADEMICIAN_LIBRE","125")],recovered83
+
+    # Actual Tome 112 title/page slot hierarchy. Decorative style values
+    # are shortened; the tableItem/tableDots/tablePage relationships and
+    # all seven membership lines are retained from the captured source.
+    actual112=[
+        ("<span class='sc'>Nominations de membres et de correspondants de l’académie</span>. — M. <i>Haller</i> est élu Correspondant pour la Section de Chimie, en remplacement de feu M. <i>Chancel</i>", "81"),
+        ("— M. <i>Chambrelent</i> est élu Membre de la Section d’Économie rurale, en remplacement de feu M. <i>Peligot</i>", "148"),
+        ("— M. <i>Geikie</i> est élu Correspondant pour la Section de Minéralogie, en remplacement de feu M. <i>Favre</i>", "470"),
+        ("— M. <i>G. Sire</i> est élu Correspondant pour la Section de Mécanique, en remplacement de feu M. <i>Dausse</i>", "509"),
+        ("— M. <i>de Serpa Pinto</i> est élu Correspondant pour la Section de Géographie et Navigation, en remplacement de feu M. <i>Pissis</i>", "846"),
+        ("— M. le Prince <i>Albert de Monaco</i> est élu Correspondant pour la Section de Géographie et Navigation, en remplacement de M. <i>de Tchihatcheff</i>", "930"),
+        ("— M. <i>Moissan</i> est élu Membre de la Section de Chimie, en remplacement de feu M. <i>Cahours</i>", "1298"),
+        ("<span class='sc'>Olfaction</span>. — Olfactomètre fondé sur la diffusion à travers les membranes flexibles ; par M. Charles Henry", "344")]
+    def floating_html(rows):
+        return "".join("<div class='tableItem' style='position:relative'><div style='margin-right:0px'><div style='float:left;width:100%'><div style='position:relative;z-index:2'><span>"+
+            line+"</span></div><div class='ws-noexport' style='position:relative;margin-left:1em'><div class='tableDots'></div></div></div><div class='ws-noexport' style='float:right'><div class='tablePage'><span>"+
+            page+"</span></div></div><div style='clear:both'></div></div></div>" for line,page in rows)
+    tome112=floating_html(actual112)
+    recovered112,_=parse_html(tome112.encode("utf-8"),112,1891)
+    expected112=[("Haller","CORRESPONDENT","81"),("Chambrelent","FULL_SECTION_MEMBER","148"),
+        ("Geikie","CORRESPONDENT","470"),("G. Sire","CORRESPONDENT","509"),
+        ("de Serpa Pinto","CORRESPONDENT","846"),("le Prince Albert de Monaco","CORRESPONDENT","930"),
+        ("Moissan","FULL_SECTION_MEMBER","1298")]
+    assert [(r["elected_name_candidate"],r["election_role_candidate"],r["original_printed_volume_page"]) for r in recovered112]==expected112,recovered112
+    # Missing structural slots cannot be borrowed from surrounding prose.
+    assert not parse_html(tome112.replace("class='tableDots'","class='unresolved'").encode("utf-8"),112,1891)[0]
+    assert not parse_html(tome112.replace("class='tablePage'","class='unresolved'").encode("utf-8"),112,1891)[0]
+    partial_rows=[(line,"unresolved" if page=="81" else page) for line,page in actual112]
+    partial,_=parse_html(floating_html(partial_rows).encode("utf-8"),112,1891)
+    assert [r["elected_name_candidate"] for r in partial]==[x[0] for x in expected112[1:]],partial
+    outside=tome112+floating_html([("— M. Exemple est élu Membre de la Section de Chimie, en remplacement de M. Autre", "12")])
+    assert len(parse_html(outside.encode("utf-8"),112,1891)[0])==7
+    external=tome112.replace("Nominations de membres et de correspondants de l’académie", "Commissions spéciales")
+    assert not parse_html(external.encode("utf-8"),112,1891)[0]
+
+    # The modern extractor already emits these nine Tome 178 records. Fix
+    # Pope's empty name from its own excerpt and Rabut's missing division
+    # from the three adjacent source fragments, without adding a duplicate.
+    tome178="""<table><tbody>
+       <tr><td><span class="sc">Elections de membres et de correspondants</span>. — M. <i>Félix Lagrange</i> est élu correspondant pour la section de médecine et chirurgie</td><td>288</td></tr>
+       <tr><td>— M. <i>Maurice de Broglie</i> est élu académicien libre</td><td>744</td></tr>
+       <tr><td>— M. <i>Alexandre Desgrez</i> est élu académicien libre</td><td>911</td></tr>
+       <tr><td>— M. <i>Serge Winogradsky</i> est élu associé étranger</td><td>1251</td></tr>
+       <tr><td>— M. <i>Edmund Beecher Wilson</i> est élu correspondant pour la section d’anatomie et zoologie</td><td>1508</td></tr>
+       <tr><td>— Sur <i>William Pope</i> est élu correspondant pour la section de chimie</td><td>1592</td></tr>
+       <tr><td>— M. <i>Johannes Schmidt</i> est élu correspondant pour la section d’anatomie et zoologie</td><td>1674</td></tr>
+       <tr><td>— M. <i>Charles Rabut</i> est élu membre de</td></tr></tbody></table> <span><span class="pagenum ws-pagenum" id="TdM" title="Page:Comptes rendus hebdomadaires des séances de l’Académie des sciences, tome 178, 1924.djvu/2304"></span></span>
+       la division des applications de la science à l’industrie
+       <table><tbody><tr><td>1871</td></tr>
+       <tr><td>— M. <i>Giovanni Battista De Toni</i> est élu correspondant pour la section de botanique</td><td>2155</td></tr>
+       <tr><td><span class="sc">Electricité</span></td></tr></tbody></table>"""
+    recovered178,_=parse_html(tome178.encode("utf-8"),178,1924)
+    assert len(recovered178)==9 and all(r["elected_name_candidate"] for r in recovered178),recovered178
+    pope=next(r for r in recovered178 if r["original_printed_volume_page"]=="1592")
+    assert (pope["elected_name_candidate"],pope["election_role_candidate"],pope["source_action_wording"],pope["science_section_candidate"])==(
+        "Sur William Pope","CORRESPONDENT","EST_ELU_TRANSCRIBED","chimie"),pope
+    rabut=next(r for r in recovered178 if r["elected_name_candidate"]=="Charles Rabut")
+    assert (rabut["election_role_candidate"],rabut["original_printed_volume_page"],rabut["science_section_candidate"])==(
+        "FULL_SECTION_MEMBER","1871","division des applications de la science à l’industrie"),rabut
+    for incomplete in (tome178.replace("la division des applications de la science à l’industrie",""),
+                       tome178.replace("<td>1871</td>","<td>unresolved</td>")):
+        rows,_=parse_html(incomplete.encode("utf-8"),178,1924)
+        row=next(r for r in rows if r["elected_name_candidate"]=="Charles Rabut")
+        assert not row["science_section_candidate"],row
+    assert all(r[field]=="0" for r in recovered83+recovered112+recovered178 for field in (
         "original_election_printed_page_opened","official_membership_accepted",
         "exact_dob_accepted","bazi_variables_computed"))
 
