@@ -1,0 +1,46 @@
+{
+  "errors": [],
+  "files": [
+    {
+      "fingerprints": {
+        "bytes": 271746,
+        "git_blob_sha": "1e76a8d1fa0e53e7f4912f282ada01cf868326de",
+        "sha256": "8eab0030d76e0e6a4705a0a745a84b63aa733e33b4b1106f7b4e505ceb5b19f8"
+      },
+      "path": "chess_first_reveal_v1/bazi_2013_M.csv",
+      "role": "development",
+      "rows": 501,
+      "unique_ids": 501
+    },
+    {
+      "fingerprints": {
+        "bytes": 162692,
+        "git_blob_sha": "630a809fdba355e3a98ef3f816666d459ec74ab8",
+        "sha256": "9f8f18f24881af06be0ab7ef69ba97be62ad7ef2e389409a8f0b49d2a9c95d34"
+      },
+      "path": "chess_2023_reveal_v1/bazi_2023_M_NEW_TARGET.csv",
+      "role": "primary_evaluation",
+      "rows": 501,
+      "unique_ids": 501
+    },
+    {
+      "fingerprints": {
+        "bytes": 158584,
+        "git_blob_sha": "523b64e5040c5371faa5df1efa01cbeb886cfb60",
+        "sha256": "ae492ee432df39bf34443a6a268bd2abf2ab61b62c81b29f24414485bc328dbc"
+      },
+      "path": "chess_2023_reveal_v1/bazi_2023_M_FULL.csv",
+      "role": "secondary_evaluation",
+      "rows": 501,
+      "unique_ids": 501
+    }
+  ],
+  "identity_overlaps": {
+    "development_primary_evaluation": 0,
+    "development_secondary_evaluation": 283,
+    "primary_evaluation_secondary_evaluation": 209
+  },
+  "ok": true,
+  "protocol_id": "chess-single-A-v1",
+  "source_commit": "20f743ef8eda060d34121530323893dffc938aa6"
+}

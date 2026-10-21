@@ -1,0 +1,40 @@
+{
+  "protocol_id": "chess-single-A-v1",
+  "source_repository": "agenhcx/bazi-public-figure-study",
+  "source_commit": "20f743ef8eda060d34121530323893dffc938aa6",
+  "files": [
+    {
+      "role": "development",
+      "path": "chess_first_reveal_v1/bazi_2013_M.csv",
+      "git_blob_sha": "1e76a8d1fa0e53e7f4912f282ada01cf868326de",
+      "sha256": "8eab0030d76e0e6a4705a0a745a84b63aa733e33b4b1106f7b4e505ceb5b19f8",
+      "bytes": 271746,
+      "expected_rows": 501,
+      "expected_snapshot": "2013-01"
+    },
+    {
+      "role": "primary_evaluation",
+      "path": "chess_2023_reveal_v1/bazi_2023_M_NEW_TARGET.csv",
+      "git_blob_sha": "630a809fdba355e3a98ef3f816666d459ec74ab8",
+      "sha256": "9f8f18f24881af06be0ab7ef69ba97be62ad7ef2e389409a8f0b49d2a9c95d34",
+      "bytes": 162692,
+      "expected_rows": 501,
+      "expected_snapshot": "2023-01"
+    },
+    {
+      "role": "secondary_evaluation",
+      "path": "chess_2023_reveal_v1/bazi_2023_M_FULL.csv",
+      "git_blob_sha": "523b64e5040c5371faa5df1efa01cbeb886cfb60",
+      "sha256": "ae492ee432df39bf34443a6a268bd2abf2ab61b62c81b29f24414485bc328dbc",
+      "bytes": 158584,
+      "expected_rows": 501,
+      "expected_snapshot": "2023-01"
+    }
+  ],
+  "expected_identity_overlaps": {
+    "development_primary_evaluation": 0,
+    "development_secondary_evaluation": 283,
+    "primary_evaluation_secondary_evaluation": 209
+  }
+}
+

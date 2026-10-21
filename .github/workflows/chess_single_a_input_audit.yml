@@ -1,0 +1,58 @@
+name: Chess single A - input audit only
+
+on:
+  pull_request:
+    paths:
+      - "studies/chess_single_A_v1/**"
+      - ".github/workflows/chess_single_a_input_audit.yml"
+      - "chess_first_reveal_v1/bazi_2013_M.csv"
+      - "chess_2023_reveal_v1/bazi_2023_M_NEW_TARGET.csv"
+      - "chess_2023_reveal_v1/bazi_2023_M_FULL.csv"
+  push:
+    branches:
+      - "codex/chess-single-a-plan-v1"
+    paths:
+      - "studies/chess_single_A_v1/**"
+      - ".github/workflows/chess_single_a_input_audit.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Check out exact workflow commit
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Check audit failure cases
+        run: python3 -m unittest discover -s studies/chess_single_A_v1 -p 'test_*.py' -v
+      - name: Audit pinned data without fitting
+        run: python3 studies/chess_single_A_v1/audit_inputs.py --repo-root . --manifest studies/chess_single_A_v1/data_manifest.json --output .audit-output/input_audit.json
+      - name: Summarize input audit
+        if: always()
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          path = Path(".audit-output/input_audit.json")
+          lines = ["## Chess single A: input audit only", "", "No models were fitted or scored.", ""]
+          if path.exists():
+              report = json.loads(path.read_text(encoding="utf-8"))
+              lines.append("Input audit: " + ("PASS" if report["ok"] else "FAIL"))
+              lines.append("")
+              for entry in report["files"]:
+                  lines.append(f'- {entry["role"]}: {entry["rows"]} rows, {entry["unique_ids"]} unique identities')
+              lines.append("")
+              for pair, count in report["identity_overlaps"].items():
+                  lines.append(f"- {pair}: {count}")
+              if report["errors"]:
+                  lines.extend(["", "See audit output for input validation errors."])
+          else:
+              lines.append("Audit report was not produced; inspect preceding step logs.")
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as handle:
+              handle.write("\n".join(lines) + "\n")
+          PY
+
