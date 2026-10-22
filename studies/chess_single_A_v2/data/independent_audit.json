@@ -1,0 +1,79 @@
+{
+  "status": "passed",
+  "audited_at_utc": "2026-10-22T00:23:22.267871+00:00",
+  "audit_script_sha256": "0c050a09784094a5b462985057a730b438becf00f40bcfeaffbaa41a34cfdd0a",
+  "errors": [],
+  "cohorts": {
+    "2013_M": {
+      "target_n": 1000,
+      "n": 1000,
+      "canonical_ids_unique": true,
+      "person_qids_n": 1000,
+      "duplicate_person_qids_n": 0,
+      "cutoff_elo": 2444,
+      "all_cutoff_ties_present": true,
+      "calendar_provenance_counts": {
+        "legacy_frozen_convention_not_requeried": 754,
+        "explicit_gregorian_required": 246
+      },
+      "evidence_source_counts": {
+        "legacy": 754,
+        "new": 246
+      }
+    },
+    "2023_M_FULL": {
+      "target_n": 1000,
+      "n": 1001,
+      "canonical_ids_unique": true,
+      "person_qids_n": 1001,
+      "duplicate_person_qids_n": 0,
+      "cutoff_elo": 2412,
+      "all_cutoff_ties_present": true,
+      "calendar_provenance_counts": {
+        "legacy_frozen_convention_not_requeried": 957,
+        "explicit_gregorian_required": 44
+      },
+      "evidence_source_counts": {
+        "legacy": 957,
+        "new": 44
+      }
+    },
+    "2023_M_NEW_TARGET": {
+      "target_n": 500,
+      "n": 500,
+      "canonical_ids_unique": true,
+      "person_qids_n": 500,
+      "duplicate_person_qids_n": 0,
+      "cutoff_elo": 2334,
+      "all_cutoff_ties_present": true,
+      "calendar_provenance_counts": {
+        "legacy_frozen_convention_not_requeried": 289,
+        "explicit_gregorian_required": 211
+      },
+      "evidence_source_counts": {
+        "legacy": 289,
+        "new": 211
+      }
+    }
+  },
+  "manifest_sha256": "5d5efc1c63bf1f7433bc9d6d9cb26a2cf16150ec90d75db634f76e472626f459",
+  "summary_sha256": "755515b1f52214ba97710da60b9b14923fef7b5fedba07cc3bd8246890f068da",
+  "executing_collector_commit": "30dd22915372a80b1da3123ff97eba96cf7cd46f",
+  "available_source_archive_checks": {
+    "2013": true,
+    "2023": true
+  },
+  "old_development_retained_n": 501,
+  "old_development_n": 501,
+  "exclusion_union_n": 1574,
+  "overlaps": {
+    "development_new_canonical_ids": 0,
+    "development_new_person_qids": 0,
+    "legacy_new_person_qids": 0
+  },
+  "ranked500_check": {
+    "n": 501,
+    "cutoff_elo": 2529,
+    "matches_old_frozen_cohort": true
+  }
+}

@@ -1,10 +1,10 @@
 {
-  "status": "acquisition_incomplete",
-  "started_utc": "2026-10-22T00:09:26.742310+00:00",
+  "status": "acquisition_complete_no_models_fitted",
+  "started_utc": "2026-10-22T00:23:12.537958+00:00",
   "legacy_source_revision": "20f743ef8eda060d34121530323893dffc938aa6",
-  "executing_commit": "779c9c891ca94bb2022c5d0e7642deb786badf62",
-  "collector_sha256": "382b7133b0574bb2127d634da1e3e4ac04be9cb6604c35acf0ccff77d7b3a498",
-  "protocol_sha256": "635a41ab1b29f0b4e7780ff101ae63737a96ca45f9f571a1c25dc43b14f4d9ee",
+  "executing_commit": "30dd22915372a80b1da3123ff97eba96cf7cd46f",
+  "collector_sha256": "000d13d4760d79e9ce71c44407d224230ca50cdf09185956d9550346c218a2b6",
+  "protocol_sha256": "2a0d1dd0557f8cfeb3892d32112e06c28abd58af532a49b0a92a368377a741c7",
   "query_template_sha256": "f3c15cb81d0d42eb7d426ef1762773a8d79ca8ef9084fb19048d57b5db85880d",
   "seed_inputs": [
     {
@@ -56,6 +56,7 @@
   },
   "rules": {
     "target": 1000,
+    "new_target": 500,
     "cutoff_ties": "all_eligible",
     "sex": "M",
     "snapshots": [
@@ -66,5 +67,33 @@
     "new_dob_calendar": "Gregorian Q1985727; best-rank day precision; no uncertainty",
     "legacy_metadata": "frozen evidence inherited, never requeried",
     "new_excludes": "expanded2013 entire cohort plus all legacy1994/2013 primary IDs"
-  }
+  },
+  "outputs": [
+    {
+      "file": "candidate_audit_2013_M.csv",
+      "sha256": "a995cbd87f508fd28efbfede40e108140bab1cdf9f2403d187728486f49aa269"
+    },
+    {
+      "file": "candidate_audit_2023_M.csv",
+      "sha256": "cdf23112e2d414434bb775aee9c3c4f2e47c902c97ca78a9356787b59790df6a"
+    },
+    {
+      "file": "cohort_2013_M.csv",
+      "sha256": "eaf7528e72a9768609e2d973d7695df1e4d73f53a0c9647e032e5821bb12f5d2"
+    },
+    {
+      "file": "cohort_2023_M_FULL.csv",
+      "sha256": "64707cc5c38d804b00e8146218c5946075ddc4c288af13ebcbd4ed9d0c00a2e8"
+    },
+    {
+      "file": "cohort_2023_M_NEW_TARGET.csv",
+      "sha256": "2d6215734b4673785d4834b5e89745ea29ef727c0bec0bf7553918d6bc6fb8eb"
+    },
+    {
+      "file": "excluded_legacy_ids.csv",
+      "sha256": "aa9e2da54d611bf3169b1a80c856929350bddfbd2f422e7ea2929cdb6626b4f9"
+    }
+  ],
+  "wikidata_cache_sha256": "eda121409fbf988934cad6dd7c78bd5504e3aaa5ac44500d65a25cbf44381adf",
+  "completed_utc": "2026-10-22T00:23:21.949739+00:00"
 }

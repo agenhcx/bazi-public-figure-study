@@ -1,0 +1,96 @@
+{
+  "acquisition_targets": {
+    "development": 1000,
+    "new_evaluation": 500
+  },
+  "builder_commit_source": "GITHUB_SHA",
+  "builder_executing_commit": "30dd22915372a80b1da3123ff97eba96cf7cd46f",
+  "builder_sha256": "1e9f7116a85a15a2c1082a0106a23aa885bc928e5d2561342d7525c32eca9aa5",
+  "config": {
+    "path": "studies/chess_single_A_v2/config.json",
+    "sha256": "ad1aa529def9899c4a622746118412ab5b8fc6907bfac46213b661c2331b175c"
+  },
+  "development_new_overlap": 0,
+  "generated_utc": "2026-10-22T00:23:22.700760+00:00",
+  "interpretation": "one prespecified nested random draw; ranked comparisons also change Elo/population range",
+  "output": {
+    "path": "studies/chess_single_A_v2/data/training_subsets.csv",
+    "sha256": "0b8e6bb7ae9e4a96d67f1612b011e81b7942be48c87342e2fcf5126dd9ec2846"
+  },
+  "primary_training_subset": "random_1000",
+  "protocol_id": "chess-single-A-v2",
+  "random_order": "ascending SHA256(UTF-8 str(seed) + newline + canonical_id), then canonical_id",
+  "random_seed": 20261024,
+  "source_acquisition_manifest_sha256": "5d5efc1c63bf1f7433bc9d6d9cb26a2cf16150ec90d75db634f76e472626f459",
+  "source_acquisition_summary_sha256": "755515b1f52214ba97710da60b9b14923fef7b5fedba07cc3bd8246890f068da",
+  "source_executing_collector_commit": "30dd22915372a80b1da3123ff97eba96cf7cd46f",
+  "sources": {
+    "2013_M": {
+      "n": 1000,
+      "path": "studies/chess_single_A_v2/data/cohort_2013_M.csv",
+      "sha256": "eaf7528e72a9768609e2d973d7695df1e4d73f53a0c9647e032e5821bb12f5d2"
+    },
+    "2023_M_NEW_TARGET": {
+      "n": 500,
+      "path": "studies/chess_single_A_v2/data/cohort_2023_M_NEW_TARGET.csv",
+      "sha256": "2d6215734b4673785d4834b5e89745ea29ef727c0bec0bf7553918d6bc6fb8eb"
+    }
+  },
+  "status": "subsets_fixed_no_models_fitted",
+  "subsets": {
+    "random_1000": {
+      "actual_n": 1000,
+      "cutoff_elo": null,
+      "ordered_ids_sha256": "67f6c9249015076cfd12f0204c89972a425652e64693d13cd40b3b0f0c177c22",
+      "rating_max": 2861,
+      "rating_min": 2444,
+      "requested_n": 1000,
+      "selector": "sha256_nested_prefix"
+    },
+    "random_500": {
+      "actual_n": 500,
+      "cutoff_elo": null,
+      "ordered_ids_sha256": "fc108f6707c8877af56b88fd6a0548158a14af7cafe53677c3b72927cca75f4f",
+      "rating_max": 2861,
+      "rating_min": 2444,
+      "requested_n": 500,
+      "selector": "sha256_nested_prefix"
+    },
+    "random_800": {
+      "actual_n": 800,
+      "cutoff_elo": null,
+      "ordered_ids_sha256": "0f95b248c712a6aea7bc2ff0d395817e2173f88f4c68a32a0eaaad892436a3c8",
+      "rating_max": 2861,
+      "rating_min": 2444,
+      "requested_n": 800,
+      "selector": "sha256_nested_prefix"
+    },
+    "ranked_1000_with_ties": {
+      "actual_n": 1000,
+      "cutoff_elo": 2444,
+      "ordered_ids_sha256": "83aab2cf1d5602cc66ead0095c3d545fd730a0e937b904b3f3ccf3648c56c29f",
+      "rating_max": 2861,
+      "rating_min": 2444,
+      "requested_n": 1000,
+      "selector": "rating_with_cutoff_ties"
+    },
+    "ranked_500_with_ties": {
+      "actual_n": 501,
+      "cutoff_elo": 2529,
+      "ordered_ids_sha256": "3d4b6f395dd1b9a105e316b8a55ee0df9e4e9e9b3d06761c1b0408bec5a63e99",
+      "rating_max": 2861,
+      "rating_min": 2529,
+      "requested_n": 500,
+      "selector": "rating_with_cutoff_ties"
+    },
+    "ranked_800_with_ties": {
+      "actual_n": 801,
+      "cutoff_elo": 2478,
+      "ordered_ids_sha256": "1065ebbb68453a397b537020131f4103449cd1aae2268c1d99c363b57cb0ea82",
+      "rating_max": 2861,
+      "rating_min": 2478,
+      "requested_n": 800,
+      "selector": "rating_with_cutoff_ties"
+    }
+  }
+}

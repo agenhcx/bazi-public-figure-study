@@ -1,4 +1,35 @@
 {
-  "status": "acquisition_incomplete",
-  "started_utc": "2026-10-22T00:09:26.742310+00:00"
+  "status": "acquisition_complete_no_models_fitted",
+  "target": 1000,
+  "new_target": 500,
+  "legacy_exclusion_count": 1216,
+  "expanded_exclusion_count": 1574,
+  "development_new_overlap": 0,
+  "cross_snapshot_conflicts": 0,
+  "candidates_scanned": {
+    "2013": 1300,
+    "2023": 3228
+  },
+  "cohorts": {
+    "2013_M": {
+      "n": 1000,
+      "cutoff_elo": 2444,
+      "sha256": "eaf7528e72a9768609e2d973d7695df1e4d73f53a0c9647e032e5821bb12f5d2",
+      "legacy_metadata_n": 754
+    },
+    "2023_M_FULL": {
+      "n": 1001,
+      "cutoff_elo": 2412,
+      "sha256": "64707cc5c38d804b00e8146218c5946075ddc4c288af13ebcbd4ed9d0c00a2e8",
+      "legacy_metadata_n": 957
+    },
+    "2023_M_NEW_TARGET": {
+      "n": 500,
+      "cutoff_elo": 2334,
+      "sha256": "2d6215734b4673785d4834b5e89745ea29ef727c0bec0bf7553918d6bc6fb8eb",
+      "legacy_metadata_n": 289
+    }
+  },
+  "development_full_overlap": 673,
+  "new_full_overlap": 308
 }
