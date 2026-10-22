@@ -2,12 +2,12 @@
 
 Prepared: 2026-10-21. Protocol ID: `chess-single-A-v2`.
 
-**Status: modelling REVIEW DRAFT; fitting is disabled.** The acquisition rules
-are in `acquisition_protocol.md` and are locked by a separately recorded commit
-before live expansion. Data hashes, analysis implementation and dependency
-versions must be fixed in a later analysis-lock commit before fitting. The
-modelling lock has not been created; acquisition commits and amendments are
-recorded separately.
+**Status: final pre-fit analysis specification, bound by `analysis_lock.json`.**
+The analysis-lock commit binds exact data/subset IDs, implementation, tests,
+methods and the pinned numerical environment. The production workflow verifies
+all bindings and creates `chess-single-a-analysis-lock-v2` at that commit before
+research-data fitting. Acquisition rules and amendments have separate earlier
+records. This Git record is not third-party registration or a newly blind test.
 
 Acquisition amendment 01, recorded before fitting, corrects the assistant's
 additional NEW1,000 assumption to the original-sized NEW500 plus ties. The
@@ -67,8 +67,8 @@ Planned data roles:
   plus cutoff ties before seen/unseen exclusion, derived from the same candidate
   audit. It is not an independent replication.
 - Supplementary evaluation: the unchanged, previously explored 2023 M_FULL501
-  file, if retained in the final manifest. Its role is fixed here; any input
-  failure is reported rather than replaced by a more favorable cohort.
+  file, verified and included in the final input manifest. Any later input
+  failure stops execution rather than substituting a different cohort.
 
 Canonical identity is normalized decimal `identity_bridge_modern_fide_id` when
 available, otherwise normalized decimal `fide_id`. Require one row per canonical
@@ -149,7 +149,14 @@ distinct input-column products, without choosing traditional combinations.
 
 Average MLP predictions across the three fixed seeds; do not choose a seed.
 Select configurations by pooled per-person held-out MAE in original Elo units.
-Ties within 1e-12 use the first listed family/configuration in the fixed order.
+For the global procedure, take the first candidate in the fixed 33-candidate
+order whose MAE is within 1e-12 of the global minimum. Independently apply this
+same minimum-plus-tolerance rule within each family for secondary family fits.
+These rules can select different candidates within the globally selected
+family in a chained numerical near-tie. Preserve an explicit global selected
+model, sharing a family object only when their candidate IDs are identical;
+otherwise save both fitted objects. This does not add candidates or change
+the search budget.
 A finite fit reaching an iteration limit is retained and its warning reported;
 do not expand the iteration budget. A numerical exception/nonfinite prediction
 invalidates the configuration for that inner search. Stop if all configurations
@@ -239,5 +246,7 @@ amendment and appropriate multiplicity handling.
 There is no automatic expansion beyond the planned pool or the planned NEW
 target. Any future sample/source/feature/model change requires a versioned
 amendment retaining the full earlier result, not collecting until a desired
-effect appears. This draft permits acquisition and audits only: no predictive
-fitting is implemented or launched here, and the modelling lock is not created.
+effect appears. The finalized implementation performs fitting only after the analysis-lock
+and environment checks and immutable tag creation. No research-data fit was
+performed during implementation or synthetic testing. All fitted objects and
+logs are saved before external scoring, then retained with the joint report.

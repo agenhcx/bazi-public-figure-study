@@ -1,7 +1,7 @@
 {
   "protocol_id": "chess-single-A-v2",
-  "status": "acquisition_amendment_01_recorded_before_fit_analysis_review_draft",
-  "fit_allowed": false,
+  "status": "analysis_locked_before_research_fitting",
+  "fit_allowed": true,
   "target": {
     "column": "rating",
     "definition": "standard Elo at the row snapshot",
@@ -203,7 +203,10 @@
     "tie_break": "first in candidate order",
     "invalid_candidate": "any numerical exception or nonfinite prediction invalidates candidate in that inner search",
     "convergence_warning": "retain finite fit, report warning; do not expand iteration budget",
-    "all_candidates_invalid": "stop"
+    "all_candidates_invalid": "stop",
+    "global_selection_rule": "First candidate in fixed order with complete pooled OOF MAE <= the minimum complete candidate MAE + tie_tolerance_mae",
+    "family_selection_rule": "Independently apply the same minimum-plus-tolerance first-order rule within each family",
+    "selected_model_storage": "Explicit global selected_model; alias a family model only when candidate IDs match, otherwise preserve a separate selected fit"
   },
   "cv": {
     "row_order": "lexicographic canonical identity string",
@@ -301,9 +304,13 @@
     "future_change_requires_versioned_amendment": true
   },
   "execution": {
-    "current_workflow": "data acquisition and audits only; no model fitting",
+    "current_workflow": "Verify immutable analysis lock and tag; run 2013-only tasks; seal all fitted objects; jointly evaluate fixed external cohorts",
     "threads": 1,
-    "training_not_implemented_in_this_draft": true
+    "training_not_implemented_in_this_draft": false,
+    "implementation_complete": true,
+    "python_version": "3.11.17",
+    "requirements_file": "studies/chess_single_A_v2/requirements-model.txt",
+    "analysis_tag": "chess-single-a-analysis-lock-v2"
   },
   "supersedes": "chess-single-A-v1 review draft; no v1 modelling or analysis-lock tag created",
   "acquisition": {
