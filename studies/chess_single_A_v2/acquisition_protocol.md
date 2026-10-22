@@ -3,6 +3,13 @@
 Prepared: 2026-10-21. Status: acquisition rules ready for commit lock; no expansion
 has been collected under this protocol and no predictive model has been fitted.
 
+Initial acquisition-rules/source-probe lock:
+`0ce667b3555119f09af8a056988d2d96b05bf0a8`. That commit launches only an official
+archive/header probe, not DOB collection. This revision clarifies explicit
+calendar checks and the supplementary expanded FULL output before first new DOB
+collection. The executing collector commit containing these clarifications is
+recorded separately in the acquisition run manifest.
+
 The acquisition lock is the immutable repository commit containing this protocol
 and the collector version used for a run. Record that exact commit SHA in the run
 manifest before live cohort expansion. An earlier protocol/source-probe commit
@@ -57,6 +64,15 @@ provenance and response status. Requests that fail temporarily are retried or
 checkpointed; a transient fetch failure must not silently become a substantive
 missing-DOB or unknown-hemisphere exclusion.
 
+Newly queried DOB claims must additionally retain and explicitly check the
+Wikidata calendar model. Accept Gregorian dates only; missing/unknown or
+non-Gregorian calendar claims are excluded with an audit reason. No implicit
+Julian-to-Gregorian conversion is introduced. The older query did not retrieve
+calendar-model metadata: reusing a legacy frozen DOB inherits that pipeline's
+Gregorian interpretation and must be labeled `legacy_calendar_not_reverified`,
+not described as a newly verified calendar check. Do not silently refresh a
+legacy record to erase this limitation.
+
 ## Frozen annotations and identity
 
 Reuse already frozen eligibility, identity bridge, DOB and hemisphere annotations
@@ -110,6 +126,12 @@ model family. Development-pool/NEW overlap must be exactly zero. The NEW cohort
 is not the actual Top1,000 list: exclusions and missing eligible DOB/birthplace
 data can move its cutoff substantially lower. Report its actual range and
 selection restrictions. Previously explored 2023 outcomes remain disclosed.
+
+From the same completed candidate audit, also generate expanded 2023 FULL:
+Top1,000 eligible men plus eligible cutoff ties before the seen/unseen exclusion.
+This is a supplementary diagnostic cohort, not another independent validation.
+Record its overlap with development and NEW, and keep it distinct from the
+unchanged historical FULL501 file. No additional model-guided scan is allowed.
 
 ## Outputs, stopping and audit record
 

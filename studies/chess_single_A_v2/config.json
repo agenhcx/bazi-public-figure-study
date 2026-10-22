@@ -1,0 +1,380 @@
+{
+  "protocol_id": "chess-single-A-v2",
+  "status": "acquisition_plan_pending_commit_lock_analysis_review_draft",
+  "fit_allowed": false,
+  "target": {
+    "column": "rating",
+    "definition": "standard Elo at the row snapshot",
+    "unit": "Elo points"
+  },
+  "data_roles": {
+    "development_pool": "2013_M_TOP1000_ELIGIBLE_WITH_TIES",
+    "primary_development": "2013_M_RANDOM1000",
+    "primary_evaluation": "2023_M_NEW_TARGET1000_WITH_TIES",
+    "legacy_secondary_evaluation": "2023_M_FULL501 unchanged, supplementary and previously explored",
+    "supplementary_diagnostic": "2023_M_FULL1000_ELIGIBLE_WITH_TIES"
+  },
+  "representations": {
+    "raw_A": {
+      "inputs": [
+        "year_stem",
+        "year_branch",
+        "month_stem",
+        "month_branch",
+        "day_stem",
+        "day_branch"
+      ],
+      "stem_vocabulary": [
+        "甲",
+        "乙",
+        "丙",
+        "丁",
+        "戊",
+        "己",
+        "庚",
+        "辛",
+        "壬",
+        "癸"
+      ],
+      "branch_vocabulary": [
+        "子",
+        "丑",
+        "寅",
+        "卯",
+        "辰",
+        "巳",
+        "午",
+        "未",
+        "申",
+        "酉",
+        "戌",
+        "亥"
+      ],
+      "encoding": "separate fixed-vocabulary one-hot; 66 columns",
+      "traditional_features": false,
+      "pretrained_embeddings": false
+    },
+    "date_control": {
+      "inputs": [
+        "age",
+        "age_squared",
+        "age_cubed",
+        "birth_season_sin1",
+        "birth_season_cos1",
+        "birth_season_sin2",
+        "birth_season_cos2"
+      ],
+      "age": "(snapshot month first day - exact Gregorian DOB).days / 365.2425",
+      "birth_season_phase": "2*pi*(Gregorian birth day-of-year - 1)/(366 if birth year is leap else 365)",
+      "harmonics": [
+        1,
+        2
+      ]
+    }
+  },
+  "pipelines": {
+    "fit_preprocessing": "inside each training fold only",
+    "input_scaling": "StandardScaler after model-specific expansion for Ridge/KRR/MLP; none for trees",
+    "target_scaling": "StandardScaler fitted inside each training fold, inverse-transform predictions for every metric"
+  },
+  "families": [
+    {
+      "name": "ridge",
+      "estimator": "sklearn.linear_model.Ridge",
+      "grid": {
+        "alpha": [
+          0.1,
+          1,
+          10,
+          100,
+          1000
+        ]
+      },
+      "fixed": {
+        "solver": "lsqr",
+        "tol": 1e-06,
+        "max_iter": 10000
+      }
+    },
+    {
+      "name": "pairwise_ridge",
+      "estimator": "PolynomialFeatures + Ridge",
+      "grid": {
+        "alpha": [
+          0.1,
+          1,
+          10,
+          100,
+          1000
+        ]
+      },
+      "fixed": {
+        "degree": 2,
+        "interaction_only": true,
+        "include_bias": false,
+        "retain_main_effects": true,
+        "solver": "lsqr",
+        "tol": 1e-06,
+        "max_iter": 10000
+      }
+    },
+    {
+      "name": "rbf_kernel_ridge",
+      "estimator": "sklearn.kernel_ridge.KernelRidge",
+      "grid": {
+        "alpha": [
+          0.1,
+          1,
+          10
+        ],
+        "gamma": [
+          0.01,
+          0.1,
+          1
+        ]
+      },
+      "fixed": {
+        "kernel": "rbf"
+      }
+    },
+    {
+      "name": "shallow_gradient_boosting",
+      "estimator": "sklearn.ensemble.GradientBoostingRegressor",
+      "grid": {
+        "max_depth": [
+          1,
+          2
+        ],
+        "n_estimators": [
+          50,
+          100
+        ],
+        "min_samples_leaf": [
+          10,
+          25
+        ]
+      },
+      "fixed": {
+        "loss": "squared_error",
+        "learning_rate": 0.05,
+        "subsample": 1,
+        "random_state": 20261021
+      }
+    },
+    {
+      "name": "small_mlp",
+      "estimator": "sklearn.neural_network.MLPRegressor",
+      "grid": {
+        "hidden_layer_sizes": [
+          [
+            8
+          ],
+          [
+            16
+          ]
+        ],
+        "alpha": [
+          0.1,
+          1,
+          10
+        ]
+      },
+      "fixed": {
+        "activation": "tanh",
+        "solver": "lbfgs",
+        "max_iter": 1000,
+        "max_fun": 20000,
+        "tol": 1e-05,
+        "early_stopping": false,
+        "random_states": [
+          20261021,
+          20261022,
+          20261023
+        ],
+        "seed_policy": "mean predictions across all three; never pick best seed"
+      }
+    }
+  ],
+  "selection": {
+    "primary_metric": "MAE in original Elo units",
+    "score_aggregation": "pooled held-out per-player absolute errors",
+    "candidate_order": "listed family order then Cartesian-product grid order",
+    "tie_tolerance_mae": 1e-12,
+    "tie_break": "first in candidate order",
+    "invalid_candidate": "any numerical exception or nonfinite prediction invalidates candidate in that inner search",
+    "convergence_warning": "retain finite fit, report warning; do not expand iteration budget",
+    "all_candidates_invalid": "stop"
+  },
+  "cv": {
+    "row_order": "lexicographic canonical identity string",
+    "outer": {
+      "method": "KFold",
+      "n_splits": 5,
+      "shuffle": true,
+      "random_state": 20261021
+    },
+    "inner": {
+      "method": "KFold",
+      "n_splits": 4,
+      "shuffle": true,
+      "random_state": 20261022
+    },
+    "final_search": "same 4-fold inner CV independently within each prespecified final training subset; no external selection",
+    "development_rows": "exact random_1000 primary development subset",
+    "outer_training_n": 800
+  },
+  "primary": {
+    "cohort": "2023_M_NEW_TARGET1000_WITH_TIES",
+    "contrast": "MAE(date_control)-MAE(raw_A)",
+    "direction": "positive favors raw_A",
+    "interval": {
+      "method": "paired person-level percentile bootstrap",
+      "n_resamples": 10000,
+      "confidence_level": 0.95,
+      "random_state": 20261023
+    },
+    "minimum_meaningful_gain_elo": null,
+    "primary_p_value": false,
+    "equivalence_claim_allowed": false,
+    "training_subset": "random_1000",
+    "previously_explored_data_disclosed": true
+  },
+  "secondary": {
+    "metrics": [
+      "RMSE",
+      "Spearman rho"
+    ],
+    "cohorts": [
+      "same 2023_M_NEW_TARGET1000_WITH_TIES for all prespecified training subsets",
+      "expanded 2023_M_FULL1000_ELIGIBLE_WITH_TIES diagnostic; overlapping, not independent",
+      "legacy 2023_M_FULL501 supplementary"
+    ],
+    "models": [
+      "raw_A selection procedure",
+      "date_control selection procedure",
+      "training median",
+      "all five families independently tuned on corresponding 2013 subset"
+    ],
+    "formal_significance_claims": false,
+    "training_subsets": [
+      "random_500",
+      "random_800",
+      "ranked_500_with_ties",
+      "ranked_800_with_ties",
+      "ranked_1000_with_ties"
+    ],
+    "size_comparison_metrics": [
+      "MAE(raw_A)",
+      "MAE(date_control)",
+      "delta_mae for each subset",
+      "paired external MAE difference for random 800 vs 500, 1000 vs 800, 1000 vs 500, separately for raw_A and date_control"
+    ],
+    "size_comparison_interval": "descriptive paired person-level percentile bootstrap, same 10000 resamples/seed as primary; no simultaneous coverage claim",
+    "reporting": "joint complete report; no selecting best size, ranked cutoff, family, or seed from external performance"
+  },
+  "learning_curve": {
+    "development_only": true,
+    "train_sizes": [
+      400,
+      600,
+      800
+    ],
+    "nested_subsets": true,
+    "subset_permutation_seed": 20261024,
+    "per_fold_seed": "base seed plus zero-based outer fold index",
+    "retune_inside_each_subset": true,
+    "automatic_expansion": false,
+    "outer_development_pool": "exact random_1000, five outer folds with fixed 200-person test sets",
+    "subset_order": "within each 800-person outer training fold, ascending SHA256 of UTF-8 str(20261024 + zero_based_fold_index) + newline + canonical_id",
+    "insufficient_fold_size": "stop with documented input/configuration failure; do not relabel smaller sizes as 800",
+    "interpretation": "internal CV training sizes 400,600,800 only; final externally evaluated 1000 model has no 1000-training-size CV estimate"
+  },
+  "expansion": {
+    "user_authorized_before_fit": true,
+    "reason": "compare prespecified training sizes and rebuild independent-person 2023 cohort after expanding 2013",
+    "planned_development_eligible_target": 1000,
+    "planned_new_2023_eligible_target": 1000,
+    "cutoff_ties_included": true,
+    "automatic_further_expansion": false,
+    "recheck_identity_overlap": true,
+    "reuse_as_new_blind_test": false,
+    "future_change_requires_versioned_amendment": true
+  },
+  "execution": {
+    "current_workflow": "data acquisition and audits only; no model fitting",
+    "threads": 1,
+    "training_not_implemented_in_this_draft": true
+  },
+  "supersedes": "chess-single-A-v1 review draft; no v1 modelling or analysis-lock tag created",
+  "acquisition": {
+    "status": "lock protocol and collector commit before live expansion; record exact SHA in run manifest",
+    "snapshots": {
+      "development": "2013-01",
+      "primary_evaluation": "2023-01"
+    },
+    "sex": "M",
+    "development_pool": {
+      "eligible_target": 1000,
+      "cutoff_ties": "include all eligible members of complete cutoff Elo group"
+    },
+    "primary_evaluation": {
+      "eligible_unseen_target": 1000,
+      "cutoff_ties": "include all eligible unseen members of complete cutoff Elo group"
+    },
+    "eligibility": "active official standard-rating male; unique clean day-precision Gregorian DOB agreeing with official birth year when present; DOB on/before snapshot; confirmed northern birthplace latitude > 0",
+    "legacy_annotations": "reuse frozen eligibility/identity/DOB/hemisphere decisions with source references; do not refresh them opportunistically",
+    "new_candidate_rules": "reuse audited chess_north_v2 and chess_2023_cohorts_v1 adjudication rules, including temporal sanity check",
+    "unresolved_or_conflicting": "exclude and audit reason; no model-outcome-guided repair or source substitution",
+    "scan_stop": "only after completing rating group reaching target; checkpoint and resume same rules if interrupted",
+    "new_target_excludes": [
+      "entire expanded 2013 development pool including all cutoff ties",
+      "chess_north_v3/primary_north_top_1994_M.csv",
+      "chess_north_v3/primary_north_top_1994_F.csv",
+      "chess_north_v3/primary_north_top_2013_M.csv",
+      "chess_north_v3/primary_north_top_2013_F.csv"
+    ],
+    "canonical_identity": "normalized decimal identity_bridge_modern_fide_id if present else fide_id",
+    "required_development_new_overlap": 0,
+    "training_or_external_scoring_during_acquisition": false,
+    "manifest_required": [
+      "source URLs and fetch timestamps",
+      "raw archive SHA256",
+      "source code commit",
+      "legacy input SHA256",
+      "cache provenance",
+      "row-level eligibility and exclusions",
+      "cutoff Elo and actual counts",
+      "canonical-ID overlap audit",
+      "output SHA256"
+    ],
+    "final_file_paths": "record in post-acquisition data_manifest.json before analysis freeze",
+    "new_claim_calendar_rule": "retrieve and retain Wikidata calendar model; accept explicit Gregorian only; exclude missing/unknown/non-Gregorian with reason; no implicit conversion",
+    "legacy_calendar_rule": "inherit existing Gregorian interpretation, record legacy_calendar_not_reverified; earlier query did not retrieve calendar model",
+    "supplementary_full": "from same completed 2023 candidate audit: Top1000 eligible plus cutoff ties before seen/unseen exclusion; not independent validation",
+    "initial_rules_source_probe_commit": "0ce667b3555119f09af8a056988d2d96b05bf0a8",
+    "collector_commit": "record exact executing commit in acquisition run manifest before first new DOB collection"
+  },
+  "training_subsets": {
+    "canonical_id_order": "normalized decimal identity strings, lexicographic where an ordering is required",
+    "random_order": "ascending SHA256 of UTF-8 string str(20261024) + newline + canonical_id; canonical_id breaks hash ties",
+    "random_seed": 20261024,
+    "random_nested_sizes": [
+      500,
+      800,
+      1000
+    ],
+    "primary": "random_1000",
+    "random_subsample_repetitions": 1,
+    "random_subset_uncertainty": "single prespecified draw; does not estimate all training-subset variation",
+    "ranked_secondary_thresholds": [
+      500,
+      800,
+      1000
+    ],
+    "ranked_rule": "rating descending; include every eligible development-pool player tied at the kth rating; record actual n",
+    "ranked_interpretation": "sample size and Elo/population-range change jointly",
+    "identical_subset_policy": "deduplicate fitting when canonical-ID sets match, retain every prespecified result label",
+    "all_subsets_use_same_external_cohort": true,
+    "external_selection_of_size_or_subset": false
+  }
+}
