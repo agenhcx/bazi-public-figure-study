@@ -471,7 +471,8 @@ def main():
         manifest["population_sources"][year] = provenance
         write_json(out / "manifest.json", manifest)
         print(f"[{year}] active_standard_male_population={len(populations[year])}", flush=True)
-    check…53 tokens truncated…_M.csv", "2023")
+    check_snapshot_anchors(populations["2013"], root / "chess_north_v3/primary_north_top_2013_M.csv", "2013")
+    check_snapshot_anchors(populations["2023"], root / "chess_2023_cohorts_v1/candidate_audit_2023_M.csv", "2023")
     resolver = Resolver(seeds, session, cache, cache_path, args.timeout, args.retries, args.delay)
     dev, _, audit13, cut13, _ = scan(populations["2013"], "2013", resolver, args.target,
                                     set(), out / "candidate_audit_2013_M.csv", args.batch_size)
