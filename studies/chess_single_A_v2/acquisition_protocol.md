@@ -1,14 +1,18 @@
 # Chess single-player A v2: acquisition protocol
 
-Prepared: 2026-10-21. Status: acquisition rules ready for commit lock; no expansion
-has been collected under this protocol and no predictive model has been fitted.
+Prepared: 2026-10-21. Amended: 2026-10-22 (UTC acquisition log), before model
+fitting. An initial NEW1,000 acquisition attempt was interrupted after reaching
+797 eligible unseen people. The corrected NEW target is 500 plus cutoff ties;
+see `acquisition_amendment_01.md` for the original assumption, checkpoint, data
+access and reason. No predictive model has been fitted.
 
 Initial acquisition-rules/source-probe lock:
 `0ce667b3555119f09af8a056988d2d96b05bf0a8`. That commit launches only an official
-archive/header probe, not DOB collection. This revision clarifies explicit
-calendar checks and the supplementary expanded FULL output before first new DOB
-collection. The executing collector commit containing these clarifications is
-recorded separately in the acquisition run manifest.
+archive/header probe, not DOB collection. The subsequent collector revision
+clarified explicit calendar checks and the supplementary expanded FULL output
+before first new DOB collection. Each executing collector commit is recorded
+separately in its acquisition run manifest; amendment 01 retains the interrupted
+run's history.
 
 The acquisition lock is the immutable repository commit containing this protocol
 and the collector version used for a run. Record that exact commit SHA in the run
@@ -116,14 +120,14 @@ First form the exclusion union using canonical identities from:
 
 Then scan January-2023 men by complete descending Elo groups, applying the same
 eligibility rules and excluding every canonical identity in this union, until
-at least 1,000 eligible unseen men are reached. Complete the cutoff group and
+at least 500 eligible unseen men are reached. Complete the cutoff group and
 retain every eligible unseen tie. Reuse valid frozen 2023 annotations while
 recomputing the seen/unseen flag against this enlarged exclusion union. Do not
 reuse the old NEW membership as if it remained independent after expansion.
 
 The resulting NEW cohort is common to every prespecified training size and
 model family. Development-pool/NEW overlap must be exactly zero. The NEW cohort
-is not the actual Top1,000 list: exclusions and missing eligible DOB/birthplace
+is not the actual Top500 list: exclusions and missing eligible DOB/birthplace
 data can move its cutoff substantially lower. Report its actual range and
 selection restrictions. Previously explored 2023 outcomes remain disclosed.
 
@@ -142,9 +146,11 @@ Save ID-overlap checks and SHA256 values for every final output in a manifest.
 No row is dropped because a later model makes a large error.
 
 An interrupted run may resume from auditable checkpoints using these same rules.
-If fewer than 1,000 eligible players can be established, or a source/identity
-audit fails, report the failure and retain the checkpoint; do not silently lower
-the target, change eligibility, omit tied rows, or label partial data complete.
+If fewer than the configured 1,000 development or 500 NEW eligible players can be
+established, or a source/identity audit fails, report the failure and retain the
+checkpoint; do not silently lower the target, change eligibility, omit tied rows,
+or label partial data complete. The 1,000-to-500 NEW correction is the explicit
+pre-fit amendment above, not a silent reinterpretation of the initial lock.
 
 Acquisition may inspect historical ratings to rank/select candidates and audit
 their ranges. It must not fit predictive models, calculate BaZi-outcome

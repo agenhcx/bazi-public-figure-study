@@ -157,6 +157,24 @@ class CollectionTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 c.check_snapshot_anchors(pd.DataFrame([{"fide_id": "1", "rating": 2501}]), path, "2013")
 
+    def test_asymmetric_full_and_new_targets_keep_each_boundary_tie(self):
+        population = pd.DataFrame([{"fide_id": str(i), "name": f"P{i}", "rating": rating,
+                                     "birth_year": "1990"} for i, rating in
+                                   [(1, 2800), (2, 2700), (3, 2600), (4, 2500), (5, 2500), (6, 2400)]])
+        class Resolver:
+            def prefetch(self, ids):
+                pass
+            def evidence(self, fid, year):
+                return row(fid)
+        with tempfile.TemporaryDirectory() as tmp:
+            full, new, audit, full_cutoff, new_cutoff = c.scan(
+                population, "2023", Resolver(), target=4, excluded={"1", "2"},
+                audit_path=Path(tmp) / "audit.csv", batch_size=2, new_target=2)
+        self.assertEqual([r["fide_id"] for r in full], ["1", "2", "3", "4", "5"])
+        self.assertEqual([r["fide_id"] for r in new], ["3", "4", "5"])
+        self.assertEqual((full_cutoff, new_cutoff), (2500, 2500))
+        self.assertEqual(len(audit), 5)
+
 
 class PopulationParserTests(unittest.TestCase):
     @classmethod

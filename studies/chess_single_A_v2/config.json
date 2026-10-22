@@ -1,6 +1,6 @@
 {
   "protocol_id": "chess-single-A-v2",
-  "status": "acquisition_plan_pending_commit_lock_analysis_review_draft",
+  "status": "acquisition_amendment_01_recorded_before_fit_analysis_review_draft",
   "fit_allowed": false,
   "target": {
     "column": "rating",
@@ -10,7 +10,7 @@
   "data_roles": {
     "development_pool": "2013_M_TOP1000_ELIGIBLE_WITH_TIES",
     "primary_development": "2013_M_RANDOM1000",
-    "primary_evaluation": "2023_M_NEW_TARGET1000_WITH_TIES",
+    "primary_evaluation": "2023_M_NEW_TARGET500_WITH_TIES",
     "legacy_secondary_evaluation": "2023_M_FULL501 unchanged, supplementary and previously explored",
     "supplementary_diagnostic": "2023_M_FULL1000_ELIGIBLE_WITH_TIES"
   },
@@ -224,7 +224,7 @@
     "outer_training_n": 800
   },
   "primary": {
-    "cohort": "2023_M_NEW_TARGET1000_WITH_TIES",
+    "cohort": "2023_M_NEW_TARGET500_WITH_TIES",
     "contrast": "MAE(date_control)-MAE(raw_A)",
     "direction": "positive favors raw_A",
     "interval": {
@@ -245,7 +245,7 @@
       "Spearman rho"
     ],
     "cohorts": [
-      "same 2023_M_NEW_TARGET1000_WITH_TIES for all prespecified training subsets",
+      "same 2023_M_NEW_TARGET500_WITH_TIES for all prespecified training subsets",
       "expanded 2023_M_FULL1000_ELIGIBLE_WITH_TIES diagnostic; overlapping, not independent",
       "legacy 2023_M_FULL501 supplementary"
     ],
@@ -293,7 +293,7 @@
     "user_authorized_before_fit": true,
     "reason": "compare prespecified training sizes and rebuild independent-person 2023 cohort after expanding 2013",
     "planned_development_eligible_target": 1000,
-    "planned_new_2023_eligible_target": 1000,
+    "planned_new_2023_eligible_target": 500,
     "cutoff_ties_included": true,
     "automatic_further_expansion": false,
     "recheck_identity_overlap": true,
@@ -307,7 +307,7 @@
   },
   "supersedes": "chess-single-A-v1 review draft; no v1 modelling or analysis-lock tag created",
   "acquisition": {
-    "status": "lock protocol and collector commit before live expansion; record exact SHA in run manifest",
+    "status": "initial NEW1000 attempt checkpointed; explicit amendment 01 restores original-sized NEW500 plus ties before fitting",
     "snapshots": {
       "development": "2013-01",
       "primary_evaluation": "2023-01"
@@ -318,7 +318,7 @@
       "cutoff_ties": "include all eligible members of complete cutoff Elo group"
     },
     "primary_evaluation": {
-      "eligible_unseen_target": 1000,
+      "eligible_unseen_target": 500,
       "cutoff_ties": "include all eligible unseen members of complete cutoff Elo group"
     },
     "eligibility": "active official standard-rating male; unique clean day-precision Gregorian DOB agreeing with official birth year when present; DOB on/before snapshot; confirmed northern birthplace latitude > 0",
@@ -352,7 +352,27 @@
     "legacy_calendar_rule": "inherit existing Gregorian interpretation, record legacy_calendar_not_reverified; earlier query did not retrieve calendar model",
     "supplementary_full": "from same completed 2023 candidate audit: Top1000 eligible plus cutoff ties before seen/unseen exclusion; not independent validation",
     "initial_rules_source_probe_commit": "0ce667b3555119f09af8a056988d2d96b05bf0a8",
-    "collector_commit": "record exact executing commit in acquisition run manifest before first new DOB collection"
+    "collector_commit": "record exact executing commit in acquisition run manifest before first new DOB collection",
+    "amendment_01": {
+      "file": "acquisition_amendment_01.md",
+      "initial_new_target": 1000,
+      "amended_new_target": 500,
+      "reason": "correct assistant additional NEW1000 assumption to original approximately500 evaluation scope; recorded after acquisition coverage/network checkpoint, before fitting or predictive scores",
+      "checkpoint_commit": "72cf94268cb438daaf2cf6e4bf0ac1af4ee1d312",
+      "interrupted_collector_commit": "779c9c891ca94bb2022c5d0e7642deb786badf62",
+      "interrupted_actions_run": 39697928640,
+      "checkpoint_counts": {
+        "2013_scanned": 1300,
+        "2013_eligible": 1000,
+        "2023_scanned": 31311,
+        "2023_eligible": 1668,
+        "2023_new_eligible": 797
+      },
+      "new1000_reached": false,
+      "new1000_impossibility_claimed": false,
+      "model_scores_used_for_amendment": false,
+      "raw_historical_outcomes_and_coverage_seen": true
+    }
   },
   "training_subsets": {
     "canonical_id_order": "normalized decimal identity strings, lexicographic where an ordering is required",

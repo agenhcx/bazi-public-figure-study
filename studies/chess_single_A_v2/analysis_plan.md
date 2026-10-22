@@ -5,8 +5,18 @@ Prepared: 2026-10-21. Protocol ID: `chess-single-A-v2`.
 **Status: modelling REVIEW DRAFT; fitting is disabled.** The acquisition rules
 are in `acquisition_protocol.md` and are locked by a separately recorded commit
 before live expansion. Data hashes, analysis implementation and dependency
-versions must be fixed in a later analysis-lock commit before fitting. This
-document does not claim that either lock already exists.
+versions must be fixed in a later analysis-lock commit before fitting. The
+modelling lock has not been created; acquisition commits and amendments are
+recorded separately.
+
+Acquisition amendment 01, recorded before fitting, corrects the assistant's
+additional NEW1,000 assumption to the original-sized NEW500 plus ties. The
+interrupted NEW1,000 attempt had yielded 797 eligible unseen people after 31,311
+2023 candidates were scanned; raw coverage and historical outcomes were visible,
+but no model, BaZi-outcome association or new predictive score was calculated.
+See `acquisition_amendment_01.md` for the retained run/checkpoint and full data
+access history. The 2013 expansion and Random1000 primary training size are
+unchanged. This is an explicit amendment, not the initial locked NEW target.
 
 This v2 replaces the unexecuted `chess_single_A_v1` modelling draft after the user
 requested expansion before fitting. Preserve v1 and all original frozen cohorts;
@@ -50,7 +60,7 @@ Planned data roles:
 
 - Development pool: January-2013 men, Top1,000 eligible plus all eligible cutoff
   Elo ties. Its actual size can exceed 1,000.
-- Primary evaluation: January-2023 NEW, at least 1,000 eligible unseen men plus
+- Primary evaluation: January-2023 NEW, at least 500 eligible unseen men plus
   eligible cutoff ties. Exclude the entire expanded 2013 pool and the union of
   all four old 1994/2013 M/F frozen north-v3 cohorts using their identity bridges.
 - Supplementary diagnostic: expanded January-2023 FULL, Top1,000 eligible men

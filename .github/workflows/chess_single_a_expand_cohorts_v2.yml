@@ -76,7 +76,9 @@ jobs:
         run: python -m unittest discover -s studies/chess_single_A_v2 -p 'test_*.py' -v
       - name: Collect 2013 then rebuild 2023 NEW
         if: hashFiles('studies/chess_single_A_v2/collect_cohorts.py') != ''
-        run: python -u studies/chess_single_A_v2/collect_cohorts.py --repo-root . --output-dir studies/chess_single_A_v2/data --cache-dir studies/chess_single_A_v2/cache --target 1000
+        run: python -u studies/chess_single_A_v2/collect_cohorts.py --repo-root . --output-dir studies/chess_single_A_v2/data --cache-dir studies/chess_single_A_v2/cache --target 1000 --new-target 500
+      - name: Independently audit completed cohorts and person identities
+        run: python studies/chess_single_A_v2/audit_completed_cohorts.py --repo-root .
       - name: Record fixed training subsets when builder is present
         if: hashFiles('studies/chess_single_A_v2/build_training_subsets.py') != ''
         run: python studies/chess_single_A_v2/build_training_subsets.py --repo-root .

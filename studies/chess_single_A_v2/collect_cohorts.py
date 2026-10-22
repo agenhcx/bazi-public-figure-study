@@ -346,7 +346,10 @@ def top_with_ties(rows, target, excluded=frozenset()):
     return [r for r in eligible if int(r["rating"]) >= cutoff], cutoff
 
 
-def scan(population, year, resolver, target, excluded, audit_path, batch_size=50):
+def scan(population, year, resolver, target, excluded, audit_path, batch_size=50, new_target=None):
+    new_target = target if new_target is None else new_target
+    if target < 1 or new_target < 1:
+        raise ValueError("FULL and NEW targets must be positive")
     rows = population.to_dict("records")
     audit = []
     full = new = None
@@ -365,12 +368,12 @@ def scan(population, year, resolver, target, excluded, audit_path, batch_size=50
             audit.append(rec)
         pd.DataFrame(audit).to_csv(audit_path, index=False, encoding="utf-8")
         full, full_cutoff = top_with_ties(audit, target)
-        new, new_cutoff = top_with_ties(audit, target, excluded)
+        new, new_cutoff = top_with_ties(audit, new_target, excluded)
         print(f"[{year}] scanned={len(audit)} eligible={sum(r['eligible'] for r in audit)} new_eligible={sum(r['eligible'] and not r['excluded_from_new'] for r in audit)}", flush=True)
         if full is not None and new is not None:
             return full, new, audit, full_cutoff, new_cutoff
         position = end
-    raise RuntimeError(f"Unable to reach fixed target={target} in {year}")
+    raise RuntimeError(f"Unable to reach fixed FULL target={target}, NEW target={new_target} in {year}")
 
 
 def find_conflicts(cohorts):
@@ -407,13 +410,16 @@ def main():
     ap.add_argument("--2013-txt", dest="txt2013", type=Path)
     ap.add_argument("--2023-txt", dest="txt2023", type=Path)
     ap.add_argument("--target", type=int, default=1000)
+    ap.add_argument("--new-target", type=int, default=None,
+                    help="2023 NEW target before ties; defaults to --target")
     ap.add_argument("--batch-size", type=int, default=50)
     ap.add_argument("--timeout", type=int, default=20)
     ap.add_argument("--retries", type=int, default=3)
     ap.add_argument("--delay", type=float, default=.5)
     args = ap.parse_args()
-    if args.target < 1 or args.batch_size < 1:
-        ap.error("target and batch size must be positive")
+    args.new_target = args.target if args.new_target is None else args.new_target
+    if args.target < 1 or args.new_target < 1 or args.batch_size < 1:
+        ap.error("FULL target, NEW target and batch size must be positive")
     if requests is None:
         raise RuntimeError("Live acquisition requires requests; install the pinned workflow dependencies")
     root = args.repo_root.resolve()
@@ -424,7 +430,7 @@ def main():
     started = datetime.now(timezone.utc).isoformat()
     write_json(out / "summary.json", {"status": "acquisition_incomplete", "started_utc": started})
     write_json(out / "manifest.json", {"status": "acquisition_incomplete", "started_utc": started})
-    for filename in ("cohort_2013_M.csv", "cohort_2023_M_FULL.csv", "cohort_2023_M_NEW_TARGET.csv", "conflicts.csv", "training_subsets.csv", "subset_manifest.json"):
+    for filename in ("cohort_2013_M.csv", "cohort_2023_M_FULL.csv", "cohort_2023_M_NEW_TARGET.csv", "conflicts.csv", "training_subsets.csv", "subset_manifest.json", "independent_audit.json"):
         (out / filename).unlink(missing_ok=True)
     parser = import_module(root / "chess_2023_cohorts_v1/build_chess_2023_cohorts_v2.py", "legacy_fide_parser")
     seeds, seed_inputs = load_seeds(root)
@@ -448,7 +454,8 @@ def main():
                 "query_template_sha256": hashlib.sha256(query_text([]).encode()).hexdigest(),
                 "seed_inputs": seed_inputs,
                 "legacy_exclusion_inputs": legacy_inputs, "population_sources": {},
-                "rules": {"target": args.target, "cutoff_ties": "all_eligible", "sex": "M",
+                "rules": {"target": args.target, "new_target": args.new_target,
+                          "cutoff_ties": "all_eligible", "sex": "M",
                           "snapshots": ["2013-01", "2023-01"], "active": True,
                           "new_dob_calendar": "Gregorian Q1985727; best-rank day precision; no uncertainty",
                           "legacy_metadata": "frozen evidence inherited, never requeried",
@@ -464,8 +471,7 @@ def main():
         manifest["population_sources"][year] = provenance
         write_json(out / "manifest.json", manifest)
         print(f"[{year}] active_standard_male_population={len(populations[year])}", flush=True)
-    check_snapshot_anchors(populations["2013"], root / "chess_north_v3/primary_north_top_2013_M.csv", "2013")
-    check_snapshot_anchors(populations["2023"], root / "chess_2023_cohorts_v1/candidate_audit_2023_M.csv", "2023")
+    check…53 tokens truncated…_M.csv", "2023")
     resolver = Resolver(seeds, session, cache, cache_path, args.timeout, args.retries, args.delay)
     dev, _, audit13, cut13, _ = scan(populations["2013"], "2013", resolver, args.target,
                                     set(), out / "candidate_audit_2013_M.csv", args.batch_size)
@@ -479,7 +485,8 @@ def main():
                    "in_expanded_2013": fid in dev_ids} for fid in sorted(exclusions)]).to_csv(
                        out / "excluded_legacy_ids.csv", index=False)
     full, new, audit23, cutfull, cutnew = scan(populations["2023"], "2023", resolver, args.target,
-                                            exclusions, out / "candidate_audit_2023_M.csv", args.batch_size)
+                                            exclusions, out / "candidate_audit_2023_M.csv", args.batch_size,
+                                            new_target=args.new_target)
     cohorts = {"2013_M": dev, "2023_M_FULL": full, "2023_M_NEW_TARGET": new}
     conflicts = find_conflicts(cohorts)
     if conflicts:
@@ -490,6 +497,7 @@ def main():
         raise RuntimeError("Development/NEW_TARGET identity overlap")
     cutoffs = {"2013_M": cut13, "2023_M_FULL": cutfull, "2023_M_NEW_TARGET": cutnew}
     summary = {"status": "acquisition_complete_no_models_fitted", "target": args.target,
+               "new_target": args.new_target,
                "legacy_exclusion_count": len(legacy_ids), "expanded_exclusion_count": len(exclusions),
                "development_new_overlap": 0, "cross_snapshot_conflicts": 0,
                "candidates_scanned": {"2013": len(audit13), "2023": len(audit23)}, "cohorts": {}}

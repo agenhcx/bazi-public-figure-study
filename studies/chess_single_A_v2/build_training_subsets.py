@@ -143,6 +143,17 @@ def build_subsets(repo_root: Path, data_dir: Path | None = None,
             or rules.get("primary") != "random_1000"):
         raise ValueError("Configuration does not match the fixed v2 subset design")
 
+    new_target = config.get("acquisition", {}).get("primary_evaluation", {}).get("eligible_unseen_target")
+    if not isinstance(new_target, int) or isinstance(new_target, bool) or new_target < 1:
+        raise ValueError("Configuration must declare a positive NEW acquisition target")
+    # Historical runs used one common target. Preserve its old meaning rather
+    # than relabeling an earlier NEW1000 file as amended NEW500.
+    summary_new_target = summary.get("new_target", summary.get("target"))
+    acquisition_rules = acquisition.get("rules", {})
+    manifest_new_target = acquisition_rules.get("new_target", acquisition_rules.get("target"))
+    if summary_new_target != new_target or manifest_new_target != new_target:
+        raise ValueError("Declared NEW acquisition target does not match configuration")
+
     outputs = acquisition.get("outputs", [])
     output_hashes = {}
     for output in outputs:
@@ -158,8 +169,9 @@ def build_subsets(repo_root: Path, data_dir: Path | None = None,
         if entry.get("sha256") != actual_hash or output_hashes.get(filename) != actual_hash:
             raise ValueError(f"Source fingerprint mismatch: {filename}")
         rows = read_cohort(path)
-        if len(rows) < 1000 or entry.get("n") != len(rows):
-            raise ValueError(f"Source count mismatch or fewer than 1000 people: {filename}")
+        required_n = 1000 if role == "2013_M" else new_target
+        if len(rows) < required_n or entry.get("n") != len(rows):
+            raise ValueError(f"Source count mismatch or fewer than {required_n} people: {filename}")
         if entry.get("cutoff_elo") != min(row["rating"] for row in rows):
             raise ValueError(f"Source cutoff mismatch: {filename}")
         sources[role] = {"path": relative_path(path, root), "sha256": actual_hash,
@@ -215,6 +227,7 @@ def build_subsets(repo_root: Path, data_dir: Path | None = None,
         "random_seed": SEED,
         "random_order": "ascending SHA256(UTF-8 str(seed) + newline + canonical_id), then canonical_id",
         "primary_training_subset": "random_1000",
+        "acquisition_targets": {"development": 1000, "new_evaluation": new_target},
         "development_new_overlap": 0,
         "subsets": subset_info,
         "output": {"path": relative_path(subset_path, root), "sha256": sha256(subset_path)},

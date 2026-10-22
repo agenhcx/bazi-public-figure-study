@@ -29,11 +29,12 @@ class SubsetTests(unittest.TestCase):
             "2013_M": [{"fide_id": str(500000 + i), "identity_bridge_modern_fide_id": f"000{i}",
                         "rating": str(3000 - (i - 1) // 3)} for i in range(1, 1003)],
             "2023_M_NEW_TARGET": [{"fide_id": str(20000 + i), "identity_bridge_modern_fide_id": "",
-                                    "rating": str(2800 - (i - 1) // 3)} for i in range(1, 1003)],
+                                    "rating": str(2800 - (i - 1) // 3)} for i in range(1, 502)],
         }
-        self.acquisition = {"status": b.COMPLETE, "executing_commit": "a" * 40, "outputs": []}
+        self.acquisition = {"status": b.COMPLETE, "executing_commit": "a" * 40,
+                            "rules": {"target": 1000, "new_target": 500}, "outputs": []}
         self.summary = {"status": b.COMPLETE, "development_new_overlap": 0,
-                        "cross_snapshot_conflicts": 0, "cohorts": {}}
+                        "cross_snapshot_conflicts": 0, "target": 1000, "new_target": 500, "cohorts": {}}
         self.write_sources()
 
     def write_sources(self):
@@ -109,6 +110,8 @@ class SubsetTests(unittest.TestCase):
         self.assertEqual(result["builder_sha256"], b.sha256(HERE / "build_training_subsets.py"))
         self.assertEqual(result["config"]["sha256"], b.sha256(self.config_path))
         self.assertEqual(result["sources"]["2013_M"]["n"], 1002)
+        self.assertEqual(result["sources"]["2023_M_NEW_TARGET"]["n"], 501)
+        self.assertEqual(result["acquisition_targets"], {"development": 1000, "new_evaluation": 500})
         self.assertEqual(result["development_new_overlap"], 0)
 
     def test_duplicate_normalized_modern_id_rejected(self):
@@ -148,6 +151,31 @@ class SubsetTests(unittest.TestCase):
         self.write_sources()
         with self.assertRaisesRegex(ValueError, "fewer than 1000"):
             self.build()
+
+    def test_new_minimum_is_500_and_does_not_relax_training_minimum(self):
+        self.rows["2023_M_NEW_TARGET"] = self.rows["2023_M_NEW_TARGET"][:499]
+        self.write_sources()
+        with self.assertRaisesRegex(ValueError, "fewer than 500"):
+            self.build()
+
+    def test_old_new1000_declaration_not_reinterpreted_as_amended_500(self):
+        self.acquisition["rules"].pop("new_target")
+        self.summary.pop("new_target")
+        self.write_metadata()
+        with self.assertRaisesRegex(ValueError, "NEW acquisition target"):
+            self.build()
+
+    def test_legacy_common_target_schema_retains_original_meaning(self):
+        self.config["acquisition"]["primary_evaluation"]["eligible_unseen_target"] = 1000
+        self.config_path.write_text(json.dumps(self.config), encoding="utf-8")
+        self.acquisition["rules"].pop("new_target")
+        self.summary.pop("new_target")
+        self.rows["2023_M_NEW_TARGET"] = [
+            {"fide_id": str(20000 + i), "identity_bridge_modern_fide_id": "",
+             "rating": str(2800 - (i - 1) // 3)} for i in range(1, 1003)]
+        self.write_sources()
+        result = self.build()
+        self.assertEqual(result["acquisition_targets"]["new_evaluation"], 1000)
 
     def test_config_seed_change_requires_amendment(self):
         self.config["training_subsets"]["random_seed"] += 1
