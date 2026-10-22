@@ -1,0 +1,94 @@
+name: Chess single A v2 - expand cohorts only
+
+on:
+  push:
+    branches: [codex/chess-single-a-plan-v1]
+    paths:
+      - '.github/workflows/chess_single_a_expand_cohorts_v2.yml'
+      - 'studies/chess_single_A_v2/collect_cohorts.py'
+      - 'studies/chess_single_A_v2/test_collect_cohorts.py'
+      - 'studies/chess_single_A_v2/acquisition_protocol.md'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: chess-single-a-v2-acquisition-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - name: Checkout acquisition commit
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Python 3.11
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.11'
+      - name: Download official January source archives and record headers
+        run: |
+          python - <<'PY'
+          import datetime, hashlib, json, pathlib, urllib.request, zipfile
+          root = pathlib.Path('studies/chess_single_A_v2')
+          cache = root / 'cache'
+          out = root / 'data'
+          cache.mkdir(parents=True, exist_ok=True)
+          out.mkdir(parents=True, exist_ok=True)
+          records = []
+          for year, token in [(2013, '13'), (2023, '23')]:
+              filename = f'standard_jan{token}frl.zip'
+              url = 'https://ratings.fide.com/download/' + filename
+              path = cache / filename
+              request = urllib.request.Request(url, headers={'User-Agent': 'bazi-public-figure-study/2.0 (public research; source archive retrieval)'})
+              with urllib.request.urlopen(request, timeout=60) as response, path.open('wb') as target:
+                  while chunk := response.read(1024 * 1024):
+                      target.write(chunk)
+              with zipfile.ZipFile(path) as archive:
+                  members = [name for name in archive.namelist() if name.lower().endswith('.txt')]
+                  if len(members) != 1:
+                      raise RuntimeError(f'Expected one TXT member, got {members!r}')
+                  with archive.open(members[0]) as source:
+                      header = source.readline().decode('utf-8-sig', errors='replace').rstrip('\r\n')
+              record = {'snapshot': f'{year}-01', 'url': url, 'bytes': path.stat().st_size, 'sha256': hashlib.sha256(path.read_bytes()).hexdigest(), 'zip_member': members[0], 'header': header, 'retrieved_at_utc': datetime.datetime.now(datetime.timezone.utc).isoformat()}
+              records.append(record)
+              print(json.dumps(record, ensure_ascii=False), flush=True)
+          (out / 'source_probe.json').write_text(json.dumps({'source_commit': __import__('os').environ['GITHUB_SHA'], 'archives': records}, indent=2) + '\n', encoding='utf-8')
+          PY
+      - name: Install collection dependencies
+        if: hashFiles('studies/chess_single_A_v2/collect_cohorts.py') != ''
+        run: python -m pip install numpy==2.1.3 pandas==2.2.3 requests==2.32.3 beautifulsoup4==4.12.3
+      - name: Run offline collection tests
+        if: hashFiles('studies/chess_single_A_v2/collect_cohorts.py') != ''
+        run: python -m unittest discover -s studies/chess_single_A_v2 -p 'test_collect_cohorts.py' -v
+      - name: Collect 2013 then rebuild 2023 NEW
+        if: hashFiles('studies/chess_single_A_v2/collect_cohorts.py') != ''
+        run: python -u studies/chess_single_A_v2/collect_cohorts.py --repo-root . --output-dir studies/chess_single_A_v2/data --cache-dir studies/chess_single_A_v2/cache --target 1000
+      - name: Save source archives and acquisition evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: chess-single-a-v2-acquisition-${{ github.run_id }}
+          path: |
+            studies/chess_single_A_v2/data/
+            studies/chess_single_A_v2/cache/
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Commit acquisition outputs and resumable evidence cache
+        if: always()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          if [ -d studies/chess_single_A_v2/data ]; then git add -f -- studies/chess_single_A_v2/data; fi
+          if [ -f studies/chess_single_A_v2/cache/wikidata_records.json ]; then git add -f -- studies/chess_single_A_v2/cache/wikidata_records.json; fi
+          if ! git diff --cached --quiet; then
+            git commit -m 'Checkpoint expanded chess acquisition evidence [skip ci]'
+            git push origin "HEAD:$GITHUB_REF_NAME"
+          fi
+      - name: Record scope
+        if: always()
+        run: |
+          echo 'Acquisition only: no predictive model fitting or scoring.' >> "$GITHUB_STEP_SUMMARY"
+          if [ -f studies/chess_single_A_v2/data/summary.json ]; then cat studies/chess_single_A_v2/data/summary.json >> "$GITHUB_STEP_SUMMARY"; fi
