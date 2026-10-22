@@ -1,0 +1,66 @@
+{
+  "convention": {
+    "boundary_limitation": "birth times are unavailable; within-date solar-term timing uncertainty is not reconstructed",
+    "calls": [
+      "sxtwl.fromSolar(year,month,day)",
+      "getYearGZ()",
+      "getMonthGZ()",
+      "getDayGZ()"
+    ],
+    "day_boundary": "civil-date-only getDayGZ; no hour or late-Zi rollover assumption",
+    "month_boundary": "sxtwl solar-term date calculation",
+    "sxtwl_version": "2.0.7",
+    "timezone_place_adjustment": "none; preserves prior date-only convention",
+    "upstream_references": {
+      "example": "https://github.com/yuangu/sxtwl_cpp/blob/master/example/main.py",
+      "implementation": "https://github.com/yuangu/sxtwl_cpp/blob/master/src/day.cpp",
+      "python_documentation": "https://github.com/yuangu/sxtwl_cpp/blob/master/python/README.md"
+    },
+    "year_boundary": "default getYearGZ(): LiChun, not Chinese New Year"
+  },
+  "development_new_overlap": 0,
+  "errors": [],
+  "executing_commit": "81ff2bb57043e218f65d3d9fdfe7270395d2badb",
+  "input_provenance_sha256": {
+    "independent_audit.json": "b2c570c09c9fb56754ee126821925bc5a8247681285b0b6361bd566cae176e59",
+    "manifest.json": "5d5efc1c63bf1f7433bc9d6d9cb26a2cf16150ec90d75db634f76e472626f459",
+    "subset_manifest.json": "18bbd6c200e9f920b3377bca3208763261cc5d4dd3df7b836d87b1a24a0cda08",
+    "summary.json": "755515b1f52214ba97710da60b9b14923fef7b5fedba07cc3bd8246890f068da",
+    "training_subsets.csv": "0b8e6bb7ae9e4a96d67f1612b011e81b7942be48c87342e2fcf5126dd9ec2846"
+  },
+  "legacy_comparisons": [
+    {
+      "matching_person_comparisons": {
+        "development": 501,
+        "legacy_full": 283,
+        "primary_new": 0,
+        "supplementary_full": 397
+      },
+      "reference": "chess_first_reveal_v1/bazi_2013_M.csv",
+      "reference_n": 501
+    },
+    {
+      "matching_person_comparisons": {
+        "development": 357,
+        "legacy_full": 501,
+        "primary_new": 139,
+        "supplementary_full": 501
+      },
+      "reference": "chess_2023_reveal_v1/bazi_2023_M_FULL.csv",
+      "reference_n": 501
+    },
+    {
+      "matching_person_comparisons": {
+        "development": 211,
+        "legacy_full": 209,
+        "primary_new": 289,
+        "supplementary_full": 501
+      },
+      "reference": "chess_2023_reveal_v1/bazi_2023_M_NEW_TARGET.csv",
+      "reference_n": 501
+    }
+  ],
+  "model_fits_or_scores_calculated": false,
+  "prepared_utc": "2026-10-22T00:38:01.267218+00:00",
+  "status": "passed"
+}
