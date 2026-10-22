@@ -15,12 +15,12 @@ LOCK_FILE = STUDY / "analysis_lock.json"
 STATUS = "analysis_locked_before_research_fitting"
 THREAD_ENV = ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS", "NUMEXPR_NUM_THREADS")
 CORE_FILES = (
-    "config.json", "analysis_plan.md", "acquisition_protocol.md", "acquisition_amendment_01.md",
+    "config.json", "analysis_plan.md", "MODEL_RUN_GUIDE.md", "acquisition_protocol.md", "acquisition_amendment_01.md",
     "requirements-model.txt", "model_inputs.py", "models.py", "train_models.py",
     "evaluate_models.py", "plot_model_results.py", "lock_utils.py",
     "data/data_manifest.json", "data/feature_audit.json", "data/manifest.json",
     "data/summary.json", "data/independent_audit.json", "data/training_subsets.csv",
-    "data/subset_manifest.json",
+    "data/subset_manifest.json", "data/model_environment.json", "data/model_pip_freeze.txt",
 )
 
 
@@ -79,6 +79,11 @@ def create_analysis_lock(repo_root: Path, *, source_data_commit: str,
         source = entry.get("source", {})
         if isinstance(source, dict) and isinstance(source.get("path"), str):
             required.add(source["path"])
+    for reference in manifest.get("reference_inputs", []):
+        path = _relative_file(root, reference["path"])
+        if sha256(path) != reference.get("sha256"):
+            raise ValueError(f"Legacy reference differs from the verified preparation: {reference['path']}")
+        required.add(reference["path"])
     hashes = {name: sha256(_relative_file(root, name)) for name in sorted(required)}
     packages = {}
     for line in (root / STUDY / "requirements-model.txt").read_text().splitlines():
@@ -86,6 +91,10 @@ def create_analysis_lock(repo_root: Path, *, source_data_commit: str,
             continue
         package, version = line.strip().split("==", 1)
         packages[package] = version
+    expected_environment = {"python": python_version, **packages}
+    recorded_environment = read_json(root / STUDY / "data/model_environment.json")
+    if any(recorded_environment.get(package) != version for package, version in expected_environment.items()):
+        raise ValueError("Preflight environment does not match the pinned model environment")
     lock = {
         "status": STATUS,
         "protocol_id": "chess-single-A-v2",
@@ -95,7 +104,7 @@ def create_analysis_lock(repo_root: Path, *, source_data_commit: str,
         "prior_outcome_access_disclosed": True,
         "new_blind_preregistration_claimed": False,
         "fitting_before_this_lock": "synthetic tests only; no research-data fits",
-        "environment": {"python": python_version, **packages},
+        "environment": expected_environment,
         "thread_environment": {name: "1" for name in THREAD_ENV},
         "pythonhashseed": "0",
         "files": hashes,

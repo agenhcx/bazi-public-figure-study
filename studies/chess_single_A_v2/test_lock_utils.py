@@ -22,6 +22,7 @@ class LockTests(unittest.TestCase):
             self.write(str(u.STUDY / name), "synthetic fixture\n")
         self.write(str(u.STUDY / "config.json"), json.dumps({"fit_allowed": True}))
         self.write(str(u.STUDY / "requirements-model.txt"), "numpy==2.3.5\n")
+        self.write(str(u.STUDY / "data/model_environment.json"), json.dumps({"python": "3.11.17", "numpy": "2.3.5"}))
         self.write(str(u.STUDY / "data/data_manifest.json"), json.dumps({"roles": {
             "development": {"path": str(u.STUDY / "data/derived.csv"),
                             "source": {"path": str(u.STUDY / "data/source.csv")}}}}))
