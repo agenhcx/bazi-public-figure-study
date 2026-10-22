@@ -12,6 +12,7 @@ on:
 
 permissions:
   contents: write
+  actions: read
 
 concurrency:
   group: chess-single-a-v2-acquisition-${{ github.ref }}
@@ -28,10 +29,18 @@ jobs:
         uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
         with:
           python-version: '3.11'
+      - name: Restore the verified source-probe archives when available
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p studies/chess_single_A_v2/cache
+          if gh run download 39697071461 --repo "$GITHUB_REPOSITORY" --name chess-single-a-v2-acquisition-39697071461 --dir "$RUNNER_TEMP/chess-single-a-sources"; then
+            cp "$RUNNER_TEMP/chess-single-a-sources/cache/"*.zip studies/chess_single_A_v2/cache/
+          fi
       - name: Download official January source archives and record headers
         run: |
           python - <<'PY'
-          import datetime, hashlib, json, pathlib, urllib.request, zipfile
+          import datetime, hashlib, json, pathlib, subprocess, zipfile
           root = pathlib.Path('studies/chess_single_A_v2')
           cache = root / 'cache'
           out = root / 'data'
@@ -42,17 +51,19 @@ jobs:
               filename = f'standard_jan{token}frl.zip'
               url = 'https://ratings.fide.com/download/' + filename
               path = cache / filename
-              request = urllib.request.Request(url, headers={'User-Agent': 'bazi-public-figure-study/2.0 (public research; source archive retrieval)'})
-              with urllib.request.urlopen(request, timeout=60) as response, path.open('wb') as target:
-                  while chunk := response.read(1024 * 1024):
-                      target.write(chunk)
+              source = 'verified-source-probe-artifact-39697071461' if path.exists() else 'official-download'
+              if not path.exists():
+                  subprocess.run(['curl', '--fail', '--location', '--ipv4', '--connect-timeout', '15', '--max-time', '90', '--retry', '3', '--retry-all-errors', '--retry-delay', '2', '--user-agent', 'bazi-public-figure-study/2.0 (public research)', '--output', str(path), url], check=True)
+              expected = {2013: '5f7e6e215d323da848857138054866e41f0e0f5e21160c6553a7fc1cfd74e78a', 2023: 'a2123b8d3b8520456ef5ece135442b2491586ba10b69c95c720c7885a70664bb'}[year]
+              if hashlib.sha256(path.read_bytes()).hexdigest() != expected:
+                  raise RuntimeError(f'Official archive fingerprint mismatch: {year}')
               with zipfile.ZipFile(path) as archive:
                   members = [name for name in archive.namelist() if name.lower().endswith('.txt')]
                   if len(members) != 1:
                       raise RuntimeError(f'Expected one TXT member, got {members!r}')
                   with archive.open(members[0]) as source:
                       header = source.readline().decode('utf-8-sig', errors='replace').rstrip('\r\n')
-              record = {'snapshot': f'{year}-01', 'url': url, 'bytes': path.stat().st_size, 'sha256': hashlib.sha256(path.read_bytes()).hexdigest(), 'zip_member': members[0], 'header': header, 'retrieved_at_utc': datetime.datetime.now(datetime.timezone.utc).isoformat()}
+              record = {'snapshot': f'{year}-01', 'url': url, 'bytes': path.stat().st_size, 'sha256': hashlib.sha256(path.read_bytes()).hexdigest(), 'zip_member': members[0], 'header': header, 'retrieved_or_restored_at_utc': datetime.datetime.now(datetime.timezone.utc).isoformat(), 'retrieval_source': source}
               records.append(record)
               print(json.dumps(record, ensure_ascii=False), flush=True)
           (out / 'source_probe.json').write_text(json.dumps({'source_commit': __import__('os').environ['GITHUB_SHA'], 'archives': records}, indent=2) + '\n', encoding='utf-8')

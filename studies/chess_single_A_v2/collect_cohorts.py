@@ -424,7 +424,7 @@ def main():
     started = datetime.now(timezone.utc).isoformat()
     write_json(out / "summary.json", {"status": "acquisition_incomplete", "started_utc": started})
     write_json(out / "manifest.json", {"status": "acquisition_incomplete", "started_utc": started})
-    for filename in ("cohort_2013_M.csv", "cohort_2023_M_FULL.csv", "cohort_2023_M_NEW_TARGET.csv", "conflicts.csv"):
+    for filename in ("cohort_2013_M.csv", "cohort_2023_M_FULL.csv", "cohort_2023_M_NEW_TARGET.csv", "conflicts.csv", "training_subsets.csv", "subset_manifest.json"):
         (out / filename).unlink(missing_ok=True)
     parser = import_module(root / "chess_2023_cohorts_v1/build_chess_2023_cohorts_v2.py", "legacy_fide_parser")
     seeds, seed_inputs = load_seeds(root)
