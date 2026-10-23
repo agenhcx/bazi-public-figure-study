@@ -1,0 +1,1106 @@
+{
+  "release_date": "2026-10-23",
+  "base_commit": "9bda89fb71501b952570d12b80e090614fe396f4",
+  "code_range": "C0001-C4581",
+  "identity_count": 4581,
+  "changed_data_and_narrative_files": [
+    {
+      "path": "chess_2023_cohorts_v1/candidate_audit_2023_F.csv",
+      "kind": "csv",
+      "rows": 1293,
+      "columns": 29,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 1293,
+      "prose_cells_changed": 0,
+      "before_bytes": 268498,
+      "after_bytes": 252863,
+      "before_sha256": "ab86a325397348ddd14c8798626b4f5eac84af16e15437852ff55e727b2f943a",
+      "after_sha256": "8cb6004adcae7c9efdad20e648a5882649aae762c72fdbd3af4aa3e545306880"
+    },
+    {
+      "path": "chess_2023_cohorts_v1/candidate_audit_2023_M.csv",
+      "kind": "csv",
+      "rows": 1478,
+      "columns": 29,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 1478,
+      "prose_cells_changed": 0,
+      "before_bytes": 311863,
+      "after_bytes": 294963,
+      "before_sha256": "b65a80793ffe5c0296bc30d9c431b2bf428e6435e45ba52b0d89e5eec917b4a0",
+      "after_sha256": "dc26595b29a159411b0cccb5bc8d67fde9b40cede898a25da271dd1bd71d8bc0"
+    },
+    {
+      "path": "chess_2023_cohorts_v1/diagnostic_2023_F_NEW_WITHIN_FULL.csv",
+      "kind": "csv",
+      "rows": 80,
+      "columns": 31,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 80,
+      "prose_cells_changed": 0,
+      "before_bytes": 19215,
+      "after_bytes": 18326,
+      "before_sha256": "3e57566427c79b1b9df1da7182d4e20568fd785be7ffbcc62e3aad84c7061ef2",
+      "after_sha256": "ea008e9c8417138fb7968b1afb6b396c9e998c720b58093415edb60acd7a2e1c"
+    },
+    {
+      "path": "chess_2023_cohorts_v1/diagnostic_2023_M_NEW_WITHIN_FULL.csv",
+      "kind": "csv",
+      "rows": 209,
+      "columns": 31,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 209,
+      "prose_cells_changed": 0,
+      "before_bytes": 48966,
+      "after_bytes": 46644,
+      "before_sha256": "e114d74788ecdb8e0e6e1634dde365c7578cf00cbe21f534bd2432585493224a",
+      "after_sha256": "f6865f14e889042976cd5b5f143e6946c6146df46d23ceeca452651c079f77cc"
+    },
+    {
+      "path": "chess_2023_cohorts_v1/primary_2023_F_FULL.csv",
+      "kind": "csv",
+      "rows": 202,
+      "columns": 31,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 202,
+      "prose_cells_changed": 0,
+      "before_bytes": 48084,
+      "after_bytes": 45788,
+      "before_sha256": "b69b810c191a7b73a2ce17af20d764c443658e90678fdeddcfec84e01b6273fe",
+      "after_sha256": "e6b657c79ba49b258f8038d67fa0f2b826bbdcf653d00a6d11a117f1cf37210e"
+    },
+    {
+      "path": "chess_2023_cohorts_v1/primary_2023_M_FULL.csv",
+      "kind": "csv",
+      "rows": 501,
+      "columns": 31,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 501,
+      "prose_cells_changed": 0,
+      "before_bytes": 116260,
+      "after_bytes": 110712,
+      "before_sha256": "d62dba206518df119d35d2daa4c0963cdfbd6f2e5be20ca8389b2397e6254d1e",
+      "after_sha256": "209d65191c11b94db6f138b8f758cedf366bf179dc286704d612c765f85bf181"
+    },
+    {
+      "path": "chess_2023_cohorts_v1/validation_2023_F_NEW_TARGET.csv",
+      "kind": "csv",
+      "rows": 200,
+      "columns": 31,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 200,
+      "prose_cells_changed": 0,
+      "before_bytes": 47701,
+      "after_bytes": 45364,
+      "before_sha256": "17af1275b504b72e4dba561d7d61c90db6bdd693dc8d7b711ec6d2011a52412e",
+      "after_sha256": "f0170a943f386e8f7117956bfade78b459b4c4664381808d6ab220f7869d8a0d"
+    },
+    {
+      "path": "chess_2023_cohorts_v1/validation_2023_M_NEW_TARGET.csv",
+      "kind": "csv",
+      "rows": 501,
+      "columns": 31,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 501,
+      "prose_cells_changed": 0,
+      "before_bytes": 117357,
+      "after_bytes": 111440,
+      "before_sha256": "5e31679116d52f6b1332e0646d9b4b85a3c006ce9bfc24f5325f15679e9fd756",
+      "after_sha256": "c5d9dcc319876e94a1626516e0a24ca13775bd34fd0fcf395adf1a7cb0d47887"
+    },
+    {
+      "path": "chess_2023_jiecai_hiddenstem_diagnostic_v1/new_target_jiecai_hidden_top5.csv",
+      "kind": "csv",
+      "rows": 5,
+      "columns": 11,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 5,
+      "prose_cells_changed": 0,
+      "before_bytes": 463,
+      "after_bytes": 416,
+      "before_sha256": "1c300709a875aa452dfbe1042a49f4f6edc7a92b22c543f25057574e26770155",
+      "after_sha256": "ac6b54a45afe99d6e01b0d5e04cbc1761ab0959b1b11dd98c8791479b4ebfd13"
+    },
+    {
+      "path": "chess_2023_jiecai_hiddenstem_diagnostic_v1/new_target_jiecai_hidden_top5_branch_details.csv",
+      "kind": "csv",
+      "rows": 5,
+      "columns": 20,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 5,
+      "prose_cells_changed": 0,
+      "before_bytes": 812,
+      "after_bytes": 765,
+      "before_sha256": "acd0b74abf4cf650d1aa9372fe648b4854b3c86df1d16b3a2b2734d5eb7d2c18",
+      "after_sha256": "b5f7e1aa731e3cdec125281d011957787425ec1325401677b450a389b94c8185"
+    },
+    {
+      "path": "chess_2023_reveal_v1/bazi_2023_F_FULL.csv",
+      "kind": "csv",
+      "rows": 202,
+      "columns": 41,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 202,
+      "prose_cells_changed": 0,
+      "before_bytes": 65240,
+      "after_bytes": 62944,
+      "before_sha256": "b88bf9c2217a144a6d305518c6b22c869f30c7888efe3525f9bf75741a514c1c",
+      "after_sha256": "cf84868187c11ad4208c8fefcc12a047f7cb8804b7534dd5f5d70943e0874ab0"
+    },
+    {
+      "path": "chess_2023_reveal_v1/bazi_2023_F_NEW_TARGET.csv",
+      "kind": "csv",
+      "rows": 200,
+      "columns": 41,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 200,
+      "prose_cells_changed": 0,
+      "before_bytes": 65908,
+      "after_bytes": 63571,
+      "before_sha256": "86ce4401f2cff7806cce51e11e7e736614a26331231dda12955617e25f79ab96",
+      "after_sha256": "7c676c0dac5b2a5e0806fef5cab2e15e13c5a824a3b9c2d87f658f2cdd371525"
+    },
+    {
+      "path": "chess_2023_reveal_v1/bazi_2023_F_NEW_WITHIN_FULL.csv",
+      "kind": "csv",
+      "rows": 80,
+      "columns": 41,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 80,
+      "prose_cells_changed": 0,
+      "before_bytes": 27000,
+      "after_bytes": 26111,
+      "before_sha256": "02634d5996faa8504263b2f75cedeb187b10bfa3e3073a1721fc1cf3179ef381",
+      "after_sha256": "4881f5cebd6260b66c3cf9db46f476f6728ed233fe94cd1e6a5cf02e1c9f5d2a"
+    },
+    {
+      "path": "chess_2023_reveal_v1/bazi_2023_M_FULL.csv",
+      "kind": "csv",
+      "rows": 501,
+      "columns": 41,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 501,
+      "prose_cells_changed": 0,
+      "before_bytes": 158584,
+      "after_bytes": 153036,
+      "before_sha256": "ae492ee432df39bf34443a6a268bd2abf2ab61b62c81b29f24414485bc328dbc",
+      "after_sha256": "1df592da6fcd337167ee90227191f92aea06fbe3bf2bfde74cfb14dc58c38ce2"
+    },
+    {
+      "path": "chess_2023_reveal_v1/bazi_2023_M_NEW_TARGET.csv",
+      "kind": "csv",
+      "rows": 501,
+      "columns": 41,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 501,
+      "prose_cells_changed": 0,
+      "before_bytes": 162692,
+      "after_bytes": 156775,
+      "before_sha256": "9f8f18f24881af06be0ab7ef69ba97be62ad7ef2e389409a8f0b49d2a9c95d34",
+      "after_sha256": "fd31c60dc15b1fe99d65c7110bc1e77d1c258d3a9808cf677fb17a9283bd1035"
+    },
+    {
+      "path": "chess_2023_reveal_v1/bazi_2023_M_NEW_WITHIN_FULL.csv",
+      "kind": "csv",
+      "rows": 209,
+      "columns": 41,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 209,
+      "prose_cells_changed": 0,
+      "before_bytes": 69032,
+      "after_bytes": 66710,
+      "before_sha256": "abafbb26c9ccb46d9684c757ac4c50225b2f53fdd357826bd2baef5425fd13c4",
+      "after_sha256": "0ae81499c7c733587785064298da91f09f4ddb1802ecc3606ec6936cf320fb19"
+    },
+    {
+      "path": "chess_c2_hiddenstem_hour_sensitivity_v1/c2_hiddenstem_hour_sensitivity_player_features.csv",
+      "kind": "csv",
+      "rows": 1002,
+      "columns": 17,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 1002,
+      "prose_cells_changed": 0,
+      "before_bytes": 159248,
+      "after_bytes": 147783,
+      "before_sha256": "6dadadbc1192c7b04e05a4a7768d3abb2a2375e3d07ea558caeb4cbb569bf7ee",
+      "after_sha256": "0145fa84beb61f594d6e9849e5299dc39b50eaf326a7f91d02a79491b4d5484e"
+    },
+    {
+      "path": "chess_c7_hiddenstem_hour_sensitivity_v1/c7_player_expected_features.csv",
+      "kind": "csv",
+      "rows": 1404,
+      "columns": 27,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 1404,
+      "prose_cells_changed": 0,
+      "before_bytes": 357483,
+      "after_bytes": 341385,
+      "before_sha256": "6fa44fbfd367d2bf8d5481b6f792243739d444a3e3cb71762d1cce64280e6522",
+      "after_sha256": "2301a87a0024363dfbb4c63c18eb3ea87082b8aadba59a0576e56f474ba099ce"
+    },
+    {
+      "path": "chess_element_concentration_v1/element_concentration_player_features.csv",
+      "kind": "csv",
+      "rows": 2807,
+      "columns": 75,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 2807,
+      "prose_cells_changed": 0,
+      "before_bytes": 1442380,
+      "after_bytes": 1410583,
+      "before_sha256": "9913441c11db92b2520a561f4709f5f2b549930f1c1d42d341ca8f44823ab98a",
+      "after_sha256": "f5e794036218f3492eba629f1d1c90b7bbd68360d96234cdbb0994c08b0a4c32"
+    },
+    {
+      "path": "chess_first_reveal_v1/bazi_1994_F.csv",
+      "kind": "csv",
+      "rows": 201,
+      "columns": 67,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 201,
+      "prose_cells_changed": 0,
+      "before_bytes": 137980,
+      "after_bytes": 135630,
+      "before_sha256": "509139c7d4eb0042321e00fdce84c44fc6c370d03efece0f6a60033b83fd7f2c",
+      "after_sha256": "5b977c9fef021c457f92fab0a376b7d7ba0e404201f785c690d5cc03e02fda65"
+    },
+    {
+      "path": "chess_first_reveal_v1/bazi_1994_M.csv",
+      "kind": "csv",
+      "rows": 501,
+      "columns": 67,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 501,
+      "prose_cells_changed": 0,
+      "before_bytes": 345819,
+      "after_bytes": 340305,
+      "before_sha256": "1653c95bdd562d208e5f623a8a5f71acdb4b96359c68fe5a069f14eaa1c2818f",
+      "after_sha256": "c0c4deee8ad9b06c60ae7443140b8bc2dfad100a110546f798b56d3bcf9dffb0"
+    },
+    {
+      "path": "chess_first_reveal_v1/bazi_2013_F.csv",
+      "kind": "csv",
+      "rows": 200,
+      "columns": 60,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 200,
+      "prose_cells_changed": 0,
+      "before_bytes": 112842,
+      "after_bytes": 110555,
+      "before_sha256": "0aefdd59705e112e17b4e54f7c1bfc9bd47d26f84cafe165468cd3e35bada6f4",
+      "after_sha256": "09a74a8eb26607daec953ee855b727adb60c9c7bb84eeade267ca8e24ebacbba"
+    },
+    {
+      "path": "chess_first_reveal_v1/bazi_2013_M.csv",
+      "kind": "csv",
+      "rows": 501,
+      "columns": 60,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 501,
+      "prose_cells_changed": 0,
+      "before_bytes": 271746,
+      "after_bytes": 266198,
+      "before_sha256": "8eab0030d76e0e6a4705a0a745a84b63aa733e33b4b1106f7b4e505ceb5b19f8",
+      "after_sha256": "b346f80e50db1a2f4851dd0ed7b0347430bc322a96d0b75f9e530ebeceeb05a0"
+    },
+    {
+      "path": "chess_freeze/1994_final_audit_resolved_v1.csv",
+      "kind": "csv",
+      "rows": 43,
+      "columns": 22,
+      "name_fields": [
+        "all_names",
+        "name"
+      ],
+      "name_cells_replaced": 86,
+      "prose_cells_changed": 0,
+      "before_bytes": 20277,
+      "after_bytes": 19365,
+      "before_sha256": "e0ceeffe862d6b49b6531b37aff1831497f614c6c21be2a21bfeca12fafaf20c",
+      "after_sha256": "76ca95a1b13eec6aa457f8f593f169e4cc91787b858aac3daab07b12cc0155f6"
+    },
+    {
+      "path": "chess_freeze/primary_clean_top_1994_F.csv",
+      "kind": "csv",
+      "rows": 188,
+      "columns": 53,
+      "name_fields": [
+        "name",
+        "olimpbase_profile_name"
+      ],
+      "name_cells_replaced": 376,
+      "prose_cells_changed": 0,
+      "before_bytes": 121359,
+      "after_bytes": 117007,
+      "before_sha256": "5c2c8f5d3a83175519f09e8544ffb4034ced3c54f0568de426685edb8e42f466",
+      "after_sha256": "a7718e5bc5ef4f39c4cc605bddd4ec469837ba6794a5173c118a225837421b74"
+    },
+    {
+      "path": "chess_freeze/primary_clean_top_1994_M.csv",
+      "kind": "csv",
+      "rows": 494,
+      "columns": 53,
+      "name_fields": [
+        "name",
+        "olimpbase_profile_name"
+      ],
+      "name_cells_replaced": 988,
+      "prose_cells_changed": 0,
+      "before_bytes": 316946,
+      "after_bytes": 305998,
+      "before_sha256": "65af7b3a6a778726840464191b7b26864716209582bd606b59b30b8570a1b0c9",
+      "after_sha256": "ce01755da3edbb64e98ad756a738c2302584cede5d25b1914f72ebdbc9a24cc4"
+    },
+    {
+      "path": "chess_freeze/primary_clean_top_2013_F.csv",
+      "kind": "csv",
+      "rows": 197,
+      "columns": 35,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 197,
+      "prose_cells_changed": 0,
+      "before_bytes": 73536,
+      "after_bytes": 71303,
+      "before_sha256": "a586e8aa6621dca90cc6f9caab2f0c416c2b5e63dec9a31f34dce326a2f5dc47",
+      "after_sha256": "963d83121ede38324bacdaa57f6ac7ea490ced60ba440678783d3cc4e84a8957"
+    },
+    {
+      "path": "chess_freeze/primary_clean_top_2013_M.csv",
+      "kind": "csv",
+      "rows": 492,
+      "columns": 35,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 492,
+      "prose_cells_changed": 0,
+      "before_bytes": 180496,
+      "after_bytes": 174999,
+      "before_sha256": "ec5d0fac6f5924c99ee66a8622bbb2548708abb15aa602a4e202047cb03df169",
+      "after_sha256": "b4cb4a471f644b4aae18cc82887637333d2d685b13486e0b96af0484bc5cc725"
+    },
+    {
+      "path": "chess_freeze/sensitivity_adjudicated_top_1994_F.csv",
+      "kind": "csv",
+      "rows": 196,
+      "columns": 53,
+      "name_fields": [
+        "name",
+        "olimpbase_profile_name"
+      ],
+      "name_cells_replaced": 392,
+      "prose_cells_changed": 0,
+      "before_bytes": 126981,
+      "after_bytes": 122424,
+      "before_sha256": "094a33e714ad454697cca12df84c136edd6fee2087a703bfcfe9b1ec6595b02a",
+      "after_sha256": "0e9a1b79e891ec0b9b77e436c13c041623493721de8c7ea00189e36b8e423e55"
+    },
+    {
+      "path": "chess_freeze/sensitivity_adjudicated_top_1994_M.csv",
+      "kind": "csv",
+      "rows": 508,
+      "columns": 53,
+      "name_fields": [
+        "name",
+        "olimpbase_profile_name"
+      ],
+      "name_cells_replaced": 1016,
+      "prose_cells_changed": 0,
+      "before_bytes": 327085,
+      "after_bytes": 315847,
+      "before_sha256": "0e66a9392ab103a55b2c7b13402520ebcdb3ffca8bda5676aa87a985cba9527e",
+      "after_sha256": "e9d4601a4a8fba095115d42ee3d557b6d7f81b1c7f1e404f7410857a9571caa0"
+    },
+    {
+      "path": "chess_ho_conditional_structure_v1/chess_ho_conditional_player_audit.csv",
+      "kind": "csv",
+      "rows": 9018,
+      "columns": 31,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 9018,
+      "prose_cells_changed": 0,
+      "before_bytes": 2302689,
+      "after_bytes": 2200611,
+      "before_sha256": "28b07da69f625ae465e1f05c9382e55de2fb842ec3ca2abd83c828ef9c4c1465",
+      "after_sha256": "be7a2569776cad8f8fb35d7af635c470d1759f51128a5b64a2bc06c4836a52e2"
+    },
+    {
+      "path": "chess_jiecai_temporal_dob_conflicts.csv",
+      "kind": "csv",
+      "rows": 7,
+      "columns": 5,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 7,
+      "prose_cells_changed": 0,
+      "before_bytes": 436,
+      "after_bytes": 346,
+      "before_sha256": "3e6d4bd2efa09071f23ee7fe50104d1f87fcf2e87f788f8e0b9579a356203be0",
+      "after_sha256": "ee90fb2b1eb8a26e0bb7cfa256be0b45ddc927dc221c61c799167364d3f703fb"
+    },
+    {
+      "path": "chess_jiecai_temporal_position_v1_3/chess_jiecai_unique_players.csv",
+      "kind": "csv",
+      "rows": 1907,
+      "columns": 25,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 1907,
+      "prose_cells_changed": 0,
+      "before_bytes": 518923,
+      "after_bytes": 497194,
+      "before_sha256": "aab05cc93ca52a64106eaa449edfe9a80906bf8ebb580a18f3d5e20f17ffbff9",
+      "after_sha256": "963569f36b10150ac0525b22de6597741396ba6485a7a2a6e85c3eda509c812b"
+    },
+    {
+      "path": "chess_north_v2/candidate_audit_1994_F.csv",
+      "kind": "csv",
+      "rows": 468,
+      "columns": 41,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 468,
+      "prose_cells_changed": 0,
+      "before_bytes": 224402,
+      "after_bytes": 218992,
+      "before_sha256": "2602247bf14e51ee347e953e36ea5ca2677537b5e66c2be36a4513613bd156c5",
+      "after_sha256": "b52ad530efd55abba924ca2bdc4fd85d9fb747d5d0adc705ced1bcead0f50ced"
+    },
+    {
+      "path": "chess_north_v2/candidate_audit_1994_M.csv",
+      "kind": "csv",
+      "rows": 811,
+      "columns": 41,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 811,
+      "prose_cells_changed": 0,
+      "before_bytes": 386110,
+      "after_bytes": 377080,
+      "before_sha256": "48717f7742b72e53e359aab736a755df7d55dbb03ac7ea801b07c1aea618cb0d",
+      "after_sha256": "a600b47751073380ecd8c3189392bff8da68b566c89a4bff0b75205d8619b7e2"
+    },
+    {
+      "path": "chess_north_v2/candidate_audit_2013_F.csv",
+      "kind": "csv",
+      "rows": 240,
+      "columns": 34,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 240,
+      "prose_cells_changed": 0,
+      "before_bytes": 83120,
+      "after_bytes": 80358,
+      "before_sha256": "7d445abffc9d6b2ad7080310cf6c4ece2917ec28dcdc391cda2fd589c15a6fbf",
+      "after_sha256": "9c5eee49c6799a7c69f9b7c9a0ad0b4b24b750b1f3787369ee8b3c22f2cc2d6f"
+    },
+    {
+      "path": "chess_north_v2/candidate_audit_2013_M.csv",
+      "kind": "csv",
+      "rows": 550,
+      "columns": 34,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 550,
+      "prose_cells_changed": 0,
+      "before_bytes": 186687,
+      "after_bytes": 180533,
+      "before_sha256": "b67dc3fe60661414d668f59a817ebfc203775a844a98c7b3eaaf2317660fc5b0",
+      "after_sha256": "3dbbe50969d771721808f45d2bd2881b1adf8e9e74cd3d8edc6cec85bca5b61e"
+    },
+    {
+      "path": "chess_north_v2/primary_north_top_1994_F.csv",
+      "kind": "csv",
+      "rows": 201,
+      "columns": 45,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 201,
+      "prose_cells_changed": 0,
+      "before_bytes": 104901,
+      "after_bytes": 102551,
+      "before_sha256": "187d080b4b3fd87e697db023a2623936bd4257243e42bf4ed9e6ad5b9a105d60",
+      "after_sha256": "612d7556f9a44a90c9d0611753375b9ae3a1a1a19a0a7116af6b6be246273741"
+    },
+    {
+      "path": "chess_north_v2/primary_north_top_1994_M.csv",
+      "kind": "csv",
+      "rows": 502,
+      "columns": 45,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 502,
+      "prose_cells_changed": 0,
+      "before_bytes": 264517,
+      "after_bytes": 258997,
+      "before_sha256": "d921ddec05feb0e2a8503e378ed4b42d5b8b871c06bc659cad2a8548036b94fe",
+      "after_sha256": "ebb82268ec270a414194722c554edcafd2b49892cc241518cfe0824e5d990715"
+    },
+    {
+      "path": "chess_north_v2/primary_north_top_2013_F.csv",
+      "kind": "csv",
+      "rows": 200,
+      "columns": 38,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 200,
+      "prose_cells_changed": 0,
+      "before_bytes": 80007,
+      "after_bytes": 77720,
+      "before_sha256": "f04966b9ae7709df0107b5b24a7e458975e16076082dc9b6bd29eadab02d22d2",
+      "after_sha256": "063446b8e607b3d8231821e4de61b3228984abb04d24be184c096c1e55032bc5"
+    },
+    {
+      "path": "chess_north_v2/primary_north_top_2013_M.csv",
+      "kind": "csv",
+      "rows": 501,
+      "columns": 38,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 501,
+      "prose_cells_changed": 0,
+      "before_bytes": 189775,
+      "after_bytes": 184227,
+      "before_sha256": "189326617adac3184d3d79a89bf74a3309aae18ebab69c773d9c7c3e9d4a3f55",
+      "after_sha256": "31e3184510e73c59cbadf33d7d850539d7d8b1e581439a068bd0e96fc41f2a19"
+    },
+    {
+      "path": "chess_north_v3/primary_north_top_1994_F.csv",
+      "kind": "csv",
+      "rows": 201,
+      "columns": 47,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 201,
+      "prose_cells_changed": 0,
+      "before_bytes": 112409,
+      "after_bytes": 110059,
+      "before_sha256": "79ac638d590d8cdca2dd772f6ead1d7a52ff780abdede86b52bfb95fafaf0c7c",
+      "after_sha256": "9faefdde708e582c71e8d16b4c0066a91725901acf1af91c7ae64017b5368248"
+    },
+    {
+      "path": "chess_north_v3/primary_north_top_1994_M.csv",
+      "kind": "csv",
+      "rows": 501,
+      "columns": 47,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 501,
+      "prose_cells_changed": 0,
+      "before_bytes": 282492,
+      "after_bytes": 276978,
+      "before_sha256": "a73808eb8a0ef8b7a76c6303bde75b967666ed0ff9589d1a8ab428d07cc93c49",
+      "after_sha256": "ac863622e87e6da6f9a7400d4d5cafb7e0a96f1de6b8787d81b0e8735cca1176"
+    },
+    {
+      "path": "chess_north_v3/primary_north_top_2013_F.csv",
+      "kind": "csv",
+      "rows": 200,
+      "columns": 40,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 200,
+      "prose_cells_changed": 0,
+      "before_bytes": 87399,
+      "after_bytes": 85112,
+      "before_sha256": "17f02a7727a17555e8360e78f4b5c0a35fa41041529f51e5f41eae4988bbb9ef",
+      "after_sha256": "86aaf86be5c711917aaa13e15b9b72c34b948b6947cee730e77c59153b88f492"
+    },
+    {
+      "path": "chess_north_v3/primary_north_top_2013_M.csv",
+      "kind": "csv",
+      "rows": 501,
+      "columns": 40,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 501,
+      "prose_cells_changed": 0,
+      "before_bytes": 208433,
+      "after_bytes": 202885,
+      "before_sha256": "b590aedce39b36f7e465612b22d41dd2cb0c8f61ac03323715632ed2dfa501a7",
+      "after_sha256": "e2329a30a6e30bbdc105ab32c7b50d9a86e44bdb0a67cfd001dd97cc6c0890a1"
+    },
+    {
+      "path": "chess_north_v3/temporal_sanity_invalid_rows.csv",
+      "kind": "csv",
+      "rows": 1,
+      "columns": 6,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 1,
+      "prose_cells_changed": 0,
+      "before_bytes": 132,
+      "after_bytes": 126,
+      "before_sha256": "9a64b0eb8ddfa79ef5deff9282ef5509bcff94500c72db050a54724677c37e37",
+      "after_sha256": "f6fdb8e7132d6c206334b339791382473e9f4c102c227a5cba568a4ddb1ef696"
+    },
+    {
+      "path": "chess_sgpy_threshold_diagnostic_v1/no_sgpy_top_players.csv",
+      "kind": "csv",
+      "rows": 100,
+      "columns": 12,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 100,
+      "prose_cells_changed": 0,
+      "before_bytes": 13741,
+      "after_bytes": 12651,
+      "before_sha256": "6c4642f4212fa4d15c5863ead1bac79f7c2c70109c86e5cc3e4e770c30a6d957",
+      "after_sha256": "0a8b7acd00ae8d3668467b4ab0b71a102ea6594fe9246e8fc451307b8e3695e3"
+    },
+    {
+      "path": "chess_tengod_distribution_v1/chess_tengod_player_features.csv",
+      "kind": "csv",
+      "rows": 1494,
+      "columns": 45,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 1494,
+      "prose_cells_changed": 0,
+      "before_bytes": 673507,
+      "after_bytes": 656545,
+      "before_sha256": "c9e5d1901ccb58e84e720251143b6d1efedbfcb1fd33ffcce944c102d307cef4",
+      "after_sha256": "4d3681c5fdefac64293b19253642447c59f077873b5648df4bbf761efddb5226"
+    },
+    {
+      "path": "chess_tengod_temporal_v1/chess_tengod_temporal_player_residuals.csv",
+      "kind": "csv",
+      "rows": 1907,
+      "columns": 132,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 1907,
+      "prose_cells_changed": 0,
+      "before_bytes": 3897714,
+      "after_bytes": 3875985,
+      "before_sha256": "900b38f0b176c6ed772b3085d36e3de2e8a2af08cb4fdf103f6664865976dcb2",
+      "after_sha256": "79b568b3720e25f5be8f632a72e829af0f1b302d5221c6786077c0764b17211c"
+    },
+    {
+      "path": "chess_yearstem_jc_combine_split_v1/chess_yearstem_jc_combine_split_players.csv",
+      "kind": "csv",
+      "rows": 72,
+      "columns": 14,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 72,
+      "prose_cells_changed": 0,
+      "before_bytes": 6413,
+      "after_bytes": 5565,
+      "before_sha256": "2cf7f5c7f9a33e99a0bde8f004698ddd77c2c4e14f317a7f5dc28f41ce539a1a",
+      "after_sha256": "fc69c7d0f4097ff1fa772818bb8997ac9ac1baea2be30d447d15c7bb05ffd470"
+    },
+    {
+      "path": "chess_yearstem_jc_companions_v1/chess_yearstem_jc_players.csv",
+      "kind": "csv",
+      "rows": 222,
+      "columns": 21,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 222,
+      "prose_cells_changed": 0,
+      "before_bytes": 27236,
+      "after_bytes": 24736,
+      "before_sha256": "0cbdcad9d9af2ebab6e5ce5b3f713c4397d4d21b7bc6c352ac9e6e32eac0c3f0",
+      "after_sha256": "d46ab146d4d9cefc49864587ac9624f3b79ef08c0b06e0c2990adc2186afb7a1"
+    },
+    {
+      "path": "chess_yearstem_jc_performance_v1/yearstem_jc_members_sorted_by_rating.csv",
+      "kind": "csv",
+      "rows": 72,
+      "columns": 10,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 72,
+      "prose_cells_changed": 0,
+      "before_bytes": 6426,
+      "after_bytes": 5578,
+      "before_sha256": "f3b85fe94d8c7850f9343aaf5a5b299cc0c1f2f028517dcd9acc98b428a73e59",
+      "after_sha256": "46f6ef4bdc2d299ff661dfa156663e8fcce3578ce19e8d007a2df6704fba038d"
+    },
+    {
+      "path": "final_birthyear_elementcount_v1/chess_unique_players_temporal.csv",
+      "kind": "csv",
+      "rows": 1907,
+      "columns": 84,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 1907,
+      "prose_cells_changed": 0,
+      "before_bytes": 1335310,
+      "after_bytes": 1313581,
+      "before_sha256": "7ae5e5654e689496bc4dccf9516f0dbcc10e92307d6541f8a88ba1a8867033bf",
+      "after_sha256": "fd808936db6da13cfff641a6f690ff94e257716fe4040b5cc9673c76f23d1529"
+    },
+    {
+      "path": "final_birthyear_elementcount_v1/tt_unique_players_temporal.csv",
+      "kind": "csv",
+      "rows": 719,
+      "columns": 77,
+      "name_fields": [
+        "name",
+        "name_en",
+        "name_zh",
+        "ttr_site_name"
+      ],
+      "name_cells_replaced": 1568,
+      "prose_cells_changed": 4,
+      "before_bytes": 381185,
+      "after_bytes": 366288,
+      "before_sha256": "1bc1cf24bb6c58c7581fa06d2c443c835f0524738cd440576b4819492a7b4244",
+      "after_sha256": "08b2cdcd9695af8effbca09decc4329626e23e02bd0b3328566ff4c6a8fccd36"
+    },
+    {
+      "path": "studies/table_tennis/data/tabletennis_reference_enriched.csv",
+      "kind": "csv",
+      "rows": 384,
+      "columns": 29,
+      "name_fields": [
+        "name",
+        "ttr_site_name"
+      ],
+      "name_cells_replaced": 734,
+      "prose_cells_changed": 4,
+      "before_bytes": 104847,
+      "after_bytes": 96955,
+      "before_sha256": "a447eed69d8fa43363b5132c4609bc2ad9f75f5e4546193479c8bd7b2b809b3f",
+      "after_sha256": "dd555c08fa1533424eb723624acff80403f8852e82abdddcfb139bfbec8c9f5f"
+    },
+    {
+      "path": "studies/table_tennis/data/ttr_elo_player_summary.csv",
+      "kind": "csv",
+      "rows": 350,
+      "columns": 22,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 350,
+      "prose_cells_changed": 0,
+      "before_bytes": 75334,
+      "after_bytes": 72022,
+      "before_sha256": "1ad3fc2cf25bf2c456ccebb4c980da11779319b30eb3ff34697bb300af485618",
+      "after_sha256": "8eb03b17f02c974972fa024bc81b6aeeaab35a4976aaed391274239b6786e9ba"
+    },
+    {
+      "path": "table_tennis_players_1985_2008.csv",
+      "kind": "csv",
+      "rows": 384,
+      "columns": 8,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 384,
+      "prose_cells_changed": 0,
+      "before_bytes": 36215,
+      "after_bytes": 32616,
+      "before_sha256": "519a98e146e5619247e187d4ecc86ef45b4fa575723fd4369817555364eaa6ca",
+      "after_sha256": "aaddec598abda3a950938d75857b10122b7d1c46a302829268c5fcf2d5f468ea"
+    },
+    {
+      "path": "tt_element_concentration_v1/tt_element_concentration_historical_performance_players.csv",
+      "kind": "csv",
+      "rows": 112,
+      "columns": 66,
+      "name_fields": [
+        "name",
+        "name_en",
+        "name_zh",
+        "ttr_site_name"
+      ],
+      "name_cells_replaced": 412,
+      "prose_cells_changed": 12,
+      "before_bytes": 72096,
+      "after_bytes": 68562,
+      "before_sha256": "1a1518ce885e5ef782946d8c4ac5d4ade1f2530683ab29ff84d3762b91100bc0",
+      "after_sha256": "a8f5846bb629b9658be276d61d78d09e454bc6b30b0fb8615cbf3ba2a80069b1"
+    },
+    {
+      "path": "tt_element_concentration_v1/tt_element_concentration_historical_players.csv",
+      "kind": "csv",
+      "rows": 335,
+      "columns": 44,
+      "name_fields": [
+        "name",
+        "name_en",
+        "name_zh"
+      ],
+      "name_cells_replaced": 834,
+      "prose_cells_changed": 0,
+      "before_bytes": 131188,
+      "after_bytes": 124183,
+      "before_sha256": "999215567636b34c1200f54e764a5adc6bb6ff185dad1343cecdaa3d567c9c91",
+      "after_sha256": "55146e3657662551b8da21f2db885cf6413706dbd8ce453dbf933f2a7097d2c3"
+    },
+    {
+      "path": "tt_element_concentration_v1/tt_element_concentration_training_elo_players.csv",
+      "kind": "csv",
+      "rows": 350,
+      "columns": 30,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 350,
+      "prose_cells_changed": 0,
+      "before_bytes": 107382,
+      "after_bytes": 104070,
+      "before_sha256": "46081e0da784bc7e361e41399b33351eb742571da487fb6188d1d0b8de6c3004",
+      "after_sha256": "76ea17fa673f7981a61f1b8066d5949832c1c1f0c58fdb3a76ed983c5d8c91cc"
+    },
+    {
+      "path": "tt_element_concentration_v1/tt_element_concentration_training_players.csv",
+      "kind": "csv",
+      "rows": 384,
+      "columns": 37,
+      "name_fields": [
+        "name",
+        "ttr_site_name"
+      ],
+      "name_cells_replaced": 734,
+      "prose_cells_changed": 4,
+      "before_bytes": 141137,
+      "after_bytes": 133245,
+      "before_sha256": "791dad499b5a0c4cbd72fb76efc0dc37a623643277af27b326229f625d2df966",
+      "after_sha256": "7dbcddd0eb5ba4893202c6d039c4820b0eba4c91fc498b208aea9c359e09a452"
+    },
+    {
+      "path": "tt_tengod_stage1_discovery_v1/tt_stage1_people_features.csv",
+      "kind": "csv",
+      "rows": 384,
+      "columns": 31,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 384,
+      "prose_cells_changed": 0,
+      "before_bytes": 46828,
+      "after_bytes": 43229,
+      "before_sha256": "e8805297ab98b1dc26e0565281d5ec20a6964cc602d6504244ee2d4b15443cc2",
+      "after_sha256": "269ebdcbb52c207e7a47830797a67be00c2e09f19efb9d714382e091803b9709"
+    },
+    {
+      "path": "tt_tengod_temporal_v1/tt_tengod_temporal_player_residuals.csv",
+      "kind": "csv",
+      "rows": 719,
+      "columns": 129,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 719,
+      "prose_cells_changed": 0,
+      "before_bytes": 1452940,
+      "after_bytes": 1446595,
+      "before_sha256": "7c31325b158e1216832e105677def0549c4223c97efd8b74e9c4ac8fcf3e5cc3",
+      "after_sha256": "d1e93ad40ae0086c89f492ef757e4fa53f130ab6a1ef719f472ab0f3096bf78a"
+    },
+    {
+      "path": "tt_training_diwang_peak_age_v1/tt_training_diwang_peak_age_complete_cases.csv",
+      "kind": "csv",
+      "rows": 335,
+      "columns": 16,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 335,
+      "prose_cells_changed": 0,
+      "before_bytes": 34764,
+      "after_bytes": 31590,
+      "before_sha256": "d2ae458f60d60fdcf704133bead578ba79c3d2a01f793e3b9d19ae38f9b13f03",
+      "after_sha256": "8da1efdfa442afb080dd36260b3e1c7a2a0df1146608213139dbaa7788aad5ad"
+    },
+    {
+      "path": "tt_training_jiecai_position_v1_1/tt_training_jiecai_position_players.csv",
+      "kind": "csv",
+      "rows": 384,
+      "columns": 40,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 384,
+      "prose_cells_changed": 0,
+      "before_bytes": 88672,
+      "after_bytes": 85073,
+      "before_sha256": "b19597335444e635fcefb24de1f8cc7ccaa227ac266fd7b2d24292e6f7b4da47",
+      "after_sha256": "7dc699a39dfb92f6963ea89183b176683c0c993181d4eebd189b163dd60c3164"
+    },
+    {
+      "path": "tt_training_yangren_diwang_v1/tt_training_any_branch_diwang_players.csv",
+      "kind": "csv",
+      "rows": 95,
+      "columns": 15,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 95,
+      "prose_cells_changed": 0,
+      "before_bytes": 8093,
+      "after_bytes": 7249,
+      "before_sha256": "4e59a4a33941c0b53dd684b3b3755dce2db80f38f7e361385f2d4817f0ee942d",
+      "after_sha256": "b27af590320c332cdf436a03e74e959d9ccddb0a0f0548e2292e144a67bf3e32"
+    },
+    {
+      "path": "tt_training_yangren_diwang_v1/tt_training_strict_yangren_month_players.csv",
+      "kind": "csv",
+      "rows": 11,
+      "columns": 11,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 11,
+      "prose_cells_changed": 0,
+      "before_bytes": 1004,
+      "after_bytes": 901,
+      "before_sha256": "9c2e0eafd120eb157a6754e1dcc224e9641c95602a2cfe6e9aa561bf614a1026",
+      "after_sha256": "2a8a340f8460b5741580e4acbfb9841493cdc34e11d6273aafff0408ff4f11bc"
+    },
+    {
+      "path": "tt_training_yearbranch_jiecai_conditional_daystem_v1/tt_training_yearbranch_jiecai_56_players.csv",
+      "kind": "csv",
+      "rows": 56,
+      "columns": 13,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 56,
+      "prose_cells_changed": 0,
+      "before_bytes": 5304,
+      "after_bytes": 4724,
+      "before_sha256": "dfe7f0c31586da8497be1587c9927764da110542b6515cc1fbb94e85266ca6a9",
+      "after_sha256": "a60f5f135d90e96007d0711de45e06768940fcbd83e9c9192e3b5bc67fdb9d9e"
+    },
+    {
+      "path": "tt_training_yearbranch_jiecai_conditional_daystem_v1/tt_yearbranch_jiecai_player_conditional_probabilities.csv",
+      "kind": "csv",
+      "rows": 384,
+      "columns": 10,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 384,
+      "prose_cells_changed": 0,
+      "before_bytes": 27060,
+      "after_bytes": 23461,
+      "before_sha256": "619f668f5c5460508c4458f5560cb5daf7ca1ce726021df2eb4a63684f464070",
+      "after_sha256": "799ff76412382aa221edb89d7f89c71d6dbe134cac10824cfbddf150500704b4"
+    },
+    {
+      "path": "tt_training_yearbranch_jiecai_pairs_v1/tt_training_yearbranch_jiecai_56_players.csv",
+      "kind": "csv",
+      "rows": 56,
+      "columns": 13,
+      "name_fields": [
+        "name"
+      ],
+      "name_cells_replaced": 56,
+      "prose_cells_changed": 0,
+      "before_bytes": 5304,
+      "after_bytes": 4724,
+      "before_sha256": "ec7a7cd89f9dbe2c472dad56c6cf105aee4b39d31558c27da300892ea27928e8",
+      "after_sha256": "12309b3f602b1e726acd449eab54b75bc32c0ee39406756909c86060182e15d6"
+    },
+    {
+      "path": "chess_north_v3/date_sanity_summary.json",
+      "kind": "json",
+      "name_cells_replaced": 1,
+      "before_bytes": 1925,
+      "after_bytes": 1919,
+      "before_sha256": "287b91f4454ba33b27554e557682dca49d7152256840a276b1550fc454181168",
+      "after_sha256": "19cf989ede8833ef158f455b14059250428b1f9eff45d2cd5470315cb455fa6e"
+    },
+    {
+      "path": "chess_sgpy_threshold_diagnostic_v1/SG_PY_THRESHOLD_DIAGNOSTIC.md",
+      "kind": "markdown",
+      "name_literals_replaced": 2,
+      "before_bytes": 803,
+      "after_bytes": 783,
+      "before_sha256": "40a2e1b508c8f09fffee30fe9c10fa3f1e49e7a55ba462e34ae8bda1fde01eb1",
+      "after_sha256": "5460dc3f97b466703a541491b5260c28f6a44327e1ba965fddb1df1af4d98cc5"
+    }
+  ],
+  "direct_name_columns": [
+    "all_names",
+    "name",
+    "name_en",
+    "name_zh",
+    "olimpbase_profile_name",
+    "ttr_site_name"
+  ],
+  "permitted_prose_columns": [
+    "manual_decision_reason",
+    "ttr_error"
+  ],
+  "mapping_published": false,
+  "historical_sources_preserved": true,
+  "privacy_scope": "Name-field coding only; retained exact birth dates and source identifiers can still identify individuals."
+}

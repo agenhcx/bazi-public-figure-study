@@ -1,0 +1,112 @@
+{
+  "base_commit": "9bda89fb71501b952570d12b80e090614fe396f4",
+  "release_date": "2026-10-23",
+  "scope": "Current athlete name fields and explicitly identified prose mentions only",
+  "identities": 4581,
+  "identity_count_by_domain": {
+    "chess": 3862,
+    "table_tennis": 719
+  },
+  "unchanged_nonname_cells": 1875433,
+  "coded_name_cells": 45703,
+  "csv_files": 70,
+  "csv_rows": 41926,
+  "all_nonblank_name_fields_use_one_consistent_code_per_person": true,
+  "blank_name_fields_unchanged": true,
+  "headers_and_row_order_unchanged": true,
+  "ids_dobs_scientific_variables_unchanged": true,
+  "cohort_membership_and_pairwise_overlap_preserved": true,
+  "name_based_key_checks": [
+    {
+      "path": "final_birthyear_elementcount_v1/tt_unique_players_temporal.csv",
+      "rows": 719,
+      "distinct_name_dob_gender_keys": 719
+    },
+    {
+      "path": "studies/table_tennis/data/tabletennis_reference_enriched.csv",
+      "rows": 384,
+      "distinct_name_dob_gender_keys": 384
+    },
+    {
+      "path": "studies/table_tennis/data/ttr_elo_player_summary.csv",
+      "rows": 350,
+      "distinct_name_dob_gender_keys": 350
+    },
+    {
+      "path": "table_tennis_players_1985_2008.csv",
+      "rows": 384,
+      "distinct_name_dob_gender_keys": 384
+    },
+    {
+      "path": "tt_element_concentration_v1/tt_element_concentration_historical_performance_players.csv",
+      "rows": 112,
+      "distinct_name_dob_gender_keys": 112
+    },
+    {
+      "path": "tt_element_concentration_v1/tt_element_concentration_historical_players.csv",
+      "rows": 335,
+      "distinct_name_dob_gender_keys": 335
+    },
+    {
+      "path": "tt_element_concentration_v1/tt_element_concentration_training_elo_players.csv",
+      "rows": 350,
+      "distinct_name_dob_gender_keys": 350
+    },
+    {
+      "path": "tt_element_concentration_v1/tt_element_concentration_training_players.csv",
+      "rows": 384,
+      "distinct_name_dob_gender_keys": 384
+    },
+    {
+      "path": "tt_tengod_stage1_discovery_v1/tt_stage1_people_features.csv",
+      "rows": 384,
+      "distinct_name_dob_gender_keys": 384
+    },
+    {
+      "path": "tt_tengod_temporal_v1/tt_tengod_temporal_player_residuals.csv",
+      "rows": 719,
+      "distinct_name_dob_gender_keys": 719
+    },
+    {
+      "path": "tt_training_diwang_peak_age_v1/tt_training_diwang_peak_age_complete_cases.csv",
+      "rows": 335,
+      "distinct_name_dob_gender_keys": 335
+    },
+    {
+      "path": "tt_training_jiecai_position_v1_1/tt_training_jiecai_position_players.csv",
+      "rows": 384,
+      "distinct_name_dob_gender_keys": 384
+    },
+    {
+      "path": "tt_training_yangren_diwang_v1/tt_training_any_branch_diwang_players.csv",
+      "rows": 95,
+      "distinct_name_dob_gender_keys": 95
+    },
+    {
+      "path": "tt_training_yangren_diwang_v1/tt_training_strict_yangren_month_players.csv",
+      "rows": 11,
+      "distinct_name_dob_gender_keys": 11
+    },
+    {
+      "path": "tt_training_yearbranch_jiecai_conditional_daystem_v1/tt_training_yearbranch_jiecai_56_players.csv",
+      "rows": 56,
+      "distinct_name_dob_gender_keys": 56
+    },
+    {
+      "path": "tt_training_yearbranch_jiecai_pairs_v1/tt_training_yearbranch_jiecai_56_players.csv",
+      "rows": 56,
+      "distinct_name_dob_gender_keys": 56
+    }
+  ],
+  "top5_summary_and_detail_join_preserved": true,
+  "nonname_json_content_unchanged": true,
+  "original_tracked_files_unchanged_outside_scope_and_readme": 1203,
+  "unchanged_data_result_and_figure_artifacts": 686,
+  "collection_code_and_frozen_source_hash_manifests_unchanged": true,
+  "remaining_identification_fields": [
+    "exact dates of birth",
+    "existing source identifiers",
+    "source links"
+  ],
+  "historical_tag_or_commit_rewrites": false
+}

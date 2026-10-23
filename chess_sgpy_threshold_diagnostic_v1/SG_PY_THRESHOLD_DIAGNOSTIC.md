@@ -13,5 +13,5 @@ No hour, no secondary hidden stems, no 三合/三会/六合 transformation.
 
 ## Highest-rated with neither 伤官 nor 偏印
 
-- Raw Elo: **Kasparov, Garry**, 1994_M, Elo 2815, z=4.915, 癸卯 丙辰 丙戌
-- Highest cohort-z: **Kasparov, Garry**, 1994_M, Elo 2815, z=4.915, 癸卯 丙辰 丙戌
+- Raw Elo: **C2462**, 1994_M, Elo 2815, z=4.915, 癸卯 丙辰 丙戌
+- Highest cohort-z: **C2462**, 1994_M, Elo 2815, z=4.915, 癸卯 丙辰 丙戌
