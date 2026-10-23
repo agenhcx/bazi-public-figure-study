@@ -1,0 +1,181 @@
+{
+  "protocol_id": "chess-single-B-v1",
+  "status": "complete_exploratory_joint_evaluation",
+  "created_at_utc": "2026-10-23T00:22:55.731579+00:00",
+  "source_commit": "06da9e83983c89e53ed8559940d934aad0d3f651",
+  "source_lock_sha256": "e4c8d94c334b0ba41ea99fe587c4d55c1a9cdc582174df5467277ee65592c610",
+  "fitted_models_lock_sha256": "ff3b8839a04cf7c5ea9cf7126cba9db54badba176c60ef65489c4955ac0f8f75",
+  "external_previously_seen": true,
+  "new_blind_test_claim": false,
+  "formal_inference_claim": false,
+  "all_final_models_sealed_before_external_loading": true,
+  "task_count": 6,
+  "metrics": [
+    {
+      "cohort": "development_nested_cv",
+      "model": "b1",
+      "n": 1000,
+      "mae": 59.6722518912,
+      "rmse": 74.8478991338,
+      "spearman": -0.0357579972
+    },
+    {
+      "cohort": "development_nested_cv",
+      "model": "raw",
+      "n": 1000,
+      "mae": 59.3817402312,
+      "rmse": 74.6018243905,
+      "spearman": -0.0195595842
+    },
+    {
+      "cohort": "development_nested_cv",
+      "model": "date",
+      "n": 1000,
+      "mae": 57.0832850238,
+      "rmse": 72.1632218405,
+      "spearman": 0.1908410839
+    },
+    {
+      "cohort": "development_nested_cv",
+      "model": "median",
+      "n": 1000,
+      "mae": 57.434,
+      "rmse": 75.3911997517,
+      "spearman": -0.0990697934
+    },
+    {
+      "cohort": "previously_seen_2023_new",
+      "model": "b1",
+      "n": 500,
+      "mae": 107.2821895369,
+      "rmse": 124.9290510604,
+      "spearman": 0.0012063123
+    },
+    {
+      "cohort": "previously_seen_2023_new",
+      "model": "raw",
+      "n": 500,
+      "mae": 107.337279167,
+      "rmse": 124.9653712745,
+      "spearman": -0.0041997967
+    },
+    {
+      "cohort": "previously_seen_2023_new",
+      "model": "date",
+      "n": 500,
+      "mae": 104.9356067842,
+      "rmse": 121.3602774158,
+      "spearman": 0.1902286541
+    },
+    {
+      "cohort": "previously_seen_2023_new",
+      "model": "median",
+      "n": 500,
+      "mae": 98.588,
+      "rmse": 115.5605295938,
+      "spearman": null
+    }
+  ],
+  "paired_mae_differences": [
+    {
+      "cohort": "development_nested_cv",
+      "n": 1000,
+      "comparison": "b1_minus_raw",
+      "mean_absolute_error_difference": 0.2905116599781463,
+      "negative_favors": "b1",
+      "formal_inference_claim": false
+    },
+    {
+      "cohort": "development_nested_cv",
+      "n": 1000,
+      "comparison": "b1_minus_date",
+      "mean_absolute_error_difference": 2.5889668674067887,
+      "negative_favors": "b1",
+      "formal_inference_claim": false
+    },
+    {
+      "cohort": "development_nested_cv",
+      "n": 1000,
+      "comparison": "b1_minus_median",
+      "mean_absolute_error_difference": 2.238251891219908,
+      "negative_favors": "b1",
+      "formal_inference_claim": false
+    },
+    {
+      "cohort": "previously_seen_2023_new",
+      "n": 500,
+      "comparison": "b1_minus_raw",
+      "mean_absolute_error_difference": -0.05508963010187199,
+      "negative_favors": "b1",
+      "formal_inference_claim": false
+    },
+    {
+      "cohort": "previously_seen_2023_new",
+      "n": 500,
+      "comparison": "b1_minus_date",
+      "mean_absolute_error_difference": 2.346582752633563,
+      "negative_favors": "b1",
+      "formal_inference_claim": false
+    },
+    {
+      "cohort": "previously_seen_2023_new",
+      "n": 500,
+      "comparison": "b1_minus_median",
+      "mean_absolute_error_difference": 8.694189536855703,
+      "negative_favors": "b1",
+      "formal_inference_claim": false
+    }
+  ],
+  "checkpoint_bundle": {
+    "file": "training_checkpoint_bundle.zip",
+    "files": 56,
+    "bytes": 8742429,
+    "sha256": "1a6547fe9b8ea9cea5c9ccf8a53e649fd25396574641d3e074715c30aa062bdb"
+  },
+  "outputs": [
+    {
+      "path": "REPORT.md",
+      "sha256": "fba841cf0f7c2e6bf8d6ee126044760eed9e0f1262b11a9c0aab39343f640e1b"
+    },
+    {
+      "path": "exploratory_2023_new_predictions.csv",
+      "sha256": "41c87d695adbb97ed60c95edaeb163388ff92cec98f6554020829dd737b9aab7"
+    },
+    {
+      "path": "mae_comparison.png",
+      "sha256": "0f2eb32a0f80859bea5931c6925cd746668f71a674feeccd992fa0113fed75d9"
+    },
+    {
+      "path": "mae_comparison.svg",
+      "sha256": "668050c42bb3f1d83e7011e89ad04c85cd16b6d0ad8883462437cbb10693901a"
+    },
+    {
+      "path": "metrics.csv",
+      "sha256": "22bb05f4f85f7fe7ab091dcfac02f1a68fdaefac1f16eeb3c2753bb5e161d7db"
+    },
+    {
+      "path": "nested_cv_predictions.csv",
+      "sha256": "b3b774d7863cf60ef5d52dd4b65e3a57d2622982edc70be2205a75ffb7d537e0"
+    },
+    {
+      "path": "paired_mae_differences.csv",
+      "sha256": "045ca4641595ac4e8eacf1ab699421149a9c0e775eb5edf4726acd05557a0047"
+    },
+    {
+      "path": "search_statistics.csv",
+      "sha256": "e33c1e03ca48916e2c8c1d2fb3a2c4965c43c1ed7a9ba37d2567d9e18adc023d"
+    },
+    {
+      "path": "selected_parameters.csv",
+      "sha256": "f88c61029ec61e69ba676863c59d19af8f6589703bbd7aeed222c5d763803096"
+    },
+    {
+      "path": "training_checkpoint_bundle.json",
+      "sha256": "2a0694648c1d9d24cfeb9e7cc7d131a1955d45869a23fa8e16b2f360aaf4350c"
+    },
+    {
+      "path": "training_checkpoint_bundle.zip",
+      "sha256": "1a6547fe9b8ea9cea5c9ccf8a53e649fd25396574641d3e074715c30aa062bdb"
+    }
+  ]
+}
