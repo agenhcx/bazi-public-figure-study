@@ -1,0 +1,21 @@
+{
+  "protocol_id": "chess-single-B-v1",
+  "status": "fixed_post_A_results_before_B1_fitting",
+  "fit_allowed": true,
+  "prior_2013_and_2023_results_seen": true,
+  "new_blind_preregistration_claimed": false,
+  "development_subset": "random_1000",
+  "external_role": "primary_new",
+  "grid": {
+    "middle": [0.25, 0.5, 0.75],
+    "residual_ratio": [0.25, 0.5, 0.75],
+    "month": [1, 1.5, 2, 3],
+    "alpha": [0.1, 1, 10, 100, 1000]
+  },
+  "cv": {
+    "outer": {"n_splits": 5, "shuffle": true, "random_state": 20261021},
+    "inner": {"n_splits": 4, "shuffle": true, "random_state": 20261022}
+  },
+  "selection": {"tie_tolerance_mae": 1e-12, "metric": "pooled person-level MAE", "tie_break": "first within minimum plus tolerance"},
+  "execution": {"python_version": "3.11.17", "requirements": "studies/chess_single_A_v2/requirements-model.txt", "threads": 1, "analysis_tag": "chess-single-b-structure-lock-v1"}
+}
