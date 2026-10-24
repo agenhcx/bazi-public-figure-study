@@ -109,6 +109,11 @@ def _decode(raw):
 
 def _month(value):
     text = str(value).strip()
+    if re.fullmatch(r"\d{4}-[A-Za-z]{3}", text):
+        try:
+            text = datetime.strptime(text, "%Y-%b").strftime("%Y-%m")
+        except ValueError as error:
+            raise SourceIntegrityError("Invalid named published rating month") from error
     if re.fullmatch(r"\d{6}", text):
         text = text[:4] + "-" + text[4:]
     match = re.fullmatch(r"(\d{4})-(\d{2})(?:-\d{2})?(?:[ T].*)?", text)
@@ -155,10 +160,10 @@ def parse_history(raw, fide_id):
     for record in value:
         if not isinstance(record, dict):
             raise SourceIntegrityError("Official chart record is not an object", raw)
-        for field in ("id", "event", "fide_id"):
-            if field in record and canonical_id(record[field]) != fid:
+        for field in ("id_number", "id", "event", "fide_id"):
+            if record.get(field) not in (None, "") and canonical_id(record[field]) != fid:
                 raise SourceIntegrityError("Official chart response has a different FIDE ID", raw)
-        date = next((record[key] for key in ("date", "period", "month", "rating_date") if key in record), None)
+        date = next((record[key] for key in ("date_2", "date", "period", "month", "rating_date") if key in record), None)
         rating = next((record[key] for key in ("rating", "rtng", "standard", "standard_rating") if key in record), None)
         if date is None or rating is None:
             raise SourceIntegrityError("Official chart record lacks month/standard rating", raw)
@@ -221,6 +226,8 @@ def load_rosters(repo_root, source_specs=None):
         for row in rows:
             fid = canonical_id(row.get("identity_bridge_modern_fide_id") or row["fide_id"])
             qids = set(re.findall(r"Q\d+", row.get("wikidata_person_qids", "")))
+            if not qids:
+                raise ValueError("Frozen person has no Wikidata identity")
             if fid in seen_ids or qids & seen_qids:
                 raise ValueError("Frozen cohorts contain duplicate/overlapping persons")
             snapshot = row.get("snapshot") or spec["snapshot"]
@@ -231,7 +238,8 @@ def load_rosters(repo_root, source_specs=None):
                 raise ValueError("Frozen exact date of birth missing")
             datetime.strptime(dob, "%Y-%m-%d")
             seen_ids.add(fid); seen_qids.update(qids)
-            people.append({**row, "canonical_id": fid, "role": spec.get("role", key),
+            people.append({**row, "canonical_id": fid, "wikidata_person_qids": sorted(qids),
+                "role": spec.get("role", key),
                 "snapshot": snapshot, "snapshot_elo": _rating(row["rating"]),
                 "source_roster": spec["path"], "source_roster_sha256": digest})
         audit[key] = {"path": spec["path"], "sha256": digest, "n": len(rows)}
@@ -486,6 +494,11 @@ def process_person(person, output, limiter, *, timeout=25, fetcher=fetch_history
     return entry
 
 
+def load_roster(repo_root, source_specs=None):
+    """Stable singular API used by the peak preparation pipeline."""
+    return load_rosters(repo_root, source_specs)
+
+
 def shard_people(people, shard_index, shard_count):
     if shard_count < 1 or shard_index < 0 or shard_index >= shard_count:
         raise ValueError("Invalid acquisition shard")
@@ -526,21 +539,22 @@ def run_acquisition(repo_root, output_dir, *, shard_index=0, shard_count=1, max_
                     raise
     entries.sort(key=lambda row: row["canonical_id"])
     failed = sum(row["status"] == "failed" for row in entries)
-    counts = {}
+    counts = {"fide_official_chart": 0, "lichess_fide_history": 0}
     for row in entries:
         if row["status"] != "failed":
             provider = row["source_provider"]
             counts[provider] = counts.get(provider, 0) + 1
     status = ("history_acquisition_stopped" if stop_reason else "history_acquisition_failed" if failed
         else "partial_pilot_history_acquisition" if len(selected) != len(shard)
-        else "rating_histories_acquired_pending_historical_merge" if "lichess_fide_history" in counts
+        else "rating_histories_acquired_pending_historical_merge" if counts["lichess_fide_history"]
         else "official_chart_histories_acquired_pending_historical_merge")
     files = {path.relative_to(output).as_posix(): sha256_file(path) for path in sorted(output.rglob("*"))
              if path.is_file() and path.name != "acquisition_manifest.json" and path.name != "STOP"}
     manifest = {"protocol_id": PROTOCOL, "status": status, "cutoff_month": CUTOFF,
         "created_at_utc": utc_now(), "shard_index": shard_index, "shard_count": shard_count,
         "full_shard_expected_n": len(shard), "selected_n": len(selected), "completed_n": len(entries),
-        "failed_n": failed, "source_provider_counts": counts, "preferred_provider": prefer_provider,
+        "failed_n": failed, "snapshot_audit_n": sum(bool(row.get("snapshot_audit_required")) for row in entries),
+        "source_provider_counts": counts, "preferred_provider": prefer_provider,
         "workers": workers, "requests_per_second": requests_per_second, "stop_reason": stop_reason,
         "roster_audit": roster_audit, "model_fitting_performed": False, "lifetime_peak_claimed": False,
         "files": files}

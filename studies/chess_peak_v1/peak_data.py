@@ -30,11 +30,13 @@ ORIGINAL_FIELDS = ("canonical_id", "snapshot", "exact_dob_frozen", "rating", "ye
     "month_pillar", "day_pillar")
 EXTRA_FIELDS = ("label_end_period", "feature_reference_snapshot", "peak_periods", "peak_sources",
     "peak_periods_complete", "history_source_provider", "derived_snapshot_record_n",
+    "ambiguous_period_n", "ambiguous_periods", "period_conflict_resolution_policy",
     "history_first_period", "history_last_period", "history_n", "fide_history_n",
     "official_chart_history_n", "lichess_history_n", "olimpbase_history_n", "pre2003_history_n", "history_coverage")
 OUTPUT_FIELDS = ("canonical_id", "snapshot", "exact_dob_frozen", "snapshot_rating", "rating") + ORIGINAL_FIELDS[4:] + EXTRA_FIELDS
 COVERAGE = "available_FIDE_history_direct_or_Lichess_mirror_and_archived_lists_1971_07_to_2023_12"
 FIDE_PROVIDERS = ("fide_official_chart", "lichess_fide_history")
+CONFLICT_POLICY = "retain_all_candidates_only_when_upper_bound_not_above_unambiguous_peak"
 
 class DatasetBuildError(ValueError):
     """The complete fixed cohort cannot yet be assigned audited labels."""
@@ -240,7 +242,12 @@ def read_acquisition(acquisition_dir, people):
     return entries, provenance
 
 def combine_person(person, official_records, historical_records):
-    """Merge equal list months exactly; future rows never enter the peak."""
+    """Identify peak values without choosing between conflicting source rows.
+
+    A conflicting month may remain unresolved only when every candidate is at
+    or below a directly observed, unambiguous peak in another month. Such a
+    month has no chosen rating and cannot supply a measured peak date.
+    """
     cid, by_month, excluded_future = person["canonical_id"], {}, 0
     for record in [*official_records, *historical_records]:
         if canonical_id(record["canonical_id"]) != cid:
@@ -255,24 +262,46 @@ def combine_person(person, official_records, historical_records):
         if source not in (*FIDE_PROVIDERS, "olimpbase_transcription"):
             raise ValueError("History has an unknown source convention")
         entry = by_month.setdefault(month, {"canonical_id": cid, "period": month, "rating": elo,
-            "sources": set(), "source_records": []})
-        if entry["rating"] != elo:
-            raise ValueError(f"Conflicting ratings for the same published month {cid}/{month}")
+            "sources": set(), "source_records": [], "candidate_ratings": set()})
+        entry["candidate_ratings"].add(elo)
         entry["sources"].add(source)
-        entry["source_records"].append(record)
+        entry["source_records"].append(dict(record))
     if not by_month:
         raise ValueError("No published standard rating before cutoff")
     rows = [by_month[key] for key in sorted(by_month)]
-    peak = max(row["rating"] for row in rows)
+    for row in rows:
+        row["candidate_ratings"] = sorted(row["candidate_ratings"])
+        row["ambiguous_period"] = len(row["candidate_ratings"]) > 1
+        row["rating"] = None if row["ambiguous_period"] else row["candidate_ratings"][0]
+        row["candidate_lower"] = row["candidate_ratings"][0]
+        row["candidate_upper"] = row["candidate_ratings"][-1]
+    unambiguous = [row for row in rows if not row["ambiguous_period"]
+        and any(not rec.get("derived_state", False) for rec in row["source_records"])]
+    if not unambiguous:
+        raise ValueError("No unambiguous directly retained rating remains to identify peak")
+    peak = max(row["rating"] for row in unambiguous)
     snapshot = by_month.get(person["snapshot"])
     if snapshot is None:
         raise ValueError("Frozen snapshot month absent from merged histories")
+    if snapshot["ambiguous_period"]:
+        raise ValueError("Conflicting ratings for frozen snapshot month")
     if snapshot["rating"] != person["snapshot_elo"]:
         raise ValueError("History snapshot rating differs from frozen snapshot")
     if peak < person["snapshot_elo"]:
         raise ValueError("Observed peak is below frozen snapshot rating")
+    ambiguous = [row for row in rows if row["ambiguous_period"]]
+    if any(row["candidate_upper"] > peak for row in ambiguous):
+        raise ValueError("Unresolved source-period conflict can change the confirmed peak value")
+    for row in rows:
+        row["resolution_policy"] = CONFLICT_POLICY if row["ambiguous_period"] else "unambiguous_source_value"
+        if row["ambiguous_period"]:
+            for rec in row["source_records"]:
+                rec.update(period_conflict_handling=CONFLICT_POLICY,
+                    period_candidate_ratings=list(row["candidate_ratings"]),
+                    period_candidate_lower=row["candidate_lower"], period_candidate_upper=row["candidate_upper"],
+                    period_rating_not_selected=True)
     # Reconstructed states align snapshots; they are not observed peak dates.
-    peak_rows = [row for row in rows if row["rating"] == peak
+    peak_rows = [row for row in rows if not row["ambiguous_period"] and row["rating"] == peak
         and any(not rec.get("derived_state", False) for rec in row["source_records"])]
     if not peak_rows:
         raise ValueError("Peak value has no directly retained source point")
@@ -283,6 +312,8 @@ def combine_person(person, official_records, historical_records):
         "peak_sources": ";".join(sorted({source for row in peak_rows for source in row["sources"]})),
         "peak_periods_complete": "lichess_fide_history" not in providers,
         "history_source_provider": ";".join(providers), "derived_snapshot_record_n": derived_n,
+        "ambiguous_period_n": len(ambiguous), "ambiguous_periods": ";".join(row["period"] for row in ambiguous),
+        "period_conflict_resolution_policy": CONFLICT_POLICY,
         "history_first_period": rows[0]["period"], "history_last_period": rows[-1]["period"], "history_n": len(rows),
         "fide_history_n": sum(bool(set(FIDE_PROVIDERS) & row["sources"]) for row in rows),
         "official_chart_history_n": sum("fide_official_chart" in row["sources"] for row in rows),
@@ -359,6 +390,13 @@ def build_dataset(repo_root, acquisition_dir, historical=None, output_dir=None):
         audit["history_source_provider_counts"] = {provider: sum(provider in labels[cid]["history_source_provider"].split(";") for cid in labels) for provider in FIDE_PROVIDERS}
         audit["derived_snapshot_person_ids"] = [cid for cid in sorted(labels) if labels[cid]["derived_snapshot_record_n"]]
         audit["peak_month_ties_incomplete_person_ids"] = [cid for cid in sorted(labels) if not labels[cid]["peak_periods_complete"]]
+        audit["period_conflict_resolution_policy"] = CONFLICT_POLICY
+        audit["ambiguous_period_person_ids"] = [cid for cid in sorted(labels) if labels[cid]["ambiguous_period_n"]]
+        audit["ambiguous_period_n"] = sum(labels[cid]["ambiguous_period_n"] for cid in labels)
+        audit["ambiguous_period_resolutions"] = [{"canonical_id": row["canonical_id"], "period": row["period"],
+            "candidate_ratings": row["candidate_ratings"], "candidate_upper": row["candidate_upper"],
+            "confirmed_peak": labels[row["canonical_id"]]["rating"], "rating_selected": False,
+            "resolution_policy": CONFLICT_POLICY} for row in history_rows if row["ambiguous_period"]]
         audit["historical_identity_priority"] = "stable modern FIDE identity and exact normalized frozen full name or explicit audited alias anchor the canonical group; source birth discrepancies are retained and never change frozen birth features"
         audit["conservative_pre2003_flag_without_archive_rows"] = [{"canonical_id": cid, "name": people[cid]["name"],
             "exact_dob_frozen": people[cid]["exact_dob_frozen"], "fide_history_start": official[cid]["entry"].get("history_start")}
@@ -383,10 +421,12 @@ def build_dataset(repo_root, acquisition_dir, historical=None, output_dir=None):
                 "original_sources": sources[role]}
         history_path = output / "normalized_history.csv.gz"
         text = io.StringIO(newline="")
-        writer = csv.DictWriter(text, fieldnames=("canonical_id", "period", "rating", "sources", "source_records"))
+        writer = csv.DictWriter(text, fieldnames=("canonical_id", "period", "rating", "sources", "candidate_ratings",
+            "ambiguous_period", "candidate_lower", "candidate_upper", "resolution_policy", "source_records"))
         writer.writeheader()
         for row in history_rows:
-            writer.writerow({**row, "source_records": json.dumps(row["source_records"], ensure_ascii=False, sort_keys=True)})
+            writer.writerow({**row, "candidate_ratings": json.dumps(row["candidate_ratings"]),
+                "source_records": json.dumps(row["source_records"], ensure_ascii=False, sort_keys=True)})
         history_path.write_bytes(gzip.compress(text.getvalue().encode(), compresslevel=6, mtime=0))
         audit["status"] = "all_fixed_people_have_audited_observed_peak_labels"
         write_json(audit_path, audit)
@@ -398,6 +438,9 @@ def build_dataset(repo_root, acquisition_dir, historical=None, output_dir=None):
             "history_source_provider_counts": audit["history_source_provider_counts"],
             "derived_snapshot_person_n": len(audit["derived_snapshot_person_ids"]),
             "peak_month_ties_incomplete_n": len(audit["peak_month_ties_incomplete_person_ids"]),
+            "ambiguous_period_n": audit["ambiguous_period_n"],
+            "ambiguous_period_people_n": len(audit["ambiguous_period_person_ids"]),
+            "period_conflict_resolution_policy": CONFLICT_POLICY,
             "acquisition": provenance, "historical_payload_sha256": json_sha256(historic), "historical_archives": historic["archives"],
             "audit": {"path": audit_path.relative_to(root).as_posix(), "sha256": sha256(audit_path)},
             "normalized_history": {"path": history_path.relative_to(root).as_posix(), "sha256": sha256(history_path), "n": len(history_rows)}}
@@ -419,6 +462,8 @@ def load_frame(repo_root, role):
             or manifest.get("completed_career_peak_claimed") is not False or manifest.get("canonical_id_overlap") != 0
             or manifest.get("wikidata_person_overlap") != 0 or set(manifest.get("roles", {})) != set(ROLES)):
         raise ValueError("Peak dataset manifest is incomplete or changed")
+    if manifest.get("period_conflict_resolution_policy") != CONFLICT_POLICY:
+        raise ValueError("Peak source-conflict policy differs")
     for key in ("canonical_ids", "wikidata_person_qids"):
         a, b = (manifest["roles"][r][key] for r in ROLES)
         if len(a) != len(set(a)) or len(b) != len(set(b)) or set(a) & set(b):
@@ -479,6 +524,15 @@ def load_frame(repo_root, role):
             row[name] = int(row[name])
         if row["history_n"] < len(months) or row["fide_history_n"] <= 0:
             raise ValueError("Peak history has insufficient source records")
+        if not re.fullmatch(r"[0-9]+", row["ambiguous_period_n"]):
+            raise ValueError("Invalid ambiguous-period count")
+        row["ambiguous_period_n"] = int(row["ambiguous_period_n"])
+        ambiguous_months = row["ambiguous_periods"].split(";") if row["ambiguous_periods"] else []
+        if (len(ambiguous_months) != row["ambiguous_period_n"] or ambiguous_months != sorted(set(ambiguous_months))
+                or any(period(x) > CUTOFF for x in ambiguous_months) or set(ambiguous_months) & set(months)
+                or row["ambiguous_period_n"] + len(months) > row["history_n"]
+                or row["period_conflict_resolution_policy"] != CONFLICT_POLICY):
+            raise ValueError("Ambiguous source months are inconsistent with the identified peak")
         if row["derived_snapshot_record_n"] > 1 or (row["derived_snapshot_record_n"] and "lichess_fide_history" not in providers):
             raise ValueError("Invalid derived snapshot count/provider")
     return pd.DataFrame(rows, columns=OUTPUT_FIELDS)
