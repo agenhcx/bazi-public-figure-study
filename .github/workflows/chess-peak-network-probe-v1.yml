@@ -1,0 +1,124 @@
+name: Chess peak isolated FIDE network probe
+on:
+  push:
+    branches: [codex/chess-peak-network-probe-v1]
+    paths: [.github/workflows/chess-peak-network-probe-v1.yml]
+permissions:
+  contents: read
+concurrency:
+  group: chess-peak-network-probe-v1
+  cancel-in-progress: false
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Probe two official charts with bounded requests
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json, sys, time, hashlib, urllib.request, urllib.error, datetime
+          sys.path.insert(0, "studies/chess_peak_v1")
+          import collect_fide as c
+          out = Path("network-probe-evidence")
+          out.mkdir()
+          limiter = c.RateLimiter(0.5)
+          counters, results = {}, []
+          stopped = False
+          class Buffered:
+              def __init__(self, body, status, headers, url):
+                  self.body, self.status, self.headers, self.url = body, status, headers, url
+              def __enter__(self): return self
+              def __exit__(self, *args): pass
+              def read(self, n=-1): return self.body if n < 0 else self.body[:n]
+              def geturl(self): return self.url
+          def observed_open(request, timeout):
+              key = (current_id, request.get_method())
+              counters[key] = counters.get(key, 0) + 1
+              attempt = counters[key]
+              prefix = out / f"{current_id}.{request.get_method()}.{attempt}"
+              started = time.monotonic()
+              info = {"fide_id": current_id, "method": request.get_method(), "url": request.full_url,
+                      "attempt": attempt, "timeout_seconds": timeout, "request_headers": dict(request.header_items()),
+                      "started_at_utc": datetime.datetime.now(datetime.timezone.utc).isoformat()}
+              try:
+                  with urllib.request.urlopen(request, timeout=timeout) as response:
+                      body = response.read(c.MAX_RESPONSE_BYTES + 1)
+                      status, headers, url = response.status, dict(response.headers), response.geturl()
+                  info.update(http_status=status, bytes=len(body), raw_sha256=hashlib.sha256(body).hexdigest(),
+                              final_url=url, elapsed_seconds=round(time.monotonic()-started, 3))
+                  prefix.with_suffix(prefix.suffix+".raw").write_bytes(body)
+                  prefix.with_suffix(prefix.suffix+".metadata.json").write_text(json.dumps(info, indent=2))
+                  print(json.dumps(info), flush=True)
+                  if status in (403, 429):
+                      limiter.stop()
+                      raise c.AcquisitionStopped("Access/rate limit response; probe stops without changing method")
+                  return Buffered(body, status, headers, url)
+              except urllib.error.HTTPError as error:
+                  body = error.read(c.MAX_RESPONSE_BYTES + 1)
+                  info.update(http_status=error.code, bytes=len(body), raw_sha256=hashlib.sha256(body).hexdigest(),
+                              elapsed_seconds=round(time.monotonic()-started, 3), error_type=type(error).__name__)
+                  prefix.with_suffix(prefix.suffix+".raw").write_bytes(body)
+                  prefix.with_suffix(prefix.suffix+".metadata.json").write_text(json.dumps(info, indent=2))
+                  print(json.dumps(info), flush=True)
+                  if error.code in (403, 429):
+                      limiter.stop()
+                      raise c.AcquisitionStopped("Access/rate limit response; probe stops without changing method") from error
+                  raise
+              except c.AcquisitionStopped:
+                  raise
+              except Exception as error:
+                  info.update(elapsed_seconds=round(time.monotonic()-started, 3),
+                              error_type=type(error).__name__, error=str(error))
+                  prefix.with_suffix(prefix.suffix+".metadata.json").write_text(json.dumps(info, indent=2))
+                  print(json.dumps(info), flush=True)
+                  raise
+          for current_id in ("4500075", "3202534"):
+              started = time.monotonic()
+              try:
+                  raw, metadata = c.fetch_chart(current_id, limiter, timeout=10, attempts=3, opener=observed_open)
+                  (out / f"{current_id}.selected.raw").write_bytes(raw)
+                  (out / f"{current_id}.selected.metadata.json").write_text(json.dumps(metadata, indent=2))
+                  result = {"fide_id": current_id, "method": "POST", "result": "success",
+                            "http_status": metadata["http_status"], "bytes": len(raw)}
+              except c.AcquisitionStopped as error:
+                  result = {"fide_id": current_id, "method": "POST", "result": "stopped", "error": str(error)}
+                  stopped = True
+              except Exception as error:
+                  records = getattr(error, "attempts", [])
+                  result = {"fide_id": current_id, "method": "POST", "result": "error",
+                            "error_type": type(error).__name__, "error": str(error), "attempt_records": records,
+                            "all_attempts_timeout": len(records)==3 and all("timed out" in r.get("error", "").lower() for r in records)}
+              result["total_elapsed_seconds"] = round(time.monotonic()-started, 3)
+              results.append(result)
+              print("PERSON_RESULT " + json.dumps(result), flush=True)
+              if stopped: break
+          if not stopped and len(results)==2 and all(r.get("all_attempts_timeout") for r in results):
+              current_id = "4500075"
+              limiter.wait()
+              headers = {**c.FIDE_HEADERS, "Referer": f"https://ratings.fide.com/profile/{current_id}"}
+              request = urllib.request.Request(c.chart_url(current_id), headers=headers, method="GET")
+              started = time.monotonic()
+              try:
+                  with observed_open(request, timeout=10) as response:
+                      body = response.read()
+                  result = {"fide_id": current_id, "method": "GET", "result": "response",
+                            "http_status": response.status, "bytes": len(body)}
+              except Exception as error:
+                  result = {"fide_id": current_id, "method": "GET", "result": "error",
+                            "error_type": type(error).__name__, "error": str(error)}
+              result["total_elapsed_seconds"] = round(time.monotonic()-started, 3)
+              results.append(result)
+              print("OPTIONAL_GET_RESULT " + json.dumps(result), flush=True)
+          (out / "summary.json").write_text(json.dumps({"scope": "Two-player isolated public FIDE network probe; no Lichess, no dataset changes, no models.",
+              "source_base_commit": "6bd583017a1e5787fdea58df53c1ca06dd08d79e", "results": results}, indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: chess-peak-network-probe-evidence
+          path: network-probe-evidence
+          retention-days: 7
