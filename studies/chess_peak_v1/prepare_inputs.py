@@ -7,6 +7,8 @@ import hashlib
 import json
 import os
 import re
+import platform
+from importlib.metadata import version
 from pathlib import Path
 import urllib.request
 import zipfile
@@ -148,6 +150,11 @@ def prepare(root, work, *, resume=None, workers=2, rate=2.0, prefer_provider='li
         manifest['collection_source'] = {
             'github_commit': os.environ.get('GITHUB_SHA'),
             'github_run_id': os.environ.get('GITHUB_RUN_ID'),
+            'source_reference': os.environ.get('PEAK_COLLECTION_SOURCE_REFERENCE'),
+            'execution_environment': 'github_actions' if os.environ.get('GITHUB_ACTIONS') == 'true'
+                                     else 'assistant_execution_workspace',
+            'python_version': platform.python_version(),
+            'packages': {name: version(name) for name in ('numpy', 'pandas', 'scipy')},
             'adjudication_archives': adjudication_archives,
             'files_sha256': {f'studies/chess_peak_v1/{name}':
                 sha256(root / 'studies/chess_peak_v1' / name) for name in source_names},

@@ -2,6 +2,8 @@
 
 The user changed the outcome from snapshot Elo after inspecting the original A/B results. This is an exploratory extension, not a new blind preregistration. Preserve every original study and result. Predictive model training is paused; complete acquisition and inspect the fixed Shangguan association first.
 
+An isolated GitHub-runner probe (run40052780928) timed out on all bounded POST requests for two known valid players and an additional GET, without an HTTP response. The official endpoint responds in the assistant execution workspace. Stop the failing cloud acquisition route and complete the same source protocol in that working environment, reusing the full saved first-pass cache. Preserve execution/package metadata and source fingerprints. Transfer only the completed audited dataset before running the unchanged association procedure in the pinned GitHub environment; no statistical result is selected from the transfer method.
+
 Use exactly the original 2013 Random1000 and 2023 NEW500. Preserve frozen people, DOBs, six symbols and eligibility. Verify zero overlap in FIDE IDs and linked Wikidata identities. No peak-based recruitment, replacement, exclusion or sample-size choice.
 
 The outcome is the maximum recorded **official published standard rating from July 1971 through the December 2023 list**. Ignore live, rapid, blitz, performance ratings and all 2024 onward lists. Both groups have the same cutoff. Their names describe roster origin, not a real-time forecast from 2013. This observed maximum is not an unknown final career maximum; younger players may improve later.
