@@ -34,6 +34,7 @@ EXTRA_FIELDS = ("label_end_period", "feature_reference_snapshot", "peak_periods"
     "peak_periods_complete", "history_source_provider", "derived_snapshot_record_n",
     "ambiguous_period_n", "ambiguous_periods", "period_conflict_resolution_policy",
     "adjudicated_period_n", "adjudicated_periods",
+    "verified_source_window_end", "source_window_reaches_cutoff", "source_tail_incomplete", "career_termination_verified",
     "history_first_period", "history_last_period", "history_n", "fide_history_n",
     "official_chart_history_n", "lichess_history_n", "official_list_history_n", "olimpbase_history_n", "pre2003_history_n", "history_coverage")
 OUTPUT_FIELDS = ("canonical_id", "snapshot", "exact_dob_frozen", "snapshot_rating", "rating") + ORIGINAL_FIELDS[4:] + EXTRA_FIELDS
@@ -45,6 +46,10 @@ COVERAGE_RULE = "lichess-frozen-snapshot-and-older-window-v1"
 COVERAGE_REASONS = {"lichess_missing_frozen_snapshot", "lichess_late_history_for_older_person"}
 SNAPSHOT_DISAGREEMENT_RULE = "direct-official-frozen-snapshot-disagreement-v1"
 POINT_ADJUDICATION_POLICY = "original_official_rating_list_has_priority_over_derived_sources"
+GAP_MODE = "api_window_gap_bridge"
+GAP_AUDIT_REASONS = {"rating_history_coverage_unresolved", "frozen_snapshot_month_absent_from_official_chart_history",
+    "observed_history_peak_is_below_frozen_snapshot_rating"}
+CUTOFF_MEANING = "The cutoff filters verified recorded ratings; it does not guarantee continuous observations through that month or a completed career peak. No unobserved tail is extrapolated."
 
 class DatasetBuildError(ValueError):
     """The complete fixed cohort cannot yet be assigned audited labels."""
@@ -98,6 +103,13 @@ def rating(value):
     if not 0 < result <= 3500:
         raise ValueError("History rating outside valid range")
     return result
+
+def source_end_coverage(end, career_termination_verified=False):
+    end = period(end)
+    if type(career_termination_verified) is not bool:
+        raise ValueError("Career-termination verification flag must be explicit")
+    return {"verified_source_window_end": end, "source_window_reaches_cutoff": end >= CUTOFF,
+        "source_tail_incomplete": end < CUTOFF, "career_termination_verified": career_termination_verified}
 
 def _a_loader(root, role):
     source = str(Path(root) / OLD)
@@ -270,6 +282,177 @@ def _verify_snapshot_disagreement(base, file_hashes, person, entry, normalized):
 def _official_archive_url(value):
     return isinstance(value, str) and re.fullmatch(r"https://ratings\.fide\.com/download/[A-Za-z0-9_.-]+\.zip", value, re.IGNORECASE) is not None
 
+def coverage_gap_eligible(prior):
+    coverage = prior.get("source_coverage_audit", {})
+    reasons = prior.get("snapshot_audit_reasons")
+    return (prior.get("status") == "history_acquired_requires_snapshot_audit"
+        and prior.get("snapshot_audit_required") is True and prior.get("snapshot_in_history") is False
+        and prior.get("snapshot_history_elo") is None and not prior.get("snapshot_disagreement")
+        and prior.get("error_type") is None and isinstance(reasons, list) and bool(reasons)
+        and "rating_history_coverage_unresolved" in reasons and set(reasons) <= GAP_AUDIT_REASONS
+        and coverage.get("unresolved") is True and coverage.get("official_outcome") in ("unavailable", "missing_frozen_snapshot")
+        and coverage.get("selected_provider") == prior.get("source_provider", "fide_official_chart"))
+
+def _official_bridge_periods(first_api_period):
+    first = period(first_api_period)
+    if first <= "2010-01" or first > CUTOFF:
+        raise ValueError("API gap boundary is outside the supported archive window")
+    result = []
+    for year in range(2010, int(first[:4]) + 1):
+        for month in range(1, 13):
+            candidate = f"{year}-{month:02d}"
+            if candidate >= first:
+                break
+            if candidate < "2012-08" and month % 2 == 0:
+                continue
+            result.append(candidate)
+    return result
+
+def _verify_api_history_evidence(base, file_hashes, person, payload, prior):
+    proof, cid = payload.get("api_history_evidence"), person["canonical_id"]
+    if not isinstance(proof, dict) or not coverage_gap_eligible(prior):
+        raise ValueError("API bridge lacks eligible unresolved-window evidence")
+    provider = proof.get("source_provider")
+    expected_url = {"fide_official_chart": f"https://ratings.fide.com/a_chart_data.phtml?event={cid}&period=0",
+        "lichess_fide_history": f"https://lichess.org/api/fide/player/{cid}/ratings"}.get(provider)
+    if (provider not in API_PROVIDERS or proof.get("source_url") != expected_url or prior.get("source_url") != expected_url
+            or prior.get("source_provider", "fide_official_chart") != provider or prior.get("raw_sha256") != proof.get("raw_sha256")):
+        raise ValueError("API bridge changed its preferred sealed source")
+    _verify_source_coverage_audit(base, file_hashes, prior, provider)
+    source = next((item for item in prior["source_coverage_audit"].get("sources", [])
+        if item.get("source_provider") == provider and all(item.get(key) == proof.get(key)
+            for key in ("raw_file", "raw_sha256", "gzip_sha256", "metadata_file", "metadata_sha256"))), None)
+    if source is None:
+        raise ValueError("API bridge raw evidence is not the prior sealed coverage source")
+    raw, metadata = _verify_source_evidence(base, file_hashes, cid, source)
+    if (metadata.get("source_url") != expected_url or metadata.get("http_status") != 200
+            or prior.get("raw_bytes") != len(raw)):
+        raise ValueError("API bridge request metadata differs from its prior source")
+    original_name, preserved_name = f"normalized/{cid}.json", f"list-supplements/evidence/{cid}.api-normalized.json"
+    if (proof.get("original_normalized_file") != original_name or prior.get("normalized_history_file") != original_name
+            or proof.get("normalized_file") != preserved_name or preserved_name not in file_hashes
+            or proof.get("normalized_sha256") != prior.get("normalized_history_sha256")):
+        raise ValueError("API bridge normalized evidence path/fingerprint differs")
+    preserved = safe_file(base, preserved_name)
+    if sha256(preserved) != proof["normalized_sha256"]:
+        raise ValueError("Preserved original API normalized history changed")
+    original = read_json(preserved)
+    if (original.get("canonical_id") != cid or original.get("source_raw_sha256") != proof["raw_sha256"]
+            or original.get("source_provider", "fide_official_chart") != provider or original.get("label_cutoff_month") != CUTOFF):
+        raise ValueError("Preserved original API identity/provenance differs")
+    from collect_fide import parse_provider, _month
+    parsed = parse_provider(raw, cid, provider, snapshot=person["snapshot"])
+    original_rows = original.get("standard_history")
+    if original_rows != parsed["all_standard_history"] or not original_rows:
+        raise ValueError("Preserved API normalized rows differ from a fresh raw parse")
+    first, last = min(row["month"] for row in original_rows), max(row["month"] for row in original_rows)
+    retained_indices = [index for index, row in enumerate(original_rows) if row["month"] <= CUTOFF]
+    if (first < person["exact_dob_frozen"][:7] or first <= person["snapshot"]
+            or proof.get("first_period") != first or proof.get("last_available_period") != last
+            or proof.get("retained_through_cutoff_n") != len(retained_indices)
+            or proof.get("excluded_future_point_n") != len(original_rows) - len(retained_indices)):
+        raise ValueError("API bridge source-window metadata differs from its recorded points")
+    extras = {"source", "source_url", "source_raw_sha256", "api_history_point_index", "api_raw_point_index", "api_raw_packed_value"}
+    api_rows = [row for row in payload["standard_history"] if row.get("source") in API_PROVIDERS]
+    if [row.get("api_history_point_index") for row in api_rows] != retained_indices:
+        raise ValueError("API bridge omits, repeats or reorders retained original points")
+    packed = json.loads(raw.decode("utf-8-sig")).get("standard") if provider == "lichess_fide_history" else None
+    for row, index in zip(api_rows, retained_indices):
+        if (type(row.get("api_history_point_index")) is not int
+                or {key: value for key, value in row.items() if key not in extras} != original_rows[index]
+                or row.get("source") != provider or row.get("source_url") != expected_url
+                or row.get("source_raw_sha256") != proof["raw_sha256"]):
+            raise ValueError("API bridge changed a retained normalized source point")
+        if provider == "lichess_fide_history" and not row.get("derived_state"):
+            raw_index = row.get("api_raw_point_index")
+            if type(raw_index) is not int or not 0 <= raw_index < len(packed):
+                raise ValueError("API bridge lacks its exact raw packed point index")
+            value = packed[raw_index]
+            if (type(value) is not int or row.get("api_raw_packed_value") != value
+                    or _month(value // 10000) != row["month"] or value % 10000 != row["standard_elo"]):
+                raise ValueError("API bridge raw packed point does not match its normalized point")
+        elif "api_raw_point_index" in row or "api_raw_packed_value" in row:
+            raise ValueError("API bridge invents a raw packed point for an unsupported/derived state")
+    prior_name = f"list-supplements/evidence/{cid}.api-entry.json"
+    if (proof.get("original_entry_file", f"entries/{cid}.json") != f"entries/{cid}.json"
+            or proof.get("entry_file", prior_name) != prior_name
+            or ("entry_sha256" in proof and proof["entry_sha256"] != sha256(safe_file(base, prior_name)))):
+        raise ValueError("API bridge prior entry fingerprint differs")
+    return {"proof": proof, "original_history_compression": original.get("history_compression"),
+        "original_peak_months_complete": original.get("peak_months_complete", provider == "fide_official_chart")}
+
+def _primary_supplement_identity(row, person):
+    """Read the name/ID/birth-year columns rather than infer a fuzzy alias."""
+    header, line = row.get("source_header"), row.get("source_line")
+    if not isinstance(header, str) or not isinstance(line, str):
+        raise ValueError("Primary bridge row lacks its original identity header")
+    lower = header.lower()
+    name_start = lower.find("name")
+    ends = [index for label in ("titl", "fed", "country") if (index := lower.find(label, name_start + 4)) >= 0]
+    births = [index for label in ("born", "b-day", "birthday") if (index := lower.find(label)) >= 0]
+    if name_start < 1 or not ends or not births:
+        raise ValueError("Primary bridge header lacks fixed identity columns")
+    source_name = line[name_start:min(ends)].strip()
+    id_text = line[:name_start].strip()
+    birth_start = min(births)
+    birth_end = lower.find("flag", birth_start + 4)
+    # Old GamesBorn rows keep their fixed widths even when the caption spells
+    # July11 instead of Jul11; only the printed header after that label shifts.
+    old_caption = re.search(r"([A-Za-z]+[0-9]{2,4})\s+GamesBorn", header, re.IGNORECASE)
+    layout_shift = len(old_caption[1]) - 5 if old_caption else 0
+    birth_start -= layout_shift
+    if birth_end >= 0:
+        birth_end -= layout_shift
+    birth_text = line[birth_start:birth_end if birth_end >= 0 else None]
+    years = re.findall(r"(?<![0-9])(?:19|20)[0-9]{2}(?![0-9])", birth_text)
+    if (canonical_id(id_text) != person["canonical_id"] or source_name != row.get("source_name")
+            or len(years) != 1 or type(row.get("source_birth_year")) is not int
+            or int(years[0]) != row["source_birth_year"] or int(years[0]) != int(person["exact_dob_frozen"][:4])):
+        raise ValueError("Primary bridge parsed ID/name/birth-year differs from frozen identity")
+    month_columns = []
+    for token in re.finditer(r"[A-Za-z]+[0-9]{2,4}", header):
+        value = re.sub(r"(?i)^sept(?=[0-9])", "Sep", token.group())
+        for pattern in ("%b%y", "%B%y", "%b%Y", "%B%Y"):
+            try:
+                caption_month = datetime.strptime(value, pattern).strftime("%Y-%m")
+                month_columns.append((token.start(), caption_month))
+                break
+            except ValueError:
+                continue
+    if month_columns:
+        if len(month_columns) != 1 or row.get("source_header_period_mismatch") is not (month_columns[0][1] != row["month"]):
+            raise ValueError("Primary bridge stale header caption is not explicitly and accurately audited")
+        rating_start = month_columns[0][0]
+    else:
+        generic = list(re.finditer(r"\b(?:rating|rate|rtng|rtg)\b", header, re.IGNORECASE))
+        if len(generic) != 1:
+            raise ValueError("Primary bridge header lacks one known rating column")
+        rating_start = generic[0].start()
+    game_columns = [match.start() - layout_shift for match in re.finditer(r"games|gms", header, re.IGNORECASE) if match.start() > rating_start]
+    if not game_columns or rating(line[rating_start:min(game_columns)].strip()) != row["standard_elo"]:
+        raise ValueError("Primary bridge parsed rating column differs from the reported score")
+    return source_name
+
+def _verify_identity_aliases(payload, person):
+    aliases = payload.get("identity_aliases", [])
+    if not isinstance(aliases, list):
+        raise ValueError("Supplement identity aliases are not an explicit registry")
+    registered = set()
+    for alias in aliases:
+        expected = {"canonical_id": person["canonical_id"], "frozen_name": person["name"],
+            "frozen_dob": person["exact_dob_frozen"], "source_birth_year": int(person["exact_dob_frozen"][:4]),
+            "decision": "explicit_registered_name_variant_with_same_exact_FIDE_ID_and_original_list_birthyear"}
+        name, witnesses = alias.get("source_name"), alias.get("witness_points")
+        if (any(alias.get(key) != value for key, value in expected.items()) or not isinstance(name, str) or not name
+                or name in registered or not isinstance(witnesses, list) or not witnesses):
+            raise ValueError("Supplement name variant lacks explicit frozen identity anchors")
+        for witness in witnesses:
+            if (witness not in payload["standard_history"] or witness.get("source") != "fide_official_list_archive"
+                    or _primary_supplement_identity(witness, person) != name):
+                raise ValueError("Supplement alias witness is not an exact original primary row")
+        registered.add(name)
+    return registered
+
 def _named_archive_period(value, suffix):
     match = re.fullmatch(r"(?:standard_)?([a-z]{3})([0-9]{2}|[0-9]{4})frl\." + suffix, value.lower())
     if match is None:
@@ -374,9 +557,15 @@ def _verify_list_supplement(base, file_hashes, person, entry, normalized, raw, r
     """Verify an availability-only archive supplement and its transcribed rows."""
     if repo_root is None:
         raise ValueError("Official-list supplement requires the frozen repository source")
+    payload = json.loads(raw.decode("utf-8-sig"))
+    coverage = payload.get("coverage", {})
+    mode = coverage.get("mode", "career_termination")
+    if mode not in ("career_termination", GAP_MODE):
+        raise ValueError("Unknown official-list supplement coverage mode")
     adjudication = entry.get("list_supplement")
     expected = {"protocol_id": "chess-peak-list-supplement-adjudication-v1",
-        "status": "applied_after_api_history_unavailable", "reason": "no_usable_history_from_fide_chart_or_lichess",
+        "status": "applied_after_api_window_coverage_gap" if mode == GAP_MODE else "applied_after_api_history_unavailable",
+        "reason": "incomplete_api_window_requires_published_list_bridge" if mode == GAP_MODE else "no_usable_history_from_fide_chart_or_lichess",
         "source_selection": "source_availability_not_rating_magnitude", "primary_snapshot_verified": True,
         "original_identity_unchanged": True}
     if not isinstance(adjudication, dict) or any(adjudication.get(key) != value for key, value in expected.items()):
@@ -391,10 +580,11 @@ def _verify_list_supplement(base, file_hashes, person, entry, normalized, raw, r
     if sha256(prior_path) != adjudication.get("prior_api_entry_sha256"):
         raise ValueError("Prior API-unavailable evidence changed")
     prior = read_json(prior_path)
-    if (prior.get("status") != "failed" or prior.get("error_type") not in ("FetchFailure", "HistoryUnavailable")
-            or any(prior.get(key) != person[key] for key in ("canonical_id", "role", "name", "exact_dob_frozen", "snapshot", "snapshot_elo"))):
+    prior_allowed = coverage_gap_eligible(prior) if mode == GAP_MODE else (
+        prior.get("status") == "failed" and prior.get("error_type") in ("FetchFailure", "HistoryUnavailable"))
+    if (not prior_allowed or any(prior.get(key) != person[key]
+            for key in ("canonical_id", "role", "name", "exact_dob_frozen", "snapshot", "snapshot_elo"))):
         raise ValueError("List supplement cannot replace usable or identity-conflicting API history")
-    payload = json.loads(raw.decode("utf-8-sig"))
     if (payload.get("protocol_id") != "chess-peak-official-list-supplement-v1"
             or payload.get("canonical_id") != person["canonical_id"] or payload.get("name") != person["name"]
             or payload.get("standard_history") != normalized.get("standard_history")):
@@ -402,7 +592,10 @@ def _verify_list_supplement(base, file_hashes, person, entry, normalized, raw, r
     rows, ledger = payload["standard_history"], payload.get("archive_ledger")
     if not rows or not isinstance(ledger, list) or not ledger:
         raise ValueError("List supplement lacks its source-row ledger")
-    allowed = {"fide_official_list_archive", "olimpbase_transcription"}
+    archive_sources = {"fide_official_list_archive", "olimpbase_transcription"}
+    api_history = _verify_api_history_evidence(base, file_hashes, person, payload, prior) if mode == GAP_MODE else None
+    registered_aliases = _verify_identity_aliases(payload, person)
+    allowed = archive_sources | (set(API_PROVIDERS) if api_history else set())
     keys = ("source_url", "archive_sha256", "archive_member", "source_line_number", "source_line")
     for source in ledger:
         if any(left in source and right in source and source[left] != source[right]
@@ -411,16 +604,30 @@ def _verify_list_supplement(base, file_hashes, person, entry, normalized, raw, r
         source_kind = source.get("source")
         url = source.get("source_url", source.get("url"))
         digest = source.get("archive_sha256", source.get("sha256"))
-        if (source_kind not in allowed or not isinstance(digest, str) or not re.fullmatch(r"[a-f0-9]{64}", digest)
+        if (source_kind not in archive_sources or not isinstance(digest, str) or not re.fullmatch(r"[a-f0-9]{64}", digest)
                 or not source.get("archive_member", source.get("member")) or not source.get("header")
                 or type(source.get("bytes")) is not int or source["bytes"] <= 0
                 or (source_kind == "fide_official_list_archive" and not _official_archive_url(url))
                 or (source_kind == "olimpbase_transcription" and url != "https://www.olimpbase.org/Elo/data/elo2002-2009.zip")):
             raise ValueError("List supplement source ledger is invalid")
         period(source.get("period"))
+        if source_kind == "fide_official_list_archive":
+            if (_named_archive_period(url.rsplit("/", 1)[-1], "zip") != source["period"]
+                    or _named_archive_period(Path(source.get("archive_member", source.get("member"))).name, "txt") != source["period"]):
+                raise ValueError("Primary bridge publication URL/member month differs from its ledger period")
+        if source_kind == "fide_official_list_archive" and source.get("player_unlisted") is True:
+            if (source.get("searched_canonical_id") != person["canonical_id"]
+                    or source.get("source_line_number") is not None or source.get("source_line") is not None
+                    or source.get("selected_row") is not None
+                    or any(row.get("source") == source_kind and row.get("month") == source["period"] for row in rows)):
+                raise ValueError("Primary list absence evidence contradicts the frozen person/observed rows")
     for row in rows:
         month, elo = period(row["month"]), rating(row["standard_elo"])
-        if (month > CUTOFF or row.get("source") not in allowed or row.get("source_point") is not True
+        if month > CUTOFF or month < person["exact_dob_frozen"][:7] or row.get("source") not in allowed:
+            raise ValueError("Invalid source-specific list supplement row")
+        if row["source"] in API_PROVIDERS:
+            continue  # Fully checked against sealed raw/normalized API bytes above.
+        if (row.get("source_point") is not True
                 or type(row.get("source_line_number")) is not int or row["source_line_number"] < 1
                 or not isinstance(row.get("source_line"), str) or not row["source_line"]):
             raise ValueError("Invalid source-specific list supplement row")
@@ -433,11 +640,24 @@ def _verify_list_supplement(base, file_hashes, person, entry, normalized, raw, r
             and item.get("player_unlisted") is not True]
         if not matches:
             raise ValueError("Normalized supplement row lacks exact archive-ledger provenance")
-        if row["source"] == "fide_official_list_archive" and (person["canonical_id"] not in re.findall(r"[0-9]+", row["source_line"])
-                or str(elo) not in re.findall(r"[0-9]+", row["source_line"])
-                or _source_name(person["name"]) not in _source_name(row["source_line"])):
-            raise ValueError("Official archive line lacks the frozen identity and rating tokens")
+        if api_history and row["source"] == "fide_official_list_archive" and not any(item["header"] == row.get("source_header") for item in matches):
+            raise ValueError("Primary bridge row header differs from its exact source ledger")
+        if row["source"] == "fide_official_list_archive":
+            name = _primary_supplement_identity(row, person) if api_history else person["name"]
+            if (_source_name(name) != _source_name(person["name"]) and name not in registered_aliases):
+                raise ValueError("Official archive name differs without an explicit verified alias")
+            if (person["canonical_id"] not in re.findall(r"[0-9]+", row["source_line"])
+                    or str(elo) not in re.findall(r"[0-9]+", row["source_line"])
+                    or _source_name(name) not in _source_name(row["source_line"])):
+                raise ValueError("Official archive line lacks the frozen identity and rating tokens")
     counts = {source: sum(row["source"] == source for row in rows) for source in allowed}
+    for item in ledger:
+        if item["source"] == "fide_official_list_archive" and item.get("player_unlisted") is not True:
+            if not any(row.get("source") == item["source"] and row.get("month") == item["period"]
+                    and row.get("source_line") == item.get("source_line", item.get("row_text"))
+                    and row.get("source_line_number") == item.get("source_line_number", item.get("row_line_number"))
+                    for row in rows):
+                raise ValueError("Published-list period lacks either a positive row or explicit absence evidence")
     reported = adjudication.get("rows_by_source", {})
     if set(reported) - allowed or {source: reported.get(source, 0) for source in allowed} != counts or not counts["fide_official_list_archive"]:
         raise ValueError("Supplement primary/secondary row counts differ")
@@ -448,19 +668,16 @@ def _verify_list_supplement(base, file_hashes, person, entry, normalized, raw, r
     if (frozen.get("month") != person["snapshot"] or frozen.get("rating") != person["snapshot_elo"] or not frozen_match
             or not any(row["source"] == "fide_official_list_archive" and row["source_url"] == entry["source_url"] for row in rows)):
         raise ValueError("Supplement lacks exact primary frozen-snapshot and anchor evidence")
-    coverage, termination = payload.get("coverage"), payload.get("career_termination")
+    termination = payload.get("career_termination")
     if (not isinstance(coverage, dict) or adjudication.get("coverage") != coverage
-            or not isinstance(termination, dict) or adjudication.get("career_termination") != termination):
+            or adjudication.get("career_termination") != termination):
         raise ValueError("Supplement coverage or career-termination provenance differs")
     official_periods = coverage.get("official_list_periods", [])
-    required_periods = [f"{year}-{month:02d}" for year in (2010, 2011) for month in (1, 3, 5, 7, 9, 11)]
-    required_periods += [f"2012-{month:02d}" for month in (1, 3, 5, 7, 8, 9, 10, 11, 12)]
-    required_periods += [f"2013-{month:02d}" for month in range(1, 13)]
+    required_periods = _official_bridge_periods(api_history["proof"]["first_period"] if api_history else "2014-01")
     if (not official_periods or official_periods != sorted(set(official_periods))
             or official_periods != required_periods
             or coverage.get("official_list_first") != official_periods[0]
             or coverage.get("official_list_last") != official_periods[-1]
-            or any(not "2010-01" <= period(month) <= "2013-12" for month in official_periods)
             or not {row["month"] for row in rows if row["source"] == "fide_official_list_archive"} <= set(official_periods)):
         raise ValueError("Supplement official-list coverage is inconsistent")
     if {item["period"] for item in ledger if item["source"] == "fide_official_list_archive"} != set(required_periods):
@@ -469,18 +686,31 @@ def _verify_list_supplement(base, file_hashes, person, entry, normalized, raw, r
     if historic_months and (coverage.get("historical_transcription_first") != historic_months[0]
             or coverage.get("historical_transcription_last") != historic_months[-1]):
         raise ValueError("Supplement historical-transcription coverage is inconsistent")
-    if (termination.get("birth_date") != person["exact_dob_frozen"]
+    if api_history:
+        if (termination is not None or adjudication.get("api_history_evidence") != payload["api_history_evidence"]
+                or adjudication.get("prior_source_coverage_audit") != prior["source_coverage_audit"]):
+            raise ValueError("API bridge rewrites its prior coverage audit or termination claims")
+        expected_end = source_end_coverage(api_history["proof"]["last_available_period"])
+        for key in ("verified_source_window_end", "source_window_reaches_cutoff", "source_tail_incomplete"):
+            if key in coverage and (coverage[key] != expected_end[key] or type(coverage[key]) is not type(expected_end[key])):
+                raise ValueError("API bridge misstates its observed source end or tail status")
+        if "complete_through_cutoff" in coverage and coverage["complete_through_cutoff"] is not expected_end["source_window_reaches_cutoff"]:
+            raise ValueError("API bridge endpoint claim differs from its actual source window")
+    elif (not isinstance(termination, dict) or termination.get("birth_date") != person["exact_dob_frozen"]
             or termination.get("source_type") != "official_national_federation_obituary"
             or termination.get("source_url") != "https://www.ruchess.ru/news/all/pogib_igor_kurnosov/"
             or not re.fullmatch(r"[a-f0-9]{64}", str(termination.get("source_sha256", "")))
             or termination.get("posthumous_2014_2023_monthly_coverage_claimed") is not False
             or not termination.get("excerpt") or not termination.get("coverage_note")):
         raise ValueError("Supplement career-termination evidence is incomplete")
-    if date.fromisoformat(termination["date"]) > date.fromisoformat(CUTOFF + "-01"):
-        raise ValueError("Career-termination evidence is after label cutoff")
-    date.fromisoformat(termination["source_publication_date"])
+    if not api_history:
+        if date.fromisoformat(termination["date"]) > date.fromisoformat(CUTOFF + "-01"):
+            raise ValueError("Career-termination evidence is after label cutoff")
+        date.fromisoformat(termination["source_publication_date"])
     return {"adjudication": adjudication, "archive_ledger": ledger, "coverage": coverage,
-        "career_termination": termination, "raw_sha256": entry["raw_sha256"], "source_url": entry["source_url"]}
+        "career_termination": termination, "api_history_evidence": api_history,
+        "identity_aliases": payload.get("identity_aliases", []),
+        "raw_sha256": entry["raw_sha256"], "source_url": entry["source_url"]}
 
 def _coverage_summary(entries):
     audits = {cid: item["entry"].get("source_coverage_audit") for cid, item in sorted(entries.items())}
@@ -488,13 +718,20 @@ def _coverage_summary(entries):
     snapshot_ids = [cid for cid, item in sorted(entries.items()) if item["entry"].get("snapshot_audit_required") is True]
     disagreements = {cid: item["snapshot_disagreement"] for cid, item in sorted(entries.items()) if item.get("snapshot_disagreement")}
     supplements = {cid: item["list_supplement"] for cid, item in sorted(entries.items()) if item.get("list_supplement")}
+    windows = [{"canonical_id": cid, "role": item["entry"]["role"], **item["source_end_coverage"]}
+        for cid, item in sorted(entries.items())]
+    early = [item for item in windows if item["source_tail_incomplete"]]
     return {"source_coverage_audits": audits, "source_coverage_checked_n": len(present),
         "source_coverage_resolved_n": sum(item["unresolved"] is False for item in present),
         "source_coverage_unresolved_n": sum(item["unresolved"] is True for item in present),
         "source_coverage_unresolved_person_ids": [cid for cid, item in audits.items() if item is not None and item["unresolved"]],
         "snapshot_audit_required_n": len(snapshot_ids), "snapshot_audit_required_person_ids": snapshot_ids,
         "snapshot_disagreement_n": len(disagreements), "snapshot_disagreement_proofs": disagreements,
-        "list_supplement_n": len(supplements), "list_supplements": supplements}
+        "list_supplement_n": len(supplements), "list_supplements": supplements,
+        "source_end_coverage": {"cutoff_meaning": CUTOFF_MEANING, "verified_person_windows": windows,
+            "early_ending_n": len(early), "early_ending_person_ids_by_role": {
+                role: [item["canonical_id"] for item in early if item["role"] == role] for role in ROLES},
+            "early_ending_windows": early}}
 
 def read_acquisition(acquisition_dir, people, dataset_audit=None, repo_root=None):
     """Verify complete FIDE-history shards and explicitly named mirror sources."""
@@ -579,14 +816,26 @@ def read_acquisition(acquisition_dir, people, dataset_audit=None, repo_root=None
                 raise ValueError("Rating-history raw-response fingerprint differs")
             supplement = (_verify_list_supplement(base, file_hashes, person, entry, normalized, raw, repo_root)
                 if provider == "fide_official_list_archive" else None)
+            window_end = max(period(row["month"]) for row in normalized["standard_history"])
+            if supplement and supplement.get("api_history_evidence"):
+                window_end = supplement["api_history_evidence"]["proof"]["last_available_period"]
+            elif entry.get("history_end") is not None and entry["history_end"] != window_end:
+                raise ValueError("Recorded history-end metadata differs from normalized source points")
+            termination = bool(supplement and supplement["career_termination"] is not None)
+            if entry.get("career_termination") is not None and (not supplement or entry["career_termination"] != supplement["career_termination"]):
+                raise ValueError("Unverified career-termination claim in source entry")
+            window = source_end_coverage(window_end, termination)
             disagreement = _verify_snapshot_disagreement(base, file_hashes, person, entry, normalized)
             rows = normalized["standard_history"]
             if provider != "fide_official_list_archive" and any("source" in row and row["source"] != provider for row in rows):
                 raise ValueError("API history cannot override its source provider per row")
             derived_rows = [row for row in rows if row.get("derived_state")]
-            if len(derived_rows) > 1 or (derived_rows and provider != "lichess_fide_history"):
+            hybrid_api = supplement.get("api_history_evidence") if supplement else None
+            derived_provider = hybrid_api["proof"]["source_provider"] if hybrid_api else provider
+            if len(derived_rows) > 1 or (derived_rows and derived_provider != "lichess_fide_history"):
                 raise ValueError("Unexpected source-derived snapshot inventory")
-            direct = {row["month"]: row for row in rows if not row.get("derived_state")}
+            direct = {row["month"]: row for row in rows if not row.get("derived_state")
+                and (not hybrid_api or row["source"] == derived_provider)}
             for derived in derived_rows:
                 month = derived.get("month")
                 previous = max((key for key in direct if key < month), default=None)
@@ -598,8 +847,10 @@ def read_acquisition(acquisition_dir, people, dataset_audit=None, repo_root=None
             records = [{**{k: v for k, v in row.items() if k not in ("month", "standard_elo")},
                 "canonical_id": cid, "period": row["month"], "rating": row["standard_elo"],
                 "source": row["source"] if supplement else provider, "source_url": row["source_url"] if supplement else url,
-                "source_raw_sha256": entry["raw_sha256"],
-                "peak_months_complete": complete, "history_compression": normalized.get("history_compression")}
+                "source_raw_sha256": row["source_raw_sha256"] if hybrid_api and row["source"] in API_PROVIDERS else entry["raw_sha256"],
+                **({"compiled_source_raw_sha256": entry["raw_sha256"]} if supplement else {}),
+                "peak_months_complete": hybrid_api["original_peak_months_complete"] if hybrid_api and row["source"] in API_PROVIDERS else complete,
+                "history_compression": hybrid_api["original_history_compression"] if hybrid_api and row["source"] in API_PROVIDERS else normalized.get("history_compression")}
                 for row in rows]
             if disagreement:
                 records.append({"canonical_id": cid, "period": person["snapshot"], "rating": person["snapshot_elo"],
@@ -607,7 +858,8 @@ def read_acquisition(acquisition_dir, people, dataset_audit=None, repo_root=None
                     "source_roster_sha256": person["source_roster_sha256"], "source_name": person["name"],
                     "snapshot_disagreement_rule_id": SNAPSHOT_DISAGREEMENT_RULE,
                     "official_source_raw_sha256": entry["raw_sha256"]})
-            entries[cid] = {"entry": entry, "records": records, "snapshot_disagreement": disagreement, "list_supplement": supplement}
+            entries[cid] = {"entry": entry, "records": records, "snapshot_disagreement": disagreement,
+                "list_supplement": supplement, "source_end_coverage": window}
             if dataset_audit is not None:
                 dataset_audit.update(_coverage_summary(entries))
         if "source_provider_counts" in manifest:
@@ -626,7 +878,7 @@ def read_acquisition(acquisition_dir, people, dataset_audit=None, repo_root=None
         raise DatasetBuildError("Rating-history source coverage or frozen snapshot audit remains unresolved")
     return entries, provenance
 
-def combine_person(person, official_records, historical_records, snapshot_disagreement=None, adjudications=None):
+def combine_person(person, official_records, historical_records, snapshot_disagreement=None, adjudications=None, source_window=None):
     """Identify peak values without choosing between conflicting source rows.
 
     A conflicting month may remain unresolved only when every candidate is at
@@ -634,6 +886,11 @@ def combine_person(person, official_records, historical_records, snapshot_disagr
     month has no chosen rating and cannot supply a measured peak date.
     """
     cid, by_month, excluded_future = person["canonical_id"], {}, 0
+    recorded_end = max(period(row["period"]) for row in official_records)
+    window = source_end_coverage(recorded_end) if source_window is None else source_window
+    if (window != source_end_coverage(window["verified_source_window_end"], window["career_termination_verified"])
+            or window["verified_source_window_end"] < recorded_end):
+        raise ValueError("Observed source-window end/flags differ from retained source evidence")
     for record in [*official_records, *historical_records]:
         if canonical_id(record["canonical_id"]) != cid:
             raise ValueError("History row belongs to another person")
@@ -753,6 +1010,7 @@ def combine_person(person, official_records, historical_records, snapshot_disagr
         "period_conflict_resolution_policy": CONFLICT_POLICY,
         "adjudicated_period_n": sum(row["adjudicated_period"] for row in rows),
         "adjudicated_periods": ";".join(row["period"] for row in rows if row["adjudicated_period"]),
+        **window,
         "history_first_period": rows[0]["period"], "history_last_period": rows[-1]["period"], "history_n": len(rows),
         "fide_history_n": sum(bool(set(FIDE_PROVIDERS) & row["sources"]) for row in rows),
         "official_chart_history_n": sum("fide_official_chart" in row["sources"] for row in rows),
@@ -825,7 +1083,8 @@ def build_dataset(repo_root, acquisition_dir, historical=None, output_dir=None):
         for cid, person in sorted(people.items()):
             try:
                 info, records, ignored = combine_person(person, official[cid]["records"], old_by_id[cid],
-                    snapshot_disagreement=official[cid]["snapshot_disagreement"], adjudications=adjudications.get(cid))
+                    snapshot_disagreement=official[cid]["snapshot_disagreement"], adjudications=adjudications.get(cid),
+                    source_window=official[cid]["source_end_coverage"])
                 labels[cid] = info
                 history_rows.extend(records)
                 excluded_future += ignored
@@ -908,6 +1167,7 @@ def build_dataset(repo_root, acquisition_dir, historical=None, output_dir=None):
             "list_supplement_n": audit["list_supplement_n"], "list_supplements": audit["list_supplements"],
             "point_adjudication_n": len(adjudication_provenance), "point_adjudication_policy": POINT_ADJUDICATION_POLICY,
             "point_adjudications": adjudication_provenance, "point_adjudication_resolutions": audit["point_adjudication_resolutions"],
+            "source_end_coverage": audit["source_end_coverage"],
             "acquisition": provenance, "historical_payload_sha256": json_sha256(historic), "historical_archives": historic["archives"],
             "audit": {"path": audit_path.relative_to(root).as_posix(), "sha256": sha256(audit_path)},
             "normalized_history": {"path": history_path.relative_to(root).as_posix(), "sha256": sha256(history_path), "n": len(history_rows)}}
@@ -934,6 +1194,26 @@ def load_frame(repo_root, role):
     if (manifest.get("point_adjudication_policy") != POINT_ADJUDICATION_POLICY
             or manifest.get("point_adjudication_n") != len(manifest.get("point_adjudications", []))):
         raise ValueError("Peak original-list point-adjudication inventory differs")
+    source_audit = manifest.get("source_end_coverage", {})
+    windows = source_audit.get("verified_person_windows", [])
+    expected_roles = {cid: r for r in ROLES for cid in manifest["roles"][r]["canonical_ids"]}
+    by_source_person = {}
+    for item in windows:
+        cid = canonical_id(item["canonical_id"])
+        if cid in by_source_person or expected_roles.get(cid) != item.get("role"):
+            raise ValueError("Peak source-window audit changes fixed person identities")
+        expected_window = source_end_coverage(item["verified_source_window_end"], item["career_termination_verified"])
+        if (any(type(item.get(key)) is not bool for key in ("source_window_reaches_cutoff", "source_tail_incomplete", "career_termination_verified"))
+                or {key: item.get(key) for key in expected_window} != expected_window):
+            raise ValueError("Peak source-window audit flags differ from their recorded end")
+        by_source_person[cid] = item
+    early = [item for item in windows if item["source_tail_incomplete"]]
+    if (source_audit.get("cutoff_meaning") != CUTOFF_MEANING or set(by_source_person) != set(expected_roles)
+            or type(source_audit.get("early_ending_n")) is not int or source_audit["early_ending_n"] != len(early)
+            or source_audit.get("early_ending_windows") != early
+            or source_audit.get("early_ending_person_ids_by_role") != {
+                r: [item["canonical_id"] for item in early if item["role"] == r] for r in ROLES}):
+        raise ValueError("Peak source-tail coverage audit inventory differs")
     for item in manifest["point_adjudications"]:
         if sha256(safe_file(root, item["source_file"])) != item["source_file_sha256"]:
             raise ValueError("Frozen point-adjudication source changed")
@@ -999,6 +1279,14 @@ def load_frame(repo_root, role):
         first, last = period(row["history_first_period"]), period(row["history_last_period"])
         if first > last or last > CUTOFF or any(x < first or x > last for x in months):
             raise ValueError("Peak history coverage is inconsistent")
+        for name in ("source_window_reaches_cutoff", "source_tail_incomplete", "career_termination_verified"):
+            if row[name] not in ("True", "False"):
+                raise ValueError("Peak source-window boolean is invalid")
+            row[name] = row[name] == "True"
+        expected_window = source_end_coverage(row["verified_source_window_end"], row["career_termination_verified"])
+        if (any(row[key] != value or by_source_person[row["canonical_id"]][key] != value for key, value in expected_window.items())
+                or row["verified_source_window_end"] < last):
+            raise ValueError("Peak input source end or tail flags differ from its verified source audit")
         for name in ("history_n", "fide_history_n", "official_chart_history_n", "lichess_history_n", "official_list_history_n", "olimpbase_history_n", "pre2003_history_n", "derived_snapshot_record_n"):
             if not re.fullmatch(r"[0-9]+", row[name]):
                 raise ValueError("Invalid history count")

@@ -89,6 +89,24 @@ def get_adjudication_archives(root):
     return verified
 
 
+def load_completed_acquisition(base, expected_count):
+    """Finish an already attempted cohort without repeating history requests."""
+    base = Path(base).resolve()
+    manifest = json.loads((base / 'acquisition_manifest.json').read_text())
+    if (manifest.get('protocol_id') != 'chess-peak-history-acquisition-v1'
+            or manifest.get('cutoff_month') != '2023-12'
+            or manifest.get('shard_count') != 1 or manifest.get('stop_reason')
+            or any(manifest.get(key) != expected_count
+                   for key in ('selected_n', 'completed_n', 'full_shard_expected_n'))
+            or not manifest.get('files')):
+        raise ValueError('Cannot assemble a partial or stopped acquisition')
+    for name, digest in manifest['files'].items():
+        path = (base / name).resolve()
+        if not path.is_relative_to(base) or not path.is_file() or sha256(path) != digest:
+            raise ValueError(f'Completed acquisition changed before assembly: {name}')
+    return manifest
+
+
 def pack_checkpoint(work, target):
     work, target = Path(work).resolve(), Path(target).resolve()
     target.parent.mkdir(parents=True, exist_ok=True)
@@ -118,7 +136,7 @@ def pack_checkpoint(work, target):
     return metadata
 
 
-def prepare(root, work, *, resume=None, workers=2, rate=2.0, prefer_provider='lichess'):
+def prepare(root, work, *, resume=None, workers=2, rate=2.0, prefer_provider='lichess', from_acquired=False):
     root, work = Path(root).resolve(), Path(work).resolve()
     work.mkdir(parents=True, exist_ok=True)
     if resume and Path(resume).is_file():
@@ -135,8 +153,11 @@ def prepare(root, work, *, resume=None, workers=2, rate=2.0, prefer_provider='li
         write_json(work / 'historical_history.json', historical)
         if historical['audit']['fatal_issues']:
             raise ValueError('Historical identity audit requires resolution')
-        histories = run_acquisition(root, work / 'fide', workers=workers,
-            requests_per_second=rate, prefer_provider=prefer_provider)
+        if from_acquired:
+            histories = load_completed_acquisition(work / 'fide', len(people))
+        else:
+            histories = run_acquisition(root, work / 'fide', workers=workers,
+                requests_per_second=rate, prefer_provider=prefer_provider)
         histories = apply_list_supplements(root, work / 'fide', histories)
         complete_statuses = {'official_chart_histories_acquired_pending_historical_merge',
                              'rating_histories_acquired_pending_historical_merge'}
@@ -153,6 +174,7 @@ def prepare(root, work, *, resume=None, workers=2, rate=2.0, prefer_provider='li
             'source_reference': os.environ.get('PEAK_COLLECTION_SOURCE_REFERENCE'),
             'execution_environment': 'github_actions' if os.environ.get('GITHUB_ACTIONS') == 'true'
                                      else 'assistant_execution_workspace',
+            'assembly_from_completed_acquisition': from_acquired,
             'python_version': platform.python_version(),
             'packages': {name: version(name) for name in ('numpy', 'pandas', 'scipy')},
             'adjudication_archives': adjudication_archives,
@@ -165,6 +187,9 @@ def prepare(root, work, *, resume=None, workers=2, rate=2.0, prefer_provider='li
         manifest['collection_source']['files_sha256'].update({
             p.relative_to(root).as_posix(): sha256(p)
             for p in sorted((root / 'studies/chess_peak_v1/adjudications').glob('*')) if p.is_file()})
+        compiler = root / 'studies/chess_peak_v1/compile_gap_supplements.py'
+        if compiler.is_file():
+            manifest['collection_source']['files_sha256'][compiler.relative_to(root).as_posix()] = sha256(compiler)
         write_json(output / 'data_manifest.json', manifest)
         status.update(status='peak_inputs_complete_before_fitting',
                       counts={r: manifest['roles'][r]['n'] for r in ('development', 'primary_new')})
@@ -194,9 +219,12 @@ def main():
     parser.add_argument('--workers', type=int, default=2)
     parser.add_argument('--requests-per-second', type=float, default=2.0)
     parser.add_argument('--prefer-provider', choices=['fide', 'lichess'], default='lichess')
+    parser.add_argument('--from-acquired', action='store_true',
+                        help='Validate the completed cache and assemble without new player-history requests')
     args = parser.parse_args()
     result = prepare(args.repo_root, args.work_dir, resume=args.resume, workers=args.workers,
-                     rate=args.requests_per_second, prefer_provider=args.prefer_provider)
+                     rate=args.requests_per_second, prefer_provider=args.prefer_provider,
+                     from_acquired=args.from_acquired)
     print(json.dumps({'status': result['status']}))
 
 

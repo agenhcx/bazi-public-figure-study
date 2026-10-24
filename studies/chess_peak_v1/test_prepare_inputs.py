@@ -5,10 +5,38 @@ import zipfile
 import json
 from unittest.mock import patch
 
-from prepare_inputs import pack_checkpoint, safe_extract, sha256, get_adjudication_archives
+from prepare_inputs import (pack_checkpoint, safe_extract, sha256, get_adjudication_archives,
+                            load_completed_acquisition)
 
 
 class CheckpointTest(unittest.TestCase):
+    def test_completed_cache_can_finish_offline_but_cannot_change(self):
+        with tempfile.TemporaryDirectory() as temp:
+            base = Path(temp)
+            source = base / 'one-source.json'
+            source.write_text('original source bytes')
+            manifest = {'protocol_id': 'chess-peak-history-acquisition-v1', 'cutoff_month': '2023-12',
+                'shard_count': 1, 'selected_n': 1, 'completed_n': 1, 'full_shard_expected_n': 1,
+                'files': {'one-source.json': sha256(source)}}
+            (base / 'acquisition_manifest.json').write_text(json.dumps(manifest))
+            with patch('prepare_inputs.run_acquisition', side_effect=AssertionError('no history requests')):
+                self.assertEqual(load_completed_acquisition(base, 1), manifest)
+            source.write_text('changed')
+            with self.assertRaises(ValueError):
+                load_completed_acquisition(base, 1)
+
+    def test_stopped_or_partial_cache_cannot_finish_offline(self):
+        with tempfile.TemporaryDirectory() as temp:
+            base = Path(temp)
+            (base / 'one').write_text('source')
+            manifest = {'protocol_id': 'chess-peak-history-acquisition-v1', 'cutoff_month': '2023-12',
+                'shard_count': 1, 'selected_n': 1, 'completed_n': 1, 'full_shard_expected_n': 1,
+                'files': {'one': sha256(base / 'one')}}
+            for change in ({'stop_reason': 'rate limit'}, {'completed_n': 0}, {'selected_n': 0}):
+                (base / 'acquisition_manifest.json').write_text(json.dumps({**manifest, **change}))
+                with self.assertRaises(ValueError):
+                    load_completed_acquisition(base, 1)
+
     def test_original_list_archives_reuse_verified_cache_and_reject_tampering(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)

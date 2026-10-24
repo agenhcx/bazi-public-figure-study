@@ -1,5 +1,6 @@
 """Synthetic peak/provenance checks only; no acquisition or model fitting."""
 import csv
+from datetime import datetime
 import gzip
 import hashlib
 import json
@@ -151,7 +152,7 @@ def snapshot_disagreement_fixture(base, people, cid="11", official_elo=None, ind
     reseal_acquisition(base)
     return proof
 
-def list_supplement_fixture(root, base, people, cid="22"):
+def list_supplement_fixture(root, base, people, cid="22", apply=True):
     """Exercise the actual availability-only helper with a sealed synthetic payload."""
     import apply_list_supplements as supplements
     p, rows, ledger = people[cid], [], []
@@ -161,10 +162,11 @@ def list_supplement_fixture(root, base, people, cid="22"):
     for month in ["2003-07", "2009-11", *periods]:
         primary = month >= "2010-01"
         source = "fide_official_list_archive" if primary else "olimpbase_transcription"
-        url = (f"https://ratings.fide.com/download/standard_{month.replace('-', '')}.zip" if primary
+        month_tag = datetime.strptime(month, "%Y-%m").strftime("%b%Y").lower()
+        url = (f"https://ratings.fide.com/download/standard_{month_tag}frl.zip" if primary
             else "https://www.olimpbase.org/Elo/data/elo2002-2009.zip")
         digest = hashlib.sha256(month.encode()).hexdigest()
-        member = month + ".txt"
+        member = f"standard_{month_tag}frl.txt" if primary else month + ".txt"
         elo = p["snapshot_elo"] + (20 if month == "2010-05" else 0)
         text = f"{cid};{p['name']};{elo}"
         row = {"month": month, "standard_elo": elo, "source_point": True, "source": source,
@@ -196,8 +198,96 @@ def list_supplement_fixture(root, base, people, cid="22"):
     manifest = data.read_json(manifest_path)
     manifest.update(status="history_acquisition_failed", failed_n=1)
     data.write_json(manifest_path, manifest)
-    with patch.object(supplements, "load_roster", return_value=(list(people.values()), {})):
-        supplements.apply_list_supplements(root, base)
+    if apply:
+        with patch.object(supplements, "load_roster", return_value=(list(people.values()), {})):
+            supplements.apply_list_supplements(root, base)
+    return payload
+
+def gap_bridge_fixture(root, base, people, cid="22", alias=None, apply=True, absent_period=None, zero_prefix=False, api_last_period="2025-01"):
+    import collect_fide as collector
+    import apply_list_supplements as supplements
+    p = people[cid]
+    payload = list_supplement_fixture(root, base, people, cid, apply=False)
+    periods = data._official_bridge_periods("2015-02")
+    payload["standard_history"] = [row for row in payload["standard_history"] if row["source"] == "olimpbase_transcription"]
+    payload["archive_ledger"] = [row for row in payload["archive_ledger"] if row["source"] == "olimpbase_transcription"]
+    source_name = alias or p["name"]
+    for month in periods:
+        tag = datetime.strptime(month, "%Y-%m").strftime("%b%Y").lower()
+        url = f"https://ratings.fide.com/download/standard_{tag}frl.zip"
+        digest, member = hashlib.sha256(month.encode()).hexdigest(), f"standard_{tag}frl.txt"
+        header = "  ID_NUMBER NAME                             TITLE COUNTRY RATE  GAMES BIRTHDAY   FLAG"
+        line = "  " + f"{cid:<10}{source_name:<33}{'g':<6}{'LAT':<8}{p['snapshot_elo']:<6}{3:<6}{int(p['exact_dob_frozen'][:4]):<11}n   "
+        ledger = {"period": month, "url": url, "sha256": digest, "member": member, "source": "fide_official_list_archive",
+            "source_line_number": 2, "source_line": line, "header": header, "bytes": 100}
+        if month == absent_period:
+            ledger.update(player_unlisted=True, searched_canonical_id=cid, source_line_number=None, source_line=None, selected_row=None)
+        else:
+            payload["standard_history"].append({"month": month, "standard_elo": p["snapshot_elo"], "source_point": True,
+                "source": "fide_official_list_archive", "source_url": url, "archive_sha256": digest, "archive_member": member,
+                "source_line_number": 2, "source_line": line, "source_header": header,
+                "source_name": source_name, "source_birth_year": int(p["exact_dob_frozen"][:4])})
+        payload["archive_ledger"].append(ledger)
+    end_stamp = int(api_last_period.replace("-", ""))
+    raw_points = [value for value in (([2015010000] if zero_prefix else []) + [2015022510, 2016012530, 2023122540, 2025012550])
+        if value // 10000 <= end_stamp]
+    if raw_points[-1] // 10000 != end_stamp:
+        raw_points.append(end_stamp * 10000 + 2540)
+    raw = json.dumps({"standard": raw_points}).encode()
+    metadata = collector.save_cache(base, cid, raw, {"source_provider": "lichess_fide_history",
+        "source_url": collector.lichess_url(cid), "http_status": 200, "fetched_at_utc": "2026-01-01T00:00:00+00:00"})
+    evidence = collector._coverage_evidence(base, cid, raw, metadata)
+    parsed = collector.parse_lichess_history(raw, cid, snapshot=p["snapshot"])
+    original = {"canonical_id": cid, "source_raw_sha256": metadata["raw_sha256"], "source_provider": "lichess_fide_history",
+        "label_cutoff_month": data.CUTOFF, "standard_history": parsed["all_standard_history"],
+        "history_compression": parsed["history_compression"], "peak_months_complete": False}
+    original_path = base / "normalized" / f"{cid}.json"
+    data.write_json(original_path, original)
+    entry_path = base / "entries" / f"{cid}.json"
+    prior = {**p, "status": "history_acquired_requires_snapshot_audit", "source_provider": "lichess_fide_history",
+        "source_url": collector.lichess_url(cid), "raw_sha256": metadata["raw_sha256"], "raw_bytes": len(raw),
+        "normalized_history_file": f"normalized/{cid}.json", "normalized_history_sha256": data.sha256(original_path),
+        "snapshot_in_history": False, "snapshot_history_elo": None, "snapshot_audit_required": True,
+        "snapshot_audit_reasons": ["frozen_snapshot_month_absent_from_official_chart_history", "rating_history_coverage_unresolved"],
+        "source_coverage_audit": {"rule_id": data.COVERAGE_RULE, "reasons": ["lichess_missing_frozen_snapshot"],
+            "unresolved": True, "selected_provider": "lichess_fide_history", "direct_source_coverage_checked": False,
+            "sources": [evidence], "official_outcome": "unavailable"}}
+    data.write_json(entry_path, prior)
+    proof = {**{key: evidence[key] for key in ("source_provider", "raw_file", "raw_sha256", "gzip_sha256", "metadata_file", "metadata_sha256")},
+        "source_url": collector.lichess_url(cid), "original_normalized_file": f"normalized/{cid}.json",
+        "normalized_file": f"list-supplements/evidence/{cid}.api-normalized.json", "normalized_sha256": data.sha256(original_path),
+        "original_entry_file": f"entries/{cid}.json", "entry_file": f"list-supplements/evidence/{cid}.api-entry.json",
+        "entry_sha256": data.sha256(entry_path), "first_period": "2015-02", "last_available_period": api_last_period,
+        "retained_through_cutoff_n": sum(row["month"] <= data.CUTOFF for row in original["standard_history"]),
+        "excluded_future_point_n": sum(row["month"] > data.CUTOFF for row in original["standard_history"])}
+    payload["api_history_evidence"] = proof
+    for index, row in enumerate(original["standard_history"]):
+        if row["month"] <= data.CUTOFF:
+            raw_index = next(i for i, value in enumerate(raw_points)
+                if str(value // 10000) == row["month"].replace("-", "") and value % 10000 == row["standard_elo"])
+            payload["standard_history"].append({**row, "source": "lichess_fide_history", "source_url": collector.lichess_url(cid),
+                "source_raw_sha256": metadata["raw_sha256"], "api_history_point_index": index,
+                "api_raw_point_index": raw_index, "api_raw_packed_value": raw_points[raw_index]})
+    payload["coverage"].update(mode=data.GAP_MODE, official_list_periods=periods,
+        official_list_first=periods[0], official_list_last=periods[-1], **data.source_end_coverage(api_last_period),
+        complete_through_cutoff=api_last_period >= data.CUTOFF)
+    payload["coverage"].pop("career_termination_verified")
+    payload["coverage"].pop("post_death_monthly_2014_2023_not_claimed", None)
+    payload.pop("career_termination")
+    frozen = next(row for row in payload["standard_history"] if row["month"] == p["snapshot"])
+    payload["frozen_snapshot"] = {"month": p["snapshot"], "rating": p["snapshot_elo"], "archive_url": frozen["source_url"],
+        **{key: frozen[key] for key in ("archive_sha256", "archive_member", "source_line_number", "source_line")}}
+    if alias:
+        payload["identity_aliases"] = [{"canonical_id": cid, "frozen_name": p["name"], "source_name": alias,
+            "frozen_dob": p["exact_dob_frozen"], "source_birth_year": int(p["exact_dob_frozen"][:4]),
+            "decision": "explicit_registered_name_variant_with_same_exact_FIDE_ID_and_original_list_birthyear",
+            "witness_points": [next(row for row in payload["standard_history"] if row["source"] == "fide_official_list_archive")]}]
+    path = root / data.STUDY / "supplements" / f"fixture_{cid}.json"
+    data.write_json(path, payload)
+    reseal_acquisition(base)
+    if apply:
+        with patch.object(supplements, "load_roster", return_value=(list(people.values()), {})):
+            supplements.apply_list_supplements(root, base)
     return payload
 
 def point_adjudication_fixture(root, base, people, historical, cid="22"):
@@ -339,6 +429,17 @@ class CombineTests(unittest.TestCase):
                 data.combine_person(person(), [bad], [])
 
 class AcquisitionTests(unittest.TestCase):
+    def test_old_gamesborn_layout_keeps_fixed_columns_under_july_caption(self):
+        p = person()
+        line = f"{p['canonical_id']:>8}  {p['name']:<34}{'g':<4}{'LAT':<5}{2500:<6}{5:<5}{1980:<6}"
+        row = {"month": "2011-07", "standard_elo": 2500, "source_name": p["name"], "source_birth_year": 1980,
+            "source_line": line, "source_header": "ID number Name                              TitlFed  July11 GamesBorn  Flag",
+            "source_header_period_mismatch": False}
+        self.assertEqual(data._primary_supplement_identity(row, p), p["name"])
+        row["standard_elo"] = 1980  # Present as birthday, not the rating column.
+        with self.assertRaisesRegex(ValueError, "parsed rating column"):
+            data._primary_supplement_identity(row, p)
+
     def test_legacy_provider_counts_can_omit_new_zero_provider(self):
         with tempfile.TemporaryDirectory() as temporary:
             base, people = Path(temporary), {"11": person()}
@@ -681,9 +782,164 @@ class DatasetTests(unittest.TestCase):
         self.assertEqual(frame.loc["22", "fide_history_n"], 33)
         self.assertFalse(frame.loc["22", "peak_periods_complete"])
         self.assertEqual(frame.loc["22", "rating"], 2520)
+        self.assertEqual(frame.loc["22", "verified_source_window_end"], "2013-12")
+        self.assertTrue(frame.loc["22", "source_tail_incomplete"])
+        self.assertTrue(frame.loc["22", "career_termination_verified"])
         history = pd.read_csv(self.root / manifest["normalized_history"]["path"], dtype={"canonical_id": str})
         selected = history[history.canonical_id == "22"]
         self.assertEqual(set(selected.sources), {"fide_official_list_archive", "olimpbase_transcription"})
+
+    def test_ordinary_api_early_end_is_uniformly_flagged_without_dropping_or_extending(self):
+        path = self.acquisition / "normalized/22.json"
+        normalized = data.read_json(path)
+        normalized["standard_history"] = [row for row in normalized["standard_history"] if row["month"] <= "2013-01"]
+        normalized["standard_history"].append({"month": "2020-06", "standard_elo": 2530})
+        data.write_json(path, normalized)
+        entry_path = self.acquisition / "entries/22.json"
+        entry = data.read_json(entry_path)
+        entry["normalized_history_sha256"] = data.sha256(path)
+        data.write_json(entry_path, entry)
+        reseal_acquisition(self.acquisition)
+        manifest = self.build()
+        frame = data.load_frame(self.root, "development").set_index("canonical_id")
+        self.assertEqual(frame.loc["22", "rating"], 2530)
+        self.assertEqual(frame.loc["22", "verified_source_window_end"], "2020-06")
+        self.assertTrue(frame.loc["22", "source_tail_incomplete"])
+        self.assertFalse(frame.loc["22", "source_window_reaches_cutoff"])
+        self.assertFalse(frame.loc["22", "career_termination_verified"])
+        self.assertEqual(frame.loc["22", "history_last_period"], "2020-06")
+        self.assertEqual(frame.loc["11", "verified_source_window_end"], "2024-01")
+        self.assertTrue(frame.loc["11", "source_window_reaches_cutoff"])
+        audit = manifest["source_end_coverage"]
+        self.assertEqual(audit["early_ending_n"], 1)
+        self.assertEqual(audit["early_ending_person_ids_by_role"], {"development": ["22"], "primary_new": []})
+        history = pd.read_csv(self.root / manifest["normalized_history"]["path"], dtype={"canonical_id": str})
+        self.assertEqual(max(history[history.canonical_id == "22"].period), "2020-06")
+
+    def test_gap_api_early_end_accepted_as_recorded_peak_with_no_tail_extrapolation(self):
+        gap_bridge_fixture(self.root, self.acquisition, self.people, api_last_period="2020-12")
+        manifest = self.build()
+        frame = data.load_frame(self.root, "development").set_index("canonical_id")
+        self.assertEqual(frame.loc["22", "rating"], 2540)
+        self.assertEqual(frame.loc["22", "verified_source_window_end"], "2020-12")
+        self.assertTrue(frame.loc["22", "source_tail_incomplete"])
+        self.assertFalse(frame.loc["22", "career_termination_verified"])
+        self.assertEqual(frame.loc["22", "history_last_period"], "2020-12")
+        self.assertEqual(manifest["source_end_coverage"]["early_ending_n"], 1)
+        history = pd.read_csv(self.root / manifest["normalized_history"]["path"], dtype={"canonical_id": str})
+        self.assertEqual(max(history[history.canonical_id == "22"].period), "2020-12")
+        self.assertIn("not guarantee continuous", manifest["source_end_coverage"]["cutoff_meaning"])
+
+    def test_gap_bridge_retains_complete_api_window_and_original_provenance(self):
+        payload = gap_bridge_fixture(self.root, self.acquisition, self.people, zero_prefix=True)
+        manifest = self.build()
+        details = manifest["list_supplements"]["22"]
+        self.assertEqual(details["coverage"]["mode"], data.GAP_MODE)
+        self.assertIsNone(details["career_termination"])
+        self.assertEqual(details["adjudication"]["prior_source_coverage_audit"]["unresolved"], True)
+        self.assertEqual(details["api_history_evidence"]["proof"], payload["api_history_evidence"])
+        frame = data.load_frame(self.root, "development").set_index("canonical_id")
+        self.assertEqual(frame.loc["22", "rating"], 2540)
+        self.assertEqual(frame.loc["22", "snapshot_rating"], 2500)
+        self.assertEqual(frame.loc["22", "official_list_history_n"], 46)
+        self.assertEqual(frame.loc["22", "lichess_history_n"], 3)
+        self.assertEqual(frame.loc["22", "olimpbase_history_n"], 2)
+        self.assertEqual(frame.loc["22", "history_last_period"], "2023-12")
+        self.assertEqual(frame.loc["22", "verified_source_window_end"], "2025-01")
+        self.assertTrue(frame.loc["22", "source_window_reaches_cutoff"])
+        history = pd.read_csv(self.root / manifest["normalized_history"]["path"], dtype={"canonical_id": str})
+        api = history[(history.canonical_id == "22") & (history.period == "2023-12")].iloc[0]
+        source = json.loads(api.source_records)[0]
+        self.assertEqual(source["source"], "lichess_fide_history")
+        self.assertEqual(source["source_raw_sha256"], payload["api_history_evidence"]["raw_sha256"])
+        self.assertNotEqual(source["source_raw_sha256"], source["compiled_source_raw_sha256"])
+        self.assertEqual(source["api_history_point_index"], 2)
+        self.assertEqual(source["api_raw_point_index"], 3)
+        self.assertFalse(source["peak_months_complete"])
+
+    def test_gap_bridge_explicit_alias_and_unlisted_period_are_evidence_not_ratings(self):
+        payload = gap_bridge_fixture(self.root, self.acquisition, self.people, alias="Player 22, Dr.", absent_period="2010-01")
+        manifest = self.build()
+        frame = data.load_frame(self.root, "development").set_index("canonical_id")
+        self.assertEqual(frame.loc["22", "official_list_history_n"], 45)
+        self.assertEqual(frame.loc["22", "rating"], 2540)
+        details = manifest["list_supplements"]["22"]
+        self.assertEqual(details["identity_aliases"], payload["identity_aliases"])
+        self.assertEqual(len(details["coverage"]["official_list_periods"]), 46)
+        self.assertTrue(next(row for row in details["archive_ledger"] if row["period"] == "2010-01")["player_unlisted"])
+
+    def test_gap_bridge_missing_period_or_unregistered_alias_stops(self):
+        payload = gap_bridge_fixture(self.root, self.acquisition, self.people, alias="Player 22, Dr.", apply=False)
+        path = self.root / data.STUDY / "supplements/fixture_22.json"
+        payload.pop("identity_aliases")
+        data.write_json(path, payload)
+        import apply_list_supplements as supplements
+        before = (self.acquisition / "entries/22.json").read_bytes()
+        old_normalized = (self.acquisition / "normalized/22.json").read_bytes()
+        with patch.object(supplements, "load_roster", return_value=(list(self.people.values()), {})):
+            with self.assertRaisesRegex(ValueError, "without an explicit verified alias"):
+                supplements.apply_list_supplements(self.root, self.acquisition)
+        self.assertEqual((self.acquisition / "entries/22.json").read_bytes(), before)
+        self.assertEqual((self.acquisition / "normalized/22.json").read_bytes(), old_normalized)
+
+    def test_gap_bridge_cannot_skip_a_published_list_or_forge_absence_identity(self):
+        payload = gap_bridge_fixture(self.root, self.acquisition, self.people, apply=False, absent_period="2010-01")
+        path = self.root / data.STUDY / "supplements/fixture_22.json"
+        payload["archive_ledger"] = [item for item in payload["archive_ledger"] if item["period"] != "2010-03"]
+        payload["standard_history"] = [row for row in payload["standard_history"] if row["month"] != "2010-03"]
+        data.write_json(path, payload)
+        import apply_list_supplements as supplements
+        before = (self.acquisition / "entries/22.json").read_bytes()
+        old_normalized = (self.acquisition / "normalized/22.json").read_bytes()
+        with patch.object(supplements, "load_roster", return_value=(list(self.people.values()), {})):
+            with self.assertRaisesRegex(ValueError, "lacks a required published period"):
+                supplements.apply_list_supplements(self.root, self.acquisition)
+        self.assertEqual((self.acquisition / "entries/22.json").read_bytes(), before)
+        self.assertEqual((self.acquisition / "normalized/22.json").read_bytes(), old_normalized)
+
+    def test_gap_bridge_cannot_omit_raw_points_or_relabel_a_point_as_official(self):
+        payload = gap_bridge_fixture(self.root, self.acquisition, self.people, apply=False)
+        path = self.root / data.STUDY / "supplements/fixture_22.json"
+        import apply_list_supplements as supplements
+        before_entry = (self.acquisition / "entries/22.json").read_bytes()
+        before_normalized = (self.acquisition / "normalized/22.json").read_bytes()
+        for mutation in ("omit", "index", "packed", "provider"):
+            with self.subTest(mutation=mutation):
+                changed = json.loads(json.dumps(payload))
+                api_rows = [row for row in changed["standard_history"] if row["source"] == "lichess_fide_history"]
+                if mutation == "omit":
+                    changed["standard_history"].remove(api_rows[-1])
+                elif mutation == "index":
+                    api_rows[0]["api_history_point_index"] = 1
+                elif mutation == "packed":
+                    api_rows[0]["api_raw_packed_value"] += 1
+                else:
+                    api_rows[0]["source"] = "fide_official_list_archive"
+                data.write_json(path, changed)
+                with patch.object(supplements, "load_roster", return_value=(list(self.people.values()), {})):
+                    with self.assertRaises(ValueError):
+                        supplements.apply_list_supplements(self.root, self.acquisition)
+                self.assertEqual((self.acquisition / "entries/22.json").read_bytes(), before_entry)
+                self.assertEqual((self.acquisition / "normalized/22.json").read_bytes(), before_normalized)
+
+    def test_gap_primary_rating_and_publication_month_checked_before_replacement(self):
+        payload = gap_bridge_fixture(self.root, self.acquisition, self.people, apply=False)
+        path = self.root / data.STUDY / "supplements/fixture_22.json"
+        before = (self.acquisition / "entries/22.json").read_bytes()
+        import apply_list_supplements as supplements
+        for mutation in ("rating", "month"):
+            changed = json.loads(json.dumps(payload))
+            row = next(item for item in changed["standard_history"] if item["source"] == "fide_official_list_archive")
+            ledger = next(item for item in changed["archive_ledger"] if item["source"] == "fide_official_list_archive")
+            if mutation == "rating":
+                row["standard_elo"] = 1980  # The original source line contains this birthday token.
+            else:
+                row["month"] = ledger["period"] = "2010-03"
+            data.write_json(path, changed)
+            with patch.object(supplements, "load_roster", return_value=(list(self.people.values()), {})):
+                with self.assertRaisesRegex(ValueError, "parsed rating column|publication URL/member month"):
+                    supplements.apply_list_supplements(self.root, self.acquisition)
+            self.assertEqual((self.acquisition / "entries/22.json").read_bytes(), before)
 
     def test_original_list_adjudication_retains_rejected_cache_and_identifies_peak(self):
         path, document = point_adjudication_fixture(self.root, self.acquisition, self.people, self.historical)
