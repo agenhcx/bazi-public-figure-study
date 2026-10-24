@@ -1,0 +1,277 @@
+{
+  "protocol_id": "chess-single-A-v1",
+  "status": "review_draft_not_frozen",
+  "fit_allowed": false,
+  "target": {
+    "column": "rating",
+    "definition": "standard Elo at the row snapshot",
+    "unit": "Elo points"
+  },
+  "data_roles": {
+    "development": "2013_M",
+    "primary_evaluation": "2023_M_NEW_TARGET",
+    "secondary_evaluation": "2023_M_FULL"
+  },
+  "representations": {
+    "raw_A": {
+      "inputs": [
+        "year_stem",
+        "year_branch",
+        "month_stem",
+        "month_branch",
+        "day_stem",
+        "day_branch"
+      ],
+      "stem_vocabulary": [
+        "甲",
+        "乙",
+        "丙",
+        "丁",
+        "戊",
+        "己",
+        "庚",
+        "辛",
+        "壬",
+        "癸"
+      ],
+      "branch_vocabulary": [
+        "子",
+        "丑",
+        "寅",
+        "卯",
+        "辰",
+        "巳",
+        "午",
+        "未",
+        "申",
+        "酉",
+        "戌",
+        "亥"
+      ],
+      "encoding": "separate fixed-vocabulary one-hot; 66 columns",
+      "traditional_features": false,
+      "pretrained_embeddings": false
+    },
+    "date_control": {
+      "inputs": [
+        "age",
+        "age_squared",
+        "age_cubed",
+        "birth_season_sin1",
+        "birth_season_cos1",
+        "birth_season_sin2",
+        "birth_season_cos2"
+      ],
+      "age": "(snapshot month first day - exact Gregorian DOB).days / 365.2425",
+      "birth_season_phase": "2*pi*(Gregorian birth day-of-year - 1)/(366 if birth year is leap else 365)",
+      "harmonics": [
+        1,
+        2
+      ]
+    }
+  },
+  "pipelines": {
+    "fit_preprocessing": "inside each training fold only",
+    "input_scaling": "StandardScaler after model-specific expansion for Ridge/KRR/MLP; none for trees",
+    "target_scaling": "StandardScaler fitted inside each training fold, inverse-transform predictions for every metric"
+  },
+  "families": [
+    {
+      "name": "ridge",
+      "estimator": "sklearn.linear_model.Ridge",
+      "grid": {
+        "alpha": [
+          0.1,
+          1,
+          10,
+          100,
+          1000
+        ]
+      },
+      "fixed": {
+        "solver": "lsqr",
+        "tol": 0.000001,
+        "max_iter": 10000
+      }
+    },
+    {
+      "name": "pairwise_ridge",
+      "estimator": "PolynomialFeatures + Ridge",
+      "grid": {
+        "alpha": [
+          0.1,
+          1,
+          10,
+          100,
+          1000
+        ]
+      },
+      "fixed": {
+        "degree": 2,
+        "interaction_only": true,
+        "include_bias": false,
+        "retain_main_effects": true,
+        "solver": "lsqr",
+        "tol": 0.000001,
+        "max_iter": 10000
+      }
+    },
+    {
+      "name": "rbf_kernel_ridge",
+      "estimator": "sklearn.kernel_ridge.KernelRidge",
+      "grid": {
+        "alpha": [
+          0.1,
+          1,
+          10
+        ],
+        "gamma": [
+          0.01,
+          0.1,
+          1
+        ]
+      },
+      "fixed": {
+        "kernel": "rbf"
+      }
+    },
+    {
+      "name": "shallow_gradient_boosting",
+      "estimator": "sklearn.ensemble.GradientBoostingRegressor",
+      "grid": {
+        "max_depth": [
+          1,
+          2
+        ],
+        "n_estimators": [
+          50,
+          100
+        ],
+        "min_samples_leaf": [
+          10,
+          25
+        ]
+      },
+      "fixed": {
+        "loss": "squared_error",
+        "learning_rate": 0.05,
+        "subsample": 1,
+        "random_state": 20261021
+      }
+    },
+    {
+      "name": "small_mlp",
+      "estimator": "sklearn.neural_network.MLPRegressor",
+      "grid": {
+        "hidden_layer_sizes": [
+          [
+            8
+          ],
+          [
+            16
+          ]
+        ],
+        "alpha": [
+          0.1,
+          1,
+          10
+        ]
+      },
+      "fixed": {
+        "activation": "tanh",
+        "solver": "lbfgs",
+        "max_iter": 1000,
+        "max_fun": 20000,
+        "tol": 0.00001,
+        "early_stopping": false,
+        "random_states": [
+          20261021,
+          20261022,
+          20261023
+        ],
+        "seed_policy": "mean predictions across all three; never pick best seed"
+      }
+    }
+  ],
+  "selection": {
+    "primary_metric": "MAE in original Elo units",
+    "score_aggregation": "pooled held-out per-player absolute errors",
+    "candidate_order": "listed family order then Cartesian-product grid order",
+    "tie_tolerance_mae": 1e-12,
+    "tie_break": "first in candidate order",
+    "invalid_candidate": "any numerical exception or nonfinite prediction invalidates candidate in that inner search",
+    "convergence_warning": "retain finite fit, report warning; do not expand iteration budget",
+    "all_candidates_invalid": "stop"
+  },
+  "cv": {
+    "row_order": "lexicographic canonical identity string",
+    "outer": {
+      "method": "KFold",
+      "n_splits": 5,
+      "shuffle": true,
+      "random_state": 20261021
+    },
+    "inner": {
+      "method": "KFold",
+      "n_splits": 4,
+      "shuffle": true,
+      "random_state": 20261022
+    },
+    "final_search": "same inner CV on all development rows; no external selection"
+  },
+  "primary": {
+    "cohort": "2023_M_NEW_TARGET",
+    "contrast": "MAE(date_control)-MAE(raw_A)",
+    "direction": "positive favors raw_A",
+    "interval": {
+      "method": "paired person-level percentile bootstrap",
+      "n_resamples": 10000,
+      "confidence_level": 0.95,
+      "random_state": 20261023
+    },
+    "minimum_meaningful_gain_elo": null,
+    "primary_p_value": false,
+    "equivalence_claim_allowed": false
+  },
+  "secondary": {
+    "metrics": [
+      "RMSE",
+      "Spearman rho"
+    ],
+    "cohorts": [
+      "2023_M_FULL"
+    ],
+    "models": [
+      "training median",
+      "all five families selected on 2013"
+    ],
+    "formal_significance_claims": false
+  },
+  "learning_curve": {
+    "development_only": true,
+    "train_sizes": [
+      100,
+      200,
+      300,
+      400
+    ],
+    "nested_subsets": true,
+    "subset_permutation_seed": 20261024,
+    "per_fold_seed": "base seed plus zero-based outer fold index",
+    "retune_inside_each_subset": true,
+    "automatic_expansion": false
+  },
+  "expansion": {
+    "v1_development_n": 501,
+    "automatic": false,
+    "next_version_required": true,
+    "recheck_identity_overlap": true,
+    "reuse_as_new_blind_test": false
+  },
+  "execution": {
+    "current_workflow": "input audit only",
+    "threads": 1,
+    "training_not_implemented_in_this_draft": true
+  }
+}
+

@@ -1,0 +1,99 @@
+{
+  "status": "acquisition_complete_no_models_fitted",
+  "started_utc": "2026-10-22T00:23:12.537958+00:00",
+  "legacy_source_revision": "20f743ef8eda060d34121530323893dffc938aa6",
+  "executing_commit": "30dd22915372a80b1da3123ff97eba96cf7cd46f",
+  "collector_sha256": "000d13d4760d79e9ce71c44407d224230ca50cdf09185956d9550346c218a2b6",
+  "protocol_sha256": "2a0d1dd0557f8cfeb3892d32112e06c28abd58af532a49b0a92a368377a741c7",
+  "query_template_sha256": "f3c15cb81d0d42eb7d426ef1762773a8d79ca8ef9084fb19048d57b5db85880d",
+  "seed_inputs": [
+    {
+      "path": "chess_north_v2/candidate_audit_2013_M.csv",
+      "sha256": "b67dc3fe60661414d668f59a817ebfc203775a844a98c7b3eaaf2317660fc5b0"
+    },
+    {
+      "path": "chess_north_v3/primary_north_top_2013_M.csv",
+      "sha256": "b590aedce39b36f7e465612b22d41dd2cb0c8f61ac03323715632ed2dfa501a7"
+    },
+    {
+      "path": "chess_2023_cohorts_v1/candidate_audit_2023_M.csv",
+      "sha256": "b65a80793ffe5c0296bc30d9c431b2bf428e6435e45ba52b0d89e5eec917b4a0"
+    }
+  ],
+  "legacy_exclusion_inputs": [
+    {
+      "path": "chess_north_v3/primary_north_top_1994_M.csv",
+      "sha256": "a73808eb8a0ef8b7a76c6303bde75b967666ed0ff9589d1a8ab428d07cc93c49"
+    },
+    {
+      "path": "chess_north_v3/primary_north_top_1994_F.csv",
+      "sha256": "79ac638d590d8cdca2dd772f6ead1d7a52ff780abdede86b52bfb95fafaf0c7c"
+    },
+    {
+      "path": "chess_north_v3/primary_north_top_2013_M.csv",
+      "sha256": "b590aedce39b36f7e465612b22d41dd2cb0c8f61ac03323715632ed2dfa501a7"
+    },
+    {
+      "path": "chess_north_v3/primary_north_top_2013_F.csv",
+      "sha256": "17f02a7727a17555e8360e78f4b5c0a35fa41041529f51e5f41eae4988bbb9ef"
+    }
+  ],
+  "population_sources": {
+    "2013": {
+      "url": "https://ratings.fide.com/download/standard_jan13frl.zip",
+      "archive": "/home/runner/work/bazi-public-figure-study/bazi-public-figure-study/studies/chess_single_A_v2/cache/standard_jan13frl.zip",
+      "archive_sha256": "5f7e6e215d323da848857138054866e41f0e0f5e21160c6553a7fc1cfd74e78a",
+      "zip_member": "standard_jan13frl.txt",
+      "text_sha256": "74aa7a422dd3f664c507f6d0418d0aa8bcb5b18d36bd16d75d0946b73dd122af"
+    },
+    "2023": {
+      "url": "https://ratings.fide.com/download/standard_jan23frl.zip",
+      "archive": "/home/runner/work/bazi-public-figure-study/bazi-public-figure-study/studies/chess_single_A_v2/cache/standard_jan23frl.zip",
+      "archive_sha256": "a2123b8d3b8520456ef5ece135442b2491586ba10b69c95c720c7885a70664bb",
+      "zip_member": "standard_jan23frl.txt",
+      "text_sha256": "0cf04db45afe7c684f02ad68b71f8abee413284acaa24d0a0ed9bba18c4a2d7d"
+    }
+  },
+  "rules": {
+    "target": 1000,
+    "new_target": 500,
+    "cutoff_ties": "all_eligible",
+    "sex": "M",
+    "snapshots": [
+      "2013-01",
+      "2023-01"
+    ],
+    "active": true,
+    "new_dob_calendar": "Gregorian Q1985727; best-rank day precision; no uncertainty",
+    "legacy_metadata": "frozen evidence inherited, never requeried",
+    "new_excludes": "expanded2013 entire cohort plus all legacy1994/2013 primary IDs"
+  },
+  "outputs": [
+    {
+      "file": "candidate_audit_2013_M.csv",
+      "sha256": "a995cbd87f508fd28efbfede40e108140bab1cdf9f2403d187728486f49aa269"
+    },
+    {
+      "file": "candidate_audit_2023_M.csv",
+      "sha256": "cdf23112e2d414434bb775aee9c3c4f2e47c902c97ca78a9356787b59790df6a"
+    },
+    {
+      "file": "cohort_2013_M.csv",
+      "sha256": "eaf7528e72a9768609e2d973d7695df1e4d73f53a0c9647e032e5821bb12f5d2"
+    },
+    {
+      "file": "cohort_2023_M_FULL.csv",
+      "sha256": "64707cc5c38d804b00e8146218c5946075ddc4c288af13ebcbd4ed9d0c00a2e8"
+    },
+    {
+      "file": "cohort_2023_M_NEW_TARGET.csv",
+      "sha256": "2d6215734b4673785d4834b5e89745ea29ef727c0bec0bf7553918d6bc6fb8eb"
+    },
+    {
+      "file": "excluded_legacy_ids.csv",
+      "sha256": "aa9e2da54d611bf3169b1a80c856929350bddfbd2f422e7ea2929cdb6626b4f9"
+    }
+  ],
+  "wikidata_cache_sha256": "eda121409fbf988934cad6dd7c78bd5504e3aaa5ac44500d65a25cbf44381adf",
+  "completed_utc": "2026-10-22T00:23:21.949739+00:00"
+}

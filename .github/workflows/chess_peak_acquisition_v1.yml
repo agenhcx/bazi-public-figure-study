@@ -1,0 +1,29 @@
+name: Chess peak - official collection moved from cloud
+
+on:
+  push:
+    branches: [codex/chess-single-a-plan-v1]
+    paths: ['.github/workflows/chess_peak_acquisition_v1.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: chess-peak-acquisition-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  explain_network_pause:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Preserve source collection status
+        run: |
+          cat >> "$GITHUB_STEP_SUMMARY" <<'STATUS'
+          Official FIDE requests from GitHub runners timed out in a bounded independent probe (run 40052780928).
+          The complete 1500-person first-pass cache is retained in run 40043960400.
+          Official-history completion is running in the assistant execution environment where the endpoint responds.
+          This job cancels the unreachable cloud route. It performs no association analysis or predictive fitting.
+          Completed verified data will be committed before the separate association workflow starts.
+          STATUS

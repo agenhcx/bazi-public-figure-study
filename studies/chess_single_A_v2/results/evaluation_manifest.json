@@ -1,0 +1,106 @@
+{
+  "all_prespecified_tasks_complete": true,
+  "analysis_lock_sha256": "4ee147676368294e93630d9e801333f5498059a7ae615d8abc532aee40c7277c",
+  "completed_at_utc": "2026-10-22T01:01:57.679519+00:00",
+  "config_sha256": "d78010beb87ac8d8c274c56103c0b5f3c9bc8d3053ba421d38694dc9491c374f",
+  "data_manifest_sha256": "77184cde285f8499b06863703e570930f4e3ea4f23a15d2f33048e938a129802",
+  "evaluation_script_sha256": "26a8bd0b129679bdf684b6dde928f22ac2168b5f6c8ac70785d4f1afbca20d8b",
+  "execution_commit": "83e2e82f57b37cf5ed5308ea6218ba317b032180",
+  "fitted_models_seal_sha256": "b7b31cab6b7bd4099570638f3fe443a41a17cec10efeedea8d519604c0420656",
+  "metrics_rows": 234,
+  "model_or_grid_changes_after_scoring": false,
+  "outputs": [
+    {
+      "path": "REPORT.md",
+      "sha256": "7aa84533718499f7dad097d8d3d29b77f7064ab4b1f3b9bf43a46370a528b6e7"
+    },
+    {
+      "path": "cohort_summary.json",
+      "sha256": "6024b8e794a9189e5607021b8fe4ea034557520b48402c0af2162560a210c439"
+    },
+    {
+      "path": "development_learning_curve.png",
+      "sha256": "c5bd6b833e49261f758e00a9fa15051593e42acf8c5aa7d16284c8b3abaeaeac"
+    },
+    {
+      "path": "development_learning_curve.svg",
+      "sha256": "102a01d5ff1f61f7e30c7c73a277c360f67e14caae9086e0c7183d6b05ce3d97"
+    },
+    {
+      "path": "development_metrics.csv",
+      "sha256": "6f15f7d06ba48c1ffca0b13bfbcb981a36ac4208a1f760a6329ca8f20f8b8a43"
+    },
+    {
+      "path": "development_predictions.csv",
+      "sha256": "29bba1e6cbc98f239a4016ac7030391f288d07b88ee78ec46649e2cde70e7dd6"
+    },
+    {
+      "path": "external_metrics.csv",
+      "sha256": "2fc5772cdc99828dbe6bfaefbe954f4377e2ec5e96772905dc0ee39936e5c9a1"
+    },
+    {
+      "path": "external_predictions.csv.gz",
+      "sha256": "048e9febc6b0da2abd1c2e5c63b13b0423e2b3ccd3ed9fa43da3f0087682ad62"
+    },
+    {
+      "path": "primary_family_mae.png",
+      "sha256": "f7b2e6b4666a7275f2241df2c059c24904bfc730c3b01c6ade80d2bf123c67e4"
+    },
+    {
+      "path": "primary_family_mae.svg",
+      "sha256": "5d9ff5a4091de3b17d00e79052d302de07afd3ee29ff791013990c6995bb633c"
+    },
+    {
+      "path": "primary_paired_losses.csv",
+      "sha256": "2cc1dd4697ce580dcff11b6b53341a16239c9240a9bef379d7707a7981bdd98e"
+    },
+    {
+      "path": "primary_result.json",
+      "sha256": "65a019247f884692403865a257feb1fc3d92d74028e3cca159204912721e5a4b"
+    },
+    {
+      "path": "primary_training_size_mae.png",
+      "sha256": "b3245e2583bd3ffa39793d829448fa8e799d15c5b11bf7cb43093c4284a64ee7"
+    },
+    {
+      "path": "primary_training_size_mae.svg",
+      "sha256": "271b94ce8a1079c11cc592795151c673dbb2a311e625a3c58b2cbe1d579200a1"
+    },
+    {
+      "path": "size_comparisons.csv",
+      "sha256": "2912ee77d950b2f2c03632b4ccc71e03622b250a287896300e624d26b3282b3a"
+    }
+  ],
+  "prediction_rows": 156156,
+  "primary": {
+    "ci_high": -0.6380466748834519,
+    "ci_low": -3.8569841342422313,
+    "cohort": "primary_new",
+    "confidence_level": 0.95,
+    "contrast": "MAE(date_control) - MAE(raw_A)",
+    "date_control_metrics": {
+      "mae": 104.93560678422214,
+      "n": 500,
+      "rmse": 121.36027741584877,
+      "spearman": 0.19022865407562536
+    },
+    "equivalence_claim_allowed": false,
+    "estimate": -2.2386602745901993,
+    "interval_scope": "conditions on fixed fitted models; not all development/training-subset uncertainty",
+    "method": "paired person-level percentile bootstrap; fixed fitted models",
+    "minimum_meaningful_gain_elo": null,
+    "n": 500,
+    "n_resamples": 10000,
+    "p_value": null,
+    "positive_favors": "raw_A",
+    "random_state": 20261023,
+    "raw_metrics": {
+      "mae": 107.17426705881235,
+      "n": 500,
+      "rmse": 124.65441973407108,
+      "spearman": -0.034038337724031295
+    },
+    "training_subset": "random_1000"
+  },
+  "status": "complete_fixed_external_evaluation"
+}

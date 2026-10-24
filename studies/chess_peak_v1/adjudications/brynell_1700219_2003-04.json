@@ -1,0 +1,65 @@
+{
+  "protocol_id": "chess-peak-original-list-point-adjudication-v1",
+  "canonical_id": "1700219",
+  "name": "Brynell, Stellan",
+  "period": "2003-04",
+  "selected_rating": 2538,
+  "rejected_ratings": [
+    2534
+  ],
+  "decision": "original_official_rating_list_has_priority_over_derived_sources",
+  "evidence": {
+    "month": "2003-04",
+    "standard_elo": 2538,
+    "source_point": true,
+    "source": "fide_official_list_archive",
+    "source_url": "https://ratings.fide.com/download/apr03frl.zip",
+    "archive_sha256": "02444b72e4abd7a555856493f5b7f1f1f26d04a64a91fd5218a5681b76ea07c1",
+    "archive_member": "APR03FRL.TXT",
+    "archive_file": "studies/chess_peak_v1/data/source_archives/apr03frl.zip",
+    "source_line_number": 5387,
+    "source_line": " 1700219  Brynell, Stellan                  g   SWE  2538    9  28.09.62       ",
+    "source_header": "   CODE   NAME                          TITLE COUNTRY APR03 GAMES BIRTHDAY FLAG",
+    "source_header_period_mismatch": false,
+    "source_country": "SWE",
+    "source_birth_date": "1962-09-28",
+    "birth_year_century_evidence": "The same exact FIDE ID/full name has the full four-digit-year birthday in the independent original April2001 corroborating row. The April2003 short-year birthday matches its day/month/year suffix; no frozen birth feature changes.",
+    "publication_period_evidence": "Original FIDE download URL, ZIP member APR03FRL.TXT and header APR03 identify the April2003 published list.",
+    "identity_anchor": "exact original FIDE ID, full name, federation and birthday match the frozen person, with century independently corroborated",
+    "raw_source_birth_date": "28.09.62",
+    "source_birth_precision": "two_digit_year",
+    "century_rule": "two_digit_date_matches_frozen_DOB_and_independent_four_digit_original_source"
+  },
+  "corroborating_points": [
+    {
+      "month": "2001-04",
+      "standard_elo": 2489,
+      "source_point": true,
+      "source": "fide_official_list_archive",
+      "source_url": "https://ratings.fide.com/download/apr01frl.zip",
+      "archive_sha256": "1d59389d9e0cf01803291b5377c72153167583d3168e576d016f4d58854de7a4",
+      "archive_member": "APR01FRL.TXT",
+      "archive_file": "studies/chess_peak_v1/data/source_archives/apr01frl.zip",
+      "source_line_number": 4442,
+      "source_line": "    1700219 Brynell, Stellan                 m     SWE      2489    28 28.09.1962     ",
+      "source_header": "  ID_NUMBER NAME                             TITLE COUNTRY APR01 GAMES BIRTHDAY   FLAG",
+      "source_header_period_mismatch": false,
+      "source_country": "SWE",
+      "source_birth_date": "1962-09-28",
+      "publication_period_evidence": "Original FIDE URL, ZIP member and header all identify April2001.",
+      "identity_anchor": "exact original FIDE ID, full name, federation and four-digit-year birthday match frozen person",
+      "raw_source_birth_date": "28.09.1962",
+      "source_birth_precision": "four_digit_year"
+    }
+  ],
+  "method": "Resolve a disputed published period by independently retrieved original FIDE list bytes, exact player identity and exact publication period. Original published-list evidence has priority over a conflicting history-chart or transcription value; the decision does not depend on whether the selected score is larger or smaller.",
+  "original_records_preserved": true,
+  "preservation_note": "Preserve all original chart/transcription records, raw bytes, SHA256 and URLs in conflict provenance. This adjudication changes only the source-authority decision for April2003, without deleting a person, changing frozen birth features or rewriting earlier studies.",
+  "identity_evidence": {
+    "canonical_id": "1700219",
+    "source_name": "Brynell, Stellan",
+    "source_federation": "SWE",
+    "frozen_dob": "1962-09-28",
+    "birthdate_witness": "The original April2001 row independently gives the same full four-digit birthdate; the original April2003 row gives its exact two-digit-year form."
+  }
+}

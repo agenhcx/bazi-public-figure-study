@@ -1,0 +1,175 @@
+name: Chess single A - training sufficiency diagnostics v1
+
+on:
+  push:
+    branches: [codex/chess-single-a-plan-v1]
+    paths:
+      - 'studies/chess_single_A_v2/diagnostics_v1/**'
+      - '.github/workflows/chess_single_a_diagnostics_v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: chess-single-a-diagnostics-v1-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  OMP_NUM_THREADS: '1'
+  OPENBLAS_NUM_THREADS: '1'
+  MKL_NUM_THREADS: '1'
+  NUMEXPR_NUM_THREADS: '1'
+  PYTHONHASHSEED: '0'
+  MPLBACKEND: Agg
+
+jobs:
+  verify_lock:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.11.17'
+          cache: pip
+          cache-dependency-path: studies/chess_single_A_v2/requirements-model.txt
+      - run: python -m pip install -r studies/chess_single_A_v2/requirements-model.txt
+      - name: Run synthetic diagnostic checks
+        run: python -m unittest discover -s studies/chess_single_A_v2/diagnostics_v1 -p 'test_*.py' -v
+      - name: Verify the unchanged original analysis and new diagnostic lock
+        run: python studies/chess_single_A_v2/diagnostics_v1/diagnostic_lock.py verify --repo-root .
+      - name: Create immutable diagnostic tag before new fitting
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          diagnostic_tag=chess-single-a-diagnostics-lock-v1
+          if git ls-remote --exit-code --tags origin "refs/tags/$diagnostic_tag" >/dev/null; then
+            git fetch origin "refs/tags/$diagnostic_tag:refs/tags/$diagnostic_tag"
+            diagnostic_commit=$(git rev-parse "$diagnostic_tag^{commit}")
+            test "$diagnostic_commit" = "$GITHUB_SHA"
+          else
+            git tag -a "$diagnostic_tag" "$GITHUB_SHA" -m 'Fix post-result training diagnostics; original A1 and external outcomes remain unchanged'
+            git push origin "$diagnostic_tag"
+          fi
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: diagnostics-lock
+          path: |
+            studies/chess_single_A_v2/diagnostics_v1/PLAN.md
+            studies/chess_single_A_v2/diagnostics_v1/diagnostic_lock.json
+          if-no-files-found: error
+          retention-days: 90
+
+  diagnose:
+    needs: verify_lock
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        task: [audit, mlp-0, mlp-1, mlp-2, mlp-3, mlp-4, control-null, control-additive, control-pairwise, control-third_order]
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.11.17'
+          cache: pip
+          cache-dependency-path: studies/chess_single_A_v2/requirements-model.txt
+      - run: python -m pip install -r studies/chess_single_A_v2/requirements-model.txt
+      - name: Verify source locks and recover only sealed A1 models
+        run: python studies/chess_single_A_v2/diagnostics_v1/diagnostic_lock.py extract --repo-root . --output-dir diagnostic_inputs
+      - name: Run fixed development-only diagnostic
+        env:
+          DIAGNOSTIC_TASK: ${{ matrix.task }}
+        run: |
+          case "$DIAGNOSTIC_TASK" in
+            audit)
+              python -u studies/chess_single_A_v2/diagnostics_v1/audit_existing.py --repo-root . --runs-dir diagnostic_inputs/runs --output-dir "diagnostic_outputs/$DIAGNOSTIC_TASK"
+              ;;
+            mlp-*)
+              python -u studies/chess_single_A_v2/diagnostics_v1/mlp_budget.py --repo-root . --runs-dir diagnostic_inputs/runs --fold "${DIAGNOSTIC_TASK#mlp-}" --output-dir "diagnostic_outputs/$DIAGNOSTIC_TASK"
+              ;;
+            control-*)
+              python -u studies/chess_single_A_v2/diagnostics_v1/synthetic_controls.py --repo-root . --signal "${DIAGNOSTIC_TASK#control-}" --output-dir "diagnostic_outputs/$DIAGNOSTIC_TASK"
+              ;;
+            *) exit 2 ;;
+          esac
+      - name: Preserve complete diagnostics
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: diag-${{ matrix.task }}
+          path: diagnostic_outputs/${{ matrix.task }}/
+          if-no-files-found: error
+          retention-days: 90
+      - name: Preserve failure records separately for identical-code retries
+        if: failure()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: failed-diagnostic-${{ matrix.task }}-${{ github.run_attempt }}
+          path: diagnostic_outputs/${{ matrix.task }}/
+          if-no-files-found: warn
+          retention-days: 90
+
+  summarize:
+    needs: diagnose
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.11.17'
+          cache: pip
+          cache-dependency-path: studies/chess_single_A_v2/requirements-model.txt
+      - run: python -m pip install -r studies/chess_single_A_v2/requirements-model.txt
+      - name: Verify diagnostic source lock
+        run: python studies/chess_single_A_v2/diagnostics_v1/diagnostic_lock.py verify --repo-root .
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          pattern: diag-*
+          path: collected_diagnostics
+          merge-multiple: false
+      - name: Summarize every fixed diagnostic together
+        run: python studies/chess_single_A_v2/diagnostics_v1/summarize.py --repo-root . --inputs-dir collected_diagnostics --output-dir studies/chess_single_A_v2/diagnostics_v1/results
+      - name: Preserve complete diagnostic checkpoints
+        run: |
+          python - <<'PY'
+          import hashlib, json, pathlib, zipfile
+          source = pathlib.Path('collected_diagnostics')
+          output = pathlib.Path('studies/chess_single_A_v2/diagnostics_v1/results')
+          bundle = output / 'diagnostic_checkpoint_bundle.zip'
+          with zipfile.ZipFile(bundle, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=6) as archive:
+              for path in sorted(source.rglob('*')):
+                  if path.is_file():
+                      archive.write(path, path.relative_to(source).as_posix())
+          if bundle.stat().st_size >= 50 * 1024 * 1024:
+              raise RuntimeError('Diagnostic checkpoint exceeds the repository size budget')
+          info = {'file': bundle.name, 'bytes': bundle.stat().st_size, 'sha256': hashlib.sha256(bundle.read_bytes()).hexdigest()}
+          (output / 'diagnostic_checkpoint_bundle.json').write_text(json.dumps(info, indent=2) + '\n')
+          print(json.dumps(info))
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: chess-single-a-diagnostics-v1-results-${{ github.run_id }}
+          path: studies/chess_single_A_v2/diagnostics_v1/results/
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Commit diagnostic report and checkpoints without altering A1
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f -- studies/chess_single_A_v2/diagnostics_v1/results/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Report bounded training-sufficiency diagnostics for chess A1 [skip ci]'
+            git push origin "HEAD:$GITHUB_REF_NAME"
+          fi
+      - run: cat studies/chess_single_A_v2/diagnostics_v1/results/REPORT.md >> "$GITHUB_STEP_SUMMARY"

@@ -1,0 +1,56 @@
+{
+  "cohorts": {
+    "development": {
+      "maximum_elo": 2861.0,
+      "minimum_elo": 2444.0,
+      "n": 1000
+    },
+    "legacy_full": {
+      "maximum_elo": 2859.0,
+      "minimum_elo": 2513.0,
+      "n": 501
+    },
+    "primary_new": {
+      "maximum_elo": 2785.0,
+      "minimum_elo": 2334.0,
+      "n": 500
+    },
+    "supplementary_full": {
+      "maximum_elo": 2859.0,
+      "minimum_elo": 2412.0,
+      "n": 1001
+    }
+  },
+  "overlaps": [
+    {
+      "first": "development",
+      "second": "primary_new",
+      "shared_people": 0
+    },
+    {
+      "first": "development",
+      "second": "supplementary_full",
+      "shared_people": 673
+    },
+    {
+      "first": "development",
+      "second": "legacy_full",
+      "shared_people": 357
+    },
+    {
+      "first": "primary_new",
+      "second": "supplementary_full",
+      "shared_people": 308
+    },
+    {
+      "first": "primary_new",
+      "second": "legacy_full",
+      "shared_people": 139
+    },
+    {
+      "first": "supplementary_full",
+      "second": "legacy_full",
+      "shared_people": 501
+    }
+  ]
+}
