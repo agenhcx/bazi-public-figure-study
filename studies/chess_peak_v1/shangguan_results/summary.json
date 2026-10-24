@@ -1,0 +1,223 @@
+{
+  "protocol_id": "chess-peak-shangguan-description-v1",
+  "status": "complete",
+  "exploratory": true,
+  "new_blind_preregistration_claimed": false,
+  "predictive_model_fitting_performed": false,
+  "age_reference_date": "2024-01-01",
+  "provenance": {
+    "data_manifest_sha256": "dd6340368dc0226264fe7d2875aaa7f2a43c4bf9becb8fca62fef19aff3de782",
+    "script_sha256": "8268ca920c428dc97011123a75ee788f05f92e21e0cdfc25c978f509869dace4",
+    "plan_sha256": "2667de412e31504802857a43fff343666fed1281a11dd9695d27cb72543b62c5"
+  },
+  "results": [
+    {
+      "role": "development",
+      "feature": "month_main_shangguan",
+      "n": 1000,
+      "groups": [
+        {
+          "level": 0,
+          "n": 883,
+          "mean_peak_elo": 2597.312570781427,
+          "median_peak_elo": 2586.0
+        },
+        {
+          "level": 1,
+          "n": 117,
+          "mean_peak_elo": 2597.3076923076924,
+          "median_peak_elo": 2582.0
+        }
+      ],
+      "pearson": {
+        "status": "available",
+        "r": -2.1345410769527506e-05,
+        "ci95_low": -0.06201434583236092,
+        "ci95_high": 0.06197181907772284
+      },
+      "spearman_r": null,
+      "raw": {
+        "status": "available",
+        "elo_per_unit": -0.004878473734560236,
+        "ci95_low": -14.727182875898983,
+        "ci95_high": 14.717425928429861,
+        "hc3_standard_error": 7.502408118001861,
+        "partial_r": null,
+        "n": 1000,
+        "residual_df": 998
+      },
+      "age_adjusted": {
+        "status": "available",
+        "elo_per_unit": -2.6149999565157644,
+        "ci95_low": -17.5339595827397,
+        "ci95_high": 12.30395966970817,
+        "hc3_standard_error": 7.602604039013646,
+        "partial_r": -0.01165076835763683,
+        "n": 1000,
+        "residual_df": 996
+      }
+    },
+    {
+      "role": "development",
+      "feature": "five_position_shangguan_count",
+      "n": 1000,
+      "groups": [
+        {
+          "level": 0,
+          "n": 579,
+          "mean_peak_elo": 2597.2746113989638,
+          "median_peak_elo": 2588.0
+        },
+        {
+          "level": 1,
+          "n": 328,
+          "mean_peak_elo": 2598.5853658536585,
+          "median_peak_elo": 2582.0
+        },
+        {
+          "level": 2,
+          "n": 81,
+          "mean_peak_elo": 2592.617283950617,
+          "median_peak_elo": 2573.0
+        },
+        {
+          "level": 3,
+          "n": 12,
+          "mean_peak_elo": 2596.0,
+          "median_peak_elo": 2600.5
+        }
+      ],
+      "pearson": {
+        "status": "available",
+        "r": -0.007638663732326546,
+        "ci95_low": -0.06959878810535836,
+        "ci95_high": 0.05438017017105837
+      },
+      "spearman_r": -0.015288734458040907,
+      "raw": {
+        "status": "available",
+        "elo_per_unit": -0.8071438620885001,
+        "ci95_low": -7.161402128869491,
+        "ci95_high": 5.547114404692491,
+        "hc3_standard_error": 3.238096258733078,
+        "partial_r": null,
+        "n": 1000,
+        "residual_df": 998
+      },
+      "age_adjusted": {
+        "status": "available",
+        "elo_per_unit": -1.8363105617666478,
+        "ci95_low": -8.082958454255804,
+        "ci95_high": 4.410337330722509,
+        "hc3_standard_error": 3.183250822279643,
+        "partial_r": -0.017704196302880292,
+        "n": 1000,
+        "residual_df": 996
+      }
+    },
+    {
+      "role": "primary_new",
+      "feature": "month_main_shangguan",
+      "n": 500,
+      "groups": [
+        {
+          "level": 0,
+          "n": 449,
+          "mean_peak_elo": 2512.369710467706,
+          "median_peak_elo": 2509.0
+        },
+        {
+          "level": 1,
+          "n": 51,
+          "mean_peak_elo": 2516.725490196078,
+          "median_peak_elo": 2523.0
+        }
+      ],
+      "pearson": {
+        "status": "available",
+        "r": 0.01602007094477583,
+        "ci95_low": -0.07177134175851121,
+        "ci95_high": 0.10356516926303333
+      },
+      "spearman_r": null,
+      "raw": {
+        "status": "available",
+        "elo_per_unit": 4.355779728372403,
+        "ci95_low": -20.554663831415912,
+        "ci95_high": 29.26622328816072,
+        "hc3_standard_error": 12.678754672117712,
+        "partial_r": null,
+        "n": 500,
+        "residual_df": 498
+      },
+      "age_adjusted": {
+        "status": "available",
+        "elo_per_unit": -8.251632060764983,
+        "ci95_low": -31.77566460532953,
+        "ci95_high": 15.272400483799565,
+        "hc3_standard_error": 11.972990644837843,
+        "partial_r": -0.033163289584286895,
+        "n": 500,
+        "residual_df": 496
+      }
+    },
+    {
+      "role": "primary_new",
+      "feature": "five_position_shangguan_count",
+      "n": 500,
+      "groups": [
+        {
+          "level": 0,
+          "n": 303,
+          "mean_peak_elo": 2512.089108910891,
+          "median_peak_elo": 2508.0
+        },
+        {
+          "level": 1,
+          "n": 161,
+          "mean_peak_elo": 2512.9378881987577,
+          "median_peak_elo": 2510.0
+        },
+        {
+          "level": 2,
+          "n": 31,
+          "mean_peak_elo": 2516.2258064516127,
+          "median_peak_elo": 2513.0
+        },
+        {
+          "level": 3,
+          "n": 5,
+          "mean_peak_elo": 2531.6,
+          "median_peak_elo": 2555.0
+        }
+      ],
+      "pearson": {
+        "status": "available",
+        "r": 0.018948637081027543,
+        "ci95_low": -0.06885636347659813,
+        "ci95_high": 0.10646232510412687
+      },
+      "spearman_r": 0.0346387070787965,
+      "raw": {
+        "status": "available",
+        "elo_per_unit": 2.3684336815678773,
+        "ci95_low": -8.464057949210808,
+        "ci95_high": 13.200925312346563,
+        "hc3_standard_error": 5.5134507558956685,
+        "partial_r": null,
+        "n": 500,
+        "residual_df": 498
+      },
+      "age_adjusted": {
+        "status": "available",
+        "elo_per_unit": -0.091724433063584,
+        "ci95_low": -10.566803631973972,
+        "ci95_high": 10.383354765846804,
+        "hc3_standard_error": 5.331484940555764,
+        "partial_r": -0.0008062548768474995,
+        "n": 500,
+        "residual_df": 496
+      }
+    }
+  ]
+}
