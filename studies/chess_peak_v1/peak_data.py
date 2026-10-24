@@ -16,6 +16,7 @@ from pathlib import Path
 import re
 import sys
 import unicodedata
+import zipfile
 import pandas as pd
 
 STUDY = Path("studies/chess_peak_v1")
@@ -32,6 +33,7 @@ ORIGINAL_FIELDS = ("canonical_id", "snapshot", "exact_dob_frozen", "rating", "ye
 EXTRA_FIELDS = ("label_end_period", "feature_reference_snapshot", "peak_periods", "peak_sources",
     "peak_periods_complete", "history_source_provider", "derived_snapshot_record_n",
     "ambiguous_period_n", "ambiguous_periods", "period_conflict_resolution_policy",
+    "adjudicated_period_n", "adjudicated_periods",
     "history_first_period", "history_last_period", "history_n", "fide_history_n",
     "official_chart_history_n", "lichess_history_n", "official_list_history_n", "olimpbase_history_n", "pre2003_history_n", "history_coverage")
 OUTPUT_FIELDS = ("canonical_id", "snapshot", "exact_dob_frozen", "snapshot_rating", "rating") + ORIGINAL_FIELDS[4:] + EXTRA_FIELDS
@@ -42,6 +44,7 @@ CONFLICT_POLICY = "retain_all_candidates_only_when_upper_bound_not_above_unambig
 COVERAGE_RULE = "lichess-frozen-snapshot-and-older-window-v1"
 COVERAGE_REASONS = {"lichess_missing_frozen_snapshot", "lichess_late_history_for_older_person"}
 SNAPSHOT_DISAGREEMENT_RULE = "direct-official-frozen-snapshot-disagreement-v1"
+POINT_ADJUDICATION_POLICY = "original_official_rating_list_has_priority_over_derived_sources"
 
 class DatasetBuildError(ValueError):
     """The complete fixed cohort cannot yet be assigned audited labels."""
@@ -266,6 +269,106 @@ def _verify_snapshot_disagreement(base, file_hashes, person, entry, normalized):
 
 def _official_archive_url(value):
     return isinstance(value, str) and re.fullmatch(r"https://ratings\.fide\.com/download/[A-Za-z0-9_.-]+\.zip", value, re.IGNORECASE) is not None
+
+def _named_archive_period(value, suffix):
+    match = re.fullmatch(r"(?:standard_)?([a-z]{3})([0-9]{2}|[0-9]{4})frl\." + suffix, value.lower())
+    if match is None:
+        raise ValueError("Original-list evidence filename does not identify its published period")
+    return datetime.strptime("".join(match.groups()), "%b%y" if len(match[2]) == 2 else "%b%Y").strftime("%Y-%m")
+
+def _verify_original_list_point(root, person, evidence):
+    """Bind a point to exact original ZIP bytes and its fixed-width fields."""
+    if (not isinstance(evidence, dict) or evidence.get("source") != "fide_official_list_archive"
+            or evidence.get("source_point") is not True or not _official_archive_url(evidence.get("source_url"))
+            or evidence.get("source_header_period_mismatch") is not False
+            or not evidence.get("publication_period_evidence") or not evidence.get("identity_anchor")):
+        raise ValueError("Point adjudication lacks original official-list evidence")
+    month, elo = period(evidence["month"]), rating(evidence["standard_elo"])
+    if month > CUTOFF or month < person["exact_dob_frozen"][:7]:
+        raise ValueError("Original-list evidence point has invalid chronology")
+    archive_name = evidence.get("archive_file")
+    if not isinstance(archive_name, str) or not archive_name.startswith((DATA / "source_archives").as_posix() + "/"):
+        raise ValueError("Original-list ZIP is outside the recorded source archive directory")
+    archive_path = safe_file(root, archive_name)
+    if sha256(archive_path) != evidence.get("archive_sha256"):
+        raise ValueError("Original-list archive fingerprint differs")
+    member = evidence.get("archive_member")
+    if (not isinstance(member, str) or _named_archive_period(Path(member).name, "txt") != month
+            or _named_archive_period(evidence["source_url"].rsplit("/", 1)[-1], "zip") != month):
+        raise ValueError("Original-list ZIP URL/member period differs")
+    with zipfile.ZipFile(archive_path) as archive:
+        if archive.namelist().count(member) != 1:
+            raise ValueError("Original-list archive member is absent or duplicated")
+        lines = archive.read(member).decode("latin-1").splitlines()
+    line_number = evidence.get("source_line_number")
+    if (type(line_number) is not int or not 1 < line_number <= len(lines)
+            or lines[0] != evidence.get("source_header")
+            or lines[line_number - 1] != evidence.get("source_line")):
+        raise ValueError("Original-list header or exact source line differs")
+    columns = list(re.finditer(r"\S+", lines[0]))
+    names = [item.group() for item in columns]
+    month_columns = [item for item in names if re.fullmatch(r"[A-Za-z]{3}[0-9]{2,4}", item)]
+    if (len(names) != len(set(names)) or not {"ID_NUMBER", "NAME", "COUNTRY"} <= set(names)
+            or len(month_columns) != 1):
+        raise ValueError("Original-list header lacks unambiguous identity/rating columns")
+    rating_column = month_columns[0]
+    header_month = datetime.strptime(rating_column, "%b%y" if len(rating_column) == 5 else "%b%Y").strftime("%Y-%m")
+    values = {item.group(): lines[line_number - 1][item.start():columns[i + 1].start() if i + 1 < len(columns) else None].strip()
+        for i, item in enumerate(columns)}
+    if (header_month != month or canonical_id(values["ID_NUMBER"]) != person["canonical_id"]
+            or _source_name(values["NAME"]) != _source_name(person["name"])
+            or rating(values[rating_column]) != elo or values["COUNTRY"] != evidence.get("source_country")):
+        raise ValueError("Original-list parsed identity, month or rating differs")
+    birthday = values.get("BIRTHDAY", "")
+    if birthday:
+        parsed_birth = datetime.strptime(birthday, "%d.%m.%Y").date().isoformat()
+        if parsed_birth != person["exact_dob_frozen"] or evidence.get("source_birth_date") != parsed_birth:
+            raise ValueError("Original-list birth witness differs from frozen identity")
+    elif evidence.get("source_birth_date") is not None:
+        raise ValueError("Original-list evidence invents an absent birthday field")
+    return {**evidence, "canonical_id": person["canonical_id"], "period": month, "rating": elo,
+        "source_archive_sha256": evidence["archive_sha256"], "source_archive_file": archive_name}
+
+def load_point_adjudications(repo_root, people):
+    """Load only source-priority decisions whose original list is reverified."""
+    root, by_person, provenance = Path(repo_root).resolve(), {}, []
+    for path in sorted((root / STUDY / "adjudications").glob("*.json")):
+        document = read_json(path)
+        cid = canonical_id(document.get("canonical_id"))
+        if cid not in people or document.get("name") != people[cid]["name"]:
+            raise ValueError("Point adjudication changes the frozen person identity")
+        person, month = people[cid], period(document.get("period"))
+        selected, rejected = rating(document.get("selected_rating")), document.get("rejected_ratings")
+        if (document.get("protocol_id") != "chess-peak-original-list-point-adjudication-v1"
+                or document.get("decision") != POINT_ADJUDICATION_POLICY
+                or document.get("original_records_preserved") is not True or not document.get("method")
+                or not isinstance(rejected, list) or not rejected or any(type(value) is not int for value in rejected)
+                or rejected != sorted(set(rating(value) for value in rejected)) or selected in rejected
+                or month > CUTOFF or month == person["snapshot"]):
+            raise ValueError("Invalid or unsupported original-list point adjudication")
+        evidence = _verify_original_list_point(root, person, document.get("evidence"))
+        if evidence["period"] != month or evidence["rating"] != selected:
+            raise ValueError("Point adjudication target differs from original evidence")
+        corroborating = document.get("corroborating_points")
+        if not isinstance(corroborating, list):
+            raise ValueError("Point adjudication lacks its corroborating evidence inventory")
+        corroboration = [_verify_original_list_point(root, person, item) for item in corroborating]
+        points = [evidence, *corroboration]
+        if len({point["period"] for point in points}) != len(points):
+            raise ValueError("Point adjudication repeats a published period")
+        identity = document.get("identity_evidence", {})
+        if (identity.get("canonical_id") != cid or identity.get("source_name") != person["name"]
+                or identity.get("frozen_dob") != person["exact_dob_frozen"]
+                or not any(point.get("source_birth_date") == person["exact_dob_frozen"] for point in points)):
+            raise ValueError("Point adjudication lacks independent frozen-birthday corroboration")
+        record = {"canonical_id": cid, "period": month, "selected_rating": selected, "rejected_ratings": rejected,
+            "source_file": path.relative_to(root).as_posix(), "source_file_sha256": sha256(path),
+            "decision": POINT_ADJUDICATION_POLICY, "document": document, "verified_points": points}
+        if month in by_person.setdefault(cid, {}):
+            raise ValueError("Duplicate original-list adjudication for one person/month")
+        by_person[cid][month] = record
+        provenance.append(record)
+    return by_person, provenance
 
 def _verify_list_supplement(base, file_hashes, person, entry, normalized, raw, repo_root):
     """Verify an availability-only archive supplement and its transcribed rows."""
@@ -523,7 +626,7 @@ def read_acquisition(acquisition_dir, people, dataset_audit=None, repo_root=None
         raise DatasetBuildError("Rating-history source coverage or frozen snapshot audit remains unresolved")
     return entries, provenance
 
-def combine_person(person, official_records, historical_records, snapshot_disagreement=None):
+def combine_person(person, official_records, historical_records, snapshot_disagreement=None, adjudications=None):
     """Identify peak values without choosing between conflicting source rows.
 
     A conflicting month may remain unresolved only when every candidate is at
@@ -553,13 +656,43 @@ def combine_person(person, official_records, historical_records, snapshot_disagr
         entry["candidate_ratings"].add(elo)
         entry["sources"].add(source)
         entry["source_records"].append(dict(record))
+    decisions = adjudications or {}
+    for month, adjudication in decisions.items():
+        source_month = by_month.get(month)
+        if (month == person["snapshot"] or source_month is None or adjudication["canonical_id"] != cid
+                or adjudication["period"] != month or adjudication["decision"] != POINT_ADJUDICATION_POLICY
+                or len(source_month["candidate_ratings"]) < 2
+                or adjudication["selected_rating"] not in source_month["candidate_ratings"]
+                or set(adjudication["rejected_ratings"]) != source_month["candidate_ratings"] - {adjudication["selected_rating"]}
+                or any(rec["source"] == "fide_official_list_archive" and rec["rating"] != adjudication["selected_rating"]
+                    for rec in source_month["source_records"])):
+            raise ValueError("Original-list adjudication does not exactly resolve known derived-source candidates")
+    # Check the original candidate inventory before adding any corroboration,
+    # then check every decision again against all added original-list points.
+    for adjudication in decisions.values():
+        for point in adjudication["verified_points"]:
+            entry = by_month.setdefault(point["period"], {"canonical_id": cid, "period": point["period"], "rating": point["rating"],
+                "sources": set(), "source_records": [], "candidate_ratings": set()})
+            entry["candidate_ratings"].add(point["rating"])
+            entry["sources"].add("fide_official_list_archive")
+            entry["source_records"].append({**point, "point_adjudication_source_file": adjudication["source_file"],
+                "point_adjudication_source_file_sha256": adjudication["source_file_sha256"]})
+    for month, adjudication in decisions.items():
+        source_month = by_month[month]
+        if (source_month["candidate_ratings"] != {adjudication["selected_rating"], *adjudication["rejected_ratings"]}
+                or any(rec["source"] == "fide_official_list_archive" and rec["rating"] != adjudication["selected_rating"]
+                    for rec in source_month["source_records"])):
+            raise ValueError("Original-list known candidates changed after cross-file corroboration")
+        source_month["adjudication"] = adjudication
     if not by_month:
         raise ValueError("No published standard rating before cutoff")
     rows = [by_month[key] for key in sorted(by_month)]
     for row in rows:
         row["candidate_ratings"] = sorted(row["candidate_ratings"])
-        row["ambiguous_period"] = len(row["candidate_ratings"]) > 1
-        row["rating"] = None if row["ambiguous_period"] else row["candidate_ratings"][0]
+        adjudication = row.get("adjudication")
+        row["adjudicated_period"] = adjudication is not None
+        row["ambiguous_period"] = len(row["candidate_ratings"]) > 1 and not row["adjudicated_period"]
+        row["rating"] = adjudication["selected_rating"] if adjudication else (None if row["ambiguous_period"] else row["candidate_ratings"][0])
         row["candidate_lower"] = row["candidate_ratings"][0]
         row["candidate_upper"] = row["candidate_ratings"][-1]
     unambiguous = [row for row in rows if not row["ambiguous_period"]
@@ -587,7 +720,15 @@ def combine_person(person, official_records, historical_records, snapshot_disagr
     if any(row["candidate_upper"] > peak for row in ambiguous):
         raise ValueError("Unresolved source-period conflict can change the confirmed peak value")
     for row in rows:
-        row["resolution_policy"] = CONFLICT_POLICY if row["ambiguous_period"] else "unambiguous_source_value"
+        row["resolution_policy"] = POINT_ADJUDICATION_POLICY if row["adjudicated_period"] else (
+            CONFLICT_POLICY if row["ambiguous_period"] else "unambiguous_source_value")
+        if row["adjudicated_period"]:
+            for rec in row["source_records"]:
+                rec.update(point_adjudication_policy=POINT_ADJUDICATION_POLICY,
+                    point_adjudication_status="supports_selected_rating" if rec["rating"] == row["rating"] else "rejected_derived_rating",
+                    point_selected_rating=row["rating"], point_observed_source_candidate_ratings=list(row["candidate_ratings"]),
+                    point_adjudication_source_file=row["adjudication"]["source_file"],
+                    point_adjudication_source_file_sha256=row["adjudication"]["source_file_sha256"])
         if row["ambiguous_period"]:
             for rec in row["source_records"]:
                 rec.update(period_conflict_handling=CONFLICT_POLICY,
@@ -599,17 +740,19 @@ def combine_person(person, official_records, historical_records, snapshot_disagr
         and any(not rec.get("derived_state", False) for rec in row["source_records"])]
     if not peak_rows:
         raise ValueError("Peak value has no directly retained source point")
-    providers = sorted({rec["source"] for rec in official_records if rec["source"] in FIDE_PROVIDERS})
+    providers = sorted({source for row in rows for source in row["sources"] if source in FIDE_PROVIDERS})
     derived_n = sum(bool(rec.get("derived_state")) for rec in official_records if rec["period"] <= CUTOFF)
     info = {"rating": peak, "label_end_period": CUTOFF, "feature_reference_snapshot": REFERENCE_SNAPSHOT,
         "peak_periods": ";".join(row["period"] for row in peak_rows),
-        "peak_sources": ";".join(sorted({source for row in peak_rows for source in row["sources"]})),
+        "peak_sources": ";".join(sorted({rec["source"] for row in peak_rows for rec in row["source_records"] if rec["rating"] == peak})),
         "peak_periods_complete": "lichess_fide_history" not in providers
             and all(rec.get("peak_months_complete", True) for rec in official_records if rec["source"] in FIDE_PROVIDERS)
             and not any(row["candidate_upper"] == peak for row in ambiguous),
         "history_source_provider": ";".join(providers), "derived_snapshot_record_n": derived_n,
         "ambiguous_period_n": len(ambiguous), "ambiguous_periods": ";".join(row["period"] for row in ambiguous),
         "period_conflict_resolution_policy": CONFLICT_POLICY,
+        "adjudicated_period_n": sum(row["adjudicated_period"] for row in rows),
+        "adjudicated_periods": ";".join(row["period"] for row in rows if row["adjudicated_period"]),
         "history_first_period": rows[0]["period"], "history_last_period": rows[-1]["period"], "history_n": len(rows),
         "fide_history_n": sum(bool(set(FIDE_PROVIDERS) & row["sources"]) for row in rows),
         "official_chart_history_n": sum("fide_official_chart" in row["sources"] for row in rows),
@@ -619,6 +762,7 @@ def combine_person(person, official_records, historical_records, snapshot_disagr
         "pre2003_history_n": sum(row["period"] < "2003-04" for row in rows), "history_coverage": COVERAGE}
     for row in rows:
         row["sources"] = ";".join(sorted(row["sources"]))
+        row.pop("adjudication", None)
     return info, rows, excluded_future
 
 def _historical_payload(historical, acquisition_dir):
@@ -663,6 +807,12 @@ def build_dataset(repo_root, acquisition_dir, historical=None, output_dir=None):
     audit_path = output / "dataset_build_audit.json"
     try:
         frames, people, sources, role_ids, role_qids = _load_originals(root)
+        audit["point_adjudication_inputs"] = [{"path": path.relative_to(root).as_posix(), "sha256": sha256(path)}
+            for path in sorted((root / STUDY / "adjudications").glob("*.json"))]
+        adjudications, adjudication_provenance = load_point_adjudications(root, people)
+        audit["point_adjudications"] = adjudication_provenance
+        audit["point_adjudication_n"] = len(adjudication_provenance)
+        audit["point_adjudication_policy"] = POINT_ADJUDICATION_POLICY
         official, provenance = read_acquisition(acquisition_dir, people, dataset_audit=audit, repo_root=root)
         historic = _historical_payload(historical, acquisition_dir)
         old_by_id = {cid: [] for cid in people}
@@ -675,7 +825,7 @@ def build_dataset(repo_root, acquisition_dir, historical=None, output_dir=None):
         for cid, person in sorted(people.items()):
             try:
                 info, records, ignored = combine_person(person, official[cid]["records"], old_by_id[cid],
-                    snapshot_disagreement=official[cid]["snapshot_disagreement"])
+                    snapshot_disagreement=official[cid]["snapshot_disagreement"], adjudications=adjudications.get(cid))
                 labels[cid] = info
                 history_rows.extend(records)
                 excluded_future += ignored
@@ -702,6 +852,11 @@ def build_dataset(repo_root, acquisition_dir, historical=None, output_dir=None):
             "frozen_source_roster_sha256": proof["frozen_source_roster_sha256"],
             "official_source_raw_sha256": proof["official_evidence"]["raw_sha256"]}
             for cid, proof in audit["snapshot_disagreement_proofs"].items()]
+        audit["point_adjudication_resolutions"] = [{"canonical_id": item["canonical_id"], "period": item["period"],
+            "selected_rating": item["selected_rating"], "rejected_ratings": item["rejected_ratings"],
+            "decision": POINT_ADJUDICATION_POLICY, "source_file": item["source_file"], "source_file_sha256": item["source_file_sha256"],
+            "identified_peak": labels[item["canonical_id"]]["rating"] if item["canonical_id"] in labels else None}
+            for item in adjudication_provenance]
         audit["historical_identity_priority"] = "stable modern FIDE identity and exact normalized frozen full name or explicit audited alias anchor the canonical group; source birth discrepancies are retained and never change frozen birth features"
         audit["conservative_pre2003_flag_without_archive_rows"] = [{"canonical_id": cid, "name": people[cid]["name"],
             "exact_dob_frozen": people[cid]["exact_dob_frozen"], "fide_history_start": official[cid]["entry"].get("history_start")}
@@ -727,7 +882,7 @@ def build_dataset(repo_root, acquisition_dir, historical=None, output_dir=None):
         history_path = output / "normalized_history.csv.gz"
         text = io.StringIO(newline="")
         writer = csv.DictWriter(text, fieldnames=("canonical_id", "period", "rating", "sources", "candidate_ratings",
-            "ambiguous_period", "candidate_lower", "candidate_upper", "resolution_policy", "source_records"))
+            "ambiguous_period", "adjudicated_period", "candidate_lower", "candidate_upper", "resolution_policy", "source_records"))
         writer.writeheader()
         for row in history_rows:
             writer.writerow({**row, "candidate_ratings": json.dumps(row["candidate_ratings"]),
@@ -751,6 +906,8 @@ def build_dataset(repo_root, acquisition_dir, historical=None, output_dir=None):
             "snapshot_disagreement_n": audit["snapshot_disagreement_n"],
             "snapshot_disagreements": audit["snapshot_disagreements"],
             "list_supplement_n": audit["list_supplement_n"], "list_supplements": audit["list_supplements"],
+            "point_adjudication_n": len(adjudication_provenance), "point_adjudication_policy": POINT_ADJUDICATION_POLICY,
+            "point_adjudications": adjudication_provenance, "point_adjudication_resolutions": audit["point_adjudication_resolutions"],
             "acquisition": provenance, "historical_payload_sha256": json_sha256(historic), "historical_archives": historic["archives"],
             "audit": {"path": audit_path.relative_to(root).as_posix(), "sha256": sha256(audit_path)},
             "normalized_history": {"path": history_path.relative_to(root).as_posix(), "sha256": sha256(history_path), "n": len(history_rows)}}
@@ -774,6 +931,15 @@ def load_frame(repo_root, role):
         raise ValueError("Peak dataset manifest is incomplete or changed")
     if manifest.get("period_conflict_resolution_policy") != CONFLICT_POLICY:
         raise ValueError("Peak source-conflict policy differs")
+    if (manifest.get("point_adjudication_policy") != POINT_ADJUDICATION_POLICY
+            or manifest.get("point_adjudication_n") != len(manifest.get("point_adjudications", []))):
+        raise ValueError("Peak original-list point-adjudication inventory differs")
+    for item in manifest["point_adjudications"]:
+        if sha256(safe_file(root, item["source_file"])) != item["source_file_sha256"]:
+            raise ValueError("Frozen point-adjudication source changed")
+        for point in item["verified_points"]:
+            if sha256(safe_file(root, point["source_archive_file"])) != point["source_archive_sha256"]:
+                raise ValueError("Frozen original-list source archive changed")
     checked, resolved, unresolved, snapshot_required = (manifest.get(key) for key in
         ("source_coverage_checked_n", "source_coverage_resolved_n", "source_coverage_unresolved_n", "snapshot_audit_required_n"))
     if (any(type(value) is not int or value < 0 for value in (checked, resolved, unresolved, snapshot_required))
@@ -848,6 +1014,14 @@ def load_frame(repo_root, role):
                 or row["ambiguous_period_n"] + len(months) > row["history_n"]
                 or row["period_conflict_resolution_policy"] != CONFLICT_POLICY):
             raise ValueError("Ambiguous source months are inconsistent with the identified peak")
+        if not re.fullmatch(r"[0-9]+", row["adjudicated_period_n"]):
+            raise ValueError("Invalid original-list adjudication count")
+        row["adjudicated_period_n"] = int(row["adjudicated_period_n"])
+        adjudicated_months = row["adjudicated_periods"].split(";") if row["adjudicated_periods"] else []
+        expected_months = sorted(item["period"] for item in manifest["point_adjudications"] if item["canonical_id"] == row["canonical_id"])
+        if (len(adjudicated_months) != row["adjudicated_period_n"] or adjudicated_months != expected_months
+                or set(adjudicated_months) & set(ambiguous_months) or row["snapshot"] in adjudicated_months):
+            raise ValueError("Original-list adjudicated periods differ from verified source inventory")
         if row["derived_snapshot_record_n"] > 1 or (row["derived_snapshot_record_n"] and "lichess_fide_history" not in providers):
             raise ValueError("Invalid derived snapshot count/provider")
     return pd.DataFrame(rows, columns=OUTPUT_FIELDS)

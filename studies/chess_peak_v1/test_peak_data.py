@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+import zipfile
 from unittest.mock import patch
 import pandas as pd
 import peak_data as data
@@ -199,7 +200,63 @@ def list_supplement_fixture(root, base, people, cid="22"):
         supplements.apply_list_supplements(root, base)
     return payload
 
+def point_adjudication_fixture(root, base, people, historical, cid="22"):
+    """A small real ZIP for each original published point, with fixed columns."""
+    p, evidence = people[cid], []
+    for month, elo in (("2001-01", 2532), ("2001-04", 2596)):
+        tag = {"2001-01": "JAN01", "2001-04": "APR01"}[month]
+        header = f"  ID_NUMBER NAME                             TITLE COUNTRY {tag} GAMES BIRTHDAY   FLAG"
+        birthday = ".".join(reversed(p["exact_dob_frozen"].split("-")))
+        line = "  " + f"{cid:<10}{p['name']:<33}{'g':<6}{'LAT':<8}{elo:<6}{3:<6}{birthday:<11}n   "
+        archive_path = root / data.DATA / "source_archives" / (tag.lower() + "frl.zip")
+        archive_path.parent.mkdir(parents=True, exist_ok=True)
+        member = tag + "FRL.TXT"
+        with zipfile.ZipFile(archive_path, "w", zipfile.ZIP_DEFLATED) as archive:
+            archive.writestr(member, (header + "\r\n" + line + "\r\n").encode("latin-1"))
+        evidence.append({"month": month, "standard_elo": elo, "source_point": True, "source": "fide_official_list_archive",
+            "source_url": f"https://ratings.fide.com/download/{tag.lower()}frl.zip",
+            "archive_file": archive_path.relative_to(root).as_posix(), "archive_sha256": data.sha256(archive_path),
+            "archive_member": member, "source_line_number": 2, "source_line": line, "source_header": header,
+            "source_header_period_mismatch": False, "publication_period_evidence": "Exact URL, member and header month",
+            "identity_anchor": "Exact ID/name and original birthday field", "source_country": "LAT",
+            "source_birth_date": p["exact_dob_frozen"]})
+    document = {"protocol_id": "chess-peak-original-list-point-adjudication-v1", "canonical_id": cid, "name": p["name"],
+        "period": "2001-01", "selected_rating": 2532, "rejected_ratings": [2601], "decision": data.POINT_ADJUDICATION_POLICY,
+        "evidence": evidence[0], "corroborating_points": [evidence[1]], "method": "Original list source priority before analysis",
+        "original_records_preserved": True, "identity_evidence": {"canonical_id": cid, "source_name": p["name"],
+            "frozen_dob": p["exact_dob_frozen"]}}
+    path = root / data.STUDY / "adjudications" / f"fixture_{cid}_2001-01.json"
+    data.write_json(path, document)
+    acquisition_fixture(base, people, {cid: "lichess_fide_history"})
+    normalized_path = base / "normalized" / f"{cid}.json"
+    normalized = data.read_json(normalized_path)
+    normalized["standard_history"] += [{"month": "2001-01", "standard_elo": 2601, "source_point": True},
+        {"month": "2001-04", "standard_elo": 2596, "source_point": True}]
+    normalized["standard_history"].sort(key=lambda row: row["month"])
+    data.write_json(normalized_path, normalized)
+    entry_path = base / "entries" / f"{cid}.json"
+    entry = data.read_json(entry_path)
+    entry["normalized_history_sha256"] = data.sha256(normalized_path)
+    data.write_json(entry_path, entry)
+    reseal_acquisition(base)
+    historical["records"] += [record("2001-01", 2532, cid, "olimpbase_transcription"),
+        record("2001-04", 2596, cid, "olimpbase_transcription")]
+    return path, document
+
 class CombineTests(unittest.TestCase):
+    def test_cross_file_corroboration_cannot_override_another_original_point(self):
+        modern = [record("2001-01", 2601), record("2001-04", 2602), record("2013-01", 2500), record("2023-12", 2700)]
+        historical = [record("2001-01", 2532, source="olimpbase_transcription"), record("2001-04", 2596, source="olimpbase_transcription")]
+        def adjudication(month, selected, rejected, extra=()):
+            return {"canonical_id": "11", "period": month, "selected_rating": selected, "rejected_ratings": [rejected],
+                "decision": data.POINT_ADJUDICATION_POLICY, "source_file": month + ".json", "source_file_sha256": "f" * 64,
+                "verified_points": [record(month, selected, source="fide_official_list_archive"), *extra]}
+        jan = adjudication("2001-01", 2532, 2601, [record("2001-04", 2533, source="fide_official_list_archive")])
+        apr = adjudication("2001-04", 2596, 2602)
+        for decisions in ({"2001-04": apr, "2001-01": jan}, {"2001-01": jan, "2001-04": apr}):
+            with self.assertRaisesRegex(ValueError, "cross-file corroboration"):
+                data.combine_person(person(), modern, historical, adjudications=decisions)
+
     def test_historical_peak_and_future_exclusion_and_matching_overlap(self):
         official = [record("2013-01", 2500), record("2023-12", 2600), record("2026-01", 2990)]
         old = [record("1994-01", 2780, source="olimpbase_transcription"),
@@ -627,6 +684,73 @@ class DatasetTests(unittest.TestCase):
         history = pd.read_csv(self.root / manifest["normalized_history"]["path"], dtype={"canonical_id": str})
         selected = history[history.canonical_id == "22"]
         self.assertEqual(set(selected.sources), {"fide_official_list_archive", "olimpbase_transcription"})
+
+    def test_original_list_adjudication_retains_rejected_cache_and_identifies_peak(self):
+        path, document = point_adjudication_fixture(self.root, self.acquisition, self.people, self.historical)
+        before = json.loads(json.dumps(self.historical))
+        manifest = self.build()
+        self.assertEqual(manifest["point_adjudication_n"], 1)
+        self.assertEqual(manifest["point_adjudications"][0]["source_file_sha256"], data.sha256(path))
+        resolution = manifest["point_adjudication_resolutions"][0]
+        self.assertEqual(resolution["selected_rating"], 2532)
+        self.assertEqual(resolution["identified_peak"], 2596)
+        frame = data.load_frame(self.root, "development").set_index("canonical_id")
+        self.assertEqual(frame.loc["22", "rating"], 2596)
+        self.assertEqual(frame.loc["22", "adjudicated_periods"], "2001-01")
+        self.assertEqual(frame.loc["22", "ambiguous_period_n"], 0)
+        self.assertEqual(frame.loc["22", "peak_periods"], "2001-04")
+        history = pd.read_csv(self.root / manifest["normalized_history"]["path"], dtype={"canonical_id": str})
+        jan = history[(history.canonical_id == "22") & (history.period == "2001-01")].iloc[0]
+        self.assertEqual(jan.rating, 2532)
+        self.assertEqual(json.loads(jan.candidate_ratings), [2532, 2601])
+        self.assertTrue(jan.adjudicated_period)
+        self.assertFalse(jan.ambiguous_period)
+        rejected = next(item for item in json.loads(jan.source_records) if item["rating"] == 2601)
+        self.assertEqual(rejected["point_adjudication_status"], "rejected_derived_rating")
+        self.assertEqual(rejected["source"], "lichess_fide_history")
+        self.assertEqual(self.historical, before)
+
+    def test_original_list_evidence_rejects_archive_tampering_and_unlisted_candidates(self):
+        path, document = point_adjudication_fixture(self.root, self.acquisition, self.people, self.historical)
+        for field, value in (("canonical_id", "999"), ("period", "2001-07"),
+                ("decision", "choose_the_lower_rating"), ("selected_rating", 2533), ("rejected_ratings", [2601, 2700])):
+            with self.subTest(field=field):
+                changed = json.loads(json.dumps(document))
+                changed[field] = value
+                data.write_json(path, changed)
+                with self.assertRaises((ValueError, data.DatasetBuildError)):
+                    self.build()
+                self.assertFalse((self.root / data.DATA / "data_manifest.json").exists())
+        data.write_json(path, document)
+        archive = self.root / document["evidence"]["archive_file"]
+        archive.write_bytes(archive.read_bytes() + b"changed ZIP bytes")
+        with self.assertRaisesRegex(ValueError, "archive fingerprint"):
+            self.build()
+
+    def test_original_list_parses_rating_column_not_any_matching_number(self):
+        path, document = point_adjudication_fixture(self.root, self.acquisition, self.people, self.historical)
+        evidence = document["evidence"]
+        # Keep the claimed2532 elsewhere but put2533 in the actual JAN01 column.
+        line = evidence["source_line"][:59] + f"{2533:<6}{2532:<6}" + evidence["source_line"][71:]
+        evidence["source_line"] = line
+        archive = self.root / evidence["archive_file"]
+        with zipfile.ZipFile(archive, "w") as z:
+            z.writestr(evidence["archive_member"], (evidence["source_header"] + "\n" + line + "\n").encode("latin-1"))
+        evidence["archive_sha256"] = data.sha256(archive)
+        data.write_json(path, document)
+        with self.assertRaisesRegex(ValueError, "parsed identity, month or rating"):
+            self.build()
+
+    def test_original_point_cannot_be_used_without_evidence_or_after_source_change(self):
+        path, document = point_adjudication_fixture(self.root, self.acquisition, self.people, self.historical)
+        path.unlink()
+        with self.assertRaises(data.DatasetBuildError):
+            self.build()
+        data.write_json(path, document)
+        self.build()
+        path.write_text(path.read_text() + " ")
+        with self.assertRaisesRegex(ValueError, "point-adjudication source changed"):
+            data.load_frame(self.root, "development")
 
     def test_list_supplement_rejects_resealed_normalized_source_override(self):
         list_supplement_fixture(self.root, self.acquisition, self.people)

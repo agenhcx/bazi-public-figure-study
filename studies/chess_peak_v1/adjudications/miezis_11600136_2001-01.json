@@ -1,0 +1,58 @@
+{
+  "protocol_id": "chess-peak-original-list-point-adjudication-v1",
+  "canonical_id": "11600136",
+  "name": "Miezis, Normunds",
+  "period": "2001-01",
+  "selected_rating": 2532,
+  "rejected_ratings": [
+    2601
+  ],
+  "decision": "original_official_rating_list_has_priority_over_derived_sources",
+  "evidence": {
+    "month": "2001-01",
+    "standard_elo": 2532,
+    "source_point": true,
+    "source": "fide_official_list_archive",
+    "source_url": "https://ratings.fide.com/download/jan01frl.zip",
+    "archive_sha256": "34bd878ad30d617be34f7d36ce9101a2b92fc751b18786dd10aec548d538ccd3",
+    "archive_member": "JAN01FRL.TXT",
+    "source_line_number": 19937,
+    "source_line": "  11600136  Miezis, Normunds                 g     LAT     2532   57   n   ",
+    "source_header": "  ID_NUMBER NAME                             TITLE COUNTRY JAN01 GAMES FLAG",
+    "source_header_period_mismatch": false,
+    "publication_period_evidence": "The original FIDE download URL, ZIP member name, and header all identify the stated January/April2001 published list.",
+    "source_country": "LAT",
+    "identity_anchor": "unique exact FIDE_ID11600136 plus exact full name Miezis, Normunds; April2001 source birthday11.05.1971 confirms the frozen1971-05-11 DOB",
+    "archive_file": "studies/chess_peak_v1/data/source_archives/jan01frl.zip"
+  },
+  "corroborating_points": [
+    {
+      "month": "2001-04",
+      "standard_elo": 2596,
+      "source_point": true,
+      "source": "fide_official_list_archive",
+      "source_url": "https://ratings.fide.com/download/apr01frl.zip",
+      "archive_sha256": "1d59389d9e0cf01803291b5377c72153167583d3168e576d016f4d58854de7a4",
+      "archive_member": "APR01FRL.TXT",
+      "source_line_number": 21446,
+      "source_line": "   11600136 Miezis, Normunds                 g     LAT      2596     6 11.05.1971 n   ",
+      "source_header": "  ID_NUMBER NAME                             TITLE COUNTRY APR01 GAMES BIRTHDAY   FLAG",
+      "source_header_period_mismatch": false,
+      "publication_period_evidence": "The original FIDE download URL, ZIP member name, and header all identify the stated January/April2001 published list.",
+      "source_country": "LAT",
+      "identity_anchor": "unique exact FIDE_ID11600136 plus exact full name Miezis, Normunds; April2001 source birthday11.05.1971 confirms the frozen1971-05-11 DOB",
+      "source_birth_date": "1971-05-11",
+      "archive_file": "studies/chess_peak_v1/data/source_archives/apr01frl.zip"
+    }
+  ],
+  "method": "Resolve this published period by source authority: an independently retrieved original FIDE rating-list ZIP with matching player identity, period and exact row takes priority over a conflicting derived history cache. The decision is independent of whether the selected number is larger or smaller and precedes the Shangguan association results.",
+  "original_records_preserved": true,
+  "preservation_note": "Retain the original derived-cache January2001 value2601, raw response, digest and source URL in the acquisition evidence and normalized conflict provenance. This adjudication does not delete a person, change frozen birth features, or rewrite earlier studies. It selects only the independently verified January2001 official observation; the April2001 value2596 is a separate published point, not an invented relocation of2601.",
+  "identity_evidence": {
+    "canonical_id": "11600136",
+    "source_name": "Miezis, Normunds",
+    "source_federation": "LAT",
+    "frozen_dob": "1971-05-11",
+    "birthdate_witness": "Original APR01FRL.TXT line21446 gives11.05.1971 for the same exact ID and full name."
+  }
+}

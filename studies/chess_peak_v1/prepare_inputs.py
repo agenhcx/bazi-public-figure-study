@@ -6,6 +6,7 @@ import csv
 import hashlib
 import json
 import os
+import re
 from pathlib import Path
 import urllib.request
 import zipfile
@@ -55,6 +56,35 @@ def get_archives(work):
             raise ValueError('Cached historical archive changed')
         paths[key] = path
     return paths
+
+
+def get_adjudication_archives(root):
+    """Retain original binary evidence for disputed published-list points."""
+    root = Path(root).resolve()
+    evidence_root = root / 'studies/chess_peak_v1/data/source_archives'
+    verified = {}
+    for path in sorted((root / 'studies/chess_peak_v1/adjudications').glob('*.json')):
+        document = json.loads(path.read_text())
+        for point in [document['evidence'], *document.get('corroborating_points', [])]:
+            url, digest = point['source_url'], point['archive_sha256']
+            target = (root / point['archive_file']).resolve()
+            if (not target.is_relative_to(evidence_root) or target == evidence_root
+                    or not re.fullmatch(r'https://ratings\.fide\.com/download/[A-Za-z0-9_-]+\.zip', url)
+                    or not re.fullmatch(r'[0-9a-f]{64}', digest)):
+                raise ValueError('Invalid original-list verification archive path or source')
+            if not target.exists():
+                request = urllib.request.Request(url, headers={'User-Agent': 'ChessPeakResearch/1.0'})
+                with urllib.request.urlopen(request, timeout=60) as response:
+                    data = response.read(60 * 1024 * 1024 + 1)
+                if len(data) > 60 * 1024 * 1024 or hashlib.sha256(data).hexdigest() != digest:
+                    raise ValueError('Original-list verification archive fingerprint differs')
+                target.parent.mkdir(parents=True, exist_ok=True)
+                target.write_bytes(data)
+            if sha256(target) != digest:
+                raise ValueError('Cached original-list verification archive changed')
+            verified[target.relative_to(root).as_posix()] = {
+                'source_url': url, 'sha256': digest, 'bytes': target.stat().st_size}
+    return verified
 
 
 def pack_checkpoint(work, target):
@@ -110,6 +140,7 @@ def prepare(root, work, *, resume=None, workers=2, rate=2.0, prefer_provider='li
                              'rating_histories_acquired_pending_historical_merge'}
         if histories['status'] not in complete_statuses or histories['failed_n'] or histories['snapshot_audit_n']:
             raise ValueError(f"Rating histories have {histories['failed_n']} failures and {histories['snapshot_audit_n']} snapshot audits")
+        adjudication_archives = get_adjudication_archives(root)
         manifest = build_dataset(root, work / 'fide', work / 'historical_history.json')
         source_names = ('PLAN.md', 'config.json', 'collect_fide.py', 'collect_historical.py',
                         'peak_data.py', 'prepare_inputs.py', 'SHANGGUAN_PLAN.md',
@@ -117,12 +148,16 @@ def prepare(root, work, *, resume=None, workers=2, rate=2.0, prefer_provider='li
         manifest['collection_source'] = {
             'github_commit': os.environ.get('GITHUB_SHA'),
             'github_run_id': os.environ.get('GITHUB_RUN_ID'),
+            'adjudication_archives': adjudication_archives,
             'files_sha256': {f'studies/chess_peak_v1/{name}':
                 sha256(root / 'studies/chess_peak_v1' / name) for name in source_names},
         }
         manifest['collection_source']['files_sha256'].update({
             p.relative_to(root).as_posix(): sha256(p)
             for p in sorted((root / 'studies/chess_peak_v1/supplements').glob('*')) if p.is_file()})
+        manifest['collection_source']['files_sha256'].update({
+            p.relative_to(root).as_posix(): sha256(p)
+            for p in sorted((root / 'studies/chess_peak_v1/adjudications').glob('*')) if p.is_file()})
         write_json(output / 'data_manifest.json', manifest)
         status.update(status='peak_inputs_complete_before_fitting',
                       counts={r: manifest['roles'][r]['n'] for r in ('development', 'primary_new')})
