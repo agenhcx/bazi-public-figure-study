@@ -5,6 +5,7 @@ import argparse
 import csv
 import hashlib
 import json
+import os
 from pathlib import Path
 import urllib.request
 import zipfile
@@ -108,6 +109,16 @@ def prepare(root, work, *, resume=None, workers=2, rate=2.0, prefer_provider='li
         if histories['status'] not in complete_statuses or histories['failed_n'] or histories['snapshot_audit_n']:
             raise ValueError(f"Rating histories have {histories['failed_n']} failures and {histories['snapshot_audit_n']} snapshot audits")
         manifest = build_dataset(root, work / 'fide', work / 'historical_history.json')
+        source_names = ('PLAN.md', 'config.json', 'collect_fide.py', 'collect_historical.py',
+                        'peak_data.py', 'prepare_inputs.py', 'SHANGGUAN_PLAN.md',
+                        'shangguan_association.py')
+        manifest['collection_source'] = {
+            'github_commit': os.environ.get('GITHUB_SHA'),
+            'github_run_id': os.environ.get('GITHUB_RUN_ID'),
+            'files_sha256': {f'studies/chess_peak_v1/{name}':
+                sha256(root / 'studies/chess_peak_v1' / name) for name in source_names},
+        }
+        write_json(output / 'data_manifest.json', manifest)
         status.update(status='peak_inputs_complete_before_fitting',
                       counts={r: manifest['roles'][r]['n'] for r in ('development', 'primary_new')})
         return manifest

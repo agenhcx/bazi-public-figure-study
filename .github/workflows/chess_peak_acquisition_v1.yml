@@ -23,7 +23,7 @@ env:
   NUMEXPR_NUM_THREADS: '1'
   PYTHONHASHSEED: '0'
   MPLBACKEND: Agg
-  PEAK_RESUME_RUN_ID: '40043634261'
+  PEAK_RESUME_RUN_ID: '40043960400'
   PEAK_RESUME_ARTIFACT_NAME: 'peak-acq-checkpoint-1'
 
 jobs:
@@ -46,13 +46,13 @@ jobs:
       - name: Choose an earlier acquisition checkpoint if retrying
         id: resume
         run: |
-          if [ "$PEAK_RESUME_RUN_ID" != 0 ]; then
-            echo "run=$PEAK_RESUME_RUN_ID" >> "$GITHUB_OUTPUT"
-            echo "artifact=$PEAK_RESUME_ARTIFACT_NAME" >> "$GITHUB_OUTPUT"
-          elif [ "$GITHUB_RUN_ATTEMPT" -gt 1 ]; then
+          if [ "$GITHUB_RUN_ATTEMPT" -gt 1 ]; then
             previous_attempt=$((GITHUB_RUN_ATTEMPT - 1))
             echo "run=$GITHUB_RUN_ID" >> "$GITHUB_OUTPUT"
             echo "artifact=peak-acq-checkpoint-$previous_attempt" >> "$GITHUB_OUTPUT"
+          elif [ "$PEAK_RESUME_RUN_ID" != 0 ]; then
+            echo "run=$PEAK_RESUME_RUN_ID" >> "$GITHUB_OUTPUT"
+            echo "artifact=$PEAK_RESUME_ARTIFACT_NAME" >> "$GITHUB_OUTPUT"
           fi
       - name: Restore verified responses from an earlier attempt
         if: steps.resume.outputs.run != ''

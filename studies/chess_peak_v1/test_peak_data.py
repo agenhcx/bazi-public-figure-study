@@ -76,6 +76,43 @@ def reseal_acquisition(base):
         for p in sorted(base.rglob("*")) if p.is_file() and p != path}
     data.write_json(path, manifest)
 
+def coverage_audit_fixture(base, cid="11", outcome="selected_snapshot_verified"):
+    """Retain both providers' evidence for a fixed-rule coverage check."""
+    entry_path = base / "entries" / f"{cid}.json"
+    entry = data.read_json(entry_path)
+    provider = entry.get("source_provider", "fide_official_chart")
+    unresolved, checked, expected_provider = {
+        "selected_snapshot_verified": (False, True, "fide_official_chart"),
+        "unavailable": (True, False, "lichess_fide_history"),
+        "missing_frozen_snapshot": (True, True, "lichess_fide_history")}[outcome]
+    if provider != expected_provider:
+        raise AssertionError("Fixture provider differs from coverage outcome")
+    evidence = []
+    for source_provider in data.FIDE_PROVIDERS:
+        if outcome == "unavailable" and source_provider == "fide_official_chart":
+            continue
+        raw = (gzip.decompress((base / "raw" / f"{cid}.json.gz").read_bytes()) if source_provider == provider
+            else json.dumps({"fixture_identity": cid, "source_provider": source_provider}).encode())
+        raw_path = base / "coverage-evidence" / f"{cid}.{source_provider}.json.gz"
+        raw_path.parent.mkdir(exist_ok=True)
+        raw_path.write_bytes(gzip.compress(raw, mtime=0))
+        metadata = {"canonical_id": cid, "source_provider": source_provider,
+            "raw_sha256": hashlib.sha256(raw).hexdigest(), "raw_bytes": len(raw),
+            "gzip_sha256": data.sha256(raw_path)}
+        metadata_path = raw_path.with_suffix(".metadata.json")
+        data.write_json(metadata_path, metadata)
+        evidence.append({**{key: metadata[key] for key in ("source_provider", "raw_sha256", "raw_bytes", "gzip_sha256")},
+            "raw_file": raw_path.relative_to(base).as_posix(),
+            "metadata_file": metadata_path.relative_to(base).as_posix(), "metadata_sha256": data.sha256(metadata_path)})
+    entry["source_coverage_audit"] = {"rule_id": data.COVERAGE_RULE,
+        "reasons": ["lichess_missing_frozen_snapshot", "lichess_late_history_for_older_person"],
+        "unresolved": unresolved, "selected_provider": provider, "direct_source_coverage_checked": checked,
+        "sources": evidence, "official_outcome": outcome}
+    entry["snapshot_audit_required"] = unresolved
+    data.write_json(entry_path, entry)
+    reseal_acquisition(base)
+    return entry["source_coverage_audit"]
+
 class CombineTests(unittest.TestCase):
     def test_historical_peak_and_future_exclusion_and_matching_overlap(self):
         official = [record("2013-01", 2500), record("2023-12", 2600), record("2026-01", 2990)]
@@ -158,6 +195,58 @@ class CombineTests(unittest.TestCase):
                 data.combine_person(person(), [bad], [])
 
 class AcquisitionTests(unittest.TestCase):
+    def test_coverage_check_evidence_and_resolved_decision_are_verified(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            base, people = Path(temporary), {"11": person()}
+            acquisition_fixture(base, people)
+            coverage = coverage_audit_fixture(base)
+            audit = {}
+            entries, _ = data.read_acquisition(base, people, dataset_audit=audit)
+            self.assertEqual(entries["11"]["entry"]["source_coverage_audit"], coverage)
+            self.assertEqual(audit["source_coverage_audits"], {"11": coverage})
+            self.assertEqual(audit["source_coverage_resolved_n"], 1)
+            self.assertEqual(audit["source_coverage_unresolved_n"], 0)
+            path = base / coverage["sources"][0]["raw_file"]
+            path.write_bytes(gzip.compress(b"changed coverage evidence", mtime=0))
+            reseal_acquisition(base)
+            with self.assertRaisesRegex(ValueError, "coverage evidence fingerprint"):
+                data.read_acquisition(base, people)
+
+    def test_explicit_unresolved_coverage_or_snapshot_audit_blocks_ready(self):
+        for outcome in ("unavailable", "missing_frozen_snapshot"):
+            with self.subTest(outcome=outcome), tempfile.TemporaryDirectory() as temporary:
+                base, people = Path(temporary), {"11": person()}
+                acquisition_fixture(base, people, {"11": "lichess_fide_history"})
+                coverage_audit_fixture(base, outcome=outcome)
+                audit = {}
+                with self.assertRaisesRegex(data.DatasetBuildError, "remains unresolved"):
+                    data.read_acquisition(base, people, dataset_audit=audit)
+                self.assertEqual(audit["source_coverage_unresolved_n"], 1)
+                self.assertEqual(audit["snapshot_audit_required_person_ids"], ["11"])
+        with tempfile.TemporaryDirectory() as temporary:
+            base, people = Path(temporary), {"11": person()}
+            acquisition_fixture(base, people)  # Legacy absence remains allowed until explicit flag.
+            entry_path = base / "entries/11.json"
+            entry = data.read_json(entry_path)
+            entry["snapshot_audit_required"] = True
+            data.write_json(entry_path, entry)
+            reseal_acquisition(base)
+            with self.assertRaisesRegex(data.DatasetBuildError, "remains unresolved"):
+                data.read_acquisition(base, people)
+
+    def test_coverage_decision_cannot_claim_resolution_without_official_evidence(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            base, people = Path(temporary), {"11": person()}
+            acquisition_fixture(base, people)
+            coverage_audit_fixture(base)
+            path = base / "entries/11.json"
+            entry = data.read_json(path)
+            entry["source_coverage_audit"]["direct_source_coverage_checked"] = False
+            data.write_json(path, entry)
+            reseal_acquisition(base)
+            with self.assertRaisesRegex(ValueError, "coverage decision"):
+                data.read_acquisition(base, people)
+
     def test_all_three_source_fingerprints_and_entry_fields_verified(self):
         with tempfile.TemporaryDirectory() as temporary:
             base = Path(temporary)
@@ -297,6 +386,30 @@ class DatasetTests(unittest.TestCase):
         self.assertNotIn("2024-01", set(history.period))
         with self.assertRaisesRegex(ValueError, "Refusing to replace"):
             self.build()
+
+    def test_coverage_audits_and_counts_preserved_in_dataset_manifest(self):
+        coverage = coverage_audit_fixture(self.acquisition)
+        manifest = self.build()
+        self.assertEqual(manifest["source_coverage_checked_n"], 1)
+        self.assertEqual(manifest["source_coverage_resolved_n"], 1)
+        self.assertEqual(manifest["source_coverage_unresolved_n"], 0)
+        audit = data.read_json(self.root / manifest["audit"]["path"])
+        self.assertEqual(audit["source_coverage_audits"], {"11": coverage, "22": None, "33": None})
+        self.assertEqual(audit["snapshot_audit_required_n"], 0)
+        self.assertEqual(len(data.load_frame(self.root, "development")), 2)
+
+    def test_unresolved_coverage_retained_in_failure_audit_without_ready_manifest(self):
+        acquisition_fixture(self.acquisition, self.people, {"22": "lichess_fide_history"})
+        coverage = coverage_audit_fixture(self.acquisition, cid="22", outcome="missing_frozen_snapshot")
+        with self.assertRaisesRegex(data.DatasetBuildError, "remains unresolved"):
+            self.build()
+        audit = data.read_json(self.root / data.DATA / "dataset_build_audit.json")
+        self.assertEqual(audit["source_coverage_audits"]["22"], coverage)
+        self.assertEqual(audit["source_coverage_checked_n"], 1)
+        self.assertEqual(audit["source_coverage_resolved_n"], 0)
+        self.assertEqual(audit["source_coverage_unresolved_n"], 1)
+        self.assertEqual(audit["source_coverage_unresolved_person_ids"], ["22"])
+        self.assertFalse((self.root / data.DATA / "data_manifest.json").exists())
 
     def test_complete_mixed_provider_dataset_has_mirror_counts_and_no_fake_monthly_ties(self):
         acquisition_fixture(self.acquisition, self.people, {"22": "lichess_fide_history"}, derived_ids={"22"})

@@ -37,6 +37,8 @@ OUTPUT_FIELDS = ("canonical_id", "snapshot", "exact_dob_frozen", "snapshot_ratin
 COVERAGE = "available_FIDE_history_direct_or_Lichess_mirror_and_archived_lists_1971_07_to_2023_12"
 FIDE_PROVIDERS = ("fide_official_chart", "lichess_fide_history")
 CONFLICT_POLICY = "retain_all_candidates_only_when_upper_bound_not_above_unambiguous_peak"
+COVERAGE_RULE = "lichess-frozen-snapshot-and-older-window-v1"
+COVERAGE_REASONS = {"lichess_missing_frozen_snapshot", "lichess_late_history_for_older_person"}
 
 class DatasetBuildError(ValueError):
     """The complete fixed cohort cannot yet be assigned audited labels."""
@@ -142,7 +144,64 @@ def _load_originals(root):
         raise ValueError("Wikidata person overlap within or across fixed cohorts")
     return frames, people, cohort_sources, role_ids, role_qids
 
-def read_acquisition(acquisition_dir, people):
+def _verify_source_coverage_audit(base, file_hashes, entry, provider):
+    """Verify the fixed coverage check without choosing a source by its peak."""
+    if "source_coverage_audit" not in entry:
+        return  # Previously sealed entries have no coverage-check record.
+    coverage = entry["source_coverage_audit"]
+    if not isinstance(coverage, dict):
+        raise ValueError("Invalid rating-history source coverage audit")
+    reasons = coverage.get("reasons")
+    outcome = coverage.get("official_outcome")
+    expected = {"selected_snapshot_verified": (False, True, "fide_official_chart"),
+        "unavailable": (True, False, "lichess_fide_history"),
+        "missing_frozen_snapshot": (True, True, "lichess_fide_history")}
+    if (coverage.get("rule_id") != COVERAGE_RULE or not isinstance(reasons, list) or not reasons
+            or len(reasons) != len(set(reasons)) or any(reason not in COVERAGE_REASONS for reason in reasons)
+            or outcome not in expected or type(coverage.get("unresolved")) is not bool
+            or type(coverage.get("direct_source_coverage_checked")) is not bool
+            or coverage.get("selected_provider") != provider
+            or (coverage["unresolved"], coverage["direct_source_coverage_checked"], provider) != expected[outcome]):
+        raise ValueError("Invalid rating-history source coverage decision")
+    sources, source_providers = coverage.get("sources"), set()
+    if not isinstance(sources, list) or not sources:
+        raise ValueError("Rating-history source coverage audit has no evidence")
+    for source in sources:
+        source_provider = source.get("source_provider")
+        if source_provider not in FIDE_PROVIDERS or source_provider in source_providers:
+            raise ValueError("Invalid rating-history coverage evidence provider")
+        source_providers.add(source_provider)
+        raw_name, metadata_name = source.get("raw_file"), source.get("metadata_file")
+        if raw_name not in file_hashes or metadata_name not in file_hashes:
+            raise ValueError("Unsealed rating-history coverage evidence")
+        raw_path, metadata_path = safe_file(base, raw_name), safe_file(base, metadata_name)
+        raw = gzip.decompress(raw_path.read_bytes())
+        if (sha256(raw_path) != source.get("gzip_sha256")
+                or sha256(metadata_path) != source.get("metadata_sha256")
+                or hashlib.sha256(raw).hexdigest() != source.get("raw_sha256")
+                or type(source.get("raw_bytes")) is not int or len(raw) != source["raw_bytes"]):
+            raise ValueError("Rating-history coverage evidence fingerprint differs")
+        metadata = read_json(metadata_path)
+        if (metadata.get("canonical_id") != entry["canonical_id"]
+                or metadata.get("source_provider") != source_provider
+                or any(metadata.get(key) != source[key] for key in ("raw_sha256", "raw_bytes", "gzip_sha256"))):
+            raise ValueError("Rating-history coverage evidence metadata differs")
+        if source_provider == provider and source["raw_sha256"] != entry["raw_sha256"]:
+            raise ValueError("Selected coverage evidence differs from normalized source")
+    if provider not in source_providers or (not coverage["unresolved"] and source_providers != set(FIDE_PROVIDERS)):
+        raise ValueError("Rating-history coverage audit omitted retained source evidence")
+
+def _coverage_summary(entries):
+    audits = {cid: item["entry"].get("source_coverage_audit") for cid, item in sorted(entries.items())}
+    present = [item for item in audits.values() if item is not None]
+    snapshot_ids = [cid for cid, item in sorted(entries.items()) if item["entry"].get("snapshot_audit_required") is True]
+    return {"source_coverage_audits": audits, "source_coverage_checked_n": len(present),
+        "source_coverage_resolved_n": sum(item["unresolved"] is False for item in present),
+        "source_coverage_unresolved_n": sum(item["unresolved"] is True for item in present),
+        "source_coverage_unresolved_person_ids": [cid for cid, item in audits.items() if item is not None and item["unresolved"]],
+        "snapshot_audit_required_n": len(snapshot_ids), "snapshot_audit_required_person_ids": snapshot_ids}
+
+def read_acquisition(acquisition_dir, people, dataset_audit=None):
     """Verify complete FIDE-history shards and explicitly named mirror sources."""
     acquisition_dir = Path(acquisition_dir).resolve()
     manifests = sorted(acquisition_dir.rglob("acquisition_manifest.json"))
@@ -189,6 +248,9 @@ def read_acquisition(acquisition_dir, people):
                 "lichess_fide_history": f"https://lichess.org/api/fide/player/{cid}/ratings"}.get(provider)
             if url is None or entry.get("source_url") != url:
                 raise ValueError("Rating-history source URL/provider differs from requested person")
+            if "snapshot_audit_required" in entry and type(entry["snapshot_audit_required"]) is not bool:
+                raise ValueError("Invalid rating-history snapshot audit flag")
+            _verify_source_coverage_audit(base, file_hashes, entry, provider)
             provider_counts[provider] += 1
             if entry.get("status") not in ("history_acquired", "history_acquired_requires_snapshot_audit"):
                 raise ValueError("Rating-history entry failed")
@@ -230,6 +292,8 @@ def read_acquisition(acquisition_dir, people):
                 "peak_months_complete": complete, "history_compression": normalized.get("history_compression")}
                 for row in rows]
             entries[cid] = {"entry": entry, "records": records}
+            if dataset_audit is not None:
+                dataset_audit.update(_coverage_summary(entries))
         if "source_provider_counts" in manifest and manifest["source_provider_counts"] != provider_counts:
             raise ValueError("Rating-history provider counts disagree with source entries")
         provenance.append({"manifest_path": manifest_path.relative_to(acquisition_dir).as_posix(),
@@ -239,6 +303,9 @@ def read_acquisition(acquisition_dir, people):
         raise ValueError("Rating-history acquisition shard set is incomplete")
     if set(entries) != set(people):
         raise ValueError("Rating histories do not cover all fixed people")
+    coverage_summary = _coverage_summary(entries)
+    if coverage_summary["source_coverage_unresolved_n"] or coverage_summary["snapshot_audit_required_n"]:
+        raise DatasetBuildError("Rating-history source coverage or frozen snapshot audit remains unresolved")
     return entries, provenance
 
 def combine_person(person, official_records, historical_records):
@@ -366,7 +433,7 @@ def build_dataset(repo_root, acquisition_dir, historical=None, output_dir=None):
     audit_path = output / "dataset_build_audit.json"
     try:
         frames, people, sources, role_ids, role_qids = _load_originals(root)
-        official, provenance = read_acquisition(acquisition_dir, people)
+        official, provenance = read_acquisition(acquisition_dir, people, dataset_audit=audit)
         historic = _historical_payload(historical, acquisition_dir)
         old_by_id = {cid: [] for cid in people}
         for row in historic["records"]:
@@ -441,6 +508,8 @@ def build_dataset(repo_root, acquisition_dir, historical=None, output_dir=None):
             "ambiguous_period_n": audit["ambiguous_period_n"],
             "ambiguous_period_people_n": len(audit["ambiguous_period_person_ids"]),
             "period_conflict_resolution_policy": CONFLICT_POLICY,
+            **{key: audit[key] for key in ("source_coverage_checked_n", "source_coverage_resolved_n",
+                "source_coverage_unresolved_n", "snapshot_audit_required_n")},
             "acquisition": provenance, "historical_payload_sha256": json_sha256(historic), "historical_archives": historic["archives"],
             "audit": {"path": audit_path.relative_to(root).as_posix(), "sha256": sha256(audit_path)},
             "normalized_history": {"path": history_path.relative_to(root).as_posix(), "sha256": sha256(history_path), "n": len(history_rows)}}
@@ -464,6 +533,11 @@ def load_frame(repo_root, role):
         raise ValueError("Peak dataset manifest is incomplete or changed")
     if manifest.get("period_conflict_resolution_policy") != CONFLICT_POLICY:
         raise ValueError("Peak source-conflict policy differs")
+    checked, resolved, unresolved, snapshot_required = (manifest.get(key) for key in
+        ("source_coverage_checked_n", "source_coverage_resolved_n", "source_coverage_unresolved_n", "snapshot_audit_required_n"))
+    if (any(type(value) is not int or value < 0 for value in (checked, resolved, unresolved, snapshot_required))
+            or checked != resolved + unresolved or unresolved or snapshot_required):
+        raise ValueError("Peak source coverage or snapshot audit is unresolved")
     for key in ("canonical_ids", "wikidata_person_qids"):
         a, b = (manifest["roles"][r][key] for r in ROLES)
         if len(a) != len(set(a)) or len(b) != len(set(b)) or set(a) & set(b):

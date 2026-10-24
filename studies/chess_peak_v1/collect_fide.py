@@ -25,6 +25,9 @@ CUTOFF = "2023-12"
 MAX_RESPONSE_BYTES = 4 * 1024 * 1024
 HEADERS = {"User-Agent": "chess-peak-research/1.0 (bounded public rating-history acquisition)",
            "Accept": "application/json, text/plain, */*"}
+FIDE_HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; chess-peak-research/1.0)",
+    "Accept": "application/json, text/javascript, */*; q=0.01",
+    "Origin": "https://ratings.fide.com", "X-Requested-With": "XMLHttpRequest"}
 LICHESS_NETWORK_LOCK = threading.Lock()
 SOURCE_SPECS = {
     "development": {"path": "studies/chess_single_A_v2/data/cohort_2013_M.csv", "n": 1000,
@@ -289,11 +292,12 @@ def _fetch(fide_id, limiter, *, provider, timeout=25, attempts=3, opener=None, s
         limiter.wait()
         record = {"attempt": attempt, "started_at_utc": utc_now()}
         try:
-            headers = dict(HEADERS)
+            headers = dict(FIDE_HEADERS if official else HEADERS)
             if official:
                 headers["Referer"] = f"https://ratings.fide.com/profile/{canonical_id(fide_id)}"
             request = urllib.request.Request(url, data=b"" if official else None,
                                              method="POST" if official else "GET", headers=headers)
+            record.update(source_url=url, request_method=request.get_method(), request_headers=headers)
             lock = threading.Lock() if official else LICHESS_NETWORK_LOCK
             with lock, opener(request, timeout=timeout) as response:
                 body = response.read(MAX_RESPONSE_BYTES + 1)
@@ -424,6 +428,96 @@ def archive_unusable_cache(output, fide_id, raw, metadata, reason):
         "cache_replacement_reason": reason, "replacement_audited_at_utc": utc_now()})
 
 
+def _snapshot_rating(parsed, person):
+    return {row["month"]: row["standard_elo"] for row in parsed["all_standard_history"]}.get(person["snapshot"])
+
+
+def _validate_snapshot(parsed, person, raw, metadata):
+    birth_month = person["exact_dob_frozen"][:7]
+    if any(row["standard_elo"] > 0 and row["month"] < birth_month
+           for row in parsed["all_standard_history"]):
+        raise SourceIntegrityError("Positive standard-rating history predates the frozen birth month; provider change forbidden",
+                                   raw, metadata.get("attempt_records", []))
+    rating = _snapshot_rating(parsed, person)
+    if rating is not None and rating != person["snapshot_elo"]:
+        raise SourceIntegrityError("Published snapshot rating differs from the frozen roster; provider change forbidden",
+                                   raw, metadata.get("attempt_records", []))
+    return rating
+
+
+def _coverage_evidence(output, fide_id, raw, metadata):
+    """Persist both bytes and original request provenance before cache replacement."""
+    provider = metadata.get("source_provider", "fide_official_chart")
+    compressed = gzip.compress(raw, compresslevel=6, mtime=0)
+    provenance = {key: value for key, value in metadata.items()
+                  if key not in ("source_coverage_audit", "source_raw_sha256s", "source_selection_reason")}
+    provenance.update(canonical_id=canonical_id(fide_id), source_provider=provider,
+                      raw_sha256=sha256_bytes(raw), raw_bytes=len(raw), gzip_sha256=sha256_bytes(compressed))
+    meta_bytes = (json.dumps(provenance, ensure_ascii=False, indent=2, sort_keys=True) + "\n").encode()
+    prefix = (f"coverage-evidence/{canonical_id(fide_id)}.{provider}."
+              f"{sha256_bytes(raw)[:16]}.{sha256_bytes(meta_bytes)[:16]}")
+    raw_name, meta_name = prefix + ".json.gz", prefix + ".metadata.json"
+    for name, content in ((raw_name, compressed), (meta_name, meta_bytes)):
+        path = safe_path(output, name)
+        if path.exists() and path.read_bytes() != content:
+            raise CacheIntegrityError("Existing coverage evidence differs; refusing to overwrite")
+        if not path.exists():
+            write_bytes(path, content)
+    return {"source_provider": provider, "raw_sha256": sha256_bytes(raw), "raw_bytes": len(raw),
+            "raw_file": raw_name, "gzip_sha256": sha256_bytes(compressed),
+            "metadata_file": meta_name, "metadata_sha256": sha256_bytes(meta_bytes)}
+
+
+def ensure_source_coverage(person, output, limiter, raw, metadata, *, timeout=25):
+    """Use frozen-date coverage checks only; never inspect peaks to choose sources."""
+    fid = canonical_id(person["canonical_id"])
+    provider = metadata.get("source_provider", "fide_official_chart")
+    parsed = parse_provider(raw, fid, provider, snapshot=person["snapshot"])
+    snapshot_rating = _validate_snapshot(parsed, person, raw, metadata)
+    if provider != "lichess_fide_history":
+        return raw, metadata, parsed
+    reasons = []
+    if snapshot_rating is None:
+        reasons.append("lichess_missing_frozen_snapshot")
+    if parsed["history_start"] > "2003-04" and person["exact_dob_frozen"] < "1985-01-01":
+        reasons.append("lichess_late_history_for_older_person")
+    if not reasons:
+        return raw, metadata, parsed
+
+    mirror_evidence = _coverage_evidence(output, fid, raw, metadata)
+    audit = {"rule_id": "lichess-frozen-snapshot-and-older-window-v1", "reasons": reasons,
+        "unresolved": True, "selected_provider": provider, "direct_source_coverage_checked": False,
+        "sources": [mirror_evidence], "official_outcome": "unavailable"}
+    metadata = dict(metadata)
+    try:
+        official_raw, official_meta = fetch_chart(fid, limiter, timeout=timeout, attempts=3)
+    except FetchFailure as error:
+        metadata["official_provider_unavailable"] = {"attempt_records": error.attempts,
+            "last_response_raw_sha256": sha256_bytes(error.response_body) if error.response_body is not None else None,
+            "last_response_bytes": len(error.response_body) if error.response_body is not None else None}
+        metadata["_official_failure_body"] = error.response_body
+    else:
+        official_meta = {**official_meta, "source_provider": "fide_official_chart"}
+        # The official bytes remain reviewable even when their snapshot conflicts.
+        audit["sources"].append(_coverage_evidence(output, fid, official_raw, official_meta))
+        official_parsed = parse_history(official_raw, fid)
+        official_snapshot = _validate_snapshot(official_parsed, person, official_raw, official_meta)
+        audit["direct_source_coverage_checked"] = True
+        if official_snapshot is not None:
+            # A direct chart can legitimately start late for an older unrated entrant.
+            # Checking that source is evidence, not an assertion of an earlier start.
+            audit.update(unresolved=False, selected_provider="fide_official_chart",
+                         official_outcome="selected_snapshot_verified")
+            raw, metadata, parsed = official_raw, official_meta, official_parsed
+        else:
+            audit["official_outcome"] = "missing_frozen_snapshot"
+    metadata.update(source_coverage_audit=audit,
+        source_selection_reason="fixed_frozen_snapshot_and_older_window_coverage_check",
+        source_raw_sha256s={source["source_provider"]: source["raw_sha256"] for source in audit["sources"]})
+    metadata = save_cache(output, fid, raw, metadata)
+    return raw, metadata, parsed
+
+
 def process_person(person, output, limiter, *, timeout=25, fetcher=fetch_history, prefer_provider="fide"):
     fid = canonical_id(person["canonical_id"])
     entry = {**person, "protocol_id": PROTOCOL, "cutoff_month": CUTOFF,
@@ -451,9 +545,15 @@ def process_person(person, output, limiter, *, timeout=25, fetcher=fetch_history
         else:
             raw, metadata = cached
         entry.update({key: metadata[key] for key in ("source_url", "fetched_at_utc", "raw_sha256", "raw_bytes")})
+        entry["source_provider"] = metadata.get("source_provider", "fide_official_chart")
+        # Apply the same fixed coverage checks to resumed and newly fetched mirrors.
+        raw, metadata, parsed = ensure_source_coverage(person, output, limiter, raw, metadata, timeout=timeout)
+        entry.update({key: metadata[key] for key in ("source_url", "fetched_at_utc", "raw_sha256", "raw_bytes")})
         provider = metadata.get("source_provider", "fide_official_chart")
         entry["source_provider"] = provider
-        parsed = parse_provider(raw, fid, provider, snapshot=person["snapshot"])
+        for key in ("source_coverage_audit", "source_selection_reason", "source_raw_sha256s"):
+            if key in metadata:
+                entry[key] = metadata[key]
         history = parsed.pop("all_standard_history")
         snapshot_rating = {row["month"]: row["standard_elo"] for row in history}.get(person["snapshot"])
         reasons = []
@@ -463,6 +563,8 @@ def process_person(person, output, limiter, *, timeout=25, fetcher=fetch_history
             reasons.append("observed_history_peak_is_below_frozen_snapshot_rating")
         if snapshot_rating is None:
             reasons.append("frozen_snapshot_month_absent_from_official_chart_history")
+        if metadata.get("source_coverage_audit", {}).get("unresolved"):
+            reasons.append("rating_history_coverage_unresolved")
         boundary, older = parsed["history_start"] <= "2003-04", person["exact_dob_frozen"] < "1985-01-01"
         normalized_path = safe_path(output, f"normalized/{fid}.json")
         write_json(normalized_path, {"canonical_id": fid, "source_raw_sha256": metadata["raw_sha256"],

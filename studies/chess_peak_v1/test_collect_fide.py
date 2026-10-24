@@ -258,6 +258,168 @@ class FetchTests(unittest.TestCase):
                     collection.fetch_lichess("123", limiter)
             opener.assert_not_called()
 
+    def test_fide_request_has_exact_provider_specific_headers(self):
+        expected = {"User-Agent": "Mozilla/5.0 (compatible; chess-peak-research/1.0)",
+                    "Accept": "application/json, text/javascript, */*; q=0.01",
+                    "Origin": "https://ratings.fide.com", "X-Requested-With": "XMLHttpRequest",
+                    "Referer": "https://ratings.fide.com/profile/123"}
+        requests = []
+        def opener(request, timeout):
+            requests.append(request)
+            return Response(payload() if request.get_method() == "POST" else lichess_payload(),
+                            request.full_url)
+        _, official_meta = collection.fetch_chart("123", NoWait(), opener=opener)
+        _, mirror_meta = collection.fetch_lichess("123", NoWait(), opener=opener)
+        self.assertEqual(official_meta["request_headers"], expected)
+        self.assertEqual({key.lower(): value for key, value in requests[0].header_items()},
+                         {key.lower(): value for key, value in expected.items()})
+        self.assertEqual(requests[0].get_method(), "POST")
+        self.assertEqual(requests[0].data, b"")
+        self.assertEqual(mirror_meta["request_headers"], collection.HEADERS)
+        mirror_headers = {key.lower(): value for key, value in requests[1].header_items()}
+        self.assertNotIn("origin", mirror_headers)
+        self.assertNotIn("x-requested-with", mirror_headers)
+        self.assertNotEqual(mirror_headers["user-agent"], expected["User-Agent"])
+
+
+class CoverageTests(unittest.TestCase):
+    def test_positive_rating_before_frozen_birth_month_fails_without_provider_change(self):
+        for provider, raw in (("fide_official_chart", payload()),
+                              ("lichess_fide_history", lichess_payload())):
+            with self.subTest(provider=provider), tempfile.TemporaryDirectory() as tmp:
+                frozen = {**person(), "exact_dob_frozen": "2004-05-10"}
+                def fetch(*args, **kwargs):
+                    return raw, metadata("123", raw, provider)
+                with patch.object(collection, "fetch_chart") as official, \
+                     patch.object(collection, "fetch_lichess") as mirror:
+                    entry = collection.process_person(frozen, Path(tmp), None, fetcher=fetch)
+                self.assertEqual(entry["status"], "failed")
+                self.assertEqual(entry["error_type"], "SourceIntegrityError")
+                self.assertIn("birth month", entry["error"])
+                official.assert_not_called(); mirror.assert_not_called()
+
+    @staticmethod
+    def acquire(root, chart_raw, *, mirror_raw=None, subject=None, chart_error=None):
+        mirror_raw = mirror_raw if mirror_raw is not None else lichess_payload(
+            [2013012500, 2023102679])
+        chart_options = ({"side_effect": chart_error} if chart_error is not None else
+                         {"return_value": (chart_raw, metadata("123", chart_raw))})
+        with patch.object(collection, "fetch_lichess", return_value=(mirror_raw,
+                          metadata("123", mirror_raw, "lichess_fide_history"))) as mirror, \
+             patch.object(collection, "fetch_chart", **chart_options) as official:
+            entry = collection.process_person(subject or person(), root, None,
+                                              prefer_provider="lichess")
+        return entry, mirror, official
+
+    def assert_evidence(self, root, audit, expected_raw):
+        self.assertEqual(audit["selected_provider"], "fide_official_chart")
+        sources = {row["source_provider"]: row for row in audit["sources"]}
+        self.assertEqual(set(sources), set(expected_raw))
+        for provider, raw in expected_raw.items():
+            evidence = sources[provider]
+            self.assertEqual(evidence["raw_sha256"], collection.sha256_bytes(raw))
+            raw_path, meta_path = root / evidence["raw_file"], root / evidence["metadata_file"]
+            self.assertTrue(raw_path.is_file()); self.assertTrue(meta_path.is_file())
+            stored = raw_path.read_bytes()
+            self.assertEqual(gzip.decompress(stored) if raw_path.suffix == ".gz" else stored, raw)
+            self.assertEqual(json.loads(meta_path.read_text())["raw_sha256"], collection.sha256_bytes(raw))
+
+    def test_missing_snapshot_in_lichess_triggers_official_coverage_check(self):
+        raw, mirror_raw = payload(), lichess_payload([2014022500, 2023102679])
+        subject = {**person(), "exact_dob_frozen": "1990-01-01"}
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            entry, mirror, official = self.acquire(root, raw, mirror_raw=mirror_raw, subject=subject)
+            official.assert_called_once(); mirror.assert_called_once()
+            self.assertEqual(entry["status"], "history_acquired")
+            self.assertEqual(entry["source_provider"], "fide_official_chart")
+            audit = entry["source_coverage_audit"]
+            self.assertEqual(audit["reasons"], ["lichess_missing_frozen_snapshot"])
+            self.assertFalse(audit["unresolved"])
+            self.assert_evidence(root, audit, {"fide_official_chart": raw, "lichess_fide_history": mirror_raw})
+
+    def test_older_person_late_lichess_history_checked_even_with_snapshot(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            entry, _, official = self.acquire(Path(tmp), payload())
+            official.assert_called_once()
+            self.assertEqual(entry["snapshot_history_elo"], 2500)
+            self.assertIn("lichess_late_history_for_older_person", entry["source_coverage_audit"]["reasons"])
+            self.assertNotIn("lichess_missing_frozen_snapshot", entry["source_coverage_audit"]["reasons"])
+
+    def test_independently_checked_official_is_selected_even_if_also_late_or_lower(self):
+        raw = payload(records=[{"id": "123", "date": "2013-01-01", "rating": 2500},
+                               {"id": "123", "date": "2023-10-01", "rating": 2600}])
+        with tempfile.TemporaryDirectory() as tmp:
+            entry, _, official = self.acquire(Path(tmp), raw)
+            official.assert_called_once()
+            self.assertEqual(entry["source_provider"], "fide_official_chart")
+            self.assertEqual(entry["observed_fide_history_peak_elo_through_2023"], 2600)
+            self.assertTrue(entry["source_coverage_audit"]["direct_source_coverage_checked"])
+            self.assertFalse(entry["source_coverage_audit"]["unresolved"])
+
+    def test_present_lichess_snapshot_disagreement_fails_without_official_fetch(self):
+        mirror_raw = lichess_payload([2003042400, 2013012499, 2023102679])
+        with tempfile.TemporaryDirectory() as tmp:
+            entry, _, official = self.acquire(Path(tmp), payload(), mirror_raw=mirror_raw)
+            official.assert_not_called()
+            self.assertEqual(entry["status"], "failed")
+            self.assertEqual(entry["error_type"], "SourceIntegrityError")
+
+    def test_cached_lichess_coverage_repair_preserves_original_evidence(self):
+        raw, mirror_raw = payload(), lichess_payload([2013012500, 2023102679])
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            collection.save_cache(root, "123", mirror_raw, metadata("123", mirror_raw, "lichess_fide_history"))
+            entry, mirror, official = self.acquire(root, raw, mirror_raw=mirror_raw)
+            mirror.assert_not_called(); official.assert_called_once()
+            self.assertEqual(entry["source_provider"], "fide_official_chart")
+            _, cached_meta = collection.read_cache(root, "123")
+            self.assertEqual(cached_meta["source_coverage_audit"], entry["source_coverage_audit"])
+            self.assert_evidence(root, entry["source_coverage_audit"],
+                                 {"fide_official_chart": raw, "lichess_fide_history": mirror_raw})
+            self.assertTrue(all(row["raw_file"].startswith("coverage-evidence/")
+                                for row in entry["source_coverage_audit"]["sources"]))
+
+    def test_unavailable_official_coverage_keeps_mirror_and_marks_unresolved(self):
+        failure = collection.FetchFailure("unavailable", [{"attempt": 3}], b"[]")
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            entry, _, official = self.acquire(root, payload(), chart_error=failure)
+            official.assert_called_once()
+            self.assertEqual(entry["source_provider"], "lichess_fide_history")
+            audit = entry["source_coverage_audit"]
+            self.assertTrue(audit["unresolved"])
+            self.assertEqual(audit["selected_provider"], "lichess_fide_history")
+            self.assertEqual(entry["status"], "history_acquired_requires_snapshot_audit")
+            self.assertIn("rating_history_coverage_unresolved", entry["snapshot_audit_reasons"])
+            self.assertEqual(collection.read_cache(root, "123")[1]["source_coverage_audit"], audit)
+
+    def test_official_coverage_missing_snapshot_keeps_mirror_and_marks_unresolved(self):
+        raw = payload(records=[{"id": "123", "date": "2014-01-01", "rating": 2600},
+                               {"id": "123", "date": "2023-10-01", "rating": 2700}])
+        with tempfile.TemporaryDirectory() as tmp:
+            entry, _, official = self.acquire(Path(tmp), raw)
+            official.assert_called_once()
+            self.assertEqual(entry["source_provider"], "lichess_fide_history")
+            self.assertTrue(entry["source_coverage_audit"]["unresolved"])
+            self.assertEqual(entry["snapshot_history_elo"], 2500)
+            self.assertIn("rating_history_coverage_unresolved", entry["snapshot_audit_reasons"])
+
+    def test_official_snapshot_disagreement_fails_without_mirror_fallback(self):
+        raw = payload(records=[{"id": "123", "date": "2013-01-01", "rating": 2499},
+                               {"id": "123", "date": "2023-10-01", "rating": 2679}])
+        with tempfile.TemporaryDirectory() as tmp, \
+             patch.object(collection, "fetch_chart", return_value=(raw, metadata("123", raw))), \
+             patch.object(collection, "fetch_lichess") as mirror:
+            entry = collection.process_person(person(), Path(tmp), None, prefer_provider="fide")
+        mirror.assert_not_called()
+        self.assertEqual(entry["status"], "failed")
+        self.assertEqual(entry["error_type"], "SourceIntegrityError")
+
+    def test_coverage_http429_propagates_stop(self):
+        with tempfile.TemporaryDirectory() as tmp, self.assertRaises(collection.AcquisitionStopped):
+            self.acquire(Path(tmp), payload(), chart_error=collection.AcquisitionStopped("rate limited"))
+
 
 if __name__ == "__main__":
     unittest.main()
