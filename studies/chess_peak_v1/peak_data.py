@@ -46,6 +46,7 @@ COVERAGE_RULE = "lichess-frozen-snapshot-and-older-window-v1"
 COVERAGE_REASONS = {"lichess_missing_frozen_snapshot", "lichess_late_history_for_older_person"}
 SNAPSHOT_DISAGREEMENT_RULE = "direct-official-frozen-snapshot-disagreement-v1"
 POINT_ADJUDICATION_POLICY = "original_official_rating_list_has_priority_over_derived_sources"
+TWO_DIGIT_CENTURY_RULE = "two_digit_date_matches_frozen_DOB_and_independent_four_digit_original_source"
 GAP_MODE = "api_window_gap_bridge"
 GAP_AUDIT_REASONS = {"rating_history_coverage_unresolved", "frozen_snapshot_month_absent_from_official_chart_history",
     "observed_history_peak_is_below_frozen_snapshot_rating"}
@@ -490,27 +491,56 @@ def _verify_original_list_point(root, person, evidence):
         raise ValueError("Original-list header or exact source line differs")
     columns = list(re.finditer(r"\S+", lines[0]))
     names = [item.group() for item in columns]
+    identity_columns = set(names) & {"ID_NUMBER", "CODE"}
     month_columns = [item for item in names if re.fullmatch(r"[A-Za-z]{3}[0-9]{2,4}", item)]
-    if (len(names) != len(set(names)) or not {"ID_NUMBER", "NAME", "COUNTRY"} <= set(names)
+    if (len(names) != len(set(names)) or len(identity_columns) != 1 or not {"NAME", "COUNTRY"} <= set(names)
             or len(month_columns) != 1):
         raise ValueError("Original-list header lacks unambiguous identity/rating columns")
+    identity_column = next(iter(identity_columns))
     rating_column = month_columns[0]
     header_month = datetime.strptime(rating_column, "%b%y" if len(rating_column) == 5 else "%b%Y").strftime("%Y-%m")
     values = {item.group(): lines[line_number - 1][item.start():columns[i + 1].start() if i + 1 < len(columns) else None].strip()
         for i, item in enumerate(columns)}
-    if (header_month != month or canonical_id(values["ID_NUMBER"]) != person["canonical_id"]
+    row_layout = "header_aligned"
+    if (identity_column == "CODE" and names == ["CODE", "NAME", "TITLE", "COUNTRY", rating_column, "GAMES", "BIRTHDAY", "FLAG"]
+            and [item.start() for item in columns] == [3, 10, 40, 46, 54, 60, 66, 75]):
+        # This published CODE layout centers its captions above fixed fields.
+        # Its starts are part of the format, not inferred from the chosen score.
+        raw_line = lines[line_number - 1]
+        spans = {"CODE": (0, 10), "NAME": (10, 40), "TITLE": (40, 48), "COUNTRY": (48, 51),
+            rating_column: (53, 57), "GAMES": (57, 64), "BIRTHDAY": (64, 72), "FLAG": (72, None)}
+        values = {key: raw_line[start:end].strip() for key, (start, end) in spans.items()}
+        row_layout = "fide_centered_code_fixed_fields"
+    if (header_month != month or canonical_id(values[identity_column]) != person["canonical_id"]
             or _source_name(values["NAME"]) != _source_name(person["name"])
             or rating(values[rating_column]) != elo or values["COUNTRY"] != evidence.get("source_country")):
         raise ValueError("Original-list parsed identity, month or rating differs")
     birthday = values.get("BIRTHDAY", "")
+    birth_precision = "not_present"
     if birthday:
-        parsed_birth = datetime.strptime(birthday, "%d.%m.%Y").date().isoformat()
-        if parsed_birth != person["exact_dob_frozen"] or evidence.get("source_birth_date") != parsed_birth:
+        if re.fullmatch(r"[0-9]{2}\.[0-9]{2}\.[0-9]{4}", birthday):
+            parsed_birth = datetime.strptime(birthday, "%d.%m.%Y").date().isoformat()
+            birth_precision = "four_digit_year"
+        elif re.fullmatch(r"[0-9]{2}\.[0-9]{2}\.[0-9]{2}", birthday):
+            # Compare the literal date suffix; %y would invent a century.
+            if (birthday != date.fromisoformat(person["exact_dob_frozen"]).strftime("%d.%m.%y")
+                    or evidence.get("raw_source_birth_date") != birthday
+                    or evidence.get("century_rule") != TWO_DIGIT_CENTURY_RULE):
+                raise ValueError("Original-list two-digit birthday lacks an exact frozen-date crosscheck")
+            parsed_birth = person["exact_dob_frozen"]
+            birth_precision = "two_digit_year"
+        else:
+            raise ValueError("Original-list birthday has an unsupported raw date format")
+        if (parsed_birth != person["exact_dob_frozen"] or evidence.get("source_birth_date") != parsed_birth
+                or ("raw_source_birth_date" in evidence and evidence["raw_source_birth_date"] != birthday)):
             raise ValueError("Original-list birth witness differs from frozen identity")
     elif evidence.get("source_birth_date") is not None:
         raise ValueError("Original-list evidence invents an absent birthday field")
+    if "source_birth_precision" in evidence and evidence["source_birth_precision"] != birth_precision:
+        raise ValueError("Original-list birth precision differs from the raw birthday field")
     return {**evidence, "canonical_id": person["canonical_id"], "period": month, "rating": elo,
-        "source_archive_sha256": evidence["archive_sha256"], "source_archive_file": archive_name}
+        "source_archive_sha256": evidence["archive_sha256"], "source_archive_file": archive_name,
+        "source_identity_column": identity_column, "source_birth_precision": birth_precision, "source_row_layout": row_layout}
 
 def load_point_adjudications(repo_root, people):
     """Load only source-priority decisions whose original list is reverified."""
@@ -542,7 +572,8 @@ def load_point_adjudications(repo_root, people):
         identity = document.get("identity_evidence", {})
         if (identity.get("canonical_id") != cid or identity.get("source_name") != person["name"]
                 or identity.get("frozen_dob") != person["exact_dob_frozen"]
-                or not any(point.get("source_birth_date") == person["exact_dob_frozen"] for point in points)):
+                or not any(point.get("source_birth_date") == person["exact_dob_frozen"]
+                    and point["source_birth_precision"] == "four_digit_year" for point in points)):
             raise ValueError("Point adjudication lacks independent frozen-birthday corroboration")
         record = {"canonical_id": cid, "period": month, "selected_rating": selected, "rejected_ratings": rejected,
             "source_file": path.relative_to(root).as_posix(), "source_file_sha256": sha256(path),

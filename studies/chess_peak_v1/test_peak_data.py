@@ -333,6 +333,26 @@ def point_adjudication_fixture(root, base, people, historical, cid="22"):
         record("2001-04", 2596, cid, "olimpbase_transcription")]
     return path, document
 
+def code_point_fixture(root, evidence, person, *, raw_birthday=None, conflicting_ids=False):
+    """Faithful centered CODE captions and fixed raw spans used by Apr2003."""
+    frozen = datetime.strptime(person["exact_dob_frozen"], "%Y-%m-%d")
+    birthday = raw_birthday or frozen.strftime("%d.%m.%y")
+    tag = datetime.strptime(evidence["month"], "%Y-%m").strftime("%b%y").upper()
+    header = f"   CODE   NAME                          TITLE COUNTRY {tag} GAMES BIRTHDAY FLAG"
+    line = [" "] * 80
+    for start, value in ((0, f"{person['canonical_id']:>8}"), (10, person["name"]), (44, "g"), (48, "LAT"),
+            (53, str(evidence["standard_elo"])), (61, "3"), (64, birthday)):
+        line[start:start + len(value)] = value
+    line = "".join(line)
+    if conflicting_ids:
+        header = header.replace("TITLE", "ID_NUMBER")
+    evidence.update(source_header=header, source_line=line, raw_source_birth_date=birthday,
+        source_birth_date=person["exact_dob_frozen"], source_birth_precision="two_digit_year", century_rule=data.TWO_DIGIT_CENTURY_RULE)
+    archive = root / evidence["archive_file"]
+    with zipfile.ZipFile(archive, "w", zipfile.ZIP_DEFLATED) as output:
+        output.writestr(evidence["archive_member"], (header + "\r\n" + line + "\r\n").encode("latin-1"))
+    evidence["archive_sha256"] = data.sha256(archive)
+
 class CombineTests(unittest.TestCase):
     def test_cross_file_corroboration_cannot_override_another_original_point(self):
         modern = [record("2001-01", 2601), record("2001-04", 2602), record("2013-01", 2500), record("2023-12", 2700)]
@@ -965,6 +985,51 @@ class DatasetTests(unittest.TestCase):
         self.assertEqual(rejected["point_adjudication_status"], "rejected_derived_rating")
         self.assertEqual(rejected["source"], "lichess_fide_history")
         self.assertEqual(self.historical, before)
+
+    def test_centered_code_two_digit_birthday_requires_full_year_original_witness(self):
+        path, document = point_adjudication_fixture(self.root, self.acquisition, self.people, self.historical)
+        code_point_fixture(self.root, document["evidence"], self.people["22"])
+        data.write_json(path, document)
+        rules, provenance = data.load_point_adjudications(self.root, self.people)
+        point = provenance[0]["verified_points"][0]
+        self.assertEqual(point["source_identity_column"], "CODE")
+        self.assertEqual(point["source_row_layout"], "fide_centered_code_fixed_fields")
+        self.assertEqual(point["source_birth_precision"], "two_digit_year")
+        self.assertEqual(provenance[0]["verified_points"][1]["source_birth_precision"], "four_digit_year")
+        self.assertEqual(self.build()["point_adjudication_n"], 1)
+
+    def test_two_digit_only_original_witnesses_cannot_establish_the_century(self):
+        path, document = point_adjudication_fixture(self.root, self.acquisition, self.people, self.historical)
+        code_point_fixture(self.root, document["evidence"], self.people["22"])
+        code_point_fixture(self.root, document["corroborating_points"][0], self.people["22"])
+        data.write_json(path, document)
+        with self.assertRaisesRegex(ValueError, "independent frozen-birthday corroboration"):
+            data.load_point_adjudications(self.root, self.people)
+
+    def test_code_layout_rejects_conflicting_identity_columns_and_wrong_two_digit_date(self):
+        path, document = point_adjudication_fixture(self.root, self.acquisition, self.people, self.historical)
+        code_point_fixture(self.root, document["evidence"], self.people["22"], conflicting_ids=True)
+        data.write_json(path, document)
+        with self.assertRaisesRegex(ValueError, "unambiguous identity"):
+            data.load_point_adjudications(self.root, self.people)
+        code_point_fixture(self.root, document["evidence"], self.people["22"], raw_birthday="04.02.80")
+        data.write_json(path, document)
+        with self.assertRaisesRegex(ValueError, "two-digit birthday"):
+            data.load_point_adjudications(self.root, self.people)
+
+    def test_matching_two_digit_point_cannot_override_wrong_full_year_corroboration(self):
+        path, document = point_adjudication_fixture(self.root, self.acquisition, self.people, self.historical)
+        code_point_fixture(self.root, document["evidence"], self.people["22"])
+        witness = document["corroborating_points"][0]
+        witness["source_line"] = witness["source_line"].replace("03.02.1980", "03.02.1981")
+        witness["source_birth_date"] = "1981-02-03"
+        archive = self.root / witness["archive_file"]
+        with zipfile.ZipFile(archive, "w") as output:
+            output.writestr(witness["archive_member"], (witness["source_header"] + "\n" + witness["source_line"] + "\n").encode("latin-1"))
+        witness["archive_sha256"] = data.sha256(archive)
+        data.write_json(path, document)
+        with self.assertRaisesRegex(ValueError, "birth witness differs"):
+            data.load_point_adjudications(self.root, self.people)
 
     def test_original_list_evidence_rejects_archive_tampering_and_unlisted_candidates(self):
         path, document = point_adjudication_fixture(self.root, self.acquisition, self.people, self.historical)
