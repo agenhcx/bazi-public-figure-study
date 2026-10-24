@@ -54,6 +54,13 @@ jobs:
             echo "run=$PEAK_RESUME_RUN_ID" >> "$GITHUB_OUTPUT"
             echo "artifact=$PEAK_RESUME_ARTIFACT_NAME" >> "$GITHUB_OUTPUT"
           fi
+      - name: Preserve the complete first-pass cache as a fallback
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: peak-acq-checkpoint-1
+          run-id: '40043960400'
+          github-token: ${{ github.token }}
+          path: peak_resume_base
       - name: Restore verified responses from an earlier attempt
         if: steps.resume.outputs.run != ''
         continue-on-error: true
@@ -63,9 +70,16 @@ jobs:
           run-id: ${{ steps.resume.outputs.run }}
           github-token: ${{ github.token }}
           path: peak_resume
+      - name: Require a saved cache before any further history requests
+        run: |
+          mkdir -p peak_resume
+          if ! test -f peak_resume/acquisition_checkpoint.zip; then
+            cp peak_resume_base/acquisition_checkpoint.zip peak_resume/acquisition_checkpoint.zip
+          fi
+          test -f peak_resume/acquisition_checkpoint.zip
       - name: Collect all 1500 histories and audit historical coverage
         id: collect
-        run: python -u studies/chess_peak_v1/prepare_inputs.py --repo-root . --work-dir peak_acquisition --resume peak_resume/acquisition_checkpoint.zip --workers 1 --requests-per-second 0.5 --prefer-provider lichess
+        run: python -u studies/chess_peak_v1/prepare_inputs.py --repo-root . --work-dir peak_acquisition --resume peak_resume/acquisition_checkpoint.zip --workers 2 --requests-per-second 0.5 --prefer-provider lichess
       - name: Preserve source checkpoint even on audit failure
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
