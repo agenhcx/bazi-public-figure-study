@@ -23,8 +23,8 @@ env:
   NUMEXPR_NUM_THREADS: '1'
   PYTHONHASHSEED: '0'
   MPLBACKEND: Agg
-  PEAK_RESUME_RUN_ID: '0'
-  PEAK_RESUME_ARTIFACT_NAME: ''
+  PEAK_RESUME_RUN_ID: '40043634261'
+  PEAK_RESUME_ARTIFACT_NAME: 'peak-acq-checkpoint-1'
 
 jobs:
   acquire_and_describe:
@@ -65,7 +65,7 @@ jobs:
           path: peak_resume
       - name: Collect all 1500 histories and audit historical coverage
         id: collect
-        run: python -u studies/chess_peak_v1/prepare_inputs.py --repo-root . --work-dir peak_acquisition --resume peak_resume/acquisition_checkpoint.zip --workers 2 --requests-per-second 2 --prefer-provider lichess
+        run: python -u studies/chess_peak_v1/prepare_inputs.py --repo-root . --work-dir peak_acquisition --resume peak_resume/acquisition_checkpoint.zip --workers 1 --requests-per-second 0.5 --prefer-provider lichess
       - name: Preserve source checkpoint even on audit failure
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02

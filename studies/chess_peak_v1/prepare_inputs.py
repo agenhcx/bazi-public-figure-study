@@ -103,7 +103,9 @@ def prepare(root, work, *, resume=None, workers=2, rate=2.0, prefer_provider='li
             raise ValueError('Historical identity audit requires resolution')
         histories = run_acquisition(root, work / 'fide', workers=workers,
             requests_per_second=rate, prefer_provider=prefer_provider)
-        if histories['failed_n'] or histories['snapshot_audit_n']:
+        complete_statuses = {'official_chart_histories_acquired_pending_historical_merge',
+                             'rating_histories_acquired_pending_historical_merge'}
+        if histories['status'] not in complete_statuses or histories['failed_n'] or histories['snapshot_audit_n']:
             raise ValueError(f"Rating histories have {histories['failed_n']} failures and {histories['snapshot_audit_n']} snapshot audits")
         manifest = build_dataset(root, work / 'fide', work / 'historical_history.json')
         status.update(status='peak_inputs_complete_before_fitting',
