@@ -15,6 +15,7 @@ import json
 from pathlib import Path
 import re
 import sys
+import unicodedata
 import pandas as pd
 
 STUDY = Path("studies/chess_peak_v1")
@@ -32,13 +33,15 @@ EXTRA_FIELDS = ("label_end_period", "feature_reference_snapshot", "peak_periods"
     "peak_periods_complete", "history_source_provider", "derived_snapshot_record_n",
     "ambiguous_period_n", "ambiguous_periods", "period_conflict_resolution_policy",
     "history_first_period", "history_last_period", "history_n", "fide_history_n",
-    "official_chart_history_n", "lichess_history_n", "olimpbase_history_n", "pre2003_history_n", "history_coverage")
+    "official_chart_history_n", "lichess_history_n", "official_list_history_n", "olimpbase_history_n", "pre2003_history_n", "history_coverage")
 OUTPUT_FIELDS = ("canonical_id", "snapshot", "exact_dob_frozen", "snapshot_rating", "rating") + ORIGINAL_FIELDS[4:] + EXTRA_FIELDS
 COVERAGE = "available_FIDE_history_direct_or_Lichess_mirror_and_archived_lists_1971_07_to_2023_12"
-FIDE_PROVIDERS = ("fide_official_chart", "lichess_fide_history")
+API_PROVIDERS = ("fide_official_chart", "lichess_fide_history")
+FIDE_PROVIDERS = (*API_PROVIDERS, "fide_official_list_archive")
 CONFLICT_POLICY = "retain_all_candidates_only_when_upper_bound_not_above_unambiguous_peak"
 COVERAGE_RULE = "lichess-frozen-snapshot-and-older-window-v1"
 COVERAGE_REASONS = {"lichess_missing_frozen_snapshot", "lichess_late_history_for_older_person"}
+SNAPSHOT_DISAGREEMENT_RULE = "direct-official-frozen-snapshot-disagreement-v1"
 
 class DatasetBuildError(ValueError):
     """The complete fixed cohort cannot yet be assigned audited labels."""
@@ -129,7 +132,8 @@ def _load_originals(root):
             by_id[cid] = row
             people[cid] = {"canonical_id": cid, "role": role, "name": row["name"],
                 "exact_dob_frozen": row["exact_dob_frozen"], "snapshot": row["snapshot"],
-                "snapshot_elo": int(row["rating"]), "wikidata_person_qids": qids}
+                "snapshot_elo": int(row["rating"]), "wikidata_person_qids": qids,
+                "source_roster": source["path"], "source_roster_sha256": source["sha256"]}
         if set(by_id) != set(frame.canonical_id):
             raise ValueError("Original cohort identities differ from model inputs")
         for row in frame.to_dict("records"):
@@ -144,6 +148,25 @@ def _load_originals(root):
         raise ValueError("Wikidata person overlap within or across fixed cohorts")
     return frames, people, cohort_sources, role_ids, role_qids
 
+def _verify_source_evidence(base, file_hashes, cid, source):
+    if not isinstance(source, dict) or source.get("source_provider") not in API_PROVIDERS:
+        raise ValueError("Invalid rating-history coverage evidence provider")
+    raw_name, metadata_name = source.get("raw_file"), source.get("metadata_file")
+    if raw_name not in file_hashes or metadata_name not in file_hashes:
+        raise ValueError("Unsealed rating-history coverage evidence")
+    raw_path, metadata_path = safe_file(base, raw_name), safe_file(base, metadata_name)
+    raw = gzip.decompress(raw_path.read_bytes())
+    if (sha256(raw_path) != source.get("gzip_sha256")
+            or sha256(metadata_path) != source.get("metadata_sha256")
+            or hashlib.sha256(raw).hexdigest() != source.get("raw_sha256")
+            or type(source.get("raw_bytes")) is not int or len(raw) != source["raw_bytes"]):
+        raise ValueError("Rating-history coverage evidence fingerprint differs")
+    metadata = read_json(metadata_path)
+    if (metadata.get("canonical_id") != cid or metadata.get("source_provider") != source["source_provider"]
+            or any(metadata.get(key) != source[key] for key in ("raw_sha256", "raw_bytes", "gzip_sha256"))):
+        raise ValueError("Rating-history coverage evidence metadata differs")
+    return raw, metadata
+
 def _verify_source_coverage_audit(base, file_hashes, entry, provider):
     """Verify the fixed coverage check without choosing a source by its peak."""
     if "source_coverage_audit" not in entry:
@@ -154,6 +177,7 @@ def _verify_source_coverage_audit(base, file_hashes, entry, provider):
     reasons = coverage.get("reasons")
     outcome = coverage.get("official_outcome")
     expected = {"selected_snapshot_verified": (False, True, "fide_official_chart"),
+        "selected_snapshot_disagreement_verified": (False, True, "fide_official_chart"),
         "unavailable": (True, False, "lichess_fide_history"),
         "missing_frozen_snapshot": (True, True, "lichess_fide_history")}
     if (coverage.get("rule_id") != COVERAGE_RULE or not isinstance(reasons, list) or not reasons
@@ -163,45 +187,213 @@ def _verify_source_coverage_audit(base, file_hashes, entry, provider):
             or coverage.get("selected_provider") != provider
             or (coverage["unresolved"], coverage["direct_source_coverage_checked"], provider) != expected[outcome]):
         raise ValueError("Invalid rating-history source coverage decision")
+    if outcome == "selected_snapshot_disagreement_verified" and not entry.get("snapshot_disagreement"):
+        raise ValueError("Coverage disagreement decision lacks official snapshot proof")
     sources, source_providers = coverage.get("sources"), set()
     if not isinstance(sources, list) or not sources:
         raise ValueError("Rating-history source coverage audit has no evidence")
     for source in sources:
         source_provider = source.get("source_provider")
-        if source_provider not in FIDE_PROVIDERS or source_provider in source_providers:
+        if source_provider not in API_PROVIDERS or source_provider in source_providers:
             raise ValueError("Invalid rating-history coverage evidence provider")
         source_providers.add(source_provider)
-        raw_name, metadata_name = source.get("raw_file"), source.get("metadata_file")
-        if raw_name not in file_hashes or metadata_name not in file_hashes:
-            raise ValueError("Unsealed rating-history coverage evidence")
-        raw_path, metadata_path = safe_file(base, raw_name), safe_file(base, metadata_name)
-        raw = gzip.decompress(raw_path.read_bytes())
-        if (sha256(raw_path) != source.get("gzip_sha256")
-                or sha256(metadata_path) != source.get("metadata_sha256")
-                or hashlib.sha256(raw).hexdigest() != source.get("raw_sha256")
-                or type(source.get("raw_bytes")) is not int or len(raw) != source["raw_bytes"]):
-            raise ValueError("Rating-history coverage evidence fingerprint differs")
-        metadata = read_json(metadata_path)
-        if (metadata.get("canonical_id") != entry["canonical_id"]
-                or metadata.get("source_provider") != source_provider
-                or any(metadata.get(key) != source[key] for key in ("raw_sha256", "raw_bytes", "gzip_sha256"))):
-            raise ValueError("Rating-history coverage evidence metadata differs")
+        _verify_source_evidence(base, file_hashes, entry["canonical_id"], source)
         if source_provider == provider and source["raw_sha256"] != entry["raw_sha256"]:
             raise ValueError("Selected coverage evidence differs from normalized source")
-    if provider not in source_providers or (not coverage["unresolved"] and source_providers != set(FIDE_PROVIDERS)):
+    if provider not in source_providers or (not coverage["unresolved"] and source_providers != set(API_PROVIDERS)):
         raise ValueError("Rating-history coverage audit omitted retained source evidence")
+
+def _source_name(value):
+    return "".join(char for char in unicodedata.normalize("NFKD", str(value)).casefold() if char.isalnum())
+
+def _verify_snapshot_disagreement(base, file_hashes, person, entry, normalized):
+    """Recheck source bytes and frozen provenance before adding a candidate."""
+    if "snapshot_disagreement" not in entry:
+        return None
+    proof = entry["snapshot_disagreement"]
+    if not isinstance(proof, dict):
+        raise ValueError("Invalid official snapshot disagreement proof")
+    expected = {"rule_id": SNAPSHOT_DISAGREEMENT_RULE,
+        "status": "officially_verified_pending_peak_identifiability", "canonical_id": person["canonical_id"],
+        "snapshot_month": person["snapshot"], "frozen_snapshot_elo": person["snapshot_elo"],
+        "frozen_name": person["name"], "frozen_source_roster": person.get("source_roster"),
+        "frozen_source_roster_sha256": person.get("source_roster_sha256")}
+    if (any(expected[key] is None or proof.get(key) != value for key, value in expected.items())
+            or entry.get("source_provider", "fide_official_chart") != "fide_official_chart"
+            or rating(proof.get("official_snapshot_elo")) == person["snapshot_elo"]
+            or _source_name(proof.get("official_name", "")) != _source_name(person["name"])):
+        raise ValueError("Official snapshot disagreement changed frozen identity/source fields")
+    evidence = proof.get("official_evidence")
+    raw, metadata = _verify_source_evidence(base, file_hashes, person["canonical_id"], evidence)
+    if (evidence["source_provider"] != "fide_official_chart" or evidence["raw_sha256"] != entry["raw_sha256"]
+            or normalized.get("source_raw_sha256") != evidence["raw_sha256"]
+            or metadata.get("source_url") != entry["source_url"] or metadata.get("http_status") != 200):
+        raise ValueError("Official snapshot proof differs from selected source bytes")
+    prior = proof.get("prior_evidence")
+    if not isinstance(prior, list):
+        raise ValueError("Official snapshot disagreement lacks prior-evidence inventory")
+    for source in prior:
+        _, prior_metadata = _verify_source_evidence(base, file_hashes, person["canonical_id"], source)
+        prior_url = {"fide_official_chart": f"https://ratings.fide.com/a_chart_data.phtml?event={person['canonical_id']}&period=0",
+            "lichess_fide_history": f"https://lichess.org/api/fide/player/{person['canonical_id']}/ratings"}[source["source_provider"]]
+        if prior_metadata.get("source_url") != prior_url:
+            raise ValueError("Snapshot disagreement prior evidence has an unexpected provider URL")
+    # Reparse the retained direct bytes rather than trusting the proof's values.
+    from collect_fide import parse_history, _month
+    parsed = parse_history(raw, person["canonical_id"])
+    points = {row["month"]: row["standard_elo"] for row in parsed["all_standard_history"]}
+    normalized_points = {row["month"]: row["standard_elo"] for row in normalized["standard_history"]}
+    if (points != normalized_points or len(normalized_points) != len(normalized["standard_history"])
+            or points.get(person["snapshot"]) != proof["official_snapshot_elo"]
+            or any(row.get("derived_state") for row in normalized["standard_history"])):
+        raise ValueError("Official snapshot proof disagrees with raw or normalized rating values")
+    chart = json.loads(raw.decode("utf-8-sig"))
+    snapshot_names, witnessed = [], False
+    witness_month = period(proof.get("identity_witness_month"))
+    for row in chart:
+        month = _month(next(row[key] for key in ("date_2", "date", "period", "month", "rating_date") if key in row))
+        name_matches = _source_name(row.get("name", "")) == _source_name(person["name"])
+        if month == person["snapshot"]:
+            if not name_matches:
+                raise ValueError("Official snapshot row name differs from frozen identity")
+            snapshot_names.append(row["name"])
+        if (month == witness_month and row.get("id_number") not in (None, "")
+                and canonical_id(row["id_number"]) == person["canonical_id"] and name_matches):
+            witnessed = True
+    if proof["official_name"] not in snapshot_names or not witnessed:
+        raise ValueError("Official snapshot disagreement lacks matching direct ID/name witness")
+    return proof
+
+def _official_archive_url(value):
+    return isinstance(value, str) and re.fullmatch(r"https://ratings\.fide\.com/download/[A-Za-z0-9_.-]+\.zip", value, re.IGNORECASE) is not None
+
+def _verify_list_supplement(base, file_hashes, person, entry, normalized, raw, repo_root):
+    """Verify an availability-only archive supplement and its transcribed rows."""
+    if repo_root is None:
+        raise ValueError("Official-list supplement requires the frozen repository source")
+    adjudication = entry.get("list_supplement")
+    expected = {"protocol_id": "chess-peak-list-supplement-adjudication-v1",
+        "status": "applied_after_api_history_unavailable", "reason": "no_usable_history_from_fide_chart_or_lichess",
+        "source_selection": "source_availability_not_rating_magnitude", "primary_snapshot_verified": True,
+        "original_identity_unchanged": True}
+    if not isinstance(adjudication, dict) or any(adjudication.get(key) != value for key, value in expected.items()):
+        raise ValueError("Official-list supplement lacks availability-only adjudication")
+    original = safe_file(repo_root, adjudication.get("supplement_file"))
+    if sha256(original) != adjudication.get("supplement_sha256") or raw != original.read_bytes():
+        raise ValueError("Compiled list supplement differs from frozen repository bytes")
+    prior_name = adjudication.get("prior_api_entry_file")
+    if prior_name not in file_hashes:
+        raise ValueError("Unsealed prior API-unavailable evidence")
+    prior_path = safe_file(base, prior_name)
+    if sha256(prior_path) != adjudication.get("prior_api_entry_sha256"):
+        raise ValueError("Prior API-unavailable evidence changed")
+    prior = read_json(prior_path)
+    if (prior.get("status") != "failed" or prior.get("error_type") not in ("FetchFailure", "HistoryUnavailable")
+            or any(prior.get(key) != person[key] for key in ("canonical_id", "role", "name", "exact_dob_frozen", "snapshot", "snapshot_elo"))):
+        raise ValueError("List supplement cannot replace usable or identity-conflicting API history")
+    payload = json.loads(raw.decode("utf-8-sig"))
+    if (payload.get("protocol_id") != "chess-peak-official-list-supplement-v1"
+            or payload.get("canonical_id") != person["canonical_id"] or payload.get("name") != person["name"]
+            or payload.get("standard_history") != normalized.get("standard_history")):
+        raise ValueError("Compiled list supplement identity or normalized rows differ")
+    rows, ledger = payload["standard_history"], payload.get("archive_ledger")
+    if not rows or not isinstance(ledger, list) or not ledger:
+        raise ValueError("List supplement lacks its source-row ledger")
+    allowed = {"fide_official_list_archive", "olimpbase_transcription"}
+    keys = ("source_url", "archive_sha256", "archive_member", "source_line_number", "source_line")
+    for source in ledger:
+        if any(left in source and right in source and source[left] != source[right]
+                for left, right in (("source_url", "url"), ("archive_sha256", "sha256"), ("archive_member", "member"))):
+            raise ValueError("List supplement ledger aliases disagree")
+        source_kind = source.get("source")
+        url = source.get("source_url", source.get("url"))
+        digest = source.get("archive_sha256", source.get("sha256"))
+        if (source_kind not in allowed or not isinstance(digest, str) or not re.fullmatch(r"[a-f0-9]{64}", digest)
+                or not source.get("archive_member", source.get("member")) or not source.get("header")
+                or type(source.get("bytes")) is not int or source["bytes"] <= 0
+                or (source_kind == "fide_official_list_archive" and not _official_archive_url(url))
+                or (source_kind == "olimpbase_transcription" and url != "https://www.olimpbase.org/Elo/data/elo2002-2009.zip")):
+            raise ValueError("List supplement source ledger is invalid")
+        period(source.get("period"))
+    for row in rows:
+        month, elo = period(row["month"]), rating(row["standard_elo"])
+        if (month > CUTOFF or row.get("source") not in allowed or row.get("source_point") is not True
+                or type(row.get("source_line_number")) is not int or row["source_line_number"] < 1
+                or not isinstance(row.get("source_line"), str) or not row["source_line"]):
+            raise ValueError("Invalid source-specific list supplement row")
+        matches = [item for item in ledger if item.get("period") == month and item.get("source") == row["source"]
+            and item.get("source_url", item.get("url")) == row["source_url"]
+            and item.get("archive_sha256", item.get("sha256")) == row["archive_sha256"]
+            and item.get("archive_member", item.get("member")) == row["archive_member"]
+            and item.get("source_line_number", item.get("row_line_number")) == row["source_line_number"]
+            and item.get("source_line", item.get("row_text")) == row["source_line"]
+            and item.get("player_unlisted") is not True]
+        if not matches:
+            raise ValueError("Normalized supplement row lacks exact archive-ledger provenance")
+        if row["source"] == "fide_official_list_archive" and (person["canonical_id"] not in re.findall(r"[0-9]+", row["source_line"])
+                or str(elo) not in re.findall(r"[0-9]+", row["source_line"])
+                or _source_name(person["name"]) not in _source_name(row["source_line"])):
+            raise ValueError("Official archive line lacks the frozen identity and rating tokens")
+    counts = {source: sum(row["source"] == source for row in rows) for source in allowed}
+    reported = adjudication.get("rows_by_source", {})
+    if set(reported) - allowed or {source: reported.get(source, 0) for source in allowed} != counts or not counts["fide_official_list_archive"]:
+        raise ValueError("Supplement primary/secondary row counts differ")
+    frozen = payload.get("frozen_snapshot", {})
+    frozen_match = [row for row in rows if row["month"] == person["snapshot"]
+        and row["source"] == "fide_official_list_archive" and row["standard_elo"] == person["snapshot_elo"]
+        and all(frozen.get(key.replace("source_url", "archive_url")) == row[key] for key in keys)]
+    if (frozen.get("month") != person["snapshot"] or frozen.get("rating") != person["snapshot_elo"] or not frozen_match
+            or not any(row["source"] == "fide_official_list_archive" and row["source_url"] == entry["source_url"] for row in rows)):
+        raise ValueError("Supplement lacks exact primary frozen-snapshot and anchor evidence")
+    coverage, termination = payload.get("coverage"), payload.get("career_termination")
+    if (not isinstance(coverage, dict) or adjudication.get("coverage") != coverage
+            or not isinstance(termination, dict) or adjudication.get("career_termination") != termination):
+        raise ValueError("Supplement coverage or career-termination provenance differs")
+    official_periods = coverage.get("official_list_periods", [])
+    required_periods = [f"{year}-{month:02d}" for year in (2010, 2011) for month in (1, 3, 5, 7, 9, 11)]
+    required_periods += [f"2012-{month:02d}" for month in (1, 3, 5, 7, 8, 9, 10, 11, 12)]
+    required_periods += [f"2013-{month:02d}" for month in range(1, 13)]
+    if (not official_periods or official_periods != sorted(set(official_periods))
+            or official_periods != required_periods
+            or coverage.get("official_list_first") != official_periods[0]
+            or coverage.get("official_list_last") != official_periods[-1]
+            or any(not "2010-01" <= period(month) <= "2013-12" for month in official_periods)
+            or not {row["month"] for row in rows if row["source"] == "fide_official_list_archive"} <= set(official_periods)):
+        raise ValueError("Supplement official-list coverage is inconsistent")
+    if {item["period"] for item in ledger if item["source"] == "fide_official_list_archive"} != set(required_periods):
+        raise ValueError("Supplement official-list source ledger lacks a required published period")
+    historic_months = sorted(row["month"] for row in rows if row["source"] == "olimpbase_transcription")
+    if historic_months and (coverage.get("historical_transcription_first") != historic_months[0]
+            or coverage.get("historical_transcription_last") != historic_months[-1]):
+        raise ValueError("Supplement historical-transcription coverage is inconsistent")
+    if (termination.get("birth_date") != person["exact_dob_frozen"]
+            or termination.get("source_type") != "official_national_federation_obituary"
+            or termination.get("source_url") != "https://www.ruchess.ru/news/all/pogib_igor_kurnosov/"
+            or not re.fullmatch(r"[a-f0-9]{64}", str(termination.get("source_sha256", "")))
+            or termination.get("posthumous_2014_2023_monthly_coverage_claimed") is not False
+            or not termination.get("excerpt") or not termination.get("coverage_note")):
+        raise ValueError("Supplement career-termination evidence is incomplete")
+    if date.fromisoformat(termination["date"]) > date.fromisoformat(CUTOFF + "-01"):
+        raise ValueError("Career-termination evidence is after label cutoff")
+    date.fromisoformat(termination["source_publication_date"])
+    return {"adjudication": adjudication, "archive_ledger": ledger, "coverage": coverage,
+        "career_termination": termination, "raw_sha256": entry["raw_sha256"], "source_url": entry["source_url"]}
 
 def _coverage_summary(entries):
     audits = {cid: item["entry"].get("source_coverage_audit") for cid, item in sorted(entries.items())}
     present = [item for item in audits.values() if item is not None]
     snapshot_ids = [cid for cid, item in sorted(entries.items()) if item["entry"].get("snapshot_audit_required") is True]
+    disagreements = {cid: item["snapshot_disagreement"] for cid, item in sorted(entries.items()) if item.get("snapshot_disagreement")}
+    supplements = {cid: item["list_supplement"] for cid, item in sorted(entries.items()) if item.get("list_supplement")}
     return {"source_coverage_audits": audits, "source_coverage_checked_n": len(present),
         "source_coverage_resolved_n": sum(item["unresolved"] is False for item in present),
         "source_coverage_unresolved_n": sum(item["unresolved"] is True for item in present),
         "source_coverage_unresolved_person_ids": [cid for cid, item in audits.items() if item is not None and item["unresolved"]],
-        "snapshot_audit_required_n": len(snapshot_ids), "snapshot_audit_required_person_ids": snapshot_ids}
+        "snapshot_audit_required_n": len(snapshot_ids), "snapshot_audit_required_person_ids": snapshot_ids,
+        "snapshot_disagreement_n": len(disagreements), "snapshot_disagreement_proofs": disagreements,
+        "list_supplement_n": len(supplements), "list_supplements": supplements}
 
-def read_acquisition(acquisition_dir, people, dataset_audit=None):
+def read_acquisition(acquisition_dir, people, dataset_audit=None, repo_root=None):
     """Verify complete FIDE-history shards and explicitly named mirror sources."""
     acquisition_dir = Path(acquisition_dir).resolve()
     manifests = sorted(acquisition_dir.rglob("acquisition_manifest.json"))
@@ -243,9 +435,14 @@ def read_acquisition(acquisition_dir, people, dataset_audit=None):
             for field in ("role", "name", "exact_dob_frozen", "snapshot", "snapshot_elo", "wikidata_person_qids"):
                 if entry.get(field) != person[field]:
                     raise ValueError(f"Rating-history entry changed frozen person field: {field}")
+            for field in ("source_roster", "source_roster_sha256"):
+                if field in person and entry.get(field) != person[field]:
+                    raise ValueError(f"Rating-history entry changed frozen person field: {field}")
             provider = entry.get("source_provider", "fide_official_chart")
             url = {"fide_official_chart": f"https://ratings.fide.com/a_chart_data.phtml?event={cid}&period=0",
                 "lichess_fide_history": f"https://lichess.org/api/fide/player/{cid}/ratings"}.get(provider)
+            if provider == "fide_official_list_archive" and _official_archive_url(entry.get("source_url")):
+                url = entry["source_url"]
             if url is None or entry.get("source_url") != url:
                 raise ValueError("Rating-history source URL/provider differs from requested person")
             if "snapshot_audit_required" in entry and type(entry["snapshot_audit_required"]) is not bool:
@@ -268,12 +465,21 @@ def read_acquisition(acquisition_dir, people, dataset_audit=None):
             complete = normalized.get("peak_months_complete", provider == "fide_official_chart")
             if not isinstance(complete, bool) or (provider == "lichess_fide_history" and complete):
                 raise ValueError("Compressed source cannot claim complete monthly peak ties")
-            raw_name = f"raw/{cid}.json.gz"
+            raw_name = entry.get("raw_history_file", f"raw/{cid}.json.gz")
+            if ((provider == "fide_official_list_archive" and raw_name != f"list-supplements/raw/{cid}.json.gz")
+                    or (provider != "fide_official_list_archive" and raw_name != f"raw/{cid}.json.gz")):
+                raise ValueError("Unexpected rating-history raw response path")
             if raw_name not in file_hashes:
                 raise ValueError("Unsealed rating-history raw response")
-            if hashlib.sha256(gzip.decompress(safe_file(base, raw_name).read_bytes())).hexdigest() != entry["raw_sha256"]:
+            raw = gzip.decompress(safe_file(base, raw_name).read_bytes())
+            if hashlib.sha256(raw).hexdigest() != entry["raw_sha256"]:
                 raise ValueError("Rating-history raw-response fingerprint differs")
+            supplement = (_verify_list_supplement(base, file_hashes, person, entry, normalized, raw, repo_root)
+                if provider == "fide_official_list_archive" else None)
+            disagreement = _verify_snapshot_disagreement(base, file_hashes, person, entry, normalized)
             rows = normalized["standard_history"]
+            if provider != "fide_official_list_archive" and any("source" in row and row["source"] != provider for row in rows):
+                raise ValueError("API history cannot override its source provider per row")
             derived_rows = [row for row in rows if row.get("derived_state")]
             if len(derived_rows) > 1 or (derived_rows and provider != "lichess_fide_history"):
                 raise ValueError("Unexpected source-derived snapshot inventory")
@@ -288,14 +494,23 @@ def read_acquisition(acquisition_dir, people, dataset_audit=None):
                     raise ValueError("Invalid piecewise-constant snapshot derivation")
             records = [{**{k: v for k, v in row.items() if k not in ("month", "standard_elo")},
                 "canonical_id": cid, "period": row["month"], "rating": row["standard_elo"],
-                "source": provider, "source_url": url, "source_raw_sha256": entry["raw_sha256"],
+                "source": row["source"] if supplement else provider, "source_url": row["source_url"] if supplement else url,
+                "source_raw_sha256": entry["raw_sha256"],
                 "peak_months_complete": complete, "history_compression": normalized.get("history_compression")}
                 for row in rows]
-            entries[cid] = {"entry": entry, "records": records}
+            if disagreement:
+                records.append({"canonical_id": cid, "period": person["snapshot"], "rating": person["snapshot_elo"],
+                    "source": "frozen_cohort_snapshot", "source_roster": person["source_roster"],
+                    "source_roster_sha256": person["source_roster_sha256"], "source_name": person["name"],
+                    "snapshot_disagreement_rule_id": SNAPSHOT_DISAGREEMENT_RULE,
+                    "official_source_raw_sha256": entry["raw_sha256"]})
+            entries[cid] = {"entry": entry, "records": records, "snapshot_disagreement": disagreement, "list_supplement": supplement}
             if dataset_audit is not None:
                 dataset_audit.update(_coverage_summary(entries))
-        if "source_provider_counts" in manifest and manifest["source_provider_counts"] != provider_counts:
-            raise ValueError("Rating-history provider counts disagree with source entries")
+        if "source_provider_counts" in manifest:
+            reported = manifest["source_provider_counts"]
+            if set(reported) - set(FIDE_PROVIDERS) or {p: reported.get(p, 0) for p in FIDE_PROVIDERS} != provider_counts:
+                raise ValueError("Rating-history provider counts disagree with source entries")
         provenance.append({"manifest_path": manifest_path.relative_to(acquisition_dir).as_posix(),
             "manifest_sha256": sha256(manifest_path), "shard_index": manifest["shard_index"],
             "selected_n": manifest["selected_n"], "files_n": len(file_hashes), "source_provider_counts": provider_counts})
@@ -308,7 +523,7 @@ def read_acquisition(acquisition_dir, people, dataset_audit=None):
         raise DatasetBuildError("Rating-history source coverage or frozen snapshot audit remains unresolved")
     return entries, provenance
 
-def combine_person(person, official_records, historical_records):
+def combine_person(person, official_records, historical_records, snapshot_disagreement=None):
     """Identify peak values without choosing between conflicting source rows.
 
     A conflicting month may remain unresolved only when every candidate is at
@@ -326,8 +541,13 @@ def combine_person(person, official_records, historical_records):
         if month < "1971-07":
             raise ValueError("History precedes declared archive coverage")
         source = str(record.get("source", ""))
-        if source not in (*FIDE_PROVIDERS, "olimpbase_transcription"):
+        if source not in (*FIDE_PROVIDERS, "olimpbase_transcription", "frozen_cohort_snapshot"):
             raise ValueError("History has an unknown source convention")
+        if source == "frozen_cohort_snapshot" and (snapshot_disagreement is None or month != person["snapshot"]
+                or elo != person["snapshot_elo"] or record.get("source_roster") != person.get("source_roster")
+                or record.get("source_roster_sha256") != person.get("source_roster_sha256")
+                or record.get("snapshot_disagreement_rule_id") != SNAPSHOT_DISAGREEMENT_RULE):
+            raise ValueError("Frozen snapshot candidate lacks verified official disagreement proof")
         entry = by_month.setdefault(month, {"canonical_id": cid, "period": month, "rating": elo,
             "sources": set(), "source_records": [], "candidate_ratings": set()})
         entry["candidate_ratings"].add(elo)
@@ -350,9 +570,16 @@ def combine_person(person, official_records, historical_records):
     snapshot = by_month.get(person["snapshot"])
     if snapshot is None:
         raise ValueError("Frozen snapshot month absent from merged histories")
-    if snapshot["ambiguous_period"]:
+    if snapshot_disagreement:
+        if (snapshot_disagreement["canonical_id"] != cid or snapshot_disagreement["snapshot_month"] != person["snapshot"]
+                or snapshot_disagreement["frozen_snapshot_elo"] != person["snapshot_elo"]
+                or not snapshot["ambiguous_period"] or "frozen_cohort_snapshot" not in snapshot["sources"]
+                or not any(rec["source"] == "fide_official_chart" and rec["rating"] == snapshot_disagreement["official_snapshot_elo"]
+                    for rec in snapshot["source_records"])):
+            raise ValueError("Snapshot disagreement proof does not match merged candidates")
+    elif snapshot["ambiguous_period"]:
         raise ValueError("Conflicting ratings for frozen snapshot month")
-    if snapshot["rating"] != person["snapshot_elo"]:
+    elif snapshot["rating"] != person["snapshot_elo"]:
         raise ValueError("History snapshot rating differs from frozen snapshot")
     if peak < person["snapshot_elo"]:
         raise ValueError("Observed peak is below frozen snapshot rating")
@@ -372,12 +599,14 @@ def combine_person(person, official_records, historical_records):
         and any(not rec.get("derived_state", False) for rec in row["source_records"])]
     if not peak_rows:
         raise ValueError("Peak value has no directly retained source point")
-    providers = sorted({rec["source"] for rec in official_records})
+    providers = sorted({rec["source"] for rec in official_records if rec["source"] in FIDE_PROVIDERS})
     derived_n = sum(bool(rec.get("derived_state")) for rec in official_records if rec["period"] <= CUTOFF)
     info = {"rating": peak, "label_end_period": CUTOFF, "feature_reference_snapshot": REFERENCE_SNAPSHOT,
         "peak_periods": ";".join(row["period"] for row in peak_rows),
         "peak_sources": ";".join(sorted({source for row in peak_rows for source in row["sources"]})),
-        "peak_periods_complete": "lichess_fide_history" not in providers,
+        "peak_periods_complete": "lichess_fide_history" not in providers
+            and all(rec.get("peak_months_complete", True) for rec in official_records if rec["source"] in FIDE_PROVIDERS)
+            and not any(row["candidate_upper"] == peak for row in ambiguous),
         "history_source_provider": ";".join(providers), "derived_snapshot_record_n": derived_n,
         "ambiguous_period_n": len(ambiguous), "ambiguous_periods": ";".join(row["period"] for row in ambiguous),
         "period_conflict_resolution_policy": CONFLICT_POLICY,
@@ -385,6 +614,7 @@ def combine_person(person, official_records, historical_records):
         "fide_history_n": sum(bool(set(FIDE_PROVIDERS) & row["sources"]) for row in rows),
         "official_chart_history_n": sum("fide_official_chart" in row["sources"] for row in rows),
         "lichess_history_n": sum("lichess_fide_history" in row["sources"] for row in rows),
+        "official_list_history_n": sum("fide_official_list_archive" in row["sources"] for row in rows),
         "olimpbase_history_n": sum("olimpbase_transcription" in row["sources"] for row in rows),
         "pre2003_history_n": sum(row["period"] < "2003-04" for row in rows), "history_coverage": COVERAGE}
     for row in rows:
@@ -433,7 +663,7 @@ def build_dataset(repo_root, acquisition_dir, historical=None, output_dir=None):
     audit_path = output / "dataset_build_audit.json"
     try:
         frames, people, sources, role_ids, role_qids = _load_originals(root)
-        official, provenance = read_acquisition(acquisition_dir, people, dataset_audit=audit)
+        official, provenance = read_acquisition(acquisition_dir, people, dataset_audit=audit, repo_root=root)
         historic = _historical_payload(historical, acquisition_dir)
         old_by_id = {cid: [] for cid in people}
         for row in historic["records"]:
@@ -444,7 +674,8 @@ def build_dataset(repo_root, acquisition_dir, historical=None, output_dir=None):
         labels, history_rows, excluded_future = {}, [], 0
         for cid, person in sorted(people.items()):
             try:
-                info, records, ignored = combine_person(person, official[cid]["records"], old_by_id[cid])
+                info, records, ignored = combine_person(person, official[cid]["records"], old_by_id[cid],
+                    snapshot_disagreement=official[cid]["snapshot_disagreement"])
                 labels[cid] = info
                 history_rows.extend(records)
                 excluded_future += ignored
@@ -464,6 +695,13 @@ def build_dataset(repo_root, acquisition_dir, historical=None, output_dir=None):
             "candidate_ratings": row["candidate_ratings"], "candidate_upper": row["candidate_upper"],
             "confirmed_peak": labels[row["canonical_id"]]["rating"], "rating_selected": False,
             "resolution_policy": CONFLICT_POLICY} for row in history_rows if row["ambiguous_period"]]
+        audit["snapshot_disagreements"] = [{"canonical_id": cid, "snapshot_month": proof["snapshot_month"],
+            "candidate_ratings": sorted([proof["frozen_snapshot_elo"], proof["official_snapshot_elo"]]),
+            "identified_peak": labels[cid]["rating"] if cid in labels else None,
+            "snapshot_rating_selected": False, "resolution_policy": CONFLICT_POLICY,
+            "frozen_source_roster_sha256": proof["frozen_source_roster_sha256"],
+            "official_source_raw_sha256": proof["official_evidence"]["raw_sha256"]}
+            for cid, proof in audit["snapshot_disagreement_proofs"].items()]
         audit["historical_identity_priority"] = "stable modern FIDE identity and exact normalized frozen full name or explicit audited alias anchor the canonical group; source birth discrepancies are retained and never change frozen birth features"
         audit["conservative_pre2003_flag_without_archive_rows"] = [{"canonical_id": cid, "name": people[cid]["name"],
             "exact_dob_frozen": people[cid]["exact_dob_frozen"], "fide_history_start": official[cid]["entry"].get("history_start")}
@@ -510,6 +748,9 @@ def build_dataset(repo_root, acquisition_dir, historical=None, output_dir=None):
             "period_conflict_resolution_policy": CONFLICT_POLICY,
             **{key: audit[key] for key in ("source_coverage_checked_n", "source_coverage_resolved_n",
                 "source_coverage_unresolved_n", "snapshot_audit_required_n")},
+            "snapshot_disagreement_n": audit["snapshot_disagreement_n"],
+            "snapshot_disagreements": audit["snapshot_disagreements"],
+            "list_supplement_n": audit["list_supplement_n"], "list_supplements": audit["list_supplements"],
             "acquisition": provenance, "historical_payload_sha256": json_sha256(historic), "historical_archives": historic["archives"],
             "audit": {"path": audit_path.relative_to(root).as_posix(), "sha256": sha256(audit_path)},
             "normalized_history": {"path": history_path.relative_to(root).as_posix(), "sha256": sha256(history_path), "n": len(history_rows)}}
@@ -592,7 +833,7 @@ def load_frame(repo_root, role):
         first, last = period(row["history_first_period"]), period(row["history_last_period"])
         if first > last or last > CUTOFF or any(x < first or x > last for x in months):
             raise ValueError("Peak history coverage is inconsistent")
-        for name in ("history_n", "fide_history_n", "official_chart_history_n", "lichess_history_n", "olimpbase_history_n", "pre2003_history_n", "derived_snapshot_record_n"):
+        for name in ("history_n", "fide_history_n", "official_chart_history_n", "lichess_history_n", "official_list_history_n", "olimpbase_history_n", "pre2003_history_n", "derived_snapshot_record_n"):
             if not re.fullmatch(r"[0-9]+", row[name]):
                 raise ValueError("Invalid history count")
             row[name] = int(row[name])

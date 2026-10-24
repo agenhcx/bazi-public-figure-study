@@ -13,6 +13,7 @@ import zipfile
 from collect_fide import run_acquisition, load_roster, write_json
 from collect_historical import extract_history
 from peak_data import build_dataset
+from apply_list_supplements import apply_list_supplements
 
 ARCHIVES = {
     'pre2002': ('https://www.olimpbase.org/Elo/data/elo1967-2001.zip',
@@ -104,6 +105,7 @@ def prepare(root, work, *, resume=None, workers=2, rate=2.0, prefer_provider='li
             raise ValueError('Historical identity audit requires resolution')
         histories = run_acquisition(root, work / 'fide', workers=workers,
             requests_per_second=rate, prefer_provider=prefer_provider)
+        histories = apply_list_supplements(root, work / 'fide', histories)
         complete_statuses = {'official_chart_histories_acquired_pending_historical_merge',
                              'rating_histories_acquired_pending_historical_merge'}
         if histories['status'] not in complete_statuses or histories['failed_n'] or histories['snapshot_audit_n']:
@@ -111,13 +113,16 @@ def prepare(root, work, *, resume=None, workers=2, rate=2.0, prefer_provider='li
         manifest = build_dataset(root, work / 'fide', work / 'historical_history.json')
         source_names = ('PLAN.md', 'config.json', 'collect_fide.py', 'collect_historical.py',
                         'peak_data.py', 'prepare_inputs.py', 'SHANGGUAN_PLAN.md',
-                        'shangguan_association.py')
+                        'shangguan_association.py', 'apply_list_supplements.py')
         manifest['collection_source'] = {
             'github_commit': os.environ.get('GITHUB_SHA'),
             'github_run_id': os.environ.get('GITHUB_RUN_ID'),
             'files_sha256': {f'studies/chess_peak_v1/{name}':
                 sha256(root / 'studies/chess_peak_v1' / name) for name in source_names},
         }
+        manifest['collection_source']['files_sha256'].update({
+            p.relative_to(root).as_posix(): sha256(p)
+            for p in sorted((root / 'studies/chess_peak_v1/supplements').glob('*')) if p.is_file()})
         write_json(output / 'data_manifest.json', manifest)
         status.update(status='peak_inputs_complete_before_fitting',
                       counts={r: manifest['roles'][r]['n'] for r in ('development', 'primary_new')})

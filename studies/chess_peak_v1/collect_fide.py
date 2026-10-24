@@ -17,6 +17,7 @@ from pathlib import Path
 import re
 import threading
 import time
+import unicodedata
 import urllib.error
 import urllib.request
 
@@ -164,18 +165,30 @@ def parse_history(raw, fide_id):
         if not isinstance(record, dict):
             raise SourceIntegrityError("Official chart record is not an object", raw)
         for field in ("id_number", "id", "event", "fide_id"):
-            if record.get(field) not in (None, "") and canonical_id(record[field]) != fid:
-                raise SourceIntegrityError("Official chart response has a different FIDE ID", raw)
+            if record.get(field) not in (None, ""):
+                try:
+                    response_id = canonical_id(record[field])
+                except ValueError as error:
+                    raise SourceIntegrityError("Official chart record has an invalid FIDE ID", raw) from error
+                if response_id != fid:
+                    raise SourceIntegrityError("Official chart response has a different FIDE ID", raw)
         date = next((record[key] for key in ("date_2", "date", "period", "month", "rating_date") if key in record), None)
         rating = next((record[key] for key in ("rating", "rtng", "standard", "standard_rating") if key in record), None)
-        if date is None or rating is None:
-            raise SourceIntegrityError("Official chart record lacks month/standard rating", raw)
-        month, rating = _month(date), _rating(rating)
+        if date is None:
+            raise SourceIntegrityError("Official chart record lacks a published month", raw)
+        month = _month(date)
+        # FIDE includes blitz/rapid-only months before a player's first standard
+        # rating (e.g. Murzin November/December2014). Missing standard is unrated,
+        # exactly like zero; the month/identity still must pass validation.
+        rating = 0 if rating is None or (isinstance(rating, str) and not rating.strip()) else _rating(rating)
         if month in by_month and by_month[month] != rating:
             raise SourceIntegrityError("Conflicting standard ratings for one month", raw)
         by_month[month] = rating
-    return _summarize([{"month": month, "standard_elo": rating, "source_point": True}
-                       for month, rating in by_month.items() if rating])
+    result = _summarize([{"month": month, "standard_elo": rating, "source_point": True}
+                         for month, rating in by_month.items() if rating])
+    unrated = sorted(month for month, rating in by_month.items() if rating == 0)
+    result.update(unrated_standard_months=unrated, unrated_standard_months_n=len(unrated))
+    return result
 
 
 def lichess_url(fide_id):
@@ -438,11 +451,35 @@ def _validate_snapshot(parsed, person, raw, metadata):
            for row in parsed["all_standard_history"]):
         raise SourceIntegrityError("Positive standard-rating history predates the frozen birth month; provider change forbidden",
                                    raw, metadata.get("attempt_records", []))
-    rating = _snapshot_rating(parsed, person)
-    if rating is not None and rating != person["snapshot_elo"]:
-        raise SourceIntegrityError("Published snapshot rating differs from the frozen roster; provider change forbidden",
-                                   raw, metadata.get("attempt_records", []))
-    return rating
+    return _snapshot_rating(parsed, person)
+
+
+def normalize_source_name(value):
+    return "".join(c for c in unicodedata.normalize("NFKD", str(value)).casefold() if c.isalnum())
+
+
+def _official_snapshot_identity(person, raw, metadata):
+    """Require same-chart name/month and a nonnull current-ID identity witness."""
+    fid = canonical_id(person["canonical_id"])
+    if metadata.get("source_url") != chart_url(fid) or metadata.get("http_status") != 200:
+        raise SourceIntegrityError("Snapshot review lacks the exact official chart request", raw)
+    expected_name = normalize_source_name(person["name"])
+    snapshot_rows, witnesses = [], []
+    for row in _decode(raw):
+        date = next((row[key] for key in ("date_2", "date", "period", "month", "rating_date") if key in row), None)
+        month = _month(date)
+        matches_name = normalize_source_name(row.get("name", "")) == expected_name
+        if row.get("id_number") not in (None, "") and canonical_id(row["id_number"]) == fid and matches_name:
+            witnesses.append(month)
+        value = next((row[key] for key in ("rating", "rtng", "standard", "standard_rating") if key in row), None)
+        rated = value is not None and not (isinstance(value, str) and not value.strip()) and _rating(value) > 0
+        if month == person["snapshot"] and rated:
+            if not matches_name:
+                raise SourceIntegrityError("Official snapshot name differs from the frozen person", raw)
+            snapshot_rows.append(row)
+    if not snapshot_rows or not witnesses or not expected_name:
+        raise SourceIntegrityError("Official snapshot review lacks name/month/current-ID proof", raw)
+    return snapshot_rows[0]["name"], min(witnesses)
 
 
 def _coverage_evidence(output, fide_id, raw, metadata):
@@ -450,7 +487,8 @@ def _coverage_evidence(output, fide_id, raw, metadata):
     provider = metadata.get("source_provider", "fide_official_chart")
     compressed = gzip.compress(raw, compresslevel=6, mtime=0)
     provenance = {key: value for key, value in metadata.items()
-                  if key not in ("source_coverage_audit", "source_raw_sha256s", "source_selection_reason")}
+                  if key not in ("source_coverage_audit", "source_raw_sha256s", "source_selection_reason",
+                                 "snapshot_disagreement", "source_evidence")}
     provenance.update(canonical_id=canonical_id(fide_id), source_provider=provider,
                       raw_sha256=sha256_bytes(raw), raw_bytes=len(raw), gzip_sha256=sha256_bytes(compressed))
     meta_bytes = (json.dumps(provenance, ensure_ascii=False, indent=2, sort_keys=True) + "\n").encode()
@@ -468,26 +506,54 @@ def _coverage_evidence(output, fide_id, raw, metadata):
             "metadata_file": meta_name, "metadata_sha256": sha256_bytes(meta_bytes)}
 
 
+def _stage_snapshot_disagreement(person, output, raw, metadata, parsed, prior_evidence=()):
+    official_name, witness_month = _official_snapshot_identity(person, raw, metadata)
+    observed = _snapshot_rating(parsed, person)
+    if observed is None or observed == person["snapshot_elo"]:
+        raise SourceIntegrityError("Snapshot disagreement proof requires differing observed and frozen values", raw)
+    frozen_sha = person.get("source_roster_sha256", "")
+    if not re.fullmatch(r"[a-f0-9]{64}", frozen_sha) or not person.get("source_roster"):
+        raise SourceIntegrityError("Snapshot disagreement lacks frozen roster provenance", raw)
+    evidence = _coverage_evidence(output, person["canonical_id"], raw, metadata)
+    proof = {"rule_id": "direct-official-frozen-snapshot-disagreement-v1",
+        "status": "officially_verified_pending_peak_identifiability",
+        "canonical_id": canonical_id(person["canonical_id"]), "snapshot_month": person["snapshot"],
+        "frozen_snapshot_elo": person["snapshot_elo"], "official_snapshot_elo": observed,
+        "frozen_name": person["name"], "official_name": official_name,
+        "frozen_source_roster": person["source_roster"], "frozen_source_roster_sha256": frozen_sha,
+        "official_evidence": evidence, "prior_evidence": list(prior_evidence),
+        "identity_witness_month": witness_month}
+    metadata = {**metadata, "snapshot_disagreement": proof,
+        "source_selection_reason": "direct_official_authority_snapshot_disagreement_pending_peak_identifiability",
+        "source_raw_sha256s": {s["source_provider"]: s["raw_sha256"] for s in [*prior_evidence, evidence]}}
+    return metadata
+
+
 def ensure_source_coverage(person, output, limiter, raw, metadata, *, timeout=25):
     """Use frozen-date coverage checks only; never inspect peaks to choose sources."""
     fid = canonical_id(person["canonical_id"])
     provider = metadata.get("source_provider", "fide_official_chart")
     parsed = parse_provider(raw, fid, provider, snapshot=person["snapshot"])
     snapshot_rating = _validate_snapshot(parsed, person, raw, metadata)
+    disagrees = snapshot_rating is not None and snapshot_rating != person["snapshot_elo"]
     if provider != "lichess_fide_history":
+        if disagrees:
+            prior = metadata.get("snapshot_disagreement", {}).get("prior_evidence", [])
+            metadata = _stage_snapshot_disagreement(person, output, raw, metadata, parsed, prior)
+            metadata = save_cache(output, fid, raw, metadata)
         return raw, metadata, parsed
     reasons = []
     if snapshot_rating is None:
         reasons.append("lichess_missing_frozen_snapshot")
     if parsed["history_start"] > "2003-04" and person["exact_dob_frozen"] < "1985-01-01":
         reasons.append("lichess_late_history_for_older_person")
-    if not reasons:
+    if not reasons and not disagrees:
         return raw, metadata, parsed
 
     mirror_evidence = _coverage_evidence(output, fid, raw, metadata)
     audit = {"rule_id": "lichess-frozen-snapshot-and-older-window-v1", "reasons": reasons,
         "unresolved": True, "selected_provider": provider, "direct_source_coverage_checked": False,
-        "sources": [mirror_evidence], "official_outcome": "unavailable"}
+        "sources": [mirror_evidence], "official_outcome": "unavailable"} if reasons else None
     metadata = dict(metadata)
     try:
         official_raw, official_meta = fetch_chart(fid, limiter, timeout=timeout, attempts=3)
@@ -496,24 +562,46 @@ def ensure_source_coverage(person, output, limiter, raw, metadata, *, timeout=25
             "last_response_raw_sha256": sha256_bytes(error.response_body) if error.response_body is not None else None,
             "last_response_bytes": len(error.response_body) if error.response_body is not None else None}
         metadata["_official_failure_body"] = error.response_body
+        if disagrees:
+            # Save failed official request provenance, but never waive a dispute.
+            save_cache(output, fid, raw, metadata)
+            raise SourceIntegrityError("Frozen snapshot disagreement could not be verified by the official source",
+                                       raw, error.attempts) from error
     else:
         official_meta = {**official_meta, "source_provider": "fide_official_chart"}
         # The official bytes remain reviewable even when their snapshot conflicts.
-        audit["sources"].append(_coverage_evidence(output, fid, official_raw, official_meta))
+        official_evidence = _coverage_evidence(output, fid, official_raw, official_meta)
+        if audit is not None:
+            audit["sources"].append(official_evidence)
         official_parsed = parse_history(official_raw, fid)
         official_snapshot = _validate_snapshot(official_parsed, person, official_raw, official_meta)
-        audit["direct_source_coverage_checked"] = True
+        if audit is not None:
+            audit["direct_source_coverage_checked"] = True
         if official_snapshot is not None:
+            if disagrees:
+                _official_snapshot_identity(person, official_raw, official_meta)
             # A direct chart can legitimately start late for an older unrated entrant.
             # Checking that source is evidence, not an assertion of an earlier start.
-            audit.update(unresolved=False, selected_provider="fide_official_chart",
-                         official_outcome="selected_snapshot_verified")
+            official_disagrees = official_snapshot != person["snapshot_elo"]
+            if official_disagrees:
+                official_meta = _stage_snapshot_disagreement(person, output, official_raw,
+                    official_meta, official_parsed, [mirror_evidence])
+            if audit is not None:
+                audit.update(unresolved=False, selected_provider="fide_official_chart",
+                    official_outcome="selected_snapshot_disagreement_verified" if official_disagrees
+                                     else "selected_snapshot_verified")
             raw, metadata, parsed = official_raw, official_meta, official_parsed
         else:
+            if disagrees:
+                raise SourceIntegrityError("Official source lacks the disputed snapshot month", official_raw)
             audit["official_outcome"] = "missing_frozen_snapshot"
-    metadata.update(source_coverage_audit=audit,
-        source_selection_reason="fixed_frozen_snapshot_and_older_window_coverage_check",
-        source_raw_sha256s={source["source_provider"]: source["raw_sha256"] for source in audit["sources"]})
+    sources = audit["sources"] if audit is not None else [mirror_evidence, official_evidence]
+    if audit is not None:
+        metadata["source_coverage_audit"] = audit
+    metadata.setdefault("source_selection_reason", "fixed_frozen_snapshot_and_older_window_coverage_check"
+                        if reasons else "direct_official_authority_for_snapshot_source_review")
+    metadata.update(source_evidence=sources,
+        source_raw_sha256s={source["source_provider"]: source["raw_sha256"] for source in sources})
     metadata = save_cache(output, fid, raw, metadata)
     return raw, metadata, parsed
 
@@ -551,15 +639,17 @@ def process_person(person, output, limiter, *, timeout=25, fetcher=fetch_history
         entry.update({key: metadata[key] for key in ("source_url", "fetched_at_utc", "raw_sha256", "raw_bytes")})
         provider = metadata.get("source_provider", "fide_official_chart")
         entry["source_provider"] = provider
-        for key in ("source_coverage_audit", "source_selection_reason", "source_raw_sha256s"):
+        for key in ("source_coverage_audit", "source_selection_reason", "source_raw_sha256s",
+                    "snapshot_disagreement", "source_evidence"):
             if key in metadata:
                 entry[key] = metadata[key]
         history = parsed.pop("all_standard_history")
         snapshot_rating = {row["month"]: row["standard_elo"] for row in history}.get(person["snapshot"])
         reasons = []
-        if snapshot_rating is not None and snapshot_rating != person["snapshot_elo"]:
+        staged_disagreement = "snapshot_disagreement" in metadata
+        if snapshot_rating is not None and snapshot_rating != person["snapshot_elo"] and not staged_disagreement:
             reasons.append("official_chart_snapshot_rating_differs_from_frozen_snapshot")
-        if parsed["observed_fide_history_peak_elo_through_2023"] < person["snapshot_elo"]:
+        if parsed["observed_fide_history_peak_elo_through_2023"] < person["snapshot_elo"] and not staged_disagreement:
             reasons.append("observed_history_peak_is_below_frozen_snapshot_rating")
         if snapshot_rating is None:
             reasons.append("frozen_snapshot_month_absent_from_official_chart_history")
@@ -656,6 +746,7 @@ def run_acquisition(repo_root, output_dir, *, shard_index=0, shard_count=1, max_
         "created_at_utc": utc_now(), "shard_index": shard_index, "shard_count": shard_count,
         "full_shard_expected_n": len(shard), "selected_n": len(selected), "completed_n": len(entries),
         "failed_n": failed, "snapshot_audit_n": sum(bool(row.get("snapshot_audit_required")) for row in entries),
+        "snapshot_disagreement_n": sum("snapshot_disagreement" in row for row in entries),
         "source_provider_counts": counts, "preferred_provider": prefer_provider,
         "workers": workers, "requests_per_second": requests_per_second, "stop_reason": stop_reason,
         "roster_audit": roster_audit, "model_fitting_performed": False, "lifetime_peak_claimed": False,

@@ -88,7 +88,7 @@ def coverage_audit_fixture(base, cid="11", outcome="selected_snapshot_verified")
     if provider != expected_provider:
         raise AssertionError("Fixture provider differs from coverage outcome")
     evidence = []
-    for source_provider in data.FIDE_PROVIDERS:
+    for source_provider in data.API_PROVIDERS:
         if outcome == "unavailable" and source_provider == "fide_official_chart":
             continue
         raw = (gzip.decompress((base / "raw" / f"{cid}.json.gz").read_bytes()) if source_provider == provider
@@ -112,6 +112,92 @@ def coverage_audit_fixture(base, cid="11", outcome="selected_snapshot_verified")
     data.write_json(entry_path, entry)
     reseal_acquisition(base)
     return entry["source_coverage_audit"]
+
+def snapshot_disagreement_fixture(base, people, cid="11", official_elo=None, independent_peak=None):
+    """Use the real collector evidence writer with synthetic direct chart bytes."""
+    import collect_fide as collector
+    p = people[cid]
+    p.setdefault("source_roster", "original_roster.csv")
+    p.setdefault("source_roster_sha256", "f" * 64)
+    official_elo = p["snapshot_elo"] + 1 if official_elo is None else official_elo
+    independent_peak = p["snapshot_elo"] + 20 if independent_peak is None else independent_peak
+    chart = [{"date_2": "2003-04-01", "rating": p["snapshot_elo"], "name": p["name"], "id_number": cid},
+        {"date_2": p["snapshot"] + "-01", "rating": official_elo, "name": p["name"], "id_number": None},
+        {"date_2": "2023-12-01", "rating": independent_peak, "name": p["name"], "id_number": None},
+        {"date_2": "2024-01-01", "rating": independent_peak + 300, "name": p["name"], "id_number": None}]
+    raw = json.dumps(chart).encode()
+    url = f"https://ratings.fide.com/a_chart_data.phtml?event={cid}&period=0"
+    official = collector._coverage_evidence(base, cid, raw, {"source_provider": "fide_official_chart", "source_url": url, "http_status": 200})
+    mirror = collector._coverage_evidence(base, cid, json.dumps({"standard": [2013010000 + p["snapshot_elo"]]}).encode(),
+        {"source_provider": "lichess_fide_history", "source_url": f"https://lichess.org/api/fide/player/{cid}/ratings"})
+    (base / "raw" / f"{cid}.json.gz").write_bytes(gzip.compress(raw, mtime=0))
+    normalized_path = base / "normalized" / f"{cid}.json"
+    normalized = {"canonical_id": cid, "source_raw_sha256": official["raw_sha256"], "source_provider": "fide_official_chart",
+        "label_cutoff_month": data.CUTOFF, "peak_months_complete": True,
+        "standard_history": [{"month": row["date_2"][:7], "standard_elo": row["rating"], "source_point": True} for row in chart]}
+    data.write_json(normalized_path, normalized)
+    proof = {"rule_id": data.SNAPSHOT_DISAGREEMENT_RULE, "status": "officially_verified_pending_peak_identifiability",
+        "canonical_id": cid, "snapshot_month": p["snapshot"], "frozen_snapshot_elo": p["snapshot_elo"],
+        "official_snapshot_elo": official_elo, "frozen_name": p["name"], "official_name": p["name"],
+        "frozen_source_roster": p["source_roster"], "frozen_source_roster_sha256": p["source_roster_sha256"],
+        "official_evidence": official, "prior_evidence": [mirror], "identity_witness_month": "2003-04"}
+    entry_path = base / "entries" / f"{cid}.json"
+    entry = data.read_json(entry_path)
+    entry.update(source_provider="fide_official_chart", source_url=url, raw_sha256=official["raw_sha256"],
+        normalized_history_sha256=data.sha256(normalized_path), snapshot_disagreement=proof,
+        snapshot_audit_required=False, source_roster=p["source_roster"], source_roster_sha256=p["source_roster_sha256"])
+    data.write_json(entry_path, entry)
+    reseal_acquisition(base)
+    return proof
+
+def list_supplement_fixture(root, base, people, cid="22"):
+    """Exercise the actual availability-only helper with a sealed synthetic payload."""
+    import apply_list_supplements as supplements
+    p, rows, ledger = people[cid], [], []
+    periods = [f"{year}-{month:02d}" for year in (2010, 2011) for month in (1, 3, 5, 7, 9, 11)]
+    periods += [f"2012-{month:02d}" for month in (1, 3, 5, 7, 8, 9, 10, 11, 12)]
+    periods += [f"2013-{month:02d}" for month in range(1, 13)]
+    for month in ["2003-07", "2009-11", *periods]:
+        primary = month >= "2010-01"
+        source = "fide_official_list_archive" if primary else "olimpbase_transcription"
+        url = (f"https://ratings.fide.com/download/standard_{month.replace('-', '')}.zip" if primary
+            else "https://www.olimpbase.org/Elo/data/elo2002-2009.zip")
+        digest = hashlib.sha256(month.encode()).hexdigest()
+        member = month + ".txt"
+        elo = p["snapshot_elo"] + (20 if month == "2010-05" else 0)
+        text = f"{cid};{p['name']};{elo}"
+        row = {"month": month, "standard_elo": elo, "source_point": True, "source": source,
+            "source_url": url, "archive_sha256": digest, "archive_member": member,
+            "source_line_number": 2, "source_line": text}
+        rows.append(row)
+        ledger.append({"period": month, "url": url, "sha256": digest, "member": member,
+            "source": source, "source_line_number": 2, "source_line": text, "header": "ID;NAME;RATING", "bytes": 100})
+    snapshot = next(row for row in rows if row["month"] == p["snapshot"])
+    coverage = {"official_list_periods": periods, "official_list_first": periods[0], "official_list_last": periods[-1],
+        "historical_transcription_first": "2003-07", "historical_transcription_last": "2009-11",
+        "post_death_monthly_2014_2023_not_claimed": True}
+    termination = {"date": "2013-08-08", "birth_date": p["exact_dob_frozen"],
+        "source_type": "official_national_federation_obituary", "source_url": "https://www.ruchess.ru/news/all/pogib_igor_kurnosov/",
+        "source_sha256": "b" * 64, "source_publication_date": "2013-08-08", "excerpt": "Synthetic obituary fixture",
+        "posthumous_2014_2023_monthly_coverage_claimed": False, "coverage_note": "Career end evidenced; later monthly lists not claimed"}
+    payload = {"protocol_id": "chess-peak-official-list-supplement-v1", "canonical_id": cid, "name": p["name"],
+        "standard_history": rows, "archive_ledger": ledger, "coverage": coverage, "career_termination": termination,
+        "frozen_snapshot": {"month": p["snapshot"], "rating": p["snapshot_elo"], "archive_url": snapshot["source_url"],
+            **{key: snapshot[key] for key in ("archive_sha256", "archive_member", "source_line_number", "source_line")}}}
+    path = root / data.STUDY / "supplements" / f"fixture_{cid}.json"
+    data.write_json(path, payload)
+    entry_path = base / "entries" / f"{cid}.json"
+    prior = data.read_json(entry_path)
+    prior.update(status="failed", error_type="FetchFailure", error="Synthetic provider-unavailable fixture")
+    data.write_json(entry_path, prior)
+    reseal_acquisition(base)
+    manifest_path = base / "acquisition_manifest.json"
+    manifest = data.read_json(manifest_path)
+    manifest.update(status="history_acquisition_failed", failed_n=1)
+    data.write_json(manifest_path, manifest)
+    with patch.object(supplements, "load_roster", return_value=(list(people.values()), {})):
+        supplements.apply_list_supplements(root, base)
+    return payload
 
 class CombineTests(unittest.TestCase):
     def test_historical_peak_and_future_exclusion_and_matching_overlap(self):
@@ -178,6 +264,7 @@ class CombineTests(unittest.TestCase):
              record("1980-01", 2600, source="olimpbase_transcription")])
         self.assertEqual(label["peak_periods"], "2023-12")
         self.assertIsNone(rows[0]["rating"])
+        self.assertFalse(label["peak_periods_complete"])
 
     def test_above_peak_and_no_unambiguous_source_peak_stop(self):
         with self.assertRaisesRegex(ValueError, "can change the confirmed peak"):
@@ -195,6 +282,109 @@ class CombineTests(unittest.TestCase):
                 data.combine_person(person(), [bad], [])
 
 class AcquisitionTests(unittest.TestCase):
+    def test_legacy_provider_counts_can_omit_new_zero_provider(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            base, people = Path(temporary), {"11": person()}
+            acquisition_fixture(base, people, {"11": "lichess_fide_history"})
+            path = base / "acquisition_manifest.json"
+            manifest = data.read_json(path)
+            del manifest["source_provider_counts"]["fide_official_list_archive"]
+            data.write_json(path, manifest)
+            entries, _ = data.read_acquisition(base, people)
+            self.assertEqual(set(entries), {"11"})
+
+    def test_real_collector_contract_stages_disagreement_and_reader_verifies_it(self):
+        import collect_fide as collector
+        with tempfile.TemporaryDirectory() as temporary:
+            base, people = Path(temporary), {"11": person()}
+            acquisition_fixture(base, people)
+            snapshot_disagreement_fixture(base, people)
+            official_raw = gzip.decompress((base / "raw/11.json.gz").read_bytes())
+            mirror_raw = json.dumps({"standard": [2003042500, 2013012501, 2023122520]}).encode()
+            collector.save_cache(base, "11", mirror_raw, {"source_provider": "lichess_fide_history",
+                "source_url": collector.lichess_url("11"), "http_status": 200, "fetched_at_utc": "2026-01-01T00:00:00+00:00"})
+            official_meta = {"source_provider": "fide_official_chart", "source_url": collector.chart_url("11"),
+                "http_status": 200, "fetched_at_utc": "2026-01-01T00:00:00+00:00"}
+            with patch.object(collector, "fetch_chart", return_value=(official_raw, official_meta)) as fetch:
+                entry = collector.process_person(people["11"], base, None)
+            self.assertEqual(fetch.call_count, 1)
+            self.assertEqual(entry["status"], "history_acquired")
+            self.assertFalse(entry["snapshot_audit_required"])
+            reseal_acquisition(base)
+            entries, _ = data.read_acquisition(base, people)
+            acquired = entries["11"]
+            label, _, _ = data.combine_person(people["11"], acquired["records"], [], acquired["snapshot_disagreement"])
+            self.assertEqual(label["rating"], 2520)
+            self.assertEqual(label["ambiguous_periods"], "2013-01")
+
+    def test_official_disagreement_proof_reparsed_and_frozen_candidate_retained(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            base, people = Path(temporary), {"11": person()}
+            acquisition_fixture(base, people)
+            proof = snapshot_disagreement_fixture(base, people)
+            entries, _ = data.read_acquisition(base, people)
+            info = entries["11"]
+            self.assertEqual(info["snapshot_disagreement"], proof)
+            frozen = next(row for row in info["records"] if row["source"] == "frozen_cohort_snapshot")
+            self.assertEqual(frozen["rating"], 2500)
+            self.assertEqual(frozen["source_roster_sha256"], people["11"]["source_roster_sha256"])
+            label, rows, _ = data.combine_person(people["11"], info["records"], [], proof)
+            self.assertEqual(label["rating"], 2520)
+            self.assertEqual(label["peak_periods"], "2023-12")
+            self.assertEqual(rows[1]["candidate_ratings"], [2500, 2501])
+            self.assertIsNone(rows[1]["rating"])
+            self.assertEqual(label["history_source_provider"], "fide_official_chart")
+
+    def test_official_disagreement_proof_rejects_identity_month_values_and_source_tampering(self):
+        for field, value in (("frozen_source_roster_sha256", "0" * 64), ("official_name", "Other person"),
+                ("identity_witness_month", "2023-12"), ("official_snapshot_elo", 2502)):
+            with self.subTest(field=field), tempfile.TemporaryDirectory() as temporary:
+                base, people = Path(temporary), {"11": person()}
+                acquisition_fixture(base, people)
+                snapshot_disagreement_fixture(base, people)
+                path = base / "entries/11.json"
+                entry = data.read_json(path)
+                entry["snapshot_disagreement"][field] = value
+                data.write_json(path, entry)
+                reseal_acquisition(base)
+                with self.assertRaises(ValueError):
+                    data.read_acquisition(base, people)
+
+    def test_official_disagreement_cannot_trust_a_resealed_normalized_value(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            base, people = Path(temporary), {"11": person()}
+            acquisition_fixture(base, people)
+            snapshot_disagreement_fixture(base, people)
+            path = base / "normalized/11.json"
+            normalized = data.read_json(path)
+            normalized["standard_history"][1]["standard_elo"] += 1
+            data.write_json(path, normalized)
+            entry_path = base / "entries/11.json"
+            entry = data.read_json(entry_path)
+            entry["normalized_history_sha256"] = data.sha256(path)
+            data.write_json(entry_path, entry)
+            reseal_acquisition(base)
+            with self.assertRaisesRegex(ValueError, "raw or normalized rating values"):
+                data.read_acquisition(base, people)
+
+    def test_disagreement_uses_peak_identifiability_without_rating_tolerance(self):
+        for official_elo, independent_peak, accepted in ((2501, 2500, False), (2501, 2501, True), (2530, 2600, True)):
+            with self.subTest(official_elo=official_elo, independent_peak=independent_peak), tempfile.TemporaryDirectory() as temporary:
+                base, people = Path(temporary), {"11": person()}
+                acquisition_fixture(base, people)
+                proof = snapshot_disagreement_fixture(base, people, official_elo=official_elo, independent_peak=independent_peak)
+                entries, _ = data.read_acquisition(base, people)
+                if accepted:
+                    label, _, _ = data.combine_person(people["11"], entries["11"]["records"], [], proof)
+                    self.assertEqual(label["rating"], independent_peak)
+                    self.assertEqual(label["peak_periods"], "2023-12")
+                    self.assertEqual(label["peak_periods_complete"], independent_peak > max(2500, official_elo))
+                else:
+                    with self.assertRaisesRegex(ValueError, "can change the confirmed peak"):
+                        data.combine_person(people["11"], entries["11"]["records"], [], proof)
+                with self.assertRaisesRegex(ValueError, "lacks verified official disagreement proof"):
+                    data.combine_person(people["11"], entries["11"]["records"], [])
+
     def test_coverage_check_evidence_and_resolved_decision_are_verified(self):
         with tempfile.TemporaryDirectory() as temporary:
             base, people = Path(temporary), {"11": person()}
@@ -398,6 +588,95 @@ class DatasetTests(unittest.TestCase):
         self.assertEqual(audit["snapshot_audit_required_n"], 0)
         self.assertEqual(len(data.load_frame(self.root, "development")), 2)
 
+    def test_official_snapshot_disagreement_preserves_frozen_fields_and_audits_peak(self):
+        p = self.people["22"]
+        p.update(source_roster=self.sources["development"]["cohort"]["path"],
+            source_roster_sha256=self.sources["development"]["cohort"]["sha256"])
+        proof = snapshot_disagreement_fixture(self.acquisition, self.people, cid="22")
+        manifest = self.build()
+        self.assertEqual(manifest["snapshot_disagreement_n"], 1)
+        detail = manifest["snapshot_disagreements"][0]
+        self.assertEqual(detail["candidate_ratings"], [2500, 2501])
+        self.assertEqual(detail["identified_peak"], 2520)
+        self.assertFalse(detail["snapshot_rating_selected"])
+        audit = data.read_json(self.root / manifest["audit"]["path"])
+        self.assertEqual(audit["snapshot_disagreement_proofs"], {"22": proof})
+        frame = data.load_frame(self.root, "development").set_index("canonical_id")
+        self.assertEqual(frame.loc["22", "snapshot_rating"], 2500)
+        self.assertEqual(frame.loc["22", "rating"], 2520)
+        self.assertEqual(frame.loc["22", "ambiguous_periods"], "2013-01")
+        self.assertNotIn("2013-01", frame.loc["22", "peak_periods"])
+
+    def test_actual_supplement_helper_and_reader_keep_primary_and_secondary_sources_distinct(self):
+        payload = list_supplement_fixture(self.root, self.acquisition, self.people)
+        manifest = self.build()
+        self.assertEqual(manifest["list_supplement_n"], 1)
+        details = manifest["list_supplements"]["22"]
+        self.assertEqual(details["coverage"], payload["coverage"])
+        self.assertEqual(details["career_termination"], payload["career_termination"])
+        self.assertEqual(details["archive_ledger"], payload["archive_ledger"])
+        self.assertEqual(manifest["history_source_provider_counts"]["fide_official_list_archive"], 1)
+        frame = data.load_frame(self.root, "development").set_index("canonical_id")
+        self.assertEqual(frame.loc["22", "history_source_provider"], "fide_official_list_archive")
+        self.assertEqual(frame.loc["22", "official_list_history_n"], 33)
+        self.assertEqual(frame.loc["22", "olimpbase_history_n"], 2)
+        self.assertEqual(frame.loc["22", "official_chart_history_n"], 0)
+        self.assertEqual(frame.loc["22", "fide_history_n"], 33)
+        self.assertFalse(frame.loc["22", "peak_periods_complete"])
+        self.assertEqual(frame.loc["22", "rating"], 2520)
+        history = pd.read_csv(self.root / manifest["normalized_history"]["path"], dtype={"canonical_id": str})
+        selected = history[history.canonical_id == "22"]
+        self.assertEqual(set(selected.sources), {"fide_official_list_archive", "olimpbase_transcription"})
+
+    def test_list_supplement_rejects_resealed_normalized_source_override(self):
+        list_supplement_fixture(self.root, self.acquisition, self.people)
+        path = self.acquisition / "normalized/22.json"
+        normalized = data.read_json(path)
+        normalized["standard_history"][0]["source"] = "fide_official_list_archive"
+        data.write_json(path, normalized)
+        entry_path = self.acquisition / "entries/22.json"
+        entry = data.read_json(entry_path)
+        entry["normalized_history_sha256"] = data.sha256(path)
+        data.write_json(entry_path, entry)
+        reseal_acquisition(self.acquisition)
+        with self.assertRaisesRegex(ValueError, "normalized rows differ"):
+            self.build()
+
+    def test_list_supplement_cannot_replace_identity_error_or_differ_from_repo_bytes(self):
+        list_supplement_fixture(self.root, self.acquisition, self.people)
+        entry_path = self.acquisition / "entries/22.json"
+        entry = data.read_json(entry_path)
+        prior_path = self.acquisition / entry["list_supplement"]["prior_api_entry_file"]
+        prior = data.read_json(prior_path)
+        prior["error_type"] = "SourceIntegrityError"
+        data.write_json(prior_path, prior)
+        entry["list_supplement"]["prior_api_entry_sha256"] = data.sha256(prior_path)
+        data.write_json(entry_path, entry)
+        reseal_acquisition(self.acquisition)
+        with self.assertRaisesRegex(ValueError, "identity-conflicting"):
+            self.build()
+        prior["error_type"] = "FetchFailure"
+        data.write_json(prior_path, prior)
+        entry["list_supplement"]["prior_api_entry_sha256"] = data.sha256(prior_path)
+        data.write_json(entry_path, entry)
+        reseal_acquisition(self.acquisition)
+        supplement = self.root / entry["list_supplement"]["supplement_file"]
+        supplement.write_text(supplement.read_text() + " ")
+        with self.assertRaisesRegex(ValueError, "frozen repository bytes"):
+            self.build()
+
+    def test_disagreement_above_independent_peak_stops_and_keeps_proof_audit(self):
+        p = self.people["22"]
+        p.update(source_roster=self.sources["development"]["cohort"]["path"],
+            source_roster_sha256=self.sources["development"]["cohort"]["sha256"])
+        proof = snapshot_disagreement_fixture(self.acquisition, self.people, cid="22", independent_peak=2500)
+        with self.assertRaises(data.DatasetBuildError):
+            self.build()
+        audit = data.read_json(self.root / data.DATA / "dataset_build_audit.json")
+        self.assertEqual(audit["snapshot_disagreement_proofs"]["22"], proof)
+        self.assertIsNone(audit["snapshot_disagreements"][0]["identified_peak"])
+        self.assertFalse((self.root / data.DATA / "data_manifest.json").exists())
+
     def test_unresolved_coverage_retained_in_failure_audit_without_ready_manifest(self):
         acquisition_fixture(self.acquisition, self.people, {"22": "lichess_fide_history"})
         coverage = coverage_audit_fixture(self.acquisition, cid="22", outcome="missing_frozen_snapshot")
@@ -414,7 +693,8 @@ class DatasetTests(unittest.TestCase):
     def test_complete_mixed_provider_dataset_has_mirror_counts_and_no_fake_monthly_ties(self):
         acquisition_fixture(self.acquisition, self.people, {"22": "lichess_fide_history"}, derived_ids={"22"})
         manifest = self.build()
-        self.assertEqual(manifest["history_source_provider_counts"], {"fide_official_chart": 2, "lichess_fide_history": 1})
+        self.assertEqual(manifest["history_source_provider_counts"], {"fide_official_chart": 2, "lichess_fide_history": 1,
+            "fide_official_list_archive": 0})
         self.assertEqual(manifest["derived_snapshot_person_n"], 1)
         self.assertEqual(manifest["peak_month_ties_incomplete_n"], 1)
         frame = data.load_frame(self.root, "development").set_index("canonical_id")

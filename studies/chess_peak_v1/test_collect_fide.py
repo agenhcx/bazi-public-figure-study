@@ -30,10 +30,18 @@ def lichess_payload(points=None):
         "rapid": [2023123300], "blitz": [2023123400]}).encode()
 
 
+def named_official_payload(snapshot_elo=2499, peak_elo=2600, name="Fixture Player", witness_id="123"):
+    return json.dumps([
+        {"date_2": "2013-Jan", "id_number": witness_id, "name": name, "rating": str(snapshot_elo)},
+        {"date_2": "2023-Oct", "id_number": witness_id, "name": name, "rating": str(peak_elo)},
+    ]).encode()
+
+
 def person(fid="123"):
     return {"canonical_id": fid, "fide_id": fid, "name": "Fixture Player",
             "role": "development", "cohort": "development", "snapshot": "2013-01",
-            "snapshot_elo": 2500, "exact_dob_frozen": "1980-01-01"}
+            "snapshot_elo": 2500, "exact_dob_frozen": "1980-01-01",
+            "source_roster": "fixtures/frozen.csv", "source_roster_sha256": "a" * 64}
 
 
 def metadata(fid, raw, provider="fide_official_chart"):
@@ -60,6 +68,62 @@ class Response:
 
 
 class HistoryTests(unittest.TestCase):
+    def test_murzin_early_blitz_only_rows_are_unrated_standard(self):
+        raw = json.dumps([
+            {"date_2": "2014-Nov", "id_number": "123", "rating": None,
+             "period_games": None, "rapid_rtng": None, "blitz_rtng": "1832"},
+            {"date_2": "2014-Dec", "id_number": "123", "rating": None,
+             "blitz_rtng": "1816"},
+            {"date_2": "2015-Jan", "id_number": "123", "rating": "1892"},
+        ]).encode()
+        result = collection.parse_history(raw, "123")
+        self.assertEqual(result["observed_fide_history_peak_elo_through_2023"], 1892)
+        self.assertEqual(result["all_standard_history"],
+                         [{"month": "2015-01", "standard_elo": 1892, "source_point": True}])
+        self.assertEqual(result["unrated_standard_months"], ["2014-11", "2014-12"])
+        self.assertEqual(result["unrated_standard_months_n"], 2)
+
+    def test_missing_blank_and_zero_standard_values_are_equivalent_unrated_months(self):
+        rows = [{"date_2": "2014-Aug", "id_number": "123"},
+                {"date_2": "2014-Sep", "id_number": "123", "rating": ""},
+                {"date_2": "2014-Oct", "id_number": "123", "rating": "  "},
+                {"date_2": "2014-Nov", "id_number": "123", "rating": 0},
+                {"date_2": "2014-Dec", "id_number": "123", "rating": "0"},
+                {"date_2": "2015-Jan", "id_number": "123", "rating": "1892"}]
+        result = collection.parse_history(json.dumps(rows).encode(), "123")
+        self.assertEqual(result["unrated_standard_months"],
+                         ["2014-08", "2014-09", "2014-10", "2014-11", "2014-12"])
+        self.assertEqual(result["unrated_standard_months_n"], 5)
+        self.assertEqual(len(result["all_standard_history"]), 1)
+
+    def test_unrated_row_still_requires_valid_date_and_matching_identity(self):
+        valid = {"date_2": "2015-Jan", "id_number": "123", "rating": "1892"}
+        for bad in ({"date_2": "2014-NotAMonth", "id_number": "123", "rating": None},
+                    {"date_2": "2014-Nov", "id_number": "456", "rating": None},
+                    {"date_2": "2014-Nov", "id_number": "bad-ID", "rating": None}):
+            with self.subTest(bad=bad), self.assertRaises(collection.SourceIntegrityError):
+                collection.parse_history(json.dumps([bad, valid]).encode(), "123")
+
+    def test_nonempty_malformed_standard_value_is_not_treated_as_unrated(self):
+        for rating in ("not a rating", "null", "NaN", -1, 3501):
+            raw = json.dumps([{"date_2": "2015-Jan", "id_number": "123", "rating": rating}]).encode()
+            with self.subTest(rating=rating), self.assertRaises(collection.SourceIntegrityError):
+                collection.parse_history(raw, "123")
+
+    def test_unrated_and_positive_duplicate_months_conflict_in_both_orders(self):
+        positive = {"date_2": "2015-Jan", "id_number": "123", "rating": "1892"}
+        for rating in (None, 0, "", "0"):
+            unrated = {"date_2": "2015-Jan", "id_number": "123", "rating": rating}
+            for rows in ([unrated, positive], [positive, unrated]):
+                with self.subTest(rating=rating, rows=rows), self.assertRaises(collection.SourceIntegrityError):
+                    collection.parse_history(json.dumps(rows).encode(), "123")
+
+    def test_all_unrated_standard_rows_have_no_usable_history(self):
+        rows = [{"date_2": "2014-Nov", "id_number": "123", "rating": None, "blitz_rtng": "1832"},
+                {"date_2": "2014-Dec", "id_number": "123", "rating": "", "rapid_rtng": "3000"}]
+        with self.assertRaises(collection.HistoryUnavailable):
+            collection.parse_history(json.dumps(rows).encode(), "123")
+
     def test_live_official_chart_fields_and_nullable_early_identity(self):
         raw = json.dumps([
             {"date_2": "2003-Apr", "rating": "2400", "id_number": None,
@@ -357,11 +421,11 @@ class CoverageTests(unittest.TestCase):
             self.assertTrue(entry["source_coverage_audit"]["direct_source_coverage_checked"])
             self.assertFalse(entry["source_coverage_audit"]["unresolved"])
 
-    def test_present_lichess_snapshot_disagreement_fails_without_official_fetch(self):
+    def test_present_lichess_snapshot_disagreement_attempts_official_but_needs_identity_proof(self):
         mirror_raw = lichess_payload([2003042400, 2013012499, 2023102679])
         with tempfile.TemporaryDirectory() as tmp:
             entry, _, official = self.acquire(Path(tmp), payload(), mirror_raw=mirror_raw)
-            official.assert_not_called()
+            official.assert_called_once()
             self.assertEqual(entry["status"], "failed")
             self.assertEqual(entry["error_type"], "SourceIntegrityError")
 
@@ -419,6 +483,132 @@ class CoverageTests(unittest.TestCase):
     def test_coverage_http429_propagates_stop(self):
         with tempfile.TemporaryDirectory() as tmp, self.assertRaises(collection.AcquisitionStopped):
             self.acquire(Path(tmp), payload(), chart_error=collection.AcquisitionStopped("rate limited"))
+
+
+class SnapshotDisagreementTests(unittest.TestCase):
+    def assert_proof(self, root, entry, raw, prior_raw=None, official_name="Fixture Player"):
+        proof = entry["snapshot_disagreement"]
+        self.assertEqual(proof["rule_id"], "direct-official-frozen-snapshot-disagreement-v1")
+        self.assertEqual(proof["status"], "officially_verified_pending_peak_identifiability")
+        self.assertEqual(proof["canonical_id"], "123")
+        self.assertEqual(proof["snapshot_month"], "2013-01")
+        self.assertEqual(proof["frozen_snapshot_elo"], 2500)
+        self.assertEqual(proof["official_snapshot_elo"], 2499)
+        self.assertEqual(proof["frozen_name"], "Fixture Player")
+        self.assertEqual(proof["official_name"], official_name)
+        self.assertEqual(proof["frozen_source_roster"], "fixtures/frozen.csv")
+        self.assertEqual(proof["frozen_source_roster_sha256"], "a" * 64)
+        self.assertEqual(proof["identity_witness_month"], "2013-01")
+        evidence = [proof["official_evidence"], *proof["prior_evidence"]]
+        expected = {collection.sha256_bytes(raw): raw}
+        if prior_raw is not None:
+            expected[collection.sha256_bytes(prior_raw)] = prior_raw
+        self.assertEqual({row["raw_sha256"] for row in evidence}, set(expected))
+        for row in evidence:
+            raw_path, meta_path = root / row["raw_file"], root / row["metadata_file"]
+            self.assertTrue(meta_path.is_file())
+            stored = raw_path.read_bytes()
+            self.assertEqual(gzip.decompress(stored) if raw_path.suffix == ".gz" else stored,
+                             expected[row["raw_sha256"]])
+        self.assertEqual(collection.read_cache(root, "123")[1]["snapshot_disagreement"], proof)
+
+    def test_proven_official_disagreement_is_staged_without_editing_frozen_input(self):
+        raw, subject = named_official_payload(peak_elo=2490), person()
+        before = json.loads(json.dumps(subject))
+        with tempfile.TemporaryDirectory() as tmp, \
+             patch.object(collection, "fetch_chart", return_value=(raw, metadata("123", raw))), \
+             patch.object(collection, "fetch_lichess") as mirror:
+            root = Path(tmp)
+            entry = collection.process_person(subject, root, None, prefer_provider="fide")
+            mirror.assert_not_called()
+            self.assertEqual(entry["status"], "history_acquired")
+            self.assertFalse(entry["snapshot_audit_required"])
+            self.assertEqual(entry["snapshot_history_elo"], 2499)
+            self.assertEqual(entry["snapshot_elo"], 2500)
+            self.assertEqual(entry["observed_fide_history_peak_elo_through_2023"], 2499)
+            self.assertEqual(subject, before)
+            self.assert_proof(root, entry, raw)
+
+    def test_lichess_dispute_selects_verified_official_even_with_lower_peak_and_preserves_both_sources(self):
+        raw = named_official_payload(name="Fíxture, Player")
+        prior = lichess_payload([2003042400, 2013012490, 2023102800])
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            entry, _, official = CoverageTests.acquire(root, raw, mirror_raw=prior)
+            official.assert_called_once()
+            self.assertEqual(entry["status"], "history_acquired")
+            self.assertEqual(entry["source_provider"], "fide_official_chart")
+            self.assertEqual(entry["observed_fide_history_peak_elo_through_2023"], 2600)
+            self.assertFalse(entry["snapshot_audit_required"])
+            self.assert_proof(root, entry, raw, prior, official_name="Fíxture, Player")
+
+    def test_disputed_mirror_can_resolve_to_named_official_matching_frozen_snapshot(self):
+        raw = named_official_payload(snapshot_elo=2500)
+        prior = lichess_payload([2003042400, 2013012490, 2023102800])
+        with tempfile.TemporaryDirectory() as tmp:
+            entry, _, official = CoverageTests.acquire(Path(tmp), raw, mirror_raw=prior)
+            official.assert_called_once()
+            self.assertEqual(entry["status"], "history_acquired")
+            self.assertEqual(entry["source_provider"], "fide_official_chart")
+            self.assertEqual(entry["snapshot_history_elo"], 2500)
+            self.assertFalse(entry["snapshot_audit_required"])
+            self.assertNotIn("snapshot_disagreement", entry)
+
+    def test_invalid_official_name_or_missing_identity_witness_cannot_adjudicate(self):
+        prior = lichess_payload([2003042400, 2013012490, 2023102800])
+        for raw in (named_official_payload(name="Another Person"),
+                    named_official_payload(witness_id=None),
+                    named_official_payload(witness_id="456")):
+            with self.subTest(raw=raw), tempfile.TemporaryDirectory() as tmp:
+                entry, _, official = CoverageTests.acquire(Path(tmp), raw, mirror_raw=prior)
+                official.assert_called_once()
+                self.assertEqual(entry["status"], "failed")
+                self.assertEqual(entry["error_type"], "SourceIntegrityError")
+
+    def test_verified_official_disagreement_cache_resumes_without_fetch(self):
+        raw = named_official_payload()
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            with patch.object(collection, "fetch_chart", return_value=(raw, metadata("123", raw))):
+                original = collection.process_person(person(), root, None)
+            self.assertEqual(original["status"], "history_acquired")
+            with patch.object(collection, "fetch_chart") as official, \
+                 patch.object(collection, "fetch_lichess") as mirror:
+                resumed = collection.process_person(person(), root, None, prefer_provider="lichess")
+            official.assert_not_called(); mirror.assert_not_called()
+            self.assertEqual(resumed["status"], "history_acquired")
+            self.assertEqual(resumed["snapshot_disagreement"], original["snapshot_disagreement"])
+
+    def test_coverage_triggered_official_disagreement_has_explicit_verified_outcome(self):
+        raw = named_official_payload()
+        prior = lichess_payload([2013012500, 2023102679])
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            entry, _, official = CoverageTests.acquire(root, raw, mirror_raw=prior)
+            official.assert_called_once()
+            self.assertEqual(entry["status"], "history_acquired")
+            audit = entry["source_coverage_audit"]
+            self.assertEqual(audit["official_outcome"], "selected_snapshot_disagreement_verified")
+            self.assertEqual(audit["selected_provider"], "fide_official_chart")
+            self.assertFalse(audit["unresolved"])
+            self.assertTrue(audit["direct_source_coverage_checked"])
+            self.assert_proof(root, entry, raw, prior)
+
+    def test_dispute_cannot_resolve_when_official_snapshot_month_is_missing(self):
+        raw = json.dumps([{"date_2": "2023-Oct", "id_number": "123", "name": "Fixture Player",
+                           "rating": "2600"}]).encode()
+        prior = lichess_payload([2003042400, 2013012490, 2023102800])
+        with tempfile.TemporaryDirectory() as tmp:
+            entry, _, official = CoverageTests.acquire(Path(tmp), raw, mirror_raw=prior)
+            official.assert_called_once()
+            self.assertEqual(entry["status"], "failed")
+            self.assertEqual(entry["error_type"], "SourceIntegrityError")
+
+    def test_dispute_direct_official_http429_propagates_stop(self):
+        prior = lichess_payload([2003042400, 2013012490, 2023102800])
+        with tempfile.TemporaryDirectory() as tmp, self.assertRaises(collection.AcquisitionStopped):
+            CoverageTests.acquire(Path(tmp), named_official_payload(), mirror_raw=prior,
+                                  chart_error=collection.AcquisitionStopped("rate limited"))
 
 
 if __name__ == "__main__":
