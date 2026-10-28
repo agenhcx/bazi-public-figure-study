@@ -1,0 +1,87 @@
+{
+  "dataset": "professor-qs2027-pilot-v1",
+  "status": "validated_availability_pilot",
+  "countries": [
+    "US",
+    "UK",
+    "CN"
+  ],
+  "universities": 9,
+  "departments": 18,
+  "ranking_edition": "QS World University Rankings 2027 overall",
+  "observed_roster_membership_rows": 1490,
+  "unique_department_person_keys": 1490,
+  "person_identity_definition": "Keys include department and profile URL. Counts are affiliation/person-record checks, not guaranteed independent people. Exact profile reuse and same-institution normalized names are flagged without merging, including within-department multi-URL records.",
+  "cross_department_profile_reuse_groups": 1,
+  "cross_department_identity_review_candidates": 2,
+  "identity_review_candidate_groups": 4,
+  "within_department_identity_review_candidates": 2,
+  "planned_dob_pilot_size": 108,
+  "actual_dob_pilot_size": 90,
+  "unfilled_sample_slots": 18,
+  "directory_status_counts": {
+    "blocked": 3,
+    "captured_complete_visible_scope": 14,
+    "captured_partial": 1
+  },
+  "body_supported_availability_precision_counts": {
+    "unknown": 76,
+    "year": 2,
+    "month": 6,
+    "day": 6
+  },
+  "birth_year_window": [
+    1835,
+    1985
+  ],
+  "birth_window_status_counts": {
+    "inside_window": 14,
+    "unknown": 76
+  },
+  "day_claims_with_printed_component_differences": 0,
+  "day_claims_with_unstated_calendar": 6,
+  "day_claims_with_explicit_lunar_calendar": 0,
+  "recorded_request_attempt_counts": {
+    "profile_fetch_attempts": 90,
+    "cv_fetch_attempts": 8,
+    "search_query_count": 90,
+    "search_result_body_fetch_attempts": 14
+  },
+  "dob_check_timing_evidence_counts": {
+    "completion_timestamp_only_start_unverified": 90
+  },
+  "pre_dob_sampling_start_times_fully_documented": false,
+  "search_result_body_confirmation_budget_per_person": 1,
+  "accepted_exact_dob_count": 0,
+  "final_cohort_frozen": false,
+  "full_department_historical_roster_completeness_claimed": false,
+  "hierarchy_age_distributions_matched": false,
+  "cross_tier_membership_overlap_adjudicated": false,
+  "higher_tier_overlap_status": "observed_positive_not_exhaustive",
+  "higher_tier_overlap_status_counts": {
+    "not_systematically_checked": 86,
+    "observed_positive_not_exhaustive": 4
+  },
+  "post_freeze_metadata_corrected_departments": 5,
+  "post_freeze_metadata_corrected_person_record_checks": 30,
+  "bazi_variables_computed": 0,
+  "statistical_analysis_performed": false,
+  "merge_external_requests": 0,
+  "calendar_conversion_performed": false,
+  "input_sha256": {
+    "US/country_pilot.json": "a94e7cf41ebdd3e6c60928ff4fc82bb0705d22374e7b122bf92da2bf802fc622",
+    "UK/country_pilot.json": "856cf0ce303defa798e9245c21133ef9564ae0c982d8a4158818410b09af2597",
+    "CN/country_pilot.json": "7f76e1dec9ceeb3bbef947068a3f32138b02ec605a7ba341de8ea910da0e98cb"
+  },
+  "limitations": [
+    "Counts describe observed official-directory scope; partial/blocked sources do not establish full faculty denominators.",
+    "DOB availability requires an observed body claim; snippets remain discovery metadata only.",
+    "All day-level dates are claims, not formally accepted Gregorian birthdays; calendar markers and disagreements are preserved.",
+    "Unknown birth year remains in the roster and pilot, without exclusion or age inference.",
+    "The 1835-1985 support window does not itself match Nobel/academy age or era distributions.",
+    "This feasibility pilot does not define or freeze the final professor comparison cohort.",
+    "A completion timestamp alone does not prove when DOB checking started. Missing start times remain explicitly unverified, without inventing timestamps or discarding the availability observations.",
+    "Documented metadata corrections bind current rows at their actual correction time. Earlier sampling time is used only after recomputing the complete prior snapshot and verifying identical selected keys; current hashes are not represented as having existed earlier.",
+    "One institution-hosted body confirmation from the bounded search result is permitted per sampled person; legacy absent counters mean zero. No repeated query or retry is authorized."
+  ]
+}

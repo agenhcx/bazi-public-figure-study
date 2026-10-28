@@ -1,0 +1,130 @@
+{
+  "dataset": "professor-qs2027-pilot-v1",
+  "schema_version": 1,
+  "scope_fixed_on": "2026-10-28",
+  "ranking_edition": "QS World University Rankings 2027",
+  "ranking_type": "overall_world_university_ranking_not_subject_ranking",
+  "ranking_sources": [
+    "https://www.topuniversities.com/qs-top-uni-wur",
+    "https://www.topuniversities.com/university-rankings-articles/world-university-rankings/top-universities-mainland-china",
+    "https://www.topuniversities.com/university-rankings-articles/world-university-rankings/top-universities-uk"
+  ],
+  "country_scope_note": "Institutional location, not faculty citizenship. CN means mainland China for this pilot.",
+  "institutions": [
+    {
+      "country": "US",
+      "institution_id": "mit",
+      "name": "Massachusetts Institute of Technology",
+      "qs_rank": "1",
+      "qs_profile_url": "https://www.topuniversities.com/universities/massachusetts-institute-technology-mit"
+    },
+    {
+      "country": "US",
+      "institution_id": "stanford",
+      "name": "Stanford University",
+      "qs_rank": "=2",
+      "qs_profile_url": "https://www.topuniversities.com/universities/stanford-university"
+    },
+    {
+      "country": "US",
+      "institution_id": "harvard",
+      "name": "Harvard University",
+      "qs_rank": "5",
+      "qs_profile_url": "https://www.topuniversities.com/universities/harvard-university"
+    },
+    {
+      "country": "UK",
+      "institution_id": "imperial",
+      "name": "Imperial College London",
+      "qs_rank": "=2",
+      "qs_profile_url": "https://www.topuniversities.com/universities/imperial-college-london"
+    },
+    {
+      "country": "UK",
+      "institution_id": "oxford",
+      "name": "University of Oxford",
+      "qs_rank": "4",
+      "qs_profile_url": "https://www.topuniversities.com/universities/university-oxford"
+    },
+    {
+      "country": "UK",
+      "institution_id": "cambridge",
+      "name": "University of Cambridge",
+      "qs_rank": "6",
+      "qs_profile_url": "https://www.topuniversities.com/universities/university-cambridge"
+    },
+    {
+      "country": "CN",
+      "institution_id": "pku",
+      "name": "Peking University",
+      "qs_rank": "13",
+      "qs_profile_url": "https://www.topuniversities.com/universities/peking-university"
+    },
+    {
+      "country": "CN",
+      "institution_id": "tsinghua",
+      "name": "Tsinghua University",
+      "qs_rank": "14",
+      "qs_profile_url": "https://www.topuniversities.com/universities/tsinghua-university"
+    },
+    {
+      "country": "CN",
+      "institution_id": "fudan",
+      "name": "Fudan University",
+      "qs_rank": "26",
+      "qs_profile_url": "https://www.topuniversities.com/universities/fudan-university"
+    }
+  ],
+  "departments": [
+    "physics",
+    "chemistry"
+  ],
+  "faculty_rank": "unrestricted_academic_faculty_ranks",
+  "nonfaculty_exclusions": [
+    "students",
+    "postdoctoral_trainees",
+    "administrative_staff",
+    "technical_support_staff"
+  ],
+  "special_categories_preserved": [
+    "emeritus",
+    "visiting",
+    "honorary"
+  ],
+  "snapshot_scope": "Current publicly visible faculty directory, retaining its own source as-of date where stated; not a complete historical roster and not a 2025 professor membership freeze.",
+  "future_appointments": "Preserve explicitly future appointments but do not sample them as current faculty.",
+  "sampling": {
+    "algorithm": "sha256_seeded_order_v1",
+    "seed": "professor-qs2027-pilot-v1",
+    "per_department": 6,
+    "max_planned_total": 108,
+    "pool": "Recognized academic faculty categories from captured directory rows; no birth-year or DOB-availability filtering before sampling.",
+    "missing_directory": "Keep blocked/partial status, do not replace the institution or department to fill the quota."
+  },
+  "birth_year_window": [
+    1835,
+    1985
+  ],
+  "birth_year_treatment": "Use explicitly stated birth year only. Unknown remains unknown. Keep out-of-window people in pilot to measure age eligibility; exclude only in a later documented analysis population.",
+  "era_matching": "The common min/max window is a support rule, not completed age/era matching to academy or Nobel distributions.",
+  "dob_budget": {
+    "institutional_profile_attempts_per_person": 1,
+    "directly_linked_cv_attempts_per_person": 1,
+    "additional_targeted_queries_per_person": 1,
+    "transport_retry_budget": 0,
+    "alternate_failed_source_mining": "not_authorized_for_this_pass",
+    "search_result_body_fetch_attempts_per_person": 1
+  },
+  "dob_policy": "Collect explicit birth claims and provenance. Preserve year/month/day precision and calendar labels; do not infer from age, graduation, anniversary or field defaults. Body-observed claims and search snippets remain distinct. Day availability is not formal accepted Gregorian DOB.",
+  "higher_tier_overlap": "Retain professor affiliations; flag observed/available-reference academy or Nobel overlap separately. Unchecked is not a negative match. No final professor-only analysis cohort is created in this feasibility pass.",
+  "source_storage": "Public outputs contain directory facts, source URLs, short claim excerpts, retrieval diagnostics and hashes. No full HTML/PDF/CV or private contacts/family data in public Git.",
+  "limits": {
+    "final_professor_roster_frozen": false,
+    "accepted_exact_dob_count": 0,
+    "full_historical_coverage_claimed": false,
+    "bazi_variables_computed": 0,
+    "statistical_unblinding_performed": false
+  },
+  "protocol_revision": "v1.1-bounded-search-result-body-confirmation",
+  "budget_clarification_note": "After some directory fields and search snippets were visible, the one targeted query budget was clarified uniformly for all sampled records to allow at most one returned institutional/first-person body open. Sampling keys were not changed. Original scope bytes are retained."
+}

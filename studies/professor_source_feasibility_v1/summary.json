@@ -1,0 +1,213 @@
+{
+  "dataset": "professor-source-feasibility-v1",
+  "client_date": "2026-10-28",
+  "status": "bounded_investigation_closed",
+  "basis_professor_pilot_commit": "1d5f910d08662abf3779fefe01e4f48a8e884ee5",
+  "search_exhaustive": false,
+  "official_catalogue_candidates_checked": 4,
+  "paper_families_checked": 4,
+  "decision": {
+    "original_QS_US_UK_CN_professor_person_by_person_expansion": "parked",
+    "three_tier_hypothesis": "not_tested; this availability check does not establish that the hypothesis is false or that all professor sources fail",
+    "professor_source_alternative": "Rostock CSV is a verified batch source candidate; German historical faculty would require a separately specified cohort and era/discipline/identity matching before any hierarchy comparison",
+    "fields_alternative": "64 official medalists through the existing 2025 cutoff; separate award cohort, not a new rung beneath Nobel",
+    "automatic_full_professor_crawl_started": false,
+    "full_Fields_DOB_collection_started": false,
+    "formal_primary_scope_changed": false
+  },
+  "rostock_independent_actual_file_recount": {
+    "subjects": {
+      "physics": {
+        "rows": 90,
+        "bytes": 17114,
+        "sha256": "89d9a17437557c5b1bce325c2b806b91f9df0cbdf5c4baa612182d2c51bdce4e",
+        "day": 65,
+        "year_only": 14,
+        "missing": 11,
+        "other": 0,
+        "day_inside_window": 62
+      },
+      "chemistry": {
+        "rows": 117,
+        "bytes": 22592,
+        "sha256": "5cbc1ddb0c28736aa46332222f919bc5227bea95902d2b9be5462c38a9edeecd",
+        "day": 93,
+        "year_only": 13,
+        "missing": 11,
+        "other": 0,
+        "day_inside_window": 89
+      }
+    },
+    "unique_official_purl_records": 205,
+    "purl_in_both_subjects": 2,
+    "unique_purl_day_claims": 156,
+    "unique_purl_day_inside_1835_1985": 149,
+    "deduplication_note": "Official PURL equality only; no adjudication of multiple PURLs for one real person, faculty-role eligibility or higher-tier membership."
+  },
+  "rostock_scope_limits": [
+    "Official PURL equality only, not full identity adjudication",
+    "Faculty title/role and academy/Nobel overlap not adjudicated",
+    "1835–1985 is support, not completed era matching",
+    "Raw CSV redistribution license not confirmed; public audit contains counts, schema, URLs and hashes only"
+  ],
+  "paper_results": [
+    {
+      "id": "polish_science_observatory",
+      "result": "No public individual day-DOB file verified. Related merged Scopus research data have release restrictions; this does not prove every registry field is inaccessible.",
+      "source_urls": [
+        "https://link.springer.com/article/10.1007/s11192-022-04363-0",
+        "https://link.springer.com/article/10.1007/s10755-024-09735-3"
+      ]
+    },
+    {
+      "id": "french_cnrs_physicists",
+      "result": "Author PDF specifies birth year, insufficient for day-known analysis.",
+      "source_urls": [
+        "https://www.nber.org/papers/w32285",
+        "https://eml.berkeley.edu/~bhhall/papers/HallMairesse24_CNRS_cum_adv_NBERw32285.pdf",
+        "https://doi.org/10.1080/10438599.2025.2523043"
+      ]
+    },
+    {
+      "id": "us_faculty_hiring_networks",
+      "result": "Actual latest public ZIP has four aggregate/network CSVs and no birth-related columns.",
+      "source_urls": [
+        "https://zenodo.org/records/6941651",
+        "https://zenodo.org/records/22099839"
+      ],
+      "downloaded_file_sha256": "ea6866d8cab967cf0ac97d696654344eb203a9ea9adb0d64d875f073c92803cf",
+      "downloaded_file_bytes": 3670981,
+      "csv_inventory": [
+        {
+          "file": "us-faculty-hiring-networks-v2026.08/data/edge-lists.csv",
+          "header": [
+            "TaxonomyLevel",
+            "TaxonomyValue",
+            "InstitutionId",
+            "InstitutionName",
+            "DegreeInstitutionId",
+            "DegreeInstitutionName",
+            "Total",
+            "Men",
+            "Women"
+          ],
+          "rows": 405410,
+          "birth_date_related_columns": []
+        },
+        {
+          "file": "us-faculty-hiring-networks-v2026.08/data/institution-stats.csv",
+          "header": [
+            "InstitutionId",
+            "InstitutionName",
+            "TaxonomyLevel",
+            "TaxonomyValue",
+            "NonAttritedFaculty",
+            "AttritedFaculty",
+            "NonAttritionEvents",
+            "AttritionEvents",
+            "ProductionRank",
+            "PrestigeRank",
+            "OrdinalPrestigeRank"
+          ],
+          "rows": 12669,
+          "birth_date_related_columns": []
+        },
+        {
+          "file": "us-faculty-hiring-networks-v2026.08/data/stats.csv",
+          "header": [
+            "TaxonomyLevel",
+            "TaxonomyValue",
+            "NoDoctorate",
+            "Doctorate (US)",
+            "Doctorate (Non-US)",
+            "Doctorate (Canada/UK)",
+            "Doctorate (Africa)",
+            "Doctorate (Asia)",
+            "Doctorate (Europe)",
+            "Doctorate (North America)",
+            "Doctorate (Oceania)",
+            "Doctorate (South America)",
+            "NonAttritedFaculty (US)",
+            "AttritedFaculty (US)",
+            "NonAttritionEvents (US)",
+            "AttritionEvents (US)",
+            "NonAttritedFaculty (Canada/UK)",
+            "AttritedFaculty (Canada/UK)",
+            "NonAttritionEvents (Canada/UK)",
+            "AttritionEvents (Canada/UK)",
+            "NonAttritedFaculty (non US/Canada/UK)",
+            "AttritedFaculty (non US/Canada/UK)",
+            "NonAttritionEvents (non US/Canada/UK)",
+            "AttritionEvents (non US/Canada/UK)",
+            "NewFaculty",
+            "ExistingFaculty",
+            "GiniCoefficient",
+            "GiniCoefficient (NewFaculty)",
+            "GiniCoefficient (ExistingFaculty)",
+            "Men",
+            "Women",
+            "FractionWomen",
+            "FractionWomen (NewFaculty)",
+            "FractionWomen (ExistingFaculty)",
+            "SelfHires",
+            "SelfHires (Men)",
+            "SelfHires (Women)",
+            "NonAttritedFaculty (SelfHires)",
+            "AttritedFaculty (SelfHires)",
+            "NonAttritionEvents (SelfHires)",
+            "AttritionEvents (SelfHires)",
+            "NonAttritedFaculty (non-SelfHires)",
+            "AttritedFaculty (non-SelfHires)",
+            "NonAttritionEvents (non-SelfHires)",
+            "AttritionEvents (non-SelfHires)",
+            "FractionUpHierarchyHires",
+            "FractionDownHierarchyHires",
+            "FractionUpHierarchyHires (null model)",
+            "NullModelMoreHierarchicalThanEmpiricalCount"
+          ],
+          "rows": 78,
+          "birth_date_related_columns": []
+        },
+        {
+          "file": "us-faculty-hiring-networks-v2026.08/data/yearly-stats.csv",
+          "header": [
+            "TaxonomyLevel",
+            "TaxonomyValue",
+            "Year",
+            "GiniCoefficient",
+            "FractionFemale"
+          ],
+          "rows": 1160,
+          "birth_date_related_columns": []
+        }
+      ]
+    },
+    {
+      "id": "rostock_medical_professors_paper",
+      "result": "295-person merged study data restricted. Its 96.61% is birth-year availability, not full YMD coverage. The public CPR catalogue is a different source.",
+      "source_urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC13107724/",
+        "https://doi.org/10.1186/s12909-026-09233-4"
+      ]
+    }
+  ],
+  "fields": {
+    "roster_source_url": "https://www.mathunion.org/imu-awards/fields-medal",
+    "roster_source_sha256": "204141d0ccc77fdcefb82dedd3d61d09e4b4bf7a040eb2c28f607a6111cf1c32",
+    "through_2025_count": 64,
+    "last_included_award_year": 2022,
+    "additional_2026_count": 4,
+    "through_2026_count": 68,
+    "special_cases": "Perelman included with declined flag; Wiles special silver plaque excluded",
+    "age_rule": "40th birthday must not precede January 1 of the award year; not simply under40 on ceremony day",
+    "DOB_examples_observed": 2,
+    "DOB_coverage_rate_established": false,
+    "new_independent_birth_window": "Not automatically inherited from Nobel",
+    "independent_award_not_hierarchy_rung": true
+  },
+  "bazi_variables_computed": 0,
+  "statistical_tests_run": 0,
+  "institution_contacted": false,
+  "permission_application_submitted": false,
+  "original_frozen_inputs_changed": false
+}
