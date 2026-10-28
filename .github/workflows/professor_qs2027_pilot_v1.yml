@@ -1,0 +1,56 @@
+name: Professor QS2027 feasibility pilot offline verification
+
+on:
+  push:
+    branches:
+      - codex/professor-qs2027-pilot-20261028
+    paths:
+      - studies/professor_qs2027_pilot_v1/**
+      - .github/workflows/professor_qs2027_pilot_v1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+      PYTHONUNBUFFERED: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Test sampling and evidence safeguards
+        run: python -m unittest discover -s studies/professor_qs2027_pilot_v1/tests
+      - name: Replay saved inputs without source requests
+        run: python studies/professor_qs2027_pilot_v1/scripts/merge_pilot.py --inputs studies/professor_qs2027_pilot_v1/inputs/US/country_pilot.json studies/professor_qs2027_pilot_v1/inputs/UK/country_pilot.json studies/professor_qs2027_pilot_v1/inputs/CN/country_pilot.json --output-dir local_runs/professor_qs2027_pilot_v1
+      - name: Compare actual replay with saved summary
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          actual = json.loads(Path("local_runs/professor_qs2027_pilot_v1/summary.json").read_text())
+          expected = json.loads(Path("studies/professor_qs2027_pilot_v1/results/summary.json").read_text())
+          assert actual == expected, "Offline replay summary differs from the saved result"
+          PY
+      - name: Publish actual result
+        if: always()
+        run: |
+          if [ -f local_runs/professor_qs2027_pilot_v1/summary.md ]; then
+            cat local_runs/professor_qs2027_pilot_v1/summary.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Verification did not complete. Inspect the failed step; no passing replay is claimed." >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: professor-qs2027-pilot-offline-verification-v1
+          path: local_runs/professor_qs2027_pilot_v1/
+          if-no-files-found: warn
+          retention-days: 14
