@@ -1,0 +1,164 @@
+name: Academy UK and Japan bounded follow-up v1
+
+on:
+  push:
+    branches:
+      - codex/academy-uk-japan-jobs-20261028
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: academy-uk-japan-followup-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  PYTHONDONTWRITEBYTECODE: "1"
+  PYTHONUNBUFFERED: "1"
+
+jobs:
+  uk_frozen_dob_replay:
+    name: UK frozen DOB deterministic replay
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      JOB_DIR: local_runs/academy_followup_20261028/uk
+      JOB_NAME: uk
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Rebuild and verify the final UK freeze
+        id: verify
+        run: python scripts/academy_jobs_uk_replay_v1.py --output-dir "$JOB_DIR"
+      - name: Publish actual counts and failure state
+        if: always()
+        env:
+          VERIFY_OUTCOME: ${{ steps.verify.outcome }}
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          output = Path(os.environ["JOB_DIR"])
+          output.mkdir(parents=True, exist_ok=True)
+          summary = output / "summary.md"
+          if not summary.exists():
+              failure = {"job": os.environ["JOB_NAME"], "status": "failed", "step_outcome": os.environ.get("VERIFY_OUTCOME", "unknown"), "counts": None, "error": "Runner did not produce a summary; inspect the job log."}
+              (output / "summary.json").write_text(json.dumps(failure, indent=2) + "\n", encoding="utf-8")
+              (output / "failure_summary.json").write_text(json.dumps(failure, indent=2) + "\n", encoding="utf-8")
+              summary.write_text("# UK frozen DOB replay\n\nStatus: **failed**\n\nActual counts unavailable. Runner did not produce a summary; inspect the job log.\n", encoding="utf-8")
+          with Path(os.environ["GITHUB_STEP_SUMMARY"]).open("a", encoding="utf-8") as stream:
+              stream.write(summary.read_text(encoding="utf-8"))
+              stream.write("\nVerification step outcome: " + os.environ.get("VERIFY_OUTCOME", "unknown") + "\n")
+          PY
+      - name: Upload UK replay evidence, including failures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: academy-uk-frozen-dob-replay-v1
+          path: local_runs/academy_followup_20261028/uk/
+          if-no-files-found: error
+          retention-days: 14
+
+  japan_239_layer_integration:
+    name: Japan 239-case layer integration
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      JOB_DIR: local_runs/academy_followup_20261028/japan_integration
+      JOB_NAME: japan_integration
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Verify accepted layers and 36 unresolved cases
+        id: verify
+        run: python scripts/academy_jobs_japan_integration_v1.py --output-dir "$JOB_DIR"
+      - name: Publish actual counts and failure state
+        if: always()
+        env:
+          VERIFY_OUTCOME: ${{ steps.verify.outcome }}
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          output = Path(os.environ["JOB_DIR"])
+          output.mkdir(parents=True, exist_ok=True)
+          summary = output / "summary.md"
+          if not summary.exists():
+              failure = {"job": os.environ["JOB_NAME"], "status": "failed", "step_outcome": os.environ.get("VERIFY_OUTCOME", "unknown"), "counts": None, "error": "Runner did not produce a summary; inspect the job log."}
+              (output / "summary.json").write_text(json.dumps(failure, indent=2) + "\n", encoding="utf-8")
+              (output / "failure_summary.json").write_text(json.dumps(failure, indent=2) + "\n", encoding="utf-8")
+              summary.write_text("# Japan 239-case integration\n\nStatus: **failed**\n\nActual counts unavailable. Runner did not produce a summary; inspect the job log.\n", encoding="utf-8")
+          with Path(os.environ["GITHUB_STEP_SUMMARY"]).open("a", encoding="utf-8") as stream:
+              stream.write(summary.read_text(encoding="utf-8"))
+              stream.write("\nVerification step outcome: " + os.environ.get("VERIFY_OUTCOME", "unknown") + "\n")
+          PY
+      - name: Upload Japan integration evidence, including failures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: academy-japan-239-layer-integration-v1
+          path: local_runs/academy_followup_20261028/japan_integration/
+          if-no-files-found: error
+          retention-days: 14
+
+  japan_four_case_evidence_replay:
+    name: Japan four accepted section-evidence replays
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      JOB_DIR: local_runs/academy_followup_20261028/japan_replay
+      JOB_NAME: japan_replay
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Ensure PDF wording verifier is available
+        run: |
+          if ! command -v pdftotext >/dev/null 2>&1; then
+            sudo apt-get update
+            sudo apt-get install --yes --no-install-recommends poppler-utils
+          fi
+          pdftotext -v
+      - name: Replay four accepted explicit section decisions
+        id: verify
+        run: python scripts/academy_jobs_japan_replay_v1.py --rehydrate-approved-sources --output-dir "$JOB_DIR"
+      - name: Publish actual counts and failure state
+        if: always()
+        env:
+          VERIFY_OUTCOME: ${{ steps.verify.outcome }}
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          output = Path(os.environ["JOB_DIR"])
+          output.mkdir(parents=True, exist_ok=True)
+          summary = output / "summary.md"
+          if not summary.exists():
+              failure = {"job": os.environ["JOB_NAME"], "status": "failed", "step_outcome": os.environ.get("VERIFY_OUTCOME", "unknown"), "counts": None, "error": "Runner did not produce a summary; inspect the job log."}
+              (output / "summary.json").write_text(json.dumps(failure, indent=2) + "\n", encoding="utf-8")
+              (output / "failure_summary.json").write_text(json.dumps(failure, indent=2) + "\n", encoding="utf-8")
+              summary.write_text("# Japan four-case evidence replay\n\nStatus: **failed**\n\nActual counts unavailable. Runner did not produce a summary; inspect the job log.\n", encoding="utf-8")
+          with Path(os.environ["GITHUB_STEP_SUMMARY"]).open("a", encoding="utf-8") as stream:
+              stream.write(summary.read_text(encoding="utf-8"))
+              stream.write("\nVerification step outcome: " + os.environ.get("VERIFY_OUTCOME", "unknown") + "\n")
+          PY
+      - name: Upload Japan four-case replay evidence, including failures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: academy-japan-four-accepted-section-replays-v1
+          path: local_runs/academy_followup_20261028/japan_replay/
+          if-no-files-found: error
+          retention-days: 14
