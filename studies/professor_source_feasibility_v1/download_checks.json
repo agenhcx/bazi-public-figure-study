@@ -1,0 +1,80 @@
+[
+  {
+    "source_id": "rostock_physics",
+    "url": "https://cpr.uni-rostock.de/api/v1/search?fl=purl%2Cprofkat.idx_profname.headline%2Cprofkat.period%2Cprofkat.gnd%2Cprofkat.birthdate%2Cprofkat.birthplace%2Cprofkat.deathdate%2Cprofkat.deathplace%2Cprofkat.last_professorship%2Cprofkat.last_faculty&fq=state%3Apublished&q=%2BobjectType%3Aperson+%2Bcategory.top%3Aprofkat_class_subjects%5C%3ABK33&rows=5000&wt=csv",
+    "started_at_utc": "2026-10-28T23:47:40.448691+00:00",
+    "attempts": 1,
+    "http_status": 200,
+    "content_type": "text/comma-separated-values;charset=UTF-8",
+    "bytes": 17114,
+    "sha256": "89d9a17437557c5b1bce325c2b806b91f9df0cbdf5c4baa612182d2c51bdce4e",
+    "rows": 90,
+    "columns": [
+      "purl",
+      "profkat.idx_profname.headline",
+      "profkat.period",
+      "profkat.gnd",
+      "profkat.birthdate",
+      "profkat.birthplace",
+      "profkat.deathdate",
+      "profkat.deathplace",
+      "profkat.last_professorship",
+      "profkat.last_faculty"
+    ],
+    "birth_precision_counts": {
+      "day_ddmmyyyy": 65,
+      "year": 14,
+      "missing": 11,
+      "other": 0
+    },
+    "day_inside_1835_1985": 62,
+    "day_birthyear_minmax": [
+      1547,
+      1976
+    ]
+  },
+  {
+    "source_id": "rostock_chemistry",
+    "url": "https://cpr.uni-rostock.de/api/v1/search?fl=purl%2Cprofkat.idx_profname.headline%2Cprofkat.period%2Cprofkat.gnd%2Cprofkat.birthdate%2Cprofkat.birthplace%2Cprofkat.deathdate%2Cprofkat.deathplace%2Cprofkat.last_professorship%2Cprofkat.last_faculty&fq=state%3Apublished&q=%2BobjectType%3Aperson+%2Bcategory.top%3Aprofkat_class_subjects%5C%3ABK35&rows=5000&wt=csv",
+    "started_at_utc": "2026-10-28T23:48:49.264447+00:00",
+    "attempts": 1,
+    "http_status": 200,
+    "content_type": "text/comma-separated-values;charset=UTF-8",
+    "bytes": 22592,
+    "sha256": "5cbc1ddb0c28736aa46332222f919bc5227bea95902d2b9be5462c38a9edeecd",
+    "rows": 117,
+    "columns": [
+      "purl",
+      "profkat.idx_profname.headline",
+      "profkat.period",
+      "profkat.gnd",
+      "profkat.birthdate",
+      "profkat.birthplace",
+      "profkat.deathdate",
+      "profkat.deathplace",
+      "profkat.last_professorship",
+      "profkat.last_faculty"
+    ],
+    "birth_precision_counts": {
+      "day_ddmmyyyy": 93,
+      "year": 13,
+      "missing": 11
+    },
+    "day_inside_1835_1985": 89,
+    "day_birthyear_minmax": [
+      1767,
+      1980
+    ]
+  },
+  {
+    "source_id": "kiel_rdf_example",
+    "url": "https://cau.gelehrtenverzeichnis.de/data/about/1bd1b326-9c40-4def-604e-4d4c60e7d96f",
+    "started_at_utc": "2026-10-28T23:47:52.674311+00:00",
+    "attempts": 1,
+    "http_status": 200,
+    "content_type": "application/rdf+xml;charset=utf-8",
+    "bytes": 9508,
+    "sha256": "c64eb71fb1da3a45bfed3225c9a17dc786b5388d02d0013469ffbc3b774ef523",
+    "precision_verified": "birth/date typed xsd:date; one known example, not coverage"
+  }
+]
