@@ -117,6 +117,8 @@ jobs:
     env:
       JOB_DIR: local_runs/academy_followup_20261028/japan_replay
       JOB_NAME: japan_replay
+      POPPLER_JAPANESE_CMAP: /usr/share/poppler/cMap/Adobe-Japan1/90ms-RKSJ-H
+      POPPLER_JAPANESE_CID_TO_UNICODE: /usr/share/poppler/cidToUnicode/Adobe-Japan1
     steps:
       - uses: actions/checkout@v4
         with:
@@ -124,12 +126,15 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - name: Ensure PDF wording verifier is available
+      - name: Ensure PDF wording verifier and Japanese CMap are available
         run: |
-          if ! command -v pdftotext >/dev/null 2>&1; then
+          if ! command -v pdftotext >/dev/null 2>&1 || [ ! -r "$POPPLER_JAPANESE_CMAP" ] || [ ! -r "$POPPLER_JAPANESE_CID_TO_UNICODE" ]; then
             sudo apt-get update
-            sudo apt-get install --yes --no-install-recommends poppler-utils
+            sudo apt-get install --yes --no-install-recommends poppler-utils poppler-data
           fi
+          command -v pdftotext >/dev/null
+          test -r "$POPPLER_JAPANESE_CMAP"
+          test -r "$POPPLER_JAPANESE_CID_TO_UNICODE"
           pdftotext -v
       - name: Replay four accepted explicit section decisions
         id: verify

@@ -24,20 +24,23 @@
 
 ## 本地运行与已验证结果
 
-在仓库根目录运行。Python 脚本不需要第三方 Python 包；UK 和 Japan integration 为离线核验。Japan replay 还需 Poppler 的 `pdftotext` 验证两份原 PDF 的显式措辞，工作流仅在缺少该程序时安装 `poppler-utils`：
+在仓库根目录运行。Python 脚本不需要第三方 Python 包；UK 和 Japan integration 为离线核验。Japan replay 还需 Poppler 的 `pdftotext` 及 `poppler-data` 的日文映射数据验证两份原 PDF 的显式措辞。工作流在缺少该程序，或 `/usr/share/poppler/cMap/Adobe-Japan1/90ms-RKSJ-H`、`/usr/share/poppler/cidToUnicode/Adobe-Japan1` 任一不可读时，显式安装 `poppler-utils poppler-data`，并在任何来源 GET 前确认三者可用：
 
 ```bash
 python scripts/academy_jobs_uk_replay_v1.py --output-dir local_runs/academy_followup_20261028/uk
 python scripts/academy_jobs_japan_integration_v1.py --output-dir local_runs/academy_followup_20261028/japan_integration
 python scripts/academy_jobs_japan_replay_v1.py --rehydrate-approved-sources --output-dir local_runs/academy_followup_20261028/japan_replay
 python scripts/test_academy_jobs_uk_replay_v1.py
+python scripts/test_academy_jobs_workflow_v1.py
 ```
 
 英国本地重建已通过：实际 **8,669／4,983／3,686**，past/current 与 exact 分层计数均符合冻结值，5 个 SHA256 及 4 个 CSV 语义比较全部相同。3 项隔离测试通过，覆盖 CSV 序列化差异、故意破坏 manifest hash、故意改变已跟踪表格单元格；后两项均返回失败并生成失败诊断，原始冻结文件未改动。
 
 日本 integration 本地通过：实际 **239 = 199 broad-II-only + 4 direct + 36 unresolved**，该项没有执行来源重放。使用准备阶段可用的原始私有归档快照，四个原裁定器重放 **4/4** 通过（II／6 为 **1**，Section I 为 **3**），两份 PDF 的原始 magic／hash／显式措辞检查通过，GET **0**，原始来源输出文件 **0**。公开包缺少 raw 时的默认离线重放已确认会失败，而不会降级使用事实摘要。此项本地归档通过不能保证公开 URL 仍提供完全相同字节。
 
-工作流结构及三个任务的“脚本尚未生成 summary 即失败”分支已在本地检查通过。GitHub 是否已排队及远端最终结果应通过对应 run／artifact 核实；本文件不把本地通过写成远端已成功。
+首次 GitHub run **40706559925** 的 UK replay 和 Japan integration 已成功；Japan replay 的实际报错为 Hiratsuka PDF 的显式措辞不匹配。CI 日志未记录日文映射文件清单，不能直接断言远端文件缺失。相同 PDF 和同版 Poppler 的本地隔离复现显示：隐藏 `poppler-data` 的日文映射时出现相同措辞失败，映射可用时通过；这一诊断与 CI 使用 `--no-install-recommends` 仅安装 `poppler-utils` 的依赖设置一致。修复只补全并预检这项系统依赖，来源字节 SHA256、PDF 检查和措辞判定均保持原样。
+
+工作流结构及三个任务的“脚本尚未生成 summary 即失败”分支已在本地检查通过。新增离线依赖回归检查覆盖完整环境、仅缺 CMap、仅缺 CID-to-Unicode、仅缺程序及安装后映射数据仍缺失时提早失败；不请求来源。依赖修复后的远端运行状态仍须核实，不能将本地检查写成 GitHub replay 已成功。
 
 ## 仍需通过的门槛
 
