@@ -1,0 +1,51 @@
+{
+  "dataset": "academy-jobs-japan-integration-v1",
+  "status": "passed",
+  "baseline_commit": "2dccafed2a1d938ef740e4bcb776fb5d97d5514a",
+  "scope": "bounded_239_person_postwar_ambiguous_layer_not_full_Japan_roster",
+  "input_rows": 239,
+  "frozen_degree_rule_broad_section_ii_rows": 199,
+  "upstream_blank_english_names_preserved": 1,
+  "original_explicit_source_required_rows": 40,
+  "documented_later_decisions": 4,
+  "documented_direct_section_ii_rows": 1,
+  "documented_section_i_exclusions": 3,
+  "effective_unresolved_rows": 36,
+  "candidate_section_ii_rows_in_this_layer": 200,
+  "exact_subsections_inferred_from_degree_or_discipline": 0,
+  "raw_source_cases_replayed": 0,
+  "evidence_verification": "documented_closeout_only_for_four_later_decisions",
+  "full_roster_completeness_claimed": 0,
+  "primary_eligibility_finalized": 0,
+  "hierarchy_birth_year_window": [
+    1835,
+    1985
+  ],
+  "birth_window_applied": 0,
+  "birth_window_reason": "This evidence layer has no DOB assertions; preserve the full archive.",
+  "section_source_routes_reopened": 0,
+  "external_requests": 0,
+  "final_roster_rows_written": 0,
+  "final_roster_frozen": 0,
+  "dob_collection_started": 0,
+  "bazi_variables_computed": 0,
+  "frozen_inputs_modified": 0,
+  "input_sha256": {
+    "data/japan_academy_broad_section_degree_rule_freeze_v1/accepted_section2_by_degree_rule_v1.csv": "6480371b063a9755c3eb7115ba5ff88710f95708c9672ade84199857015a8e92",
+    "data/japan_academy_broad_section_degree_rule_freeze_v1/remaining_other_official_source_required_v1.csv": "f608b9c868aeb3d26c5e4fbc95fb5ee7e69740dbca0891fefa082f8fa44ec29b",
+    "data/japan_academy_broad_section_degree_rule_freeze_v1/summary.json": "a7c2f40abaf1817f8e8ae28742630d3168b16fd8b0006a6b17e5bd1aed9db02f",
+    "JAPAN_ACADEMY_SECTION_EVIDENCE_CLOSEOUT_V1.md": "d588dd3138663d9216da46a99a05bfe4cca88e7065c572842c8cb802f22e20b1",
+    "data/japan_academy_remaining40_explicit_source_policy_freeze_v1/source_policy_v1.json": "2ec1c1fb1c8b7b52e585da83f68d8b4181ba58bea1484d03fcef1077e3830c4d",
+    "ACADEMY_COHORT_SCOPE_FREEZE_V1.md": "1eda96c666d604533ce7acf03e5966ab876d646b8dac3b1bdeb142ade5d49d6b",
+    "DOB_CALENDAR_AUDIT_CLOSEOUT_V1.md": "3e25e12a4acffc186b7a98c09081589c92cc4eb70ea9396a4202e60ee212cb07",
+    "scripts/adjudicate_japan_academy_remaining40_tierb_hiratsuka_v1.py": "90f42e1e94686610f392b93c30b2e4f0412294dbfd7db5d80836c1323352f746",
+    "scripts/adjudicate_japan_academy_remaining39_tierb_yoshikawa_v1.py": "3dbb1bc74a51e72e74af333175c08f484f7e6faf3df03cc5ebc546000d9f4e88",
+    "scripts/adjudicate_japan_academy_remaining38_tierb_nanbara_v1.py": "4fed146dde667426b0eba49d450184e41794aa72eaa03fd4713ac1e19ba27358",
+    "scripts/adjudicate_japan_academy_remaining37_tierb_doi_v1.py": "bdfaa9cd5ae4e9c1033c0ff5c4553214dbc0bfa4bc19124c31f04bfe1349d05e"
+  },
+  "limitations": [
+    "The 199 degree-rule rows prove broad Section II only, with no exact subsection.",
+    "The four later decisions are integrated from the Git closeout, not raw evidence verified by this job.",
+    "This is a partial evidence layer; it does not establish the final primary Japan cohort or DOB missingness."
+  ]
+}

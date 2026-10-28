@@ -1,10 +1,13 @@
 name: Academy UK and Japan bounded follow-up v1
 
 on:
-  push:
-    branches:
-      - codex/academy-uk-japan-jobs-20261028
   workflow_dispatch:
+    inputs:
+      replay_live_sources:
+        description: Explicitly request a bounded replay of the four pinned public sources
+        type: boolean
+        required: false
+        default: false
 
 permissions:
   contents: read
@@ -112,6 +115,7 @@ jobs:
 
   japan_four_case_evidence_replay:
     name: Japan four accepted section-evidence replays
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.replay_live_sources == true }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
     env:

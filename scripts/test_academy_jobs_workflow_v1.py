@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Exercise the workflow's PDF dependency preflight without apt or network."""
+"""Check manual-only replay controls and PDF preflight without apt or network."""
 from __future__ import annotations
 
 import json
 import os
 from pathlib import Path
+import re
 import subprocess
 import sys
 import tempfile
@@ -30,6 +31,34 @@ def preflight_script() -> str:
             break
         body.append(line)
     return textwrap.dedent("\n".join(body)) + "\n"
+
+
+class WorkflowManualReplayTests(unittest.TestCase):
+    def test_only_manual_dispatch_can_start_workflow(self):
+        workflow = WORKFLOW.read_text(encoding="utf-8")
+        events = re.search(r"(?m)^on:\n((?:[ \t].*\n|\n)*)", workflow)
+        self.assertIsNotNone(events, "Expected one explicit top-level event block")
+        self.assertEqual(re.findall(r"(?m)^  ([a-z_]+):", events.group(1)),
+                         ["workflow_dispatch"])
+
+    def test_live_sources_are_an_explicit_boolean_opt_in(self):
+        workflow = WORKFLOW.read_text(encoding="utf-8")
+        option = re.search(r"(?m)^      replay_live_sources:\n((?:        .*\n)*)", workflow)
+        self.assertIsNotNone(option, "Manual dispatch must offer a live-source opt-in")
+        fields = dict(re.findall(r"(?m)^        (type|required|default): (\S+)$", option.group(1)))
+        self.assertEqual(fields, {"type": "boolean", "required": "false", "default": "false"})
+
+    def test_live_job_is_gated_while_offline_jobs_remain_available(self):
+        workflow = WORKFLOW.read_text(encoding="utf-8")
+        jobs = dict(re.findall(r"(?m)^  ([a-z0-9_]+):\n((?:[ \t]{4,}.*\n|\n)*)", workflow))
+        self.assertIn("japan_four_case_evidence_replay", jobs)
+        live = jobs["japan_four_case_evidence_replay"]
+        self.assertEqual(re.findall(r"(?m)^    if: (.*)$", live),
+                         ["${{ github.event_name == 'workflow_dispatch' && inputs.replay_live_sources == true }}"])
+        for job_name in ("uk_frozen_dob_replay", "japan_239_layer_integration"):
+            self.assertIn(job_name, jobs)
+            self.assertNotRegex(jobs[job_name], r"(?m)^    if:",
+                                f"{job_name} must run on an ordinary manual dispatch")
 
 
 class WorkflowPDFDependencyTests(unittest.TestCase):

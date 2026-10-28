@@ -10,7 +10,7 @@
 
 ## 三个独立任务
 
-工作流：`.github/workflows/academy_uk_japan_followup_v1.yml`。只在推送分支 `codex/academy-uk-japan-jobs-20261028` 时自动触发，另保留 `workflow_dispatch`；不设置 pull-request 触发，避免同一次提交重复执行。三项任务互不依赖，每项最多 10 分钟，仓库权限仅 `contents: read`，不使用 secrets。
+工作流：`.github/workflows/academy_uk_japan_followup_v1.yml`。2026-10-28日本采集收尾后，已移除自动push触发，仅保留 `workflow_dispatch`。英国和日本整合可手动离线核验；日本线上复现仅在显式选择布尔输入 `replay_live_sources=true` 时运行，默认false。三项任务互不依赖，每项最多10分钟，仓库权限仅 `contents: read`，不使用 secrets。
 
 | 任务 | 核验内容 | 输出目录 | GitHub artifact |
 | --- | --- | --- | --- |
@@ -40,8 +40,10 @@ python scripts/test_academy_jobs_workflow_v1.py
 
 首次 GitHub run **40706559925** 的 UK replay 和 Japan integration 已成功；Japan replay 的实际报错为 Hiratsuka PDF 的显式措辞不匹配。CI 日志未记录日文映射文件清单，不能直接断言远端文件缺失。相同 PDF 和同版 Poppler 的本地隔离复现显示：隐藏 `poppler-data` 的日文映射时出现相同措辞失败，映射可用时通过；这一诊断与 CI 使用 `--no-install-recommends` 仅安装 `poppler-utils` 的依赖设置一致。修复只补全并预检这项系统依赖，来源字节 SHA256、PDF 检查和措辞判定均保持原样。
 
-工作流结构及三个任务的“脚本尚未生成 summary 即失败”分支已在本地检查通过。新增离线依赖回归检查覆盖完整环境、仅缺 CMap、仅缺 CID-to-Unicode、仅缺程序及安装后映射数据仍缺失时提早失败；不请求来源。依赖修复后的远端运行状态仍须核实，不能将本地检查写成 GitHub replay 已成功。
+工作流结构及三个任务的“脚本尚未生成 summary 即失败”分支已在本地检查通过。新增离线依赖回归检查覆盖完整环境、仅缺 CMap、仅缺 CID-to-Unicode、仅缺程序及安装后映射数据仍缺失时提早失败；不请求来源。依赖修复后的远端运行 **40707665630** 已核实：英国和日本整合通过；日本线上复现因吉川逸治来源返回字节与原hash不符而 `blocked_source`。平塚PDF字节已匹配，随后停止；该次未接受结果、未重试、未更新hash。简要诊断已随采集收尾记录保存，不能称作四例线上复现通过。
 
-## 仍需通过的门槛
+## 日本采集收尾与仍未满足的冻结门槛
 
 日本剩余 36 人只有出现可审计、明确支持 section 的来源后才能按现有标准另行版本化处理；大学、学位、研究领域或仅有会员身份均不能补成较窄 section／subsection。全名册对账和 DOB 冻结仍是独立未完成工作。这三项核验通过也不代表所有 primary cohorts 已冻结；继续维持解盲前门槛，八字变量计算与后续分析仍为 **0**。
+
+2026-10-28按用户指示，日本现有公开网补缺和重复搜索已结束，36人未决、6条维基线索保留。最新状态见 [JAPAN_ACADEMY_COLLECTION_CLOSEOUT_V1.md](JAPAN_ACADEMY_COLLECTION_CLOSEOUT_V1.md)。这次收尾仅关闭采集，不将日本全名册／生日／缺失诊断标为已冻结；不会自动再次请求来源。
