@@ -1,0 +1,99 @@
+{
+  "dataset": "japan-academy-collection-closeout-v1",
+  "closeout_date": "2026-10-28",
+  "status": "collection_closed_with_unresolved",
+  "decision": "User confirmed to finish Japan promptly and park findings that cannot be resolved. The current collection pass is closed with no active work; incomplete project prerequisites remain deferred.",
+  "scope": "Existing 239-person postwar ambiguous-section evidence layer and its residual public-source searches; not a complete Japan Academy roster.",
+  "basis_commit": "0edb1ea1566fdd302ad2e3854879259c86186459",
+  "partition": {
+    "input_rows": 239,
+    "accepted_broad_section_ii_by_frozen_degree_rule": 199,
+    "archived_direct_section_decisions": 4,
+    "archived_direct_section_ii_subsection_6": 1,
+    "archived_direct_section_i": 3,
+    "unresolved_section_rows": 36,
+    "candidate_section_ii_rows_in_this_layer": 200,
+    "exact_subsections_inferred_from_degree_or_discipline": 0
+  },
+  "later_public_search_closeouts": {
+    "official_website_v11": {
+      "unresolved": 36,
+      "wikipedia_provisional_not_accepted": 6,
+      "new_section_acceptances": 0
+    },
+    "scholarly_publication_v12": {
+      "research_date": "2026-10-17",
+      "unresolved": 36,
+      "wikipedia_provisional_not_accepted": 6,
+      "new_section_acceptances": 0,
+      "google_scholar_comprehensive_search_claimed": false
+    }
+  },
+  "latest_hosted_verification": {
+    "run_id": 40707665630,
+    "run_url": "https://github.com/agenhcx/bazi-public-figure-study/actions/runs/40707665630",
+    "uk_deterministic_replay": "success",
+    "japan_239_layer_integration": "success",
+    "japan_four_case_live_replay": "blocked_source",
+    "blocked_source_case": "yoshikawa",
+    "accepted_results_claimed_by_blocked_live_replay": 0,
+    "historical_archived_decisions_rewritten": 0,
+    "note": "The live replay stopped after the Yoshikawa URL returned non-matching bytes; no later source requests were made."
+  },
+  "collection_policy": {
+    "broad_public_web_searches": "closed",
+    "repeated_searches_of_the_36_cases": "closed",
+    "automatic_workflow_triggers_enabled": false,
+    "live_replay_manual_opt_in_default": false,
+    "reopen_only_with": "A concrete new digitized contemporaneous subsection roster, original member-election record, or explicit person-specific Academy/institutional source; review as a new version.",
+    "unknowns_are_not_ineligibility": true,
+    "no_degree_or_profession_subsection_imputation": true,
+    "no_membership_or_prize_to_subsection_inference": true,
+    "no_1956_historical_number_back_projection": true,
+    "automatic_case_reopening_enabled": false,
+    "requires_explicit_user_reopening": true,
+    "generic_continue_does_not_reopen_japan": true
+  },
+  "study_readiness": {
+    "full_roster_completeness_claimed": false,
+    "final_roster_frozen": false,
+    "exact_dob_frozen": false,
+    "dob_missingness_frozen": false,
+    "primary_cohort_eligibility_finalized": false,
+    "hierarchy_unblinding_ready": false,
+    "japan_removed_from_primary_scope": false,
+    "full_japan_dob_collection_count": null,
+    "reason": "Stopping collection preserves a documented incomplete evidence layer. It does not complete the independent full-roster, DOB, missingness and primary-cohort freeze requirements."
+  },
+  "this_closeout_activity": {
+    "source_http_requests": 0,
+    "new_section_acceptances": 0,
+    "dob_values_imputed": 0,
+    "raw_evidence_replayed": 0,
+    "bazi_variables_computed": 0,
+    "statistical_unblinding_performed": false
+  },
+  "files": {
+    "unresolved_ledger": "remaining36_unresolved_v1.csv",
+    "archived_decisions": "documented_closeout_decisions_v1.csv",
+    "integration_summary": "integration_summary.json",
+    "hosted_replay_block": "hosted_replay_block_40707665630.json",
+    "prior_v11": "jpa_official_website_gap_summary_v11.json",
+    "prior_v12": "JPA_PUBLICATION_SEARCH_CLOSEOUT_V12.md",
+    "parked_work_items": "parked_work_items_v1.csv",
+    "current_checkpoint": "../../JAPAN_ACADEMY_CURRENT_CHECKPOINT.md"
+  },
+  "deferment_confirmed_date": "2026-10-28",
+  "work_queue": {
+    "status": "closed_all_remaining_work_parked",
+    "active_items": 0,
+    "parked_person_cases": 36,
+    "parked_live_verification_items": 1,
+    "deferred_project_prerequisites": 3,
+    "total_parked_work_items": 40,
+    "counts_are_work_items_not_total_japan_members": true,
+    "next_default_action": "Move on from Japan; do not automatically restart its searches or verification.",
+    "reopening": "An explicit user request to reopen Japan with a defined scope; new person-specific evidence is still required before changing any accepted section label."
+  },
+  "deferment_basis_commit": "a7d6667228c6c4e4abb3092b6060a9bc4ae1a12b"
+}

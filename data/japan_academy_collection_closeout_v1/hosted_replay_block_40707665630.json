@@ -1,0 +1,40 @@
+{
+  "evidence_type": "factual_failure_summary_extracted_from_hosted_job_log",
+  "run_id": 40707665630,
+  "job_id": 122884043245,
+  "run_url": "https://github.com/agenhcx/bazi-public-figure-study/actions/runs/40707665630",
+  "commit": "0edb1ea1566fdd302ad2e3854879259c86186459",
+  "log_timestamp_utc": "2026-10-28T14:37:20.2801596Z",
+  "result": {
+    "dataset": "academy-jobs-japan-replay-v1",
+    "status": "blocked_source",
+    "error_type": "SourceBlockedError",
+    "error": "blocked_source=yoshikawa: ValueError: Source bytes changed from the frozen SHA256; no acceptance permitted",
+    "final_roster_frozen": 0,
+    "dob_collection_started": 0,
+    "bazi_variables_computed": 0,
+    "accepted_results_claimed": 0,
+    "blocked_source": "yoshikawa",
+    "source_request_attempts": [
+      {
+        "case": "hiratsuka",
+        "url": "https://www.jstage.jst.go.jp/article/jjom/41/4/41_H11-175/_pdf/-char/ja",
+        "GET_attempts": 1,
+        "timeout_seconds": 20,
+        "http_status": 200,
+        "status": "exact_archived_sha_verified"
+      },
+      {
+        "case": "yoshikawa",
+        "url": "https://www.tobunken.go.jp/materials/nenshi/ny/1982",
+        "GET_attempts": 1,
+        "timeout_seconds": 20,
+        "http_status": 200,
+        "status": "blocked"
+      }
+    ]
+  },
+  "interpretation": "Returned bytes did not match the archived SHA256. This blocks this live replay; it does not itself refute an archived historical decision.",
+  "retry_or_hash_update_authorized_by_this_closeout": false
+}
+

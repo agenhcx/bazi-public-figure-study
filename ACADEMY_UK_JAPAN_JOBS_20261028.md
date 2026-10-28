@@ -1,0 +1,49 @@
+# 英国／日本院士数据：后台核验任务（2026-10-28）
+
+这批任务只复核现有采集结果，不新增广泛检索，不改变已冻结输入，不计算或检查八字变量及后续结果。
+
+## 当前边界
+
+- **英国已冻结**：Royal Society primary Fellows 共 **8,669** 人（past **7,099**、current **1,570**）；exact DOB **4,983**（past **4,884**、current **99**）；unresolved **3,686**。以 `data/royal_society_dob_freeze_v1.json` 与 `ROYAL_SOCIETY_DOB_CLOSEOUT_V1.md` 为准，继续遵守停止广泛 DOB 采集的规则。
+- **日本尚未完成全名册／DOB 冻结**：本次只核验既有 **239 个战后 section 歧义个案**，不能将 239 写成日本学士院全体名册人数。
+- 日本已接受层为：**199** 人仅支持 broad Section II，不支持 subsection 4–7；**Hiratsuka Naohide** 为 Section II／6；**Yoshikawa Itsuji、Nanbara Shigeru、Doi Kōchi** 为 Section I。其余 **36** 人仍 unresolved。最新 Git closeout 的 36 取代旧 Library 材料中的 39，不得把 membership-only 的 Ōta Hirotarō 当成 section 已解决。
+
+## 三个独立任务
+
+工作流：`.github/workflows/academy_uk_japan_followup_v1.yml`。2026-10-28日本采集收尾后，已移除自动push触发，仅保留 `workflow_dispatch`。英国和日本整合可手动离线核验；日本线上复现仅在显式选择布尔输入 `replay_live_sources=true` 时运行，默认false。三项任务互不依赖，每项最多10分钟，仓库权限仅 `contents: read`，不使用 secrets。
+
+| 任务 | 核验内容 | 输出目录 | GitHub artifact |
+| --- | --- | --- | --- |
+| UK frozen DOB replay | 在临时目录重建全部 5 份输出；逐一匹配 frozen manifest 的 SHA256；另与 4 份已跟踪 CSV 作语义比较；独立重新计数并确认原输入未变 | `local_runs/academy_followup_20261028/uk/` | `academy-uk-frozen-dob-replay-v1` |
+| Japan 239-case integration | 校验 239 人的唯一身份键、199 个 broad-II 接受层、4 个直接证据接受层、36 个 unresolved 及标签边界 | `local_runs/academy_followup_20261028/japan_integration/` | `academy-japan-239-layer-integration-v1` |
+| Japan four-case replay | 仅恢复四个已批准旧来源的精确字节，在临时目录核对原 SHA256 并重放四个已接受的显式 section 裁定；不扩展检索或接受新个案 | `local_runs/academy_followup_20261028/japan_replay/` | `academy-japan-four-accepted-section-replays-v1` |
+
+每项输出含 `summary.json`、`summary.md`；失败时保留 `failure_summary.json` 和可用诊断。工作流在失败后仍尝试发布 GitHub step summary 和上传 artifact，提早失败而没有有效计数时明确显示 counts unavailable，不把预期计数冒充实际结果。artifact 保留 14 天；实际 counts 与通过／失败状态以该次运行的 summary 为准。
+
+公开输入包 `data/academy_jobs_japan_inputs_v1/` 保留原 queue、inventory、已接受裁定表和最小事实／hash 清单，不包含原始 PDF、完整 HTML 或全文副本。GitHub replay 使用 `--rehydrate-approved-sources`：四个 inventory 指定的旧公开 HTTPS URL 各最多一次 GET，单次 timeout 20 秒、上限 8 MiB、请求间隔至少 1 秒；不跟随重定向、不重试、不搜索替代来源。不可访问、429 或字节 hash 改变均记为 `blocked_source` 并失败，不把 integration 中的既有结论冒充新的来源重放。原始文件只存在临时目录，上传内容仅为计数、hash、裁定结果及必要诊断，不上传原始来源或全文。
+
+## 本地运行与已验证结果
+
+在仓库根目录运行。Python 脚本不需要第三方 Python 包；UK 和 Japan integration 为离线核验。Japan replay 还需 Poppler 的 `pdftotext` 及 `poppler-data` 的日文映射数据验证两份原 PDF 的显式措辞。工作流在缺少该程序，或 `/usr/share/poppler/cMap/Adobe-Japan1/90ms-RKSJ-H`、`/usr/share/poppler/cidToUnicode/Adobe-Japan1` 任一不可读时，显式安装 `poppler-utils poppler-data`，并在任何来源 GET 前确认三者可用：
+
+```bash
+python scripts/academy_jobs_uk_replay_v1.py --output-dir local_runs/academy_followup_20261028/uk
+python scripts/academy_jobs_japan_integration_v1.py --output-dir local_runs/academy_followup_20261028/japan_integration
+python scripts/academy_jobs_japan_replay_v1.py --rehydrate-approved-sources --output-dir local_runs/academy_followup_20261028/japan_replay
+python scripts/test_academy_jobs_uk_replay_v1.py
+python scripts/test_academy_jobs_workflow_v1.py
+```
+
+英国本地重建已通过：实际 **8,669／4,983／3,686**，past/current 与 exact 分层计数均符合冻结值，5 个 SHA256 及 4 个 CSV 语义比较全部相同。3 项隔离测试通过，覆盖 CSV 序列化差异、故意破坏 manifest hash、故意改变已跟踪表格单元格；后两项均返回失败并生成失败诊断，原始冻结文件未改动。
+
+日本 integration 本地通过：实际 **239 = 199 broad-II-only + 4 direct + 36 unresolved**，该项没有执行来源重放。使用准备阶段可用的原始私有归档快照，四个原裁定器重放 **4/4** 通过（II／6 为 **1**，Section I 为 **3**），两份 PDF 的原始 magic／hash／显式措辞检查通过，GET **0**，原始来源输出文件 **0**。公开包缺少 raw 时的默认离线重放已确认会失败，而不会降级使用事实摘要。此项本地归档通过不能保证公开 URL 仍提供完全相同字节。
+
+首次 GitHub run **40706559925** 的 UK replay 和 Japan integration 已成功；Japan replay 的实际报错为 Hiratsuka PDF 的显式措辞不匹配。CI 日志未记录日文映射文件清单，不能直接断言远端文件缺失。相同 PDF 和同版 Poppler 的本地隔离复现显示：隐藏 `poppler-data` 的日文映射时出现相同措辞失败，映射可用时通过；这一诊断与 CI 使用 `--no-install-recommends` 仅安装 `poppler-utils` 的依赖设置一致。修复只补全并预检这项系统依赖，来源字节 SHA256、PDF 检查和措辞判定均保持原样。
+
+工作流结构及三个任务的“脚本尚未生成 summary 即失败”分支已在本地检查通过。新增离线依赖回归检查覆盖完整环境、仅缺 CMap、仅缺 CID-to-Unicode、仅缺程序及安装后映射数据仍缺失时提早失败；不请求来源。依赖修复后的远端运行 **40707665630** 已核实：英国和日本整合通过；日本线上复现因吉川逸治来源返回字节与原hash不符而 `blocked_source`。平塚PDF字节已匹配，随后停止；该次未接受结果、未重试、未更新hash。简要诊断已随采集收尾记录保存，不能称作四例线上复现通过。
+
+## 日本采集收尾与仍未满足的冻结门槛
+
+日本剩余 36 人只有出现可审计、明确支持 section 的来源后才能按现有标准另行版本化处理；大学、学位、研究领域或仅有会员身份均不能补成较窄 section／subsection。全名册对账和 DOB 冻结仍是独立未完成工作。这三项核验通过也不代表所有 primary cohorts 已冻结；继续维持解盲前门槛，八字变量计算与后续分析仍为 **0**。
+
+2026-10-28按用户指示，日本现有公开网补缺和重复搜索已结束，36人未决、6条维基线索保留。最新状态见 [JAPAN_ACADEMY_COLLECTION_CLOSEOUT_V1.md](JAPAN_ACADEMY_COLLECTION_CLOSEOUT_V1.md)。这次收尾仅关闭采集，不将日本全名册／生日／缺失诊断标为已冻结；不会自动再次请求来源。
