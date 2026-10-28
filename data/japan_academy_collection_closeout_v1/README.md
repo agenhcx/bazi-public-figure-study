@@ -14,3 +14,4 @@ The scope is 239 postwar ambiguous-section records, not all Japan Academy member
 
 Historical acceptance and current live replay are separate: four old decisions remain documented, while the latest hosted live replay blocked on non-matching Yoshikawa bytes. Full-roster, exact-DOB and missingness freeze flags remain false. No new source request or BaZi calculation was made for this closeout.
 
+Final queue disposition: **0 active work items**. `parked_work_items_v1.csv` contains 36 person-section cases, one blocked live verification, and three deferred project prerequisites (40 work items, not 40 people). A generic request to continue should not restart Japan; it requires explicit reopening with a defined scope. See the repository-root `JAPAN_ACADEMY_CURRENT_CHECKPOINT.md`. Readiness flags remain false.

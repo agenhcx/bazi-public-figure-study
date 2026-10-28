@@ -2,7 +2,7 @@
   "dataset": "japan-academy-collection-closeout-v1",
   "closeout_date": "2026-10-28",
   "status": "collection_closed_with_unresolved",
-  "decision": "User requested Japan collection closeout; stop broad acquisition and automatic live-source replay.",
+  "decision": "User confirmed to finish Japan promptly and park findings that cannot be resolved. The current collection pass is closed with no active work; incomplete project prerequisites remain deferred.",
   "scope": "Existing 239-person postwar ambiguous-section evidence layer and its residual public-source searches; not a complete Japan Academy roster.",
   "basis_commit": "0edb1ea1566fdd302ad2e3854879259c86186459",
   "partition": {
@@ -49,7 +49,10 @@
     "unknowns_are_not_ineligibility": true,
     "no_degree_or_profession_subsection_imputation": true,
     "no_membership_or_prize_to_subsection_inference": true,
-    "no_1956_historical_number_back_projection": true
+    "no_1956_historical_number_back_projection": true,
+    "automatic_case_reopening_enabled": false,
+    "requires_explicit_user_reopening": true,
+    "generic_continue_does_not_reopen_japan": true
   },
   "study_readiness": {
     "full_roster_completeness_claimed": false,
@@ -76,7 +79,21 @@
     "integration_summary": "integration_summary.json",
     "hosted_replay_block": "hosted_replay_block_40707665630.json",
     "prior_v11": "jpa_official_website_gap_summary_v11.json",
-    "prior_v12": "JPA_PUBLICATION_SEARCH_CLOSEOUT_V12.md"
-  }
+    "prior_v12": "JPA_PUBLICATION_SEARCH_CLOSEOUT_V12.md",
+    "parked_work_items": "parked_work_items_v1.csv",
+    "current_checkpoint": "../../JAPAN_ACADEMY_CURRENT_CHECKPOINT.md"
+  },
+  "deferment_confirmed_date": "2026-10-28",
+  "work_queue": {
+    "status": "closed_all_remaining_work_parked",
+    "active_items": 0,
+    "parked_person_cases": 36,
+    "parked_live_verification_items": 1,
+    "deferred_project_prerequisites": 3,
+    "total_parked_work_items": 40,
+    "counts_are_work_items_not_total_japan_members": true,
+    "next_default_action": "Move on from Japan; do not automatically restart its searches or verification.",
+    "reopening": "An explicit user request to reopen Japan with a defined scope; new person-specific evidence is still required before changing any accepted section label."
+  },
+  "deferment_basis_commit": "a7d6667228c6c4e4abb3092b6060a9bc4ae1a12b"
 }
-

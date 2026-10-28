@@ -35,3 +35,8 @@ V11官网补缺与V12出版物最终检索均未新增接受记录，未决保�
 
 机器可读状态及清单见 [data/japan_academy_collection_closeout_v1/](data/japan_academy_collection_closeout_v1/)。旧来源路线记录保持原样：[JAPAN_ACADEMY_SECTION_EVIDENCE_CLOSEOUT_V1.md](JAPAN_ACADEMY_SECTION_EVIDENCE_CLOSEOUT_V1.md)。
 
+## 最终待办处置
+
+用户再次确认“尽快结束日本，找不到的就先搁置”。当前采集待办为 **0**：36个分科未决个案、1项受阻线上复现、3项独立前置工作（全名册及纳入资格、DOB接受表、全体缺失诊断）全部列入 `parked_work_items_v1.csv`。这40项是工作项，不能当作人数。
+
+上述独立前置工作默认搁置，不再作为本轮必须继续执行的下一步。一般性的“继续”不自动重开日本；只有明确提出重开日本及具体范围时才另行处理，证据标准和解盲门槛保持原样。最新入口为 [JAPAN_ACADEMY_CURRENT_CHECKPOINT.md](JAPAN_ACADEMY_CURRENT_CHECKPOINT.md)。
