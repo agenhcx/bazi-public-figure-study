@@ -7,6 +7,7 @@ on:
       - 'studies/academy_reopen_fr_jp_v1/**'
       - 'studies/academy_fr_jp_completion_v2/**'
       - 'studies/academy_fr_jp_completion_v3/**'
+      - 'studies/academy_fr_jp_completion_v4/**'
       - 'JAPAN_ACADEMY_CURRENT_CHECKPOINT.md'
       - 'ACADEMY_COLLECTION_CURRENT_CHECKPOINT.md'
       - '.github/workflows/academy_reopen_fr_jp_v1.yml'
@@ -104,5 +105,25 @@ jobs:
           path: |
             studies/academy_fr_jp_completion_v3/README.md
             studies/academy_fr_jp_completion_v3/outputs/
+          if-no-files-found: error
+          retention-days: 14
+      - name: Validate v4 inherited evidence and source tier guards
+        run: python3 -m unittest discover -s studies/academy_fr_jp_completion_v4/tests -v
+      - name: Rebuild v4 prepared inputs and country outputs
+        run: |
+          python3 studies/academy_fr_jp_completion_v4/scripts/continue.py prepare --output-dir "${{ runner.temp }}/academy-v4-inputs"
+          for name in japan_claims.json japan_holds.json japan_processed_ids.json france_decisions.json; do
+            diff "studies/academy_fr_jp_completion_v4/inputs/$name" "${{ runner.temp }}/academy-v4-inputs/$name"
+          done
+          python3 studies/academy_fr_jp_completion_v4/scripts/continue.py assemble --output-dir "${{ runner.temp }}/academy-v4-output"
+          diff -r studies/academy_fr_jp_completion_v4/outputs "${{ runner.temp }}/academy-v4-output"
+          python3 studies/academy_fr_jp_completion_v4/scripts/continue.py verify
+      - name: Save v4 continued country tables
+        uses: actions/upload-artifact@v4
+        with:
+          name: academy-france-japan-continuation-v4
+          path: |
+            studies/academy_fr_jp_completion_v4/README.md
+            studies/academy_fr_jp_completion_v4/outputs/
           if-no-files-found: error
           retention-days: 14

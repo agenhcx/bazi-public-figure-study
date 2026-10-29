@@ -1,0 +1,30 @@
+{
+  "queue_people": 41,
+  "query_processed_people": 41,
+  "full_body_claim_rows": 41,
+  "institutional_claim_rows": 9,
+  "edited_reference_claim_rows": 31,
+  "other_secondary_claim_rows": 1,
+  "distinct_people_with_any_body_claim": 35,
+  "distinct_people_with_institutional_day_claim": 9,
+  "distinct_people_with_edited_reference_day_claim": 28,
+  "hold_people": 8,
+  "holds_by_type": {
+    "calendar_hold": 5,
+    "formal_source_date_conflict": 2,
+    "source_quality_hold_unverified_competing_year": 1
+  },
+  "queue_people_body_day_no_known_conflict": 27,
+  "bounded_without_qualified_body_claim": 6,
+  "source_captures_total": 39,
+  "valid_source_bodies": 38,
+  "invalid_capture_ids": [
+    "sawada"
+  ],
+  "source_request_policy": "One GET per discovered URL. No raw body hash assigned to the Sawada repository SPA shell; no failed-source retry.",
+  "bulk_academy2007_note": "Same captured source was exact-name matched to all482 preserved candidates: Taira/Hori/Maruyama/Akira/Miyashita. Parent selected B bulk_academy2007 as canonical independent table transcription, so no duplicate bulk claims file is emitted here. Own Miyashita claim remains in main.",
+  "baseline": "academy_fr_jp_completion_v3 (parent frozen f5058...)",
+  "final_cohort_accepted": 0,
+  "bazi_variables_computed": 0,
+  "old_outputs_changed": false
+}

@@ -1,0 +1,42 @@
+{
+  "review_completed_utc": "2026-10-29T13:33:32.033453+00:00",
+  "baseline_git": "f5058c523402f1ed6df19df815400969a9c0a4de",
+  "scope": "membership only; accepted identity and DOB unchanged",
+  "search_usage": {
+    "queries": 10,
+    "calls": 3,
+    "systems_and_counts": [
+      {
+        "system": "system2",
+        "queries": 4
+      },
+      {
+        "system": "system1",
+        "queries": 4
+      },
+      {
+        "system": "system2",
+        "queries": 2
+      }
+    ],
+    "exact_query_texts": null,
+    "exact_query_texts_note": "Query count and call composition were retained in the session checkpoint; literal query texts were not locally persisted. They are not reconstructed or invented here."
+  },
+  "fetch_usage": {
+    "unique_fresh_urls": 30,
+    "retries": 0,
+    "stopped_after_budget": true
+  },
+  "events": [
+    "Reviewed new queue against accepted identity and DOB gates; all 60 have identity=1, DOB=1, membership=0.",
+    "Searched Academy original obituaries and historical official material; a single all-history typed roster was not obtained in the bounded search.",
+    "Fetched 30 unique official URLs once; 16 actual bodies and 14 HTTP404. No 404 is converted into membership absence.",
+    "Read all successful bodies. Rejected Jean Charcot medical-centenary source for the 1867 polar-navigator candidate.",
+    "Reused prior original Maire and Gaston Delépine PDFs solely for explicitly named Academy-member speech authors Sergent and Policard.",
+    "Visually checked all cited PDF evidence pages and the wrong-subject Charcot title; corrected clearly image-resolved OCR only.",
+    "Recorded nine actual full-member election events and ten positive roles with historical bounds but no accepted election year.",
+    "Recomputed every available body hash, checked schema and uniqueness, and kept quotes at or below 25 words per document across output metadata."
+  ],
+  "no_new_external_messages": true,
+  "no_shared_repo_changes": true
+}

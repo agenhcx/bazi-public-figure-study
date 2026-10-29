@@ -1,0 +1,37 @@
+{
+  "worker": "japan_c",
+  "baseline": "academy_fr_jp_completion_v3",
+  "assigned_queue_rows": 40,
+  "processed_queue_rows": 40,
+  "single_query_screened": 40,
+  "unprocessed_queue_rows": 0,
+  "institution_claims": 10,
+  "institution_day_claims": 8,
+  "institution_month_claims": 1,
+  "institution_year_claims": 1,
+  "secondary_claims": 26,
+  "secondary_day_claims": 26,
+  "secondary_calendar_comparable_day_claims": 23,
+  "queue_calendar_comparable_day_people": 31,
+  "queue_calendar_held_day_people": 3,
+  "queue_no_new_birth_claim_people": 4,
+  "bulk_sendai_roster_screened": 482,
+  "bulk_sendai_matched_people": 10,
+  "bulk_sendai_day_claims": 10,
+  "bulk_sendai_calendar_comparable_day_claims": 8,
+  "bulk_sendai_new_body_day_people_vs_v3": [
+    "熊谷岱蔵",
+    "阿部次郎"
+  ],
+  "bulk_sendai_extra_person_not_in_queue": [
+    "阿部次郎"
+  ],
+  "source_date_conflict_holds": 0,
+  "claim_only_calendar_holds": 5,
+  "original_source_capture_urls": 38,
+  "valid_original_source_capture_urls": 36,
+  "no_bazi_variables_computed": true,
+  "final_cohort_acceptances": 0,
+  "final_dob_freeze": false,
+  "note": "Do not sum bulk and queue claims as unique people: 熊谷岱蔵 appears in both. Secondary stays a separate layer. All candidate DOB rows selected=false."
+}

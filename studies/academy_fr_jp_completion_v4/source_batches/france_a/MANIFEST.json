@@ -1,0 +1,53 @@
+{
+  "batch": "France v4 historical A",
+  "baseline_git": "f5058c523402f1ed6df19df815400969a9c0a4de",
+  "publishable_files": [
+    {
+      "relative_path": "README.md",
+      "sha256": "8272cbef9bb4956c943d90bc14c6bd5c8753e020b6b5241300db8ed649a7d081",
+      "bytes": 3599
+    },
+    {
+      "relative_path": "decisions.json",
+      "sha256": "08e4d283bcb5208231beb8e0437b03effb85d27a5fb049ba190d4ddebfebc3c5",
+      "bytes": 40712
+    },
+    {
+      "relative_path": "decisions.csv",
+      "sha256": "3387819a87e4021f088d699340595dae8bef906941e7e2be93544e2f13ef6ac4",
+      "bytes": 2425
+    },
+    {
+      "relative_path": "source_manifest.json",
+      "sha256": "4f3560bffc15c093278f7c31bcd8ba24f38f3f3f8a90d676377cc548ce8d1f05",
+      "bytes": 29622
+    },
+    {
+      "relative_path": "source_assignment_rejections.json",
+      "sha256": "ee85920f3b71b2d728858924211d817e09911314630fc183dfebb12c6e91036c",
+      "bytes": 865
+    },
+    {
+      "relative_path": "queue_status.json",
+      "sha256": "2f58871ec7b29606339a91c41bf74d2fb0efd1df6a27d8abacb9f90a573681da",
+      "bytes": 23004
+    },
+    {
+      "relative_path": "summary.json",
+      "sha256": "a427566c5dbe47a40d6a1d1b5187e0c083d17374cc08002d3ff8beeb8fe37b4a",
+      "bytes": 1997
+    },
+    {
+      "relative_path": "log.json",
+      "sha256": "c72b8799ef8bb16579877f8eaf2c9faa2880a73b4194b127acfdc45466c3728f",
+      "bytes": 1977
+    }
+  ],
+  "excluded": [
+    "private/",
+    "fetch.py",
+    "build_metadata.py",
+    "fetch_log.json"
+  ],
+  "raw_body_publication": false
+}
