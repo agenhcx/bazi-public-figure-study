@@ -1,0 +1,53 @@
+{
+  "japan_claim_files": [
+    "japan_a/claims.json",
+    "japan_b/claims.json",
+    "japan_b/bulk_jsce_claims.json"
+  ],
+  "japan_processed_files": [
+    "japan_a/processed.csv",
+    "japan_b/processed.csv"
+  ],
+  "france_decision_files": [
+    "france_a/decisions.json",
+    "france_b/decisions.json",
+    "france_c/decisions.json",
+    "france_a/cross_source_addendum.json"
+  ],
+  "france_processed_files": [
+    "france_a/processed.csv",
+    "france_b/processed.csv",
+    "france_c/processed.csv"
+  ],
+  "japan_hold_files": [
+    "japan_a/holds.json",
+    "japan_b/holds.json"
+  ],
+  "reviewed_source_tiers": [
+    "learned_society_official_biography"
+  ],
+  "france_cross_source_candidate_ids": [
+    "CTHS_101454",
+    "CTHS_112121"
+  ],
+  "web_body_capture_exceptions": [
+    {
+      "member_key": "jpa:yanagida_toshio",
+      "source_url": "https://www.fbs.osaka-u.ac.jp/labs/yanagida/English/CURRICULUM%20VITAE%202010.pdf",
+      "extracted_body_sha256": "f33fa0f33177892062f62ac6299fe0adbe915d9d870cfc7283b08a7d54a4a5f0",
+      "source_original_capture_http_status": 404,
+      "root_verification_ref": "turn1783search0",
+      "approval_basis": "Collector initially observed actual complete51-line web body turn1742view0; root independently read derived transcript, recalculated its hash, and corroborated same-person DOB/career through official-URL indexed CV text.",
+      "independent_original_body_refetched": false,
+      "pdf_visual_verification_available": false,
+      "web_body_ref": "turn1742view0"
+    }
+  ],
+  "japan_cross_source_member_keys": [
+    "jpa-unlinked-a7688ab1a1777b70",
+    "jpa-unlinked-f7f5b8dea31d1fd8",
+    "jpa-unlinked-3411bc0c8cc0e999",
+    "jpa-unlinked-14d515442048824d",
+    "jpa:horikawa_kiyoshi"
+  ]
+}

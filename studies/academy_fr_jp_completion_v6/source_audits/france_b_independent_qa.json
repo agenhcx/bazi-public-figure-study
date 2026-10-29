@@ -1,0 +1,410 @@
+{
+  "reviewer": "v6_france_a independent collector",
+  "completed_utc": "2026-10-29T23:30:52.550957+00:00",
+  "review_scope": "Read-only independent source review of every France B strict proposed ordinary membership; no network, no source/decision edits. Does not claim complete lifetime review or QA of nonstrict statuses.",
+  "decision_file": "france_b/decisions.json",
+  "decision_file_sha256": "32c3ef92b7ad8110b30752784a52883b58d2269fd7207ed8c209ee5ea6d2764b",
+  "source_manifest_file_sha256_at_review": "18e0caf2c2dd58318b22c7a2fb66ef6a8bc0975221d33b9c046bd615e7096e95",
+  "strict_rows_reviewed": 16,
+  "unique_original_bodies_hash_verified": 17,
+  "PDF_originals_reviewed": 14,
+  "HTML_originals_reviewed": 3,
+  "PDF_key_pages_visually_reviewed": 19,
+  "independently_rendered_images_private": "france_b_qa_private/",
+  "result": "pass",
+  "blockers": [],
+  "specific_checks": [
+    "Guyénot1951is an explicit nonresident ordinary role start, separate from1932correspondence; subtype retained.",
+    "Portier1936is a literal succession in the Academy of Sciences, separate from1929Medicine election; source monthMay is not converted into a day.",
+    "Solomon literalJune1988is accepted at year precision with original month expression preserved.",
+    "Férey day2003-11-18is supported by the same newsletter full-member list item; Institut year2003is supplementary and does not falsely support a day.",
+    "Laffitte1969appears literally in the election sentence, not calculated from retirement.",
+    "Pascal/Portier/Prévôt/Laffitte ordinary subject headings visually checked separately from source-author labels.",
+    "No strict fixed-B candidate carries a baseline inherited election-date conflict.",
+    "HTML Jeannerod/Combes/Férey read from locally captured original bytes; no search snippets used as original evidence."
+  ],
+  "rows": [
+    {
+      "candidate_group_id": "CTHS_112448",
+      "name": "GUYÉNOT Émile",
+      "accepted_event_date": null,
+      "accepted_event_year": 1951,
+      "result": "pass",
+      "ordinary_role_subject_not_author": true,
+      "identity_bridge_reviewed": true,
+      "election_is_literal_not_arithmetic_or_asof": true,
+      "evidence": [
+        {
+          "source_id": "guyenot",
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/guyenot_notice.pdf",
+          "source_sha256": "dd835c036914d38c84ebae1b0be2aaed37143e249589c6c6712b6768d488ecf7",
+          "original_hash_verified": true,
+          "body_independently_read": true,
+          "PDF_pages_independently_visually_verified_1based": [
+            1,
+            3
+          ],
+          "same_item_gate_supports_accepted_event": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_128386",
+      "name": "SAVÉANT Jean-Michel",
+      "accepted_event_date": "2000-11-06",
+      "accepted_event_year": 2000,
+      "result": "pass",
+      "ordinary_role_subject_not_author": true,
+      "identity_bridge_reviewed": true,
+      "election_is_literal_not_arithmetic_or_asof": true,
+      "evidence": [
+        {
+          "source_id": "saveant",
+          "source_url": "https://www.academie-sciences.fr/pdf/membre/SaveantJM_bio0611.pdf",
+          "source_sha256": "0c4fb88dc2ec15877b5de068aa722b137afb0ac7d8ca6afad11329acaad3c743",
+          "original_hash_verified": true,
+          "body_independently_read": true,
+          "PDF_pages_independently_visually_verified_1based": [
+            1
+          ],
+          "same_item_gate_supports_accepted_event": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_128371",
+      "name": "GLOWINSKI Roland",
+      "accepted_event_date": "2005-11-29",
+      "accepted_event_year": 2005,
+      "result": "pass",
+      "ordinary_role_subject_not_author": true,
+      "identity_bridge_reviewed": true,
+      "election_is_literal_not_arithmetic_or_asof": true,
+      "evidence": [
+        {
+          "source_id": "glowinski",
+          "source_url": "https://www.academie-sciences.fr/pdf/membre/GlowinskiR_bio0411.pdf",
+          "source_sha256": "cea8e43c792da1067ace127b08907bda9ded8aa4411af8964c4e493c5ae38c79",
+          "original_hash_verified": true,
+          "body_independently_read": true,
+          "PDF_pages_independently_visually_verified_1based": [
+            1
+          ],
+          "same_item_gate_supports_accepted_event": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_118958",
+      "name": "BUI Huy Duong",
+      "accepted_event_date": "1995-11-13",
+      "accepted_event_year": 1995,
+      "result": "pass",
+      "ordinary_role_subject_not_author": true,
+      "identity_bridge_reviewed": true,
+      "election_is_literal_not_arithmetic_or_asof": true,
+      "evidence": [
+        {
+          "source_id": "bui",
+          "source_url": "https://www.academie-sciences.fr/pdf/membre/notice_bui.pdf",
+          "source_sha256": "f2cd7db1813b34efd5cf5cb21d59d8cedde41e4341ea5fcd92c8f10b7a43f9a3",
+          "original_hash_verified": true,
+          "body_independently_read": true,
+          "PDF_pages_independently_visually_verified_1based": [
+            1
+          ],
+          "same_item_gate_supports_accepted_event": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_117165",
+      "name": "TUBIANA Maurice",
+      "accepted_event_date": "1988-06-06",
+      "accepted_event_year": 1988,
+      "result": "pass",
+      "ordinary_role_subject_not_author": true,
+      "identity_bridge_reviewed": true,
+      "election_is_literal_not_arithmetic_or_asof": true,
+      "evidence": [
+        {
+          "source_id": "tubiana",
+          "source_url": "https://www.academie-sciences.fr/pdf/membre/TubianaM_bio0509.pdf",
+          "source_sha256": "07b2bb1a5219bc6ad8d4ece2c40503690ac8f3162a66ab29c210413d292fc7b9",
+          "original_hash_verified": true,
+          "body_independently_read": true,
+          "PDF_pages_independently_visually_verified_1based": [
+            1
+          ],
+          "same_item_gate_supports_accepted_event": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_125348",
+      "name": "Moshe Yaniv",
+      "accepted_event_date": "1995-10-23",
+      "accepted_event_year": 1995,
+      "result": "pass",
+      "ordinary_role_subject_not_author": true,
+      "identity_bridge_reviewed": true,
+      "election_is_literal_not_arithmetic_or_asof": true,
+      "evidence": [
+        {
+          "source_id": "yaniv",
+          "source_url": "https://www.academie-sciences.fr/pdf/membre/YanivM_bio0708.pdf",
+          "source_sha256": "6613e052361b20db3a7f973cc63e52e6a7f2bb6ba1203adc6beed72145590b6d",
+          "original_hash_verified": true,
+          "body_independently_read": true,
+          "PDF_pages_independently_visually_verified_1based": [
+            1
+          ],
+          "same_item_gate_supports_accepted_event": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_128647",
+      "name": "JEANNEROD Marc",
+      "accepted_event_date": "2002-11-12",
+      "accepted_event_year": 2002,
+      "result": "pass",
+      "ordinary_role_subject_not_author": true,
+      "identity_bridge_reviewed": true,
+      "election_is_literal_not_arithmetic_or_asof": true,
+      "evidence": [
+        {
+          "source_id": "jeannerod",
+          "source_url": "https://podcasts.institutdefrance.fr/academiciens/marc-jeannerod",
+          "source_sha256": "a98a2cd0c03e0e69137137fe45a451833ab8c4e8b8a3704bae1bcae43c131a77",
+          "original_hash_verified": true,
+          "body_independently_read": true,
+          "PDF_pages_independently_visually_verified_1based": [],
+          "same_item_gate_supports_accepted_event": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_121731",
+      "name": "COMBES Claude",
+      "accepted_event_date": null,
+      "accepted_event_year": 2004,
+      "result": "pass",
+      "ordinary_role_subject_not_author": true,
+      "identity_bridge_reviewed": true,
+      "election_is_literal_not_arithmetic_or_asof": true,
+      "evidence": [
+        {
+          "source_id": "combes",
+          "source_url": "https://comptes-rendus.academie-sciences.fr/biologies/articles/10.5802/crbiol.74/",
+          "source_sha256": "4abe47054aefa3a3e26f509ce00848102a9786edf6d510a385e6d6b789ac02a6",
+          "original_hash_verified": true,
+          "body_independently_read": true,
+          "PDF_pages_independently_visually_verified_1based": [],
+          "same_item_gate_supports_accepted_event": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_112746",
+      "name": "PASCAL Paul",
+      "accepted_event_date": null,
+      "accepted_event_year": 1945,
+      "result": "pass",
+      "ordinary_role_subject_not_author": true,
+      "identity_bridge_reviewed": true,
+      "election_is_literal_not_arithmetic_or_asof": true,
+      "evidence": [
+        {
+          "source_id": "pascal",
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/pascal_cr1968.pdf",
+          "source_sha256": "4b7be84eec689cd4f5c4d56cbd20e7a22b27fd80cb73ba16483eb5d93a443444",
+          "original_hash_verified": true,
+          "body_independently_read": true,
+          "PDF_pages_independently_visually_verified_1based": [
+            1,
+            11
+          ],
+          "same_item_gate_supports_accepted_event": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_112784",
+      "name": "PORTIER Paul",
+      "accepted_event_date": null,
+      "accepted_event_year": 1936,
+      "result": "pass",
+      "ordinary_role_subject_not_author": true,
+      "identity_bridge_reviewed": true,
+      "election_is_literal_not_arithmetic_or_asof": true,
+      "evidence": [
+        {
+          "source_id": "portier",
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/portier_notice.pdf",
+          "source_sha256": "bf5130c0cf88ce5a1e15eb0c44259b07108dc1a8ed3bc9f6ee21f8a89e586242",
+          "original_hash_verified": true,
+          "body_independently_read": true,
+          "PDF_pages_independently_visually_verified_1based": [
+            1,
+            14
+          ],
+          "same_item_gate_supports_accepted_event": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_125338",
+      "name": "SOLOMON Ionel",
+      "accepted_event_date": null,
+      "accepted_event_year": 1988,
+      "result": "pass",
+      "ordinary_role_subject_not_author": true,
+      "identity_bridge_reviewed": true,
+      "election_is_literal_not_arithmetic_or_asof": true,
+      "evidence": [
+        {
+          "source_id": "solomon",
+          "source_url": "https://academie-sciences.fr/pdf/discours/s241115_meunier.pdf",
+          "source_sha256": "4b2632d1439b433065f03acde0b92bf0ad0b29683dd62ce8bf2b4a6125a6b25d",
+          "original_hash_verified": true,
+          "body_independently_read": true,
+          "PDF_pages_independently_visually_verified_1based": [
+            2
+          ],
+          "same_item_gate_supports_accepted_event": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_128435",
+      "name": "YOR Marc",
+      "accepted_event_date": "2003-11-18",
+      "accepted_event_year": 2003,
+      "result": "pass",
+      "ordinary_role_subject_not_author": true,
+      "identity_bridge_reviewed": true,
+      "election_is_literal_not_arithmetic_or_asof": true,
+      "evidence": [
+        {
+          "source_id": "yor",
+          "source_url": "https://www.academie-sciences.fr/pdf/membre/YorM_bio0610.pdf",
+          "source_sha256": "39f18b757db35f538877ff7874a777bc33dc775710cf9fb14ebd3386c11e2bcb",
+          "original_hash_verified": true,
+          "body_independently_read": true,
+          "PDF_pages_independently_visually_verified_1based": [
+            1
+          ],
+          "same_item_gate_supports_accepted_event": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_128377",
+      "name": "DEMAILLY Jean-Pierre",
+      "accepted_event_date": null,
+      "accepted_event_year": 2007,
+      "result": "pass",
+      "ordinary_role_subject_not_author": true,
+      "identity_bridge_reviewed": true,
+      "election_is_literal_not_arithmetic_or_asof": true,
+      "evidence": [
+        {
+          "source_id": "demailly",
+          "source_url": "https://comptes-rendus.academie-sciences.fr/mathematique/item/10.5802/crmath.368.pdf",
+          "source_sha256": "5da9db12521ae860a290ba7d69703372da486ddb14ee3017a46776383bd3ed21",
+          "original_hash_verified": true,
+          "body_independently_read": true,
+          "PDF_pages_independently_visually_verified_1based": [
+            2
+          ],
+          "same_item_gate_supports_accepted_event": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_112788",
+      "name": "PRÉVÔT André-Romain",
+      "accepted_event_date": "1963-01-28",
+      "accepted_event_year": 1963,
+      "result": "pass",
+      "ordinary_role_subject_not_author": true,
+      "identity_bridge_reviewed": true,
+      "election_is_literal_not_arithmetic_or_asof": true,
+      "evidence": [
+        {
+          "source_id": "prevot",
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/prevot_cr1983.pdf",
+          "source_sha256": "2aa40c1956320d957b9295c6e48c33beca914d51d0e80beae080ad37ba353806",
+          "original_hash_verified": true,
+          "body_independently_read": true,
+          "PDF_pages_independently_visually_verified_1based": [
+            1,
+            5
+          ],
+          "same_item_gate_supports_accepted_event": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_2071",
+      "name": "LAFFITTE Paul",
+      "accepted_event_date": null,
+      "accepted_event_year": 1969,
+      "result": "pass",
+      "ordinary_role_subject_not_author": true,
+      "identity_bridge_reviewed": true,
+      "election_is_literal_not_arithmetic_or_asof": true,
+      "evidence": [
+        {
+          "source_id": "laffitte",
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/laffitte_cr1982.pdf",
+          "source_sha256": "3bf7629899cb34ee3e35661562bbe87012a1d7ad41bdef111674cff36ce83cce",
+          "original_hash_verified": true,
+          "body_independently_read": true,
+          "PDF_pages_independently_visually_verified_1based": [
+            1,
+            2
+          ],
+          "same_item_gate_supports_accepted_event": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_128412",
+      "name": "FÉREY Gérard",
+      "accepted_event_date": "2003-11-18",
+      "accepted_event_year": 2003,
+      "result": "pass",
+      "ordinary_role_subject_not_author": true,
+      "identity_bridge_reviewed": true,
+      "election_is_literal_not_arithmetic_or_asof": true,
+      "evidence": [
+        {
+          "source_id": "ferey",
+          "source_url": "https://podcasts.institutdefrance.fr/academiciens/gerard-ferey",
+          "source_sha256": "a2f7ddc132fd9b70bdfb1af828bf40112fe3291d3d94ff7ec18ad96fd57a6dec",
+          "original_hash_verified": true,
+          "body_independently_read": true,
+          "PDF_pages_independently_visually_verified_1based": [],
+          "same_item_gate_supports_accepted_event": false
+        },
+        {
+          "source_id": "lettre11",
+          "source_url": "https://www.academie-sciences.fr/pdf/lettre/lettre11.pdf",
+          "source_sha256": "0565e20274cd07fe5efa3008dba19abdd2260ab17f6b3e125a20830710dc4996",
+          "original_hash_verified": true,
+          "body_independently_read": true,
+          "PDF_pages_independently_visually_verified_1based": [
+            24
+          ],
+          "same_item_gate_supports_accepted_event": true
+        }
+      ]
+    }
+  ],
+  "earlier_decision_file_sha256_before_nonstrict_locator_corrections": "2b13dc424909dfddcd808f406a6ceb0091ba40c8c4365e929726e238f97f5666",
+  "final_strict_decisions_canonical_json_sha256": "642a3c87a089b19fbc4d88ad2c1c79717190a3598bd3252f01a4ad4a33b11ea3",
+  "final_snapshot_rechecked_utc": "2026-10-29T23:31:31.137361+00:00",
+  "final_snapshot_note": "Collector finalized only two nonstrict hold locators (Halpern heading1 and Binet relative29-years page6). Every reviewed strict row, accepted event, source hash, evidence count and visual page list was compared and remains unchanged; independent source conclusions still apply. Nonstrict bodies/statuses remain outside QA scope."
+}
