@@ -1,0 +1,59 @@
+{
+  "scope": "2026 extension only",
+  "query_events": [
+    {
+      "names": [
+        "Yu Deng",
+        "John Pardon",
+        "Jacob Tsimerman",
+        "Hong Wang"
+      ],
+      "engine": "system1",
+      "per_name_query_count": 1,
+      "query_pattern": "site:heidelberg-laureate-forum.org NAME Born",
+      "time_utc": null
+    },
+    {
+      "names": [
+        "Yu Deng",
+        "John Pardon",
+        "Hong Wang"
+      ],
+      "engine": "system1",
+      "per_name_query_count": 1,
+      "query_pattern": "NAME born with month/CV/institutional constraint",
+      "time_utc": null
+    }
+  ],
+  "body_opens": [
+    {
+      "name": "Yu Deng",
+      "url": "https://www.heidelberg-laureate-forum.org/laureate/yu-deng/",
+      "status": "body_observed",
+      "time_utc": null
+    },
+    {
+      "name": "John Pardon",
+      "url": "https://www.heidelberg-laureate-forum.org/laureate/john-pardon/",
+      "status": "body_observed",
+      "time_utc": null
+    },
+    {
+      "name": "Jacob Tsimerman",
+      "url": "https://www.heidelberg-laureate-forum.org/laureate/jacob-tsimerman/",
+      "status": "body_observed",
+      "time_utc": null
+    },
+    {
+      "name": "Hong Wang",
+      "url": "https://www.heidelberg-laureate-forum.org/laureate/hong-wang/",
+      "status": "body_observed",
+      "time_utc": null
+    }
+  ],
+  "shared_discovery": "HLF official laureate directory opened once and exact profile links followed. No guessed profile URL.",
+  "blocked_requests": [],
+  "bazi_variables_computed": 0,
+  "exact_query_text_complete": false,
+  "audit_limitation": "Saved grouped patterns do not retain all exact query strings. Declared per-person query counts are preserved; no reconstruction from memory is asserted."
+}

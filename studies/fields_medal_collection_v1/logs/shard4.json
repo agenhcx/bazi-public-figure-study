@@ -1,0 +1,507 @@
+{
+  "schema_version": 1,
+  "shard_id": "shard4",
+  "events": [
+    {
+      "fields_id": "fields-1c88a974455a2296",
+      "name": "Cédric Villani",
+      "action": "search",
+      "query": "Cédric Villani born 5 October 1973 MacTutor",
+      "method": "web.system2_search_query",
+      "timestamp_utc": null
+    },
+    {
+      "fields_id": "fields-ac2d92f0d9dc1e3a",
+      "name": "Elon Lindenstrauss",
+      "action": "search",
+      "query": "Elon Lindenstrauss born 1 August 1970 MacTutor",
+      "method": "web.system2_search_query",
+      "timestamp_utc": null
+    },
+    {
+      "fields_id": "fields-15d81b267b6e2025",
+      "name": "Ngô Bào Châu",
+      "action": "search",
+      "query": "Ngô Bảo Châu born 28 June 1972 MacTutor",
+      "method": "web.system2_search_query",
+      "timestamp_utc": null
+    },
+    {
+      "fields_id": "fields-de5a4b4e279eaf4f",
+      "name": "Stanislav Smirnov",
+      "action": "search",
+      "query": "Stanislav Smirnov born 3 September 1970 MacTutor",
+      "method": "web.system2_search_query",
+      "timestamp_utc": null
+    },
+    {
+      "fields_id": "fields-ac2d92f0d9dc1e3a",
+      "name": "Elon Lindenstrauss",
+      "action": "search",
+      "query": "Elon Lindenstrauss site:mathshistory.st-andrews.ac.uk/Biographies/ born",
+      "method": "web.system2_search_query",
+      "timestamp_utc": null
+    },
+    {
+      "fields_id": "fields-c941cd26a5646845",
+      "name": "Artur Avila",
+      "action": "search",
+      "query": "Artur Avila birth date university CV",
+      "method": "web.system2_search_query",
+      "timestamp_utc": null
+    },
+    {
+      "fields_id": "fields-c847084f96ea991e",
+      "name": "Manjul Bhargava",
+      "action": "search",
+      "query": "Manjul Bhargava born August 8 1974 university",
+      "method": "web.system2_search_query",
+      "timestamp_utc": null
+    },
+    {
+      "fields_id": "fields-4e3f7537e4f6bbd4",
+      "name": "Martin Hairer",
+      "action": "search",
+      "query": "Martin Hairer born November 14 1975 CV",
+      "method": "web.system2_search_query",
+      "timestamp_utc": null
+    },
+    {
+      "fields_id": "fields-1b10f55053fe7dfc",
+      "name": "Maryam Mirzakhani",
+      "action": "search",
+      "query": "Maryam Mirzakhani born 12 May 1977 Stanford",
+      "method": "web.system2_search_query",
+      "timestamp_utc": null
+    },
+    {
+      "fields_id": "fields-c847084f96ea991e",
+      "name": "Manjul Bhargava",
+      "action": "search",
+      "query": "Manjul Bhargava \"born\" \"August 8\" site:edu",
+      "method": "web.system2_search_query",
+      "timestamp_utc": null
+    },
+    {
+      "fields_id": "fields-de5a4b4e279eaf4f",
+      "name": "Stanislav Smirnov",
+      "action": "search",
+      "query": "Stanislav Smirnov curriculum vitae born university",
+      "method": "web.system2_search_query",
+      "timestamp_utc": null
+    },
+    {
+      "fields_id": "fields-1c88a974455a2296",
+      "name": "Cédric Villani",
+      "action": "open",
+      "url": "https://www.pas.va/en/academicians/ordinary/villani.html",
+      "method": "web.open",
+      "status": "body_observed",
+      "note": "",
+      "kind": "body_candidate",
+      "timestamp_utc": null
+    },
+    {
+      "fields_id": "fields-ac2d92f0d9dc1e3a",
+      "name": "Elon Lindenstrauss",
+      "action": "open",
+      "url": "https://web.math.princeton.edu/WebCV/LindenstraussCV.pdf",
+      "method": "web.open",
+      "status": "body_observed",
+      "note": "",
+      "kind": "direct_cv",
+      "timestamp_utc": null
+    },
+    {
+      "fields_id": "fields-ac2d92f0d9dc1e3a",
+      "name": "Elon Lindenstrauss",
+      "action": "open",
+      "url": "https://www.heidelberg-laureate-forum.org/laureate/elon-lindenstrauss/",
+      "method": "web.open",
+      "status": "body_observed",
+      "note": "",
+      "kind": "body_candidate",
+      "timestamp_utc": null
+    },
+    {
+      "fields_id": "fields-15d81b267b6e2025",
+      "name": "Ngô Bào Châu",
+      "action": "open",
+      "url": "https://www.trailblazers.psd.uchicago.edu/ng%C3%B4-b%E1%BA%A3o-ch%C3%A2u",
+      "method": "web.open",
+      "status": "body_observed",
+      "note": "",
+      "kind": "body_candidate",
+      "timestamp_utc": null
+    },
+    {
+      "fields_id": "fields-de5a4b4e279eaf4f",
+      "name": "Stanislav Smirnov",
+      "action": "open",
+      "url": "https://www.unige.ch/universite/presentation/nobel-plus/stanislav-smirnov-medaille-fields-2010",
+      "method": "web.open",
+      "status": "blocked",
+      "note": "Access Denied; security system blocked request.",
+      "kind": "body_candidate",
+      "timestamp_utc": null
+    },
+    {
+      "fields_id": "fields-de5a4b4e279eaf4f",
+      "name": "Stanislav Smirnov",
+      "action": "open",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Stanislav_Smirnov/",
+      "method": "web.open",
+      "status": "blocked",
+      "note": "404 Not Found; URL candidate inferred from search-exposed biography ID.",
+      "kind": "body_candidate",
+      "timestamp_utc": null
+    },
+    {
+      "fields_id": "fields-c941cd26a5646845",
+      "name": "Artur Avila",
+      "action": "open",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Avila/",
+      "method": "web.open",
+      "status": "body_observed",
+      "note": "",
+      "kind": "body_candidate",
+      "timestamp_utc": null
+    },
+    {
+      "fields_id": "fields-c847084f96ea991e",
+      "name": "Manjul Bhargava",
+      "action": "open",
+      "url": "https://www.icts.res.in/people/manjul-bhargava",
+      "method": "web.open",
+      "status": "body_observed",
+      "note": "",
+      "kind": "body_candidate",
+      "timestamp_utc": null
+    },
+    {
+      "fields_id": "fields-c847084f96ea991e",
+      "name": "Manjul Bhargava",
+      "action": "open",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Bhargava/",
+      "method": "web.open",
+      "status": "blocked",
+      "note": "404 Not Found; inferred surname URL candidate.",
+      "kind": "body_candidate",
+      "timestamp_utc": null
+    },
+    {
+      "fields_id": "fields-4e3f7537e4f6bbd4",
+      "name": "Martin Hairer",
+      "action": "open",
+      "url": "https://www.carmin.tv/en/collections/outreach-les-videos-tout-public-du-cirm/video/interview-at-cirm-martin-hairer",
+      "method": "web.open",
+      "status": "body_observed",
+      "note": "",
+      "kind": "body_candidate",
+      "timestamp_utc": null
+    },
+    {
+      "fields_id": "fields-4e3f7537e4f6bbd4",
+      "name": "Martin Hairer",
+      "action": "open",
+      "url": "https://www.leopoldina.org/fileadmin/redaktion/Mitglieder/CV_Hairer_Martin_D.pdf",
+      "method": "web.open",
+      "status": "blocked",
+      "note": "Direct institutional CV URL not accessible via web tool.",
+      "kind": "direct_cv",
+      "timestamp_utc": null
+    },
+    {
+      "fields_id": "fields-1b10f55053fe7dfc",
+      "name": "Maryam Mirzakhani",
+      "action": "open",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Mirzakhani/",
+      "method": "web.open",
+      "status": "body_observed",
+      "note": "",
+      "kind": "body_candidate",
+      "timestamp_utc": null
+    },
+    {
+      "fields_id": "fields-12ddab1dd74af07f",
+      "name": "Akshay Venkatesh",
+      "action": "search",
+      "query": "site-history.mcs.st-andrews.ac.uk Akshay Venkatesh born",
+      "engine": "system2",
+      "timestamp_utc": null,
+      "result_ref": "[session-reference-omitted]",
+      "note": "Representative result ref; query results inspected. Query birth dates are leads, not evidence."
+    },
+    {
+      "fields_id": "fields-12ddab1dd74af07f",
+      "name": "Akshay Venkatesh",
+      "action": "search",
+      "query": "Akshay Venkatesh born 21 November 1981 site:st-andrews.ac.uk",
+      "engine": "system1",
+      "timestamp_utc": null,
+      "result_ref": "[session-reference-omitted]",
+      "note": "Representative result ref; query results inspected. Query birth dates are leads, not evidence."
+    },
+    {
+      "fields_id": "fields-12ddab1dd74af07f",
+      "name": "Akshay Venkatesh",
+      "action": "open",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Venkatesh/",
+      "timestamp_utc": null,
+      "status": "blocked",
+      "note": "Tool reports inaccessible; not retried Tool ref: [session-reference-omitted]."
+    },
+    {
+      "fields_id": "fields-12ddab1dd74af07f",
+      "name": "Akshay Venkatesh",
+      "action": "open",
+      "url": "https://www.ias.edu/scholars/venkatesh",
+      "timestamp_utc": null,
+      "status": "body_observed",
+      "note": "Official IAS scholar body observed; no birth date statement Tool ref: [session-reference-omitted]."
+    },
+    {
+      "fields_id": "fields-571e847e5a08d9e2",
+      "name": "Alessio Figalli",
+      "action": "search",
+      "query": "site:math.ethz.ch Alessio Figalli born March 1984",
+      "engine": "system2",
+      "timestamp_utc": null,
+      "result_ref": "[session-reference-omitted]",
+      "note": "Representative result ref; query results inspected. Query birth dates are leads, not evidence."
+    },
+    {
+      "fields_id": "fields-571e847e5a08d9e2",
+      "name": "Alessio Figalli",
+      "action": "search",
+      "query": "Alessio Figalli born 2 April 1984 site:st-andrews.ac.uk",
+      "engine": "system1",
+      "timestamp_utc": null,
+      "result_ref": "[session-reference-omitted]",
+      "note": "Representative result ref; query results inspected. Query birth dates are leads, not evidence."
+    },
+    {
+      "fields_id": "fields-571e847e5a08d9e2",
+      "name": "Alessio Figalli",
+      "action": "open",
+      "url": "https://people.math.ethz.ch/~afigalli/cv",
+      "timestamp_utc": null,
+      "status": "body_observed",
+      "note": "Personal CV explicitly supplies month and year only Tool ref: [session-reference-omitted]."
+    },
+    {
+      "fields_id": "fields-e820d3ddf8c32593",
+      "name": "Caucher Birkar",
+      "action": "search",
+      "query": "Caucher Birkar born date biography university",
+      "engine": "system2",
+      "timestamp_utc": null,
+      "result_ref": "[session-reference-omitted]",
+      "note": "Representative result ref; query results inspected. Query birth dates are leads, not evidence."
+    },
+    {
+      "fields_id": "fields-e820d3ddf8c32593",
+      "name": "Caucher Birkar",
+      "action": "search",
+      "query": "Caucher Birkar born July 1978 site:st-andrews.ac.uk",
+      "engine": "system1",
+      "timestamp_utc": null,
+      "result_ref": "[session-reference-omitted]",
+      "note": "Representative result ref; query results inspected. Query birth dates are leads, not evidence."
+    },
+    {
+      "fields_id": "fields-e820d3ddf8c32593",
+      "name": "Caucher Birkar",
+      "action": "open",
+      "url": "https://ncts.ntu.edu.tw/upload/blistfs133190404035843296.pdf",
+      "timestamp_utc": null,
+      "status": "search_snippet_only",
+      "note": "Search snippet has birth statement; opening [session-reference-omitted] yielded zero body lines, so body not accepted Tool ref: [session-reference-omitted]."
+    },
+    {
+      "fields_id": "fields-e820d3ddf8c32593",
+      "name": "Caucher Birkar",
+      "action": "open",
+      "url": "https://www.york.ac.uk/maths/about/equality-diversity-inclusion/celebrating-mathematicians/professor-caucher-birkar/",
+      "timestamp_utc": null,
+      "status": "blocked",
+      "note": "403 Forbidden; not retried; search snippet [session-reference-omitted] says born in 1978 Tool ref: [session-reference-omitted]."
+    },
+    {
+      "fields_id": "fields-e820d3ddf8c32593",
+      "name": "Caucher Birkar",
+      "action": "open",
+      "url": "https://www.ae-info.org/ae/Member/Birkar_Caucher/CV",
+      "timestamp_utc": null,
+      "status": "body_observed",
+      "note": "Institutional CV body observed; birth date absent Tool ref: [session-reference-omitted]."
+    },
+    {
+      "fields_id": "fields-fb1a53c2315ccaec",
+      "name": "Peter Scholze",
+      "action": "search",
+      "query": "site:math.uni-bonn.de Peter Scholze born 11 December 1987",
+      "engine": "system2",
+      "timestamp_utc": null,
+      "result_ref": "[session-reference-omitted]",
+      "note": "Representative result ref; query results inspected. Query birth dates are leads, not evidence."
+    },
+    {
+      "fields_id": "fields-fb1a53c2315ccaec",
+      "name": "Peter Scholze",
+      "action": "search",
+      "query": "Peter Scholze born 11 December 1987 site:mpg.de",
+      "engine": "system1",
+      "timestamp_utc": null,
+      "result_ref": "[session-reference-omitted]",
+      "note": "Representative result ref; query results inspected. Query birth dates are leads, not evidence."
+    },
+    {
+      "fields_id": "fields-fb1a53c2315ccaec",
+      "name": "Peter Scholze",
+      "action": "open",
+      "url": "https://www.mpg.de/12130269/mathematik_scholze-peter",
+      "timestamp_utc": null,
+      "status": "body_observed",
+      "note": "Institutional Curriculum Vitae explicit birth year Tool ref: [session-reference-omitted]."
+    },
+    {
+      "fields_id": "fields-fb1a53c2315ccaec",
+      "name": "Peter Scholze",
+      "action": "open",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Scholze/",
+      "timestamp_utc": null,
+      "status": "blocked",
+      "note": "Tool reports inaccessible; not retried Tool ref: [session-reference-omitted]."
+    },
+    {
+      "fields_id": "fields-ef72cb77368d48fe",
+      "name": "Hugo Duminil-Copin",
+      "action": "open",
+      "url": "https://www.ihes.fr/~duminil/CV.html",
+      "timestamp_utc": null,
+      "status": "body_observed",
+      "note": "Direct supplied personal CV; birth statement at line 11 Tool ref: [session-reference-omitted]."
+    },
+    {
+      "fields_id": "fields-10692a7f984e35cf",
+      "name": "James Maynard",
+      "action": "search",
+      "query": "James Maynard born June 1987 university biography CV",
+      "engine": "system2",
+      "timestamp_utc": null,
+      "result_ref": "[session-reference-omitted]",
+      "note": "Representative result ref; query results inspected. Query birth dates are leads, not evidence."
+    },
+    {
+      "fields_id": "fields-10692a7f984e35cf",
+      "name": "James Maynard",
+      "action": "search",
+      "query": "\"James Maynard\" \"born\" \"1987\" site:ox.ac.uk",
+      "engine": "system1",
+      "timestamp_utc": null,
+      "result_ref": "[session-reference-omitted]",
+      "note": "Representative result ref; query results inspected. Query birth dates are leads, not evidence."
+    },
+    {
+      "fields_id": "fields-10692a7f984e35cf",
+      "name": "James Maynard",
+      "action": "open",
+      "url": "https://www.maths.ox.ac.uk/people/james.maynard",
+      "timestamp_utc": null,
+      "status": "body_observed",
+      "note": "Oxford faculty body observed; no DOB Tool ref: [session-reference-omitted]."
+    },
+    {
+      "fields_id": "fields-10692a7f984e35cf",
+      "name": "James Maynard",
+      "action": "open",
+      "url": "https://www.heidelberg-laureate-forum.org/laureate/james-maynard/",
+      "timestamp_utc": null,
+      "status": "body_observed",
+      "note": "Official recognized-awards foundation laureate biography; identity tied to Fields Medal 2022 Tool ref: [session-reference-omitted]."
+    },
+    {
+      "fields_id": "fields-245b1db3d564bcdd",
+      "name": "June Huh",
+      "action": "search",
+      "query": "June Huh born June 9 1983 Princeton CV",
+      "engine": "system2",
+      "timestamp_utc": null,
+      "result_ref": "[session-reference-omitted]",
+      "note": "Representative result ref; query results inspected. Query birth dates are leads, not evidence."
+    },
+    {
+      "fields_id": "fields-245b1db3d564bcdd",
+      "name": "June Huh",
+      "action": "search",
+      "query": "\"June Huh\" \"born\" \"June 9\" site:princeton.edu",
+      "engine": "system1",
+      "timestamp_utc": null,
+      "result_ref": "[session-reference-omitted]",
+      "note": "Representative result ref; query results inspected. Query birth dates are leads, not evidence."
+    },
+    {
+      "fields_id": "fields-245b1db3d564bcdd",
+      "name": "June Huh",
+      "action": "open",
+      "url": "https://web.math.princeton.edu/~huh/",
+      "timestamp_utc": null,
+      "status": "body_observed",
+      "note": "Personal university page observed; links CV; no DOB statement Tool ref: [session-reference-omitted]."
+    },
+    {
+      "fields_id": "fields-245b1db3d564bcdd",
+      "name": "June Huh",
+      "action": "open",
+      "url": "https://www.princeton.edu/news/2022/10/12/june-huh-wins-macarthur-genius-grant-creative-approaches-mathematical-puzzles",
+      "timestamp_utc": null,
+      "status": "body_observed",
+      "note": "Princeton institutional birth statement at line 47 Tool ref: [session-reference-omitted]."
+    },
+    {
+      "fields_id": "fields-245b1db3d564bcdd",
+      "name": "June Huh",
+      "action": "open",
+      "url": "https://web.math.princeton.edu/~huh/JuneHuhCV.pdf",
+      "timestamp_utc": null,
+      "status": "body_observed",
+      "note": "Direct linked personal CV opened via click; finds [session-reference-omitted]/1/2 found no Born/1983/Birth Tool ref: [session-reference-omitted]."
+    },
+    {
+      "fields_id": "fields-fefcb685c1b7b23c",
+      "name": "Maryna Viazovska",
+      "action": "search",
+      "query": "Maryna Viazovska born 2 December 1984 EPFL CV",
+      "engine": "system2",
+      "timestamp_utc": null,
+      "result_ref": "[session-reference-omitted]",
+      "note": "Representative result ref; query results inspected. Query birth dates are leads, not evidence."
+    },
+    {
+      "fields_id": "fields-fefcb685c1b7b23c",
+      "name": "Maryna Viazovska",
+      "action": "open",
+      "url": "https://actu.epfl.ch/news/an-epfl-mathematician-is-awarded-a-fields-medal/",
+      "timestamp_utc": null,
+      "status": "body_observed",
+      "note": "Official EPFL birth statement at line 54 Tool ref: [session-reference-omitted]."
+    },
+    {
+      "fields_id": "fields-245b1db3d564bcdd",
+      "name": "June Huh",
+      "action": "find",
+      "url": "https://web.math.princeton.edu/~huh/JuneHuhCV.pdf",
+      "patterns": [
+        "Born",
+        "1983",
+        "Birth"
+      ],
+      "timestamp_utc": null,
+      "status": "body_observed",
+      "note": "No matches. Refs [session-reference-omitted], [session-reference-omitted], [session-reference-omitted]."
+    }
+  ],
+  "completed_at_utc": "2026-10-29T00:02:47.650756Z",
+  "note": "Actual queries, opens, and explicitly logged finds. Individual action times unavailable and recorded null. Events grouped by worker/person rather than asserted chronological order. No failed URL retried. Minimum evidence snippets and hashes retained privately; no full documents retained."
+}

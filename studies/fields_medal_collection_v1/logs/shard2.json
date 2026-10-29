@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "shard_id": "shard2",
+  "created_at_utc": "2026-10-29T00:00:50.586915Z",
+  "operation_timestamp_note": "Exact retrieval times were not captured; occurred_at_utc is null. checked_at_utc is the actual record finalization time.",
+  "events": [
+    {
+      "operation": "open",
+      "fields_id": "fields-ab7e472d5cf76ecd",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Thompson/",
+      "occurred_at_utc": null,
+      "outcome": "blocked",
+      "note": "Internal Error; URL not accessible through tool; not retried."
+    },
+    {
+      "operation": "open",
+      "fields_id": "fields-aff0cdc021d4243d",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Novikov/",
+      "occurred_at_utc": null,
+      "outcome": "body_observed",
+      "note": "Different person Petr Sergeevich Novikov; excluded from claims."
+    },
+    {
+      "operation": "open",
+      "fields_id": "fields-7d71248c0d771d98",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Mumford/",
+      "occurred_at_utc": null,
+      "outcome": "body_observed",
+      "note": "Target biography birth YMD observed."
+    },
+    {
+      "operation": "open",
+      "fields_id": "fields-d9e4d873237731ea",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Bombieri/",
+      "occurred_at_utc": null,
+      "outcome": "body_observed",
+      "note": "Target biography birth YMD observed."
+    },
+    {
+      "operation": "open",
+      "fields_id": "fields-b84f4bfa9bc80d49",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Fefferman/",
+      "occurred_at_utc": null,
+      "outcome": "body_observed",
+      "note": "Target biography birth YMD observed."
+    },
+    {
+      "operation": "open",
+      "fields_id": "fields-afcbea9504ddbc86",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Quillen/",
+      "occurred_at_utc": null,
+      "outcome": "body_observed",
+      "note": "Target biography birth YMD observed."
+    },
+    {
+      "operation": "open",
+      "fields_id": "fields-b15a1279d07983b5",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Margulis/",
+      "occurred_at_utc": null,
+      "outcome": "body_observed",
+      "note": "Target biography birth YMD observed."
+    },
+    {
+      "operation": "open",
+      "fields_id": "fields-4b145f3b9f405e20",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Deligne/",
+      "occurred_at_utc": null,
+      "outcome": "body_observed",
+      "note": "Target biography birth YMD observed."
+    },
+    {
+      "operation": "open",
+      "fields_id": "fields-752b28b44b2b7a34",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Connes/",
+      "occurred_at_utc": null,
+      "outcome": "body_observed",
+      "note": "Target biography birth YMD observed."
+    },
+    {
+      "operation": "open",
+      "fields_id": "fields-206e09a51a88ec69",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Yau/",
+      "occurred_at_utc": null,
+      "outcome": "body_observed",
+      "note": "Target biography birth YMD observed."
+    },
+    {
+      "operation": "open",
+      "fields_id": "fields-512c51251ebcd967",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Thurston/",
+      "occurred_at_utc": null,
+      "outcome": "body_observed",
+      "note": "Target biography birth YMD observed."
+    },
+    {
+      "operation": "open",
+      "fields_id": "fields-c86644eff8fc9147",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Faltings/",
+      "occurred_at_utc": null,
+      "outcome": "body_observed",
+      "note": "Target biography birth YMD observed."
+    },
+    {
+      "operation": "open",
+      "fields_id": "fields-5fd3dd851e0a9db1",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Freedman/",
+      "occurred_at_utc": null,
+      "outcome": "body_observed",
+      "note": "Target biography birth YMD observed."
+    },
+    {
+      "operation": "open",
+      "fields_id": "fields-00ef0626b60f8f1a",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Donaldson/",
+      "occurred_at_utc": null,
+      "outcome": "body_observed",
+      "note": "Target biography birth YMD observed."
+    },
+    {
+      "operation": "open",
+      "fields_id": "fields-d522c6e745ebde9b",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Witten/",
+      "occurred_at_utc": null,
+      "outcome": "body_observed",
+      "note": "Target biography birth YMD observed."
+    },
+    {
+      "operation": "open",
+      "fields_id": "fields-9b8093d69609d94c",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Mori/",
+      "occurred_at_utc": null,
+      "outcome": "body_observed",
+      "note": "Target biography birth YMD observed."
+    },
+    {
+      "operation": "search",
+      "search_engine": "system2",
+      "fields_id": "fields-ab7e472d5cf76ecd",
+      "query": "John Griggs Thompson born site:mathshistory.st-andrews.ac.uk/Biographies",
+      "occurred_at_utc": null,
+      "outcome": "search_results_observed",
+      "note": "Discovered Thompson_John path; no search snippet accepted as body evidence."
+    },
+    {
+      "operation": "click",
+      "fields_id": "fields-aff0cdc021d4243d",
+      "from_tool_ref": "[session-reference-omitted]",
+      "link_id": 6,
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Novikov_Sergi/",
+      "occurred_at_utc": null,
+      "outcome": "body_observed",
+      "note": "Target Sergei Petrovich Novikov birth YMD observed."
+    },
+    {
+      "operation": "open",
+      "fields_id": "fields-ab7e472d5cf76ecd",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Thompson_John/",
+      "occurred_at_utc": null,
+      "outcome": "body_observed",
+      "note": "Different corrected candidate URL; target John Griggs Thompson birth YMD observed."
+    }
+  ]
+}

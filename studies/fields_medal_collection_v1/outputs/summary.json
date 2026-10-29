@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "main": {
+    "roster_count": 64,
+    "status_counts": {
+      "day_source_verified": 57,
+      "year_only": 3,
+      "blocked": 2,
+      "month_only": 1,
+      "not_found": 1
+    },
+    "body_date_claim_people": 61,
+    "source_day_coverage_count": 57,
+    "single_institution_source_people": 60,
+    "mactutor_body_date_people": 50,
+    "snippet_only_claim_count": 2
+  },
+  "extension2026": {
+    "roster_count": 4,
+    "status_counts": {
+      "month_only": 2,
+      "day_source_verified": 1,
+      "year_only": 1
+    },
+    "body_date_claim_people": 4,
+    "source_day_coverage_count": 1,
+    "single_institution_source_people": 4,
+    "mactutor_body_date_people": 0,
+    "snippet_only_claim_count": 0
+  },
+  "collection_first_pass_complete": true,
+  "final_analysis_cohort_freeze": false,
+  "bazi_record_count": 0,
+  "analysis_record_count": 0,
+  "calendar_conversion_performed": false,
+  "coverage_rule": "Only body_observed date claims count; no partial components are filled.",
+  "institution_dependency_rule": "Exact source host, except St Andrews subdomains grouped; not independent-source verification."
+}

@@ -1,0 +1,40 @@
+{
+  "dataset": "fields-medal-source-collection-v1",
+  "client_date": "2026-10-28",
+  "collection_scope": "Independent award cohort; first source-acquisition pass",
+  "primary_award_cutoff": 2025,
+  "primary_roster_count": 64,
+  "primary_last_award_year": 2022,
+  "separate_extension_award_year": 2026,
+  "separate_extension_roster_count": 4,
+  "membership_source": "https://www.mathunion.org/imu-awards/fields-medal",
+  "roster_count_rule": "Only chronological Fields Medalist recipients; exclude Wiles1998 special silver plaque, include Perelman2006 with declined flag.",
+  "birth_year_filter": null,
+  "nobel_birth_year_window_inherited": false,
+  "source_types_allowed": [
+    "official_award",
+    "institutional_biography",
+    "institutional_cv",
+    "first_person_cv"
+  ],
+  "institutional_biography_note": "Includes university-authored MacTutor historical biographies and recognized award organizations such as HLF. Institutional compilation is not an independent civil birth record.",
+  "budgets_per_person": {
+    "targeted_search_queries": 2,
+    "different_body_candidates": 2,
+    "direct_cv_attempts": 1,
+    "transport_retries": 0
+  },
+  "claim_policy": "Explicit printed components only; preserve day/month/year and calendar labels. Search snippets are discovery only. Single-source body support is not independent corroboration or formal Gregorian-DOB acceptance.",
+  "source_timing": "Source access timestamps not recorded by the search tool remain null. checked_at_utc is the actual recording/completion time, not invented HTTP retrieval time.",
+  "stop_rule": "End the bounded first pass with missing/partial records preserved. No automatic rerun, extra source mining or expansion to other awards.",
+  "analysis_scope": "No hierarchy positioning or hypothesis testing; official award-age rule must be considered in a future separate analysis design.",
+  "age_rule_source": "https://www.mathunion.org/imu-awards/fields-medal",
+  "age_rule": "Candidate 40th birthday must not precede January1 of the award year; not simply under40 on ceremony day.",
+  "bazi_variables_computed": 0,
+  "formal_analysis_cohort_frozen": false,
+  "calendar_conversion_performed": false,
+  "statistical_tests_run": 0,
+  "roster_prepared_at_utc": "2026-10-28T23:59:01.483793+00:00",
+  "protocol_documented_at_utc": "2026-10-29T00:07:21.110145+00:00",
+  "documentation_note": "Protocol instructions and fixed roster preceded sharded targeted checks; this document is the after-collection record and is not labelled a preregistered statistical analysis."
+}
