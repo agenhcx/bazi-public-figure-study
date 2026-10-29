@@ -1,0 +1,52 @@
+{
+  "checked_utc": "2026-10-29T00:47:30.903122+00:00",
+  "source": "University of Amsterdam Album Academicum",
+  "first_party": true,
+  "task": "Final bounded bulk-only check; zero individual pages and zero individual DOB lookups.",
+  "bounds": {
+    "targeted_queries_used": 0,
+    "official_public_pages_retrieved": 2,
+    "individual_record_pages_opened": 0,
+    "individual_DOBs_collected": 0,
+    "guessed_API_endpoints": 0,
+    "wholefiles_downloaded": 0
+  },
+  "entry_page": {
+    "url": "https://www.uva.nl/en/about-the-uva/organisation/professors/professors-and-professorial-appointments.html",
+    "retrieval_method": "public web retrieval",
+    "http_status": "not exposed by retrieval tool",
+    "official_scope_statement": "Album Academicum names every professor since 1632 who worked at the University of Amsterdam or its predecessor Athenaeum Illustre, with personal details, academic background and position.",
+    "album_link_destination": "https://albumacademicum.uva.nl/cgi/b/bib/bib-idx?c=ap%3Bpage%3Dindex%3Bcc%3Dap%3Blang%3Den",
+    "other_downloads_observed": "Current professor ancillary-activity and externally-funded chair overviews were linked; the entry page did not describe them as historical birthday datasets. They were not downloaded."
+  },
+  "album_page": {
+    "canonical_url": "https://albumacademicum.uva.nl/search",
+    "retrieval_method": "public web retrieval of linked Album Academicum page",
+    "http_status": "not exposed by retrieval tool",
+    "freshness_note": "Retrieved representation labelled crawled 1.1 years ago; do not treat displayed counts as current verified totals.",
+    "observed_interface": [
+      "public named search results",
+      "category filters including Doctor, Afgestudeerde, Hoogleraar, Eredoctor",
+      "professor in-service filter",
+      "appointment-type filters including lecturers and private lecturers",
+      "Geboortejaar birth-year range filter",
+      "year of death filter",
+      "discipline and appointment-related search fields",
+      "pagination"
+    ],
+    "displayed_counts": {
+      "all_results": 35493,
+      "professor_category": 3427,
+      "all_results_pages": 1775
+    },
+    "count_interpretation": "Mixed catalogue items including graduates, doctorates, honorary doctorates and professor category. Displayed counts are not current unique or eligible science-professor counts; 1,775 is all-result pages, not professor pages.",
+    "birth_precision_visible_in_list": "year",
+    "day_level_DOB_schema_verified": false,
+    "visible_direct_download_or_wholefile_link_found": false,
+    "visible_bulk_DOB_data_found": false,
+    "no_export_claim_limit": "No direct complete-table/wholefile download was found on these two rendered official pages. This is bounded negative evidence, not proof no export exists elsewhere."
+  },
+  "conclusion": "Official public name/year search entrance confirmed. No immediately downloadable wholefile containing DOB was verified. Stop under requested bulk-only boundary.",
+  "recommended_action": "Do not start individual-record retrieval or endpoint guessing. No new easy bulk DOB source established in this check.",
+  "provenance": "Two official public pages; extraction preserves observations and limitations. No authentication wall was bypassed, no person record was opened, no formal professor queue created."
+}

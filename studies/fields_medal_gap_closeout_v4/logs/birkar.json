@@ -1,0 +1,54 @@
+{
+  "name": "Caucher Birkar",
+  "fields_id": "fields-e820d3ddf8c32593",
+  "award_year": 2018,
+  "status_retained": "month_only",
+  "source_date_components_iso_retained": "1978-07",
+  "new_full_date_claims": 0,
+  "queries": [
+    {
+      "engine": "system2",
+      "query": "Caucher Birkar \"7 July 1978\" university",
+      "at_utc": null,
+      "candidate_day_in_query_is_evidence": false
+    },
+    {
+      "engine": "system2",
+      "query": "Caucher Birkar date birth CV site:tsinghua.edu.cn",
+      "at_utc": null
+    },
+    {
+      "engine": "system1",
+      "query": "\"Caucher Birkar\" \"birth\" site:ae-info.org",
+      "at_utc": null
+    },
+    {
+      "engine": "system1",
+      "query": "\"Caucher Birkar\" \"born\" site:royalsociety.org",
+      "at_utc": null
+    }
+  ],
+  "body_candidates": [
+    {
+      "url": "https://qzc.tsinghua.edu.cn/en/info/1148/1853.htm",
+      "status": "body_observed",
+      "finding": "Institutional profile has appointment, education and awards, without explicit birthday.",
+      "at_utc": null
+    },
+    {
+      "url": "https://www.dpmms.cam.ac.uk/~cb496/research.html",
+      "status": "blocked",
+      "http_status": 404,
+      "discovery": "Exact Personal web page link on the Tsinghua profile, not guessed.",
+      "at_utc": null
+    }
+  ],
+  "new_round_counters": {
+    "targeted_queries": 4,
+    "distinct_body_candidates": 2,
+    "direct_cv_attempts": 0
+  },
+  "stop_reason": "No full source date found in bounded official-source check. Previously observed HLF month claim retained; unavailable page not retried.",
+  "calendar_conversion": false,
+  "date_padding": false
+}

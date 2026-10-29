@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "worker_id": "hong_wang_round4",
+  "records": [
+    {
+      "fields_id": "fields-7134a0f12e23708a",
+      "name": "Hong Wang",
+      "award_year": 2026,
+      "status": "year_only",
+      "claims": [
+        {
+          "date_raw": "1991",
+          "year": 1991,
+          "month": null,
+          "day": null,
+          "precision": "year",
+          "calendar": "not_stated",
+          "source_url": "https://www.heidelberg-laureate-forum.org/laureate/hong-wang/",
+          "source_type": "institutional_biography",
+          "source_status": "body_observed",
+          "excerpt": "1991, Guangxi, China",
+          "birthplace_raw": "Guangxi, China",
+          "identity_note": "HLF laureate heading matches name and explicitly identifies Fields Medal2026."
+        },
+        {
+          "date_raw": "1991",
+          "year": 1991,
+          "month": null,
+          "day": null,
+          "precision": "year",
+          "calendar": "not_stated",
+          "source_url": "https://www.ihes.fr/hong-wang-fields-2026/",
+          "source_type": "institutional_biography",
+          "source_status": "body_observed",
+          "excerpt": "Née en 1991, Hong Wang",
+          "identity_note": "Official IHES biography/Fields award announcement identifies the NYU and IHES mathematician with MIT PhD under Larry Guth in 2019; Fields 2026 explicit."
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.heidelberg-laureate-forum.org/laureate/hong-wang/",
+          "status": "body_observed",
+          "access_method": "web.click from official HLF laureate directory",
+          "note": "Rendered heading contains explicit birth components and award identity. Tool reference [session-reference-omitted]."
+        },
+        {
+          "url": "https://sites.google.com/view/hongwang/home",
+          "status": "body_observed",
+          "access_method": "web.open",
+          "note": "[session-reference-omitted]; target public personal mathematics page, no DOB or direct CV link observed."
+        },
+        {
+          "url": "https://www.ihes.fr/hong-wang-fields-2026/",
+          "status": "body_observed",
+          "access_method": "web.open",
+          "note": "[session-reference-omitted]; L30 explicitly states born in 1991; no month/day supplied."
+        }
+      ],
+      "search_queries_used": 2,
+      "body_candidates_opened": 1,
+      "direct_cv_attempts": 0,
+      "checked_at_utc": "2026-10-29T00:46:48Z",
+      "review_note": "Separate2026 extension; only explicit printed precision retained. Search results with ages/career history or non-primary biographical content not converted into DOB. Priority round4: personal page and official IHES 2026 award biography opened; IHES explicitly corroborates 1991 only. Full birthday remains unknown; no age, graduation, appointment, article-date or default-day inference. Existing HLF body was not reopened; two-source budget exhausted.",
+      "followup_budget_usage": {
+        "round_id": "priority_round4",
+        "search_queries_used": 2,
+        "body_candidates_opened": 2,
+        "direct_cv_attempts": 0
+      }
+    }
+  ]
+}

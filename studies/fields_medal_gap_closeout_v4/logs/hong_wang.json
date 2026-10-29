@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "worker_id": "hong_wang_round4",
+  "events": [
+    {
+      "action": "search",
+      "query": "\"Hong Wang\" mathematician \"born\" \"1991\" birthday",
+      "method": "web.system2_search_query",
+      "tool_batch": "turn1347",
+      "timestamp_utc": null,
+      "note": "Institutional results showed year 1991; no target-matching full birthday surfaced."
+    },
+    {
+      "action": "search",
+      "query": "\"Hong Wang\" mathematics curriculum vitae date of birth",
+      "method": "web.system2_search_query",
+      "tool_batch": "turn1347",
+      "timestamp_utc": null,
+      "note": "Same-name CV results for South Carolina/University of Wyoming mathematician were excluded as a different person; none opened."
+    },
+    {
+      "action": "open",
+      "url": "https://sites.google.com/view/hongwang/home",
+      "method": "web.open",
+      "timestamp_utc": null,
+      "status": "body_observed",
+      "note": "Target personal public page identified by MIT/Larry Guth PhD 2019 and NYU/IHES posts; no birth statement or direct CV link observed."
+    },
+    {
+      "action": "open",
+      "url": "https://www.ihes.fr/hong-wang-fields-2026/",
+      "method": "web.open",
+      "timestamp_utc": null,
+      "status": "body_observed",
+      "note": "Official institution body states Née en 1991 at line 30; page identity and 2026 Fields award explicit. No month/day supplied."
+    }
+  ],
+  "budget": {
+    "targeted_search_queries_used": 2,
+    "targeted_search_queries_limit": 2,
+    "body_sources_opened": 2,
+    "body_sources_limit": 2,
+    "public_cv_attempts": 0,
+    "public_cv_limit": 1
+  },
+  "stop_reason": "Two targeted queries and two body-source candidates exhausted. No matching direct public CV exposed. Only year precision observed. Old HLF page was not reopened."
+}
