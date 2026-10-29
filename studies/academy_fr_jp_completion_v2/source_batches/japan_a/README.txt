@@ -1,0 +1,15 @@
+JAPAN INSTITUTIONAL DOB SHARD A — 2026-10-29
+
+42 source-body day-precision claims for42 unique candidate identities:39 original discovery rows0–144 plus3 restored official SectionII scientists outside435 (Nagai, Takamine, Noguchi). All are evidence-layer claims, zero final cohort acceptances. 仁科芳雄 was recaptured as one of24 exact NDL portrait matches but its existing seed is not overwritten or counted as new.
+
+Read claims.json for dates, source URLs, identity support, raw calendar expressions, precision, source tier and caveats. Read processed.csv for all145 assigned candidates; source-index absence is NOT an individual birthday search failure. 95 remain individually unprocessed in this shard. The source index was screened for all435 and38 exact matches transferred to the B/C workers. Three recovered science members were then added and captured separately.
+
+Five source/calendar holds: 石川千代松 source says DOB has multiple accounts; 丘浅次郎 has pre1873 era/four-digit expressions with identical month/day and unspecified calendar; 藤澤利喜太郎 provides explicit parallel dates but does not literally label the calendar; 小藤文次郎 and寺尾寿 give era/four-digit-year components without a source calendar conversion. Never treat these old-era-only month/day as Gregorian dates. No collector converted a calendar. NDL paired Western-style dates are retained because NDL itself supplies them, with the source not-stated calendar label.
+
+MacTutor's9 rows are University of St Andrews scholarly biographies (institutional secondary), not first-party civil records. The municipal, society and national-library sources are separately labeled. Source-body claim does not mean accepted identity, accepted national science subsection, or analysis-ready Gregorian DOB. Raw academic degree cannot freeze science subsection. No BaZi variables were computed.
+
+Mizuno's Kyoto1862/6/2 is deliberately delegated to the bulk collector because Kyoto's legend says preMeiji6 dates retain lunar month/day while transcribing the year. The Kyoto public empty-form POST directory yielded1025 records and was handed over for batch matching; this does not resume professor cohort collection.
+
+HTML and PDF bodies were read; ASJ and Sendai necessary pages were also rendered and visually read. Full copyrighted bodies, photos and page renders are private intermediates, excluded from the public deliverable. 林忠四郎 (Chushiro Hayashi)'s page was read fully via webbody, while independent local download returned403: its hash is explicitly empty. Its source is https://www.city.kyoto.lg.jp/sogo/page/0000207454.html and webbody ref turn1480view0. The separate metadata file records this limitation.
+
+Main files: claims.json, processed.csv, summary.json, log.json, capture_manifest.json. Sources and hashes are in the claims. collect_ndl.py and assemble_claims.py are replay helpers for this worker's intermediate capture paths, not a standalone public replay bundle. Parent integration should copy minimized input claims and build a portable offline replay. Never distribute private/.

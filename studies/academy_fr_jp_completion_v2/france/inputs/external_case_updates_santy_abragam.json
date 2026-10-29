@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "scope": "Case-level evidence update; not a complete French Academy roster or DOB acceptance table",
+  "records": [
+    {
+      "cths_person_id": "110681",
+      "name": "Paul Santy",
+      "field": "membership_role",
+      "claimed_role": "CORRESPONDENT_AT_DEATH",
+      "source_url": "https://www.academie-sciences.fr/pdf/eloges/santy_cr1970.pdf",
+      "source_issuer": "Academie des sciences, Paris",
+      "source_type": "first_party_academy_obituary",
+      "source_status": "body_observed",
+      "access_method": "PDF first page visually inspected",
+      "page_locator": "PDF page 1 (zero-based index 0)",
+      "session_date": "1970-02-23",
+      "excerpt": "Notice nécrologique sur M. Paul Santy (1887-1970), Correspondant pour la Section de Médecine et Chirurgie",
+      "case_disposition": "EXCLUDE_FROM_PRIMARY_FULL_MEMBER_CANDIDATE_LAYER",
+      "reason": "The Academy's own obituary explicitly identifies its deceased subject as a correspondent. This supplies the previously missing first-party support for the corresponding-only exclusion overlay.",
+      "identity_note": "Header Paul Santy, 1887-1970, and Lyon medical career identify the CTHS case. OCR misspells the body surname SANTRY; header checked visually.",
+      "election_date_inferred": false,
+      "dob_conflict_resolved": false,
+      "retained_dob_claims": [
+        "1887-04-16",
+        "1887-04-18"
+      ],
+      "global_cohort_frozen": false
+    },
+    {
+      "cths_person_id": "111758",
+      "name": "Anatole Abragam",
+      "field": "dob_and_membership_corroboration",
+      "source_url": "https://iramis.cea.fr/nimbe/lsdrm/rmn-et-irm-a-l-iramis/",
+      "source_issuer": "CEA IRAMIS",
+      "source_type": "holding_institution_biography",
+      "source_status": "body_observed",
+      "page_locator": "Biographie d'Anatole Abragam and Societes Savantes headings",
+      "source_date_components_iso": "1914-12-15",
+      "calendar": "not_stated",
+      "membership_year_claim": 1973,
+      "excerpt": "Né en Russie le 15 décembre 1914. Membre de l’Académie des Sciences depuis 1973",
+      "case_disposition": "EMPLOYER_CORROBORATION_REOBSERVED_FIRST_PARTY_ACADEMY_CLASSIFICATION_STILL_PENDING",
+      "reason": "Employer states French membership since 1973 separately from its foreign-academy list. This is not the Paris Academy's own ordinary-member election record and does not by itself settle the CTHS foreign-role conflict.",
+      "new_person_dob_count": 0,
+      "collector_calendar_conversion_performed": false,
+      "global_cohort_frozen": false
+    }
+  ],
+  "upstream_git_commit": "1c14f6e3a3015a8c12f6a7c39f2e035cab15ab85",
+  "upstream_path": "studies/academy_reopen_fr_jp_v1/inputs/france_case_updates.json",
+  "upstream_original_sha256": "1e98907c2b62499dbda36819b86535de9615be379f966fb5cd79dded0ec79643",
+  "current_baseline_note": "Santy CTHS110681 is absent from restored877 candidate groups. Keep firstparty exclusion as an explicit source-pool overlay so it is not reintroduced as ordinary full. Abragam CTHS111758 is present, DOB accepted1 and membership accepted0; employer corroboration does not resolve its role conflict."
+}

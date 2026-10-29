@@ -1,10 +1,11 @@
-name: France Japan academy reopened collection v1
+name: France Japan academy collection and completion ledgers
 
 on:
   push:
     branches: ['codex/academy-fr-jp-reopen-20261029']
     paths:
       - 'studies/academy_reopen_fr_jp_v1/**'
+      - 'studies/academy_fr_jp_completion_v2/**'
       - 'JAPAN_ACADEMY_CURRENT_CHECKPOINT.md'
       - 'ACADEMY_COLLECTION_CURRENT_CHECKPOINT.md'
       - '.github/workflows/academy_reopen_fr_jp_v1.yml'
@@ -53,5 +54,32 @@ jobs:
             ${{ runner.temp }}/academy-japan-replay/
             studies/academy_reopen_fr_jp_v1/inputs/france_case_updates.json
             studies/academy_reopen_fr_jp_v1/source_audits/
+          if-no-files-found: error
+          retention-days: 14
+      - name: Validate expanded Japan identity and calendar routing
+        run: python3 -m unittest discover -s studies/academy_fr_jp_completion_v2/tests -v
+      - name: Rebuild normalized institution claims
+        run: |
+          python3 studies/academy_fr_jp_completion_v2/scripts/normalize_japan.py --output-dir "${{ runner.temp }}/academy-normalized-v2"
+          for name in japan_body_claims.json japan_processed_ids.json japan_dob_holds.json; do
+            diff "studies/academy_fr_jp_completion_v2/inputs/$name" "${{ runner.temp }}/academy-normalized-v2/$name"
+          done
+      - name: Replay expanded Japan master and France decisions
+        run: |
+          python3 studies/academy_fr_jp_completion_v2/scripts/build_japan.py --output-dir "${{ runner.temp }}/academy-japan-v2"
+          diff -r studies/academy_fr_jp_completion_v2/japan_outputs "${{ runner.temp }}/academy-japan-v2"
+          python3 -I studies/academy_fr_jp_completion_v2/france/assemble_france.py --output-dir "${{ runner.temp }}/academy-france-v2"
+          diff -r studies/academy_fr_jp_completion_v2/france/outputs "${{ runner.temp }}/academy-france-v2"
+      - name: Verify completion metadata hashes and totals
+        run: python3 studies/academy_fr_jp_completion_v2/scripts/verify_study.py
+      - name: Save updated country tables and gaps
+        uses: actions/upload-artifact@v4
+        with:
+          name: academy-france-japan-completion-v2
+          path: |
+            studies/academy_fr_jp_completion_v2/round_summary.json
+            studies/academy_fr_jp_completion_v2/README.md
+            studies/academy_fr_jp_completion_v2/japan_outputs/
+            studies/academy_fr_jp_completion_v2/france/outputs/
           if-no-files-found: error
           retention-days: 14
