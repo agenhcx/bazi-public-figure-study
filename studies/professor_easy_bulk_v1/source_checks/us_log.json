@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "route_id": "us_uc_in_memoriam_bulk",
+  "events": [
+    {
+      "action": "open",
+      "url": "https://senateinmemoriam.universityofcalifornia.edu/",
+      "method": "web.open",
+      "status": "body_observed",
+      "timestamp_utc": null,
+      "note": "Landing search form lists Birth Year; no individual biography opened."
+    },
+    {
+      "action": "open",
+      "url": "https://senate.universityofcalifornia.edu/in-memoriam/index.html",
+      "method": "web.open",
+      "status": "body_observed",
+      "timestamp_utc": null,
+      "note": "Official Senate page identifies memorial publication and links UC Berkeley digitized volumes."
+    },
+    {
+      "action": "search",
+      "query": "site:digicoll.lib.berkeley.edu \"In Memoriam\" pdf 2001",
+      "method": "web.system2_search_query",
+      "tool_batch": "turn1330",
+      "representative_refs": [
+        "[session-reference-omitted]",
+        "[session-reference-omitted]"
+      ],
+      "timestamp_utc": null
+    },
+    {
+      "action": "search",
+      "query": "site:senate.universityofcalifornia.edu \"In Memoriam\" pdf 1994",
+      "method": "web.system2_search_query",
+      "tool_batch": "turn1330",
+      "representative_refs": [
+        "[session-reference-omitted]"
+      ],
+      "timestamp_utc": null
+    },
+    {
+      "action": "download",
+      "url": "https://digicoll.lib.berkeley.edu/nanna/record/81359/files/inmemoriam2001.pdf?registerDownload=1&version=1&withMetadata=0&withWatermark=0",
+      "method": "Python urllib.request.urlopen; ordinary unauthenticated HTTPS GET",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "timestamp_utc": "2026-10-29T00:25:30.713583Z",
+      "status": "saved",
+      "local_filename": "uc_in_memoriam_2001.pdf",
+      "note": "Exact public file URL exposed in [session-reference-omitted]. No retry, hidden API guess, authentication, or access-control bypass."
+    },
+    {
+      "action": "local_metadata_inspection",
+      "method": "pypdf.PdfReader",
+      "network_request": false,
+      "pages": 117,
+      "pages_with_extractable_text": 117,
+      "timestamp_utc": null,
+      "note": "Only PDF metadata and aggregate text availability assessed; no individual DOB extraction."
+    },
+    {
+      "action": "local_text_extract_and_format_inspection",
+      "network_request": false,
+      "method": "pypdf",
+      "physical_pages": 117,
+      "output": "pdftext_extract.txt",
+      "format_samples": "format_samples.json",
+      "individual_dob_rows_extracted": 0,
+      "aggregate_year_span_line_count": 77,
+      "timestamp_utc": null,
+      "note": "Root requested text for bulk parser assessment. No unified full-DOB header, so no strong birth-date parser or candidate DOB JSON generated."
+    }
+  ],
+  "budget": {
+    "targeted_search_queries_used": 2,
+    "targeted_search_queries_limit": 3,
+    "ordinary_public_requests_used": 3,
+    "ordinary_public_requests_limit": 3
+  },
+  "fields_followup_cancelled": true,
+  "fields_followup_new_searches": 0
+}

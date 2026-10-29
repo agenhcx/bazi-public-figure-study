@@ -1,0 +1,32 @@
+{
+  "url": "https://cpr.uni-rostock.de/api/v1/search?fl=purl%2Cprofkat.idx_profname.headline%2Cprofkat.period%2Cprofkat.gnd%2Cprofkat.birthdate%2Cprofkat.birthplace%2Cprofkat.deathdate%2Cprofkat.deathplace%2Cprofkat.last_professorship%2Cprofkat.last_faculty&fq=state%3Apublished&q=%2BobjectType%3Aperson+%2Bcategory.top%3Aprofkat_class_subjects%5C%3ABK35&rows=5000&wt=csv",
+  "started_at_utc": "2026-10-28T23:48:49.264447+00:00",
+  "attempts": 1,
+  "http_status": 200,
+  "content_type": "text/comma-separated-values;charset=UTF-8",
+  "bytes": 22592,
+  "sha256": "5cbc1ddb0c28736aa46332222f919bc5227bea95902d2b9be5462c38a9edeecd",
+  "rows": 117,
+  "columns": [
+    "purl",
+    "profkat.idx_profname.headline",
+    "profkat.period",
+    "profkat.gnd",
+    "profkat.birthdate",
+    "profkat.birthplace",
+    "profkat.deathdate",
+    "profkat.deathplace",
+    "profkat.last_professorship",
+    "profkat.last_faculty"
+  ],
+  "birth_precision_counts": {
+    "day_ddmmyyyy": 93,
+    "year": 13,
+    "missing": 11
+  },
+  "day_inside_1835_1985": 89,
+  "day_birthyear_minmax": [
+    1767,
+    1980
+  ]
+}

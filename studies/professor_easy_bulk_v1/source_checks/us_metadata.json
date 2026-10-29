@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "route_id": "us_uc_in_memoriam_bulk",
+  "decision": "official_whole_volume_download_succeeded",
+  "artifact": {
+    "filename": "uc_in_memoriam_2001.pdf",
+    "source_url": "https://digicoll.lib.berkeley.edu/nanna/record/81359/files/inmemoriam2001.pdf?registerDownload=1&version=1&withMetadata=0&withWatermark=0",
+    "source_owner": "UC Berkeley Library Digital Collections / University of California Academic Senate",
+    "publication_year": 2001,
+    "format": "application/pdf",
+    "bytes": 834563,
+    "sha256": "9c5fa94e676f0c901d710fc6bd11f6c578c3ec7478098cfaf4fa82866d75518c",
+    "physical_pdf_pages": 117,
+    "pages_with_extractable_text": 117,
+    "pdf_metadata": {
+      "title": "inmemoriam2001",
+      "producer": "Prince 12.5 (www.princexml.com)",
+      "ark": "ark:/13030/kt738nc19j"
+    }
+  },
+  "observed_schema": {
+    "landing_index_fields": [
+      "First Name",
+      "Last Name",
+      "Birth Year",
+      "Death Year",
+      "Campus",
+      "Title",
+      "Keywords"
+    ],
+    "landing_index_born_full_dob_column_observed": false,
+    "landing_index_json_or_csv_export_observed": false,
+    "download_schema": "Whole annual memorial biography volume; unstructured narrative PDF with named memorial headings and biographical prose.",
+    "download_structured_dob_rows": null,
+    "download_professor_person_count": null,
+    "download_full_dob_count": null,
+    "header_format": "Name, discipline: campus / YYYY-YYYY / academic title / variable narrative",
+    "uniform_full_dob_header_observed": false
+  },
+  "counts": {
+    "official_volumes_downloaded": 1,
+    "physical_pdf_pages": 117,
+    "individual_biography_pages_opened": 0,
+    "individual_dobs_extracted": 0,
+    "targeted_search_queries_used": 2,
+    "ordinary_public_page_or_data_requests": 3,
+    "aggregate_year_span_line_count": 77,
+    "aggregate_year_span_line_count_is_person_count": false
+  },
+  "limitations": [
+    "No ready-made row-level DOB table or bulk JSON/CSV export was observed on the two landing pages. Backend capabilities were not probed.",
+    "The annual volume covers deceased UC faculty and administrators, so it is not a national professor roster and not exclusively professors.",
+    "Birth-date completeness and number of individual memorial entries were not audited; no individual DOB extraction was performed.",
+    "The PDF is a public officially hosted whole-volume download discovered verbatim in search, not a guessed or enumerated endpoint.",
+    "The catalogue search result reports 278 pp; the downloaded PDF has 117 physical pages. Page counts are therefore kept separate rather than equated."
+  ],
+  "stopped_reason": "Public request budget reached; usable whole-volume file obtained. No further feasibility exploration needed.",
+  "local_text_extract": {
+    "filename": "pdftext_extract.txt",
+    "encoding": "UTF-8",
+    "physical_page_markers": 117,
+    "bytes": 445533,
+    "sha256": "d60d168031ae93ecc7ff951cf364f729e8e7efa800db06b116acdf034107c985",
+    "individual_dob_rows_extracted": 0
+  }
+}

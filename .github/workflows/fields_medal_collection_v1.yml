@@ -5,6 +5,8 @@ on:
     branches: ['codex/fields-and-professor-catalogues-20261028']
     paths:
       - 'studies/fields_medal_collection_v1/**'
+      - 'studies/fields_medal_followup_v2/**'
+      - 'studies/professor_easy_bulk_v1/**'
       - 'studies/professor_catalogue_expansion_v1/**'
       - '.github/workflows/fields_medal_collection_v1.yml'
   workflow_dispatch:
@@ -35,12 +37,20 @@ jobs:
           --output-dir "${{ runner.temp }}/fields-medal-replay-v1"
       - name: Compare all replay outputs with committed files
         run: diff -r studies/fields_medal_collection_v1/outputs "${{ runner.temp }}/fields-medal-replay-v1"
+      - name: Validate follow-up patches and easy batch parser
+        run: |
+          python3 -m unittest discover -s studies/fields_medal_followup_v2/tests -v
+          python3 -m unittest discover -s studies/professor_easy_bulk_v1/tests -v
+      - name: Replay completed Fields Medal follow-up
+        run: python3 studies/fields_medal_followup_v2/scripts/build.py --output-dir "${{ runner.temp }}/fields-followup-replay-v2"
+      - name: Compare current follow-up outputs
+        run: diff -r studies/fields_medal_followup_v2/outputs "${{ runner.temp }}/fields-followup-replay-v2"
       - name: Verify source-study manifests
         run: |
           python3 - <<'PY'
           import hashlib, json
           from pathlib import Path
-          for name in ('fields_medal_collection_v1', 'professor_catalogue_expansion_v1'):
+          for name in ('fields_medal_collection_v1', 'professor_catalogue_expansion_v1', 'fields_medal_followup_v2', 'professor_easy_bulk_v1'):
               root = Path('studies') / name
               manifest = json.loads((root / 'MANIFEST.json').read_text())
               for rel, expected in manifest['files'].items():
@@ -55,6 +65,8 @@ jobs:
           name: fields-medal-collection-and-catalogue-review-v1
           path: |
             ${{ runner.temp }}/fields-medal-replay-v1/
+            ${{ runner.temp }}/fields-followup-replay-v2/
             studies/professor_catalogue_expansion_v1/
+            studies/professor_easy_bulk_v1/
           if-no-files-found: error
           retention-days: 14
