@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "main": {
+    "roster_count": 64,
+    "status_counts": {
+      "day_source_verified": 63,
+      "month_only": 1
+    },
+    "body_date_claim_people": 64,
+    "source_day_coverage_count": 63,
+    "single_institution_source_people": 59,
+    "mactutor_body_date_people": 50,
+    "snippet_only_claim_count": 2
+  },
+  "extension2026": {
+    "roster_count": 4,
+    "status_counts": {
+      "month_only": 2,
+      "day_source_verified": 1,
+      "year_only": 1
+    },
+    "body_date_claim_people": 4,
+    "source_day_coverage_count": 1,
+    "single_institution_source_people": 4,
+    "mactutor_body_date_people": 0,
+    "snippet_only_claim_count": 0
+  },
+  "collection_first_pass_complete": true,
+  "final_analysis_cohort_freeze": false,
+  "bazi_record_count": 0,
+  "analysis_record_count": 0,
+  "calendar_conversion_performed": false,
+  "coverage_rule": "Only body_observed date claims count; no partial components are filled.",
+  "institution_dependency_rule": "Exact source host, except St Andrews subdomains grouped; not independent-source verification.",
+  "followup_delta": {
+    "schema_version": 1,
+    "baseline_v1_main_day_count": 57,
+    "previous_v2_main_day_count": 59,
+    "current_v3_main_day_count": 63,
+    "main_day_delta_from_v2": 4,
+    "main_day_delta_from_v1": 6,
+    "patch_count": 5,
+    "new_day_body_claims": 4,
+    "new_month_body_claims": 1,
+    "v1_main_status_counts": {
+      "day_source_verified": 57,
+      "year_only": 3,
+      "blocked": 2,
+      "month_only": 1,
+      "not_found": 1
+    },
+    "v2_main_status_counts": {
+      "day_source_verified": 59,
+      "year_only": 3,
+      "blocked": 2
+    },
+    "v3_main_status_counts": {
+      "day_source_verified": 63,
+      "month_only": 1
+    },
+    "extension2026_unchanged": true,
+    "supersession_note": "The current v3 main day-source count 63 supersedes v2 59; v1 57 and v2 59 are retained as checkpoints.",
+    "v1_v2_inputs_immutable": true,
+    "calendar_conversion_performed": false,
+    "bazi_record_count": 0,
+    "analysis_record_count": 0,
+    "final_analysis_cohort_freeze": false
+  }
+}

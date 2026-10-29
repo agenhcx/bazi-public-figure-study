@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "parser_version": 2,
+  "volume_year": 2000,
+  "source_file": "source.pdf",
+  "source_url": "https://digicoll.lib.berkeley.edu/nanna/record/81436/files/inmemoriam2000.pdf?registerDownload=1&version=1&withMetadata=0&withWatermark=0",
+  "source_sha256": "420b81f0300a08379d835cfd251b5555db5327862c747e6b89997ee42ec3e785",
+  "source_physical_pages": 123,
+  "counts": {
+    "total_header_candidates": 76,
+    "day_candidates": 18,
+    "year_candidates": 58,
+    "statuses": {
+      "automatic_unverified": 76
+    },
+    "campuses": {
+      "Irvine": 5,
+      "Berkeley": 22,
+      "Santa Barbara": 8,
+      "Los Angeles": 18,
+      "Davis": 13,
+      "Santa Cruz": 2,
+      "San Francisco": 1,
+      "San Diego": 5,
+      "Riverside": 2
+    },
+    "candidates_with_title": 73
+  },
+  "network_requests": 0,
+  "individual_verifications": 0,
+  "unparsed_year_span_line_count": 2,
+  "unparsed_year_span_note": "Isolated year spans lacking the nearby comma/colon named-heading syntax are skipped without manual rescue.",
+  "validation": {
+    "valid_unique_candidate_ids": true,
+    "all_records_have_physical_page_rule_precision_status": true,
+    "year_only_month_day_null": true,
+    "prose_outside_public_candidates": true
+  },
+  "rejected_birth_clause_counts": {
+    "no_named_subject_in_birth_clause": 46,
+    "no_full_date_in_same_birth_clause": 7
+  },
+  "constraints": [
+    "Every record is automatic_unverified.",
+    "Only named-heading year spans establish year-level candidates.",
+    "Full-date candidates require named subject in same birth clause, complete date, and agreement with heading year.",
+    "Pronoun-only, kinship, incomplete and year-mismatched clauses are skipped.",
+    "Other people mentioned in prose are not intentionally extracted; no manual rescue performed.",
+    "Entry boundaries, names, disciplines and titles are automatic and may need review."
+  ],
+  "scope_screen": {
+    "rule": "literal discipline contains physics or chemistry; includes biophysics/biochemistry",
+    "candidates": 10,
+    "day_candidates": 3,
+    "year_candidates": 7,
+    "eligible_control_people": null
+  },
+  "birth_year_window": {
+    "lower": 1835,
+    "upper": 1985,
+    "candidate_rows_inside": 76,
+    "full_date_rows_inside": 18
+  },
+  "overlap_check": {
+    "previous_volume_year": 2001,
+    "previous_candidate_rows": 75,
+    "current_candidate_rows": 76,
+    "normalization": "NFKC name, strip, casefold plus birth_year",
+    "exact_name_year_matches": 0,
+    "limitations": "No fuzzy or individual identity resolution; zero exact matches is not proof of no duplicate people."
+  },
+  "scientific_analysis": {
+    "bazi_record_count": 0,
+    "formal_control_cohort_frozen": false,
+    "academy_nobel_overlap_adjudicated": false
+  }
+}

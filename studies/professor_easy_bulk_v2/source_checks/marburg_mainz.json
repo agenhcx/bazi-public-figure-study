@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "route_id": "marburg_mainz_easy_bulk",
+  "result": "no_usable_bulk_file_obtained",
+  "artifacts": [],
+  "schemas": {
+    "marburg": "Official landing page describes biographies and exposes full-text, epoch, faculty and gallery navigation; no whole-table download was observed.",
+    "mainz": "Official all-person index is advertised and indexed with name and birth/death years. Its actual HTML GET returned 503, so no downloaded schema or row count was verified."
+  },
+  "counts": {
+    "downloaded_files": 0,
+    "downloaded_rows": 0,
+    "birth_window_1835_1985_rows": 0,
+    "individual_pages_opened": 0,
+    "targeted_queries": 4,
+    "official_public_requests": 2
+  },
+  "hashes": [],
+  "limitations": [
+    "No individual pages or individual DOB searches were opened.",
+    "Search mentions of TEI XML/REST/BEACON were treated as leads; no unadvertised endpoint was guessed or enumerated.",
+    "Mainz index download failed once with HTTP 503; no retry was attempted.",
+    "No birth-year-window eligibility was inferred from an unavailable file or from catalog dates.",
+    "Helmstedt excluded without lookup as instructed."
+  ],
+  "stop_reason": "No directly usable whole-file download obtained within easy-bulk bounds."
+}
