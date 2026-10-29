@@ -1,0 +1,155 @@
+{
+  "worker": "v5_japan_c",
+  "search_queries": 40,
+  "query_batches": [
+    {
+      "batch": 1,
+      "engine": "system2",
+      "queries": [
+        "\"青木楠男\" site:kotobank.jp",
+        "\"福山敏男\" site:kotobank.jp",
+        "\"野田稲吉\" site:kotobank.jp",
+        "\"真島正市\" site:kotobank.jp"
+      ]
+    },
+    {
+      "batch": 2,
+      "engine": "system1",
+      "queries": [
+        "\"田村憲造\" 生年",
+        "\"中山秀三郎\" 生年",
+        "\"松村任三\" 生年月日",
+        "\"岸上鎌吉\" 生年月日"
+      ]
+    },
+    {
+      "batch": 3,
+      "engine": "system2",
+      "queries": [
+        "\"Kiyoshi Hama\" born",
+        "\"入谷明\" 誕生 生まれ",
+        "\"和田英太郎\" 略歴 生",
+        "\"名取礼二\" 生まれ"
+      ]
+    },
+    {
+      "batch": 4,
+      "engine": "system1",
+      "queries": [
+        "\"野田稲吉\" コトバンク",
+        "\"岸上鎌吉\" コトバンク",
+        "\"田中豊\" 土木 コトバンク",
+        "\"山村昌\" コトバンク"
+      ]
+    },
+    {
+      "batch": 5,
+      "engine": "system2",
+      "queries": [
+        "\"辻廣\" site:kotobank.jp",
+        "\"荒田吉明\" site:kotobank.jp",
+        "\"本多健一\" site:kotobank.jp",
+        "\"井上明久\" site:kotobank.jp"
+      ]
+    },
+    {
+      "batch": 6,
+      "engine": "system2",
+      "queries": [
+        "\"諸熊奎治\" site:kotobank.jp",
+        "\"中西準子\" site:kotobank.jp",
+        "\"鈴木厚人\" site:kotobank.jp",
+        "\"梶田隆章\" site:kotobank.jp"
+      ]
+    },
+    {
+      "batch": 7,
+      "engine": "system1",
+      "queries": [
+        "冨田雅次 富田雅次 生年",
+        "\"Kiyoshi Takewaki\" born",
+        "\"Masanori Otsuka\" born",
+        "\"四方英四郎\" 略歴 誕生"
+      ]
+    },
+    {
+      "batch": 8,
+      "engine": "system2",
+      "queries": [
+        "\"古在由秀\" 略歴 誕生",
+        "\"田村三郎\" コトバンク",
+        "\"山川民夫\" コトバンク",
+        "\"鈴木厚人\" 略歴 生年月日 KEK"
+      ]
+    },
+    {
+      "batch": 9,
+      "engine": "system1",
+      "queries": [
+        "\"濱清\" 生まれ 略歴",
+        "\"辻廣\" 誕生 大正",
+        "\"山川民夫\" 生まれ 1921",
+        "\"大塚正徳\" 生まれ 1929"
+      ]
+    },
+    {
+      "batch": 10,
+      "engine": "system2",
+      "queries": [
+        "\"田村三郎\" \"1917\" \"生まれ\"",
+        "\"田村憲造\" \"駒屋\" 誕生",
+        "\"中山秀三郎\" \"人事興信録\"",
+        "\"Hiroshi Tsuji\" combustion born"
+      ]
+    }
+  ],
+  "unique_body_urls_screened": 21,
+  "body_url_definition": "19 captured/attempted originals in source_capture_log plus one dictionary index and one JT Wada interview (no improved birth claim).",
+  "web_opens_or_clicks": 22,
+  "web_screenshot_attempts": 3,
+  "direct_original_url_attempts": 19,
+  "direct_valid_originals": 17,
+  "failed_direct_originals": [
+    {
+      "url": "https://www.iwate-pu.ac.jp/whatsnew/folder30/鈴木学長略歴.pdf",
+      "status": 403,
+      "body_verified_via_web": true,
+      "web_ref": "turn1701view1",
+      "source_sha256": null,
+      "extracted_private_file": "private/suzuki_web_extracted_body.txt"
+    },
+    {
+      "url": "https://www.ppsj.org/news/news006.pdf",
+      "status": 403,
+      "body_verified": false,
+      "web_screenshot_failures": 3,
+      "claim_accepted_from_this_source": false
+    }
+  ],
+  "prior_round_logs_reviewed": true,
+  "repeated_prior_failed_original_gets": 0,
+  "prior_gets_not_repeated": [
+    "NDL bulk authorities/portraits",
+    "JSCE chairman Nakayama profile",
+    "JpGU Wada profile",
+    "Nagasaki med150kinensi.pdf",
+    "Open University Natori PDF",
+    "Nobel Facts API"
+  ],
+  "claim_rules": {
+    "no_wikipedia_dates": true,
+    "no_snippet_dates": true,
+    "no_padding": true,
+    "no_pre1873_era_month_day_conversion": true,
+    "no_final_cohort": true,
+    "no_bazi": true
+  },
+  "note": "Publisher dictionaries are separated in secondary_claims.json; first-party institutional claims remain claims.json. Budget is a ceiling; stopped after productive new sources and bounded parks.",
+  "root_suzuki_check": {
+    "body_ref": "turn1715view0",
+    "body_verified": true,
+    "pdf_visual_verification_available": false,
+    "screenshot_ref": "turn1716view0",
+    "screenshot_http_status": 403
+  }
+}

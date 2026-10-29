@@ -1,0 +1,370 @@
+{
+  "reviewer": "/root/france_historical_next",
+  "completed_utc": "2026-10-29T14:18:47.994049+00:00",
+  "input_B_decisions_sha256": "6139d8acaf84ee9cd4ddcc4bad42fbeec19e6b3e034c1d6958dcf2cff4a0ecfd",
+  "input_B_decisions_relative_path": "france_b/decisions.json",
+  "B_strict_cases_reviewed": 11,
+  "B_strict_pass": 11,
+  "B_strict_fail": 0,
+  "B_day_precision": 4,
+  "B_year_precision": 7,
+  "Brossel_addendum_relative_path": "france_cross_source_addendum.json",
+  "Brossel_addendum_sha256": "d427951f5a43faea8764d349eb8d147d3cad2552ba43a167308838991d038e44",
+  "Brossel_extra_strict_cases_reviewed": 1,
+  "Brossel_extra_strict_pass": 1,
+  "all_12_positive_cases_pass": true,
+  "unique_source_bodies_SHA256_reverified": 12,
+  "new_network_requests": 0,
+  "no_B_decision_files_modified": true,
+  "no_identity_or_DOB_changes": true,
+  "bazi_computed": 0,
+  "analysis_cohort_frozen": false,
+  "rows": [
+    {
+      "candidate_group_id": "CTHS_112495",
+      "name": "HÉLÈNE Claude",
+      "outside_fixed_v5_queue": false,
+      "qa_status": "pass",
+      "ordinary_full_role_supported": true,
+      "same_evidence_role_firstparty_and_accepted_event_gate": "pass",
+      "accepted_election_date_reviewed": null,
+      "accepted_election_year_reviewed": 1988,
+      "accepted_precision_reviewed": "year",
+      "page_images_independently_viewed": [
+        "helene_20.jpg"
+      ],
+      "observation": "Same named Claude Hélène entry gives ordinary Academy member since1988. Pierre Douzou’s separate statement is not an election event for Douzou. Year precision only.",
+      "identity_DOB_unchanged": true,
+      "source_checks": [
+        {
+          "source_url": "https://www.academie-sciences.fr/pdf/lettre/lettre9.pdf",
+          "source_sha256": "e73af2ab22abdaf144086589fc8def5cc0601495767bde0a91f5fe97dc792718",
+          "source_locator": "PDF p20 Carnet, Claude Hélène subject; rightmost biography column",
+          "actual_body_sha256_reverified": true,
+          "body_read_or_PDF_page_image_independently_reviewed": true,
+          "full_member_subtype_preserved": null
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_112503",
+      "name": "JACQUINOT Pierre",
+      "outside_fixed_v5_queue": false,
+      "qa_status": "pass",
+      "ordinary_full_role_supported": true,
+      "same_evidence_role_firstparty_and_accepted_event_gate": "pass",
+      "accepted_election_date_reviewed": null,
+      "accepted_election_year_reviewed": 1966,
+      "accepted_precision_reviewed": "year",
+      "page_images_independently_viewed": [
+        "jacquinot_20.jpg"
+      ],
+      "observation": "Named Pierre Jacquinot text explicitly gives full election1966 and separately presidency1981–1982. Historical free-member subtype retained from evidence metadata.",
+      "identity_DOB_unchanged": true,
+      "source_checks": [
+        {
+          "source_url": "https://www.academie-sciences.fr/pdf/lettre/lettre7.pdf",
+          "source_sha256": "9e3a8802067445f814a94054695b091114363adc2a6f1611dc2a3821c5aa2cc9",
+          "source_locator": "PDF p20 Carnet, Pierre Jacquinot final biography column",
+          "actual_body_sha256_reverified": true,
+          "body_read_or_PDF_page_image_independently_reviewed": true,
+          "full_member_subtype_preserved": "academicien_libre_historical"
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_112505",
+      "name": "JANOT Maurice",
+      "outside_fixed_v5_queue": false,
+      "qa_status": "pass",
+      "ordinary_full_role_supported": true,
+      "same_evidence_role_firstparty_and_accepted_event_gate": "pass",
+      "accepted_election_date_reviewed": null,
+      "accepted_election_year_reviewed": 1967,
+      "accepted_precision_reviewed": "year",
+      "page_images_independently_viewed": [
+        "janot_1.jpg",
+        "janot_3.jpg"
+      ],
+      "observation": "Official obituary title types Maurice-Marie Janot as member of chemical-sciences section, and body explicitly dates his election1967. Medicine/Pharmacy Academy roles elsewhere are distinct.",
+      "identity_DOB_unchanged": true,
+      "source_checks": [
+        {
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/janot_cr1979.pdf",
+          "source_sha256": "ec523d549eb95ff99856314d03954b13a6dc5ec37b4b728200ff895d02f7daad",
+          "source_locator": "PDF p3 printedp176; subject full-member headingp1",
+          "actual_body_sha256_reverified": true,
+          "body_read_or_PDF_page_image_independently_reviewed": true,
+          "full_member_subtype_preserved": null
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_112480",
+      "name": "HAUG Gustave",
+      "outside_fixed_v5_queue": false,
+      "qa_status": "pass",
+      "ordinary_full_role_supported": true,
+      "same_evidence_role_firstparty_and_accepted_event_gate": "pass",
+      "accepted_election_date_reviewed": null,
+      "accepted_election_year_reviewed": 1917,
+      "accepted_precision_reviewed": "year",
+      "page_images_independently_viewed": [
+        "haug_1.jpg",
+        "haug_2.jpg"
+      ],
+      "observation": "Source Émile Haug matches fixed canonical Gustave Émile Haug. Body gives1917member of mineralogy section replacing Lacroix; source cover confirms ordinary role. Speaker Emmanuel de Margerie is explicitly correspondent and is not transferred to Haug.",
+      "identity_DOB_unchanged": true,
+      "source_checks": [
+        {
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/haug_notice.pdf",
+          "source_sha256": "ca862d781bc081696acbc9c0615de0532ce22edcccc707ca0325f4ffb934d9cb",
+          "source_locator": "PDF p2 printedp158; full sciences-member coverp1",
+          "actual_body_sha256_reverified": true,
+          "body_read_or_PDF_page_image_independently_reviewed": true,
+          "full_member_subtype_preserved": null
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_112494",
+      "name": "HELBRONNER Paul",
+      "outside_fixed_v5_queue": false,
+      "qa_status": "pass",
+      "ordinary_full_role_supported": true,
+      "same_evidence_role_firstparty_and_accepted_event_gate": "pass",
+      "accepted_election_date_reviewed": "1927-05-30",
+      "accepted_election_year_reviewed": 1927,
+      "accepted_precision_reviewed": "day",
+      "page_images_independently_viewed": [
+        "helbronner_12.jpg"
+      ],
+      "observation": "Image explicitly gives full free-member admission30May1927 for Paul Helbronner. Historical membre-libre subtype is retained and not flattened into a resident sectional seat.",
+      "identity_DOB_unchanged": true,
+      "source_checks": [
+        {
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/helbronner_notice.pdf",
+          "source_sha256": "2b84ab3e7738abe47114215ac904c7fd9a7a074697256cb2077ef53ef054dd53",
+          "source_locator": "PDF p12 printedp322, introductory paragraph",
+          "actual_body_sha256_reverified": true,
+          "body_read_or_PDF_page_image_independently_reviewed": true,
+          "full_member_subtype_preserved": "academicien_libre_historical"
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_112623",
+      "name": "LAUNAY Louis de",
+      "outside_fixed_v5_queue": false,
+      "qa_status": "pass",
+      "ordinary_full_role_supported": true,
+      "same_evidence_role_firstparty_and_accepted_event_gate": "pass",
+      "accepted_election_date_reviewed": null,
+      "accepted_election_year_reviewed": 1912,
+      "accepted_precision_reviewed": "year",
+      "page_images_independently_viewed": [
+        "launay_1.jpg",
+        "launay_4.jpg"
+      ],
+      "observation": "Image explicitly dates Academy admission1912 and separately1931presidency. Cover types Louis de Launay as mineralogy-section member. Agriculture membership and unrelated relatives remain distinct.",
+      "identity_DOB_unchanged": true,
+      "source_checks": [
+        {
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/launay_notice.pdf",
+          "source_sha256": "45c3564b0505eb703770404bae544e760de77bd229459c60849ab7ed6e18332c",
+          "source_locator": "PDF p4 printedp254; mineralogy-member coverp1",
+          "actual_body_sha256_reverified": true,
+          "body_read_or_PDF_page_image_independently_reviewed": true,
+          "full_member_subtype_preserved": null
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_112627",
+      "name": "LÉAUTÉ André",
+      "outside_fixed_v5_queue": false,
+      "qa_status": "pass",
+      "ordinary_full_role_supported": true,
+      "same_evidence_role_firstparty_and_accepted_event_gate": "pass",
+      "accepted_election_date_reviewed": "1958-03-24",
+      "accepted_election_year_reviewed": 1958,
+      "accepted_precision_reviewed": "day",
+      "page_images_independently_viewed": [
+        "leaute_1.jpg",
+        "leaute_21.jpg"
+      ],
+      "observation": "Image explicitly gives André Léauté full election24March1958 in applications-to-industry division, replacing Esnault-Pelterie.1953is a prize and1966is funeral, not election.",
+      "identity_DOB_unchanged": true,
+      "source_checks": [
+        {
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/leaute_notice.pdf",
+          "source_sha256": "a1ccb28875286d9a341ec51b45db7c64d8b49efb4591547458c5d07ead7d6072",
+          "source_locator": "PDF p21 printedp562; André Léauté full applications-division coverp1",
+          "actual_body_sha256_reverified": true,
+          "body_read_or_PDF_page_image_independently_reviewed": true,
+          "full_member_subtype_preserved": "division_applications_de_la_science_a_lindustrie"
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_112461",
+      "name": "HAMBURGER Jean",
+      "outside_fixed_v5_queue": false,
+      "qa_status": "pass",
+      "ordinary_full_role_supported": true,
+      "same_evidence_role_firstparty_and_accepted_event_gate": "pass",
+      "accepted_election_date_reviewed": null,
+      "accepted_election_year_reviewed": 1974,
+      "accepted_precision_reviewed": "year",
+      "page_images_independently_viewed": [
+        "hamburger_6.jpg",
+        "hamburger_20.jpg"
+      ],
+      "observation": "Actual Institut biography explicitly gives ordinary Sciences Academy membership1974; Academy archival membership chronology independently gives1974. The4February1974notification and4March1974decree are document/approval dates, not accepted election days. The Institut erroneous presidency1981–1982is retained in source-quality notes and not used.",
+      "identity_DOB_unchanged": true,
+      "source_checks": [
+        {
+          "source_url": "https://podcasts.institutdefrance.fr/academiciens/jean-hamburger",
+          "source_sha256": "0fea741a1e526a8096c250151f378ae2370148b357ec367c2c90aed9d7bda4f0",
+          "source_locator": "HTML Jean HAMBURGER biography, institutional membership sentence",
+          "actual_body_sha256_reverified": true,
+          "body_read_or_PDF_page_image_independently_reviewed": true,
+          "full_member_subtype_preserved": null
+        },
+        {
+          "source_url": "https://www.academie-sciences.fr/pdf/dossiers/fonds_pdf/Fonds_Hamburger.pdf",
+          "source_sha256": "2bb3c3d9e032407ffc907cab0ebf1814a4cfe4717984ae5571fdcd7d32c967f9",
+          "source_locator": "PDF p6 institutional memberships; official upcoming-election and notification inventoryp20",
+          "actual_body_sha256_reverified": true,
+          "body_read_or_PDF_page_image_independently_reviewed": true,
+          "full_member_subtype_preserved": null
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_112677",
+      "name": "LIONS Jacques-Louis",
+      "outside_fixed_v5_queue": false,
+      "qa_status": "pass",
+      "ordinary_full_role_supported": true,
+      "same_evidence_role_firstparty_and_accepted_event_gate": "pass",
+      "accepted_election_date_reviewed": "1973-02-12",
+      "accepted_election_year_reviewed": 1973,
+      "accepted_precision_reviewed": "day",
+      "page_images_independently_viewed": [
+        "lions_19.jpg"
+      ],
+      "observation": "Academy newsletter explicitly types Jacques-Louis Lions as elected member of mechanical-sciences section12February1973; later offices and1973Collège appointment are separate.",
+      "identity_DOB_unchanged": true,
+      "source_checks": [
+        {
+          "source_url": "https://www.academie-sciences.fr/pdf/lettre/lettre4.pdf",
+          "source_sha256": "269a60c5875525c673e63cdf1d67954579d48ac691015cd68fa0c4f7fa537c48",
+          "source_locator": "PDF p19 Hommage àJacques-LouisLions, middle column",
+          "actual_body_sha256_reverified": true,
+          "body_read_or_PDF_page_image_independently_reviewed": true,
+          "full_member_subtype_preserved": null
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_112680",
+      "name": "LOUBATIÈRES Auguste",
+      "outside_fixed_v5_queue": false,
+      "qa_status": "pass",
+      "ordinary_full_role_supported": true,
+      "same_evidence_role_firstparty_and_accepted_event_gate": "pass",
+      "accepted_election_date_reviewed": "1967-05-22",
+      "accepted_election_year_reviewed": 1967,
+      "accepted_precision_reviewed": "day",
+      "page_images_independently_viewed": [
+        "loubatieres_5.jpg"
+      ],
+      "observation": "Image explicitly dates Auguste-Louis Loubatières election22May1967 to section des Membres Libres. Medicine Academy correspondence1963 and membership1972 are distinct.",
+      "identity_DOB_unchanged": true,
+      "source_checks": [
+        {
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/loubatiere_cr1982.pdf",
+          "source_sha256": "cc9821ff6de59800a1511b23f37bc2d26b9c19740f9af05ab17e136050f65121",
+          "source_locator": "PDF p5 printedp38, closing paragraph continues full sciences/free-members section",
+          "actual_body_sha256_reverified": true,
+          "body_read_or_PDF_page_image_independently_reviewed": true,
+          "full_member_subtype_preserved": "academicien_libre_historical"
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_112577",
+      "name": "JOLIBOIS Pierre",
+      "outside_fixed_v5_queue": false,
+      "qa_status": "pass",
+      "ordinary_full_role_supported": true,
+      "same_evidence_role_firstparty_and_accepted_event_gate": "pass",
+      "accepted_election_date_reviewed": null,
+      "accepted_election_year_reviewed": 1944,
+      "accepted_precision_reviewed": "year",
+      "page_images_independently_viewed": [
+        "jolibois_9.jpg"
+      ],
+      "observation": "Image explicitly states Pierre Jolibois full Sciences Academy election1944. Surrounding1948industrial role and1953honor are separate events.",
+      "identity_DOB_unchanged": true,
+      "source_checks": [
+        {
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/jolibois_notice.pdf",
+          "source_sha256": "b3065e218b6314f11aa6ea04d1f11e7ae4998dc433e52419fb629e71c43142cf",
+          "source_locator": "PDF p9 printedp507; typed chemistry-member coverp1",
+          "actual_body_sha256_reverified": true,
+          "body_read_or_PDF_page_image_independently_reviewed": true,
+          "full_member_subtype_preserved": null
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_111885",
+      "name": "BROSSEL Jean",
+      "outside_fixed_v5_queue": true,
+      "qa_status": "pass",
+      "ordinary_full_role_supported": true,
+      "same_evidence_role_firstparty_and_accepted_event_gate": "pass",
+      "accepted_election_date_reviewed": null,
+      "accepted_election_year_reviewed": 1977,
+      "accepted_precision_reviewed": "year",
+      "page_images_independently_viewed": [
+        "helene_20.jpg"
+      ],
+      "observation": "Same newly captured Academy newsletter entry explicitly types Jean Brossel as physics-section member and gives election1977. Birth1918andKastler/ENSoptical-pumping career match the fixed identity; only year precision accepted.",
+      "identity_DOB_unchanged": true,
+      "source_checks": [
+        {
+          "source_url": "https://www.academie-sciences.fr/pdf/lettre/lettre9.pdf",
+          "source_sha256": "e73af2ab22abdaf144086589fc8def5cc0601495767bde0a91f5fe97dc792718",
+          "source_locator": "PDF p20 JeanBrossel lower-half subject, fullmembertitle and election paragraph",
+          "actual_body_sha256_reverified": true,
+          "body_read_or_PDF_page_image_independently_reviewed": true,
+          "full_member_subtype_preserved": null
+        }
+      ]
+    }
+  ],
+  "metadata_hold_checks": {
+    "Haller_existing_1901_1905_source_conflict_remains_held": true,
+    "Herman_untyped_role_not_promoted_to_strict": true,
+    "scope": "Held-case metadata checked only; no claim of full independent held-source adjudication."
+  },
+  "France_A_final_correction": {
+    "candidate_group_id": "CTHS_112280",
+    "case": "Charles Gravier",
+    "strict_after_QA": 0,
+    "ordinary_role_after_QA": 0,
+    "accepted_full_election_fields_all_null": true,
+    "raw_observed_section_event_year": 1922,
+    "reason": "Typed Membre belongs to author Roubaud, not subject Gravier; section replacement alone does not satisfy the strict full-role gate. A outputs have been refreshed."
+  },
+  "non_adjudicated_followup_lead": {
+    "candidate_group_id": "CTHS_112279",
+    "fixed_name": "GRANJEAN François",
+    "source_subject_or_author_name": "François GRANDJEAN",
+    "source": "france_b Launay notice cover",
+    "observation": "Academy-member author byline is visible in1938notice, but spelling/identity bridge has not been independently resolved for this candidate. No new approval or election date is made."
+  }
+}

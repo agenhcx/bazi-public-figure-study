@@ -1,0 +1,356 @@
+{
+  "reviewer": "/root/japan_dob_next_b",
+  "reviewed_utc": "2026-10-29T14:08:12.181121+00:00",
+  "target": "academy_v5_workers/japan_c",
+  "scope": "All18new claims, all17original-byte hashes plus1separate web-extracted-text hash, dates/precision, professional identities, calendar routing,0cohort/0BaZi",
+  "input_sha256": {
+    "claims.json": "822c166aa01914262978ebd7e104151c9c2a04281eca123a1c4ba7f065b61ff6",
+    "secondary_claims.json": "f54eeee8c964a41d146b5db23a693dbeaa1d6ff2806d70123170bfde504670eb",
+    "source_capture_log.json": "2fa58098ed94b15f700b66edd9b16858e7797c422d21f3a0422c5cc02b5651b5"
+  },
+  "claim_rows": 18,
+  "original_byte_hashes_checked": 17,
+  "extracted_text_hashes_checked": 1,
+  "all_hash_checks_pass": true,
+  "all_body_date_and_identity_checks_pass": true,
+  "new_network_requests": 0,
+  "target_files_modified": 0,
+  "material_errors_found": 0,
+  "nonblocking_limitations": [
+    "Suzuki Atsuto originalPDF unavailable403 and no visual verification; claim accurately labels text-body-only evidence with null original hash.",
+    "Tamura Saburo raw automated match false due spaced PDF extraction; independent rendered page confirms literal1917birth year."
+  ],
+  "rows": [
+    {
+      "claim_id": "b8d1b17854f6800ea2f7",
+      "member_key": "jpa:kozai_yoshihide",
+      "name_jp": "古在 由秀",
+      "date_components": [
+        1928,
+        4,
+        1
+      ],
+      "precision": "day",
+      "identity_body_reviewed": true,
+      "calendar_routing_pass": true,
+      "cohort_and_bazi_unchanged": true,
+      "review_outcome": "pass",
+      "original_hash_recomputed": "7107dc546050728aa84b7890ee9e6223adaf43055591e61ad3f9b04fe466a578",
+      "original_hash_matches": true,
+      "source_original_available": true,
+      "visual_source_check": "OriginalPDF index0/printed482, explicit1928年4月1日 and astronomical career; local QA JPEG qa_c_kozai_p0.jpg."
+    },
+    {
+      "claim_id": "59ce045dd198ed5e054e",
+      "member_key": "jpa:suzuki_atsuto",
+      "name_jp": "鈴木 厚人",
+      "date_components": [
+        1946,
+        10,
+        3
+      ],
+      "precision": "day",
+      "identity_body_reviewed": true,
+      "calendar_routing_pass": true,
+      "cohort_and_bazi_unchanged": true,
+      "review_outcome": "pass",
+      "source_original_available": false,
+      "source_sha256_correctly_null": true,
+      "extracted_hash_recomputed": "8f7d6cdd80f1a3bdae1a850a6f4dac09fe07aa45f58d6800590a03c7baba07ab",
+      "extracted_hash_matches": true,
+      "limitation": "OriginalPDF403; only full web-extracted text independently read, not visually inspected or original-byte captured. Extracted hash is separate. Root independently verified body ref turn1715view0."
+    },
+    {
+      "claim_id": "d434f9e1d4a07fec2da5",
+      "member_key": "jpa:yamakawa_tamio",
+      "name_jp": "山川 民夫",
+      "date_components": [
+        1921,
+        10,
+        19
+      ],
+      "precision": "day",
+      "identity_body_reviewed": true,
+      "calendar_routing_pass": true,
+      "cohort_and_bazi_unchanged": true,
+      "review_outcome": "pass",
+      "original_hash_recomputed": "7c7756ba29124ddc97bfdc8cd11ddd4a243483f84e4afe4d596eba015f9355d1",
+      "original_hash_matches": true,
+      "source_original_available": true
+    },
+    {
+      "claim_id": "b27d5e88e020e7b05a13",
+      "member_key": "jpa-unlinked-f0e12183de79ae82",
+      "name_jp": "辻 廣",
+      "date_components": [
+        1923,
+        9,
+        null
+      ],
+      "precision": "month",
+      "identity_body_reviewed": true,
+      "calendar_routing_pass": true,
+      "cohort_and_bazi_unchanged": true,
+      "review_outcome": "pass",
+      "original_hash_recomputed": "03c6cfaaefb82d7fb8fcfbd10137d753dd67c38b755fc6d494c55c9b170d54ec",
+      "original_hash_matches": true,
+      "source_original_available": true,
+      "visual_source_check": "OriginalPDF index0 opening biography, September1923 only; Tokyo aeronautics/combustion professor and Academy1992. No day invented."
+    },
+    {
+      "claim_id": "93d1a1744ca88e2c4673",
+      "member_key": "jpa:tamura_saburo",
+      "name_jp": "田村 三郎",
+      "date_components": [
+        1917,
+        null,
+        null
+      ],
+      "precision": "year",
+      "identity_body_reviewed": true,
+      "calendar_routing_pass": true,
+      "cohort_and_bazi_unchanged": true,
+      "review_outcome": "pass",
+      "original_hash_recomputed": "d942b3f16df5ce39b71ed440cd484f1a09374a72ecfabf651712eadc350bf2ec",
+      "original_hash_matches": true,
+      "source_original_available": true,
+      "visual_source_check": "OriginalPDF index1/printed2 left column lower-middle: 田村先生は1917年のお生まれで; linked Tokyo agricultural-chemistry career and Academy1976award/1989membership.",
+      "raw_match_warning_resolution": "PDF extraction adds spaces between Japanese glyphs and line breaks; actual page visibly and unambiguously supports1917birth year. Matching false is an extraction/normalization artifact, not absent birth evidence."
+    },
+    {
+      "claim_id": "6f3343e2a60b124518c2",
+      "member_key": "jpa-unlinked-3411bc0c8cc0e999",
+      "name_jp": "青木 楠男",
+      "date_components": [
+        1893,
+        7,
+        23
+      ],
+      "precision": "day",
+      "identity_body_reviewed": true,
+      "calendar_routing_pass": true,
+      "cohort_and_bazi_unchanged": true,
+      "review_outcome": "pass",
+      "original_hash_recomputed": "0b1c0626186096a77f57619e04ee90e7109dee734581b28010b5a3667ef3c8a5",
+      "original_hash_matches": true,
+      "source_original_available": true
+    },
+    {
+      "claim_id": "87fd2ed6e5bdf5c51c42",
+      "member_key": "jpa-unlinked-36a717d3ac0c7381",
+      "name_jp": "福山 敏男",
+      "date_components": [
+        1905,
+        4,
+        1
+      ],
+      "precision": "day",
+      "identity_body_reviewed": true,
+      "calendar_routing_pass": true,
+      "cohort_and_bazi_unchanged": true,
+      "review_outcome": "pass",
+      "original_hash_recomputed": "a2c19bc5c6d93d59150c56604410df3d91188ab1b05795d640f8ceff7bdd1c29",
+      "original_hash_matches": true,
+      "source_original_available": true
+    },
+    {
+      "claim_id": "707dfc56376375d5fc10",
+      "member_key": "jpa-unlinked-56194c1178dedf24",
+      "name_jp": "真島 正市",
+      "date_components": [
+        1886,
+        12,
+        15
+      ],
+      "precision": "day",
+      "identity_body_reviewed": true,
+      "calendar_routing_pass": true,
+      "cohort_and_bazi_unchanged": true,
+      "review_outcome": "pass",
+      "original_hash_recomputed": "6293788259220760bd87659954d91e759e3af56b166f48dc0fecf5784c8e1806",
+      "original_hash_matches": true,
+      "source_original_available": true
+    },
+    {
+      "claim_id": "673eba17f0f4675a357a",
+      "member_key": "jpa-unlinked-5eaf3480c6129ce9",
+      "name_jp": "松村 任三",
+      "date_components": [
+        1856,
+        1,
+        9
+      ],
+      "precision": "day",
+      "identity_body_reviewed": true,
+      "calendar_routing_pass": true,
+      "cohort_and_bazi_unchanged": true,
+      "review_outcome": "pass",
+      "original_hash_recomputed": "7cb9d935507b8bce47f6334a0677962c3eeff41155fb90ffe7215428f5814a5a",
+      "original_hash_matches": true,
+      "source_original_available": true,
+      "hold_check": "Matsumura Ansei3/1/9 retained calendar hold; same-page Britannica also gives era-date, no distinct Gregorian equivalent found."
+    },
+    {
+      "claim_id": "6bc077b36d9584dc7552",
+      "member_key": "jpa-unlinked-bae1e1eb738bde5b",
+      "name_jp": "名取 禮二",
+      "date_components": [
+        1912,
+        1,
+        2
+      ],
+      "precision": "day",
+      "identity_body_reviewed": true,
+      "calendar_routing_pass": true,
+      "cohort_and_bazi_unchanged": true,
+      "review_outcome": "pass",
+      "original_hash_recomputed": "95a0421a2735423204b59f812b8a0ca178700fae186c69c7fdba5f310a8ea929",
+      "original_hash_matches": true,
+      "source_original_available": true
+    },
+    {
+      "claim_id": "3f972a636eaf7a93c65b",
+      "member_key": "jpa-unlinked-de6d2127578d923e",
+      "name_jp": "山村 昌",
+      "date_components": [
+        1918,
+        2,
+        26
+      ],
+      "precision": "day",
+      "identity_body_reviewed": true,
+      "calendar_routing_pass": true,
+      "cohort_and_bazi_unchanged": true,
+      "review_outcome": "pass",
+      "original_hash_recomputed": "aa2c5ef45122916db3eefbb1cf04ed9ea837286a7cd3912421ef61b157ffc416",
+      "original_hash_matches": true,
+      "source_original_available": true
+    },
+    {
+      "claim_id": "1cc463f76f826f707cdb",
+      "member_key": "jpa:arata_yoshiaki",
+      "name_jp": "荒田 吉明",
+      "date_components": [
+        1924,
+        5,
+        22
+      ],
+      "precision": "day",
+      "identity_body_reviewed": true,
+      "calendar_routing_pass": true,
+      "cohort_and_bazi_unchanged": true,
+      "review_outcome": "pass",
+      "original_hash_recomputed": "d9602a4ea28d82fd1aaa6a442daeab16664564b811ebd51c51b714faa5c16d96",
+      "original_hash_matches": true,
+      "source_original_available": true
+    },
+    {
+      "claim_id": "2808be0fd5ffc89ebbbf",
+      "member_key": "jpa:honda_kenichi",
+      "name_jp": "本多 健一",
+      "date_components": [
+        1925,
+        8,
+        23
+      ],
+      "precision": "day",
+      "identity_body_reviewed": true,
+      "calendar_routing_pass": true,
+      "cohort_and_bazi_unchanged": true,
+      "review_outcome": "pass",
+      "original_hash_recomputed": "5269c0dff57cba478a3b230e840e6262c199e5b024f5362604f80e1f285f7821",
+      "original_hash_matches": true,
+      "source_original_available": true
+    },
+    {
+      "claim_id": "ef65334a98d6d9faa91a",
+      "member_key": "jpa:inoue_akihisa",
+      "name_jp": "井上 明久",
+      "date_components": [
+        1947,
+        9,
+        13
+      ],
+      "precision": "day",
+      "identity_body_reviewed": true,
+      "calendar_routing_pass": true,
+      "cohort_and_bazi_unchanged": true,
+      "review_outcome": "pass",
+      "original_hash_recomputed": "2373047b5d3c325fe146de85de80723fcc0eef52721b81dad3682af5522db5bb",
+      "original_hash_matches": true,
+      "source_original_available": true
+    },
+    {
+      "claim_id": "e51f07fde33585830881",
+      "member_key": "jpa:kajita_takaaki",
+      "name_jp": "梶田 隆章",
+      "date_components": [
+        1959,
+        3,
+        9
+      ],
+      "precision": "day",
+      "identity_body_reviewed": true,
+      "calendar_routing_pass": true,
+      "cohort_and_bazi_unchanged": true,
+      "review_outcome": "pass",
+      "original_hash_recomputed": "276cde3449a3eac231ae5ed32ddd09c6a84ef01d3ae34abf5f55305987770d3d",
+      "original_hash_matches": true,
+      "source_original_available": true
+    },
+    {
+      "claim_id": "9748d4400147447e53dd",
+      "member_key": "jpa:morokuma_keiji",
+      "name_jp": "諸熊 奎治",
+      "date_components": [
+        1934,
+        7,
+        12
+      ],
+      "precision": "day",
+      "identity_body_reviewed": true,
+      "calendar_routing_pass": true,
+      "cohort_and_bazi_unchanged": true,
+      "review_outcome": "pass",
+      "original_hash_recomputed": "65446870b87d7d6b0f30a260ba02d968193e05dcc0e5b648f218f7913ef62aeb",
+      "original_hash_matches": true,
+      "source_original_available": true
+    },
+    {
+      "claim_id": "3ed9718f595352ad5593",
+      "member_key": "jpa:nakanishi_junko",
+      "name_jp": "中西 準子",
+      "date_components": [
+        1938,
+        5,
+        30
+      ],
+      "precision": "day",
+      "identity_body_reviewed": true,
+      "calendar_routing_pass": true,
+      "cohort_and_bazi_unchanged": true,
+      "review_outcome": "pass",
+      "original_hash_recomputed": "6e5cf4f5a208672020d68d52722f20537dbe82bdf39b5ee0aad4923ea82a4e8b",
+      "original_hash_matches": true,
+      "source_original_available": true
+    },
+    {
+      "claim_id": "def334d1654e77996ce6",
+      "member_key": "jpa:shikata_eishiro",
+      "name_jp": "四方 英四郎",
+      "date_components": [
+        1926,
+        9,
+        25
+      ],
+      "precision": "day",
+      "identity_body_reviewed": true,
+      "calendar_routing_pass": true,
+      "cohort_and_bazi_unchanged": true,
+      "review_outcome": "pass",
+      "original_hash_recomputed": "12bfeee7d6de545c74955bc9b1be3832ac0356750956082311089dbd7aa7ee97",
+      "original_hash_matches": true,
+      "source_original_available": true
+    }
+  ]
+}
