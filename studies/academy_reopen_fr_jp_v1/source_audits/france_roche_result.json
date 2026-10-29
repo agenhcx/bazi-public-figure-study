@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "person": {
+    "name": "Jean Roche",
+    "full_name_from_prior_audit": "Jean Casimir Henri Hilaire Roche",
+    "cths_person_id": "2067"
+  },
+  "task_scope": "Bounded public original civil birth-register search: Sorgues, 1901; January 14 versus February 14.",
+  "status": "blocked_original_record_not_observed",
+  "prior_conflict_preserved": [
+    "1901-01-14",
+    "1901-02-14"
+  ],
+  "new_birth_claims": [],
+  "accepted_birth_date": null,
+  "original_register_evidence": {
+    "source_url": null,
+    "physical_page": null,
+    "register_or_act_number": null,
+    "date_raw": null,
+    "excerpt": null,
+    "body_or_image_observed": false
+  },
+  "finding_aid": {
+    "url": "https://memento.vaucluse.fr/dans-les-archives/consultation-en-ligne-archives/documents-numerises",
+    "status": "body_observed",
+    "excerpt": "Registres paroissiaux et d’état civil du Vaucluse",
+    "note": "Official finding aid only; no Jean Roche birth entry or date observed."
+  },
+  "blocked_route": {
+    "url": "https://earchives.vaucluse.fr/archives/classification-scheme",
+    "status": "blocked",
+    "error": "Failed to fetch restricted URL",
+    "note": "Reached by the official civil-register link from the opened digitized-documents page. It resolved to the endpoint already recorded in the prior audit. No retry after this new link resolved to that blocked route."
+  },
+  "triage_input_check": {
+    "file": "data/france_academy_cths_nine_source_adjudication_v1_2/person_evidence_triage_v1_2.csv",
+    "row_count": 9,
+    "same_name_row_found": false,
+    "cths_2067_row_found": false,
+    "note": "Checked exact name/ID; the supplied nine-person file has no Roche row. Prior Roche conflict was read from the specified markdown audit."
+  },
+  "budget": {
+    "targeted_searches_used": 3,
+    "new_body_or_image_pages_attempted": 2,
+    "original_images_observed": 0,
+    "limits": {
+      "targeted_searches": 3,
+      "new_body_or_image_pages": 4
+    }
+  },
+  "stop_reason": "Public archive retrieval was restricted; no indexed official original birth page emerged within the search budget. No date selected from snippets or secondary-source majority.",
+  "constraints": {
+    "network_contact_or_messages_sent": 0,
+    "login_attempts": 0,
+    "access_control_bypass_attempts": 0,
+    "repository_files_changed": 0,
+    "accepted_DOB_changed": false,
+    "membership_flags_changed": false,
+    "bazi_variables_computed": 0
+  },
+  "completed_at_utc": "2026-10-29T00:59:08.522008Z"
+}

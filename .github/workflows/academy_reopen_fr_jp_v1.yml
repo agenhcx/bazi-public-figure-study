@@ -1,0 +1,57 @@
+name: France Japan academy reopened collection v1
+
+on:
+  push:
+    branches: ['codex/academy-fr-jp-reopen-20261029']
+    paths:
+      - 'studies/academy_reopen_fr_jp_v1/**'
+      - 'JAPAN_ACADEMY_CURRENT_CHECKPOINT.md'
+      - 'ACADEMY_COLLECTION_CURRENT_CHECKPOINT.md'
+      - '.github/workflows/academy_reopen_fr_jp_v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-ledger-review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate identity, missingness and calendar rules
+        run: python3 -m unittest discover -s studies/academy_reopen_fr_jp_v1/tests -v
+      - name: Rebuild Japanese candidate and DOB ledgers offline
+        run: python3 studies/academy_reopen_fr_jp_v1/scripts/assemble_japan_dob.py --output-dir "${{ runner.temp }}/academy-japan-replay"
+      - name: Compare all saved outputs
+        run: diff -r studies/academy_reopen_fr_jp_v1/outputs "${{ runner.temp }}/academy-japan-replay"
+      - name: Verify study source metadata hashes
+        run: |
+          python3 - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          root = Path('studies/academy_reopen_fr_jp_v1')
+          m = json.loads((root / 'MANIFEST.json').read_text())
+          for rel, expected in m['files'].items():
+              if hashlib.sha256((root / rel).read_bytes()).hexdigest() != expected:
+                  raise SystemExit(f'Hash mismatch: {rel}')
+          f = json.loads((root / 'inputs/france_case_updates.json').read_text())
+          santy = next(r for r in f['records'] if r['cths_person_id'] == '110681')
+          assert santy['claimed_role'] == 'CORRESPONDENT_AT_DEATH'
+          assert santy['case_disposition'] == 'EXCLUDE_FROM_PRIMARY_FULL_MEMBER_CANDIDATE_LAYER'
+          assert not santy['dob_conflict_resolved']
+          print(f'{len(m["files"])} study file hashes verified; France role/DOB distinction preserved')
+          PY
+      - name: Save candidate ledgers and case evidence metadata
+        uses: actions/upload-artifact@v4
+        with:
+          name: academy-france-japan-reopened-v1
+          path: |
+            ${{ runner.temp }}/academy-japan-replay/
+            studies/academy_reopen_fr_jp_v1/inputs/france_case_updates.json
+            studies/academy_reopen_fr_jp_v1/source_audits/
+          if-no-files-found: error
+          retention-days: 14

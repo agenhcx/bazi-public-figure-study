@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "cths_person_id": "2092",
+  "name": "Léopold Escande",
+  "full_name_from_prior_record": "Léopold Charles Marie Jean-Baptiste Escande",
+  "status": "conflicting_sources_unresolved",
+  "prior_birthplace_raw": "Toulouse (Haute-Garonne)",
+  "prior_birthplace_source": "frozen CTHS metadata; no contradictory birthplace surfaced in this bounded search",
+  "competing_date_claims": [
+    {
+      "date": "1902-06-01",
+      "source_url": "https://catalogue.bnf.fr/ark:/12148/cb134750614",
+      "source_status": "inherited_local_overlay_not_reopened",
+      "note": "BnF source list cites CTHS; not independent vote."
+    },
+    {
+      "date": "1902-07-01",
+      "source_url": "https://www.academie-sciences-lettres-toulouse.fr/wp-content/uploads/2021/05/Escande.pdf",
+      "source_status": "inherited_local_overlay_not_reopened",
+      "note": "Institutional biography claim; source basis not reproduced in prior overlay."
+    },
+    {
+      "date": "1902-09-13",
+      "source_url": "https://www.idrotecnicaitaliana.it/wp-content/uploads/2020/04/Hager-LAcqua-n.-1-2003.pdf",
+      "source_status": "inherited_local_overlay_not_reopened",
+      "note": "Prior scholarly profile claim; coincides with recorded death month/day, so requires original source adjudication."
+    }
+  ],
+  "new_civil_register_evidence": [],
+  "original_birth_act_observed": false,
+  "new_date_adjudicated": null,
+  "highest_new_birth_date_precision": null,
+  "reason": "Official Archives de Toulouse guide confirms relevant public registers exist and supports nominative searches from1900, but its linked official database returned503. No subject record or register image reached. Search snippets and secondary death indexes not adopted.",
+  "new_sources": [
+    {
+      "url": "https://archives.toulouse.fr/genealogie-et-etat-civil/",
+      "status": "body_observed",
+      "type": "official_archive_general_guide",
+      "person_specific": false
+    },
+    {
+      "url": "https://basededonnees.archives.toulouse.fr/",
+      "status": "blocked",
+      "http_status": 503,
+      "person_specific": false
+    }
+  ],
+  "budget_usage": {
+    "targeted_queries": 3,
+    "new_official_body_or_image_requests": 2
+  },
+  "frozen_study_DOB_accepted": 0,
+  "frozen_study_membership_accepted": 0,
+  "bazi_variables_computed": 0,
+  "checked_at_utc": "2026-10-29T00:59:21.966664Z",
+  "review_note": "Preserve all existing conflicts. This is source-access failure, not evidence that a birth record does not exist. No original act, date or identity was accepted; no repository/global state modified."
+}
