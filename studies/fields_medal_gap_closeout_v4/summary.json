@@ -1,0 +1,68 @@
+{
+  "study": "fields_medal_gap_closeout_v4",
+  "checked_at_utc": "2026-10-29T00:50:17.588519+00:00",
+  "purpose": "Prioritize the four remaining incomplete Fields DOB records; professor check remains bulk-only.",
+  "canonical_dataset": "fields_medal_followup_v3",
+  "canonical_dataset_modified": false,
+  "main": {
+    "roster": 64,
+    "day_source_verified": 63,
+    "month_only": 1
+  },
+  "extension2026": {
+    "roster": 4,
+    "day_source_verified": 1,
+    "month_only": 2,
+    "year_only": 1
+  },
+  "new_full_date_claims": 0,
+  "retained_gaps": [
+    {
+      "name": "Caucher Birkar",
+      "cohort": "main",
+      "components": "1978-07",
+      "precision": "month"
+    },
+    {
+      "name": "Yu Deng",
+      "cohort": "extension2026",
+      "components": "1989-06",
+      "precision": "month"
+    },
+    {
+      "name": "John Pardon",
+      "cohort": "extension2026",
+      "components": "1989-06",
+      "precision": "month"
+    },
+    {
+      "name": "Hong Wang",
+      "cohort": "extension2026",
+      "components": "1991",
+      "precision": "year"
+    }
+  ],
+  "declared_round_counters": {
+    "targeted_queries": 10,
+    "body_candidates": 8,
+    "direct_cv_attempts": 2,
+    "note": "Separate counter types, not a sum of unique HTTP requests; queries and body/CV checks were batched where possible."
+  },
+  "source_evidence_note": "Supplemental records preserve original claims and newly inspected sources. One new IHES year claim for Hong Wang does not improve precision. No source snippet is promoted to a full date.",
+  "professor_result": {
+    "new_professor_dataset_rows": 0,
+    "new_verified_easy_bulk_DOB_sources": 0,
+    "individual_professor_DOB_searches": 0,
+    "amsterdam": "Public mixed catalogue, names/birth years; no qualifying directly linked complete DOB table verified.",
+    "existing_easy_sources": "Rostock physics/chemistry CSV extraction remains the strongest demonstrated source; UC memorial volumes remain a lower-yield whole-file candidate route.",
+    "previous_UC_two_volume_scope_counts": {
+      "physics_chemistry_literal_records": 14,
+      "full_date_candidates": 4,
+      "not_unique_or_accepted_control_people": true
+    }
+  },
+  "bazi_variables_computed": 0,
+  "analysis_cohort_frozen": false,
+  "statistical_tests_run": 0,
+  "stop_rule": "Park all four incomplete DOB cases after this bounded pass. Reopen only on a concrete new public source lead; no automatic retry, age inference or day imputation."
+}

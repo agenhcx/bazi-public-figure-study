@@ -1,0 +1,82 @@
+name: Fields Medal source collection v1
+
+on:
+  push:
+    branches: ['codex/fields-and-professor-catalogues-20261028']
+    paths:
+      - 'studies/fields_medal_collection_v1/**'
+      - 'studies/fields_medal_followup_v2/**'
+      - 'studies/fields_medal_followup_v3/**'
+      - 'studies/professor_easy_bulk_v1/**'
+      - 'studies/professor_easy_bulk_v2/**'
+      - 'studies/professor_catalogue_expansion_v1/**'
+      - '.github/workflows/fields_medal_collection_v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-collection-review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate collection invariants
+        run: python3 -m unittest discover -s studies/fields_medal_collection_v1/tests -v
+      - name: Replay saved collection without source requests
+        run: >-
+          python3 studies/fields_medal_collection_v1/scripts/aggregate.py
+          --roster studies/fields_medal_collection_v1/fixed_roster.json
+          --inputs studies/fields_medal_collection_v1/data/shard1.json
+          studies/fields_medal_collection_v1/data/shard2.json
+          studies/fields_medal_collection_v1/data/shard3.json
+          studies/fields_medal_collection_v1/data/shard4.json
+          studies/fields_medal_collection_v1/data/extension2026.json
+          --output-dir "${{ runner.temp }}/fields-medal-replay-v1"
+      - name: Compare all replay outputs with committed files
+        run: diff -r studies/fields_medal_collection_v1/outputs "${{ runner.temp }}/fields-medal-replay-v1"
+      - name: Validate follow-up patches and easy batch parser
+        run: |
+          python3 -m unittest discover -s studies/fields_medal_followup_v2/tests -v
+          python3 -m unittest discover -s studies/professor_easy_bulk_v1/tests -v
+          python3 -m unittest discover -s studies/professor_easy_bulk_v2/tests -v
+          python3 -m unittest discover -s studies/fields_medal_followup_v3/tests -v
+      - name: Replay completed Fields Medal follow-up
+        run: python3 studies/fields_medal_followup_v2/scripts/build.py --output-dir "${{ runner.temp }}/fields-followup-replay-v2"
+      - name: Compare current follow-up outputs
+        run: diff -r studies/fields_medal_followup_v2/outputs "${{ runner.temp }}/fields-followup-replay-v2"
+      - name: Replay latest Fields Medal source follow-up
+        run: python3 studies/fields_medal_followup_v3/scripts/build.py --output-dir "${{ runner.temp }}/fields-followup-replay-v3"
+      - name: Compare latest follow-up outputs
+        run: diff -r studies/fields_medal_followup_v3/outputs "${{ runner.temp }}/fields-followup-replay-v3"
+      - name: Verify source-study manifests
+        run: |
+          python3 - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          for name in ('fields_medal_collection_v1', 'professor_catalogue_expansion_v1', 'fields_medal_followup_v2', 'professor_easy_bulk_v1', 'professor_easy_bulk_v2', 'fields_medal_followup_v3'):
+              root = Path('studies') / name
+              manifest = json.loads((root / 'MANIFEST.json').read_text())
+              for rel, expected in manifest['files'].items():
+                  actual = hashlib.sha256((root / rel).read_bytes()).hexdigest()
+                  if actual != expected:
+                      raise SystemExit(f'Hash mismatch: {name}/{rel}')
+              print(f'{name}: {len(manifest["files"])} file hashes verified')
+          PY
+      - name: Save verified replay and catalogue metadata
+        uses: actions/upload-artifact@v4
+        with:
+          name: fields-medal-collection-and-catalogue-review-v1
+          path: |
+            ${{ runner.temp }}/fields-medal-replay-v1/
+            ${{ runner.temp }}/fields-followup-replay-v2/
+            ${{ runner.temp }}/fields-followup-replay-v3/
+            studies/professor_catalogue_expansion_v1/
+            studies/professor_easy_bulk_v1/
+            studies/professor_easy_bulk_v2/
+          if-no-files-found: error
+          retention-days: 14

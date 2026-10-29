@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "country_route": "United Kingdom — Cambridge ACAD / Venn",
+  "checked_at_utc": "2026-10-29T00:26:22.474112Z",
+  "task_scope": "Official ready-made bulk professor/faculty historical catalogue route only; no individual record or birth-date research.",
+  "decision": "stop_no_direct_public_bulk_confirmed_within_budget",
+  "public_bulk_download_confirmed": false,
+  "bulk_acquired": false,
+  "bulk_rows_acquired": 0,
+  "professor_rows_acquired": 0,
+  "download_hash": null,
+  "route": {
+    "name": "ACAD — A Cambridge Alumni Database",
+    "institution": "University of Cambridge / Cambridge University Library",
+    "official_project_url": "https://venn.lib.cam.ac.uk/",
+    "source_family": "Alumni Cantabrigienses (Venn), Emden, Newnham and Girton registers",
+    "population_description": "People academically associated with Cambridge; students, graduates and office-holders are mixed.",
+    "professor_role_screened": false,
+    "professor_only": false,
+    "professor_role_structured_field_confirmed": false,
+    "name_field_bulk_confirmed": false,
+    "birthdate_field_bulk_confirmed": false,
+    "name_birthdate_professor_role_joint_bulk_confirmed": false,
+    "period_description": "Academic-association/source coverage approximately 1200–1900; this is not a birth-year range.",
+    "historical_years_too_early_flag": true,
+    "historical_years_note": "The route includes medieval and early modern records, many potentially earlier than a modern birth-window requirement; no birth-window or professor-role filtering was performed.",
+    "date_precision_note": "Public form explicitly warns of approximate lifespans, ±10-year margins, and for pre-1752 men possible admission-date ±100-year substitutes. These must not be treated as explicit birthdates.",
+    "availability_conclusion": "None of the three inspected official pages supplied a directly usable whole-table/text/download containing confirmed name + explicit birthdate + professor role. This bounded check does not prove that no public bulk release exists elsewhere."
+  },
+  "other_leads_not_opened": [
+    {
+      "url": "https://www.lib.cam.ac.uk/collections/departments/manuscripts-university-archives/subject-guides/university-archives/online-3",
+      "status": "search_snippet_only",
+      "note": "Official Cambridge guide points to ACAD and digitized matriculation/degree books via Internet Archive; no bulk dataset or professor role filter verified."
+    }
+  ],
+  "operations": {
+    "targeted_searches_used": 3,
+    "ordinary_public_page_or_data_requests_used": 3,
+    "individual_records_opened": 0,
+    "individual_birthdate_queries": 0,
+    "search_form_submissions": 0,
+    "bulk_download_requests": 0,
+    "budget_limits": {
+      "targeted_searches": 3,
+      "ordinary_public_page_or_data_requests": 3
+    }
+  },
+  "queries": [
+    {
+      "query": "site.lib.cam.ac.uk ACAD Venn database download data alumni cantabrigienses bulk",
+      "engine": "system2",
+      "timestamp_utc": null,
+      "tool_call_batch": "turn1331",
+      "relevant_result_refs": [
+        "[session-reference-omitted]",
+        "[session-reference-omitted]",
+        "[session-reference-omitted]",
+        "[session-reference-omitted]"
+      ]
+    },
+    {
+      "query": "site:cam.ac.uk \"Alumni Cantabrigienses\" \"download\"",
+      "engine": "system2",
+      "timestamp_utc": null,
+      "tool_call_batch": "turn1331",
+      "relevant_result_refs": [
+        "[session-reference-omitted]",
+        "[session-reference-omitted]",
+        "[session-reference-omitted]"
+      ],
+      "note": "Exact submitted query retained; results shared with the preceding query."
+    },
+    {
+      "query": "site:venn.lib.cam.ac.uk ACAD \"download\" \"data\"",
+      "engine": "system1",
+      "timestamp_utc": null,
+      "tool_call_batch": "turn1332",
+      "relevant_result_refs": [],
+      "note": "Returned irrelevant results; no bulk endpoint established. No further query made."
+    }
+  ],
+  "page_requests": [
+    {
+      "url": "https://venn.lib.cam.ac.uk/",
+      "status": "body_observed",
+      "timestamp_utc": null,
+      "request_type": "ordinary_public_project_page",
+      "observed_lines": "1–10",
+      "excerpt": "biographical details of everyone who has been identified as being academically associated with the University of Cambridge",
+      "finding": "Official ACAD introduction describes mixed academic associations, approximately 1200–1900, based on Venn, Emden and women college registers. No full-data download link observed in this page text."
+    },
+    {
+      "url": "https://venn.lib.cam.ac.uk/Documents/acad/2016/dawson.html",
+      "status": "body_observed",
+      "timestamp_utc": null,
+      "request_type": "ordinary_public_project_documentation",
+      "observed_lines": "6–28; 113–125",
+      "excerpt": "all known students, graduates and holders of office at the University of Cambridge",
+      "finding": "Historical project documentation establishes mixed roles and existence of machine-readable/tagged source work; it does not establish a currently downloadable professor-only dataset. Described 180,000 names are an approximate historical source count with overlap, not an acquired row count."
+    },
+    {
+      "url": "https://venn.lib.cam.ac.uk/Documents/acad/2018/search-2018.html",
+      "status": "body_observed",
+      "timestamp_utc": null,
+      "request_type": "ordinary_public_search_form_documentation_only",
+      "observed_lines": "4–9; 39–45; 52",
+      "excerpt": "The life-span range for any person may not be accurate.",
+      "finding": "Public interface is a query form with text/date/college controls and a result-display limit. No bulk CSV/JSON/TSV/text export or full-data download observed. Documentation warns that date filtering uses approximate lifespan and admission-date proxies for early records."
+    }
+  ],
+  "stop_reason": "No direct public bulk acquisition route established within the authorized check. Stopped without per-person checks, result-page scraping, endpoint probing or additional source requests.",
+  "data_use": {
+    "new_person_level_records": 0,
+    "bazi_computed": 0,
+    "analysis_performed": false,
+    "repository_modified": false
+  },
+  "timestamp_note": "Per-request timestamps were not captured and remain null. checked_at_utc is metadata finalization time."
+}

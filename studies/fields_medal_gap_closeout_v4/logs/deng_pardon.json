@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "round": "fields_priority_round4",
+  "completed_at_utc": "2026-10-29T00:47:43.294162Z",
+  "baseline_source": "extension2026.json",
+  "baseline_source_sha256": "5189047b26984f80da234a28bc7a01aa983076316cd8aea67cbec7240d9fb691",
+  "queries": [
+    {
+      "name": "Yu Deng",
+      "query": "\"Yu Deng\" mathematician \"birth\" CV",
+      "engine": "system2",
+      "tool_batch": "turn1346",
+      "timestamp_utc": null
+    },
+    {
+      "name": "John Pardon",
+      "query": "\"John Pardon\" \"born\" \"June\" university CV",
+      "engine": "system2",
+      "tool_batch": "turn1346",
+      "timestamp_utc": null
+    },
+    {
+      "name": "Yu Deng",
+      "query": "\"Yu Deng\" (CV OR \"curriculum vitae\") (Chicago OR usc.edu)",
+      "engine": "system1",
+      "tool_batch": "turn1348",
+      "timestamp_utc": null,
+      "selected_result_refs": [
+        "[session-reference-omitted]",
+        "[session-reference-omitted]"
+      ]
+    },
+    {
+      "name": "John Pardon",
+      "query": "\"John Pardon\" (\"curriculum vitae\" OR cv)",
+      "engine": "system1",
+      "tool_batch": "turn1348",
+      "timestamp_utc": null,
+      "selected_result_refs": [
+        "[session-reference-omitted]",
+        "[session-reference-omitted]"
+      ]
+    }
+  ],
+  "body_or_cv_requests": [
+    {
+      "name": "Yu Deng",
+      "operation": "open",
+      "request_kind": "body_candidate",
+      "url": "https://sites.google.com/uchicago.edu/yudeng",
+      "timestamp_utc": null,
+      "status": "body_observed",
+      "note": "Personal homepage linked from official Chicago faculty listing; identifies mathematics professor and Princeton PhD. No explicit birthdate. Tool ref [session-reference-omitted], lines13–20."
+    },
+    {
+      "name": "Yu Deng",
+      "operation": "open",
+      "request_kind": "body_candidate",
+      "url": "https://news.uchicago.edu/story/uchicago-prof-yu-deng-receives-fields-medal-highest-honor-mathematics",
+      "timestamp_utc": null,
+      "status": "body_observed",
+      "note": "Official university Fields Medal biography; no explicit birthday. Article date is not birthdate and age at Olympiad was not converted to birth components. Tool ref [session-reference-omitted]."
+    },
+    {
+      "name": "Yu Deng",
+      "operation": "click",
+      "request_kind": "direct_cv",
+      "url": "https://drive.google.com/file/d/1Xd_LHE05PpgNN8eGJPzZARvZ2YE3lmLV/view?usp=sharing",
+      "timestamp_utc": null,
+      "status": "blocked",
+      "note": "Direct CV attempt resolved to CV-2025.pdf Google Drive shell showing Loading and Sign in only; CV body not observed. No login, alternative download attempt or retry. Tool ref [session-reference-omitted]."
+    },
+    {
+      "name": "John Pardon",
+      "operation": "open",
+      "request_kind": "body_candidate",
+      "url": "https://www.math.stonybrook.edu/~jpardon/",
+      "timestamp_utc": null,
+      "status": "body_observed",
+      "note": "Named university-hosted personal homepage; no explicit birthday; followed its Curriculum Vitae link. Tool ref [session-reference-omitted]."
+    },
+    {
+      "name": "John Pardon",
+      "operation": "open",
+      "request_kind": "body_candidate",
+      "url": "https://scgp.stonybrook.edu/people/faculty/bios/john-pardon",
+      "timestamp_utc": null,
+      "status": "body_observed",
+      "note": "Official SCGP biography identifies the 2026 Fields medallist; no explicit birthday. Tool ref [session-reference-omitted], lines78–86."
+    },
+    {
+      "name": "John Pardon",
+      "operation": "click",
+      "request_kind": "direct_cv",
+      "url": "https://www.math.stonybrook.edu/~jpardon/cv.pdf",
+      "timestamp_utc": null,
+      "status": "body_observed",
+      "note": "Direct first-person CV, September2026, six PDF pages. Personal section gives citizenship but no birthday. Find Born/Birth/1989 returned no matches. Tool refs [session-reference-omitted]; [session-reference-omitted]/1/2. No personal contact details retained."
+    }
+  ],
+  "within_open_cv_finds": [
+    {
+      "name": "John Pardon",
+      "operation": "find",
+      "url": "https://www.math.stonybrook.edu/~jpardon/cv.pdf",
+      "pattern": "Born",
+      "timestamp_utc": null,
+      "result": "no matching text",
+      "budget_note": "Find inside the same already-open CV, not a new targeted web query or body candidate."
+    },
+    {
+      "name": "John Pardon",
+      "operation": "find",
+      "url": "https://www.math.stonybrook.edu/~jpardon/cv.pdf",
+      "pattern": "Birth",
+      "timestamp_utc": null,
+      "result": "no matching text",
+      "budget_note": "Find inside the same already-open CV, not a new targeted web query or body candidate."
+    },
+    {
+      "name": "John Pardon",
+      "operation": "find",
+      "url": "https://www.math.stonybrook.edu/~jpardon/cv.pdf",
+      "pattern": "1989",
+      "timestamp_utc": null,
+      "result": "no matching text",
+      "budget_note": "Find inside the same already-open CV, not a new targeted web query or body candidate."
+    }
+  ],
+  "failures": [
+    {
+      "name": "Yu Deng",
+      "operation": "click",
+      "request_kind": "direct_cv",
+      "url": "https://drive.google.com/file/d/1Xd_LHE05PpgNN8eGJPzZARvZ2YE3lmLV/view?usp=sharing",
+      "timestamp_utc": null,
+      "status": "blocked",
+      "note": "Direct CV attempt resolved to CV-2025.pdf Google Drive shell showing Loading and Sign in only; CV body not observed. No login, alternative download attempt or retry. Tool ref [session-reference-omitted]."
+    }
+  ],
+  "search_lead_handling": "Unrelated same-name people, Wikipedia/mirrors, and Carmin description explicitly sourced to Wikipedia were not accepted. No age, article date, education date or award year was converted to DOB.",
+  "timestamp_note": "Exact request timestamps were not captured and remain null; completed_at_utc is actual metadata finalization time.",
+  "stop_reason": "Both people reached the authorized per-person limits. No HLF repeat, hidden/nonpublic form, login attempt, failed-URL retry, third query or additional CV request."
+}

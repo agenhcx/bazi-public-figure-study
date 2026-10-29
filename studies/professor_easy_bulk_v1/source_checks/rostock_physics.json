@@ -1,0 +1,81 @@
+{
+  "url": "https://cpr.uni-rostock.de/api/v1/search?fl=purl%2Cprofkat.idx_profname.headline%2Cprofkat.period%2Cprofkat.gnd%2Cprofkat.birthdate%2Cprofkat.birthplace%2Cprofkat.deathdate%2Cprofkat.deathplace%2Cprofkat.last_professorship%2Cprofkat.last_faculty&fq=state%3Apublished&q=%2BobjectType%3Aperson+%2Bcategory.top%3Aprofkat_class_subjects%5C%3ABK33&rows=5000&wt=csv",
+  "started_at_utc": "2026-10-28T23:47:40.448691+00:00",
+  "attempts": 1,
+  "http_status": 200,
+  "content_type": "text/comma-separated-values;charset=UTF-8",
+  "final_url": "https://cpr.uni-rostock.de/api/v1/search?fl=purl%2Cprofkat.idx_profname.headline%2Cprofkat.period%2Cprofkat.gnd%2Cprofkat.birthdate%2Cprofkat.birthplace%2Cprofkat.deathdate%2Cprofkat.deathplace%2Cprofkat.last_professorship%2Cprofkat.last_faculty&fq=state%3Apublished&q=%2BobjectType%3Aperson+%2Bcategory.top%3Aprofkat_class_subjects%5C%3ABK33&rows=5000&wt=csv",
+  "bytes": 17114,
+  "sha256": "89d9a17437557c5b1bce325c2b806b91f9df0cbdf5c4baa612182d2c51bdce4e",
+  "rows": 90,
+  "columns": [
+    "purl",
+    "profkat.idx_profname.headline",
+    "profkat.period",
+    "profkat.gnd",
+    "profkat.birthdate",
+    "profkat.birthplace",
+    "profkat.deathdate",
+    "profkat.deathplace",
+    "profkat.last_professorship",
+    "profkat.last_faculty"
+  ],
+  "birth_precision_counts": {
+    "day_ddmmyyyy": 65,
+    "year": 14,
+    "missing": 11,
+    "other": 0
+  },
+  "example_dates": [
+    "18.10.1954",
+    "1945",
+    "15.08.1969",
+    "11.10.1928",
+    "02.03.1963",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "sample_name_role_birth": [
+    {
+      "profkat.idx_profname.headline": "Lübken, Franz-Josef",
+      "profkat.birthdate": "18.10.1954",
+      "profkat.last_professorship": "Professor (C4) für Atmosphärenphysik",
+      "purl": "http://purl.uni-rostock.de/cpr/_00000236"
+    },
+    {
+      "profkat.idx_profname.headline": "Gau, Barbara",
+      "profkat.birthdate": "1945",
+      "profkat.last_professorship": "Hochschuldozentin für Methodik des Physikunterrichts",
+      "purl": "http://purl.uni-rostock.de/cpr/_00003563"
+    },
+    {
+      "profkat.idx_profname.headline": "Chau, Jorge Luis",
+      "profkat.birthdate": "15.08.1969",
+      "profkat.last_professorship": "Professor (W2) für Experimentelle Atmosphärenphysik",
+      "purl": "http://purl.uni-rostock.de/cpr/_00003583"
+    },
+    {
+      "profkat.idx_profname.headline": "Mischok, Walter",
+      "profkat.birthdate": "11.10.1928",
+      "profkat.last_professorship": "o. Professor für Experimentalphysik",
+      "purl": "http://purl.uni-rostock.de/cpr/_00003586"
+    },
+    {
+      "profkat.idx_profname.headline": "Meier, Markus",
+      "profkat.birthdate": "02.03.1963",
+      "profkat.last_professorship": "Professor (W3) für Physikalische Ozeanographie",
+      "purl": "http://purl.uni-rostock.de/cpr/_00003624"
+    }
+  ],
+  "other_date_literals": [],
+  "day_inside_1835_1985": 62,
+  "all_explicit_year_inside_1835_1985": 76,
+  "day_birthyear_minmax": [
+    1547,
+    1976
+  ],
+  "note": "A single official physics search-result export, not a random per-person sample. It includes honorary and lecturer-like titles requiring role adjudication. Day precision is a printed source claim, not a final accepted Gregorian DOB."
+}

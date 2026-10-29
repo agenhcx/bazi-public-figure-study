@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "scope": "Single-source low-fruit HLF official laureate-profile check for five fixed main-cohort names.",
+  "completed_at_utc": "2026-10-29T00:39:27.948344Z",
+  "queries": [
+    {
+      "name": "Caucher Birkar",
+      "query": "site:heidelberg-laureate-forum.org/laureate/ \"Caucher Birkar\"",
+      "engine": "system2",
+      "operation": "search",
+      "timestamp_utc": null
+    },
+    {
+      "name": "Peter Scholze",
+      "query": "site:heidelberg-laureate-forum.org/laureate/ \"Peter Scholze\"",
+      "engine": "system2",
+      "operation": "search",
+      "timestamp_utc": null
+    },
+    {
+      "name": "June Huh",
+      "query": "site:heidelberg-laureate-forum.org/laureate/ \"June Huh\"",
+      "engine": "system2",
+      "operation": "search",
+      "timestamp_utc": null
+    }
+  ],
+  "prior_exact_url_discovery_reused": [
+    {
+      "name": "Stanislav Smirnov",
+      "query": "site:heidelberg-laureate-forum.org/laureate/ \"Stanislav Smirnov\" born",
+      "engine": "system2",
+      "timestamp_utc": null,
+      "note": "Exact URL discovered during an earlier cancelled Fields follow-up; no page body was opened then. Reused discovery result without repeating the query in this round."
+    },
+    {
+      "name": "Manjul Bhargava",
+      "query": "site:heidelberg-laureate-forum.org/laureate/ \"Manjul Bhargava\" born",
+      "engine": "system2",
+      "timestamp_utc": null,
+      "note": "Exact URL discovered during an earlier cancelled Fields follow-up; no page body was opened then. Reused discovery result without repeating the query in this round."
+    }
+  ],
+  "body_requests": [
+    {
+      "name": "Stanislav Smirnov",
+      "operation": "open",
+      "url": "https://www.heidelberg-laureate-forum.org/laureate/stanislav-smirnov/",
+      "method": "web.open",
+      "timestamp_utc": null,
+      "status": "body_observed",
+      "birth_field_lines": "72–79",
+      "result_precision": "day",
+      "award_identity": "Page heading names Stanislav Smirnov; Fields Medal - 2010 explicitly shown.",
+      "current_round_search_queries_used": 0,
+      "current_round_body_opens": 1
+    },
+    {
+      "name": "Manjul Bhargava",
+      "operation": "open",
+      "url": "https://www.heidelberg-laureate-forum.org/laureate/manjul-bhargava/",
+      "method": "web.open",
+      "timestamp_utc": null,
+      "status": "body_observed",
+      "birth_field_lines": "72–79",
+      "result_precision": "day",
+      "award_identity": "Page heading names Manjul Bhargava; Fields Medal - 2014 explicitly shown.",
+      "current_round_search_queries_used": 0,
+      "current_round_body_opens": 1
+    },
+    {
+      "name": "Caucher Birkar",
+      "operation": "open",
+      "url": "https://www.heidelberg-laureate-forum.org/laureate/caucher-birkar/",
+      "method": "web.open",
+      "timestamp_utc": null,
+      "status": "body_observed",
+      "birth_field_lines": "72–80",
+      "result_precision": "month",
+      "award_identity": "Page heading names Caucher Birkar; Fields Medal - 2018 explicitly shown.",
+      "current_round_search_queries_used": 1,
+      "current_round_body_opens": 1
+    },
+    {
+      "name": "Peter Scholze",
+      "operation": "open",
+      "url": "https://www.heidelberg-laureate-forum.org/laureate/peter-scholze/",
+      "method": "web.open",
+      "timestamp_utc": null,
+      "status": "body_observed",
+      "birth_field_lines": "72–80",
+      "result_precision": "day",
+      "award_identity": "Page heading names Peter Scholze; Fields Medal - 2018 explicitly shown.",
+      "current_round_search_queries_used": 1,
+      "current_round_body_opens": 1
+    },
+    {
+      "name": "June Huh",
+      "operation": "open",
+      "url": "https://www.heidelberg-laureate-forum.org/laureate/june-huh/",
+      "method": "web.open",
+      "timestamp_utc": null,
+      "status": "body_observed",
+      "birth_field_lines": "72–79",
+      "result_precision": "day",
+      "award_identity": "Page heading names June Huh; Fields Medal - 2022 explicitly shown.",
+      "current_round_search_queries_used": 1,
+      "current_round_body_opens": 1
+    }
+  ],
+  "selected_evidence": [
+    {
+      "name": "Stanislav Smirnov",
+      "url": "https://www.heidelberg-laureate-forum.org/laureate/stanislav-smirnov/",
+      "selected_fragment": "* September 3, 1970, Leningrad (today Saint Petersburg), Soviet Union (today Russia)",
+      "fragment_sha256": "9b2664483f70b84da3adfb0f57cf9c7819fa6323d36f860a1c947e0ee41dfee3",
+      "note": "Hash is of brief selected fragment only. No full biography, footer contact details or page copy saved."
+    },
+    {
+      "name": "Manjul Bhargava",
+      "url": "https://www.heidelberg-laureate-forum.org/laureate/manjul-bhargava/",
+      "selected_fragment": "* August 8, 1974, Hamilton, Ontario, Canada",
+      "fragment_sha256": "824776f5d9ffa1e38e2361628479aacaab0924fc9463b0eb9838641a472074e2",
+      "note": "Hash is of brief selected fragment only. No full biography, footer contact details or page copy saved."
+    },
+    {
+      "name": "Caucher Birkar",
+      "url": "https://www.heidelberg-laureate-forum.org/laureate/caucher-birkar/",
+      "selected_fragment": "* July, 1978, Marivan, Iran",
+      "fragment_sha256": "58d221b6794f2d3797a3e65de0aa675f890bef8b5b7067cc99b19458ae461d74",
+      "note": "Hash is of brief selected fragment only. No full biography, footer contact details or page copy saved."
+    },
+    {
+      "name": "Peter Scholze",
+      "url": "https://www.heidelberg-laureate-forum.org/laureate/peter-scholze/",
+      "selected_fragment": "* December 11, 1987, Dresden, Germany",
+      "fragment_sha256": "9d14c285b93193e7f1877f8a0f983075cf8307fe9e9af0dfceb175d5b9395a8e",
+      "note": "Hash is of brief selected fragment only. No full biography, footer contact details or page copy saved."
+    },
+    {
+      "name": "June Huh",
+      "url": "https://www.heidelberg-laureate-forum.org/laureate/june-huh/",
+      "selected_fragment": "* June 9, 1983, Stanford, California, USA",
+      "fragment_sha256": "4bdccf60e15ced96e609ee5725bcac0f3acd82e04c43a30fa8b42f51f8c1d667",
+      "note": "Hash is of brief selected fragment only. No full biography, footer contact details or page copy saved."
+    }
+  ],
+  "current_round_budget_usage": {
+    "targeted_queries": 3,
+    "body_opens": 5,
+    "direct_cv_attempts": 0
+  },
+  "per_person_budget_limits": {
+    "new_targeted_queries": 1,
+    "new_body_opens": 1
+  },
+  "result_counts": {
+    "day_body_claims": 4,
+    "month_body_claims": 1,
+    "not_found": 0,
+    "blocked": 0
+  },
+  "timestamp_note": "Exact tool-request timestamps were not captured and remain null; completed_at_utc is file-finalization time.",
+  "stop_note": "Every name stopped after the one HLF body observation. Birkar is month-only and no day was filled. No other sources or blocked university URLs requested; repository not modified; no professor person-level work or analysis performed."
+}

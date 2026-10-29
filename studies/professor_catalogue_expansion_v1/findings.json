@@ -1,0 +1,429 @@
+{
+  "study_id": "professor_catalogue_expansion_v1",
+  "checked_utc_date": "2026-10-29",
+  "created_utc": "2026-10-29T00:11:27.592611+00:00",
+  "purpose": "Bounded feasibility assessment of additional first-party historical professor catalogues.",
+  "publication_scope": "Metadata only. No raw response bodies, images, full professor roster, private contacts, family information, or formal professor processing queue.",
+  "bounds": "Five first-party catalogues assessed from existing session evidence only; this packaging step made no network requests. No authentication, captcha, VPN or proof-of-work bypass.",
+  "definitions": {
+    "day_level_birth_html_verified": "At least one bounded HTML example showed a day-level birthday; this does not establish coverage.",
+    "bulk_biographical_data_verified": "An actually retrieved public batch dataset containing usable biographical fields; none established here.",
+    "public_enumeration": "Evidence that catalogue item URLs or paginated lists can be enumerated; separate from biographical data."
+  },
+  "sources": [
+    {
+      "source_id": "utrecht_catalogus_professorum",
+      "institution": "Utrecht University Library",
+      "first_party": true,
+      "catalogue_url": "https://profs.library.uu.nl/",
+      "scope_evidence_url": "https://profs.library.uu.nl/english-information/",
+      "historical_scope": "All professors who held chairs at Utrecht University, foundation 1636 to present; dates of birth/death, education, appointment, teaching commitment; regularly adds newly inaugurated professors.",
+      "historical_count_note": "almost 2,600 was launch count at 375th anniversary (2011), not a verified current count.",
+      "assessment": "Public URL enumeration verified; three day-level HTML samples verified; no bulk biographical export verified.",
+      "day_level_birth_html_verified": true,
+      "day_level_birth_sample_count": 3,
+      "sample_method": "Purposeful physics/chemistry examples; no random sample or population coverage estimate.",
+      "sample_evidence": [
+        {
+          "profile_url": "https://profs.library.uu.nl/hoogleraar/kramers-h-a/",
+          "retrieval_name": "uu_kramers",
+          "http_status": 200,
+          "birth_field": "Geboren",
+          "birth_precision": "day",
+          "fields_checked": [
+            "profile name",
+            "Geboren",
+            "Benoemd",
+            "Aanvang",
+            "Einde",
+            "Vakgebied"
+          ],
+          "death_field_missing": false
+        },
+        {
+          "profile_url": "https://profs.library.uu.nl/hoogleraar/drenth-w/",
+          "retrieval_name": "uu_drenth",
+          "http_status": 200,
+          "birth_field": "Geboren",
+          "birth_precision": "day",
+          "fields_checked": [
+            "profile name",
+            "Geboren",
+            "Benoemd",
+            "Aanvang",
+            "Einde",
+            "Vakgebied"
+          ],
+          "death_field_missing": false
+        },
+        {
+          "profile_url": "https://profs.library.uu.nl/hoogleraar/peerdeman-a-f/",
+          "retrieval_name": "uu_peerdeman",
+          "http_status": 200,
+          "birth_field": "Geboren",
+          "birth_precision": "day",
+          "fields_checked": [
+            "profile name",
+            "Geboren",
+            "Benoemd",
+            "Aanvang",
+            "Einde",
+            "Vakgebied"
+          ],
+          "death_field_missing": true
+        }
+      ],
+      "bulk_biographical_data_verified": false,
+      "rest_probe": {
+        "url": "https://profs.library.uu.nl/wp-json/",
+        "http_status": 401,
+        "response_code": "rest_not_logged_in",
+        "action": "Stopped; no authentication bypass."
+      },
+      "public_enumeration": {
+        "method": "Two professor sitemaps advertised by public sitemap index",
+        "sitemap_index_url": "https://profs.library.uu.nl/wp-sitemap.xml",
+        "index_http_status": 200,
+        "files": [
+          {
+            "url": "https://profs.library.uu.nl/wp-sitemap-posts-hoogleraar-1.xml",
+            "http_status": 200,
+            "url_entries": 2000
+          },
+          {
+            "url": "https://profs.library.uu.nl/wp-sitemap-posts-hoogleraar-2.xml",
+            "http_status": 404,
+            "url_entries": 1206,
+            "note": "HTTP 404 response body is a parseable Sitemaps urlset; anomaly retained."
+          }
+        ],
+        "distinct_url_entries": 3206,
+        "schema": [
+          "url/loc",
+          "url/lastmod"
+        ],
+        "contains_birth_dates": false,
+        "count_interpretation": "3,206 distinct URL entries, not unique persons, qualified science professors, or a completeness estimate."
+      },
+      "html_pagination": {
+        "empty_search_display": "500+",
+        "last_page_link_number": 50,
+        "second_page_http_status": 200,
+        "assessment": "Visible empty-search cap prevents proving complete enumeration through this query alone."
+      },
+      "later_access_limitation": "A later same-session verification of the English information and Kramers pages returned an Anubis proof-of-work challenge. Earlier direct HTTP 200 evidence is retained; consistent current access is not established. No challenge was solved or bypassed.",
+      "next_step": "Retain as an enumerated candidate source; confirm stable authorized access or obtain an actual public biographical export before a formal extraction queue."
+    },
+    {
+      "source_id": "leiden_hoogleraren",
+      "institution": "Leiden University / Leiden University Libraries",
+      "first_party": true,
+      "catalogue_url": "https://hoogleraren.universiteitleiden.nl/",
+      "scope_evidence_url": "https://www.bibliotheek.universiteitleiden.nl/binaries/content/assets/ul2ub/over-ons/jaarverslagen/jaarverslag-2015nieuwelinks.pdf",
+      "historical_scope": "2015 official annual report describes a central professor catalogue with personalia, portraits, chairs, dissertations, inaugural lectures, publications and biographical links, since foundation 1575.",
+      "historical_count_note": "2015 report says almost 1,900 historical professors excluding about 500 then sitting professors; these are historical counts, not current qualified-person counts.",
+      "assessment": "Official catalogue and a paginated public representation confirmed; live raw enumeration and date-of-birth schema unverified.",
+      "day_level_birth_html_verified": false,
+      "day_level_birth_sample_count": 0,
+      "bulk_biographical_data_verified": false,
+      "public_enumeration": {
+        "url": "https://hoogleraren.universiteitleiden.nl/s/hoogleraren/search",
+        "retrieved_representation_items": 2571,
+        "retrieved_representation_pages": 258,
+        "page_size": 10,
+        "count_interpretation": "All catalogue item types, including lecturers and visiting appointments; not qualified science professors. A rendered representation is not a completed download.",
+        "live_full_enumeration_verified": false,
+        "cached_physics_facet_note": "A retrieved representation showed 163 physics items and 17 pages but was labelled crawled 1.3 years earlier; not a current census."
+      },
+      "access": {
+        "direct_home_http_status": 503,
+        "direct_canonical_home_http_status": 503,
+        "candidate_api_sample_url": "https://hoogleraren.universiteitleiden.nl/api/items?per_page=2",
+        "candidate_api_http_status": 503,
+        "api_schema_verified": false,
+        "later_rendered_search_reopen_http_status": 502,
+        "profile_attempts": "Lorentz and Abragam pages timed out or were inaccessible; no day-level fields verified."
+      },
+      "next_step": "Keep as an official candidate and reassess only when ordinary access is stable; no bulk endpoint is established."
+    },
+    {
+      "source_id": "groningen_catalogus_professorum",
+      "institution": "University of Groningen Library / University Museum",
+      "first_party": true,
+      "catalogue_url": "https://hoogleraren.ub.rug.nl/",
+      "scope_evidence_url": "https://www.rug.nl/museum/collections/the-academic-heritage-of-groningen",
+      "historical_scope": "Official museum page links Catalogus Professorum Academiae Groninganae and describes biographical/iconographic information about professors since 1614.",
+      "assessment": "Official catalogue candidate confirmed; catalogue currently unavailable.",
+      "day_level_birth_html_verified": false,
+      "day_level_birth_sample_count": 0,
+      "bulk_biographical_data_verified": false,
+      "public_enumeration": {
+        "verified": false
+      },
+      "access": {
+        "http_status": 503,
+        "message": "Service Unavailable; temporary maintenance or capacity condition."
+      },
+      "next_step": "No individual or API expansion was attempted after the unavailable homepage."
+    },
+    {
+      "source_id": "kiel_gelehrtenverzeichnis",
+      "institution": "Christian-Albrechts-Universität zu Kiel",
+      "first_party": true,
+      "catalogue_url": "https://cau.gelehrtenverzeichnis.de/",
+      "assessment": "Public person listing and one individual RDF day-level birth sample verified; HTML birthday sample confirmed in session; no whole-catalogue batch downloaded.",
+      "day_level_birth_html_verified": true,
+      "day_level_birth_sample_count": null,
+      "sample_count_note": "Session confirms an HTML birthday sample, but a precise sample count and date are not reproduced in the supplied metadata.",
+      "bulk_biographical_data_verified": false,
+      "public_enumeration": {
+        "public_person_list_pages_observed": 179,
+        "observation_reconfirmed_in_session": true,
+        "count_interpretation": "179 list pages, not 179 people and not a count of qualified science professors.",
+        "whole_batch_downloaded": false
+      },
+      "rdf_sample": {
+        "url": "https://cau.gelehrtenverzeichnis.de/data/about/e3ef2ef9-2424-c175-bc4f-4d4c606410fa",
+        "http_status": 200,
+        "content_type": "application/rdf+xml;charset=utf-8",
+        "bytes": 11963,
+        "sha256": "94cc08aac069df7286e309fa023de67bde492cddec4515f689316752bcd034b9",
+        "accessed_utc": "2026-10-29T00:05:13.964230+00:00",
+        "has_birth_predicate": true,
+        "birth_date_literals_extracted": 1,
+        "interpretation": "One explicit day-level birthday is verified in one individual RDF response; this is an individual structured sample, not a whole-catalogue batch or a coverage estimate.",
+        "birth_date_literal": "1906-09-19",
+        "birth_date_precision": "day",
+        "schema": {
+          "birth_event_path": "g:birth / owl:Thing / g:date",
+          "date_literal_type": "xsd:date",
+          "note": "Descendant traversal confirms an explicit labelled birth field rather than collecting unlabelled dates."
+        }
+      },
+      "next_step": "Potentially useful public enumeration plus individual machine-readable route; the nested RDF birth schema is confirmed in one sample. Confirm scope, science eligibility and completeness before any formal batch.",
+      "structured_birth_sample_count": 1,
+      "sample_discipline_note": "The single RDF example is outside physics/chemistry; no science-subset qualification or population coverage was established."
+    },
+    {
+      "source_id": "hamburg_professorenkatalog",
+      "institution": "Universität Hamburg",
+      "first_party": true,
+      "catalogue_url": "https://www.hpk.uni-hamburg.de/",
+      "assessment": "Official about content was read in session, while the main site retrieval returned HTTP 503; no date-of-birth schema verified.",
+      "day_level_birth_html_verified": false,
+      "day_level_birth_sample_count": 0,
+      "bulk_biographical_data_verified": false,
+      "public_enumeration": {
+        "verified": false
+      },
+      "access": {
+        "url": "https://www.hpk.uni-hamburg.de/",
+        "http_status": 503,
+        "accessed_utc": "2026-10-29T00:03:49.904719+00:00",
+        "method": "GET",
+        "attempts": 1,
+        "earlier_rendered_attempt": "timeout"
+      },
+      "next_step": "Keep as an official candidate only; do not claim birthday fields or a bulk route."
+    }
+  ],
+  "http_response_metadata": [
+    {
+      "name": "groningen_home",
+      "url": "https://hoogleraren.ub.rug.nl/",
+      "accessed_utc": "2026-10-29T00:00:30.994168+00:00",
+      "status": 503,
+      "final_url": "https://hoogleraren.ub.rug.nl/",
+      "bytes": 339,
+      "sha256": "f8d456abd6ec87245aee4c1e61deeb1413e34890d0c835867e8626afaf0f48c1",
+      "content_type": "text/html; charset=iso-8859-1"
+    },
+    {
+      "name": "leiden_api_items_sample",
+      "url": "https://hoogleraren.universiteitleiden.nl/api/items?per_page=2",
+      "accessed_utc": "2026-10-29T00:02:00.710151+00:00",
+      "status": 503,
+      "final_url": "https://hoogleraren.universiteitleiden.nl/api/items?per_page=2",
+      "bytes": 98,
+      "sha256": "33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909",
+      "content_type": "text/plain"
+    },
+    {
+      "name": "leiden_canonical",
+      "url": "https://hoogleraren.universiteitleiden.nl/s/hoogleraren/page/welcome",
+      "accessed_utc": "2026-10-29T00:01:39.168858+00:00",
+      "status": 503,
+      "final_url": "https://hoogleraren.universiteitleiden.nl/s/hoogleraren/page/welcome",
+      "bytes": 98,
+      "sha256": "33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909",
+      "content_type": "text/plain"
+    },
+    {
+      "name": "leiden_home",
+      "url": "https://hoogleraren.universiteitleiden.nl/",
+      "accessed_utc": "2026-10-29T00:00:30.991951+00:00",
+      "status": 503,
+      "final_url": "https://hoogleraren.universiteitleiden.nl/",
+      "bytes": 98,
+      "sha256": "33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909",
+      "content_type": "text/plain"
+    },
+    {
+      "name": "uu_about",
+      "url": "https://profs.library.uu.nl/english-information/",
+      "accessed_utc": "2026-10-29T00:00:54.591687+00:00",
+      "status": 200,
+      "final_url": "https://profs.library.uu.nl/english-information/",
+      "bytes": 35523,
+      "sha256": "a95554908292f0a8b57b1ef57f6dcfe11a28ec29192cb00c038892dd4e6140e5",
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "name": "uu_chemistry_index",
+      "url": "https://profs.library.uu.nl/?s=&discipline_filter=scheikunde&faculteit_filter=",
+      "accessed_utc": "2026-10-29T00:01:24.910762+00:00",
+      "status": 200,
+      "final_url": "https://profs.library.uu.nl/?s=&discipline_filter=scheikunde&faculteit_filter=",
+      "bytes": 88412,
+      "sha256": "f0cad4044316e0237f067db5b859abae315ccca1c1aa9757db72f4a9108658d3",
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "name": "uu_drenth",
+      "url": "https://profs.library.uu.nl/hoogleraar/drenth-w/",
+      "accessed_utc": "2026-10-29T00:01:32.042513+00:00",
+      "status": 200,
+      "final_url": "https://profs.library.uu.nl/hoogleraar/drenth-w/",
+      "bytes": 43074,
+      "sha256": "0bf6cd50740943ad4b96a4d089283c24147dc7556997e53a4ece2edb968c7c18",
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "name": "uu_home",
+      "url": "https://profs.library.uu.nl/",
+      "accessed_utc": "2026-10-29T00:00:30.988869+00:00",
+      "status": 200,
+      "final_url": "https://profs.library.uu.nl/",
+      "bytes": 39798,
+      "sha256": "053a2f3a215f64716b34ab4af37e20955fc685b751158645e96228b0d6de6cac",
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "name": "uu_kramers",
+      "url": "https://profs.library.uu.nl/hoogleraar/kramers-h-a/",
+      "accessed_utc": "2026-10-29T00:00:54.590838+00:00",
+      "status": 200,
+      "final_url": "https://profs.library.uu.nl/hoogleraar/kramers-h-a/",
+      "bytes": 42007,
+      "sha256": "163d14d86958b20fd8c3a0a28f5d5d0951d989e07fd91e776ac90d79e64178bf",
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "name": "uu_peerdeman",
+      "url": "https://profs.library.uu.nl/hoogleraar/peerdeman-a-f/",
+      "accessed_utc": "2026-10-29T00:01:32.248100+00:00",
+      "status": 200,
+      "final_url": "https://profs.library.uu.nl/hoogleraar/peerdeman-a-f/",
+      "bytes": 40583,
+      "sha256": "888fd2fed13de74a7bf9cac8b57e9a49da675cbfcceb62ba348acc6d4bc5cc76",
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "name": "uu_physics_index",
+      "url": "https://profs.library.uu.nl/?s=&discipline_filter=natuurkunde&faculteit_filter=",
+      "accessed_utc": "2026-10-29T00:01:21.721097+00:00",
+      "status": 200,
+      "final_url": "https://profs.library.uu.nl/?s=&discipline_filter=natuurkunde&faculteit_filter=",
+      "bytes": 88902,
+      "sha256": "84668914417e3a075ffb2a762828fa19c6645b5362dfd67e52c7a9b3ba45bfd0",
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "name": "uu_professor_sitemap_1",
+      "url": "https://profs.library.uu.nl/wp-sitemap-posts-hoogleraar-1.xml",
+      "accessed_utc": "2026-10-29T00:02:00.707961+00:00",
+      "status": 200,
+      "final_url": "https://profs.library.uu.nl/wp-sitemap-posts-hoogleraar-1.xml",
+      "bytes": 234699,
+      "sha256": "e26dbaf4c858eb31ea24b011cdb292b2a5e8efa21d3ac6c5c371b5c35e232a10",
+      "content_type": "application/xml; charset=UTF-8"
+    },
+    {
+      "name": "uu_professor_sitemap_2",
+      "url": "https://profs.library.uu.nl/wp-sitemap-posts-hoogleraar-2.xml",
+      "accessed_utc": "2026-10-29T00:02:00.708885+00:00",
+      "status": 404,
+      "final_url": "https://profs.library.uu.nl/wp-sitemap-posts-hoogleraar-2.xml",
+      "bytes": 143358,
+      "sha256": "8614744912d6ad9a25977ade3742a3c1ebbaa071e7604c3a571aba8f565b9a13",
+      "content_type": "application/xml; charset=UTF-8"
+    },
+    {
+      "name": "uu_results",
+      "url": "https://profs.library.uu.nl/?s=&discipline_filter=&faculteit_filter=",
+      "accessed_utc": "2026-10-29T00:00:54.588861+00:00",
+      "status": 200,
+      "final_url": "https://profs.library.uu.nl/?s=&discipline_filter=&faculteit_filter=",
+      "bytes": 65297,
+      "sha256": "578df4f6da2460e19c4b9c670fe5114c8f013e229be26ea854770ecc97e0258b",
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "name": "uu_results_page2",
+      "url": "https://profs.library.uu.nl/page/2/?s&discipline_filter&faculteit_filter",
+      "accessed_utc": "2026-10-29T00:01:21.720387+00:00",
+      "status": 200,
+      "final_url": "https://profs.library.uu.nl/page/2/?s&discipline_filter&faculteit_filter",
+      "bytes": 66097,
+      "sha256": "665441fe06325c4e1f93cff82b201bd41ec4a73f40d220c438cdc468bb2eb724",
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "name": "uu_robots",
+      "url": "https://profs.library.uu.nl/robots.txt",
+      "accessed_utc": "2026-10-29T00:00:54.596171+00:00",
+      "status": 200,
+      "final_url": "https://profs.library.uu.nl/robots.txt",
+      "bytes": 38,
+      "sha256": "2bee0f22acab8046d7af722ae992f8d53dbec4bd221929d2fdb78b82c6913744",
+      "content_type": "text/plain"
+    },
+    {
+      "name": "uu_search",
+      "url": "https://profs.library.uu.nl/zoeken/",
+      "accessed_utc": "2026-10-29T00:00:30.990455+00:00",
+      "status": 200,
+      "final_url": "https://profs.library.uu.nl/zoeken/",
+      "bytes": 54510,
+      "sha256": "c4e7a82c07f37fef094a0c1783cb166da066c14e5dad73376b648dfd0d3a57dc",
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "name": "uu_sitemap",
+      "url": "https://profs.library.uu.nl/wp-sitemap.xml",
+      "accessed_utc": "2026-10-29T00:01:21.719132+00:00",
+      "status": 200,
+      "final_url": "https://profs.library.uu.nl/wp-sitemap.xml",
+      "bytes": 1220,
+      "sha256": "8d7d5a4d9bfccf159f92e15893fad3b8690ccc80617d07ad680f35ec6594c77a",
+      "content_type": "application/xml; charset=UTF-8"
+    },
+    {
+      "name": "uu_wp_json",
+      "url": "https://profs.library.uu.nl/wp-json/",
+      "accessed_utc": "2026-10-29T00:00:30.989894+00:00",
+      "status": 401,
+      "final_url": "https://profs.library.uu.nl/wp-json/",
+      "bytes": 96,
+      "sha256": "b7448eefff99acbdf0e87434d2a79304b908abba6177eb747efe0372f092cddb",
+      "content_type": "application/json; charset=UTF-8"
+    }
+  ],
+  "global_caveats": [
+    "Catalogue totals, URL counts, list page counts and facets have different units; none is a verified count of eligible science professors.",
+    "Purposefully selected HTML samples cannot support a birthday hit rate or completeness estimate.",
+    "Historical launch/report counts are retained only as historical context.",
+    "Access observations may differ by endpoint and retrieval method; successful earlier downloads do not establish stable present access.",
+    "No whole-professor queue or mass profile crawl was started."
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "parser_version": 1,
+  "source_url": "https://digicoll.lib.berkeley.edu/nanna/record/81359/files/inmemoriam2001.pdf?registerDownload=1&version=1&withMetadata=0&withWatermark=0",
+  "source_sha256": "9c5fa94e676f0c901d710fc6bd11f6c578c3ec7478098cfaf4fa82866d75518c",
+  "source_physical_pages": 117,
+  "counts": {
+    "total_header_candidates": 75,
+    "day_candidates": 13,
+    "year_candidates": 62,
+    "statuses": {
+      "automatic_unverified": 75
+    },
+    "campuses": {
+      "Los Angeles": 20,
+      "Berkeley": 23,
+      "Irvine": 6,
+      "San Francisco": 8,
+      "Santa Barbara": 3,
+      "San Diego": 5,
+      "Davis": 10
+    },
+    "candidates_with_title": 73
+  },
+  "network_requests": 0,
+  "individual_verifications": 0,
+  "unparsed_year_span_line_count": 2,
+  "unparsed_year_span_note": "Isolated year spans lacking the nearby comma/colon named-heading syntax are skipped without manual rescue.",
+  "validation": {
+    "valid_unique_candidate_ids": true,
+    "all_records_have_physical_page_rule_precision_status": true,
+    "year_only_month_day_null": true,
+    "prose_outside_public_candidates": true
+  },
+  "rejected_birth_clause_counts": {
+    "no_full_date_in_same_birth_clause": 9,
+    "no_named_subject_in_birth_clause": 44
+  },
+  "constraints": [
+    "Every record is automatic_unverified.",
+    "Only named-heading year spans establish year-level candidates.",
+    "Full-date candidates require named subject in same birth clause, complete date, and agreement with heading year.",
+    "Pronoun-only, kinship, incomplete and year-mismatched clauses are skipped.",
+    "Other people mentioned in prose are not intentionally extracted; no manual rescue performed.",
+    "Entry boundaries, names, disciplines and titles are automatic and may need review."
+  ],
+  "scope_screen": {
+    "rule": "Literal discipline contains physics or chemistry; includes biochemistry, no manual role assessment.",
+    "science_literal_candidates": 4,
+    "science_literal_day_candidates": 1,
+    "whole_volume_candidates_not_science_only": true
+  }
+}

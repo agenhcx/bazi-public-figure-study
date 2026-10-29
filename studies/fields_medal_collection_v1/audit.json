@@ -1,0 +1,36 @@
+{
+  "independent_review": "Separate read-only worker checked all collected records against the fixed roster, with no source requests or changes.",
+  "identity_review": "68 unique IDs, exact ID/name/award_year match, 64 main plus 4 separate extension; Perelman declined flag retained, Wiles excluded; no inherited birth-year filter.",
+  "claims_review": "Explicit nullable components and valid dates checked; body claims require same-URL successful source ledger; snippets excluded from coverage. Single-source body support is not independent corroboration.",
+  "declared_collection_counters": {
+    "main": {
+      "people": 64,
+      "declared_targeted_queries": 41,
+      "declared_body_candidates": 72,
+      "declared_direct_cv_attempts": 6
+    },
+    "extension2026": {
+      "people": 4,
+      "declared_targeted_queries": 7,
+      "declared_body_candidates": 4,
+      "declared_direct_cv_attempts": 0
+    }
+  },
+  "known_limitations": [
+    "Exact HTTP retrieval timestamps unavailable for search-tool source opens.",
+    "2026 extension exact query strings not completely retained in saved operation logs; query budget declarations cannot be fully independently replayed from logs.",
+    "Some targeted searches included candidate dates; collection is not blinded validation.",
+    "MacTutor university-authored compilation is the dominant main-cohort source; no civil-record or independent-source acceptance asserted."
+  ],
+  "statistical_tests_run": 0,
+  "bazi_variables_computed": 0,
+  "analysis_cohort_frozen": false,
+  "validation_tests": "12 synthetic invariant tests plus full saved-input deterministic replay; separate from statistical hypothesis tests.",
+  "final_read_only_review": {
+    "result": "PASS",
+    "unit_tests_passed": 12,
+    "deterministic_replay": "All 10 output files matched byte-for-byte, including output hash manifest. Independently replayed with in-memory export.",
+    "workflow_review": "No birthday source-site requests; only local validation and GitHub checkout/setup/upload.",
+    "blocking_findings": []
+  }
+}

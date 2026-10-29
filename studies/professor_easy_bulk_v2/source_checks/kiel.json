@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "route_id": "kiel_gelehrtenverzeichnis_1919_1965_easy_bulk_round2",
+  "checked_at_utc": "2026-10-29T00:36:14.037047Z",
+  "scope": {
+    "institution": "Christian-Albrechts-Universität zu Kiel",
+    "target_professor_activity_period": "1919–1965",
+    "intended_birth_year_window": "1835–1985",
+    "birth_year_filter_executed": false,
+    "old_1665_1815_group_included": false,
+    "individual_records_allowed": false,
+    "individual_birthdate_queries_allowed": false
+  },
+  "decision": "stop_no_public_wholebatch_confirmed_within_budget",
+  "public_wholebatch_download_confirmed": false,
+  "wholebatch_download_url": null,
+  "bulk_file_sha256": null,
+  "bulk_format": null,
+  "bulk_schema": null,
+  "bulk_person_count_acquired": 0,
+  "bulk_professor_count_acquired": 0,
+  "finding": "No publicly linked whole-batch RDF/CSV/JSON download was established in the three inspected official pages and three targeted searches. Single-person RDF availability is prior task context and was not rechecked. No endpoint was guessed or probed.",
+  "professor_period_fit": "The target 1919–1965 activity cohort could overlap births1835–1985, but this was not verified person by person and is not a filter result.",
+  "reported_site_counts": {
+    "source_url": "https://cau.gelehrtenverzeichnis.de/",
+    "all_periods_person_entries_reported": 5350,
+    "all_periods_professors_reported_lower_bound_exclusive": 950,
+    "target_1919_1965_professor_count": null,
+    "note": "Homepage figures are cross-period reported counts, not downloaded row counts or a checked 1919–1965 denominator; old cohort was not researched."
+  },
+  "license": {
+    "database": "ODbL1.0",
+    "individual_database_contents": "DbCL1.0",
+    "images_excluded": true,
+    "source_url": "https://cau.gelehrtenverzeichnis.de/topics/license",
+    "status": "body_observed"
+  },
+  "technical_leads_not_opened_or_probed": [
+    {
+      "url": "https://cau-git.rz.uni-kiel.de/scholy/scholy-triplestore",
+      "status": "search_snippet_only",
+      "note": "Official university-hosted software README search result describes generic SPARQL datasets and localhost example. This is source-code/software documentation, not an established live Kiel bulk-data URL. No code downloaded, endpoint guessed, or query submitted."
+    },
+    {
+      "url": "https://cau-git.rz.uni-kiel.de/scholy/scholy-core/-/wikis/Documentation/About/diff?version_id=a68fab6e948e6daeab70f1ced2d582b07f885f28&view=inline",
+      "status": "search_snippet_only",
+      "note": "Software documentation search lead mentions internal automatic RDF dumps and filtered public-data endpoints. It supplies no verified public whole-batch Kiel download route in this check; no endpoint probing performed."
+    }
+  ],
+  "queries": [
+    {
+      "query": "Kieler Gelehrtenverzeichnis 1919 1965 RDF Gesamtdaten Download CSV JSON",
+      "engine": "system2",
+      "timestamp_utc": null,
+      "tool_call_batch": "turn1334"
+    },
+    {
+      "query": "Kieler Gelehrtenverzeichnis Gesamtdaten Export RDF Download Professoren",
+      "engine": "system2",
+      "timestamp_utc": null,
+      "tool_call_batch": "turn1334"
+    },
+    {
+      "query": "site:cau.gelehrtenverzeichnis.de (\"RDF\" OR \"Download\" OR \"CSV\" OR \"JSON\" OR \"Export\" OR \"SPARQL\")",
+      "engine": "system1",
+      "timestamp_utc": null,
+      "tool_call_batch": "turn1337"
+    }
+  ],
+  "page_requests": [
+    {
+      "url": "https://cau.gelehrtenverzeichnis.de/",
+      "request_method": "web.open",
+      "status": "body_observed",
+      "timestamp_utc": null,
+      "observed_lines": "60–72",
+      "finding": "Official CAU project home page describes 1919–1965 professors and current cross-period mixed person counts, data under continuous editing, and ODbL/DbCL licensing. No whole-batch RDF/CSV/JSON download URL observed."
+    },
+    {
+      "url": "https://cau.gelehrtenverzeichnis.de/topics/license",
+      "request_method": "web.click from homepage link 16",
+      "status": "body_observed",
+      "timestamp_utc": null,
+      "observed_lines": "55–74",
+      "finding": "Official licensing page allows database use under ODbL and content under DbCL, excluding images. Licensing does not supply or prove a whole-batch download endpoint."
+    },
+    {
+      "url": "https://cau.gelehrtenverzeichnis.de/topics/about",
+      "request_method": "web.click from homepage link 17",
+      "status": "body_observed",
+      "timestamp_utc": null,
+      "observed_lines": "55–59; 69–70",
+      "finding": "Official project description confirms a Semantic Web data collection built by CAU history/computing groups; no public whole-batch download link or live SPARQL endpoint supplied in observed page text."
+    }
+  ],
+  "budget_usage": {
+    "targeted_searches": 3,
+    "official_public_page_or_download_requests": 3,
+    "bulk_download_requests": 0,
+    "individual_record_requests": 0,
+    "individual_birthdate_queries": 0,
+    "sparql_or_api_requests": 0
+  },
+  "budget_limits": {
+    "targeted_searches": 3,
+    "official_public_page_or_download_requests": 3
+  },
+  "stop_reason": "Bounded easy-bulk check exhausted; no public whole-batch route established. Stopped without per-record acquisition, hidden API guessing, login bypass, or requests to old1665–1815 records.",
+  "repository_modified": false,
+  "bazi_computed": false,
+  "statistical_analysis_performed": false,
+  "timestamp_note": "Exact request times were not captured and remain null; checked_at_utc is actual metadata completion time."
+}
