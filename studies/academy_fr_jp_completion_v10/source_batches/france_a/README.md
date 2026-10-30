@@ -1,0 +1,11 @@
+# France A v10 — 2026-10-30
+
+All28 fixed candidates received individually mapped targeted searches (44literalqueries). Historical coverage was unknown, not classified as neversearched. The batch makes14distinctURLattempts:8actualAcademyPDFs,1actualCTHSHTMLrecord,and5failures. Three404attempts inadvertently repeated olderfailedroutes because anID-onlypreflightmissedURL-onlyCSVrecords; these are explicitlyrecorded, produce no evidence,and are not calledfreshnewroutes. No furtherrequests follow.
+
+Four strict membership decisions:Calmette1927titular(not1907correspondent),Carpentier1907,Hatt1897,andDassault1953-06-15free-member. Hatt is an exactroot-approvedAcademy-authoredcontribution onanexternalCTHShost: theactualrecordcreditsAcadémiedessciences aswriterand directlystatesmembershipstart1897. This doesnotmakeallCTHSrecordsfirstparty. No unnamedsection or electionday is manufactured.
+
+Three holds:Perrier role/asof1946withoutsubtracting20years;Guilliermond1935chair eventuntypedordinaryrole(authorHeim’sMemberisnottransferred);Charlot1970ballotexcerptwithoutanexplicitproclamation. Twentyone othercasesareparked. Bénard1885physicianisnotBénard1874fluidphysicist.
+
+Important:Dassault’ssamepersonAcademynoticevisuallyprints18January1882,contrarytobaseline13January1882. `dob_discrepancy_leads.json` preservesthebothdateexpressions andrequestsexactrootquarantinebeforeall-threecounting. Collector membershipdecisionisindependentanddoesnotmodifyDOB, selectawinner,usemajorityoropennewcivilrecordroutes.
+
+Onlyshortquotesandhash/locator metadataarepublic;rawPDF/HTML/images/derivedtextsareprivate. Noanalysiscohortfreeze,BaZi,identitychangeoroutreach. ExternalindependentQA bindsfinalpublichashes withoutrewritingthefrozenhandoffstatus.

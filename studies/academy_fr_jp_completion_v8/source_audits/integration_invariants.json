@@ -1,0 +1,35 @@
+{
+  "audit_kind": "offline_integration_invariants",
+  "date": "2026-10-29",
+  "baseline_commit": "37adc745748718db64fb85bc81c44bc07356b157",
+  "baseline_study": "studies/academy_fr_jp_completion_v7",
+  "baseline_pins_verified": 79,
+  "stable_identity_keys": {
+    "france": 877,
+    "japan": 482
+  },
+  "all_unmodified_person_fields_unchanged_outside_new_decision_or_claim_ids": true,
+  "france_identity_and_DOB_fields_unchanged": true,
+  "inherited_france_election_conflict_rows_preserved": 25,
+  "inherited_france_decision_rows_every_field_preserved": 145,
+  "new_france_decisions": 7,
+  "new_strict_france_memberships": 6,
+  "inherited_japan_claims_every_field_preserved": 525,
+  "new_japan_claims": 2,
+  "inherited_japan_day_statuses_and_dates_preserved": 366,
+  "inherited_japan_held_rows": 48,
+  "inherited_japan_holds_retained": 47,
+  "exact_new_root_calendar_routing_releases": [
+    "jpa-unlinked-7ecae30c03b86d5f"
+  ],
+  "inherited_v7_calendar_routing_releases_preserved": {
+    "jpa-unlinked-a9d1e2cde713ae0e": "1865-06-08",
+    "jpa-unlinked-d4cbc74833986120": "1870-04-10"
+  },
+  "japan_section_scope_unchanged": true,
+  "all_legacy_japan_source_flags_preserved": true,
+  "root_calendar_decision_QA_and_claims_files_relationally_hash_bound": true,
+  "analysis_cohort_frozen": false,
+  "bazi_variables_computed": 0,
+  "source_body_redistributed": false
+}

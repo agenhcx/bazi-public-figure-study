@@ -1,0 +1,241 @@
+[
+  {
+    "key": "hirai_nagasaki",
+    "url": "https://www.med.nagasaki-u.ac.jp/med/data/05_international/med150kinensi.pdf",
+    "retrieved_utc": "2026-10-29T23:22:36.576579+00:00",
+    "error": "HTTP Error 301: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nMoved Permanently",
+    "source_sha256": null,
+    "transport": "original_http_capture",
+    "purpose": "One inherited failed med150 route was inadvertently retried before concurrent audit returned. No subsequent retry, claim, or hash.",
+    "http_status": 301,
+    "original_capture_failed": true,
+    "capture_path": null,
+    "bytes": null,
+    "source_body_redistributed": false,
+    "repeated_prior_route": true
+  },
+  {
+    "key": "yanagida_cv",
+    "url": "https://www.fbs.osaka-u.ac.jp/labs/yanagida/English/CURRICULUM%20VITAE%202010.pdf",
+    "retrieved_utc": "2026-10-29T23:22:56.869093+00:00",
+    "source_sha256": null,
+    "error": "HTTP Error 404: Not Found",
+    "transport": "original_http_capture",
+    "purpose": "New source body capture, except explicit inherited Hirai retry; full source private.",
+    "http_status": 404,
+    "original_capture_failed": true,
+    "capture_path": null,
+    "bytes": null,
+    "source_body_redistributed": false
+  },
+  {
+    "key": "tatsumi_iupac",
+    "url": "https://old.iupac.org/symposia/conferences/ga09/Nominations_2009.pdf",
+    "retrieved_utc": "2026-10-29T23:22:56.870033+00:00",
+    "source_sha256": null,
+    "error": "HTTP Error 403: Forbidden",
+    "transport": "original_http_capture",
+    "purpose": "New source body capture, except explicit inherited Hirai retry; full source private.",
+    "http_status": 403,
+    "original_capture_failed": true,
+    "capture_path": null,
+    "bytes": null,
+    "source_body_redistributed": false
+  },
+  {
+    "key": "jsce_presidents",
+    "url": "https://ftp.jsce.or.jp/president/successive_president/index.html",
+    "retrieved_utc": "2026-10-29T23:23:43.184411+00:00",
+    "source_sha256": "47ded92cd9fed9cafedd04d85eb95369d73e09e74ab469a1b364a3a0b49fd3c8",
+    "http_status": 200,
+    "final_url": "https://ftp.jsce.or.jp/president/successive_president/index.html",
+    "content_type": "text/html",
+    "capture_path": "/workspace/scratch/7e8aa4e0d4af/academy_v6_workers/japan_b/private/jsce_presidents.html",
+    "bytes": 13362,
+    "transport": "original_http_capture",
+    "purpose": "New source body capture, except explicit inherited Hirai retry; full source private.",
+    "source_body_redistributed": false
+  },
+  {
+    "key": "matsuoka_award",
+    "url": "https://www.japan-acad.go.jp/japanese/news/2016/031401.html",
+    "retrieved_utc": "2026-10-29T23:23:43.185145+00:00",
+    "source_sha256": "533a6fd9eec90d045416ef6a9a300844e54a66446bd36cb0277f8788755c7a6e",
+    "http_status": 200,
+    "final_url": "https://www.japan-acad.go.jp/japanese/news/2016/031401.html",
+    "content_type": "text/html",
+    "capture_path": "/workspace/scratch/7e8aa4e0d4af/academy_v6_workers/japan_b/private/matsuoka_award.html",
+    "bytes": 46967,
+    "transport": "original_http_capture",
+    "purpose": "New source body capture, except explicit inherited Hirai retry; full source private.",
+    "source_body_redistributed": false
+  },
+  {
+    "key": "otsuka_autobiography",
+    "url": "https://www.jstage.jst.go.jp/article/pjab/83/2/83_2_47/_html/-char/en",
+    "retrieved_utc": "2026-10-29T23:23:47.235299+00:00",
+    "source_sha256": null,
+    "error": "HTTP Error 404: Not Found",
+    "transport": "original_http_capture",
+    "purpose": "New source body capture, except explicit inherited Hirai retry; full source private.",
+    "http_status": 404,
+    "original_capture_failed": true,
+    "capture_path": null,
+    "bytes": null,
+    "source_body_redistributed": false
+  },
+  {
+    "key": "suda_autobiography",
+    "url": "https://www.jstage.jst.go.jp/article/pjab/84/10/84_10_419/_html/-char/en",
+    "retrieved_utc": "2026-10-29T23:23:47.632414+00:00",
+    "source_sha256": null,
+    "error": "HTTP Error 404: Not Found",
+    "transport": "original_http_capture",
+    "purpose": "New source body capture, except explicit inherited Hirai retry; full source private.",
+    "http_status": 404,
+    "original_capture_failed": true,
+    "capture_path": null,
+    "bytes": null,
+    "source_body_redistributed": false
+  },
+  {
+    "key": "tatsumi_cerm",
+    "url": "https://www.cerm.unifi.it/memorial-lectures-in-chemistry",
+    "retrieved_utc": "2026-10-29T23:24:05.868503+00:00",
+    "source_sha256": "f33f28e7c7e16de02d40c10b8d247bb97e220ae87856e203fa64e6752808abb8",
+    "http_status": 200,
+    "final_url": "https://www.cerm.unifi.it/memorial-lectures-in-chemistry",
+    "content_type": "text/html; charset=utf-8",
+    "capture_path": "/workspace/scratch/7e8aa4e0d4af/academy_v6_workers/japan_b/private/tatsumi_cerm.html",
+    "bytes": 97147,
+    "transport": "original_http_capture",
+    "purpose": "New source body capture, except explicit inherited Hirai retry; full source private.",
+    "source_body_redistributed": false
+  },
+  {
+    "key": "tatsumi_jsps",
+    "url": "https://www.jsps.go.jp/file/storage/e-toplevel/08_followup/TatsumiKazuyuki.pdf",
+    "retrieved_utc": "2026-10-29T23:24:05.869239+00:00",
+    "source_sha256": "029cfbf398d849d272225ea4f1189b82d03023a9b470e7b0bbfc7003188fb427",
+    "http_status": 200,
+    "final_url": "https://www.jsps.go.jp/file/storage/e-toplevel/08_followup/TatsumiKazuyuki.pdf",
+    "content_type": "application/pdf",
+    "capture_path": "/workspace/scratch/7e8aa4e0d4af/academy_v6_workers/japan_b/private/tatsumi_jsps.pdf",
+    "bytes": 69785,
+    "transport": "original_http_capture",
+    "purpose": "New source body capture, except explicit inherited Hirai retry; full source private.",
+    "source_body_redistributed": false
+  },
+  {
+    "key": "jsce_presidents_body",
+    "url": "https://ftp.jsce.or.jp/president/successive_president/sp.txt",
+    "retrieved_utc": "2026-10-29T23:24:16.685252+00:00",
+    "source_sha256": "57bcfb17d86b1b78e6cee9ca2a597e12cc7d995ab06b370f1797c24a28fb1f3e",
+    "http_status": 200,
+    "final_url": "https://ftp.jsce.or.jp/president/successive_president/sp.txt",
+    "content_type": "text/plain",
+    "capture_path": "/workspace/scratch/7e8aa4e0d4af/academy_v6_workers/japan_b/private/jsce_presidents_body.html",
+    "bytes": 105317,
+    "transport": "original_http_capture",
+    "purpose": "New source body capture, except explicit inherited Hirai retry; full source private.",
+    "source_body_redistributed": false
+  },
+  {
+    "transport": "web",
+    "action": "open",
+    "url": "https://www.med.nagasaki-u.ac.jp/med/data/05_international/med150kinensi.pdf",
+    "ref": "turn1733view0",
+    "result": "400 content length too large (23631093 bytes); no body",
+    "source_sha256": null,
+    "repeated_prior_route": true
+  },
+  {
+    "transport": "web",
+    "action": "open",
+    "url": "https://www.fbs.osaka-u.ac.jp/labs/yanagida/English/CURRICULUM%20VITAE%202010.pdf",
+    "ref": "turn1742view0",
+    "result": "Complete actual PDF text body: 2 pages, 51 lines; no original bytes",
+    "source_sha256": null,
+    "derived_text_path": "/workspace/scratch/7e8aa4e0d4af/academy_v6_workers/japan_b/private/yanagida_web_body_transcript.txt"
+  },
+  {
+    "transport": "web",
+    "action": "open",
+    "url": "https://old.iupac.org/symposia/conferences/ga09/Nominations_2009.pdf",
+    "ref": "turn1742view1",
+    "result": "Error fetching; no body claim",
+    "source_sha256": null
+  },
+  {
+    "transport": "web",
+    "action": "open",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3756739/",
+    "ref": "turn1742view2",
+    "result": "Recaptcha wall; no qualified body",
+    "source_sha256": null
+  },
+  {
+    "transport": "web",
+    "action": "open",
+    "url": "https://www.japan-acad.go.jp/japanese/news/2016/031401.html",
+    "ref": "turn1758view0",
+    "result": "Actual Academy award biography body; Matsouka award10 birth year row",
+    "source_sha256": null
+  },
+  {
+    "transport": "web",
+    "action": "open",
+    "url": "https://www.jstage.jst.go.jp/article/pjab/83/2/83_2_47/_article",
+    "ref": "turn1758view1",
+    "result": "Not accessible via tool; no body",
+    "source_sha256": null
+  },
+  {
+    "transport": "web",
+    "action": "screenshot",
+    "url": "https://www.fbs.osaka-u.ac.jp/labs/yanagida/English/CURRICULUM%20VITAE%202010.pdf",
+    "ref": "turn1758view2",
+    "result": "404; no image",
+    "source_sha256": null
+  },
+  {
+    "transport": "web",
+    "action": "open",
+    "url": "https://ftp.jsce.or.jp/president/successive_president/index.html",
+    "ref": "turn1762view0",
+    "result": "Actual index body only; biography HTML loaded by script from sp.txt",
+    "source_sha256": null
+  },
+  {
+    "transport": "web",
+    "action": "open",
+    "url": "https://www.cerm.unifi.it/memorial-lectures-in-chemistry",
+    "ref": "turn1764view0",
+    "result": "Actual university lecture biography body, full Tatsumi paragraph",
+    "source_sha256": null
+  },
+  {
+    "transport": "web",
+    "action": "open",
+    "url": "https://www.jsps.go.jp/file/storage/e-toplevel/08_followup/TatsumiKazuyuki.pdf",
+    "ref": "turn1764view1",
+    "result": "Actual 1-page CV body; original also captured",
+    "source_sha256": null
+  },
+  {
+    "transport": "web",
+    "action": "screenshot",
+    "url": "https://www.jsps.go.jp/file/storage/e-toplevel/08_followup/TatsumiKazuyuki.pdf",
+    "ref": "turn1769view0 / turn1770view0",
+    "result": "Returned screenshot; local original PDF rendered and visually inspected for final QA",
+    "source_sha256": null
+  },
+  {
+    "transport": "web",
+    "action": "open",
+    "url": "https://www.fbs.osaka-u.ac.jp/labs/yanagida/English/CURRICULUM%20VITAE%202010.pdf",
+    "ref": "turn1777view0",
+    "result": "404 on reopening prior success ref; original SHA remains null",
+    "source_sha256": null
+  }
+]

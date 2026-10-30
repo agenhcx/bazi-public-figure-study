@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "events": [
+    {
+      "action": "read_local",
+      "path": "FRANCE_ACADEMY_ROCHE_BNF_AND_CIVIL_ARCHIVE_PUBLIC_SOURCE_V1.md",
+      "status": "read",
+      "at_utc": null,
+      "note": "Read prior routes and conflict; did not reopen BnF, EPHE, CTHS, College de France, Le Monde or matchID."
+    },
+    {
+      "action": "read_local",
+      "path": "data/france_academy_cths_nine_source_adjudication_v1_2/person_evidence_triage_v1_2.csv",
+      "status": "read_no_roche_row",
+      "at_utc": null
+    },
+    {
+      "action": "search",
+      "query": "site:earchives.vaucluse.fr Sorgues 1901 naissances Roche",
+      "engine": "system1",
+      "at_utc": null,
+      "status": "archive_domain_robots_blocked",
+      "note": "Search tool reported earchives.vaucluse.fr cannot be accessed, non-retryable robots.txt error."
+    },
+    {
+      "action": "search",
+      "query": "site:memento.vaucluse.fr Sorgues état civil 1901 naissances archives",
+      "engine": "system1",
+      "at_utc": null,
+      "status": "results_returned",
+      "result_refs": [
+        "[session-reference-omitted]",
+        "[session-reference-omitted]",
+        "[session-reference-omitted]"
+      ],
+      "note": "No original Jean Roche birth entry observed; search snippets not accepted as birth evidence."
+    },
+    {
+      "action": "search",
+      "query": "\"Sorgues\" \"1901\" \"naissances\" archives",
+      "engine": "system1",
+      "at_utc": null,
+      "status": "results_returned",
+      "note": "Municipal archive information/contact PDF, a commercial index and other general pages surfaced; no official original birth-entry URL. No contact or commercial signup attempted."
+    },
+    {
+      "action": "open",
+      "url": "https://memento.vaucluse.fr/dans-les-archives/consultation-en-ligne-archives/documents-numerises",
+      "result_ref": "[session-reference-omitted]",
+      "at_utc": null,
+      "status": "body_observed",
+      "note": "Official civil-register navigation link at lines108–110; finding aid only."
+    },
+    {
+      "action": "click",
+      "link_id": 69,
+      "url": "https://earchives.vaucluse.fr/archives/classification-scheme",
+      "result_ref": "[session-reference-omitted]",
+      "at_utc": null,
+      "status": "blocked",
+      "error": "Failed to fetch restricted URL",
+      "note": "No register pages, shelfmark or act number returned. Link resolved to the already-known blocked endpoint; stopped without retry."
+    }
+  ],
+  "request_times_note": "Exact individual request timestamps not recorded; null retained. Completion timestamp is file finalization only.",
+  "completed_at_utc": "2026-10-29T00:59:08.522008Z"
+}

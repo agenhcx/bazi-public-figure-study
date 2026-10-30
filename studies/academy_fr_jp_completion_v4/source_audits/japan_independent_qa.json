@@ -1,0 +1,383 @@
+{
+  "report": "Japan v4 independent source/body/date QA",
+  "reviewer": "/root/japan_hold_next",
+  "scope_excludes_own_D": true,
+  "network_requests": 0,
+  "subagents_spawned": 0,
+  "other_worker_files_modified": 0,
+  "final_cohort_accepted": false,
+  "bazi_variables_computed": 0,
+  "summary": {
+    "checked_claim_rows": 126,
+    "group_claim_rows": {
+      "A": 41,
+      "B": 39,
+      "C": 46
+    },
+    "hashed_capture_entries_verified": 106,
+    "hashed_capture_entries_note": "106 group capture entries; not asserted to be distinct URLs. Shared award source and repeated corroborations remain deduplicated by the root integrator.",
+    "material_findings": 2,
+    "material_findings_corrected_by_owners": 2,
+    "new_unresolved_material_errors": 0
+  },
+  "stable_claim_files": [
+    {
+      "path": "academy_v4_workers/japan_a/claims.json",
+      "sha256": "e07fa5addb17161826b4b7b6d65300d27c6111a2cff4b352b5926ddd0acbc80f",
+      "claims": 9
+    },
+    {
+      "path": "academy_v4_workers/japan_a/secondary_claims.json",
+      "sha256": "ea9e02b7257c8463aad97b90e4b2e25359874dc3459cf3804c6c52b12788c476",
+      "claims": 32
+    },
+    {
+      "path": "academy_v4_workers/japan_b/claims.json",
+      "sha256": "74850b33c922f4a2880925fdd8307c7c63546f2ec1ab378401c6177479dfd3e9",
+      "claims": 9
+    },
+    {
+      "path": "academy_v4_workers/japan_b/secondary_dictionary_claims.json",
+      "sha256": "45a8c9968e7f8e94f70260944d9644924f3263326b0961ea7dac5c01d85e99fa",
+      "claims": 25
+    },
+    {
+      "path": "academy_v4_workers/japan_b/bulk_academy2007_claims.json",
+      "sha256": "83929af41892cc9cacb6840948984a3c147f01f99b06da2a11b4cf60a6c2aa60",
+      "claims": 5
+    },
+    {
+      "path": "academy_v4_workers/japan_c/claims.json",
+      "sha256": "4211a9bd243e1633c35b6ea79eb091fa7258a57c5031db990b27562bf11702f8",
+      "claims": 10
+    },
+    {
+      "path": "academy_v4_workers/japan_c/secondary_claims.json",
+      "sha256": "76f1627b639d49de56f8d4621023702ec082abfda370902daedb84c33fa95abc",
+      "claims": 26
+    },
+    {
+      "path": "academy_v4_workers/japan_c/bulk_sendai_claims.json",
+      "sha256": "84202f379b56681934330c1c7b6b79cd843d3bef2a39ee9b2aee66f4c374da0e",
+      "claims": 10
+    }
+  ],
+  "hash_checks": [
+    {
+      "group": "A",
+      "hashed_original_capture_entries_verified": 38,
+      "unhashed_failed_or_invalid_capture_entries": 1,
+      "invalid_urls": [
+        "https://repository.kulib.kyoto-u.ac.jp/dspace/bitstream/2433/209499/1/kukoho187.pdf"
+      ]
+    },
+    {
+      "group": "B",
+      "hashed_original_capture_entries_verified": 32,
+      "unhashed_failed_or_invalid_capture_entries": 0,
+      "invalid_urls": []
+    },
+    {
+      "group": "C",
+      "hashed_original_capture_entries_verified": 36,
+      "unhashed_failed_or_invalid_capture_entries": 2,
+      "invalid_urls": [
+        "https://www.med.nagasaki-u.ac.jp/med/data/05_international/med150kinensi.pdf",
+        "https://ouj.repo.nii.ac.jp/record/4103/files/KJ00005165276.pdf"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "B-KON-DOB-CONFLICT",
+      "severity": "material_source_conflict",
+      "status": "corrected_by_B_and_rechecked",
+      "path": "academy_v4_workers/japan_b/secondary_dictionary_claims.json",
+      "member_key": "jpa-unlinked-b6417dddc4c5846a",
+      "name_jp": "今 裕",
+      "source_path": "academy_v4_workers/japan_b/private/dict_1076464.html",
+      "source_url": "https://kotobank.jp/word/%E4%BB%8A%E8%A3%95-1076464",
+      "source_sha256": "317febac98734d84eaf2d522ca4c83a8f9531227c57fb81aec255a52a2f0fb71",
+      "evidence": [
+        "日外 生年 明治11(1878)年10月1日",
+        "講談社 明治11年2月7日生まれ"
+      ],
+      "identity_check": "Both bodies describe the same pathologist, Hokkaido Imperial professor/president, silver-reaction research and 1954-02-05 death. It is a birth-date conflict, not an event date or namesake.",
+      "expected_action": "Retain 1878-10-01 and 1878-02-07 as two attributed claims and add source_date_conflict_hold. Do not choose a majority date.",
+      "verified_action": "Final B file has both dates; holds.json includes 今裕."
+    },
+    {
+      "id": "C-SASAKI-MONTH-MISREAD",
+      "severity": "material_transcription_error",
+      "status": "corrected_by_C_and_rechecked",
+      "path": "academy_v4_workers/japan_c/claims.json",
+      "member_key": "jpa:sasaki_satohiko",
+      "name_jp": "佐々木 惠彦",
+      "source_path": "academy_v4_workers/japan_c/private/334ee34503a76eff.pdf",
+      "source_url": "https://sfc.jp/information/ir/stockholder/pdf/2007_syosyu.pdf",
+      "source_sha256": "828c46753616e7348467fd9d6c02c2095dd47a2f11faf5b9a3b8753473e9f20d",
+      "source_locator": "PDF index45 / printed46; left name/birth cell",
+      "quote": "(昭和10年８月24日生)",
+      "initial_error": "1935-06-24",
+      "actual_source_date": "1935-08-24",
+      "evidence_visual": "academy_v4_workers/japan_independent_qa_private/sasaki_birth_crop.png",
+      "identity_check": "Same full name; forestry/wood-resource scientist, Tokyo emeritus, Nihon University professor/vice-president and Academy member. Birth cell is separate from career and shareholder quantity.",
+      "expected_action": "Correct month to 8 and raw transcription. Remove the collector misreading 6; do not manufacture a date-conflict claim.",
+      "verified_action": "Final C claims/observations use 1935-08-24. No June claim remains."
+    }
+  ],
+  "passed_scopes": [
+    {
+      "group": "A",
+      "scope": "9 institutional/corporate/museum/society claims plus 32 secondary claims",
+      "claim_rows": 41,
+      "method": "All actual captured publisher/institution bodies compared with claimed birthday expressions and profession/career identity; 38 raw-byte hashes recomputed. All new dictionary birthday sections scanned for competing actual birth expressions.",
+      "pdf_visual_pages": [
+        {
+          "path": "academy_v4_workers/japan_a/private/kobayashi.pdf",
+          "index": 62,
+          "printed": 59,
+          "birth": "1901-08-31"
+        },
+        {
+          "path": "academy_v4_workers/japan_a/private/nakao.pdf",
+          "index": 28,
+          "printed": 29,
+          "birth": "1912-01-22"
+        },
+        {
+          "path": "academy_v4_workers/japan_a/private/kakizoe.pdf",
+          "index": 16,
+          "printed": 16,
+          "birth": "1941-04-10"
+        }
+      ],
+      "notes": [
+        "Kobayashi birth paragraph is separate from 1996-01-13 death and 1996-01-16 funeral.",
+        "Nakao first obituary is distinct from the separate Saigusa biography lower on the same page.",
+        "Kakizoe biography9 birth label is distinct from board/career dates and stock quantity. Corporate notice tier is explicit.",
+        "High-homonym Takahashi Shinji municipal museum body identifies the medical radiology professor, not an unrelated namesake.",
+        "Ueda Ryuzo is a third-party securities-report reproduction, not a university source; actual physician/oncology career is present and tier remains secondary."
+      ]
+    },
+    {
+      "group": "B",
+      "scope": "9 direct institutional claims + 25 dictionary/publisher claims + 5 Academy2007 bulk claims",
+      "claim_rows": 39,
+      "method": "Every current claim birthday read in actual captured body; all32 source hashes recomputed. Both PDF sources visually inspected. New same-page conflict found and corrected.",
+      "pdf_visual_pages": [
+        {
+          "path": "academy_v4_workers/japan_b/private/hiratsuka.pdf",
+          "index": 0,
+          "printed": 175,
+          "birth": "1903-08-28"
+        },
+        {
+          "path": "academy_v4_workers/japan_b/private/amemiya.pdf",
+          "index": 0,
+          "birth_precision": "year",
+          "birth": "1889"
+        }
+      ],
+      "notes": [
+        "Hiratsuka birth is below the death paragraph; August28 is literal.",
+        "Amemiya title/body supports1889 only; no month/day inferred from unrelated later histories.",
+        "Uchimura baseball museum body explicitly calls him a leading psychiatrist, and death1980-09-17 matches the preserved candidate; birthday row is1897-11-12.",
+        "Iritani publisher page decoded as Shift_JIS/CP932, explicitly1928 and Kyoto agricultural/animal-reproduction career; no day imputed.",
+        "Hasegawa and Shimizu recent Academy award pages label 生年（年齢）, year only."
+      ]
+    },
+    {
+      "group": "B",
+      "scope": "Academy2007 complete actual HTML table inventory",
+      "award_tables": 9,
+      "recipients": 11,
+      "existing_roster_matches": 5,
+      "method": "Parsed and read every actual HTML table name/current post/生年月日/専攻学科目 row, including both paired-recipient tables; independently matched five claimed recipients.",
+      "matched_births": {
+        "審良静男": "1953-01-27",
+        "平朝彦": "1946-05-30",
+        "堀幸夫": "1927-08-22",
+        "丸山利輔": "1933-10-17",
+        "宮下保司": "1949-12-08"
+      },
+      "notes": [
+        "Birth rows are separate from2007-03-12 award decision and award numbers.",
+        "Six unmatched prize recipients are inventory only; no new Academy member IDs inferred from prize status.",
+        "A Miyashita and B bulk Miyashita are same source/person/date corroborations, not two people or independent sources."
+      ]
+    },
+    {
+      "group": "C",
+      "scope": "10 institutional claims +26 secondary claims +10 Sendai bulk claims",
+      "claim_rows": 46,
+      "method": "All actual birthday expressions and identities compared; all36 valid original source hashes recomputed. Five single-source PDF birthday pages and ten Sendai match pages rendered and viewed. Sasaki transcription corrected by source image.",
+      "pdf_visual_pages": [
+        {
+          "path": "academy_v4_workers/japan_c/private/58b6cb3e8d7512ec.pdf",
+          "index": 0,
+          "birth": "1882-07-15"
+        },
+        {
+          "path": "academy_v4_workers/japan_c/private/334ee34503a76eff.pdf",
+          "index": 45,
+          "printed": 46,
+          "birth": "1935-08-24"
+        },
+        {
+          "path": "academy_v4_workers/japan_c/private/469482d58e2df58d.pdf",
+          "index": 1,
+          "printed": 9,
+          "birth": "1945-08",
+          "birth_precision": "month"
+        },
+        {
+          "path": "academy_v4_workers/japan_c/private/b4202bb0085fe50d.pdf",
+          "index": 0,
+          "birth": "1905-11-28"
+        },
+        {
+          "path": "academy_v4_workers/japan_c/private/6ecb27e7f0347e63.pdf",
+          "index": 9,
+          "printed": 8,
+          "birth": "1957-03-29"
+        }
+      ],
+      "notes": [
+        "Nishizawa Naoko vertical CV supplies 生年月, not a day; month8 preserved.",
+        "Shirato1957-03-29 birth line is in his own labelled CV and separate from article issue/award dates.",
+        "Otsuka1936-01-13 is in the named pharmaceutical researcher block on a multi-officer university page; adjacent people’s birthdays are not used.",
+        "Mitsui1910-01-01 is literal in named Nichigai/Kodansha bodies, not default fill.",
+        "Yanagida1946 source is year only."
+      ]
+    },
+    {
+      "group": "C",
+      "scope": "Sendai honorary citizens complete roster-match set",
+      "source_path": "academy_completion_workers/japan_institution_a/private/sendai_meiyoshimin.pdf",
+      "source_sha256": "3fa10c8da133ec85bacce998f48b04039806c4913f490c394fe6eb3723629208",
+      "matched_people": 10,
+      "visually_checked_indexes": [
+        2,
+        3,
+        5,
+        7,
+        8,
+        9,
+        10,
+        13,
+        17,
+        23
+      ],
+      "births": {
+        "本多光太郎": "明治3年2月23日",
+        "志賀潔": "明治3年12月18日",
+        "熊谷岱蔵": "明治13年7月19日",
+        "村上武次郎": "明治15年11月10日",
+        "阿部次郎": "明治16年8月27日",
+        "増本量": "明治28年1月9日",
+        "野副鉄男": "明治35年5月16日",
+        "黒川利雄": "明治30年1月15日",
+        "西澤潤一": "大正15年9月12日",
+        "岩崎俊一": "大正15年8月3日"
+      },
+      "notes": [
+        "Every page has distinct 生年月日, 逝去 and 顕彰日 fields; all claims use the birth field.",
+        "Honda and Shiga pre1873 era dates are claim-only calendar holds, not conflicts against existing modern-date sources.",
+        "Baseline Honda source itself gives明治3年2月23日 /1870年3月24日; baseline Shiga official source gives1871-02-07. Preserve those comparable claims.",
+        "Kumagai main and bulk refer to same source/person/date; fold duplicates. Abe Jiro is a philosopher; a verified birthday does not establish science-section eligibility."
+      ]
+    }
+  ],
+  "known_holds_verified": [
+    {
+      "group": "A",
+      "names": [
+        "勝沼精蔵",
+        "石原忍"
+      ],
+      "type": "actual source DOB conflict",
+      "note": "Katsunuma8/28 vs8/25 and Ishihara9/25 vs9/15 actually present in separate attributed entries; held."
+    },
+    {
+      "group": "B",
+      "names": [
+        "加藤豊治郎",
+        "田原良純",
+        "今裕"
+      ],
+      "type": "actual source DOB conflict",
+      "note": "Kato7/3 vs7/1; Tawara7/6 vs7/4 with additional pre1873 era hold; Kon10/1 vs2/7 after QA correction."
+    },
+    {
+      "group": "B",
+      "names": [
+        "朝比奈泰彦"
+      ],
+      "type": "unverified competing lead caveat",
+      "note": "Actual dictionary body4/16 is verified.4/12 is only an unread memorial-PDF search lead; no second verified claim is fabricated."
+    },
+    {
+      "group": "A",
+      "names": [
+        "磯貝彰"
+      ],
+      "type": "unverified competing year quality caveat",
+      "note": "Actual Kodansha1942-04-01 is verified; competing1943 lead is not read independent evidence and is not a formal two-body conflict."
+    },
+    {
+      "group": "A",
+      "names": [
+        "佐々木忠次郎",
+        "俵国一",
+        "安藤広太郎",
+        "佐藤三吉",
+        "藤波鑑"
+      ],
+      "type": "historical calendar/representation",
+      "note": "Pre1873 era-only claims remain noncomparable. Fujinami raw明治3 plus parenthetical1871 inconsistency retained. Ando Britannica separately prints1871.9.15, not collector conversion; conservative calendar policy remains for root review and must not globally downgrade a separate proven modern-date claim."
+    },
+    {
+      "group": "B",
+      "names": [
+        "中村清二",
+        "三浦謹之助",
+        "田原良純"
+      ],
+      "type": "historical calendar",
+      "note": "Era dates before1873 are not treated as Gregorian merely because an article supplies the Western year. Numeric re-expression with identical old month/day is not proof of conversion."
+    },
+    {
+      "group": "C",
+      "names": [
+        "山崎直方",
+        "井口在屋",
+        "隈川宗雄",
+        "本多光太郎",
+        "志賀潔"
+      ],
+      "type": "claim-only historical calendar",
+      "note": "False comparability on new era claims is appropriate. Honda/Shiga existing independently supported modern dates must remain comparable; no global member conflict added solely from calendar form."
+    }
+  ],
+  "invalid_capture_handling": [
+    {
+      "group": "A",
+      "source_id": "sawada",
+      "http_status": 200,
+      "body_kind": "3058-byte generic Kyoto repository SPA shell",
+      "expected": "not a named biography/PDF body; no original source evidence hash",
+      "observed": "valid_body false, sha256 null; no claim linked to this shell"
+    },
+    {
+      "group": "C",
+      "note": "Two failed body captures have no verified birth claim and are excluded from36 valid original source captures. No added pseudo200 error body is used as evidence."
+    }
+  ],
+  "limits": [
+    "QA covered current A/B/C outputs and local captured bodies, with no new network. It is not an independent audit of D, authored by this reviewer.",
+    "Full copyrighted dictionary bodies and PDF images are audit-only private files; publish QA metadata and short birth expressions, not body caches.",
+    "Birth evidence verification does not approve Academy scope, final eligibility, final DOB freeze or any BaZi/outcome variable.",
+    "Count126 is claim rows, including deliberate same-person/source corroborations, not126 new people."
+  ]
+}

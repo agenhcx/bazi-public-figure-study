@@ -1,0 +1,66 @@
+{
+  "audit_kind": "bounded_official_directory_route_audit",
+  "baseline_commit": "eb4c24192a2bf111e3b47bc02c57c8950e4ef89d",
+  "fixed_people": 37,
+  "local_baseline_and_prior_route_triage_people": 37,
+  "previous_v10_1906_directory_excluded_from_new_search": "Ten already acceptedIIidentities are outside these37;1906cannotestablishlaterjoinerdivision. No overwrite of438II/7I.",
+  "prior_local_inputs": [
+    {
+      "path": "studies/academy_fr_jp_completion_v2/inputs/imperial_exact_evidence885.csv",
+      "sha256": "b5075d475ee5b90409eadbeaed777bf2090aa62f76f43774a867f2da085017a4",
+      "finding": "1944originalmemberstrips point toNDLpid1070913canvases88-91; they are notfullpagecopies."
+    },
+    {
+      "path": "scripts/probe_japan_academy_postwar_digital_sources_v1.py",
+      "sha256": "9246d84b8b88c96c015f4f924a8ddcd43cfcef8f2453522a2714c03f6aa8d93a",
+      "finding": "KnownpostwarrosterPID2934795 andofficialhistoryPID2988196 identified as sourcecandidates; prioravailabilitychecks did not createacceptedperson-sectionfindings."
+    }
+  ],
+  "route_outcomes": [
+    {
+      "source": "NDLpostwarrosterPID2934795",
+      "outcome": "ExactIIIFmanifest404;NDLofficialResearchNavigatorindependentlyconfirmscorrect1948-1954bookPID. No alternatebackendorimageguess retry."
+    },
+    {
+      "source": "NDLofficialhistoryPID2988196",
+      "outcome": "ExactIIIFmanifest404; no furtherendpointguessing."
+    },
+    {
+      "source": "1944ImperialAcademydirectoryPID1070913",
+      "outcome": "Manifest,actualcover,active-membercanvas91,former-Imperialcanvas105andformer-Tokyocanvas108captured200andread. Cover昭和十九年六月調;genericmanifestrange昭和16–22/W3CDTF1947 keptdistinctfromactual1944edition."
+    },
+    {
+      "source": "1947ImperialAcademydirectoryPID1070915",
+      "outcome": "Root authorized four extra sourceURLs for a concrete 1947 roster continuation. Three used: originalmanifest, actualcover canvas1 and full member spread canvas85. Cover reads 昭和二十二年四月調; canvas85/rightleaf166 directly binds three current unresolved names to 第一部 with exact preserved election dates. No adjacent image or further query required.",
+      "direct_section_proposal_member_keys": [
+        "jpa-unlinked-694f8362d63485d0",
+        "jpa-unlinked-d5517f6f53da71c1",
+        "jpa-unlinked-e1fad8c84e89a158"
+      ],
+      "source_snapshot_caveat": "Cover month is explicitly as printed; later-dated entries elsewhere in the spread preclude claiming every entry is a strict April snapshot. All three proposed members have matching pre-April election dates. 阿部次郎 elected June1947 remains unresolved; no absence inference."
+    }
+  ],
+  "direct_historical_body_observation": {
+    "member_key": "jpa-unlinked-dcd0cace2d070ff8",
+    "name_jp": "伊藤 圭介",
+    "source_url": "https://dl.ndl.go.jp/api/iiif/1070913/R0000108/full/full/0/default.jpg",
+    "source_sha256": "bf7f8e79b6e80410caca3c07dd2d2ec2d313caba71b7d997e264a470b2c9e703",
+    "locator": "Canvas108,printed212–213,formerTokyoAcademymember/guesttable;leftleaf伊藤圭介column",
+    "body_finding": "Printednameanddegree; NOI/IIlabel forperson. Notusedtoinfersection fromdegree or absence oflater-systemmembership.",
+    "section_assignment": null
+  },
+  "limited_negative_scope": "Onlythelistedpageswereread; nofullvolumeorallpublicliteratureexhaustionclaim. Nonappearanceinthissubset doesnotestablishnonmembership orotherdivision.",
+  "calendar_sources_researched": false,
+  "new_DOB_claims": 0,
+  "new_section_proposals": 3,
+  "degree_rule_extended": false,
+  "subsection_backprojected": false,
+  "known_scope_overwritten": false,
+  "additional_network_requests_planned": false,
+  "source_body_redistributed": false,
+  "authorized_extra_URL_cap": 4,
+  "extra_URLs_used": 3,
+  "new_distinct_URL_attempt_total": 11,
+  "discovery_query_total": 9,
+  "scope_proposals_not_applied_by_worker": true
+}

@@ -1,0 +1,31 @@
+[
+  {
+    "member_key": "jpa-unlinked-1da6b5d6c2d71731",
+    "name_jp": "中山 秀三郎",
+    "status": "source_calendar_hold",
+    "hold_status": "source_calendar_hold",
+    "global_member_hold": true,
+    "source_url": "https://ftp.jsce.or.jp/president/successive_president/sp.txt",
+    "raw_birth_statement": "1864年12月24日(元治元年12月24日)",
+    "source_components": {
+      "year": 1864,
+      "month": 12,
+      "day": 24
+    },
+    "reason": "Pre1873era month/day is unconverted; modern-year typography repeats era month/day. Do not infer Gregorian comparability. No other qualified birth-body date in baseline.",
+    "resolution": "Keep historical-calendar hold; no date selection or collector conversion."
+  },
+  {
+    "member_key": "jpa-unlinked-a7688ab1a1777b70",
+    "name_jp": "古市 公威",
+    "status": "source_calendar_hold",
+    "hold_status": "source_calendar_hold",
+    "global_member_hold": false,
+    "hold_scope": "claim_only",
+    "source_url": "https://ftp.jsce.or.jp/president/successive_president/sp.txt",
+    "source_locator_anchor": "president1",
+    "raw_birth_statement": "1854年7月12日(安政元年閏7月12日)",
+    "reason": "Explicit leap-month historical era expression retained, noncomparable; baseline NDL source itself supplies1854-09-04. This alternate unconverted expression does not challenge the independently supplied modern date or create a same-calendar conflict.",
+    "resolution": "Preserve existing supported modern date and claim-scoped calendar annotation; no collector conversion."
+  }
+]

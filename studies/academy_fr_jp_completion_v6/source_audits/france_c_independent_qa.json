@@ -1,0 +1,477 @@
+{
+  "reviewer": "/root/v6_france_b",
+  "independent_of_collector": true,
+  "completed_utc": "2026-10-29T23:35:53.384772+00:00",
+  "scope": [
+    {
+      "source_batch": "france_c",
+      "files": [
+        "decisions.json",
+        "source_manifest.json",
+        "visual_review.json",
+        "private original bodies and independently rendered key pages"
+      ],
+      "checked_rows": 15
+    }
+  ],
+  "input_C_decisions_sha256": "8cc36604d2fabb219ba1df7a32012684a703b57a0f6e3bbffc9c1de25229aac3",
+  "input_C_source_manifest_sha256": "73930372d0bd1a831718f1860373bdc802b4746139cb786f9fabb81b9b0e118d",
+  "C_strict_cases_reviewed": 15,
+  "C_strict_pass": 15,
+  "C_strict_fail": 0,
+  "unique_original_source_bodies_SHA256_reverified": 15,
+  "unique_PDF_sources_reviewed": 13,
+  "PDF_key_pages_independently_rendered_and_visually_reviewed": 18,
+  "HTML_original_bodies_independently_read": 2,
+  "new_network_requests": 0,
+  "no_C_decision_files_modified": true,
+  "no_identity_or_DOB_changes": true,
+  "all_same_evidence_gates_pass": true,
+  "findings": [
+    {
+      "path": "france_c/decisions.json",
+      "key": "all15strict",
+      "evidence": "All15 ordinary role/event/source gates pass against15 original captured bodies with reverified SHA;13 PDFs and18 independently rendered key pages visually read, plus2 HTML original bodies read.",
+      "expected_action": "retain15strict; preserve all inherited holds",
+      "status": "passed"
+    },
+    {
+      "path": "france_c/decisions.json",
+      "key": "Fontaine_literal_role_start",
+      "evidence": "Current stable evidence event_type is membership_start and reason explicitly identifies literal full membership since2002, with correspondence1986 separated.",
+      "expected_action": "retain year-only ordinary role start without inventing election verb/day",
+      "status": "passed"
+    },
+    {
+      "path": "france_c/decisions.json",
+      "key": "Perard_subtype",
+      "evidence": "Subject heading and1942 body identify historic libre membership; ordinary subtype remains explicit.",
+      "expected_action": "retain academicien_libre subtype",
+      "status": "passed"
+    }
+  ],
+  "remaining_holds": [
+    {
+      "candidate_group_id": "CTHS_112676",
+      "decision_status": "role_cutoff_supported_election_year_unresolved",
+      "note": "Collector hold remains unchanged; outside strict-positive QA scope"
+    },
+    {
+      "candidate_group_id": "CTHS_124081",
+      "decision_status": "ordinary_role_supported_election_year_unresolved",
+      "note": "Collector hold remains unchanged; outside strict-positive QA scope"
+    }
+  ],
+  "rows": [
+    {
+      "candidate_group_id": "CTHS_125349",
+      "name": "YOCCOZ Jean-Christophe",
+      "qa_status": "pass",
+      "ordinary_full_role_supported": true,
+      "accepted_election_date_reviewed": "1994-10-24",
+      "accepted_election_year_reviewed": 1994,
+      "accepted_precision_reviewed": "day",
+      "same_evidence_role_firstparty_and_accepted_event_gate": "pass",
+      "identity_DOB_unchanged": true,
+      "source_checks": [
+        {
+          "source_id": "yoccoz",
+          "source_url": "https://www.academie-sciences.fr/pdf/membre/YoccozJC_bio0708.pdf",
+          "source_sha256": "513a0252dff2dd8fb5837d59b21866c3006284a7eca92b152658e6d4d85fcecb",
+          "actual_original_body_sha256_reverified": true,
+          "body_read_independently": true,
+          "PDF_key_pages_independently_rendered_and_visually_reviewed": [
+            1
+          ],
+          "same_evidence_role_source_and_accepted_event_gate": "pass",
+          "membership_subtype": "ordinary_full_member",
+          "event_type": "election",
+          "observation": "Named 1957-born mathematician; Academy explicitly gives full member 24 October 1994."
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_112742",
+      "name": "OURISSON Guy",
+      "qa_status": "pass",
+      "ordinary_full_role_supported": true,
+      "accepted_election_date_reviewed": "1981-11-23",
+      "accepted_election_year_reviewed": 1981,
+      "accepted_precision_reviewed": "day",
+      "same_evidence_role_firstparty_and_accepted_event_gate": "pass",
+      "identity_DOB_unchanged": true,
+      "source_checks": [
+        {
+          "source_id": "lettre20",
+          "source_url": "https://www.academie-sciences.fr/pdf/lettre/lettre20.pdf",
+          "source_sha256": "dffa2e5e07bac6455c283af2d4b6720202ca9a7e6a4d6631c0d2a4c8f0bec21e",
+          "actual_original_body_sha256_reverified": true,
+          "body_read_independently": true,
+          "PDF_key_pages_independently_rendered_and_visually_reviewed": [
+            33
+          ],
+          "same_evidence_role_source_and_accepted_event_gate": "pass",
+          "membership_subtype": "ordinary_full_member",
+          "event_type": "election",
+          "observation": "Named Guy Ourisson paragraph ties 23 November 1981 ordinary election to Strasbourg chemist; author Rohmer is separate."
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_125281",
+      "name": "NORMANT Jean",
+      "qa_status": "pass",
+      "ordinary_full_role_supported": true,
+      "accepted_election_date_reviewed": null,
+      "accepted_election_year_reviewed": 1993,
+      "accepted_precision_reviewed": "year",
+      "same_evidence_role_firstparty_and_accepted_event_gate": "pass",
+      "identity_DOB_unchanged": true,
+      "source_checks": [
+        {
+          "source_id": "meunier2016",
+          "source_url": "https://academie-sciences.fr/pdf/discours/s221116_meunier.pdf",
+          "source_sha256": "1cf29edfed5fa0300093c4282632f7cecfb0bb00d10a3b6a4c73b837eb808c43",
+          "actual_original_body_sha256_reverified": true,
+          "body_read_independently": true,
+          "PDF_key_pages_independently_rendered_and_visually_reviewed": [
+            3
+          ],
+          "same_evidence_role_source_and_accepted_event_gate": "pass",
+          "membership_subtype": "ordinary_full_member",
+          "event_type": "election",
+          "observation": "Jean Normant, died 2016 aged80, is explicitly correspondent1990 then member1993; distinct from Henri Normant."
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_128382",
+      "name": "CABOCHE Michel",
+      "qa_status": "pass",
+      "ordinary_full_role_supported": true,
+      "accepted_election_date_reviewed": "2004-11-30",
+      "accepted_election_year_reviewed": 2004,
+      "accepted_precision_reviewed": "day",
+      "same_evidence_role_firstparty_and_accepted_event_gate": "pass",
+      "identity_DOB_unchanged": true,
+      "source_checks": [
+        {
+          "source_id": "caboche",
+          "source_url": "https://www.academie-sciences.fr/pdf/membre/CabocheM_bio0411.pdf",
+          "source_sha256": "fd13b9a6901cfc21cca956f983bab0b4f0c61db0e28383cec6703543d2bc8f1d",
+          "actual_original_body_sha256_reverified": true,
+          "body_read_independently": true,
+          "PDF_key_pages_independently_rendered_and_visually_reviewed": [
+            1
+          ],
+          "same_evidence_role_source_and_accepted_event_gate": "pass",
+          "membership_subtype": "ordinary_full_member",
+          "event_type": "election",
+          "observation": "Michel Caboche ordinary 30 November2004 is separated from correspondence1993."
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_128397",
+      "name": "FONTAINE Jean-Marc",
+      "qa_status": "pass",
+      "ordinary_full_role_supported": true,
+      "accepted_election_date_reviewed": null,
+      "accepted_election_year_reviewed": 2002,
+      "accepted_precision_reviewed": "year",
+      "same_evidence_role_firstparty_and_accepted_event_gate": "pass",
+      "identity_DOB_unchanged": true,
+      "source_checks": [
+        {
+          "source_id": "fontaine",
+          "source_url": "https://comptes-rendus.academie-sciences.fr/mathematique/article/CRMATH_2020__358_9-10_1045_0.pdf",
+          "source_sha256": "c7bb3324190cff14ff883a63a1eff4f9f7d8504bb3e2450aed8173e0452aad00",
+          "actual_original_body_sha256_reverified": true,
+          "body_read_independently": true,
+          "PDF_key_pages_independently_rendered_and_visually_reviewed": [
+            2
+          ],
+          "same_evidence_role_source_and_accepted_event_gate": "pass",
+          "membership_subtype": "ordinary_full_member",
+          "event_type": "membership_start",
+          "observation": "Jean-Marc Fontaine ordinary membership since2002 is literal role-start, not inferred publication or relative-duration arithmetic; event_type correctly membership_start."
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_128375",
+      "name": "VILLAIN Jacques",
+      "qa_status": "pass",
+      "ordinary_full_role_supported": true,
+      "accepted_election_date_reviewed": "2000-11-06",
+      "accepted_election_year_reviewed": 2000,
+      "accepted_precision_reviewed": "day",
+      "same_evidence_role_firstparty_and_accepted_event_gate": "pass",
+      "identity_DOB_unchanged": true,
+      "source_checks": [
+        {
+          "source_id": "villain",
+          "source_url": "https://www.academie-sciences.fr/pdf/membre/VillainJ_bio0808.pdf",
+          "source_sha256": "a8831c64fdcc1ea4170d28130a14bd9bb0ab1183f30149b39fecb7d1a5e51843",
+          "actual_original_body_sha256_reverified": true,
+          "body_read_independently": true,
+          "PDF_key_pages_independently_rendered_and_visually_reviewed": [
+            1
+          ],
+          "same_evidence_role_source_and_accepted_event_gate": "pass",
+          "membership_subtype": "ordinary_full_member",
+          "event_type": "election",
+          "observation": "Named 1934-born Jacques Villain ordinary election6 November2000."
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_125343",
+      "name": "TIOLLAIS Pierre",
+      "qa_status": "pass",
+      "ordinary_full_role_supported": true,
+      "accepted_election_date_reviewed": "1991-04-15",
+      "accepted_election_year_reviewed": 1991,
+      "accepted_precision_reviewed": "day",
+      "same_evidence_role_firstparty_and_accepted_event_gate": "pass",
+      "identity_DOB_unchanged": true,
+      "source_checks": [
+        {
+          "source_id": "tiollais",
+          "source_url": "https://www.academie-sciences.fr/pdf/membre/TiollaisP_bio0908.pdf",
+          "source_sha256": "54c30a867411a4d5c9287a306422cf0985cdd7651ca8f8af27b6407149598acd",
+          "actual_original_body_sha256_reverified": true,
+          "body_read_independently": true,
+          "PDF_key_pages_independently_rendered_and_visually_reviewed": [
+            1
+          ],
+          "same_evidence_role_source_and_accepted_event_gate": "pass",
+          "membership_subtype": "ordinary_full_member",
+          "event_type": "election",
+          "observation": "Pierre Tiollais ordinary15 April1991 is distinct from correspondence7 May1990."
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_125174",
+      "name": "CABANNES Henri",
+      "qa_status": "pass",
+      "ordinary_full_role_supported": true,
+      "accepted_election_date_reviewed": "1991-04-08",
+      "accepted_election_year_reviewed": 1991,
+      "accepted_precision_reviewed": "day",
+      "same_evidence_role_firstparty_and_accepted_event_gate": "pass",
+      "identity_DOB_unchanged": true,
+      "source_checks": [
+        {
+          "source_id": "cabannes",
+          "source_url": "https://www.academie-sciences.fr/pdf/membre/CabannesH_bio1009.pdf",
+          "source_sha256": "fa0b07707305e09a499922d43b02f45259837c155fb86aaa26765039440d9d29",
+          "actual_original_body_sha256_reverified": true,
+          "body_read_independently": true,
+          "PDF_key_pages_independently_rendered_and_visually_reviewed": [
+            1
+          ],
+          "same_evidence_role_source_and_accepted_event_gate": "pass",
+          "membership_subtype": "ordinary_full_member",
+          "event_type": "election",
+          "observation": "Henri Cabannes1923 is ordinary8 April1991; correspondence7 February1983 is separate."
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_116625",
+      "name": "JACOB François",
+      "qa_status": "pass",
+      "ordinary_full_role_supported": true,
+      "accepted_election_date_reviewed": "1976-11-22",
+      "accepted_election_year_reviewed": 1976,
+      "accepted_precision_reviewed": "day",
+      "same_evidence_role_firstparty_and_accepted_event_gate": "pass",
+      "identity_DOB_unchanged": true,
+      "source_checks": [
+        {
+          "source_id": "jacob_institut",
+          "source_url": "https://podcasts.institutdefrance.fr/academiciens/francois-jacob",
+          "source_sha256": "4d1efa3a0e823c453ad01a7feff30cf6721fe8bf4932052f82a38caa0a9f6de7",
+          "actual_original_body_sha256_reverified": true,
+          "body_read_independently": true,
+          "PDF_key_pages_independently_rendered_and_visually_reviewed": [],
+          "same_evidence_role_source_and_accepted_event_gate": "pass",
+          "membership_subtype": "ordinary_full_member",
+          "event_type": "election",
+          "observation": "Institut original HTML explicitly identifies François Jacob and ordinary sciences22 November1976, separately from Française1996."
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_112747",
+      "name": "PÉRARD Albert",
+      "qa_status": "pass",
+      "ordinary_full_role_supported": true,
+      "accepted_election_date_reviewed": null,
+      "accepted_election_year_reviewed": 1942,
+      "accepted_precision_reviewed": "year",
+      "same_evidence_role_firstparty_and_accepted_event_gate": "pass",
+      "identity_DOB_unchanged": true,
+      "source_checks": [
+        {
+          "source_id": "perard",
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/perard_notice.pdf",
+          "source_sha256": "54623cb8d24d0a910fd074e22a13d4d70f52e1c342d1b28aaaa5c04028a01ccd",
+          "actual_original_body_sha256_reverified": true,
+          "body_read_independently": true,
+          "PDF_key_pages_independently_rendered_and_visually_reviewed": [
+            1,
+            8
+          ],
+          "same_evidence_role_source_and_accepted_event_gate": "pass",
+          "membership_subtype": "academicien_libre",
+          "event_type": "admission",
+          "observation": "Albert Pérard subject title states libre division; body explicitly Academy admission as Membre libre1942, separately from Bureau des Longitudes1936/1956."
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_112837",
+      "name": "RIBAUD Gustave",
+      "qa_status": "pass",
+      "ordinary_full_role_supported": true,
+      "accepted_election_date_reviewed": null,
+      "accepted_election_year_reviewed": 1947,
+      "accepted_precision_reviewed": "year",
+      "same_evidence_role_firstparty_and_accepted_event_gate": "pass",
+      "identity_DOB_unchanged": true,
+      "source_checks": [
+        {
+          "source_id": "ribaud",
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/ribaud_notice.pdf",
+          "source_sha256": "48e5e3c15719ab1a4bd0841cb7fd445feef7b1e84268f15d7b8313319ba9c50e",
+          "actual_original_body_sha256_reverified": true,
+          "body_read_independently": true,
+          "PDF_key_pages_independently_rendered_and_visually_reviewed": [
+            1,
+            6
+          ],
+          "same_evidence_role_source_and_accepted_event_gate": "pass",
+          "membership_subtype": "ordinary_full_member",
+          "event_type": "election",
+          "observation": "Gustave Ribaud subject full physics role plus literal ordinary1947; author Jean Lecomte and colleague Jean Cabannes are distinct."
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_112789",
+      "name": "PRUVOST Pierre",
+      "qa_status": "pass",
+      "ordinary_full_role_supported": true,
+      "accepted_election_date_reviewed": null,
+      "accepted_election_year_reviewed": 1954,
+      "accepted_precision_reviewed": "year",
+      "same_evidence_role_firstparty_and_accepted_event_gate": "pass",
+      "identity_DOB_unchanged": true,
+      "source_checks": [
+        {
+          "source_id": "pruvost",
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/pruvost_cr1968.pdf",
+          "source_sha256": "40a1619ae587fe5ec4eb4a9380008483ade324ad6238aab5d088e17216d0541f",
+          "actual_original_body_sha256_reverified": true,
+          "body_read_independently": true,
+          "PDF_key_pages_independently_rendered_and_visually_reviewed": [
+            1,
+            5
+          ],
+          "same_evidence_role_source_and_accepted_event_gate": "pass",
+          "membership_subtype": "ordinary_full_member",
+          "event_type": "election",
+          "observation": "Image-only original visually confirms Pierre Pruvost1890 subject role and literal ordinary geology1954 on printed114; OCR alone was not relied upon."
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_112754",
+      "name": "POIVILLIERS Georges",
+      "qa_status": "pass",
+      "ordinary_full_role_supported": true,
+      "accepted_election_date_reviewed": "1946-12-09",
+      "accepted_election_year_reviewed": 1946,
+      "accepted_precision_reviewed": "day",
+      "same_evidence_role_firstparty_and_accepted_event_gate": "pass",
+      "identity_DOB_unchanged": true,
+      "source_checks": [
+        {
+          "source_id": "poivilliers",
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/poivilliers_cr1968.pdf",
+          "source_sha256": "6ea650c7f80c6f79f25f86714cc4fafe3db3a85bef18aab61522056344e9488c",
+          "actual_original_body_sha256_reverified": true,
+          "body_read_independently": true,
+          "PDF_key_pages_independently_rendered_and_visually_reviewed": [
+            1,
+            5
+          ],
+          "same_evidence_role_source_and_accepted_event_gate": "pass",
+          "membership_subtype": "ordinary_full_member",
+          "event_type": "election",
+          "observation": "Image-only key pages explicitly identify Georges Poivilliers1892 subject and ordinary section election9 December1946; later presidency1964 is separate."
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_180",
+      "name": "MILNE-EDWARDS Alphonse",
+      "qa_status": "pass",
+      "ordinary_full_role_supported": true,
+      "accepted_election_date_reviewed": "1879-04-07",
+      "accepted_election_year_reviewed": 1879,
+      "accepted_precision_reviewed": "day",
+      "same_evidence_role_firstparty_and_accepted_event_gate": "pass",
+      "identity_DOB_unchanged": true,
+      "source_checks": [
+        {
+          "source_id": "milneedwards",
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/milneedwards_vol3273.pdf",
+          "source_sha256": "48d0aa0fda085ea7e73b448235f832b145e4c851b34cf7376538e167940e6e1e",
+          "actual_original_body_sha256_reverified": true,
+          "body_read_independently": true,
+          "PDF_key_pages_independently_rendered_and_visually_reviewed": [
+            1,
+            7
+          ],
+          "same_evidence_role_source_and_accepted_event_gate": "pass",
+          "membership_subtype": "ordinary_full_member",
+          "event_type": "election",
+          "observation": "Alphonse Milne Edwards subject anatomy/zoology ordinary role and literal7 April1879 replacing Gervais; father and author Lacroix are distinct."
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_1369",
+      "name": "BECQUEREL Henri",
+      "qa_status": "pass",
+      "ordinary_full_role_supported": true,
+      "accepted_election_date_reviewed": "1889-05-27",
+      "accepted_election_year_reviewed": 1889,
+      "accepted_precision_reviewed": "day",
+      "same_evidence_role_firstparty_and_accepted_event_gate": "pass",
+      "identity_DOB_unchanged": true,
+      "source_checks": [
+        {
+          "source_id": "becquerel",
+          "source_url": "https://www.academie-sciences.fr/pdf/dossiers/Becquerel/Becquerel_od1.htm",
+          "source_sha256": "a5473373ea17092cc6aecd4ee9e74435f0fe44c613abcd315866f191db504086",
+          "actual_original_body_sha256_reverified": true,
+          "body_read_independently": true,
+          "PDF_key_pages_independently_rendered_and_visually_reviewed": [],
+          "same_evidence_role_source_and_accepted_event_gate": "pass",
+          "membership_subtype": "ordinary_full_member",
+          "event_type": "election",
+          "observation": "Academy HTML names Henri Becquerel1852 and literal ordinary27 May1889; presidency/permanent-secretary1908 are separate."
+        }
+      ]
+    }
+  ],
+  "bazi_variables_computed": 0,
+  "bazi_computed": 0,
+  "analysis_cohort_frozen": false,
+  "private_images_publish": false
+}

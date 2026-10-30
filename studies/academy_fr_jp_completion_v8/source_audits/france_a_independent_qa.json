@@ -1,0 +1,82 @@
+{
+  "audit_kind": "independent_actual_original_hash_body_and_visual_review",
+  "reviewer": "v8_france_b",
+  "reviewed_batch": "v8_france_a",
+  "completed_utc": "2026-10-30T00:31:06.124744+00:00",
+  "review_passed": true,
+  "public_manifest_sha256": "facca433500232702d26bc70761e6f314185640beedc8847d38e48469ac1e77a",
+  "decisions_sha256": "778fed584b685a94bac662f33ea5ec7db411a0b183afe59c82b0e78c95e16fa3",
+  "public_inventory_files_checked": [
+    "README.md",
+    "body_review_log.json",
+    "decisions.json",
+    "prior_route_audit.json",
+    "processed.csv",
+    "requests.json",
+    "search_queries.json",
+    "source_manifest.json",
+    "summary.json",
+    "visual_review.json"
+  ],
+  "original_sources": [
+    {
+      "source_id": "ferrie",
+      "source_sha256": "bf60c8f86e4f0d59e320718863ed6d6ba3b737e4904b56b139f824c692355d69",
+      "original_rehashed": true
+    },
+    {
+      "source_id": "esnaultpelterie",
+      "source_sha256": "654d4066861a91e16491d871dafca0c24c633dddaa556b7a82e396dc18fa0206",
+      "original_rehashed": true
+    },
+    {
+      "source_id": "picard_duhem",
+      "source_sha256": "e21af5f2c06946129f2d93595491869a586f532da2f81b871b3a8e051f82e091",
+      "original_rehashed": true
+    }
+  ],
+  "actual_pdf_pages_visually_viewed": {
+    "ferrie": [
+      1,
+      7,
+      21
+    ],
+    "picard_duhem": [
+      1,
+      2,
+      38
+    ],
+    "esnaultpelterie": [
+      1,
+      2
+    ]
+  },
+  "positive_decisions_reviewed": 2,
+  "holds_reviewed": 1,
+  "decision_checks": [
+    {
+      "candidate_group_id": "CTHS_112152",
+      "pass": true,
+      "event_date": "1922-02-06",
+      "role": "ordinary_full_member",
+      "note": "Actualp1subject heading types Geography and Navigation section. p7printed430 supplies literal admission date and votes; p21namesGustave-AugusteFerrié and birth1868-11-19. Speaker titles not transferred."
+    },
+    {
+      "candidate_group_id": "CTHS_112118",
+      "pass": true,
+      "event_date": "1913-12-08",
+      "role": "ordinary_nonresident_full_member",
+      "note": "Actualp38printedCXXXVI explicitly distinguishes correspondence1900 from newly created nonresident role and election1913-12-08. p1subjectheading and p2birthParis1861-06-10+nonresidentdivision establish identity."
+    },
+    {
+      "candidate_group_id": "CTHS_112125",
+      "pass": true,
+      "membership_accepted": false,
+      "note": "Actualp1dates speech1966-03-18, p2explicit subject applications-to-industry role but only30yearsrelativewording. No1936datearithmetic permitted. AuthorMauricePonte role separated."
+    }
+  ],
+  "new_web_requests": 0,
+  "identity_or_dob_changed": false,
+  "inherited_chronology_hold_releases": 0,
+  "source_bodies_redistributed": false
+}

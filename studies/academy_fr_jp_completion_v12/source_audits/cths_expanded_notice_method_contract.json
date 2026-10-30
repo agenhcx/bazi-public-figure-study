@@ -1,0 +1,356 @@
+{
+  "contract_id": "v12_cths_observed_expanded_biography_component_method",
+  "status": "root_approved_method_distinction_pending_explicit_component_branch_implementation_and_per_positive_QA",
+  "reviewer": "v12_france_c",
+  "created_utc": "2026-10-30T12:37:49.386382+00:00",
+  "review_scope": "Read-only actual v11 cached parentHTML and Casimir AJAX component; independent of A triage. No new network, repository edits or membership approvals.",
+  "network_requests_performed": 0,
+  "repository_edits_performed": 0,
+  "membership_approvals_created": 0,
+  "semantic_conclusion": "The observed expanded biography is a component of one human-visible subject notice but a separate HTTP response. Defensible attribution requires the linked-source bundle; it cannot satisfy the literal same-HTTP-body flag.",
+  "actual_parent_cache_examples": [
+    {
+      "candidate_group_id": "CTHS_117210",
+      "parent_notice_url": "https://cths.fr/an/savant.php?id=117210",
+      "parent_notice_sha256": "60159b98dee1b3bb5f9a3f0bec2a20d5662898bdb035ca7cb9ca94f5a243c44c",
+      "parent_notice_bytes": 21182,
+      "title_fact": "CASIMIR Hendrik Brugt Gerhard",
+      "birth_line_fact": "15 juillet 1909 à La Haye, Pays-Bas",
+      "credited_authors": [
+        "Institut de France"
+      ],
+      "observed_handler_query": "q=proso_bio_detail&id=117210&dep=y",
+      "observed_handler_target_element": "proso_bio_detail",
+      "resolved_expanded_biography_url": "https://cths.fr/library/getdata.php?q=proso_bio_detail&id=117210&dep=y",
+      "handler_inside_parent_biography_component": true,
+      "route_read_from_actual_cached_JS": true
+    },
+    {
+      "candidate_group_id": "CTHS_112651",
+      "parent_notice_url": "https://cths.fr/an/savant.php?id=112651",
+      "parent_notice_sha256": "f0c015911f192bac0ca0380fd1ce420d9be0126b67484b5de7ecae57e36eb17e",
+      "parent_notice_bytes": 21640,
+      "title_fact": "LEDERER Edgar",
+      "birth_line_fact": "5 juin 1908 à Vienne, Autriche",
+      "credited_authors": [
+        "Académie des sciences"
+      ],
+      "observed_handler_query": "q=proso_bio_detail&id=112651&dep=y",
+      "observed_handler_target_element": "proso_bio_detail",
+      "resolved_expanded_biography_url": "https://cths.fr/library/getdata.php?q=proso_bio_detail&id=112651&dep=y",
+      "handler_inside_parent_biography_component": true,
+      "route_read_from_actual_cached_JS": true
+    },
+    {
+      "candidate_group_id": "CTHS_100529",
+      "parent_notice_url": "https://cths.fr/an/savant.php?id=100529",
+      "parent_notice_sha256": "8fc09509091cb0fcf2a111019941b7dc0fa1259336f83805a306e4bb73984d0b",
+      "parent_notice_bytes": 22549,
+      "title_fact": "LWOFF André Michel",
+      "birth_line_fact": "8 mai 1902 à Ainay-le-Château (Allier)",
+      "credited_authors": [
+        "Martine François",
+        "Académie des sciences"
+      ],
+      "observed_handler_query": "q=proso_bio_detail&id=100529&dep=y",
+      "observed_handler_target_element": "proso_bio_detail",
+      "resolved_expanded_biography_url": "https://cths.fr/library/getdata.php?q=proso_bio_detail&id=100529&dep=y",
+      "handler_inside_parent_biography_component": true,
+      "route_read_from_actual_cached_JS": true
+    }
+  ],
+  "actual_cached_fragment_control": {
+    "candidate_group_id": "CTHS_117210",
+    "expanded_component_url": "https://cths.fr/library/getdata.php?q=proso_bio_detail&id=117210&dep=y",
+    "expanded_component_sha256": "e27c5d8561f9fbedb3b39442937e553ab119b7a08569b44de6f27d7c1875afaf",
+    "expanded_component_bytes": 2977,
+    "expanded_component_body_read": true,
+    "parent_preview_continuity_verified": true,
+    "normalized_preview_characters_compared": 470,
+    "returned_close_handler_same_person_ID_verified": true,
+    "returned_close_handler_dep_literal": "",
+    "fragment_has_own_person_heading_DOB_or_writer_block": false,
+    "fragment_has_common_script_helpers": true,
+    "actual_fragment_Paris_ordinary_role_proven": false,
+    "known_Academy_foreign_control_retained": true,
+    "inspected_v11_control_json_does_not_record_AJAX_HTTP_status": true,
+    "this_cached_control_is_not_a_new_positive_bundle": true
+  },
+  "known_foreign_control_provenance": {
+    "control_metadata_sha256": "1eb436995a5f1e738108fa5a6f6dbd40774bceaafd6fb1fa2d023184b55340bc",
+    "Academy_PDF_sha256": "a30d6661fd74b49382e9b56c27d624f19e955494b8e9a6d4e07a8266c73f35e7",
+    "pdf_page": 52,
+    "printed_page": 43,
+    "control_role": "foreign_associate",
+    "exact1981_start_not_proven": true,
+    "lifetime_exclusion_not_proven": true
+  },
+  "required_canonical_evidence_keys": {
+    "cths_notice_component_bundle_verified": {
+      "type": "boolean",
+      "required_value": true,
+      "meaning": "Explicit new component branch, never blanket CTHS acceptance."
+    },
+    "cths_evidence_spans_multiple_http_responses": {
+      "type": "boolean",
+      "required_value": true
+    },
+    "cths_same_body_authorship_role_start_verified": {
+      "type": "boolean",
+      "required_value": false,
+      "meaning": "Legacy single-response gate cannot be asserted across parent and AJAX responses."
+    },
+    "cths_parent_notice_url": {
+      "type": "absolute URL",
+      "meaning": "Captured original person page, exact selected savant ID."
+    },
+    "cths_parent_notice_sha256": {
+      "type": "64hex",
+      "meaning": "Recomputed from actual retained parent response bytes."
+    },
+    "cths_parent_notice_http_status": {
+      "type": "integer",
+      "required_value": 200
+    },
+    "cths_parent_notice_retrieved_utc": {
+      "type": "timestamp"
+    },
+    "cths_parent_notice_identity_DOB_verified": {
+      "type": "boolean",
+      "required_value": true
+    },
+    "cths_observed_expansion_handler": {
+      "type": "object",
+      "keys": [
+        "target_element_id",
+        "literal_onclick_or_query",
+        "query_name",
+        "person_id",
+        "dep",
+        "resolved_url",
+        "parent_source_locator"
+      ],
+      "meaning": "Literal actual parent handler, parsed without eval; q=proso_bio_detail, exact selected ID, dep=y, target proso_bio_detail."
+    },
+    "cths_expanded_biography_url": {
+      "type": "absolute URL",
+      "meaning": "Must equal URL resolved from observed handler and actual parent routing JS."
+    },
+    "cths_expanded_biography_sha256": {
+      "type": "64hex",
+      "meaning": "Actual separately retained response bytes, not a snippet or SHA-only inherited claim."
+    },
+    "cths_expanded_biography_http_status": {
+      "type": "integer",
+      "required_value": 200
+    },
+    "cths_expanded_biography_retrieved_utc": {
+      "type": "timestamp"
+    },
+    "cths_expanded_biography_body_verified": {
+      "type": "boolean",
+      "required_value": true
+    },
+    "cths_expansion_handler_ID_continuity_verified": {
+      "type": "boolean",
+      "required_value": true
+    },
+    "cths_expansion_preview_career_continuity_verified": {
+      "type": "boolean",
+      "required_value": true,
+      "meaning": "Parent preview and expanded content agree for same subject; HTML entity and whitespace normalization only. Expected matching close-handler ID is checked when returned."
+    },
+    "cths_subject_identity_career_verified": {
+      "type": "boolean",
+      "required_value": true,
+      "meaning": "Parent title/DOB plus observed exact-ID route, response continuity and subject career; do not claim DOB/name appears inside fragment if absent."
+    },
+    "cths_society_id": {
+      "type": "string",
+      "required_value": "506"
+    },
+    "cths_typed_ordinary_role_verified": {
+      "type": "boolean",
+      "required_value": true,
+      "meaning": "Existing ordinary/free/nonresident member-class requirement, with exact subject/institution locator in bundle component."
+    },
+    "cths_literal_full_member_start_verified": {
+      "type": "boolean",
+      "required_value": true,
+      "meaning": "Direct literal ordinary-family event/start, or root-approved unambiguous single full-member interval; no calculated, relative or as-of event."
+    },
+    "cths_role_evidence_component": {
+      "type": "enum",
+      "values": [
+        "parent_notice",
+        "expanded_biography"
+      ]
+    },
+    "cths_start_evidence_component": {
+      "type": "enum",
+      "values": [
+        "parent_notice",
+        "expanded_biography"
+      ]
+    },
+    "cths_role_evidence_locator": {
+      "type": "string"
+    },
+    "cths_start_evidence_locator": {
+      "type": "string"
+    },
+    "cths_notice_authorship_credit_component": {
+      "type": "enum",
+      "required_value": "parent_notice",
+      "meaning": "Institutional notice credit occurs on retained parent response; never invent an AJAX author byline."
+    },
+    "credited_authors": {
+      "type": "array of exact bounded comma-list tokens",
+      "meaning": "From Rédacteur(s) de la notice before Fiche créée/copyright, not meta-author, picture, reference or affiliation."
+    },
+    "source_author_credit": {
+      "type": "enum",
+      "values": [
+        "Académie des sciences",
+        "Institut de France"
+      ],
+      "meaning": "Exact credited institution; parent-only never relabelled Academy writer."
+    },
+    "source_author_credit_verified": {
+      "type": "boolean",
+      "required_value": true
+    },
+    "source_author_credit_scope": {
+      "type": "enum",
+      "required_value": "explicit_credited_writer_or_cowriter"
+    },
+    "source_role": {
+      "type": "enum",
+      "values": [
+        "academy_authored_independent_host",
+        "parent_institution_firstparty"
+      ]
+    },
+    "academy_authored_or_issued_original": {
+      "type": "boolean",
+      "meaning": "True only when exact Académie des sciences token is a credited writer on parent."
+    },
+    "parent_institution_authored_or_issued_original": {
+      "type": "boolean",
+      "meaning": "True only when exact Institut de France token is a credited writer on parent."
+    },
+    "source_independence_group": {
+      "type": "string",
+      "meaning": "One logical person-notice authorial contribution; parent and AJAX are not counted as independent sources."
+    },
+    "source_capture_components": {
+      "type": "array",
+      "meaning": "Both original response URL/SHA/status/time/bytes and claim locators retained. If legacy singular source_url/SHA remain, explicitly identify the anchor component; do not omit second hash."
+    },
+    "cths_known_role_controls_preserved": {
+      "type": "boolean",
+      "required_value": true
+    },
+    "identity_and_DOB_unchanged": {
+      "type": "boolean",
+      "required_value": true
+    }
+  },
+  "approval_checks": [
+    "Parent original bytes exist, are read and rehashed; source title/name/DOB/career match preserved selected identity. Any new body DOB difference is an unapplied lead for root and prevents silent triple promotion.",
+    "Parent notice writer block is isolated before Fiche créée/copyright. Exact comma-list institutional token is required; individual writers or affiliations alone do not qualify.",
+    "Observe the expansion click inside the subject proso_bio_detail element. Parse literal parameters without eval or ID substitution. Resolve the endpoint using actual cached ajax_data routing JS and the parent URL.",
+    "Require exact ID consistency among selected record, parentURL, handler query and any returned closing handler/identifier. No generic endpoint guessing for a person lacking an observed expansion handler.",
+    "Retain the actual200 expanded response separately with URL/time/bytes/SHA; reject error/challenge/redirect-to-another-person responses. No replayed SHA without raw bytes.",
+    "Read subject content after excluding script/style/helper code and collapse UI. Check preview/career continuity and expected closing target/ID. A shared JavaScript helper is not identity evidence.",
+    "Notice-level institutional writer attribution may scope the observed biography component only within this linked person-notice bundle. The fragment has no standalone author credit and is not literally the parent HTTP body.",
+    "Use the new component gate: cths_notice_component_bundle_verified=True, cths_evidence_spans_multiple_http_responses=True, legacy cths_same_body_authorship_role_start_verified=False.",
+    "Apply existing ordinary/free/nonresident class and direct-start gates unchanged. Keep exact Paris science institution separate from medicine, local academies, other societies and quoted third-party biographies.",
+    "If role and start are in different components, attach individual component hashes/locators and demonstrate the event refers to the subject and same full-member phase. An unseparated correspondent/foreign/full interval cannot supply its earliest year.",
+    "Preserve all known foreign/correspondent and election/DOB conflicts. Generic membre or a richer biography cannot override explicit contrary role controls. No nationality classification, source majority, lifetime exclusion, presidency/as-of or relative arithmetic.",
+    "Record both retrieval times; do not assert an identical server version. Material author/identity/preview/date/class discontinuity is held for review; cached-parent plus fresh-fragment is disclosed, not silently called a contemporaneous same-response original.",
+    "Independent QA rehashes and reads both actual originals for every positive and binds final decision and manifest hashes. Combined source quotations stay within25words per notice; raw bodies remain private."
+  ],
+  "negative_controls": [
+    {
+      "id": "wrong_person_ID",
+      "failure": "Parent117210 but handler/fragmentclose112651; reject bundle despite similar generic career text."
+    },
+    {
+      "id": "wrong_component",
+      "failure": "q=proso_biblio_detail or proso_correspondance, not proso_bio_detail; no biography-component inference."
+    },
+    {
+      "id": "unobserved_route",
+      "failure": "Generated getdata ID without actual target-page click handler; no provenance chain."
+    },
+    {
+      "id": "wrong_dep_or_target",
+      "failure": "Collapse dep empty/n or element other than proso_bio_detail used as expansion; reject route."
+    },
+    {
+      "id": "source_status_error",
+      "failure": "404,403,challenge or unexpected redirect is not an expanded biography original."
+    },
+    {
+      "id": "hash_only_or_missing_parent",
+      "failure": "No original parent bytes/writer block or no expanded raw bytes; hash metadata cannot substitute."
+    },
+    {
+      "id": "institution_credit_prefix",
+      "failure": "Académie des sciences et belles-lettres de Besançon is not the Paris institution; do not split et to create a token."
+    },
+    {
+      "id": "institution_affiliation",
+      "failure": "Personal writer described as membre de l’Institut or Institut in references/meta-author/picture does not establish institutional coauthorship."
+    },
+    {
+      "id": "wrong_author_transfer",
+      "failure": "Credit from another person page, biography about a father, or author Member heading cannot become subject membership."
+    },
+    {
+      "id": "response_helpers",
+      "failure": "Common ajax_data functions/scripts and fermer anchor are control material, not biography facts."
+    },
+    {
+      "id": "other_academy_member",
+      "failure": "Expanded Member of medicine/Europe/local academies does not type Paris Académie des sciences membership."
+    },
+    {
+      "id": "chronology_conflict",
+      "failure": "Two direct incompatible starts for same full event are held; no earliest-year/source-majority choice."
+    },
+    {
+      "id": "mixed_phase_interval",
+      "failure": "Correspondant1951/member1956 with total1951–1980 cannot yield full start1951; explicit1956 may qualify separately."
+    },
+    {
+      "id": "presidency_or_asof",
+      "failure": "Presidency, secretary role, obituary date, since20years or arithmetic are not election/start events."
+    },
+    {
+      "id": "Casimir_actual_cached_control",
+      "failure": "Valid observed-ID component bundle still yields no ordinary Paris class: expanded members list concerns other academies; actual Academy foreign-associate control persists."
+    },
+    {
+      "id": "Bronk_Chagas_inherited_holds",
+      "failure": "Expanded generic/free label alone does not release inherited role-control holds or invent a foreign classification."
+    },
+    {
+      "id": "VanDerPol_Zernike_Wyckoff",
+      "failure": "Known correspondence-only/foreign-associate controls stay nonordinary; no lifetime exclusion follows."
+    },
+    {
+      "id": "DOB_difference",
+      "failure": "Any expanded DOB different from accepted parent DOB is recorded and root-notified; collector cannot overwrite or suppress it."
+    }
+  ],
+  "no_blanket_CTHS_host_approval": true,
+  "notice_author_scope_not_transferred_between_people": true,
+  "two_responses_not_two_independent_sources": true,
+  "ordinary_member_class_gate_unchanged": true,
+  "known_foreign_and_correspondent_controls_persist": true,
+  "raw_bodies_redistributed": false,
+  "analysis_cohort_frozen": false,
+  "bazi_computed": 0
+}

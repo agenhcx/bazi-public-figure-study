@@ -1,0 +1,37 @@
+{
+  "reviewer": "root",
+  "independent_of_collector": true,
+  "scope": [
+    {
+      "source_batch": "japan_b",
+      "files": [
+        "claims.json",
+        "requests.json"
+      ],
+      "checked_rows": 1,
+      "member_key": "jpa:yanagida_toshio",
+      "source_url": "https://www.fbs.osaka-u.ac.jp/labs/yanagida/English/CURRICULUM%20VITAE%202010.pdf"
+    }
+  ],
+  "findings": [
+    {
+      "path": "source_batches/japan_b/claims.json",
+      "key": "jpa:yanagida_toshio",
+      "evidence": "Collector initial actual web-open body turn1742view0 returned complete51-line CV text with Date of Birth: October10,1946 and Osaka nanobiology/physiology career. Root independently read the derived transcript, recalculated its SHA256, and corroborated DOB/career through official-URL indexed complete CV text turn1783search0. Direct original capture, subsequent opens and PDF screenshot returned404.",
+      "expected_action": "Retain exact root-approved null-original-hash exception, separately hashed derived transcript, actual-body reference, source precision and explicit lack of independent original re-fetch/PDF visual verification. Do not represent indexed corroboration or derived bytes as original PDF capture.",
+      "status": "passed"
+    }
+  ],
+  "remaining_holds": [],
+  "original_source_sha256": null,
+  "original_capture_http_status": 404,
+  "collector_actual_body_ref": "turn1742view0",
+  "root_verification_ref": "turn1783search0",
+  "root_verification_kind": "derived_transcript_review_hash_recalculation_and_official_indexed_text_corroboration",
+  "extracted_body_sha256": "f33fa0f33177892062f62ac6299fe0adbe915d9d870cfc7283b08a7d54a4a5f0",
+  "independent_original_body_refetched": false,
+  "pdf_visual_verification_available": false,
+  "approval_scope": "Only exact member, URL, derived hash andHTTP404 listed in inputs/batch_selection.json; inherited Suzuki403 exception remains in ancestor metadata.",
+  "bazi_variables_computed": 0,
+  "analysis_cohort_frozen": false
+}

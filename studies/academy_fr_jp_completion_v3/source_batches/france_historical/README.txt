@@ -1,0 +1,15 @@
+France historical ordinary-membership continuation, 2026-10-29
+
+Fixed queue: first 60 CTHS membership-only gaps from academy_fr_jp_completion_v 2, baseline Git a 7297 e 662502 ce 821 c 9289 dc 7 d 5226 b 82208 b 92 d. All selected people already have identity/DOB acceptance; neither dimension is changed here.
+
+Results:20 positive actual-source decisions;12 strict ordinary-member approvals (5 explicit full election days,7 source election years) and 8 additional full-role/cutoff-positive cases with exact election evidence still held. The 12 proposed strict approvals are Sabatier, Gabriel Bertrand, Émile Picard, Yves Delage, Alphonse Laveran, Lucien Cuénot, Camille Matignon, Henri Moissan, Louis-Félix Henneguy, Paul Marchal, Émile Roubaud and René Maire. Nonresident full-member subtypes are preserved for Sabatier, Cuénot and Maire; prior correspondent events do not become lifetime exclusions.
+
+The 8 strict holds are Mesnil, Bertin, Grassé, Joubin, Gallien, Marcel Delépine, Charles Moureu and Louis Fage. Source as-of years certify ordinary role by an upper temporal bound, not an invented election year or ongoing service after death.20 decisions are reviewed; the remaining 40 fixed-queue candidates did not receive a positive body decision in this bounded batch. This does not assert that all 40 underwent a substantive failed search.
+
+30 distinct official PDF URL requests were made, yielding 16 complete HTTP 200 PDFs and 14 HTTP 404 responses. The 16 include one actual wrong-person document: delepine_notice.pdf is Gaston Delépine 1878–1963 and cannot support Marcel. Marcel instead has explicit member-role evidence as a speaker in Matignon's 1934 funeral publication. The official Bertin PDF is byte-identical to a previously known mirror, not independent corroboration.
+
+OCR corrections verified on page images: Laveran's printed 1901 is OCR 1904; Roubaud's printed 1938 is OCR 4938. These are not competing source claims. Conversely, Moureu has a genuine same-compilation 1907-versus 1911 chronology problem, and Fage's 1971 notice literally reports 1947 even though an Academy 1944 publication already names him a member. Both genuine chronology problems remain held; role/cutoff support is retained.
+
+All positive role/date evidence pages were visually reviewed. Complete PDFs and private image renders stay in private/ and must not be published. Source SHA 256 and short quotations identify what was read; quotations total at most 25 whitespace-delimited words per PDF across all public decisions. No raw copyrighted biography is included. Capture bytes are rehashed before packaging; no count of independent sources is asserted.
+
+Safe publication files: decisions.json, source_manifest.json, summary.json, queue_status.json, log.json, integration_preflight.json, README.txt and MANIFEST.json. Do not publish private/, fetch scripts or worker transcription generator as a portable production collector. Root's unified v 3 replay should consume the pinned decisions and perform its own integration QA. No analysis cohort was frozen, no BaZi variables calculated, and no messages sent to archives.

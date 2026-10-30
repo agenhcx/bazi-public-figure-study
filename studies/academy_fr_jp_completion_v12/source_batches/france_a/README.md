@@ -1,0 +1,7 @@
+# v12 France A observed expanded-biography components
+
+The fixed26actual expansion URLs were captured once, serially, with zero search queries and no retries. Each actual expanded response is linked to a retained v11parent notice by its observed exact-ID handler, returned closing ID and matching career preview. Both originals are separately hashed and timed; they constitute one institutional notice contribution and are not the same HTTP body or two independent sources.
+
+Nine notices support ordinary-family membership starts (eight years and one explicit membership day). Seventeen remain held despite actual200responses and substantive biography review. Glangeaud uses the explicit governing Member heading plus the parent1968–1986period at year precision; its section day is not an accepted membership day. Douvillé directly supplies29April1907. No Medicine/Lyon/other-Academy/committee title, presidency date or relative arithmetic is substituted.
+
+Institutional writer attribution is confined to the actual parent notice. The canonical component branch is governed by the independently supplied d6ba1790method contract; the legacy same-body flag stays false. All selected parent birthdays match preserved identities, and the expanded birth mentions add no contrary date. Identity/DOB, known foreign controls, inherited chronology holds, cohort and BaZi fields remain unchanged. Raw originals are private. Earlier triage-only queue files are outside this final source-batch manifest.

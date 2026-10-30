@@ -1,0 +1,162 @@
+{
+  "audit_utc": "2026-10-29T12:04:07.715326+00:00",
+  "auditor": "independent child japan_institution_a; no root files modified; no network DOB searches",
+  "script_sha256": "566af97b1494dd2940fbea97e359de7c8b6f44b1175306575e13eb34c6009ab6",
+  "input_sha256": {
+    "japan_original435.csv": "2142e9c2403279ea68511efb0cd2d79d95093b31ab84c6b9709d31f5d44d991b",
+    "japan_remaining40.csv": "bd81f0b4d994833fa5d0d5b04e2dcd036f0670b87aecdcfa08ce9df159acda11",
+    "japan_imperial332.csv": "c7776b536294d82b5fec96a43fd8e19f6baaba34ca9502b51fc2b4b748f8e668",
+    "japan_frozen_degree199.csv": "6480371b063a9755c3eb7115ba5ff88710f95708c9672ade84199857015a8e92",
+    "japan_tierb_decisions.json": "55476ce156d377cdd738049a85bea350eb67f0683b2fbcd81c3602fba858888f"
+  },
+  "verdict": "PASS_SCOPE_COUNTS_AND_SOURCE_PRESERVATION_WITH_ONE_NONBLOCKING_SUBSECTION_OMISSION",
+  "checks": {
+    "unique482_ids": true,
+    "435_40_disjoint": true,
+    "union_exact_original435_remaining40_imperial332": true,
+    "exact_seven_new_imperial_ids": true,
+    "increment_contains_three_required_science_members": true,
+    "official139_unique_ids_names": true,
+    "II_support_classes_pairwise_disjoint": true,
+    "all_supported_science_has_explicit_restored_basis": true,
+    "SectionI_exactly_four_imperial_plus_three_tierB": true,
+    "no_nonblank_shared_field_conflicts_lost": true,
+    "historical_Matsumura_conflict_retained": true,
+    "all_cohort_analysis_flags_false": true,
+    "unresolved_exact47": true,
+    "unresolved_partition36_plus11": true
+  },
+  "counts": {
+    "input_rows": {
+      "original435": 435,
+      "remaining40": 40,
+      "imperial332": 332,
+      "frozen199": 199
+    },
+    "restored_unique482": 482,
+    "original435_remaining40_overlap": 0,
+    "imperial_overlap_original435": 285,
+    "imperial_overlap_remaining40": 40,
+    "imperial_increment": 7,
+    "official_sectionII": 139,
+    "imperial_sectionII": 89,
+    "frozen_broad_degree_sectionII": 199,
+    "tierB_sectionII": 1,
+    "supported_sectionII": 428,
+    "sectionI_exclusion": 7,
+    "section_unresolved": 47,
+    "scope_not_excluded": 475
+  },
+  "source_layer_section_status_counts": {
+    "restored_official_detail_or_current_section_ii": 139,
+    "pre1906_single_science_degree_original_section_unrecovered": 11,
+    "restored_imperial_official_section_ii": 88,
+    "restored_imperial_official_section_ii_historical_conflict_retained": 1,
+    "restored_frozen_broad_degree_rule_section_ii": 199,
+    "restored_remaining36_section_unresolved": 36,
+    "restored_tier_b_direct_section_ii": 1,
+    "restored_tier_b_direct_section_i_exclusion": 3,
+    "restored_imperial_official_section_i_exclusion": 4
+  },
+  "seven_added_ids": [
+    {
+      "member_key": "jpa-unlinked-072db33bbc81e13f",
+      "name_jp": "長井 長義",
+      "final_section_evidence": "2",
+      "section_evidence_status": "restored_imperial_official_section_ii"
+    },
+    {
+      "member_key": "jpa-unlinked-037c62494b622071",
+      "name_jp": "高峰 譲吉",
+      "final_section_evidence": "2",
+      "section_evidence_status": "restored_imperial_official_section_ii"
+    },
+    {
+      "member_key": "jpa-unlinked-244d16a381e9218f",
+      "name_jp": "野口 英世",
+      "final_section_evidence": "2",
+      "section_evidence_status": "restored_imperial_official_section_ii"
+    },
+    {
+      "member_key": "jpa-unlinked-2846e0b3a1b84b25",
+      "name_jp": "徳富 猪一郎",
+      "final_section_evidence": "1",
+      "section_evidence_status": "restored_imperial_official_section_i_exclusion"
+    },
+    {
+      "member_key": "jpa-unlinked-e06fc02e81b9982d",
+      "name_jp": "新渡戸 稲造",
+      "final_section_evidence": "1",
+      "section_evidence_status": "restored_imperial_official_section_i_exclusion"
+    },
+    {
+      "member_key": "jpa-unlinked-23fc9c62e90a12d0",
+      "name_jp": "佐伯 定胤",
+      "final_section_evidence": "1",
+      "section_evidence_status": "restored_imperial_official_section_i_exclusion"
+    },
+    {
+      "member_key": "jpa-unlinked-75af3eb07e64296d",
+      "name_jp": "高岡 熊雄",
+      "final_section_evidence": "1",
+      "section_evidence_status": "restored_imperial_official_section_i_exclusion"
+    }
+  ],
+  "all_nonblank_shared_field_differences": [],
+  "same_normalized_name_different_ids": [
+    {
+      "normalized_name": "西村秀雄",
+      "rows": [
+        {
+          "member_key": "jpa-unlinked-a8fc2a0b9c3ac0d3",
+          "name_jp": "西村 秀雄",
+          "degree_jp": "工",
+          "specialty_jp": "冶金学",
+          "first_election_date": "1970-11-12",
+          "final_retirement_date": "1978-05-22",
+          "broad_section_supported": "2"
+        },
+        {
+          "member_key": "jpa-unlinked-363d031907d26f0c",
+          "name_jp": "西村 秀雄",
+          "degree_jp": "医",
+          "specialty_jp": "解剖学・発生学",
+          "first_election_date": "1987-12-14",
+          "final_retirement_date": "1995-10-17",
+          "broad_section_supported": "2"
+        }
+      ],
+      "disposition": "Preserve distinct identities. Do not deduplicate or assign DOB by Japanese/romanized name alone."
+    }
+  ],
+  "historical_conflict": {
+    "member_key": "jpa-unlinked-5eaf3480c6129ce9",
+    "name_jp": "松村 任三",
+    "historical_section_conflict": "1",
+    "evidence_status": "exact_section_conflict",
+    "exact_section1_hits": "1",
+    "exact_section2_hits": "11",
+    "section_evidence_status": "restored_imperial_official_section_ii_historical_conflict_retained",
+    "broad_section_supported": "2",
+    "final_cohort_accepted": false
+  },
+  "issues": [
+    {
+      "severity": "nonblocking_information_loss_in_derived_field",
+      "member_key": "jpa-unlinked-67412ee03b08c5d2",
+      "name_jp": "平塚 直秀",
+      "input_accepted_exact_subsection": "6",
+      "output_exact_subsection_supported": "6",
+      "why": "roster() initializes exact only from merged row subsection_official and does not carry tierB accepted_exact_subsection. Direct source supplied subsection6 is retained in input JSON but absent from the derived master field.",
+      "suggestion": "When a tierB accepted broad section is used, also preserve its explicitly accepted exact subsection in exact_subsection_supported, with a dedicated exact_subsection_evidence_route. Do not infer subsection from degree or field. This does not affect428/7/47 counts."
+    }
+  ],
+  "recommendations": [
+    "Keep428 described as supported broad SectionII evidence including199 prior degree-rule cases and one historical source conflict; it is not428 newly primary-source-verified final members.",
+    "Retain original435+old40+imperial332 files and frozen199/tierB decisions with hashes; no generic Academy membership alone is used to promote the remaining47.",
+    "Keep Matsumura historical SectionI/II conflict visible through any downstream cohort freeze, even though upstream adjudication supports broadII.",
+    "Add regression assertions for zero overlap435/40,139 unique names/IDs,482 union,428/7/47 partition, and same-ID conflicting nonempty section fields. Actual inputs have no nonempty cross-layer field conflicts, but merge code has no general conflict guard.",
+    "Preserve both 西村秀雄 identities; the current master does this correctly. Bulk institution-authority name joins must use discipline/election/retirement context before any DOB assignment."
+  ],
+  "boundary": "This audit validates restored snapshot identities and evidence routing only. It does not independently verify all original source pages, reconcile national roster completeness, accept Gregorian DOBs, freeze cohorts, or compute BaZi."
+}

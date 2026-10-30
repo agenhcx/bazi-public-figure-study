@@ -1,0 +1,29 @@
+{
+  "scope": "membership only; fixed France B v7 39; no repository writes",
+  "baseline_commit": "4187d923880b6c78259c703904f0d46cfd35d934",
+  "search_cap": 45,
+  "url_attempt_cap": 30,
+  "actual_queries": 45,
+  "actual_new_url_attempts": 14,
+  "network_stopped": true,
+  "stop_reason": "45-query cap reached; capture command scheduled with final query allowed to finish, then no network calls",
+  "anubis_archive_route_retried": false,
+  "initial_private_cache_inventory": "v6 France A/B/C original-byte and text caches inspected before GET. Name proximity reviewed; no qualifying fixed-person ordinary event found there. No v6 source URL was fetched again.",
+  "query_log": "search_queries.json",
+  "request_log": "requests.json",
+  "source_log": "source_manifest.json",
+  "pdf_skill_used": "e1/pdf read-only render-and-verify workflow",
+  "pdf_key_pages_actually_viewed": true,
+  "ocr_note": "Scanned Tannery, Halphen and Arambourg require local OCR; decisions use actual key-page images. Initial multipage Arambourg p2 PNG was truncated; separately rerendered locally. Partial OCR is not represented as a complete source transcript.",
+  "no_repository_writes": true,
+  "no_contacts_sent": true,
+  "body_and_images_private": true,
+  "identity_and_DOB_changes": 0,
+  "existing_conflicts_cleared": 0,
+  "outside_queue_strict_additions": 1,
+  "lifetime_exhaustion_claimed": false,
+  "root_approved_cross_source_ids": [
+    "CTHS_112626"
+  ],
+  "cross_source_review_note": "Independent review identified explicit member-since1960 on Laval p3; collector and root actually viewed p1/p3 and root rehashed original. Added separately after exact-ID approval, with no extra targeted query or network."
+}

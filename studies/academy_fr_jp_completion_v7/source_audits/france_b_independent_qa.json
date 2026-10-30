@@ -1,0 +1,482 @@
+{
+  "reviewer": "v7_france_a independent collector",
+  "independent_of_collector": true,
+  "completed_utc": "2026-10-30T00:00:40.345662+00:00",
+  "scope": [
+    {
+      "source_batch": "france_b",
+      "files": [
+        "decisions.json",
+        "requests.json",
+        "source_manifest.json",
+        "private original PDFs",
+        "independently rendered private key-page PNGs"
+      ],
+      "checked_rows": 10
+    },
+    {
+      "source_batch": "france_b_cross_source_addendum",
+      "files": [
+        "cross_source_addendum.json",
+        "private/laval.pdf",
+        "independently rendered private Laval p1/p3/p7 images"
+      ],
+      "checked_rows": 1
+    }
+  ],
+  "review_scope": "Independent read-only local-original review of every fixed-France-B strict membership plus root-approved exact-ID cross-source addendum; no network and no source-decision edits. Nonstrict rows remain outside strict QA.",
+  "decision_file": "france_b/decisions.json",
+  "decision_file_sha256": "c26e5f8d3d7d05a800fa23589faa3fb5fc794a1263aa2e94eb09d8e4ceea1e53",
+  "source_manifest_file_sha256_at_review": "e65efc413a227a2b608701fc81a3b26bcd4dd017c89aaa368b1e5310a0209df4",
+  "strict_rows_reviewed": 10,
+  "unique_original_bodies_hash_verified": 10,
+  "PDF_originals_reviewed": 10,
+  "PDF_key_pages_visually_reviewed": 18,
+  "independently_rendered_images_private": "france_b_qa_private/",
+  "result": "pass",
+  "blockers": [],
+  "findings": [
+    {
+      "path": "france_b/decisions.json",
+      "key": "all10_strict_memberships",
+      "evidence": "All accepted literal years/days and ordinary roles are supported by each matching official original; source bytes were independently rehashed and 18 critical PDF pages independently rendered and visually read.",
+      "expected_action": "Accept these fixed-file strict evidence proposals without identity or DOB changes; preserve all unrelated holds.",
+      "status": "passed"
+    },
+    {
+      "path": "france_b/cross_source_addendum.json",
+      "key": "CTHS_112626",
+      "evidence": "Laval original independently rehashed and p1/p3/p7 visually read: the named Physics subject born1900 and explicit membership start1960 belong to Jean Laval. Guy Laval and Jean Dalibard are distinct people. Prize years are not election years.",
+      "expected_action": "Accept the approved exact-ID cross-source membership at year1960 with null day; retain outside-fixed-queue status and do not add targeted processing coverage.",
+      "status": "passed"
+    }
+  ],
+  "remaining_holds": [
+    {
+      "candidate_group_id": "CTHS_112729",
+      "status": "retained_hold",
+      "note": "Moret correspondent observation stays outside strict approval; no lifetime exclusion. This QA does not promote it."
+    }
+  ],
+  "bazi_variables_computed": 0,
+  "analysis_cohort_frozen": false,
+  "specific_checks": [
+    "Bouin1945 starts ordinary nonresident membership after correspondence1932; original April expression remains year precision.",
+    "Brouardel1892 is explicitly placed in the medical free-member succession; no notice-author role is transferred.",
+    "Arambourg1961 is literal ordinary section election on p3, tied to the named subject heading p1.",
+    "Hartmann1945 is an explicit member-since start, rather than publication or funeral year.",
+    "Laubry1945 Sciences election is separately stated after the Medicine Academy discussion.",
+    "Tannery1907 belongs to Jules, whose ordinary free-member role and birth identity are on p3; brother Paul is distinct.",
+    "Teilhard1950 election is literal; the same source types nonresident ordinary role.",
+    "Halphen1886-03-15 replaces the vacant Geometry seat; a source title and birth paragraph identify the same person.",
+    "Darrieus1946 section election is literal; the quoted laureateships and later presidencies are separate.",
+    "Grandidier1885-07-06 is literal on p21; the relative duration is not used for arithmetic.",
+    "Cross-source Jean Laval1960 is a literal member-since start paired with ordinary Physics subject role and matching1900identity in the same official original; no targeted-search coverage is claimed."
+  ],
+  "rows": [
+    {
+      "candidate_group_id": "CTHS_125172",
+      "name": "BOUIN Pol",
+      "accepted_event_date": null,
+      "accepted_event_year": 1945,
+      "result": "pass",
+      "ordinary_role_subject_not_author": true,
+      "identity_bridge_reviewed": true,
+      "election_is_literal_not_arithmetic_or_asof": true,
+      "evidence": [
+        {
+          "source_id": "bouin",
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/bouin_notice.pdf",
+          "source_sha256": "a33d1f86597fe1eac9a75866af3f4f2fb73a543a59b8a8cf530684f914608a4c",
+          "original_hash_verified": true,
+          "body_independently_read": true,
+          "PDF_pages_independently_visually_verified_1based": [
+            1
+          ],
+          "visual_images": [
+            {
+              "pdf_page": 1,
+              "png_sha256": "f307b4d9feeb1be5177bc6bbc2e9bfc4207f2e287323602763387b8caa4afc54",
+              "independently_rendered_and_visually_read": true
+            }
+          ],
+          "same_item_gate_supports_accepted_event": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_184",
+      "name": "BROUARDEL Paul",
+      "accepted_event_date": null,
+      "accepted_event_year": 1892,
+      "result": "pass",
+      "ordinary_role_subject_not_author": true,
+      "identity_bridge_reviewed": true,
+      "election_is_literal_not_arithmetic_or_asof": true,
+      "evidence": [
+        {
+          "source_id": "desgenettes",
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/desgenettes_notice.pdf",
+          "source_sha256": "ecb12bd793ad3dd07dad4bc34f060f06f17e17a7772c3c83e7c813421ca48ced",
+          "original_hash_verified": true,
+          "body_independently_read": true,
+          "PDF_pages_independently_visually_verified_1based": [
+            2
+          ],
+          "visual_images": [
+            {
+              "pdf_page": 2,
+              "png_sha256": "24c1cbbcd457b30d1d645734f66be53413b40ba1347975a55ef094a1cc32f71e",
+              "independently_rendered_and_visually_read": true
+            }
+          ],
+          "same_item_gate_supports_accepted_event": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_2431",
+      "name": "ARAMBOURG Camille",
+      "accepted_event_date": null,
+      "accepted_event_year": 1961,
+      "result": "pass",
+      "ordinary_role_subject_not_author": true,
+      "identity_bridge_reviewed": true,
+      "election_is_literal_not_arithmetic_or_asof": true,
+      "evidence": [
+        {
+          "source_id": "arambourg",
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/arambourg_cr1970.pdf",
+          "source_sha256": "c1f8c591ee40fbb0116559465f7909bc6f9608aff478aa07d07916f33735027c",
+          "original_hash_verified": true,
+          "body_independently_read": true,
+          "PDF_pages_independently_visually_verified_1based": [
+            1,
+            3
+          ],
+          "visual_images": [
+            {
+              "pdf_page": 1,
+              "png_sha256": "9ea1c28bb420b92612f2c929ac520f70d3668d59d6499a84527beafce45f39b7",
+              "independently_rendered_and_visually_read": true
+            },
+            {
+              "pdf_page": 3,
+              "png_sha256": "92583f57d03ce0d65f2beba63218a58ff853c74793951cc407c8263074620d5b",
+              "independently_rendered_and_visually_read": true
+            }
+          ],
+          "same_item_gate_supports_accepted_event": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_112478",
+      "name": "HARTMANN Henri",
+      "accepted_event_date": null,
+      "accepted_event_year": 1945,
+      "result": "pass",
+      "ordinary_role_subject_not_author": true,
+      "identity_bridge_reviewed": true,
+      "election_is_literal_not_arithmetic_or_asof": true,
+      "evidence": [
+        {
+          "source_id": "hartmann",
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/hartmann_notice.pdf",
+          "source_sha256": "afc51f05a44c676140e37187970a7955ae330ac0c261e51845e93fa87f3c1566",
+          "original_hash_verified": true,
+          "body_independently_read": true,
+          "PDF_pages_independently_visually_verified_1based": [
+            1
+          ],
+          "visual_images": [
+            {
+              "pdf_page": 1,
+              "png_sha256": "42fee1b31b07c88bfd244f458bf6d8f46ce0ad9d76027d23785157871efa8b2f",
+              "independently_rendered_and_visually_read": true
+            }
+          ],
+          "same_item_gate_supports_accepted_event": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_112622",
+      "name": "LAUBRY Charles",
+      "accepted_event_date": null,
+      "accepted_event_year": 1945,
+      "result": "pass",
+      "ordinary_role_subject_not_author": true,
+      "identity_bridge_reviewed": true,
+      "election_is_literal_not_arithmetic_or_asof": true,
+      "evidence": [
+        {
+          "source_id": "laubry",
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/laubry_notice.pdf",
+          "source_sha256": "6fb63c2a23ae265bbc355ac3cbdca545c3f3155c8c6e9f348ddf1b9aa70bcfc6",
+          "original_hash_verified": true,
+          "body_independently_read": true,
+          "PDF_pages_independently_visually_verified_1based": [
+            1,
+            11
+          ],
+          "visual_images": [
+            {
+              "pdf_page": 1,
+              "png_sha256": "acfeb03ccf88e98623c244eff53f6e4ab5afa1f35e6dfc3695ec6dca3dc37003",
+              "independently_rendered_and_visually_read": true
+            },
+            {
+              "pdf_page": 11,
+              "png_sha256": "500b7bb3dbf04035356bb899918876a329e5ce918c1273d589f112e53645a92b",
+              "independently_rendered_and_visually_read": true
+            }
+          ],
+          "same_item_gate_supports_accepted_event": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_112867",
+      "name": "TANNERY Jules",
+      "accepted_event_date": null,
+      "accepted_event_year": 1907,
+      "result": "pass",
+      "ordinary_role_subject_not_author": true,
+      "identity_bridge_reviewed": true,
+      "election_is_literal_not_arithmetic_or_asof": true,
+      "evidence": [
+        {
+          "source_id": "tannery",
+          "source_url": "https://www.academie-sciences.fr/pdf/dossiers/Picard/Picard_pdf/Picard_Tannery.pdf",
+          "source_sha256": "e956ac3d46e7a57bd649fa2168b042f02aa395e41a2220f54ff3c3ce13321a31",
+          "original_hash_verified": true,
+          "body_independently_read": true,
+          "PDF_pages_independently_visually_verified_1based": [
+            3,
+            31
+          ],
+          "visual_images": [
+            {
+              "pdf_page": 3,
+              "png_sha256": "22749ee85ce747a50c8d24bcd9e3d6b50dd905c9eb23e3d7296b6c18dfe57080",
+              "independently_rendered_and_visually_read": true
+            },
+            {
+              "pdf_page": 31,
+              "png_sha256": "5f310f98826bea6e3cba3b4b60bfedcdf7a11631f4e2620fa3fa5e79ed512fe7",
+              "independently_rendered_and_visually_read": true
+            }
+          ],
+          "same_item_gate_supports_accepted_event": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_112882",
+      "name": "TEILHARD DE CHARDIN R. P. Pierre",
+      "accepted_event_date": null,
+      "accepted_event_year": 1950,
+      "result": "pass",
+      "ordinary_role_subject_not_author": true,
+      "identity_bridge_reviewed": true,
+      "election_is_literal_not_arithmetic_or_asof": true,
+      "evidence": [
+        {
+          "source_id": "teilhard",
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/teilhardduchardin_notice.pdf",
+          "source_sha256": "6d6ec5ddb725fb16d0d78953c0a54e4501c4f45d1b698f4487493c80e389b180",
+          "original_hash_verified": true,
+          "body_independently_read": true,
+          "PDF_pages_independently_visually_verified_1based": [
+            1,
+            4
+          ],
+          "visual_images": [
+            {
+              "pdf_page": 1,
+              "png_sha256": "b72ff9bbe3503eba59194c5130382f078b49fe6f94c0173f55b5228f797d24f1",
+              "independently_rendered_and_visually_read": true
+            },
+            {
+              "pdf_page": 4,
+              "png_sha256": "ff1847f066ff242e0cabd22106515debac241c076277d0dab3fc590fc4777bc8",
+              "independently_rendered_and_visually_read": true
+            }
+          ],
+          "same_item_gate_supports_accepted_event": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_124781",
+      "name": "HALPHEN Georges-Henri",
+      "accepted_event_date": "1886-03-15",
+      "accepted_event_year": 1886,
+      "result": "pass",
+      "ordinary_role_subject_not_author": true,
+      "identity_bridge_reviewed": true,
+      "election_is_literal_not_arithmetic_or_asof": true,
+      "evidence": [
+        {
+          "source_id": "halphen",
+          "source_url": "https://www.academie-sciences.fr/pdf/dossiers/Picard/Picard_pdf/Picard_Halphen.pdf",
+          "source_sha256": "708edf97c5c8dbe84d7a1c16a35909fa28793b72cd832e1dd935285937e0305f",
+          "original_hash_verified": true,
+          "body_independently_read": true,
+          "PDF_pages_independently_visually_verified_1based": [
+            1,
+            2,
+            7
+          ],
+          "visual_images": [
+            {
+              "pdf_page": 1,
+              "png_sha256": "1b71eec09733d07d4b3fc53552d2e4b842d15f7429d2aae663e25afc8065877e",
+              "independently_rendered_and_visually_read": true
+            },
+            {
+              "pdf_page": 2,
+              "png_sha256": "c81bd78fe4e3a03f425662596a76f4b6782e9f0015b4bc1873849e674c30328c",
+              "independently_rendered_and_visually_read": true
+            },
+            {
+              "pdf_page": 7,
+              "png_sha256": "93cdd8dfc2d3a8415920d86370492722eeb6dc243dfc71d8373779bd36fa1819",
+              "independently_rendered_and_visually_read": true
+            }
+          ],
+          "same_item_gate_supports_accepted_event": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_128586",
+      "name": "DARRIEUS Georges",
+      "accepted_event_date": null,
+      "accepted_event_year": 1946,
+      "result": "pass",
+      "ordinary_role_subject_not_author": true,
+      "identity_bridge_reviewed": true,
+      "election_is_literal_not_arithmetic_or_asof": true,
+      "evidence": [
+        {
+          "source_id": "darrieus",
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/darrieus_cr1980.pdf",
+          "source_sha256": "75905ae997425e7d0370fb4bc2ecbfb00fb949693fbc5372afd1609c1b8227d8",
+          "original_hash_verified": true,
+          "body_independently_read": true,
+          "PDF_pages_independently_visually_verified_1based": [
+            1,
+            6
+          ],
+          "visual_images": [
+            {
+              "pdf_page": 1,
+              "png_sha256": "cc1fd8b64adb704384093d921dfb7aec79d1279ef6c2af928969c3594fa3446d",
+              "independently_rendered_and_visually_read": true
+            },
+            {
+              "pdf_page": 6,
+              "png_sha256": "a5206f8efb7cbeed38b30032c376445d3f0ab62497fb2c009c6135027b59964f",
+              "independently_rendered_and_visually_read": true
+            }
+          ],
+          "same_item_gate_supports_accepted_event": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_227",
+      "name": "GRANDIDIER Alfred",
+      "accepted_event_date": "1885-07-06",
+      "accepted_event_year": 1885,
+      "result": "pass",
+      "ordinary_role_subject_not_author": true,
+      "identity_bridge_reviewed": true,
+      "election_is_literal_not_arithmetic_or_asof": true,
+      "evidence": [
+        {
+          "source_id": "grandidier",
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/grandidier_vol3273.pdf",
+          "source_sha256": "970a0a25a603f75601cdb40166bbeafeed8bdece1a820d055e7da72eb597da84",
+          "original_hash_verified": true,
+          "body_independently_read": true,
+          "PDF_pages_independently_visually_verified_1based": [
+            2,
+            21
+          ],
+          "visual_images": [
+            {
+              "pdf_page": 2,
+              "png_sha256": "0fc72969d29395f8d9af8009cd79c6c4c8b53bcfb893887c22be3312e0b89732",
+              "independently_rendered_and_visually_read": true
+            },
+            {
+              "pdf_page": 21,
+              "png_sha256": "7c40a6fcf3d81bf841abc7b1fd4890add0faa73d2063fcc140373e870ee06f32",
+              "independently_rendered_and_visually_read": true
+            }
+          ],
+          "same_item_gate_supports_accepted_event": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_112626",
+      "name": "LAVAL Jean",
+      "outside_fixed_queue": true,
+      "root_approved_cross_source": true,
+      "targeted_search": false,
+      "accepted_event_date": null,
+      "accepted_event_year": 1960,
+      "result": "pass",
+      "ordinary_role_subject_not_author": true,
+      "identity_bridge_reviewed": true,
+      "election_is_literal_not_arithmetic_or_asof": true,
+      "evidence": [
+        {
+          "source_id": "laval",
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/laval_cr1980.pdf",
+          "source_sha256": "6ef0e3cbddf31f3b2cc1821d94d8fffafefe473332cdd217a6c9bb89098cb56d",
+          "original_hash_verified": true,
+          "body_independently_read": true,
+          "PDF_pages_independently_visually_verified_1based": [
+            1,
+            3,
+            7
+          ],
+          "visual_images": [
+            {
+              "pdf_page": 1,
+              "png_sha256": "48b9f7afa42cc55489f16ca1c9804de35a040937b2bc9865460d10c5dbcd52f5",
+              "independently_rendered_and_visually_read": true
+            },
+            {
+              "pdf_page": 3,
+              "png_sha256": "9b99047214c2ec6adc068f2110fa1de6936c6411ce5027111e84410d05a0e2d4",
+              "independently_rendered_and_visually_read": true
+            },
+            {
+              "pdf_page": 7,
+              "png_sha256": "3ad311a3e9d2917f724bbb1d6111fde9c34329ab9441bf938c6822034dd9f4d1",
+              "independently_rendered_and_visually_read": true
+            }
+          ],
+          "same_item_gate_supports_accepted_event": true
+        }
+      ]
+    }
+  ],
+  "cross_source_addendum_file": "france_b/cross_source_addendum.json",
+  "cross_source_addendum_file_sha256": "6b4f71f5f2652554bf48e1f3e9edbf3d933d5ed5f7b250910639faae84002973",
+  "cross_source_addendum_rows_reviewed": 1,
+  "cross_source_addendum_originals_hash_verified": 1,
+  "cross_source_addendum_PDF_pages_visually_reviewed": 3,
+  "total_strict_rows_reviewed_including_cross_source": 11,
+  "total_unique_originals_hash_verified_including_cross_source": 11,
+  "total_PDF_key_pages_visually_reviewed_including_cross_source": 21,
+  "source_manifest_file_sha256_at_final_review": "f260bfa2f9d7e3ae945f2486287d669cfcbc01290e027fef602bcf39b0205506",
+  "cross_source_addendum_prior_sha256_before_redundant_scope_flag_removal": "760d4a787bfd46dead2e6edca56c2c65d69c8dd780bd347e4b8901b6c7db4483",
+  "final_snapshot_note": "Cross addendum was reread after removing one redundant aggregate-scope flag. Candidate, accepted literal start1960, null day, source hash, quote, ordinary role, identity bridge and visual pages remain unchanged; all independent source conclusions remain valid."
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Independent source QA metadata envelope",
+  "type": "object",
+  "required": ["reviewer", "independent_of_collector", "scope", "findings", "remaining_holds", "bazi_variables_computed", "analysis_cohort_frozen"],
+  "properties": {
+    "reviewer": {"type": "string"},
+    "independent_of_collector": {"const": true},
+    "scope": {"type": "array", "items": {"type": "object", "required": ["source_batch", "files", "checked_rows"], "properties": {"source_batch": {"type": "string"}, "files": {"type": "array", "items": {"type": "string"}}, "checked_rows": {"type": "integer", "minimum": 0}}}},
+    "findings": {"type": "array", "items": {"type": "object", "required": ["path", "key", "evidence", "expected_action", "status"], "properties": {"path": {"type": "string"}, "key": {"type": "string"}, "evidence": {"type": "string"}, "expected_action": {"type": "string"}, "status": {"enum": ["open", "corrected_and_rechecked", "retained_hold", "passed"]}}}},
+    "remaining_holds": {"type": "array"},
+    "bazi_variables_computed": {"const": 0},
+    "analysis_cohort_frozen": {"const": false}
+  }
+}

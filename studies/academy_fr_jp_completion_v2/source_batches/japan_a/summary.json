@@ -1,0 +1,40 @@
+{
+  "scope": "Japanese institutional DOB shard A, original discovery rows 0–144 plus three restored Section II scientists outside435",
+  "original_shard_candidates": 145,
+  "full_ndl_portrait_index_screened": true,
+  "ndl_portrait_exact_name_matches_in_shard": 24,
+  "ndl_portrait_included_new_claims_in_shard": 23,
+  "old_仁科_seed_not_overwritten": true,
+  "restored_science_outside435_claims": 3,
+  "new_claim_rows": 42,
+  "unique_people_with_new_claims": 42,
+  "day_precision_source_body_claims": 42,
+  "calendar_or_source_caveat_hold_claims": 5,
+  "source_tier_counts": {
+    "national_library_institutional_biography_secondary": 26,
+    "learned_society_commemorative_chronology": 1,
+    "prefectural_government_historical_essay_secondary": 1,
+    "learned_society_historical_article": 1,
+    "university_scholarly_biography_secondary": 9,
+    "municipal_government_honorary_citizen_biography": 4
+  },
+  "processed_status_counts": {
+    "no_usable_institution_day_in_bounded_round": 7,
+    "body_supported_day": 34,
+    "body_supported_day_caveat_hold": 5,
+    "delegated_kyoto_bulk": 1,
+    "not_processed": 95,
+    "existing_seed_skipped": 3
+  },
+  "new_final_cohort_accepted": 0,
+  "analysis_frozen": false,
+  "bazi_computed": 0,
+  "limitations": [
+    "Source day components do not all assert Gregorian calendar; explicit caveats must survive integration.",
+    "石川千代松 source explicitly reports multiple DOB accounts.",
+    "Pre-1873 old-era-only month/day (小藤/寺尾) are not Gregorian birthdays.",
+    "Discovery-row name 山崎一雄 has a false same-name secondary lead 1896; correct Nagoya chemist source says1911. No 1896 DOB was copied.",
+    "京都大学水野1862/6/2 is handled by bulk worker with database lunar-calendar legend; not counted here.",
+    "NDL portrait DOI/URL coverage is a partial source index; unmatched names are not not-found birthdays."
+  ]
+}

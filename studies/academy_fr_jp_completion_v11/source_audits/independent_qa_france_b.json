@@ -1,0 +1,1535 @@
+{
+  "audit_kind": "independent_v11_france_b_actual_HTML_QA",
+  "reviewer": "v11_france_a",
+  "reviewed_worker": "v11_france_b",
+  "completed_utc": "2026-10-30T12:12:45.704820+00:00",
+  "independent_qa_passed": true,
+  "final_decisions_sha256": "8798f98ac72438c3e81911fdd370f6d0435808ff13162e15e90e4c9fd9e89c68",
+  "final_manifest_sha256": "4df99feaa9169da142ef25af227265706d833e413214eb3074508fd4334d2f9b",
+  "public_pins_verified": {
+    "README.md": "1f7c8560315f9b2de07639f073a4f143cb1e5aa427f0081eb33db5e64b02101b",
+    "decisions.json": "8798f98ac72438c3e81911fdd370f6d0435808ff13162e15e90e4c9fd9e89c68",
+    "extracted_fields_audit.json": "a7ce67908b72c3fd24c9222a4aa0702a759baeb6304446fa530286fa6ac716de",
+    "processed.csv": "25a24289dab6f068bea69fc19c76b5693009f6634e4ee11e8d962e6bfa44c3e8",
+    "requests.json": "1422e1b10ecf3733afac658dddfc48494486af49bc6682e975f3aeaedad18fd8",
+    "source_manifest.json": "43b08ff8cfb002b51d99ade844df1dc10bf58ea48de3fd5f3293349b210d52e3",
+    "summary.json": "024a2c7db9dbe1488115d41125e1d5a76c02a183867dcc43c7295c475d9c4f35",
+    "unapplied_DOB_leads.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+  },
+  "public_pin_count": 8,
+  "fixed_queue_count": 102,
+  "source_URL_attempt_count": 102,
+  "actual_HTTP200_HTML_count": 101,
+  "HTTP500_response_count": 1,
+  "failed_response_not_used": "CTHS_112069 Debre500 body captured/hash checked but not eligible evidence; no retry",
+  "search_queries": 0,
+  "all_positive_actual_HTMLs_independently_parsed_and_read": 67,
+  "all_raw_response_hashes_checked": 102,
+  "all_HTTP200_body_DOBs_independently_reparsed_and_match": 101,
+  "new_DOB_mismatch_observed": false,
+  "original_response_hashes": [
+    {
+      "source_id": "cths_100241",
+      "sha256": "30717b9a0c8e2c394ff12944c45b004dd2050ad013bbd2054656ba8ac06c5559",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_100524",
+      "sha256": "eafc0481da30605e61d94c19d85baf8d873a00e48f80f9e80347edfd9286b62e",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_100534",
+      "sha256": "65fb0158602dcda9ce0173fdcf1adf3a6babe17e80906d2c421f6690b61b9bb9",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_100858",
+      "sha256": "98e26fca4989035d82645756cd27dd28eedfd50b188ae501602ae8372c0773f5",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_101223",
+      "sha256": "cdabb14aa37dab98a7911f408a957225b62a021130c25b4a5fb097f9b80609c6",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_101471",
+      "sha256": "eab79ffad71d66557e35e2c48487d8de2fdfbd961f4704e014dddea5125b8def",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_101483",
+      "sha256": "7618a41469395f5b679e8a7b361bb0a335c5297a1f073f6b2c871010c78244d0",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_101503",
+      "sha256": "e6ff017cf352bc72b268017ed2cef31df8d565ab6b1a540370102ceb39c84fa3",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_101507",
+      "sha256": "7aaa830d03ef83ff23cd79f48a1059a266573fa0e2e386e705d10375c488860e",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_101973",
+      "sha256": "035f2b3a029299fd37e5d027a7fc7bc5180dbbe8c509955b04bd3a9dc948b375",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_102355",
+      "sha256": "942f06ae65607cda56fa2ef44671692410190bd4d1715b55767524cd54b1fbc6",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_103005",
+      "sha256": "d7ec6c6a827456855e114f11cc89c3ce0985c0e16fc5e3fb9deb5d87e9f7d337",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_103993",
+      "sha256": "8345fc28cd7bf72c7355b9298f1ddf66fb13d7d83cf305594a935f0780c0b624",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_104846",
+      "sha256": "d879d9c3bedc80927d8888212eaa5da29b5b005f1237a0269afd49f3b6031cc9",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_105974",
+      "sha256": "0f142e6f7610be6a4a9d622bbe8da2f0cfd7760e379f4d7691ca33a2265ba750",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_107092",
+      "sha256": "83c8a512c2ade1e272508b413a2e8f6e871c630f9dabe4db62347040bf1fed44",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_107447",
+      "sha256": "22d397be1fb35bea880e5a9e98ad1e159df9a8ec22839af113956fd12bce6ba6",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_107885",
+      "sha256": "b2acfd2d20d81cfcad40125aba09562e6f1c2c4252a3e5b9d4fc7fc23eddd24a",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_108692",
+      "sha256": "acfc532bfec6db2cd8a5a85a3557279e1341aaf722e9696e89188e3e3278fe4d",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_110180",
+      "sha256": "67ac704468635ba4d8cbcd76d59efaaa374aa1879be31b17bdcc70c3662e745f",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_110671",
+      "sha256": "c8a23e4501066db32024e6ca7fbbae68057f4313f517f24794a04da079f02a25",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_110941",
+      "sha256": "976a3515ad26f476cf958a7e84bdcb2a58dcd2f1ae89ce14e7d84e457c62e067",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_110964",
+      "sha256": "24e798ca28a3c314e51a8072f27abe887f9f97340758b6eb9b77005d2b7fac43",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_111418",
+      "sha256": "29185b5fd026e3df64fb9b99fa3db1fddf2516d6fb06bdf9868f0c70f1ff63a4",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_111518",
+      "sha256": "5bdaa4cc05758e2214e4a9ee9c798cb9f6d0889b8350e871988783e1f3e44df7",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_111760",
+      "sha256": "ef74483b88c23524064046dbd6e38ea1bddacabdb0d9a6243eab8a4855267606",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_111773",
+      "sha256": "a71ae1b9d5732afeeb1912b13ca778363c4ffe304c5f697bf4ecc2639dddb015",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_111781",
+      "sha256": "30b702a38ed94ffbda3649a588ba037de95f91900f9cfac13479786fa73d637c",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_111792",
+      "sha256": "6358be97ea4ac2d0ba323c3ec66c3c6eaccffe3aa46ec218b7caf760b7039ed9",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_111799",
+      "sha256": "a087aeb9a093d986e403efe77ae135ce9171a0cda12e28aca452755f16c1f72f",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_111834",
+      "sha256": "4773716f540769cea2d6bc6a1b78373bc1b1c3337fb9f5b96a92c55ef18177b6",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_111841",
+      "sha256": "74274421614c00c379fa9df697b3152369ad96130eb99cb066ce915a01d4d4e2",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_111847",
+      "sha256": "ecbe4e3eaf1b140ab17410d0648c9afad99d4e33a101d2d1c686265735d7afe2",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_111937",
+      "sha256": "94a64668e89ff16309c4c44e52ca49f15307b24ce121027c0e05da464835dd5a",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_111978",
+      "sha256": "276a455d60e59faa5a320a10b43ce1ea7ebdc552ef1e84bf985f1dd14671da2a",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112032",
+      "sha256": "b5e27f53b11ef96d57bc393fd35001e5a8420f303d01c5213152455c0f332868",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112040",
+      "sha256": "5439bca7315a77344913c066d41fb2cd13016a93101512f3ed28c0fb2c41f565",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112057",
+      "sha256": "d27f70eba4e754dc4406fdcf02a8029fcc2431b3a91f4a1602c0e82be7c4ce66",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112069",
+      "sha256": "c26351c30adfa116ce1c5123a957b75c12e37e7ded449dde225f065ceb10af39",
+      "http_status": 500,
+      "actual_body_eligible": false
+    },
+    {
+      "source_id": "cths_112079",
+      "sha256": "12ac320c3310e3bec4827461d043f1244d34ae3b422a03a7fc9cea05e77f0390",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112085",
+      "sha256": "0d30fde3b2e87943f088245353404a3714198645795e5f654019390021065595",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112120",
+      "sha256": "d3ad38e7ad89550f138dff10ac5fdb8c3f0d4924332fd7ecebbf7a516421f179",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112125",
+      "sha256": "1d2c0b16de819bbf330e61fdec2ea1cb0c247c523b2cee1eb7b41ca1ce3a7cd9",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112134",
+      "sha256": "d4cb6145756d4fcd8acd7a4f01443d5098bfe193a74c926ac7a73a863066f9c5",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112138",
+      "sha256": "57abfd109ae18716f77b916cc397f2b7615f51f4d6ceca8c63f4f99b276c5346",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112168",
+      "sha256": "c9689ae03f569ce96b72f9dfd212c27b51697e6e83ad890a7e0cc78d182e0d05",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112173",
+      "sha256": "7a0b27b9a3ad00efe76860857e06b669e85c3528a04d7fbf1797d3d64f1e31f0",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112272",
+      "sha256": "f1a0c9813cb1055996dc1b3c161c3e9347f02df6918e8c09650e092dee181137",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112276",
+      "sha256": "717daefaacdb03636892ce5c1be1d1a0c8c2b5ba8b6b1d821d9b2e76f8eb27f4",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112279",
+      "sha256": "fcc113d9ecd0c9c933f4e3632d2f6826926413fef2328e884334670d579de38e",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112282",
+      "sha256": "f94489040b246602cf04d3a69c78e6f2419c0b4246131e74a926fcd3b5452683",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112451",
+      "sha256": "9cc9fb185b8aded8ab5877e1d0251e7ccd57af1038ebc5a542117e8b1b7c7c7f",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112496",
+      "sha256": "3dc854cdac3178434f8bf551c7c6a8b390d9f2fad39f396c4859009e8c9dc4ac",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112499",
+      "sha256": "640a89d166c1fd9a8a4a4462f5aa12e84f3a7fbd4f36cb2084e782113c812d6d",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112594",
+      "sha256": "0a05de3a3344f01e29d20de91daf6821e26b64f371a7a87f1e29fd58c3bee551",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112597",
+      "sha256": "9fd0c11c8245d0e7743b3002b60aeb71e62ad5ce5c0bdfe6c85d0ad04b9156da",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112619",
+      "sha256": "9396da897445642ed2dd0fbf2ecba27274da787523c2f3297961e0bb879dce3d",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112628",
+      "sha256": "d47167e87ab45ab49b60e6c384ff0531c97010eaeebb04a734ade21836a86612",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112650",
+      "sha256": "77a89b97a147e98f0b2f5d8ff0ae787ecb64d886cc910c48b2c6aa14771964d7",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112653",
+      "sha256": "18538a9602fa4214b102dd30da26af639ca5379b0ff47c7e1e0012c4b5e6f44e",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112671",
+      "sha256": "a61aea289f181dbf35c93bebd91271df16f88b63bbe8b519c44c55caf74716bc",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112675",
+      "sha256": "0913afcddaea8e5679c8d4909da544ccf37cfc19523725c85230c6fe2d28b4e8",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112704",
+      "sha256": "8879b6dae2dcd77c915408fea9094a933d5c6b572e72f5c1bc48bd9d061f9937",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112709",
+      "sha256": "f491aa5a3cab3d2631a474f9406d0c597e7721c3151b1dcf1518b5f52edc6432",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112725",
+      "sha256": "be56a83dac437e74989a65a17201dab26ac00ef8edf7c813bd7efefc8efa3d3a",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112729",
+      "sha256": "369b360c38edf813b9bdccd2b2db1d91a5b8d0c44ceb06f183ac581a00c8ba6a",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112739",
+      "sha256": "6a4a36405f817edd87b5e1f6c6fc892db61a24201e6163f5d17294783ccd9b5e",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112745",
+      "sha256": "c54d808b09cd430eb70c22a8578fe57fef671819c75937b58703696338d73abd",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112750",
+      "sha256": "3b2b4d8b3b2bb17792d553d10f92548961483f008589191bbfe3c2941729f050",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112755",
+      "sha256": "9b9b79986f2c6888b1554e641509fdc60ebbe0beff2e93648e69469e02d15f54",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112783",
+      "sha256": "20757266d23e2901c433126b944a98f83bdc8b40165e7c74227e3a8b8aad4f11",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112829",
+      "sha256": "d68aca34f5965d49fbf43dddc137556191628b5f1c1335f3d30c84ea976b6f14",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112838",
+      "sha256": "1f751d33107eb2194711a03badf54644929ae23b085149543642d3b1165bf5d8",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112842",
+      "sha256": "b18a4eafd5d319435cb0f6dfa9f1013b208aabb9e24874b4d9b2713d13b84089",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112865",
+      "sha256": "5974cbaa2de1ce9fa33d13cfedbb3ab77b9ba419cf9194c78a96a2704d8a33d9",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112880",
+      "sha256": "b63c2ff5ba6ebd87b8e10b9c2b67bfedcf2ebdb3448c01b1cfeb44d1da69df2c",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112917",
+      "sha256": "d3c3e2b7f4ab235e1c4076787daff57522e1c81a6dd752472946cf8c42a481d1",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112936",
+      "sha256": "8aac18e8daebc6ddbbbd2fd35560b953a92755f5ea9830e66d3a640a7369365d",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112939",
+      "sha256": "ccad33c466fd2cf7ad9d9010cf54824afd1b16384550bc01353064d46bc8a90d",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_112942",
+      "sha256": "e1182c1f35391259a18c8b9d76bc9374185efdd31e7e17c0cef5f97754697171",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_116770",
+      "sha256": "211bad1ae103eab9a38f59a1dd1e165763d0de785421d27be64fbb5e794c311a",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_117565",
+      "sha256": "032c6b17ef9b2bdae16c799bd3864ba3e7186d494a742eda53bd204ee31a845c",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_118883",
+      "sha256": "48bfc45dad6b0d1f6681d65b3c4d3b3cb6cff7a814b0c079212c5c5b4253ddff",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_118994",
+      "sha256": "d56c93dba4a07116b44b2cfad36e971e758e2480db076447961a37c1e262465b",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_119388",
+      "sha256": "ab4aa81112db67f169e88fe01e6d6aa7646f94fb170bd9634a7408e0c14c8e8a",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_119600",
+      "sha256": "cfc6349b2728949176e455112f4eba89b18e32dd1ea4ccebf68718c41b00dce9",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_123375",
+      "sha256": "6ecf32301eb8267738edcc59376e54b39ec089d6c2237583988e726322e2702c",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_125284",
+      "sha256": "6f76ca293bbf3a8685425122238c3a945bbace695da0b1a4ba01e2322a9387ae",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_128414",
+      "sha256": "16f6563a3c1301316cb4af35532ad818340117a034ef146dacbac30d4ceba21f",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_128866",
+      "sha256": "727ccb6102f3aee92febd70a0f0d846e0030f1e0a58ab0791735870286db875c",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_128917",
+      "sha256": "79ee78b2f1e1b453fd1a3955aac1c0e105de9c52b46d2209deaf49ff27add11a",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_129033",
+      "sha256": "e0791d705a5e2a069148d645773ecf6eb3a39b8272be4b0e0896463dc84a54fa",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_1378",
+      "sha256": "8456d23184f0d8b08708109c2e0bea49a03be7d41f09839cebeba5935cad9be7",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_1675",
+      "sha256": "5d863ab3a97d8884b3ed33ec84b7caa10a3d8eaf7574acb38b779c032ac991fc",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_192",
+      "sha256": "c7e4a92ef19d9f9aecc1fb48b9e0735a4ee563fc1752ec111cf5b5fdf0ba8750",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_2060",
+      "sha256": "403df45d2d998120e14492ec989b31839b1cf6cc07c6573e2d84d167d201c474",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_2067",
+      "sha256": "ebd26a38a3835f524340c09de7a0275a12359ee35bf237a5c866faefd683850e",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_2079",
+      "sha256": "7ac99397bf237f50bda4122ca7bb0232f5dffd223ec0b095167fd6c19504cc33",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_2093",
+      "sha256": "734772ce378b6bf3a032bffbfe9783b3993ce288a8276863c6cf334bccf8914c",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_2505",
+      "sha256": "ba648dfdd76a238d32df8eddcc643e7f83efe9ffec651a9dd36a3bf26dab6ce3",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_412",
+      "sha256": "a4cef984e08f682f42bd54285474ad5117cbe50636a3d4425af4b94577db9f3b",
+      "http_status": 200,
+      "actual_body_eligible": true
+    },
+    {
+      "source_id": "cths_662",
+      "sha256": "b48e22bcb27ab3ca735172e493989acb6a0a91ce9d1ecaf5e123e118f16befd5",
+      "http_status": 200,
+      "actual_body_eligible": true
+    }
+  ],
+  "strict_validator_positive_checks_passed": 67,
+  "strict_approved_count": 67,
+  "parked_count": 35,
+  "institution_role_and_start_gates_not_waived": true,
+  "exact_bounded_credit_no_affiliation_substring_transfer": true,
+  "biography_and_society_fields_combined_only_within_same_actual_body": true,
+  "root_uniform_member_separate_presidency_period_cases": {
+    "CTHS_107885": "Member plus separatelydated1973presidency and single1956–1991membership period; literalstart1956.",
+    "CTHS_112499": "Member plus separatelydated1949presidency and single1931–1962period; literalstart1931.",
+    "CTHS_112650": "Member plus separatelydated1930presidency and single1910–1940period; literalstart1910.",
+    "CTHS_123375": "Member plus separatelydated1925presidency and single1902–1944period; literalstart1902.",
+    "CTHS_112279": "Actual captured full biography explicitly gives SUBJECT Member of Academy1937; same-body506single1937–1975period; no hidden biography or author title transfer."
+  },
+  "positive_checks": [
+    {
+      "candidate_group_id": "CTHS_100241",
+      "source_id": "cths_100241",
+      "actual_raw_sha256": "30717b9a0c8e2c394ff12944c45b004dd2050ad013bbd2054656ba8ac06c5559",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Institut de France",
+      "typed_ordinary_member_start_verified": 1903,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_100524",
+      "source_id": "cths_100524",
+      "actual_raw_sha256": "eafc0481da30605e61d94c19d85baf8d873a00e48f80f9e80347edfd9286b62e",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Institut de France",
+      "typed_ordinary_member_start_verified": 1948,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_100534",
+      "source_id": "cths_100534",
+      "actual_raw_sha256": "65fb0158602dcda9ce0173fdcf1adf3a6babe17e80906d2c421f6690b61b9bb9",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Institut de France",
+      "typed_ordinary_member_start_verified": 1963,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_100858",
+      "source_id": "cths_100858",
+      "actual_raw_sha256": "98e26fca4989035d82645756cd27dd28eedfd50b188ae501602ae8372c0773f5",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Institut de France",
+      "typed_ordinary_member_start_verified": 1939,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_101223",
+      "source_id": "cths_101223",
+      "actual_raw_sha256": "cdabb14aa37dab98a7911f408a957225b62a021130c25b4a5fb097f9b80609c6",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Institut de France",
+      "typed_ordinary_member_start_verified": 1942,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_101471",
+      "source_id": "cths_101471",
+      "actual_raw_sha256": "eab79ffad71d66557e35e2c48487d8de2fdfbd961f4704e014dddea5125b8def",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Institut de France",
+      "typed_ordinary_member_start_verified": 1903,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_101483",
+      "source_id": "cths_101483",
+      "actual_raw_sha256": "7618a41469395f5b679e8a7b361bb0a335c5297a1f073f6b2c871010c78244d0",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Institut de France",
+      "typed_ordinary_member_start_verified": 1923,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_101503",
+      "source_id": "cths_101503",
+      "actual_raw_sha256": "e6ff017cf352bc72b268017ed2cef31df8d565ab6b1a540370102ceb39c84fa3",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Institut de France",
+      "typed_ordinary_member_start_verified": 1979,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_101973",
+      "source_id": "cths_101973",
+      "actual_raw_sha256": "035f2b3a029299fd37e5d027a7fc7bc5180dbbe8c509955b04bd3a9dc948b375",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1955,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_102355",
+      "source_id": "cths_102355",
+      "actual_raw_sha256": "942f06ae65607cda56fa2ef44671692410190bd4d1715b55767524cd54b1fbc6",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Institut de France",
+      "typed_ordinary_member_start_verified": 1946,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_103005",
+      "source_id": "cths_103005",
+      "actual_raw_sha256": "d7ec6c6a827456855e114f11cc89c3ce0985c0e16fc5e3fb9deb5d87e9f7d337",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Institut de France",
+      "typed_ordinary_member_start_verified": 1924,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_103993",
+      "source_id": "cths_103993",
+      "actual_raw_sha256": "8345fc28cd7bf72c7355b9298f1ddf66fb13d7d83cf305594a935f0780c0b624",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Institut de France",
+      "typed_ordinary_member_start_verified": 1919,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_104846",
+      "source_id": "cths_104846",
+      "actual_raw_sha256": "d879d9c3bedc80927d8888212eaa5da29b5b005f1237a0269afd49f3b6031cc9",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1918,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_107885",
+      "source_id": "cths_107885",
+      "actual_raw_sha256": "b2acfd2d20d81cfcad40125aba09562e6f1c2c4252a3e5b9d4fc7fc23eddd24a",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Institut de France",
+      "typed_ordinary_member_start_verified": 1956,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": "Member plus separatelydated1973presidency and single1956–1991membership period; literalstart1956."
+    },
+    {
+      "candidate_group_id": "CTHS_108692",
+      "source_id": "cths_108692",
+      "actual_raw_sha256": "acfc532bfec6db2cd8a5a85a3557279e1341aaf722e9696e89188e3e3278fe4d",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Institut de France",
+      "typed_ordinary_member_start_verified": 1926,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_110941",
+      "source_id": "cths_110941",
+      "actual_raw_sha256": "976a3515ad26f476cf958a7e84bdcb2a58dcd2f1ae89ce14e7d84e457c62e067",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Institut de France",
+      "typed_ordinary_member_start_verified": 1953,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_111418",
+      "source_id": "cths_111418",
+      "actual_raw_sha256": "29185b5fd026e3df64fb9b99fa3db1fddf2516d6fb06bdf9868f0c70f1ff63a4",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Institut de France",
+      "typed_ordinary_member_start_verified": 1935,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_111518",
+      "source_id": "cths_111518",
+      "actual_raw_sha256": "5bdaa4cc05758e2214e4a9ee9c798cb9f6d0889b8350e871988783e1f3e44df7",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Institut de France",
+      "typed_ordinary_member_start_verified": 1976,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_111978",
+      "source_id": "cths_111978",
+      "actual_raw_sha256": "276a455d60e59faa5a320a10b43ce1ea7ebdc552ef1e84bf985f1dd14671da2a",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1954,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_112032",
+      "source_id": "cths_112032",
+      "actual_raw_sha256": "b5e27f53b11ef96d57bc393fd35001e5a8420f303d01c5213152455c0f332868",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1982,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_112040",
+      "source_id": "cths_112040",
+      "actual_raw_sha256": "5439bca7315a77344913c066d41fb2cd13016a93101512f3ed28c0fb2c41f565",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1943,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_112057",
+      "source_id": "cths_112057",
+      "actual_raw_sha256": "d27f70eba4e754dc4406fdcf02a8029fcc2431b3a91f4a1602c0e82be7c4ce66",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1964,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_112079",
+      "source_id": "cths_112079",
+      "actual_raw_sha256": "12ac320c3310e3bec4827461d043f1244d34ae3b422a03a7fc9cea05e77f0390",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1886,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_112085",
+      "source_id": "cths_112085",
+      "actual_raw_sha256": "0d30fde3b2e87943f088245353404a3714198645795e5f654019390021065595",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1979,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_112120",
+      "source_id": "cths_112120",
+      "actual_raw_sha256": "d3ad38e7ad89550f138dff10ac5fdb8c3f0d4924332fd7ecebbf7a516421f179",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1935,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_112125",
+      "source_id": "cths_112125",
+      "actual_raw_sha256": "1d2c0b16de819bbf330e61fdec2ea1cb0c247c523b2cee1eb7b41ca1ce3a7cd9",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1936,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_112134",
+      "source_id": "cths_112134",
+      "actual_raw_sha256": "d4cb6145756d4fcd8acd7a4f01443d5098bfe193a74c926ac7a73a863066f9c5",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1948,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_112138",
+      "source_id": "cths_112138",
+      "actual_raw_sha256": "57abfd109ae18716f77b916cc397f2b7615f51f4d6ceca8c63f4f99b276c5346",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1918,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_112168",
+      "source_id": "cths_112168",
+      "actual_raw_sha256": "c9689ae03f569ce96b72f9dfd212c27b51697e6e83ad890a7e0cc78d182e0d05",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1931,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_112173",
+      "source_id": "cths_112173",
+      "actual_raw_sha256": "7a0b27b9a3ad00efe76860857e06b669e85c3528a04d7fbf1797d3d64f1e31f0",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1977,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_112276",
+      "source_id": "cths_112276",
+      "actual_raw_sha256": "717daefaacdb03636892ce5c1be1d1a0c8c2b5ba8b6b1d821d9b2e76f8eb27f4",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1913,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_112279",
+      "source_id": "cths_112279",
+      "actual_raw_sha256": "fcc113d9ecd0c9c933f4e3632d2f6826926413fef2328e884334670d579de38e",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1937,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": "Actual captured full biography explicitly gives SUBJECT Member of Academy1937; same-body506single1937–1975period; no hidden biography or author title transfer."
+    },
+    {
+      "candidate_group_id": "CTHS_112282",
+      "source_id": "cths_112282",
+      "actual_raw_sha256": "f94489040b246602cf04d3a69c78e6f2419c0b4246131e74a926fcd3b5452683",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1972,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_112451",
+      "source_id": "cths_112451",
+      "actual_raw_sha256": "9cc9fb185b8aded8ab5877e1d0251e7ccd57af1038ebc5a542117e8b1b7c7c7f",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1946,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_112496",
+      "source_id": "cths_112496",
+      "actual_raw_sha256": "3dc854cdac3178434f8bf551c7c6a8b390d9f2fad39f396c4859009e8c9dc4ac",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1991,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_112499",
+      "source_id": "cths_112499",
+      "actual_raw_sha256": "640a89d166c1fd9a8a4a4462f5aa12e84f3a7fbd4f36cb2084e782113c812d6d",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1931,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": "Member plus separatelydated1949presidency and single1931–1962period; literalstart1931."
+    },
+    {
+      "candidate_group_id": "CTHS_112594",
+      "source_id": "cths_112594",
+      "actual_raw_sha256": "0a05de3a3344f01e29d20de91daf6821e26b64f371a7a87f1e29fd58c3bee551",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1979,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_112628",
+      "source_id": "cths_112628",
+      "actual_raw_sha256": "d47167e87ab45ab49b60e6c384ff0531c97010eaeebb04a734ade21836a86612",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1890,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_112650",
+      "source_id": "cths_112650",
+      "actual_raw_sha256": "77a89b97a147e98f0b2f5d8ff0ae787ecb64d886cc910c48b2c6aa14771964d7",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1910,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": "Member plus separatelydated1930presidency and single1910–1940period; literalstart1910."
+    },
+    {
+      "candidate_group_id": "CTHS_112653",
+      "source_id": "cths_112653",
+      "actual_raw_sha256": "18538a9602fa4214b102dd30da26af639ca5379b0ff47c7e1e0012c4b5e6f44e",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1985,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_112671",
+      "source_id": "cths_112671",
+      "actual_raw_sha256": "a61aea289f181dbf35c93bebd91271df16f88b63bbe8b519c44c55caf74716bc",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1934,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_112675",
+      "source_id": "cths_112675",
+      "actual_raw_sha256": "0913afcddaea8e5679c8d4909da544ccf37cfc19523725c85230c6fe2d28b4e8",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1963,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_112704",
+      "source_id": "cths_112704",
+      "actual_raw_sha256": "8879b6dae2dcd77c915408fea9094a933d5c6b572e72f5c1bc48bd9d061f9937",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1979,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_112709",
+      "source_id": "cths_112709",
+      "actual_raw_sha256": "f491aa5a3cab3d2631a474f9406d0c597e7721c3151b1dcf1518b5f52edc6432",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1982,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_112725",
+      "source_id": "cths_112725",
+      "actual_raw_sha256": "be56a83dac437e74989a65a17201dab26ac00ef8edf7c813bd7efefc8efa3d3a",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1950,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_112729",
+      "source_id": "cths_112729",
+      "actual_raw_sha256": "369b360c38edf813b9bdccd2b2db1d91a5b8d0c44ceb06f183ac581a00c8ba6a",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1957,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_112739",
+      "source_id": "cths_112739",
+      "actual_raw_sha256": "6a4a36405f817edd87b5e1f6c6fc892db61a24201e6163f5d17294783ccd9b5e",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1966,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_112750",
+      "source_id": "cths_112750",
+      "actual_raw_sha256": "3b2b4d8b3b2bb17792d553d10f92548961483f008589191bbfe3c2941729f050",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1935,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_112755",
+      "source_id": "cths_112755",
+      "actual_raw_sha256": "9b9b79986f2c6888b1554e641509fdc60ebbe0beff2e93648e69469e02d15f54",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1955,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_112783",
+      "source_id": "cths_112783",
+      "actual_raw_sha256": "20757266d23e2901c433126b944a98f83bdc8b40165e7c74227e3a8b8aad4f11",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1942,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_112838",
+      "source_id": "cths_112838",
+      "actual_raw_sha256": "1f751d33107eb2194711a03badf54644929ae23b085149543642d3b1165bf5d8",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1970,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_112842",
+      "source_id": "cths_112842",
+      "actual_raw_sha256": "b18a4eafd5d319435cb0f6dfa9f1013b208aabb9e24874b4d9b2713d13b84089",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1949,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_112880",
+      "source_id": "cths_112880",
+      "actual_raw_sha256": "b63c2ff5ba6ebd87b8e10b9c2b67bfedcf2ebdb3448c01b1cfeb44d1da69df2c",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1985,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_112917",
+      "source_id": "cths_112917",
+      "actual_raw_sha256": "d3c3e2b7f4ab235e1c4076787daff57522e1c81a6dd752472946cf8c42a481d1",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1968,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_112936",
+      "source_id": "cths_112936",
+      "actual_raw_sha256": "8aac18e8daebc6ddbbbd2fd35560b953a92755f5ea9830e66d3a640a7369365d",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1943,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_112939",
+      "source_id": "cths_112939",
+      "actual_raw_sha256": "ccad33c466fd2cf7ad9d9010cf54824afd1b16384550bc01353064d46bc8a90d",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1922,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_112942",
+      "source_id": "cths_112942",
+      "actual_raw_sha256": "e1182c1f35391259a18c8b9d76bc9374185efdd31e7e17c0cef5f97754697171",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Académie des sciences",
+      "typed_ordinary_member_start_verified": 1938,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_123375",
+      "source_id": "cths_123375",
+      "actual_raw_sha256": "6ecf32301eb8267738edcc59376e54b39ec089d6c2237583988e726322e2702c",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Institut de France",
+      "typed_ordinary_member_start_verified": 1902,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": "Member plus separatelydated1925presidency and single1902–1944period; literalstart1902."
+    },
+    {
+      "candidate_group_id": "CTHS_1378",
+      "source_id": "cths_1378",
+      "actual_raw_sha256": "8456d23184f0d8b08708109c2e0bea49a03be7d41f09839cebeba5935cad9be7",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Institut de France",
+      "typed_ordinary_member_start_verified": 1911,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_192",
+      "source_id": "cths_192",
+      "actual_raw_sha256": "c7e4a92ef19d9f9aecc1fb48b9e0735a4ee563fc1752ec111cf5b5fdf0ba8750",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Institut de France",
+      "typed_ordinary_member_start_verified": 1900,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_2060",
+      "source_id": "cths_2060",
+      "actual_raw_sha256": "403df45d2d998120e14492ec989b31839b1cf6cc07c6573e2d84d167d201c474",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Institut de France",
+      "typed_ordinary_member_start_verified": 1959,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_2067",
+      "source_id": "cths_2067",
+      "actual_raw_sha256": "ebd26a38a3835f524340c09de7a0275a12359ee35bf237a5c866faefd683850e",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Institut de France",
+      "typed_ordinary_member_start_verified": 1963,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_2079",
+      "source_id": "cths_2079",
+      "actual_raw_sha256": "7ac99397bf237f50bda4122ca7bb0232f5dffd223ec0b095167fd6c19504cc33",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Institut de France",
+      "typed_ordinary_member_start_verified": 1977,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_2093",
+      "source_id": "cths_2093",
+      "actual_raw_sha256": "734772ce378b6bf3a032bffbfe9783b3993ce288a8276863c6cf334bccf8914c",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Institut de France",
+      "typed_ordinary_member_start_verified": 1952,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_2505",
+      "source_id": "cths_2505",
+      "actual_raw_sha256": "ba648dfdd76a238d32df8eddcc643e7f83efe9ffec651a9dd36a3bf26dab6ce3",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Institut de France",
+      "typed_ordinary_member_start_verified": 1904,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_412",
+      "source_id": "cths_412",
+      "actual_raw_sha256": "a4cef984e08f682f42bd54285474ad5117cbe50636a3d4425af4b94577db9f3b",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Institut de France",
+      "typed_ordinary_member_start_verified": 1919,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    },
+    {
+      "candidate_group_id": "CTHS_662",
+      "source_id": "cths_662",
+      "actual_raw_sha256": "b48e22bcb27ab3ca735172e493989acb6a0a91ce9d1ecaf5e123e118f16befd5",
+      "actual_HTML_body_independently_parsed_and_read": true,
+      "bounded_exact_institution_writer_entry_verified": "Institut de France",
+      "typed_ordinary_member_start_verified": 1943,
+      "body_DOB_matches_preserved_identity": true,
+      "body_name_and_career_bridge_reviewed": true,
+      "no_correspondent_or_foreign_start_substituted": true,
+      "no_author_title_or_presidency_start_transfer": true,
+      "root_uniform_rule_supplement": null
+    }
+  ],
+  "raw_source_body_redistributed": false,
+  "reviewer_modified_reviewed_public_files": false,
+  "identity_DOB_modified": false,
+  "analysis_cohort_frozen": false,
+  "bazi_computed": 0
+}

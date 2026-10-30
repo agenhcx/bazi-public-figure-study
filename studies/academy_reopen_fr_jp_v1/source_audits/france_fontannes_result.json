@@ -1,0 +1,59 @@
+{
+  "case": "france_fontannes",
+  "cths_person_id": "107677",
+  "target_name": "FONTANNES François",
+  "identity_variants_to_require": [
+    "François Fontannes",
+    "Jacques François Fontannes"
+  ],
+  "checked_utc": "2026-10-29T00:59:02.351271+00:00",
+  "status": "NO_PRIMARY_BIRTH_RECORD_OBTAINED_OFFICIAL_SERVICE_UNAVAILABLE",
+  "research_question": "Can an original Lyon civil birth registration independently establish the day/month for the target born in 1839?",
+  "baseline": {
+    "cths_birth_evidence": "1839 only",
+    "unverified_day_month_lead": "1839-09-16, previously Wikipedia-derived only",
+    "birthdate_evidence_status": "YEAR_ONLY_UNVERIFIED_DAY_MONTH",
+    "membership_status": "CTHS_MEMBER_1886_UNCONFIRMED_POSSIBLE_PRIZE_CONFUSION"
+  },
+  "primary_birth_record_seen": false,
+  "target_identity_on_primary_record_verified": false,
+  "day_level_birth_date_supported": false,
+  "new_accepted_birth_date": null,
+  "new_day_month_candidate": null,
+  "disposition": "Keep year-only evidence and unresolved September 16 lead. No primary record was retrieved, so this attempt adds no support to a day/month claim.",
+  "access_findings": [
+    {
+      "url": "https://www.archives-lyon.fr/",
+      "kind": "official_archives_homepage",
+      "observation": "Current official homepage states a technical failure of online genealogical holdings and that the service is unavailable for an indefinite period.",
+      "brief_original_notice": "Le service n’est plus disponible pour une durée indéterminée."
+    },
+    {
+      "url": "https://www.fondsenligne.archives-lyon.fr/v2/ac69/mariage.html",
+      "kind": "official_old_civil_register_entry",
+      "result": "502 Bad Gateway on retrieval"
+    },
+    {
+      "url": "https://recherches.archives-lyon.fr/page/-rechercher-ses-ancetres",
+      "kind": "official_genealogy_entry_linked_from_homepage",
+      "result": "403 Forbidden on retrieval; stopped without bypass"
+    }
+  ],
+  "interpretation_limit": "The outcome is failure to obtain primary evidence within a bounded check, not evidence that the birth register or the person is absent. Search snippets were not accepted as birth evidence.",
+  "scope_preserved": {
+    "repository_changed": false,
+    "accepted_membership_changed": false,
+    "accepted_DOB_changed": false,
+    "bazi_computed": false,
+    "contacts_made": false,
+    "access_bypass_attempted": false
+  },
+  "budget_used": {
+    "targeted_search_queries": 2,
+    "official_public_body_or_image_requests": 3,
+    "maximum_queries": 3,
+    "maximum_body_or_image_requests": 4,
+    "primary_images_retrieved": 0
+  },
+  "stop_reason": "Official homepage announces an indefinite genealogy-service outage; old endpoint failed 502, linked genealogy endpoint failed 403. No further endpoint attempts were made."
+}

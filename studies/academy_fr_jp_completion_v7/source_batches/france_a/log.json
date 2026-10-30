@@ -1,0 +1,17 @@
+{
+  "batch": "france_a",
+  "baseline_commit": "4187d923880b6c78259c703904f0d46cfd35d934",
+  "fixed_queue_csv_sha256": "3c52a09cdfe695ff4af482d74ef8be98470074952fdffb5d419cc9a11417268a",
+  "query_count": 45,
+  "url_attempt_count": 7,
+  "network_stopped": true,
+  "scope_exhaustion_claim": false,
+  "query_execution_independent_of_claim_count": true,
+  "private_import_failures_before_any_network": 2,
+  "notes": [
+    "Two helper invocations failed before networking because requests was unavailable; collector switched to standard-library urllib.",
+    "All seven attempted official URLs returned original PDF bytes.",
+    "No PDF title or search snippet substitutes for original-body verification.",
+    "No source capture exception; no full original body or review image is publishable."
+  ]
+}

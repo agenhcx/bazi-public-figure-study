@@ -1,0 +1,157 @@
+{
+  "reviewer": "v7_japan_dates independent source reviewer",
+  "independent_of_collector": true,
+  "scope": [
+    {
+      "source_batch": "japan_calendar",
+      "files": [
+        "claims.json",
+        "calendar_recommendations.json",
+        "source_manifest.json",
+        "MANIFEST.json",
+        "holds.json",
+        "processed.csv"
+      ],
+      "checked_rows": 2,
+      "claim_ids": [
+        "f3bc596f8db3e0fff254",
+        "ad6d540a17e2801c29aa"
+      ],
+      "claim_review_coverage": "All2newclaims, both calendar recommendations, original bytes, exact source pairs, same-source occupational bridges, inheritedfalsecalendar claims, and necessaryPDFbirth page visual review.31fixedprocessing rows checked for exact denominator and stableIDcoverage."
+    }
+  ],
+  "bindings": {
+    "claims.json": "2645059887ed2be07c23f6a3a815c28827db124037a1aaf80e2b58cad3ebcb9a",
+    "calendar_recommendations.json": "2840bf2d153dbbe2d360a25b4fe2e14057bef79a0362dba5886cb70ee16f94af",
+    "source_manifest.json": "a0d2ab983188215dbed2874471932983c72b2ce0fa80c14be6e85577a75e224f",
+    "MANIFEST.json": "be9e2995c48bcbea1ed6a43c8b6513140b4e04f44da21184607abca3cffb0f9b",
+    "v6_japan_birth_claims.csv": "5b3e38c3c7fbee6e2c4354f4f30645eba3213268946678eb90d1864bd90313b3"
+  },
+  "original_source_checks": [
+    {
+      "claim_id": "f3bc596f8db3e0fff254",
+      "source_url": "https://miyairikinenkan.com/keinosuke_miyairi/ryakureki/",
+      "original_sha256": "5c237f6b6894264bdb885981dff89da039731badf619f01d262e0d760c2aace6",
+      "verified_by_reading_original_local_bytes": true,
+      "original_is_derived_text": false
+    },
+    {
+      "claim_id": "ad6d540a17e2801c29aa",
+      "source_url": "https://www.jstage.jst.go.jp/article/agcjchikyukagaku/62/5/62_KJ00005034039/_pdf",
+      "original_sha256": "65669baf74954e88aa0d767cd3a8e595d788882bd52d52a72aa1af479d89986a",
+      "verified_by_reading_original_local_bytes": true,
+      "original_is_derived_text": false
+    }
+  ],
+  "findings": [
+    {
+      "path": "claims.json",
+      "key": "f3bc596f8db3e0fff254",
+      "evidence": "Independently rehashed memorial HTML80471bytes:5c237f6b6894264bdb885981dff89da039731badf619f01d262e0d760c2aace6. Actual chronology first row prints1865年/慶応元年/5月15日（新暦6月8日）and states birth. Same body identifies full-name Kyushu emeritus parasitologist,1904Fukuoka first hygiene professor,1923ImperialAcademy membership and1925emeritus career. Raw source labels新暦, not literallyGregorian.",
+      "expected_action": "Accept source-supplied1865-06-08candidate with new_calendar_explicit; retain historical1865-05-15falsecalendar claim f57984624f944bf1fa00. Root may implement only the approved calendar-routing release; no collector conversion or explicitGregorian claim.",
+      "status": "passed"
+    },
+    {
+      "path": "claims.json",
+      "key": "ad6d540a17e2801c29aa",
+      "evidence": "Independently rehashed originalPDF1685599bytes:65669baf74954e88aa0d767cd3a8e595d788882bd52d52a72aa1af479d89986a. Visually read page1/printed345 at private/yamasaki_jstage_p1.png:生涯 first sentence is明治3年3月10日（1870年4月10日）and says生まれた. Full-name Japanese/English title, geography/geology career,1911geography chair then1912professor and1925JapaneseGeographicalSociety first president establish identity. PDF has no新暦/Gregorian label.",
+      "expected_action": "Accept literal source-supplied1870-04-10parallel-date candidate with calendar=not_stated/source_supplied_calendar_pair=true. Retain historical1870-03-10falsecalendar claim08a287de2e498aafec22. Root may implement only the approved calendar-routing release without conversion or explicitGregorian assertion.",
+      "status": "passed"
+    },
+    {
+      "path": "calendar_recommendations.json",
+      "key": "both_fixed_members",
+      "evidence": "Both recommendations bind the actual original hashes and literal supplied pairs. Each relevant member has one inheritedFalsecalendar claim in cumulative v6ledger and no competing comparable body date; the oldfalseclaims are explicitly named for retention. Worker does not mutate a master or release a hold. No vote/tier majority was used.",
+      "expected_action": "Preserve oldsource rows verbatim and apply only root-approved routing decisions; keep any claim-level historical noncomparability. This QA does not itself release inheritedholds.",
+      "status": "passed"
+    },
+    {
+      "path": "MANIFEST.json",
+      "key": "public_metadata_and_fixed_scope",
+      "evidence": "Alltop-level manifest file hashes/bytecounts agree; private bodies,images and helpers excluded. ProcessedCSVhas31unique fixedkeys matching exact selection queue. No newmemberID, sectiondecision, finalcohort/BaZi/freeze. holds.json is empty for newmemberholds.",
+      "expected_action": "Integrate only reviewed metadata; do not treat31dispositions as31newsearches or2claims as processing completion.",
+      "status": "passed"
+    }
+  ],
+  "visual_reviews": [
+    {
+      "claim_id": "ad6d540a17e2801c29aa",
+      "original_pdf_sha256": "65669baf74954e88aa0d767cd3a8e595d788882bd52d52a72aa1af479d89986a",
+      "image_path": "/workspace/scratch/7e8aa4e0d4af/academy_v7_workers/japan_calendar/private/yamasaki_jstage_p1.png",
+      "image_sha256": "aa91c62ec600ebd6ba5276401bdd034d9efd2d78cd35c9c3992a8590d0bf8563",
+      "page": 1,
+      "printed_page": "345",
+      "birth_and_identity_visually_verified": true
+    }
+  ],
+  "manifest_checks": [
+    {
+      "path": "README.md",
+      "sha256": "3f31c4a55a055d62ca049c2ce197b891c40aa804b3c53e7cac89a3a8545c394a",
+      "passed": true
+    },
+    {
+      "path": "calendar_recommendations.json",
+      "sha256": "2840bf2d153dbbe2d360a25b4fe2e14057bef79a0362dba5886cb70ee16f94af",
+      "passed": true
+    },
+    {
+      "path": "claims.json",
+      "sha256": "2645059887ed2be07c23f6a3a815c28827db124037a1aaf80e2b58cad3ebcb9a",
+      "passed": true
+    },
+    {
+      "path": "holds.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "passed": true
+    },
+    {
+      "path": "prior_route_audit.json",
+      "sha256": "b72296bd1df07fe10a535350f13e50c521589089ed4226d48d818927982e7b3d",
+      "passed": true
+    },
+    {
+      "path": "processed.csv",
+      "sha256": "9f07a929942e6248564172ce432f71946fcbbfa8d19e70e46cdf64eea16e0fd5",
+      "passed": true
+    },
+    {
+      "path": "requests.json",
+      "sha256": "c719f9f254ee2632a3a82724126d057600dccf250c3f0a42f9ba189757021b36",
+      "passed": true
+    },
+    {
+      "path": "source_manifest.json",
+      "sha256": "a0d2ab983188215dbed2874471932983c72b2ce0fa80c14be6e85577a75e224f",
+      "passed": true
+    },
+    {
+      "path": "summary.json",
+      "sha256": "afe3bd56fbf4df0ba5c1678f45101b45331bc7814b17a160b4f4050045f08e15",
+      "passed": true
+    }
+  ],
+  "remaining_holds": [
+    {
+      "member_key": "jpa-unlinked-a9d1e2cde713ae0e",
+      "status": "inheritedcalendarholdunchangedbyreviewer; rootapprovedroutingreleaseonly",
+      "retained_false_calendar_claim_ids": [
+        "f57984624f944bf1fa00"
+      ]
+    },
+    {
+      "member_key": "jpa-unlinked-d4cbc74833986120",
+      "status": "inheritedcalendarholdunchangedbyreviewer; rootapprovedroutingreleaseonly",
+      "retained_false_calendar_claim_ids": [
+        "08a287de2e498aafec22"
+      ]
+    }
+  ],
+  "new_member_holds_written": 0,
+  "inherited_hold_releases_written_by_reviewer": 0,
+  "collector_calendar_conversions": 0,
+  "comparable_conflicts_observed": 0,
+  "bazi_variables_computed": 0,
+  "analysis_cohort_frozen": false,
+  "result": "passed_all_new_claims_and_calendar_recommendations_with_explicit_calendar_label_limits"
+}
