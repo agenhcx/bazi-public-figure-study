@@ -1,0 +1,33 @@
+{
+  "audit_kind": "final_exact_source_and_QA_bindings",
+  "date": "2026-10-30",
+  "batches": [
+    {
+      "source_batch": "france_a",
+      "worker_manifest_sha256": "908cc2f1e7e487fe17142994458d3ba39f5e2cef5dc85aab96f9c19cdf4056de",
+      "independent_qa_file": "source_audits/independent_qa_france_a.json",
+      "independent_qa_sha256": "3009d1f57a8fec90518c502a07c3d0f6b3813d7587855d6e3cdb6f7f89614059"
+    },
+    {
+      "source_batch": "france_b",
+      "worker_manifest_sha256": "f8b11ceca99163a65530b91f7050545156ecc9832eaf4ce147e8da035aab758e",
+      "independent_qa_file": "source_audits/france_b_independent_qa.json",
+      "independent_qa_sha256": "31a9d36f81f35b1864c1e5b12a0a3541db0a97ef1d837103860e6a6b381ac076"
+    },
+    {
+      "source_batch": "japan_scope",
+      "worker_manifest_sha256": "95c9b3216b10f227eac91e7f8a24e671656177e834d158f1f27421be135590f1",
+      "independent_qa_file": "source_audits/japan_scope_independent_qa.json",
+      "independent_qa_sha256": "0ce6a7c23ed97676c2a27ab10991660d1ccd098c629dbd5b30816b86b6646fdc"
+    }
+  ],
+  "component_method_contract_sha256": "d6ba179064775003e9a556b3579c1570f7c4a64333bd0092d0895b21c95eef13",
+  "root_approved_component_memberships": 9,
+  "root_approved_individual_cases": 25,
+  "conditional_membership_approvals": 25,
+  "unresolved_father_birthyear_control_sha256": "09c391450a901e089d3d9dc4906ddf8484461db76af7652717a839e02e4fac3c",
+  "raw_date_claims_changed": 0,
+  "historical_source_origin_flags_changed": 0,
+  "analysis_cohort_frozen": false,
+  "bazi_variables_computed": 0
+}

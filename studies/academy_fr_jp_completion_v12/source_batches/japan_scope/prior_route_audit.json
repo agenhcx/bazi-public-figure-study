@@ -1,0 +1,95 @@
+{
+  "audit_kind": "read_only_bulk_scope_route_triage_then_bounded_fresh_archive_check",
+  "baseline_commit": "070239774f4fff72daea231e836796ef3ae8fc62",
+  "fixed_people": 34,
+  "local_triage_people": 34,
+  "local_inputs": [
+    {
+      "path": "studies/academy_fr_jp_completion_v12/selection_queues/japan_sections.csv",
+      "sha256": "4c8cf021fcb44b8cb087c497b90dfa6c76b5d518d32d102ee154796cdc70e599"
+    },
+    {
+      "path": "studies/academy_fr_jp_completion_v11/outputs/japan_master.csv",
+      "sha256": "23db003c00fc921fb9d0c2a8241e6ff0e8fc37101304c311d01339fed8e432bd"
+    },
+    {
+      "path": "studies/academy_fr_jp_completion_v11/source_batches/japan_scope/prior_route_audit.json",
+      "sha256": "c538c266ddb8c96b166b4759270173e087c77192398d5891e2bc2dcd13b6cefb"
+    },
+    {
+      "path": "studies/academy_fr_jp_completion_v11/source_batches/japan_scope/source_manifest.json",
+      "sha256": "8118cbb9dbfb76bf92e7b535cfe18ccc1c1c792b6adb8920eae89394ed62315d"
+    },
+    {
+      "path": "studies/academy_fr_jp_completion_v10/source_batches/japan_scope/prior_route_audit.json",
+      "sha256": "bfb32040ca2c0a38d44cea8a7fb04a8b8de6c2360217d326cd5bb6ac0dfbed5b"
+    },
+    {
+      "path": "data/japan_academy_collection_closeout_v1/jpa_official_website_gap_summary_v11.json",
+      "sha256": "d2d82f99f80239a9d7b4590fd464e9b32a832b19c517b033d9a88dd84de23ebc"
+    },
+    {
+      "path": "data/japan_academy_collection_closeout_v1/JPA_PUBLICATION_SEARCH_CLOSEOUT_V12.md",
+      "sha256": "4302fd6643c8b22a6e26453945774831d2030d735f07fdb506e272fa257e22a9"
+    },
+    {
+      "path": "scripts/discover_japan_academy_postwar_official_sources_v1.py",
+      "sha256": "97942d66bb4ed462a02357ef5382033b2d693e391d47903f847d69afeb25f1fc"
+    }
+  ],
+  "known_scope_unchanged": {
+    "II": 438,
+    "I": 10,
+    "unresolved": 34
+  },
+  "routes_not_repeated": [
+    {
+      "route": "NDL1906fullmemberpages",
+      "reason": "Accepted v10 identities are already outside the remaining34; no new applicable member snapshot."
+    },
+    {
+      "route": "NDL1944reviewedactive/former/Tokyopages",
+      "reason": "Prior actual limited-page screening recorded no further direct binding; not repeated."
+    },
+    {
+      "route": "NDL1947adjacentactivecanvases82–84",
+      "reason": "No promising currently unresolved ordinary-member bridge. Current34 mostly joined1949+, while Ito and Sezawa died before1947. The already-read final ordinary-member leaf does not supply Abe. No absence classification."
+    },
+    {
+      "route": "NDLpostwardirectoryPID2934795andhistoryPID2988196",
+      "reason": "Known exactmanifest404s retained; no repeat or alternate endpoint guesses."
+    },
+    {
+      "route": "1979officialgeneralpublication",
+      "reason": "Local prior website audit identifies limited-access catalog route; no concrete new public original body found, so no retry."
+    },
+    {
+      "route": "oldindividualpublication/JSTAGE/Waybackfamily",
+      "reason": "Prior closeouts read; no repeated person query or old blocked route."
+    }
+  ],
+  "fresh_route_plan_before_fetch": "Official Academy newsletter archive, at most2queries+indexand2observedPDFs, only if chronology supports multiple remaining current members. Root approved bounded route.",
+  "selected_2004_2007_candidate_member_keys": [
+    "jpa-unlinked-3883f5d7333898da",
+    "jpa-unlinked-46342129907360df",
+    "jpa-unlinked-afef687f5e18a470",
+    "jpa-unlinked-e0189dfe842edbd0",
+    "jpa-unlinked-e0aae7738ae3f733"
+  ],
+  "fresh_route_observation": {
+    "source_url": "https://www.japan-acad.go.jp/japanese/publishing/newsletter.html",
+    "source_sha256": "757f3fbf2b272e363cee703fa5bd8bd2eac2e619eb6b73b2a3779acee3a58919",
+    "source_locator": "Archive list bottom, observed first issue 第1号（2008.4）",
+    "latest_preserved_retirement_among34": "2007-03-25",
+    "decision": "Stop after original index. No2004–2007contemporary issue exists in this archive listing; no PDF retrieval is justified for this proposed route.",
+    "limited_negative_scope": "This is a contemporaneous-source chronology mismatch, not proof that later newsletters contain no retrospective evidence and not section or nonmembership evidence."
+  },
+  "new_section_proposals": 0,
+  "new_DOB_claims": 0,
+  "individual_queries": 0,
+  "additional_network_requests_planned": false,
+  "degree_rule_extended": false,
+  "exact_subsection_inferred": false,
+  "known_scope_overwritten": false,
+  "source_body_redistributed": false
+}

@@ -1,0 +1,27 @@
+{
+  "candidate_group_id": "CTHS_102829",
+  "name": "DANGEARD Pierre-Augustin",
+  "status": "all_three_dimensions_held_actual_contrary_birthyear",
+  "root_hold_instruction": true,
+  "identity_DOB_membership_promotions_proposed": false,
+  "preserved_current_raw_DOB_claim": "1862-11-23",
+  "father_dedicated_subject_source": {
+    "source_id": "cths_102829",
+    "source_url": "https://cths.fr/an/savant.php?id=102829",
+    "source_sha256": "004926eb68023a040c44b00e85cb40e1c3c71bf46aa5316d38e6cb798b8c7b0a",
+    "source_locator": "Dedicated father subject heading and Naissance field",
+    "observed_full_date": "1862-11-23"
+  },
+  "related_son_source": {
+    "candidate_group_id": "CTHS_112057",
+    "source_url": "https://cths.fr/an/savant.php?id=112057",
+    "source_sha256": "d27f70eba4e754dc4406fdcf02a8029fcc2431b3a91f4a1602c0e82be7c4ce66",
+    "source_locator": "Actual captured son biography opening: father Pierre Augustin parenthetical lifespan",
+    "raw_parenthetical_year_expression": "Pierre Augustin (1867-1947)",
+    "observed_birthyear_only": 1867,
+    "observed_deathyear_only": 1947
+  },
+  "interpretation": "The father and son are distinct people. The actual same-father year1867 conflicts with dedicated father date1862-11-23. Neither is declared a typo or chosen by source-count/dedicated-field priority. No1867month/day is invented; all father flags/raw claims remain unchanged. Son accepted1895birth and membership remain unchanged.",
+  "accepted_data_modified": false,
+  "new_GET_performed_for_control": false
+}
