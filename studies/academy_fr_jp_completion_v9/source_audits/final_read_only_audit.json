@@ -1,0 +1,142 @@
+{
+  "audit_kind": "independent_read_only_v9_integration_audit",
+  "reviewer": "v9_france_source_scout",
+  "completed_utc": "2026-10-30T01:17:42.005763+00:00",
+  "independent_qa_passed": true,
+  "errors": [],
+  "stable_japan_ids": 482,
+  "scope_section_election_columns_compared": [
+    "member_key",
+    "membership_state",
+    "name_jp",
+    "name_en",
+    "degree_jp",
+    "specialty_jp",
+    "specialty_en",
+    "section_official",
+    "subsection_official",
+    "degree_suggested_subsection",
+    "election_dates_iso",
+    "first_election_date",
+    "last_election_date",
+    "election_year",
+    "retirement_dates_iso",
+    "final_retirement_date",
+    "detail_url_jp",
+    "source_url_jp",
+    "scope_status",
+    "through_2025_eligible",
+    "automatic_roster_acceptance",
+    "restored_layers",
+    "section_evidence_status",
+    "broad_section_supported",
+    "exact_subsection_supported",
+    "final_cohort_accepted",
+    "bazi_variables_computed"
+  ],
+  "scope_field_differences": [],
+  "inherited_claims_compared": 527,
+  "old_csv_claim_field_differences": [],
+  "old_structured_claim_differences": [],
+  "old_selected_days_preserved": 367,
+  "old_selected_day_differences": [],
+  "old_day_tier_flag_differences": [],
+  "legacy_source_flag_differences": [],
+  "prior_exact_calendar_releases_preserved": {
+    "jpa-unlinked-a9d1e2cde713ae0e": "1865-06-08",
+    "jpa-unlinked-d4cbc74833986120": "1870-04-10",
+    "jpa-unlinked-7ecae30c03b86d5f": "1865-08-01"
+  },
+  "only_new_day_id": [
+    "jpa-unlinked-eabfb6c33df81d73"
+  ],
+  "old_hold_count": 47,
+  "only_new_hold_release": [
+    "jpa-unlinked-eabfb6c33df81d73"
+  ],
+  "other_old_holds_retained": 46,
+  "terao_selected_day": "1855-11-04",
+  "terao_tier": "other_attributed_secondary_only",
+  "terao_NDL_authority_preserved": true,
+  "terao_section_still_unresolved": true,
+  "fixed_candidate_processing": {
+    "france_a": {
+      "selected": 30,
+      "dispositions": 30,
+      "all_search_performed_true_and_query_count_positive": true
+    },
+    "france_b": {
+      "selected": 30,
+      "dispositions": 30,
+      "all_search_performed_true_and_query_count_positive": true
+    },
+    "japan_calendar": {
+      "selected": 2,
+      "dispositions": 2,
+      "all_search_performed_true_and_query_count_positive": true
+    },
+    "japan_dates": {
+      "selected": 3,
+      "dispositions": 3,
+      "all_search_performed_true_and_query_count_positive": true
+    }
+  },
+  "prior_unknown_historical_person_query_coverage": 150,
+  "fixed60_people_now_targeted": 60,
+  "remaining_unknown_historical_coverage_subset": 90,
+  "current_membership_gaps_with_unknown_historical_coverage": 89,
+  "source_only_resolved_gap_ids_without_new_individual_query": [
+    "CTHS_111928"
+  ],
+  "unknown_does_not_mean_never_searched": true,
+  "current_date_cases_not_day": 107,
+  "current_combined_date_section_queue": 120,
+  "france_strict_memberships": 394,
+  "france_all_three": 392,
+  "france_new_strict_memberships": 13,
+  "france_identity_DOB_field_differences": [],
+  "Chardonnet_ordinary_role_typing_hold_retained": true,
+  "Camichel_source_only_cross_accepted": true,
+  "new_tier_classifier_review": "Exactadditionalattributedsecondarytier only; ancestor classification unchanged. Future continuations reconstructing throughV4mustinherit this exacttier extension.",
+  "routing_guard_review": "Exactroot source/date, dualapproval, actualQA/claims/workerManifest bindings, soleoldnoncomparableclaim, originalV2purecalendaroverlayfileSHA/record/rootoverride and later exactsynthesizedrecord. Single-rowJreplay copiesonlyDOBstatus/ISO/holdnote; noancestormutation.",
+  "files_sha256": {
+    "scripts/continue.py": "3563ff7fe9076b0502bdc2c7b6e2e41d4a4360a2e70f6b352c5697fe43ba6755",
+    "inputs/calendar_routing_decisions.json": "467b76f2a365d8800cef398e8994f389a3371e97e2a889d8207633e0d8beba45",
+    "outputs/japan_master.csv": "a913187e2a7215631ff18341b65cc08d813ada0c626546d1734df4ffd4a66a5f",
+    "outputs/japan_birth_claims.csv": "c0a7820ea8149829d3b58caae18fefbb7b15fbc68f3ca1cb1f86582f793aff4c",
+    "outputs/summary.json": "ae1979fcdb67223ee7245f27d3f7f6848c9fafe87a96ce27b4d9b50bab912b50",
+    "source_batches/france_a/requests.json": "26a20a71a641fa2fc3d5482746268e0bba186f34ecd4878d6b3696ad614174d0",
+    "source_batches/france_b/requests.json": "172068f80e72a71f3838c183cd28e66020a9627c9f3deeb6c90ca690ea96e9c3",
+    "source_batches/japan_calendar/requests.json": "b3c852267801b87102f4e9dc71048be67b93396e0d4acf9a31fc2382b05fe699",
+    "source_batches/japan_dates/requests.json": "99cdc07d23c9b0c2fa87a2c7a939e855d025f3b69d0541ef877f74b2fcf5fc3b",
+    "source_audits/france_targeted_coverage_continuation.json": "e3e446fadcc7f767b85452077d71e4dec6b9562cdd2c90c1cfa2202637cfcef7"
+  },
+  "network_requests": 0,
+  "repository_writes": 0,
+  "analysis_cohort_frozen": false,
+  "bazi_variables_computed": 0,
+  "source_body_redistributed": false,
+  "public_coverage_audit_exact_sets_matched": true,
+  "literal_query_log_mapping_checks": {
+    "france_a": {
+      "literal_query_log_rows": 44,
+      "all_fixed_people_have_at_least_one_mapped_literal_query": true,
+      "fixed_people_matched": 30
+    },
+    "france_b": {
+      "literal_query_log_rows": 60,
+      "all_fixed_people_have_at_least_one_mapped_literal_query": true,
+      "fixed_people_matched": 30
+    },
+    "japan_calendar": {
+      "literal_query_log_rows": 9,
+      "all_fixed_people_have_at_least_one_mapped_literal_query": true,
+      "fixed_people_matched": 2
+    },
+    "japan_dates": {
+      "literal_query_log_rows": 9,
+      "all_fixed_people_have_at_least_one_mapped_literal_query": true,
+      "fixed_people_matched": 3
+    }
+  }
+}
