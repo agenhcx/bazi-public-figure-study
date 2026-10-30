@@ -1,0 +1,11 @@
+# France v7 A bounded membership continuation
+
+The fixed39IDs all received a targeted person-name route query. Thirteen had previously been wholly unsearched and26had only prior broad cache screening. All39processing outcomes are explicit:4strict new ordinary memberships,2role/date holds and33unresolved targeted-search cases. A returned search hit does not count as a source-body claim, and unresolved cases are not lifetime nonmembership findings.
+
+The4strict proposals are Janet1919(free-member subtype retained), Rey16June1930(historical applications division), Moussu1934and Albert-Auguste de Lapparent1896. Ordinary subject role and literal membership start are read from the same official original in each case. Rey's image reads1930where OCR says4930; Moussu's first presentation1917is not his1934election; Lapparent's secretary event1907is separate from ordinary admission1896. All original hashes and critical PDF images were checked. Identity and DOB approvals remain unchanged.
+
+Sebert's mechanics role is supported by1930and Douvillé's mineralogy role by1937, but neither captured body gives a literal election year. Douvillé's approximate duration is retained without arithmetic. The Monod article attaches its explicit Academy title to author Taquet; it does not supply a qualifying Monod election. No author title is transferred to a subject.
+
+45literal queries in12search calls and7original URL attempts were used; all7returned official PDFs. The45-query ceiling was reached and all networking stopped. Available v6France private bodies were screened first; no same-source GET was repeated, no failed Anubis/challenge/archive route was retried, and no outside-queue claim is proposed. This bounded run does not establish lifetime exhaustion, country completion or analysis readiness.
+
+Only the top-level metadata files enumerated in MANIFEST.json are publishable. The private directory contains full source bodies, raw search results, helper scripts, extracted text and review images and is excluded. Each public source excerpt is below25words, and no source is shared with a separate A claim outside this batch. No identity, DOB, inherited hold or chronology conflict is changed; no BaZi computation or country freeze occurs.

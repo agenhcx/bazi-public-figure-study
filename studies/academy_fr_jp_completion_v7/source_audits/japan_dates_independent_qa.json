@@ -1,0 +1,228 @@
+{
+  "reviewer": "v7_japan_calendar",
+  "reviewed_worker": "v7_japan_dates",
+  "independent_of_collector": true,
+  "reviewed_utc": "2026-10-29T23:58:26.323650+00:00",
+  "mode": "Independent read-only local original-byte/body QA with required PDF visual inspection. No fresh search, no network request, no worker mutation.",
+  "result": "pass",
+  "scope": [
+    {
+      "source_batch": "japan_dates",
+      "files": [
+        "README.md",
+        "cached_corpus_screening.json",
+        "claims.json",
+        "holds.json",
+        "prior_route_audit.json",
+        "processed.csv",
+        "requests.json",
+        "summary.json"
+      ],
+      "checked_rows": 5
+    }
+  ],
+  "claim_count": 5,
+  "original_hashes_recomputed": 5,
+  "null_original_hash_claims": 0,
+  "claims_json_sha256": "ee35d9fe45a91204636a55ede4f3552e9f4413045d1d6fcf8e8f8a75ae4f8a0c",
+  "manifest_json_sha256": "edc49ecd41789fd897bb737016fd8bd1a8702335eb168ea3ad621d57a72d08fe",
+  "checks": [
+    {
+      "member_key": "jpa-unlinked-7cc1c92cdee98a86",
+      "claim_id": "dbafb37b67b9193fc520",
+      "source_original_path": "/workspace/scratch/7e8aa4e0d4af/academy_v7_workers/japan_dates/private/kishinouye_utokyo.html",
+      "source_sha256_expected": "bcc65420330827fc0be25dd646e46991be83eea8a00e7189d2ebe4034ce0577d",
+      "source_sha256_actual": "bcc65420330827fc0be25dd646e46991be83eea8a00e7189d2ebe4034ce0577d",
+      "original_bytes_match": true,
+      "body_birth_expression_matches_claim": true,
+      "professional_identity_bridge_verified": true,
+      "precision_preserved": true,
+      "calendar_label_not_invented": true,
+      "birth_not_death_or_appointment": true,
+      "existing_body_components_compatible": true,
+      "source_tier_preserved": true,
+      "result": "pass"
+    },
+    {
+      "member_key": "jpa-unlinked-de01b2d523597cc7",
+      "claim_id": "a60d0383e565e261b395",
+      "source_original_path": "/workspace/scratch/7e8aa4e0d4af/academy_v7_workers/japan_dates/private/soda_imeche.html",
+      "source_sha256_expected": "18285280330c6162db41d6229680cbbcd551b2100ccfdda6cc73a12bae4f873c",
+      "source_sha256_actual": "18285280330c6162db41d6229680cbbcd551b2100ccfdda6cc73a12bae4f873c",
+      "original_bytes_match": true,
+      "body_birth_expression_matches_claim": true,
+      "professional_identity_bridge_verified": true,
+      "precision_preserved": true,
+      "calendar_label_not_invented": true,
+      "birth_not_death_or_appointment": true,
+      "existing_body_components_compatible": true,
+      "source_tier_preserved": true,
+      "result": "pass"
+    },
+    {
+      "member_key": "jpa:namba_shigetou",
+      "claim_id": "924af34b17b088d7a83b",
+      "source_original_path": "/workspace/scratch/7e8aa4e0d4af/academy_v7_workers/japan_dates/private/namba_pja.html",
+      "source_sha256_expected": "4ee9943bff507daf1ed28a1a2eb6ce04487a8fcfbb45b60aa8f78667989ae5ec",
+      "source_sha256_actual": "4ee9943bff507daf1ed28a1a2eb6ce04487a8fcfbb45b60aa8f78667989ae5ec",
+      "original_bytes_match": true,
+      "body_birth_expression_matches_claim": true,
+      "professional_identity_bridge_verified": true,
+      "precision_preserved": true,
+      "calendar_label_not_invented": true,
+      "birth_not_death_or_appointment": true,
+      "existing_body_components_compatible": true,
+      "source_tier_preserved": true,
+      "result": "pass"
+    },
+    {
+      "member_key": "jpa:okada_tsuneo",
+      "claim_id": "541b87298ce6a67b64e7",
+      "source_original_path": "/workspace/scratch/7e8aa4e0d4af/academy_v7_workers/japan_dates/private/okada_eaj83.pdf",
+      "source_sha256_expected": "3a3408c28311253811bd3cee6d8c7e7fedde2ce55dba3c97a518d532d6477353",
+      "source_sha256_actual": "3a3408c28311253811bd3cee6d8c7e7fedde2ce55dba3c97a518d532d6477353",
+      "original_bytes_match": true,
+      "body_birth_expression_matches_claim": true,
+      "professional_identity_bridge_verified": true,
+      "precision_preserved": true,
+      "calendar_label_not_invented": true,
+      "birth_not_death_or_appointment": true,
+      "existing_body_components_compatible": true,
+      "source_tier_preserved": true,
+      "result": "pass"
+    },
+    {
+      "member_key": "jpa:sasazuki_takehiko",
+      "claim_id": "b25c9bd215d6a9fc5552",
+      "source_original_path": "/workspace/scratch/7e8aa4e0d4af/academy_v7_workers/japan_dates/private/sasazuki_publisherpreview_rg.html",
+      "source_sha256_expected": "15dbb146827f33166d803a9821a8e70530c49f262e23f4e7cde19e3368b4cd01",
+      "source_sha256_actual": "15dbb146827f33166d803a9821a8e70530c49f262e23f4e7cde19e3368b4cd01",
+      "original_bytes_match": true,
+      "body_birth_expression_matches_claim": true,
+      "professional_identity_bridge_verified": true,
+      "precision_preserved": true,
+      "calendar_label_not_invented": true,
+      "birth_not_death_or_appointment": true,
+      "existing_body_components_compatible": true,
+      "source_tier_preserved": true,
+      "result": "pass"
+    }
+  ],
+  "visual_reviews": [
+    {
+      "member_key": "jpa:okada_tsuneo",
+      "source": "japan_dates/private/okada_eaj83.pdf",
+      "viewed": "japan_dates/private/okada_visual.jpg",
+      "location": "Physical PDF page2/index1, printed1, shaded top speaker biography",
+      "finding": "Name岡田恒男, literal1936年1月生まれ, University of Tokyo architecture and earthquake-engineering bridge independently read. Month precision preserved."
+    }
+  ],
+  "manifest_checks": [
+    {
+      "file": "README.md",
+      "sha256": "4aaac501923624ec35473b8c365df0069fa17b2f741064fda92e4092fcd545ed",
+      "matches": true
+    },
+    {
+      "file": "cached_corpus_screening.json",
+      "sha256": "40cf2ff27ab0e67cf8691e0230334c3edde662429780c44b0e568681c1947f9e",
+      "matches": true
+    },
+    {
+      "file": "claims.json",
+      "sha256": "ee35d9fe45a91204636a55ede4f3552e9f4413045d1d6fcf8e8f8a75ae4f8a0c",
+      "matches": true
+    },
+    {
+      "file": "holds.json",
+      "sha256": "6d7ae73ce61bbb6a2a4f9e08a746caa243826e6b4871df167814801685f3c5a4",
+      "matches": true
+    },
+    {
+      "file": "prior_route_audit.json",
+      "sha256": "554262405eb8b40c7de5306da10224baac4d09e8aac5af7f14ea8eb4488a148f",
+      "matches": true
+    },
+    {
+      "file": "processed.csv",
+      "sha256": "502a921bbd9c713d8ed38d81dbb53e287b8cc884221c11299efcdd047416e587",
+      "matches": true
+    },
+    {
+      "file": "requests.json",
+      "sha256": "f8d718d4c86062708734d4ac7bc6663b7fcb1c032b469448d996345e96c251d7",
+      "matches": true
+    },
+    {
+      "file": "summary.json",
+      "sha256": "d840af55c246c5662fb19680288a67cb2d6cc7e4b6f691c1c8c2ca6a56eb1dc8",
+      "matches": true
+    }
+  ],
+  "fixed_queue_rows": 29,
+  "search_outcome_record_count": 29,
+  "search_outcome_records_are_global_holds": false,
+  "findings": [
+    {
+      "path": "japan_dates/claims.json",
+      "key": "dbafb37b67b9193fc520",
+      "evidence": "University museum exhibition actual paragraph gives岸上鎌吉（1867−1929）and fisheries/zoological work on Scombridae and Penaeus. Year only; no pre1873month/day inferred.",
+      "expected_action": "Accept this literal source-body claim at its recorded precision and tier; do not release unrelated calendar holds.",
+      "status": "passed"
+    },
+    {
+      "path": "japan_dates/claims.json",
+      "key": "a60d0383e565e261b395",
+      "evidence": "Actual IMechE award biography states Professor Norimune Soda was born in Kashiwazaki, Japan in1911; same paragraph gives Tokyo lubrication/aeronautics and RIKEN career. Year only.",
+      "expected_action": "Accept this literal source-body claim at its recorded precision and tier; do not release unrelated calendar holds.",
+      "status": "passed"
+    },
+    {
+      "path": "japan_dates/claims.json",
+      "key": "924af34b17b088d7a83b",
+      "evidence": "Actual Academy journal HTML Profile states Shigetou Namba was born in Chiyoda-ku, Tokyo in1951; same profile gives Tokyo plant-pathology professorship, Academy Prize2017 and phytoplasma work. Year only.",
+      "expected_action": "Accept this literal source-body claim at its recorded precision and tier; do not release unrelated calendar holds.",
+      "status": "passed"
+    },
+    {
+      "path": "japan_dates/claims.json",
+      "key": "541b87298ce6a67b64e7",
+      "evidence": "Independently viewed private/okada_visual.jpg from original PDF physical page2/printed1. Shaded 岡田恒男 biography clearly reads1936年1月生まれ and names architecture/earthquake engineering career. No day supplied.",
+      "expected_action": "Accept this literal source-body claim at its recorded precision and tier; do not release unrelated calendar holds.",
+      "status": "passed"
+    },
+    {
+      "path": "japan_dates/claims.json",
+      "key": "b25c9bd215d6a9fc5552",
+      "evidence": "Actual ResearchGate captured HTML includes Publisher Preview and Wiley attribution; joining the page text spans produces Takehiko Sasazuki was born on April21,1940. Same obituary identifies Kyushu immunogeneticist/HLA work. The hash is for this HTML, not the Wiley403original or an uncaptured PDF; conservative attributed-secondary tier retained.",
+      "expected_action": "Accept this literal source-body claim at its recorded precision and tier; do not release unrelated calendar holds.",
+      "status": "passed"
+    }
+  ],
+  "remaining_holds": [
+    "All inherited canonical holds remain in force. This report authorizes no member/calendar hold release. Worker holds.json contains only explicit global_member_hold:false search-outcome records."
+  ],
+  "scope_invariants": {
+    "all_new_claims_checked": true,
+    "all_original_claim_hashes_recomputed": true,
+    "no_source_calendar_conversion": true,
+    "no_precision_padding": true,
+    "no_birth_death_appointment_conflation": true,
+    "all_final_cohort_false": true,
+    "all_bazi_zero": true,
+    "worker_files_modified": false,
+    "source_bodies_redistributed": false
+  },
+  "bazi_variables_computed": 0,
+  "analysis_cohort_frozen": false,
+  "limitation": "Validates recorded local source originals and metadata; does not claim remote re-fetch availability. Wiley original403 and no original PDF visual claim remain accurately disclosed.",
+  "metadata_followup_checks": [
+    {
+      "file": "japan_dates/cached_corpus_screening.json",
+      "key": "new_source_outside_fixed_matches[0].member_key",
+      "value": "jpa:utida_yositika",
+      "finding": "Independently matched the corrected stable ID to v6 master 内田祥哉. EAJ dialogue mention only; no DOB and no extra claim. Claims JSON hash unchanged; all manifest entries rehashed.",
+      "status": "passed"
+    }
+  ]
+}
