@@ -1,0 +1,30 @@
+{
+  "audit_kind": "bounded_prior_route_and_source_structure_review",
+  "baseline_commit": "c8d38ab3db34270d39d1c39e2aa368de612edc3f",
+  "fixed_people": 47,
+  "pre1906_science_degree_only_people": 11,
+  "remaining36_people": 36,
+  "local_files_reviewed": [
+    {
+      "path": "studies/academy_fr_jp_completion_v2/inputs/imperial_exact_evidence885.csv",
+      "sha256": "b5075d475ee5b90409eadbeaed777bf2090aa62f76f43774a867f2da085017a4",
+      "rows": 885,
+      "max_column_raw_text_characters": 76,
+      "finding": "Individual matched-name strips, not whole-page OCR. None of the eleven pre1906 selected names occurs in those strips; absence is not a section decision."
+    },
+    {
+      "path": "data/japan_academy_collection_closeout_v1/JPA_PUBLICATION_SEARCH_CLOSEOUT_V12.md",
+      "sha256": "4302fd6643c8b22a6e26453945774831d2030d735f07fdb506e272fa257e22a9",
+      "finding": "Prior broad literature/biography searches closed; no restart without a concrete new qualifying source. Existing janews20 historicalschema recognized; it supplies no new person binding."
+    }
+  ],
+  "fresh_route_basis": "Re-capture full original pages from known previously successful1906 NDLsnapshot, whose earlier extraction targeted laterjoiners only. This is new-person full-page review of a successful source, not repeated blind blocked endpoints. Viewer failed but manifest and three declared originalimages succeeded.",
+  "no_degree_rule_extension": true,
+  "no_exact_subsection_backprojection": true,
+  "old_calendar_cases_not_researched": true,
+  "new_dob_claims": 0,
+  "remaining_unresolved_note": "ItoKeisuke died1901 before1906reorganization and is not promoted;37 other scope rows remain unchanged absent root-approved direct evidence.",
+  "private_v6_v9_caches_gone": true,
+  "no_metadata_hash_only_capture_reuse": true,
+  "additional_network_requests_planned": false
+}

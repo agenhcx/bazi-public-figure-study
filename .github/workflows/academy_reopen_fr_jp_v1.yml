@@ -13,6 +13,7 @@ on:
       - 'studies/academy_fr_jp_completion_v7/**'
       - 'studies/academy_fr_jp_completion_v8/**'
       - 'studies/academy_fr_jp_completion_v9/**'
+      - 'studies/academy_fr_jp_completion_v10/**'
       - 'JAPAN_ACADEMY_CURRENT_CHECKPOINT.md'
       - 'ACADEMY_COLLECTION_CURRENT_CHECKPOINT.md'
       - '.github/workflows/academy_reopen_fr_jp_v1.yml'
@@ -230,5 +231,25 @@ jobs:
           path: |
             studies/academy_fr_jp_completion_v9/README.md
             studies/academy_fr_jp_completion_v9/outputs/
+          if-no-files-found: error
+          retention-days: 14
+      - name: Validate v10 targeted coverage and inherited calendar decisions
+        run: python3 -m unittest discover -s studies/academy_fr_jp_completion_v10/tests -v
+      - name: Rebuild v10 prepared inputs and country outputs
+        run: |
+          python3 studies/academy_fr_jp_completion_v10/scripts/continue.py prepare --output-dir "${{ runner.temp }}/academy-v10-inputs"
+          for name in japan_claims.json japan_delta_claims.json japan_holds.json japan_delta_holds.json japan_processed_ids.json japan_delta_processed_ids.json france_decisions.json france_processed_ids.json inherited_france_decisions.json japan_section_decisions.json france_dob_conflict_decisions.json; do
+            diff "studies/academy_fr_jp_completion_v10/inputs/$name" "${{ runner.temp }}/academy-v10-inputs/$name"
+          done
+          python3 studies/academy_fr_jp_completion_v10/scripts/continue.py assemble --output-dir "${{ runner.temp }}/academy-v10-output"
+          diff -r studies/academy_fr_jp_completion_v10/outputs "${{ runner.temp }}/academy-v10-output"
+          python3 studies/academy_fr_jp_completion_v10/scripts/continue.py verify
+      - name: Save v10 continued country tables
+        uses: actions/upload-artifact@v4
+        with:
+          name: academy-france-japan-continuation-v10
+          path: |
+            studies/academy_fr_jp_completion_v10/README.md
+            studies/academy_fr_jp_completion_v10/outputs/
           if-no-files-found: error
           retention-days: 14

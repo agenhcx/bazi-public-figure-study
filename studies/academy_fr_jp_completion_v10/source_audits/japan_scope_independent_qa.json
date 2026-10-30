@@ -1,0 +1,324 @@
+{
+  "audit_kind": "independent_Japan_direct_section_source_QA",
+  "reviewer": "v10_audit",
+  "reviewed_worker": "v10_japan_scope",
+  "completed_utc": "2026-10-30T11:21:51.437778+00:00",
+  "independent_qa_passed": true,
+  "section_proposals_sha256": "276d22590f4d769cf43820d4b3db7610922299a96f7d2168a6b30585ff3325d5",
+  "claims_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+  "worker_manifest_sha256": "4b49d2aef41caa7830285eb4c22e79f84e7c429ae3937edeae108509ddfa0ffe",
+  "public_manifest_pins_verified": 9,
+  "actual_private_original_capture_hashes_verified": [
+    {
+      "source_id": "ndl1906_manifest",
+      "source_sha256": "e310c5c64df04a9ad462ba44203ce56ce7b8e823c019b3bd5fc1da939c3fa7a6",
+      "bytes": 13156
+    },
+    {
+      "source_id": "janews20",
+      "source_sha256": "92954267cf52bf663902aa6e1af62699103191a8155e8e358acaef17ce20f754",
+      "bytes": 2021368
+    },
+    {
+      "source_id": "janews26",
+      "source_sha256": "a9ad646ee5a4ff8f14eb3fd8f4c44133593693ae90cbcfa86c27c8ea945d6db1",
+      "bytes": 1106575
+    },
+    {
+      "source_id": "transcont62_3",
+      "source_sha256": "15001ae36d6a8dd2dfbd137777d4bf7d5ddb5fe5478cc400cc5911d69a14d7a9",
+      "bytes": 9029
+    },
+    {
+      "source_id": "ndl1906_canvas12",
+      "source_sha256": "d4c147ed03719be1ba7080970a4eb75d9ba6703a2a20337eb82ef57a99cf567a",
+      "bytes": 1672725
+    },
+    {
+      "source_id": "ndl1906_canvas11",
+      "source_sha256": "b69686b265016700d2e1c75d30cb89c50692e094c93cf848fc073af34f99dbb4",
+      "bytes": 1771845
+    },
+    {
+      "source_id": "ndl1906_cover_canvas1",
+      "source_sha256": "6492911632bde9d58a08a0ca26e5a6491f0a0a1db074cfb815c0c0f6d05a7675",
+      "bytes": 1272815
+    }
+  ],
+  "actual_source_images_independently_visually_reviewed": [
+    {
+      "canvas_index": 1,
+      "role": "cover",
+      "source_sha256": "6492911632bde9d58a08a0ca26e5a6491f0a0a1db074cfb815c0c0f6d05a7675",
+      "literal_cover": "明治三十九年 帝國學士院一覽"
+    },
+    {
+      "canvas_index": 11,
+      "printed_pages": [
+        16,
+        17
+      ],
+      "role": "第五會員 directory columns",
+      "source_sha256": "b69686b265016700d2e1c75d30cb89c50692e094c93cf848fc073af34f99dbb4"
+    },
+    {
+      "canvas_index": 12,
+      "printed_pages": [
+        18,
+        19
+      ],
+      "role": "member directory continuation",
+      "source_sha256": "d4c147ed03719be1ba7080970a4eb75d9ba6703a2a20337eb82ef57a99cf567a"
+    }
+  ],
+  "official_manifest_independently_refetched": {
+    "url": "https://dl.ndl.go.jp/api/iiif/897383/manifest.json",
+    "http_status": 200,
+    "bytes": 13156,
+    "sha256": "e310c5c64df04a9ad462ba44203ce56ce7b8e823c019b3bd5fc1da939c3fa7a6",
+    "matches_worker_original_bytes": true,
+    "publisher": "帝国学士院",
+    "volume_label": "帝国学士院一覧. 明治39年",
+    "generic_series_metadata_caveat": "Publication range明39–45 andW3CDTF1912 retained as generic series metadata; actual cover fixes this volume at1906."
+  },
+  "proposal_checks": [
+    {
+      "member_key": "jpa-unlinked-0e74d049141c9fd7",
+      "name_jp": "菊池 大麓",
+      "printed_name_jp": "菊池大麓",
+      "source_sha256": "b69686b265016700d2e1c75d30cb89c50692e094c93cf848fc073af34f99dbb4",
+      "canvas_index": 11,
+      "printed_page": 16,
+      "literal_same_column_section": "第二部",
+      "independent_actual_image_visual_passed": true,
+      "unique_preserved_identity_match_passed": true,
+      "existing_membership_interval": [
+        "1889-03-10",
+        "1917-08-20"
+      ],
+      "1906_year_overlap_passed": true,
+      "old_broad_section": "",
+      "new_broad_section": "2",
+      "no_backprojection_to_original_election": true,
+      "no_exact_subsection_inference": true
+    },
+    {
+      "member_key": "jpa-unlinked-501b5814ef8eb21f",
+      "name_jp": "三宅 秀",
+      "printed_name_jp": "三宅秀",
+      "source_sha256": "b69686b265016700d2e1c75d30cb89c50692e094c93cf848fc073af34f99dbb4",
+      "canvas_index": 11,
+      "printed_page": 16,
+      "literal_same_column_section": "第二部",
+      "independent_actual_image_visual_passed": true,
+      "unique_preserved_identity_match_passed": true,
+      "existing_membership_interval": [
+        "1885-11-15",
+        "1938-03-16"
+      ],
+      "1906_year_overlap_passed": true,
+      "old_broad_section": "",
+      "new_broad_section": "2",
+      "no_backprojection_to_original_election": true,
+      "no_exact_subsection_inference": true
+    },
+    {
+      "member_key": "jpa-unlinked-685499c7cac8c622",
+      "name_jp": "大澤 謙二",
+      "printed_name_jp": "大澤謙二",
+      "source_sha256": "b69686b265016700d2e1c75d30cb89c50692e094c93cf848fc073af34f99dbb4",
+      "canvas_index": 11,
+      "printed_page": 17,
+      "literal_same_column_section": "第二部",
+      "independent_actual_image_visual_passed": true,
+      "unique_preserved_identity_match_passed": true,
+      "existing_membership_interval": [
+        "1895-12-20",
+        "1927-01-10"
+      ],
+      "1906_year_overlap_passed": true,
+      "old_broad_section": "",
+      "new_broad_section": "2",
+      "no_backprojection_to_original_election": true,
+      "no_exact_subsection_inference": true
+    },
+    {
+      "member_key": "jpa-unlinked-b3170067960e401e",
+      "name_jp": "箕作 佳吉",
+      "printed_name_jp": "箕作佳吉",
+      "source_sha256": "b69686b265016700d2e1c75d30cb89c50692e094c93cf848fc073af34f99dbb4",
+      "canvas_index": 11,
+      "printed_page": 17,
+      "literal_same_column_section": "第二部",
+      "independent_actual_image_visual_passed": true,
+      "unique_preserved_identity_match_passed": true,
+      "existing_membership_interval": [
+        "1897-04-09",
+        "1909-09-17"
+      ],
+      "1906_year_overlap_passed": true,
+      "old_broad_section": "",
+      "new_broad_section": "2",
+      "no_backprojection_to_original_election": true,
+      "no_exact_subsection_inference": true
+    },
+    {
+      "member_key": "jpa-unlinked-b6a85346dd06dbc7",
+      "name_jp": "緒方 正規",
+      "printed_name_jp": "緒方正規",
+      "source_sha256": "b69686b265016700d2e1c75d30cb89c50692e094c93cf848fc073af34f99dbb4",
+      "canvas_index": 11,
+      "printed_page": 17,
+      "literal_same_column_section": "第二部",
+      "independent_actual_image_visual_passed": true,
+      "unique_preserved_identity_match_passed": true,
+      "existing_membership_interval": [
+        "1897-06-13",
+        "1919-08-01"
+      ],
+      "1906_year_overlap_passed": true,
+      "old_broad_section": "",
+      "new_broad_section": "2",
+      "no_backprojection_to_original_election": true,
+      "no_exact_subsection_inference": true
+    },
+    {
+      "member_key": "jpa-unlinked-f72252fc4e77931a",
+      "name_jp": "桜井 錠二",
+      "printed_name_jp": "櫻井錠二",
+      "source_sha256": "b69686b265016700d2e1c75d30cb89c50692e094c93cf848fc073af34f99dbb4",
+      "canvas_index": 11,
+      "printed_page": 17,
+      "literal_same_column_section": "第二部",
+      "independent_actual_image_visual_passed": true,
+      "unique_preserved_identity_match_passed": true,
+      "existing_membership_interval": [
+        "1898-03-17",
+        "1939-01-28"
+      ],
+      "1906_year_overlap_passed": true,
+      "old_broad_section": "",
+      "new_broad_section": "2",
+      "no_backprojection_to_original_election": true,
+      "no_exact_subsection_inference": true
+    },
+    {
+      "member_key": "jpa-unlinked-4ed3afac92825ad9",
+      "name_jp": "小藤 文次郎",
+      "printed_name_jp": "小藤文次郎",
+      "source_sha256": "b69686b265016700d2e1c75d30cb89c50692e094c93cf848fc073af34f99dbb4",
+      "canvas_index": 11,
+      "printed_page": 17,
+      "literal_same_column_section": "第二部",
+      "independent_actual_image_visual_passed": true,
+      "unique_preserved_identity_match_passed": true,
+      "existing_membership_interval": [
+        "1899-01-13",
+        "1935-03-08"
+      ],
+      "1906_year_overlap_passed": true,
+      "old_broad_section": "",
+      "new_broad_section": "2",
+      "no_backprojection_to_original_election": true,
+      "no_exact_subsection_inference": true
+    },
+    {
+      "member_key": "jpa-unlinked-3a793d0d8e9d64db",
+      "name_jp": "山川 健次郎",
+      "printed_name_jp": "山川健次郎",
+      "source_sha256": "b69686b265016700d2e1c75d30cb89c50692e094c93cf848fc073af34f99dbb4",
+      "canvas_index": 11,
+      "printed_page": 17,
+      "literal_same_column_section": "第二部",
+      "independent_actual_image_visual_passed": true,
+      "unique_preserved_identity_match_passed": true,
+      "existing_membership_interval": [
+        "1901-04-06",
+        "1906-12-22"
+      ],
+      "1906_year_overlap_passed": true,
+      "old_broad_section": "",
+      "new_broad_section": "2",
+      "no_backprojection_to_original_election": true,
+      "no_exact_subsection_inference": true
+    },
+    {
+      "member_key": "jpa-unlinked-29e021ed17d66ad4",
+      "name_jp": "小金井 良精",
+      "printed_name_jp": "小金井良精",
+      "source_sha256": "b69686b265016700d2e1c75d30cb89c50692e094c93cf848fc073af34f99dbb4",
+      "canvas_index": 11,
+      "printed_page": 17,
+      "literal_same_column_section": "第二部",
+      "independent_actual_image_visual_passed": true,
+      "unique_preserved_identity_match_passed": true,
+      "existing_membership_interval": [
+        "1902-11-14",
+        "1944-10-16"
+      ],
+      "1906_year_overlap_passed": true,
+      "old_broad_section": "",
+      "new_broad_section": "2",
+      "no_backprojection_to_original_election": true,
+      "no_exact_subsection_inference": true
+    },
+    {
+      "member_key": "jpa-unlinked-eabfb6c33df81d73",
+      "name_jp": "寺尾 寿",
+      "printed_name_jp": "寺尾壽",
+      "source_sha256": "d4c147ed03719be1ba7080970a4eb75d9ba6703a2a20337eb82ef57a99cf567a",
+      "canvas_index": 12,
+      "printed_page": 18,
+      "literal_same_column_section": "第二部",
+      "independent_actual_image_visual_passed": true,
+      "unique_preserved_identity_match_passed": true,
+      "existing_membership_interval": [
+        "1903-11-12",
+        "1923-07-06"
+      ],
+      "1906_year_overlap_passed": true,
+      "old_broad_section": "",
+      "new_broad_section": "2",
+      "no_backprojection_to_original_election": true,
+      "no_exact_subsection_inference": true
+    }
+  ],
+  "approved_source_proposals_count": 10,
+  "distinct_underlying_qualifying_publications": 1,
+  "degree_or_specialty_mapping_used": false,
+  "old_glyph_variants_reviewed": {
+    "櫻井錠二": "桜井錠二",
+    "寺尾壽": "寺尾寿"
+  },
+  "scope_attestation_year": 1906,
+  "backprojection_to_pre1906_election_performed": false,
+  "existing_known_scope_overwrites_recommended": 0,
+  "new_birth_claim_count": 0,
+  "new_DOB_processed_ids_recommended": [],
+  "processing_boundary_checks": {
+    "fixed47_local_triage": 47,
+    "actually_individually_scope_queried_people": 5,
+    "person_scope_query_count": 9,
+    "bulk_or_schema_query_count": 3,
+    "not_individually_queried_people": 42,
+    "body_scope_review_people": 12,
+    "all47_have_honest_explicit_dispositions": true,
+    "all47_DOB_search_and_DOB_body_review_flags_false": true,
+    "new_claims_empty": true,
+    "query_count_and_search_flags_match_literal_request_log": true
+  },
+  "source_access_review_scope": "All7 captured originals rehashed; only3 qualifying directory images were visually read as section evidence. One original official manifest was independently refetched. Other3 newsletter/index captures were not promoted into section evidence.",
+  "root_decisions_written": 0,
+  "section_proposals_applied_by_reviewer": 0,
+  "final_cohort_accepted": false,
+  "bazi_variables_computed": 0,
+  "source_body_redistributed": false,
+  "limitations": [
+    "Ten accepted source readings share one official1906 directory; this is not ten independent source publications.",
+    "SectionII is directly attested for1906, not back-projected to each earlier TokyoAcademy election date.",
+    "No exact subsection or later1911/1930/modern section composition is inferred.",
+    "伊藤圭介 died1901 and is not promoted from absent1906 evidence.",
+    "42 local-triaged people were not individually queried; neither triage nor section queries count as birthday searches.",
+    "Root must approve exact ID/source/section decisions before applying any scope changes."
+  ]
+}
