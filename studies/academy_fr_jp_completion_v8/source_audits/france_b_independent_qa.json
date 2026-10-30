@@ -1,0 +1,107 @@
+{
+  "audit_kind": "independent_source_QA",
+  "reviewer": "v8_france_a",
+  "reviewed_batch": "v8_france_b",
+  "completed_utc": "2026-10-30T00:32:08.375515+00:00",
+  "network_requests": 0,
+  "source_decisions_sha256": "c8c9a4c85b7d8233e9af3f45feae380d86865eb58a4411ab3e6310cc5119f118",
+  "cross_source_decisions_sha256": "23bdecac1f53a9e26a43031808cead92a38ae594ad9935789445690b0d9cb09b",
+  "source_manifest_sha256": "4a898ace0fce210f554174efe36f6187171dacb6f1d23baf2589709eaf9fc3ef",
+  "batch_manifest_sha256": "22577ec3f4437bb94859ee407f13e2e404e12555502f74cf7ae26cb1f0052539",
+  "all_public_manifest_hashes_passed": true,
+  "public_file_count": 8,
+  "captured_originals_rehashed": 3,
+  "actual_visual_pages_read": 6,
+  "source_checks": [
+    {
+      "source_id": "fontaine_bonnefous",
+      "source_sha256": "a2839ae8059774e3c8cf5620dfab324f74a10e1dcdbe234b09eeb39a6eb393a7",
+      "original_bytes": 150728,
+      "original_rehash_passed": true,
+      "PDF_pages": 15,
+      "actual_visual_read_page_indices": [
+        0,
+        12
+      ],
+      "PDF_text_key_pages_extracted_independently": true,
+      "verified_original_key_page_text_sha256": "987e994546f67f0a7ac2d2b66705b4361106685d9886981a127de6f77e208f52"
+    },
+    {
+      "source_id": "gallais_original",
+      "source_sha256": "d76066228197f12c795d26aff7444ef45b7ae1c2e154501605673ec2ec38de40",
+      "original_bytes": 2632084,
+      "original_rehash_passed": true,
+      "PDF_pages": 24,
+      "actual_visual_read_page_indices": [
+        0
+      ],
+      "PDF_text_key_pages_extracted_independently": true,
+      "verified_original_key_page_text_sha256": "010fb2a998d33246c243f8aa929712e736faa099c4c0d9d03e579ec6404e5e09"
+    },
+    {
+      "source_id": "guillain",
+      "source_sha256": "76d596d6c748a46c7cf70ccde115086e3159b96c12b9536e107a4e30fb0b659c",
+      "original_bytes": 1498452,
+      "original_rehash_passed": true,
+      "PDF_pages": 31,
+      "actual_visual_read_page_indices": [
+        0,
+        1,
+        24
+      ],
+      "PDF_text_key_pages_extracted_independently": true,
+      "verified_original_key_page_text_sha256": "949ee3a4a173e50aa94b3f1563d9f570cfaa651ae2922bb758eb3175b19c055e"
+    }
+  ],
+  "person_checks": [
+    {
+      "candidate_group_id": "CTHS_112167",
+      "proposed_event_year": 1957,
+      "passed": true,
+      "finding": "InstituteLibraryowncatalogue p1issuer; p13item90literalordinaryScienceAcademy election1957 and MauriceFontaine1904/comparativephysiology/oceanographyidentity bridge. No inventedday."
+    },
+    {
+      "candidate_group_id": "CTHS_112174",
+      "proposed_event_year": 1973,
+      "passed": true,
+      "finding": "Academy-owned journaloriginalp1copyrightandFernandGallais subjecttribute; literal1973nonresidentmemberdistinctfrom1966correspondent; Toulousecoordinationchemistrycareerbridge."
+    },
+    {
+      "candidate_group_id": "CTHS_112433",
+      "proposed_event_year": 1951,
+      "passed": true,
+      "finding": "Guillainoriginalp1subjectordinarysectionrole;p2birth1876-03-03;p25printed322literal1951calltomedicine/surgeryseat. SpeakerTurpinnottransferred."
+    },
+    {
+      "candidate_group_id": "CTHS_112136",
+      "proposed_event_year": 1934,
+      "passed": true,
+      "finding": "SameInstitutcataloguep13item89literalJean-LouisFaure1863–1944ScienceAcademy election1934; gynecologicalclinicalprofessor bridge distinguishesEmmanuelFaure-Fremiet."
+    }
+  ],
+  "exact_source_issuer_requirement_met": true,
+  "new_host_wildcard_approval": false,
+  "broglie_inherited_chronology_hold_retained": true,
+  "quote_word_budget_per_original_at_most25": true,
+  "no_DOB_or_identity_changes": true,
+  "no_bazi_or_freeze": true,
+  "strict_fixed_decisions_passed": 3,
+  "strict_cross_decisions_passed": 1,
+  "qa_passed": true,
+  "notes": [
+    "Guillain p25 PNG viewer rejected an image format; the actual rendered p25_review.jpg was successfully viewed and the literal1951read.",
+    "Only originalsource metadata and shortfindings are published; fulltext/PDF/images stayprivate.",
+    "FinalQA rebind after correcting only Fontaine/Faure subtype from ordinary_section_member to ordinary_full_member; source hash/year/identity claims unchanged."
+  ],
+  "formal_member_title_audit": {
+    "candidate_ids": [
+      "CTHS_112167",
+      "CTHS_112136"
+    ],
+    "literal_typed_ordinary_member_election_supported": true,
+    "basis": "Catalogue captions explicitly state election as member of the named Académie des sciences, with literal1957/1934years. This is a formal member/election statement, not merely the generic label Académicien. No inference from citizenship was used. Source does not name their science section; metadata nowordinary_full_member, notordinary_section_member.",
+    "not_a_generic_academicien_rule_relaxation": true,
+    "no_nationality_inference": true,
+    "no_unstated_section_inference": true
+  }
+}
