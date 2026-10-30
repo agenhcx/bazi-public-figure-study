@@ -1,0 +1,189 @@
+{
+  "audit_kind": "independent_original_image_Japan_scope_QA",
+  "reviewer": "v10_audit",
+  "completed_utc": "2026-10-30T12:20:19.793596+00:00",
+  "independent_qa_passed": true,
+  "section_proposals_sha256": "83858b47d4dbc17eaa63ba4eeb9d4da2cb6cfc2f2ed4c9ae9e9f0c607eda93e2",
+  "worker_manifest_sha256": "604b95495fdbae07500ff36ea8146d4eb3b21008e8c82d63545f680a37dfaf3b",
+  "public_manifest_all9_file_hashes_passed": true,
+  "actual_original_captures_rehashed": [
+    {
+      "source_id": "ndl_1070913_manifest",
+      "url": "https://dl.ndl.go.jp/api/iiif/1070913/manifest.json",
+      "source_sha256": "8f422f5c6cb80c8d0bea2155c7e3057b4d8f7c5aa8e02d04178507cc0dc7709e",
+      "bytes": 78434
+    },
+    {
+      "source_id": "ndl_official_source_navigator",
+      "url": "https://ndlsearch.ndl.go.jp/rnavi/politics/public_officer/others",
+      "source_sha256": "4962fe8d3ae6366a8bb5d0428dd79557f9fe777ab662053803eb84621e90ff0e",
+      "bytes": 378849
+    },
+    {
+      "source_id": "ndl1944_canvas91",
+      "url": "https://dl.ndl.go.jp/api/iiif/1070913/R0000091/full/full/0/default.jpg",
+      "source_sha256": "ee9f6c3cd5966db812876f024831fd5b8537d2c9cf29b9fd48ac723a80bab389",
+      "bytes": 1738367
+    },
+    {
+      "source_id": "ndl1944_canvas1",
+      "url": "https://dl.ndl.go.jp/api/iiif/1070913/R0000001/full/full/0/default.jpg",
+      "source_sha256": "4d5a43373e37c9124d2bd601b16381c834e9cae687575f0df7788ce23d0f531c",
+      "bytes": 1005190
+    },
+    {
+      "source_id": "ndl1944_canvas105",
+      "url": "https://dl.ndl.go.jp/api/iiif/1070913/R0000105/full/full/0/default.jpg",
+      "source_sha256": "47c26924ab9c9428700d1c526d33ea2e604fa06b08296cfb6d877df6d0ef75f0",
+      "bytes": 1845125
+    },
+    {
+      "source_id": "ndl1944_canvas108",
+      "url": "https://dl.ndl.go.jp/api/iiif/1070913/R0000108/full/full/0/default.jpg",
+      "source_sha256": "bf7f8e79b6e80410caca3c07dd2d2ec2d313caba71b7d997e264a470b2c9e703",
+      "bytes": 1875354
+    },
+    {
+      "source_id": "ndl_1070915_manifest",
+      "url": "https://dl.ndl.go.jp/api/iiif/1070915/manifest.json",
+      "source_sha256": "fe0a37990cf94b3ad7999d6369282fb69174d25b41a797f0067604e54dec2b81",
+      "bytes": 72643
+    },
+    {
+      "source_id": "ndl1947_canvas85",
+      "url": "https://dl.ndl.go.jp/api/iiif/1070915/R0000085/full/full/0/default.jpg",
+      "source_sha256": "bea31a22b78e1f4e9e77e5825a80cc57f35edc29dc23a068f86477442f82a0ba",
+      "bytes": 2108444
+    },
+    {
+      "source_id": "ndl1947_canvas1",
+      "url": "https://dl.ndl.go.jp/api/iiif/1070915/R0000001/full/full/0/default.jpg",
+      "source_sha256": "59dd530fc02786a8e2bc67ca0411a41dcaba227443133407dce775d766c02fe6",
+      "bytes": 898533
+    }
+  ],
+  "actual_original_image_visual_reviews": [
+    "ndl1944_canvas1",
+    "ndl1944_canvas91",
+    "ndl1944_canvas105",
+    "ndl1944_canvas108",
+    "ndl1947_canvas1",
+    "ndl1947_canvas85"
+  ],
+  "source_origin_verified_from_actual_manifest": {
+    "title": "帝国学士院一覧.昭和22年",
+    "creator": "帝国学士院 編",
+    "publisher": "帝国学士院",
+    "National_Diet_Library_is_digitization_host_not_original_Academy_author": true
+  },
+  "cover_actual_image_date_read": "昭和二十二年四月調",
+  "cover_month_note": "The cover prints April1947, while later-dated entries occur elsewhere on this spread. Approval is a1947 directory attestation; no global April cutoff, no guarantee of an unupdated April snapshot, and no absence inference. All three named proposals have printed matching election dates before April and preserved intervals spanning1947.",
+  "three_proposals_share_one_underlying_directory_not_independent_source_votes": true,
+  "proposal_checks": [
+    {
+      "member_key": "jpa-unlinked-694f8362d63485d0",
+      "name_jp": "高柳 賢三",
+      "source_printed_member_name": "高柳賢三",
+      "source_url": "https://dl.ndl.go.jp/api/iiif/1070915/R0000085/full/full/0/default.jpg",
+      "source_sha256": "bea31a22b78e1f4e9e77e5825a80cc57f35edc29dc23a068f86477442f82a0ba",
+      "source_edition_year": 1947,
+      "new_broad_section": "1",
+      "literal_same_column_section": "第一部",
+      "printed_page": 166,
+      "vertical_member_column_from_right": 5,
+      "independent_actual_image_visual_passed": true,
+      "unique_preserved_identity_match_passed": true,
+      "printed_exact_election_date_matches_preserved": true,
+      "preserved_first_election_date": "1945-12-24",
+      "snapshot_year_overlap_passed": true,
+      "source_snapshot_year_overlap_verified": true,
+      "snapshot_month_overlap_passed": true,
+      "no_backprojection_to_original_election": true,
+      "no_exact_subsection_inference": true,
+      "birthdate_processing_unmodified": true
+    },
+    {
+      "member_key": "jpa-unlinked-d5517f6f53da71c1",
+      "name_jp": "上野 直昭",
+      "source_printed_member_name": "上野直昭",
+      "source_url": "https://dl.ndl.go.jp/api/iiif/1070915/R0000085/full/full/0/default.jpg",
+      "source_sha256": "bea31a22b78e1f4e9e77e5825a80cc57f35edc29dc23a068f86477442f82a0ba",
+      "source_edition_year": 1947,
+      "new_broad_section": "1",
+      "literal_same_column_section": "第一部",
+      "printed_page": 166,
+      "vertical_member_column_from_right": 9,
+      "independent_actual_image_visual_passed": true,
+      "unique_preserved_identity_match_passed": true,
+      "printed_exact_election_date_matches_preserved": true,
+      "preserved_first_election_date": "1946-08-28",
+      "snapshot_year_overlap_passed": true,
+      "source_snapshot_year_overlap_verified": true,
+      "snapshot_month_overlap_passed": true,
+      "no_backprojection_to_original_election": true,
+      "no_exact_subsection_inference": true,
+      "birthdate_processing_unmodified": true
+    },
+    {
+      "member_key": "jpa-unlinked-e1fad8c84e89a158",
+      "name_jp": "高橋 誠一郎",
+      "source_printed_member_name": "高橋誠一郎",
+      "source_url": "https://dl.ndl.go.jp/api/iiif/1070915/R0000085/full/full/0/default.jpg",
+      "source_sha256": "bea31a22b78e1f4e9e77e5825a80cc57f35edc29dc23a068f86477442f82a0ba",
+      "source_edition_year": 1947,
+      "new_broad_section": "1",
+      "literal_same_column_section": "第一部",
+      "printed_page": 166,
+      "vertical_member_column_from_right": 11,
+      "independent_actual_image_visual_passed": true,
+      "unique_preserved_identity_match_passed": true,
+      "printed_exact_election_date_matches_preserved": true,
+      "preserved_first_election_date": "1947-02-05",
+      "snapshot_year_overlap_passed": true,
+      "source_snapshot_year_overlap_verified": true,
+      "snapshot_month_overlap_passed": true,
+      "no_backprojection_to_original_election": true,
+      "no_exact_subsection_inference": true,
+      "birthdate_processing_unmodified": true
+    }
+  ],
+  "negative_controls": {
+    "Ito_Keisuke_actual1944_printed213_member_column_read": true,
+    "Ito_membership_degree_without_direct_I_II_is_not_section_proof": true,
+    "Abe_Jiro_no_new_qualifying_own_column_source": true,
+    "Abe_not_excluded_or_assigned_from_cover_month_or_profession": true,
+    "no_other_section_proposals_approved_by_this_QA": true
+  },
+  "processing_checks": {
+    "fixed_selected_and_locally_triaged": 37,
+    "explicit_dispositions": 37,
+    "new_individual_scope_queried_people": 2,
+    "individual_scope_queries": 4,
+    "bulk_source_queries": 5,
+    "all_search_queries": 9,
+    "distinct_URL_attempts": 11,
+    "successful_original_captures": 9,
+    "failed_manifest404": 2,
+    "images_visually_reviewed": 6,
+    "scope_document_screen_people": 5,
+    "named_subject_body_review_people": 4,
+    "not_individually_queried_people": 35,
+    "local_only_people": 31,
+    "DOB_query_or_body_review_people": 0,
+    "DOB_claims": 0,
+    "section_proposals": 3,
+    "actual_query_ID_mapping_verified": true,
+    "selected_or_triaged_not_equated_with_individual_search": true
+  },
+  "all_37_DOB_flags_false_and_birth_delta_empty": true,
+  "all_proposals_currently_scope_unresolved_and_previously_unprocessed_for_DOB": true,
+  "root_approval_required_separately": true,
+  "no_degree_specialty_or_humanities_inference": true,
+  "no_exact_subsection_or_new_election_DOB_identity_change": true,
+  "no_lifetime_exclusion_or_source_exhaustion_claim": true,
+  "source_body_redistributed": false,
+  "network_requests_for_this_QA": 0,
+  "repository_writes": 0,
+  "analysis_cohort_frozen": false,
+  "bazi_variables_computed": 0
+}

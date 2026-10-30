@@ -1,0 +1,13 @@
+# Japan scope routes v11 — 2026-10-30
+
+The final bundle proposes three direct Section I assignments for 高柳賢三, 上野直昭 and 高橋誠一郎, all among the fixed37 unresolved identities. The original Academy-issued1947directory hosted by NDL, pid1070915, canvas85/right leaf printed166 places each printed full name, 第一部 and a matching preserved election date in the same vertical member column. The manifest, actual cover and actual full spread were captured, hashed and visually read. Independent QA and exact root approval are required before application.
+
+The cover explicitly says 昭和二十二年四月調 (April1947). Its month is reported as printed; later-dated entries elsewhere on the spread mean it is not a guarantee that every entry is a strict April snapshot. All three proposed people have exact printed election dates before April1947. 阿部次郎, elected June1947, remains unresolved; no classification is inferred from absence or this cover date. The generic manifest series range is distinguished from the actual cover.
+
+All37 identities received local prior-route triage. Two people received four individual scope queries; five other discovery queries concern source availability. Thirty-five were not individually queried. Five received limited source-document screening, including four whose named original member columns were actually observed. Thirty-one dispositions are local-only. None received a birthday search or birthday-body review.
+
+Eleven distinct source URLs were attempted: the initial eight and three of four additional URLs expressly authorized by root for the concrete1947 roster continuation. Nine actual originals were captured and two exact manifests returned404. Six original images were visually read. Network work is stopped. The earlier empty-proposal bundle is superseded by this final three-proposal bundle.
+
+The exact postwar directory PID2934795 and official history PID2988196 manifests each returned404. The NDL ResearchNavigator confirms the1948–1954directory PID; no alternate endpoint guessing followed. The accessible1944directory pid1070913 yielded cover and limited current/former-member spreads. Its former Tokyo Academy table names 伊藤圭介 with a degree but no I/II label, so he remains unresolved.
+
+`claims.json` remains empty and `holds.json` has no new DOB changes. The worker applies no section decisions. Existing438II/7I evidence is not reopened; exact subsections, identities, election dates, DOB claims and calendar holds remain unchanged. No degree inference, backprojection, cohort freeze, BaZi, outreach or outcome analysis. Original images/HTML remain private; public files contain metadata, hashes, locators and short evidence text.
