@@ -1,0 +1,11 @@
+# Japan scope route v16 — 2026-11-01
+
+This bounded continuation starts from immutable v15 commit `8e545eadbdf232e4c5839aebf62a19ead00e2c46`. The34 residual section-unresolved identities receive local prior-source and membership-interval triage only;33 have no new actual person-body review. Only Sezawa is selected for the fresh original-image route. No DOB collection, calendar change, subsection backprojection or cohort freeze occurs.
+
+The known successful NDL1944directory manifest is reopened once; its78,434bytes exactly match the v11manifestSHA. It actually declares two previously unread former-member images, one-basedcanvases106and107. Those exact resourceURLs are fetched once each, with no guessed URL, redirect, retry or query. Historical v11reading covered1/91/105/108, rather than these106–107leaves.
+
+The actual canvas106rightleaf/printed208 clearly names `妹澤克惟`, gives his science/engineering degrees and the membership interval from Showa18August25 to Showa19April23, matching preserved1943-08-25/1944-04-23. This establishes a direct own-person membership body. Its governing former-Imperial-Academy-member/guest table supplies no First/SecondDivision label. Degree is not division evidence. Canvas107has formerTokyoAcademy tables and supplies no direct Sezawa-division binding. Both full images are visually read. No section is assigned.
+
+The remaining31people elected1949or later have no contemporary applicability to1906/1947member pages; Ito retired1901, before1906reorganization. Abe is the sole residual possible1947candidate, but no actually observed unused member-page URL is available; the April1947cover cannot be treated as a strict cutoff because later entries exist in the prior source. That route remains parked. Known404postwar manifests, limited-access books, newsletter2004–2007absence and old individual queries are not repeated.
+
+This is3GETs/3actualoriginals,2newimagebodyreads,1named-subjectreview,0queries,0newscopeproposals and0DOBclaims. Full438II/10I/34unresolved,528structuredbirthclaims,368daystatuses,46holds and all calendar outcomes are preserved by the collector's zero-change handoff. Unknowns remain unknown. Raw manifest/images stay private; public files contain bounded factual readings, hashes, locators and honest processing scope.

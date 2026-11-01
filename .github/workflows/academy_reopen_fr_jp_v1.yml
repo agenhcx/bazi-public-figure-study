@@ -19,6 +19,7 @@ on:
       - 'studies/academy_fr_jp_completion_v13/**'
       - 'studies/academy_fr_jp_completion_v14/**'
       - 'studies/academy_fr_jp_completion_v15/**'
+      - 'studies/academy_fr_jp_source_triage_v16/**'
       - 'JAPAN_ACADEMY_CURRENT_CHECKPOINT.md'
       - 'ACADEMY_COLLECTION_CURRENT_CHECKPOINT.md'
       - '.github/workflows/academy_reopen_fr_jp_v1.yml'
@@ -361,5 +362,32 @@ jobs:
           path: |
             studies/academy_fr_jp_completion_v15/README.md
             studies/academy_fr_jp_completion_v15/outputs/
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Verify v16 source-triage pins and unchanged canonical v15 state
+        run: |
+          python3 - <<'PYCODE'
+          import hashlib, json
+          from pathlib import Path
+          root = Path('studies/academy_fr_jp_source_triage_v16')
+          sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
+          inventory = lambda p: {str(f.relative_to(p)): sha(f) for f in sorted(p.rglob('*')) if f.is_file() and '__pycache__' not in f.parts}
+          manifest = json.loads((root / 'MANIFEST.json').read_text())
+          observed = inventory(root)
+          observed.pop('MANIFEST.json')
+          assert observed == manifest['files'], 'Changed v16 source-triage metadata'
+          pins = json.loads((root / 'canonical_v15_pins.json').read_text())
+          assert inventory(Path(pins['canonical_study'])) == pins['files'], 'Canonical v15 changed'
+          summary = json.loads((root / 'summary.json').read_text())
+          assert not summary['new_data_version_created'] and not any(summary['new_approvals'].values())
+          assert summary['new_raw_birth_claims'] == 0 and not summary['analysis_cohort_frozen']
+          print(f"{len(observed)} v16 report pins and {len(pins['files'])} unchanged canonical v15 files verified; no new data approval")
+          PYCODE
+      - name: Save v16 bounded source-triage report
+        uses: actions/upload-artifact@v4
+        with:
+          name: academy-france-japan-source-triage-v16
+          path: studies/academy_fr_jp_source_triage_v16/
           if-no-files-found: error
           retention-days: 14

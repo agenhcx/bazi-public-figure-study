@@ -1,0 +1,569 @@
+{
+  "schema": "v16_independent_france_primary_route_triage",
+  "baseline_commit": "8e545eadbdf232e4c5839aebf62a19ead00e2c46",
+  "reviewed_utc": "2026-11-01T09:32:06.041118+00:00",
+  "baseline_master_sha256": "dd2dd779b648691bd76bdbcf12dcc6b11b9228cc057cd1d19585ace3b3161930",
+  "membership_zero_candidate_groups": 234,
+  "membership_zero_with_approved_identity_and_DOB": 135,
+  "membership_zero_blocked_by_prior_identity_or_DOB": 99,
+  "existing_reducer_rule": {
+    "source_path": "studies/academy_fr_jp_completion_v3/scripts/assemble.py",
+    "source_sha256": "69dfe63d757102fa710b3bf6ed0da5e77d7f04c2d853f39dc2eef4478d3e1849",
+    "rule": "Strict membership reducer requires identity_accepted and dob_accepted both1. Already captured new-member election PDFs cannot directly promote the99 rows retaining prior identity/DOB holds. This is an implementation boundary, not a claim that their membership events are absent."
+  },
+  "source_work": {
+    "queries": 2,
+    "query_engine": "system1_search_query",
+    "direct_HTTP_GETs": 4,
+    "actual_new_originals_captured": 0,
+    "local_source_body_reopened": 3,
+    "individual_DOB_queries": 0,
+    "retries": 0,
+    "accepted_memberships": 0,
+    "accepted_DOBs": 0,
+    "observed_exact_target_attempts": 2,
+    "normal_301_redirect_GETs": 2,
+    "new_qualifying_own_subject_bodies": 0,
+    "actual_404_response_bodies_captured": 2,
+    "local_reread_scope": "One existing generic-directory anchor block plus two archived CTHS exact-link parents; none counted as a new person adjudication"
+  },
+  "queries": [
+    {
+      "q": "site:academie-sciences.fr \"membres\" \"liste\" \"élection\" \"1666\"",
+      "purpose": "Discover official historical original membership roster/index, not birthdays"
+    },
+    {
+      "q": "site:institutdefrance.fr \"Académie des sciences\" \"liste\" \"membres\" \"1900\"",
+      "purpose": "Discover original parent-Institut historical roster"
+    }
+  ],
+  "search_discovery": [
+    {
+      "url": "https://www.academie-sciences.fr/les-academiciens",
+      "ref": "turn1992search0",
+      "kind": "known current directory with historical-member footer",
+      "new_route": false,
+      "actual_person_event_body_review_this_round": false
+    },
+    {
+      "url": "https://www.academie-sciences.fr/lhistoire-de-lacademie",
+      "ref": "turn1992search1",
+      "kind": "general history and role/statute counts, not candidate-level start table",
+      "new_qualifying_source": false
+    },
+    {
+      "url": "https://www.academie-sciences.fr/pdf/lettre/lettre37_38_fr.pdf",
+      "ref": "turn1992search5",
+      "kind": "350th-anniversary history; discovery snippet about1666 founder recruitment is outside target candidates",
+      "new_qualifying_source": false,
+      "actual_PDF_captured_or_read_this_round": false
+    },
+    {
+      "url": "https://www.academie-sciences.fr/pdf/admin/statuts.pdf",
+      "ref": "turn1992search7",
+      "kind": "statutes/history, not person-level election dates",
+      "new_qualifying_source": false,
+      "actual_PDF_captured_or_read_this_round": false
+    }
+  ],
+  "actual_cached_navigation_review": {
+    "path": "academy_v13_workers/france_a/private_sources/fr13_a_1.html",
+    "source_sha256": "718840ae72f888ae5e95c8e281c6a02d45eff01574b60b6302c7980af39fe60f",
+    "read_scope": "Literal anchor href/text for history/archive/index routes; no network refetch",
+    "observed_historical_master_url": "https://archives.academie-sciences.fr/n/fichier-des-membres-de-l-academie-issu-de-l-index-biographique-par-henri-leridon/n:155",
+    "master_disposition": "Previously bot-blocked exact route, do not retry",
+    "observed_archive_information_url": "https://www.academie-sciences.fr/nos-archives-le-patrimoine-scientifique-de-lacademie",
+    "archive_information_disposition": "Already recorded in data/france_academy_leridon_historical_master_source_pilot_v1/data_acquisition_routes_current_v1.csv as current official contact/printed2016index route, no new electronic original identified"
+  },
+  "open_nonconflict_case": {
+    "candidate_group_id": "PROFILE2_d5d3cfe69571b31f",
+    "name": "Pierre-Louis Lions",
+    "current_state": "Generic October1994 Academician header only; no directly typed ordinary membership event in actual reviewed body",
+    "historical_blocked_routes": [
+      "https://academie-sciences.fr/pdf/conf/JDN_190618.pdf",
+      "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000733250",
+      "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000715028"
+    ],
+    "new_exact_untried_URL_found": false,
+    "no_retries": true,
+    "actual_old_profile_bytes_available_in_current_scratch": false,
+    "basis": "Tracked v3 reviewed source manifest/log/decisions, not a new actual reread of unavailable source bytes"
+  },
+  "cases": [
+    {
+      "candidate_group_id": "CTHS_107107",
+      "name": "BROGLIE Louis",
+      "classification": "inherited_formal_chronology_hold",
+      "identity_approved": true,
+      "DOB_approved": true,
+      "membership_approved": false,
+      "existing_source_urls": [
+        "https://cths.fr/an/savant.php?id=107107",
+        "https://cths.fr/an/societe.php?id=506&proso=y&soc_liees=",
+        "https://www.academie-sciences.fr/pdf/dossiers/Broglie/Broglie_od1.htm",
+        "https://www.academie-sciences.fr/pdf/dossiers/ama/astronomes.pdf"
+      ],
+      "new_source_capture": false
+    },
+    {
+      "candidate_group_id": "CTHS_130792",
+      "name": "Paul Deheuvels",
+      "classification": "inherited_formal_chronology_hold",
+      "identity_approved": true,
+      "DOB_approved": true,
+      "membership_approved": false,
+      "existing_source_urls": [
+        "https://cths.fr/an/savant.php?id=130792",
+        "https://cths.fr/an/societe.php?id=506&proso=y&soc_liees=",
+        "https://www.academie-sciences.fr/paul-deheuvels",
+        "https://www.academie-sciences.fr/sites/default/files/2026-01/CV-%20PAUL%20DEHEUVELS.pdf"
+      ],
+      "new_source_capture": false
+    },
+    {
+      "candidate_group_id": "PROFILE2_05ba5ad44ca92a28",
+      "name": "Alain Aspect",
+      "classification": "inherited_formal_chronology_hold",
+      "identity_approved": true,
+      "DOB_approved": true,
+      "membership_approved": false,
+      "existing_source_urls": [
+        "https://catalogue.bnf.fr/ark:/12148/cb12408578c",
+        "https://www.academie-sciences.fr/alain-aspect",
+        "https://www.nobelprize.org/prizes/physics/2022/aspect/facts/"
+      ],
+      "new_source_capture": false
+    },
+    {
+      "candidate_group_id": "PROFILE2_08407b6d0479b1d0",
+      "name": "Nicole Le Douarin",
+      "classification": "v15_actual_same_subject_chronology_hold",
+      "identity_approved": true,
+      "DOB_approved": true,
+      "membership_approved": false,
+      "existing_source_urls": [
+        "https://catalogue.bnf.fr/ark:/12148/cb121568380",
+        "https://www.academie-sciences.fr/nicole-le-douarin",
+        "https://www.college-de-france.fr/fr/personne/nicole-le-douarin",
+        "https://www.pas.va/en/academicians/ordinary/le_douarin.html"
+      ],
+      "new_source_capture": false
+    },
+    {
+      "candidate_group_id": "PROFILE2_15377afa6201a9c5",
+      "name": "Jean-Pierre Serre",
+      "classification": "inherited_formal_chronology_hold",
+      "identity_approved": true,
+      "DOB_approved": true,
+      "membership_approved": false,
+      "existing_source_urls": [
+        "https://abelprize.no/sites/default/files/2021-09/The%20Abel%20Prize%202003-2007%20The%20first%20years%202003_jean_pierre_serre.pdf",
+        "https://catalogue.bnf.fr/ark:/12148/cb11924501z",
+        "https://www.academie-sciences.fr/jean-pierre-serre"
+      ],
+      "new_source_capture": false
+    },
+    {
+      "candidate_group_id": "PROFILE2_3daeb9c61fb99763",
+      "name": "Philippe Morat",
+      "classification": "previous_actual_nonordinary_event",
+      "identity_approved": true,
+      "DOB_approved": true,
+      "membership_approved": false,
+      "existing_source_urls": [
+        "https://catalogue.bnf.fr/ark:/12148/cb12052411q",
+        "https://www.academie-sciences.fr/philippe-morat"
+      ],
+      "new_source_capture": false
+    },
+    {
+      "candidate_group_id": "PROFILE2_5574e675b32d5b4a",
+      "name": "Amable Liñan",
+      "classification": "previous_actual_nonordinary_event",
+      "identity_approved": true,
+      "DOB_approved": true,
+      "membership_approved": false,
+      "existing_source_urls": [
+        "https://www.academie-sciences.fr/amable-linan",
+        "https://www.idref.fr/032626010.xml"
+      ],
+      "new_source_capture": false
+    },
+    {
+      "candidate_group_id": "PROFILE2_5de2119b1b7a12fe",
+      "name": "Jean Rossier",
+      "classification": "previous_actual_nonordinary_event",
+      "identity_approved": true,
+      "DOB_approved": true,
+      "membership_approved": false,
+      "existing_source_urls": [
+        "https://www.academie-sciences.fr/jean-rossier"
+      ],
+      "new_source_capture": false
+    },
+    {
+      "candidate_group_id": "PROFILE2_8af6652c8c5db254",
+      "name": "Bengt Samuelsson",
+      "classification": "previous_actual_nonordinary_event",
+      "identity_approved": true,
+      "DOB_approved": true,
+      "membership_approved": false,
+      "existing_source_urls": [
+        "https://catalogue.bnf.fr/ark:/12148/cb16618321z",
+        "https://www.academie-sciences.fr/bengt-samuelsson"
+      ],
+      "new_source_capture": false
+    },
+    {
+      "candidate_group_id": "PROFILE2_a29b6a24738c76fa",
+      "name": "Antoine Labeyrie",
+      "classification": "inherited_formal_chronology_hold",
+      "identity_approved": true,
+      "DOB_approved": true,
+      "membership_approved": false,
+      "existing_source_urls": [
+        "https://www.academie-sciences.fr/antoine-labeyrie",
+        "https://www.academie-sciences.fr/pdf/dossiers/ama/astronomes.pdf"
+      ],
+      "new_source_capture": false
+    },
+    {
+      "candidate_group_id": "PROFILE2_a73ee9a12b737868",
+      "name": "Guy Bertrand",
+      "classification": "inherited_formal_chronology_hold",
+      "identity_approved": true,
+      "DOB_approved": true,
+      "membership_approved": false,
+      "existing_source_urls": [
+        "https://catalogue.bnf.fr/ark:/12148/cb13163729c",
+        "https://www.academie-sciences.fr/guy-bertrand"
+      ],
+      "new_source_capture": false
+    },
+    {
+      "candidate_group_id": "PROFILE2_b23ad78f7bc1380a",
+      "name": "Andrée Marquet",
+      "classification": "previous_actual_nonordinary_event",
+      "identity_approved": true,
+      "DOB_approved": true,
+      "membership_approved": false,
+      "existing_source_urls": [
+        "https://www.academie-sciences.fr/andree-marquet"
+      ],
+      "new_source_capture": false
+    },
+    {
+      "candidate_group_id": "PROFILE2_b26db9ae3cc06893",
+      "name": "David Baltimore",
+      "classification": "previous_actual_nonordinary_event",
+      "identity_approved": true,
+      "DOB_approved": true,
+      "membership_approved": false,
+      "existing_source_urls": [
+        "https://catalogue.bnf.fr/ark:/12148/cb12104072f",
+        "https://www.academie-sciences.fr/david-baltimore"
+      ],
+      "new_source_capture": false
+    },
+    {
+      "candidate_group_id": "PROFILE2_b7ddae2f9fce26c6",
+      "name": "Serge Abiteboul",
+      "classification": "inherited_formal_chronology_hold",
+      "identity_approved": true,
+      "DOB_approved": true,
+      "membership_approved": false,
+      "existing_source_urls": [
+        "https://catalogue.bnf.fr/ark:/12148/cb134862796",
+        "https://www.academie-sciences.fr/serge-abiteboul"
+      ],
+      "new_source_capture": false
+    },
+    {
+      "candidate_group_id": "PROFILE2_bc01a976d90aefc5",
+      "name": "Catherine Bréchignac",
+      "classification": "inherited_formal_chronology_hold",
+      "identity_approved": true,
+      "DOB_approved": true,
+      "membership_approved": false,
+      "existing_source_urls": [
+        "https://catalogue.bnf.fr/ark:/12148/cb13027553n",
+        "https://www.academie-sciences.fr/catherine-brechignac"
+      ],
+      "new_source_capture": false
+    },
+    {
+      "candidate_group_id": "PROFILE2_d5d3cfe69571b31f",
+      "name": "Pierre-Louis Lions",
+      "classification": "generic_header_no_typed_ordinary_start",
+      "identity_approved": true,
+      "DOB_approved": true,
+      "membership_approved": false,
+      "existing_source_urls": [
+        "https://catalogue.bnf.fr/ark:/12148/cb123346366",
+        "https://www.academie-sciences.fr/pierre-louis-lions"
+      ],
+      "new_source_capture": false
+    },
+    {
+      "candidate_group_id": "PROFILE2_d644548a37ab83f2",
+      "name": "Pierre Encrenaz",
+      "classification": "inherited_formal_chronology_hold",
+      "identity_approved": true,
+      "DOB_approved": true,
+      "membership_approved": false,
+      "existing_source_urls": [
+        "https://www.academie-sciences.fr/pdf/dossiers/ama/astronomes.pdf",
+        "https://www.academie-sciences.fr/pierre-encrenaz"
+      ],
+      "new_source_capture": false
+    },
+    {
+      "candidate_group_id": "PROFILE2_ddffb380986fa5d5",
+      "name": "Jean Weissenbach",
+      "classification": "inherited_formal_chronology_hold",
+      "identity_approved": true,
+      "DOB_approved": true,
+      "membership_approved": false,
+      "existing_source_urls": [
+        "https://catalogue.bnf.fr/ark:/12148/cb126461408",
+        "https://www.academie-sciences.fr/jean-weissenbach"
+      ],
+      "new_source_capture": false
+    },
+    {
+      "candidate_group_id": "PROFILE2_ed8377d533c8b3c2",
+      "name": "Philippe Bousso",
+      "classification": "inherited_formal_chronology_hold",
+      "identity_approved": true,
+      "DOB_approved": true,
+      "membership_approved": false,
+      "existing_source_urls": [
+        "https://www.academie-sciences.fr/philippe-bousso",
+        "https://www.lajauneetlarouge.com/philippe-bousso-x92-chercheur-en-immunologie-de-renommee-mondiale/",
+        "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053619394"
+      ],
+      "new_source_capture": false
+    },
+    {
+      "candidate_group_id": "PROFILE2_edebf5e16d2d6a84",
+      "name": "Herbert Roesky",
+      "classification": "previous_actual_nonordinary_event",
+      "identity_approved": true,
+      "DOB_approved": true,
+      "membership_approved": false,
+      "existing_source_urls": [
+        "https://www.academie-sciences.fr/herbert-roesky",
+        "https://www.leopoldina.org/fileadmin/Migrierte_Daten/Publikationen/Dokumente/2015_Leopoldina_Mitgliederverzeichnis_02.pdf"
+      ],
+      "new_source_capture": false
+    },
+    {
+      "candidate_group_id": "PROFILE2_ee3becf839e3a034",
+      "name": "Pascale Senellart-Mardon",
+      "classification": "inherited_formal_chronology_hold",
+      "identity_approved": true,
+      "DOB_approved": true,
+      "membership_approved": false,
+      "existing_source_urls": [
+        "https://www.academie-sciences.fr/pascale-senellart-mardon",
+        "https://www.college-de-france.fr/sites/default/files/media/document/2025-07/senellart-cv-avril2025.pdf"
+      ],
+      "new_source_capture": false
+    },
+    {
+      "candidate_group_id": "PROFILE2_fe6e383fc8d42613",
+      "name": "Jean-Philippe Bouchaud",
+      "classification": "inherited_formal_chronology_hold",
+      "identity_approved": true,
+      "DOB_approved": true,
+      "membership_approved": false,
+      "existing_source_urls": [
+        "https://catalogue.bnf.fr/ark:/12148/cb134826769",
+        "https://scopterra-incognita.com/wp-content/uploads/2023/07/LMDC_Festival_2023_juillet6140.pdf",
+        "https://www.academie-sciences.fr/jean-philippe-bouchaud",
+        "https://www.academie-sciences.fr/pdf/membre/election_051217.pdf",
+        "https://www.academie-sciences.fr/sites/default/files/2025-07/CV_2025.pdf"
+      ],
+      "new_source_capture": false
+    }
+  ],
+  "conclusion": "Two official discovery queries found no fresh qualifying bulk election master. Two root-selected exact links from actual CTHS notice bodies were each requested once, followed their normalHTTPtoHTTPS301 and returned404HTML. No own-subject ordinary-election original was recovered, and no approval changes are proposed. Three other old exactHTML anchors were not requested; do not claim those individual endpoints checked. Search results/legacy metadata/404bodies are not positive membership evidence. These working-ledger gaps include nonordinary and unresolved source/identity assignments; no national completion or lifetime exclusion is inferred.",
+  "next_step": "Park the two failed exact legacy routes with no variant-prefix guesses or retries. Leave three unrequested oldHTML anchors explicitly distinguishable from checked404routes. Current authoritative French values787identity775DOB643membership640allthree237gaps remain unchanged by this primary-source subtask.",
+  "non_CTHS_source_route_branch_rows": 22,
+  "non_CTHS_source_route_branch_classification_counts": {
+    "inherited_formal_chronology_hold": 13,
+    "v15_actual_same_subject_chronology_hold": 1,
+    "previous_actual_nonordinary_event": 7,
+    "generic_header_no_typed_ordinary_start": 1
+  },
+  "source_branch_scope": "The22-row branch is defined by original Academy/non-CTHS source routes, not by non-CTHS candidate IDs; it includesCTHS_107107 andCTHS_130792. It is separate from the135-CTHS-ID versus99-other-ID decomposition.",
+  "later_actual_archived_anchor_leads": {
+    "supplied_by": "v16_france_inventory",
+    "capture_scope": "Actual retained CTHS notice bytes read by inventory worker; exact links only, no new source body or membership fact yet",
+    "request_status": "Two root-selected legacy URLs attempted once each; both301HTTPtoHTTPS then404; three other exact anchors not requested",
+    "links": [
+      {
+        "candidate_group_id": "CTHS_107447",
+        "parent_sha256": "22d397be1fb35bea880e5a9e98ad1e159df9a8ec22839af113956fd12bce6ba6",
+        "source_url": "http://www.academie-sciences.fr/academie/membre/Vago_Constantin.htm",
+        "exact_prior_request_found": false,
+        "requested_this_round": false
+      },
+      {
+        "candidate_group_id": "CTHS_111758",
+        "parent_sha256": "d00d1cbe0937b2523feec6928ada21be4de4137631c73599c2f9d16cf0e96852",
+        "source_url": "http://www.academie-sciences.fr/academie/membre/Abragam_Anatole.htm",
+        "exact_prior_request_found": false,
+        "requested_this_round": true
+      },
+      {
+        "candidate_group_id": "CTHS_111759",
+        "parent_sha256": "e4290b01cc834a9574642deea77e666d722a7852dee1f1ded5b25b6434e7d146",
+        "source_url": "http://www.academie-sciences.fr/academie/membre/Aigrain_Pierre.htm",
+        "exact_prior_request_found": false,
+        "requested_this_round": true
+      },
+      {
+        "candidate_group_id": "CTHS_111797",
+        "parent_sha256": "65476004a5dd9cae6d19329b76754f2d9766c3caf0eed837a5e027c5dfab1c1d",
+        "source_url": "http://www.academie-sciences.fr/academie/membre/LewyBertaud_Erwin.htm",
+        "exact_prior_request_found": false,
+        "requested_this_round": false
+      },
+      {
+        "candidate_group_id": "CTHS_112619",
+        "parent_sha256": "9396da897445642ed2dd0fbf2ecba27274da787523c2f3297961e0bb879dce3d",
+        "source_url": "http://www.academie-sciences.fr/academie/membre/Laporte_Yves.htm",
+        "exact_prior_request_found": false,
+        "requested_this_round": false
+      }
+    ],
+    "Lebesgue_literal_long_anchor_parked": "http://www.academie-sciences.fr/activite/archive/dossiers/eloges/lebesgues_notice.pdf",
+    "Lebesgue_reason": "sameleaf lebesgues_notice.pdf already tried at Academy/pdf/eloges URL in v10 and failed; do not rewalk old prefixes"
+  },
+  "completed_utc": "2026-11-01T09:34:48.334036+00:00",
+  "root_authorized_source_plan": {
+    "baseline_commit": "8e545eadbdf232e4c5839aebf62a19ead00e2c46",
+    "root_authorized_target_attempts": 2,
+    "max_actual_GETs_per_target": 3,
+    "normal_Location_redirects_only": true,
+    "stop_before_requesting_generic_directory_Location": true,
+    "source_archive_sha256": "6258a366f69e120395450420fee8ae2587d586cb5db153937d1ef45267468811",
+    "actual_parent_bytes_rehashed_and_exact_URL_observed": true,
+    "additional_queries": 0,
+    "retries": 0,
+    "targets": [
+      {
+        "candidate_group_id": "CTHS_111758",
+        "parent_source_sha256": "d00d1cbe0937b2523feec6928ada21be4de4137631c73599c2f9d16cf0e96852",
+        "observed_exact_source_url": "http://www.academie-sciences.fr/academie/membre/Abragam_Anatole.htm",
+        "prior_exact_request_found": false
+      },
+      {
+        "candidate_group_id": "CTHS_111759",
+        "parent_source_sha256": "e4290b01cc834a9574642deea77e666d722a7852dee1f1ded5b25b6434e7d146",
+        "observed_exact_source_url": "http://www.academie-sciences.fr/academie/membre/Aigrain_Pierre.htm",
+        "prior_exact_request_found": false
+      }
+    ]
+  },
+  "actual_request_receipts": [
+    {
+      "candidate_group_id": "CTHS_111758",
+      "parent_source_sha256": "d00d1cbe0937b2523feec6928ada21be4de4137631c73599c2f9d16cf0e96852",
+      "observed_exact_source_url": "http://www.academie-sciences.fr/academie/membre/Abragam_Anatole.htm",
+      "prior_exact_request_found": false,
+      "attempt_count": 1,
+      "additional_queries": 0,
+      "retries": 0,
+      "requests": [
+        {
+          "requested_url": "http://www.academie-sciences.fr/academie/membre/Abragam_Anatole.htm",
+          "request_started_utc": "2026-11-01T09:34:01.211017+00:00",
+          "GET_number_for_target": 1,
+          "http_status": 301,
+          "final_response_url": "http://www.academie-sciences.fr/academie/membre/Abragam_Anatole.htm",
+          "retrieved_utc": "2026-11-01T09:34:07.968068+00:00",
+          "retrieval_timestamp_basis": "response_body_completed_utc",
+          "content_type": null,
+          "response_bytes": 0,
+          "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "location": "https://www.academie-sciences.fr/academie/membre/Abragam_Anatole.htm",
+          "actual_response_body_captured": true,
+          "actual_PDF": false,
+          "observed_redirect_url": "https://www.academie-sciences.fr/academie/membre/Abragam_Anatole.htm"
+        },
+        {
+          "requested_url": "https://www.academie-sciences.fr/academie/membre/Abragam_Anatole.htm",
+          "request_started_utc": "2026-11-01T09:34:07.968507+00:00",
+          "GET_number_for_target": 2,
+          "http_status": 404,
+          "final_response_url": "https://www.academie-sciences.fr/academie/membre/Abragam_Anatole.htm",
+          "retrieved_utc": "2026-11-01T09:34:13.115123+00:00",
+          "retrieval_timestamp_basis": "response_body_completed_utc",
+          "content_type": "text/html; charset=UTF-8",
+          "response_bytes": 151894,
+          "source_sha256": "45246e9c3380b51679c42bbbf70f0c59afeee58372137db4c900216afe386da6",
+          "location": null,
+          "actual_response_body_captured": true,
+          "actual_PDF": false
+        }
+      ],
+      "own_target_body_read": false,
+      "disposition": "actual_HTTP_404_not_target_evidence",
+      "actual_returned_404_body_read": true,
+      "404_main_text": "Retour Il n'y a rien ici Erreur cette page n'existe pas... Retour sur la page d'accueil",
+      "own_target_biography_or_membership_present": false,
+      "no_qualifying_target_body": true
+    },
+    {
+      "candidate_group_id": "CTHS_111759",
+      "parent_source_sha256": "e4290b01cc834a9574642deea77e666d722a7852dee1f1ded5b25b6434e7d146",
+      "observed_exact_source_url": "http://www.academie-sciences.fr/academie/membre/Aigrain_Pierre.htm",
+      "prior_exact_request_found": false,
+      "attempt_count": 1,
+      "additional_queries": 0,
+      "retries": 0,
+      "requests": [
+        {
+          "requested_url": "http://www.academie-sciences.fr/academie/membre/Aigrain_Pierre.htm",
+          "request_started_utc": "2026-11-01T09:34:01.212316+00:00",
+          "GET_number_for_target": 1,
+          "http_status": 301,
+          "final_response_url": "http://www.academie-sciences.fr/academie/membre/Aigrain_Pierre.htm",
+          "retrieved_utc": "2026-11-01T09:34:07.969935+00:00",
+          "retrieval_timestamp_basis": "response_body_completed_utc",
+          "content_type": null,
+          "response_bytes": 0,
+          "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "location": "https://www.academie-sciences.fr/academie/membre/Aigrain_Pierre.htm",
+          "actual_response_body_captured": true,
+          "actual_PDF": false,
+          "observed_redirect_url": "https://www.academie-sciences.fr/academie/membre/Aigrain_Pierre.htm"
+        },
+        {
+          "requested_url": "https://www.academie-sciences.fr/academie/membre/Aigrain_Pierre.htm",
+          "request_started_utc": "2026-11-01T09:34:07.970150+00:00",
+          "GET_number_for_target": 2,
+          "http_status": 404,
+          "final_response_url": "https://www.academie-sciences.fr/academie/membre/Aigrain_Pierre.htm",
+          "retrieved_utc": "2026-11-01T09:34:13.218048+00:00",
+          "retrieval_timestamp_basis": "response_body_completed_utc",
+          "content_type": "text/html; charset=UTF-8",
+          "response_bytes": 151892,
+          "source_sha256": "063b11575023b40be90214d07c2f89f7b61621bc1b05bbd65b2f7f1b8016b17d",
+          "location": null,
+          "actual_response_body_captured": true,
+          "actual_PDF": false
+        }
+      ],
+      "own_target_body_read": false,
+      "disposition": "actual_HTTP_404_not_target_evidence",
+      "actual_returned_404_body_read": true,
+      "404_main_text": "Retour Il n'y a rien ici Erreur cette page n'existe pas... Retour sur la page d'accueil",
+      "own_target_biography_or_membership_present": false,
+      "no_qualifying_target_body": true
+    }
+  ],
+  "actual_request_receipts_sha256": "7286165968ab0b891c62e14f4c9bc9032403f5dd9542a47a1d686e05e8d45000"
+}

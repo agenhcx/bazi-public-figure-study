@@ -1,0 +1,129 @@
+{
+  "audit_kind": "readonly_1947_directory_route_newness_review",
+  "created_utc": "2026-11-01T09:30:39.904184+00:00",
+  "baseline_commit": "8e545eadbdf232e4c5839aebf62a19ead00e2c46",
+  "network_requests": 0,
+  "search_queries": 0,
+  "new_person_body_reviews": 0,
+  "new_section_proposals": 0,
+  "repo_edits": 0,
+  "local_metadata_read": [
+    {
+      "path": "studies/academy_fr_jp_completion_v11/source_batches/japan_scope/README.md",
+      "sha256": "aec597eb2e750525f5a2bebfa25b1742e923efa907ad70950f9d0ead746ad885"
+    },
+    {
+      "path": "studies/academy_fr_jp_completion_v11/source_batches/japan_scope/source_manifest.json",
+      "sha256": "8118cbb9dbfb76bf92e7b535cfe18ccc1c1c792b6adb8920eae89394ed62315d"
+    },
+    {
+      "path": "studies/academy_fr_jp_completion_v11/source_batches/japan_scope/prior_route_audit.json",
+      "sha256": "c538c266ddb8c96b166b4759270173e087c77192398d5891e2bc2dcd13b6cefb"
+    },
+    {
+      "path": "studies/academy_fr_jp_completion_v11/source_batches/japan_scope/processed.csv",
+      "sha256": "0197f5c36e39a9ae8030c3c475e614adebe479b8322a99e89993d1efeba7020b"
+    }
+  ],
+  "current_master": {
+    "path": "studies/academy_fr_jp_completion_v15/outputs/japan_master.csv",
+    "sha256": "f901f568d0a5c85e8ace5ae928d5a3473b9e7691131941075b9cd19d1c7a3021",
+    "residual_scope_rows": 34
+  },
+  "known_1947_originals_from_prior_metadata": [
+    {
+      "source_id": "ndl_1070915_manifest",
+      "url": "https://dl.ndl.go.jp/api/iiif/1070915/manifest.json",
+      "retrieved_utc": "2026-10-30T12:12:19.884278+00:00",
+      "root_extra_URL_budget": true,
+      "http_status": 200,
+      "bytes": 72643,
+      "content_type": "application/json; charset=utf-8",
+      "source_sha256": "fe0a37990cf94b3ad7999d6369282fb69174d25b41a797f0067604e54dec2b81",
+      "actual_original_captured": true,
+      "used_for_positive_section_proposal": true,
+      "source_body_redistributed": false
+    },
+    {
+      "source_id": "ndl1947_canvas85",
+      "url": "https://dl.ndl.go.jp/api/iiif/1070915/R0000085/full/full/0/default.jpg",
+      "retrieved_utc": "2026-10-30T12:13:01.334396+00:00",
+      "root_extra_URL_budget": true,
+      "http_status": 200,
+      "bytes": 2108444,
+      "content_type": "image/jpeg",
+      "source_sha256": "bea31a22b78e1f4e9e77e5825a80cc57f35edc29dc23a068f86477442f82a0ba",
+      "actual_original_captured": true,
+      "used_for_positive_section_proposal": true,
+      "source_body_redistributed": false
+    },
+    {
+      "source_id": "ndl1947_canvas1",
+      "url": "https://dl.ndl.go.jp/api/iiif/1070915/R0000001/full/full/0/default.jpg",
+      "retrieved_utc": "2026-10-30T12:13:01.335626+00:00",
+      "root_extra_URL_budget": true,
+      "http_status": 200,
+      "bytes": 898533,
+      "content_type": "image/jpeg",
+      "source_sha256": "59dd530fc02786a8e2bc67ca0411a41dcaba227443133407dce775d766c02fe6",
+      "actual_original_captured": true,
+      "used_for_positive_section_proposal": true,
+      "source_body_redistributed": false
+    }
+  ],
+  "actual_private_original_availability": {
+    "visible_workspace_tree": "/workspace/scratch/7e8aa4e0d4af",
+    "tracked_and_scratch_file_paths_checked": 30985,
+    "exact_byte_length_then_SHA_match": [],
+    "actual_originals_body_reopened_this_review": false,
+    "limitation": "Workspace inventory only. Prior actual capture/read is recorded in immutable v11 metadata, not re-performed now. Metadata does not substitute for a new physical body read."
+  },
+  "temporal_triage_not_membership_inference": {
+    "pre1947_retired_or_died": [
+      {
+        "member_key": "jpa-unlinked-dcd0cace2d070ff8",
+        "name_jp": "伊藤 圭介",
+        "first_election_date": "1879-02-15",
+        "final_retirement_date": "1901-01-24"
+      },
+      {
+        "member_key": "jpa-unlinked-f85799efdd6bf1bb",
+        "name_jp": "妹沢 克惟",
+        "first_election_date": "1943-08-25",
+        "final_retirement_date": "1944-04-23"
+      }
+    ],
+    "elected1947": [
+      {
+        "member_key": "jpa-unlinked-29629b724effe0d3",
+        "name_jp": "阿部 次郎",
+        "first_election_date": "1947-06-25",
+        "final_retirement_date": "1959-10-20"
+      }
+    ],
+    "elected_after1947_count": 31,
+    "elected_after1947_min": "1949-01-19"
+  },
+  "already_accepted_1947_I_rows": [
+    "jpa-unlinked-694f8362d63485d0",
+    "jpa-unlinked-d5517f6f53da71c1",
+    "jpa-unlinked-e1fad8c84e89a158"
+  ],
+  "observed_coverage_from_prior_v11_metadata": {
+    "captured_cover_canvas": 1,
+    "captured_member_spread_canvas": 85,
+    "named_positive_rows_leaf": 166,
+    "other_1947_member_spreads_captured": false,
+    "full_volume_exhaustion_claim": false,
+    "April_cover_not_hard_cutoff": "Later-dated entries occur elsewhere on spread85. Cannot classify or exclude Abe from April cover or nonappearance in limited pages."
+  },
+  "fresh_page_route": {
+    "concrete_observed_unread_URL": null,
+    "potential_candidate": "jpa-unlinked-29629b724effe0d3",
+    "potential_candidate_name": "阿部 次郎",
+    "source_need": "If resumed, first recover or refetch the exact known manifest and observe its actual page metadata, then identify a named own-person member column. Do not guess adjacent canvas paths or treat page adjacency/absence as I/II evidence.",
+    "known_manifest_url": "https://dl.ndl.go.jp/api/iiif/1070915/manifest.json",
+    "expected_yield_limit": "At most one residual has a1947 election; not a multi-person bulk gap route."
+  },
+  "recommendation": "Park the 1947 route for now: no fresh observed unread page URL and no retained actual source bytes currently recovered. Reopening already-read spread85 would repeat the prior limited-page check. Full-volume availability/exhaustion is not established."
+}
