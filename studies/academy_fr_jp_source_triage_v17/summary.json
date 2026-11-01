@@ -1,0 +1,83 @@
+{
+  "schema": "academy_fr_jp_source_triage_v17",
+  "date": "2026-11-01",
+  "parent_git_commit": "4686d63b73357f9b29a4838f0827341c425f23ed",
+  "canonical_data_study": "studies/academy_fr_jp_completion_v15",
+  "new_data_version_created": false,
+  "new_approvals": {
+    "identity": 0,
+    "DOB": 0,
+    "France_ordinary_membership": 0,
+    "Japan_section": 0
+  },
+  "new_raw_birth_claims": 0,
+  "fixed_targets": [
+    "CTHS_107447",
+    "CTHS_111797",
+    "CTHS_112619"
+  ],
+  "source_activity": {
+    "target_URL_attempts": 3,
+    "HTTP_GETs": 6,
+    "normal_HTTP_to_HTTPS_redirects": 3,
+    "final_404_responses": 3,
+    "queries": 0,
+    "retries": 0,
+    "guessed_URLs": 0,
+    "new_own_subject_bodies_recovered": 0,
+    "Japan_activity": 0
+  },
+  "route_closeout": {
+    "earlier_v16_targets": 2,
+    "new_v17_targets": 3,
+    "all5_observed_legacy_targets_attempted": true,
+    "all5_ended404_after_scheme_redirect": true,
+    "earlier2_not_retried": true,
+    "new_reopen_condition": "A distinct attributable substantive original or exact replacement link observed in a source; no automatic retry of the five failed endpoints.",
+    "not_a_lifetime_membership_exclusion": true,
+    "not_a_claim_all_public_sources_exhausted": true
+  },
+  "france": {
+    "candidate_groups": 877,
+    "identity_approved": 787,
+    "DOB_approved": 775,
+    "strict_ordinary_memberships": 643,
+    "all_three": 640,
+    "remaining_gaps": 237,
+    "membership_only_gaps": 135,
+    "DOB_unapproved": 102,
+    "raw_missing_day_groups": 73,
+    "exact_DOB_conflicts": 4,
+    "held_singleton_DOB_groups": 25,
+    "membership_history_rows": 485,
+    "case_history_rows": 32,
+    "formal_election_holds": 25,
+    "additional_actual_same_subject_election_conflict": 1
+  },
+  "japan": {
+    "identities": 482,
+    "birth_claims": 528,
+    "day_statuses": 368,
+    "Section_II": 438,
+    "Section_I_exclusions": 10,
+    "scope_unresolved": 34,
+    "nonexcluded_DOB_pending": 104,
+    "combined_queue": 112,
+    "new_activity": 0
+  },
+  "preservation": {
+    "all57_canonical_v15_files_unchanged": true,
+    "all24_prior_v16_source_audit_files_unchanged": true,
+    "all_old_accepted_values_raw_claims_alias_and_chronology_holds_unchanged": true,
+    "six_unapplied_DOB_gate_leads_still_held": true
+  },
+  "analysis_cohort_frozen": false,
+  "bazi_variables_computed": 0,
+  "outreach_count": 0,
+  "professors_paused": true,
+  "Fields_parked": true,
+  "background_collection_jobs_scheduled": 0,
+  "successor_data_API": "V15.final_japan()",
+  "no_V17_data_reducer_created": true,
+  "prior_v16_manifest_sha256": "61212302cd9f2c0bb0e5f10de2a918d7e4670cfbad55221e8fd4d88ef780dc56"
+}
