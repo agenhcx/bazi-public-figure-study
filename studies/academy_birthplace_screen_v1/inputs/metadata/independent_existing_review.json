@@ -1,0 +1,290 @@
+{
+  "review_scope": "Independent bounded QA of existing birthplace extraction, completed Japanese supplement, and assembly boundary behavior. No new DOB or outcome analysis.",
+  "status": "passed_after_bounded_birthplace_body_addenda_and_conflict_holds",
+  "baseline_counts": {
+    "CAS": {
+      "rows": 1230,
+      "hemisphere_counts": {
+        "north": 1003,
+        "unknown": 224,
+        "south": 3
+      }
+    },
+    "DE_Leopoldina": {
+      "rows": 778,
+      "hemisphere_counts": {
+        "unknown": 765,
+        "north": 13
+      }
+    },
+    "Fields_main": {
+      "rows": 63,
+      "hemisphere_counts": {
+        "unknown": 4,
+        "north": 55,
+        "south": 4
+      }
+    },
+    "France": {
+      "rows": 775,
+      "hemisphere_counts": {
+        "north": 537,
+        "unknown": 237,
+        "south": 1
+      }
+    },
+    "Japan": {
+      "rows": 368,
+      "hemisphere_counts": {
+        "unknown": 343,
+        "north": 25
+      }
+    },
+    "NAS": {
+      "rows": 2242,
+      "hemisphere_counts": {
+        "unknown": 2241,
+        "north": 1
+      }
+    },
+    "Nobel_science": {
+      "rows": 655,
+      "hemisphere_counts": {
+        "north": 633,
+        "south": 21,
+        "unknown": 1
+      }
+    },
+    "UK_Royal_Society": {
+      "rows": 4983,
+      "hemisphere_counts": {
+        "unknown": 4948,
+        "north": 30,
+        "south": 5
+      }
+    }
+  },
+  "input_sha256": {
+    "inputs/existing/CAS.jsonl.gz": "3eccaf991931c4861d6828bd1930dfb59ce9ec2d03e2e83972803f19ce29459c",
+    "inputs/existing/DE_Leopoldina.jsonl.gz": "ea176f7a0604a1e824fa25a382b90a277868144807e6a5e46204c5a01ad79481",
+    "inputs/existing/Fields_main.jsonl.gz": "e9c43febe6a9dad32a467ab4d0065302b88526a1aeb7a119c2540941cf9c1aca",
+    "inputs/existing/France.jsonl.gz": "fc5a29ebcc202c0f7be5e8dd0189510a9a658ae6857493503daf326cf4a45661",
+    "inputs/existing/Japan.jsonl.gz": "9f0404d77b0df026b8ce3ebef359597fde4a31e679ca9309f1a61291028f7de5",
+    "inputs/existing/NAS.jsonl.gz": "7e0e1a7c89bdb3d6f0d6ec23ad4d1ffdbb9e918528db09d0872842f7ee277f76",
+    "inputs/existing/Nobel_science.jsonl.gz": "854bd781dad80db4c8f33d3892c7236a1b1726f27857fd74951c7eaf363a7143",
+    "inputs/existing/UK_Royal_Society.jsonl.gz": "e8d7740ffe8c74040be5cab0c87fdcfc22472f3bd18dda1bb31bec163ce7dbd8"
+  },
+  "checks": {
+    "all_baseline_IDs_unique_within_cohort": true,
+    "all_34_existing_southern_rows_explicit_birthplace_and_geography_consistent": true,
+    "CAS_selected_external_birthplace_contexts_reviewed_for_subject_and_birth_semantics": true,
+    "CAS_71_multiple_literal_place_rows_no_cross_hemisphere_conflict": true,
+    "CAS_Indonesia_only_unknown": true,
+    "Japan_25_original_birth_sentences_do_not_use_origin_or_hometown_proxy": true,
+    "Nobel_all_639_stored_city_coordinates_equal_captured_official_API_cityNow_fields": true,
+    "Nobel_16_coordinate_missing_rows_include_15_explicit_northern_country_state_rules_and_1_unknown": true,
+    "Nobel_655_rows_all_DOB_blank_and_reconstructed_scope_label_present": true,
+    "CAS_1230_rows_accepted_Gregorian_DOB_blank": true,
+    "direct_opposite_hemisphere_merge_becomes_unknown": true,
+    "mixed_North_South_alternatives_with_existing_north_become_unknown": true,
+    "Japan_272_supplement_has_no_North_South_alternative_coordinate_conflict": true,
+    "DOB_unchanged_in_merge_boundary_fixtures": true,
+    "France_538_CTHS_field_birthplace_mappings_consistent": true
+  },
+  "findings": [
+    {
+      "severity": "resolved_during_review",
+      "finding": "Early merge version could preserve an existing north flag when a multi-valued supplement contained both north and south coordinates. Current fixture confirms unknown/conflict=true. No Japanese real-row occurrence."
+    },
+    {
+      "severity": "informational",
+      "finding": "Some CAS literal birthplace alternatives name different cities but all are northern. Retain alternatives; hemisphere annotation does not adjudicate one city."
+    },
+    {
+      "severity": "informational",
+      "finding": "Nobel 655 is rebuilt from current API science award scope minus existing pending IDs; count match does not reproduce the original final row-set hash."
+    }
+  ],
+  "limitations": [
+    "Full main bulk supplement and final assembled counts were not yet available for independent review.",
+    "Geographic classification is an annotation and does not approve calendar, identity, membership or final analysis eligibility.",
+    "Cross-cohort people overlap remains unresolved; cohort counts cannot be summed as distinct people."
+  ],
+  "final_bulk_appendix": {
+    "output_rows_reviewed": 11094,
+    "all_8_cohort_counts_and_CSV_rowcounts_conserved": true,
+    "all_native_DOB_and_eligibility_fields_unchanged": true,
+    "cross_cohort_dedup_not_claimed": true,
+    "baseline_vs_supplement_conflict": {
+      "cohort": "UK_Royal_Society",
+      "record_id": "RS_CURRENT_11226",
+      "name": "Graeme Clark",
+      "stored_body_place": "Camden, New South Wales, Australia",
+      "stored_body_hemisphere": "south",
+      "wikidata_qid": "Q5591558",
+      "wikidata_P19": "Q25413 Linkoping, Sweden",
+      "wikidata_hemisphere": "north",
+      "assembled_disposition": "unknown; explicit geographic_conflict_pending_review=true"
+    },
+    "new_S3_error": {
+      "cohort": "UK_Royal_Society",
+      "record_id": "RS_PAST_NA1503",
+      "name": "William Noel Benson",
+      "wikidata_qid": "Q8016163",
+      "incorrect_S3_birthplace": "Dunedin, New Zealand",
+      "independently_read_S2_birthplace": "Penge, Surrey, England",
+      "source_url": "https://teara.govt.nz/en/biographies/4b24/benson-gertrude-helen/print",
+      "source_author": "J. D. Campbell",
+      "note": "Signed Dictionary of New Zealand Biography article hosted by official Te Ara. Dunedin is described as death place in this article. No DOB altered.",
+      "recommended_disposition": "Retain S3 claim but remove confirmed-south treatment; opposite-hemisphere conflict unknown until explicit adjudication, or a documented S2 correction policy."
+    },
+    "checked_ambiguous_names": {
+      "NAS_Vincent_Massey": "Berkeley is Q4891969, New South Wales Australia; not Berkeley California. South classification consistent.",
+      "DE_Max_Birnstiel": "Bahia Brazil confirmed by captured IMP institutional body. State-level location, not a city; retain regional granularity and distinguish an extent-based southern inference from a city point.",
+      "France_Felix_Rey": "P19 Q6007933 carries an Argentina settlement P31 and direct negative Earth coordinates; English label absent, raw QID preserved."
+    },
+    "new_source_capture_manifest": "bounded_geography_QA_source_captures.json",
+    "checked_outputs_sha256": {
+      "outputs/summary.json": "665c903b9990e81f133d6b4e6b8c58f44bf281465ff868f7a58bd54fdb583977",
+      "outputs/birthplace_rows.jsonl.gz": "a4982784780ce07a9bdcacb51deb3c738e65978b9b1ed46e140e0298f84db8fe"
+    },
+    "counts_at_time_of_review": [
+      {
+        "cohort": "CAS",
+        "baseline_rows": 1230,
+        "north": 1003,
+        "south": 3,
+        "equator": 0,
+        "unknown": 224,
+        "S3_geography_supplement_used": 0,
+        "hemisphere_conflicts": 0,
+        "baseline_scope": "native_day_claim_layer_not_accepted_Gregorian_DOB"
+      },
+      {
+        "cohort": "DE_Leopoldina",
+        "baseline_rows": 778,
+        "north": 655,
+        "south": 6,
+        "equator": 0,
+        "unknown": 117,
+        "S3_geography_supplement_used": 648,
+        "hemisphere_conflicts": 0,
+        "baseline_scope": "existing_native_day_level_baseline"
+      },
+      {
+        "cohort": "Fields_main",
+        "baseline_rows": 63,
+        "north": 55,
+        "south": 4,
+        "equator": 0,
+        "unknown": 4,
+        "S3_geography_supplement_used": 0,
+        "hemisphere_conflicts": 0,
+        "baseline_scope": "existing_native_day_level_baseline"
+      },
+      {
+        "cohort": "France",
+        "baseline_rows": 775,
+        "north": 702,
+        "south": 3,
+        "equator": 0,
+        "unknown": 70,
+        "S3_geography_supplement_used": 167,
+        "hemisphere_conflicts": 0,
+        "baseline_scope": "existing_native_day_level_baseline"
+      },
+      {
+        "cohort": "Japan",
+        "baseline_rows": 368,
+        "north": 234,
+        "south": 0,
+        "equator": 0,
+        "unknown": 134,
+        "S3_geography_supplement_used": 209,
+        "hemisphere_conflicts": 0,
+        "baseline_scope": "existing_native_day_level_baseline"
+      },
+      {
+        "cohort": "NAS",
+        "baseline_rows": 2242,
+        "north": 1637,
+        "south": 31,
+        "equator": 0,
+        "unknown": 574,
+        "S3_geography_supplement_used": 1667,
+        "hemisphere_conflicts": 0,
+        "baseline_scope": "existing_native_day_level_baseline"
+      },
+      {
+        "cohort": "Nobel_science",
+        "baseline_rows": 655,
+        "north": 633,
+        "south": 21,
+        "equator": 0,
+        "unknown": 1,
+        "S3_geography_supplement_used": 0,
+        "hemisphere_conflicts": 0,
+        "baseline_scope": "reconstructed_award_ID_scope_not_hash_verified_final_DOB_table"
+      },
+      {
+        "cohort": "UK_Royal_Society",
+        "baseline_rows": 4983,
+        "north": 1818,
+        "south": 71,
+        "equator": 0,
+        "unknown": 3094,
+        "S3_geography_supplement_used": 1855,
+        "hemisphere_conflicts": 1,
+        "baseline_scope": "existing_native_day_level_baseline"
+      }
+    ],
+    "limitations": [
+      "All new southern rows were examined for record/source/coordinate coherence, but this was not an independent primary-biography verification of every S3 claim.",
+      "The Benson finding requires a correction or hold before presenting final south counts as reviewed."
+    ]
+  },
+  "final_resolution": {
+    "resolved_previous_findings": true,
+    "method": "Benson north S2, Clark south S2 and Birnstiel Bahia south S1 body addenda recorded; opposite Wikidata hemisphere evidence remains explicit unknown hold rather than silently overridden.",
+    "checked_UK_rows": [
+      {
+        "record_id": "RS_CURRENT_11226",
+        "name": "Graeme Clark",
+        "dob": "1935-08-16",
+        "raw_birthplace": "Camden, New South Wales, Australia",
+        "birthplace_source_grade": "S2",
+        "hemisphere": "unknown",
+        "reason": "stored_body_and_S3_supplement_disagree_on_hemisphere",
+        "geographic_conflict_pending_review": true
+      },
+      {
+        "record_id": "RS_PAST_NA1503",
+        "name": "William Noel",
+        "dob": "1885-12-26",
+        "raw_birthplace": "Penge, Surrey, England",
+        "birthplace_source_grade": "S2",
+        "hemisphere": "unknown",
+        "reason": "stored_body_and_S3_supplement_disagree_on_hemisphere",
+        "geographic_conflict_pending_review": true
+      }
+    ],
+    "final_UK_counts": {
+      "cohort": "UK_Royal_Society",
+      "baseline_rows": 4983,
+      "north": 1818,
+      "south": 70,
+      "equator": 0,
+      "unknown": 3095,
+      "S3_geography_supplement_used": 1854,
+      "hemisphere_conflicts": 2,
+      "baseline_scope": "existing_native_day_level_baseline"
+    },
+    "no_additional_external_retrieval_in_final_resolution": true,
+    "final_outputs_sha256": {
+      "outputs/summary.json": "43de1ca6190b7f97c886bc6956de0308739739b08b6b31e69ca1f5901aed2dfa",
+      "outputs/birthplace_rows.jsonl.gz": "2ad00462255629a603bc4a95aa64158141b5a9b105359baece528a163aa93d92",
+      "inputs/birthplace_body_addenda.json": "7718badf9effd07fb05b1ac8903f4036ea74a1609bf57ae9f9ff555f9b581082"
+    },
+    "scope": "Only the two UK held rows and final summary reread for this final resolution; earlier checks and limitations remain recorded."
+  }
+}
