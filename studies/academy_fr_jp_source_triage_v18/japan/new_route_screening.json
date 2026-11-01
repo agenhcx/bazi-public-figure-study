@@ -1,0 +1,80 @@
+{
+  "schema": "v18_Japan_new_family_screening",
+  "baseline_commit": "a392edba4c34be218670261083d3b1efaf1bd6a5",
+  "created_utc": "2026-11-01T10:30:16.608298+00:00",
+  "canonical_state": "studies/academy_fr_jp_completion_v15",
+  "local_read_inputs": [
+    {
+      "path": "studies/academy_fr_jp_source_triage_v16/japan_routes/readonly_remaining34_route_map.csv",
+      "sha256": "efe242e6ea15c65c0c948f75d4915880fdb914fbbae50aa12b06ce7bdfabaa6b"
+    },
+    {
+      "path": "studies/academy_fr_jp_completion_v2/source_audits/japan_bulk_source_feasibility.json",
+      "sha256": "801828d6e1a61b642ff57aebd8b99e1a6354ff8bd78d5154c3b64dbfa9e6a24d"
+    },
+    {
+      "path": "data/japan_academy_collection_closeout_v1/JPA_PUBLICATION_SEARCH_CLOSEOUT_V12.md",
+      "sha256": "4302fd6643c8b22a6e26453945774831d2030d735f07fdb506e272fa257e22a9"
+    }
+  ],
+  "residual_scope_people": 34,
+  "joined1949_or_later": 31,
+  "search_query_count": 2,
+  "searches": [
+    {
+      "q": "site:japan-acad.go.jp 日本学士院 物故会員 名簿 第一部 第二部 歴代",
+      "engine": "system1",
+      "purpose": "Discover official retrospective or historical division roster, avoiding individual birthday checks."
+    },
+    {
+      "q": "日本学士院 百年史 会員名簿 第一部 第二部 国立国会図書館",
+      "engine": "system1",
+      "purpose": "Discover Academy-authored historical membership registers or annual with direct person-division records."
+    }
+  ],
+  "direct_HTTP_GETs": 1,
+  "retries": 0,
+  "new_approvals": 0,
+  "new_DOB_claims": 0,
+  "candidate_routes": [
+    {
+      "url": "https://ci.nii.ac.jp/ncid/BB06030912",
+      "ref": "turn1994search3",
+      "status": "already_documented_catalogue_only_v2",
+      "prior_local_record": "studies/academy_fr_jp_completion_v2/source_audits/japan_bulk_source_feasibility.json",
+      "action": "No new request; not a fresh digitized body."
+    },
+    {
+      "url": "https://www.japan-acad.go.jp/pdf/news/2021/kaiin.pdf",
+      "ref": "turn1994search8",
+      "status": "2021_current_membership_list_not_contemporaneous_to_remaining34",
+      "actual_body_retrieved": false,
+      "action": "Do not infer any historic division by absence or research discipline; no request."
+    },
+    {
+      "url": "https://www.digital.archives.go.jp/fonds/4672505",
+      "ref": "turn1994search6",
+      "status": "exact_catalogue_target_returned403_no_catalogue_body_recovered",
+      "newness_check": "Exact URL, fondsID4672505 and member-card title not found in tracked Japan data/studies by rg. This is a local-history observation, not a worldwide source-exhaustion claim.",
+      "catalogue_search_result_observation": "Japan Academy archival series lists440volumes, including member record cards spanning1922–1953. Nearby snippets also contain paper/external-storage/access-review labels; their attachment to the member-card record itself remains unverified.",
+      "direct_original_person_division_evidence": false,
+      "root_authorized_actual_GET_attempted": true,
+      "actual_HTTP_status": 403,
+      "actual_response_sha256": "223c94fb88c2b6dfb087f9b0b3833cac8d2690f4abb17e0323bc6185702a7db5",
+      "actual_catalogue_body_read": false,
+      "public_digital_images_link_verified": false,
+      "member_card_access_condition_verified": false,
+      "disposition": "Stop after actual403; do not retry, alter endpoint, request archive access, contact anyone, or probe a backend."
+    }
+  ],
+  "preservation": "No canonical or prior audit edits; all34 scope holds and allDOB/calendar data retained.",
+  "source_scope_limit": "Search results are discovery metadata, never accepted person-section evidence. Known failed NDL routes and v16 scanned pages were not retried.",
+  "completed_utc": "2026-11-01T10:31:39.982054+00:00",
+  "target_URL_attempts": 1,
+  "normal_redirects": 0,
+  "restricted_backend_attempts": 0,
+  "new_own_subject_body_reviews": 0,
+  "new_section_proposals": 0,
+  "stop_status": "bounded_new_family_screen_complete_no_accessible_new_original",
+  "overall_conclusion": "Two bounded primary-source queries found no new accessible direct person-section original. The only locally new catalogue family returned403 on its single authorized GET. Preserve all34 scope unknowns and allDOB/calendar data; no new dataset or source-policy expansion is warranted by this screen."
+}

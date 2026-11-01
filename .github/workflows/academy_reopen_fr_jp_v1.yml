@@ -21,6 +21,7 @@ on:
       - 'studies/academy_fr_jp_completion_v15/**'
       - 'studies/academy_fr_jp_source_triage_v16/**'
       - 'studies/academy_fr_jp_source_triage_v17/**'
+      - 'studies/academy_fr_jp_source_triage_v18/**'
       - 'JAPAN_ACADEMY_CURRENT_CHECKPOINT.md'
       - 'ACADEMY_COLLECTION_CURRENT_CHECKPOINT.md'
       - '.github/workflows/academy_reopen_fr_jp_v1.yml'
@@ -418,5 +419,34 @@ jobs:
         with:
           name: academy-france-japan-source-triage-v17
           path: studies/academy_fr_jp_source_triage_v17/
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Verify v18 source-triage pins and unchanged canonical v15 state
+        run: |
+          python3 - <<'PYCODE'
+          import hashlib, json
+          from pathlib import Path
+          root = Path('studies/academy_fr_jp_source_triage_v18')
+          sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
+          inventory = lambda p: {str(f.relative_to(p)): sha(f) for f in sorted(p.rglob('*')) if f.is_file() and '__pycache__' not in f.parts}
+          manifest = json.loads((root / 'MANIFEST.json').read_text())
+          observed = inventory(root)
+          observed.pop('MANIFEST.json')
+          assert observed == manifest['files'], 'Changed v18 source-triage metadata'
+          pins = json.loads((root / 'canonical_v15_pins.json').read_text())
+          assert inventory(Path(pins['canonical_study'])) == pins['files'], 'Canonical v15 changed'
+          assert sha(Path('studies/academy_fr_jp_source_triage_v16/MANIFEST.json')) == '61212302cd9f2c0bb0e5f10de2a918d7e4670cfbad55221e8fd4d88ef780dc56', 'Changed v16 baseline manifest'
+          assert sha(Path('studies/academy_fr_jp_source_triage_v17/MANIFEST.json')) == '2b50e25f11d6696275296e5afa745c12af1ca73e9cc868a6b7db132e0e8af8b7', 'Changed v17 baseline manifest'
+          summary = json.loads((root / 'summary.json').read_text())
+          assert not summary['new_data_version_created'] and not any(summary['new_approvals'].values())
+          assert summary['new_raw_birth_claims'] == 0 and not summary['analysis_cohort_frozen']
+          print(f"{len(observed)} v18 report pins and {len(pins['files'])} unchanged canonical v15 files verified; no new data approval")
+          PYCODE
+      - name: Save v18 bounded source-triage report
+        uses: actions/upload-artifact@v4
+        with:
+          name: academy-france-japan-source-triage-v18
+          path: studies/academy_fr_jp_source_triage_v18/
           if-no-files-found: error
           retention-days: 14
