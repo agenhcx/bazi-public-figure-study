@@ -1,0 +1,61 @@
+{
+  "schema": "academy_inventory_independent_summary_quality_review_v1",
+  "reviewer": "summary_quality_review",
+  "reviewed_utc": "2026-11-01T11:00:44.374889+00:00",
+  "baseline_repository_commit": "32653a72679c5ab17afbdaf955d1ae797f02077c",
+  "review_passed": true,
+  "bound_report_sha256": {
+    "README.md": "bb395fc8c30d145a71ef8b7911f48fb130ea25f811dac6af7dd693626d5a73fb",
+    "summary.json": "4f0099f3380ab83748e25976571527f94388acee9a6b22761442c267bf2794fe",
+    "coverage_metrics.csv": "3644204ca9aebfbc71b1f81d6455032dc702d31bf39a979e15c03f9b882f2c4f",
+    "birth_window_notes.csv": "ee93081bef6244599984f14565f3117518855ee28faebf50ae6d8db764dee472",
+    "source_provenance.json": "2009ee89086e9d6598e10719266e8a761037bb97346d7b1a65da6a3f29eb25b2",
+    "source_audits/us_uk_inventory.json": "a2297f6bcd8e207e77afb69ebfe948f02ab7562e11008cd292cdcba3768c85ce",
+    "source_audits/germany_china_inventory_audit_v2.json": "572eb412c7535905b8132387fafd2cad17a05e06817630516880fc6098161bd4",
+    "source_audits/fr_jp_inventory.json": "661b1b55d2d91e956c31efe97d7aaf8f7a8b090327eb70859145155199d21671",
+    "source_audits/awards_status_audit.json": "1275346ee4bed6839b18e6699c9115b8b57b4b0319d287d03cc96d9f6c5a9ca5"
+  },
+  "independent_checks": {
+    "all9_bound_main_and_audit_files_read": true,
+    "all_native_metric_fractions_recomputed": true,
+    "CAE_unavailable_values_blank_not_zero": true,
+    "current_repo_provenance_hashes_checked": 17,
+    "external_ZIP_digests_checked": {
+      "nas-dob-v17-official-provenance-freeze.zip": "dfbdeadd1dd0fe3ac05c8c70f233857582ef694e483f8ff3ffdba897a5e96c10",
+      "china_cas_collection_v19_20261028.zip": "5d4c4a49c2f4d71c953d8a890fd2473b595c38d274d6fb6d1ac9d56c62e3cfb9"
+    },
+    "Fields_and_professor_branch_file_hashes_checked": 18,
+    "NAS_recovered_CSV_uniqueIDs_dates_and_window_independently_recomputed": true,
+    "CAS_recovered_roster_precision_zero_acceptance_flags_independently_recomputed": true,
+    "France_key_approval_counts_independently_recomputed": true,
+    "summary_partitions_and_native_source_path_totals_consistent": true
+  },
+  "semantic_checks": {
+    "native_count_policies_are_explicit_and_not_uniform_quality_tiers": true,
+    "German_778_rate_labeled_window_inclusion_not_all_roster_DOB_coverage": true,
+    "German_2407_candidate_overlap_not_presented_as_extra_disjoint_people": true,
+    "CAS_1230_raw_day_claims_not_accepted_Gregorian_dates": true,
+    "CAS_25_diagnostics_not_adjudicated_conflicts": true,
+    "CAS_vs_CAE_and_missing_CAE_snapshot_separate": true,
+    "France_640_strict_all_three_distinct_from_Japan_360_working_intersection": true,
+    "Japan_degree_rule_and_cutoff_flags_354_2_4_disclosed": true,
+    "common_window_denominators_not_inferred_from_exact_only_rows": true,
+    "Fields_2026_extension_and_Perelman_declined_record_separate_and_disclosed": true,
+    "Nobel_655_metadata_crosscheck_not_claimed_row_recomputation": true,
+    "MacTutor_edited_secondary_and_singlehost_not_independent_verification": true,
+    "institution_not_nationality_and_no_unduplicated_grand_total": true,
+    "earlier_freezes_retained_no_new_unified_cohort_freeze": true,
+    "professor_pilots_not_promoted_to_control_cohort": true
+  },
+  "review_limits": [
+    "This is a summary-consistency and provenance review, not a new person-level source adjudication.",
+    "NAS and CAS selected row tables plus ZIP digests were independently read; the CAS owner audit supplies its complete10695-member manifest/CRC check, not a new independent review of10695 source bodies.",
+    "Nobel final row tables remain absent;655 is supported by existing script and later summary.",
+    "No source collection, date conversion, imputation, deduplication, source-policy change, inferential test or BaZi computation was performed.",
+    "Hosted CI status is not asserted by this review."
+  ],
+  "network_requests": 0,
+  "canonical_data_modified": false,
+  "new_approval_decisions": 0,
+  "new_cohort_freeze": false
+}

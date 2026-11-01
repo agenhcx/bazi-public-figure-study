@@ -1,0 +1,277 @@
+{
+  "schema": "scientist_program_awards_and_professor_inventory_support_v1",
+  "baseline_commit": "32653a72679c5ab17afbdaf955d1ae797f02077c",
+  "scope": "Readonly current Git snapshot; no external search, new collection, analysis, data alteration or cohort freeze.",
+  "nobel": {
+    "scope": "Physics, Chemistry and Physiology or Medicine; award years1901–2025. Peace, Literature and Economics excluded.",
+    "award_rows": 662,
+    "unique_people": 658,
+    "unit": "unique Nobel laureate IDs, not award rows",
+    "enriched_exact_DOB_count": 655,
+    "pending_DOB_count": 3,
+    "rate": {
+      "numerator": 655,
+      "denominator": 658,
+      "percent": 99.54407294832826
+    },
+    "count_evidence_status": "metadata_corroborated_not_person_table_recomputed",
+    "count_basis": [
+      "Frozen original reference645exact of658people; enrichment script contains10 frozen enrichments and hard asserts655 final exact.",
+      "Subsequent tracked calendar-closeout summary independently records655 Nobel exact rows and655 calendar-eligible rows."
+    ],
+    "older_raw_snapshot": {
+      "unique_people": 658,
+      "exact_DOB": 645,
+      "not_latest_enriched_count": true
+    },
+    "source_quality": "OfficialNobelAPI raw base plus ten frozen external enrichments. Not a uniform first-party-body-verified set.",
+    "enrichment_metadata": {
+      "count": 10,
+      "self_assigned_confidence_labels": {
+        "medium": 4,
+        "high": 6
+      },
+      "wikidata_URL_count": 7,
+      "do_not_map_confidence_labels_to_harmonized_source_tiers": true
+    },
+    "pending_cases": [
+      {
+        "laureate_id": "986",
+        "name": "Michael Houghton",
+        "known_year": "1949",
+        "reason": "Reliable public sources currently confirm only birth year 1949.",
+        "candidate_dates": ""
+      },
+      {
+        "laureate_id": "998",
+        "name": "Ardem Patapoutian",
+        "known_year": "1967",
+        "reason": "Conflicting sources: Scripps CV says 1967-10-01, while Wikidata cites a public post by Patapoutian for 1967-10-02. Keep unresolved.",
+        "candidate_dates": "1967-10-01; 1967-10-02"
+      },
+      {
+        "laureate_id": "1041",
+        "name": "John Jumper",
+        "known_year": "1985",
+        "reason": "Nobel/Lindau-style authoritative biographies give only 1985; do not treat secondary 1985-01-01 values as exact without stronger evidence.",
+        "candidate_dates": ""
+      }
+    ],
+    "common_birthyear_window_reported": {
+      "min": 1835,
+      "max": 1985,
+      "status": "Tracked calendar-closeout metadata. Person-table birth range not recomputed in this snapshot."
+    },
+    "calendar_summary": {
+      "rows": 655,
+      "changed": 3,
+      "pending": 0,
+      "calendar_eligible": 655
+    },
+    "calendar_eligible_not_final_source_or_northern_hemisphere_cohort": true,
+    "missing_actual_current_tables": [
+      "data/nobel_science_master/nobel_science_awards.csv",
+      "data/nobel_science_master/nobel_science_people.csv",
+      "data/nobel_science_master/manifest.json",
+      "data/nobel_science_enriched_v1/nobel_science_people.csv",
+      "data/nobel_science_enriched_v1/nobel_science_summary.csv",
+      "data/nobel_science_enriched_v1/manifest.json"
+    ],
+    "no_new_run_of_network_crawler_or_enrichment_script": true
+  },
+  "fields": {
+    "stage": "partial dates parked; existing canonical v3 data recovered from separate project branch, v4 closeout unchanged",
+    "source_branch": "codex/fields-and-professor-catalogues-20261028",
+    "source_commit": "85bc28ca9bb55d52495dfd3f2eaf716226ab8a03",
+    "canonical_study": "studies/fields_medal_followup_v3",
+    "latest_closeout_study": "studies/fields_medal_gap_closeout_v4",
+    "count_evidence_status": "rosters_and_source_claim_ledgers_recomputed_from_exact_git_objects",
+    "main": {
+      "award_year_min": 1936,
+      "award_year_max": 2022,
+      "scope_description": "Main recipients through2025; last observed awardyear2022, including declined award record.",
+      "roster_count": 64,
+      "unique_ID_count": 64,
+      "day_source_verified": 63,
+      "month_only": 1,
+      "rate": {
+        "numerator": 63,
+        "denominator": 64,
+        "percent": 98.4375
+      },
+      "declined_record_names": [
+        "Grigori Perelman"
+      ],
+      "birthyear_range": [
+        1897,
+        1987
+      ]
+    },
+    "extension2026": {
+      "recorded_award_year": 2026,
+      "kept_separate_from_main": true,
+      "roster_count": 4,
+      "day_source_verified": 1,
+      "month_only": 2,
+      "year_only": 1,
+      "rate": {
+        "numerator": 1,
+        "denominator": 4,
+        "percent": 25.0
+      },
+      "date_state": "Recorded frozen branch snapshot, no new award-status verification performed."
+    },
+    "partial_records": [
+      {
+        "fields_id": "fields-352a6198eb2cbea0",
+        "name": "Yu Deng",
+        "cohort": "extension2026",
+        "status": "month_only",
+        "source_date_components_iso": "1989-06"
+      },
+      {
+        "fields_id": "fields-067784796f2c2d7f",
+        "name": "John Pardon",
+        "cohort": "extension2026",
+        "status": "month_only",
+        "source_date_components_iso": "1989-06"
+      },
+      {
+        "fields_id": "fields-7134a0f12e23708a",
+        "name": "Hong Wang",
+        "cohort": "extension2026",
+        "status": "year_only",
+        "source_date_components_iso": "1991"
+      },
+      {
+        "fields_id": "fields-e820d3ddf8c32593",
+        "name": "Caucher Birkar",
+        "cohort": "main",
+        "status": "month_only",
+        "source_date_components_iso": "1978-07"
+      }
+    ],
+    "source_quality": {
+      "main_DOB_claim_rows": 71,
+      "body_observed_claim_rows": 69,
+      "snippet_only_claim_rows": 2,
+      "body_day_people": 63,
+      "main_single_host_date_source_people": 59,
+      "main_MacTutor_body_date_people": 50,
+      "body_claim_source_type_counts": {
+        "first_person_cv": 3,
+        "institutional_biography": 65,
+        "institutional_cv": 1
+      },
+      "day_body_claim_source_type_counts": {
+        "first_person_cv": 1,
+        "institutional_biography": 62
+      },
+      "MacTutor_is_edited_biography_not_subject_first_party": true,
+      "single_institution_source_label_not_independent_source_verification": true
+    },
+    "source_calendar_field_counts": {
+      "not_stated": 68
+    },
+    "calendar_conversion_performed": false,
+    "body_day_status_not_final_calendar_adjudication": true,
+    "Nobel_common_window_not_applied_to_original_Fields_cohort": true,
+    "descriptive_common_window_1835_1985_only": {
+      "main_known_year_inside": 62,
+      "main_day_inside": 61,
+      "extension_inside": 0,
+      "not_a_new_cohort_filter_or_freeze": true
+    },
+    "verified_manifest_pin_counts": {
+      "studies/fields_medal_followup_v3": 18,
+      "studies/fields_medal_gap_closeout_v4": 11
+    },
+    "source_files_sha256": {
+      "studies/fields_medal_followup_v3/MANIFEST.json": "1a2ad468efd30bd134aa566e5fa746172aa62b6df46aef3e8ddd39ae611ab0a9",
+      "studies/fields_medal_followup_v3/README.txt": "1a6cdfcc6f93419687cd66305156e88743f5a163fa10d31d9615c62a940063e2",
+      "studies/fields_medal_followup_v3/outputs/extension2026_dob_source_ledger.csv": "69cf660dc9a6775614582b2ff1a815f8c35d443c083da7d51acaebc46f26e9a0",
+      "studies/fields_medal_followup_v3/outputs/extension2026_roster.csv": "361813476253eaf80bf729ad5b86d3bef14b97b905cb028c293594a2e1e74911",
+      "studies/fields_medal_followup_v3/outputs/hash_manifest.json": "f4422058d99fd9cd4cafa0fc1244ef73574001406e07017965df992bde5412a9",
+      "studies/fields_medal_followup_v3/outputs/main_dob_source_ledger.csv": "245ed77da2aeee0aca76c0714466433574cb05fb119ffef2753e96353ecc0114",
+      "studies/fields_medal_followup_v3/outputs/main_roster.csv": "d16c6744e777fa2b4bb8d43f16e62485a93a64c2d537d4dc5d0bf3eddd8e363e",
+      "studies/fields_medal_followup_v3/outputs/missing_partial_queue.csv": "1358f4640b30f12d65dee4a51839f63b3ad8725ccf5df8076d8b09013035220b",
+      "studies/fields_medal_followup_v3/outputs/summary.json": "e86328580e76eb0e4f8635417576635a362c54e299bd4968ce0db0899a06de0e",
+      "studies/fields_medal_gap_closeout_v4/MANIFEST.json": "cc32a88ffcd0ab9082d977096b4389bf1c3cf07878866055f9c8f4d0fccec308",
+      "studies/fields_medal_gap_closeout_v4/README.txt": "79e47509c0b581fc9485f86c72d111e4e8037d17b8f893e72dea78ae3ce0ad3c",
+      "studies/fields_medal_gap_closeout_v4/summary.json": "2024e4d8ebc13665a60541e50e67ee140e212fe093eb03c5a3b072b83a7b4af5"
+    },
+    "recovered_table_local_root": "/workspace/scratch/7e8aa4e0d4af/academy_inventory_workers/awards/recovered_fields_branch",
+    "git_objects_materialized_only_no_branch_checkout_or_merge": true,
+    "final_analysis_cohort_frozen": false,
+    "new_collection_requests": 0,
+    "bazi_variables_computed": 0
+  },
+  "professors": {
+    "stage": "paused per current project checkpoint",
+    "current_snapshot_has_complete_professor_cohort": false,
+    "roster_count": null,
+    "usable_count": null,
+    "coverage_percent": null,
+    "not_counted_as_primary_hierarchy_sample": true,
+    "Kyoto1025_directory_is_not_a_professor_cohort": "Existing Japan v2 source handoff temporarily acquired1025 mixed university index records to match academy candidates; this did not resume professor cohort collection.",
+    "pilot_snapshot_recovered": true,
+    "source_branch": "codex/fields-and-professor-catalogues-20261028",
+    "source_commit": "85bc28ca9bb55d52495dfd3f2eaf716226ab8a03",
+    "Rostock_physics_chemistry_pilot_metadata": {
+      "membership_rows": 207,
+      "distinct_catalogue_purls": 205,
+      "day_level_candidates": 156,
+      "day_level_in_1835_1985_candidates": 149,
+      "accepted_professor_control_people": null,
+      "record_table_absent_metadata_only": true,
+      "not_higher_tier_overlap_excluded": true
+    },
+    "UC_two_volumes_pilot_metadata": {
+      "volume_years": [
+        2000,
+        2001
+      ],
+      "automatic_unverified_header_records": 151,
+      "full_date_candidates_all_disciplines": 31,
+      "literal_physics_chemistry_records": 14,
+      "literal_physics_chemistry_day_candidates": 4,
+      "accepted_unique_control_people": null,
+      "record_tables_absent_metadata_only": true,
+      "no_individual_or_fuzzy_identity_adjudication": true
+    },
+    "source_files_sha256": {
+      "studies/professor_catalogue_expansion_v1/README.txt": "b1725811281401dba9957bdfc3cb5fe8e3e31b1616503973bd06b3def18d66bb",
+      "studies/professor_catalogue_expansion_v1/findings.json": "e61d640b9f494e8c842b131f5f5c8f9023825733f2d2a7ff1a1fa5a6a89fecef",
+      "studies/professor_easy_bulk_v1/rostock_summary.json": "ecc21f170a6af3e599af9417d1a7ba3648e2d71f1396e882877060facbc2bc76",
+      "studies/professor_easy_bulk_v1/uc_summary.json": "fd9a7d9f07e4c98a08b6dfef8d2fa972884db508ed5e1caeddb437a2b5babff0",
+      "studies/professor_easy_bulk_v2/README.txt": "168c22478ac71d3a20461ba502e86fa6e4ceee989c727d38b27c087085a8ba13",
+      "studies/professor_easy_bulk_v2/summary.json": "b2b0adfbef80b09f3273367581143f5ff38ea95ada267841015d33c355ff2bd8"
+    },
+    "pilots_do_not_resolve_missing_formal_professor_cohort": true
+  },
+  "comparison_limits": [
+    "Do not sum Nobel uniquepeople and academy roster rows into a deduplicated total; overlap has not been evaluated.",
+    "658people and662awardrows are different units.",
+    "655exactDOB is not proof of uniform source quality, final source adjudication or northern-hemisphere eligibility.",
+    "Professor pause means the originally planned professor→academy→Nobel comparison does not yet have a complete professor-tier cohort.",
+    "Fields main64 and2026extension4 are separate predefined samples; do not silently collapse their coverage denominators.",
+    "Fields63 day-source status is a body/source-components coverage metric, not proof of a frozen uniform primary-source or calendar-adjudicated analysis cohort.",
+    "The source branch was recovered without merging into current canonical academy data.",
+    "Nobel current row tables remain absent on this baseline; the external Fields recovery does not remove that limitation.",
+    "Rostock149 and UC4 science exact-date candidates are metadata-described pilots, not approved nonacademy/nonnobel controls."
+  ],
+  "source_sha256": {
+    "NOBEL_SCIENCE_MASTER_FREEZE_REFERENCE_V1.json": "add867345b572b766d5a60f12ed471711b413faf7ebffcc7ab102bf3c0142bd7",
+    "scripts/nobel_science_crawl.py": "be77373b9ebd6251181d4b000d7a3a4ef8ed2a1e3983c67c01aa19bbc88a8c9c",
+    "scripts/nobel_dob_enrich_v1.py": "33b781e1bdbb9a9d49bd99f33f68df11384a754d84538a31b8e34097c0fb2e12",
+    "scripts/verify_nobel_science_master_v1.py": "53a7187916b2fda50edd8bf4b51632d1b03696216e7c30e882a7324a11c07834",
+    "data/dob_calendar_audit_closeout_v1/summary.json": "47efdfbb4c64ea594acc62fe6281c042967ebf16953cc1f97be2d96a399a2f5f",
+    "HIERARCHY_COMMON_BIRTHYEAR_SUPPORT_PLAN_V1.md": "dd39e20fc0fda03719313537641ab68838b67ee902d994f3307d58a577e2f1cf",
+    "ACADEMY_COLLECTION_CURRENT_CHECKPOINT.md": "d7db7722067229492e80546ca7d6449e399aa5cc7ee5c3f312fc5904b183f70a",
+    "SCIENTIST_HIERARCHY_PREUNBLINDING_AMENDMENT_V1.md": "c0e6104f9cd82e4809688407c001beaf47cd3cba889cfda021df10b125b6673d",
+    "studies/academy_fr_jp_completion_v2/source_batches/japan_kyoto_bulk/README.txt": "df9da5562d11e9627ff41a82bebd90d2820a551e3c189377146ded073dfb0330"
+  },
+  "raw_or_frozen_data_modified": false,
+  "bazi_variables_computed": 0,
+  "fields_source_snapshot_recovered_after_initial_audit": true
+}

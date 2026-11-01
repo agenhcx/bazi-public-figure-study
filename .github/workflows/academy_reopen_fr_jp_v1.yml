@@ -22,6 +22,7 @@ on:
       - 'studies/academy_fr_jp_source_triage_v16/**'
       - 'studies/academy_fr_jp_source_triage_v17/**'
       - 'studies/academy_fr_jp_source_triage_v18/**'
+      - 'studies/academy_coverage_inventory_v1/**'
       - 'JAPAN_ACADEMY_CURRENT_CHECKPOINT.md'
       - 'ACADEMY_COLLECTION_CURRENT_CHECKPOINT.md'
       - '.github/workflows/academy_reopen_fr_jp_v1.yml'
@@ -448,5 +449,39 @@ jobs:
         with:
           name: academy-france-japan-source-triage-v18
           path: studies/academy_fr_jp_source_triage_v18/
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Verify cross-institution inventory and source pins
+        run: |
+          python3 - <<'PYCODE'
+          import csv, hashlib, json
+          from pathlib import Path
+          root = Path('studies/academy_coverage_inventory_v1')
+          sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
+          observed = {str(p.relative_to(root)): sha(p) for p in sorted(root.rglob('*')) if p.is_file() and p != root / 'MANIFEST.json' and '__pycache__' not in p.parts}
+          assert observed == json.loads((root / 'MANIFEST.json').read_text())['files']
+          provenance = json.loads((root / 'source_provenance.json').read_text())
+          for name, expected in provenance['current_repository_files'].items():
+              assert sha(Path(name)) == expected, name
+          summary = json.loads((root / 'summary.json').read_text())
+          with (root / 'coverage_metrics.csv').open() as stream:
+              metrics = list(csv.DictReader(stream))
+          assert len(metrics) == len(summary['metrics']) == 10
+          for row, expected in zip(metrics, summary['metrics']):
+              assert row['dataset'] == expected['dataset']
+              for field in ('numerator', 'denominator', 'remaining_count'):
+                  assert (int(row[field]) if row[field] else None) == expected[field]
+              if expected['numerator'] is not None and expected['denominator']:
+                  assert abs(float(row['percentage']) - 100 * expected['numerator'] / expected['denominator']) < 0.000001
+          assert summary['new_data_approvals'] == summary['new_birth_claims'] == summary['new_source_collection_requests'] == 0
+          assert summary['guardrails']['no_new_unified_cohort_freeze'] and not summary['bazi_or_outcome_analysis_performed']
+          print(f"{len(observed)} report pins, {len(provenance['current_repository_files'])} repository-source pins and10 native metric rows verified; policies unchanged")
+          PYCODE
+      - name: Save cross-institution coverage inventory
+        uses: actions/upload-artifact@v4
+        with:
+          name: academy-cross-institution-inventory-v1
+          path: studies/academy_coverage_inventory_v1/
           if-no-files-found: error
           retention-days: 14
