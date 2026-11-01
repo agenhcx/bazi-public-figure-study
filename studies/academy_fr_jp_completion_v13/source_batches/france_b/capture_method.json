@@ -1,0 +1,86 @@
+{
+  "root_fixed_B5_ids": [
+    "CTHS_102823",
+    "CTHS_102836",
+    "CTHS_102838",
+    "PROFILE2_39000bb1e114bf0c",
+    "PROFILE2_738d6d5c74a7a874"
+  ],
+  "original_frozen_plan": {
+    "root_authorization": "ROOTfreezeB5:2fixedCVGETs and at most2 observed Costantin/Combes expansion GETs;0 queries;once each stop error",
+    "maximum_distinct_request_URLs": 4,
+    "redirect_policy": "Do not follow; capture status/body and stop",
+    "requests": [
+      {
+        "source_id": "salomon_cv",
+        "candidate_group_id": "PROFILE2_39000bb1e114bf0c",
+        "url": "https://www.phys.ens.psl.eu/~salomon/images/CV_salomon_e.pdf",
+        "filename": "salomon_cv.pdf"
+      },
+      {
+        "source_id": "mbl_cv",
+        "candidate_group_id": "PROFILE2_738d6d5c74a7a874",
+        "url": "https://www.lri.fr/~mbl/mbl-CV-court-jan2025.pdf",
+        "filename": "mbl_cv.pdf"
+      },
+      {
+        "source_id": "cths_102823_expanded",
+        "candidate_group_id": "CTHS_102823",
+        "url": "https://cths.fr/library/getdata.php?q=proso_bio_detail&id=102823&dep=y",
+        "filename": "cths_102823_expanded.html"
+      },
+      {
+        "source_id": "cths_102838_expanded",
+        "candidate_group_id": "CTHS_102838",
+        "url": "https://cths.fr/library/getdata.php?q=proso_bio_detail&id=102838&dep=y",
+        "filename": "cths_102838_expanded.html"
+      }
+    ],
+    "handler_proofs": [
+      {
+        "candidate_group_id": "CTHS_102823",
+        "parent_url": "https://cths.fr/an/savant.php?id=102823",
+        "parent_source_sha256": "6e4414f9366ba916ba1cd51ee486a08b2e86c8e561a3552949d98d2d9f6b2d9c",
+        "parent_original_retrieved_utc": null,
+        "parent_archive_provenance": "tracked SHA-named archive member; unknown historical retrieval time retained null",
+        "target_element_id": "proso_bio_detail",
+        "literal_query": "q=proso_bio_detail&id=102823&dep=y",
+        "query_name": "proso_bio_detail",
+        "person_id": "102823",
+        "dep": "y",
+        "routing_path_literal_from_parent_JS": "../library/getdata.php",
+        "resolved_url": "https://cths.fr/library/getdata.php?q=proso_bio_detail&id=102823&dep=y",
+        "parent_source_locator": "actual archived ajax_data function plus #proso_bio_detail expansion OnClick"
+      },
+      {
+        "candidate_group_id": "CTHS_102838",
+        "parent_url": "https://cths.fr/an/savant.php?id=102838",
+        "parent_source_sha256": "77a5e9b758c6d2bfbb09350f7bdfe90f8a11793595994cf6399260c758cab841",
+        "parent_original_retrieved_utc": null,
+        "parent_archive_provenance": "tracked SHA-named archive member; unknown historical retrieval time retained null",
+        "target_element_id": "proso_bio_detail",
+        "literal_query": "q=proso_bio_detail&id=102838&dep=y",
+        "query_name": "proso_bio_detail",
+        "person_id": "102838",
+        "dep": "y",
+        "routing_path_literal_from_parent_JS": "../library/getdata.php",
+        "resolved_url": "https://cths.fr/library/getdata.php?q=proso_bio_detail&id=102838&dep=y",
+        "parent_source_locator": "actual archived ajax_data function plus #proso_bio_detail expansion OnClick"
+      }
+    ]
+  },
+  "observed_MBL_relocation_pair": {
+    "original_url": "https://www.lri.fr/~mbl/mbl-CV-court-jan2025.pdf",
+    "original_status": 302,
+    "original_response_sha256": "7813e1465b3f6cb27e2dc674eefabf8929a32948732565cfd89e35118aefbecb",
+    "observed_Location": "https://perso.lisn.upsaclay.fr/mbl/mbl-CV-court-jan2025.pdf",
+    "root_authorized_one_extra_GET": true,
+    "relocated_url": "https://perso.lisn.upsaclay.fr/mbl/mbl-CV-court-jan2025.pdf",
+    "relocated_status": 200,
+    "relocated_source_sha256": "88454da95d22aa070792f00cdf9743b66cd296be559015c0f9b82b09627ed213"
+  },
+  "network_boundary": "5 actualBGETs/4status200/1status302,0 queries,0 retries;sharedreportGETownedbyCnotB",
+  "archived_parent_status_time": "bothnulltruthful;harvestreportedHTTP_200preservedseparatelyaslegacyclaim",
+  "two_responses_one_notice_not_independent_sources": true,
+  "raw_bodies_redistributed": false
+}

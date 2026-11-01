@@ -16,6 +16,7 @@ on:
       - 'studies/academy_fr_jp_completion_v10/**'
       - 'studies/academy_fr_jp_completion_v11/**'
       - 'studies/academy_fr_jp_completion_v12/**'
+      - 'studies/academy_fr_jp_completion_v13/**'
       - 'JAPAN_ACADEMY_CURRENT_CHECKPOINT.md'
       - 'ACADEMY_COLLECTION_CURRENT_CHECKPOINT.md'
       - '.github/workflows/academy_reopen_fr_jp_v1.yml'
@@ -295,5 +296,26 @@ jobs:
           path: |
             studies/academy_fr_jp_completion_v12/README.md
             studies/academy_fr_jp_completion_v12/outputs/
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Validate v13 institutional writer credits and inherited scope safeguards
+        run: python3 -m unittest discover -s studies/academy_fr_jp_completion_v13/tests -v
+      - name: Rebuild v13 prepared inputs and country outputs
+        run: |
+          python3 studies/academy_fr_jp_completion_v13/scripts/continue.py prepare --output-dir "${{ runner.temp }}/academy-v13-inputs"
+          for name in japan_claims.json japan_delta_claims.json japan_holds.json japan_delta_holds.json japan_processed_ids.json japan_delta_processed_ids.json france_decisions.json france_processed_ids.json inherited_france_decisions.json japan_section_decisions.json france_dob_conflict_decisions.json france_individual_case_decisions.json inherited_france_case_adjudications.json; do
+            diff "studies/academy_fr_jp_completion_v13/inputs/$name" "${{ runner.temp }}/academy-v13-inputs/$name"
+          done
+          python3 studies/academy_fr_jp_completion_v13/scripts/continue.py assemble --output-dir "${{ runner.temp }}/academy-v13-output"
+          diff -r studies/academy_fr_jp_completion_v13/outputs "${{ runner.temp }}/academy-v13-output"
+          python3 studies/academy_fr_jp_completion_v13/scripts/continue.py verify
+      - name: Save v13 continued country tables
+        uses: actions/upload-artifact@v4
+        with:
+          name: academy-france-japan-continuation-v13
+          path: |
+            studies/academy_fr_jp_completion_v13/README.md
+            studies/academy_fr_jp_completion_v13/outputs/
           if-no-files-found: error
           retention-days: 14
