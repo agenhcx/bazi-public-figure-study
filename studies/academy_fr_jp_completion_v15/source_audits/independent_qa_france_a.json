@@ -1,0 +1,117 @@
+{
+  "audit_kind": "independent_v15_france_a_actual_source_QA",
+  "reviewer": "v15_source_qa",
+  "completed_utc": "2026-11-01T09:07:53.455110+00:00",
+  "independent_qa_passed": true,
+  "decisions_sha256": "09928cfec5f6fd34d42bd85f6bcf9e9d20e58130a3a256a25c3649997fab4971",
+  "worker_manifest_sha256": "a896babec823bc56fc2db799d8a4494d6ad2357b23baa20fd39e608d3ca863a2",
+  "public_manifest_pins_passed": 12,
+  "source_assignment_control_sha256": "1020279bf14b59711e63038ca5fea79f813407abcd864b31f0bfb83bef9af86a",
+  "decision_checks": [
+    {
+      "candidate_group_id": "CTHS_128379",
+      "source_sha256s": [
+        "7a290a6f3483b5120a0477ce39b10f8f3d9fb8607b09f2d840e7a655285c9f23"
+      ],
+      "all_actual_source_sha256s": [
+        "7a290a6f3483b5120a0477ce39b10f8f3d9fb8607b09f2d840e7a655285c9f23",
+        "510bc84765d6ba08840cf84035c01201c95a5e12bf54a11c81f59ce76397b7e3"
+      ],
+      "assignment_source_sha256s": [
+        "510bc84765d6ba08840cf84035c01201c95a5e12bf54a11c81f59ce76397b7e3"
+      ],
+      "source_assignment_disposition": {
+        "status": "current_profile_maternal_body_quarantined_pdf_own_subject_event_accepted",
+        "observed_source_sha256s": [
+          "510bc84765d6ba08840cf84035c01201c95a5e12bf54a11c81f59ce76397b7e3",
+          "7a290a6f3483b5120a0477ce39b10f8f3d9fb8607b09f2d840e7a655285c9f23"
+        ],
+        "observed_election_years": [
+          1988,
+          2010
+        ],
+        "reason": "Current Hélène title/card/birth-year1958 and November2010 header coexist with a1986/1988 electoral line and an explicitly Marie-Anne-named biography. Those mixed current-profile components are quarantined from daughter membership inference. The actual independent Academy-issued PDF names the daughter with own DOB/career and directly dates her ordinary election2010-11-30. No maternal date is inferred or transferred.",
+        "current_profile_quarantined": true
+      },
+      "actual_bodies_rehashed_and_read": true,
+      "actual_body_rehashed_and_read": true,
+      "old_warnings_preserved": true,
+      "ordinary_role_direct_start_passed": true,
+      "independent_PDF_ordinary_start_passed": true,
+      "identity_DOB_unchanged": true,
+      "accepted_membership_start_date_verified": "2010-11-30",
+      "accepted_membership_start_year_verified": 2010,
+      "accepted_precision_verified": "day",
+      "academy_authored_independent_host_original_verified": true,
+      "PDF_page1_role_distinction_and_2010_2011_election_batches_read": true,
+      "PDF_physical_page4_visually_read": true,
+      "PDF_physical_page4_heading_and_own_name_DOB_career_read": true,
+      "own_subject_identity_bridge": "Hélène Bouchiat, birth1958-05-08, CNRS/LPS/Paris-Sud-Orsay physics career matches preserved identity/DOB. Printed p4 heading governs this own entry.",
+      "current_profile_body_explicitly_names_Marie_Anne": true,
+      "current_profile_not_used_as_accepted_election_event_source": true,
+      "current_profile_dates_1986_1988_not_transferred_to_daughter": true,
+      "previous_bad_response_bytes_available_or_claimed_reread": false,
+      "current_mixed_subject_page_not_repaired": true,
+      "previous_conflict_explicitly_resolved": false,
+      "new_raw_DOB_claims_or_DOB_approval": false,
+      "finding": "Accept independent own-subject Academy-issued 2011 bulletin p4 election event, while retaining old profile warning and quarantining current mixed mother/daughter body. This does not select a date from the mixed profile."
+    },
+    {
+      "candidate_group_id": "PROFILE2_08407b6d0479b1d0",
+      "source_sha256s": [
+        "c92bca31e34d52f7d518647add883ffe49168afd327d611eb1f0d37746def58c"
+      ],
+      "observed_source_sha256s": [
+        "c92bca31e34d52f7d518647add883ffe49168afd327d611eb1f0d37746def58c"
+      ],
+      "source_assignment_disposition": {
+        "status": "unresolved_actual_same_subject_election_year_conflict",
+        "observed_source_sha256s": [
+          "c92bca31e34d52f7d518647add883ffe49168afd327d611eb1f0d37746def58c"
+        ],
+        "observed_election_years": [
+          1982,
+          2006
+        ],
+        "reason": "The current Academy header dates election to January2006, while the subject-specific electoral text gives member15February1982 after correspondence4February1980. Title, birth-year1930 and Collège-de-France biography consistently name Nicole Le Douarin, so this is a genuine same-subject election-year contradiction and remains held. No date is chosen.",
+        "current_profile_quarantined": false
+      },
+      "actual_bodies_rehashed_and_read": true,
+      "actual_body_rehashed_and_read": true,
+      "old_warnings_preserved": true,
+      "ordinary_role_direct_start_passed": false,
+      "identity_DOB_unchanged": true,
+      "genuine_current_same_subject_year_conflict_held": true,
+      "observed_election_years": [
+        1982,
+        2006
+      ],
+      "v15_election_source_conflict_status": "unresolved_actual_same_subject_election_year_conflict",
+      "membership_hold_endorsed": true,
+      "no_year_or_day_selected": true,
+      "PAS_nomination_not_used_for_French_membership": true,
+      "previous_conflict_explicitly_resolved": false,
+      "finding": "Current Academy page has own-name header election January2006 and own-name role line member15February1982. Same person/career supplies no source assignment split, so select neither year or day."
+    }
+  ],
+  "actual_new_HTML_response_originals_independently_rehashed_and_read": 2,
+  "actual_retained_PDF_originals_independently_rehashed_and_read": 1,
+  "new_PDF_count": 0,
+  "retained_PDF_pages_read_text": [
+    1,
+    4
+  ],
+  "retained_PDF_pages_visually_read": [
+    4
+  ],
+  "new_network_requests": 0,
+  "new_search_queries": 0,
+  "no_original_BAD_historical_profile_bytes_reread_claimed": true,
+  "no_majority_vote_or_maternal_date_transfer": true,
+  "legacy_formal_25_chronology_holds_not_released": true,
+  "root_approval_required_separately": true,
+  "raw_bodies_redistributed": false,
+  "data_edits_performed": 0,
+  "analysis_cohort_frozen": false,
+  "bazi_variables_computed": 0
+}
