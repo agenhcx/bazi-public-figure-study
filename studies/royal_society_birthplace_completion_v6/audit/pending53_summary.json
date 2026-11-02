@@ -1,0 +1,59 @@
+{
+  "schema": "UK_Royal_Society_v6_single_Crossref_owner_pending53",
+  "frozen_utc": "2026-11-02T23:22:27.683358+00:00",
+  "selected": 53,
+  "attempted": 53,
+  "not_attempted": 0,
+  "HTTP_status_counts": {
+    "200": 53
+  },
+  "accepted_explicit_birthplace": 21,
+  "held": 32,
+  "held_reason_counts": {
+    "matched_memoir_abstract_without_explicit_subject_birthplace": 23,
+    "father_job_and_early_childhood_Watton_not_explicit_birthplace": 1,
+    "birthdate_and_brought_up_place_not_explicit_birthplace": 1,
+    "birthdate_parental_Islay_Arran_origins_not_subject_birthplace": 1,
+    "raised_in_West_Country_not_explicit_birthplace": 1,
+    "no_fullname_and_lifespan_matching_subject_in_top3": 1,
+    "lived_and_worked_all_life_in_Reading_not_explicit_born_clause": 1,
+    "father_and_ancestral_home_St_Neots_not_explicit_subject_birthplace": 1,
+    "same_named_memoir_title_without_life_dates_and_abstract_without_birthplace": 1,
+    "memoir_title_month_differs_from_native_DOB_abstract_without_birthplace": 1
+  },
+  "accepted_by_journal_issn": {
+    "2053-9118": 3,
+    "1748-8494": 18
+  },
+  "accepted_source_grade_counts": {
+    "S2": 21
+  },
+  "source": "Publisher-deposited edited Royal Society memoir abstracts via Crossref; no original full memoir fetched",
+  "selection": "Exactly53 frozen v5 pending queue rows, earlyjournal2053-9118 first3, then laterjournal1748-8494 remaining50; no discovery or additional probes",
+  "native_DOB_calendar_identity_acceptance_modified": false,
+  "geography_or_birth_country_assigned": false,
+  "title_date_discrepancies_recorded": 1,
+  "network_policy": {
+    "max_in_flight": 1,
+    "minimum_start_interval_seconds": 4.430682288002572,
+    "required_minimum_start_interval_seconds": 3.0,
+    "retries": 0,
+    "stop_reason": "all53_completed",
+    "single_Crossref_worker_only": true
+  },
+  "retry_after_preflight": "v5 response headers absent from saved record; Retry-After unobserved, not claimed absent; elapsed>10h. v6 records all response headers and would stop all53 on first429.",
+  "inputs_sha256": {
+    "cohort.json": "ff5da211de936b93f4ad8c5cc69a96ae7e89b5ff7b4de7c762c335f269697868",
+    "retry_after_preflight.json": "9d2b366463249f5e427b4d141814edd4fa5b0747056976ddb5bd2f41274fee20"
+  },
+  "collector_as_run_sha256": "551db12538ca9de921b6695f229a68eaa7a3f18c725aab2f688fa5ada519e3f4",
+  "output_sha256": {
+    "accepted.jsonl": "117cdef8f4be5dfad983dd282f1ff3a9caeae762fac33c31e14d19b3a134bea5",
+    "coverage.jsonl": "e79ec907ff336edda3b2a919fb27bbf0b2ad07333d80a7079cd979ae546de69d",
+    "held.jsonl": "2f86b61591473e63b849efed8d0d4aacf6b3042bfe31867ce37590c9a1823e34",
+    "raw_source_manifest.jsonl": "6eea6ae31ed704a0d45f23873cb734b96d33396eb0288be374ac050399769b55",
+    "title_date_discrepancies.jsonl": "af08f033bfaeba369b8e56add795e9e0443755f6b53334daa83954cf4c24b0ab",
+    "request_ledger.jsonl": "673511f17ed6217cee8fe44e611419f636a78d5230c114718308227b0ac59420",
+    "fetch_summary.json": "47c785c7e89cb3e1bd2923be7eabe4de4a2858d2a64a1b7f2cc11ba84229fa3f"
+  }
+}

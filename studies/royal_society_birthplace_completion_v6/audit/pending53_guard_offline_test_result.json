@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "tested_utc": "2026-11-02T23:23:32.101400+00:00",
+  "source_sha256": "551db12538ca9de921b6695f229a68eaa7a3f18c725aab2f688fa5ada519e3f4",
+  "test_script_sha256": "cfdb9f02ed6490c94741e8363f7ffd770483992bdd8f87f6e6e6be5e7513341f",
+  "real_network_requests": 0,
+  "socket_connection_attempts": 0,
+  "cases": [
+    {
+      "case": "existing_shared_marker",
+      "status": "PASS",
+      "fake_urlopen_calls": 0,
+      "not_attempted": 53
+    },
+    {
+      "case": "fake429_captures_retry_after_and_stops_all53_without_switching_journal",
+      "status": "PASS",
+      "fake_urlopen_calls": 1,
+      "not_attempted": 52,
+      "Retry-After_captured": "120"
+    },
+    {
+      "case": "stop_marker_arrives_during_interval_wait_rechecked_before_dispatch",
+      "status": "PASS",
+      "fake_urlopen_calls": 1,
+      "not_attempted": 52
+    }
+  ],
+  "scope": "Exact collector byte copies with synthetic53 fixtures; no real API calls or edits to collector as-run."
+}
