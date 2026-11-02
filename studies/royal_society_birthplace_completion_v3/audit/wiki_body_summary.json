@@ -1,0 +1,87 @@
+{
+  "schema": "UK_QID_bound_Wikipedia_explicit_birthplace_body_v3",
+  "scope": "Only frozen v2 780 UK rows with no birthplace evidence; no geography/DOB/native acceptance changes",
+  "native_no_evidence_baseline": 780,
+  "safe_unique_frozen_qid": 592,
+  "frozen_enwiki_sitelinks": 375,
+  "prior_attempted_articles_not_reread": 9,
+  "previously_unread_eligible": 366,
+  "probe_requests": 5,
+  "article_requests_this_round": 300,
+  "HTTP_status_counts": {
+    "200": 300
+  },
+  "article_qid_verified": 300,
+  "accepted_explicit_birthplace": 93,
+  "held_after_article_review": 207,
+  "not_attempted_this_round": 480,
+  "accepted_field": 43,
+  "accepted_body": 50,
+  "hold_reason_counts": {
+    "Born_field_without_location": 16,
+    "Born_field_without_place": 40,
+    "DOB_and_deathplace_not_explicit_birthplace": 1,
+    "DOB_and_parentage_without_person_birthplace": 1,
+    "DOB_born_name_and_parentage_without_person_birthplace": 1,
+    "DOB_without_location": 3,
+    "ambiguous_pronoun_outside_first_Early_life_paragraph": 6,
+    "born_name_and_family_places_not_person_birthplace": 1,
+    "born_name_not_birthplace": 2,
+    "family_member_birth_sentence": 3,
+    "given_name_only_subject_outside_Early_life_rule": 1,
+    "incomplete_name_subject_missing_Jarrett_not_fullname_or_surname": 1,
+    "kinship_description_subject_outside_Early_life_rule": 1,
+    "no_Born_field_or_body_birth_sentence": 16,
+    "no_Born_field_or_born_body_sentence": 64,
+    "no_explicit_subject_birthplace": 28,
+    "no_frozen_enwiki_sitelink": 217,
+    "no_safe_qid": 188,
+    "not_attempted_due_to_300_article_bound": 66,
+    "parentage_and_family_places_not_person_birthplace": 2,
+    "parentage_without_person_birthplace": 1,
+    "prior_probe_page_not_reread_in_unread_batch": 9,
+    "pronoun_birthplace_outside_Early_life_first_paragraph_rule": 18,
+    "stub_birth_decade_without_place": 1
+  },
+  "network_policy": {
+    "host": "en.wikipedia.org",
+    "one_parse_HTML_request_per_article": true,
+    "maximum_unread_article_requests": 300,
+    "shared_minimum_start_interval_seconds": 1.1,
+    "observed_minimum_async_start_interval_seconds": 1.100228,
+    "max_in_flight": 3,
+    "requests_retried": 0,
+    "HTTP429_stop_required": true,
+    "HTTP429_observed": false,
+    "no_alternate_host_or_IP": true,
+    "probe_sequential_urllib": true
+  },
+  "identity_policy": "frozen unique safe QID + frozen enwiki sitelink SHA + parse.properties.wikibase_item exact equality",
+  "extraction_policy": "First explicit Born/birthplace field, otherwise named target surname/full-name born sentence; He only in unique first Early life paragraph. Family/DOB-only/death/education/nationality not promoted.",
+  "native_DOB_or_acceptance_modified": false,
+  "article_DOB_not_used_to_update_native": true,
+  "known_within_article_birthplace_discrepancies": [
+    "RS_PAST_NA5449"
+  ],
+  "no_new_geographic_or_hemisphere_claims_assigned": true,
+  "manual_review_inputs": [
+    "review_batch_a_decisions.jsonl",
+    "review_batch_b_decisions.jsonl",
+    "review_batch_b_tail_decisions.jsonl"
+  ],
+  "input_manifest_sha256": "bccc256c62689a261dfb6b71706fa4e6e2844db1b5e5c6834c296971253cd0ce",
+  "output_sha256": {
+    "row_results.jsonl": "076b54b3397aaac4429cf94aa74614cd2df65c34cf09aa228b6e2b8cf021de88",
+    "row_results.jsonl.gz": "5eee3cc46992f8469b7c26873cd81189ea44bfda01ec4015bd3a31a501e92cfd",
+    "accepted_birthplace_candidates.jsonl": "f4b36b571a0ea9155c194b1cc72e19252f39eacb7f5ad8481621b244dd898c5e"
+  },
+  "script_sha256": {
+    "assemble_wikipedia_body_results.py": "007d7ef8418bbb520dfb5c2d678be6482d4d7636290f978bf849b3a403cae2bd",
+    "collect_wikipedia_body.py": "48065a395113422dd8553183447b1535f09e889002bd009d315cc40b8723b24f",
+    "extract_wikipedia_body_candidates.py": "8bf389c4cf77e21046b366377b9da431f2e1eb4225eb43cdd289499c987dbf3a",
+    "review_batch_a.py": "dbd767c89120d326058e4f7c7e5b1ea1356bc97ffcfc76ae903ba0124c9573e4",
+    "review_batch_b.py": "952b70e06480dc0a82ab845672188c8640d8007eb8369378de5bc39d7c9a9e89",
+    "review_batch_b_tail.py": "c83012aa1e02bc51a5d5683ba29f90c43fdd330cf1d41d589ccc1efd5a6f7994",
+    "validate_wikipedia_body_results.py": "180a7816e860098296219fc4b560495f936790b96f06d83ee8518b2dc8e05a98"
+  }
+}

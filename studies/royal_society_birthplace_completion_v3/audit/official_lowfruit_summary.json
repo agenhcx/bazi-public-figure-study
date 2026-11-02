@@ -1,0 +1,53 @@
+{
+  "worker": "official_lowfruit",
+  "repo_head_read": "3aa736341a33f47df3ca00e3d350491a285248b6",
+  "created_utc": "2026-11-02T12:26:00.919276+00:00",
+  "scope": "birthplace-only; no repo edits; immutable v2 DOB copied",
+  "input_no_explicit_birthplace_count": 780,
+  "input_1835_1985_no_evidence_count": 337,
+  "catalogue_no_field_route_samples": 5,
+  "catalogue_samples_have_text_memoir_reference": 5,
+  "catalogue_samples_have_external_memoir_anchor": 0,
+  "bounded_crossref_cohort": 40,
+  "crossref_http_success": 35,
+  "crossref_http_429": 5,
+  "accepted_from_crossref_memoir_abstract": 19,
+  "accepted_from_ODNB_public_extract": 1,
+  "accepted_total": 20,
+  "cohort40_held": 20,
+  "extra_current_people_held": 2,
+  "held_total": 22,
+  "held_reasons": {
+    "matching_memoir_abstract_no_explicit_subject_birthplace": 8,
+    "crossref_HTTP_429_no_retry": 5,
+    "no_subject_matching_memoir_in_bounded_journal_query": 4,
+    "memoir_explicitly_says_birthplace_unverified": 1,
+    "ambiguous_birth_vs_fathers_posting_context": 1,
+    "born_clause_is_about_father_not_subject": 1,
+    "bounded new official/edited sources provide no explicit birthplace": 2
+  },
+  "source_grade_counts": {
+    "S2": 20
+  },
+  "no_DOB_or_native_flags_modified": true,
+  "no_geography_assigned": true,
+  "stop_rules": [
+    "Five Crossref 429 responses not retried in this bounded pass",
+    "One direct journal DOI sample returned 403; no paid access requested",
+    "No full-text paywall bypass or requests to third parties",
+    "No unsupported place inferred from nationality, affiliation, schooling, death, parent birthplace, or speculative hints"
+  ],
+  "route_gaps": [
+    "Four cohort subjects died 1950–1953; Biographical Memoirs journal (1955+) cannot cover them; predecessor Obituary Notices bulk endpoint not explored in this pass",
+    "Matching memoir abstracts without birthplace could be completed from full memoir if publicly available via another institutional repository; direct journal sample 403",
+    "Crossref route is demonstrated on 40 subjects only; remaining no-evidence records not claimed searched",
+    "Two current people new official/editorial sources did not explicitly state birthplace; Chen prior v2 Bucharest inherited from unreferenced P19 should be independently reviewed"
+  ],
+  "current2_summary": "current2/summary.json",
+  "inputs_sha256": {
+    "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_checkout/studies/royal_society_birthplace_completion_v2/outputs/remaining_unknown.csv": "f0c92c91affc0cbf3f63b9a0119e29a19e6351752a7289aba22322b9dc83b929",
+    "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_checkout/studies/royal_society_birthplace_completion_v2/outputs/uk_birthplace_rows.jsonl.gz": "739c0bf9ae48e61bd7a59378f186027c0cd87e9e248d1efc3ee0c8c8d9a5e773",
+    "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_checkout/studies/royal_society_birthplace_completion_v2/inputs/official_birthplace_fields.jsonl.gz": "6a8309d4ce4ee062ae57f0f79af8708685276394179e182bbddd89b9cb758d25",
+    "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_checkout/studies/royal_society_birthplace_completion_v2/inputs/metadata/current99_last3_search_coverage.json": "0542d3b349a2bdaf6d9fd39ce890b170fa460079f8f548bf567dfaa1913e8ddf"
+  }
+}
