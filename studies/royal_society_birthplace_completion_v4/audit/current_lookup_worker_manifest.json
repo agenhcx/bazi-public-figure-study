@@ -1,0 +1,123 @@
+{
+  "created_utc": "2026-11-02T12:51:36.793621+00:00",
+  "scope": "Exact P2070 replacement links for geography only. Native DOB and native lookup QID never changed.",
+  "seed_count": 24,
+  "status_counts": {
+    "active_exact_P2070_name_native_DOB_verified": 22,
+    "held_no_exact_P2070_match_in_bounded_query": 2
+  },
+  "positive_replacements": 22,
+  "new_unknown_birthplace_candidates": 1,
+  "new_birthplace_record_ids": [
+    "RS_CURRENT_11487"
+  ],
+  "SPARQL_batch_requests": 2,
+  "SPARQL_retries": 0,
+  "priority_EntityData_requests": 2,
+  "EntityData_retries": 0,
+  "old_quarantined_QID_P19_requests": 0,
+  "inputs": [
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v4_workers/correct_current_links/native_seeds_review.jsonl",
+      "sha256": "6ed3d9ae0a6b38a282f485476f7b65f9693bef4c2e38f393470f957cd4d32e38"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v4_workers/correct_current_links/native_seeds_review.meta.json",
+      "sha256": "c3e4429b2da6da485b16268d7bde1791723e300dae161f2c2d1c1a06115c119c"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_checkout/data/royal_society_dob_freeze_v1/royal_society_current_exact_dob_final_v1.csv",
+      "sha256": "8e3f3bc7607c0f0dafbfab26375136eab9e6e4692447527f65794faff2d5d662"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_checkout/studies/royal_society_birthplace_completion_v2/geography/classify_birthplace.py",
+      "sha256": "8b8b894ee85deef97047691d9612f1b2cf21f1687d29e12fcc205468ce421a54"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_checkout/studies/royal_society_birthplace_completion_v2/geography/geography_rules.json",
+      "sha256": "51a3928d185c760e703e8a4b6e8cb369a47c5abe1f63ef6af4444bd3fba9eea7"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v4_workers/correct_current_links/p2070_batch_1.meta.json",
+      "sha256": "6a4e2a24b79016f4c829a47467b01ed96f836c32f3c3c0a051820165ff63f4b1"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v4_workers/correct_current_links/p2070_batch_1.raw.json",
+      "sha256": "53c3387d4646c9d1dee90bb7ca5803ee121f7b0986ba4983aab329acc8f851b2"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v4_workers/correct_current_links/p2070_batch_1.rq",
+      "sha256": "5e51793610e1c1205a3794097203f73d2667aba0f499e6716819934bfefd68df"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v4_workers/correct_current_links/p2070_batch_2.meta.json",
+      "sha256": "8e085035d1367bb72f6f49a3dc5e7644379fdb50d952823459961c07c61f0c6e"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v4_workers/correct_current_links/p2070_batch_2.raw.json",
+      "sha256": "571d03b52c8317ddbad31e5a94a006c7afb174381b9e8cb4c25feaa59a876a35"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v4_workers/correct_current_links/p2070_batch_2.rq",
+      "sha256": "908652ea265c6acfde7ae8d53e14752333ff3be571631e0d998382de1ee315ab"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v4_workers/correct_current_links/priority_entitydata_Q15994572.meta.json",
+      "sha256": "90864520961abcd15c29f19f8d4c3a470b031a67878d0a295a76dfdbcff39d46"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v4_workers/correct_current_links/priority_entitydata_Q15994572.raw.json",
+      "sha256": "72f262516259376f6cfa1abaf3414880f5205b4b691e67e833fc1c71c632d3b0"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v4_workers/correct_current_links/priority_entitydata_Q8074621.meta.json",
+      "sha256": "ece8ef51e8357879faf17d54f43b27aaba479fac9e2a40dc531d4c3b47f1b6be"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v4_workers/correct_current_links/priority_entitydata_Q8074621.raw.json",
+      "sha256": "dccaabcee01fb583d01e24240966d939c1466c65fe8dff8a6b73874d0468ee5d"
+    }
+  ],
+  "code": [
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v4_workers/correct_current_links/build_correct_current_links.py",
+      "sha256": "8d8158b8f68dd063a4ee19e715640acce115e6b0d01d6ca9017bc89c655c59b1"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v4_workers/correct_current_links/collect_exact_p2070.py",
+      "sha256": "79ef7b165440435ba8a3f69ca81b7a67b8b854549a6622a878bede8be86f52ac"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v4_workers/correct_current_links/fetch_priority_entitydata.py",
+      "sha256": "60c746540c79415b8d2009408fd51906ad779b4e83b5f06c6f5c09a3534bfa0b"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v4_workers/correct_current_links/correct_current_links_audit.jsonl",
+      "rows": 24,
+      "sha256": "fce9fbaa49560b625cf5ee60331186d3547d75e0a1aeba896fecbb79f07be08b"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v4_workers/correct_current_links/positive_replacements.jsonl",
+      "rows": 22,
+      "sha256": "c4bd74d286e0928bd6788ded0d96363b409075d53f6f8fb8fae35dbd796a0831"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v4_workers/correct_current_links/held_no_exact_p2070_match.jsonl",
+      "rows": 2,
+      "sha256": "11bd9e79534d5b1f687320eddb018cb14fb5ce8245c6d0323f8dddd4b86e5696"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v4_workers/correct_current_links/unknown_birthplace_candidates.jsonl",
+      "rows": 1,
+      "sha256": "e547f3270528f3d3431b75d6ff61594bce736ada4f0c06a9882537ca545df7da"
+    }
+  ],
+  "limitations": [
+    "No P2070 return is held and is not evidence that a person lacks a Wikidata entity.",
+    "Only priority unknown birthplace records generate new P19 geography candidates; known geography is retained.",
+    "Observed DOB alternatives are retained as audit evidence without modifying native accepted DOB.",
+    "Steffen Lauritzen verified identity has no active P19 in both exact-ID SPARQL response and complete archived EntityData claims."
+  ]
+}
