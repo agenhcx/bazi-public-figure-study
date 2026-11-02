@@ -1,0 +1,57 @@
+{
+  "schema": "Royal_Society_v5_bounded_remaining_Crossref_memoir_abstract_birthplaces",
+  "frozen_utc": "2026-11-02T13:12:44.670812+00:00",
+  "baseline_rows": 4983,
+  "baseline_unknown": 690,
+  "remaining_eligible_scope": 62,
+  "selected": 62,
+  "attempted": 12,
+  "not_attempted_after_429": 50,
+  "HTTP_status_counts": {
+    "200": 11,
+    "429": 1
+  },
+  "accepted_explicit_birthplace": 2,
+  "held": 60,
+  "accepted_source_grade_counts": {
+    "S2": 2
+  },
+  "selection": "All62 v4 past fellows without active explicit birthplace evidence, native DOB year1835–1985 inclusive, official deathyear1955–2021 inclusive, excluding v3cohort40 and v4cohort100. Intended entire remaining scope; HTTP429 stopped after12 attempts and50 remain unrequested.",
+  "held_reason_counts": {
+    "matched_memoir_abstract_without_explicit_subject_birthplace": 4,
+    "Irish_born_adjective_without_concrete_birthplace_and_title_without_lifespan_held": 1,
+    "no_fullname_and_lifespan_matching_memoir_in_top3": 3,
+    "DOB_only_born_clause_parent_workplace_not_promoted_to_birthplace": 1,
+    "Crossref_HTTP429_no_retry_stop": 1,
+    "not_attempted_after_Crossref_HTTP429_stop": 50
+  },
+  "new_geography_or_birth_country_assigned": false,
+  "native_DOB_identity_calendar_acceptance_flags_modified": false,
+  "metadata_carrier": "Crossref HTTP API, Royal Society journal ISSN1748-8494; publisher-deposited edited memoir abstracts. Original journal full text not fetched or represented as read.",
+  "network_policy": {
+    "max_requests": 62,
+    "max_in_flight": 2,
+    "minimum_request_start_interval_seconds": 1.1001461570003812,
+    "required_minimum_interval_seconds": 1.1,
+    "retries": 0,
+    "stop_on_429": true,
+    "HTTP429_observed": true,
+    "stopped_after_HTTP429": true,
+    "no_alternate_endpoint_or_retrieval_route_after_429": true
+  },
+  "exact_quote_fullname_lifespan_native_DOB_source_SHA_QA": "PASS",
+  "input_sha256": {
+    "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_checkout/studies/royal_society_birthplace_completion_v4/outputs/uk_birthplace_rows.jsonl.gz": "9336e72186f8f7dd475b4b0bac432c324e9661acfd6256240fd8cc6d7ca40be3",
+    "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/official_lowfruit/cohort40.json": "d347cea3e15d1ee1d5dc94e40c0021def76a120d2753fc98c0004e2169e1d74f",
+    "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v4_workers/memoir_batch/cohort100.json": "0292907d91efb3fcc7109116059bc82925807d67d002c82b741d453da196e8d6",
+    "cohort.json": "69f136bec935536d8f264f1f1bec8a45971313ec80f81bc12da1f170b41efd27"
+  },
+  "output_sha256": {
+    "accepted.jsonl": "2af6cc1bcc0a196635d673364724a223ec54faa4cffe9e9973f5ebad0b60d6ca",
+    "held.jsonl": "04850f8fea5434d714b231b9356b321a0bf6d4c29c71177d24b3be4ab6eedfa8",
+    "coverage.jsonl": "128bfe00d76597608fa63f6bedc5a0d901f96ec19e2053f6e63061a1439525e1",
+    "raw_source_manifest.jsonl": "2ed22d390c615421766d2d181be136c7cef7c4b9aedf957b57e8706b94014d20",
+    "request_ledger.jsonl": "2469c8d2c25dc3ecf04b07edad80761fa7105ad2bb9aa68c366ee206ca6fd470"
+  },
+  "raw_caches_note": "Full Crossref metadata JSON remains in worker scratch for audit. Delivery should preserve only short facts/quotes and metadata coverage/provenance, not full abstract texts."
+}

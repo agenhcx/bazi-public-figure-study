@@ -1,0 +1,41 @@
+{
+  "schema": "Royal_Society_v5_early_Obituary_Notices_Crossref_abstracts",
+  "selected": 32,
+  "attempted": 32,
+  "HTTP_status_counts": {
+    "200": 32
+  },
+  "accepted_explicit_birthplace": 18,
+  "accepted_source_grade_counts": {
+    "S2": 18
+  },
+  "held": 14,
+  "full_text_not_fetched": true,
+  "native_DOB_and_flags_modified": false,
+  "no_geography_or_birth_country_assigned": true,
+  "frozen_utc": "2026-11-02T13:16:41.673367+00:00",
+  "network_operation_event": {
+    "event": "Crossref shared stop failed to reach running original process",
+    "observed_cached_completions_at_stop": 16,
+    "actual_attempted": 32,
+    "actual_HTTP_status_counts": {
+      "200": 32
+    },
+    "scope": 32,
+    "recorded_stop_utc": "2026-11-02T13:12:51.507982+00:00",
+    "request_started_after_recorded_stop": 14,
+    "in_flight_at_recorded_stop": 2,
+    "parent_disposition": "Parent explicitly instructed offline review of all saved public responses; facts retain timing flags and operation event is separate. No response/caches removed.",
+    "collector_as_run_sha256": "418ea942caa5534a77a515b3564d4d5bf3b2ff8d8244d20552f14ec15081ed87",
+    "future_collector_shared_stop_guard_added_but_not_run": true,
+    "network_requests_after_process_end": 0
+  },
+  "input_base_sha256": "9336e72186f8f7dd475b4b0bac432c324e9661acfd6256240fd8cc6d7ca40be3",
+  "output_sha256": {
+    "accepted.jsonl": "e0bfe21cde111bd718c70701c477de94e3890c56b8868e14a230fa4e03dd981d",
+    "coverage.jsonl": "144676813f6ae26c486227286f73e2f4fd4ba7c1f0e8bbf85168e9a509817c08",
+    "held.jsonl": "f4630811636a7db26bde1eece307d505eb438155fd84ab5c2568049446e495c4",
+    "raw_source_manifest.jsonl": "07629cb481be259ee3a44a6b5c58768670b626b84f2a972bfc62c6fcb1a4fb04",
+    "operation_stop_audit.json": "bc87400e22ac6f2946f0b07af30bcd395147d545b16df4f900d44f4daf8fa8c6"
+  }
+}
