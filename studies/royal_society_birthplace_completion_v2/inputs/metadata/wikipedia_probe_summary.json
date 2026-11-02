@@ -1,0 +1,26 @@
+{
+  "schema": "UK_Wikipedia_first_infobox_bounded_fallback_v1",
+  "status": "stopped_after_probe_no_explicit_birthplaces_and_HTTP429",
+  "unknown_baseline": 1041,
+  "safe_QID_seeds": 604,
+  "enwiki_sitelinks": 416,
+  "rows": 604,
+  "attempted_article_requests": 10,
+  "HTTP200": 6,
+  "HTTP429": 4,
+  "explicit_birthplace_candidates": 0,
+  "wikibase_item_matches": 6,
+  "no_DOB_or_native_acceptance_changes": true,
+  "intro_not_used": true,
+  "all_604_seed_rows_preserved": true,
+  "reason_counts": {
+    "fetch_or_parse_error:HTTPError:HTTP Error 429: Too Many Requests": 4,
+    "Born_row_without_safely_separable_location": 3,
+    "no_main_infobox": 3,
+    "safe_QID_no_enwiki_sitelink_observed": 188,
+    "probe_stopped_not_attempted": 406
+  },
+  "output_file": "wikipedia_birthplace_fallback_rows.jsonl.gz",
+  "output_sha256": "6cba4e1bca9378d7f48eac4f8d26679ba4c345cecd5fc641f595469614bbf30e",
+  "offline_probe_review": "probe_offline_review.json"
+}

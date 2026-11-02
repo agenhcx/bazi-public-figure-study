@@ -1,0 +1,7 @@
+{
+  "url": "https://query.wikidata.org/sparql?query=SELECT+%3Fneedle+%3Fplace+%3Flatitude+%3Flongitude+%3Fprecision+%3Frank+%3Fcountry+%3Ftype+WHERE+%7B%0A+VALUES+%3Fneedle+%7B%22Bavaria%22%40en+%22Surrey%22%40en+%22Woking%22%40en+%22Montr%C3%A9al%22%40en+%22Montreal%22%40en+%22Saint-Lin%22%40en+%22Austin%22%40en+%22Texas%22%40en+%22Bicester%22%40en+%22Norwich%22%40en+%22Shaftesbury%22%40en+%22Dorset%22%40en+%22Copenhagen%22%40en+%22Folkestone%22%40en+%22Kent%22%40en+%22Carrickfergus%22%40en+%22Wolverhampton%22%40en%7D%0A+%3Fplace+%28rdfs%3Alabel%7Cskos%3AaltLabel%29+%3Fneedle.%0A+%3Fplace+p%3AP625+%3Fstatement.%0A+%3Fstatement+wikibase%3Arank+%3Frank%3B+psv%3AP625+%3Fcoordinate.%0A+FILTER%28%3Frank+%21%3D+wikibase%3ADeprecatedRank%29%0A+%3Fcoordinate+wikibase%3AgeoGlobe+wd%3AQ2%3B+wikibase%3AgeoLatitude+%3Flatitude%3B+wikibase%3AgeoLongitude+%3Flongitude%3B+wikibase%3AgeoPrecision+%3Fprecision.%0A+OPTIONAL+%7B%3Fplace+wdt%3AP17+%3Fcountry.%7D%0A+OPTIONAL+%7B%3Fplace+wdt%3AP31+%3Ftype.%7D%0A%7D&format=json",
+  "retrieved_utc": "2026-11-02T00:24:46.064484+00:00",
+  "bytes": 250990,
+  "sha256": "975ed06d48dd1a10609e7f03ee2eccd340769e73eae7478ac0fb6d45b49a4783",
+  "kind": "S3 geography-only exact label/alias query; no persons queried"
+}

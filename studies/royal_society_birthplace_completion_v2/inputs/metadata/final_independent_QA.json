@@ -1,0 +1,203 @@
+{
+  "stage": "final_independent_QA",
+  "created_utc": "2026-11-02T00:55:50.310009+00:00",
+  "passed": true,
+  "rows": 4983,
+  "hemisphere_counts": {
+    "north": 3955,
+    "unknown": 855,
+    "south": 173
+  },
+  "all_original_non_geography_fields_unchanged": true,
+  "all_original_keys_preserved": true,
+  "changed_original_fields_and_row_counts": {
+    "birthplace_claim_excerpt": 76,
+    "birthplace_evidence_kind": 4983,
+    "birthplace_source_grade": 3484,
+    "birthplace_source_url": 4168,
+    "birthplace_source_urls": 1138,
+    "lat": 1773,
+    "lon": 1773,
+    "raw_birthplace": 3470,
+    "reason": 4266,
+    "country": 36,
+    "geographic_conflict_pending_review": 2,
+    "hemisphere": 2242,
+    "southern_birthplace_separate": 105,
+    "northern_birthplace_candidate": 2139
+  },
+  "unchanged_original_non_geography_field_row_counts": {
+    "baseline_birthplace_hemisphere": 4983,
+    "baseline_evidence_file": 4983,
+    "birthplace_claim_status": 4983,
+    "cohort": 4983,
+    "dob": 4983,
+    "dob_or_native_acceptance_modified": 4983,
+    "external_id_property": 4983,
+    "external_id_value": 4983,
+    "final_analysis_eligibility_assigned": 4983,
+    "geo_mapping_basis": 4983,
+    "geo_resolution_status": 4983,
+    "lookup_identity_provenance": 4983,
+    "lookup_qid": 4983,
+    "name": 4983,
+    "place_alternatives_retained": 4983,
+    "record_id": 4983,
+    "supplement_birthplace_hemisphere": 4983,
+    "supplement_birthplace_source_grade": 4983,
+    "supplement_reason": 4983,
+    "supplement_used_for_hemisphere": 4983,
+    "wikidata_qid": 4983,
+    "unresolved_supplement_reason": 3093,
+    "birthplace_body_addendum": 2,
+    "initial_baseline_hemisphere": 2,
+    "birthplace_lookup_seed_url": 4884
+  },
+  "added_fields_and_row_counts": {
+    "birthplace_discrepancy_retained": 4983,
+    "DOB_or_native_acceptance_modified": 4983,
+    "source_sha256": 4983,
+    "geography_decision": 4983,
+    "source_authorised_full_name": 4983,
+    "prior_geography_selected_fields": 4983,
+    "selected_birthplace_evidence": 4983,
+    "birthplace_evidence_candidates": 4983,
+    "official_birthplace_field_status": 4983,
+    "prior_hemisphere": 4983,
+    "birthplace_source_urls": 3129
+  },
+  "DOB_identity_calendar_acceptance_source_groups_unchanged": true,
+  "birthplace_grade_not_used_as_DOB_grade": true,
+  "all_final_eligibility_flags_remain_false": true,
+  "existing_DOB_window_1835_1985": {
+    "rows": 2644,
+    "same_record_ids_as_v1": true,
+    "hemisphere_counts": {
+      "north": 2104,
+      "unknown": 372,
+      "south": 168
+    }
+  },
+  "CSV_and_summary_match_all_output_rows": true,
+  "all_summary_input_hashes_match_files": true,
+  "same_tier_cross_hemisphere_live_cases": 0,
+  "same_tier_conflict_hold_rule_verified": true,
+  "alternatives_hold_record_ids": [],
+  "named_case_claim_retention": {
+    "RS_PAST_NA1503": {
+      "selected_hemisphere": "north",
+      "selected_birthplace": "Penge, Surrey, England",
+      "selected_grade": "S2",
+      "prior_S3_raw_birthplace_retained": "Dunedin",
+      "prior_S3_P19_place_QID_retained": "Q133073",
+      "DOB_and_native_fields_unchanged": true
+    },
+    "RS_CURRENT_11226": {
+      "selected_hemisphere": "south",
+      "selected_birthplace": "Camden, New South Wales, Australia",
+      "selected_grade": "S2",
+      "prior_S3_raw_birthplace_retained": "Linköping",
+      "prior_S3_P19_place_QID_retained": "Q25413",
+      "DOB_and_native_fields_unchanged": true
+    }
+  },
+  "unknown_semantic_categories": {
+    "no_explicit_birthplace": 780,
+    "named_birthplace_geography_pending": 75,
+    "confirmed_cross_hemisphere_conflict": 0
+  },
+  "unknown_operational_decisions": {
+    "unresolved_geography": 75,
+    "no_birthplace_evidence": 780
+  },
+  "strict_P569_inventory": {
+    "seeds": 1324,
+    "unique_inventoried_QIDs": 1324,
+    "statements": 1324,
+    "raw_response_batches_verified": 9,
+    "all_source_query_and_response_hashes_verified": true,
+    "every_statement_matches_original_DOB_at_Gregorian_day_precision": true,
+    "query_has_no_rank_or_value_filter": true,
+    "previous_nonvalue_coverage_warning": "resolved_by_complete_all_statement_inventory"
+  },
+  "transition_counts": {
+    "north->north": 1817,
+    "unknown->unknown": 855,
+    "south->south": 69,
+    "unknown->south": 103,
+    "unknown->north": 2137,
+    "north->south": 1,
+    "south->north": 1
+  },
+  "files_sha256": {
+    "studies/academy_birthplace_screen_v1/outputs/birthplace_rows.jsonl.gz": "2ad00462255629a603bc4a95aa64158141b5a9b105359baece528a163aa93d92",
+    "studies/royal_society_birthplace_completion_v2/outputs/uk_birthplace_rows.jsonl.gz": "739c0bf9ae48e61bd7a59378f186027c0cd87e9e248d1efc3ee0c8c8d9a5e773",
+    "studies/royal_society_birthplace_completion_v2/outputs/uk_birthplaces.csv": "cd1e6fc905f894a48b83fdc957baf1db9858cce6d36a9e006c07a788c8df537e",
+    "studies/royal_society_birthplace_completion_v2/outputs/remaining_unknown.csv": "f0c92c91affc0cbf3f63b9a0119e29a19e6351752a7289aba22322b9dc83b929",
+    "studies/royal_society_birthplace_completion_v2/outputs/summary.json": "fa0acd132f7aabb78e69d37a0e70ff2c5801b4ba92f5de82382a035cfe396289",
+    "studies/royal_society_birthplace_completion_v2/inputs/P569_statement_inventory.jsonl.gz": "b15f0ee2f48ae006875571baedf16bb4d181f27085bfab44f859eaf303771cb8",
+    "studies/royal_society_birthplace_completion_v2/inputs/strict_lookup_seeds.jsonl.gz": "0fbda00b32eb7d6174b3c15c11b5a8b2b8a370dba48f2b0242c1443f8f5c85f0",
+    "studies/royal_society_birthplace_completion_v2/inputs/manual_hemisphere_resolutions.json": "5a0de01076cd099a2b2c5fe43e0df8aeac8ef0410cdfa2d22909bfb79d195c51"
+  },
+  "manual_resolution_delta_audit": {
+    "exactly_two_rows_changed_from_prior_3953_output": true,
+    "reverse_reconstructed_prior_output_sha256": "d06a8b4d9c14144d248c88ff236db92d18a03f64d27531039acf1519267dff5d",
+    "prior_output_expected_sha256": "d06a8b4d9c14144d248c88ff236db92d18a03f64d27531039acf1519267dff5d",
+    "manual_input_sha256": "5a0de01076cd099a2b2c5fe43e0df8aeac8ef0410cdfa2d22909bfb79d195c51",
+    "details": [
+      {
+        "record_id": "RS_PAST_NA7911",
+        "changed_from_previous_3953_output_fields": [
+          "birthplace_discrepancy_retained",
+          "birthplace_evidence_candidates",
+          "birthplace_evidence_kind",
+          "birthplace_source_grade",
+          "birthplace_source_url",
+          "birthplace_source_urls",
+          "geographic_conflict_pending_review",
+          "geography_decision",
+          "hemisphere",
+          "northern_birthplace_candidate",
+          "raw_birthplace",
+          "reason",
+          "selected_birthplace_evidence",
+          "source_sha256"
+        ],
+        "selected_raw_birthplace": "Erfurt or Heidelberg, Germany",
+        "geography_reason": "reviewed_alternatives_with_common_explicit_northern_extent",
+        "prior_alternative_hold_not_cross_hemisphere_proof": true
+      },
+      {
+        "record_id": "RS_PAST_NA8406",
+        "changed_from_previous_3953_output_fields": [
+          "birthplace_discrepancy_retained",
+          "birthplace_evidence_candidates",
+          "birthplace_evidence_kind",
+          "birthplace_source_grade",
+          "birthplace_source_url",
+          "birthplace_source_urls",
+          "geographic_conflict_pending_review",
+          "geography_decision",
+          "hemisphere",
+          "northern_birthplace_candidate",
+          "raw_birthplace",
+          "reason",
+          "selected_birthplace_evidence",
+          "source_sha256"
+        ],
+        "selected_raw_birthplace": "Killyleagh or White's Castle, County Down, Ireland, Europe",
+        "geography_reason": "reviewed_alternatives_with_common_explicit_northern_extent",
+        "prior_alternative_hold_not_cross_hemisphere_proof": true
+      }
+    ],
+    "final_output_sha256": "739c0bf9ae48e61bd7a59378f186027c0cd87e9e248d1efc3ee0c8c8d9a5e773"
+  },
+  "strict_name_DOB_membership_independent_final_audit": "All1324 final seeds reconstructed from9777member universe; exact fullname+unchangedDOB+raw uniqueness+reverse1:1+baseline occupiedQID checks passed.",
+  "official_final_audit": {
+    "cached_HTML_rows": 4884,
+    "explicit_birthplace_fields": 3070,
+    "no_birthplace_field": 1814,
+    "errors_or_differences": 0,
+    "audit_file": "official_parser/summary.json"
+  }
+}
