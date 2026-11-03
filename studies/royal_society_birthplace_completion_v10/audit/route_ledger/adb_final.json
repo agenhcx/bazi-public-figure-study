@@ -1,0 +1,32 @@
+{
+  "status": "PASS_FROZEN_ZERO_WITH_DISCLOSED_INTENT_GAP",
+  "route": "ADB",
+  "initial_search_attempts": 3,
+  "initial_navigation_attempts": 5,
+  "root_approved_extension_navigation_attempts": 1,
+  "total_known_attempts": 9,
+  "person_bodies": 0,
+  "accepted_facts": 0,
+  "navigation_outcomes": {
+    "reported403": 4,
+    "parsed_text_available": 2
+  },
+  "advertised_global_index_entries": 17442,
+  "advertised_global_index_pages": 349,
+  "advertised_B_index_entries": 1790,
+  "advertised_B_index_pages": 36,
+  "counts_are_index_metadata_not_records_screened": true,
+  "no_complete_name_index_screen_claim_justified": true,
+  "range_attempt_returned403_no_candidate_bodies_requested": true,
+  "initial_8_attempts_pre_request_durable_intent_not_evidenced": true,
+  "extension_durable_intent_record_present": true,
+  "extension_request_id_matches_result": true,
+  "extension_exact_network_start_timestamp_recorded": false,
+  "extension_timing_limit": "One root-approved range intent exists; result has no exact network start/finish timestamps. Initial discovery ledger is retrospective/no pre-intent timing and must not be relabelled ex-ante.",
+  "same_home_URL_attempted_via_two_transports": true,
+  "home_repeat_detail": "urllib403 then web.open403 are two separately counted navigation attempts; avoid saying every ADB URL requested only once.",
+  "extension_capture_SHA_verified": "2b3618fc685a9322033d43fdf77ff7cae1b4a3829be545d9b16ea90953065e5e",
+  "extension_capture_is_serialized_web_projection_not_origin_bytes": true,
+  "summary_sha256": "fe6b6b979bb3d159d0636ed30e4e5bac1d21dc680597ad1c50cbdf98f80d5fba",
+  "network_requests_by_QA": 0
+}
