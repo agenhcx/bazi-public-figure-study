@@ -1,0 +1,81 @@
+{
+  "status": "PASS",
+  "scope": "Frozen source-fact and request coverage review only; global assembled output audit pending.",
+  "new_network_requests": 0,
+  "facts": [
+    {
+      "cohort": "Fields_main",
+      "record_id": "fields-12ddab1dd74af07f",
+      "name": "Akshay Venkatesh",
+      "native_dob": "1981-11-21",
+      "raw_birthplace": "New Delhi, India",
+      "source_sha256": "1332f2dc6a1e9a8b0a402cd8b1d1c769bfdc19fc27bc0b548cbf64d6410fc4bb",
+      "source_primary_and_explicit_birthplace": "pass",
+      "independent_full_name_and_prize_context": "pass",
+      "source_birth_date_precision": "year",
+      "native_dob_adoption": "none",
+      "source_capture_only_not_publisher_bytes": true
+    },
+    {
+      "cohort": "Fields_main",
+      "record_id": "fields-c847084f96ea991e",
+      "name": "Manjul Bhargava",
+      "native_dob": "1974-08-08",
+      "raw_birthplace": "Canada",
+      "source_sha256": "48ecb75ef956b0afd7cf68cd55675a2cd64b8987c12dfc7625600eda3283bf65",
+      "source_primary_and_explicit_birthplace": "pass",
+      "independent_full_name_and_prize_context": "pass",
+      "source_birth_date_precision": "year",
+      "native_dob_adoption": "none",
+      "source_capture_only_not_publisher_bytes": true
+    },
+    {
+      "cohort": "Nobel_science",
+      "record_id": "1052",
+      "name": "John M. Martinis",
+      "native_dob": "",
+      "raw_birthplace": "Los Angeles, CA, USA",
+      "source_sha256": "581e8cd946c84cb94c589fb0c2b33bbdafe259e1a07b259b71c0a7eec6107dc8",
+      "source_primary_and_explicit_birthplace": "pass",
+      "independent_full_name_and_prize_context": "pass",
+      "source_birth_date_precision": "year",
+      "native_dob_adoption": "none",
+      "source_capture_only_not_publisher_bytes": true
+    }
+  ],
+  "fields_coverage": {
+    "targets": 4,
+    "accepted": 2,
+    "unknown": 2,
+    "discovery_queries": 4,
+    "body_requests": 8,
+    "negative_evidence": "Smirnov access-denied body; Duminil-Copin interview no explicit birthplace and final exposition timeout."
+  },
+  "nobel_coverage": {
+    "targets": 1,
+    "accepted": 1,
+    "discovery_queries": 2,
+    "successful_body_text_reads": 1,
+    "logical_retrievals_of_same_url": 3,
+    "original_pdf_download": "HTTP403",
+    "pdf_visual_attempt": "text placeholder only; no image pixels",
+    "identity": "full name plus official Physics 2025 context; native DOB intentionally blank"
+  },
+  "nas_coverage": {
+    "eligible_unknown_pool": 574,
+    "selected_and_requested_profiles": 6,
+    "exact_earliest_selection_rule_verified": true,
+    "accessible_cached_projections": 5,
+    "profile_timeouts": 1,
+    "queries": 0,
+    "memoir_body_reads": 0,
+    "explicit_birthplace_facts": 0,
+    "observed_person_specific_memoir_links": 0,
+    "coverage_limit": "Six selected profiles only; not all 574 unknown rows screened."
+  },
+  "capture_limitations": "Hashes identify retained web-tool text/JSON captures, not original publisher PDF/HTML bytes; NAS projections do not expose live HTTP status.",
+  "baseline_hashes_verified": {
+    "global_v1": "2ad00462255629a603bc4a95aa64158141b5a9b105359baece528a163aa93d92",
+    "uk_v10": "e44f6dc02cc0cafece9b792164f016da0f08de5736ac62442d176d45b19a5799"
+  }
+}

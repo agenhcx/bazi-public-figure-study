@@ -1,0 +1,138 @@
+{
+  "status": "PASS",
+  "global_path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_checkout/studies/scientist_birthplace_completion_v2/outputs/birthplace_rows.jsonl.gz",
+  "global_sha256": "2b7897d0c4e2655ecb6f10311e1bdf7b06b8eeae3f181e9bebe92cbc7f066ee0",
+  "row_count": 11094,
+  "cohort_count": 8,
+  "key": "(cohort, record_id)",
+  "cross_cohort_deduplication": false,
+  "uk_objects_canonical_byte_equivalent": 4983,
+  "unchanged_composed_baseline_objects": 11091,
+  "changed": [
+    {
+      "cohort": "Fields_main",
+      "record_id": "fields-12ddab1dd74af07f",
+      "name": "Akshay Venkatesh",
+      "preexisting_fields_changed": [
+        "birthplace_evidence_kind",
+        "birthplace_locator",
+        "birthplace_source_grade",
+        "birthplace_source_url",
+        "hemisphere",
+        "northern_birthplace_candidate",
+        "raw_birthplace",
+        "reason"
+      ],
+      "fields_added": [
+        "birthplace_evidence_excerpt",
+        "birthplace_source_sha256",
+        "birthplace_source_urls",
+        "v2_birthplace_fact_evidence",
+        "v2_geographic_review",
+        "v2_geography_before_overlay"
+      ],
+      "raw_birthplace": "New Delhi, India",
+      "native_dob": "1981-11-21"
+    },
+    {
+      "cohort": "Fields_main",
+      "record_id": "fields-c847084f96ea991e",
+      "name": "Manjul Bhargava",
+      "preexisting_fields_changed": [
+        "birthplace_evidence_kind",
+        "birthplace_locator",
+        "birthplace_source_grade",
+        "birthplace_source_url",
+        "hemisphere",
+        "northern_birthplace_candidate",
+        "raw_birthplace",
+        "reason"
+      ],
+      "fields_added": [
+        "birthplace_evidence_excerpt",
+        "birthplace_source_sha256",
+        "birthplace_source_urls",
+        "v2_birthplace_fact_evidence",
+        "v2_geographic_review",
+        "v2_geography_before_overlay"
+      ],
+      "raw_birthplace": "Canada",
+      "native_dob": "1974-08-08"
+    },
+    {
+      "cohort": "Nobel_science",
+      "record_id": "1052",
+      "name": "John M. Martinis",
+      "preexisting_fields_changed": [
+        "birthplace_evidence_kind",
+        "birthplace_locator",
+        "birthplace_source_grade",
+        "birthplace_source_sha256",
+        "birthplace_source_url",
+        "hemisphere",
+        "northern_birthplace_candidate",
+        "raw_birthplace",
+        "reason"
+      ],
+      "fields_added": [
+        "birthplace_evidence_excerpt",
+        "birthplace_source_urls",
+        "v2_birthplace_fact_evidence",
+        "v2_geographic_review",
+        "v2_geography_before_overlay"
+      ],
+      "raw_birthplace": "Los Angeles, CA, USA",
+      "native_dob": ""
+    }
+  ],
+  "all_preexisting_non_geographic_fields_unchanged": true,
+  "all_preexisting_countries_and_coordinates_unchanged": true,
+  "cas_1230_dob_and_accepted_gregorian_blank": true,
+  "nobel_655_native_dob_blank": true,
+  "baseline_identity_qid_lookup_quarantine_home_flags_unchanged": true,
+  "cohort_hemisphere_counts": {
+    "CAS": {
+      "unknown": 224,
+      "north": 1003,
+      "south": 3
+    },
+    "DE_Leopoldina": {
+      "north": 655,
+      "unknown": 117,
+      "south": 6
+    },
+    "Fields_main": {
+      "north": 57,
+      "south": 4,
+      "unknown": 2
+    },
+    "France": {
+      "north": 702,
+      "unknown": 70,
+      "south": 3
+    },
+    "Japan": {
+      "north": 234,
+      "unknown": 134
+    },
+    "NAS": {
+      "unknown": 574,
+      "north": 1637,
+      "south": 31
+    },
+    "Nobel_science": {
+      "north": 634,
+      "south": 21
+    },
+    "UK_Royal_Society": {
+      "north": 4155,
+      "unknown": 645,
+      "south": 183
+    }
+  },
+  "total_hemisphere_counts": {
+    "unknown": 1766,
+    "north": 9077,
+    "south": 251
+  }
+}

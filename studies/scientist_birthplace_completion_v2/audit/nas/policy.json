@@ -1,0 +1,15 @@
+{
+  "baseline_path": "uk_birthplace_checkout/studies/academy_birthplace_screen_v1/outputs/birthplace_rows.jsonl.gz",
+  "baseline_sha256": "2ad00462255629a603bc4a95aa64158141b5a9b105359baece528a163aa93d92",
+  "selection_rule": "6 earliest native-day DOB NAS unknown hemisphere 1835\u20131985 with frozen official directory-entry record_id; tie by name and record_id",
+  "constraints": {
+    "profile_body_reads_max": 6,
+    "memoir_body_reads_max": 3,
+    "all_body_reads_max": 9,
+    "retries": 0,
+    "requests_sequential": true,
+    "geography_assignments": false,
+    "native_dob_accepted_dob_identity_eligibility_dobtier_qid_changes": false,
+    "stop": "429 or two same403/503; no guessed memoir paths or individual searches"
+  }
+}

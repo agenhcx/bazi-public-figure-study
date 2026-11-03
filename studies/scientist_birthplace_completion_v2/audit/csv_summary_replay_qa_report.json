@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "csv_rows": {
+    "birthplaces": 11094,
+    "remaining_unknown": 1766,
+    "changed_records": 3,
+    "country_summary": 8
+  },
+  "all_csv_values_match_jsonl": true,
+  "summary_recomputed_from_rows_and_composed_baseline": true,
+  "source_facts_match_frozen_worker_captures": true,
+  "native_window_counts_recomputed_without_source_year_adoption": true,
+  "byte_identical_replay_output_count": 7,
+  "gzip_mtime_zero": true,
+  "output_sha256": {
+    "all_country_birthplace_summary.csv": "3e83c882adf897ba3c108b82fe049d0bbcea4a3c0a7342824e09d1984f612bd6",
+    "birthplace_rows.jsonl.gz": "2b7897d0c4e2655ecb6f10311e1bdf7b06b8eeae3f181e9bebe92cbc7f066ee0",
+    "birthplaces.csv": "d3d6219b8570cd41d2ff35e785ac9fac787006ec46822f03894cd87bbf931028",
+    "changed_records.csv": "8a632f3d417ae003809545ba0119f7ec5fc9499840d152dd0e4647ff497d4919",
+    "changes.jsonl.gz": "d3dc32ac562ee421cc594cd9cc06d19b36f14ef8f02151c9f797c01344a54b54",
+    "remaining_unknown.csv": "963ec325a4267fc1de475d652e90608903fc7fada57073b8ef3304d3bc67c3e6",
+    "summary.json": "67487f2e8071d2b5164f302d62755b5e3a4860a9df0db60965fb4e7f4c59503c"
+  }
+}
