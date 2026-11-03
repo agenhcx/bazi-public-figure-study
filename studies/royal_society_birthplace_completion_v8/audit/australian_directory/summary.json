@@ -1,0 +1,45 @@
+{
+  "schema": "UK_v8_bounded_Australian_directory_expanded",
+  "frozen_utc": "2026-11-03T00:27:50.123376+00:00",
+  "native_window_unknown_targets": 218,
+  "initial_partial_probe_directory_requests": 3,
+  "authorized_new_directory_requests": 25,
+  "new_directory_limit": 25,
+  "all_directory_requests": 28,
+  "all_directory_HTTP200": 28,
+  "AAS_pages_including_initial": 24,
+  "AAS_unique_memoir_links": 239,
+  "AAS_directory_complete_for_reported239": true,
+  "EOAS_letter_pages_read": [
+    "M",
+    "L"
+  ],
+  "EOAS_full_directory_complete": false,
+  "unique_person_index_links_compared": 1372,
+  "candidate_index_links": 7,
+  "native_records_body_selected": 5,
+  "new_body_requests": 6,
+  "new_body_limit": 8,
+  "new_body_HTTP200": 6,
+  "HTTP429": 0,
+  "retries": 0,
+  "accepted_explicit_birthplace": 4,
+  "accepted_source_grade_counts": {
+    "S2": 4
+  },
+  "held_different_person_body": 1,
+  "no_Crossref_requests": true,
+  "native_DOB_sourcegroups_flags_other_countries_modified": false,
+  "no_geography_country_birthpoint_assigned": true,
+  "month_only_source_note": "Pickett-Heaps source gives June1940 and full name/lifespan, compatible with native1940-06-05; no day inferred or upgraded.",
+  "scope_note": "Original 0-result three-navigation-page probe preserved under partial_probe. Extension covered complete AAS239 memoirdirectory plus only EOASM/L, not all EOAS. Only five selected native records had HTML body reads, one additional explicitly linked PDF read.",
+  "input_base_sha256": "3aa09ae1720ed7abc06b49cb49f9002aa91b0a8a65ac0c0bafe18f455dc8eff7",
+  "source_hash_scope": "Original HTTP HTML/PDF bytes hashes are separate from short evidence projections. Whole biography/index/PDF caches excluded from delivery.",
+  "output_sha256": {
+    "accepted.jsonl": "2d02fab936c2b76763f2fc8bbc168ccad4d9f1ca4fdf63f4677b8090b1813159",
+    "held.jsonl": "9adcb8a3777d699721fc5fd33e00bf6d587027ab2c1048b32c03e00924883452",
+    "coverage.jsonl": "8339ef03294862c4968b88b8e4d07a24da2f469bcb5086fa719d47ce316f6951",
+    "request_ledger.jsonl": "818e2791b9f6e7ae31221629978aa6abe233e8a15b7c7fb7643f461c22f818e5",
+    "expanded_selection.json": "cc1450db8b8c11e53329ebbdcc048131d2704808dcdd4b4cb82b908b96b501c7"
+  }
+}

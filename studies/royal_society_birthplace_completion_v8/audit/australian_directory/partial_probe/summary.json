@@ -1,0 +1,51 @@
+{
+  "schema": "UK_v8_bounded_Australian_directory_probe",
+  "frozen_utc": "2026-11-03T00:16:41.186134+00:00",
+  "baseline_rows": 4983,
+  "native_window_unknown_targets": 218,
+  "index_directory_requests": 3,
+  "index_HTTP200": 3,
+  "index_request_limit": 3,
+  "index_complete": false,
+  "aas_visible_memoir_cards": 10,
+  "aas_reported_memoir_total": 239,
+  "aas_name_compatible_target_candidates": 0,
+  "eoas_pages": "Home and Browse both contain navigational gateways; no biography bodies or complete person-name index fetched.",
+  "body_requests": 0,
+  "body_request_limit": 12,
+  "accepted_explicit_birthplace": 0,
+  "accepted_source_grade_counts": {},
+  "target_records_not_body_requested": 218,
+  "retries": 0,
+  "HTTP429": 0,
+  "no_Crossref_requests": true,
+  "native_DOB_source_groups_flags_other_countries_modified": false,
+  "country_birthpoint_or_hemisphere_assigned": false,
+  "stop_reason": "Low coverage from allowed three directory requests; no complete person-name index obtained, no individual full-web search expansion.",
+  "source_authority_verification": [
+    {
+      "url": "https://science.org.au/our-focus/history-australian-science/fellows-biographical-memoirs",
+      "web_ref": "turn2060search1",
+      "observation": "Official Academy says deceased-Fellow memoirs are carefully researched; named edited memoirs would be S2 rather than automatic S1."
+    },
+    {
+      "url": "https://eoas.info/bib-pdf/Index_2025-08-10.pdf",
+      "web_ref": "turn2061search24",
+      "observation": "Current EOAS publication identifies research, curation and web publication support by Swinburne University of Technology, Office of the Chief Scientist. This was authority search retrieval, not a downloaded full PDF."
+    }
+  ],
+  "potential_source_classification": {
+    "AAS_commissioned_edited_memoir": "S2",
+    "EOAS_curated_person_entry": "S2",
+    "official_self_profile_if_any": "S1 only if an actual self/institutional profile explicitly states birthplace; none read this run"
+  },
+  "input_base_sha256": "3aa09ae1720ed7abc06b49cb49f9002aa91b0a8a65ac0c0bafe18f455dc8eff7",
+  "source_hash_scope": "The three directory source hashes are of original HTTP HTML bytes; no biography body was fetched. Authority notes are paraphrases of official web search retrieval, not fabricated raw snapshots.",
+  "output_sha256": {
+    "accepted.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "coverage.jsonl": "68611d3a0fe010e3545dcfcee40f938da333c64b054e0fde06b2ffb11523528a",
+    "held.jsonl": "68611d3a0fe010e3545dcfcee40f938da333c64b054e0fde06b2ffb11523528a",
+    "request_ledger.jsonl": "6ba13d8402f0ad1d569b88e4b2c9325df1056330161f77597229a3eb12895fd5",
+    "preliminary_selection.json": "b82abc3bb01e0b175bbc2b4a056993d9d1376d8fc7dffb495a1cc8d860c4568f"
+  }
+}

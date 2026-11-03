@@ -1,0 +1,80 @@
+{
+  "schema": "royal_society_birthplace_completion_v8",
+  "baseline": 4983,
+  "previous_counts": {
+    "north": 4150,
+    "unknown": 652,
+    "south": 181
+  },
+  "hemisphere_counts": {
+    "north": 4153,
+    "unknown": 647,
+    "south": 183
+  },
+  "hemisphere_net_change": {
+    "north": 3,
+    "south": 2,
+    "unknown": -5
+  },
+  "previous_unknown_newly_classified": 5,
+  "prior_known_reverted_to_unknown": 0,
+  "existing_geography_inventory": {
+    "prior_explicit_unresolved": 54,
+    "new_dedicated_reviews": 0,
+    "resolved_from_dedicated_reviews": 0
+  },
+  "new_fact_candidates": 6,
+  "new_fact_origin_counts": {
+    "v8_Australian_edited_birthplace": 4,
+    "v8_DNB_online_transcription_birthplace": 2
+  },
+  "new_fact_unique_people": 6,
+  "new_fact_people_first_explicit_birthplace": 5,
+  "new_fact_source_grade_counts": {
+    "S2": 4,
+    "S3": 2
+  },
+  "new_fact_hemisphere_candidate_counts": {
+    "south": 2,
+    "north": 3,
+    "unknown": 1
+  },
+  "new_fact_people_classified": 5,
+  "verified_lookup_replacements": 0,
+  "current_lookup_state": {
+    "active": 94,
+    "legacy_lookup_quarantined": 2,
+    "held_identity_unverified": 3
+  },
+  "unknown_breakdown": {
+    "no_active_explicit_birthplace_evidence": 593,
+    "explicit_place_but_geography_unresolved": 54
+  },
+  "descriptive_existing_native_DOB_window_1835_1985": {
+    "rows": 2644,
+    "hemisphere_counts": {
+      "north": 2253,
+      "unknown": 213,
+      "south": 178
+    },
+    "not_new_calendar_or_final_cohort_adjudication": true
+  },
+  "source_grade_counts_for_selected_geography": {
+    "S1": 3008,
+    "S2": 128,
+    "S3": 1243,
+    "S1_or_S2_existing_body_metadata_not_reopened": 10,
+    "unknown": 594
+  },
+  "native_DOB_calendar_identity_eligibility_fields_preserved": true,
+  "birth_window_changed": false,
+  "source_quality_DOB_groups_unchanged": true,
+  "cross_cohort_deduplicated": false,
+  "final_cohort_frozen": false,
+  "inputs_sha256": {
+    "studies/royal_society_birthplace_completion_v7/outputs/uk_birthplace_rows.jsonl.gz": "3aa09ae1720ed7abc06b49cb49f9002aa91b0a8a65ac0c0bafe18f455dc8eff7",
+    "studies/royal_society_birthplace_completion_v8/inputs/current_lookup_replacements.jsonl.gz": "f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec",
+    "studies/royal_society_birthplace_completion_v8/inputs/geographic_reviews.jsonl.gz": "f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec",
+    "studies/royal_society_birthplace_completion_v8/inputs/new_birthplace_facts.jsonl.gz": "31f67408fd5c7060af08d84a9c3bafc484b3484cc15b69d6bbad897832f27847"
+  }
+}
