@@ -1,0 +1,386 @@
+{
+  "counts": {
+    "birthdate_queries": 0,
+    "geography_queries": 0,
+    "held": 0,
+    "network_requests": 0,
+    "north": 7,
+    "person_queries": 0,
+    "south": 0
+  },
+  "final_output_check": {
+    "all_nine_ids_unique_and_match_frozen_facts": true,
+    "all_seven_full_NAS_frozen_baseline_rows_match_original_v2": true,
+    "checked_utc": "2026-11-03T14:48:50.019080+00:00",
+    "combined_exactly_equals_frozen_Fields_plus_NAS": true,
+    "frozen_Fields_manifest": [
+      {
+        "matches": true,
+        "original_name": "build_review.py",
+        "sha256": "3f3dfd405247ebbbaf03d3277b43fddd766fadfe87c83993e0a0a427d69bf972",
+        "snapshot_or_original_name": "build_review.py"
+      },
+      {
+        "matches": true,
+        "original_name": "chatenay_malabry_exact.sparql",
+        "sha256": "ef6ab497a0155ca42f1e75bc978f6c5f96fd7cfcd21e08b877dd7e6595e70c1c",
+        "snapshot_or_original_name": "chatenay_malabry_exact.sparql"
+      },
+      {
+        "matches": true,
+        "original_name": "geography_offline_qa.json",
+        "sha256": "d9286dd391c8080e7751d01618844c42d45a716e0f431323645508c3f38bfa7f",
+        "snapshot_or_original_name": "geography_offline_qa.json"
+      },
+      {
+        "matches": true,
+        "original_name": "georeview.jsonl",
+        "sha256": "5c83523b485f98b3446a3fc78f2c0677df7a68d80bfa9599812e15430bd2abb0",
+        "snapshot_or_original_name": "georeview.jsonl"
+      },
+      {
+        "matches": true,
+        "original_name": "input_locks.json",
+        "sha256": "3386bf2b13401643a490cbe727331763b8dd79a18d89f8ead13ad64174cd51ae",
+        "snapshot_or_original_name": "input_locks.json"
+      },
+      {
+        "matches": true,
+        "original_name": "locality_candidates.json",
+        "sha256": "b2d386291dd5365d5fb573941d82b5f0bb0bff60adbf780e9ebebe79786a279f",
+        "snapshot_or_original_name": "locality_candidates.json"
+      },
+      {
+        "matches": true,
+        "original_name": "query_once.py",
+        "sha256": "7d973b16688b2b8d07df061ad490d6d3727b435dd3ceda88b092ba26d5ef2c77",
+        "snapshot_or_original_name": "query_once.py"
+      },
+      {
+        "matches": true,
+        "original_name": "query_outcome.json",
+        "sha256": "6467db9927ecb65edf0c930c70e2c3a262eabbf6632ce3fdc5772a3269b27474",
+        "snapshot_or_original_name": "query_outcome.json"
+      },
+      {
+        "matches": true,
+        "original_name": "raw/geo_v3_exact_001.parsed.json",
+        "sha256": "4e07180bba17acb86b4d0411d5d7cb7548eacf6888c133fe337c2a87103a2f6f",
+        "snapshot_or_original_name": "raw/geo_v3_exact_001.parsed.json"
+      },
+      {
+        "matches": true,
+        "original_name": "raw/geo_v3_exact_001.response",
+        "sha256": "bdd226f0fc55d5fb82d9d3af2ec616307a58f04aac24bb1f07681a84e9e95847",
+        "snapshot_or_original_name": "raw/geo_v3_exact_001.response"
+      },
+      {
+        "matches": true,
+        "original_name": "request_ledger.jsonl",
+        "sha256": "548bfdbf9174c28d7145ebe3d058263ff210d9ea2003c49bf66ce7e075bce6df",
+        "snapshot_or_original_name": "request_ledger.jsonl"
+      },
+      {
+        "matches": true,
+        "original_name": "summary.json",
+        "sha256": "88aa1275c2b8a4a1fa69640679db851399292290f3ddff9b526cdc094fd1d52f",
+        "snapshot_or_original_name": "fields_summary.json"
+      },
+      {
+        "matches": true,
+        "original_name": "verification.json",
+        "sha256": "e17e8f012f41c33cf217f324164ef1f59c5b02ac2850ca339292787412c4454d",
+        "snapshot_or_original_name": "fields_verification.json"
+      }
+    ],
+    "network_requests_by_this_reviewer": 0,
+    "no_country_point_unique_entity_assignments": true,
+    "no_native_DOB_flags_QID_calendar_eligibility_or_DOB_group_changes": true,
+    "query_ledger": {
+      "NAS_additional_queries": 0,
+      "actual_attempts": 1,
+      "intents": 1,
+      "outcomes": 1,
+      "retries": 0
+    },
+    "review_and_summary_hashes": {
+      "combined_georeview.jsonl": "703dc8f1a7cd881f9e8921aad582862eba467c0fb10432d49a8186be32c1bb9e",
+      "fields_SHA256SUMS": "2d824e5fe71395b3279e941c97a67803f112e315c34e951a93113f4e2152cb03",
+      "fields_summary.json": "88aa1275c2b8a4a1fa69640679db851399292290f3ddff9b526cdc094fd1d52f",
+      "fields_verification.json": "e17e8f012f41c33cf217f324164ef1f59c5b02ac2850ca339292787412c4454d",
+      "georeview.jsonl": "5c83523b485f98b3446a3fc78f2c0677df7a68d80bfa9599812e15430bd2abb0",
+      "nas_georeview.jsonl": "1f05ec4c0a2a6243bbc27b0377c704b34fd01681abdec9c41f095863ecba8f64",
+      "request_ledger.jsonl": "548bfdbf9174c28d7145ebe3d058263ff210d9ea2003c49bf66ce7e075bce6df",
+      "summary.json": "0c48e8e76a06de6f8f87f8bbe2b1d9eac59230211958c9366b2f6f0bbe059ab6",
+      "verification.json": "9ee316ac2f36ad7892d9118890fafa9d23e1c25fbde4a34e31e4032476856e35"
+    },
+    "review_counts": {
+      "NAS": 7,
+      "combined": 9,
+      "frozen_Fields": 2,
+      "north": 9
+    },
+    "row_checks": [
+      {
+        "hemisphere_only_assignments_check": "pass",
+        "raw_place_native_DOB_source_grade_and_metadata_match": true,
+        "record_id": "fields-de5a4b4e279eaf4f"
+      },
+      {
+        "hemisphere_only_assignments_check": "pass",
+        "raw_place_native_DOB_source_grade_and_metadata_match": true,
+        "record_id": "fields-ef72cb77368d48fe"
+      },
+      {
+        "hemisphere_only_assignments_check": "pass",
+        "raw_place_native_DOB_source_grade_and_metadata_match": true,
+        "record_id": "https://www.nasonline.org/directory-entry/l-a-dubridge-krundi/"
+      },
+      {
+        "hemisphere_only_assignments_check": "pass",
+        "raw_place_native_DOB_source_grade_and_metadata_match": true,
+        "record_id": "https://www.nasonline.org/directory-entry/r-g-herb-ovp2tw/"
+      },
+      {
+        "hemisphere_only_assignments_check": "pass",
+        "raw_place_native_DOB_source_grade_and_metadata_match": true,
+        "record_id": "https://www.nasonline.org/directory-entry/donald-w-kerst-8t27xz/"
+      },
+      {
+        "hemisphere_only_assignments_check": "pass",
+        "raw_place_native_DOB_source_grade_and_metadata_match": true,
+        "record_id": "https://www.nasonline.org/directory-entry/paul-j-kramer-l5rtvs/"
+      },
+      {
+        "hemisphere_only_assignments_check": "pass",
+        "raw_place_native_DOB_source_grade_and_metadata_match": true,
+        "record_id": "https://www.nasonline.org/directory-entry/w-w-morgan-5f09yz/"
+      },
+      {
+        "hemisphere_only_assignments_check": "pass",
+        "raw_place_native_DOB_source_grade_and_metadata_match": true,
+        "record_id": "https://www.nasonline.org/directory-entry/m-m-rhoades-vnjycr/"
+      },
+      {
+        "hemisphere_only_assignments_check": "pass",
+        "raw_place_native_DOB_source_grade_and_metadata_match": true,
+        "record_id": "https://www.nasonline.org/directory-entry/j-e-varner-7bfrec/"
+      }
+    ],
+    "source_S1_S2_and_DOB_metadata_independent_of_geography_S3": true,
+    "source_additions_by_this_reviewer": 0,
+    "source_capture_kind_scope_and_hashes_preserved": true,
+    "status": "pass",
+    "summary_and_verification_consistent": true
+  },
+  "input_fact_count": 7,
+  "input_facts_path": "/workspace/scratch/7e8aa4e0d4af/academy_v3_workers/nas_memoirs/retained/source_facts.jsonl",
+  "input_facts_sha256": "ca1fe908b781e09591ae2d3760620e51f151afee90c431c122b0c317f29d7fd9",
+  "new_evidence_quotes_copied_into_this_artifact": 0,
+  "review_kind": "independent_offline_NAS_geographic_QA",
+  "review_rows": [
+    {
+      "basis": "explicit_named_state_extent_wholly_north_existing_rule",
+      "birthplace_source_grade_preserved": "S2",
+      "cited_line_sha256": "dec62f029adcffa713ccfcd119cbd9e0f757b0b4a65a0d439fa49107094a2efb",
+      "country_assigned": false,
+      "evidence_quote_verified_against_cited_line": true,
+      "exact_birthpoint_assigned": false,
+      "exact_cited_html_line": 966,
+      "geographic_resolution_source_grade": "S3",
+      "hemisphere_supported": "north",
+      "inline_text_normalization": "HTML data concatenated before whitespace collapse; preserves drop-cap letters without inserting spaces",
+      "name": "L. A. DuBridge",
+      "native_dob_modified": false,
+      "native_dob_status_modified": false,
+      "native_flags_modified": false,
+      "new_queries": 0,
+      "qid_used_or_modified": false,
+      "record_id": "https://www.nasonline.org/directory-entry/l-a-dubridge-krundi/",
+      "source_capture_kind_preserved": "original_HTTP_response_body",
+      "source_explicit_extent": "Indiana",
+      "source_explicit_qualifier_preserved": null,
+      "source_html_path": "/workspace/scratch/7e8aa4e0d4af/academy_v3_workers/nas_memoirs/raw/nas_memoirs_chapter_07.html",
+      "source_html_sha256": "2b81b794cc041784cf273bb040b4803692f1e793e591284625f4f3ef548a96b4",
+      "source_url": "https://www.nationalacademies.org/read/5859/chapter/7",
+      "unique_locality_entity_assigned": false
+    },
+    {
+      "basis": "explicit_named_state_extent_wholly_north_existing_rule",
+      "birthplace_source_grade_preserved": "S2",
+      "cited_line_sha256": "fe1e5adfa1181076a6641e8a11a1aa75907bc6da18ee4d8b73e35b33299ba321",
+      "country_assigned": false,
+      "evidence_quote_verified_against_cited_line": true,
+      "exact_birthpoint_assigned": false,
+      "exact_cited_html_line": 968,
+      "geographic_resolution_source_grade": "S3",
+      "hemisphere_supported": "north",
+      "inline_text_normalization": "HTML data concatenated before whitespace collapse; preserves drop-cap letters without inserting spaces",
+      "name": "R. G. Herb",
+      "native_dob_modified": false,
+      "native_dob_status_modified": false,
+      "native_flags_modified": false,
+      "new_queries": 0,
+      "qid_used_or_modified": false,
+      "record_id": "https://www.nasonline.org/directory-entry/r-g-herb-ovp2tw/",
+      "source_capture_kind_preserved": "original_HTTP_response_body",
+      "source_explicit_extent": "Wisconsin",
+      "source_explicit_qualifier_preserved": null,
+      "source_html_path": "/workspace/scratch/7e8aa4e0d4af/academy_v3_workers/nas_memoirs/raw/nas_memoirs_chapter_11.html",
+      "source_html_sha256": "739838733d7b7b186215982c42c9efdb30a7f0cd5489ce9e33b6abfbc2e5c0fa",
+      "source_url": "https://www.nationalacademies.org/read/5859/chapter/11",
+      "unique_locality_entity_assigned": false
+    },
+    {
+      "basis": "explicit_named_state_extent_wholly_north_existing_rule",
+      "birthplace_source_grade_preserved": "S2",
+      "cited_line_sha256": "3205c8ae99e73d6ada9d779d5ce244cb18c58d9a93cf72145ef0e6af0aa18d85",
+      "country_assigned": false,
+      "evidence_quote_verified_against_cited_line": true,
+      "exact_birthpoint_assigned": false,
+      "exact_cited_html_line": 1125,
+      "geographic_resolution_source_grade": "S3",
+      "hemisphere_supported": "north",
+      "inline_text_normalization": "HTML data concatenated before whitespace collapse; preserves drop-cap letters without inserting spaces",
+      "name": "Donald W. Kerst",
+      "native_dob_modified": false,
+      "native_dob_status_modified": false,
+      "native_flags_modified": false,
+      "new_queries": 0,
+      "qid_used_or_modified": false,
+      "record_id": "https://www.nasonline.org/directory-entry/donald-w-kerst-8t27xz/",
+      "source_capture_kind_preserved": "original_HTTP_response_body",
+      "source_explicit_extent": "Illinois",
+      "source_explicit_qualifier_preserved": null,
+      "source_html_path": "/workspace/scratch/7e8aa4e0d4af/academy_v3_workers/nas_memoirs/raw/nas_memoirs_chapter_14.html",
+      "source_html_sha256": "f9cfd0854ec616178cb7cbf997573b531ab0a1fc4e2d3767ab6f731c5c82c5e9",
+      "source_url": "https://www.nationalacademies.org/read/5859/chapter/14",
+      "unique_locality_entity_assigned": false
+    },
+    {
+      "basis": "explicit_named_state_extent_wholly_north_existing_rule",
+      "birthplace_source_grade_preserved": "S2",
+      "cited_line_sha256": "5e4af6674636d4a3beeb414113527b1cd011d738fabe1eaa39d71a7dea3788f1",
+      "country_assigned": false,
+      "evidence_quote_verified_against_cited_line": true,
+      "exact_birthpoint_assigned": false,
+      "exact_cited_html_line": 1129,
+      "geographic_resolution_source_grade": "S3",
+      "hemisphere_supported": "north",
+      "inline_text_normalization": "HTML data concatenated before whitespace collapse; preserves drop-cap letters without inserting spaces",
+      "name": "Paul J. Kramer",
+      "native_dob_modified": false,
+      "native_dob_status_modified": false,
+      "native_flags_modified": false,
+      "new_queries": 0,
+      "qid_used_or_modified": false,
+      "record_id": "https://www.nasonline.org/directory-entry/paul-j-kramer-l5rtvs/",
+      "source_capture_kind_preserved": "original_HTTP_response_body",
+      "source_explicit_extent": "Indiana",
+      "source_explicit_qualifier_preserved": "near the Ohio border",
+      "source_html_path": "/workspace/scratch/7e8aa4e0d4af/academy_v3_workers/nas_memoirs/raw/nas_memoirs_chapter_15.html",
+      "source_html_sha256": "67e3189f5758b865336398f96ad49c2fbfdcf7334fb8b15cee43e297cd801033",
+      "source_url": "https://www.nationalacademies.org/read/5859/chapter/15",
+      "unique_locality_entity_assigned": false
+    },
+    {
+      "basis": "explicit_named_state_extent_wholly_north_existing_rule",
+      "birthplace_source_grade_preserved": "S2",
+      "cited_line_sha256": "16a140ac5cc128eb0554761ce9e1d7c8388bc34ddeef8b26a224bf679bc51ca3",
+      "country_assigned": false,
+      "evidence_quote_verified_against_cited_line": true,
+      "exact_birthpoint_assigned": false,
+      "exact_cited_html_line": 972,
+      "geographic_resolution_source_grade": "S3",
+      "hemisphere_supported": "north",
+      "inline_text_normalization": "HTML data concatenated before whitespace collapse; preserves drop-cap letters without inserting spaces",
+      "name": "W. W. Morgan",
+      "native_dob_modified": false,
+      "native_dob_status_modified": false,
+      "native_flags_modified": false,
+      "new_queries": 0,
+      "qid_used_or_modified": false,
+      "record_id": "https://www.nasonline.org/directory-entry/w-w-morgan-5f09yz/",
+      "source_capture_kind_preserved": "original_HTTP_response_body",
+      "source_explicit_extent": "Tennessee",
+      "source_explicit_qualifier_preserved": "a tiny hamlet that no longer exists",
+      "source_html_path": "/workspace/scratch/7e8aa4e0d4af/academy_v3_workers/nas_memoirs/raw/nas_memoirs_chapter_17.html",
+      "source_html_sha256": "7c20204e630ffb1113c1b707668bf8fa85405d441acccdfe5f127c2db366270e",
+      "source_url": "https://www.nationalacademies.org/read/5859/chapter/17",
+      "unique_locality_entity_assigned": false
+    },
+    {
+      "basis": "explicit_named_state_extent_wholly_north_existing_rule",
+      "birthplace_source_grade_preserved": "S2",
+      "cited_line_sha256": "6647fdcee971c7ee9e20659a41bf7b3881c6d52d2bb10fd8147bddae93806822",
+      "country_assigned": false,
+      "evidence_quote_verified_against_cited_line": true,
+      "exact_birthpoint_assigned": false,
+      "exact_cited_html_line": 968,
+      "geographic_resolution_source_grade": "S3",
+      "hemisphere_supported": "north",
+      "inline_text_normalization": "HTML data concatenated before whitespace collapse; preserves drop-cap letters without inserting spaces",
+      "name": "M. M. Rhoades",
+      "native_dob_modified": false,
+      "native_dob_status_modified": false,
+      "native_flags_modified": false,
+      "new_queries": 0,
+      "qid_used_or_modified": false,
+      "record_id": "https://www.nasonline.org/directory-entry/m-m-rhoades-vnjycr/",
+      "source_capture_kind_preserved": "original_HTTP_response_body",
+      "source_explicit_extent": "Missouri",
+      "source_explicit_qualifier_preserved": null,
+      "source_html_path": "/workspace/scratch/7e8aa4e0d4af/academy_v3_workers/nas_memoirs/raw/nas_memoirs_chapter_18.html",
+      "source_html_sha256": "2d8a87f93deebcd9aeef456d5340df87de38f224d4734021c3e73e68f2f245d1",
+      "source_url": "https://www.nationalacademies.org/read/5859/chapter/18",
+      "unique_locality_entity_assigned": false
+    },
+    {
+      "basis": "explicit_named_state_extent_wholly_north_existing_rule",
+      "birthplace_source_grade_preserved": "S2",
+      "cited_line_sha256": "0209b86b41bbe48482061f6782270c74e7cb3f5c2c5caf4d73943dcf47b58cdd",
+      "country_assigned": false,
+      "evidence_quote_verified_against_cited_line": true,
+      "exact_birthpoint_assigned": false,
+      "exact_cited_html_line": 1127,
+      "geographic_resolution_source_grade": "S3",
+      "hemisphere_supported": "north",
+      "inline_text_normalization": "HTML data concatenated before whitespace collapse; preserves drop-cap letters without inserting spaces",
+      "name": "J. E. Varner",
+      "native_dob_modified": false,
+      "native_dob_status_modified": false,
+      "native_flags_modified": false,
+      "new_queries": 0,
+      "qid_used_or_modified": false,
+      "record_id": "https://www.nasonline.org/directory-entry/j-e-varner-7bfrec/",
+      "source_capture_kind_preserved": "original_HTTP_response_body",
+      "source_explicit_extent": "Ohio",
+      "source_explicit_qualifier_preserved": null,
+      "source_html_path": "/workspace/scratch/7e8aa4e0d4af/academy_v3_workers/nas_memoirs/raw/nas_memoirs_chapter_20.html",
+      "source_html_sha256": "e15d258c704852ab25061977b979dcea182743c857cdc8f39c94b8440d90fbc6",
+      "source_url": "https://www.nationalacademies.org/read/5859/chapter/20",
+      "unique_locality_entity_assigned": false
+    }
+  ],
+  "reviewed_utc": "2026-11-03T14:47:11.796039+00:00",
+  "scope": {
+    "DOB_native_flags_or_QIDs_modified": false,
+    "Fields_artifacts_modified": false,
+    "country_assigned": false,
+    "country_inferred_from_nationality_or_work": false,
+    "exact_birthpoint_assignment": false,
+    "famous_locality_selection": false,
+    "held_or_unapproved_source_content_read": false,
+    "rule": "Existing explicit state extent rule authorized by parent; each named state lies wholly in Northern Hemisphere. Only hemisphere is supported.",
+    "source_S2_independent_of_geography_S3": true,
+    "unique_locality_entity_assignment": false
+  },
+  "source_html_hashes_and_exact_cited_lines_verified": true,
+  "special_case_notes": {
+    "M. M. Rhoades": "Only birth-clause state used; later childhood location not used.",
+    "Paul J. Kramer": "Border qualifier preserved; explicit state extent suffices without boundary point assignment.",
+    "R. G. Herb": "Farm and north-central state wording is preserved; no unique Navarino selected.",
+    "W. W. Morgan": "Extinct-hamlet qualifier preserved; no present-day Bethesda selected."
+  },
+  "status": "pass"
+}
