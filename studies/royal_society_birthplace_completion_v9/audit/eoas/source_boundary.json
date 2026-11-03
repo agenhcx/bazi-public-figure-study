@@ -1,0 +1,36 @@
+{
+  "stop_reason": "Root instructed network freeze after repeated identical 503s. Process interrupted at next boundary; no further requests authorized at this checkpoint.",
+  "observed_ledger_attempts": 21,
+  "observed_ledger_last_completed_url": "https://www.eoas.info/browsew_people.htm",
+  "observed_ledger_last_finished_utc": "2026-11-03T13:35:17.684533+00:00",
+  "possible_interrupted_request": {
+    "url": "https://www.eoas.info/browsex_people.htm",
+    "status": "interrupted_uncertain_request_initiation",
+    "started_utc": null,
+    "start_time_bound_lower_utc": "2026-11-03T13:35:17.684533+00:00",
+    "start_time_bound_upper_utc": null,
+    "note": "Sequential worker was interrupted with exit 130 after W failure was logged; X was next in observed navigation. Its intent/start was not durably logged before interruption; conservatively count one possible request, not unrequested. No response bytes/status captured."
+  },
+  "unrequested_letters": [
+    "Y",
+    "Z"
+  ],
+  "v8_excluded_letters": [
+    "L",
+    "M"
+  ],
+  "HTTP_429_observed": false,
+  "retry_count": 0,
+  "redirect_follow_count": 0,
+  "biography_body_requests": 3,
+  "additional_network_authorized": false,
+  "written_utc": "2026-11-03T13:37:25.101477+00:00",
+  "final_frozen_utc": "2026-11-03T13:40:06.987378+00:00",
+  "biography_successful_bodies": 2,
+  "biography_failed_http_503": 1,
+  "post_boundary_authorization": "Root authorized only Townsend, Short, Pate URLs once each; three completed sequentially; no alphabet request resumed.",
+  "accepted_source_facts": 2,
+  "accepted_sha256": "f6f08342a4fafc6aa7af777671b62189ab291e4ef4ecb2548b5239c73dd7769f",
+  "network_frozen": true,
+  "index_stop_checkpoint_file": "uk_birthplace_v9_workers/eoas/index_stop_checkpoint.json"
+}

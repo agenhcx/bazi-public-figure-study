@@ -1,0 +1,89 @@
+{
+  "baseline_file_sha256": "b13ba1336b5912e58cfc38aa79aa668772ece189623f32a23625e67eaabd4c92",
+  "rows": 4983,
+  "unknown_targets": 647,
+  "window_targets": 213,
+  "directory_link_rows": 2856,
+  "unique_directory_urls": 2722,
+  "candidate_links": 4,
+  "candidate_target_count": 4,
+  "window_candidate_target_count": 4,
+  "existing_frozen_source_candidate_count": 1,
+  "coverage_status_counts": {
+    "directory_name_lifespan_candidate_only": 4,
+    "expected_surname_index_not_covered_in_successful_responses": 409,
+    "no_full_name_birthyear_match_in_successful_indices": 234
+  },
+  "source_facts_accepted": 2,
+  "body_requests": 3,
+  "geography_assigned": false,
+  "DOB_or_acceptance_modified": false,
+  "formal_identity_flags_modified": false,
+  "held_new_candidates": 1,
+  "excluded_existing_frozen_source_targets": 1,
+  "successful_biography_bodies_read": 2,
+  "body_http_status_counts": {
+    "200": 2,
+    "503": 1
+  },
+  "navigation_completed_ledger_requests": 21,
+  "navigation_interrupted_uncertain_requests": 1,
+  "navigation_conservative_max_requests": 22,
+  "web_search_discovery_requests": 1,
+  "navigation_plus_discovery_conservative_max_requests": 23,
+  "navigation_plus_discovery_cap": 25,
+  "observed_successful_letter_indices": 14,
+  "observed_successful_letters": [
+    "A",
+    "F",
+    "I",
+    "J",
+    "K",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V"
+  ],
+  "http_503_letters": [
+    "B",
+    "C",
+    "D",
+    "E",
+    "G",
+    "H"
+  ],
+  "transport_failure_letters": [
+    "W"
+  ],
+  "interrupted_uncertain_letters": [
+    "X"
+  ],
+  "unrequested_letters": [
+    "Y",
+    "Z"
+  ],
+  "excluded_previously_covered_letters": [
+    "L",
+    "M"
+  ],
+  "all_completed_http_request_status_counts": {
+    "200": 16,
+    "503": 7,
+    "transport_error": 1
+  },
+  "all_completed_http_requests": 24,
+  "all_requests_one_at_a_time": true,
+  "retries": 0,
+  "redirects_followed": 0,
+  "crossref_queries": 0,
+  "individual_birthday_searches": 0,
+  "accepted_sha256": "f6f08342a4fafc6aa7af777671b62189ab291e4ef4ecb2548b5239c73dd7769f",
+  "boundary_note": "Successful directory scope is 14 indices only, not all 24 remaining letters; no claim that all indexed persons were read. X may have begun before interruption and lacks an exact durable start time/status. Error responses are not source coverage.",
+  "source_grade": "S2",
+  "source_grade_independent_of_DOB_match": true
+}

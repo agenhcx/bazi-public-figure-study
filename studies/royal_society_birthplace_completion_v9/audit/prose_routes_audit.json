@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "README_sha256": "f365e229c4e4798edd9b885f31618976d4129cb968d75030b81d19fe38e54b44",
+  "CONTINUATION_sha256": "d97ad36e1e504170292ec00bab226966792f2482479f5f5e3c594d1781f78156",
+  "data_and_native_invariance_claims_match_final_audit": true,
+  "source_quote_grade_identity_precision_claims_match_source_audit": true,
+  "route_copies_match_frozen_worker_metadata": true,
+  "documented_EOAS_requests": 24,
+  "index_attempts": 21,
+  "biography_attempts": 3,
+  "HTTP_statuses": {
+    "200": 16,
+    "503": 7,
+    "transport_error": 1
+  },
+  "actual_HTTP_response_bodies_hashed": 23,
+  "possible_X_initiation_explicitly_uncertain": true,
+  "failed_indices_not_counted_as_coverage": true,
+  "initial_A_not_duplicated": true,
+  "historic_index_stop_checkpoint_separated_from_final_body_freeze": true,
+  "DIB_corrected_canonical_zero_644_past_3_current": true,
+  "NZ_canonical_zero_644_past_3_current": true,
+  "source_route_scripts_explicitly_process_snapshots": true,
+  "runnable_replay_entrypoints_assemble_and_verify_correct": true,
+  "source_route_script_sha256": {
+    "scripts/source_routes/dib/summarize.py": "9aa3c0f5cd9507bab2a6dde33f45e3a2531d7f0be0b22170f0b53e3beedf2df0",
+    "scripts/source_routes/new_zealand/replay_index_screen.py": "d377e30b8c10c395a4602deeb55753f0d0dd6e5e95a95c989fb6a36e0710f72d",
+    "scripts/source_routes/eoas/census.py": "f4e98327bad28ee89ea3bf65ed9402cfae258475948389b7cb94e95d4bfd0ef2",
+    "scripts/source_routes/eoas/offline_match.py": "d13a869bea073475a79799f3a49f3b9f369a2f8594472f59bfcf23dd534ceb68"
+  },
+  "remaining_limitations_explicit": [
+    "No complete EOAS remainder-alphabet coverage.",
+    "DIB only returned25A-headings; NZ only76projected entries.",
+    "Native DOB window is descriptive; DOB grades, calendars and final eligibility not upgraded.",
+    "Original remote bodies remain transient; retained projections and source SHAs do not substitute for originals.",
+    "Seven-output replay requires fixed v8 master and v3 choice rules in existing repository."
+  ],
+  "network_requests": 0,
+  "no_repository_mutations_by_QA": true
+}
