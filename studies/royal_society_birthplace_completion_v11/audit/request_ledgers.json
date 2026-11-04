@@ -1,0 +1,250 @@
+[
+  {
+    "lane": "a",
+    "scope": [
+      "RS_PAST_NA1510",
+      "RS_PAST_NA1727",
+      "RS_PAST_NA1752",
+      "RS_PAST_NA2154"
+    ],
+    "planned_queries": [
+      "William Henry Broadbent born Lindley Huddersfield biography",
+      "Miles Walker born Carlisle 1868 engineer biography",
+      "William Palmer Wynne born Stafford 1861 biography",
+      "Stephen Esslemont Woods born Cardiff 1912 biography"
+    ],
+    "actual_requests": [
+      {
+        "operation": "system2_search_query",
+        "queries": [
+          "William Henry Broadbent born Lindley Huddersfield biography",
+          "Miles Walker born Carlisle 1868 engineer biography",
+          "William Palmer Wynne born Stafford 1861 biography",
+          "Stephen Esslemont Woods born Cardiff 1912 biography"
+        ],
+        "completed_utc": "2026-11-04T22:47:11.882352+00:00",
+        "result_refs": [
+          "turn0search0",
+          "turn0search3",
+          "turn0search47",
+          "turn0search48"
+        ]
+      },
+      {
+        "operation": "system1_search_query",
+        "queries": [
+          "Miles Walker professor electrical Carlisle 1868 biography"
+        ],
+        "completed_utc": "2026-11-04T22:47:31.486139+00:00",
+        "result_refs": [
+          "turn3search0"
+        ]
+      },
+      {
+        "operation": "open",
+        "refs": [
+          "turn0search0",
+          "turn0search3",
+          "turn0search47",
+          "turn0search48"
+        ],
+        "completed_utc": "2026-11-04T22:47:31.486158+00:00",
+        "outcome": [
+          "200text",
+          "200text",
+          "failed_content_too_large_22891091",
+          "200pdftext"
+        ]
+      },
+      {
+        "operation": "open",
+        "refs": [
+          "turn0search1",
+          "turn3search0",
+          "https://doi.org/10.1098/rsbm.1998.0029"
+        ],
+        "completed_utc": "2026-11-04T22:47:41.522454+00:00",
+        "outcome": [
+          "200text",
+          "subscription_preview_no_birthplace",
+          "tool_inaccessible"
+        ]
+      },
+      {
+        "operation": "click",
+        "ref": "turn8view0",
+        "link_id": 42,
+        "completed_utc": "2026-11-04T22:48:29.682871+00:00",
+        "observed_url": "https://link.springer.com/article/10.1007/s00415-025-13119-8",
+        "outcome": "subscription_preview_no_biographical_body"
+      }
+    ],
+    "started_utc": "2026-11-04T22:47:00.098522+00:00",
+    "completed_utc": "2026-11-04T22:48:29.682889+00:00",
+    "baseline_row_canonical_sha256": {
+      "RS_PAST_NA1510": "2113baaf785e8e9294009d99559cb3e4169b74c0f3e705429a34256930f37f72",
+      "RS_PAST_NA1727": "4e2304e3314e2387bca40105d93b5ae0e28ec0cb4454c6884fb77b2157ca2588",
+      "RS_PAST_NA1752": "c953c20a163397fce553283a9c19c92245cb40a75ad274fcb33c38434f7f61b3",
+      "RS_PAST_NA2154": "21f0ac6c651940beeee014e8cb76068640619aff39f778634d98f4a5fa7c9daa"
+    },
+    "evidence_storage_note": "Only short quotations and tool reference locators retained. No raw HTTP-byte capture or SHA is claimed; tool returned parsed text. All raw/source/place strings kept literal; no hemisphere/country/lat/lon assigned by this worker.",
+    "root_caution": "Request plans and retrospective tool ledgers do not establish durable pre-request artifacts. Exact source response timestamps are not inferred from audit completion times. Parsed web text is not raw HTTP bytes. Prior failed DOI route opens yielded tool failures, not verified service restoration."
+  },
+  {
+    "lane": "b",
+    "scope": [
+      "RS_PAST_NA1324",
+      "RS_PAST_NA1592",
+      "RS_PAST_NA1945",
+      "RS_PAST_NA2080"
+    ],
+    "queries": [
+      {
+        "engine": "system2",
+        "q": "\"Charles Stanley Gibson\" born Manchester Lancashire"
+      },
+      {
+        "engine": "system2",
+        "q": "\"Ernest John Maskell\" born Cambridge England"
+      },
+      {
+        "engine": "system2",
+        "q": "\"Eric Eastwood\" born Rochdale Lancashire"
+      },
+      {
+        "engine": "system2",
+        "q": "\"Denis Henry Desty\" born Southampton Hampshire"
+      },
+      {
+        "engine": "system1",
+        "q": "\"Charles Stanley Gibson\" \"born\""
+      }
+    ],
+    "observed_opens": [
+      {
+        "url": "https://marconiradarhistory.pbworks.com/w/file/fetch/136588206/rsbm.1983.0007.pdf",
+        "web_ref": "turn2view0",
+        "result": "PDF text available, 20 pages"
+      },
+      {
+        "url": "https://www.southampton.ac.uk/chemistry/news/2019/02/denis-henry-desty.page",
+        "web_ref": "turn2view1",
+        "result": "official university page body read; no birth clause"
+      },
+      {
+        "url": "https://www.npg.org.uk/collections/search/person/mp133248/charles-stanley-gibson",
+        "web_ref": "turn2view2",
+        "result": "official national collection person page body read; lifespan/occupation, no birthplace"
+      },
+      {
+        "url": "https://doi.org/10.1098/rsbm.1950.0009",
+        "web_ref": "turn6view0",
+        "result": "tool says not accessible; no HTTP status known"
+      },
+      {
+        "url": "https://doi.org/10.1098/rsbm.1961.0013",
+        "web_ref": "turn6view1",
+        "result": "tool says not accessible; no HTTP status known"
+      },
+      {
+        "url": "https://doi.org/10.1098/rsbm.1995.0009",
+        "web_ref": "turn6view2",
+        "result": "tool says not accessible; no HTTP status known"
+      }
+    ],
+    "usage": {
+      "discovery_queries": 5,
+      "web_open_items": 6,
+      "PDF_screenshot_requests": 3,
+      "direct_raw_PDF_HTTP_captures": 1,
+      "retries_of_failed_DOI": 0
+    },
+    "ledger_limitations": {
+      "web_request_exact_timestamps": "not retained; ledger compiled retrospectively",
+      "web_request_durable_intents_before_request": false,
+      "web_tool_error_is_HTTP_status": false,
+      "raw_pdf_capture_has_started_and_completed_UTC": true,
+      "raw_pdf_intent_durably_saved_before_request": false
+    },
+    "root_caution": "Request plans and retrospective tool ledgers do not establish durable pre-request artifacts. Exact source response timestamps are not inferred from audit completion times. Parsed web text is not raw HTTP bytes. Prior failed DOI route opens yielded tool failures, not verified service restoration."
+  },
+  {
+    "lane": "c",
+    "scope_record_ids": [
+      "RS_PAST_NA4571",
+      "RS_PAST_NA8798",
+      "RS_PAST_NA8835",
+      "RS_PAST_NA9209"
+    ],
+    "queries": [
+      {
+        "engine": "system2",
+        "q": "\"Peter Maitlis\" \"born\" Germany"
+      },
+      {
+        "engine": "system2",
+        "q": "\"David Gadsby\" \"born\" Wales"
+      },
+      {
+        "engine": "system2",
+        "q": "\"Lisa Jardine\" \"born\" Oxford England"
+      },
+      {
+        "engine": "system2",
+        "q": "\"David Ewins\" \"born\" Blackpool Lancashire"
+      },
+      {
+        "engine": "system1",
+        "q": "\"David Ewins\" \"Blackpool\""
+      }
+    ],
+    "original_opens": [
+      {
+        "url": "https://digitalcommons.rockefeller.edu/faculty-members/88/",
+        "web_ref": "turn7view0",
+        "result": "read original text projection"
+      },
+      {
+        "url": "https://nias.knaw.nl/fellow/jardine-l-a/",
+        "web_ref": "turn7view1",
+        "result": "read original text projection"
+      },
+      {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6683670/",
+        "web_ref": "turn7view2",
+        "result": "recaptcha wall; no memoir body acquired"
+      },
+      {
+        "url": "https://www.jesus.cam.ac.uk/sites/default/files/inline/files/Annual%20Report%202016.pdf",
+        "web_ref": "turn7view3",
+        "result": "original PDF opened but returned initial line window only; later find and screenshot timed out; date claim observed in search excerpt turn5search47, not original page pixels"
+      },
+      {
+        "url": "https://www.bristol.ac.uk/news/2023/february/david-ewins.html",
+        "web_ref": "turn12view0",
+        "result": "read original text projection"
+      },
+      {
+        "url": "https://www.hendonschool.co.uk/assets/Documents/Alumni/The-Old-Hendonian-2023.pdf",
+        "web_ref": "turn12view1",
+        "result": "read original PDF text projection; find Maitlis supplied relevant original paragraph turn13view0"
+      }
+    ],
+    "navigation_failures": [
+      {
+        "operation": "find Lisa was born in Jesus PDF",
+        "ref": "turn12view2",
+        "result": "timeout",
+        "retried": false
+      },
+      {
+        "operation": "screenshot zero-index PDF page132",
+        "ref": "turn14view0",
+        "result": "timeout",
+        "retried": false
+      }
+    ],
+    "source_request_timing_note": "Individual tool request timestamps were not exposed or durably logged before calls. They remain null; audit_written_utc is not a capture time.",
+    "root_caution": "Request plans and retrospective tool ledgers do not establish durable pre-request artifacts. Exact source response timestamps are not inferred from audit completion times. Parsed web text is not raw HTTP bytes. Prior failed DOI route opens yielded tool failures, not verified service restoration."
+  }
+]

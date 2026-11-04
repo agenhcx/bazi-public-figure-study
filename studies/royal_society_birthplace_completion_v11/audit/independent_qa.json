@@ -1,0 +1,103 @@
+{
+  "schema": "royal_society_birthplace_v11_independent_qa",
+  "status": "PASS",
+  "reviewed_utc": "2026-11-04T22:54:15.913013+00:00",
+  "review_scope": "Local frozen inputs, outputs, retained source observations and root-rendered original Eastwood page178; no new source requests or master writes.",
+  "checks": {
+    "baseline_sha256_verified": true,
+    "rows": 4983,
+    "record_id_order_and_unique_keys_preserved": true,
+    "changed_keys": [
+      "RS_PAST_NA1510",
+      "RS_PAST_NA1945",
+      "RS_PAST_NA8798"
+    ],
+    "unchanged_complete_objects": 4980,
+    "actual_changed_fields_by_key": {
+      "RS_PAST_NA1510": [
+        "birthplace_followup_v11",
+        "geo_resolution_status",
+        "geography_decision",
+        "hemisphere",
+        "northern_birthplace_candidate",
+        "reason"
+      ],
+      "RS_PAST_NA1945": [
+        "birthplace_followup_v11",
+        "geo_resolution_status",
+        "geography_decision",
+        "hemisphere",
+        "northern_birthplace_candidate",
+        "reason"
+      ],
+      "RS_PAST_NA8798": [
+        "birthplace_followup_v11",
+        "geo_resolution_status",
+        "geography_decision",
+        "hemisphere",
+        "northern_birthplace_candidate",
+        "reason"
+      ]
+    },
+    "all_existing_native_and_prior_evidence_fields_preserved_except_explicit_geography_allowlist": true,
+    "raw_birthplace_original_source_grades_DOB_source_grades_identity_calendar_eligibility_QID_coordinates_unchanged": true,
+    "all_4983_dates_valid_ISO_day_dates": true,
+    "date_window_independently_recomputed_with_date_objects": true,
+    "year_slice_window_rule_safe_for_hash_locked_current_input": true,
+    "overall_counts": {
+      "north": 4158,
+      "unknown": 642,
+      "south": 183
+    },
+    "native_DOB_window_inclusive": "1835-01-01 through 1985-12-31",
+    "window_records": 2644,
+    "window_counts": {
+      "north": 2258,
+      "unknown": 208,
+      "south": 178
+    },
+    "summary_counts_and_CSV_keys_values_match_master": true,
+    "all_9_hold_rows_completely_unchanged": true,
+    "Gadsby_compatible_full_authority_lifespan_combination_unique_in_4983": true,
+    "Eastwood_raw_PDF_hash_verified": true,
+    "Eastwood_printed_page178_visually_reviewed": true
+  },
+  "source_decisions": [
+    {
+      "record_id": "RS_PAST_NA1510",
+      "result": "PASS",
+      "context_source_grade": "S2",
+      "assessment": "Recorded authored medical history explicitly ties full subject name and exact native DOB to Lindley near Huddersfield Yorkshire. Yorkshire is the explicit regional qualifier for the birthplace; no nationality, affiliation or later-work inference. Existing S1 birthplace and native DOB tiers retained."
+    },
+    {
+      "record_id": "RS_PAST_NA1945",
+      "result": "PASS",
+      "context_source_grade": "S2",
+      "assessment": "Visually inspected original printed p178: Lancashire introduces the directly quoted brother birth recollection, which traces Broad Lane Rochdale to number105 Spectacle Row and explicitly places Eric birth there on12March1910. This is continuous birth-address context, not parental-work inference. Raw PDF SHA matches retained capture."
+    },
+    {
+      "record_id": "RS_PAST_NA8798",
+      "result": "PASS",
+      "context_source_grade": "S1",
+      "assessment": "Recorded original Rockefeller faculty archive title David C. Gadsby, lifespan1947–2019 and profession are compatible with unique frozen authority David Christopher Gadsby. The archive explicitly states Cardiff Wales. Middle initial is not expanded and only source year precision is asserted; native exact day remains frozen."
+    }
+  ],
+  "material_findings": [],
+  "limits": [
+    "Broadbent and Gadsby web quotations were assessed from retained source-observation records and root original-page read ledger; this QA did not independently refetch them.",
+    "Eastwood entire original page and PDF were inspection intermediates and are not distribution deliverables.",
+    "The script year slicing is adequate for the exact hash-locked input, all4983DOBs independently parsed as valid ISO day dates; no general claim for malformed future inputs.",
+    "Jardine search-excerpt potential DOB discrepancy remains a hold rather than a confirmed original-source DOB correction; Ewins direct institutional birthplace conflict also remains held.",
+    "No native DOB/source-grade adjudication, calendar conversion, new country/point/entity assignment, final eligibility freeze or cross-cohort statistical deduplication was performed."
+  ],
+  "input_output_sha256": {
+    "inputs/uk_birthplace_rows_v10.jsonl.gz": "e44f6dc02cc0cafece9b792164f016da0f08de5736ac62442d176d45b19a5799",
+    "inputs/accepted_context.json": "4eef1c6412640a62f11f354b862a960207f0c7e7978c5d1c9a93a346cada8e8b",
+    "scripts/replay.py": "ae73a8f1f99ab4b0949ecc74bf0962c8262dee3faa542389584c8c5bf2857bba",
+    "audit/holds.json": "d945eb7e0388c9f0aa1d82076fb8d3dfe7b37e4041f5b984346671cecf4356d2",
+    "outputs/birthplace_rows.jsonl.gz": "ed3630b660ea4eeb6942e90d3f7b5f7a1e9a0fc2428696ec98a1d98fc4c370f7",
+    "outputs/summary.json": "2692db19367b7c1c85a066473dfe64d4d0992700da9edc274ccf48704e871f57",
+    "outputs/birthplaces.csv": "d8b7e680cb4e73704cf5550cf72aa013662304203d476cf4613666d82b507486",
+    "outputs/remaining_unknown_window.csv": "89821c472b1234d566e218e3c57437b12894c2a64ff8eefd9e6cfa5f4cefcb94"
+  }
+}

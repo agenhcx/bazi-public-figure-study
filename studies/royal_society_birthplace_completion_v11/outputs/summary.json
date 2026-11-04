@@ -1,0 +1,42 @@
+{
+  "schema": "royal_society_birthplace_completion_v11",
+  "baseline_sha256": "e44f6dc02cc0cafece9b792164f016da0f08de5736ac62442d176d45b19a5799",
+  "baseline_commit": "557e228fe61222bb57440204b7902cfc398b200f",
+  "records": 4983,
+  "counting_unit": "fixed UK cohort records",
+  "reviewed_records": 12,
+  "newly_classified": 3,
+  "new_explicit_region_context_observations": 3,
+  "new_first_birthplace_records": 0,
+  "new_context_source_grades": {
+    "S1": 1,
+    "S2": 2
+  },
+  "overall": {
+    "north": 4158,
+    "unknown": 642,
+    "south": 183
+  },
+  "native_dob_window": "1835-1985 inclusive",
+  "native_dob_window_records": 2644,
+  "native_dob_window_counts": {
+    "north": 2258,
+    "unknown": 208,
+    "south": 178
+  },
+  "unchanged_complete_rows": 4980,
+  "native_fields_and_prior_evidence_preserved": true,
+  "original_birthplace_and_DOB_source_grades_preserved": true,
+  "holds": {
+    "no_new_qualifier_or_unavailable": 7,
+    "new_birthplace_conflict": 1,
+    "potential_DOB_conflict_pending_original_page": 1
+  },
+  "other_cohorts_modified": false,
+  "country_or_personal_coordinates_assigned": false,
+  "DOB_calendar_identity_eligibility_modified": false,
+  "cross_cohort_deduplication": false,
+  "BaZi_or_outcomes": false,
+  "final_cohort_freeze": false,
+  "recovery_note": "UK independently recovered from Git; comprehensive v8 NAS/DE increments not reconstructed."
+}
