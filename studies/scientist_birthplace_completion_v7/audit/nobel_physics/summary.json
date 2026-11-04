@@ -1,0 +1,57 @@
+{
+  "lane": "v7 OFFLINE cached official Nobel physics API crossmatch for NAS birthplace only",
+  "baseline_sha256": "8e880fcf4a659a1c8753a5a0ad4c06552ddd9d0d545334b0e81a2459907d7356",
+  "baseline_counts": {
+    "all_records": 11094,
+    "NAS": 2242,
+    "NAS_unknown": 543,
+    "NAS_north": 1667,
+    "NAS_south": 32,
+    "Nobel_cohort_rows": 655,
+    "Nobel_native_DOB_all_blank": true
+  },
+  "source_sha256": "633002ff83120f9408d630209b24ebab7d1f3f1e999cf5bb51638ebb8976075e",
+  "source_original_bytes": 914378,
+  "source_API_objects": 230,
+  "source_capture_time_utc": "2026-11-04T00:26:53.521414+00:00",
+  "all_current_NAS_unknowns_compared": 543,
+  "candidate_fact_count": 9,
+  "candidate_names": [
+    "H. A. Bethe",
+    "Hans G. Dehmelt",
+    "James Franck",
+    "Kenneth G. Wilson",
+    "L. James Rainwater",
+    "P. Kusch",
+    "Robert C. Richardson",
+    "S. Chandrasekhar",
+    "Val L. Fitch"
+  ],
+  "holds_count": 2,
+  "holds_names": [
+    "Igor Tamm",
+    "J. Herbert Taylor"
+  ],
+  "holds_classification": "2different-person identity exclusions; no native DOB errors alleged",
+  "no_compatible_name_routes": 532,
+  "HTTP_requests_this_lane": 0,
+  "discovery_queries_this_lane": 0,
+  "API_refreshes_this_lane": 0,
+  "QIDs_used": false,
+  "identity_rule": "every known native full name part compatible with API fullName.en; native initials may expand; knownName cannot override full-name contradictions and API initials cannot prove longer native full tokens; exact frozen nativeDOB equalsAPIbirth.date; unique among all2242NAS andall230APIobjects; no name/initial-only acceptance",
+  "source_grade": "S1 direct official structured birth.place text fields",
+  "source_birth_place_fields_used": [
+    "locationString.en",
+    "city.en",
+    "country.en"
+  ],
+  "source_coordinates_or_continent_or_QIDs_used": false,
+  "native_DOB_calendar_identity_eligibility_sourcegroups_QIDs_modified": false,
+  "Nobel_cohort_rows_modified": false,
+  "statistical_cross_cohort_deduplication": false,
+  "geography_or_country_or_point_assignments": 0,
+  "input_hashes_unchanged_at_end": true,
+  "frozen_at_utc": "2026-11-04T01:07:07.382594+00:00",
+  "no_more_source_requests": true,
+  "pending": "root independent identity QA and separate geographic review"
+}

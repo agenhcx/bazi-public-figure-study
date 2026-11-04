@@ -1,0 +1,38 @@
+[
+  {
+    "category": "che",
+    "requested_url": "https://api.nobelprize.org/2.1/laureates?nobelPrizeCategory=che&limit=1000&offset=0&sort=asc&format=json",
+    "final_url": "https://api.nobelprize.org/2.1/laureates?nobelPrizeCategory=che&limit=1000&offset=0&sort=asc&format=json",
+    "status": 200,
+    "sha256": "8fd0d5b3e4c6528b13c5993c13c14453e7d739a9fe7a57c7d2d6486d1c7040c8",
+    "bytes": 790882,
+    "retrieved_utc": "2026-11-04T01:06:32.317219+00:00",
+    "capture_kind": "original_JSON_API_response_bytes",
+    "scope": "complete_official_public_category_laureates_API_response",
+    "headers": {
+      "content-type": "application/json",
+      "last-modified": "Wed, 04 Nov 2026 01:06:31 GMT"
+    },
+    "local_raw_path": "/workspace/scratch/7e8aa4e0d4af/academy_v7_workers/nobel_chem_med/raw/nobel_che_original_response.bin",
+    "laureate_objects_count": 200,
+    "retained_public_original_path": "/workspace/scratch/7e8aa4e0d4af/academy_v7_workers/nobel_chem_med/original_chemistry_response.bin"
+  },
+  {
+    "category": "med",
+    "requested_url": "https://api.nobelprize.org/2.1/laureates?nobelPrizeCategory=med&limit=1000&offset=0&sort=asc&format=json",
+    "final_url": "https://api.nobelprize.org/2.1/laureates?nobelPrizeCategory=med&limit=1000&offset=0&sort=asc&format=json",
+    "status": 200,
+    "sha256": "dc4bd5e0d8f301273e8d5e4cb9955eff3c1ed316cb1f29fd468dec5b76b562d3",
+    "bytes": 955773,
+    "retrieved_utc": "2026-11-04T01:06:37.401046+00:00",
+    "capture_kind": "original_JSON_API_response_bytes",
+    "scope": "complete_official_public_category_laureates_API_response",
+    "headers": {
+      "content-type": "application/json",
+      "last-modified": "Wed, 04 Nov 2026 01:06:37 GMT"
+    },
+    "local_raw_path": "/workspace/scratch/7e8aa4e0d4af/academy_v7_workers/nobel_chem_med/raw/nobel_med_original_response.bin",
+    "laureate_objects_count": 235,
+    "retained_public_original_path": "/workspace/scratch/7e8aa4e0d4af/academy_v7_workers/nobel_chem_med/original_medicine_response.bin"
+  }
+]

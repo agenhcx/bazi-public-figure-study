@@ -1,0 +1,90 @@
+{
+  "retained_files": [
+    {
+      "path": "academy_v7_workers/nobel_physics/SUMMARY.txt",
+      "bytes": 869,
+      "sha256": "e9efb2fdf3d37ef4d7fd68d16077652adeb07a462ae084b91da3e91e214afc12"
+    },
+    {
+      "path": "academy_v7_workers/nobel_physics/__pycache__/identity_matcher.cpython-312.pyc",
+      "bytes": 4879,
+      "sha256": "f28da4ae7721ec674484af1f47d42a6834ad29b3f7e85821ac8574c1b6dfef2c"
+    },
+    {
+      "path": "academy_v7_workers/nobel_physics/all543_coverage.jsonl",
+      "bytes": 377367,
+      "sha256": "6673fab18d6071fbe94992f51a40e55476fad5541ba366c6d4c2dcfbbe656021"
+    },
+    {
+      "path": "academy_v7_workers/nobel_physics/analyze_candidates.py",
+      "bytes": 4610,
+      "sha256": "18c1a9078a85201e45713c0f70a1e82f3d3a15550b55a809591df7604030229b"
+    },
+    {
+      "path": "academy_v7_workers/nobel_physics/cached_source_capture_metadata.json",
+      "bytes": 1253,
+      "sha256": "ebb5a78c7eb74375979fdca77494c8eea830332e5e16fa80e6ebbaeee421365f"
+    },
+    {
+      "path": "academy_v7_workers/nobel_physics/candidate_analysis.jsonl",
+      "bytes": 10697,
+      "sha256": "7f043e13f8f358a854030ad684c4b8a523d11b59a7ac0a641dbfea1d2085e2f7"
+    },
+    {
+      "path": "academy_v7_workers/nobel_physics/candidate_holds_analysis.jsonl",
+      "bytes": 2153,
+      "sha256": "0b21ff85d9596c90ef07fd49ba012861a3bbd6d65d44d31422625d2be1e4b5d7"
+    },
+    {
+      "path": "academy_v7_workers/nobel_physics/finalize_facts.py",
+      "bytes": 14281,
+      "sha256": "92fea8d1b2942eaedfe7310410707010572c5b1af39ed8ad85df417ed385edaa"
+    },
+    {
+      "path": "academy_v7_workers/nobel_physics/holds.jsonl",
+      "bytes": 8202,
+      "sha256": "38da9ba997e2370da1b95b61b86e1c7ee88d02ba28d9b8f18a46042b07b661eb"
+    },
+    {
+      "path": "academy_v7_workers/nobel_physics/identity_matcher.py",
+      "bytes": 2444,
+      "sha256": "bc5acc8ccf265669d6a6c8793a9da8676b7d67451bb663e83dc9d052018671df"
+    },
+    {
+      "path": "academy_v7_workers/nobel_physics/input_locks.json",
+      "bytes": 644,
+      "sha256": "1cd0d6c6fdef4e51d4e0999bd3e3b7c6e7c1aaf876c62b4fe22555bd6dbb3d5d"
+    },
+    {
+      "path": "academy_v7_workers/nobel_physics/retained_facts.jsonl",
+      "bytes": 67808,
+      "sha256": "413147916a58547bbcb848ed45ae1475e19937264265371a59ca73f3f72eb144"
+    },
+    {
+      "path": "academy_v7_workers/nobel_physics/summary.json",
+      "bytes": 2254,
+      "sha256": "97184bff43356aa919d2ffccbb9ff612a42ac1b04365561c30fc086ea8658a8e"
+    }
+  ],
+  "referenced_cached_source": {
+    "capture_kind": "original_HTTP_response_bytes",
+    "capture_representation": "original_HTTP_JSON_bytes",
+    "captured_at_utc": "2026-11-04T00:26:53.521414+00:00",
+    "request_url": "https://api.nobelprize.org/2.1/laureates?nobelPrizeCategory=phy&limit=1000&offset=0&sort=asc&format=json",
+    "final_url": "https://api.nobelprize.org/2.1/laureates?nobelPrizeCategory=phy&limit=1000&offset=0&sort=asc&format=json",
+    "status": 200,
+    "original_response_bytes": 914378,
+    "original_response_sha256": "633002ff83120f9408d630209b24ebab7d1f3f1e999cf5bb51638ebb8976075e",
+    "source_file": "academy_v5_workers/geography/nobel_physics_corroboration_response.bin",
+    "source_scope": "complete captured official Nobel physics laureate API JSON collection;230objects",
+    "current_lane_HTTP_requests": 0,
+    "cached_capture_metadata_file": "academy_v5_workers/geography/anderson_corroboration_capture.json",
+    "cached_capture_metadata_sha256": "7b7fd31d65bdc515136f93ef459485f880e81d65070b976cd388a57a9adb7299",
+    "safe_response_headers": {
+      "content-type": "application/json",
+      "date": "Wed, 04 Nov 2026 00:26:52 GMT",
+      "last-modified": "Wed, 04 Nov 2026 00:26:52 GMT"
+    },
+    "headers_policy": "public content/date headers only; no auth/cookies/client-IP"
+  }
+}

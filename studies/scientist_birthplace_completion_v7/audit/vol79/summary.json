@@ -1,0 +1,71 @@
+{
+  "lane": "NAS official BiographicalMemoirsVolume79",
+  "frozen_utc": "2026-11-04T01:03:28.097461+00:00",
+  "source_clock_start_utc": "2026-11-04T01:01:10.645586+00:00",
+  "source_acquisition_end_utc": "2026-11-04T01:02:05.617967+00:00",
+  "elapsed_seconds_at_freeze": 137.451875,
+  "baseline_sha256": "8e880fcf4a659a1c8753a5a0ad4c06552ddd9d0d545334b0e81a2459907d7356",
+  "baseline_records": 11094,
+  "NAS_records": 2242,
+  "NAS_unknowns_bulkmatched": 543,
+  "observed_TOC_named_subjects": 20,
+  "observed_non_subject_title_page_excluded_from_named_subject_count": true,
+  "strong_unknown_name_routes": 3,
+  "chapter_bodies_requested": 3,
+  "image_requests": 0,
+  "original_body_requests_total": 3,
+  "original_body_cap": 8,
+  "unused_body_allowances": 5,
+  "chapter_body_original200_captures": 3,
+  "retained_literal_place_facts": 3,
+  "held": 0,
+  "deferred_good_routes_unread": 0,
+  "unknowns_without_compatible_TOC_route": 540,
+  "discovery_queries": 1,
+  "index_navigation_requests": 1,
+  "retries": 0,
+  "HTTP_errors": 0,
+  "source_grade": "S2",
+  "geography_or_native_metadata_changes": 0,
+  "final_classification_pending": "RootQAandgeography; lane assigns no hemisphere/country/point",
+  "full_raw_original_HTML_and_derived_text": "transientunderraw;excludeoriginalbodiesandfulltextsfromdistribution",
+  "safe_header_allowlist": [
+    "content-type",
+    "content-length",
+    "last-modified",
+    "etag"
+  ],
+  "no_cookies_auth_or_private_headers_captured": true,
+  "facts_file": "retained_facts.jsonl",
+  "held_file": "held.jsonl",
+  "coverage_file": "coverage.jsonl",
+  "intent_file": "intent_ledger.jsonl",
+  "query_and_index_limits_honored": true,
+  "source_budget_honored": true,
+  "independent_source_QA_status": "rootv4_qa reviewinglocalcaptures",
+  "Nobel_physics_route_overlap": false,
+  "Nobel_physics_overlap_communicated_to_root_before_freeze": "threeNASunknownroutesTarbellClemenceWulf;nonephysicslaureate;rootnotified",
+  "facts": [
+    {
+      "record_id": "https://www.nasonline.org/directory-entry/d-stanley-tarbell-xd75sf/",
+      "name": "D. Stanley Tarbell",
+      "native_dob": "1913-10-19",
+      "raw_birthplace": "Hancock, New Hampshire, on a farm that had been in the family since the settlement of the village",
+      "source_sha256": "60391496bebcd9b252243c5e4612a867161b21533554bdd39b134d48906c60a9"
+    },
+    {
+      "record_id": "https://www.nasonline.org/directory-entry/gerald-clemence-fmrpf8/",
+      "name": "Gerald Clemence",
+      "native_dob": "1908-08-16",
+      "raw_birthplace": "near Greenville, Rhode Island",
+      "source_sha256": "219686cdb1b2613a6d7591643155fd1e0e8a86c6b75cb4e4ed5d64d64da6d900"
+    },
+    {
+      "record_id": "https://www.nasonline.org/directory-entry/oliver-r-wulf-tcdfbv/",
+      "name": "Oliver R. Wulf",
+      "native_dob": "1897-04-22",
+      "raw_birthplace": "Norwich, Connecticut",
+      "source_sha256": "eb1e099c02f73b41ccfe766e12c748446b1b8ec8092a050200caaef45d279356"
+    }
+  ]
+}
