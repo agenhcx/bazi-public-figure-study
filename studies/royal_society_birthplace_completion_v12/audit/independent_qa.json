@@ -1,0 +1,87 @@
+{
+  "schema": "royal_society_birthplace_v12_independent_qa",
+  "status": "PASS",
+  "reviewed_utc": "2026-11-04T23:16:07.058049+00:00",
+  "scope": "Local frozen sources, original-source observations recorded by workers/root, code and outputs; no additional HTTP/source requests or master edits.",
+  "checks": {
+    "baseline_v11_canonical_sha256_verified": true,
+    "rows": 4983,
+    "record_id_order_and_unique_keys_preserved": true,
+    "changed_keys": [
+      "RS_PAST_NA7006"
+    ],
+    "actual_changed_fields": {
+      "RS_PAST_NA7006": [
+        "birthplace_followup_v12",
+        "geo_resolution_status",
+        "geography_decision",
+        "hemisphere",
+        "northern_birthplace_candidate",
+        "reason"
+      ]
+    },
+    "unchanged_complete_objects": 4982,
+    "all_old_fields_preserved_except_explicit_top_level_geography_allowlist": true,
+    "all_v11_source_evidence_objects_preserved": true,
+    "all_native_name_DOB_calendar_identity_eligibility_original_grades_QID_country_coordinates_preserved": true,
+    "all_4983_DOBs_valid_ISO_dates": true,
+    "independent_date_object_window_rows": 2644,
+    "overall_counts": {
+      "north": 4159,
+      "unknown": 641,
+      "south": 183
+    },
+    "window_1835_1985_counts": {
+      "north": 2259,
+      "unknown": 207,
+      "south": 178
+    },
+    "held_rows_complete_objects_unchanged": 11,
+    "hold_type_counts": {
+      "no_new_region_or_unavailable": 9,
+      "birthplace_conflict": 1,
+      "birth_year_conflict": 1
+    },
+    "CSV_full_and_remaining_window_counts_verified": true,
+    "all_five_outputs_byte_identical_temporary_replay": [
+      "birthplace_rows.jsonl.gz",
+      "birthplaces.csv",
+      "changes.json",
+      "remaining_unknown_window.csv",
+      "summary.json"
+    ]
+  },
+  "source_and_identity_review": {
+    "Holden": "Accept S2 original OUP signed extract: direct subject birth clause explicitly includes Gloucestershire; complete name,1856–1937 lifespan and exact nativeDOB match. OriginalCheltenham literal remains. County extent is northern; no nationality/work/footer inference or personal-coordinate assignment.",
+    "Barber": "Hold: original source explicitlyLetchworth versus retainedRoyalSocietyHatfield. Same exactDOB does not resolve competingbirthtowns; not applied.",
+    "Thompson": "Hold: original signedBMJ subsection gives1913 vs frozen1912. No sourcebirthday or town correction.",
+    "grade_separation": "One new S2 geographic context; original birthplace grade and DOB group remain unchanged."
+  },
+  "material_findings": [],
+  "limitations": [
+    "QA independently reviews retained observations and root/worker source-access records, not another fresh HTTP capture.",
+    "Only OUP extract birth clause was accessed; full article access is not claimed.",
+    "No cross-cohort deduplication, original DOB adjudication, final eligibility freeze or outcome analysis."
+  ],
+  "output_sha256": {
+    "birthplace_rows.jsonl.gz": "76cde0037b8fe2eea1a413d96e71a1220ecc1c6e4daa82908c04152106f16412",
+    "birthplaces.csv": "09e1345187ebc5c13d767f0f9ba344cf113376b031c44f93a25eac6776a9cb4f",
+    "changes.json": "1472767356c843a82268170d207c60c1af6b3fb2803945f85c6df9a0577cdf38",
+    "remaining_unknown_window.csv": "ff4d2439833816d63bf6b425136130b31ac326b5b33ed30516bd6a84206c2fca",
+    "summary.json": "7bebf588e90a149d4d049b4c6ffb87bcc994b4046822c8398c0a6e789c69d197"
+  },
+  "prose_review": {
+    "README_and_CONTINUATION_counts_match_outputs": true,
+    "new_context_not_first_birthplace_or_new_person": true,
+    "source_extract_not_full_article_access_claim": true,
+    "old_and_new_source_grades_kept_separate_from_DOB_tiers": true,
+    "Barber_and_Thompson_conflicts_not_readjudicated": true,
+    "prior_v11_holds_not_double_counted_in_this_batch": true,
+    "source_request_counts_match_workers": {
+      "queries": 18,
+      "original_navigation": 24
+    },
+    "durability_and_self_contained_replay_description_accurate": true,
+    "no_material_findings": true
+  }
+}
