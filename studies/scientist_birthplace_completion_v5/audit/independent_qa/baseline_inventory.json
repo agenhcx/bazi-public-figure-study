@@ -1,0 +1,317 @@
+{
+  "status": "PASS",
+  "direct_baseline": "uk_birthplace_checkout/studies/scientist_birthplace_completion_v4/outputs/birthplace_rows.jsonl.gz",
+  "sha256": "abbce4e99ad51252dd5e127a0609bc6c4950c121afa2dd126bfc2187b39cd4e8",
+  "rows": 11094,
+  "unique_cohort_keys": 11094,
+  "unit": "cohort records; not cross-cohort independent people",
+  "cohort_counts": {
+    "CAS": 1230,
+    "DE_Leopoldina": 778,
+    "Fields_main": 63,
+    "France": 775,
+    "Japan": 368,
+    "NAS": 2242,
+    "Nobel_science": 655,
+    "UK_Royal_Society": 4983
+  },
+  "hemisphere_counts_by_cohort": {
+    "CAS": {
+      "unknown": 224,
+      "north": 1003,
+      "south": 3
+    },
+    "DE_Leopoldina": {
+      "north": 655,
+      "unknown": 117,
+      "south": 6
+    },
+    "Fields_main": {
+      "north": 59,
+      "south": 4
+    },
+    "France": {
+      "north": 702,
+      "unknown": 70,
+      "south": 3
+    },
+    "Japan": {
+      "north": 234,
+      "unknown": 134
+    },
+    "NAS": {
+      "unknown": 559,
+      "north": 1652,
+      "south": 31
+    },
+    "Nobel_science": {
+      "north": 634,
+      "south": 21
+    },
+    "UK_Royal_Society": {
+      "north": 4155,
+      "unknown": 645,
+      "south": 183
+    }
+  },
+  "native_observed_windows": {
+    "CAS": {
+      "native_nonblank_day_rows": 0,
+      "native_window_1835_1985_rows": 0,
+      "hemisphere_counts": {}
+    },
+    "DE_Leopoldina": {
+      "native_nonblank_day_rows": 778,
+      "native_window_1835_1985_rows": 778,
+      "hemisphere_counts": {
+        "north": 655,
+        "unknown": 117,
+        "south": 6
+      }
+    },
+    "Fields_main": {
+      "native_nonblank_day_rows": 63,
+      "native_window_1835_1985_rows": 61,
+      "hemisphere_counts": {
+        "north": 57,
+        "south": 4
+      }
+    },
+    "France": {
+      "native_nonblank_day_rows": 775,
+      "native_window_1835_1985_rows": 775,
+      "hemisphere_counts": {
+        "north": 702,
+        "unknown": 70,
+        "south": 3
+      }
+    },
+    "Japan": {
+      "native_nonblank_day_rows": 368,
+      "native_window_1835_1985_rows": 367,
+      "hemisphere_counts": {
+        "north": 234,
+        "unknown": 133
+      }
+    },
+    "NAS": {
+      "native_nonblank_day_rows": 2242,
+      "native_window_1835_1985_rows": 2240,
+      "hemisphere_counts": {
+        "unknown": 559,
+        "north": 1650,
+        "south": 31
+      }
+    },
+    "Nobel_science": {
+      "native_nonblank_day_rows": 0,
+      "native_window_1835_1985_rows": 0,
+      "hemisphere_counts": {}
+    },
+    "UK_Royal_Society": {
+      "native_nonblank_day_rows": 4983,
+      "native_window_1835_1985_rows": 2644,
+      "hemisphere_counts": {
+        "north": 2255,
+        "unknown": 211,
+        "south": 178
+      }
+    }
+  },
+  "Nobel_655_all_native_DOB_blank": true,
+  "CAS_1230_all_accepted_Gregorian_DOB_blank": true,
+  "Fields_main_count": 63,
+  "Fields_2026_extension_not_added": true,
+  "prior_v2_v3_v4_overlay_count": 21,
+  "prior_overlay_rows": [
+    {
+      "cohort": "Fields_main",
+      "record_id": "fields-12ddab1dd74af07f",
+      "name": "Akshay Venkatesh",
+      "whole_object_canonical_sha256": "de89522d803de38f864a3ff0e9b9ad82849a1ccd47588afb3c5e34aa925f583d",
+      "versions": [
+        2
+      ]
+    },
+    {
+      "cohort": "Fields_main",
+      "record_id": "fields-c847084f96ea991e",
+      "name": "Manjul Bhargava",
+      "whole_object_canonical_sha256": "e5964a7e291f2f4f7c163816f160dd0d0abd82f9085b170259acf13cdbf5286d",
+      "versions": [
+        2
+      ]
+    },
+    {
+      "cohort": "Fields_main",
+      "record_id": "fields-de5a4b4e279eaf4f",
+      "name": "Stanislav Smirnov",
+      "whole_object_canonical_sha256": "eb6836d61572df349d04a687479735831339042f4a1ebfdf762cc5a2521720b1",
+      "versions": [
+        3
+      ]
+    },
+    {
+      "cohort": "Fields_main",
+      "record_id": "fields-ef72cb77368d48fe",
+      "name": "Hugo Duminil-Copin",
+      "whole_object_canonical_sha256": "ad4933005f593023b147a1665b017d58b1502060061305044fdd8093b9a7eae0",
+      "versions": [
+        3
+      ]
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/carl-d-anderson-qydvwd/",
+      "name": "Carl D. Anderson",
+      "whole_object_canonical_sha256": "c56772c02fa3e3c230678a79bcdf8a19eb01fc242e3a3c3719d4e7d6717b56fe",
+      "versions": [
+        4
+      ]
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/charles-g-abbot-w5o3if/",
+      "name": "Charles G. Abbot",
+      "whole_object_canonical_sha256": "6b5b693c898b731703dea67338929c8c79f80cfc8ca9bb5aa055517dc5695d4a",
+      "versions": [
+        4
+      ]
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/donald-w-kerst-8t27xz/",
+      "name": "Donald W. Kerst",
+      "whole_object_canonical_sha256": "2e857b9303aea3fd108a84e97c6b881cec6dd6f708533d66e6b88c93ef3b5f3f",
+      "versions": [
+        3
+      ]
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/frederick-keyes-57s205/",
+      "name": "Frederick Keyes",
+      "whole_object_canonical_sha256": "19232cc35381c4d5d6e9940fbc6932b89caa8224d5a6ec4e1e9c70badbb19219",
+      "versions": [
+        4
+      ]
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/j-e-varner-7bfrec/",
+      "name": "J. E. Varner",
+      "whole_object_canonical_sha256": "fc6159301eb3e4f02a90c46a8961c5fea0dd0e24f05d9e2c10bfc2e58f07e3e2",
+      "versions": [
+        3
+      ]
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/james-f-bonner-qkrrsz/",
+      "name": "James F. Bonner",
+      "whole_object_canonical_sha256": "a0aee38c552799296b07909e83838d99a3e28347da757ea3a8725a556d86de7b",
+      "versions": [
+        4
+      ]
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/l-a-dubridge-krundi/",
+      "name": "L. A. DuBridge",
+      "whole_object_canonical_sha256": "9f23a0b86a223c5e511a57bb5794fe52394b3d5b9628ec0be5f4c91022e141b8",
+      "versions": [
+        3
+      ]
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/lewis-longsworth-puzzay/",
+      "name": "Lewis Longsworth",
+      "whole_object_canonical_sha256": "8db80c9db3ec19e3cd3535537818d3165a5c238934c5b45adc452455f108e386",
+      "versions": [
+        4
+      ]
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/m-m-rhoades-vnjycr/",
+      "name": "M. M. Rhoades",
+      "whole_object_canonical_sha256": "f7f77e0a5d65d9ab17d733c80be2a115282910dcdf6c8db75356bdc1e1c36e06",
+      "versions": [
+        3
+      ]
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/paul-j-kramer-l5rtvs/",
+      "name": "Paul J. Kramer",
+      "whole_object_canonical_sha256": "5766f7da00b75129cc2585454600a58e1bd27e8c0a81aa545db3ea938992ceca",
+      "versions": [
+        3
+      ]
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/r-g-herb-ovp2tw/",
+      "name": "R. G. Herb",
+      "whole_object_canonical_sha256": "e3a2202c81e96317b86a48046b841ff7873969383221b84b631d02994780972e",
+      "versions": [
+        3
+      ]
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/rodney-l-cool-csyr51/",
+      "name": "Rodney L. Cool",
+      "whole_object_canonical_sha256": "a1731a387c113f8671ad38dd46dbf88db5caf67b2f583b05ac06fc2c3431b6c5",
+      "versions": [
+        4
+      ]
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/scott-e-forbush-k9rusl/",
+      "name": "Scott E. Forbush",
+      "whole_object_canonical_sha256": "aabfdf0f6b64937487a6e1fc3fdf6a5bc0884ad3b812b5fea9fa4305b2f71bd3",
+      "versions": [
+        4
+      ]
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/stephen-kuffler-vpfruz/",
+      "name": "Stephen Kuffler",
+      "whole_object_canonical_sha256": "d6a04bdc58af87526ba9e3430a8cde9ea0d5345eb72f40916693976772e661e8",
+      "versions": [
+        4
+      ]
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/w-w-morgan-5f09yz/",
+      "name": "W. W. Morgan",
+      "whole_object_canonical_sha256": "2ef8cb443c7af42c85ffe4e8950bc112bc45cf35fbf47f7ed6e3b616ef3cacc2",
+      "versions": [
+        3
+      ]
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/william-young-x705ya/",
+      "name": "William Young",
+      "whole_object_canonical_sha256": "4f4929f687ce971b3823ed80c5761339d80a78afb871090a85e49dba1e7a165b",
+      "versions": [
+        4
+      ]
+    },
+    {
+      "cohort": "Nobel_science",
+      "record_id": "1052",
+      "name": "John M. Martinis",
+      "whole_object_canonical_sha256": "b449f4928242815a772eb92d85e7fe72a71ad1002e40c7c991da998d6110fe63",
+      "versions": [
+        2
+      ]
+    }
+  ]
+}

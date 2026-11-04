@@ -1,0 +1,37 @@
+{
+  "source_lanes": {
+    "each_authorized_max": {
+      "discovery_queries": 2,
+      "index_navigations": 3,
+      "body_requests_including_images": 6
+    },
+    "actual_vol75": {
+      "discovery_queries": 1,
+      "index_navigations": 1,
+      "chapter_HTML": 4,
+      "page_images": 0,
+      "retries": 0
+    },
+    "actual_vol76": {
+      "discovery_queries": 1,
+      "index_navigations": 1,
+      "chapter_HTML": 1,
+      "page_images": 1,
+      "retries": 0
+    },
+    "Vol76_parent_steering": "Woolsey observed image follow-up only, then freeze; 3 other observed TOC routes pending unread",
+    "retrieval_deadline": "about8minutes each; actual acquisition ended inside deadline; freeze times recorded separately"
+  },
+  "geography": {
+    "authorized_and_actual_Nobel_known_API_URL_captures": 1,
+    "new_name_exact_place_queries": 1,
+    "query_names": [
+      "Berlin",
+      "Detroit"
+    ],
+    "prior_NYC_Colorado_query_repeated": false,
+    "retries": 0
+  },
+  "stop_rules": "429=>stop; two consistent403/503=>stop; none encountered",
+  "all_new_requests_have_preintent": true
+}

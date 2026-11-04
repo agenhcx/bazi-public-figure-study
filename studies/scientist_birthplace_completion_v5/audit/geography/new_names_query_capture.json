@@ -1,0 +1,47 @@
+{
+  "binding_count": 314,
+  "capture_kind": "original_HTTP_response_bytes",
+  "captured_at_utc": "2026-11-04T00:28:42.257046+00:00",
+  "final_url": "https://query.wikidata.org/sparql?query=PREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX+skos%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0APREFIX+schema%3A+%3Chttp%3A%2F%2Fschema.org%2F%3E%0APREFIX+p%3A+%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2F%3E%0APREFIX+ps%3A+%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fstatement%2F%3E%0APREFIX+psv%3A+%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fstatement%2Fvalue%2F%3E%0APREFIX+wikibase%3A+%3Chttp%3A%2F%2Fwikiba.se%2Fontology%23%3E%0ASELECT+%3FrequestedName+%3FmatchPredicate+%3Fplace+%3FenglishLabel+%3FenglishDescription%0A+++++++%3FcoordinateStatement+%3FcoordinateWkt+%3FcoordinateRank+%3FcoordinateValue%0A+++++++%3Flatitude+%3Flongitude+%3Fglobe+%3Fprecision%0A+++++++%3FinstanceStatement+%3FinstanceOf+%3FinstanceRank+%3FinstanceOfLabel%0A+++++++%3FcountryStatement+%3Fcountry+%3FcountryRank+%3FcountryLabel%0AWHERE+%7B%0A++VALUES+%3FrequestedName+%7B+%22Berlin%22%40en+%22Detroit%22%40en+%7D%0A++VALUES+%3FmatchPredicate+%7B+rdfs%3Alabel+skos%3AaltLabel+%7D%0A++%3Fplace+%3FmatchPredicate+%3FrequestedName+.%0A++OPTIONAL+%7B+%3Fplace+rdfs%3Alabel+%3FenglishLabel+.+FILTER%28LANG%28%3FenglishLabel%29+%3D+%22en%22%29+%7D%0A++OPTIONAL+%7B+%3Fplace+schema%3Adescription+%3FenglishDescription+.+FILTER%28LANG%28%3FenglishDescription%29+%3D+%22en%22%29+%7D%0A++OPTIONAL+%7B%0A++++%3Fplace+p%3AP625+%3FcoordinateStatement+.%0A++++OPTIONAL+%7B+%3FcoordinateStatement+ps%3AP625+%3FcoordinateWkt+.+%7D%0A++++OPTIONAL+%7B+%3FcoordinateStatement+wikibase%3Arank+%3FcoordinateRank+.+%7D%0A++++OPTIONAL+%7B%0A++++++%3FcoordinateStatement+psv%3AP625+%3FcoordinateValue+.%0A++++++OPTIONAL+%7B+%3FcoordinateValue+wikibase%3AgeoLatitude+%3Flatitude+.+%7D%0A++++++OPTIONAL+%7B+%3FcoordinateValue+wikibase%3AgeoLongitude+%3Flongitude+.+%7D%0A++++++OPTIONAL+%7B+%3FcoordinateValue+wikibase%3AgeoGlobe+%3Fglobe+.+%7D%0A++++++OPTIONAL+%7B+%3FcoordinateValue+wikibase%3AgeoPrecision+%3Fprecision+.+%7D%0A++++%7D%0A++%7D%0A++OPTIONAL+%7B%0A++++%3Fplace+p%3AP31+%3FinstanceStatement+.%0A++++OPTIONAL+%7B%0A++++++%3FinstanceStatement+ps%3AP31+%3FinstanceOf+.%0A++++++OPTIONAL+%7B+%3FinstanceOf+rdfs%3Alabel+%3FinstanceOfLabel+.+FILTER%28LANG%28%3FinstanceOfLabel%29+%3D+%22en%22%29+%7D%0A++++%7D%0A++++OPTIONAL+%7B+%3FinstanceStatement+wikibase%3Arank+%3FinstanceRank+.+%7D%0A++%7D%0A++OPTIONAL+%7B%0A++++%3Fplace+p%3AP17+%3FcountryStatement+.%0A++++OPTIONAL+%7B%0A++++++%3FcountryStatement+ps%3AP17+%3Fcountry+.%0A++++++OPTIONAL+%7B+%3Fcountry+rdfs%3Alabel+%3FcountryLabel+.+FILTER%28LANG%28%3FcountryLabel%29+%3D+%22en%22%29+%7D%0A++++%7D%0A++++OPTIONAL+%7B+%3FcountryStatement+wikibase%3Arank+%3FcountryRank+.+%7D%0A++%7D%0A%7D%0AORDER+BY+%3FrequestedName+%3Fplace+%3FcoordinateStatement+%3FinstanceStatement+%3FcountryStatement+%3FmatchPredicate%0A&format=json",
+  "metadata_policy": "Public request URL, status and safe date/content header allowlist only; no full headers, cookies, IP addresses or credentials.",
+  "parse_status": "valid_SPARQL_JSON",
+  "query_attempts": 1,
+  "request": {
+    "all_direct_coordinate_ranks_and_globes_retained": true,
+    "all_homonyms_retained": true,
+    "endpoint": "https://query.wikidata.org/sparql",
+    "exact_names": [
+      "Berlin",
+      "Detroit"
+    ],
+    "no_LIMIT": true,
+    "no_person_query": true,
+    "no_retry": true,
+    "operation": "combined_exact_English_label_or_alias_place_SPARQL",
+    "ordinal": 1,
+    "prior_NYC_Colorado_query_rerun": false,
+    "query_file": "academy_v5_workers/geography/new_names_query.rq",
+    "query_sha256": "be3fcc52c3e453cd706aba6591c7501d4c88c83b45d3bb1bd2658d8adcd63cf3",
+    "source_fact_file": "academy_v5_workers/vol75/retained_facts.jsonl",
+    "source_fact_file_sha256": "f3c2b77bb67003ef3a30daccda2be5e85abce72d5708dd432b3989edfb55ca37",
+    "time_utc": "2026-11-04T00:28:35.464353+00:00"
+  },
+  "request_url": "https://query.wikidata.org/sparql?query=PREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX+skos%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0APREFIX+schema%3A+%3Chttp%3A%2F%2Fschema.org%2F%3E%0APREFIX+p%3A+%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2F%3E%0APREFIX+ps%3A+%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fstatement%2F%3E%0APREFIX+psv%3A+%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fstatement%2Fvalue%2F%3E%0APREFIX+wikibase%3A+%3Chttp%3A%2F%2Fwikiba.se%2Fontology%23%3E%0ASELECT+%3FrequestedName+%3FmatchPredicate+%3Fplace+%3FenglishLabel+%3FenglishDescription%0A+++++++%3FcoordinateStatement+%3FcoordinateWkt+%3FcoordinateRank+%3FcoordinateValue%0A+++++++%3Flatitude+%3Flongitude+%3Fglobe+%3Fprecision%0A+++++++%3FinstanceStatement+%3FinstanceOf+%3FinstanceRank+%3FinstanceOfLabel%0A+++++++%3FcountryStatement+%3Fcountry+%3FcountryRank+%3FcountryLabel%0AWHERE+%7B%0A++VALUES+%3FrequestedName+%7B+%22Berlin%22%40en+%22Detroit%22%40en+%7D%0A++VALUES+%3FmatchPredicate+%7B+rdfs%3Alabel+skos%3AaltLabel+%7D%0A++%3Fplace+%3FmatchPredicate+%3FrequestedName+.%0A++OPTIONAL+%7B+%3Fplace+rdfs%3Alabel+%3FenglishLabel+.+FILTER%28LANG%28%3FenglishLabel%29+%3D+%22en%22%29+%7D%0A++OPTIONAL+%7B+%3Fplace+schema%3Adescription+%3FenglishDescription+.+FILTER%28LANG%28%3FenglishDescription%29+%3D+%22en%22%29+%7D%0A++OPTIONAL+%7B%0A++++%3Fplace+p%3AP625+%3FcoordinateStatement+.%0A++++OPTIONAL+%7B+%3FcoordinateStatement+ps%3AP625+%3FcoordinateWkt+.+%7D%0A++++OPTIONAL+%7B+%3FcoordinateStatement+wikibase%3Arank+%3FcoordinateRank+.+%7D%0A++++OPTIONAL+%7B%0A++++++%3FcoordinateStatement+psv%3AP625+%3FcoordinateValue+.%0A++++++OPTIONAL+%7B+%3FcoordinateValue+wikibase%3AgeoLatitude+%3Flatitude+.+%7D%0A++++++OPTIONAL+%7B+%3FcoordinateValue+wikibase%3AgeoLongitude+%3Flongitude+.+%7D%0A++++++OPTIONAL+%7B+%3FcoordinateValue+wikibase%3AgeoGlobe+%3Fglobe+.+%7D%0A++++++OPTIONAL+%7B+%3FcoordinateValue+wikibase%3AgeoPrecision+%3Fprecision+.+%7D%0A++++%7D%0A++%7D%0A++OPTIONAL+%7B%0A++++%3Fplace+p%3AP31+%3FinstanceStatement+.%0A++++OPTIONAL+%7B%0A++++++%3FinstanceStatement+ps%3AP31+%3FinstanceOf+.%0A++++++OPTIONAL+%7B+%3FinstanceOf+rdfs%3Alabel+%3FinstanceOfLabel+.+FILTER%28LANG%28%3FinstanceOfLabel%29+%3D+%22en%22%29+%7D%0A++++%7D%0A++++OPTIONAL+%7B+%3FinstanceStatement+wikibase%3Arank+%3FinstanceRank+.+%7D%0A++%7D%0A++OPTIONAL+%7B%0A++++%3Fplace+p%3AP17+%3FcountryStatement+.%0A++++OPTIONAL+%7B%0A++++++%3FcountryStatement+ps%3AP17+%3Fcountry+.%0A++++++OPTIONAL+%7B+%3Fcountry+rdfs%3Alabel+%3FcountryLabel+.+FILTER%28LANG%28%3FcountryLabel%29+%3D+%22en%22%29+%7D%0A++++%7D%0A++++OPTIONAL+%7B+%3FcountryStatement+wikibase%3Arank+%3FcountryRank+.+%7D%0A++%7D%0A%7D%0AORDER+BY+%3FrequestedName+%3Fplace+%3FcoordinateStatement+%3FinstanceStatement+%3FcountryStatement+%3FmatchPredicate%0A&format=json",
+  "response_bytes": 713237,
+  "response_file": "academy_v5_workers/geography/new_names_query_response.bin",
+  "response_representation": "original_HTTP_SPARQL_JSON_response_bytes",
+  "response_sha256": "611bdc51b7df79b38a08eac47c2b5dfb81f0c58f09cee077ad35c3a6014420b5",
+  "retry_performed": false,
+  "safe_response_headers": {
+    "content-type": "application/sparql-results+json;charset=utf-8",
+    "date": "Wed, 04 Nov 2026 00:28:42 GMT"
+  },
+  "status": 200,
+  "distribution_metadata_note": {
+    "file": "audit/geography/new_names_query_capture.json",
+    "original_metadata_sha256": "3b9cfcc9a3d042069f304a189f03df120674247820380626baa68dd6101717f3",
+    "removed_paths": [
+      "/request/authorization"
+    ]
+  }
+}
