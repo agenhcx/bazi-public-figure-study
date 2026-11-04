@@ -1,0 +1,113 @@
+{
+  "schema": "UK_v14_independent_method_review_v1",
+  "review_written_utc": "2026-11-04T23:36:41.363797+00:00",
+  "reviewer": "v14_method_review",
+  "protocol_sha256": "36a2b6881190c01afd7127cb60fef5c2dc2b497aef9d40099c7eaf196769a5d3",
+  "review_scope": "Method only; no new source queries, no candidate decision, no master mutation, no statistical or BaZi hypothesis.",
+  "status": "CONDITIONAL_METHOD_APPROVAL_WITH_OPERATIONAL_GATES",
+  "overall_assessment": "Compound-place geography can refine an already accepted literal birthplace, but a map showing that one same-named compound exists is not by itself a positive identification of the biographical referent. Bounded no-counterexample search is a limitation check, not proof of worldwide uniqueness. The protocol is sound only if its sufficient-coverage clause is implemented through the gates below rather than used as an after-the-fact discretion to admit a match.",
+  "material_risks": [
+    {
+      "risk": "Existence-versus-referent error",
+      "detail": "An authoritative source can verify Lowther Street in one Carlisle while saying nothing about which Carlisle the birth source meant. Source authority establishes its own geographic claim, not the person-to-place linkage."
+    },
+    {
+      "risk": "Shared regional or data-lineage bias",
+      "detail": "Two UK-only sources, or two sites copying the same national map or place record, add positive support for one candidate but are not two independent tests of possible global alternatives."
+    },
+    {
+      "risk": "Unsupported normalization",
+      "detail": "Removing case, spaces and punctuation is not equivalent to changing Blencoe to Blencow or Blencowe. A spelling substitution requires an observed original historical-alias statement."
+    },
+    {
+      "risk": "Post-hoc relation and type filtering",
+      "detail": "Do not choose a convenient distance threshold for near or exclude a settlement merely because a current type differs. Type and relation exclusions must derive from the original wording and an observed candidate record, with historical relevance assessed when it affects the result."
+    },
+    {
+      "risk": "Incomplete search treated as exhaustive",
+      "detail": "Search pagination, indexing, language and feature-class limits matter. A structured global catalogue is not complete merely because it is global in name; a failed or truncated response provides no negative coverage."
+    }
+  ],
+  "decision_gates_in_order": [
+    {
+      "gate": 1,
+      "name": "Frozen birth-source bridge",
+      "pass_requirement": "Use only the already accepted literal birthplace and its explicit qualifiers or relationship. Preserve native identity, dates, original grades and old evidence; verify the source collector has not substituted a parental, employment, education or death location. No new person binding is created by the geography step."
+    },
+    {
+      "gate": 2,
+      "name": "Complete compound positive identification",
+      "pass_requirement": "At least one original authoritative geographic or historical source must explicitly identify the entire distinctive compound or a documented equivalent, including the relevant child-place/parent-place relation and a region whose extent permits a hemisphere decision. Matching a familiar parent name plus a separate, unrelated child-name hit fails. A county name in a webpage footer fails."
+    },
+    {
+      "gate": 3,
+      "name": "Identity of geographic names and temporal compatibility",
+      "pass_requirement": "Exact literal matching may normalize only case, spacing and punctuation. Any spelling or historical-name bridge must be explicitly documented. Assess historical compatibility proportionately: do not demand an exact-year map when immaterial, but do not assume a modern renamed road or relation existed at birth when the decision relies on that equivalence. A proposed modern county is reference geography, not an assigned historical birth-country field."
+    },
+    {
+      "gate": 4,
+      "name": "Independent discriminating support",
+      "pass_requirement": "Seek a second independently authored/compiled geographic witness or a candidate/type catalogue that adds information capable of distinguishing alternatives. Record shared or unknown data lineage. Repetition of the same national-map record is corroboration, not an independent discrimination step."
+    },
+    {
+      "gate": 5,
+      "name": "Bounded alternatives coverage",
+      "pass_requirement": "Retain the actual searches and accessible candidate lists for the complete raw compound and relevant parent/child names, without choosing a country first. Record all compatible and excluded candidates, exact reasons for exclusions, limits and failures. A region-restricted source cannot stand in for this coverage. Do not describe an empty search as proof that no alternative exists."
+    },
+    {
+      "gate": 6,
+      "name": "Residual ambiguity review",
+      "pass_requirement": "A main-table hemisphere proposal is eligible only when gates1–5 provide a positive, well-supported identification and no material unresolved alternative remains. All observed compatible candidates must agree in hemisphere; however agreement of observed candidates alone does not pass if the supporting coverage or referent bridge is inadequate. An observed opposing-hemisphere compatible candidate, unsupported alias, incomplete critical response or materially uncertain relation requires unknown."
+    },
+    {
+      "gate": 7,
+      "name": "Versioned geography-only application",
+      "pass_requirement": "If eligible, record the inference as geographic disambiguation with separate geographic-support grade, source provenance, alternatives and stated coverage limits. Do not call it a new birth sentence or upgrade the original birthplace/DOB tier. Assign no country, unique place QID or personal birthpoint coordinates. Independent source/context QA must pass before root applies a result."
+    }
+  ],
+  "outcome_categories": [
+    {
+      "category": "eligible_for_root_main_geography_review",
+      "meaning": "Positive compound referent identification plus discriminating support and adequately reviewed alternatives; hemisphere may be proposed conditionally on documented source coverage, never described as mathematical worldwide uniqueness."
+    },
+    {
+      "category": "candidate_support_only",
+      "meaning": "One or more sound sources establish a possible matching compound, but do not sufficiently identify the birth-source referent or distinguish other plausible compounds. Save the geographic observation; master remains unknown. Any exploratory sensitivity use must be a separately labelled field and must not silently alter the principal hemisphere."
+    },
+    {
+      "category": "hold",
+      "meaning": "Contradictory compatible candidates, unsupported alias, materially incomplete lookup, missing original source or unjustified type/relation restriction. Preserve all evidence and unknown."
+    }
+  ],
+  "target_specific_checks": [
+    {
+      "record_id": "RS_PAST_NA1727",
+      "literal": "Lowther Street, Carlisle",
+      "required_checks": "Observe the street-to-locality relation directly and the parent region; a Lowther Street elsewhere plus an unrelated Carlisle result does not form a compound. A modern local street record alone gives a candidate, not global disambiguation."
+    },
+    {
+      "record_id": "RS_PAST_NA331",
+      "literal": "Little Blencoe, near Penrith",
+      "required_checks": "Retain Little and near Penrith. If a source instead uses Blencow/Blencowe, demand explicit historical alias evidence. Do not repair the spelling silently or define an ad-hoc near radius to select a candidate."
+    },
+    {
+      "record_id": "RS_PAST_NA663",
+      "literal": "Church End, Finchley",
+      "required_checks": "Verify Church End as the named child locality or historical area of the relevant Finchley, not merely a street called Finchley Road. Both generic child and parent terms must be positively linked in original geographic evidence."
+    },
+    {
+      "record_id": "RS_PAST_NA6847",
+      "literal": "Carleton, a small village near Carlisle",
+      "required_checks": "Retain village and near Carlisle. Show an observed settlement relation, not an estate, road, station or surname. Exclude a candidate by type only when the exclusion follows the birth wording and historically relevant evidence, not because it is outside the anticipated region."
+    }
+  ],
+  "operational_recommendations": [
+    "Record these interpretation gates before the root evaluates source proposals; if changing the original protocol, retain both versions and the amendment timestamp rather than backdating the change.",
+    "A request-budget stop can legitimately yield candidate_support_only or hold; do not lower the evidence bar to obtain a nonzero batch.",
+    "Keep biography-source identity confidence, birthplace-source grade and geographic-disambiguation confidence as distinct fields.",
+    "No source queries or substantive data decisions were made by this reviewer. This review does not approve any of the four candidates."
+  ],
+  "master_modified": false,
+  "new_sources_requested": false,
+  "source_candidate_decisions_made": false
+}

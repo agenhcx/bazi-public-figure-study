@@ -1,0 +1,30 @@
+{
+  "schema": "UK_v14_compound_geography_protocol_v1",
+  "written_before_new_geography_requests_utc": "2026-11-04T23:34:53.546919+00:00",
+  "baseline_commit": "09568feae7af46e5c4ca312e512cf60df3bf8904",
+  "scope": [
+    "RS_PAST_NA1727",
+    "RS_PAST_NA331",
+    "RS_PAST_NA663",
+    "RS_PAST_NA6847"
+  ],
+  "unit": "existing fixed UK records with already adopted explicit compound birthplaces; no new person/DOB binding",
+  "question": "Can the complete observed compound locality, its explicit type/relation, and an authoritative geography hierarchy disambiguate the existing birthplace without inferring nationality or biography context?",
+  "rules": [
+    "Preserve every literal birth component and all frozen personal fields. Do not use birthplace guesses from nationality, affiliation, parents, schooling, later work/death or publisher footer.",
+    "Observe the whole compound name, not only a familiar component. Exact case/space/punctuation normalization allowed; historical spelling aliases only if explicitly documented by an observed original source.",
+    "Record candidate geography sources, all returned compatible and incompatible candidates, parent locality/type/region and reasons. Search result titles/snippets alone are leads, not adopted geographic support.",
+    "At least one original authoritative geography source must explicitly link the compound components to each other and a regional extent. Seek a second independent geographic witness or a global candidate/type record; distinguish copied source lineages.",
+    "A bounded alternative-name query must be attempted; record its actual accessible coverage. A search hit or missing hit never proves global uniqueness.",
+    "A hemisphere proposal requires positive compound/type/relation binding, no observed compatible opposing-hemisphere candidate, and sufficient source coverage under independent skeptical review. If coverage cannot establish that the adopted geographic binding is sound, retain unknown; candidate support alone is not a resolved birthplace.",
+    "Do not select the largest or famous city. No inferred full spelling, country, unique entity/QID or personal birthpoint coordinates. Type exclusions must follow the original compound wording and be explicitly evidenced.",
+    "Geographic support is separately graded and does not upgrade original birthday or birthplace source grades. New map/gazetteer lookup is not a new biographical birth clause.",
+    "Source collectors only gather evidence; root and independent QA decide. Preserve rejected alternatives and limitations. Any new decision is versioned and reversible, not final eligibility or cohort freeze."
+  ],
+  "request_budget_per_two_target_lane": {
+    "discovery_queries_max": 8,
+    "original_navigations_max": 10
+  },
+  "countercandidate_coverage_limit": "No exhaustive-world-coverage claim. Explicitly evaluate whether bounded evidence suffices; otherwise hold.",
+  "statistical_or_BaZi_work": false
+}
