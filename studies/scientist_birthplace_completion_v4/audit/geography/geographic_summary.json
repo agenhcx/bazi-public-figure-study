@@ -1,0 +1,49 @@
+{
+  "NAS_geography_query_count": 1,
+  "exact_requested_names": [
+    "New York City",
+    "Colorado Springs"
+  ],
+  "explicit_born_clause_extent_count": 7,
+  "fact_count": 9,
+  "frozen": true,
+  "geographic_lookup_grade": "S3 separate from S2 birthplace fact evidence",
+  "held": [
+    {
+      "name": "Carl D. Anderson",
+      "raw_birthplace": "New York City",
+      "reason": "exact-name physical place collision includes missing coordinates: hotel Q39319400; do not select famous city or infer from country/NAS/parent/death context"
+    }
+  ],
+  "hemisphere_counts": {
+    "north": 8,
+    "unknown": 1
+  },
+  "inputs_sha256": {
+    "academy_v4_workers/vol73/retained_facts.jsonl": "75706e12eb3eab775845713991946913f91535d748bda6c9ef5a681fa3508cb3",
+    "academy_v4_workers/vol74/retained/facts.jsonl": "0f62174c38c5d0bae17ea742aef8c614c09e21764fe5351e828cfc2f7282cad1",
+    "uk_birthplace_checkout/studies/scientist_birthplace_completion_v3/outputs/birthplace_rows.jsonl.gz": "6df02f0b3a535c8b5447ee704ddc96f473509ed9c2df84b25d6b40064a5dff44"
+  },
+  "native_DOB_calendar_identity_eligibility_flags_QIDs_changes": 0,
+  "new_birthpoint_coordinate_assignments": 0,
+  "new_country_assignments": 0,
+  "new_unique_place_entity_assignments": 0,
+  "no_NAS_nationality_parent_upbringing_deathplace_inference": true,
+  "person_queries": 0,
+  "physical_place_candidate_count": 4,
+  "query_bindings": 94,
+  "query_capture_representation": "original_HTTP_SPARQL_JSON_response_bytes; not a web-tool projection",
+  "query_count": 1,
+  "query_response_sha256": "4153c960cb3710ad452d5dcbd74b3e8a2236898bb6b3658e7ae3da6b6837c38a",
+  "query_retries": 0,
+  "query_sha256": "bf4f8de1a9cbb0a0bfdd3e187ecd66de170df94b97246c7e542fc79b6015287d",
+  "retained_homonym_entity_count": 80,
+  "schema": "scientist_birthplace_completion_v4_NAS_geographic_review",
+  "source_grade_counts": {
+    "S2": 9
+  },
+  "status_counts": {
+    "held_unknown": 1,
+    "hemisphere_only_accepted": 8
+  }
+}

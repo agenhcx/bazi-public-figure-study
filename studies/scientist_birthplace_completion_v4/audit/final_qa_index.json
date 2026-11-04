@@ -1,0 +1,69 @@
+{
+  "schema": "scientist_birthplace_completion_v4_independent_QA_index",
+  "status": "PASS",
+  "frozen_at_utc": "2026-11-04T00:13:17.078703+00:00",
+  "baseline_sha256": "6df02f0b3a535c8b5447ee704ddc96f473509ed9c2df84b25d6b40064a5dff44",
+  "main_table_sha256": "abbce4e99ad51252dd5e127a0609bc6c4950c121afa2dd126bfc2187b39cd4e8",
+  "result": {
+    "cohort_records": 11094,
+    "source_facts_S2": 9,
+    "changed_rows": 9,
+    "new_north": 8,
+    "source_place_accepted_hemisphere_held": 1,
+    "held_source_candidates": 2,
+    "unchanged_complete_objects": 11085,
+    "prior_12_overlay_complete_objects_equal": true,
+    "UK_4983_complete_objects_equal": true,
+    "all_native_fields_frozen": true,
+    "new_country_or_birthpoint_assignments": 0,
+    "all_CSV_cells_and_summary_windows_checked": true,
+    "seven_outputs_byte_identical_private_offline_replay": true,
+    "QA_network_requests": 0
+  },
+  "documents": {
+    "studies/scientist_birthplace_completion_v4/README.md": "db4dd2eb36044ada34c90ddbcdcdf3c5adab3d93164e10903a571bca8abe4c90",
+    "studies/scientist_birthplace_completion_v4/CONTINUATION.md": "405faf133e9d1092274bcf6ebd9a8ec218cc6e11b00137e5cfd0226f5558fb12"
+  },
+  "reports": {
+    "baseline_inventory.json": {
+      "sha256": "3752969617906d8ab518be092158a0f7ec7a7198ff475e0a8eb8da3d149fad89",
+      "bytes": 4101
+    },
+    "source_review.json": {
+      "sha256": "89c1c2498fd6aa101090b5b445d341ce4726642bf895b4b150f9786031597b9e",
+      "bytes": 14139
+    },
+    "geography_review.json": {
+      "sha256": "5a6c84ec0e85077cf8c3adb3a15e1af0072cc4f69e13639e3d36a0c5397d120b",
+      "bytes": 968
+    },
+    "distribution_review.json": {
+      "sha256": "d6d32a6f45dfe02bca3d28ef60ddd8210388fb8bfd46704f6f74a4e479a31250",
+      "bytes": 587
+    },
+    "output_review.json": {
+      "sha256": "61646cd8bf35e78a6692ef95a6e5564465495fde8a83762af582165901cf0f49",
+      "bytes": 3485
+    },
+    "prose_review.json": {
+      "sha256": "7916e03ac9582cd2517dda080f01d3cfe7a6c6e605f57a064551291c7ea80155",
+      "bytes": 1778
+    }
+  },
+  "local_QA_scripts": {
+    "source_review.py": "ca6ce7642f27674c6c187e4a0942d7272985ca3b4a66f91a4a3538e617620e89",
+    "geography_review.py": "3e3cd82bd9e5e59ad871331aeefaa0ead7ebda6afe8386a34bde86c7e4b84ffb",
+    "verify_v4_independent.py": "644a06954762be1389b6404c07dbaab2d5cef30516f289dd6223dbac4c689a16"
+  },
+  "output_sha256": {
+    "all_country_birthplace_summary.csv": "979d56a883dc3868574731213be5b74c36164eccf79fb5a5e29ecaa8bc0758eb",
+    "birthplace_rows.jsonl.gz": "abbce4e99ad51252dd5e127a0609bc6c4950c121afa2dd126bfc2187b39cd4e8",
+    "birthplaces.csv": "0632a7b1cf72560fa0e49cb116351ec12130e8b04c41717fb29241b1301fd84d",
+    "changed_records.csv": "53a536906433f5639df7f0ee46f8f8d7114f59495f2ef4fa8332db690248c53d",
+    "changes.jsonl.gz": "5b2e870c6758927e08401384ae4bbe4bfac7567f3248f8d82136466122a0cacb",
+    "remaining_unknown.csv": "ec118aed9c5b2cb8a69558396c71cce4d3c8901b0ca0603c6291854d98b6477e",
+    "summary.json": "db7b48d09cedcfff5015530a624d13fc7e9145e2986bd0d2f6cfe20b667dd536"
+  },
+  "work_scope": "Independent local read-only source, geography, native-field, all-row, CSV, summary, byte-replay, distribution metadata and prose review; QA writes only under academy_v4_workers/qa; no source/repository/Git edits",
+  "replay_note": "Source and geography QA scripts depend on retained worker scratch captures; main study assemble.py and verify.py are the offline seven-output replay entrypoints."
+}
