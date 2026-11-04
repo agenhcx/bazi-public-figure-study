@@ -1,0 +1,199 @@
+{
+  "schema": "scientist_birthplace_completion_v6",
+  "cohort_records": 11094,
+  "unique_within_cohort_keys": 11094,
+  "unit": "cohort records; not cross-cohort independent persons",
+  "direct_baseline": "scientist_birthplace_completion_v5",
+  "baseline_lineage": {
+    "other_seven_cohorts": "v5 complete objects retaining v1 baseline and all v2/v3/v4/v5 overlays",
+    "UK_Royal_Society": "royal_society_birthplace_completion_v10",
+    "UK_baseline_rows": 4983
+  },
+  "new_fact_candidates": 12,
+  "new_explicit_memoir_birthplace_facts": 12,
+  "prior_birthplace_qualification_facts": 0,
+  "new_fact_source_grade_counts": {
+    "S2": 12
+  },
+  "new_fact_cohort_counts": {
+    "NAS": 12
+  },
+  "newly_classified": 12,
+  "country_summary": [
+    {
+      "cohort": "CAS",
+      "baseline_rows": 1230,
+      "north": 1003,
+      "south": 3,
+      "equator": 0,
+      "unknown": 224,
+      "previous_unknown": 224,
+      "newly_classified": 0
+    },
+    {
+      "cohort": "DE_Leopoldina",
+      "baseline_rows": 778,
+      "north": 655,
+      "south": 6,
+      "equator": 0,
+      "unknown": 117,
+      "previous_unknown": 117,
+      "newly_classified": 0
+    },
+    {
+      "cohort": "Fields_main",
+      "baseline_rows": 63,
+      "north": 59,
+      "south": 4,
+      "equator": 0,
+      "unknown": 0,
+      "previous_unknown": 0,
+      "newly_classified": 0
+    },
+    {
+      "cohort": "France",
+      "baseline_rows": 775,
+      "north": 702,
+      "south": 3,
+      "equator": 0,
+      "unknown": 70,
+      "previous_unknown": 70,
+      "newly_classified": 0
+    },
+    {
+      "cohort": "Japan",
+      "baseline_rows": 368,
+      "north": 234,
+      "south": 0,
+      "equator": 0,
+      "unknown": 134,
+      "previous_unknown": 134,
+      "newly_classified": 0
+    },
+    {
+      "cohort": "NAS",
+      "baseline_rows": 2242,
+      "north": 1667,
+      "south": 32,
+      "equator": 0,
+      "unknown": 543,
+      "previous_unknown": 555,
+      "newly_classified": 12
+    },
+    {
+      "cohort": "Nobel_science",
+      "baseline_rows": 655,
+      "north": 634,
+      "south": 21,
+      "equator": 0,
+      "unknown": 0,
+      "previous_unknown": 0,
+      "newly_classified": 0
+    },
+    {
+      "cohort": "UK_Royal_Society",
+      "baseline_rows": 4983,
+      "north": 4155,
+      "south": 183,
+      "equator": 0,
+      "unknown": 645,
+      "previous_unknown": 645,
+      "newly_classified": 0
+    }
+  ],
+  "UK_all_4983_rows_preserved": true,
+  "other_unchanged_rows": 11082,
+  "all_existing_non_geographic_fields_preserved": true,
+  "original_DOB_groups_unchanged": true,
+  "CAS_Gregorian_acceptance_still_unadjudicated": true,
+  "Nobel_655_reconstructed_ID_scope_not_original_final_DOB_restoration": true,
+  "Nobel_native_DOBs_still_blank": true,
+  "observed_native_DOB_windows": {
+    "CAS": {
+      "native_nonblank_day_rows": 0,
+      "native_window_1835_1985_rows": 0,
+      "hemisphere_counts": {},
+      "descriptive_only_not_calendar_eligibility_adjudication": true,
+      "source_birth_years_not_used_to_fill_native_DOB_or_window": true
+    },
+    "DE_Leopoldina": {
+      "native_nonblank_day_rows": 778,
+      "native_window_1835_1985_rows": 778,
+      "hemisphere_counts": {
+        "north": 655,
+        "unknown": 117,
+        "south": 6
+      },
+      "descriptive_only_not_calendar_eligibility_adjudication": true,
+      "source_birth_years_not_used_to_fill_native_DOB_or_window": true
+    },
+    "Fields_main": {
+      "native_nonblank_day_rows": 63,
+      "native_window_1835_1985_rows": 61,
+      "hemisphere_counts": {
+        "north": 57,
+        "south": 4
+      },
+      "descriptive_only_not_calendar_eligibility_adjudication": true,
+      "source_birth_years_not_used_to_fill_native_DOB_or_window": true
+    },
+    "France": {
+      "native_nonblank_day_rows": 775,
+      "native_window_1835_1985_rows": 775,
+      "hemisphere_counts": {
+        "north": 702,
+        "unknown": 70,
+        "south": 3
+      },
+      "descriptive_only_not_calendar_eligibility_adjudication": true,
+      "source_birth_years_not_used_to_fill_native_DOB_or_window": true
+    },
+    "Japan": {
+      "native_nonblank_day_rows": 368,
+      "native_window_1835_1985_rows": 367,
+      "hemisphere_counts": {
+        "north": 234,
+        "unknown": 133
+      },
+      "descriptive_only_not_calendar_eligibility_adjudication": true,
+      "source_birth_years_not_used_to_fill_native_DOB_or_window": true
+    },
+    "NAS": {
+      "native_nonblank_day_rows": 2242,
+      "native_window_1835_1985_rows": 2240,
+      "hemisphere_counts": {
+        "unknown": 543,
+        "north": 1665,
+        "south": 32
+      },
+      "descriptive_only_not_calendar_eligibility_adjudication": true,
+      "source_birth_years_not_used_to_fill_native_DOB_or_window": true
+    },
+    "Nobel_science": {
+      "native_nonblank_day_rows": 0,
+      "native_window_1835_1985_rows": 0,
+      "hemisphere_counts": {},
+      "descriptive_only_not_calendar_eligibility_adjudication": true,
+      "source_birth_years_not_used_to_fill_native_DOB_or_window": true
+    },
+    "UK_Royal_Society": {
+      "native_nonblank_day_rows": 4983,
+      "native_window_1835_1985_rows": 2644,
+      "hemisphere_counts": {
+        "north": 2255,
+        "unknown": 211,
+        "south": 178
+      },
+      "descriptive_only_not_calendar_eligibility_adjudication": true,
+      "source_birth_years_not_used_to_fill_native_DOB_or_window": true
+    }
+  },
+  "new_country_or_birthpoint_assignments": 0,
+  "cross_cohort_deduplicated": false,
+  "final_cohort_frozen": false,
+  "BaZi_or_outcomes_added": false,
+  "inputs_sha256": {
+    "studies/scientist_birthplace_completion_v5/outputs/birthplace_rows.jsonl.gz": "15f3d58b3334fbc5c32229b0c122ff5e693379fbf9759794e1e3ae87ac06d152",
+    "studies/scientist_birthplace_completion_v6/inputs/new_birthplace_facts.jsonl.gz": "0f7e32ce8e488e5a6f111802e5c8c2da8dcdea1974449d297d5fe6a4254d9087"
+  }
+}
