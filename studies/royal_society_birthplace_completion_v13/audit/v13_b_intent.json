@@ -1,0 +1,172 @@
+{
+  "worker": "v13_sources_b",
+  "started_utc": "2026-11-04T23:19:25.444516+00:00",
+  "scope_ids": [
+    "RS_PAST_NA1513",
+    "RS_PAST_NA3620",
+    "RS_PAST_NA669",
+    "RS_PAST_NA6847",
+    "RS_PAST_NA813",
+    "RS_PAST_NA872"
+  ],
+  "initial_queries": [
+    "\"Martin Rivers Pollock\" \"born\" Liverpool Lancashire",
+    "\"Herbert Marcus Powell\" \"born\" Coventry Warwickshire",
+    "\"Edward Waymouth Reid\" \"born\" Canterbury Kent",
+    "\"Charles Todd\" \"1869\" \"born\" Carlisle Cumberland",
+    "\"John Walter Ryde\" \"born\" Brighton Sussex",
+    "\"William Scott Farren\" \"born\" Cambridge England"
+  ],
+  "rules": "New original authored or institutional birth sentence with explicit region. Preserve native names, DOB, QID, grades. No geography assignment by worker. Unknown request timing or HTTP status stays null. No raw HTTP SHA claims for parsed text.",
+  "budget": {
+    "queries_max": 8,
+    "original_navigation_max": 10
+  },
+  "request_ledger": [
+    {
+      "kind": "search",
+      "queries": [
+        "\"Martin Rivers Pollock\" \"born\" Liverpool Lancashire",
+        "\"Herbert Marcus Powell\" \"born\" Coventry Warwickshire",
+        "\"Edward Waymouth Reid\" \"born\" Canterbury Kent"
+      ],
+      "planned_before_request": true,
+      "request_time_utc": null,
+      "response_time_utc": null,
+      "status": null,
+      "result_note": "Result rendered by web search tool but output exceeded model context; not treated as evidence."
+    },
+    {
+      "kind": "search",
+      "queries": [
+        "\"Charles Todd\" \"1869\" \"born\" Carlisle Cumberland",
+        "\"John Walter Ryde\" \"born\" Brighton Sussex",
+        "\"William Scott Farren\" \"born\" Cambridge England"
+      ],
+      "planned_at_utc": "2026-11-04T23:20:23.783121+00:00",
+      "request_time_utc": null,
+      "response_time_utc": null,
+      "status": null,
+      "result_refs": [
+        "turn40search36",
+        "turn40search0",
+        "turn40search2"
+      ]
+    },
+    {
+      "kind": "search",
+      "queries": [
+        "site:oxforddnb.com \"Pollock, Martin\" OR \"Powell, Herbert\" OR \"Reid, Edward\"",
+        "\"Edward Waymouth Reid\" Kent birthplace"
+      ],
+      "planned_at_utc": "2026-11-04T23:20:35.199612+00:00",
+      "request_time_utc": null,
+      "response_time_utc": null,
+      "status": null,
+      "result_refs": [
+        "turn42search2",
+        "turn42search3",
+        "turn42search5"
+      ]
+    },
+    {
+      "kind": "open",
+      "targets": [
+        "https://www.cumbrianlives.org.uk/lives-index/t.html",
+        "https://archives.trin.cam.ac.uk/index.php/actor/browse?languages=en&page=215&sf_culture=es&sort=identifier&sortDir=asc",
+        "https://www.oxforddnb.com/search?q=Martin+Rivers+Pollock",
+        "https://www.oxforddnb.com/search?q=Herbert+Marcus+Powell"
+      ],
+      "planned_at_utc": "2026-11-04T23:20:50.109151+00:00",
+      "request_time_utc": null,
+      "response_time_utc": null,
+      "http_status": null,
+      "result_refs": [
+        "turn45view0",
+        "turn45view1",
+        "turn45view2",
+        "turn45view3"
+      ],
+      "note": "Two ODNB URLs inaccessible via tool; status not exposed."
+    },
+    {
+      "kind": "find",
+      "targets": [
+        {
+          "ref": "turn45view0",
+          "pattern": "Todd, Charles"
+        }
+      ],
+      "planned_at_utc": "2026-11-04T23:21:14.540322+00:00",
+      "request_time_utc": null,
+      "response_time_utc": null,
+      "http_status": null,
+      "result_refs": [
+        "turn47view0"
+      ],
+      "note": "No matching Todd, Charles text."
+    },
+    {
+      "kind": "open",
+      "targets": [
+        "https://pubmed.ncbi.nlm.nih.gov/796437/",
+        "https://app.dundee.ac.uk/museum/collections/physiology/index.html",
+        "https://www.perse.co.uk/community/old-perseans/inspiring-old-perseans/",
+        "https://www.nature.com/articles/1801024a0.pdf"
+      ],
+      "planned_at_utc": "2026-11-04T23:21:37.728482+00:00",
+      "request_time_utc": null,
+      "response_time_utc": null,
+      "http_status": null,
+      "result_refs": [
+        "turn49view0",
+        "turn49view1",
+        "turn49view2",
+        "turn49view3"
+      ],
+      "note": "PubMed biography metadata and free full-text link; Dundee page has no birth; Perse inaccessible; Nature PDF URL returned HTML article metadata."
+    },
+    {
+      "kind": "click",
+      "targets": [
+        {
+          "ref": "turn49view0",
+          "link_id": 14,
+          "description": "PMC1307676 full biography article"
+        }
+      ],
+      "planned_at_utc": "2026-11-04T23:21:52.540608+00:00",
+      "request_time_utc": null,
+      "response_time_utc": null,
+      "http_status": null,
+      "result_refs": [
+        "turn50view0"
+      ],
+      "note": "Scanned article pages; body text not present in parsed HTML."
+    },
+    {
+      "kind": "click",
+      "targets": [
+        {
+          "ref": "turn50view0",
+          "link_id": 14,
+          "description": "PMC proceedings PDF for first biography pages"
+        }
+      ],
+      "planned_at_utc": "2026-11-04T23:22:04.960941+00:00",
+      "request_time_utc": null,
+      "response_time_utc": null,
+      "http_status": null,
+      "result_refs": [
+        "turn51view0"
+      ],
+      "note": "PDF route produced reCAPTCHA/checking-browser HTML, not PDF bytes. No retry or circumvention."
+    }
+  ],
+  "finished_utc": "2026-11-04T23:23:27.123250+00:00",
+  "actual_budget_used": {
+    "discovery_queries": 8,
+    "original_open_and_click_requests": 10,
+    "in_page_find_requests": 1
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "written_before_requests_utc": "2026-11-04T23:19:10.502245+00:00",
+  "scope": [
+    "RS_PAST_NA1475",
+    "RS_PAST_NA2111",
+    "RS_PAST_NA2146",
+    "RS_PAST_NA2460",
+    "RS_PAST_NA6231",
+    "RS_PAST_NA907"
+  ],
+  "initial_queries": [
+    "\"Edgar Hartley Kettle\" born London England biography",
+    "\"Claude Rimington\" born London England biography",
+    "\"Oscar Victor Sayer Heath\" born London England",
+    "\"Henry Gerard Thornton\" born London Middlesex",
+    "\"Richard Whiddington\" born London Middlesex",
+    "\"Kenneth James Franklin\" born London England"
+  ],
+  "budget": {
+    "queries": 8,
+    "original_navigations": 10
+  },
+  "notes": "Seek original institution/authored biography direct born clause with explicit region. No hemisphere assigned by worker. Exact HTTP status/time unknown unless exposed.",
+  "adaptive_pre_request_plans": [
+    {
+      "written_before_requests_utc": "2026-11-04T23:20:23.675999+00:00",
+      "search_queries": [
+        "site:academic.oup.com \"Kettle\" \"1882\" \"born\"",
+        "site:academic.oup.com \"Rimington\" \"1902\""
+      ],
+      "planned_original_navigations": [
+        "https://history.rcp.ac.uk/inspiring-physicians/edgar-hartley-kettle",
+        "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/583054003",
+        "https://www.ukkidney.org/about-us/history/obituaries/kenneth-james-franklin"
+      ],
+      "reason": "Initial six planned searches found authentic RCP and ODNB routes; original-body checks may reveal geographic specificity. UK Kidney mirror already flags a DOB inconsistency, retained for inspection as hold evidence. Last two queries target original ODNB for two original biographies."
+    },
+    {
+      "written_before_requests_utc": "2026-11-04T23:20:49.637316+00:00",
+      "planned_original_navigations": [
+        "https://history.rcp.ac.uk/inspiring-physicians/kenneth-james-franklin",
+        "https://www.jjhc.info/heathoscarpetervictorsayer1997",
+        "https://www.independent.co.uk/news/people/obituary-professor-claude-rimington-1460840.html",
+        "https://atom.aim25.com/index.php/travel?listLimit=50&onlyDirect=1&page=4&sf_culture=en&sort=date&sortDir=asc"
+      ],
+      "reason": "Check RCP original behind Kidney reproduction and source attribution for Heath; original authored newspaper obituary for Rimington; institutional archive description may supply Thornton birthplace context. Two searches left returned irrelevant subjects, so query budget is exhausted."
+    },
+    {
+      "written_before_requests_utc": "2026-11-04T23:21:11.065401+00:00",
+      "planned_original_navigations": [
+        {
+          "ref_id": "turn44view3",
+          "find": "Thornton"
+        },
+        {
+          "ref_id": "turn44view2",
+          "find": "Claude Rimington, biochemist"
+        }
+      ],
+      "reason": "Final within-page locators for institutional archive lead and authored original Rimington birth clause. Seven opens plus prior one find plus these two finds exhaust ten original navigation items."
+    }
+  ],
+  "target_completion_utc": "2026-11-04T23:29:10+00:00"
+}
