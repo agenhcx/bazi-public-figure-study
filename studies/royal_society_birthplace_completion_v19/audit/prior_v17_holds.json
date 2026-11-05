@@ -1,0 +1,46 @@
+[
+  {
+    "record_id": "RS_PAST_NA1376",
+    "native_dob": "1869-04-09",
+    "authority_name": "Masterman; Arthur Thomas (1869 - 1941)",
+    "hold_type": "bound_index_entry_no_birthplace_in_observed_segment",
+    "reason": "Matching header and natural-history career; observed entry proceeds from name/date to profession without a birthplace field. Family/school locations not used. Not a claim that all literature lacks birthplace.",
+    "source_audit_file": "audit/bulk_rse.json",
+    "no_master_change": true
+  },
+  {
+    "record_id": "RS_PAST_NA1614",
+    "native_dob": "1868-08-04",
+    "authority_name": "Watson; William (1868 - 1919)",
+    "hold_type": "different_person_index_entries_rejected",
+    "reason": "Returned name/component candidates have incompatible stated life years and/or profession; no target birthplace bound. These rejected alternative persons are not established same-person source DOB conflicts.",
+    "source_audit_file": "audit/bulk_rse.json",
+    "rejected_entry_references": [
+      2701,
+      2372
+    ],
+    "no_master_change": true
+  },
+  {
+    "record_id": "RS_PAST_NA5620",
+    "native_dob": "1850-02-24",
+    "authority_name": "Brown; John (1850 - 1911)",
+    "hold_type": "different_person_index_entries_rejected",
+    "reason": "Returned name/component candidates have incompatible stated life years and/or profession; no target birthplace bound. These rejected alternative persons are not established same-person source DOB conflicts.",
+    "source_audit_file": "audit/bulk_rse.json",
+    "rejected_entry_references": [
+      1679,
+      1725
+    ],
+    "no_master_change": true
+  },
+  {
+    "record_id": "RS_PAST_NA637",
+    "native_dob": "1930-02-21",
+    "authority_name": "Haydon; Denis Arthur (1930 - 1988)",
+    "hold_type": "hold_original_bodies_unavailable",
+    "reason": "Original Royal Society ePDF inaccessible via tool; no body. Original Springer obituary page is subscription preview with title/author/bibliography only and no observed subject-born/place clause. No birthplace inferred from education, employer or unrelated same-name funeral notices.",
+    "source_audit_file": "audit/sources_b.json",
+    "no_master_change": true
+  }
+]

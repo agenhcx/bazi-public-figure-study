@@ -1,0 +1,533 @@
+{
+  "schema": "UK_v19_independent_final_QA_v1",
+  "completed_utc": "2026-11-05T14:40:56.583513+00:00",
+  "reviewer": "/root/v19_final_qa",
+  "decision": "pass",
+  "check_count": 102,
+  "data_check_count": 87,
+  "parallel_prose_request_check_count": 15,
+  "blocking_findings": [],
+  "nonblocking_findings": [],
+  "checks": [
+    {
+      "check": "replay_AST_valid",
+      "passed": true
+    },
+    {
+      "check": "v18_reconstructed_complete_objects_exact",
+      "passed": true
+    },
+    {
+      "check": "v18_canonical_pin",
+      "passed": true
+    },
+    {
+      "check": "v18_raw_baseline_carrier_pin",
+      "passed": true
+    },
+    {
+      "check": "fixed_record_count_4983",
+      "passed": true
+    },
+    {
+      "check": "native_cohort_label_preserved",
+      "passed": true
+    },
+    {
+      "check": "record_ids_unique",
+      "passed": true
+    },
+    {
+      "check": "record_order_preserved",
+      "passed": true
+    },
+    {
+      "check": "four_accepted_records_unique",
+      "passed": true
+    },
+    {
+      "check": "eight_holds_unique",
+      "passed": true
+    },
+    {
+      "check": "target_queue_145_unique",
+      "passed": true
+    },
+    {
+      "check": "target_queue_exact_v18_blank_window",
+      "passed": true
+    },
+    {
+      "check": "fixed_individual_scope_12_unique",
+      "passed": true
+    },
+    {
+      "check": "reviewed_scope_exact_fixed_12",
+      "passed": true
+    },
+    {
+      "check": "facts_holds_disjoint_complete",
+      "passed": true
+    },
+    {
+      "check": "reviewed_inside_target_queue",
+      "passed": true
+    },
+    {
+      "check": "only_four_accepted_objects_changed",
+      "passed": true
+    },
+    {
+      "check": "4979_complete_objects_unchanged",
+      "passed": true
+    },
+    {
+      "check": "all_old_fields_retained",
+      "passed": true
+    },
+    {
+      "check": "only_allowed_new_keys",
+      "passed": true
+    },
+    {
+      "check": "all_nonmutable_old_fields_exact",
+      "passed": true
+    },
+    {
+      "check": "native_DOB_every_record_exact",
+      "passed": true
+    },
+    {
+      "check": "critical_identity_QID_country_coords_history_fields_exact",
+      "passed": true
+    },
+    {
+      "check": "old_calendar_fields_exact",
+      "passed": true
+    },
+    {
+      "check": "old_eligibility_fields_exact",
+      "passed": true
+    },
+    {
+      "check": "old_DOB_source_tiers_fields_exact",
+      "passed": true
+    },
+    {
+      "check": "old_geocoordinates_fields_exact",
+      "passed": true
+    },
+    {
+      "check": "all_v15_v16_v17_v18_fact_objects_exact",
+      "passed": true
+    },
+    {
+      "check": "all_rollback_snapshots_exact",
+      "passed": true
+    },
+    {
+      "check": "all_four_rollbacks_restore_full_v18_objects",
+      "passed": true
+    },
+    {
+      "check": "accepted_input_facts_embedded_exact",
+      "passed": true
+    },
+    {
+      "check": "all_four_started_blank_unknown_in_window",
+      "passed": true
+    },
+    {
+      "check": "all_new_birthplaces_explicit_nonempty",
+      "passed": true
+    },
+    {
+      "check": "new_birthplace_grades_four_S2",
+      "passed": true
+    },
+    {
+      "check": "grade_role_birthplace_only",
+      "passed": true
+    },
+    {
+      "check": "new_North_Polge_Morris_only",
+      "passed": true
+    },
+    {
+      "check": "new_unknown_Beverton_Pagel_only",
+      "passed": true
+    },
+    {
+      "check": "no_new_South",
+      "passed": true
+    },
+    {
+      "check": "overall_counts",
+      "passed": true
+    },
+    {
+      "check": "native_window_2644",
+      "passed": true
+    },
+    {
+      "check": "window_counts",
+      "passed": true
+    },
+    {
+      "check": "window_unknown_blank_141",
+      "passed": true
+    },
+    {
+      "check": "window_unknown_nonblank_51",
+      "passed": true
+    },
+    {
+      "check": "all_unknown_blank_563",
+      "passed": true
+    },
+    {
+      "check": "all_unknown_nonblank_63",
+      "passed": true
+    },
+    {
+      "check": "source_precisions_three_exact_one_year",
+      "passed": true
+    },
+    {
+      "check": "Morris_only_year1932_no_day_claim",
+      "passed": true
+    },
+    {
+      "check": "three_exact_source_days_match_frozen",
+      "passed": true
+    },
+    {
+      "check": "quote_lengths_under25",
+      "passed": true,
+      "detail": {
+        "RS_PAST_NA2099": 17,
+        "RS_PAST_NA4614": 9,
+        "RS_PAST_NA4636": 12,
+        "RS_PAST_NA4667": 14
+      }
+    },
+    {
+      "check": "new_fact_original_locators_identity_geo_nonempty",
+      "passed": true
+    },
+    {
+      "check": "new_fact_raw_HTTP_fields_unknown",
+      "passed": true
+    },
+    {
+      "check": "current_records_not_accepted",
+      "passed": true
+    },
+    {
+      "check": "current_full_objects_exact",
+      "passed": true
+    },
+    {
+      "check": "current_native_authority_blank_names_nonempty",
+      "passed": true
+    },
+    {
+      "check": "current_guard_positive_exact_stored_name",
+      "passed": true
+    },
+    {
+      "check": "current_guard_rejects_missing_native_full_name",
+      "passed": true
+    },
+    {
+      "check": "current_guard_rejects_empty_native_full_name",
+      "passed": true
+    },
+    {
+      "check": "current_guard_rejects_wrong_native_full_name",
+      "passed": true
+    },
+    {
+      "check": "summary_counts_roles_scope_exact",
+      "passed": true
+    },
+    {
+      "check": "summary_no_bulk_crosscohort_screen",
+      "passed": true
+    },
+    {
+      "check": "summary_no_other_cohort_or_analysis_or_freeze",
+      "passed": true
+    },
+    {
+      "check": "changes_exact_four_facts",
+      "passed": true
+    },
+    {
+      "check": "changes_two_geo_flags",
+      "passed": true
+    },
+    {
+      "check": "master_CSV_4983",
+      "passed": true
+    },
+    {
+      "check": "CSV_column_prefix_preserves_v18_order",
+      "passed": true
+    },
+    {
+      "check": "CSV_six_v19_columns_added",
+      "passed": true
+    },
+    {
+      "check": "CSV_ID_order_matches_master",
+      "passed": true
+    },
+    {
+      "check": "CSV_prior_column_values_frozen_except_current_BP_geo_grade",
+      "passed": true
+    },
+    {
+      "check": "CSV_prior_version_columns_all_exact",
+      "passed": true
+    },
+    {
+      "check": "CSV_v19_markers_four",
+      "passed": true
+    },
+    {
+      "check": "CSV_v19_values_exact_accepted",
+      "passed": true
+    },
+    {
+      "check": "unknown_CSV_192_current_unknown_rows",
+      "passed": true
+    },
+    {
+      "check": "two_active_source_DOB_conflicts",
+      "passed": true
+    },
+    {
+      "check": "Argyris_inherited_exact_conflict_preserved",
+      "passed": true
+    },
+    {
+      "check": "Laver_new_header_conflict_precision_preserved",
+      "passed": true
+    },
+    {
+      "check": "conflict_records_full_objects_unchanged",
+      "passed": true
+    },
+    {
+      "check": "Laver_current_hold_not_adopted",
+      "passed": true
+    },
+    {
+      "check": "Laver_competing_support_no_verdict",
+      "passed": true
+    },
+    {
+      "check": "Argyris_dateless_bypass_prohibited",
+      "passed": true
+    },
+    {
+      "check": "exactly_two_main_replay_passes",
+      "passed": true
+    },
+    {
+      "check": "both_main_replays_exit0_match_all_five_pins",
+      "passed": true
+    },
+    {
+      "check": "final_all_five_output_pins_match",
+      "passed": true
+    },
+    {
+      "check": "gzip_fixed_mtime_and_no_filename",
+      "passed": true
+    },
+    {
+      "check": "no_raw_source_document_image_files",
+      "passed": true
+    },
+    {
+      "check": "no_source_cache_directory_in_distribution",
+      "passed": true
+    },
+    {
+      "check": "selfcontained_replay_root_relative",
+      "passed": true
+    },
+    {
+      "check": "main_no_network_client_imports",
+      "passed": true
+    },
+    {
+      "check": "prose_worker_queries_18",
+      "passed": true
+    },
+    {
+      "check": "prose_worker_nav_24",
+      "passed": true
+    },
+    {
+      "check": "prose_root_nav_8",
+      "passed": true
+    },
+    {
+      "check": "prose_all_nav_32",
+      "passed": true
+    },
+    {
+      "check": "prose_carrier_1",
+      "passed": true
+    },
+    {
+      "check": "prose_host_or_resolver_31",
+      "passed": true
+    },
+    {
+      "check": "prose_finds_5",
+      "passed": true
+    },
+    {
+      "check": "prose_failed_find_1",
+      "passed": true
+    },
+    {
+      "check": "prose_root_queries_finds_zero",
+      "passed": true
+    },
+    {
+      "check": "prose_four_S2",
+      "passed": true
+    },
+    {
+      "check": "prose_north_two_unknown_two",
+      "passed": true
+    },
+    {
+      "check": "prose_quotes_below25",
+      "passed": true
+    },
+    {
+      "check": "prose_three_exact_one_year",
+      "passed": true
+    },
+    {
+      "check": "prose_two_active_DOB_conflicts",
+      "passed": true
+    },
+    {
+      "check": "prose_no_prohibited_source_file_formats",
+      "passed": true
+    }
+  ],
+  "replay_runs": [
+    {
+      "pass": 1,
+      "returncode": 0,
+      "seconds": 21.386,
+      "all_five_output_hashes_match": true,
+      "output_hashes": {
+        "birthplace_rows.jsonl.gz": "8494975ecb3d7b238515ae21c725f83d6e7345b32e86bd691fd158297e69f6f4",
+        "birthplaces.csv": "b6e5682168a97b803e7a568ee23df08f8557910343cbb3f8bb326c2007d7325b",
+        "changes.json": "a0c1ff456176f20b1925ea20fee4eb4d2b37cf55c2b5575685fba4a506e3a376",
+        "remaining_unknown_window.csv": "168ae74b50e8222129cf766650da162b1c46979b34d68e1a74939cad2585de1a",
+        "summary.json": "90d1d64b37b26e0dd510efae49b7df3b4c27c1cd8ea2c73da4000c7bc959cce9"
+      }
+    },
+    {
+      "pass": 2,
+      "returncode": 0,
+      "seconds": 18.985,
+      "all_five_output_hashes_match": true,
+      "output_hashes": {
+        "birthplace_rows.jsonl.gz": "8494975ecb3d7b238515ae21c725f83d6e7345b32e86bd691fd158297e69f6f4",
+        "birthplaces.csv": "b6e5682168a97b803e7a568ee23df08f8557910343cbb3f8bb326c2007d7325b",
+        "changes.json": "a0c1ff456176f20b1925ea20fee4eb4d2b37cf55c2b5575685fba4a506e3a376",
+        "remaining_unknown_window.csv": "168ae74b50e8222129cf766650da162b1c46979b34d68e1a74939cad2585de1a",
+        "summary.json": "90d1d64b37b26e0dd510efae49b7df3b4c27c1cd8ea2c73da4000c7bc959cce9"
+      }
+    }
+  ],
+  "exact_main_replay_count": 2,
+  "final_output_hashes": {
+    "birthplace_rows.jsonl.gz": "8494975ecb3d7b238515ae21c725f83d6e7345b32e86bd691fd158297e69f6f4",
+    "birthplaces.csv": "b6e5682168a97b803e7a568ee23df08f8557910343cbb3f8bb326c2007d7325b",
+    "changes.json": "a0c1ff456176f20b1925ea20fee4eb4d2b37cf55c2b5575685fba4a506e3a376",
+    "remaining_unknown_window.csv": "168ae74b50e8222129cf766650da162b1c46979b34d68e1a74939cad2585de1a",
+    "summary.json": "90d1d64b37b26e0dd510efae49b7df3b4c27c1cd8ea2c73da4000c7bc959cce9"
+  },
+  "native_cohort_label": "UK_Royal_Society",
+  "cohort_label_assertion_correction_or_replay_reruns": false,
+  "baseline_and_delta": {
+    "v18_complete_objects_exact": true,
+    "records": 4983,
+    "unchanged_complete_objects": 4979,
+    "changed_complete_objects": 4,
+    "all_changed_within_current_BP_geo_whitelist": true,
+    "all_rollbacks_exact": true,
+    "native_DOB_identity_QID_country_coordinates_DOBgrades_history_prior_facts_exact": true
+  },
+  "source_and_prose_subreview": {
+    "schema": "UK_v19_readonly_prose_and_request_counts_subreview_v1",
+    "written_utc": "2026-11-05T14:37:42.780638+00:00",
+    "checks": {
+      "worker_queries_18": true,
+      "worker_nav_24": true,
+      "root_nav_8": true,
+      "all_nav_32": true,
+      "carrier_1": true,
+      "host_or_resolver_31": true,
+      "finds_5": true,
+      "failed_find_1": true,
+      "root_queries_finds_zero": true,
+      "four_S2": true,
+      "north_two_unknown_two": true,
+      "quotes_below25": true,
+      "three_exact_one_year": true,
+      "two_active_DOB_conflicts": true,
+      "no_prohibited_source_file_formats": true
+    },
+    "blocking_findings": [],
+    "nonblocking_findings": [],
+    "counts": {
+      "queries": 18,
+      "web_nav": 32,
+      "original_host_or_resolver": 31,
+      "original_work_carrier": 1,
+      "parsed_finds": 5,
+      "failed_find": 1,
+      "raw_GET": 0,
+      "screenshots": 0
+    },
+    "source_prose_assessment": [
+      "Morris S2 is explicitly an edited college publication with named family authors, not civil registration or peer review; no independence from university obituary asserted.",
+      "Pagel earlier worker original parsed PDF observation and later root503 are kept distinct; no independent parent verification/rawbyte identity or version-change claim.",
+      "Laver profile-header year conflict is distinguished from inherited Argyris exact-day born-clause conflict; neither date adjudicated or changed.",
+      "Current Lauritzen CV exactDOB is not birthplace; citizenship/residence/work not used; Finney failed original endpoints leave search-only lead unadopted.",
+      "Named family contributor credits are intentional provenance, while unrelated CV contact/family details are not redistributed.",
+      "Book/report periods, URL date components and access dates are not improperly promoted to publication dates."
+    ],
+    "limits": [
+      "No source refetch/rendering/raw HTTP inspection performed.",
+      "No main replay or full frozen-field/CSV comparison by this subreview; parent performs those.",
+      "Manifest and ZIP not yet created or verified.",
+      "Generated __pycache__ must be excluded by packager."
+    ]
+  },
+  "verification_limits": [
+    "No new source fetch, raw source bytes, visual PDF inspection or original source publication authentication performed by this final QA; source judgments use the separately disclosed source QA and worker/root observations.",
+    "Pagel original CUP parsed-body reading was earlier by the worker; the later root503 remains an access failure, not independent parent verification or a source-version change.",
+    "Morris family author provenance and original edited college-report genre are preserved; no peer-review or independent corroboration claim.",
+    "Manifest and ZIP were not yet created and are not verified here. Packager must exclude generated __pycache__ and all source caches/full documents."
+  ],
+  "edits": {
+    "official_output_replays_only": true,
+    "code_facts_inputs_prose_unchanged": true,
+    "added_this_QA_report_only": true,
+    "Git_operations": false
+  }
+}

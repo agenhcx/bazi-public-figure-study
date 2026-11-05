@@ -1,0 +1,204 @@
+{
+  "schema": "UK_v19_independent_source_adjudication_v1",
+  "completed_utc": "2026-11-05T14:25:08.504469+00:00",
+  "reviewer": "/root/v19_source_qa",
+  "decision": "four_admissible_S2_first_birthplaces_two_North_two_unknown_eight_holds",
+  "blocking_findings": [],
+  "review_materials": {
+    "worker_files": [
+      "v19_sources_a.json",
+      "v19_sources_b.json",
+      "v19_sources_c.json"
+    ],
+    "parent_records": [
+      "v19_root_followups.json",
+      "v19_root_intent.json",
+      "v19_plan.json"
+    ],
+    "native_baseline": "academy_repo/studies/royal_society_birthplace_completion_v18/outputs/birthplace_rows.jsonl.gz",
+    "target_queue": "v19_blank_queue.json",
+    "verification_limit": "QA reviewed structured original-source observations and parent request/read ledger, and directly checked the native table and complete queue objects. No source URL fetching, original rendering or raw HTTP bytes inspection by this QA. Root read Polge/Beverton/Morris originals; Pagel relies on earlier worker original parsed-PDF reading, followed by root503. A separate read-only helper independently rechecked native identity, quote and request counts without fetching sources."
+  },
+  "record_checks": [
+    {
+      "record_id": "RS_PAST_NA4667",
+      "native_authority_name": "Polge; Ernest John Christopher (1926 - 2006)",
+      "native_dob": "1926-08-16",
+      "native_full_authority_key_count_in_4983": 1,
+      "native_name_and_DOB_key_count_in_4983": 1,
+      "queue_complete_object_exact_v18": true,
+      "prior_blank_birthplace_and_unknown": true,
+      "source_quote_words_whitespace": 14,
+      "source_quote_under_25_words": true,
+      "source_birthdate": "1926-08-16",
+      "source_birthdate_precision": "day_in_birth_clause",
+      "source_date_compatibility": "exact native day observed"
+    },
+    {
+      "record_id": "RS_PAST_NA2099",
+      "native_authority_name": "Beverton; Raymond John Heaphy (1922 - 1995)",
+      "native_dob": "1922-08-29",
+      "native_full_authority_key_count_in_4983": 1,
+      "native_name_and_DOB_key_count_in_4983": 1,
+      "queue_complete_object_exact_v18": true,
+      "prior_blank_birthplace_and_unknown": true,
+      "source_quote_words_whitespace": 17,
+      "source_quote_under_25_words": true,
+      "source_birthdate": "1922-08-29",
+      "source_birthdate_precision": "day_in_birth_clause",
+      "source_date_compatibility": "exact native day observed"
+    },
+    {
+      "record_id": "RS_PAST_NA4614",
+      "native_authority_name": "Morris; John Gareth (1932 - 2023); microbiologist",
+      "native_dob": "1932-11-25",
+      "native_full_authority_key_count_in_4983": 1,
+      "native_name_and_DOB_key_count_in_4983": 1,
+      "queue_complete_object_exact_v18": true,
+      "prior_blank_birthplace_and_unknown": true,
+      "source_quote_words_whitespace": 9,
+      "source_quote_under_25_words": true,
+      "source_birthdate": "1932",
+      "source_birthdate_precision": "year_only",
+      "source_date_compatibility": "source year1932 only, compatible with native1932-11-25; month/day not confirmed"
+    },
+    {
+      "record_id": "RS_PAST_NA4636",
+      "native_authority_name": "Pagel; Bernard Ephraim Julius (1930 - 2007)",
+      "native_dob": "1930-01-04",
+      "native_full_authority_key_count_in_4983": 1,
+      "native_name_and_DOB_key_count_in_4983": 1,
+      "queue_complete_object_exact_v18": true,
+      "prior_blank_birthplace_and_unknown": true,
+      "source_quote_words_whitespace": 12,
+      "source_quote_under_25_words": true,
+      "source_birthdate": "1930-01-04",
+      "source_birthdate_precision": "day_in_birth_clause",
+      "source_date_compatibility": "exact native day observed"
+    }
+  ],
+  "source_reviews": [
+    {
+      "record_id": "RS_PAST_NA4667",
+      "decision": "accept_S2_North",
+      "reason": "Full Ernest John Christopher Polge, exact1926-08-16 and explicit born clause bind subject; Buckinghamshire, England and village Beaconsfield are directly birth-linked. Authored/referenced original university encyclopedia is defensible conservative S2, not civil registration, peer-review or S1-by-host.",
+      "source_author_requirement": "Retain displayed Bailey Renee and citation-order caveat; do not repair author identity."
+    },
+    {
+      "record_id": "RS_PAST_NA2099",
+      "decision": "accept_S2_geography_unknown",
+      "reason": "Original signed ODNB public extract explicitly supplies all native Raymond John Heaphy Beverton components, exact1922-08-29 and birth address. Same article links born-name Bareham and later Bartram/Beverton surname history; not an invented alias or native-name rewrite. Address/east London lacks sufficient explicit country/whole-region qualifier, so keep unknown. Paid full chapter was not accessed."
+    },
+    {
+      "record_id": "RS_PAST_NA4614",
+      "decision": "accept_conservative_S2_North_with_genre_and_precision_limits",
+      "reason": "Original edited Trinity College Report has directly observed named contributors Martha Gallop, daughter, and Paul Morris, son. Full (John) Gareth Morris components, compatible1932/lifespan and distinctive career bind subject. West Glamorgan directly qualifies birth town. S2 is a disclosed judgment based on edited institutional publication and named biographical contributors, not hosting/family status alone.",
+      "limits": [
+        "Source year1932 only; no month/day confirmation.",
+        "Do not claim peer review, signed scholarly memoir, civil register or S1.",
+        "College report and Aberystwyth may share family information; no informational independence assumed.",
+        "Retain literal West Glamorgan without historic/county correction or personal country/entity/point assignment.",
+        "Report period2023–24 and URL2025/03 are not a verified publication date.",
+        "Use PDF page66/index65; printed page not inferred."
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA4636",
+      "decision": "accept_conservative_S2_geography_unknown_with_access_limit",
+      "reason": "Earlier worker original CUP frontmatter reading supplies full Bernard Ephraim Julius Pagel, exact1930-01-04, compatible lifespan/death and explicit born Berlin clause. An edited academic-book author biography supports conservative S2 with uncredited note author. Book subject/author/copyright holder is not assumed narrator. Berlin alone leaves geography unknown.",
+      "access_limit": "Root reopening503 stopped without retry. Preserve earlier parsed-body observation, not raw-byte identity, proof of revision, HTTP200 or independent parent body verification."
+    }
+  ],
+  "geographic_review": {
+    "proposed_North": [
+      "RS_PAST_NA4667",
+      "RS_PAST_NA4614"
+    ],
+    "proposed_unknown": [
+      "RS_PAST_NA2099",
+      "RS_PAST_NA4636"
+    ],
+    "basis": "Only explicit birth-linked England/Buckinghamshire and West Glamorgan support North; no familiar-city/nationality/family/education/work/death/footer/map-default inference. No country/QID/place entity/coordinates assigned."
+  },
+  "hold_review": {
+    "fixed_individual_records": 12,
+    "accepted": 4,
+    "held": 8,
+    "partition_disjoint_complete": true,
+    "held_record_ids": [
+      "RS_CURRENT_11792",
+      "RS_CURRENT_37377",
+      "RS_PAST_NA3912",
+      "RS_PAST_NA3979",
+      "RS_PAST_NA4124",
+      "RS_PAST_NA4485",
+      "RS_PAST_NA4601",
+      "RS_PAST_NA4627"
+    ],
+    "Laver": {
+      "record_id": "RS_PAST_NA4485",
+      "decision": "retain_profile_header_birthyear_conflict_hold",
+      "native_dob": "1929-06-03",
+      "contrary_profile_header_year": "1925",
+      "compatible_observations": "ANU body age79 in2008 and separate Webster obituary header1929–2008 support compatible native-year context, not exact native day or conclusive proof of a header typo.",
+      "specificity": "Profile-lifespan-header year conflict, not conflicting exact-day born sentence. The Birth-field find failed502; no structured Birth footer was read.",
+      "restriction": "No birthplace/hemisphere/date/tier/eligibility adoption or repair, majority vote or silent date adjudication."
+    },
+    "inherited_Argyris": {
+      "record_id": "RS_PAST_NA4005",
+      "restriction": "Original1913-08-19 versus frozen1916-08-19 conflict stays active outside this12-target set; no v19 or dateless source may silently clear/bypass it."
+    },
+    "Finney": {
+      "record_id": "RS_PAST_NA4124",
+      "reason": "IMS HTML502, parent original BulletinPDF502 and new original journal DOI inaccessible. Search projection full name/date/WarringtonUK is not an acquired original born clause; preserve hold and no literature-absence claim."
+    },
+    "Lauritzen": {
+      "record_id": "RS_CURRENT_11792",
+      "reason": "New AE CV directly states native1947-04-22 and observed Steffen L. Lauritzen but no birthplace. Danish citizenship, Denmark residence, Aalborg work and Oxford business address do not supply birth country. Do not expand extra initialL or retier native DOB."
+    },
+    "Chen": {
+      "record_id": "RS_CURRENT_37377",
+      "reason": "Original full English name/exactDOB and NTU/Fuzhou/Muenster career supply identity but no birthplace. No nationality/hometown/education/employer or ORCID transfer."
+    },
+    "other_holds": "Jarrett, Mitchison, Tooze and Northcote provide identity/career or unavailable originals but no admitted available original birthplace body. Search-only places are not adopted."
+  },
+  "current_record_requirements": {
+    "both_current_records_remain_unaccepted": true,
+    "native_authority_fields_remain_blank": true,
+    "future_current_fact_gate": "Any accepted v19 current record must supply native_full_name equal to actual nonempty stored name and authority_name equal to actual blank string. Runtime guard testing is separate replay QA, not source QA performed here."
+  },
+  "request_accounting": {
+    "worker_discovery_queries": 18,
+    "worker_web_navigation_attempts": 24,
+    "worker_original_host_navigation_attempts": 23,
+    "worker_external_original_work_carrier_attempts": 1,
+    "root_original_navigation_attempts": 8,
+    "root_queries": 0,
+    "total_discovery_queries": 18,
+    "total_web_navigation_attempts": 32,
+    "total_original_host_navigation_attempts": 31,
+    "total_external_original_work_carrier_attempts": 1,
+    "parsed_find_operations": 5,
+    "failed_parsed_find_operations": 1,
+    "raw_HTTP_or_PDF_GETs": 0,
+    "cached_screenshot_attempts": 0,
+    "note": "Finds are one failed A plus four B. Navigation counts include unsuccessful parent FinneyPDF/DOI and Pagel reopen plus CV wrapper/attachment; not32 successfully read bodies."
+  },
+  "preservation_and_distribution_requirements": [
+    "New source grades apply birthplace support only; native DOB tiers and DOB-based S2/S2+S3 group membership stay frozen.",
+    "Native DOB/calendar/identity/eligibility/QID/country/coordinates, old selected evidence/hashes/official statuses and prior facts stay unchanged; allowed current birthplace/geography fields need complete rollback snapshots.",
+    "Quote word counts14/17/9/12 each below25; do not expand cumulative different quotation from one work.",
+    "No full source HTML/PDF/page images/parsed caches or irrelevant CV contact/family details distributed.",
+    "Tool-parsed text is not raw HTTP. Unknown raw statuses/request times/hashes null; root503/access failures do not imply source change or negate earlier source reading.",
+    "No new bulk/crosscohort screen, statistical deduplication, BaZi/outcome analysis or final cohort freeze."
+  ],
+  "parent_action_items": [
+    "Adopt four S2 facts with source genre, actual precision and access caveats; North only for Polge/Morris.",
+    "Keep Laver profile-header year conflict distinct from Argyris born-sentence DOB conflict, neither date adjudicated.",
+    "Supplement historical Finney/Lauritzen holds with parent followups without overwriting worker observations.",
+    "Disclose Pagel worker-body reading and later root503, without independent parent/raw-byte verification claim."
+  ],
+  "no_new_network_requests": true,
+  "no_master_or_Git_mutation": true,
+  "main_replay_or_frozen_field_diff_verified_by_this_source_QA": false
+}

@@ -1,0 +1,53 @@
+{
+  "schema": "UK_v19_parent_adjudication_v1",
+  "written_utc": "2026-11-05T14:24:38.066567+00:00",
+  "timing": "Twelve targets/new-body strategy fixed before collection; parent followups planned after worker leads and before respective calls. Consolidated decisions after observations/before first main replay; no source-blind preregistration.",
+  "frozen_blank_window_pool": 145,
+  "fixed_individual_followups": 12,
+  "actual_reviewed_records": 12,
+  "new_bulk_or_crosscohort_screen": false,
+  "accepted_record_ids": [
+    "RS_PAST_NA2099",
+    "RS_PAST_NA4614",
+    "RS_PAST_NA4636",
+    "RS_PAST_NA4667"
+  ],
+  "held_record_ids": [
+    "RS_CURRENT_11792",
+    "RS_CURRENT_37377",
+    "RS_PAST_NA3912",
+    "RS_PAST_NA3979",
+    "RS_PAST_NA4124",
+    "RS_PAST_NA4485",
+    "RS_PAST_NA4601",
+    "RS_PAST_NA4627"
+  ],
+  "new_BP_grades": {
+    "S2": 4
+  },
+  "new_source_date_precision": {
+    "exact_day": 3,
+    "year_only": 1
+  },
+  "grade_role": "Newpersonbirthplace support only. Original DOB grades/DOB-basedS2vsS2+S3panels remain frozen.",
+  "geography": "North2fromPolgeexplicitEngland/Buckinghamshire andMorrisexplicitWestGlamorgan. BevertonEastLondon/PagelBerlin remainunknown. No personalcountry/entity/QID/coordinates or familiarcity/family/work inference.",
+  "Morris_genre_decision": "S2 original edited college report with named daughter/son authors; provenance is family, not scholarlypeerreview/civilrecord. No independence from university obituary assumed.",
+  "Pagel_access_limit": "Source worker acquired original CUP parsedPDF birth clause and metadata; parent later503stopped. Earlier observation retained, not converted to rawbytes or independent parent/source-version verification.",
+  "Beverton_identity": "Explicit source birth-name/history does not alter frozen native Beverton identity.",
+  "current_record_guard": "No current-record facts adopted. New script requires nonempty stored name to match fact.native_full_name if authority_name blank; both current complete objects remain unchanged.",
+  "DOB_conflicts": "NewLaver profile-header birthyear1925 versusnative1929 held; bodyage and matchingWebster1929heading retained without verdict/repair. PriorArgyris1913versus1916 activehold unchanged. See active_source_DOB_conflicts.json.",
+  "parent_adaptive_results": "FinneyPDF502/journalDOIinaccessible/no bornbody; Lauritzen newAE CV attachment read exactDOBbutno birthplace. No failedendpoint retry or birthplace from citizenship/residence/office.",
+  "counts": {
+    "discovery_queries": 18,
+    "web_navigation_attempts": 32,
+    "original_source_host_or_resolver_navigation_attempts": 31,
+    "external_original_work_carrier_attempts": 1,
+    "parsed_text_find_operations": 5,
+    "failed_parsed_find_operations": 1,
+    "raw_GETs": 0,
+    "screenshots": 0
+  },
+  "retrieval_caveat": "All body observations tool-parsed originals or tool-reported errors; actual rawHTTP status/time/bytehash unknownnull. Original sourcePDF/HTML/images/wholeCV/contacts/familydata/cache not distributed. <=25Englishquotedwords/originalwork.",
+  "frozen": "DOB/calendar/identity/eligibility/QID/DOBtiers/country/coords/oldselectedevidence/hash/officialfieldstatus/allv15-v18facts; only4currentBP/geofields+v19evidence withcomplete prior/absent rollback; alluntargetedcompleteobjects identical.",
+  "no_other_cohort_mutation_statisticaldedup_BaZi_outcomes_or_finalfreeze": true
+}

@@ -1,0 +1,351 @@
+{
+  "schema": "UK_v19_original_birthplace_sources_a_v1",
+  "worker": "/root/v19_sources_a",
+  "written_utc": "2026-11-05T14:09:20.779537+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA3979",
+    "RS_PAST_NA4485",
+    "RS_PAST_NA4601",
+    "RS_PAST_NA4667"
+  ],
+  "intent_file": "v19_a_intent.json",
+  "counts": {
+    "discovery_queries": 6,
+    "original_navigation_attempts": 8,
+    "parsed_text_find_operations": 1,
+    "failed_parsed_find_operations": 1,
+    "raw_HTTP_or_PDF_byte_requests": 0,
+    "body_verified_unconflicted_birthplace_candidates": 1,
+    "holds": 3,
+    "original_profile_header_birthyear_conflicts": 1
+  },
+  "candidates": [
+    {
+      "record_id": "RS_PAST_NA4667",
+      "native": {
+        "record_id": "RS_PAST_NA4667",
+        "authority_name": "Polge; Ernest John Christopher (1926 - 2006)",
+        "native_dob": "1926-08-16",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "full_target_object_canonical_sha256": "d05a66bd7672653990823bdf0df027d7ff1e646c3f9289d84fc8e72c0d126d54"
+      },
+      "status": "candidate_original_explicit_birthplace_parent_review_required",
+      "raw_birthplace": "Buckinghamshire, England in the village of Beaconsfield",
+      "source_url": "https://embryo.asu.edu/pages/ernest-john-christopher-polge-1926-2006",
+      "source_title": "Ernest John Christopher Polge (1926-2006)",
+      "source_author": "Bailey Renee",
+      "source_author_note": "Original By line says Bailey Renee; citation formats Renee, Bailey. Retain displayed authorship, do not infer alternate personal identity.",
+      "source_kind": "original_authored_university_encyclopedia_biographical_article",
+      "source_grade_proposal": "S2",
+      "source_grade_role": "new_person_birthplace_support_only",
+      "source_grade_basis": "Authored original university historical-science encyclopedia narrative with source references and institutional publisher, conservative S2; no civil registration or journal peer-review/S1 claim by host alone.",
+      "source_quote": "was born on 16 August 1926 in Buckinghamshire, England in the village of Beaconsfield",
+      "source_quote_word_count": 14,
+      "source_locator": "Original ASU Embryo Project Encyclopedia title28/36 and full name37; By30; published32; born clause40; death76; source list77–90; citation/publisher100–104.",
+      "source_webrefs": [
+        "turn4172758view0"
+      ],
+      "source_birthdate": "1926-08-16",
+      "source_birthdate_precision": "day_in_birth_clause",
+      "source_DOB_matches_native": true,
+      "source_death_date": "2006-08-17",
+      "publication_date": "2018-01-30",
+      "last_modified_observed": "2023-09-11",
+      "source_identifier": "https://hdl.handle.net/10776/13049",
+      "source_publisher": "Arizona State University, School of Life Sciences, Center for Biology and Society, Embryo Project Encyclopedia",
+      "observed_source_full_name": "Ernest John Christopher Polge",
+      "identity_review": [
+        "All native full-name components explicitly present in original heading/body; Chris is an observed nickname, not used to expand missing native names.",
+        "Exact16August1926 matches frozen native birthday;1926–2006 lifespan and17August2006 death agree source context.",
+        "Reproductive cryobiology, glycerol experiments with Audrey Smith/Parkes, Cambridge Animal Research Station and founding Animal Biotechnology Cambridge provide distinctive career anchors."
+      ],
+      "identity_conflicts_observed": [],
+      "geography_assignment_performed": false,
+      "geographic_basis_for_parent": "Born clause explicitly includes Buckinghamshire, England and village Beaconsfield together. Parent may assess hemisphere using explicit England/region; no country/entity/point assigned by worker.",
+      "caveats": [
+        "Original narrative cites Hunter2008 memoir and other works; those source bodies were not separately read, so no independent corroboration claim.",
+        "Full article is an authored university encyclopedia entry, not a civil birth record or a claimed peer-reviewed memoir.",
+        "Raw place wording/order retained; do not treat parent/education/work locations as birth context."
+      ],
+      "retrieval_representation": "web-tool parsed original ASU HTML body, not raw HTTP bytes",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    }
+  ],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA3979",
+      "native": {
+        "record_id": "RS_PAST_NA3979",
+        "authority_name": "Jarrett; William Fleming Hoggan (1928 - 2011)",
+        "native_dob": "1928-01-02",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "full_target_object_canonical_sha256": "00feaff3b5133178b90f78d2812e4c66a70c3fdf96f893cd3fc5661515cfe91d"
+      },
+      "status": "hold_no_original_birthplace_body",
+      "source_url": "https://universitystory.gla.ac.uk/people/WH2594",
+      "source_title": "Bill Jarrett, University Story",
+      "source_author": null,
+      "source_kind": "original_institutional_historical_person_profile",
+      "source_locator": "turn4172758view1 lines11–14 full name/year1928/career/death27August2011.",
+      "source_webrefs": [
+        "turn4172758view1"
+      ],
+      "source_birthdate": "1928",
+      "source_birthdate_precision": "year_only",
+      "source_DOB_compatibility": "Observed1928 compatible with native1928-01-02, not an independent month/day confirmation.",
+      "reason": "Original Glasgow body provides full native components, compatible birthyear and distinctive veterinary pathology career, but no explicit subject-born/place clause. Glasgow education, employment or footer not birthplace. Search-only wiki birthplace not adopted.",
+      "unadopted_discovery_birthplace_lead": "Glasgow, Scotland from Wikipedia/mirror discovery only; not opened or used as original evidence.",
+      "source_grade_proposal": null,
+      "raw_birthplace_candidate": null,
+      "no_master_change": true
+    },
+    {
+      "record_id": "RS_PAST_NA4485",
+      "native": {
+        "record_id": "RS_PAST_NA4485",
+        "authority_name": "Laver; William Graeme (1929 - 2008)",
+        "native_dob": "1929-06-03",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "full_target_object_canonical_sha256": "4deb0ea52a00380e5dc341de9cf9a63a4da3375a49609d40cfe8357b593d3272"
+      },
+      "status": "hold_conflicting_original_profile_header_birthyear",
+      "hold_type": "original_profile_header_birthyear_conflict",
+      "source_url": "https://oa.anu.edu.au/obituary/laver-william-graeme-graeme-18708",
+      "source_title": "William Graeme (Graeme) Laver (1925–2008)",
+      "source_author": "Harriet Veitch",
+      "source_kind": "original_ANU_hosted_authored_newspaper_obituary_reprint",
+      "source_original_publication": "Sydney Morning Herald; date not observed in opened page window",
+      "source_locator": "turn3182247view1 heading43, author45/publication47; subject-born/bodyage79 line53.",
+      "source_webrefs": [
+        "turn3182247view1"
+      ],
+      "source_birthdate": "1925",
+      "source_birthdate_precision": "birthyear_in_profile_lifespan_header_only",
+      "native_birthdate_preserved": "1929-06-03",
+      "source_quote": "was born in Diamond Creek, Victoria",
+      "source_quote_word_count": 6,
+      "unadopted_birthplace_lead": "Diamond Creek, Victoria, described as a small town now outer suburb of Melbourne",
+      "reason": "Original ANU-hosted profile heading explicitly1925–2008 conflicts with native1929. Same full-name/influenza/ANU/Webster career strongly binds subject, while body says diedaged79 in2008, internally compatible with1928/1929 rather than1925. Separate original Webster obituary header1929–2008 agrees native birthyear but supplies no exact own day. Do not choose or repair a date, dismiss the contrary header as a proven typo, or silently adopt birthplace under the date-conflict gate. Parent adjudication required; this is specifically a profile-header birthyear conflict, not a conflicting exact-day born sentence.",
+      "body_age_observation": {
+        "age_at_death": 79,
+        "deathyear_context": 2008,
+        "no_birthdate_reconstruction": true
+      },
+      "supporting_original_compatible_source": {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4954463/",
+        "web_ref": "turn3182247view0",
+        "title": "William Graeme Laver PhD, FRS (1929–2008)",
+        "author": "Robert G Webster",
+        "source_kind": "original_signed_journal_obituary_archived_at_PMC",
+        "doi": "10.1111/j.1750-2659.2008.00076.x",
+        "publication_date": "2009-01-19",
+        "issue_date": "2008-09",
+        "source_quote": "Graeme was born in Victoria",
+        "source_quote_word_count": 5,
+        "birthplace_lead": "Victoria",
+        "source_birthdate": "1929",
+        "source_birthdate_precision": "year_in_subject_header; born_clause_undated",
+        "locator": "Heading35,author37–38; online date/DOI34, issue63; explicit born clause72 and collaborator1959 at74.",
+        "role": "Original subject identity/compatible year and a birthplace observation; not independent proof that ANU1925 header is wrong.",
+        "exact_native_day_confirmed": false
+      },
+      "failed_parsed_find": {
+        "ref": "turn3182247view1",
+        "pattern": "Birth",
+        "result_ref": "turn4172758view3",
+        "outcome": "Tool-reported502BadGateway during find; stopped no retry. Existing earlier parsed-body observation retained; no claim footer Birth field read.",
+        "tool_reported_HTTP_status": 502,
+        "raw_HTTP_status": null
+      },
+      "source_grade_proposal": null,
+      "no_birthplace_or_geography_or_DOB_adopted": true,
+      "no_master_change": true
+    },
+    {
+      "record_id": "RS_PAST_NA4601",
+      "native": {
+        "record_id": "RS_PAST_NA4601",
+        "authority_name": "Mitchison; Nicholas Avrion (1928 - 2022); zoologist and immunologist",
+        "native_dob": "1928-05-05",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "full_target_object_canonical_sha256": "40e8ed1a8a0bd9db694d2a92f19d66892acd0ff61186de4a7d36d37dcef1f310"
+      },
+      "status": "hold_no_available_original_birthplace_body",
+      "source_urls": [
+        "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/eji.202350565",
+        "https://www.immunology.org/news/professor-avrion-mitchison-1928-2022",
+        "https://onlinelibrary.wiley.com/doi/full/10.1002/eji.202350565",
+        "https://onlinelibrary.wiley.com/doi/full/10.1111/sji.13259"
+      ],
+      "source_webrefs": [
+        "turn3182247view2",
+        "turn3182247view3",
+        "turn4172758view2",
+        "turn7241403view0"
+      ],
+      "source_author": null,
+      "source_grade_proposal": null,
+      "raw_birthplace_candidate": null,
+      "reason": "Original EJI PDF route redirects to abs page containing authors/date/references only and no available born/place body; its distinct full-text route inaccessible. Distinct original Scandinavian Journal of Immunology full route returned403, stopped. Original BSI memorial body supplies full Nicholas Avrion and scientific career/lifespan but no birthplace. Search-only Hammersmith,London and exact DOB snippets are not adopted.",
+      "original_sources_observed": [
+        {
+          "url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/eji.202350565",
+          "resolved_url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/eji.202350565",
+          "title": "In memoriam Av Mitchison (1928–2022)",
+          "authors": [
+            "Andreas Radbruch",
+            "Fritz Melchers"
+          ],
+          "publication_date": "2023-07-13",
+          "doi": "10.1002/eji.202350565",
+          "locator": "turn3182247view2 title18,authors20/38,date70, noabstract99, references102 onward.",
+          "body_birthplace_observed": false
+        },
+        {
+          "url": "https://www.immunology.org/news/professor-avrion-mitchison-1928-2022",
+          "title": "Professor Avrion Mitchison1928–2022",
+          "publication_date": "2023-03-22",
+          "author_note": "Institutional compiled memorial, foreword credited Arne Akbar; not asserted whole-article author.",
+          "locator": "turn3182247view3 title5/date7/fullname12/foreword24.",
+          "body_birthplace_observed": false
+        }
+      ],
+      "no_master_change": true
+    }
+  ],
+  "query_ledger": [
+    {
+      "engine": "system2",
+      "count": 4,
+      "queries": [
+        "William Fleming Hoggan Jarrett born Glasgow obituary",
+        "William Graeme Laver born biography ANU",
+        "Nicholas Avrion Mitchison born obituary",
+        "Ernest John Christopher Polge born obituary Cambridge"
+      ],
+      "web_ref": "turn2111329search",
+      "preplanned": true,
+      "exact_request_utc": null
+    },
+    {
+      "engine": "system1",
+      "count": 2,
+      "queries": [
+        "\"William Fleming Hoggan Jarrett\" born site:gla.ac.uk",
+        "\"Ernest John Christopher Polge\" \"born\" embryo"
+      ],
+      "web_ref": "turn3182247search",
+      "preplanned": true,
+      "exact_request_utc": null
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4954463/",
+      "web_ref": "turn3182247view0",
+      "outcome": "Original signed Webster journal obituary archived by PMC body available; full name/header1929–2008 and explicit Victoria born clause.",
+      "tool_reported_HTTP_status": null,
+      "raw_HTTP_status": null,
+      "exact_request_utc": null,
+      "raw_bytes_sha256": null,
+      "raw_bytes_saved": false
+    },
+    {
+      "url": "https://oa.anu.edu.au/obituary/laver-william-graeme-graeme-18708",
+      "web_ref": "turn3182247view1",
+      "outcome": "Original ANU-hosted Harriet Veitch/Sydney Morning Herald obituary reprint available; heading1925–2008 conflicts native1929 while body deathage79 is compatible1929; explicit DiamondCreekVictoria born clause.",
+      "tool_reported_HTTP_status": null,
+      "raw_HTTP_status": null,
+      "exact_request_utc": null,
+      "raw_bytes_sha256": null,
+      "raw_bytes_saved": false
+    },
+    {
+      "url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/eji.202350565",
+      "web_ref": "turn3182247view2",
+      "outcome": "Requested PDF route redirected to original abs page; author/date/references only, no original born/place body exposed.",
+      "tool_reported_HTTP_status": null,
+      "raw_HTTP_status": null,
+      "exact_request_utc": null,
+      "raw_bytes_sha256": null,
+      "raw_bytes_saved": false
+    },
+    {
+      "url": "https://www.immunology.org/news/professor-avrion-mitchison-1928-2022",
+      "web_ref": "turn3182247view3",
+      "outcome": "Original scientific-society commemorative body read, full Nicholas Avrion and career/lifespan, no subject-born/place clause.",
+      "tool_reported_HTTP_status": null,
+      "raw_HTTP_status": null,
+      "exact_request_utc": null,
+      "raw_bytes_sha256": null,
+      "raw_bytes_saved": false
+    },
+    {
+      "url": "https://embryo.asu.edu/pages/ernest-john-christopher-polge-1926-2006",
+      "web_ref": "turn4172758view0",
+      "outcome": "Original authored university encyclopedia article body, full native name/exactDOB/explicit qualified birthplace.",
+      "tool_reported_HTTP_status": null,
+      "raw_HTTP_status": null,
+      "exact_request_utc": null,
+      "raw_bytes_sha256": null,
+      "raw_bytes_saved": false
+    },
+    {
+      "url": "https://universitystory.gla.ac.uk/people/WH2594",
+      "web_ref": "turn4172758view1",
+      "outcome": "Original Glasgow institutional narrative full native name/birthyear/career/deathday, no birthplace.",
+      "tool_reported_HTTP_status": null,
+      "raw_HTTP_status": null,
+      "exact_request_utc": null,
+      "raw_bytes_sha256": null,
+      "raw_bytes_saved": false
+    },
+    {
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/eji.202350565",
+      "web_ref": "turn4172758view2",
+      "outcome": "Distinct full-body route inaccessible via tool; no body and no retry.",
+      "tool_reported_HTTP_status": null,
+      "raw_HTTP_status": null,
+      "exact_request_utc": null,
+      "raw_bytes_sha256": null,
+      "raw_bytes_saved": false
+    },
+    {
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/sji.13259",
+      "web_ref": "turn7241403view0",
+      "outcome": "Distinct original Scandinavian Journal of Immunology full route tool-reported403; stopped no retry.",
+      "tool_reported_HTTP_status": 403,
+      "raw_HTTP_status": null,
+      "exact_request_utc": null,
+      "raw_bytes_sha256": null,
+      "raw_bytes_saved": false
+    }
+  ],
+  "parsed_text_find_ledger": [
+    {
+      "ref": "turn3182247view1",
+      "pattern": "Birth",
+      "result_ref": "turn4172758view3",
+      "outcome": "Tool-reported502BadGateway during find; stopped no retry. Existing earlier parsed-body observation retained; no claim footer Birth field read.",
+      "tool_reported_HTTP_status": 502,
+      "raw_HTTP_status": null
+    }
+  ],
+  "limits": [
+    "No master, original DOB/calendar/identity/eligibility/source-grade, country/entity/coordinates/QID or hemisphere assignments or Git mutations.",
+    "All adopted-candidate source full names and stated dates actually observed; no aliases or initials expanded from native.",
+    "Laver1925 header versus native1929/compatible Webster1929 and ANUage79 is retained as an unresolved original-profile-header conflict, not a corrected typo or final correct-date verdict.",
+    "All6queries/8originalnavigations exhausted. No old roster/index sweep repeated; unvisited individual original bodies used. No retry after403/502/inaccessible tool errors.",
+    "No full original sourceHTML/PDF/pageimages or signed-URL credentials redistributed. Cloudfront signed search-only Polge lead not opened or stored in report.",
+    "Tool-parsed text is not rawHTTP response bytes; actual rawstatus/exacttimes/hashes unknown null. Tool-reported403/502 separately identified.",
+    "No source-author/publication/civil-record/peer-review status inferred solely from institutional hosting.",
+    "Polge article sources not independently read/counted; no native birthday retiering or original-DOB repair.",
+    "No corpus or literature exhaustion claim from bounded original-source attempts."
+  ]
+}
