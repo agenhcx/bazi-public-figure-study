@@ -1,0 +1,45 @@
+{
+  "written_utc": "2026-11-05T23:29:20.164565+00:00",
+  "baseline_commit": "4f15eecc06904eee10005d1c2a09eaea9771e834",
+  "baseline_canonical_sha256": "bbe9e22d00c4bfb3fb7a390df6a18a349e0abe64ba2986cd5075650f62ae9f2b",
+  "fixed_blank_window_pool": 137,
+  "individual_followup_groups": {
+    "a": [
+      "RS_PAST_NA4651",
+      "RS_PAST_NA4585",
+      "RS_PAST_NA4834",
+      "RS_PAST_NA4076"
+    ],
+    "b": [
+      "RS_PAST_NA8672",
+      "RS_PAST_NA8700",
+      "RS_PAST_NA5885",
+      "RS_PAST_NA9858"
+    ]
+  },
+  "geography_pilot_ids": [],
+  "source_strategy": "Eight not-yet-individually-reviewed targets; new original university/college/scientific-society/signed expert biography sources, no bulk index reruns.",
+  "budgets": {
+    "per_group_queries": 6,
+    "per_group_navigation_attempts": 8
+  },
+  "admission": "Full native name components, actually stated compatible DOB precision, lifespan and distinctive professional anchors; explicit subject birth relation only. Existing v20 death-endpoint-only exception applies only if its exactDOB/identity/eligibility gates all verified and discrepancy separately recorded, with no DOB conflict exception.",
+  "geography": "Birth-linked country/whole-region may resolve hemisphere; city-only may remain unknown. No nationality/family/education/work/death/footer/map inference.",
+  "frozen": [
+    "DOB",
+    "calendar",
+    "identity",
+    "eligibility",
+    "QID",
+    "DOBtiers",
+    "old_evidence",
+    "country",
+    "coords",
+    "all_prior_facts",
+    "untargeted_complete_objects"
+  ],
+  "active_DOB_conflicts": "Argyris and Laver remain active; no dateless bypass.",
+  "quote_policy": "<=25 distinct English words per original work across distributed excerpts; no full source/projection caches.",
+  "retrieval": "Record intent before adaptive queries/opens. Stop failed403/429/timeouts; no retry/bypass/rawGET. Parsed text not raw bytes: unknown rawstatus/time/hash null.",
+  "no_analysis_or_final_freeze": true
+}

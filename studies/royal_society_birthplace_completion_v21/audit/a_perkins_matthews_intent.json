@@ -1,0 +1,62 @@
+{
+  "written_utc": "2026-11-05T23:29:56.175757+00:00",
+  "scope": [
+    "RS_PAST_NA4651",
+    "RS_PAST_NA4585"
+  ],
+  "budget": {
+    "discovery_queries": 3,
+    "web_navigations": 4
+  },
+  "planned_queries": [
+    {
+      "q": "\"Donald Hill Perkins\" obituary born Oxford",
+      "target": "RS_PAST_NA4651"
+    },
+    {
+      "q": "\"Peter Bryan Conrad Matthews\" born obituary",
+      "target": "RS_PAST_NA4585"
+    }
+  ],
+  "adaptive_intents": [
+    {
+      "written_utc": "2026-11-05T23:30:09.242516+00:00",
+      "planned_opens": [
+        {
+          "url": "https://www.theguardian.com/science/2022/nov/22/donald-perkins-obituary",
+          "target": "RS_PAST_NA4651",
+          "purpose": "Read original signed FrankClose obituary birthclause, fullidentity, exactDOB."
+        },
+        {
+          "url": "https://www.dpag.ox.ac.uk/news/peter-b-c-matthews-frs-obituary",
+          "target": "RS_PAST_NA4585",
+          "purpose": "Read original Oxford institutional biography explicitCambridgebirth/fullname/year."
+        },
+        {
+          "url": "https://www.physoc.org/magazine-articles/obituary-peter-bryan-conrad-matthews-1928-2020/",
+          "target": "RS_PAST_NA4585",
+          "purpose": "Read original signed society obituary exactDOB/fullname and career identity; birthdateprecision corroboration only if no birthplace."
+        }
+      ]
+    },
+    {
+      "written_utc": "2026-11-05T23:30:21.823475+00:00",
+      "planned_open": {
+        "url": "https://www.medsci.ox.ac.uk/files/alumni/oxford-medicine-june-2020.pdf",
+        "target": "RS_PAST_NA4585",
+        "purpose": "Distinct original OxfordMedicine newsletter after DPAG403stopped. Not sameendpointretry; discovered separate publication with explicit birthplace/fullname/1928\u20132020 header."
+      },
+      "planned_cached_find": {
+        "ref": "turn7608655view2",
+        "pattern": "Peter Matthews was born",
+        "purpose": "Locate acquired original Physoc body exactDOB."
+      }
+    },
+    {
+      "written_utc": "2026-11-05T23:30:32.942745+00:00",
+      "planned_query": "\"Peter Bryan Conrad Matthews\" \"born\" Cambridge -site:dpag.ox.ac.uk -site:medsci.ox.ac.uk",
+      "purpose": "One remaining allocated query for genuinely distinct original biography lead after both Oxfordroutes403stopped. No newnavbudget; parentonlylead if available."
+    }
+  ],
+  "limits": "No rawGET/retry/failedendpointvariants; originalbody plus fullnativeidentity/compatibleDOB. Shortquotes<=25words/work. No native/main/Git changes."
+}

@@ -1,0 +1,54 @@
+{
+  "written_utc": "2026-11-05T23:32:38.216759+00:00",
+  "planned_source_opens": [
+    {
+      "record_id": "RS_PAST_NA4651",
+      "url": "https://www.theguardian.com/science/2022/nov/22/donald-perkins-obituary",
+      "purpose": "Verifybornplace/fullname/exactdate and acquiredauthorprofessionalcontext."
+    },
+    {
+      "record_id": "RS_PAST_NA5885",
+      "url": "https://www.theguardian.com/science/2024/aug/30/george-pickett-obituary",
+      "purpose": "Verifybornplace/fullname/exactdate, conservativeS3journalistgenre."
+    },
+    {
+      "record_id": "RS_PAST_NA8700",
+      "url": "https://bir.org.uk/media-centre/news/2017/may/professor-peter-wells-1936-2017.aspx",
+      "purpose": "VerifyheldexplicitMay19versusnativeJun19 birth-monthconflict, notadoptBP/geo."
+    }
+  ],
+  "counts_budget": {
+    "root_source_opens_or_context_max": 8,
+    "root_discovery_queries": 1
+  },
+  "retrieval": "Parsedbody/contextonly. No failedroute retry/rawGET. Unknownrawstatus/time/hashnull.",
+  "adaptive_source_opens": [
+    {
+      "written_utc": "2026-11-05T23:32:49.131007+00:00",
+      "ref": "turn2850554view0",
+      "link_id": 35,
+      "purpose": "Inspect observed byline-linked original authorbio toverifyexpertise, no assumedS2basedonfamiliarname."
+    },
+    {
+      "written_utc": "2026-11-05T23:33:15.570881+00:00",
+      "query": "site:physics.ox.ac.uk Frank Close emeritus professor particle physics",
+      "purpose": "Check primaryinstitutional authorcredentials after bylinelinkedauthorpage suppliedarticlesbutnoexpertise; informsS2vsS3only,no newBPtarget.",
+      "query_budget_amendment": "One extra root query declaredbefore execution; original rootzeroqueryplan extended forsourceauthorverification."
+    },
+    {
+      "written_utc": "2026-11-05T23:33:35.737437+00:00",
+      "url": "https://www.physics.ox.ac.uk/our-people/closefe",
+      "purpose": "ReadobservedoriginalOxfordauthorcredentialsforsourcegenreonly."
+    },
+    {
+      "written_utc": "2026-11-05T23:33:35.737448+00:00",
+      "url": "https://www.asbmb.org/asbmb-today/people/050624/in-memoriam-michael-waterfield",
+      "purpose": "Verifyfullsubjectbornplace/exactDOB/deathdate/reportedageinconsistencyandnamedscientificauthor."
+    },
+    {
+      "written_utc": "2026-11-05T23:33:35.737450+00:00",
+      "url": "https://www.cambridge.org/core/books/voyage-through-turbulence/aa-townsend/33EBAD36028186677507F3177B624121",
+      "purpose": "ReadoriginalpublisherpublicSummarybornclauseandbyline/DOI/fullidentity."
+    }
+  ]
+}

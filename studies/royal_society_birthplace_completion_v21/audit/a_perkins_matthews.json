@@ -1,0 +1,206 @@
+{
+  "schema": "v21_group_a_Perkin_Matthews_subset_source_observations_v1",
+  "worker": "/root/v21_sources_a/perkins_matthews",
+  "written_utc": "2026-11-05T23:31:40.165338+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA4651",
+    "RS_PAST_NA4585"
+  ],
+  "intent_file": "v21_a_perkins_matthews_intent.json",
+  "counts": {
+    "discovery_queries": 3,
+    "original_source_navigation_attempts": 4,
+    "parsed_text_find_operations": 1,
+    "raw_GETs": 0,
+    "screenshots": 0,
+    "body_verified_birthplace_candidates": 1,
+    "holds": 1
+  },
+  "candidates": [
+    {
+      "record_id": "RS_PAST_NA4651",
+      "native": {
+        "record_id": "RS_PAST_NA4651",
+        "authority_name": "Perkins; Donald Hill (1925 - 2022); physicist",
+        "native_dob": "1925-10-15",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "e1d0024f72489f1f0b99d987e4e20c76bc1a7f5f56b65aed4dd8d8d1e8dbfb44"
+      },
+      "status": "candidate_original_signed_edited_obituary_full_identity_exact_DOB_explicit_birthplace",
+      "raw_birthplace": "Hull, east Yorkshire",
+      "source_url": "https://www.theguardian.com/science/2022/nov/22/donald-perkins-obituary",
+      "source_title": "Donald Perkins obituary",
+      "source_author": "Frank Close",
+      "publication_date": "2022-11-22",
+      "this_version_date": "2022-11-24",
+      "source_kind": "original_signed_edited_newspaper_obituary",
+      "source_grade_proposal": "S2",
+      "source_grade_basis": "Original signed edited obituary; proposed conservativeS2 under existing v20 signed-expert-newspaper source-genre interpretation, not host-onlyS1 or claim of scholarlypeerreview. Author expertise not separately researched in this allocated subset. Parent final source-genre adjudication required.",
+      "source_grade_role": "new_person_birthplace_support_only",
+      "source_quote": "Born in Hull, east Yorkshire",
+      "source_quote_word_count": 5,
+      "source_locator": "turn7608655view0: bylineL61; publication/versionL63; explicitbirthplaceL90; fullDonaldHillPerkins/exactDOB/deathL96; Oxfordparticlephysics1965L78; FRS1966L92.",
+      "source_webrefs": [
+        "turn7608655view0"
+      ],
+      "source_birthdate": "1925-10-15",
+      "source_birthdate_precision": "day_in_subject_vital_dates",
+      "source_DOB_matches_native": true,
+      "source_death_date": "2022-10-30",
+      "source_lifespan_compatible_with_native": true,
+      "observed_source_full_name": "Donald Hill Perkins",
+      "identity_review": [
+        "All native name components Donald Hill Perkins explicitly appear in the original article vital lineL96.",
+        "Exact15October1925 and1925–2022 lifespan agree unchanged native DOB/authority label.",
+        "Particle physicist, Oxfordprofessor1965, CERN/Gargamellework and FRS1966 give distinctive professional anchors; no initialsnickname expansion."
+      ],
+      "identity_conflicts_observed": [],
+      "reviewed_hemisphere_proposal": "north",
+      "geographic_basis": "Direct born clause includes Hull and east Yorkshire. Explicit Yorkshire whole-region context is wholly north under existing region rule; no personal country/QID/coordinates assignment, nationality or familiar-city inference.",
+      "caveats": [
+        "Samebody confirms exactnativeDOB andbirthplace; no endpoint-only exception needed.",
+        "Newspaper genreS2 proposed under recorded v20method; notS1 fromhost.",
+        "No originalHTML/rawbytes/status/hash/preciserequesttime retained."
+      ],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original HTML/PDF text, not raw HTTP bytes",
+      "raw_bytes_captured": false,
+      "no_master_change": true,
+      "geography_assignment_performed": false
+    }
+  ],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA4585",
+      "native": {
+        "record_id": "RS_PAST_NA4585",
+        "authority_name": "Matthews; Peter Bryan Conrad (1928 - 2020)",
+        "native_dob": "1928-12-23",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "414509320dfd5399c088a3b0282f6be9155b4b99c4f18cb0fba5b7831171a996"
+      },
+      "status": "hold_original_birthplace_body_unavailable_subset_nav_budget_exhausted",
+      "hold_type": "original_birthplace_body_unavailable",
+      "reason": "DPAG original biography and distinct OxfordMedicine newsletter both tool-reported403, stopped. Acquired original Physoc body confirms full identity/exactDOB but has no explicitbirthplace; Cambridge modifies childhoodschool, notbirth. OriginalKingsCollege report newly discovered but unopened within subsetnavbudget; no birthplace adopted from searchprojection.",
+      "sources": [
+        {
+          "url": "https://www.dpag.ox.ac.uk/news/peter-b-c-matthews-frs-obituary",
+          "ref": "turn7608655view1",
+          "outcome": "tool_reported403Forbidden_no_body",
+          "raw_HTTP_status": null,
+          "birthplace_relation_verified": false
+        },
+        {
+          "url": "https://www.medsci.ox.ac.uk/files/alumni/oxford-medicine-june-2020.pdf",
+          "ref": "turn8821294view0",
+          "outcome": "tool_reported403Forbidden_no_body",
+          "raw_HTTP_status": null,
+          "birthplace_relation_verified": false
+        },
+        {
+          "url": "https://www.physoc.org/magazine-articles/obituary-peter-bryan-conrad-matthews-1928-2020/",
+          "ref": "turn8821294view1",
+          "initial_ref": "turn7608655view2",
+          "title": "Obituary: Peter Bryan Conrad Matthews1928–2020",
+          "author": "Bob Banks (Durham University)",
+          "source_kind": "original_signed_scientific_society_obituary",
+          "publication_issue": "Spring(May)2020,issue118",
+          "doi": "10.36866/pn.118.49",
+          "locator": "L524issue;L527fullsubjectheading;L534byline;L539exactDOB;L554death2020-03-02/age91.",
+          "source_birthdate": "1928-12-23",
+          "source_birthdate_precision": "day",
+          "source_DOB_matches_native": true,
+          "source_death_date": "2020-03-02",
+          "birthplace_relation_verified": false,
+          "body_summary": "Original gives exactbirthdate but no birthplace. Cambridge explicitly attaches to school attendance; notusedasbirth.",
+          "source_quote": "",
+          "source_grade_proposal": null
+        }
+      ],
+      "unopened_original_lead": {
+        "url": "https://www.kings.cam.ac.uk/sites/default/files/documents/kings-annual-report-2020-web18082021-1-1.pdf",
+        "search_ref": "turn1414685search3",
+        "source_body_verified": false,
+        "purpose": "Originalcollegeannualreport source projection includes fullsubjectheading and explicitCambridgebirth. Parent may inspect if overallgroupnavbudget remains. Not birthplace proof in this subset."
+      },
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original HTML/PDF text, not raw HTTP bytes",
+      "raw_bytes_captured": false,
+      "no_master_change": true,
+      "geography_assignment_performed": false
+    }
+  ],
+  "query_ledger": [
+    {
+      "q": "\"Donald Hill Perkins\" obituary born Oxford",
+      "ref": "turn7052920search0–2",
+      "target": "RS_PAST_NA4651"
+    },
+    {
+      "q": "\"Peter Bryan Conrad Matthews\" born obituary",
+      "ref": "turn7052920search3–4/8",
+      "target": "RS_PAST_NA4585"
+    },
+    {
+      "q": "\"Peter Bryan Conrad Matthews\" \"born\" Cambridge -site:dpag.ox.ac.uk -site:medsci.ox.ac.uk",
+      "ref": "turn1414685search0–5",
+      "target": "RS_PAST_NA4585"
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "url": "https://www.theguardian.com/science/2022/nov/22/donald-perkins-obituary",
+      "ref": "turn7608655view0",
+      "outcome": "originalparsedbodyread"
+    },
+    {
+      "url": "https://www.dpag.ox.ac.uk/news/peter-b-c-matthews-frs-obituary",
+      "ref": "turn7608655view1",
+      "outcome": "tool403stopped"
+    },
+    {
+      "url": "https://www.physoc.org/magazine-articles/obituary-peter-bryan-conrad-matthews-1928-2020/",
+      "ref": "turn7608655view2",
+      "outcome": "originalparsedbodyacquired_thenlocatedbycachedfind"
+    },
+    {
+      "url": "https://www.medsci.ox.ac.uk/files/alumni/oxford-medicine-june-2020.pdf",
+      "ref": "turn8821294view0",
+      "outcome": "tool403stopped"
+    }
+  ],
+  "parsed_find_ledger": [
+    {
+      "ref": "turn7608655view2",
+      "pattern": "Peter Matthews was born",
+      "result_ref": "turn8821294view1",
+      "outcome": "fulltitle/byline/exactbirthdate/noexplicitbirthplaceverified"
+    }
+  ],
+  "quote_ledger": [
+    {
+      "original_work": "https://www.theguardian.com/science/2022/nov/22/donald-perkins-obituary",
+      "quote": "Born in Hull, east Yorkshire",
+      "word_count": 5
+    },
+    {
+      "original_work": "https://www.physoc.org/magazine-articles/obituary-peter-bryan-conrad-matthews-1928-2020/",
+      "quote": "",
+      "word_count": 0
+    }
+  ],
+  "limits": [
+    "No searchprojection adopted as birthplace proof.",
+    "Failed403routes stopped with no retry/variants/rawGET. DistinctOxfordMedicinepublication is not sameendpointretry.",
+    "KingsCollege annualreport remains unopened lead in this subset, parentnotified.",
+    "Parsedsourcebodyisnotrawbytes; rawstatus/time/hashnull. No fullsourceHTML/PDF/cache redistribution.",
+    "No mainmaster/native/calendar/grade/Git changes."
+  ],
+  "protocol_deviations": []
+}
