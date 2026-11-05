@@ -1,0 +1,130 @@
+{
+  "schema": "v15_independent_source_adjudication_v1",
+  "completed_utc": "2026-11-05T00:02:21.115037+00:00",
+  "reviewer": "/root/v15_source_qa",
+  "review_scope": "Five proposed original-source first-birthplace additions; no main-table mutation",
+  "review_materials": {
+    "worker_reports": [
+      "v15_sources_a.json",
+      "v15_sources_b.json"
+    ],
+    "original_local_PDF": "v15_source_cache/inmemoriam2000.pdf",
+    "PDF_sha256": "420b81f0300a08379d835cfd251b5555db5327862c747e6b89997ee42ec3e785",
+    "PDF_bytes": 797469,
+    "verification_limit": "Four HTML observations were reviewed from worker structured observations, including exact source locations, not newly fetched independently by this QA. Popjak original PDF body was read directly with PyMuPDF. Main replay/diff verification is outside this source-only QA."
+  },
+  "decision": "admissible_with_conservative_Dixon_S3_and_provenance_caveats",
+  "proposed_birthplace_grades": {
+    "RS_PAST_NA3607": "S2",
+    "RS_PAST_NA3957": "S2",
+    "RS_PAST_NA4682": "S2",
+    "RS_PAST_NA3629": "S2",
+    "RS_PAST_NA4117": "S3"
+  },
+  "record_checks": [
+    {
+      "record_id": "RS_PAST_NA3607",
+      "native_authority_name": "Zuckerman; Solly (1904 - 1993); Baron Zuckerman of Burnham Thorpe",
+      "native_dob": "1904-05-30",
+      "native_authority_name_plus_DOB_count_in_all_UK_rows": 1,
+      "blank_birthplace_and_unknown_before": true,
+      "source_quote_word_count_whitespace": 14,
+      "source_quote_under_25_words": true
+    },
+    {
+      "record_id": "RS_PAST_NA3957",
+      "native_authority_name": "Boyse; Edward Arthur (1923 - 2007)",
+      "native_dob": "1923-08-11",
+      "native_authority_name_plus_DOB_count_in_all_UK_rows": 1,
+      "blank_birthplace_and_unknown_before": true,
+      "source_quote_word_count_whitespace": 16,
+      "source_quote_under_25_words": true
+    },
+    {
+      "record_id": "RS_PAST_NA4682",
+      "native_authority_name": "Ramachandran; Gopalasamudram Narayana (1922 - 2001)",
+      "native_dob": "1922-10-08",
+      "native_authority_name_plus_DOB_count_in_all_UK_rows": 1,
+      "blank_birthplace_and_unknown_before": true,
+      "source_quote_word_count_whitespace": 12,
+      "source_quote_under_25_words": true
+    },
+    {
+      "record_id": "RS_PAST_NA3629",
+      "native_authority_name": "Popjak; George Joseph (1914 - 1998)",
+      "native_dob": "1914-05-05",
+      "native_authority_name_plus_DOB_count_in_all_UK_rows": 1,
+      "blank_birthplace_and_unknown_before": true,
+      "source_quote_word_count_whitespace": 9,
+      "source_quote_under_25_words": true
+    },
+    {
+      "record_id": "RS_PAST_NA4117",
+      "native_authority_name": "Dixon; Gordon Henry (1930 - 2016)",
+      "native_dob": "1930-03-25",
+      "native_authority_name_plus_DOB_count_in_all_UK_rows": 1,
+      "blank_birthplace_and_unknown_before": true,
+      "source_quote_word_count_whitespace": 7,
+      "source_quote_under_25_words": true
+    }
+  ],
+  "source_reviews": [
+    {
+      "record_id": "RS_PAST_NA3607",
+      "decision": "accept_S2",
+      "reason": "Institutional archival administrative biography directly gives full personal name and exact birth date with city and country. Archive creator is not asserted to be the narrative author. Conservative S2 is defensible; official host alone does not establish primary civil documentation."
+    },
+    {
+      "record_id": "RS_PAST_NA3957",
+      "decision": "accept_S2",
+      "reason": "Original signed ODNB public extract by Harvey Cantor supplies full subject name, exact native date and full birth address, town and Sussex. Do not replace birth address with the later family registration address. Independent primary born clause, not transferred NAS S3 lead."
+    },
+    {
+      "record_id": "RS_PAST_NA4682",
+      "decision": "accept_S2",
+      "reason": "Original signed scholarly obituary by N. Yathindra gives full name in body and exact native date plus Ernakulam, India. FRS1977 and career anchors support identity; source own initials are not used to invent full name."
+    },
+    {
+      "record_id": "RS_PAST_NA3629",
+      "decision": "accept_S2",
+      "reason": "Original UC Academic Senate edited memorial volume, PDF page82/bookp203 directly supplies George Joseph Popják, lifespan and exact native date with Kiskundorozsma, Hungary. PDFpage83/bookp206 names John Edmond, Peter A. Edwards and Alan M. Fogelman as chapter authors. Full name, exact birth date, UCLA biochemistry and FRS1961 uniquely bind native Popjak record despite accent orthography. PDFbyte SHA/size agree capture log. Original catalog403 remains distinct from successful public PDF200; old worker body-not-verified hold is superseded only by the later PDF observation.",
+      "source_note": "Subsequent childhood narrative discusses Yugoslavia and family moves, but does not explicitly supply a different birth-place clause. Retain literal birth place/country and do not rewrite it from that narrative."
+    },
+    {
+      "record_id": "RS_PAST_NA4117",
+      "decision": "accept_S3_only",
+      "reason": "Original professionally hosted family/funeral obituary directly supplies Durban, South Africa. Header and body dates match native exact day; full name, FRS1978, Order of Canada and specific career sequence strongly bind identity. Uncredited author and unknown editorial verification justify weaker S3, not S1 or signed-scholarly S2. User previously allowed a separate S2+S3 sensitivity set. This is a conservative new source-class judgment rather than a recovered immutable rule explicitly listing funeral notices.",
+      "restrictions": [
+        "Preserve source_author:null and original_family_funeral_obituary kind.",
+        "Do not claim signed academic or university biography, peer review or corroboration.",
+        "Keep outside new-birthplace S2-only subset and retain grade for sensitivity filtering.",
+        "Do not substitute Victoria death/funeral location for birthplace."
+      ]
+    }
+  ],
+  "geographic_review": {
+    "north": [
+      "RS_PAST_NA3957",
+      "RS_PAST_NA4682",
+      "RS_PAST_NA3629"
+    ],
+    "south": [
+      "RS_PAST_NA3607",
+      "RS_PAST_NA4117"
+    ],
+    "basis": "Explicit Sussex, India, Hungary and South Africa in direct born clauses; their regional extents support hemisphere only. No person country, unique place entity or coordinates are assigned.",
+    "none_from_nationality_affiliation_school_work_family_death_or_footer": true
+  },
+  "frozen_boundary_requirements": [
+    "Native DOB, date/calendar representation, authority identity, membership/eligibility, QID and original DOB-source grades remain unchanged.",
+    "New birthplace grade is birthplace-support only; original selected evidence remains historical.",
+    "No cross-cohort fact transfer or statistical deduplication.",
+    "Do not distribute original full PDF/HTML or page images in ZIP/Git."
+  ],
+  "issues_requiring_parent_action": [
+    "All five preserved quote strings are below25 whitespace-delimited words: Zuckerman14, Boyse16, Ramachandran12, Popjak9 and Dixon7. Keep actual quotes unchanged and avoid expanding cumulative quotation from any source.",
+    "Record Dixon S3 decision explicitly and keep it separately filterable.",
+    "Record Popjak later direct-PDF success and original-body locator as superseding the earlier unavailable-body hold without erasing the failed attempt."
+  ],
+  "blocking_findings": []
+}

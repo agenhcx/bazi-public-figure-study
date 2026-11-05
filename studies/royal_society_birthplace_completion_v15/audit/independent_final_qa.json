@@ -1,0 +1,246 @@
+{
+  "schema": "UK_v15_independent_final_QA_v1",
+  "reviewer": "/root/v15_final_qa",
+  "completed_utc": "2026-11-05T00:06:07.212524+00:00",
+  "decision": "pass",
+  "checks": {
+    "fixed4983_records_unique_order": {
+      "passed": true
+    },
+    "baseline_canonical_sha": {
+      "passed": true
+    },
+    "exact4978_unchanged_and5_changed": {
+      "passed": true
+    },
+    "all_existing_fields_outside_BP_geo_whitelist_unchanged": {
+      "passed": true
+    },
+    "only_whitelisted_new_fields_plus_v15_evidence": {
+      "passed": true
+    },
+    "rollback_complete_objects_exact": {
+      "passed": true
+    },
+    "all_frozen_fields_all4983_exact": {
+      "passed": true
+    },
+    "DOB_all4983_exact": {
+      "passed": true
+    },
+    "overall_counts_exact": {
+      "passed": true,
+      "detail": {
+        "north": 4162,
+        "unknown": 636,
+        "south": 185
+      }
+    },
+    "window_counts_exact": {
+      "passed": true,
+      "detail": {
+        "north": 2262,
+        "unknown": 202,
+        "south": 180
+      }
+    },
+    "unknown_window164blank38nonblank": {
+      "passed": true
+    },
+    "169_targets_exact_v14_filter": {
+      "passed": true
+    },
+    "169_snapshot_complete_objects_exact": {
+      "passed": true
+    },
+    "8_followup_partition_5accepted3held": {
+      "passed": true
+    },
+    "all5_first_BP_and5_geographic": {
+      "passed": true
+    },
+    "4S2_1S3_grade_role_not_DOB": {
+      "passed": true
+    },
+    "Dixon_S3_uncredited_family_kind": {
+      "passed": true
+    },
+    "source_grade_adjudication_consistent": {
+      "passed": true
+    },
+    "facts_native_dates_names_exact": {
+      "passed": true
+    },
+    "5quotes_atmost25_words": {
+      "passed": true
+    },
+    "CSV4983_order_current_BP_hemi_grade": {
+      "passed": true
+    },
+    "CSV_new5_S2four_S3one_separable": {
+      "passed": true
+    },
+    "remaining_unknown_CSV202_order_exact": {
+      "passed": true
+    },
+    "no_original_source_fullPDF_HTML_images_cache": {
+      "passed": true
+    },
+    "five_outputs_first_QA_replay_byteidentical": {
+      "passed": true
+    },
+    "second_QA_replay_exit0": {
+      "passed": true,
+      "detail": ""
+    },
+    "five_outputs_second_QA_replay_byteidentical": {
+      "passed": true
+    },
+    "offline_core_summary_reproduced": {
+      "passed": true
+    },
+    "offline_coverage_reproduced": {
+      "passed": true
+    },
+    "offline_exact_candidates_reproduced": {
+      "passed": true
+    },
+    "offline_same_full_name_different_date_holds_reproduced": {
+      "passed": true
+    },
+    "offline_pool_diagnostics_reproduced": {
+      "passed": true
+    },
+    "offline_normalization_reproduced": {
+      "passed": true
+    },
+    "offline_initial_lead_core_reproduced": {
+      "passed": true
+    },
+    "offline169_screen_no_fact_adoption": {
+      "passed": true
+    },
+    "README_CONTINUATION_counts_and_source_limits_present": {
+      "passed": true
+    }
+  },
+  "changed_record_diffs": [
+    {
+      "record_id": "RS_PAST_NA3607",
+      "changed_existing_fields": [
+        "birthplace_claim_excerpt",
+        "birthplace_claim_status",
+        "birthplace_evidence_kind",
+        "birthplace_source_grade",
+        "birthplace_source_url",
+        "birthplace_source_urls",
+        "geo_resolution_status",
+        "geography_decision",
+        "hemisphere",
+        "raw_birthplace",
+        "reason",
+        "southern_birthplace_separate"
+      ],
+      "added_fields": [
+        "birthplace_followup_v15"
+      ],
+      "rollback_restores_complete_baseline_object": true
+    },
+    {
+      "record_id": "RS_PAST_NA3629",
+      "changed_existing_fields": [
+        "birthplace_claim_excerpt",
+        "birthplace_claim_status",
+        "birthplace_evidence_kind",
+        "birthplace_source_grade",
+        "birthplace_source_url",
+        "birthplace_source_urls",
+        "geo_resolution_status",
+        "geography_decision",
+        "hemisphere",
+        "northern_birthplace_candidate",
+        "raw_birthplace",
+        "reason"
+      ],
+      "added_fields": [
+        "birthplace_followup_v15"
+      ],
+      "rollback_restores_complete_baseline_object": true
+    },
+    {
+      "record_id": "RS_PAST_NA3957",
+      "changed_existing_fields": [
+        "birthplace_claim_excerpt",
+        "birthplace_claim_status",
+        "birthplace_evidence_kind",
+        "birthplace_source_grade",
+        "birthplace_source_url",
+        "birthplace_source_urls",
+        "geo_resolution_status",
+        "geography_decision",
+        "hemisphere",
+        "northern_birthplace_candidate",
+        "raw_birthplace",
+        "reason"
+      ],
+      "added_fields": [
+        "birthplace_followup_v15"
+      ],
+      "rollback_restores_complete_baseline_object": true
+    },
+    {
+      "record_id": "RS_PAST_NA4117",
+      "changed_existing_fields": [
+        "birthplace_claim_excerpt",
+        "birthplace_claim_status",
+        "birthplace_evidence_kind",
+        "birthplace_source_grade",
+        "birthplace_source_url",
+        "birthplace_source_urls",
+        "geo_resolution_status",
+        "geography_decision",
+        "hemisphere",
+        "raw_birthplace",
+        "reason",
+        "southern_birthplace_separate"
+      ],
+      "added_fields": [
+        "birthplace_followup_v15"
+      ],
+      "rollback_restores_complete_baseline_object": true
+    },
+    {
+      "record_id": "RS_PAST_NA4682",
+      "changed_existing_fields": [
+        "birthplace_claim_excerpt",
+        "birthplace_claim_status",
+        "birthplace_evidence_kind",
+        "birthplace_source_grade",
+        "birthplace_source_url",
+        "birthplace_source_urls",
+        "geo_resolution_status",
+        "geography_decision",
+        "hemisphere",
+        "northern_birthplace_candidate",
+        "raw_birthplace",
+        "reason"
+      ],
+      "added_fields": [
+        "birthplace_followup_v15"
+      ],
+      "rollback_restores_complete_baseline_object": true
+    }
+  ],
+  "outputs_sha256": {
+    "remaining_unknown_window.csv": "7d89d216424103e58ea7c19a88bdb4800a0bd23f2d4d27aadd4b7bc98bac2615",
+    "birthplace_rows.jsonl.gz": "4f73bb899084a54be7eae5d10a44b3e2b35af1d30b7405f4173f1cf56c223524",
+    "summary.json": "114e25fbec03678cdc3e028fa7470d8a7c8401e6b492449be3575f34c6d855ec",
+    "birthplaces.csv": "9a8468afd5a3716bf27b06270ff5fdecbd863f87d21442690fee9b6bb8d10722",
+    "changes.json": "94b74bc5c19a346ce225e2a2fb3f75c3af560eefc67702766f5bbe436327d006"
+  },
+  "source_verification_scope": "Fact data compared to independent source QA and frozen original objects; no source HTML or PDF independently refetched by this final data QA. Source QA directly read Popjak PDF.",
+  "offline_rerun": "Portable script run against separately available hash-locked original v7 pool and bundled169target snapshot; core summary,coverage,lead and diagnostics compared ignoring paths/times and later manual cached-source annotations.",
+  "manifest_verified": false,
+  "manifest_note": "Manifest not yet created during review; no manifest claim made.",
+  "blocking_findings": []
+}
