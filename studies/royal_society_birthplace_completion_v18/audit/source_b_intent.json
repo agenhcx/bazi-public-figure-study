@@ -1,0 +1,61 @@
+{
+  "written_utc": "2026-11-05T00:40:28.714547+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA3358",
+    "RS_PAST_NA5962",
+    "RS_PAST_NA6938",
+    "RS_PAST_NA4005"
+  ],
+  "group_budget": {
+    "queries": 6,
+    "nav": 8
+  },
+  "delegated_subbudget": {
+    "targets": [
+      "RS_PAST_NA3358",
+      "RS_PAST_NA5962"
+    ],
+    "queries": 2,
+    "nav": 4
+  },
+  "own_subbudget": {
+    "targets": [
+      "RS_PAST_NA6938",
+      "RS_PAST_NA4005"
+    ],
+    "queries": 4,
+    "nav": 4
+  },
+  "planned_queries": [
+    "Derman Guy Christopherson born obituary Durham",
+    "John Argyris born obituary Stuttgart"
+  ],
+  "scope": "New original source bodies, no closed route retries, no native fields changed.",
+  "own_next_action_before_call": {
+    "written_utc": "2026-11-05T00:40:38.938001+00:00",
+    "opens": [
+      "https://www.nae.edu/File.aspx?id=189543"
+    ],
+    "query": "\"Christopherson, Sir Derman Guy\" born obituary"
+  },
+  "own_last_planned_opens": {
+    "written_utc": "2026-11-05T00:40:59.200450+00:00",
+    "urls": [
+      "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/579807932"
+    ],
+    "visual_PDF_check": {
+      "ref": "turn127view0",
+      "page_zero_based": 1
+    }
+  },
+  "own_final_query_before_call": {
+    "written_utc": "2026-11-05T00:41:44.223210+00:00",
+    "query": "\"John H. Argyris\" \"Memorial Tributes\" \"Volume 15\" site:nationalacademies.org",
+    "reason": "Find originalpublishercleanHTML for same NAE chapter; PDFparsedtextmissingletters, source1913year alreadyplain. Do notrepairnative1916."
+  },
+  "clean_publisher_chapter_before_call": {
+    "written_utc": "2026-11-05T00:41:59.345196+00:00",
+    "url": "https://www.nationalacademies.org/read/13160/chapter/6",
+    "reason": "Same originallypublishedNAE memoir incleanHTML toreadfullauthor/name and DOBconflict; notindependentcorroboration."
+  }
+}

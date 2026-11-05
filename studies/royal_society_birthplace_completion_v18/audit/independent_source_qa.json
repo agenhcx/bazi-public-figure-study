@@ -1,0 +1,187 @@
+{
+  "schema": "UK_v18_independent_source_adjudication_v1",
+  "reviewer": "/root/v18_source_qa",
+  "written_utc": "2026-11-05T00:48:15.132846+00:00",
+  "decision": "three_first_birthplace_observations_admissible_with_two_S2_and_one_conservative_S3; all_geography_unknown; Argyris_conflict_held",
+  "review_materials": [
+    "v18_sources_a.json",
+    "v18_sources_b.json",
+    "v18_bulk_rse_lead.json",
+    "v18_root_intent.json",
+    "v18_blank_queue.json",
+    "v17 complete UK master",
+    "v18_rse_lead_cache/observed_parsed_results.json"
+  ],
+  "verification_limit": "No network or source refetch performed by this reviewer. Three proposed biography/authority facts and the Argyris clean-HTML conflict were reviewed through worker reports and inherited parent source observations (parent refs turn139view0–2 and turn137view0). Reviewer independently read retained original parsed RSE pilot entry segments locally and checked their cache lock. Parsed content is not raw HTTP/PDF bytes. Main replay/frozen-field diff and final output verification are outside this source-only review.",
+  "record_checks": [
+    {
+      "record_id": "RS_PAST_NA4918",
+      "native_authority_name": "Adam; Neil Kensington (1891 - 1973); chemist",
+      "native_dob": "1891-11-05",
+      "prior_birthplace_blank": true,
+      "prior_hemisphere_unknown": true,
+      "native_full_authority_key_count_in_4983": 1,
+      "queue_complete_object_equals_v17": true,
+      "source_birthdate": "1891-11-05",
+      "source_birthdate_precision": "exact_day_in_same_profile_dates_of_life_field_not_birthplace_clause",
+      "source_quote_word_count_whitespace": 0,
+      "quote_at_most_25": true,
+      "raw_birthplace": "Cambridge",
+      "geography_decision": "unknown",
+      "source_date_compatibility": "Exact stated source day matches native; no date or DOB-source-tier change authorized."
+    },
+    {
+      "record_id": "RS_PAST_NA5962",
+      "native_authority_name": "Collar; Arthur Roderick (1908 - 1986)",
+      "native_dob": "1908-02-22",
+      "prior_birthplace_blank": true,
+      "prior_hemisphere_unknown": true,
+      "native_full_authority_key_count_in_4983": 1,
+      "queue_complete_object_equals_v17": true,
+      "source_birthdate": "1908",
+      "source_birthdate_precision": "year_only",
+      "source_quote_word_count_whitespace": 10,
+      "quote_at_most_25": true,
+      "raw_birthplace": "West Ealing",
+      "geography_decision": "unknown",
+      "source_date_compatibility": "Only1908birthyear stated; compatible with native1908-02-22, not independent month/day verification."
+    },
+    {
+      "record_id": "RS_PAST_NA6938",
+      "native_authority_name": "Christopherson; Sir; Derman Guy (1915 - 2000)",
+      "native_dob": "1915-09-06",
+      "prior_birthplace_blank": true,
+      "prior_hemisphere_unknown": true,
+      "native_full_authority_key_count_in_4983": 1,
+      "queue_complete_object_equals_v17": true,
+      "source_birthdate": "1915-09-06",
+      "source_birthdate_precision": "day_in_birth_clause",
+      "source_quote_word_count_whitespace": 10,
+      "quote_at_most_25": true,
+      "raw_birthplace": "Plumstead, south-east London",
+      "geography_decision": "unknown",
+      "source_date_compatibility": "Exact stated source day matches native; no date or DOB-source-tier change authorized."
+    }
+  ],
+  "source_decisions": [
+    {
+      "record_id": "RS_PAST_NA4918",
+      "grade": "S3",
+      "decision": "accept_first_birthplace_only",
+      "reason": "Original Deutsche Biographie profile explicitly labels Cambridge as Place of birth and supplies full Neil Kensington Adam plus exact1891-11-05 and compatible lifespan. The profile is an authority index without a signed biography or demonstrated upstream birthplace provenance. Conservative S3 is admissible; official hosting or displayed GND identifier does not justify S1/S2. AIP original catalogue supplies distinctive professional identity, not independent birthday or birthplace corroboration.",
+      "requirements": [
+        "Keep source_author null and unknown article publication date. Dynamic citation access date is not publication date.",
+        "Keep source_raw_field_label/evidence_format=structured_birthplace_field, source_quote empty, and a concrete source locator. Do not invent a prose born quote.",
+        "Do not presume GND supplied these facts or transfer GND/QID to frozen identity fields.",
+        "Mirror search-excerpt5/6November variation is not an acquired original-source conflict or a basis for date repair.",
+        "Cambridge unqualified; hemisphere unknown."
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA5962",
+      "grade": "S2",
+      "decision": "accept_first_birthplace_only",
+      "reason": "Original Bristol institutional archival narrative explicitly gives full Arthur Roderick Collar and born West Ealing in1908, with source title1908–1986 and distinctive Bristol/ARC/FRS career anchors. This meets the documented v16/v17 partial-date identity rule without independently verifying native month/day. The narrative is expressly based on the NCUACS historical catalogue, not independent corroboration of it.",
+      "requirements": [
+        "Keep actual source_birthdate_precision year_only. Do not promote search-only22February1908 to an observed body date.",
+        "Keep web narrative author uncredited; underlying catalogue compilers P Harper and TE Powell are not assumed authors of the exact web prose.",
+        "Cached PDF screenshot attempts yielded text markers only: no visual inspection or PDF-derived exact-DOB claim.",
+        "West Ealing unqualified; hemisphere unknown."
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA6938",
+      "grade": "S2",
+      "decision": "accept_first_birthplace_only",
+      "reason": "Original signed ODNB public extract by R Hyam explicitly gives all native Sir Derman Guy Christopherson components, exact6September1915, lifespan1915–2000 and Plumstead,south-eastLondon in the subject-born sentence. The father is separately named Derman Christopherson and is not mistaken for the subject.",
+      "requirements": [
+        "Paid full chapter was not accessed; cite observed original public Extract.",
+        "South-east is a part-of-London modifier, not a hemisphere or independent country/whole-region qualifier. Keep geography unknown."
+      ]
+    }
+  ],
+  "Argyris_conflict_review": {
+    "record_id": "RS_PAST_NA4005",
+    "decision": "hold_no_birthplace_or_geography_adoption_and_no_native_DOB_repair",
+    "native_dob": "1916-08-19",
+    "observed_source_dob": "1913-08-19",
+    "source_date_precision": "day_in_birth_clause",
+    "native_authority_lifespan": "1916–2004",
+    "source_heading_lifespan": "1913–2004",
+    "reason": "Clean original NAE chapter explicitly gives birth19August1913. Full John Argyris components, Imperial/Stuttgart finite-element career and2004death context strongly support subject binding, but the explicit birthyear disagreement triggers the conflict hold. This is not a merely compatible partial date or an alternative-person rejection.",
+    "source_url": "https://www.nationalacademies.org/read/13160/chapter/6",
+    "source_locator": "Original clean HTML born clause line76; authors74; subject heading69; printedpage25.",
+    "source_quote_word_count_whitespace": 18,
+    "source_author_note": "Author names retained as displayed, including J. Tinsely Oden spelling; no author-name correction.",
+    "representation_note": "Original HTML and NAE PDF are representations of the same memorial chapter, not independent corroborating works. Clean HTML resolves the missing-letter PDF text issue. Both screenshot attempts lacked usable image data; no visual verification claimed.",
+    "not_authorized": [
+      "adopt Volos/Greece birthplace",
+      "assign north or country/coordinates",
+      "correct1916to1913",
+      "alter original DOB tiers, membership or eligibility"
+    ]
+  },
+  "compact_RSE_pilot_review": {
+    "source": "192-page all_fellows.pdf",
+    "new_birthplace_adoptions": 0,
+    "full_148_pool_screen_operations": 0,
+    "in_pool_find_targets": 2,
+    "out_of_pool_benchmark_targets": 1,
+    "parsed_find_operations": 3,
+    "observed_bound_in_pool_entry": "RS_PAST_NA1376 Arthur Thomas Masterman",
+    "local_segment_check": "PDFpage118(one-based), lines14407–14411 bind full name/exact1869-04-09 and show death/election/profession/FellowType before next-person header14412. No Place of Birth field in that observed entry segment; adjacent next-person NotesBorn1860 not transferred.",
+    "out_of_pool_benchmark": "RS_PAST_NA6313 Chibnall already has v17 birthplace; compact header4065–4068 repeats date/election/profession without birth field. It is a presentation benchmark, not a current review ID or main update.",
+    "relationship_caveat": "Different compact presentation is observed; authorship/date/edition/newness/independence versus the prior two-part index remains undetermined. Official related index context does not assign its compilers or date to this PDF. No byte-identical duplicate or complete content equivalence claimed.",
+    "cache_bytes": 44780,
+    "parsed_projection_sha256": "0d6e0e14ccb7ac04518018ed9bffd90aaff7be9fa17fdc05517397216a993538",
+    "raw_HTTP_or_PDF_requests": 0,
+    "no_absence_inference": "No148rescreen, corpus-negative or literature-exhaustion claim. Pilot McCance no-match is only the returned formatted-name projection."
+  },
+  "scope_and_counts": {
+    "frozen_blank_window_pool": 148,
+    "fixed_individual_followups": 8,
+    "actual_reviewed_unique_targets": 9,
+    "reviewed_scope_formula": "fixed8 + Masterman; McCance compact pilot overlaps fixed8; Chibnall out-of-pool benchmark excluded.",
+    "adopted_first_birthplaces": 3,
+    "adopted_birthplace_grades": {
+      "S2": 2,
+      "S3": 1
+    },
+    "new_geographic_resolutions": 0,
+    "accepted_with_geography_unknown": 3,
+    "holds": 6,
+    "hold_targets": [
+      "RS_PAST_NA1744",
+      "RS_PAST_NA3830",
+      "RS_PAST_NA8089",
+      "RS_PAST_NA3358",
+      "RS_PAST_NA4005",
+      "RS_PAST_NA1376"
+    ],
+    "discovery_queries": 18,
+    "query_formula": "6groupA+6groupB+1bulk+5parent",
+    "web_navigation_attempts": 20,
+    "web_formula": "8groupA+6groupB+2bulk+4parent",
+    "original_host_web_navigation_attempts": 19,
+    "external_original_work_mirror_navigation_attempts": 1,
+    "cached_PDF_screenshot_attempts": 2,
+    "usable_images_from_those_attempts": 0,
+    "parsed_find_operations": 3,
+    "raw_HTTP_or_PDF_byte_requests": 0
+  },
+  "global_requirements": [
+    "New grades apply to person-birthplace support only. Original DOB tiers and original DOB-based S2 versusS2+S3 groups remain unchanged.",
+    "No nationality, parentage, childhood, school, work, death, source-host or footer inference for birthplace/country/hemisphere.",
+    "No personal country, unique place entity, QID/GND or coordinates assigned.",
+    "All accepted and held native DOB, identity, calendar and eligibility stay frozen; all untargeted complete objects and prior evidence preserved.",
+    "No failed403/500 or inaccessible-source retry, no invented raw status/hash/request time. Tool-reported errors and parsed content remain distinct from raw HTTP evidence.",
+    "Do not distribute full source HTML/PDF/pages, screenshots or parsed-result caches. Source quotations stay within25Englishwords per work."
+  ],
+  "blocking_findings_for_proposed_batch": [],
+  "individual_admission_blockers_already_handled": [
+    "Argyris explicit source DOB conflict; unadopted under hold.",
+    "Other inaccessible/no-birthplace sources remain holds rather than inferred birthplace facts."
+  ],
+  "no_network_requests_by_reviewer": true,
+  "no_master_or_Git_mutation": true
+}

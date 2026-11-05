@@ -1,0 +1,414 @@
+{
+  "schema": "UK_v18_independent_final_QA_v1",
+  "reviewer": "/root/v18_final_qa",
+  "completed_utc": "2026-11-05T00:57:07.034750+00:00",
+  "decision": "pass",
+  "checked_outputs_sha256": {
+    "birthplace_rows.jsonl.gz": "c9fa2da8c9b1c49652a3512814a3472450f1e1dfed7209ce0787623d8b0844e7",
+    "birthplaces.csv": "05ce9bd0ebcc3b1b9a2d080b4a9ac33e853f16ad8ec8edc979443b4c50ba33b2",
+    "changes.json": "929405bcb5bf1cf1c84dd08bcec3850f72b0436fd143134e1279c447d03622d6",
+    "remaining_unknown_window.csv": "d9cf729dc05c068c0c23a1a39bfbffc98b818c1af209bba566e9018783da2c0c",
+    "summary.json": "6477e9f093e5293122112d5bf03af28f865da07e00f8d78e9cfe3f9a54d0f46c"
+  },
+  "check_count": 80,
+  "checks": [
+    {
+      "check": "Five expected output names",
+      "passed": true
+    },
+    {
+      "check": "Pre-QA output hashes match supplied pins",
+      "passed": true
+    },
+    {
+      "check": "Replay Python AST",
+      "passed": true
+    },
+    {
+      "check": "Replay 1 exits successfully",
+      "passed": true
+    },
+    {
+      "check": "Replay 1 five output hashes byte-identical",
+      "passed": true,
+      "detail": {
+        "birthplace_rows.jsonl.gz": "c9fa2da8c9b1c49652a3512814a3472450f1e1dfed7209ce0787623d8b0844e7",
+        "birthplaces.csv": "05ce9bd0ebcc3b1b9a2d080b4a9ac33e853f16ad8ec8edc979443b4c50ba33b2",
+        "changes.json": "929405bcb5bf1cf1c84dd08bcec3850f72b0436fd143134e1279c447d03622d6",
+        "remaining_unknown_window.csv": "d9cf729dc05c068c0c23a1a39bfbffc98b818c1af209bba566e9018783da2c0c",
+        "summary.json": "6477e9f093e5293122112d5bf03af28f865da07e00f8d78e9cfe3f9a54d0f46c"
+      }
+    },
+    {
+      "check": "Replay 2 exits successfully",
+      "passed": true
+    },
+    {
+      "check": "Replay 2 five output hashes byte-identical",
+      "passed": true,
+      "detail": {
+        "birthplace_rows.jsonl.gz": "c9fa2da8c9b1c49652a3512814a3472450f1e1dfed7209ce0787623d8b0844e7",
+        "birthplaces.csv": "05ce9bd0ebcc3b1b9a2d080b4a9ac33e853f16ad8ec8edc979443b4c50ba33b2",
+        "changes.json": "929405bcb5bf1cf1c84dd08bcec3850f72b0436fd143134e1279c447d03622d6",
+        "remaining_unknown_window.csv": "d9cf729dc05c068c0c23a1a39bfbffc98b818c1af209bba566e9018783da2c0c",
+        "summary.json": "6477e9f093e5293122112d5bf03af28f865da07e00f8d78e9cfe3f9a54d0f46c"
+      }
+    },
+    {
+      "check": "v17 reconstruction exact to all actual full objects",
+      "passed": true
+    },
+    {
+      "check": "v17 canonical hash pinned",
+      "passed": true
+    },
+    {
+      "check": "4983 records and unique IDs",
+      "passed": true
+    },
+    {
+      "check": "Record order unchanged",
+      "passed": true
+    },
+    {
+      "check": "Exactly three adopted targets",
+      "passed": true
+    },
+    {
+      "check": "Adopted grades 2S2 plus 1S3",
+      "passed": true
+    },
+    {
+      "check": "All three reviewed hemispheres unknown",
+      "passed": true
+    },
+    {
+      "check": "4980 complete objects unchanged",
+      "passed": true
+    },
+    {
+      "check": "Three changed rows only explicit whitelist or v18 context",
+      "passed": true,
+      "detail": [
+        {
+          "record_id": "RS_PAST_NA4918",
+          "changed_keys": [
+            "birthplace_claim_status",
+            "birthplace_evidence_kind",
+            "birthplace_followup_v18",
+            "birthplace_source_grade",
+            "birthplace_source_url",
+            "birthplace_source_urls",
+            "geo_resolution_status",
+            "geography_decision",
+            "raw_birthplace",
+            "reason"
+          ]
+        },
+        {
+          "record_id": "RS_PAST_NA5962",
+          "changed_keys": [
+            "birthplace_claim_excerpt",
+            "birthplace_claim_status",
+            "birthplace_evidence_kind",
+            "birthplace_followup_v18",
+            "birthplace_source_grade",
+            "birthplace_source_url",
+            "birthplace_source_urls",
+            "geo_resolution_status",
+            "geography_decision",
+            "raw_birthplace",
+            "reason"
+          ]
+        },
+        {
+          "record_id": "RS_PAST_NA6938",
+          "changed_keys": [
+            "birthplace_claim_excerpt",
+            "birthplace_claim_status",
+            "birthplace_evidence_kind",
+            "birthplace_followup_v18",
+            "birthplace_source_grade",
+            "birthplace_source_url",
+            "birthplace_source_urls",
+            "geo_resolution_status",
+            "geography_decision",
+            "raw_birthplace",
+            "reason"
+          ]
+        }
+      ]
+    },
+    {
+      "check": "All three old-field and absent-field snapshots exact; rollback exact",
+      "passed": true
+    },
+    {
+      "check": "All nonwhitelist native fields frozen across all records",
+      "passed": true
+    },
+    {
+      "check": "DOB/date/calendar unchanged",
+      "passed": true
+    },
+    {
+      "check": "identity/name/eligibility/QID/country/coordinates unchanged",
+      "passed": true
+    },
+    {
+      "check": "old selected evidence/hash/official status unchanged",
+      "passed": true
+    },
+    {
+      "check": "all prior v15 v16 v17 facts unchanged",
+      "passed": true
+    },
+    {
+      "check": "Held Argyris full object untouched",
+      "passed": true
+    },
+    {
+      "check": "No new v18 context on held targets",
+      "passed": true
+    },
+    {
+      "check": "Six held targets complete objects unchanged",
+      "passed": true
+    },
+    {
+      "check": "All hemisphere values unchanged",
+      "passed": true
+    },
+    {
+      "check": "Overall 4169N 186S 628U",
+      "passed": true
+    },
+    {
+      "check": "Window2644 count 2269N 181S 194U",
+      "passed": true
+    },
+    {
+      "check": "Window unknown 145blank 49nonblank",
+      "passed": true
+    },
+    {
+      "check": "All unknown 567blank 61nonblank",
+      "passed": true
+    },
+    {
+      "check": "Three changes output is exact adopted key set",
+      "passed": true
+    },
+    {
+      "check": "Every change unknown to unknown without geographic resolution",
+      "passed": true
+    },
+    {
+      "check": "Fixed target queue148 exact baseline-derived IDs",
+      "passed": true
+    },
+    {
+      "check": "Fixed8 plus Masterman yields9 reviewed",
+      "passed": true
+    },
+    {
+      "check": "Reviewed subset of current blank queue",
+      "passed": true
+    },
+    {
+      "check": "Facts and holds disjoint complete partition",
+      "passed": true
+    },
+    {
+      "check": "Chibnall benchmark excluded and untouched",
+      "passed": true
+    },
+    {
+      "check": "Argyris hold has active explicit DOB conflict",
+      "passed": true
+    },
+    {
+      "check": "Argyris native1916 source1913 retained separately",
+      "passed": true
+    },
+    {
+      "check": "Argyris hold prevents dateless-source bypass",
+      "passed": true
+    },
+    {
+      "check": "Summary counts match independent results",
+      "passed": true
+    },
+    {
+      "check": "Summary new hemisphere delta empty",
+      "passed": true
+    },
+    {
+      "check": "Summary grades true birthplace-only",
+      "passed": true
+    },
+    {
+      "check": "Summary denies new crosscohort screen or analysis",
+      "passed": true
+    },
+    {
+      "check": "Fact source identity/DOB fields preserve native RS_PAST_NA4918",
+      "passed": true
+    },
+    {
+      "check": "Fact no raw metadata invented RS_PAST_NA4918",
+      "passed": true
+    },
+    {
+      "check": "Quote under25 RS_PAST_NA4918",
+      "passed": true
+    },
+    {
+      "check": "Fact source identity/DOB fields preserve native RS_PAST_NA5962",
+      "passed": true
+    },
+    {
+      "check": "Fact no raw metadata invented RS_PAST_NA5962",
+      "passed": true
+    },
+    {
+      "check": "Quote under25 RS_PAST_NA5962",
+      "passed": true
+    },
+    {
+      "check": "Fact source identity/DOB fields preserve native RS_PAST_NA6938",
+      "passed": true
+    },
+    {
+      "check": "Fact no raw metadata invented RS_PAST_NA6938",
+      "passed": true
+    },
+    {
+      "check": "Quote under25 RS_PAST_NA6938",
+      "passed": true
+    },
+    {
+      "check": "Adam structured no-prose quote has field format/locator",
+      "passed": true
+    },
+    {
+      "check": "Adam S3 upstream/GND caveat explicit",
+      "passed": true
+    },
+    {
+      "check": "Collar yearonly without day confirmation",
+      "passed": true
+    },
+    {
+      "check": "Christopherson exact source DOB clause",
+      "passed": true
+    },
+    {
+      "check": "Adam exact displayed sameprofile DOB",
+      "passed": true
+    },
+    {
+      "check": "Main CSV4983 unique ordered IDs",
+      "passed": true
+    },
+    {
+      "check": "CSV all v17 columns retained in order",
+      "passed": true
+    },
+    {
+      "check": "CSV adds exactly6 v18 columns",
+      "passed": true
+    },
+    {
+      "check": "CSV all old immutable column values preserved",
+      "passed": true
+    },
+    {
+      "check": "CSV untouched rows all old values exact",
+      "passed": true
+    },
+    {
+      "check": "CSV three new v18 record flags/grades",
+      "passed": true
+    },
+    {
+      "check": "CSV window unknown194 exact record set",
+      "passed": true
+    },
+    {
+      "check": "CSV unknown all correct status",
+      "passed": true
+    },
+    {
+      "check": "Gzip fixed zero mtime",
+      "passed": true
+    },
+    {
+      "check": "Main inputs are local standard-library selfcontained",
+      "passed": true
+    },
+    {
+      "check": "No full original source HTML/PDF/image/cache files in study",
+      "passed": true
+    },
+    {
+      "check": "Native UK_Royal_Society cohort labels/distribution preserved",
+      "passed": true
+    },
+    {
+      "check": "Independent read-only prose/source-count review passed",
+      "passed": true
+    },
+    {
+      "check": "Prose discloses Adam S3 upstream uncertainty and no assumed GND supplier",
+      "passed": true
+    },
+    {
+      "check": "Prose discloses Collar birthyear only and no month/day verification",
+      "passed": true
+    },
+    {
+      "check": "Prose retains Argyris1913 versus native1916 active hold without birthplace or date correction",
+      "passed": true
+    },
+    {
+      "check": "Compact pilot2inpool plus1outbenchmark and0full148screen accurately disclosed",
+      "passed": true
+    },
+    {
+      "check": "Compact source date/authorship/newer/independence/byte-identity not assumed",
+      "passed": true
+    },
+    {
+      "check": "Request arithmetic18queries20webnav19hosts1mirror2screenshots3find0GET independently recomputed",
+      "passed": true
+    },
+    {
+      "check": "Prose no visual verification from unusable image-marker responses",
+      "passed": true
+    },
+    {
+      "check": "Source quotes0,10,10 and Argyris18 words within25-word policy",
+      "passed": true
+    },
+    {
+      "check": "Original DOB tiers distinct from new birthplace support grades in prose",
+      "passed": true
+    }
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [],
+  "prose_review_pending": false,
+  "limits": [
+    "No new source-network retrieval in this data QA. Source-admission decisions and original-body observations are reviewed through supplied source audits and separate source QA.",
+    "Manifest and ZIP not yet created; not verified here. Packager must exclude __pycache__ and scratch source caches.",
+    "The study contains only self-contained accepted-fact replay inputs, not a runnable reproduction of external source acquisition."
+  ],
+  "prose_reviewer": "/root/v18_final_qa/prose_review",
+  "QA_process_notes": [
+    "The first harness execution verified two successful replay/hash passes and all data/CSV/frozen-field checks, then a QA-only final assertion incorrectly expected native cohort label UK. Actual native label is UK_Royal_Society. This was a harness assumption, not a dataset or implementation failure.",
+    "The corrected harness had already relaunched before the parent requested limiting follow-up to the final assertion; it completed with the correct native-label/distribution check. Four total replay invocations succeeded with the same five pinned output hashes. No further replay was run.",
+    "Only this audit report was newly written in the study. Main replays regenerated byte-identical official outputs; no implementation, fact inputs or prose were changed."
+  ],
+  "independent_source_network_refetch_performed": false
+}
