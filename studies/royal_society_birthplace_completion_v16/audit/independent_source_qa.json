@@ -1,0 +1,233 @@
+{
+  "schema": "UK_v16_independent_source_adjudication_v1",
+  "reviewer": "/root/v16_source_qa",
+  "written_utc": "2026-11-05T00:14:14.865410+00:00",
+  "scope": "Five proposed first-birthplace additions and the Brown identity hold; no master/Git mutation.",
+  "review_materials": {
+    "files": [
+      "v16_sources_a.json",
+      "v16_sources_b.json",
+      "v16_sources_c.json",
+      "v16_method_qa.json",
+      "v16_blank_queue.json",
+      "v16_plan.json",
+      "academy_repo/studies/royal_society_birthplace_completion_v15/outputs/birthplace_rows.jsonl.gz"
+    ],
+    "parent_original_body_observations": [
+      "MayoRaftery turn97view0",
+      "NAS Evans turn98view0",
+      "WellcomeWilliams turn99view0",
+      "ODNB Mackintosh turn99view1",
+      "WadhamRoss turn99view2"
+    ],
+    "verification_limit": "This QA reviewed structured source observations and the inherited parent original-body readings, and independently checked frozen native data and target uniqueness. It did not fetch source bodies anew or read raw original PDF/HTML bytes; no independent raw HTTP status/time/hash is claimed."
+  },
+  "decision": "five_admissible_with_documented_source_precision_and_Mackintosh_superset_name_review",
+  "new_birthplace_grades": {
+    "S2": 4,
+    "S3": 1
+  },
+  "expected_new_birthplaces": 5,
+  "expected_new_geographic_resolutions": 2,
+  "expected_new_hemisphere_counts": {
+    "north": 1,
+    "south": 1
+  },
+  "expected_new_birthplaces_geography_unknown": 3,
+  "record_checks": [
+    {
+      "record_id": "RS_PAST_NA4680",
+      "native_authority_name": "Raftery; Michael Augustine (1936 - 2007); biochemist",
+      "native_DOB": "1936-02-08",
+      "unique_native_full_authority_name_key_in_all_4983": true,
+      "native_full_authority_name_key_count": 1,
+      "matches": [
+        "RS_PAST_NA4680"
+      ],
+      "target_object_exact_v15": true,
+      "fixed_12_followup": true,
+      "fixed_164_blank_place_pool": true,
+      "initial_raw_birthplace_blank_and_hemisphere_unknown": true,
+      "quote_word_count_whitespace": 5,
+      "quote_under_25_words": true
+    },
+    {
+      "record_id": "RS_PAST_NA5416",
+      "native_authority_name": "Williams; Alan Frederick (1945 - 1992)",
+      "native_DOB": "1945-05-25",
+      "unique_native_full_authority_name_key_in_all_4983": true,
+      "native_full_authority_name_key_count": 1,
+      "matches": [
+        "RS_PAST_NA5416"
+      ],
+      "target_object_exact_v15": true,
+      "fixed_12_followup": true,
+      "fixed_164_blank_place_pool": true,
+      "initial_raw_birthplace_blank_and_hemisphere_unknown": true,
+      "quote_word_count_whitespace": 10,
+      "quote_under_25_words": true
+    },
+    {
+      "record_id": "RS_PAST_NA4568",
+      "native_authority_name": "Mackintosh; Nicholas John (1935 - 2015)",
+      "native_DOB": "1935-07-09",
+      "unique_native_full_authority_name_key_in_all_4983": true,
+      "native_full_authority_name_key_count": 1,
+      "matches": [
+        "RS_PAST_NA4568"
+      ],
+      "target_object_exact_v15": true,
+      "fixed_12_followup": true,
+      "fixed_164_blank_place_pool": true,
+      "initial_raw_birthplace_blank_and_hemisphere_unknown": true,
+      "quote_word_count_whitespace": 14,
+      "quote_under_25_words": true
+    },
+    {
+      "record_id": "RS_PAST_NA4774",
+      "native_authority_name": "Ross; Graham Garland (1944 - 2021); theoretical physicist",
+      "native_DOB": "1944-09-13",
+      "unique_native_full_authority_name_key_in_all_4983": true,
+      "native_full_authority_name_key_count": 1,
+      "matches": [
+        "RS_PAST_NA4774"
+      ],
+      "target_object_exact_v15": true,
+      "fixed_12_followup": true,
+      "fixed_164_blank_place_pool": true,
+      "initial_raw_birthplace_blank_and_hemisphere_unknown": true,
+      "quote_word_count_whitespace": 8,
+      "quote_under_25_words": true
+    },
+    {
+      "record_id": "RS_PAST_NA6897",
+      "native_authority_name": "Evans; Anthony Glyn (1942 - 2009)",
+      "native_DOB": "1942-12-04",
+      "unique_native_full_authority_name_key_in_all_4983": true,
+      "native_full_authority_name_key_count": 1,
+      "matches": [
+        "RS_PAST_NA6897"
+      ],
+      "target_object_exact_v15": true,
+      "fixed_12_followup": true,
+      "fixed_164_blank_place_pool": true,
+      "initial_raw_birthplace_blank_and_hemisphere_unknown": true,
+      "quote_word_count_whitespace": 10,
+      "quote_under_25_words": true
+    }
+  ],
+  "source_reviews": [
+    {
+      "record_id": "RS_PAST_NA4680",
+      "decision": "accept_first_birthplace_S3_geography_unknown",
+      "raw_birthplace": "Galway",
+      "source_birthdate_or_null": null,
+      "source_birthdate_precision": "no_DOB_age_at_death_only",
+      "native_DOB_verification": "Native1936-02-08 is frozen and unverified by this source; age71 at August1 death in a2007 obituary is compatible, not a derived DOB.",
+      "name_binding": "Explicit Michael Augustine Raftery matches all native components and is unique in fixed UK pool.",
+      "identity_basis": [
+        "Native full authority name and1936–2007 lifespan are compatible with source subject and deathage.",
+        "Caltech23-year chemical biology/acetylcholine-receptor career, FRS1986, Minnesota and retirement2001 provide distinctive coherent anchors."
+      ],
+      "source_grade_basis": "Uncredited individual author; original professional newspaper/local tribute, institutional byline The Mayo News. Conservative S3, not signed scholarly S2 or official-register S1.",
+      "caveats": [
+        "Distinctive anchors all within this narrative remain one source, not independent corroboration.",
+        "Parentage/upbringing in Shrule,CoMayo and education/employment/publisher geography do not qualify the birth-place referent.",
+        "No country, entity or personal birthpoint assigned."
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA5416",
+      "decision": "accept_first_birthplace_S2_south",
+      "raw_birthplace": "Australia",
+      "source_birthdate_or_null": "1945-05-25",
+      "source_birthdate_precision": "day_in_birth_clause",
+      "name_binding": "Original archive heading/contributor supplies Alan Frederick Williams, lifespan1945–1992; the birth-clause author initials are not expanded without the same-source full heading.",
+      "identity_basis": [
+        "Exact native DOB in the born clause.",
+        "OxfordMRCunit director1977, immunology professor1990 and FRS1990 provide distinctive anchors."
+      ],
+      "source_grade_basis": "Original Wellcome institutional archival biographical description, conservative S2. Creator/contributor is not presumed narrative author; individual author null.",
+      "geographic_basis": "Australia explicit in born clause supports south only; no city inferred from Melbourne education."
+    },
+    {
+      "record_id": "RS_PAST_NA4568",
+      "decision": "accept_first_birthplace_S2_geography_unknown",
+      "raw_birthplace": "the Royal Northern Hospital in Islington, London",
+      "source_birthdate_or_null": "1935-07-09",
+      "source_birthdate_precision": "day_in_birth_clause",
+      "name_binding": "Reviewed source-superset binding: original explicitly gives Nicholas John Seymour Munro Mackintosh; all native Nicholas John Mackintosh components are present, but names are not string-exact and extra components are not mere orthography. Native shorter identity remains unchanged.",
+      "identity_basis": [
+        "Exact native9July1935 and lifespan1935–2015.",
+        "Experimental/comparative psychology, Oxford animal-learning/DPhil and original CCC memoir/FRS1987 provide specific professional identity correspondence."
+      ],
+      "source_grade_basis": "A Dickinson signed original edited ODNB public extract, conservative S2; paid full chapter not claimed read.",
+      "geographic_basis": "Hospital/Islington/London are unqualified by a birth-linked country/region under this strict workflow; retain unknown.",
+      "required_documentation": "Explicit source-superset review exception/clarification to method gate, rather than claiming exact-name or harmless-orthography equality."
+    },
+    {
+      "record_id": "RS_PAST_NA4774",
+      "decision": "accept_first_birthplace_S2_geography_unknown",
+      "raw_birthplace": "Aberdeen",
+      "source_birthdate_or_null": "1944",
+      "source_birthdate_precision": "year_only",
+      "native_DOB_verification": "Compatible with native1944-09-13 only at year precision; month/day not independently verified.",
+      "name_binding": "Full Graham Garland Ross FRS subject title and1944–2021 lifespan uniquely bind native theoretical physicist.",
+      "identity_basis": [
+        "Oxford/Wadham1984 appointment, FRS1991, professorship1992, emeritus2009 and DiracMedal2012 are coherent distinctive anchors."
+      ],
+      "source_grade_basis": "C.V.Sukumar signed original Wadham College gazette obituary; S2.",
+      "geographic_basis": "Born-clause Aberdeen lacks a country/region; no Scottish-nationality/university/career inference, unknown."
+    },
+    {
+      "record_id": "RS_PAST_NA6897",
+      "decision": "accept_first_birthplace_S2_north",
+      "raw_birthplace": "Porthcawl, Wales",
+      "source_birthdate_or_null": "1942-12-04",
+      "source_birthdate_precision": "exact_day_in_same_memoir_subject_header_not_in_born_clause",
+      "name_binding": "Original NAS memoir full body/header Anthony Glyn Evans, exactDOB and lifespan1942–2009 match native record; no initials expansion invented.",
+      "identity_basis": [
+        "Materials science/engineering and Imperial metallurgy, Berkeley/Harvard/Princeton/UCSBcareer and RoyalSociety membership are distinctive."
+      ],
+      "source_grade_basis": "JohnW.Hutchinson signed original NAS scholarly memoir, conservative S2. Host alone not S1 proof.",
+      "geographic_basis": "Porthcawl,Wales explicit together in subject-born-and-raised clause; Wales supports north.",
+      "caveats": [
+        "NAE McMeeking2014 is a separate authored publication, but informational independence is not established.",
+        "Hutchinson2011 Harvard tribute shares author with NAS memoir, not independent corroboration.",
+        "These are one person-birthplace observation, not multiple independent people."
+      ]
+    }
+  ],
+  "Brown_hold": {
+    "record_id": "RS_PAST_NA3971",
+    "decision": "hold_under_current_full_source_name_gate",
+    "observed_positive_evidence": "DavidA.Brown first-person autobiography explicitly born London; MalaShah signed Physoc obituary positively links exact2020 DOI and supplies1936–2023/career/FRS correspondence.",
+    "limitation": "No opened original body expands Anthony and autobiography has no ownDOB. Do not expand A from native record to pretend a full-source-name match, or call year-only companion evidence exactdate verification.",
+    "interpretation": "This is a conservative method-gate hold, not an observed contradictory person or birthday, nor a claim the autobiography belongs to someone else. Preserve lead for possible later explicit authority binding."
+  },
+  "geography": {
+    "north": [
+      "RS_PAST_NA6897"
+    ],
+    "south": [
+      "RS_PAST_NA5416"
+    ],
+    "unknown": [
+      "RS_PAST_NA4680",
+      "RS_PAST_NA4568",
+      "RS_PAST_NA4774"
+    ],
+    "no_country_entity_or_personal_coordinates_assigned": true
+  },
+  "required_parent_documentation": [
+    "Raftery no-source-DOB/age-only is separate from compatible partial DOB; no independent native date verification claimed.",
+    "Mackintosh source adds SeymourMunro, so preserve observed source name and document reviewed superset binding without rewriting native authority name.",
+    "Record v16 identity-method amendment timing honestly; preserve v15 exactdate protocol and outputs unchanged.",
+    "New S2/S3 grades are birthplace support only; original native DOB tiers and existing S2-versusS2+S3 DOB panels unchanged.",
+    "Multiple anchors within one source are not independent sources; separate Evans publications not automatically independent."
+  ],
+  "blocking_findings": [],
+  "no_source_network_requests_by_QA": true,
+  "no_master_mutation": true,
+  "no_Git_operations": true
+}

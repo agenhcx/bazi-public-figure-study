@@ -1,0 +1,58 @@
+{
+  "schema": "v16_group_c_intent_v1",
+  "written_utc": "2026-11-05T00:08:53.717256+00:00",
+  "scope": [
+    "RS_PAST_NA4050",
+    "RS_PAST_NA4863",
+    "RS_PAST_NA6870",
+    "RS_PAST_NA6897"
+  ],
+  "planned_queries": [
+    "Lionel Vivian Crawford obituary born Cambridge",
+    "Dennis James Greenland obituary born Rothamsted",
+    "Henry Elderfield obituary born Cambridge",
+    "Anthony Glyn Evans obituary born Harvard UCSB"
+  ],
+  "planned_opens": [
+    {
+      "url": "https://www.nationalacademies.org/read/18959/chapter/14",
+      "reason": "Original NAE memorial chapter and direct birth-clause discovery result"
+    },
+    {
+      "url": "https://groups.seas.harvard.edu/hutchinson/papers/Evanstribute2011.pdf",
+      "reason": "Original signed tribute PDF discovery result"
+    }
+  ],
+  "limits": {
+    "queries": 6,
+    "navigations": 8
+  },
+  "request_times_note": "Intent timestamp is not exact request time. Tool parsed text is not raw HTTP.",
+  "adaptive_queries": {
+    "written_utc": "2026-11-05T00:09:07.794593+00:00",
+    "queries": [
+      "\"Lionel Crawford\" obituary Emmanuel",
+      "\"Harry Elderfield\" \"born\" OR \"Dennis Greenland\" \"born\""
+    ]
+  },
+  "second_open_intent": {
+    "written_utc": "2026-11-05T00:09:25.361105+00:00",
+    "urls": [
+      "https://www.nature.com/articles/533322a",
+      "https://taa-international.org/wp-content/uploads/2018/07/Ag4Dev18_web_upload.pdf",
+      "https://www.nasonline.org/wp-content/uploads/2024/10/Evans_Anthony.pdf",
+      "https://iiif.wellcomecollection.org/file/b16893281_Vol.%2038.pdf"
+    ]
+  },
+  "third_open_intent": {
+    "written_utc": "2026-11-05T00:09:42.469484+00:00",
+    "urls": [
+      "https://www.researchgate.net/publication/379545268_Henry_Elderfield_25_April_1943-19_April_2016",
+      "https://royalsocietypublishing.org/doi/10.1098/rsbm.2018.0030"
+    ],
+    "notes": "TAA PDF observed429; no retry. Nature originalpreview lacks born clause, discoveryexcerpt not accepted."
+  },
+  "parsed_find_intent": [
+    "Dr Lionel Crawford in Wellcome PDF"
+  ]
+}

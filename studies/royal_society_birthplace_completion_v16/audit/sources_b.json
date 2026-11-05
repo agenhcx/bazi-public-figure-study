@@ -1,0 +1,440 @@
+{
+  "schema": "UK_v16_original_source_group_b_v1",
+  "worker": "/root/v16_sources_b",
+  "written_utc": "2026-11-05T00:11:33.332889+00:00",
+  "intent_file": "v16_b_intent.json",
+  "scope_record_ids": [
+    "RS_PAST_NA5416",
+    "RS_PAST_NA3971",
+    "RS_PAST_NA4568",
+    "RS_PAST_NA4774"
+  ],
+  "counts": {
+    "queries": 6,
+    "original_navigations": 8,
+    "parsed_text_find_attempts": 13,
+    "body_verified_birthplace_candidates": 4,
+    "straight_identity_candidates": 3,
+    "conditional_identity_candidates": 1,
+    "original_body_inaccessible_routes": 1,
+    "holds_final_adjudication_by_parent": true
+  },
+  "candidates": [
+    {
+      "record_id": "RS_PAST_NA5416",
+      "native": {
+        "record_id": "RS_PAST_NA5416",
+        "authority_name": "Williams; Alan Frederick (1945 - 1992)",
+        "native_dob": "1945-05-25",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_sha256": "bf29cc8f41c47a3e28a7774367e4549dd37554544f070b0d0b0e8fd66d02ecaf",
+        "native_authority_name_and_DOB_count_in_all_UK": 1
+      },
+      "status": "candidate_explicit_birthplace",
+      "raw_birthplace_candidate": "Australia",
+      "source_quote": "Alan F. Williams was born in Australia, 25 May 1945.",
+      "source_quote_word_count": 10,
+      "source_url": "https://wellcomecollection.org/works/s9gweuay",
+      "source_title": "Alan Frederick Williams (1945-1992): archive",
+      "source_author": null,
+      "source_kind": "original_institutional_archival_biographical_note",
+      "source_grade_proposal": "S2",
+      "source_grade_role": "new_person_birthplace_support_only",
+      "source_birthdate_precision": "day_in_birth_clause",
+      "source_birthdate_observed": "1945-05-25",
+      "source_locator": "PP/AFW; full title/contributor lines2–4, Biographical note line53; FRS1990 line58.",
+      "web_refs": [
+        "turn83view0"
+      ],
+      "identity_anchors": [
+        "Full archive heading and contributor names Alan Frederick Williams, lifespan1945–1992.",
+        "Explicit day-month-year in born clause exactly matches native1945-05-25.",
+        "MRC Cellular Immunology Unit director1977, Oxford immunology professor1990 and FRS1990 match distinctive career."
+      ],
+      "identity_or_DOB_conflicts_observed": false,
+      "caveats": [
+        "Only country-level birthplace stated; no town inferred from Melbourne education.",
+        "Individual narrative author uncredited; archive creator/contributor is not asserted to be narrative author.",
+        "Conservative S2 original archive description, not S1 based on official host."
+      ],
+      "geography_assignment_performed": false,
+      "retrieval_representation": "tool-parsed original publisher/institution HTML or PDF text; raw HTTP bytes not saved",
+      "raw_HTTP_status": null,
+      "raw_HTTP_bytes_sha256": null,
+      "request_started_utc": null,
+      "response_received_utc": null,
+      "native_fields_modified": false
+    },
+    {
+      "record_id": "RS_PAST_NA4568",
+      "native": {
+        "record_id": "RS_PAST_NA4568",
+        "authority_name": "Mackintosh; Nicholas John (1935 - 2015)",
+        "native_dob": "1935-07-09",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_sha256": "bee4d0e213a9b1dad9098da33391d3827dedaa4daab1644acc36fcbb13b8896a",
+        "native_authority_name_and_DOB_count_in_all_UK": 1
+      },
+      "status": "candidate_explicit_birthplace",
+      "raw_birthplace_candidate": "the Royal Northern Hospital in Islington, London",
+      "source_quote": "was born at the Royal Northern Hospital in Islington, London, on 9 July 1935",
+      "source_quote_word_count": 14,
+      "source_url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/579372118",
+      "source_title": "Mackintosh, Nicholas John Seymour Munro [Nick]: (1935–2015), experimental and comparative psychologist",
+      "source_author": "A Dickinson",
+      "source_kind": "original_signed_edited_ODNB_public_extract",
+      "source_grade_proposal": "S2",
+      "source_grade_role": "new_person_birthplace_support_only",
+      "source_birthdate_precision": "day_in_birth_clause",
+      "source_birthdate_observed": "1935-07-09",
+      "source_locator": "Original public Extract line777; author761–763, DOI771, publication10January2019 line775.",
+      "web_refs": [
+        "turn93view0",
+        "turn95view1",
+        "turn96view0"
+      ],
+      "identity_anchors": [
+        "Subject full source name Nicholas John Seymour Munro Mackintosh includes native Nicholas John Mackintosh; native shorter identity is retained without adding extra given names.",
+        "Explicit native exact9July1935; source lifespan1935–2015.",
+        "Winchester, Oxford Magdalen BA1960/DPhil animal-learning work under Stuart Sutherland and original CCC memoirFRS1987 bind same experimental psychologist."
+      ],
+      "identity_or_DOB_conflicts_observed": false,
+      "caveats": [
+        "London unqualified by country; no geography assigned by this worker.",
+        "Public extract read; paid full chapter not accessed.",
+        "CCC original signed memoir corroborates born London/exactdate, but no extra birthplace detail was transferred from later career regions."
+      ],
+      "geography_assignment_performed": false,
+      "retrieval_representation": "tool-parsed original publisher/institution HTML or PDF text; raw HTTP bytes not saved",
+      "raw_HTTP_status": null,
+      "raw_HTTP_bytes_sha256": null,
+      "request_started_utc": null,
+      "response_received_utc": null,
+      "native_fields_modified": false,
+      "doi": "10.1093/odnb/9780198614128.013.110019",
+      "publication_date": "2019-01-10",
+      "supporting_original_source": {
+        "url": "https://www.ccc.ox.ac.uk/sites/default/files/2020-01/ccc_pelican_2015_complete_hyperlinked_compressed.pdf",
+        "title": "The Pelican Record, Vol.LI, December2015, Nick Mackintosh1935–2015",
+        "authors": [
+          "A.G. Baker",
+          "Robin A. Murphy"
+        ],
+        "publisher": "Corpus Christi College, Oxford",
+        "editor": "Mark Whittow",
+        "locator": "PDF zero-based pages71–72, printed69–70; born-date sentence parsed2333–2335, authors2363–2364, FRS1987 at2359.",
+        "web_refs": [
+          "turn83view2",
+          "turn85view1"
+        ],
+        "source_role": "original_identity_and_date_correspondence; no separate quotation distributed"
+      },
+      "access_failure": {
+        "url": "https://www.psychometrics.cam.ac.uk/people/professor-nicholas-mackintosh",
+        "web_ref": "turn89view1",
+        "observed_tool_error": "403 Forbidden",
+        "raw_HTTP_status": null,
+        "no_retry": true
+      }
+    },
+    {
+      "record_id": "RS_PAST_NA4774",
+      "native": {
+        "record_id": "RS_PAST_NA4774",
+        "authority_name": "Ross; Graham Garland (1944 - 2021); theoretical physicist",
+        "native_dob": "1944-09-13",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_sha256": "bd8a6f30f386f7d8626d80cd3607571bf6f9e486774a5cda526602459dddb217",
+        "native_authority_name_and_DOB_count_in_all_UK": 1
+      },
+      "status": "candidate_explicit_birthplace",
+      "raw_birthplace_candidate": "Aberdeen",
+      "source_quote": "Graham Ross was born in Aberdeen in 1944",
+      "source_quote_word_count": 8,
+      "source_url": "https://admin.wadham.ox.ac.uk/media/documents/Gazette_2022.pdf",
+      "source_title": "Professor Graham Garland Ross FRS | 1944–2021, Wadham College Gazette2022",
+      "source_author": "C. V. Sukumar",
+      "source_kind": "original_signed_university_college_gazette_obituary",
+      "source_grade_proposal": "S2",
+      "source_grade_role": "new_person_birthplace_support_only",
+      "source_birthdate_precision": "year_only",
+      "source_birthdate_observed": "1944",
+      "source_locator": "PDF zero-based page50 of82 (spread, printed100); born clause5015, career5017–5027, author5051 and full subject title5052.",
+      "web_refs": [
+        "turn83view3",
+        "turn85view2",
+        "turn89view2"
+      ],
+      "identity_anchors": [
+        "Full subject title Graham Garland Ross FRS and lifespan1944–2021 match native.",
+        "Birth year1944 compatible with native1944-09-13; source month/day not given and not inferred.",
+        "Oxford lecturer and Wadham fellow1984, FRS1991, professor1992, emeritus2009 and DiracMedal2012 uniquely match theoretical physicist."
+      ],
+      "identity_or_DOB_conflicts_observed": false,
+      "caveats": [
+        "Aberdeen has no explicit country/region qualifier in born clause; do not use Scottish university or career to infer region.",
+        "No native date verification at day precision claimed; preserve frozen DOB unchanged."
+      ],
+      "geography_assignment_performed": false,
+      "retrieval_representation": "tool-parsed original publisher/institution HTML or PDF text; raw HTTP bytes not saved",
+      "raw_HTTP_status": null,
+      "raw_HTTP_bytes_sha256": null,
+      "request_started_utc": null,
+      "response_received_utc": null,
+      "native_fields_modified": false
+    },
+    {
+      "record_id": "RS_PAST_NA3971",
+      "native": {
+        "record_id": "RS_PAST_NA3971",
+        "authority_name": "Brown; David Anthony (1936 - 2023); pharmacologist",
+        "native_dob": "1936-02-10",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_sha256": "318196857e16c1931971a1ed3b16f73437e0a62ae64380c844768d4d4fad0513",
+        "native_authority_name_and_DOB_count_in_all_UK": 1
+      },
+      "status": "candidate_explicit_birthplace_conditional_identity_binding",
+      "raw_birthplace_candidate": "London",
+      "source_quote": "I was born in London",
+      "source_quote_word_count": 5,
+      "source_url": "https://www.annualreviews.org/doi/pdf/10.1146/annurev-pharmtox-010919-023755",
+      "source_title": "Neurons, Receptors, and Channels",
+      "source_author": "David A. Brown",
+      "source_kind": "original_signed_scholarly_autobiographical_review",
+      "source_grade_proposal": "S2",
+      "source_grade_role": "new_person_birthplace_support_only",
+      "source_birthdate_precision": "no_own_birthdate_in_birthplace_source; companion_obituary_year_only",
+      "source_birthdate_observed": null,
+      "source_locator": "Annual Review of Pharmacology and Toxicology2020,60:9–30; PDF zero-basedpage1 title/author; page2 printed10 Introduction lines34–35 born clause; page14 printed22 career sequence.",
+      "web_refs": [
+        "turn89view0",
+        "turn96view1",
+        "turn96view2"
+      ],
+      "identity_anchors": [
+        "Author explicitly identified David A.Brown, UCL Neuroscience/Physiology/Pharmacology.",
+        "First-person career sequence Barts→WellcomeProfessor/ChairSchoolofPharmacy→NIHFogarty→UCLChair is highly distinctive.",
+        "MalaShah original PhysiologicalSociety obituary1936–2023 explicitly links this exact2020 autobiography, with BrownDA full citation and M-current research, FRS1990, headUCL1987–2002."
+      ],
+      "identity_or_DOB_conflicts_observed": false,
+      "caveats": [
+        "Conditional parent identity review: native expands Anthony, but no full Anthony expansion or exact DOB found in body of the opened original sources.",
+        "Own birth date is absent in autobiography (find1936 returned no match); companion signed obituary title gives only year1936 and death2023.",
+        "Do not call this exact-native-date verified or infer own1936 from parents1899/1900 dates.",
+        "London unqualified by country; birthplace can be first stored text while hemisphere remains unknown."
+      ],
+      "geography_assignment_performed": false,
+      "retrieval_representation": "tool-parsed original publisher/institution HTML or PDF text; raw HTTP bytes not saved",
+      "raw_HTTP_status": null,
+      "raw_HTTP_bytes_sha256": null,
+      "request_started_utc": null,
+      "response_received_utc": null,
+      "native_fields_modified": false,
+      "doi": "10.1146/annurev-pharmtox-010919-023755",
+      "publication_year": "2020",
+      "supporting_original_source": {
+        "url": "https://www.physoc.org/magazine-articles/obituary-professor-david-brown-1936-2023/",
+        "title": "Obituary: Professor David Brown (1936-2023)",
+        "author": "Professor Mala Shah",
+        "publication": "Physiology News133, SpringApril2024",
+        "doi": "10.36866/pn.133.46",
+        "locator": "Title527,author533,UCL535,career543–549, exact2020 autobiography reference563.",
+        "web_refs": [
+          "turn83view1",
+          "turn89view3"
+        ],
+        "source_role": "explicit bibliographic link from deceased neuropharmacologist to autobiography; year/lifespan/professional identity, no own exactDOB and no born clause"
+      },
+      "additional_original_source_no_birthplace": {
+        "url": "https://www.bps.ac.uk/news/article/in-memoriam-professor-david-brown/",
+        "title": "In memoriam: Professor David Brown",
+        "publication_date": "2023-10-30",
+        "source_author": "Institutional notice; signed quote attributed Professor Clive Page, BPS President, not whole notice author",
+        "locator": "124–133",
+        "web_ref": "turn93view1",
+        "role": "BPS membership1965/HonoraryFellow2005 and deathnotice, no birthplace orDOB; not used to infer Londoncountry"
+      }
+    }
+  ],
+  "holds": [],
+  "query_ledger": [
+    {
+      "engine": "system2",
+      "queries": [
+        "Alan Frederick Williams immunologist born Oxford obituary",
+        "David Anthony Brown pharmacologist born UCL obituary",
+        "Nicholas John Mackintosh born Cambridge obituary",
+        "Graham Garland Ross born Oxford obituary"
+      ],
+      "webref": "turn81search",
+      "preplanned": true,
+      "exact_request_utc": null
+    },
+    {
+      "engine": "system1",
+      "queries": [
+        "\"David Anthony Brown\" \"UCL\" obituary",
+        "\"Mackintosh, Nicholas John\" \"born\" obituary"
+      ],
+      "webref": "turn90search",
+      "preplanned": true,
+      "exact_request_utc": null
+    }
+  ],
+  "original_navigation_ledger": [
+    {
+      "url": "https://wellcomecollection.org/works/s9gweuay",
+      "web_ref": "turn83view0",
+      "outcome": "body_explicit_birthplace",
+      "raw_HTTP_status": null,
+      "tool_reported_status": null,
+      "exact_request_utc": null,
+      "raw_bytes_saved": false
+    },
+    {
+      "url": "https://www.physoc.org/magazine-articles/obituary-professor-david-brown-1936-2023/",
+      "web_ref": "turn83view1",
+      "outcome": "signed_obituary_no_birthplace; explicit_bibliographic_link_to_autobiography",
+      "raw_HTTP_status": null,
+      "tool_reported_status": null,
+      "exact_request_utc": null,
+      "raw_bytes_saved": false
+    },
+    {
+      "url": "https://www.ccc.ox.ac.uk/sites/default/files/2020-01/ccc_pelican_2015_complete_hyperlinked_compressed.pdf",
+      "web_ref": "turn83view2",
+      "outcome": "original_signed_memoir_born_London_exactdate",
+      "raw_HTTP_status": null,
+      "tool_reported_status": null,
+      "exact_request_utc": null,
+      "raw_bytes_saved": false
+    },
+    {
+      "url": "https://admin.wadham.ox.ac.uk/media/documents/Gazette_2022.pdf",
+      "web_ref": "turn83view3",
+      "outcome": "original_signed_memoir_born_Aberdeen_yearonly",
+      "raw_HTTP_status": null,
+      "tool_reported_status": null,
+      "exact_request_utc": null,
+      "raw_bytes_saved": false
+    },
+    {
+      "url": "https://www.annualreviews.org/doi/pdf/10.1146/annurev-pharmtox-010919-023755",
+      "web_ref": "turn89view0",
+      "outcome": "original_selfauthored_born_London_no_ownDOB",
+      "raw_HTTP_status": null,
+      "tool_reported_status": null,
+      "exact_request_utc": null,
+      "raw_bytes_saved": false
+    },
+    {
+      "url": "https://www.psychometrics.cam.ac.uk/people/professor-nicholas-mackintosh",
+      "web_ref": "turn89view1",
+      "outcome": "tool_reported403_nobody_noretry",
+      "raw_HTTP_status": null,
+      "tool_reported_status": 403,
+      "exact_request_utc": null,
+      "raw_bytes_saved": false
+    },
+    {
+      "url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/579372118",
+      "web_ref": "turn93view0",
+      "outcome": "signed_ODNB_public_extract_explicit_hospital_Islington_London_exactDOB",
+      "raw_HTTP_status": null,
+      "tool_reported_status": null,
+      "exact_request_utc": null,
+      "raw_bytes_saved": false
+    },
+    {
+      "url": "https://www.bps.ac.uk/news/article/in-memoriam-professor-david-brown/",
+      "web_ref": "turn93view1",
+      "outcome": "original_short_deathnotice_noDOB_noBP",
+      "raw_HTTP_status": null,
+      "tool_reported_status": null,
+      "exact_request_utc": null,
+      "raw_bytes_saved": false
+    }
+  ],
+  "parsed_text_find_ledger": [
+    {
+      "ref": "turn83view1",
+      "pattern": "born",
+      "outcome": "no match"
+    },
+    {
+      "ref": "turn83view2",
+      "pattern": "Born in London",
+      "outcome": "Mackintoshbornclauseandprofessionalanchors"
+    },
+    {
+      "ref": "turn83view3",
+      "pattern": "Graham Ross was born",
+      "outcome": "bornclause_and_authored_title"
+    },
+    {
+      "ref": "turn83view1",
+      "pattern": "Khan",
+      "outcome": "no match; exploratory author guess not evidence"
+    },
+    {
+      "ref": "turn83view3",
+      "pattern": "Professor Graham Garland",
+      "outcome": "fullsubjectheading_and_author"
+    },
+    {
+      "ref": "turn83view1",
+      "pattern": "David was",
+      "outcome": "signedMalaShahbody_identityand_bibliographiclink"
+    },
+    {
+      "ref": "turn93view0",
+      "pattern": "## Extract",
+      "outcome": "locator776"
+    },
+    {
+      "ref": "turn93view0",
+      "pattern": "A Dickinson",
+      "outcome": "author_and_publication_metadata"
+    },
+    {
+      "ref": "turn89view0",
+      "pattern": "1990",
+      "outcome": "references_only_no_ownDOB"
+    },
+    {
+      "ref": "turn89view0",
+      "pattern": "BROWN",
+      "outcome": "references_only_no_fullnameexpansion"
+    },
+    {
+      "ref": "turn93view0",
+      "pattern": "was born at the Royal Northern Hospital",
+      "outcome": "publicoriginalbornclause777"
+    },
+    {
+      "ref": "turn89view0",
+      "pattern": "1936",
+      "outcome": "no match"
+    },
+    {
+      "ref": "turn89view0",
+      "pattern": "School of Pharmacy",
+      "outcome": "distinctivefirstpersoncareer_sequence"
+    }
+  ],
+  "limits_and_caveats": [
+    "No master/Git/country/QID/coordinates/hemisphere changes made.",
+    "All raw HTTP status/times/hashes unknown; tool PDF text is not raw original PDF bytes. No original fullsource was downloaded or redistributed.",
+    "Three straightforward identity candidates and one conditional Brown candidate are proposals, not accepted main facts.",
+    "No geography inference from nationality, family, work, education, publication host/footer or famouscity.",
+    "Original Wellcome contributor is not assumed narrative author.",
+    "Mackintosh native name not expanded to source additional given names.",
+    "Only source-level year precision forRoss; no exactDOB validation claimed.",
+    "Source quotation <=25Englishwords each; no original fullHTML/PDF/pageimages in report.",
+    "Sourcefind outputs exposed changing generateddownload-watermark time/IP; not treated as sourcepublication/retrievalmetadata or distributed."
+  ]
+}
