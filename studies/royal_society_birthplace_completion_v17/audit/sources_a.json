@@ -1,0 +1,289 @@
+{
+  "schema": "UK_v17_original_birthplace_sources_a_v1",
+  "worker": "/root/v17_sources_a",
+  "completed_utc": "2026-11-05T00:23:32.264412+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA4155",
+    "RS_PAST_NA5003",
+    "RS_PAST_NA629",
+    "RS_PAST_NA5508"
+  ],
+  "intent_file": "v17_a_intent.json",
+  "counts": {
+    "queries": 6,
+    "original_navigation_attempts": 5,
+    "parsed_text_find_operations": 0,
+    "raw_HTTP_requests": 0,
+    "body_verified_birthplace_candidates": 4,
+    "holds": 0
+  },
+  "candidates": [
+    {
+      "record_id": "RS_PAST_NA4155",
+      "native": {
+        "record_id": "RS_PAST_NA4155",
+        "authority_name": "Goodwin; Leonard George (1915 - 2008)",
+        "native_dob": "1915-07-11",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "full_target_object_canonical_sha256": "2c7c5e7985cb3092c1fbcfee61a20b69976415e2a5df6b5d3f61b2a6bb825c93",
+        "native_authority_name_and_DOB_count_in_all_4983": 1
+      },
+      "status": "candidate_original_explicit_birthplace_parent_review_required",
+      "raw_birthplace": "Wood Green, London",
+      "source_url": "https://history.rcp.ac.uk/inspiring-physicians/leonard-george-goodwin",
+      "source_title": "Leonard George Goodwin",
+      "source_author": "R Killick-Kendrick",
+      "source_kind": "original_signed_edited_historical_biography",
+      "source_grade_proposal": "S2",
+      "source_grade_role": "new_person_birthplace_support_only",
+      "source_quote": "Leonard George Goodwin was an only child, born in Wood Green, London.",
+      "source_quote_word_count": 12,
+      "source_ref": "turn103view0",
+      "source_locator": "Original RCP Inspiring Physicians/Munk’s Roll, Vol XII, web; full name lines65/76; exact DOB header84; birthplace102; author107.",
+      "source_birthdate": "1915-07-11",
+      "source_birthdate_precision": "exact_day_in_subject_header_not_repeated_in_born_clause",
+      "source_date_matches_native": true,
+      "source_publication_date_or_note": "Original biography publication range2005–2018 stated by host; exact year/day not stated.",
+      "identity_anchors": [
+        "Full original subject name Leonard George Goodwin and lifespan1915–2008 match native.",
+        "DOB11July1915 in subject header exactly matches native.",
+        "Pharmacologist/protozoologist, Wellcome Laboratories of Tropical Medicine director, Nuffield Institute/Zoological Society career and FRS1976 are distinctive anchors."
+      ],
+      "caveats": [
+        "Wood Green, London is explicitly within the born clause. Nearby Hampstead is later family move, not birth. Maternal grandfather’s Hambleton,Rutland and later Berkshire residence must not qualify birth-place geography.",
+        "Individual signed edited historical obituary; conservative S2, not S1 based on RCP host."
+      ],
+      "source_DOB_conflict_observed": false,
+      "geography_assignment_performed": false,
+      "hemisphere_proposal": null,
+      "retrieval_representation": "web-tool parsed original HTML text; not raw HTTP response bytes",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA5003",
+      "native": {
+        "record_id": "RS_PAST_NA5003",
+        "authority_name": "Dudley; Sir; Sheldon Francis (1884 - 1956)",
+        "native_dob": "1884-08-16",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "full_target_object_canonical_sha256": "190680901f21444bb60a674fd6bf2e8f7c3614db45265006665337ffc6f54665",
+        "native_authority_name_and_DOB_count_in_all_4983": 1
+      },
+      "status": "candidate_original_explicit_birthplace_parent_review_required",
+      "raw_birthplace": "Lisbon",
+      "source_url": "https://history.rcp.ac.uk/inspiring-physicians/sir-sheldon-francis-dudley",
+      "source_title": "Sir Sheldon Francis Dudley",
+      "source_author": "Richard R Trail",
+      "source_kind": "original_signed_edited_historical_biography",
+      "source_grade_proposal": "S2",
+      "source_grade_role": "new_person_birthplace_support_only",
+      "source_quote": "He was born into the Naval Medical Service at Lisbon",
+      "source_quote_word_count": 10,
+      "source_ref": "turn103view1",
+      "source_locator": "Original RCP Munk’s Roll, Vol V, printedp111; full name10/21; DOB29; birth-place35; author46; original publication1968 line34.",
+      "source_birthdate": "1884-08-16",
+      "source_birthdate_precision": "exact_day_in_subject_header_not_repeated_in_born_clause",
+      "source_date_matches_native": true,
+      "source_publication_date_or_note": "1968",
+      "identity_anchors": [
+        "Full original subject title Sir Sheldon Francis Dudley and lifespan1884–1956 match native.",
+        "Header exact16August1884 agrees native DOB.",
+        "Surgeon Vice-Admiral and Royal Naval Medical Service director-general1941–1947, epidemiology/diphtheria work and specific qualifications uniquely bind subject."
+      ],
+      "caveats": [
+        "Born-into-service phrase explicitly locates the subject at Lisbon; family profession is not used to invent birthplace. No country stated in birth clause.",
+        "Internal source membership inconsistency: credentials header lists FRS1941 but narrative later says FRS granted1951. Retain as source observation; do not correct source, native membership or eligibility. This is not a DOB conflict.",
+        "Conservative S2 signed edited historical obituary; source full surname/givens and exact native date strongly bind subject despite unrelated internal FRS-year inconsistency."
+      ],
+      "source_DOB_conflict_observed": false,
+      "geography_assignment_performed": false,
+      "hemisphere_proposal": null,
+      "retrieval_representation": "web-tool parsed original HTML text; not raw HTTP response bytes",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA629",
+      "native": {
+        "record_id": "RS_PAST_NA629",
+        "authority_name": "Downie; Allan Watt (1901 - 1988)",
+        "native_dob": "1901-09-05",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "full_target_object_canonical_sha256": "246dac3c59acadb53ccb2872dbe09976f78607e61850fd9ae42589efa3fa690b",
+        "native_authority_name_and_DOB_count_in_all_4983": 1
+      },
+      "status": "candidate_original_explicit_birthplace_parent_review_required",
+      "raw_birthplace": "the Mid Street cottage in Rosehearty, Aberdeenshire",
+      "source_url": "https://history.rcp.ac.uk/inspiring-physicians/allan-watt-downie",
+      "source_title": "Allan Watt Downie",
+      "source_author": "K McCarthy",
+      "source_kind": "original_signed_edited_historical_biography",
+      "source_grade_proposal": "S2",
+      "source_grade_role": "new_person_birthplace_support_only",
+      "source_quote": "were born in the Mid Street cottage in Rosehearty, Aberdeenshire",
+      "source_quote_word_count": 10,
+      "source_ref": "turn103view2",
+      "source_locator": "Original RCP Munk’s Roll, Vol VIII, printedp138; full name10/21; DOB29; born-place35; author52; publication1989 line34.",
+      "source_birthdate": "1901-09-05",
+      "source_birthdate_precision": "exact_day_in_subject_header_not_repeated_in_born_clause",
+      "source_date_matches_native": true,
+      "source_publication_date_or_note": "1989",
+      "identity_anchors": [
+        "Full original heading Allan Watt Downie and lifespan1901–1988 match native.",
+        "Exact subject-header DOB5September1901 agrees native.",
+        "Twin Richard, smallpox/poxvirus research and Liverpool bacteriology chair23years, FRS1955 and RCP1982 are distinctive anchors."
+      ],
+      "caveats": [
+        "Born clause explicitly covers Allan and twin Richard, with address/town and Aberdeenshire. Source is not the separate RCP Allan Watson Downie biography.",
+        "Conservative S2 original signed edited obituary; no national affiliation or workplace inferred as birthplace."
+      ],
+      "source_DOB_conflict_observed": false,
+      "geography_assignment_performed": false,
+      "hemisphere_proposal": null,
+      "retrieval_representation": "web-tool parsed original HTML text; not raw HTTP response bytes",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA5508",
+      "native": {
+        "record_id": "RS_PAST_NA5508",
+        "authority_name": "Moore; Benjamin (1867 - 1922); biochemist",
+        "native_dob": "1867-01-14",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "full_target_object_canonical_sha256": "4f01ad9958efd392f3b2f49b04640abad877f7f626f6a9cf1c30c405df4de7b9",
+        "native_authority_name_and_DOB_count_in_all_4983": 1
+      },
+      "status": "candidate_original_explicit_birthplace_parent_review_required",
+      "raw_birthplace": "Paisley, Renfrewshire (near Glasgow)",
+      "source_url": "https://www.newulsterbiography.co.uk/index.php/home/viewPerson/1973",
+      "source_title": "Benjamin Moore FRS (1867 - 1922): Scientist: biochemist",
+      "source_author": "Richard Froggatt",
+      "source_kind": "original_signed_biographical_dictionary_article",
+      "source_grade_proposal": "S2",
+      "source_grade_role": "new_person_birthplace_support_only",
+      "source_quote": "Moore was born in Paisley, Renfrewshire (near Glasgow)",
+      "source_quote_word_count": 8,
+      "source_ref": "turn108view0",
+      "source_locator": "Original Dictionary of Ulster Biography; full subject title45–46; birthplace51; DOB68; author71; relevant career57–58/65.",
+      "source_birthdate": "1867-01-14",
+      "source_birthdate_precision": "exact_day_in_separate_born_field_not_repeated_in_place_clause",
+      "source_date_matches_native": true,
+      "source_publication_date_or_note": null,
+      "identity_anchors": [
+        "Full Benjamin Moore,biochemist,FRS subject heading and lifespan1867–1922 match native.",
+        "Separate Born field14January1867 exactly matches native day.",
+        "First biochemistry professor,Liverpool Johnston chair1902,FRS1912,Oxford Whitley chair1920 and cofounding Biochemical Journal1906 are distinctive anchors."
+      ],
+      "caveats": [
+        "Renfrewshire and nearGlasgow are explicit in the born-place phrase. Parents’ Ulster origin and later Belfast childhood are separate associations, not the birthplace.",
+        "Source has an unrelated factual quality caveat: narrative describes Ostwald’s1909 Nobel as Physics, rather than Chemistry. No change to source or any dataset fact is made; this does not provide an alternative birth/DOB.",
+        "Conservative S2 original signed biographical dictionary narrative; official site copyright year2026 is not claimed as article publication date."
+      ],
+      "source_DOB_conflict_observed": false,
+      "geography_assignment_performed": false,
+      "hemisphere_proposal": null,
+      "retrieval_representation": "web-tool parsed original HTML text; not raw HTTP response bytes",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    }
+  ],
+  "holds": [],
+  "query_ledger": [
+    {
+      "engine": "system2",
+      "count": 4,
+      "preplanned": true,
+      "queries": [
+        "Leonard George Goodwin born RCP lives fellows",
+        "Sheldon Francis Dudley born RCP lives fellows",
+        "Allan Watt Downie born RCP lives fellows",
+        "Benjamin Moore biochemist born RCP lives fellows"
+      ],
+      "webref": "turn102search",
+      "exact_request_utc": null
+    },
+    {
+      "engine": "system1",
+      "count": 2,
+      "preplanned": true,
+      "queries": [
+        "\"Benjamin Moore FRS (1867–1922)\" \"Ulster\"",
+        "\"Benjamin Moore\" biochemist \"born\" \"1867\" -wikipedia -newikis"
+      ],
+      "webref": "turn106search",
+      "exact_request_utc": null
+    }
+  ],
+  "original_navigation_ledger": [
+    {
+      "url": "https://history.rcp.ac.uk/inspiring-physicians/leonard-george-goodwin",
+      "webref": "turn103view0",
+      "outcome": "original_signed_RCP_body_explicit_birthplace_exactDOBheader",
+      "raw_HTTP_status": null,
+      "tool_reported_HTTP_status": null,
+      "raw_bytes_saved": false,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "url": "https://history.rcp.ac.uk/inspiring-physicians/sir-sheldon-francis-dudley",
+      "webref": "turn103view1",
+      "outcome": "original_signed_RCP_body_explicit_birthplace_exactDOBheader_internalFRSyearinconsistency",
+      "raw_HTTP_status": null,
+      "tool_reported_HTTP_status": null,
+      "raw_bytes_saved": false,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "url": "https://history.rcp.ac.uk/inspiring-physicians/allan-watt-downie",
+      "webref": "turn103view2",
+      "outcome": "original_signed_RCP_body_explicit_birthplace_exactDOBheader",
+      "raw_HTTP_status": null,
+      "tool_reported_HTTP_status": null,
+      "raw_bytes_saved": false,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3632847/",
+      "webref": "turn103view3",
+      "outcome": "browser_checking_challenge_noarticlebody_no_retry",
+      "raw_HTTP_status": null,
+      "tool_reported_HTTP_status": null,
+      "raw_bytes_saved": false,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "url": "https://www.newulsterbiography.co.uk/index.php/home/viewPerson/1973",
+      "webref": "turn108view0",
+      "outcome": "original_signed_dictionary_body_explicit_birthplace_exactDOBfield",
+      "raw_HTTP_status": null,
+      "tool_reported_HTTP_status": null,
+      "raw_bytes_saved": false,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    }
+  ],
+  "limits": [
+    "All4 are candidates pending parent adoption/grade/geography review; no main-table or Git changes.",
+    "No hemisphere/country/uniqueentity/coordinates assigned.",
+    "No original full HTML/PDF/page images saved or redistributed.",
+    "Each candidate source has one quotation under25Englishwords; no additional different verbatim source quotations distributed.",
+    "Tool-parsed source content does not establish rawHTTPstatuses,exactrequesttimes orrawbytehashes; those fields remain null.",
+    "PMC challenge not retried; new signed dictionary route used forMoore.",
+    "Dudley source-internalFRSyear discrepancy and Moore unrelatedOstwaldawardfield quality caveat retained without source/native correction.",
+    "Same-name AllanWatsonDownie RCP discovery was not opened or reused; native isAllanWattDownie."
+  ]
+}
