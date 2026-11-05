@@ -1,0 +1,46 @@
+{
+  "written_utc": "2026-11-05T23:43:41.588966+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA3621",
+    "RS_PAST_NA3635"
+  ],
+  "budget": {
+    "queries": 3,
+    "nav": 4
+  },
+  "requests": [
+    {
+      "kind": "query",
+      "q": "\"Malcolm Douglas Lilly\" born obituary"
+    },
+    {
+      "kind": "query",
+      "q": "\"Alan Marmaduke Wetherell\" born obituary"
+    },
+    {
+      "written_utc": "2026-11-05T23:43:52.421998+00:00",
+      "kind": "open",
+      "url": "https://cds.cern.ch/record/2848104/files/rsbm.1999.0101.pdf",
+      "purpose": "Read original carried authored scientific memoir born clause/fullidentity."
+    },
+    {
+      "written_utc": "2026-11-05T23:43:52.422012+00:00",
+      "kind": "open",
+      "url": "https://centreforscientificarchives.co.uk/wp-content/uploads/2024/01/LILLY_MALCOLM_DOUGLAS_v1.pdf",
+      "purpose": "Read original archives biography for explicitLillybirthplace and actual dateprecision."
+    },
+    {
+      "written_utc": "2026-11-05T23:44:02.019684+00:00",
+      "kind": "query",
+      "q": "\"Malcolm Douglas Lilly\" \"born\" -site:grafiati.com",
+      "purpose": "Find distinct original biographical body after CSAtooLargefailure stopped; no retry."
+    },
+    {
+      "written_utc": "2026-11-05T23:44:19.775743+00:00",
+      "kind": "open",
+      "url": "https://www.jstor.org/stable/770403",
+      "purpose": "Inspect observed original memoirbody viaJSTORcarrier, notpriorfailedCSAPDF."
+    }
+  ],
+  "no_rawGET_retry_bypass": true
+}

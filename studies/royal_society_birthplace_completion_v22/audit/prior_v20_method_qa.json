@@ -1,0 +1,168 @@
+{
+  "schema": "UK_v20_non_DOB_lifespan_endpoint_admission_method_review_v1",
+  "reviewer": "/root/v19_source_qa",
+  "written_utc": "2026-11-05T15:06:45.460496+00:00",
+  "materials_read": [
+    "v20_plan.json",
+    "v20_sources_a.json final Midwinter disposition",
+    "studies/royal_society_birthplace_completion_v19/audit/parent_adjudication.json",
+    "studies/royal_society_birthplace_completion_v18/audit/parent_adjudication.json",
+    "actual v19 native master row RS_PAST_NA4036"
+  ],
+  "timing": "This review was requested after the worker had observed the Midwinter discrepancy and before parent final admission/main adoption. The final sources_a observation was available and inspected before this report was written. This is a post-observation source-admission interpretation/amendment recommendation, not a source-blind preregistration, and not a retrospective claim that the initial rule already contained an exception.",
+  "decision": "Recommend a narrow documented death/lifespan-end-only exception, with final individual admission conditional on parent adopting the amendment and verifying all stated gates. No fact is adopted by this method review.",
+  "unamended_rule_result": {
+    "current_v20_rule": "The plan carries compatible source DOB precision/lifespan plus distinctive professional anchors and says any new explicit source date conflict is held.",
+    "strict_application": "Without an explicit amendment, the worker is correct to hold Midwinter because the native authority-label endpoint2011 conflicts with the new source death/lifespan endpoint2021.",
+    "policy_status": "The read documents are batch collection/admission protocols, not evidence of an immutable user instruction that every unrelated source lifespan endpoint must block birthplace forever. The user-facing frozen native DOB/identity/eligibility boundaries remain binding; the proposed exception must not alter them.",
+    "no_silent_relabelling": "Do not present acceptance as routine compliance with an unchanged compatible-lifespan rule."
+  },
+  "recommended_general_exception_gates": [
+    {
+      "gate": "Existing fixed record and exact birth date",
+      "requirement": "The target is an existing fixed-cohort record in the declared followup scope. The available original born-source explicitly contains all native name components and the exact unchanged native day/month/year. This exception does not apply to partial/year-only/no-DOB source binding in the presence of a lifespan conflict."
+    },
+    {
+      "gate": "Positive same-person binding",
+      "requirement": "At least two distinctive substantive professional/role/career anchors coherently bind the subject, with an additional original institutional identity observation supporting that same career/person. Check for competing native candidates and unresolved alternative-person ambiguity. Mere common name plus profession is insufficient."
+    },
+    {
+      "gate": "Conflict confined to lifespan end",
+      "requirement": "The only unresolved incompatible date relevant to this exception is a death/lifespan-end value in a source or frozen authority label. There must be no conflicting birth date, missing native name component, or incompatible core person identity. Record the contradictory endpoint explicitly rather than declaring either year correct."
+    },
+    {
+      "gate": "Eligibility and study variables unaffected",
+      "requirement": "Verify that using this source for birthplace does not change cohort membership, original eligibility, birth-window placement, native DOB/calendar, DOB-derived variables or any outcome/selection based on death date. If death-year-dependent eligibility or another substantive selection rule could change, hold for separate adjudication."
+    },
+    {
+      "gate": "Available original birth relation",
+      "requirement": "The birthplace itself must be explicit in the original body and attached to the bound subject, not taken from search snippets, school/work/residence, relatives, nationality or a source footer. Source genre, author and actually stated date precision must be documented."
+    },
+    {
+      "gate": "No assumed informational independence",
+      "requirement": "A Guardian obituary and UCL tribute may be separately published originals while sharing Polina Bayvel as an information source. Do not count different hosts or contributors as independent date/birthplace confirmation without proof; use the UCL observation for coherent institutional identity context."
+    },
+    {
+      "gate": "Native fields remain frozen and reversible",
+      "requirement": "Keep source_authorised_full_name including its original2011 endpoint, native DOB, identity/cohort key, eligibility, QID, DOB tiers, country/coordinates and old evidence unchanged. A new birthplace fact should retain the original authority string as native authority and separately record observed source death date/lifespan and the unresolved end-year discrepancy. Current birthplace/geography changes alone use the usual rollback snapshots."
+    },
+    {
+      "gate": "Separate birthplace and geography decision",
+      "requirement": "An eligible birthplace observation may support a hemisphere only under the existing explicit birth-linked country/whole-region rules. The lifespan exception does not license new fuzzy geography, person country/point assignment or source-grade upgrades for original DOB."
+    },
+    {
+      "gate": "Explicit parent amendment and bounded application",
+      "requirement": "Record actual timing after observations and before final decision, the motivating case, general gates and outcome. Apply the same gates to any eligible v20 endpoint-only cases, not a named-person-only exemption. Do not retrospectively alter previous version results or automatically clear older holds."
+    }
+  ],
+  "Midwinter_record_review": {
+    "record_id": "RS_PAST_NA4036",
+    "native_authority_name": "Midwinter; John Edwin (1938 - 2011); electrical engineer",
+    "native_dob": "1938-03-08",
+    "native_full_authority_key_count_in_4983": 1,
+    "native_cohort": "UK_Royal_Society",
+    "native_final_analysis_eligibility_assigned": false,
+    "native_endpoint_role_caveat": "The observed2011 value is embedded in the frozen source_authorised_full_name string, not a separately validated death-date field in the inspected native row. Do not reinterpret that label or repair it here.",
+    "source_observed_full_name": "John Edwin Midwinter",
+    "source_birthdate": "1938-03-08",
+    "source_birthdate_matches_native_exactly": true,
+    "source_death_date": "2021-11-13",
+    "source_birthplace_candidate": "Newbury, Berkshire",
+    "source_author": "Polina Bayvel",
+    "source_url": "https://www.theguardian.com/technology/2021/dec/12/john-midwinter-obituary",
+    "available_body_observation": "Final worker report states original signed Guardian body provides John Edwin Midwinter, exact1938-03-08 and explicit Newbury, Berkshire; same worker read original UCL tribute describing the matching optical-communications/UCL career and2021 death/age83 context.",
+    "additional_institutional_source": "https://www.ucl.ac.uk/engineering/news/2021/dec/professor-john-midwinter-true-optical-fibre-communications-pioneer",
+    "preliminary_assessment": "Reported full native components plus exact birth date, rare optical-communications subject and coherent original institutional career context make a same-person birthplace binding defensible despite the unrelated authority-label endpoint discrepancy. This is not a native death-date adjudication. Parent should verify detailed anchors and absence of eligibility effects before final acceptance under the formally adopted exception.",
+    "geography_if_admitted": "Newbury, Berkshire is explicitly birth-linked. Existing region rule can assess North using Berkshire; retain literal birthplace and do not assign a personal country, entity or coordinates.",
+    "source_grade_if_admitted": "Conservative S2 may be defensible for an original signed, edited newspaper obituary by a named professional colleague. This is a disclosed genre admission interpretation, not S1 based on the Guardian/UCL host or a claim of scholarly peer review.",
+    "source_class_note": "The worker sought a narrower institutional/college/scientific-society/ODNB class and correctly left the outside-class observation held. Parent must explicitly state the signed-expert-newspaper judgment if admitting it; do not pretend that genre question was already resolved by the worker.",
+    "not_a_final_case_acceptance": true,
+    "parent_source_observation_gate_status": "Parent reports direct body verification of full name/exactDOB/birthplace and concrete UCL career correspondence. This supports the endpoint-only source-admission exception; source native death-end discrepancy remains unresolved and frozen.",
+    "eligibility_scope_note": "The inspected native row has final_analysis_eligibility_assigned:false, and the stated scope is an existing fixed cohort plus an unchanged DOB window. A death-year-sensitive selection/analysis is not being assigned. Parent must retain the exception gate and must not claim a corrected death date or use this fact as eligibility re-adjudication."
+  },
+  "birthdate_conflict_boundary": {
+    "Argyris": "Retain recorded original born-sentence1913-08-19 versus frozen1916-08-19 as blocking. It is a birthdate discrepancy, unlike an endpoint-only discrepancy; no dateless-source bypass or DOB correction.",
+    "Laver": "Retain original ANU profile-header1925 versus native1929 birthyear conflict as blocking. A birthyear disagreement is not a lifespan-end-only disagreement, even where other observations support native-year context.",
+    "no_general_date_conflict_waiver": true
+  },
+  "required_fact_or_audit_fields_if_admitted": [
+    "original native_authority_name verbatim",
+    "native DOB unchanged",
+    "observed source full name and exact DOB",
+    "observed source death date/lifespan",
+    "native authority-label endpoint discrepancy",
+    "specific positive identity/career anchors",
+    "institutional identity source and possible shared authorship",
+    "eligibility/selection non-effect review",
+    "method-amendment timing and decision",
+    "birthplace source grade role and source genre",
+    "original body quote/locator",
+    "geographic basis or unknown",
+    "complete prior/absent-field rollback snapshots"
+  ],
+  "verification_limits": "No network requests, original source refetch, original PDF rendering or raw HTTP-byte inspection by this method QA. It read final worker structured observations plus the actual frozen native row and prior protocols. The Guardian/UCL original-body facts still require parent/source-QA verification of the recorded observations; this report does not claim independent source acquisition or informational independence.",
+  "no_master_or_Git_mutation": true,
+  "no_final_birthplace_adoption_by_this_review": true,
+  "no_BaZi_outcomes_statisticaldedup_or_finalfreeze": true,
+  "additional_review_utc": "2026-11-05T15:12:57.671406+00:00",
+  "additional_materials_read": [
+    "v20_sources_b.json final Crisp/Kassanis dispositions",
+    "v20_b_crisp_rishbeth.json final original-body observations",
+    "v20_geo_authority_pilot.json final"
+  ],
+  "additional_review_timing": "These interpretations were added after the source observations and the first Midwinter method recommendation, but before parent final case decisions. The initial written_utc is retained. No literal born-label, legend, original source refetch or final case adoption is retroactively claimed.",
+  "Crisp_structured_header_interpretation": {
+    "record_id": "RS_PAST_NA2044",
+    "observed_source_form": "CRISP, Dennis John [29.IV.1916, London - 18.I.1990]",
+    "source_context_reported": "Signed BIOGRAPHIES section by Jacqueline Carpine-Lancre in an edited historical-scientific newsletter; exact source start date/lifespan agree native identity and a specifically cited Fogg/Southward1992 memoir.",
+    "recommendation": "A literal born word or printed legend is not mandatory if original section context and inspected entry layout make the conventional birth-date/place – death-date structure unambiguous. It can then qualify as an explicit equivalent structured birth relationship, with a documented structural/semantic interpretation, conservative S3 and geography unknown.",
+    "remaining_gate": "Before final acceptance, parent should inspect and record the same-work context and, where useful, nearby entries or other explicit pattern evidence. Ensure London is inside the first life-summary date field attached to the exact native birth date, not a publication place, employer/residence, unrelated adjacent entry or incidental source metadata.",
+    "if_context_insufficient": "Retain the worker hold. Do not lower the birth-relation semantic gate merely because proposed source grade is S3.",
+    "required_disclosures": [
+      "No literal born label or legend was observed in the reported Crisp excerpt.",
+      "The birthplace relation is decoded from a validated conventional biographical structure; record that inference instead of inventing a printed label.",
+      "Keep actual source date spelling29.IV.1916 and explicit source locator, with normal date-format decoding disclosed.",
+      "The cited memoir body was unavailable; do not claim it independently supplied London.",
+      "London remains unqualified; no hemisphere/country/entity/point assignment.",
+      "No native identity, birthday, calendar, DOB grade or original evidence correction."
+    ],
+    "not_a_final_case_acceptance": true,
+    "parent_context_gate_status": "Met on the parent-reported original-context inspection: consistent nearby birth-date/place versus death-date/place summaries are explicitly documented with locators. A literal legend is unnecessary under this accepted conventional-notation interpretation. The method reviewer itself did not independently read those nearby source words.",
+    "conditional_method_conclusion": "The source relation can be admitted as a decoded conventional biographical birth-place field, with S3 and London geography unknown, provided the actual fact preserves the structural interpretation and locators rather than inventing a literal born label."
+  },
+  "Kassanis_adjectival_birth_region_interpretation": {
+    "record_id": "RS_PAST_NA1998",
+    "observed_source_wording": "Macedonian born",
+    "recommendation": "This is an explicit adjectival nativity/birth-region assertion about the bound virologist and can support a first stored birth description. Prefer raw_birthplace retaining the exact wording Macedonian born; put Macedonia only in a separately annotated noun/region interpretation.",
+    "source_grade_recommendation": "Conservative S3 for an uncredited original institutional portrait-catalogue biography with no cited birth authority, not S1/S2 by host alone.",
+    "identity_and_date": "Catalogue supplies full Basil Kassanis, lifespan1911–1985, virologist and FRS1966. Treat its date precision as year-only; an authored memoir cover supplies compatible exact native dates only as identity/date support, not independent birthplace corroboration or DOB retiering.",
+    "geography": "Retain hemisphere unknown. Do not map to modern North Macedonia, Greece, any polity, boundaries, country, entity or coordinates. Greek describes the subject, not proven birth country; associated Europe/UK hierarchy and photographer London address do not qualify birthplace.",
+    "normalization_boundary": "Adjective-to-region rendering is a disclosed semantic interpretation, not a literal modern country supplied by the source. If raw_birthplace is instead normalized to Macedonia, the original wording and annotation must remain explicit and no extra geographic precision may be claimed.",
+    "not_a_final_case_acceptance": true
+  },
+  "Adam_geography_pilot_review": {
+    "record_id": "RS_PAST_NA4918",
+    "decision": "hold_zero_geographic_facts",
+    "reason": "Neither provider nor original authority-owner target record body was acquired. No inspected semantic person-placeOfBirth edge, actual place identifier or typed place record exists in this pilot, so positive gates remain unmet.",
+    "constraints": [
+      "Do not assume linked GND pointer supplied earlier portal DOB/birthplace.",
+      "Access failure is not absence of a graph field or biography, wrong Cambridge, or a verified source DOB compatibility/conflict result.",
+      "Do not infer place from fuzzy city search, maps/default geocoder, residence/nationality or original page footer.",
+      "Do not relabel an access-denial page as HTTP403 where no actual status was observed.",
+      "No endpoint variants, raw GET, retry or bypass after failed routes.",
+      "Existing raw birthplace, S3 birthplace grade, DOB and complete geography/identity fields remain unchanged; planned S3 geographic-support role is not an adopted grade."
+    ]
+  },
+  "expanded_review_limit": "No network or original document rendering in this method QA. Final a/b structured observations and native row were inspected; root planned direct/cached-context review is needed before Crisp convention acceptance and final Midwinter exception application. No main, source facts or Git objects were mutated.",
+  "parent_context_followup_received_utc": "2026-11-05T15:14:54.080685+00:00",
+  "parent_context_followup": {
+    "representation": "Parent-reported direct original parsed-source inspection; this method reviewer did not refetch or render originals.",
+    "Midwinter": "Root verified Guardian full John Edwin name, exact1938-03-08, born Newbury/Berkshire and source death2021-11-13, plus UCL same-subject career anchors: joined1984, head1988, Pender1989. Same Bayvel overlap remains explicitly non-independent.",
+    "Crisp": "Root verified original BIOGRAPHIES/byline lines730–731, neighboring chronological birth-date/place then death-date/place pairs at775,785,799,802,826, Crisp bracket817 and cited memoir818–819. This supplies the additional original-context evidence requested by the structural-semantic gate.",
+    "Kassanis": "Parent proposes exact raw wording Macedonian born, a separate annotated Macedonia interpretation, S3 and geography unknown.",
+    "proposed_parent_decisions": "GartonS2/Chelsea/unknown; MidwinterS2/NewburyBerkshire/North under explicit amendment; CrispS3/London/unknown as conventional structured relation; KassanisS3/Macedonian born/unknown; Adam geography hold.",
+    "timing": "Parent context acknowledgment was recorded at 2026-11-05T15:14:54.080685+00:00, after the parent facts/adjudication write timestamp 2026-11-05T15:14:36.119977+00:00 and before requested final source QA. Initial method gates were recorded at 15:06:45 and additional semantic gates at 15:12:57, before that fact write. This acknowledgment does not establish the exact time of the original source inspection or final decision, and makes no source-blind or pre-fact timing claim for this later acknowledgment."
+  },
+  "final_method_recommendation": "The planned four-fact decision is methodologically defensible if the parent formally records the Midwinter endpoint-only and signed-expert-newspaper admission judgments, the validated Crisp structural-birth convention, literal Kassanis wording, and unchanged native fields. This method report does not write/adopt facts or replace final source/data QA.",
+  "final_timing_clarification_utc": "2026-11-05T15:21:21.430278+00:00"
+}

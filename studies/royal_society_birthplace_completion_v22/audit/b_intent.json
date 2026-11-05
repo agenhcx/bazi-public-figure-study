@@ -1,0 +1,81 @@
+{
+  "written_utc": "2026-11-05T23:43:41.448391+00:00",
+  "worker": "/root/v22_sources_b",
+  "own_scope": [
+    "RS_PAST_NA4193",
+    "RS_PAST_NA6876"
+  ],
+  "delegated_scope": [
+    "RS_PAST_NA3621",
+    "RS_PAST_NA3635"
+  ],
+  "own_budget": {
+    "queries": 3,
+    "nav": 4
+  },
+  "child_budget": {
+    "queries": 3,
+    "nav": 4
+  },
+  "operations": [
+    {
+      "type": "query",
+      "query": "\"Kenneth Dawson Bagshawe\" born obituary",
+      "purpose": "Findneworiginalbiographysource, snippetsleadsonly."
+    },
+    {
+      "type": "query",
+      "query": "\"John David Hunt\" born obituary",
+      "purpose": "Findneworiginalbiographysource, snippetsleadsonly."
+    },
+    {
+      "written_utc": "2026-11-05T23:43:54.877833+00:00",
+      "type": "open",
+      "url": "https://www.thelancet.com/article/S0140673623003604/pdf",
+      "purpose": "Readoriginalobituarybornrelation/fullDOB/attribution; stopiffailed."
+    },
+    {
+      "written_utc": "2026-11-05T23:43:54.877848+00:00",
+      "type": "query",
+      "query": "\"John David Hunt\" \"born\" \"1936\"",
+      "purpose": "Disambiguate1936metallurgistfromunrelatedfuneralresults andlocateneworiginalbody."
+    },
+    {
+      "written_utc": "2026-11-05T23:44:12.178961+00:00",
+      "type": "open",
+      "url": "https://www.bmj.com/bmj/section-pdf/1081914?path=%2Fbmj%2F381%2F8380%2FComment.full.pdf",
+      "purpose": "DistinctoriginalBMJobituarybodyforBagshaweafterLancetrouteinaccessible; notsameworkendpointvariant."
+    },
+    {
+      "written_utc": "2026-11-05T23:44:12.178976+00:00",
+      "type": "open",
+      "url": "https://doi.org/10.1098/rsbm.2022.0046",
+      "purpose": "OriginalHuntmetallurgistmemoirpublisherroute; stopiffailed."
+    },
+    {
+      "written_utc": "2026-11-05T23:44:31.452887+00:00",
+      "type": "open",
+      "url": "https://www.christs.cam.ac.uk/sites/default/files/2025-02/2013%20Magazine.pdf",
+      "purpose": "ReadoriginalcollegeHunttribute fullsubject/date/career andtestwhetherbirthplaceactuallystated, notassumefromlead."
+    },
+    {
+      "written_utc": "2026-11-05T23:44:38.738339+00:00",
+      "type": "cached_parsed_find",
+      "ref": "turn6460726view0",
+      "pattern": "John David Hunt",
+      "purpose": "LocateexactsubjectwithinalreadyacquiredoriginalcollegePDFtext; nonewURLorrawGET."
+    },
+    {
+      "written_utc": "2026-11-05T23:45:04.156044+00:00",
+      "type": "open",
+      "url": "https://doi.org/10.1098/rsbm.2023.0050",
+      "purpose": "Firstoriginalpublisherroute ofdistinct2024BagshaweRSmemoir observedOpenAlexlead. Notendpointvariant/retryofthefailedLancet/BMJworks. Finalsharednav."
+    }
+  ],
+  "shared_budget_transfer": {
+    "written_utc": "2026-11-05T23:45:04.156024+00:00",
+    "from_child_unused_nav": 1,
+    "own_nav_capacity": 5,
+    "combined_nav_max": 8
+  }
+}
