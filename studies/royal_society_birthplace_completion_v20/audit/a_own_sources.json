@@ -1,0 +1,212 @@
+{
+  "scope_record_ids": [
+    "RS_PAST_NA4036",
+    "RS_PAST_NA4179"
+  ],
+  "counts": {
+    "discovery_queries": 4,
+    "web_navigation_attempts": 4,
+    "original_source_host_or_resolver_navigation_attempts": 4,
+    "external_original_work_carrier_attempts": 0,
+    "parsed_text_find_operations": 0,
+    "raw_GETs": 0,
+    "screenshots": 0,
+    "body_verified_birthplace_candidates": 0,
+    "held_explicit_birthplace_observations": 1,
+    "holds": 2
+  },
+  "query_ledger": [
+    {
+      "engine": "system2",
+      "query": "John Edwin Midwinter born obituary university",
+      "ref": "turn9228621search",
+      "preplanned": true,
+      "exact_request_utc": null
+    },
+    {
+      "engine": "system2",
+      "query": "Robert Neville Haszeldine born obituary university",
+      "ref": "turn9228621search",
+      "preplanned": true,
+      "exact_request_utc": null
+    },
+    {
+      "engine": "system1",
+      "query": "\"John Midwinter obituary\" Guardian",
+      "ref": "turn1981817search",
+      "preplanned": false,
+      "exact_request_utc": null,
+      "timing_caveat": "Intent was recorded after this adaptive query request, before source opens; do not represent it as preregistered."
+    },
+    {
+      "engine": "system1",
+      "query": "\"Robert Neville Haszeldine\" \"born\"",
+      "ref": "turn1981817search",
+      "preplanned": false,
+      "exact_request_utc": null,
+      "timing_caveat": "Intent was recorded after this adaptive query request, before source opens; do not represent it as preregistered."
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "url": "https://www.theguardian.com/technology/2021/dec/12/john-midwinter-obituary",
+      "ref": "turn6662317view0",
+      "role": "original_signed_obituary",
+      "outcome": "original_body_acquired_in_parsedHTML_explicit_birthplace_held_for_native_lifespan_conflict",
+      "tool_reported_status": null,
+      "raw_HTTP_status": null,
+      "exact_request_utc": null,
+      "raw_bytes_sha256": null
+    },
+    {
+      "url": "https://www.ucl.ac.uk/engineering/news/2021/dec/professor-john-midwinter-true-optical-fibre-communications-pioneer",
+      "ref": "turn6662317view1",
+      "role": "original_institutional_tribute",
+      "outcome": "body_acquired_in_parsedHTML_no_explicit_birthplace_in_returned_body",
+      "tool_reported_status": null,
+      "raw_HTTP_status": null,
+      "exact_request_utc": null,
+      "raw_bytes_sha256": null
+    },
+    {
+      "url": "https://fluorine.ch.man.ac.uk/history.php",
+      "ref": "turn6662317view2",
+      "role": "original_university_history_narrative",
+      "outcome": "body_acquired_in_parsedHTML_no_explicit_birthplace_for_Haszeldine",
+      "tool_reported_status": null,
+      "raw_HTTP_status": null,
+      "exact_request_utc": null,
+      "raw_bytes_sha256": null
+    },
+    {
+      "url": "https://royalsocietypublishing.org/doi/10.1098/rsbm.2018.0035",
+      "ref": "turn6662317view3",
+      "role": "new_individual_original_signed_Royal_Society_memoir",
+      "outcome": "tool_reported403_stopped_no_retry",
+      "tool_reported_status": 403,
+      "raw_HTTP_status": null,
+      "exact_request_utc": null,
+      "raw_bytes_sha256": null
+    }
+  ],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA4036",
+      "native": {
+        "authority_name": "Midwinter; John Edwin (1938 - 2011); electrical engineer",
+        "native_dob": "1938-03-08",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "6ac3084cdcafb4951d4b84f458db3394610cfba0ce3e1dce861d6b3504a549f0"
+      },
+      "status": "hold_native_lifespan_endpoint_conflict_despite_exact_DOB_and_full_name",
+      "hold_type": "native_lifespan_endpoint_conflict",
+      "raw_birthplace_candidate": "Newbury, Berkshire",
+      "source_url": "https://www.theguardian.com/technology/2021/dec/12/john-midwinter-obituary",
+      "source_title": "John Midwinter obituary",
+      "source_author": "Polina Bayvel",
+      "publication_date": "2021-12-12",
+      "last_modified_date": "2022-01-20",
+      "source_kind": "original_signed_newspaper_obituary_by_UCL_optical_communications_colleague",
+      "source_grade_proposal": null,
+      "source_grade_if_independently_admitted": "S2",
+      "source_grade_caveat": "No grade adopted. This is a signed original narrative, not host-only S1. It is outside the narrower university/college/scientific-society/ODNB source class sought here; retained as a held source observation for parent review.",
+      "source_quote": "Born in Newbury, Berkshire",
+      "source_quote_word_count": 5,
+      "source_locator": "Parsed original L61 byline; L63 publication metadata; L80 born relation; L86 subject name and vital dates.",
+      "source_webrefs": [
+        "turn6662317view0"
+      ],
+      "observed_source_full_name": "John Edwin Midwinter",
+      "source_birthdate": "1938-03-08",
+      "source_birthdate_precision": "day",
+      "source_DOB_matches_native": true,
+      "source_death_date": "2021-11-13",
+      "source_lifespan_compatible_with_native": false,
+      "identity_review": {
+        "source_full_native_name_components_present": true,
+        "source_exact_DOB_matches_native": true,
+        "source_lifespan_compatible_with_native": false,
+        "native_endpoint_preserved": true,
+        "career_binding_original": "See independent UCL original observation below; same Midwinter optical-communications/UCL subject. No initial or nickname expansion."
+      },
+      "reason": "Strict group admission requires a compatible native lifespan as well as full-name/DOB/career binding. This source has an endpoint discrepancy, distinct from a DOB disagreement. Keep first-BP observation held; any parent exception requires separately documented review without altering frozen native facts.",
+      "supporting_original_observation": {
+        "url": "https://www.ucl.ac.uk/engineering/news/2021/dec/professor-john-midwinter-true-optical-fibre-communications-pioneer",
+        "title": "Professor John Midwinter: a true optical fibre communications pioneer",
+        "publication_date": "2021-12-16",
+        "author_observation": "Opening identifies Professor Polina Bayvel as the person remembering Midwinter; later additional memories explicitly attributed to Nick Doran. Nick Doran is not asserted to be sole article author.",
+        "ref": "turn6662317view1",
+        "locator": "L83-92 article heading, Polina Bayvel attribution and age83; L111 subject appearance in2016; L115-121 UCL career/retirement; L124-127 contributor attribution.",
+        "body_summary": "Institutional original tribute reports recent death at age83 in2021 and detailed same optical-communications/UCL career. Returned body does not supply subject birthplace or full Edwin component, so it cannot independently satisfy first-BP proof. A 2016 subject appearance also conflicts native2011 endpoint.",
+        "source_quote": null
+      },
+      "geography_assignment_performed": false,
+      "no_master_change": true,
+      "retrieval_representation": "web-tool parsed original HTML, not raw HTTP bytes",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA4179",
+      "native": {
+        "authority_name": "Haszeldine; Robert Neville (1925 - 2016)",
+        "native_dob": "1925-05-03",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "4682b251b240409c0102a7f88f77d90bf9c1820976d5fed6df335b39efd05378"
+      },
+      "status": "hold_no_explicit_subject_birthplace_in_acquired_original_body",
+      "hold_type": "no_explicit_birthplace_original_memoir_unavailable",
+      "raw_birthplace_candidate": null,
+      "source_url": "https://fluorine.ch.man.ac.uk/history.php",
+      "source_title": "A history of Fluorine Chemistry in Manchester",
+      "source_author": null,
+      "source_author_caveat": "No individual author visible in returned original university history narrative; institutional host alone is not a grade assignment.",
+      "source_kind": "original_university_history_narrative",
+      "source_grade_proposal": null,
+      "observed_source_full_name": "Robert Neville Haszeldine",
+      "source_birthdate": "1925-05-03",
+      "source_birthdate_precision": "day",
+      "source_DOB_matches_native": true,
+      "source_death_date": "2016-10-13",
+      "source_lifespan_compatible_with_native": true,
+      "source_locator": "Parsed original Haszeldine section L45-54; L46 full native name and exact DOB; L47 death; L46-48 Cambridge/UMIST career and principalship.",
+      "source_webrefs": [
+        "turn6662317view2"
+      ],
+      "identity_review": [
+        "All native name components and exact3May1925 are directly present, with source1925–2016 lifespan compatible.",
+        "Cambridge research/teaching1949–57, UMIST chair/headfrom1957 and principal1967–82 distinguish the chemist."
+      ],
+      "reason": "Acquired narrative gives subject birthdate but no birth location. Greater Manchester modifies Stockport Grammar School, and Birmingham/Cambridge/UMIST locations describe education/work. Great Langdale describes retirement. None is reused as birthplace.",
+      "inaccessible_original_memoir": {
+        "url": "https://royalsocietypublishing.org/doi/10.1098/rsbm.2018.0035",
+        "doi": "10.1098/rsbm.2018.0035",
+        "title_lead": "Robert Neville Haszeldine. 3 May 1925—13 October 2016",
+        "author_leads": [
+          "R. W. Munn",
+          "D. R. Taylor"
+        ],
+        "publication_year_lead": "2019",
+        "publication_locator_lead": "Biographical Memoirs of Fellows of the Royal Society66:243–265",
+        "ref": "turn6662317view3",
+        "outcome": "tool_reported403_stopped_no_retry",
+        "metadata_not_body_caveat": "Authorship/title/journal are discovery leads, not a claim that the original memoir body was acquired."
+      },
+      "unadopted_discovery_variation": {
+        "url": "https://www.admin.cam.ac.uk/reporter/2016-17/weekly/6447/6447.pdf",
+        "ref": "turn1981817search4",
+        "observation": "Discovery excerpt appeared to give death31October2016, whereas acquired Manchester body says13October2016. This original notice was not opened and no formal body-verified source conflict or date repair is inferred."
+      },
+      "source_quote": null,
+      "geography_assignment_performed": false,
+      "no_master_change": true,
+      "retrieval_representation": "web-tool parsed original HTML, not raw HTTP bytes",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    }
+  ]
+}

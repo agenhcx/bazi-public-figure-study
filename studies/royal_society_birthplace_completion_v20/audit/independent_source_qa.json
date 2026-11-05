@@ -1,0 +1,191 @@
+{
+  "schema": "v20_independent_source_qa_v1",
+  "reviewer": "/root/v19_source_qa",
+  "written_utc": "2026-11-05T15:21:21.430278+00:00",
+  "result": "PASS_with_explicit_documentary_verification_limits",
+  "blocking_issues": [],
+  "scope": "Independent documentary review of v20 accepted birthplace facts, source-observation reports, parent adjudication and holds. No independent original-source acquisition, network calls, replay, source-image rendering or main/output/code/Git modification by this reviewer.",
+  "materials_read": [
+    "inputs/accepted_birthplaces.json",
+    "audit/plan.json",
+    "audit/sources_a.json",
+    "audit/sources_b.json",
+    "audit/geo_authority_pilot.json",
+    "audit/parent_adjudication.json",
+    "audit/root_followups.json",
+    "audit/lifespan_endpoint_discrepancies.json",
+    "audit/followup_holds.json",
+    "audit/active_source_DOB_conflicts.json",
+    "audit/method_qa.json",
+    "actual v19 outputs/birthplace_rows.jsonl.gz for native record/name/DOB identity checks",
+    "actual v19 audit/active_source_DOB_conflicts.json for exact-copy comparison",
+    "v20 scratch method/source reports and parent-reported parsed original section/context observations; prior v18/v19 protocol review recorded in method_qa.json"
+  ],
+  "timing": {
+    "initial_method_report_utc": "2026-11-05T15:06:45.460496+00:00",
+    "additional_semantic_method_review_utc": "2026-11-05T15:12:57.671406+00:00",
+    "parent_fact_adjudication_write_utc": "2026-11-05T15:14:36.119977+00:00",
+    "later_parent_context_acknowledgment_utc": "2026-11-05T15:14:54.080685+00:00",
+    "interpretation": "Method recommendations followed observations and preceded the timestamped final fact write. The later parent-context acknowledgment and this final QA followed the fact write. No blind preregistration, exact source-acquisition time, or claim that all final QA preceded facts is made."
+  },
+  "actual_native_identity_and_quote_checks": [
+    {
+      "record_id": "RS_PAST_NA1998",
+      "exact_native_authority_match": true,
+      "exact_native_DOB_match": true,
+      "native_authority_plus_DOB_count_in_4983": 1,
+      "quote_words": 2,
+      "source_birthdate_precision": "year_only_in_sitter_lifespan"
+    },
+    {
+      "record_id": "RS_PAST_NA2044",
+      "exact_native_authority_match": true,
+      "exact_native_DOB_match": true,
+      "native_authority_plus_DOB_count_in_4983": 1,
+      "quote_words": 7,
+      "source_birthdate_precision": "exact_day_in_conventional_biographical_lifespan_header"
+    },
+    {
+      "record_id": "RS_PAST_NA4036",
+      "exact_native_authority_match": true,
+      "exact_native_DOB_match": true,
+      "native_authority_plus_DOB_count_in_4983": 1,
+      "quote_words": 4,
+      "source_birthdate_precision": "day_in_subject_vital_dates"
+    },
+    {
+      "record_id": "RS_PAST_NA4166",
+      "exact_native_authority_match": true,
+      "exact_native_DOB_match": true,
+      "native_authority_plus_DOB_count_in_4983": 1,
+      "quote_words": 8,
+      "source_birthdate_precision": "day_in_born_clause_and_subject_header"
+    }
+  ],
+  "case_reviews": [
+    {
+      "record_id": "RS_PAST_NA1998",
+      "subject": "Basil Kassanis",
+      "result": "PASS_S3_literal_birth_region_unknown_geography",
+      "source_relation": "Original institutional portrait catalogue description explicitly uses a born-region adjective; raw wording Macedonian born is retained. Macedonia appears only in a separate annotated adjective interpretation.",
+      "genre_and_grade": "Uncredited biographical catalogue description supports conservative S3, not a scholarly memoir or host-derived S1.",
+      "date_and_identity": "Catalogue source has1911-1985 year precision only, full Basil Kassanis, virologist and FRS1966 anchors. Separate Hirst/Harrison original-work cover/abstract supplies a compatible exact day only as identity/date support, not an acquired birthplace narrative.",
+      "geography": "Unknown. Greek nationality, catalogue hierarchy and photographer location are excluded; historical Macedonia boundaries and modern country unresolved.",
+      "publication_caveat": "Portrait date1985 is expressly not used as publication date."
+    },
+    {
+      "record_id": "RS_PAST_NA2044",
+      "subject": "Dennis John Crisp",
+      "result": "PASS_S3_disclosed_structured_birth_relation_unknown_geography",
+      "source_relation": "London follows the exact birth date in a conventional chronological biographical lifespan bracket. Worker entry plus parent-inspected BIOGRAPHIES/byline and neighboring paired birth/death layouts make the birth-side relation sufficiently unambiguous for the documented structural-equivalence gate.",
+      "genre_and_grade": "Signed compiled biographical bibliography in an edited historical-scientific newsletter: conservative S3. Cited memoir binds identity; its unavailable body is not represented as birthplace corroboration.",
+      "date_and_identity": "Full native components, exact29April1916 and compatible death18January1990 appear in the observed header/citation context.",
+      "semantic_limit": "No literal born label or explicit legend was observed. This is an openly recorded source-layout interpretation; this reviewer checked the audit observations without acquiring the original PDF.",
+      "geography": "London alone remains unknown under the existing qualifier rule; no familiar-city inference."
+    },
+    {
+      "record_id": "RS_PAST_NA4036",
+      "subject": "John Edwin Midwinter",
+      "result": "PASS_S2_under_documented_death_endpoint_only_amendment_North",
+      "source_relation": "Signed Guardian obituary has a direct born clause for Newbury, Berkshire and full subject vital dates.",
+      "genre_and_grade": "Named professional-colleague edited newspaper obituary receives reviewed conservative S2. It is not described as peer reviewed or as host-derived S1.",
+      "date_and_identity": "All native full-name components, exact8March1938, BT/PostOffice1971-1984 and distinctive UCL appointment/head/Pender career anchors bind the fixed native record. Original institutional UCL context supplies matching anchors. UCL/Guardian shared Bayvel authorship is expressly not informationally independent.",
+      "exception_boundary": "Unamended compatible-lifespan gate would HOLD. A separately documented post-observation amendment allows only an endpoint-only discrepancy with exact nativeDOB, full name, strong career binding, unique native key, no acquired competing person/birthdate conflict, and no death-dependent selection effect. All documented gates pass; source death2021-11-13 versus native authority endyear2011 remains unresolved.",
+      "selection_non_effect": "Actual v19 native record retains the original2011 authority string, nativeDOB1938-03-08 and final_analysis_eligibility_assigned=false. Fixed membership/ID and birthdate-window selection are unchanged; parent records no death-date selector/outcome and no separately validated native death-date field. This review does not independently rerun the implementation.",
+      "geography": "Explicit birth-linked Berkshire qualifies the whole region for North under the existing rule. No personal country/entity/coordinates assigned."
+    },
+    {
+      "record_id": "RS_PAST_NA4166",
+      "subject": "William Reginald Stephen Garton",
+      "result": "PASS_S2_explicit_birth_clause_unknown_geography",
+      "source_relation": "Direct born-in-Chelsea clause with exact7March1912 in original signed published memoir text observed on an author-upload carrier.",
+      "genre_and_grade": "Jean-Patrick Connerade byline, original Royal Society journal/volume/pages/DOI/copyright and full original text establish original-work provenance. Conservative S2 is based on the work, not ResearchGate hosting; carrier is not independent corroboration.",
+      "date_and_identity": "All native full-name components, exact native day, compatible1912-2002 lifespan and distinctive Imperial/spectroscopy/FRS1969 anchors pass.",
+      "geography": "Chelsea alone remains unknown; Londoner/upbringing and Imperial workplace address do not establish a birth-linked region.",
+      "publication_caveat": "Only publication year2009 retained because carrier metadata month/day differ. No raw PDF or direct first-publisher-body acquisition claimed."
+    }
+  ],
+  "aggregate_checks": {
+    "native_rows_read": 4983,
+    "accepted_first_birthplaces": 4,
+    "grade_counts": {
+      "S3": 2,
+      "S2": 2
+    },
+    "hemisphere_counts": {
+      "unknown": 3,
+      "north": 1
+    },
+    "source_date_precision_counts": {
+      "exact_day": 3,
+      "year_only": 1
+    },
+    "all_native_DOB_source_grades_explicitly_frozen": true,
+    "all_quotes_at_most25_words": true,
+    "active_Argyris_and_Laver_sidecar_exact_byte_copy_of_v19": true,
+    "accepted_geography_only": 0,
+    "followup_holds": 5
+  },
+  "holds_review": {
+    "RS_PAST_NA2090": "Rishbeth original obituary was unreadable; screenshot attempt returned no usable image block. Discovery Cambridge not adopted.",
+    "RS_PAST_NA4170": "Harris original PDF inaccessible and OCLC client shell lacks subject fields. Discovery Leicester not adopted.",
+    "RS_PAST_NA4179": "Haszeldine acquired body supplies exact DOB and career but no subject birthplace. School/work/retirement locations excluded. Unopened discovery death-date variation is not elevated to a body-verified conflict.",
+    "RS_PAST_NA4490": "Ledwith original memoir body unavailable; bibliography/search leads are not birthplace evidence and no guessed URL is treated as acquired.",
+    "RS_PAST_NA4918": "Adam geo pilot lacks an acquired semantic person record, explicit placeOfBirth edge and typed place body. Access failures do not establish field absence, DOB compatibility or a conflict; existing Cambridge/S3/unknown remains unchanged."
+  },
+  "birthdate_conflict_boundary": {
+    "Argyris": "Active native1916-08-19 versus original1913-08-19 hold remains; death-endpoint amendment cannot apply or be bypassed with a dateless source.",
+    "Laver": "Active ANU profile-header1925 versus native1929-06-03 remains; explicitly header birthyear precision, not an exact-day born clause. Compatible other observations do not adjudicate/clear it."
+  },
+  "request_accounting": {
+    "worker_discovery_queries": {
+      "a": 6,
+      "b": 6,
+      "geo": 2,
+      "total": 14
+    },
+    "worker_navigation_attempts": {
+      "a": 7,
+      "b": 8,
+      "geo": 3,
+      "total": 18
+    },
+    "root_parsed_source_and_context_open_operations": 8,
+    "total_navigation_and_context_open_operations": 26,
+    "parsed_finds": 1,
+    "cached_screenshot_attempts": 1,
+    "usable_screenshot_image_blocks": 0,
+    "raw_GETs": 0,
+    "reviewer_new_source_requests": 0,
+    "counting_notes": "Aggregate worker reports counted once; delegated snapshots not added again. B navigation8 includes its2 known external carriers. No claim that all26 operations were original-host acquisitions. A two adaptive-query intents were logged after the requests and are transparently retained as protocol deviations."
+  },
+  "audit_only_corrections": [
+    {
+      "file": "audit/root_followups.json",
+      "change": "Midwinter quote count5 corrected to4 with parent authorization. Original sources_a report count5 retained as harmless worker metadata typo; literal quote unchanged."
+    },
+    {
+      "files": [
+        "scratch v20_method_qa.json",
+        "audit/method_qa.json"
+      ],
+      "change": "Clarified that the15:14:54 parent-context acknowledgment followed the15:14:36 fact write; earlier method-gate timestamps retained. No retroactive pre-fact claim for later review."
+    }
+  ],
+  "verification_limits": [
+    "This is independent documentary QA of observations and native identity/counts, not independent acquisition or direct inspection of original web/PDF bodies by this reviewer.",
+    "Parent original parsed-source/context observations are identified as parent observations; no raw HTTP status, exact request time, raw-byte hash or usable screenshot is invented.",
+    "No literature-exhaustion, independent shared-author corroboration, DOB/death adjudication, country/entity/coordinate enrichment, main replay correctness or final-analysis freeze is certified.",
+    "Accepted fact bytes, code, output/master files and Git were not changed by this review."
+  ],
+  "accepted_fact_sha256_at_review": "2b9f22618bc966ac6784e851a48ae9b749f0545f1bb7e547fd2de1f99df8ef78",
+  "reviewed_audit_sha256": {
+    "audit/parent_adjudication.json": "613a76504f6202730e2950a38693485d1c03fc9bd87ee1e5212cad8422c9b60c",
+    "audit/root_followups.json": "310c16df3252a755c76556cb370e71c0b91dff17b1e829a1a89f99f789dbb45c",
+    "audit/lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+    "audit/followup_holds.json": "0fe269f7dcf6eb2855b511b4cc41394c67dcdf9a65c4e3ef9bec7c4d3103e277",
+    "audit/active_source_DOB_conflicts.json": "8da873cf61a7ae0bec908d007ab2d96606514d1c4b659f431645f6063a37e0c9",
+    "audit/method_qa.json": "82f66141eef202ebf585723eb311c1f020ae045e08e6085ea8163b9a79c80b5c"
+  },
+  "helper_review": "Read-only identity/count cross-check by /root/v19_source_qa/identity_counts independently confirmed native authority/DOB uniqueness, grade/precision/quote counts, active conflicts and request arithmetic; it acquired no sources, reran no pipeline and modified no files."
+}

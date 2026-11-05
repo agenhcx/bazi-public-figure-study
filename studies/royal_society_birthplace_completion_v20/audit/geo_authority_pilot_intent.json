@@ -1,0 +1,43 @@
+{
+  "written_utc": "2026-11-05T14:54:43.572091+00:00",
+  "record_id": "RS_PAST_NA4918",
+  "native_authority": "Adam; Neil Kensington (1891 - 1973); chemist",
+  "native_dob": "1891-11-05",
+  "stored_raw_birthplace": "Cambridge",
+  "planned_queries": [
+    {
+      "q": "site:lobid.org/gnd API GND data source hbz DNB license"
+    },
+    {
+      "q": "site:d-nb.info/gnd/122880773 Neil Kensington Adam"
+    }
+  ],
+  "planned_strategy": "Inspect published institutional lobid GND documentation then published person JSON if provider provenance verified. Semantic placeOfBirth URI must be actually observed before place lookup. Original DNB record may be read separately if needed; representations are same authority work, not independent. No rawGET or failed endpoint retry/rotation.",
+  "budgets": {
+    "queries": 3,
+    "navigations": 6
+  },
+  "acceptance_gates": [
+    "explicit full person name with actual native-compatible DOB/lifespan/profession",
+    "explicit semantic person placeOfBirth identifier",
+    "follow observed place URI only and verify typed place + explicit whole region/country/coordinate support",
+    "no map/default/geocoder/nationality/fuzzy Cambridge inference",
+    "date conflict or unresolved evidence means hold"
+  ],
+  "grade_role": "potential S3 geographic_support_only; no master adoption or rawBP/BPgrade/DOBgrade/QID/country/personcoordinates change",
+  "source_quote_limit": "<=25 English prose words per work; minimal structured factual fields/paths only, no whole dumps in report",
+  "planned_original_opens": {
+    "written_utc": "2026-11-05T14:55:03.125122+00:00",
+    "urls": [
+      "https://lobid.org/gnd/api",
+      "https://lobid.org/gnd/122880773.json"
+    ],
+    "provider_basis": "Official lobid search observation identifies hbz institutional service, GND RDF/EntityFacts provider and CC0. Data provider chosen before any failed endpoint, not failed-endpoint rotation."
+  },
+  "adaptive_source_owner_fallback": {
+    "written_utc": "2026-11-05T14:57:55.261087+00:00",
+    "url": "https://d-nb.info/gnd/122880773",
+    "basis": "Parent directs one first inspection of the original authority owner base record already linked by prior profile. Distinct first-party source, not a lobid retry/endpoint variant. After provider failure, not retrospectively preplanned.",
+    "limits": "No rawGET/UA/proxy/auth changes; stop if source fails or no positive semantic fields. Follow only actually observed place identifier within remaining budget."
+  }
+}

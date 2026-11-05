@@ -1,0 +1,717 @@
+{
+  "schema": "UK_v20_original_source_group_b_v1",
+  "worker": "/root/v20_sources_b",
+  "written_utc": "2026-11-05T15:03:01.515332+00:00",
+  "baseline_commit": "25b6b8f40d148d2e6c61235675446bbbfbdb4928",
+  "scope_record_ids": [
+    "RS_PAST_NA2044",
+    "RS_PAST_NA2090",
+    "RS_PAST_NA4170",
+    "RS_PAST_NA1998"
+  ],
+  "counts": {
+    "discovery_queries": 6,
+    "original_source_navigation_attempts": 8,
+    "cached_screenshot_attempts": 1,
+    "parsed_text_find_operations": 1,
+    "raw_HTTP_or_PDF_GETs": 0,
+    "usable_image_content_blocks_returned": 0,
+    "body_verified_birthplace_candidates": 1,
+    "holds": 3,
+    "original_work_body_or_catalogue_navigation_attempts": 8,
+    "known_external_carrier_attempts": 2,
+    "known_external_carrier_attempts_basis": "ResearchGate and JSTOR; source-work status is separate from hosting provenance. Hosted newsletter original page remains separately described.",
+    "verbatim_English_quote_words_by_work": {
+      "RS_portrait_RS21618": 2,
+      "HISTOC08_Crisp_entry": 7
+    }
+  },
+  "budgets": {
+    "discovery_queries_cap": 6,
+    "original_navigation_attempts_cap": 8,
+    "original_navigation_excludes_cached_screenshot": true,
+    "no_failed_URL_retry": true
+  },
+  "candidates": [
+    {
+      "record_id": "RS_PAST_NA1998",
+      "native": {
+        "record_id": "RS_PAST_NA1998",
+        "authority_name": "Kassanis; Basil (1911 - 1985)",
+        "native_dob": "1911-10-16",
+        "prior_raw_birthplace": "",
+        "full_target_object_canonical_sha256": "d836f2fed69b01df432b4dd7d28ecb1080ffec4e009f8dcc95b76dc72e412330",
+        "native_authority_name_and_DOB_count_in_fixed_blank_queue": 1
+      },
+      "status": "candidate_original_explicit_birth_region_uncredited_institutional_catalogue_S3_parent_review",
+      "raw_birthplace": "Macedonia",
+      "source_birthplace_wording": "Macedonian born",
+      "place_name_normalization": "Macedonia is a transparent place-name rendering of the source adjective Macedonian; source says no town or modern country. Parent may preserve literal wording instead. No boundaries, country, entity, or coordinates resolved.",
+      "source_url": "https://pictures.royalsociety.org/image-rs-21618",
+      "source_title": "Portrait of Basil Kassanis",
+      "source_author": null,
+      "source_kind": "original_institutional_picture_catalogue_uncredited_biographical_description",
+      "source_grade_proposal": "S3",
+      "source_grade_basis": "Original Royal Society picture catalogue body contains direct born-region wording; narrative has no named biographical author or cited birth authority. Weaker uncredited catalogue metadata, not scholarly memoir or host-only S1.",
+      "source_quote": "Macedonian born",
+      "source_quote_word_count": 2,
+      "source_birthdate": "1911",
+      "source_birthdate_precision": "year_only_in_1911_1985_sitter_lifespan",
+      "source_DOB_native_compatibility": "Only year1911 stated in catalogue; compatible with native1911-10-16. Exact day is not supplied by catalogue and is not manufactured.",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "portrait_date": "1985",
+      "portrait_date_is_publication_date": false,
+      "image_reference": "IM/GA/SGRS/8373",
+      "image_number": "RS.21618",
+      "source_locator": "turn5938178view0: subject titleL167; sitter full name/lifespan/virologistL175; portrait referenceL190-192; descriptionL212 supplies explicit born wording and FRS1966.",
+      "source_webrefs": [
+        "turn4071624search2",
+        "turn5938178view0"
+      ],
+      "identity_review": [
+        "Full native components Basil and Kassanis are present in catalogue subject and sitter fields; no initials or nickname expansion.",
+        "Catalogue lifespan1911-1985 matches native year and authority lifespan.",
+        "Virologist and Fellow of the Royal Society elected1966 explicitly stated together with full subject atL212 supply distinctive professional anchors.",
+        "Separate authored scientific memoir title/cover atturn2387613view2 L2 andL48-52 supplies exact16October1911 and23March1985, compatible with native. This carrier does not supply acquired born-place narrative and is not represented as birthplace corroboration."
+      ],
+      "geographic_basis": "Explicit adjectival born-region clause only. Historical Macedonia boundaries and modern country are not determined. Hemisphere staysunknown; catalogue associated-place hierarchy Europe/UnitedKingdom and photographer addressLondon are unrelated to birthplace and not used.",
+      "caveats": [
+        "Uncredited institutional catalogue metadata receives conservativeS3 proposal.",
+        "No modern country inferred from Greek nationality or Macedonian adjective.",
+        "The catalogue1911-1985 is year precision only. Native exactDOB unchanged.",
+        "Portrait image was not downloaded or relied on; only original catalogue text used.",
+        "Prior HarpendenPDFGreece discovery lead was not bodyverified and is not treated as corroboration/conflict adjudication."
+      ],
+      "supporting_identity_only_original_work": {
+        "url": "https://www.researchgate.net/publication/247606177_Basil_Kassanis_16_October_1911_-_23_March_1985",
+        "web_ref": "turn2387613view2",
+        "title": "Basil Kassanis. 16 October 1911-23 March 1985",
+        "authors": [
+          "J. M. Hirst",
+          "B. D. Harrison"
+        ],
+        "publication": "Biographical Memoirs of Fellows of the Royal Society",
+        "volume": "34",
+        "pages": "346-371",
+        "publication_date": "1988-12-01",
+        "publication_date_precision": "day_from_carried_coverL52",
+        "doi": "10.1098/rsbm.1988.0013",
+        "source_kind": "external_carrier_of_original_authored_scientific_society_memoir_cover_and_abstract_only",
+        "locator": "Full name/exactdatesL2,L48; authorsL50; publicationL52; plantvirologist/Rothamstedcareer abstractL25-26.",
+        "birthplace_relation_verified": false,
+        "author_upload_date": "2016-01-27",
+        "upload_date_not_publication_date": true
+      },
+      "conflicts_observed": [],
+      "conflict_caveat": "No catalogue/native date conflict observed; search-only Greece lead remains unverified and not geographically adjudicated.",
+      "no_master_change": true,
+      "geography_assignment_performed": false,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "tool-parsed original HTML/PDF text, not raw HTTP bytes",
+      "raw_bytes_captured": false
+    }
+  ],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA2044",
+      "native": {
+        "record_id": "RS_PAST_NA2044",
+        "authority_name": "Crisp; Dennis John (1916 - 1990)",
+        "native_dob": "1916-04-29",
+        "prior_raw_birthplace": "",
+        "full_target_object_canonical_sha256": "a1e341e0dfd2df74064e00c9f1c606fea696dda8ec4b288798d04db299dd48e0",
+        "native_authority_name_and_DOB_count_in_fixed_blank_queue": 1
+      },
+      "status": "Original_structured_date_place_entry_read_but_born_relation_unlabelled_pending_parent_semantic_adjudication",
+      "reason": "Original_structured_date_place_entry_read_but_born_relation_unlabelled_pending_parent_semantic_adjudication",
+      "source_grade_proposal": null,
+      "raw_birthplace_candidate": null,
+      "detailed_disposition": {
+        "record_id": "RS_PAST_NA2044",
+        "native_authorised_full_name": "Crisp; Dennis John (1916 - 1990)",
+        "native_dob": "1916-04-29",
+        "baseline_object_canonical_sha256": "a1e341e0dfd2df74064e00c9f1c606fea696dda8ec4b288798d04db299dd48e0",
+        "decision": "HOLD",
+        "reason": "Original_structured_date_place_entry_read_but_born_relation_unlabelled_pending_parent_semantic_adjudication",
+        "proposed_raw_birthplace": null,
+        "birthplace_admitted": false,
+        "geography_decision": "unchanged_unknown",
+        "identity_audit": {
+          "native_components": [
+            "Dennis",
+            "John",
+            "Crisp"
+          ],
+          "source_name_components_seen_in_discovery": [
+            "Dennis",
+            "John",
+            "Crisp"
+          ],
+          "source_lifespan_from_memoir_title": "29 April 1916–18 January 1990",
+          "source_dob_precision": "day (original body entry)",
+          "source_dob_compatible": true,
+          "body_identity_gate_passed": true,
+          "professional_anchors_from_bibliographic_discovery": [
+            "Biographical Memoirs of Fellows of the Royal Society, volume38 (1992), pages111–129"
+          ],
+          "conflicts_observed": [],
+          "conflict_caveat": "No conflict observed in the inspected Crisp entry and citation. Other source bodies were unavailable.",
+          "source_name_components_seen_in_body": [
+            "Dennis",
+            "John",
+            "Crisp"
+          ],
+          "source_lifespan_from_original_body": "29.IV.1916–18.I.1990",
+          "professional_anchors_from_original_body": [
+            "Fogg and Southward1992 RoyalSociety memoir of DennisJohnCrisp",
+            "Biographical Memoirs of Fellows of the Royal Society, volume38, pages111–129"
+          ]
+        },
+        "sources": [
+          {
+            "source_id": "BCR_C1",
+            "url": "https://www.jstor.org/stable/769998",
+            "ref": "turn2402796view0",
+            "title": "Dennis John Crisp. 29 April 1916–18 January 1990",
+            "authors": [
+              "G. E. Fogg",
+              "A. J. Southward"
+            ],
+            "author_provenance": "Discovery issue bibliographic citation, not a readable memoir body",
+            "publication": "Biographical Memoirs of Fellows of the Royal Society",
+            "publication_date": "1992",
+            "publication_date_precision": "year",
+            "source_kind": "Original scientific-society memoir, body unavailable in returned representation",
+            "locator": "Title only / L0 Image link",
+            "source_grade_proposed": null,
+            "birthplace_relation_verified": false,
+            "raw_http_status": null,
+            "raw_retrieval_utc": null,
+            "raw_bytes_sha256": null,
+            "raw_bytes_captured": false
+          },
+          {
+            "source_id": "BCR_C2",
+            "url": "https://ijnh.seahistory.org/www/wp-content/uploads/sites/2/2012/01/HISTOC08.pdf",
+            "ref": "turn3106827view0",
+            "title": "Commission of Oceanography newsletter, No.8",
+            "editor": "Eric L. Mills",
+            "editor_provenance": "Original returned body lines42–47, PDF page1 (zero-based)",
+            "publication": "International Union of the History and Philosophy of Science, Division of History of Science, Commission of Oceanography",
+            "publication_date": "1996-09",
+            "publication_date_precision": "month",
+            "source_kind": "Signed biographical bibliography in edited historical-scientific-society newsletter",
+            "body_locators_seen": "L730-731@P20 section/byline; L817-819@P21 Crisp entry/cited memoir (zero-basedPDFpages20and21; printedpages19and20)",
+            "birthplace_lead_from_discovery": {
+              "place": "London",
+              "dob": "29.IV.1916",
+              "death_date": "18.I.1990",
+              "source_name": "CRISP, Dennis John",
+              "discovery_ref": "turn2684307search4",
+              "source_body_verified": true
+            },
+            "source_grade_proposed": null,
+            "birthplace_relation_verified": false,
+            "caveat": "Original body now read. Full native identity and compatible dayprecisiondate observed; London is a structured-place lead. Conservative HOLD remains for explicit birthplace semantics. No geography inference, source-grade admission, or raw_birthplace mutation.",
+            "raw_http_status": null,
+            "raw_retrieval_utc": null,
+            "raw_bytes_sha256": null,
+            "raw_bytes_captured": false,
+            "initial_open_ref": "turn2402796view1",
+            "author": "Jacqueline Carpine-Lancre",
+            "author_provenance": "BIOGRAPHIES section byline atL730-731@P20; source entry atL817-819@P21",
+            "structured_body_facts": {
+              "source_name": "CRISP, Dennis John",
+              "source_lifespan_start_date": "29.IV.1916",
+              "place_after_lifespan_start_date": "London",
+              "source_lifespan_end_date": "18.I.1990",
+              "cited_memoir_authors": [
+                "G. E. Fogg",
+                "A. J. Southward"
+              ],
+              "cited_memoir_year": "1992",
+              "cited_memoir_publication": "Biographical Memoirs of Fellows of the Royal Society",
+              "cited_memoir_volume": "38",
+              "cited_memoir_pages": "111–129"
+            },
+            "source_quote": "CRISP, Dennis John [29.IV.1916, London - 18.I.1990]",
+            "quote_whitespace_token_count": 7,
+            "source_grade_conditional": "S3 if parent accepts conventional chronological date/place brackets as an explicit structured birth field; no source grade applied",
+            "relation_assessment": "Name, exact compatible startdate, London, and enddate are explicitly printed in a life-summary bracket under BIOGRAPHIES. The returned excerpt does not label London as birthplace or provide a legend. Interpreting it as birthplace relies on chronological date/place format convention; this is an inference, not an observed literal born clause."
+          }
+        ],
+        "parent_review_only": {
+          "conditional_place": "London",
+          "conditional_source_grade": "S3",
+          "geography_if_parent_admits": "unknown",
+          "gate_remaining": "Accept or reject unlabeled structured life-date/place bracket as explicit birthrelation. No additional research recommended by worker."
+        }
+      },
+      "no_literature_exhaustion_claim": true,
+      "no_master_change": true,
+      "geography_assignment_performed": false,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "tool-parsed original HTML/PDF text, not raw HTTP bytes",
+      "raw_bytes_captured": false
+    },
+    {
+      "record_id": "RS_PAST_NA2090",
+      "native": {
+        "record_id": "RS_PAST_NA2090",
+        "authority_name": "Rishbeth; John (1918 - 1991)",
+        "native_dob": "1918-07-10",
+        "prior_raw_birthplace": "",
+        "full_target_object_canonical_sha256": "645dcaf2e61250151ced7f34b50e2b59237b60cf6ed8c3398e7acf21f2182362",
+        "native_authority_name_and_DOB_count_in_fixed_blank_queue": 1
+      },
+      "status": "Original_scientific_obituary_body_unreadable_no_usable_screenshot",
+      "reason": "Original_scientific_obituary_body_unreadable_no_usable_screenshot",
+      "source_grade_proposal": null,
+      "raw_birthplace_candidate": null,
+      "detailed_disposition": {
+        "record_id": "RS_PAST_NA2090",
+        "native_authorised_full_name": "Rishbeth; John (1918 - 1991)",
+        "native_dob": "1918-07-10",
+        "baseline_object_canonical_sha256": "645dcaf2e61250151ced7f34b50e2b59237b60cf6ed8c3398e7acf21f2182362",
+        "decision": "HOLD",
+        "reason": "Original_scientific_obituary_body_unreadable_no_usable_screenshot",
+        "proposed_raw_birthplace": null,
+        "birthplace_admitted": false,
+        "geography_decision": "unchanged_unknown",
+        "identity_audit": {
+          "native_components": [
+            "John",
+            "Rishbeth"
+          ],
+          "source_name_components_seen_in_discovery": [
+            "John",
+            "Rishbeth"
+          ],
+          "source_lifespan_from_original_obituary_discovery": "Born July 10, 1918, died June 1, 1991",
+          "source_dob_precision": "day (discovery title only)",
+          "source_dob_compatible": true,
+          "body_identity_gate_passed": false,
+          "professional_anchors_from_discovery": [
+            "Forest pathologist",
+            "Phytopathology original obituary in1992"
+          ],
+          "conflicts_observed": [],
+          "conflict_caveat": "Original page not legibly returned; full-body conflicts cannot be checked."
+        },
+        "sources": [
+          {
+            "source_id": "BCR_R1",
+            "url": "https://www.apsnet.org/publications/phytopathology/backissues/Documents/1992Articles/phyto82n07_725.PDF",
+            "ref": "turn2684307view0",
+            "visual_attempt_ref": "turn2402796view2",
+            "title": "John Rishbeth. Born July 10, 1918, died June 1, 1991",
+            "title_provenance": "Discovery title; original PDF returned0lines",
+            "author": null,
+            "publication": "Phytopathology",
+            "publication_date": "1992",
+            "publication_date_precision": "year (URL/discovery metadata)",
+            "source_kind": "Original scientific-society obituary, body unreadable in returned representation",
+            "locator": "One-pagePDF, page0; filename phyto82n07_725.PDF",
+            "source_grade_proposed": null,
+            "birthplace_relation_verified": false,
+            "caveat": "The screenshot response contains only an image marker. No readable image was returned and no visual claim is made.",
+            "raw_http_status": null,
+            "raw_retrieval_utc": null,
+            "raw_bytes_sha256": null,
+            "raw_bytes_captured": false
+          },
+          {
+            "source_id": "BCR_R_DISCOVERY",
+            "url": "https://www.slatters.org.uk/Trumpington/f3323.htm",
+            "ref": "turn2225454search0",
+            "source_kind": "Genealogy discovery projection, not opened or admitted",
+            "author": null,
+            "publication_date": null,
+            "publication_date_precision": "unknown",
+            "discovery_birthplace_lead": "Cambridge",
+            "discovery_dob": "10 Jul 1918",
+            "use": "Supplied direct original APS obituary URL only",
+            "source_grade_proposed": null,
+            "birthplace_relation_verified": false,
+            "raw_http_status": null,
+            "raw_retrieval_utc": null,
+            "raw_bytes_sha256": null,
+            "raw_bytes_captured": false
+          }
+        ]
+      },
+      "no_literature_exhaustion_claim": true,
+      "no_master_change": true,
+      "geography_assignment_performed": false,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "tool-parsed original HTML/PDF text, not raw HTTP bytes",
+      "raw_bytes_captured": false
+    },
+    {
+      "record_id": "RS_PAST_NA4170",
+      "native": {
+        "record_id": "RS_PAST_NA4170",
+        "authority_name": "Harris; Thomas Maxwell (1903 - 1983)",
+        "native_dob": "1903-01-08",
+        "prior_raw_birthplace": "",
+        "full_target_object_canonical_sha256": "fd6bf1669abda3cc5b094b5324412513adc566b44f17453595c2d033be53888b",
+        "native_authority_name_and_DOB_count_in_fixed_blank_queue": 1
+      },
+      "status": "hold_original_birthplace_body_unavailable",
+      "reason": "BBS original biographical PDF returned tool-reported403 and was stopped; OCLC original entity URL opened to generic55-line client shell without subject fields. Leicester is visible only in discovery projections, not acquired original body. No birthplace or source grade adopted.",
+      "source_grade_proposal": null,
+      "raw_birthplace_candidate": null,
+      "identity_audit": {
+        "native_components": [
+          "Thomas",
+          "Maxwell",
+          "Harris"
+        ],
+        "source_full_components_observed_in_discovery": true,
+        "discovery_lifespan": "1903-1983",
+        "source_DOB_precision": "year_lifespan_in_discovery_only",
+        "source_DOB_native_compatible": true,
+        "body_identity_gate_passed": false,
+        "distinctive_discovery_anchors": [
+          "Botanist",
+          "Professor of botany at University of Reading1934-1968",
+          "Herbarium at Reading"
+        ],
+        "conflicts_observed": [],
+        "conflict_caveat": "No readable original subject body acquired; no full-source consistency claim."
+      },
+      "sources": [
+        {
+          "url": "https://www.britishbryologicalsociety.org.uk/wp-content/uploads/2022/09/Lawley-M-MEC_BBS-Members-Sept-2022.pdf",
+          "ref": "turn4071624view0",
+          "discovery_ref": "turn2541277search24",
+          "title": "Members of the Moss Exchange Club (1896-1922) and British Bryological Society (1923-1945)",
+          "author": "Mark Lawley",
+          "author_provenance": "Discovery bibliographic projection; original body unavailable",
+          "source_kind": "original_scientific_society_compiled_biographical_reference_PDF",
+          "publication_date": null,
+          "publication_date_precision": "unknown",
+          "URL_date_not_publication_date": true,
+          "locator": "No acquired body; tool-reported403",
+          "tool_reported_HTTP_status": 403,
+          "discovery_birthplace_lead": "Leicester",
+          "birthplace_relation_verified": false,
+          "source_grade_proposed": null,
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "retrieval_representation": "tool-parsed original HTML/PDF text, not raw HTTP bytes",
+          "raw_bytes_captured": false
+        },
+        {
+          "url": "https://entities.oclc.org/worldcat/entity/E39PBJjmWx69FxFhw44FvdvbVC.html",
+          "ref": "turn2387613view0",
+          "discovery_ref": "turn2541277search0",
+          "title": "Thomas Maxwell Harris",
+          "author": null,
+          "source_kind": "original_library_entity_catalogue_client_shell_only",
+          "publication_date": null,
+          "publication_date_precision": "unknown",
+          "locator": "ReturnedL0-54 contain shell/footer only, no subject fields. Discovery projection had RelatedPlaces/Leicester/Placeofbirth.",
+          "discovery_birthplace_lead": "Leicester",
+          "birthplace_relation_verified": false,
+          "source_grade_proposed": null,
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "retrieval_representation": "tool-parsed original HTML/PDF text, not raw HTTP bytes",
+          "raw_bytes_captured": false
+        }
+      ],
+      "unopened_leads": [
+        {
+          "url": "https://www.ipni.org/a/19991-1",
+          "discovery_ref": "turn2541277search1",
+          "source_name": "Thomas Maxwell Harris",
+          "observed_lifespan": "1903-1983",
+          "source_kind": "original_botanical_author_catalogue_search_projection",
+          "birthplace_seen_in_discovery": false,
+          "opened": false,
+          "reason_not_used": "No explicit born-place in discovery and fixednavigationbudget"
+        }
+      ],
+      "no_literature_exhaustion_claim": true,
+      "no_master_change": true,
+      "geography_assignment_performed": false,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "tool-parsed original HTML/PDF text, not raw HTTP bytes",
+      "raw_bytes_captured": false
+    }
+  ],
+  "dispositions": [
+    {
+      "record_id": "RS_PAST_NA2044",
+      "decision": "HOLD",
+      "detail_container": "holds"
+    },
+    {
+      "record_id": "RS_PAST_NA2090",
+      "decision": "HOLD",
+      "detail_container": "holds"
+    },
+    {
+      "record_id": "RS_PAST_NA4170",
+      "decision": "HOLD",
+      "detail_container": "holds"
+    },
+    {
+      "record_id": "RS_PAST_NA1998",
+      "decision": "CANDIDATE",
+      "detail_container": "candidates"
+    }
+  ],
+  "query_ledger": [
+    {
+      "engine": "system2",
+      "queries": [
+        "Thomas Maxwell Harris born botanical obituary biography",
+        "Basil Kassanis born obituary Rothamsted"
+      ],
+      "count": 2,
+      "preplanned": true,
+      "web_ref_family": "turn2541277search",
+      "exact_request_utc": null
+    },
+    {
+      "engine": "system1",
+      "queries": [
+        "Basil Kassanis Harpenden History born biography"
+      ],
+      "count": 1,
+      "preplanned": true,
+      "web_ref_family": "turn4071624search",
+      "exact_request_utc": null
+    },
+    {
+      "request_id": "BCR_Q1",
+      "operation": "system2_search_query",
+      "query": "Dennis John Crisp born Bangor obituary",
+      "purpose": "Locate new original biography body",
+      "result": "No usable original candidate from this query",
+      "raw_http_status": null,
+      "raw_retrieval_utc": null
+    },
+    {
+      "request_id": "BCR_Q2",
+      "operation": "system2_search_query",
+      "query": "John Rishbeth born Cambridge obituary",
+      "purpose": "Locate original scientific obituary",
+      "result": "Genealogy discovery hit supplied actual APS obituary link; genealogy not opened or admitted",
+      "discovery_ref": "turn2225454search0",
+      "raw_http_status": null,
+      "raw_retrieval_utc": null
+    },
+    {
+      "request_id": "BCR_Q3",
+      "operation": "system1_search_query",
+      "query": "\"Dennis John Crisp\" born biography",
+      "purpose": "Find memoir or edited historical-scientific biography",
+      "result": "JSTOR memoir citation and HISTOC08 newsletter lead found",
+      "discovery_refs": [
+        "turn2684307search0",
+        "turn2684307search4"
+      ],
+      "raw_http_status": null,
+      "raw_retrieval_utc": null
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "url": "https://www.britishbryologicalsociety.org.uk/wp-content/uploads/2022/09/Lawley-M-MEC_BBS-Members-Sept-2022.pdf",
+      "web_ref": "turn4071624view0",
+      "role": "original",
+      "outcome": "tool-reported403; no body, no retry",
+      "tool_reported_HTTP_status": 403,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "tool-parsed original HTML/PDF text, not raw HTTP bytes",
+      "raw_bytes_captured": false
+    },
+    {
+      "url": "https://entities.oclc.org/worldcat/entity/E39PBJjmWx69FxFhw44FvdvbVC.html",
+      "web_ref": "turn2387613view0",
+      "role": "original",
+      "outcome": "Generic55-line client shell without original entity fields; no body birthplace",
+      "tool_reported_HTTP_status": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "tool-parsed original HTML/PDF text, not raw HTTP bytes",
+      "raw_bytes_captured": false
+    },
+    {
+      "url": "https://www.harpenden-history.org.uk/wp-content/uploads/2021/08/A-History-of-Rosebery-AvenueHarpenden-Final-14-Aug-2021-compressed-2.pdf",
+      "web_ref": "turn2387613view1",
+      "role": "original",
+      "outcome": "Five-line HTML verification challenge instead ofPDF; stop, no retry",
+      "tool_reported_HTTP_status": null,
+      "source_author": null,
+      "source_kind": "original_local_history_PDF_challenge_no_body",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "URL_date_not_publication_date": true,
+      "locator": "L0-4 challenge only",
+      "discovery_ref": "turn2541277search25",
+      "discovery_birthplace_lead": "Greece; not admitted",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "tool-parsed original HTML/PDF text, not raw HTTP bytes",
+      "raw_bytes_captured": false
+    },
+    {
+      "url": "https://www.researchgate.net/publication/247606177_Basil_Kassanis_16_October_1911_-_23_March_1985",
+      "web_ref": "turn2387613view2",
+      "role": "external_carrier_of_original_work",
+      "outcome": "Original authored memoir cover/metadata/abstract readable; no acquired born-place clause",
+      "tool_reported_HTTP_status": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "tool-parsed original HTML/PDF text, not raw HTTP bytes",
+      "raw_bytes_captured": false
+    },
+    {
+      "url": "https://pictures.royalsociety.org/image-rs-21618",
+      "web_ref": "turn5938178view0",
+      "role": "original",
+      "outcome": "Original uncredited picture-catalogue text explicitly says subject Macedonianborn, with full name/lifespan and FRS1966",
+      "tool_reported_HTTP_status": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "tool-parsed original HTML/PDF text, not raw HTTP bytes",
+      "raw_bytes_captured": false
+    },
+    {
+      "request_id": "BCR_N1",
+      "operation": "open",
+      "url": "http://www.apsnet.org/publications/phytopathology/backissues/Documents/1992Articles/phyto82n07_725.PDF",
+      "canonical_returned_url": "https://www.apsnet.org/publications/phytopathology/backissues/Documents/1992Articles/phyto82n07_725.PDF",
+      "result_ref": "turn2684307view0",
+      "purpose": "Read original Rishbeth obituary body",
+      "result": "One-page PDF; 0 readable lines in returned representation",
+      "raw_http_status": null,
+      "raw_retrieval_utc": null,
+      "raw_bytes_sha256": null,
+      "raw_bytes_captured": false
+    },
+    {
+      "request_id": "BCR_N3",
+      "operation": "open",
+      "url": "https://www.jstor.org/stable/769998",
+      "result_ref": "turn2402796view0",
+      "purpose": "Read original Crisp memoir body",
+      "result": "Title and one Image link only; no readable memoir body, no HTTP error status observed",
+      "raw_http_status": null,
+      "raw_retrieval_utc": null,
+      "raw_bytes_sha256": null,
+      "raw_bytes_captured": false,
+      "source_host_role": "JSTOR digital carrier of original scientific-society memoir"
+    },
+    {
+      "request_id": "BCR_N4",
+      "operation": "open",
+      "url": "https://ijnh.seahistory.org/www/wp-content/uploads/sites/2/2012/01/HISTOC08.pdf",
+      "result_ref": "turn2402796view1",
+      "purpose": "Inspect original historical-scientific newsletter Crisp entry and attribution",
+      "result": "29-page PDF, 1143 total lines reported; returned excerpt covers lines0-281/pages0-7 only, before bibliography entry. Editorial provenance read; Crisp entry not present in returned body excerpt",
+      "raw_http_status": null,
+      "raw_retrieval_utc": null,
+      "raw_bytes_sha256": null,
+      "raw_bytes_captured": false
+    }
+  ],
+  "cached_screenshot_ledger": [
+    {
+      "request_id": "BCR_N2",
+      "operation": "screenshot",
+      "ref": "turn2684307view0",
+      "page_number_zero_based": 0,
+      "result_ref": "turn2402796view2",
+      "purpose": "Read Rishbeth image-only page",
+      "result": "Only text marker <<ImageDisplayed>> returned; no actual ImageContent block, so no visual inspection claimed",
+      "raw_http_status": null,
+      "raw_retrieval_utc": null,
+      "raw_bytes_sha256": null,
+      "raw_bytes_captured": false
+    }
+  ],
+  "parsed_find_ledger": [
+    {
+      "request_id": "BCR_F1",
+      "operation": "find",
+      "ref": "turn2402796view1",
+      "pattern": "CRISP",
+      "result_ref": "turn3106827view0",
+      "purpose": "Inspect already parsed original newsletter biography entry; separately authorized by parent after budget clarification",
+      "result": "Original signed Biographies section and Crisp entry read atL730-731/P20 andL817-819/P21",
+      "original_navigation_counted": false,
+      "cached_parsed_find_counted": true,
+      "raw_http_status": null,
+      "raw_retrieval_utc": null,
+      "raw_bytes_sha256": null,
+      "raw_bytes_captured": false
+    }
+  ],
+  "intent_files": [
+    "v20_b_intent.json",
+    "v20_b_crisp_rishbeth_intent.json"
+  ],
+  "delegated_report_file": "v20_b_crisp_rishbeth.json",
+  "other_unopened_non_evidence_leads": [
+    {
+      "record_id": "RS_PAST_NA1998",
+      "url": "https://www.harpenden-history.org.uk/harpenden-history/people-2/artists/basil_kassanis",
+      "discovery_ref": "turn4071624search0",
+      "source_kind": "original_local_history_biographical_article_search_projection",
+      "publication_history_from_discovery": "Originally HertfordshireCountryside May1983; precise webpage publication date unknown",
+      "author": null,
+      "opened": false,
+      "role": "Discovery only. Came to England fromMacedonia1938 is migration, not a birthplace relation; not admitted."
+    }
+  ],
+  "quote_policy": {
+    "max_english_words_per_original_work": 25,
+    "candidate_verbatim_quote_words": 2,
+    "full_source_HTML_PDF_images_graph_dumps_or_parsed_caches_distributed": false,
+    "child_quote_ledger_preserved": {
+      "max_english_words_per_work": 25,
+      "verbatim_source_quotes_in_report": 1,
+      "full_source_or_cache_distributed": false,
+      "source_quote_ledger": [
+        {
+          "work_id": "BCR_C2",
+          "source_quote": "CRISP, Dennis John [29.IV.1916, London - 18.I.1990]",
+          "whitespace_token_count": 7,
+          "max_english_words": 25,
+          "locator": "L817@P21",
+          "other_verbatim_prose_from_work": false
+        }
+      ]
+    }
+  },
+  "limits": [
+    "Exactly6discoveryqueries and8original-sourceopens across parent andchild. Onecachedscreenshot andparsedfinds separately logged; no extraquery orfailedURLretry.",
+    "Kassanis is a conservativeS3 originalcatalogue candidate with direct bornregionwording, not a scholarlymemoirS2claim. HistoricalMacedonia and moderncountry unresolved; hemisphereunknown.",
+    "Crisp chronological date/place bracket may remain held if it lacks explicit bornlabel or legend; parent can inspect detailedsourceaudit.",
+    "Original parsedsource fields are structured observations, not rawHTTP captures. Unknown rawstatus/time/hash remainnull; tool403 separately retained.",
+    "No master,Git,hemisphere,BP,DOBgrade,QID,country,coordinates,nativeDOB/calendar/identity/eligibilitymutations.",
+    "Holds do not establish literatureexhaustion; discovery projections are not admitted evidence."
+  ]
+}

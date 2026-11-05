@@ -1,0 +1,48 @@
+{
+  "written_utc": "2026-11-05T14:53:07.257919+00:00",
+  "baseline_commit": "25b6b8f40d148d2e6c61235675446bbbfbdb4928",
+  "fixed_blank_window_pool": 141,
+  "individual_followup_groups": {
+    "a": [
+      "RS_PAST_NA4036",
+      "RS_PAST_NA4166",
+      "RS_PAST_NA4179",
+      "RS_PAST_NA4490"
+    ],
+    "b": [
+      "RS_PAST_NA2044",
+      "RS_PAST_NA2090",
+      "RS_PAST_NA4170",
+      "RS_PAST_NA1998"
+    ]
+  },
+  "fixed_existing_place_geography_pilot_ids": [
+    "RS_PAST_NA4918"
+  ],
+  "geography_pilot_method": "One-case original GND/library authority graph inspection for Adam. Need explicitly verified full subject identity/compatible source date AND semantic person->placeOfBirth identifier AND inspected typed place record with explicit whole-region/country/latitude supporting hemisphere. Follow actual observed identifiers, not fuzzy city search, map default/geocoder, nationality/residence or assumed GND origin of portal facts. Unknown provenance/type/edge/date conflict =>hold, no adoption.",
+  "source_strategy": "Eight new individual original biography bodies plus one separately audited existing-place graph pilot; no bulk index rerun or crosscohort screen.",
+  "budgets": {
+    "per_individual_group_queries": 6,
+    "per_individual_group_original_nav": 8,
+    "geo_pilot_queries": 3,
+    "geo_pilot_nav": 6
+  },
+  "first_BP_admission": "Carryv16-v19 explicit fullnativecomponents/source-name superset, actuallystated compatibleDOBprecision/lifespan+uniqueprofessionalanchors. No initials/date repair; explicit born relation only; city-only BP may remain unknown.",
+  "geography_grades": "Any accepted authority-graph hemisphere support conservatively S3/geographic_support_only, separate from unchanged original BP and DOB grades/URLs/rawBP. No personal country/QID/coordinates assigned. No ordinary-city name uniqueness claim.",
+  "DOB_conflicts": "Argyris1913vs1916 and Laverprofileheader1925vsnative1929 remainactive holds, cannot bypass via dateless material. Any new explicit source date conflict held and recorded.",
+  "frozen": [
+    "DOB",
+    "calendar",
+    "identity",
+    "eligibility",
+    "QID",
+    "DOBtiers",
+    "old_evidence",
+    "country",
+    "coords",
+    "allpriorfacts",
+    "untargetedobjects"
+  ],
+  "quote_policy": "<=25Englishwords/originalwork; no fullsourceHTML/PDF/graph dumps/images/parsedcache distributed. Structured minimal factual fields with locators allowed.",
+  "no_analysis_or_final_freeze": true
+}

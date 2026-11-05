@@ -1,0 +1,97 @@
+{
+  "schema": "UK_v20_sources_a_consolidated_intent_v1",
+  "written_utc": "2026-11-05T15:01:22.578926+00:00",
+  "note": "Consolidated after execution from contemporaneous component ledgers; preserves two adaptive-query late-intent disclosures rather than backdating.",
+  "scope_record_ids": [
+    "RS_PAST_NA4036",
+    "RS_PAST_NA4166",
+    "RS_PAST_NA4179",
+    "RS_PAST_NA4490"
+  ],
+  "group_budget": {
+    "queries": 6,
+    "web_navigation": 8
+  },
+  "parent_component": {
+    "written_utc": "2026-11-05T14:54:01.744225+00:00",
+    "scope": [
+      "RS_PAST_NA4036",
+      "RS_PAST_NA4179"
+    ],
+    "parent_budget": {
+      "queries": 4,
+      "original_navigation": 4
+    },
+    "group_combined_budget": {
+      "queries": 6,
+      "original_navigation": 8
+    },
+    "delegated": [
+      "RS_PAST_NA4166",
+      "RS_PAST_NA4490"
+    ],
+    "queries": [
+      "John Edwin Midwinter born obituary university",
+      "Robert Neville Haszeldine born obituary university"
+    ],
+    "purpose": "New explicit original birthplace bodies; no failed/closed route reruns, no native DOB repair or grade/geo writes.",
+    "second_queries_recorded_after_call": {
+      "written_utc": "2026-11-05T14:54:58.129558+00:00",
+      "queries": [
+        "\"John Midwinter obituary\" Guardian",
+        "\"Robert Neville Haszeldine\" \"born\""
+      ],
+      "note": "Adaptive query intent was recorded after the request; not preregistered. No source-open decision made yet."
+    },
+    "planned_opens": {
+      "written_utc": "2026-11-05T14:55:40.815717+00:00",
+      "urls": [
+        "https://www.theguardian.com/technology/2021/dec/12/john-midwinter-obituary",
+        "https://www.ucl.ac.uk/engineering/news/2021/dec/professor-john-midwinter-true-optical-fibre-communications-pioneer",
+        "https://fluorine.ch.man.ac.uk/history.php",
+        "https://royalsocietypublishing.org/doi/10.1098/rsbm.2018.0035"
+      ],
+      "purpose": "Original source bodies only; bound subject-born places and dates; source death-year discrepancy recorded separately without repair."
+    }
+  },
+  "delegated_component": {
+    "written_utc": "2026-11-05T14:54:02.995768+00:00",
+    "subjects": [
+      "RS_PAST_NA4166",
+      "RS_PAST_NA4490"
+    ],
+    "planned_queries": [
+      "William Reginald Stephen Garton born obituary Imperial",
+      "Anthony Ledwith born obituary Sheffield Lancaster"
+    ],
+    "budgets": {
+      "queries": 2,
+      "original_navigation": 4
+    },
+    "scope": "Original explicit birthplace bodies only; no source/master changes.",
+    "original_opens": {
+      "written_utc": "2026-11-05T14:54:39.091204+00:00",
+      "urls": [
+        "https://www.imperial.ac.uk/physics/about-us/contact-us/fellows-of-the-royal-society/",
+        "https://doi.org/10.1098/rsbm.2017.0029"
+      ]
+    },
+    "adaptive_new_work_carrier_open": {
+      "written_utc": "2026-11-05T14:55:21.562642+00:00",
+      "url": "https://www.researchgate.net/publication/247606535_William_Reginald_Stephen_Garton_7_March_1912--28_August_2002",
+      "reason": "Observed author-uploaded original published memoir lead, distinct from inaccessible Imperial institutional webpage; no retry of either failedURL."
+    }
+  },
+  "actual_counts": {
+    "discovery_queries": 6,
+    "holds": 3,
+    "original_source_host_or_resolver_navigation_attempts": 6,
+    "external_original_work_carrier_attempts": 1,
+    "screenshots": 0,
+    "web_navigation_attempts": 7,
+    "raw_GETs": 0,
+    "body_verified_birthplace_candidates": 1,
+    "held_explicit_birthplace_observations": 1,
+    "parsed_text_find_operations": 0
+  }
+}

@@ -1,0 +1,355 @@
+{
+  "schema": "v20_individual_original_source_research_v1",
+  "written_utc": "2026-11-05T15:01:57.091977+00:00",
+  "worker": "/root/v20_sources_b/crisp_rishbeth",
+  "baseline_commit": "25b6b8f40d148d2e6c61235675446bbbfbdb4928",
+  "scope_record_ids": [
+    "RS_PAST_NA2044",
+    "RS_PAST_NA2090"
+  ],
+  "intent_file": "v20_b_crisp_rishbeth_intent.json",
+  "counts": {
+    "discovery_queries": 3,
+    "original_source_navigation_attempts": 3,
+    "cached_screenshot_attempts": 1,
+    "total_navigation_or_visual_operations": 4,
+    "raw_gets": 0,
+    "usable_image_content_blocks_returned": 0,
+    "candidates": 0,
+    "holds": 2,
+    "cached_parsed_find_operations": 1,
+    "total_original_nav_screenshot_and_cached_find_operations": 5
+  },
+  "budget_exhausted": false,
+  "request_ledger": [
+    {
+      "request_id": "BCR_Q1",
+      "operation": "system2_search_query",
+      "query": "Dennis John Crisp born Bangor obituary",
+      "purpose": "Locate new original biography body",
+      "result": "No usable original candidate from this query",
+      "raw_http_status": null,
+      "raw_retrieval_utc": null
+    },
+    {
+      "request_id": "BCR_Q2",
+      "operation": "system2_search_query",
+      "query": "John Rishbeth born Cambridge obituary",
+      "purpose": "Locate original scientific obituary",
+      "result": "Genealogy discovery hit supplied actual APS obituary link; genealogy not opened or admitted",
+      "discovery_ref": "turn2225454search0",
+      "raw_http_status": null,
+      "raw_retrieval_utc": null
+    },
+    {
+      "request_id": "BCR_Q3",
+      "operation": "system1_search_query",
+      "query": "\"Dennis John Crisp\" born biography",
+      "purpose": "Find memoir or edited historical-scientific biography",
+      "result": "JSTOR memoir citation and HISTOC08 newsletter lead found",
+      "discovery_refs": [
+        "turn2684307search0",
+        "turn2684307search4"
+      ],
+      "raw_http_status": null,
+      "raw_retrieval_utc": null
+    },
+    {
+      "request_id": "BCR_N1",
+      "operation": "open",
+      "url": "http://www.apsnet.org/publications/phytopathology/backissues/Documents/1992Articles/phyto82n07_725.PDF",
+      "canonical_returned_url": "https://www.apsnet.org/publications/phytopathology/backissues/Documents/1992Articles/phyto82n07_725.PDF",
+      "result_ref": "turn2684307view0",
+      "purpose": "Read original Rishbeth obituary body",
+      "result": "One-page PDF; 0 readable lines in returned representation",
+      "raw_http_status": null,
+      "raw_retrieval_utc": null,
+      "raw_bytes_sha256": null,
+      "raw_bytes_captured": false
+    },
+    {
+      "request_id": "BCR_N2",
+      "operation": "screenshot",
+      "ref": "turn2684307view0",
+      "page_number_zero_based": 0,
+      "result_ref": "turn2402796view2",
+      "purpose": "Read Rishbeth image-only page",
+      "result": "Only text marker <<ImageDisplayed>> returned; no actual ImageContent block, so no visual inspection claimed",
+      "raw_http_status": null,
+      "raw_retrieval_utc": null,
+      "raw_bytes_sha256": null,
+      "raw_bytes_captured": false
+    },
+    {
+      "request_id": "BCR_N3",
+      "operation": "open",
+      "url": "https://www.jstor.org/stable/769998",
+      "result_ref": "turn2402796view0",
+      "purpose": "Read original Crisp memoir body",
+      "result": "Title and one Image link only; no readable memoir body, no HTTP error status observed",
+      "raw_http_status": null,
+      "raw_retrieval_utc": null,
+      "raw_bytes_sha256": null,
+      "raw_bytes_captured": false
+    },
+    {
+      "request_id": "BCR_N4",
+      "operation": "open",
+      "url": "https://ijnh.seahistory.org/www/wp-content/uploads/sites/2/2012/01/HISTOC08.pdf",
+      "result_ref": "turn2402796view1",
+      "purpose": "Inspect original historical-scientific newsletter Crisp entry and attribution",
+      "result": "29-page PDF, 1143 total lines reported; returned excerpt covers lines0-281/pages0-7 only, before bibliography entry. Editorial provenance read; Crisp entry not present in returned body excerpt",
+      "raw_http_status": null,
+      "raw_retrieval_utc": null,
+      "raw_bytes_sha256": null,
+      "raw_bytes_captured": false
+    },
+    {
+      "request_id": "BCR_F1",
+      "operation": "find",
+      "ref": "turn2402796view1",
+      "pattern": "CRISP",
+      "result_ref": "turn3106827view0",
+      "purpose": "Inspect already parsed original newsletter biography entry; separately authorized by parent after budget clarification",
+      "result": "Original signed Biographies section and Crisp entry read atL730-731/P20 andL817-819/P21",
+      "original_navigation_counted": false,
+      "cached_parsed_find_counted": true,
+      "raw_http_status": null,
+      "raw_retrieval_utc": null,
+      "raw_bytes_sha256": null,
+      "raw_bytes_captured": false
+    }
+  ],
+  "dispositions": [
+    {
+      "record_id": "RS_PAST_NA2044",
+      "native_authorised_full_name": "Crisp; Dennis John (1916 - 1990)",
+      "native_dob": "1916-04-29",
+      "baseline_object_canonical_sha256": "a1e341e0dfd2df74064e00c9f1c606fea696dda8ec4b288798d04db299dd48e0",
+      "decision": "HOLD",
+      "reason": "Original_structured_date_place_entry_read_but_born_relation_unlabelled_pending_parent_semantic_adjudication",
+      "proposed_raw_birthplace": null,
+      "birthplace_admitted": false,
+      "geography_decision": "unchanged_unknown",
+      "identity_audit": {
+        "native_components": [
+          "Dennis",
+          "John",
+          "Crisp"
+        ],
+        "source_name_components_seen_in_discovery": [
+          "Dennis",
+          "John",
+          "Crisp"
+        ],
+        "source_lifespan_from_memoir_title": "29 April 1916–18 January 1990",
+        "source_dob_precision": "day (original body entry)",
+        "source_dob_compatible": true,
+        "body_identity_gate_passed": true,
+        "professional_anchors_from_bibliographic_discovery": [
+          "Biographical Memoirs of Fellows of the Royal Society, volume38 (1992), pages111–129"
+        ],
+        "conflicts_observed": [],
+        "conflict_caveat": "No conflict observed in the inspected Crisp entry and citation. Other source bodies were unavailable.",
+        "source_name_components_seen_in_body": [
+          "Dennis",
+          "John",
+          "Crisp"
+        ],
+        "source_lifespan_from_original_body": "29.IV.1916–18.I.1990",
+        "professional_anchors_from_original_body": [
+          "Fogg and Southward1992 RoyalSociety memoir of DennisJohnCrisp",
+          "Biographical Memoirs of Fellows of the Royal Society, volume38, pages111–129"
+        ]
+      },
+      "sources": [
+        {
+          "source_id": "BCR_C1",
+          "url": "https://www.jstor.org/stable/769998",
+          "ref": "turn2402796view0",
+          "title": "Dennis John Crisp. 29 April 1916–18 January 1990",
+          "authors": [
+            "G. E. Fogg",
+            "A. J. Southward"
+          ],
+          "author_provenance": "Discovery issue bibliographic citation, not a readable memoir body",
+          "publication": "Biographical Memoirs of Fellows of the Royal Society",
+          "publication_date": "1992",
+          "publication_date_precision": "year",
+          "source_kind": "Original scientific-society memoir, body unavailable in returned representation",
+          "locator": "Title only / L0 Image link",
+          "source_grade_proposed": null,
+          "birthplace_relation_verified": false,
+          "raw_http_status": null,
+          "raw_retrieval_utc": null,
+          "raw_bytes_sha256": null,
+          "raw_bytes_captured": false
+        },
+        {
+          "source_id": "BCR_C2",
+          "url": "https://ijnh.seahistory.org/www/wp-content/uploads/sites/2/2012/01/HISTOC08.pdf",
+          "ref": "turn3106827view0",
+          "title": "Commission of Oceanography newsletter, No.8",
+          "editor": "Eric L. Mills",
+          "editor_provenance": "Original returned body lines42–47, PDF page1 (zero-based)",
+          "publication": "International Union of the History and Philosophy of Science, Division of History of Science, Commission of Oceanography",
+          "publication_date": "1996-09",
+          "publication_date_precision": "month",
+          "source_kind": "Signed biographical bibliography in edited historical-scientific-society newsletter",
+          "body_locators_seen": "L730-731@P20 section/byline; L817-819@P21 Crisp entry/cited memoir (zero-basedPDFpages20and21; printedpages19and20)",
+          "birthplace_lead_from_discovery": {
+            "place": "London",
+            "dob": "29.IV.1916",
+            "death_date": "18.I.1990",
+            "source_name": "CRISP, Dennis John",
+            "discovery_ref": "turn2684307search4",
+            "source_body_verified": true
+          },
+          "source_grade_proposed": null,
+          "birthplace_relation_verified": false,
+          "caveat": "Original body now read. Full native identity and compatible dayprecisiondate observed; London is a structured-place lead. Conservative HOLD remains for explicit birthplace semantics. No geography inference, source-grade admission, or raw_birthplace mutation.",
+          "raw_http_status": null,
+          "raw_retrieval_utc": null,
+          "raw_bytes_sha256": null,
+          "raw_bytes_captured": false,
+          "initial_open_ref": "turn2402796view1",
+          "author": "Jacqueline Carpine-Lancre",
+          "author_provenance": "BIOGRAPHIES section byline atL730-731@P20; source entry atL817-819@P21",
+          "structured_body_facts": {
+            "source_name": "CRISP, Dennis John",
+            "source_lifespan_start_date": "29.IV.1916",
+            "place_after_lifespan_start_date": "London",
+            "source_lifespan_end_date": "18.I.1990",
+            "cited_memoir_authors": [
+              "G. E. Fogg",
+              "A. J. Southward"
+            ],
+            "cited_memoir_year": "1992",
+            "cited_memoir_publication": "Biographical Memoirs of Fellows of the Royal Society",
+            "cited_memoir_volume": "38",
+            "cited_memoir_pages": "111–129"
+          },
+          "source_quote": "CRISP, Dennis John [29.IV.1916, London - 18.I.1990]",
+          "quote_whitespace_token_count": 7,
+          "source_grade_conditional": "S3 if parent accepts conventional chronological date/place brackets as an explicit structured birth field; no source grade applied",
+          "relation_assessment": "Name, exact compatible startdate, London, and enddate are explicitly printed in a life-summary bracket under BIOGRAPHIES. The returned excerpt does not label London as birthplace or provide a legend. Interpreting it as birthplace relies on chronological date/place format convention; this is an inference, not an observed literal born clause."
+        }
+      ],
+      "parent_review_only": {
+        "conditional_place": "London",
+        "conditional_source_grade": "S3",
+        "geography_if_parent_admits": "unknown",
+        "gate_remaining": "Accept or reject unlabeled structured life-date/place bracket as explicit birthrelation. No additional research recommended by worker."
+      }
+    },
+    {
+      "record_id": "RS_PAST_NA2090",
+      "native_authorised_full_name": "Rishbeth; John (1918 - 1991)",
+      "native_dob": "1918-07-10",
+      "baseline_object_canonical_sha256": "645dcaf2e61250151ced7f34b50e2b59237b60cf6ed8c3398e7acf21f2182362",
+      "decision": "HOLD",
+      "reason": "Original_scientific_obituary_body_unreadable_no_usable_screenshot",
+      "proposed_raw_birthplace": null,
+      "birthplace_admitted": false,
+      "geography_decision": "unchanged_unknown",
+      "identity_audit": {
+        "native_components": [
+          "John",
+          "Rishbeth"
+        ],
+        "source_name_components_seen_in_discovery": [
+          "John",
+          "Rishbeth"
+        ],
+        "source_lifespan_from_original_obituary_discovery": "Born July 10, 1918, died June 1, 1991",
+        "source_dob_precision": "day (discovery title only)",
+        "source_dob_compatible": true,
+        "body_identity_gate_passed": false,
+        "professional_anchors_from_discovery": [
+          "Forest pathologist",
+          "Phytopathology original obituary in1992"
+        ],
+        "conflicts_observed": [],
+        "conflict_caveat": "Original page not legibly returned; full-body conflicts cannot be checked."
+      },
+      "sources": [
+        {
+          "source_id": "BCR_R1",
+          "url": "https://www.apsnet.org/publications/phytopathology/backissues/Documents/1992Articles/phyto82n07_725.PDF",
+          "ref": "turn2684307view0",
+          "visual_attempt_ref": "turn2402796view2",
+          "title": "John Rishbeth. Born July 10, 1918, died June 1, 1991",
+          "title_provenance": "Discovery title; original PDF returned0lines",
+          "author": null,
+          "publication": "Phytopathology",
+          "publication_date": "1992",
+          "publication_date_precision": "year (URL/discovery metadata)",
+          "source_kind": "Original scientific-society obituary, body unreadable in returned representation",
+          "locator": "One-pagePDF, page0; filename phyto82n07_725.PDF",
+          "source_grade_proposed": null,
+          "birthplace_relation_verified": false,
+          "caveat": "The screenshot response contains only an image marker. No readable image was returned and no visual claim is made.",
+          "raw_http_status": null,
+          "raw_retrieval_utc": null,
+          "raw_bytes_sha256": null,
+          "raw_bytes_captured": false
+        },
+        {
+          "source_id": "BCR_R_DISCOVERY",
+          "url": "https://www.slatters.org.uk/Trumpington/f3323.htm",
+          "ref": "turn2225454search0",
+          "source_kind": "Genealogy discovery projection, not opened or admitted",
+          "author": null,
+          "publication_date": null,
+          "publication_date_precision": "unknown",
+          "discovery_birthplace_lead": "Cambridge",
+          "discovery_dob": "10 Jul 1918",
+          "use": "Supplied direct original APS obituary URL only",
+          "source_grade_proposed": null,
+          "birthplace_relation_verified": false,
+          "raw_http_status": null,
+          "raw_retrieval_utc": null,
+          "raw_bytes_sha256": null,
+          "raw_bytes_captured": false
+        }
+      ]
+    }
+  ],
+  "mutations": {
+    "master": false,
+    "git": false,
+    "native_DOB": false,
+    "identity": false,
+    "DOB_grade": false,
+    "birthplace_grade": false,
+    "raw_birthplace": false,
+    "hemisphere": false,
+    "country": false,
+    "qid": false,
+    "coordinates": false
+  },
+  "quote_policy": {
+    "max_english_words_per_work": 25,
+    "verbatim_source_quotes_in_report": 1,
+    "full_source_or_cache_distributed": false,
+    "source_quote_ledger": [
+      {
+        "work_id": "BCR_C2",
+        "source_quote": "CRISP, Dennis John [29.IV.1916, London - 18.I.1990]",
+        "whitespace_token_count": 7,
+        "max_english_words": 25,
+        "locator": "L817@P21",
+        "other_verbatim_prose_from_work": false
+      }
+    ]
+  },
+  "limits": "After initial holds, parent clarified originalopens3/cachedscreenshot1 separately and authorized exactlyone cachedparsedfind. This find read the signed original Crisp bibliography entry. Both remain HOLD: Crisp birth-relation semantics unlabeled; Rishbeth body unavailable. No further query/URL/navigation/retry was sent.",
+  "budget_status": {
+    "discovery_queries": "3of3used",
+    "original_source_navigation_attempts": "3of4used",
+    "cached_screenshot_attempts": "1separate",
+    "cached_parsed_find_operations": "1parentauthorized",
+    "further_requests_performed": false,
+    "stopped_after_authorized_cached_find": true
+  }
+}
