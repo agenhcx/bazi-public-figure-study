@@ -1,0 +1,30 @@
+{
+  "schema": "v31_a_geography_intent_v1",
+  "written_utc": "2026-11-06T12:35:12.626109+00:00",
+  "scope": [
+    "RS_PAST_NA4680",
+    "RS_PAST_NA4155",
+    "RS_PAST_NA6868",
+    "RS_PAST_NA4113"
+  ],
+  "full_prior_context_review_before_queries": {
+    "review_file": "v31_a_prior_context_review.json",
+    "accepted": "Fullv16Rafteryandv17Goodwinacceptedfactobjectsread,includingdateprecision/career/caveats/quotes.",
+    "holds": "Fullv12HarrySmithNorthamptonstreetonlyandv13Ekins403publisherPDFholdsread.",
+    "current": "FulltargetedcurrentselectedBP/geocontextsread,includingEkinsv6CrossrefabstractoriginalLondon-onlyandallsource/BPgrades; HarryS1catalogue/GoodwinS2/RafteryS3unchanged.",
+    "closed_or_known_unproductive": "No re-openRafteryMayoage71Galway-only/RCPGoodwinWoodGreenLondon-only/HarryODNBNorthamptonstreet-onlyorMicrobiologySocietyNorthampton-only/EkinspublisherPDF403oroldLondon-onlyabstractasnewcoverage."
+  },
+  "initial_queries": [
+    "\"Michael Augustine Raftery\" born Ireland",
+    "\"Leonard George Goodwin\" born England",
+    "\"Roger Philip Ekins\" born England",
+    "\"Harry Smith\" \"1921\" born Northampton England"
+  ],
+  "general_adaptive_intent": "Withinremainingfourqueries,useobservednewdistinctoriginalobituary/memoir/institutionalbiography/carrierleads, fullsubjectanddate/careercontext. Priorpurposewrittennow; adaptivewordingschosenafterinitialresultsandloggedhonestlywithoutbackdating. No failedroute retries/variants/accessbypass/rawGET/fullsourcecaches.",
+  "gates": "Geographyonly actualdirectborncountry/wholeregion +fullnativepersonalcomponents/actuallycompatibleDOBprecision/distinctivecareer +reviewedconsistentrelationtostoredcity. No city/nationality/family/work/footer inferredcountry. ActualDOB/place/nameconflictshold; no oldage71usedtoinventRafteryDOB. Existingv24strictmiddleomissiononlyfirstsurnameexactDOB/lifespan/uniquefixedcohort/nocontraryfacts; noinitial/nicknameexpansion/newrule. BPraw/grades/URLs/claims/native/allpriorfactsfrozen. Geographic_support_only sourcegrade. Quotes<=25words/workincludingoldquotes.",
+  "budgets": {
+    "queries": 8,
+    "navigation": 10
+  },
+  "nine_inherited_issue_files_untouched": true
+}

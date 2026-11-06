@@ -1,0 +1,163 @@
+{
+  "review_scope": "unique full targetedacceptedBP/geofact/holdobjects fromv30inputs+audit;beforev31queries",
+  "objects": [
+    {
+      "paths": [
+        "inputs/v16_accepted_birthplaces.json"
+      ],
+      "record_id": "RS_PAST_NA4680",
+      "object": {
+        "record_id": "RS_PAST_NA4680",
+        "native_dob": "1936-02-08",
+        "authority_name": "Raftery; Michael Augustine (1936 - 2007); biochemist",
+        "raw_birthplace": "Galway",
+        "source_grade": "S3",
+        "source_url": "https://www.mayonews.ie/news/opinion/michael-augustine-raftery-7521177",
+        "source_quote": "He was born in Galway",
+        "source_title": "Michael Augustine Raftery,",
+        "source_author": null,
+        "source_kind": "original_professional_newspaper_obituary_or_local_tribute",
+        "source_birthdate": null,
+        "source_birthdate_precision": "no_DOB_age_at_death_only",
+        "source_locator": "turn86view2 L10 full name; L12 institutional byline; L14 publication date; L18 explicit born clause and age/deathday; L19–21 Caltech career; L40–43 FRS/Minnesota/retirement/family anchors.",
+        "identity_review": [
+          "Source heading exactly Michael Augustine Raftery, matching authorized native full name.",
+          "Age71 at August1 death in 2007 is compatible with native1936-02-08; no date conflict observed, no native date correction or precision upgrade.",
+          "Caltech chemical biology/acetylcholine receptor research, 23-year Caltech career beginning1964, FRS1986, later University of Minnesota, retirement2001 and children M Daniel/Jennifer/John Kevin provide multiple distinctive anchors."
+        ],
+        "reviewed_hemisphere": "unknown",
+        "geographic_basis": "Only unqualified Galway is birth-linked; Co Mayo describes parents/upbringing, not birthplace. Country/entity/coordinates are not inferred.",
+        "source_grade_basis": "Conservative S3 for original professional newspaper obituary with institutional byline but no individually named author. Press-code notice is not proof of verified biography or peer review.",
+        "source_grade_role": "person_birthplace_support_only",
+        "native_DOB_source_grade_unchanged": true,
+        "native_DOB_independent_exact_day_confirmation_in_this_source": false,
+        "native_date_compatibility_without_repair": "No incompatible source date observed. Compare only stated precision; native DOB preserved without inference.",
+        "retrieval_representation": "tool-parsed original publisher HTML/PDF text; not raw HTTP response bytes",
+        "raw_HTTP_status": null,
+        "raw_bytes_sha256": null,
+        "exact_request_utc": null,
+        "parent_adjudication_utc": "2026-11-05T00:13:50.861082+00:00",
+        "source_publication_date": "2007-09-26",
+        "source_page_updated_date": "2023-04-13",
+        "source_author_note": "Original publisher credits The Mayo News; no individual writer is named. A family relationship or author identity is not inferred.",
+        "no_DOB_identity_caveat": "Original source states age71 and August1 death in2007 context; no own birthdate is stated or reconstructed. Full native name/lifespan and distinctive FRS/Caltech/Minnesota narrative support unique subject binding. Multiple anchors in one notice are not independent source corroboration.",
+        "parent_source_ref": "turn97view0"
+      }
+    },
+    {
+      "paths": [
+        "inputs/v17_accepted_birthplaces.json"
+      ],
+      "record_id": "RS_PAST_NA4155",
+      "object": {
+        "record_id": "RS_PAST_NA4155",
+        "native_dob": "1915-07-11",
+        "authority_name": "Goodwin; Leonard George (1915 - 2008)",
+        "raw_birthplace": "Wood Green, London",
+        "source_grade": "S2",
+        "source_url": "https://history.rcp.ac.uk/inspiring-physicians/leonard-george-goodwin",
+        "source_title": "Leonard George Goodwin",
+        "source_author": "R Killick-Kendrick",
+        "source_kind": "original_signed_edited_historical_biography",
+        "source_quote": "Leonard George Goodwin was an only child, born in Wood Green, London.",
+        "evidence_format": "explicit_subject_birthplace_prose",
+        "source_locator": "Original RCP Inspiring Physicians/Munk’s Roll, Vol XII, web; full name lines65/76; exact DOB header84; birthplace102; author107.",
+        "source_birthdate": "1915-07-11",
+        "source_birthdate_precision": "exact_day_in_subject_header_not_repeated_in_born_clause",
+        "identity_review": [
+          "Full original subject name Leonard George Goodwin and lifespan1915–2008 match native.",
+          "DOB11July1915 in subject header exactly matches native.",
+          "Pharmacologist/protozoologist, Wellcome Laboratories of Tropical Medicine director, Nuffield Institute/Zoological Society career and FRS1976 are distinctive anchors."
+        ],
+        "reviewed_hemisphere": "unknown",
+        "geographic_basis": "Original born-clause place retained literally. No birth-linked country/whole-region qualifier sufficient under current rules; geography stays unknown, without school/family/work/death/footer or famous-city inference.",
+        "source_grade_basis": "Conservative S2 original signed/edited historical biography; not civil birth registration and not S1 by institutional host alone.",
+        "source_grade_role": "person_birthplace_support_only",
+        "source_native_DOB_matches": true,
+        "native_DOB_source_grade_unchanged": true,
+        "retrieval_representation": "web-tool parsed original HTML text; not raw HTTP response bytes",
+        "raw_HTTP_status": null,
+        "raw_bytes_sha256": null,
+        "exact_request_utc": null,
+        "parent_adjudication_utc": "2026-11-05T00:30:17.389751+00:00",
+        "source_publication_date_or_note": "Original biography publication range2005–2018 stated by host; exact year/day not stated.",
+        "caveats": [
+          "Wood Green, London is explicitly within the born clause. Nearby Hampstead is later family move, not birth. Maternal grandfather’s Hambleton,Rutland and later Berkshire residence must not qualify birth-place geography.",
+          "Individual signed edited historical obituary; conservative S2, not S1 based on RCP host."
+        ]
+      }
+    },
+    {
+      "paths": [
+        "audit/prior_v12_holds.json"
+      ],
+      "record_id": "RS_PAST_NA4113",
+      "object": {
+        "record_id": "RS_PAST_NA4113",
+        "native_name": "Harry",
+        "authority_name": "Smith; Harry (1921 - 2011)",
+        "native_dob": "1921-08-07",
+        "frozen_raw_birthplace": "Northampton",
+        "frozen_birthplace_source_grade": "S1",
+        "official_authority_url": "https://catalogues.royalsociety.org/calmview/Record.aspx?src=CalmView.Persons&id=NA4113",
+        "status": "hold_no_regional_qualifier",
+        "new_source_url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/582686323",
+        "source_doi": "10.1093/ref:odnb/104510",
+        "source_title": "Smith, Harry: (1921–2011), microbiologist",
+        "source_author": "Edward Cocking",
+        "source_published": "2015-01-08",
+        "source_grade_suggestion": "S2 signed edited biographical article",
+        "source_locator": "Extract, toolL777",
+        "web_ref": "turn18view0",
+        "quote": "was born on 7 August 1921 at 98 St James' Road, Northampton",
+        "source_birthdate": "1921-08-07",
+        "source_birthdate_precision": "day",
+        "source_place_literal": "98 St James' Road, Northampton",
+        "identity_support": "Exact nativeDOB; titleHarrySmith1921–2011,microbiologist; birthparagraph subjectexplicit.",
+        "reason": "Adds street address but no county/state/country qualifier. Do not infer region from later schools, workplace, spouse, publisher or fame. No sourceTown conflict identified.",
+        "additional_source": {
+          "url": "https://microbiologysociety.org/who-we-are/our-history/past-presidents.html",
+          "web_ref": "turn18view1",
+          "locator": "HarrySmith section,L178–188",
+          "observation": "Official professional society history saysbornNorthampton and microbepathogenicity career, but unqualifiedplace only; not adopted."
+        },
+        "hemisphere_assigned": null,
+        "hold_type": "no_new_region_or_unavailable",
+        "root_decision": "Retain frozen native row unchanged; this audit does not correct DOB or adjudicate a competing birthplace."
+      }
+    },
+    {
+      "paths": [
+        "audit/prior_v13_holds.json"
+      ],
+      "record_id": "RS_PAST_NA6868",
+      "object": {
+        "record_id": "RS_PAST_NA6868",
+        "native_name": "Roger Philip",
+        "source_authorised_full_name": "Ekins; Roger Philip (1926 - 2016)",
+        "native_dob": "1926-09-22",
+        "existing_raw_birthplace": "London",
+        "frozen_birthplace_source_grade": "S2",
+        "disposition": "hold",
+        "hold_type": "no_new_region_or_unavailable",
+        "hold_reason": "Observed new publisher-PDF route failed403; searchabstract repeats known London-only birth context. No new qualified born clause acquired.",
+        "source_reviews": [
+          {
+            "url": "https://royalsocietypublishing.org/rsbm/article-pdf/75/1/93/1448322/rsbm.2023.0020.pdf",
+            "web_ref": "turn41view0",
+            "source_doi": "10.1098/rsbm.2023.0020",
+            "title": "Roger Philip Ekins,22September1926—26July2016",
+            "source_grade_suggestion": null,
+            "finding": "Original publisherPDF discovered via turn38search9; tool-reported403 and no full memoir acquired. No retry.",
+            "http_status": null,
+            "tool_error_status": 403
+          }
+        ],
+        "native_fields_modified": false,
+        "hemisphere_assigned": null,
+        "input_complete_object_canonical_json_sha256": "f0484efb977e51434ed70725714c921bc510672c7dbfa314ab006cd12bdc21ce",
+        "root_decision": "Retain complete frozen v12 row unchanged; no birthday or birthplace correction or grade upgrade."
+      }
+    }
+  ]
+}
