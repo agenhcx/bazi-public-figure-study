@@ -1,0 +1,91 @@
+{
+  "written_utc": "2026-11-06T22:23:50.734158+00:00",
+  "scope_file": "v32_scope_b.json",
+  "full_scope_read": true,
+  "scope_sha256": "cca2802f988c777f34d23355e427cbb0c87aae12c695402628fa32cd5e71aa2e",
+  "prior_context_read_files_sha256": {
+    "prior_v11_holds.json": "d945eb7e0388c9f0aa1d82076fb8d3dfe7b37e4041f5b984346671cecf4356d2",
+    "prior_v13_holds.json": "9b54ad12c2a8aa10d3bbc6cefbbf84f8322474a6585310ce86559da2900e05ee",
+    "prior_v14_geography_candidates.json": "f164bc93f6a16aa30c6ddeea1a61fb1ba0bcbce75383dfb1593f3fcebe6158cf",
+    "prior_v14_holds.json": "83b624fef9d10aa0ccf5f98fddaef97659e42b2e244ce858b6a2cea722d581da"
+  },
+  "targets": [
+    {
+      "record_id": "RS_PAST_NA1513",
+      "authority_name": "Pollock; Martin Rivers (1914 - 1999)",
+      "native_dob": "1914-12-10",
+      "frozen_raw_birthplace": "Liverpool",
+      "original_BP_grade": "S2",
+      "prior_BP_urls": [
+        "https://doi.org/10.1098/rsbm.2002.0021",
+        "https://api.crossref.org/journals/1748-8494/works?rows=3&query=Martin+Rivers+Pollock+1914+-+1999&select=DOI%2Ctitle%2Cabstract%2Cpublisher%2Ccontainer-title%2CURL%2Clink%2Cpublished-print"
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA1592",
+      "authority_name": "Maskell; Ernest John (1895 - 1958)",
+      "native_dob": "1895-02-01",
+      "frozen_raw_birthplace": "Cambridge",
+      "original_BP_grade": "S2",
+      "prior_BP_urls": [
+        "https://doi.org/10.1098/rsbm.1961.0013",
+        "https://api.crossref.org/journals/1748-8494/works?rows=3&query=Ernest+John+Maskell+1895+-+1958&select=DOI%2Ctitle%2Cabstract%2Cpublisher%2Ccontainer-title%2CURL%2Clink%2Cpublished-print"
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA1727",
+      "authority_name": "Walker; Miles (1868 - 1941)",
+      "native_dob": "1868-08-13",
+      "frozen_raw_birthplace": "Lowther Street, Carlisle",
+      "original_BP_grade": "S2",
+      "prior_BP_urls": [
+        "https://doi.org/10.1098/rsbm.1941.0034"
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA1752",
+      "authority_name": "Wynne; William Palmer (1861 - 1950)",
+      "native_dob": "1861-02-13",
+      "frozen_raw_birthplace": "Stafford",
+      "original_BP_grade": "S2",
+      "prior_BP_urls": [
+        "https://doi.org/10.1098/rsbm.1951.0017"
+      ]
+    }
+  ],
+  "closed_routes": [
+    {
+      "record_id": "RS_PAST_NA1727",
+      "work": "Nature1941 A.B.Field obituary 10.1038/147258a0",
+      "state": "subscriptionpreview no birthplace; no alternate URL retry",
+      "other_hold": "v14 official LowtherStreetCarlisle candidate only, binding insufficient; no adoption from city geography"
+    },
+    {
+      "record_id": "RS_PAST_NA1752",
+      "work": "RSC presidents PDF",
+      "state": "actualStafford no regional qualifier; no newwork or retry"
+    },
+    {
+      "record_id": "RS_PAST_NA1592",
+      "work": "RoyalSociety memoir 10.1098/rsbm.1961.0013",
+      "state": "priorDOIinaccessible; no failedroute retry"
+    },
+    {
+      "record_id": "RS_PAST_NA1513",
+      "work": "ODNB search entrypoint",
+      "state": "priorinaccessible; no retry; priorqueryoverflow is not negativeevidence"
+    }
+  ],
+  "strategy": "Newpersonbiography/obituary/referenceoriginalworks, require fullnative/actualcompatibleDOBprecision/coherentcareer/directborncountry or wholecounty with storedplace binding; preserve allnative/BPvalues; city/work/nationality not borncountry. No pureWikipediarewrite, no failedroutevariants/rawGET.",
+  "budget": {
+    "queries": 8,
+    "navigation": 10
+  },
+  "prior_read_limit": "Initial combined fullscope outputtruncated; all4 fullobjects reread individually untruncated BEFORE anyqueries. Audit matchingrecords read with all observedholds.",
+  "adaptive_navigation_intent": {
+    "written_utc": "2026-11-06T22:24:36.095211+00:00",
+    "record_id": "RS_PAST_NA1727",
+    "url": "https://www.gracesguide.co.uk/Miles_Walker",
+    "reason": "First attempt at distinct professional industrial-history biography, newwork; not variant of closedNatureobituary and not sameRSabstract."
+  }
+}

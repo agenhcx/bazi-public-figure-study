@@ -1,0 +1,78 @@
+{
+  "schema": "UK_v21_source_method_boundary_review_v1",
+  "reviewer": "/root/v21_source_qa",
+  "initial_written_utc": "2026-11-05T23:31:38.666034+00:00",
+  "timing": "Written after parent relayed initial worker observations and before final source reports, root original-body verification, final facts or main adoption. Not source-blind preregistration. Provisional source-admission interpretations, not birthplace adoptions.",
+  "materials_read": [
+    "v21_plan.json",
+    "v20 audit/parent_adjudication.json",
+    "v20 audit/method_qa.json",
+    "actual frozen v20 native rows for Waterfield/Pickett/Wells"
+  ],
+  "native_checks": {
+    "RS_PAST_NA4834": {
+      "authority_name": "Waterfield; Michael Derek (1941 - 2023)",
+      "native_dob": "1941-05-14",
+      "native_key_count": 1,
+      "hemisphere": "unknown",
+      "raw_birthplace": "",
+      "eligibility_flag": false
+    },
+    "RS_PAST_NA5885": {
+      "authority_name": "Pickett; George Richard (1939 - 2024); physicist",
+      "native_dob": "1939-04-10",
+      "native_key_count": 1,
+      "hemisphere": "unknown",
+      "raw_birthplace": "",
+      "eligibility_flag": false
+    },
+    "RS_PAST_NA8700": {
+      "authority_name": "Wells; Peter Neil Temple (1936 - 2017)",
+      "native_dob": "1936-06-19",
+      "native_key_count": 1,
+      "hemisphere": "unknown",
+      "raw_birthplace": "",
+      "eligibility_flag": false
+    }
+  },
+  "Waterfield": {
+    "reported_observation": "Worker/parent report original ASBMB signed Swarnali Roy obituary states full Michael Derek, born1941-05-14 in Hampshire UnitedKingdom, died2023-05-11, and age82. Source body/report not yet independently read by method reviewer.",
+    "provisional_method_interpretation": "If actual source literals are as reported, full exact native DOB and lifespan years agree. The age-at-death statement is arithmetically inconsistent with the reported dates (completed years81), but is not a separately printed competing birth date. Retain the age inconsistency separately; do not calculate a substitute source DOB, silently correct the source age, or alter native facts. A bounded birthplace observation may be admitted if full-name, exact actually stated DOB, professional identity, explicit birthplace and geography gates independently pass.",
+    "not_the_v20_death_endpoint_exception": "No source/native death-endpoint difference currently reported; do not invoke that exception or expand it. This is a transparent distinction between actual date literals and a derived-age inconsistency, not a DOB conflict waiver.",
+    "remaining_gates": [
+      "Read actual original body or root observation with exact locator, source date precision and age wording.",
+      "Verify source birth/death literals and all native components/career anchors; if a different explicit DOB is actually printed, hold.",
+      "Record literal reported age82 plus computed completed-years81 solely as an inconsistency audit; preserve both date literals and native DOB.",
+      "Source grade based on original signed professional obituary genre, not ASBMB host alone.",
+      "No eligibility/window/sourceDOBtier change; no independently corroborated correct-age/date verdict."
+    ]
+  },
+  "Pickett": {
+    "reported_observation": "Parent/worker report original Guardian signed Mick OHare obituary supplies full George Richard and exact native DOB and explicit Biddenham,Bedfordshire. No observed professional-colleague authorship.",
+    "provisional_grade": "Conservative S3 for the reported journalistic obituary. Do not silently extend v20 S2 signed professional-colleague genre to a named journalist merely because it is edited or Guardian-hosted.",
+    "remaining_gates": "Actual source full name/date/born clause/professional anchors must pass, with source genre/authorship and no informational-independence overclaim. Birth-linked Bedfordshire may support North under existing whole-region rule, without person country/coordinates."
+  },
+  "Wells": {
+    "parent_reported_new_conflict": "Original British Institute of Radiology biography reports full Peter Neil Temple Wells, born19May1936 versus native1936-06-19.",
+    "provisional_disposition": "HOLD entire new BP/geography adoption pending separate DOB-source adjudication. No date repair and no dateless-source bypass.",
+    "remaining_gate": "Confirm actual original born clause, full subject name and exact locator from worker/root body before reporting a newly established active DOB conflict."
+  },
+  "active_prior_conflicts": "Argyris and Laver remain active. V20 Midwinter unresolved death-endpoint discrepancy retained separately, no retroactive clearing.",
+  "verification_limits": "Documentary/native-row method check only; no network, original-source acquisition, image/PDF rendering, replay, code/main/master/facts/Git mutation. Final source report and fact QA still required.",
+  "no_fact_adoption": true,
+  "additional_review_utc": "2026-11-05T23:34:06.523463+00:00",
+  "additional_materials_read": [
+    "final v21_sources_a.json",
+    "final v21_sources_b.json",
+    "parent messages reporting acquired original bodies and expert credentials"
+  ],
+  "final_source_observation_review": {
+    "Waterfield": "Final worker report and parent direct-source report both record same actual nativeDOB1941-05-14 and source death2023-05-11, explicit Hampshire UnitedKingdom, full MichaelDerek and distinctive career. Retain sourceage82 versus arithmetic81 separately; no competing explicitDOB or death-endpoint difference observed. Original signed society member-magazine genre can supportS2; no peer-review/civilrecord claim.",
+    "Perkins": "Parent reports direct original Guardian birth clause/fullDonaldHill/exactDOB and direct original Oxford author profile explicitly establishing FrankClose theoretical-physics emeritus and particle-physics/history expertise. ConservativeS2 expert-authored edited original is defensible only with explicit v21 genre-scope clarification: expertise is acquired, direct subject collaboration/personal friendship not established. Do not call this a proven direct-colleague relationship or silently reuse the narrow literal v20 colleague wording.",
+    "Townsend": "Original public publisher summary supplies full AlbertAlan/exact1917-01-22/MelbourneAustralia and attributed authors/editors; exactDOB/career binding passes. No source death endpoint acquired, so do not claim source lifespan confirmation. Absence of a source endpoint is not a new death-conflict exception; identity rests on positive exactDOB/career and no acquired conflicting endpoint.",
+    "Pickett": "Original edited journalistic obituary, fullGeorgeRichard/exact1939-04-10 and BiddenhamBedfordshire; S3conservative as journalist expertise/subject-colleague relation not acquired. Birth-linkedBedfordshirewhole-regionNorth under existingrule.",
+    "Wells": "Final worker report and parent BIR bodyverification agree explicit source born1936-05-19 versus native1936-06-19. New blocking source exactDOB/month conflict. KeepBP/geo unadopted, nativefrozen, no datelessbypass, sourcegradeunadopted."
+  },
+  "parent_planned_admissions": "4firstBPs: PerkinsS2North,WaterfieldS2North,TownsendS2South,PickettS3North; WellsDOBhold plus Matthews/Fletcher/OBrien holds.",
+  "final_method_recommendation": "Defensible under recorded source-genre clarification, actual stated precision, separate unresolved age audit and all native/frozen gates. This report is documentary method/source-observation review, not original acquisition or final fact adoption. Fact/audit consistency QA follows actual write."
+}

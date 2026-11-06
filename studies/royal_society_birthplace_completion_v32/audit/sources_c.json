@@ -1,0 +1,279 @@
+{
+  "written_utc": "2026-11-06T22:25:19.667826+00:00",
+  "scope": [
+    "RS_PAST_NA2044",
+    "RS_PAST_NA2080",
+    "RS_PAST_NA2099",
+    "RS_PAST_NA2111"
+  ],
+  "intent_file": "v32_c_intent.json",
+  "prior_context_review": "All4fullobjects read beforequeries; initiallargeoutputtruncatedmiddleDesty/Beverton and bothrecovered in fullbeforequeries. Targetedv11/v13/v19/v20holds/acceptedcontexts/requestledgersread.",
+  "candidates": [],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA2044",
+      "native": {
+        "record_id": "RS_PAST_NA2044",
+        "authority_name": "Crisp; Dennis John (1916 - 1990)",
+        "native_dob": "1916-04-29",
+        "prior_raw_birthplace": "London",
+        "prior_birthplace_source_grade": "S3"
+      },
+      "status": "hold_geography_unresolved",
+      "hold_type": "no_new_admissible_birth_region",
+      "reason": "New cumulated bibliography landing returned JavaScript antirobot challenge; stopped without PDFvariant. Original inherited newsletterLondon remains unqualified; no new admissible borncountry body acquired. Failed originalCrispmemoirJSTOR route not retried.",
+      "observation_locators": "turn9719571view0:L0-2",
+      "master_object_unchanged": true,
+      "source_quote": null,
+      "source_quote_word_count": 0,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA2080",
+      "native": {
+        "record_id": "RS_PAST_NA2080",
+        "authority_name": "Desty; Denis Henry (1923 - 1994); chemical engineer and inventor",
+        "native_dob": "1923-10-21",
+        "prior_raw_birthplace": "Southampton",
+        "prior_birthplace_source_grade": "S2"
+      },
+      "status": "hold_geography_unresolved",
+      "hold_type": "no_new_admissible_birth_region",
+      "reason": "NewWellcomeconceptrecord explicitlyWikidata-derived, life1923-1994/fullname but no birthplace; no originalbiographicalworkcountryevidence. ExistingSouthamptonS2frozen. PriorinaccessibleDOI and universitycareerpage not retried.",
+      "observation_locators": "turn9719571view1:L0-8",
+      "master_object_unchanged": true,
+      "source_quote": null,
+      "source_quote_word_count": 0,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA2099",
+      "native": {
+        "record_id": "RS_PAST_NA2099",
+        "authority_name": "Beverton; Raymond John Heaphy (1922 - 1995)",
+        "native_dob": "1922-08-29",
+        "prior_raw_birthplace": "5 Forest Glade, Leytonstone, east London",
+        "prior_birthplace_source_grade": "S2"
+      },
+      "status": "hold_geography_unresolved",
+      "hold_type": "no_new_admissible_birth_region",
+      "reason": "New actual signedICES1996Ramstermemorial fullnative/exact1922-08-29/death1995-07-23/fisheriescareer compatible, but no acquired birthlinkedcountry/wholeregion. Englandcachedfind explicitlyno-match; LondonmatchesadministrativecommitteeandRoyalSocietyreference notborn. InheritedODNBaddress/eastLondon unchanged; no citycountryinference.",
+      "observation_locators": "turn9719571view2:L547/582-588/615-631;turn1129092view0;turn1129092view1:L432-448/615-631;turn1129092view2:No matching text found for England",
+      "master_object_unchanged": true,
+      "source_quote": null,
+      "source_quote_word_count": 0,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA2111",
+      "native": {
+        "record_id": "RS_PAST_NA2111",
+        "authority_name": "Rimington; Claude (1902 - 1993)",
+        "native_dob": "1902-11-17",
+        "prior_raw_birthplace": "London",
+        "prior_birthplace_source_grade": "S2"
+      },
+      "status": "hold_geography_unresolved",
+      "hold_type": "no_new_admissible_birth_region",
+      "reason": "Queries returned inheritedIndependentLondononly, memoirabstractLondononly and unrelated research affiliations; no new country-qualified originalbiographicalbody. Did not reopen oldIndependent or memoircarrier variants; research/workLondon/SouthAfrica/Norway notbirthcountry.",
+      "observation_locators": "Discoveryonlyturn5127731search4-6;turn8856977search3; prior_v13_holds.json remainsbinding",
+      "master_object_unchanged": true,
+      "source_quote": null,
+      "source_quote_word_count": 0,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    }
+  ],
+  "request_ledger": [
+    {
+      "kind": "search",
+      "engine": "system2",
+      "query": "\"Dennis John Crisp\" obituary \"England\"",
+      "batch": 1,
+      "exact_query_durable_intent_before_call": true,
+      "response_batch_reference_prefix": "turn5127731search",
+      "outcome": "Returned merged search results; no per-query hit attribution or source-body verification inferred.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "search",
+      "engine": "system2",
+      "query": "\"Denis Henry Desty\" biography Hampshire",
+      "batch": 1,
+      "exact_query_durable_intent_before_call": true,
+      "response_batch_reference_prefix": "turn5127731search",
+      "outcome": "Returned merged search results; no per-query hit attribution or source-body verification inferred.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "search",
+      "engine": "system2",
+      "query": "\"Raymond John Heaphy Beverton\" \"born\" England",
+      "batch": 1,
+      "exact_query_durable_intent_before_call": true,
+      "response_batch_reference_prefix": "turn5127731search",
+      "outcome": "Returned merged search results; no per-query hit attribution or source-body verification inferred.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "search",
+      "engine": "system2",
+      "query": "\"Claude Rimington\" født London",
+      "batch": 1,
+      "exact_query_durable_intent_before_call": true,
+      "response_batch_reference_prefix": "turn5127731search",
+      "outcome": "Returned merged search results; no per-query hit attribution or source-body verification inferred.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "search",
+      "engine": "system1",
+      "query": "\"Dennis John Crisp\" born London biography",
+      "batch": 2,
+      "exact_query_durable_intent_before_call": false,
+      "response_batch_reference_prefix": "turn8856977search",
+      "outcome": "Returned merged search results; no per-query hit attribution or source-body verification inferred.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "search",
+      "engine": "system1",
+      "query": "\"Denis Henry Desty\" \"born\" Southampton",
+      "batch": 2,
+      "exact_query_durable_intent_before_call": false,
+      "response_batch_reference_prefix": "turn8856977search",
+      "outcome": "Returned merged search results; no per-query hit attribution or source-body verification inferred.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "search",
+      "engine": "system1",
+      "query": "\"Raymond John Heaphy Beverton\" England birthplace",
+      "batch": 2,
+      "exact_query_durable_intent_before_call": false,
+      "response_batch_reference_prefix": "turn8856977search",
+      "outcome": "Returned merged search results; no per-query hit attribution or source-body verification inferred.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "search",
+      "engine": "system1",
+      "query": "\"Claude Rimington\" \"England\" born",
+      "batch": 2,
+      "exact_query_durable_intent_before_call": false,
+      "response_batch_reference_prefix": "turn8856977search",
+      "outcome": "Returned merged search results; no per-query hit attribution or source-body verification inferred.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "open",
+      "target": "https://escholarship.org/uc/item/46t92266",
+      "ref": "turn9719571view0",
+      "outcome": "Actual anti-robot JavaScript challenge atL0-2. Stopped; no PDFvariant/rawGET/retry.",
+      "source_body_acquired": false,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "durable_intent_before_call": true
+    },
+    {
+      "kind": "open",
+      "target": "https://wellcomecollection.org/concepts/fh9rkyfa",
+      "ref": "turn9719571view1",
+      "outcome": "Actualconceptrecord: fullDenisHenryDestyL0/lifeyears1923-1994L2/sourceWikidataL4-8. No directbornplacefield. Not an admitted originalbiographicalwork and nohostS1.",
+      "source_body_acquired": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "durable_intent_before_call": true
+    },
+    {
+      "kind": "open",
+      "target": "turn5127731search47",
+      "ref": "turn9719571view2",
+      "observed_work_url": "https://academic.oup.com/icesjms/article/53/1/1/731536",
+      "actual_carrier": "Search-linked public tokenized Silverchair watermark PDF; canonical article URL appears in parsed download footer. No claim HTML article opened.",
+      "outcome": "ParsedoriginalICES1996memorialtext available632lines. FullnativeL582-583/exactDOB1922-08-29anddeath1995-07-23L584/careerL615-631/signedJohnRamsterL547. No birthlinkedLondon/England qualifier acquired.",
+      "source_body_acquired": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "durable_intent_before_call": true
+    },
+    {
+      "kind": "find",
+      "target": "turn9719571view2",
+      "pattern": "born",
+      "ref": "turn1129092view0",
+      "outcome": "Returned context for natural-born sailorL297 and explicitDOB/deathL584; no birthcountry statement in returned contexts.",
+      "cached_parsed_text": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "durable_intent_before_call": true
+    },
+    {
+      "kind": "find",
+      "target": "turn9719571view2",
+      "pattern": "London",
+      "ref": "turn1129092view1",
+      "outcome": "Returned administrativecommitteeLondonL443 and referencecitationRoyalSocietyLondonL628; neither birthplace.",
+      "cached_parsed_text": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "durable_intent_before_call": true
+    },
+    {
+      "kind": "find",
+      "target": "turn9719571view2",
+      "pattern": "England",
+      "ref": "turn1129092view2",
+      "outcome": "Tool explicitly returned No matching text found for England.",
+      "cached_parsed_text": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "durable_intent_before_call": true
+    }
+  ],
+  "counts": {
+    "queries": 8,
+    "navigation_attempts": 3,
+    "parsed_finds": 3,
+    "all_navigation_including_finds": 6,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "budget": {
+    "queries_limit": 8,
+    "navigation_limit": 10
+  },
+  "protocol_disclosure": "Initial4exactqueries and allactualopens/finds have durablespecificintent. Adaptive4S1exactquerywording was notdurablyaddedbeforecall, although within8querybudgetand samepredeclaredsourcegoal; actualwording/resultrefs preserved, no per-query durableintentclaim. No retries/failedroutevariants/bypass/rawGET.",
+  "quote_policy": "No new Englishsourcequotes persisted; minimalstructuredfacts/locators only. Priorquotationsunchanged.",
+  "no_analysis_or_final_freeze": true,
+  "repo_or_master_modified": false
+}

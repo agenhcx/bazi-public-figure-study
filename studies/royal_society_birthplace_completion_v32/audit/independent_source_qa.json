@@ -1,0 +1,554 @@
+{
+  "schema": "UK_v32_independent_geography_source_documentary_QA_v1",
+  "reviewer": "/root/v32_source_qa",
+  "written_utc": "2026-11-06T22:30:49.533964+00:00",
+  "phase": "final",
+  "passed": true,
+  "checks_passed": 116,
+  "checks": [
+    {
+      "check": "actual_v31_canonical_pin",
+      "passed": true
+    },
+    {
+      "check": "fixed4983native_records",
+      "passed": true
+    },
+    {
+      "check": "actual66nonblank_unknown_window_pool",
+      "passed": true
+    },
+    {
+      "check": "twelve_predeclared_followups_3groups4",
+      "passed": true
+    },
+    {
+      "check": "followups_all_nonblank_unknown_nativewindow",
+      "passed": true
+    },
+    {
+      "check": "103blank_window_outside_scope",
+      "passed": true
+    },
+    {
+      "check": "zero_firstbirthplace_groups",
+      "passed": true
+    },
+    {
+      "check": "Ewins_Barber_known_placeholds_excluded",
+      "passed": true
+    },
+    {
+      "check": "source_contexts_exact_complete_baseline",
+      "passed": true
+    },
+    {
+      "check": "seven_activeDOBcases_no_scope_bypass",
+      "passed": true
+    },
+    {
+      "check": "Tomes_remains_separate_provisional",
+      "passed": true
+    },
+    {
+      "check": "actual_replay_declares_exact_six_GEO_FIELDS",
+      "passed": true
+    },
+    {
+      "check": "target_ids_equal_actual66pool",
+      "passed": true
+    },
+    {
+      "check": "reviewed_and_followups_equal_fixed12",
+      "passed": true
+    },
+    {
+      "check": "unique_accepted_held_complete_partition",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1752_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1752_fixed_native_key_unique",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1752_rawBP_grade_frozen",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1752_geographic_only_source_role",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1752_reviewed_N_or_S_newgradeS2S3",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1752_actual_identity_date_and_place_reviews",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1752_observed_date_precision_compatible",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1752_exactday_confirmation_not_overstated",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1752_quote_count_under25",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1752_explicit_actual_acquisition_role",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1752_raw_metadata_unknown_null",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1752_no_personcountry_QID_coords_or_BP_replacement_keys",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1752_no_stale_proposal_pending_fields",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1324_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1324_held_rawbirthplace_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1475_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1475_held_rawbirthplace_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1476_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1476_held_rawbirthplace_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1513_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1513_held_rawbirthplace_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1592_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1592_held_rawbirthplace_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1611_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1611_held_rawbirthplace_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1727_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1727_held_rawbirthplace_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2044_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2044_held_rawbirthplace_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2080_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2080_held_rawbirthplace_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2099_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2099_held_rawbirthplace_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2111_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2111_held_rawbirthplace_exact",
+      "passed": true
+    },
+    {
+      "check": "inherited_active_source_DOB_conflicts.json_byteidentical",
+      "passed": true
+    },
+    {
+      "check": "inherited_provisional_parsed_date_discrepancies.json_byteidentical",
+      "passed": true
+    },
+    {
+      "check": "inherited_birthplace_source_conflicts.json_byteidentical",
+      "passed": true
+    },
+    {
+      "check": "inherited_source_date_precision_holds.json_byteidentical",
+      "passed": true
+    },
+    {
+      "check": "inherited_source_derived_age_inconsistencies.json_byteidentical",
+      "passed": true
+    },
+    {
+      "check": "inherited_lifespan_endpoint_discrepancies.json_byteidentical",
+      "passed": true
+    },
+    {
+      "check": "inherited_cross_source_reported_age_contrasts.json_byteidentical",
+      "passed": true
+    },
+    {
+      "check": "inherited_omitted_middle_name_admission.json_byteidentical",
+      "passed": true
+    },
+    {
+      "check": "inherited_source_ordinal_age_wording_observations.json_byteidentical",
+      "passed": true
+    },
+    {
+      "check": "prior_v11_holds.json_historical_bytes_unchanged",
+      "passed": true
+    },
+    {
+      "check": "prior_v12_holds.json_historical_bytes_unchanged",
+      "passed": true
+    },
+    {
+      "check": "prior_v29_first_pass_queue_closeout.json_historical_bytes_unchanged",
+      "passed": true
+    },
+    {
+      "check": "no_fullsource_caches_or_images",
+      "passed": true
+    },
+    {
+      "check": "a_worker_report_preserved_exact",
+      "passed": true
+    },
+    {
+      "check": "a_actual_query_ledger_within8",
+      "passed": true
+    },
+    {
+      "check": "a_actual_nav_ledger_within10",
+      "passed": true
+    },
+    {
+      "check": "a_current_scope_partition",
+      "passed": true
+    },
+    {
+      "check": "a_preintent_retained",
+      "passed": true
+    },
+    {
+      "check": "b_worker_report_preserved_exact",
+      "passed": true
+    },
+    {
+      "check": "b_actual_query_ledger_within8",
+      "passed": true
+    },
+    {
+      "check": "b_actual_nav_ledger_within10",
+      "passed": true
+    },
+    {
+      "check": "b_current_scope_partition",
+      "passed": true
+    },
+    {
+      "check": "b_preintent_retained",
+      "passed": true
+    },
+    {
+      "check": "c_worker_report_preserved_exact",
+      "passed": true
+    },
+    {
+      "check": "c_actual_query_ledger_within8",
+      "passed": true
+    },
+    {
+      "check": "c_actual_nav_ledger_within10",
+      "passed": true
+    },
+    {
+      "check": "c_current_scope_partition",
+      "passed": true
+    },
+    {
+      "check": "c_preintent_retained",
+      "passed": true
+    },
+    {
+      "check": "worker12holds_preserved_root_one_Wynne_override",
+      "passed": true
+    },
+    {
+      "check": "actual24queries_16workeropens_6finds",
+      "passed": true
+    },
+    {
+      "check": "worker_zero_screenshots_or_rawGETs",
+      "passed": true
+    },
+    {
+      "check": "Gibson_newprofile_timeout_no_body",
+      "passed": true
+    },
+    {
+      "check": "Kettle_newobituary_timeout_no_body",
+      "passed": true
+    },
+    {
+      "check": "BernardSmith_newappointment_abstract_not_birth_context",
+      "passed": true
+    },
+    {
+      "check": "BernardSmith_actual_cookieURL_abstract_role_preserved",
+      "passed": true
+    },
+    {
+      "check": "Spath_generic_OCLC_UI_not_subject_biography",
+      "passed": true
+    },
+    {
+      "check": "Pollock_Guardian_missing_header_ref_explicit_null",
+      "passed": true
+    },
+    {
+      "check": "Pollock_Edinburgh_firstbody_vs_later_failedfind_distinct",
+      "passed": true
+    },
+    {
+      "check": "Maskell_newprofile_missing_errorheader_ref_not_invented",
+      "passed": true
+    },
+    {
+      "check": "Walker_prior_personalreferent_binding_hold_preserved",
+      "passed": true
+    },
+    {
+      "check": "Wynne_worker_yearonly_cityonly_5wordquote_preserved",
+      "passed": true
+    },
+    {
+      "check": "Wynne_root_new_original_exactDOB_StaffordEngland_S3_North",
+      "passed": true
+    },
+    {
+      "check": "Wynne_root_copyright_not_publication_date",
+      "passed": true
+    },
+    {
+      "check": "Crisp_antirobot_no_variant",
+      "passed": true
+    },
+    {
+      "check": "Desty_Wikidata_concept_not_originalborncontext",
+      "passed": true
+    },
+    {
+      "check": "Beverton_signedmemoir_date_but_London_context_nonbirth",
+      "passed": true
+    },
+    {
+      "check": "Rimington_discovery_career_not_birthcountry",
+      "passed": true
+    },
+    {
+      "check": "C_four_adaptive_query_intents_honestly_late",
+      "passed": true
+    },
+    {
+      "check": "B_filtered_header_limits_explicit",
+      "passed": true
+    },
+    {
+      "check": "A_no_protocol_deviation_claim_supported_by_retained_intent",
+      "passed": true
+    },
+    {
+      "check": "worker_quoted_work_only_Wynne_profile_under25",
+      "passed": true
+    },
+    {
+      "check": "Wynne_both_new_works_not_in_inherited_master",
+      "passed": true
+    },
+    {
+      "check": "Wynne_both_new_work_identifiers_not_priorinputs_audits",
+      "passed": true
+    },
+    {
+      "check": "parent_aggregate_source_counts_exact",
+      "passed": true
+    },
+    {
+      "check": "parent_decision_counts_exact",
+      "passed": true
+    },
+    {
+      "check": "root_one_first_original_open_one_cachedfind",
+      "passed": true
+    },
+    {
+      "check": "root_refs_and_quote_role_exact_fact_match",
+      "passed": true
+    },
+    {
+      "check": "root_preintent_entry_urls_cachedfind_and_times",
+      "passed": true
+    },
+    {
+      "check": "Wynne_source_fullnative_and_career_binding_no_name_endpoint_exception",
+      "passed": true
+    },
+    {
+      "check": "Wynne_attributed_compilation_conservativeS3_without_editing_independence_claim",
+      "passed": true
+    },
+    {
+      "check": "Wynne_copyright_span_and_source_version_unknown",
+      "passed": true
+    },
+    {
+      "check": "Wynne_cited_biographies_not_acquired_as_corroboration",
+      "passed": true
+    },
+    {
+      "check": "Wynne_worker_discovery_only_root_actual_acquisition",
+      "passed": true
+    },
+    {
+      "check": "source_class_current_policy_no_amendment_or_hostgrade_expansion",
+      "passed": true
+    },
+    {
+      "check": "prior_v31_Harry_sourceclass_historical_copy_byteexact",
+      "passed": true
+    },
+    {
+      "check": "actual_preliminaryQA_precedes_finalfacts",
+      "passed": true
+    }
+  ],
+  "blocking_issues": [],
+  "declared_six_GEO_FIELDS": [
+    "geo_resolution_status",
+    "geography_decision",
+    "hemisphere",
+    "northern_birthplace_candidate",
+    "reason",
+    "southern_birthplace_separate"
+  ],
+  "no_new_admission_method_exception": true,
+  "review_scope": "Read-only documentary source/schema/native binding/scope/protocol audit. Sources acquired by workers and parent; reviewer did not network-fetch originals, inspect pixels/raw bytes or run production. Exact output rollback/frozen-field comparisons and deterministic replays belong to final QA.",
+  "no_network_source_code_mainoutputs_audits_or_Git_mutation_by_reviewer": true,
+  "accepted_fact_path": "inputs/accepted_geography.json",
+  "accepted_fact_sha256_at_review": "7fcf0c2e260eaacddbd608bcb5dbc48e9395716840d7e1062d3224825b9fbe27",
+  "accepted_geography_sha256_at_review": "7fcf0c2e260eaacddbd608bcb5dbc48e9395716840d7e1062d3224825b9fbe27",
+  "active_DOB_conflicts_sha256_at_review": "93fc69c77bc85e2fe032b42f88f66d5dd59332d4d4bd0bca0ff36b11d3a00ad4",
+  "source_class_adjudication_sha256_at_review": "a30f93e5a259c43c0b7d4049aa8862e8972d97251d190230b29d122d5d9794ae",
+  "accepted_geographic_bindings": [
+    {
+      "record_id": "RS_PAST_NA1752",
+      "native_DOB": "1861-02-13",
+      "native_authority": "Wynne; William Palmer (1861 - 1950)",
+      "frozen_raw_birthplace": "Stafford",
+      "frozen_BP_source_grade": "S2",
+      "source_observed_name": "William Palmer Wynne",
+      "source_birthdate": "1861-02-13",
+      "source_date_precision": "exact_day",
+      "source_birthplace_context": "Stafford, England",
+      "new_geographic_source_grade": "S3",
+      "new_hemisphere": "north",
+      "quote_words": 3,
+      "fixed_native_key_matches": 1
+    }
+  ],
+  "inherited_nine_issue_sidecars_byte_identical": [
+    "active_source_DOB_conflicts.json",
+    "provisional_parsed_date_discrepancies.json",
+    "birthplace_source_conflicts.json",
+    "source_date_precision_holds.json",
+    "source_derived_age_inconsistencies.json",
+    "lifespan_endpoint_discrepancies.json",
+    "cross_source_reported_age_contrasts.json",
+    "omitted_middle_name_admission.json",
+    "source_ordinal_age_wording_observations.json"
+  ],
+  "protocol_disclosures": {
+    "A": "Full prior contexts checked before queries; 8queries/5opens; no actualnewfullbirthregion. Smith Nature1935 publicabstract acquired despite cookie error parameter; no fullarticle or borncontext claim.",
+    "B": "8queries/8opens/3finds. Two output filters omitted Guardian bodyheader/ref and Maskell errorheader/ref; unknown refs explicitly null, no retry or backfill. Edinburgh firstbody is distinct from later cachedfind502. Original unqualifiedStafford hold retained in unchanged workerreport.",
+    "C": "8queries/3opens/3finds. Initial4 exactqueries durablyprelogged; adaptive4S1 exactstrings logged after call under predeclared same goal/budget. No backdating of specific priorintent.",
+    "root": "0queries/1firstoriginalopen/1cachedfind. Worker discovered Andraos lead only; root actual acquisition verified fullentry. Root did not reopen held works. Copyright span2000-2018 is not publication/version date; cited biographies not newly acquired."
+  },
+  "source_counts": {
+    "queries": 24,
+    "worker_opens": 16,
+    "root_opens": 1,
+    "total_opens": 17,
+    "worker_finds": 6,
+    "root_finds": 1,
+    "total_finds": 7,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "quote_audit": {
+    "new_works_old_package_hits": {
+      "Andraos_Named_Reagents_G_Z": [],
+      "Armstrong_Wynne_profile": []
+    },
+    "new_quotes_words": {
+      "Andraos_Named_Reagents_G_Z_root_adopted": 3,
+      "Armstrong_Wynne_profile_worker_held_initially": 5
+    },
+    "new_quote_words_from_inherited_works": 0
+  },
+  "harness_correction": "Scratch v32_source_qa_harness_correction.json documents initial case-sensitive string check failure and corrected PASS; no factual or production edits.",
+  "limitations": [
+    "Documentary review only: reviewer did not network-acquire original works, inspect pixels/raw bytes or execute production.",
+    "Complete-output/frozen-field rollback verification and deterministic production replays reserved for independent final QA.",
+    "No civil/independent-source verification or unknown rawHTTPtime/status/hash claim.",
+    "C exact-query timing limit and B missing filteredrefs retained without retroactive repair."
+  ]
+}
