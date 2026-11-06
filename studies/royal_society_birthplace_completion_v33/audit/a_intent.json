@@ -1,0 +1,122 @@
+{
+  "written_before_requests_utc": "2026-11-06T22:37:14.277653+00:00",
+  "scope": [
+    "RS_PAST_NA1994",
+    "RS_PAST_NA2016",
+    "RS_PAST_NA2146",
+    "RS_PAST_NA2153"
+  ],
+  "phase": "geography_only",
+  "prior_context_review": {
+    "full_scope_records_read": true,
+    "firstoutputtruncated": true,
+    "truncatedBinnieHeath recoveredbeforequeries": true,
+    "targeted_holds_read": "v32auditprior_v12Thompson/prior_v13Heath/prior_v27methodQA; originalv12requestledger/v13Heathobservation/v27sourceBfinalread",
+    "original_BP_sources": {
+      "RS_PAST_NA1994": [
+        "https://www.chilton-computing.org.uk/ChiltonCatalog/UKAEA-atom/19690200-UkaeaAtom-148.pdf"
+      ],
+      "RS_PAST_NA2016": [
+        "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/579603141"
+      ],
+      "RS_PAST_NA2146": [
+        "https://doi.org/10.1098/rsbm.1998.0015"
+      ],
+      "RS_PAST_NA2153": [
+        "https://doi.org/10.1098/rsbm.1998.0027"
+      ]
+    },
+    "closed_or_previously_inspected_works": [
+      "Franklin1969ATOMUKAEApressrelease sourceworkeractual/rootTimeout400; no retry/variant",
+      "FranklinIChemEunsignedpresidentprofile originalmonth1924-09/Leedsonly alreadyacquired; notnew",
+      "BinnieAlanMuirWoodODNB2004originalpublicextract full/exact1908-11-13/Kensingtononly alreadyacquired; no reopening",
+      "Heathjjhcfamilypage acquiredname/lifespanonly and searchprojectionbornLondon; no regionverified; notnew",
+      "ThompsonPeterWilliamsBMJ1998originalPMC1113094 actualyear1913 vs native1912 qualifiedDOBhold; preserve, no country/yearonlynewsourcebypass"
+    ],
+    "Thompson_DOB_hold_not_in_global7": "Parentnotifiedbeforequeries. Oldqualifiedoriginalconflict remainsbinding, geographyadoptionblocked evenifnewcompatiblecountrywork."
+  },
+  "initial_queries": [
+    {
+      "record_id": "RS_PAST_NA1994",
+      "q": "\"Norman Laurence Franklin\" \"Leeds\" \"Yorkshire\""
+    },
+    {
+      "record_id": "RS_PAST_NA2016",
+      "q": "\"Geoffrey Morse Binnie\" \"born\" \"England\""
+    },
+    {
+      "record_id": "RS_PAST_NA2146",
+      "q": "\"Oscar Victor Sayer Heath\" \"born\" \"England\""
+    },
+    {
+      "record_id": "RS_PAST_NA2153",
+      "q": "\"Robert Henry Stewart Thompson\" obituary biography Croydon -site:pmc.ncbi.nlm.nih.gov -site:bmj.com"
+    }
+  ],
+  "budget": {
+    "queries": 8,
+    "open_navigation_attempts": 10,
+    "cached_finds": "separateledger"
+  },
+  "admission": "NEWoriginalwork/fullnative/actuallycompatibleDOBprecision/coherentcareer/directborncountryorwholeregionbindingstoredplace. SourceS2/S3geographic_support_only; nativeBPgradesandDOB/factsfrozen. No conflictingDOB/placeholdbypass/city/nationality/workorfootercountry inference. No pureWiki/Kiddle/derivativemirrors. Stopfailedworks403/timeout/size/toolnotaccessible; no retry/URLvariant/rawGET. <=25quotedwords/workinclusiveofinherited. Unknownrawstatus/hash/exacttime null. Exactquery/open/findintentbeforeeachcall.",
+  "prequery_discovery_and_instruction_sequence": {
+    "inheritedThompsonhold_discovered_before_queries": true,
+    "parent_notified_before_queries": true,
+    "firstbatchfour_queries_intented_and_completed_before_parent_noquery_instruction_received": true,
+    "no_Thompson_originalbody_opened_or_geography_unlocked": true,
+    "further_Thompson_queries_or_opens": false,
+    "historical_context_file": "v33_thompson_historical_context.json"
+  },
+  "post_request_protocol_deviation": {
+    "recorded_utc": "2026-11-06T22:38:14.862526+00:00",
+    "affected_requests": "S1queries5-8returnedturn7723779search*",
+    "actual_cause": "Adaptiveintent localPython failed with AttributeError(str object has no attribute get) beforewriting; webrequestnotgatedonexitand4queriesstill submitted. Parentnotifiedimmediatelyafterobservingerror.",
+    "pre_request_durable_intent_exists": false,
+    "no_backdating_or_retrospective_intent_claim": true,
+    "queries_actual": [
+      {
+        "record_id": "RS_PAST_NA1994",
+        "q": "\"Norman Laurence Franklin\" obituary biography"
+      },
+      {
+        "record_id": "RS_PAST_NA2016",
+        "q": "\"Geoffrey Morse Binnie\" biography Kensington"
+      },
+      {
+        "record_id": "RS_PAST_NA2146",
+        "q": "\"Oscar Victor Sayer Heath\" obituary biography"
+      },
+      {
+        "record_id": "RS_PAST_NA1994",
+        "q": "\"Norman Laurence Franklin\" \"born\" -site:icheme.org -site:chilton-computing.org.uk"
+      }
+    ],
+    "neworiginalbody_or_adoptedfact_from_queries_beforefurtherintent": false
+  },
+  "adaptive_pre_request_plans": [
+    {
+      "written_before_requests_utc": "2026-11-06T22:38:14.862531+00:00",
+      "original_opens": [
+        {
+          "record_id": "RS_PAST_NA1994",
+          "url": "https://www.jstor.org/stable/770051",
+          "observed_ref": "turn7723779search1",
+          "purpose": "FirstoriginalFranklin1988JohnHillmemoir inspectactualfullnative/date/bornregion. Prior1969ATOMsourceclosed,1988memoirdistinctwork."
+        },
+        {
+          "record_id": "RS_PAST_NA2016",
+          "url": "https://doi.org/10.1080/03068378908730362",
+          "observed_ref": "turn7723779search8",
+          "purpose": "Distinct1989AndreSinger/RALongmireAsianAffairsBinnieobituary firstoriginalbody; actualDOB/fullname/directbornregiongates required."
+        },
+        {
+          "record_id": "RS_PAST_NA2146",
+          "url": "https://www.jstor.org/stable/770241",
+          "observed_ref": "turn7723779search3",
+          "purpose": "FirstfulloriginalTerryAMansfieldHeath1998memoir work onlypublisherabstractpreviouslyacquired, no knownfailedfullroute. Inspectnewbodycountry; no transferfromfamilyreprint."
+        }
+      ],
+      "reason": "All8queriesused;3firstoriginalworkopensonly. NoThompsonquery/open/unlock; no oldfailedworkvariant. Savedpreintent nowverifiedbeforecalls."
+    }
+  ]
+}

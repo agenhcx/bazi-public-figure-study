@@ -1,0 +1,158 @@
+{
+  "written_utc": "2026-11-06T22:37:24.561215+00:00",
+  "phase": "v33_geography_only",
+  "scope": [
+    "RS_PAST_NA3578",
+    "RS_PAST_NA3609",
+    "RS_PAST_NA3620",
+    "RS_PAST_NA5124"
+  ],
+  "full_prior_contexts_read_before_queries": true,
+  "prior_context_sha256": {
+    "RS_PAST_NA3578": "20151e499346c01e49c763cd90314d58c588130117aa3131a8fb2f93e167246f",
+    "RS_PAST_NA3609": "ee4fc4abedd3647b5d73ce24a8a4133751aa78a091d05f130903b82dc128157b",
+    "RS_PAST_NA3620": "79d3503d5442e2c0e76058fda369422349e86a69ddb6c4da7bf28206d93e5adf",
+    "RS_PAST_NA5124": "f864ddd8dd0e0fa156ac67a7eb1ea84164266c734a2c036b2cbce1ea0ad3219e"
+  },
+  "historical_reviews": [
+    "v32/audit/prior_v12_holds.json Woods/Guggenheim full",
+    "v32/audit/prior_v13_holds.json Hinton/Powell full",
+    "v12/audit/request_ledgers.json relevant groupc routes",
+    "v13/audit/request_ledgers.json relevant groupb/c routes"
+  ],
+  "closed_or_already_used_routes": {
+    "RS_PAST_NA3578": [
+      "LindaHall Ashworth2021 fullDOB/careernoBPlace",
+      "Historylinks Shindler evolve16 career/no birthregion",
+      "OriginalCrossref10.1098/rsbm.1963.0008abstractLondononly"
+    ],
+    "RS_PAST_NA3609": [
+      "CSAC64/2/79 archive catalogue fullnative/year1912/Ipswichonly",
+      "DOI10.1098/rsbm.1965.0014 inaccessible, no alternateworkcarrier/retry"
+    ],
+    "RS_PAST_NA3620": [
+      "ODNB search endpoint inaccessible v13 no variantsearchreopen",
+      "OriginalCrossref10.1098/rsbm.1999.0094Coventryonly; laterKidderminsterbelongsfather"
+    ],
+    "RS_PAST_NA5124": [
+      "ODNB33598originalwork failednonretryable500; no DOI/OUP variant",
+      "NPGmp134089failed; no variant",
+      "Stanfordfacultyhistoricalchaptercareeronly, OxfordEnglandeducationnotbirth",
+      "OriginalCrossref10.1098/rsbm.1971.0012Manchesteronly"
+    ]
+  },
+  "initial_queries": [
+    {
+      "record_id": "RS_PAST_NA3578",
+      "engine": "system2",
+      "q": "\"Martin Alister Campbell Hinton\" \"London\" \"England\" biography"
+    },
+    {
+      "record_id": "RS_PAST_NA3609",
+      "engine": "system2",
+      "q": "\"Donald Devereux Woods\" biography birthplace England"
+    },
+    {
+      "record_id": "RS_PAST_NA3620",
+      "engine": "system2",
+      "q": "\"Herbert Marcus Powell\" biography \"England\""
+    },
+    {
+      "record_id": "RS_PAST_NA5124",
+      "engine": "system2",
+      "q": "\"Edward Armand Guggenheim\" biography born Lancashire"
+    }
+  ],
+  "budgets": {
+    "queries": 8,
+    "original_opens": 10
+  },
+  "method": "Onlyneworiginalworkactualbody/fullnative/compatibleactualDOBprecision/career/directborncountryorwholeregion. No Wiki/Kiddle derivativeadmission/hostS1. BPgrades/rawplace/DOB/priorfactsfrozen. Alladaptiveexactqueries/opens/finds mustbeaddedbeforecalls.",
+  "raw_HTTP_status": null,
+  "raw_bytes_sha256": null,
+  "exact_request_utc": null,
+  "adaptive_queries": {
+    "written_utc": "2026-11-06T22:37:38.771802+00:00",
+    "queries": [
+      {
+        "record_id": "RS_PAST_NA3578",
+        "engine": "system1",
+        "q": "\"Martin Alister Campbell Hinton\" biography birth -site:en.wikipedia.org -site:newikis.com"
+      },
+      {
+        "record_id": "RS_PAST_NA3609",
+        "engine": "system1",
+        "q": "\"Donald Devereux Woods\" \"Suffolk\" -site:en.wikipedia.org -site:kids.kiddle.co"
+      },
+      {
+        "record_id": "RS_PAST_NA3620",
+        "engine": "system1",
+        "q": "\"Herbert Marcus Powell\" \"born\" \"Coventry\" -site:en.wikipedia.org"
+      },
+      {
+        "record_id": "RS_PAST_NA5124",
+        "engine": "system1",
+        "q": "\"Edward Armand Guggenheim\" \"born\" \"England\" -site:en.wikipedia.org -site:handwiki.org -site:newikis.com"
+      }
+    ]
+  },
+  "open_plan_1": {
+    "written_utc": "2026-11-06T22:38:03.305524+00:00",
+    "opens": [
+      {
+        "record_id": "RS_PAST_NA5124",
+        "url": "https://careerchem.com/NAMED/Named-Concepts%28A-K%29.pdf",
+        "discovery_ref": "turn6662043search10",
+        "purpose": "NewAndraosA-Knamedconceptsreference, genuinelydistinctworkfrompriorG-ZWynnework; verifyactualGuggenheimfullnative/exactDOB/directManchesterEngland/contextandbyline."
+      },
+      {
+        "record_id": "RS_PAST_NA3620",
+        "url": "https://www.hertford.ox.ac.uk/wp-content/uploads/2021/11/1997-1998-No.83-The-Hertford-College-Magazine.pdf",
+        "discovery_ref": "turn6662043search8",
+        "purpose": "NewcollegemagazinePowellmemorial: inspectsubjectbirthgeographyandcitationrelationshiptoinheritedmemoir; do notassumereprintindependence."
+      },
+      {
+        "record_id": "RS_PAST_NA3620",
+        "url": "https://centreforscientificarchives.co.uk/wp-content/uploads/2024/01/POWELL_HERBERT_MARCUS.pdf",
+        "discovery_ref": "turn6662043search9",
+        "purpose": "NeworiginalNCUACS58/1/96cataloguebody, inspectfullnative/year1906/careerandbirthregion; notinferfromCoventryschool."
+      }
+    ]
+  },
+  "find_plan_1": {
+    "written_utc": "2026-11-06T22:38:11.937484+00:00",
+    "operations": [
+      {
+        "ref": "turn5020780view0",
+        "pattern": "Edward Armand Guggenheim"
+      },
+      {
+        "ref": "turn5020780view1",
+        "pattern": "He was born in Coventry"
+      },
+      {
+        "ref": "turn5020780view1",
+        "pattern": "England"
+      }
+    ],
+    "purpose": "Selectivecachedparsedbodychecks withoutnewHTTP/failedsource retry."
+  },
+  "find_plan_2": {
+    "written_utc": "2026-11-06T22:38:22.532124+00:00",
+    "operations": [
+      {
+        "ref": "turn5020780view0",
+        "pattern": "Tompkins, F.C."
+      },
+      {
+        "ref": "turn5020780view1",
+        "pattern": "Warwickshire"
+      },
+      {
+        "ref": "turn5020780view1",
+        "pattern": "Herbert Marcus Powell"
+      }
+    ],
+    "purpose": "ReadactualGuggenheimscientificeponym/referencecontext; checkPowellbirthcountywithoutfamily/workinferenceandfullsourceheading."
+  }
+}

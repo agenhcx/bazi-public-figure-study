@@ -1,0 +1,622 @@
+{
+  "schema": "UK_v33_independent_geography_source_documentary_QA_v1",
+  "reviewer": "/root/v32_source_qa",
+  "written_utc": "2026-11-06T22:47:39.055709+00:00",
+  "phase": "final",
+  "passed": true,
+  "checks_passed": 129,
+  "checks": [
+    {
+      "check": "actual_v32_baseline_canonical_pin",
+      "passed": true
+    },
+    {
+      "check": "fixed4983native_unique_records",
+      "passed": true
+    },
+    {
+      "check": "actual65nonblank_unknown_window_pool",
+      "passed": true
+    },
+    {
+      "check": "fixed12scope_threegroups4",
+      "passed": true
+    },
+    {
+      "check": "scope_within_actual_nonblankunknown_pool",
+      "passed": true
+    },
+    {
+      "check": "complete_targeted_scope_objects_exactbaseline",
+      "passed": true
+    },
+    {
+      "check": "103blank_window_outside_scope",
+      "passed": true
+    },
+    {
+      "check": "zero_firstbirthplacegroups",
+      "passed": true
+    },
+    {
+      "check": "all7globalDOBcases_excluded",
+      "passed": true
+    },
+    {
+      "check": "Ewins_Barber_knownplaceholds_excluded",
+      "passed": true
+    },
+    {
+      "check": "Thompson_existing_historicalhold_retained_reviewscope",
+      "passed": true
+    },
+    {
+      "check": "Thompson_historicalsource_not_exactalternate_day",
+      "passed": true
+    },
+    {
+      "check": "Tomes_separate_provisional_only",
+      "passed": true
+    },
+    {
+      "check": "v32_Wynne_originalBP_S2_geographicS3_North_baseline",
+      "passed": true
+    },
+    {
+      "check": "65target_ids_equal_actualpool",
+      "passed": true
+    },
+    {
+      "check": "fixed12followups_reviewed",
+      "passed": true
+    },
+    {
+      "check": "accepted_held_complete_disjoint_partition",
+      "passed": true
+    },
+    {
+      "check": "actual_replay_exact6GEO_FIELDS",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5124_nativeDOB_authorityexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5124_fixednativekey_unique",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5124_frozen_rawBP_grade",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5124_geography_only_role",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5124_S2S3_NorthSouth_only",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5124_actualdateprecision_compatible",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5124_exactdayconfirmation_not_overstated",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5124_explicit_source_identity_date_place_basis_role",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5124_quote_under25",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5124_rawmetadata_null",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5124_no_frozen_personcountry_QIDcoords_or_BP_replacementkeys",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5124_no_stale_proposal_pending_fields",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5124_no_known_DOBcase_adoption",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1994_held_nativeDOB_authorityexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1994_held_rawBPexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2016_held_nativeDOB_authorityexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2016_held_rawBPexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2146_held_nativeDOB_authorityexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2146_held_rawBPexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2153_held_nativeDOB_authorityexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2153_held_rawBPexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2154_held_nativeDOB_authorityexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2154_held_rawBPexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2460_held_nativeDOB_authorityexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2460_held_rawBPexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2863_held_nativeDOB_authorityexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2863_held_rawBPexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA331_held_nativeDOB_authorityexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA331_held_rawBPexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA3578_held_nativeDOB_authorityexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA3578_held_rawBPexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA3609_held_nativeDOB_authorityexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA3609_held_rawBPexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA3620_held_nativeDOB_authorityexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA3620_held_rawBPexact",
+      "passed": true
+    },
+    {
+      "check": "inherited_provisional_parsed_date_discrepancies.json_byteidentical",
+      "passed": true
+    },
+    {
+      "check": "inherited_birthplace_source_conflicts.json_byteidentical",
+      "passed": true
+    },
+    {
+      "check": "inherited_source_date_precision_holds.json_byteidentical",
+      "passed": true
+    },
+    {
+      "check": "inherited_source_derived_age_inconsistencies.json_byteidentical",
+      "passed": true
+    },
+    {
+      "check": "inherited_lifespan_endpoint_discrepancies.json_byteidentical",
+      "passed": true
+    },
+    {
+      "check": "inherited_cross_source_reported_age_contrasts.json_byteidentical",
+      "passed": true
+    },
+    {
+      "check": "inherited_omitted_middle_name_admission.json_byteidentical",
+      "passed": true
+    },
+    {
+      "check": "inherited_source_ordinal_age_wording_observations.json_byteidentical",
+      "passed": true
+    },
+    {
+      "check": "prior_v11_holds.json_historical_bytes_unchanged",
+      "passed": true
+    },
+    {
+      "check": "prior_v12_holds.json_historical_bytes_unchanged",
+      "passed": true
+    },
+    {
+      "check": "prior_v29_first_pass_queue_closeout.json_historical_bytes_unchanged",
+      "passed": true
+    },
+    {
+      "check": "prior7activeDOBobjects_unchanged",
+      "passed": true
+    },
+    {
+      "check": "no_Thompson_adopted_geographic_fact",
+      "passed": true
+    },
+    {
+      "check": "a_workerreport_exact_scratch",
+      "passed": true
+    },
+    {
+      "check": "a_queryledger_within8",
+      "passed": true
+    },
+    {
+      "check": "a_navigationledger_within10",
+      "passed": true
+    },
+    {
+      "check": "a_worker_scope_partition",
+      "passed": true
+    },
+    {
+      "check": "a_intent_retained_exact",
+      "passed": true
+    },
+    {
+      "check": "b_workerreport_exact_scratch",
+      "passed": true
+    },
+    {
+      "check": "b_queryledger_within8",
+      "passed": true
+    },
+    {
+      "check": "b_navigationledger_within10",
+      "passed": true
+    },
+    {
+      "check": "b_worker_scope_partition",
+      "passed": true
+    },
+    {
+      "check": "b_intent_retained_exact",
+      "passed": true
+    },
+    {
+      "check": "c_workerreport_exact_scratch",
+      "passed": true
+    },
+    {
+      "check": "c_queryledger_within8",
+      "passed": true
+    },
+    {
+      "check": "c_navigationledger_within10",
+      "passed": true
+    },
+    {
+      "check": "c_worker_scope_partition",
+      "passed": true
+    },
+    {
+      "check": "c_intent_retained_exact",
+      "passed": true
+    },
+    {
+      "check": "actual1Guggenheim_fact11holds",
+      "passed": true
+    },
+    {
+      "check": "Guggenheim_actual_fullnative_exactDOB_country_andS3North",
+      "passed": true
+    },
+    {
+      "check": "Guggenheim_root_worker_roles_and_refs_exact",
+      "passed": true
+    },
+    {
+      "check": "Guggenheim_threeword_bornquote",
+      "passed": true
+    },
+    {
+      "check": "Guggenheim_attributedacademic_unverifiedediting_conservativeS3",
+      "passed": true
+    },
+    {
+      "check": "Guggenheim_copyright_not_publication_or_exactversion",
+      "passed": true
+    },
+    {
+      "check": "Guggenheim_career_citations_not_independent_acquiredbiographies",
+      "passed": true
+    },
+    {
+      "check": "Guggenheim_concepts_work_distinct_prior_Wynne_reagents",
+      "passed": true
+    },
+    {
+      "check": "new_concepts_and_Fawcett_work_not_priorinputs_audits",
+      "passed": true
+    },
+    {
+      "check": "nine_unique_activecases_exact_old7plus2",
+      "passed": true
+    },
+    {
+      "check": "prior_v32_active_inventory_copied_byteexact",
+      "passed": true
+    },
+    {
+      "check": "Thompson_historicalorigin_inventorycompletion_not_newwork",
+      "passed": true
+    },
+    {
+      "check": "Thompson_yearprecision_no_invented_alternateexactday",
+      "passed": true
+    },
+    {
+      "check": "Thompson_actual_root_ref_historical_ref_distinct",
+      "passed": true
+    },
+    {
+      "check": "Thompson_signed_subsection_author_not_pageindex",
+      "passed": true
+    },
+    {
+      "check": "Thompson_historicalquote_sevenwords_no_additional_literalwords",
+      "passed": true
+    },
+    {
+      "check": "Thompson_current_quote_location_count_metadata_seven",
+      "passed": true
+    },
+    {
+      "check": "Thompson_auxiliary_deathday_contrast_not_newDOB",
+      "passed": true
+    },
+    {
+      "check": "Thompson_currenthold_clarifies_earlierworker_snapshot_vs_laterroot",
+      "passed": true
+    },
+    {
+      "check": "Thompson_preserved_worker_snapshot_hashbound",
+      "passed": true
+    },
+    {
+      "check": "Thompson_one_initial_discoveryquery_no_laterworkerrequests",
+      "passed": true
+    },
+    {
+      "check": "Fawcett_new_actual_headerMarch18_bodyMay18_nativeMay18",
+      "passed": true
+    },
+    {
+      "check": "Fawcett_actual_worker_and_rootbody_not_searchtitle",
+      "passed": true
+    },
+    {
+      "check": "Fawcett_samepage_doesnotclear_header_or_claim_two_independent_sources",
+      "passed": true
+    },
+    {
+      "check": "Fawcett_birthcountry_not_nationality_father_school",
+      "passed": true
+    },
+    {
+      "check": "Fawcett_threeword_datequote_under25",
+      "passed": true
+    },
+    {
+      "check": "both_new_inventorycases_native_BPgrades_frozen_metadata_null",
+      "passed": true
+    },
+    {
+      "check": "A_adaptive_exactintent_write_failure_disclosed_without_backdate",
+      "passed": true
+    },
+    {
+      "check": "A_no_adoptedfact_and_no_newsourceafter_failedintent_until_newintent",
+      "passed": true
+    },
+    {
+      "check": "A_Heath_Image_marker_not_sourcepixels",
+      "passed": true
+    },
+    {
+      "check": "B_Fawcett_index_literal_find_not_universal_absence",
+      "passed": true
+    },
+    {
+      "check": "B_Fawcett_UNSW_primaryintro_not_failed_PMC_carrier_bypass",
+      "passed": true
+    },
+    {
+      "check": "C_Woods_Kiddle_unopened_not_admitted",
+      "passed": true
+    },
+    {
+      "check": "C_Powell_parental_context_not_subject_birthcounty",
+      "passed": true
+    },
+    {
+      "check": "worker_24queries10opens7finds_exact",
+      "passed": true
+    },
+    {
+      "check": "parent_aggregate_24queries15opens8finds_exact",
+      "passed": true
+    },
+    {
+      "check": "root_actual5opens1cachedfind_0othercalls",
+      "passed": true
+    },
+    {
+      "check": "root_intent_exact5original_URLs_and_cachedfind_scope",
+      "passed": true
+    },
+    {
+      "check": "root_intent_all6entries_precede_final_parentadjudication",
+      "passed": true
+    },
+    {
+      "check": "root_Thompson_actual_retrieval_historical_work",
+      "passed": true
+    },
+    {
+      "check": "root_Guggenheim_actual_geography_and_cachedfind",
+      "passed": true
+    },
+    {
+      "check": "root_Binnie_two_newfailedworks_no_body_no_adoption",
+      "passed": true
+    },
+    {
+      "check": "parent_1geofact_1historicalplus1newDOB_inventory_exact",
+      "passed": true
+    },
+    {
+      "check": "sourceclass_unchanged_admission_1S3geoonly",
+      "passed": true
+    },
+    {
+      "check": "prior_v32_sourceclass_copy_byteidentical",
+      "passed": true
+    },
+    {
+      "check": "root_quotes_3concepts3Prabook0additionalBMJ_under25",
+      "passed": true
+    },
+    {
+      "check": "actual_preliminary_sourceQA_precedes_finalfacts",
+      "passed": true
+    },
+    {
+      "check": "no_fullsource_caches_images",
+      "passed": true
+    }
+  ],
+  "blocking_issues": [],
+  "declared_six_GEO_FIELDS": [
+    "geo_resolution_status",
+    "geography_decision",
+    "hemisphere",
+    "northern_birthplace_candidate",
+    "reason",
+    "southern_birthplace_separate"
+  ],
+  "no_new_admission_method_exception": true,
+  "review_scope": "Documentary source/native binding/scope/protocol review only. Workers/root acquired source observations; reviewer did not network-fetch originals, inspect pixels/rawbytes or execute production. Final QA independently checks runtime rollback/frozen objects and deterministic output replays.",
+  "no_network_source_code_mainoutputs_audits_or_Git_mutation_by_reviewer": true,
+  "accepted_fact_path": "inputs/accepted_geography.json",
+  "accepted_fact_sha256_at_review": "b4cd974667892c6806b1004a23219bc18dfa493403c8e9fe27c29b5e2e8c2a78",
+  "accepted_geography_sha256_at_review": "b4cd974667892c6806b1004a23219bc18dfa493403c8e9fe27c29b5e2e8c2a78",
+  "active_DOB_conflicts_sha256_at_review": "f0ea1529f7bcb9d4ad485a3c05e46e02195bcb3ae750594070301d274467a6eb",
+  "source_class_adjudication_sha256_at_review": "5b27889aa674ab70c7e26785e019925cb58d6fcfccf69eab77b1478fd156c6fd",
+  "accepted_geographic_bindings": [
+    {
+      "record_id": "RS_PAST_NA5124",
+      "native_DOB": "1901-08-11",
+      "native_authority": "Guggenheim; Edward Armand (1901 - 1970)",
+      "source_full_name": "Edward Armand Guggenheim",
+      "source_birthdate": "1901-08-11",
+      "frozen_raw_birthplace": "Manchester",
+      "frozen_BP_source_grade": "S2",
+      "source_birthplace_context": "Manchester, England",
+      "new_source_grade": "S3",
+      "new_hemisphere": "north",
+      "quote_words": 3,
+      "fixed_native_key_matches": 1
+    }
+  ],
+  "inherited_eight_issue_sidecars_byte_identical": [
+    "provisional_parsed_date_discrepancies.json",
+    "birthplace_source_conflicts.json",
+    "source_date_precision_holds.json",
+    "source_derived_age_inconsistencies.json",
+    "lifespan_endpoint_discrepancies.json",
+    "cross_source_reported_age_contrasts.json",
+    "omitted_middle_name_admission.json",
+    "source_ordinal_age_wording_observations.json"
+  ],
+  "protocol_disclosures": {
+    "A": "Fullpriorcontexts readbeforequeries. HistoricalThompsonholdfound andnotifiedbeforeinitial4querybatch, butoneThompsonqueryreturnedbefore rootno-further-queryinstruction. No laterThompsonworkerrequests/adoption. AdaptiveexactintentwritefailedAttributeError beforewrite; webrequestnotgatedoncommandexit, soqueries5-8 hadno durablespecificpreintent. Actualerror/queries/time retainedwithoutbackdating; no Afactaccepted. Neworiginalopens hadseparatepriorintent.",
+    "B": "8 actualqueries representedby2 batchedledgerentriesof4;4opens1find. ActualFawcettPrabookdateheader/bodycontrast qualifiedasnewS3DOBobservationonly. Cumbrianliteralfind no-match bounded, not universalabsence; UNSWownhistoricalintro notfailedPMCcarrierbypass.",
+    "C": "8queries3opens6finds, allspecificintents beforecorrespondingcalls. NewAndraosConceptsA-K actualentry fullnative/exactDOB/lifespan/directManchesterEngland/methodreference admittedS3geographyonly. Powellfather/parentsplaces notsubjectbirthregion; WoodsKiddleunopened/notadopted.",
+    "root": "0queries5firstv33opens1cachedfind. GuggenheimactualPDFverifiedafterworker; Fawcettnewactualheaderbodycontrast verified; Thompsonoldv12work freshlyretrievedparsedbody forhistoricalinventorycompletion (notnewsourcework/conflictdiscovery). Two distinctBinniebodyattempts held/stopped. EarlierworkerThompsonno-v33-open wording is boundedbydatedrootclarification and hashboundpreservedsnapshot, not rewritten."
+  },
+  "source_counts": {
+    "queries": 24,
+    "worker_opens": 10,
+    "root_opens": 5,
+    "total_opens": 15,
+    "worker_finds": 7,
+    "root_finds": 1,
+    "total_finds": 8,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "quote_audit": {
+    "new_work_identifiers_old_package_hits": {
+      "Andraos_Named_Concepts_A_K": [],
+      "Prabook_Edward_Fawcett": []
+    },
+    "new_quoted_words": {
+      "Andraos_Named_Concepts_A_K_adoptedgeo": 3,
+      "Prabook_Edward_Fawcett_dateheader": 3,
+      "BMJ_Thompson_additional_literalwords": 0
+    },
+    "historical_BMJ_Thompson_frozen_clause_words": 7,
+    "historical_BMJ_Thompson_frozen_clause_unchanged": true
+  },
+  "active_DOB_inventory_reconciliation": {
+    "total_active": 9,
+    "prior7objects_unchanged": true,
+    "historical_qualified_v12_case_inventory_additions": [
+      "RS_PAST_NA2153"
+    ],
+    "new_actual_original_profile_conflict_observations": [
+      "RS_PAST_NA331"
+    ],
+    "Thompson_root_retrieval_is_new_v33_acquisition_of_old_work_not_new_work_discovery": true,
+    "Tomes_provisional_separate": true
+  },
+  "source_QA_correction_record": "v33_source_qa_correction.json",
+  "initial_failed_report_preserved": "v33_source_qa_initial_failed_report.json",
+  "limitations": [
+    "Independent documentary review only: no reviewer networksource acquisition, rawbyte/pixelinspection or production execution.",
+    "Complete-object frozen-field/rollback and deterministic output replay checks belong to final QA.",
+    "Sourcegrades ofnewgeo/issue observations do not change originalDOBorBPgrades.",
+    "Thompsonsourceyear1913 is not an alternate exactday; historicaldeathdaycontrast is a separatefield.",
+    "FawcettactualbodyMay18 matchingnative does notclear sameprofileMarch18header; repeatedBornfooter is not independentcorroboration.",
+    "Copyrightspans are notexactpublication/source-versiondates; listedbiographies were notacquired asindependent sources.",
+    "A actualspecificprequeryintentfailure and earlieroneThompsonquery retainedwithoutbackdating; no Afactaccepted."
+  ]
+}
