@@ -1,0 +1,432 @@
+{
+  "schema": "v27_sources_b_v1",
+  "worker": "/root/v26_sources_b",
+  "batch_role": "v27groupb_followup",
+  "written_utc": "2026-11-06T10:58:15.626408+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA1973",
+    "RS_PAST_NA1994",
+    "RS_PAST_NA2005",
+    "RS_PAST_NA2016"
+  ],
+  "intent_file": "v27_b_intent.json",
+  "counts": {
+    "discovery_queries": 8,
+    "web_navigation_attempts": 7,
+    "parsed_find_operations": 3,
+    "cached_screenshot_attempts": 0,
+    "ImageContent_blocks_exposed_from_screenshot": 0,
+    "raw_HTTP_or_PDF_GETs": 0,
+    "body_verified_birthplace_candidates": 3,
+    "holds": 1,
+    "new_confirmed_printed_DOB_conflicts": 0,
+    "new_confirmed_original_birthplace_conflicts": 0,
+    "new_source_age_ordinal_wording_observations": 1
+  },
+  "budgets": {
+    "queries": 8,
+    "navigation": 10
+  },
+  "candidates": [
+    {
+      "source_grade_role": "person_birthplace_support_only",
+      "native_DOB_source_grade_unchanged": true,
+      "retrieval_representation": "web-tool parsed original text, not raw HTTP/PDF bytes",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "source_body_acquisition_role": "worker_original_body_verified_parent_review_pending",
+      "birth_source_all_native_components_confirmed": true,
+      "record_id": "RS_PAST_NA2016",
+      "native": {
+        "record_id": "RS_PAST_NA2016",
+        "authority_name": "Binnie; Geoffrey Morse (1908 - 1989)",
+        "native_dob": "1908-11-13",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "d69b23ac5f7f36a108dd1867356d80cec81e6a1bc87e746b4d7d4be4fb0313fc"
+      },
+      "status": "candidate_original_authored_ODNB_public_extract",
+      "source_url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/579603141",
+      "source_title": "Binnie, Geoffrey Morse (1908-1989), civil engineer",
+      "source_author": "Alan Muir Wood",
+      "source_kind": "original_authored_edited_national_biographical_reference_public_extract",
+      "publication_date": "2004-09-23",
+      "publication_date_precision": "exact_displayed_publication_date",
+      "source_observed_name": "Geoffrey Morse Binnie",
+      "source_birthdate": "1908-11-13",
+      "source_birthdate_precision": "exact_day_in_born_clause",
+      "source_lifespan": "1908-1989",
+      "source_quote": "was born in Kensington on 13 November 1908",
+      "raw_birthplace": "Kensington",
+      "source_grade": "S2",
+      "source_grade_basis": "Acquired original authored edited ODNB public extract with AlanMuirWood byline, not a searchprojection/fullpaywalledchapter/civilrecord/S1.",
+      "reviewed_hemisphere": "unknown",
+      "geographic_basis": "Direct subject-born assertion names Kensington locality only. Father/family engineering and workcountry references are not birthcountry evidence.",
+      "source_ref": "turn2678980view0",
+      "source_locator": "turn2678980view0:L757 fullnative/lifespan/title;L761-775 author/publication;L777 exactDOB/Kensington/fullname/family;L778-781 engineeringcareer. Firstopen turn2112290view0 acquired970lineparsedoriginal;findlocatedactualExtract.",
+      "identity_review": [
+        "Full GeoffreyMorseBinnie appears in authoredextract with exact13November1908 matching frozen native1908-11-13 and compatible1908-1989lifespan.",
+        "Charterhouse/TrinityHall/Swissengineerpupil/familyengineeringpractice/Dokan-Mangladamcareer coheres as source-only distinctiveprofessionalcontext. No independentnativecareerfields corroboration claim."
+      ],
+      "caveats": [
+        "Public extract itself was acquired. No claim to access paywalled fullchapter; no login/accessbypass attempted.",
+        "Unopened second-person WilliamBinnie Wikipedia searchprojection turn2609451search50 claims son born1901. It is not acquiredoriginalbody or qualifiedDOBconflict, no datecorrection/adoption or identitymerge.",
+        "City alone remainsunknowngeo; nativeDOBgrade/authority/eligibility/country/coords unchanged."
+      ],
+      "source_quote_word_count": 8
+    },
+    {
+      "source_grade_role": "person_birthplace_support_only",
+      "native_DOB_source_grade_unchanged": true,
+      "retrieval_representation": "web-tool parsed original text, not raw HTTP/PDF bytes",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "source_body_acquisition_role": "worker_original_body_verified_parent_review_pending",
+      "birth_source_all_native_components_confirmed": true,
+      "record_id": "RS_PAST_NA1994",
+      "native": {
+        "record_id": "RS_PAST_NA1994",
+        "authority_name": "Franklin; Norman Laurence (1924 - 1986)",
+        "native_dob": "1924-09-01",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "0d875a1a53281f593f1dd25331a23fccfb67d322d7e8922cec6567fbc8bd6393"
+      },
+      "status": "candidate_original_institutionally_attributed_contemporaneous_pressrelease_biographical_note",
+      "source_url": "https://www.chilton-computing.org.uk/ChiltonCatalog/UKAEA-atom/19690200-UkaeaAtom-148.pdf",
+      "source_title": "Two new A.E.A. members: Biographical notes, ATOM148(February1969),printed29",
+      "source_author": "Ministry of Technology (press-release attribution in original bulletin; no named personal byline)",
+      "source_kind": "original_institutionally_attributed_pressrelease_biographical_note_in_UKAEA_bulletin",
+      "publication_date": "1969-02",
+      "publication_date_precision": "month_in_original_issue_identity",
+      "source_observed_name": "Norman Laurence Franklin",
+      "source_birthdate": "1924-09-01",
+      "source_birthdate_precision": "exact_day_in_born_clause",
+      "source_lifespan": null,
+      "source_lifespan_precision": "contemporaneous1969piece_doesnotstate_later1986death_no_conflictingendpoint_observed",
+      "source_quote": "was born on 1st September, 1924, at Leeds",
+      "raw_birthplace": "Leeds",
+      "source_grade": "S3",
+      "source_grade_basis": "Conservative S3 proposed for non-personally-signed institutional biographical pressrelease note. Actual MinistryofTechnology attribution retained; no host-onlyS1/civilregister proof or assumed personalbiographercredentials. Parent may apply established genre gates, no new exception requested.",
+      "reviewed_hemisphere": "unknown",
+      "geographic_basis": "Direct born clause names Leeds city alone. UKAEAworklocation/bulletinoffice/nationality are not birthcountry.",
+      "source_ref": "turn1731107view0",
+      "source_locator": "turn1731107view0:L148-149@PDF6 issue148/February1969;L196-199 titleandMinistryofTechnologypressreleaseattribution;L217-223 fullnative/exactnativeDOB/directLeeds/degreecontext;L224-247UKAEAcareer.",
+      "identity_review": [
+        "FullnativeNormanLaurenceFranklin explicitly appears in directbornbiographicalnote. Exact1September1924 matches frozen native1924-09-01.",
+        "Contemporaneous1969source has no laterdeathendpoint; no contradictorylifespan observed and no falseclaimthatitstates1986.",
+        "BatleyGrammar/Leedschemicalengineeringdegree1945/MSc1948/PhD1952/UKAEA1955/TechnicalPolicy/Risley/fuelproductionboard roles are coherent distinctivecontext."
+      ],
+      "additional_original_observations": [
+        {
+          "source_url": "https://www.icheme.org/about-us/history/presidents/norman-laurence-franklin/",
+          "source_ref": "turn2678980view1",
+          "source_title": "Norman Laurence Franklin CBE: IChemE President1979-1980",
+          "source_author": null,
+          "source_kind": "original_unsigned_professional_body_historical_profile",
+          "source_quote": "was born in Leeds in September 1924",
+          "source_birthdate": "1924-09",
+          "source_birthdate_precision": "month_only_not_exact_day",
+          "raw_birthplace": "Leeds",
+          "locator": "L171 fullnativeheading;L173 nicknameNedwithinentry/directLeeds/September1924;L174-182 nuclearengineeringcareer.",
+          "grade_if_used": "S3",
+          "role": "Additional acquired profile context, not informationalindependence or exactdayconfirmation. Fullnativeheader binds entry; no nicknameexpansionfromunrelatedperson.",
+          "source_quote_word_count": 7
+        }
+      ],
+      "caveats": [
+        "Originalbulletinpressreleaseinstitutionalattribution is distinct from commercial/historical carrier; carrier not independent source.",
+        "Nativeexactdayagrees with original1969note; IChemE separately gives monthonly and cannot confirmday1.",
+        "No source death1986confirmation or formalDOBtierupgrade.",
+        "No independentinformation claim between1969andlaterprofile or careerdateadjudication."
+      ],
+      "source_quote_word_count": 8
+    },
+    {
+      "source_grade_role": "person_birthplace_support_only",
+      "native_DOB_source_grade_unchanged": true,
+      "retrieval_representation": "web-tool parsed original text, not raw HTTP/PDF bytes",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "source_body_acquisition_role": "worker_original_body_verified_parent_review_pending",
+      "birth_source_all_native_components_confirmed": true,
+      "record_id": "RS_PAST_NA2005",
+      "native": {
+        "record_id": "RS_PAST_NA2005",
+        "authority_name": "Shortt; Henry Edward (1887 - 1987)",
+        "native_dob": "1887-04-15",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "e91a744b165bcf31010cfe5f9ab230b70a75f046aafa422c09908e77788390b4"
+      },
+      "status": "candidate_original_compiled_auction_biographical_footnote_with_separate_age_wording_limit",
+      "source_url": "https://www.noonans.co.uk/archive/lot-archive/results/441186/",
+      "source_title": "Lot67,7December2022: C.I.E. awarded to Colonel H.E.Shortt, IndianMedicalService",
+      "source_author": null,
+      "source_kind": "original_unsigned_auction_catalogue_biographical_footnote",
+      "publication_date": "2022-12-07",
+      "publication_date_precision": "displayed_auction_date_not_asserted_exact_article_publicationtime",
+      "source_observed_name": "Henry Edward Shortt",
+      "source_birthdate": "1887-04-15",
+      "source_birthdate_precision": "exact_day_in_born_clause",
+      "source_death_date": "1987-11-09",
+      "source_quote": "was born at Dhariwal, India, on 15 April 1887",
+      "raw_birthplace": "Dhariwal, India",
+      "source_grade": "S3",
+      "source_grade_basis": "Actual original anonymouscommercialauctioncataloguefootnote with directbirthassertion. ConservativecompiledS3; descriptive originaldocuments and BMJobituary soldwithlot were not acquired and do not upgradegrade or become independentcorroboration/civilverification.",
+      "reviewed_hemisphere": "north",
+      "geographic_basis": "Directsubjectbornclause explicitly specifies Dhariwal,India. Birth-linked countryIndia supportsNorth, without addingpersonalcountry/QID/coordinates. Not inferredfromnationality/career/placefamily.",
+      "source_ref": "turn2112290view3",
+      "source_locator": "turn2112290view3:L154 auctiondate;L166 lotidentity;L169 fullnative/exactDOB/directDhariwalIndia;L171 parasitologycareer/deathdate/ageordinal;L172-173 listsunacquireddocuments.",
+      "identity_review": [
+        "All fullnativeHenryEdwardShortt components in actualbornsentence; exact15April1887 matches frozen native1887-04-15.",
+        "Death9November1987 compatible nativeauthorityendyear1987; completedage100 comesfrom source stateddates, not alternateDOB.",
+        "IndianMedicalService/Basralaboratory/AssamInspectorGeneral/LSHTMProfessorMedicalProtozoology/FRS1950/CIE1941 form distinctivesourcecontext."
+      ],
+      "source_age_wording_observation": {
+        "source_quote": "in his 100th year",
+        "source_quote_word_count": 4,
+        "source_stated_birthdate": "1887-04-15",
+        "source_stated_deathdate": "1987-11-09",
+        "computed_completed_age_from_source_dates": 100,
+        "issue": "Ordinal100thyear wording conventionally refers to age99 before100thbirthday, whereas source actualdates yield100completed. Preserve qualifier/arithmeticdistinction; not convert to reportedintegerage99 or inferalternateDOB/deathday.",
+        "native_actual_birthdate_agrees": true,
+        "not_DOB_source_conflict": true,
+        "not_cross_source_age_contrast": true,
+        "adjudication": "parentreviewpending_separateone-sourceagewordingissue_no_datecorrection"
+      },
+      "additional_original_observations": [
+        {
+          "source_url": "https://wellcomecollection.org/works/xtp2dd3e",
+          "source_ref": "turn2112290view2",
+          "source_title": "Shortt,HenryEdward(1887-1987), archiveWTI/HES",
+          "source_author": null,
+          "source_kind": "original_unsigned_archival_catalogue_biographical_note",
+          "source_quote": "was born in Punjab in April 1887",
+          "source_birthdate": "1887-04",
+          "source_birthdate_precision": "month_only_not_exact_native_day",
+          "source_lifespan": "1887-1987",
+          "raw_birthplace": "Punjab",
+          "locator": "L0title/fullnative/lifespan;L44-48 actualbiographicalnote/directPunjab/April1887/protozoologycareer/deathyear1987. L15describesinterimcatalogue;L51uncataloguedarchivalmaterialunavailableuntil2027.",
+          "grade_if_used": "S3",
+          "role": "Additional acquired originalcatalogue birthplacenote, no exactdayconfirmation or acquiredarchiveddocuments. Punjab/DhariwalIndia are separate sourcewordings; no asserted exactnestedplaceequivalence or adjudicatedplaceconflict.",
+          "geography_if_used": "Punjab is birth-linkedhistoricalregion, no currentstate/countrylabel assigned fromsource alone.",
+          "source_quote_word_count": 7
+        }
+      ],
+      "caveats": [
+        "Sourceordinalagewordingissue remainsdistinctfromagreeingactualDOB/native; no nativeedit, correctdateverdict or agewordingrepair.",
+        "Careerpromotiondates/commissions in catalogue not exhaustivelyadjudicated; no identity or DOB rewrite fromtheirordering.",
+        "No informationalindependence claim between auctionresearch and Wellcomecatalogue. No civil-recordverification.",
+        "BMJoriginalPDF singleattempt403; not bodyacquired, no sourcegradeupgrade or corroboration from its searchprojection."
+      ],
+      "source_quote_word_count": 9
+    }
+  ],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA1973",
+      "native": {
+        "record_id": "RS_PAST_NA1973",
+        "authority_name": "Cour; Leonard Francis La (1907 - 1984)",
+        "native_dob": "1907-07-28",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "f6e58ad1bf83901f46a8b52a9b8df0e814d4878dc0886085149092ba0835b496"
+      },
+      "status": "hold_no_acquired_original_birthplace_body",
+      "hold_type": "no_acquired_original_birthplace_body",
+      "reason": "Initial/adaptivequeries located a RoyalSocietymemoir and Wikipedia birthprojection. Singleobservedoriginalmemoirepdf firstopen returnednotaccessibleviatool;stopped. No originalbirthplacebody acquired; no birth/DOB/geo adoption.",
+      "source_url": "https://royalsocietypublishing.org/doi/epdf/10.1098/rsbm.1986.0011",
+      "source_ref": "turn1731107view1",
+      "source_title": "LeonardFrancisLaCour,28July1907-3November1984",
+      "source_author": "Dan Lewis (bibliographicsearchprojectiononly; originalbylinenotbodyverified)",
+      "source_kind": "observed_originalmemoir_route_notbodyacquired",
+      "publication_date": "1986",
+      "source_quote": "",
+      "source_locator": "turn5142260search6 bibliographicprojection observedepdfURL; turn1731107view1 toolnotaccessibleoriginalroute.",
+      "actual_tool_result": "URL https://royalsocietypublishing.org/doi/epdf/10.1098/rsbm.1986.0011 is not accessible via this tool.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "source_grade_adopted": null,
+      "geography_decision": "unchanged_unknown_no_original_birthplace",
+      "caveats": [
+        "Wikipediaactualbornprojection LambethsouthLondon/date is not originalbodyproof. Do not expand/aliasrepairnativeCour;source-nativefullcomponentsnotoriginalbodyverified.",
+        "No retry/variant/DOIHTMLroute/rawGET/accessbypass. No claim403/rawstatus fornotaccessibletoolmessage."
+      ],
+      "source_quote_word_count": 0
+    }
+  ],
+  "query_log": [
+    {
+      "query_index": 1,
+      "engine": "system2",
+      "query": "\"Leonard Francis La Cour\" born",
+      "observed_call_result_ref_prefix": "turn2609451",
+      "topic_relevant_observed_refs": [
+        "turn2609451search53",
+        "turn2609451search11"
+      ],
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "intent_timing": "Exactstringprelistedbeforeexecution ininitialintent"
+    },
+    {
+      "query_index": 2,
+      "engine": "system2",
+      "query": "\"Norman Laurence Franklin\" born",
+      "observed_call_result_ref_prefix": "turn2609451",
+      "topic_relevant_observed_refs": [
+        "turn2609451search2",
+        "turn2609451search4",
+        "turn2609451search12"
+      ],
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "intent_timing": "Exactstringprelistedbeforeexecution ininitialintent"
+    },
+    {
+      "query_index": 3,
+      "engine": "system2",
+      "query": "\"Henry Edward Shortt\" born",
+      "observed_call_result_ref_prefix": "turn2609451",
+      "topic_relevant_observed_refs": [
+        "turn2609451search1",
+        "turn2609451search3",
+        "turn2609451search51",
+        "turn2609451search13"
+      ],
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "intent_timing": "Exactstringprelistedbeforeexecution ininitialintent"
+    },
+    {
+      "query_index": 4,
+      "engine": "system2",
+      "query": "\"Geoffrey Morse Binnie\" born",
+      "observed_call_result_ref_prefix": "turn2609451",
+      "topic_relevant_observed_refs": [
+        "turn2609451search0",
+        "turn2609451search48",
+        "turn2609451search50"
+      ],
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "intent_timing": "Exactstringprelistedbeforeexecution ininitialintent"
+    },
+    {
+      "query_index": 5,
+      "engine": "system1",
+      "query": "\"Leonard Francis La Cour\" \"born\" -site:wikipedia.org",
+      "observed_call_result_ref_prefix": "turn5142260",
+      "topic_relevant_observed_refs": [
+        "turn5142260search0"
+      ],
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "intent_timing": "Exactadaptivestringprelistedbeforeexecution inintentadaptive_exact_queries_prelisted"
+    },
+    {
+      "query_index": 6,
+      "engine": "system1",
+      "query": "\"Leonard Francis La Cour\" memoir pdf",
+      "observed_call_result_ref_prefix": "turn5142260",
+      "topic_relevant_observed_refs": [
+        "turn5142260search6",
+        "turn5142260search7"
+      ],
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "intent_timing": "Exactadaptivestringprelistedbeforeexecution inintentadaptive_exact_queries_prelisted"
+    },
+    {
+      "query_index": 7,
+      "engine": "system1",
+      "query": "\"Norman Laurence Franklin\" \"Leeds\" obituary",
+      "observed_call_result_ref_prefix": "turn5142260",
+      "topic_relevant_observed_refs": [
+        "turn5142260search3",
+        "turn5142260search4",
+        "turn5142260search8"
+      ],
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "intent_timing": "Exactadaptivestringprelistedbeforeexecution inintentadaptive_exact_queries_prelisted"
+    },
+    {
+      "query_index": 8,
+      "engine": "system1",
+      "query": "\"Henry Edward Shortt\" \"born\" \"Dhariwal\"",
+      "observed_call_result_ref_prefix": "turn5142260",
+      "topic_relevant_observed_refs": [
+        "turn5142260search5",
+        "turn5142260search9"
+      ],
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "intent_timing": "Exactadaptivestringprelistedbeforeexecution inintentadaptive_exact_queries_prelisted"
+    }
+  ],
+  "query_result_mapping_limit": "Eachfourquerycallreturnedaggregateresults,nobackendperqueryresultmapexposed. Listedtopicrefsreflectobservedmatchingtopicresults,nofabricatedexactqueryallocation.",
+  "navigation_log": [
+    {
+      "ref": "turn2112290view0",
+      "target": "BinnieODNB",
+      "result": "parsedoriginalpublicextract970lines"
+    },
+    {
+      "ref": "turn2112290view1",
+      "target": "FranklinIChemE",
+      "result": "parsedoriginalprofile259lines"
+    },
+    {
+      "ref": "turn2112290view2",
+      "target": "ShorttWellcome",
+      "result": "parsedoriginalarchivalbiographicalnote77lines"
+    },
+    {
+      "ref": "turn2112290view3",
+      "target": "ShorttNoonans",
+      "result": "parsedoriginalauctionfootnote261lines"
+    },
+    {
+      "ref": "turn1731107view0",
+      "target": "FranklinATOMPDF",
+      "result": "parsedoriginal36pagebulletin;directbirthparagraphPDF6"
+    },
+    {
+      "ref": "turn1731107view1",
+      "target": "LaCourRSmemoirepdf",
+      "result": "URLnotaccessibleviathistool;stopped;noHTTPstatusclaim"
+    },
+    {
+      "ref": "turn1731107view2",
+      "target": "ShorttBMJPDF",
+      "result": "toolreported403Forbidden;stopped;notbodyacquired"
+    }
+  ],
+  "parsed_find_log": [
+    {
+      "source_ref": "turn2112290view0",
+      "pattern": "was born",
+      "result_ref": "turn2678980view0",
+      "result": "BinnieactualODNBextractlocated"
+    },
+    {
+      "source_ref": "turn2112290view1",
+      "pattern": "was born",
+      "result_ref": "turn2678980view1",
+      "result": "Franklinactualbiographicalbodylocated"
+    },
+    {
+      "source_ref": "turn2112290view0",
+      "pattern": "Alan Muir Wood",
+      "result_ref": null,
+      "result": "Toolcallcompleted but directdisplaytruncatedmiddle;thirdresultrefnotretained. No additionalfactreliesonunseenresult; actualbylinealreadyvisiblefirstfindL761."
+    }
+  ],
+  "protocol_deviations": [],
+  "representation_limits": [
+    "Firstthree-findcalldirectdisplaywastruncatedinmiddle. ActualBinniebirthparagraph/bylineandFranklinbirthparagraphremainedvisible;thirdfindrefnotretainedandnotinvented. Finalsourcefetchstatusesforeachofthreeopenswereallvisibleandretained.",
+    "All minimalfacts/shortquotes/locatorsonly; no fullsourceHTML/PDF/images/searchprojectioncache saved/distributed.",
+    "No exactrequesttimestamps/rawHTTPstatus/rawbyteshash acquired. AuditwritetimeUTCisonlyfilewrite.",
+    "No new admission exception; nativeDOB/identity/sourceDOBgrades/cohort/eligibility/country/QIDs/coords unchanged.",
+    "Unusedthreenavigationbudgetslotsarenotclaimedreads. No furthersearchqueriesorfailedrouteretries."
+  ]
+}

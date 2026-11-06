@@ -1,0 +1,124 @@
+{
+  "schema": "UK_v27_independent_local_final_QA_v1",
+  "reviewer": "/root/v26_final_qa",
+  "written_utc": "2026-11-06T11:04:59.885989+00:00",
+  "status": "PASS",
+  "validation_categories_passed": 33,
+  "checks": [
+    "five pinned production outputs match before QA",
+    "v26 baseline and v27 current canonical exactly pinned",
+    "self-contained v26 reconstruction equals all4983 baseline complete objects",
+    "fixed cohort order and unique keys",
+    "scope118queue12reviewed4facts8holds disjoint partition",
+    "exact4changed and4979 complete identical objects",
+    "all frozen fields prior facts and exact previous plus absent rollback",
+    "separate newbirthplace grade roles S2two S3two and North2 unknown2",
+    "independent overall and2644window counts",
+    "blank nonblank diagnostics independently recomputed",
+    "remaining114blank queue includes30 neverindividuallyreviewed using allholdsunion",
+    "summary deltas and no geographyonly adoption",
+    "CSV92old positions and meaning plus6v27 fields",
+    "CSV4983 rows current fields and historical columns exact",
+    "remaining181unknown CSV matches master order",
+    "all8 inherited issue and method sidecars byteidentical",
+    "six activeDOB and separate oneprovisional glyph case unchanged",
+    "all issue records Wager Adam currentholds completeobjects unchanged",
+    "all4 exactunchanged sourceDOB and fullnative components observed",
+    "Franklin earlierworkerbody rootlaterfirsttimeout explicit noindependentrootbody",
+    "Franklin contemporaneous1969 alive doesnot claimlater1986deathconfirmed",
+    "other3 rootprimarybody role and explicitIndia North versus2cityunknown",
+    "Shortt qualifiedlooseordinal100th versus source-date100 distinct fromDOBconflict",
+    "Shortt additionalWellcome monthonly separateplace wording not exactdayconfirmation",
+    "no current middleexception or pending proposal fields in acceptedfacts",
+    "actualquote counts9 8 9 8 and Shorttcombined13 under25",
+    "request accounting24queries20worker5root25total4find0screenshot0GET",
+    "parent4facts8holds no newDOBconflict separate1ordinalobservation and originalroles",
+    "no fullsource cache or image formats distributed",
+    "README andCONTINUATION actual counts scope and source limits directlyreviewed",
+    "independent sourceQA finalized and matches acceptedfact hash",
+    "two isolated cleanreplays all5outputs equal originalpins",
+    "production5outputs untouched after QA"
+  ],
+  "baseline_canonical_sha256": "41aebb4d4c05b6c45889315892b5edcfa1f10c2a7d16fe75e6608e0e3dc07378",
+  "final_canonical_sha256": "ac6d3db5594801b9c55e271b392eb245fc8ae66216c0031eb5686ba82a545118",
+  "records": 4983,
+  "changed_complete_objects": 4,
+  "unchanged_complete_objects": 4979,
+  "overall": {
+    "north": 4181,
+    "unknown": 615,
+    "south": 187
+  },
+  "window_counts": {
+    "north": 2281,
+    "unknown": 181,
+    "south": 182
+  },
+  "blank_diagnostics": {
+    "all_blank_raw_birthplace": 536,
+    "window_blank_raw_birthplace": 114,
+    "all_unknown": 615,
+    "all_unknown_with_blank_raw_birthplace": 536,
+    "all_unknown_with_nonblank_raw_birthplace": 79,
+    "window_unknown": 181,
+    "window_unknown_with_blank_raw_birthplace": 114,
+    "window_unknown_with_nonblank_raw_birthplace": 67
+  },
+  "never_individually_reviewed_remaining": 30,
+  "main_pre_QA_output_pins": {
+    "birthplace_rows.jsonl.gz": "95f80d5446090ee960200d4792275398f3f88689b60bc6f282a96ca49e26bbf8",
+    "birthplaces.csv": "d41cdebeedb1ae614a249b0076a85162ad1fc4ee9af73b74d4aef27d55fbf737",
+    "changes.json": "f90e9bc3dab3d2af1b7f54a0c521c31550fb1827bc0559a0ae93ca79d75b809f",
+    "remaining_unknown_window.csv": "b9d37f74e6ee35e318edfbd5ee106bab5e297afe1160d921e97f6fe3d8f4b7ec",
+    "summary.json": "f77d6006aefe33dec4dee4226261da761fa8d136bc58fb34f2f30617630b66af"
+  },
+  "isolated_replay_runs": [
+    {
+      "run": 1,
+      "clean_exit": true,
+      "five_hashes": {
+        "birthplace_rows.jsonl.gz": "95f80d5446090ee960200d4792275398f3f88689b60bc6f282a96ca49e26bbf8",
+        "birthplaces.csv": "d41cdebeedb1ae614a249b0076a85162ad1fc4ee9af73b74d4aef27d55fbf737",
+        "changes.json": "f90e9bc3dab3d2af1b7f54a0c521c31550fb1827bc0559a0ae93ca79d75b809f",
+        "remaining_unknown_window.csv": "b9d37f74e6ee35e318edfbd5ee106bab5e297afe1160d921e97f6fe3d8f4b7ec",
+        "summary.json": "f77d6006aefe33dec4dee4226261da761fa8d136bc58fb34f2f30617630b66af"
+      },
+      "matched_original_pins": true
+    },
+    {
+      "run": 2,
+      "clean_exit": true,
+      "five_hashes": {
+        "birthplace_rows.jsonl.gz": "95f80d5446090ee960200d4792275398f3f88689b60bc6f282a96ca49e26bbf8",
+        "birthplaces.csv": "d41cdebeedb1ae614a249b0076a85162ad1fc4ee9af73b74d4aef27d55fbf737",
+        "changes.json": "f90e9bc3dab3d2af1b7f54a0c521c31550fb1827bc0559a0ae93ca79d75b809f",
+        "remaining_unknown_window.csv": "b9d37f74e6ee35e318edfbd5ee106bab5e297afe1160d921e97f6fe3d8f4b7ec",
+        "summary.json": "f77d6006aefe33dec4dee4226261da761fa8d136bc58fb34f2f30617630b66af"
+      },
+      "matched_original_pins": true
+    }
+  ],
+  "main_outputs_rerun_or_mutated": false,
+  "quote_words_by_record": {
+    "RS_PAST_NA1951": 9,
+    "RS_PAST_NA1994": 8,
+    "RS_PAST_NA2005": 9,
+    "RS_PAST_NA2016": 8
+  },
+  "Shortt_combined_birth_and_ordinal_quote_words": 13,
+  "documentation_checks": {
+    "files": [
+      "README.md",
+      "CONTINUATION.md"
+    ],
+    "counts_scope_limits_consistent": true,
+    "review_method": "Direct review of Hutchison original1999catalogue versus2024uploadpath, Binnie publicExtract, Franklin earlierworkerprimarybody/rootlaterfirsttimeout/no laterdeathconfirmation, Shortt literalordinal wording with looseusage versus source-date arithmetic and separatelyworded monthonlyWellcome observation, inheritedsixDOB/provisionalglyph and distinctissues."
+  },
+  "limitations": [
+    "Independent local structural/data/replay verification only; no network, new original-source acquisition or rawHTTP-byte inspection.",
+    "Source semantic/genre quality reviewed separately in independent_source_qa.json; original-body locators supplied by collectors/root are not a new original-acquisition claim by this reviewer.",
+    "Franklin primary original was acquired by worker before laterrootfirsttimeout; this reviewer does not assert independentrootbody/bytes/HTTP200/versionchange or confirm1986death from the1969livingappointee note.",
+    "Shortt literal100thyear wording may be loose; separatequalifiedobservation is not reportedinteger99/error/alternateDOB/dateverdict or a seventhDOBconflict. WellcomePunjabApril1887 is monthonly/separatewording, not exactday/placeequivalence.",
+    "No production inputs, facts, code, master outputs or Git operations changed; this audit and scratch harness only."
+  ]
+}
