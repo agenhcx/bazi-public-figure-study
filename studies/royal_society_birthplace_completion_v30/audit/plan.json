@@ -1,0 +1,62 @@
+{
+  "written_utc": "2026-11-06T12:03:04.213172+00:00",
+  "baseline_commit": "8c801f03dd42fb497d437ede34d6caf0d3a41e4a",
+  "baseline_canonical_sha256": "e528b4afce6ded29ff6af749b4d46a8d7b9d0bce7d57d34ac8f1366421bbce73",
+  "phase": "geography_only_original_person_birth_context_followup",
+  "fixed_nonblank_unknown_window_pool": 69,
+  "geography_followup_groups": {
+    "a": [
+      "RS_CURRENT_10965",
+      "RS_PAST_NA2007",
+      "RS_PAST_NA1998",
+      "RS_PAST_NA2892"
+    ],
+    "b": [
+      "RS_PAST_NA187",
+      "RS_PAST_NA173",
+      "RS_PAST_NA4571",
+      "RS_PAST_NA4636"
+    ],
+    "c": [
+      "RS_PAST_NA5003",
+      "RS_PAST_NA4774",
+      "RS_PAST_NA6938",
+      "RS_PAST_NA8835"
+    ]
+  },
+  "first_birthplace_followup_groups": {},
+  "source_strategy": "Twelve fixed records, selected before discovery for country/region enrichment and a known unqualified date-hold check. Inspect priorindividualgeographyholds first; seek genuinelynewinformativeoriginalworks/body observations, notclosedqueryloops or failedroutevariants. ExistingrawUSA/France and citylabels are notautomaticallymapped. No newfirstbirthplaces or bulk gazetteer/coordinate lookups.",
+  "budgets": {
+    "per_group_queries": 8,
+    "per_group_navigation_attempts": 10,
+    "root_source_or_context_verification_opens": 12,
+    "root_adaptive_author_or_observed_original_work_locator_query": 1
+  },
+  "admission": "Actualsourcefullnativecomponents/actuallystatedcompatibleDOBprecision/distinctivecareer/directsubjectborncountryorwholeregion plus explicitreviewedbinding to existingstoredplace. Sourceadditionalpreciseplace mayqualify geography if consistentrefinement, with originalrawplaceunchanged. No inferredcountryfromfamouscity/nationality/family/school/work/death/footer. USA/Francegenericcountrylabels remainunresolved withoutwhollyonehemispherebirthcontext; no overseas-exclusionassumption. No conflictingDOB/place/identity repair or datelessbypass. Existingv24omitted-middle rule onlycompletefirstsurname/exactunchangedDOB/compatiblelifespan/coherentfingerprint/uniquefixedcohortmatch/no observedcontradiction; sourceactualshortname/unconfirmedmiddles explicit, no initials/nicknameexpansion. SourceextraGordon-stylecomponents canremainobservedwithoutnativeedit. No automaticcombinationofexceptions.",
+  "geography_role": "New geography_followup_v30 sourcegrade_role geographic_support_only; originalDOBtiers, BPsourcegrade/rawplace/sourceURL/claims/selectedevidence and allpriorfacts unchanged. Only sixexistinggeo fields+versionedcontext mutable, with previous+absentfieldrollback.",
+  "known_holds": "JardineNA8835 native1944-04-14 vs oldunacquiredoriginalprojections1944-04-12; oldNIASyearonlyOxfordUK mustnot bypass. Seek genuinelynewqualifiedoriginalexactDOB/fullnativebody; ifacquired12daycontradiction appendqualifiedactiveDOBsidecar andholdgeography, no nativecorrection. OldAnnualReport relevantpage timedout routeclosed. MaitlispriororiginalsourceBerlinonly, RambautpriorRASbodyDOBbutnoBP/DIBtaxonomyonly/ADSno readablelines, Youngv13mirrorsunproductive; no reruns ofclosedoldroutes withoutnewbodywork.",
+  "grades": "S2originalattributededitedbiography/memoir/scholarlyhistory/referencework; S3uncreditedcompiledmetadata/unverifiedexpertrole. No host-onlyS1. Earlierqualifiedworkeroriginalbody maystandiflaterrootfirstattemptfails withroles/errors/limits explicit.",
+  "quote_policy": "<=25distinctEnglishquotedwords/originalwork acrosspackage, accountfor priorcurrentfrozenobservations; no fullsourceHTML/PDF/images/projectioncaches.",
+  "retrieval": "Intentbeforequeries/opens; stop403/429/timeouts/size/challenges/no repeatsvariantsbypassrawGET; rawstatus/requesttime/bytehashunknownnull, parsedtextnotrawbytes.",
+  "frozen": [
+    "nativeDOB",
+    "calendar",
+    "authorityidentity",
+    "cohort",
+    "eligibility",
+    "DOBtiers",
+    "rawbirthplace",
+    "BPsourcegrade",
+    "BPsourceURLs/claims/evidence",
+    "QIDs",
+    "country",
+    "coords",
+    "officialstatus",
+    "oldsourcehash",
+    "allpriorversionedfacts",
+    "untargetedcompleteobjects"
+  ],
+  "inherited_issues": "Nineissue/methodsidecars unchanged exceptqualifiedexplicitnewcaseappend preservingoldobjects. SixactiveDOBArgyris/Laver/Wells/Menter/McClelland/Bisat; Tomesparseddayprovisionalseparate; Gotchplace/Maletapprox/Waterfieldintegerage/Midwinterendpoint/Colescross-age/Wagermiddleadmission/Shorttordinal distinct. Do notclear oldholds withnewdateless/year-onlysources.",
+  "blank_queue_boundary": "v29firstpasscloseout is historical;103blankwindowrecords unchanged bythisgeography-onlybatch. Preserveprior_v29_first_pass_queue_closeout with historicalhash, notcurrentmasterlabel.",
+  "no_analysis_or_final_freeze": true
+}

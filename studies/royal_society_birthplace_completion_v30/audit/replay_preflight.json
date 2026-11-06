@@ -1,0 +1,39 @@
+{
+  "written_utc": "2026-11-06T12:08:40.126253+00:00",
+  "status": "pass",
+  "checks": [
+    "exact_v29_canonical_hash",
+    "all4983_baseline_complete_objects_match_v29_output",
+    "geography_pool69_exact_and_blankqueue103_separate",
+    "current12_geography_scope_exact",
+    "everypriorloader_legacygeohelper_v20constants_scope_verbatim",
+    "allfrozeninputbytes_preserved",
+    "v29currentinputbytes_frozen",
+    "v30two_geographyonly_fixture_changes",
+    "untargeted_complete_objects",
+    "allbirthplace_native_priorfields_frozen_except_sixgeo",
+    "exactrollback_allcomplete_objects",
+    "absentgeofield_snapshot_rollback",
+    "reject_wrongstoredplace_DOB_unresolvedhemisphere_missingdateprecision",
+    "geographic_support_role_without_BP_DOB_upgrade",
+    "five_isolatedoutputs",
+    "isolatedsummary_geopool69_reviewed12_newBP0_geoonly2_blank103",
+    "CSV110priorpositions_and_allcellmeanings_unchanged_plus6v30geo",
+    "CSV4983rows_rectangular",
+    "deterministicgzip_fixture",
+    "no_production_outputs_orfacts_reviewed_audits_docs_written"
+  ],
+  "check_count": 20,
+  "elapsed_seconds": 69.176,
+  "scope": "Synthetic isolated geography-only fixtures and actual frozen v29 reconstruction only; source quality or factual geographic admission not inferred; no production current facts/reviewed/audits/docs/outputs/Git changed.",
+  "baseline_canonical_sha256": "e528b4afce6ded29ff6af749b4d46a8d7b9d0bce7d57d34ac8f1366421bbce73",
+  "current_geography_target_pool": 69,
+  "current_geography_followups": 12,
+  "untargeted_blank_window_queue": 103,
+  "csv_columns": 116,
+  "current_inputs_root_must_supply": [
+    "inputs/accepted_geography.json",
+    "inputs/reviewed_record_ids.json",
+    "audit/followup_holds.json"
+  ]
+}

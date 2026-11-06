@@ -1,0 +1,132 @@
+{
+  "schema": "UK_v30_geography_only_independent_final_QA_v1",
+  "reviewer": "/root/v26_final_qa",
+  "written_utc": "2026-11-06T12:22:05.327520+00:00",
+  "status": "PASS",
+  "validation_categories_passed": 38,
+  "checks": [
+    "five pinned production outputs match before QA",
+    "v29 baseline and v30 current canonical exactly pinned",
+    "selfcontained v29 reconstruction all4983 completeobjects exact",
+    "legacy geography constants unchanged by newphase",
+    "legacy v20 geography and prior firstbirthplace helpers unchanged",
+    "fixed recordorder unique keys andUKcohort",
+    "69existingplacegeoqueue12fixedreviewed1fact11holds partition",
+    "geographyscope3groups4 and no firstbirthplaceinputs",
+    "only six declared geographyfields mutable",
+    "exactonechanged Rambaut4982 completeobjects identical",
+    "allnative allBP evidence allpriorfacts frozen exactgeorollback",
+    "allrawbirthplaces andBPgrades remainunchanged everywhere",
+    "all103windowblank andall525blank completeobjects unchanged",
+    "all11currentholds completeobjects unchanged",
+    "Rambaut oldWaterford S1 unchanged newgeoS2only",
+    "Rambaut newODNBcountryprimary separateDIBpersonalcareer context noindependence",
+    "independentoverall and2644windowcounts",
+    "blankcountsunchanged103525 andunknownnonblank6880 recomputed",
+    "summarygeo1 BP0 roles andfrozenbaseline exact",
+    "onegeoonlychange oldBPrawgrade exact preserved",
+    "CSV110oldcolumns samepositions plus6newgeo=116",
+    "all4983CSVrows onlyoldRambauthemispherecell changes",
+    "remaining171unknownCSVexact masterorder",
+    "old6qualifiedDOBobjectsunchanged appendonlyJardine7th",
+    "Jardine actualnew2013fullLisaAnne born12April versusnative14 heldno nativegradechange",
+    "other8issue sidecars byteidentical andTomesnot8thqualifiedDOBcase",
+    "priorv29activeconflicthistoricalcopy exact",
+    "historicalv29firstpasscloseoutbyteidentical keepsv29hash andsame103blankIDs",
+    "all inheritedissue andmiddlecase completeobjects unchanged",
+    "lateacceptedKassaniscontextreuse disclosednotnewbody andnoRambautdependency",
+    "24queries19worker3root22nav4find0shotGET accounting",
+    "rootadjudicationgeo1BP0 and1newDOBconflict explicit",
+    "quotesRambaut9 Jardine4 andunknownrawmetadata null",
+    "no fullsourcecache image formats distributed",
+    "README CONTINUATION phase counts frozenBP historicalhash sourceandconflictlimits directlyreviewed",
+    "sourceQAfinalPASS geofact andactiveDOBsidecarhashbindings match",
+    "twoisolatedcleanreplays all5outputs equal originalpins",
+    "productionfiveoutputs untouched afterQA"
+  ],
+  "baseline_canonical_sha256": "e528b4afce6ded29ff6af749b4d46a8d7b9d0bce7d57d34ac8f1366421bbce73",
+  "final_canonical_sha256": "4313e08b77eee084ed6ba828b1490a57deba8fab502a6fe09a4780db8ac14e8a",
+  "records": 4983,
+  "changed_complete_objects": 1,
+  "unchanged_complete_objects": 4982,
+  "new_birthplaces": 0,
+  "geography_only_resolutions": 1,
+  "overall": {
+    "north": 4191,
+    "unknown": 605,
+    "south": 187
+  },
+  "window_counts": {
+    "north": 2291,
+    "unknown": 171,
+    "south": 182
+  },
+  "blank_diagnostics": {
+    "all_blank_raw_birthplace": 525,
+    "window_blank_raw_birthplace": 103,
+    "all_unknown": 605,
+    "all_unknown_with_blank_raw_birthplace": 525,
+    "all_unknown_with_nonblank_raw_birthplace": 80,
+    "window_unknown": 171,
+    "window_unknown_with_blank_raw_birthplace": 103,
+    "window_unknown_with_nonblank_raw_birthplace": 68
+  },
+  "main_pre_QA_output_pins": {
+    "birthplace_rows.jsonl.gz": "02d8853ea53306e29d06ba750969730a425c3982e2a051448825726afad9f2dc",
+    "birthplaces.csv": "0652981340a79fcf30758f80445fa641a252fba64a85fc426e0d008698171b40",
+    "changes.json": "4eeea0e859a5a3b23d3fab76b852f4a31b3c628efa6c71a96462f0e4c6b93165",
+    "remaining_unknown_window.csv": "113f10bac8cfdf21a602703ab9314b89260482f7fd6fbf30faabddb8294f57d7",
+    "summary.json": "dc88ea0f345004bf51c2127aabcce1e169739fb3216537bbb1bb6720c1308379"
+  },
+  "isolated_replay_runs": [
+    {
+      "run": 1,
+      "clean_exit": true,
+      "five_hashes": {
+        "birthplace_rows.jsonl.gz": "02d8853ea53306e29d06ba750969730a425c3982e2a051448825726afad9f2dc",
+        "birthplaces.csv": "0652981340a79fcf30758f80445fa641a252fba64a85fc426e0d008698171b40",
+        "changes.json": "4eeea0e859a5a3b23d3fab76b852f4a31b3c628efa6c71a96462f0e4c6b93165",
+        "remaining_unknown_window.csv": "113f10bac8cfdf21a602703ab9314b89260482f7fd6fbf30faabddb8294f57d7",
+        "summary.json": "dc88ea0f345004bf51c2127aabcce1e169739fb3216537bbb1bb6720c1308379"
+      },
+      "matched_original_pins": true
+    },
+    {
+      "run": 2,
+      "clean_exit": true,
+      "five_hashes": {
+        "birthplace_rows.jsonl.gz": "02d8853ea53306e29d06ba750969730a425c3982e2a051448825726afad9f2dc",
+        "birthplaces.csv": "0652981340a79fcf30758f80445fa641a252fba64a85fc426e0d008698171b40",
+        "changes.json": "4eeea0e859a5a3b23d3fab76b852f4a31b3c628efa6c71a96462f0e4c6b93165",
+        "remaining_unknown_window.csv": "113f10bac8cfdf21a602703ab9314b89260482f7fd6fbf30faabddb8294f57d7",
+        "summary.json": "dc88ea0f345004bf51c2127aabcce1e169739fb3216537bbb1bb6720c1308379"
+      },
+      "matched_original_pins": true
+    }
+  ],
+  "main_outputs_rerun_or_mutated": false,
+  "new_active_DOB_conflicts": 1,
+  "active_DOB_conflict_count": 7,
+  "old6_active_DOB_conflict_objects_unchanged": true,
+  "historical_v29_closeout_hash_preserved": true,
+  "quote_words": {
+    "Rambaut_ODNB": 9,
+    "Jardine_Independent": 4
+  },
+  "documentation_checks": {
+    "files": [
+      "README.md",
+      "CONTINUATION.md"
+    ],
+    "counts_scope_limits_consistent": true,
+    "review_method": "Direct geography-only phase review: originalWaterford/S1/BPclaims/source/allpriorfacts frozen; newODNBgeographic S2 countrycontext and distinctDIBprofessionalidentitycontext without independence; familyordinalcontrast retainedunadjudicated; genuine newJardine2013exactDOBconflict versus native14Apr, S3conflict-observation only/no dateverdict; lateacceptedKassaniscontext reuse disclosed without newbodycoverage/factdependence; v29firstpasscloseout historicalhash preserved."
+  },
+  "limitations": [
+    "Independent local data/structural/replay verification only; no network, original-source acquisition or rawHTTP-byte inspection by this reviewer.",
+    "Source semantic/genre/source-newness reviewed separately in independent_source_qa.json; source locators are not a new acquisition claim by this reviewer.",
+    "Rambaut newS2 grade supports geography only; originalrawWaterford/S1/BPURLs/claims/DOBgrades remain unchanged. DIB actualprofessionalcontext is distinguished from ODNBastronomerlabel/familycontext; no independence or familyordinal adjudication.",
+    "Jardine original12Apr versusnative14Apr remains unresolved. No correct-birthday/error/nativegrade/geography repair or year-only bypass; Tomes provisional glyph case stays separate from seven qualified conflicts.",
+    "v29firstpasscloseout remains historical, including its v29canonical hash; 103blankwindowobjects untouched.",
+    "No production inputs, facts, code, master outputs or Git operations changed; this audit and scratch harness only."
+  ]
+}

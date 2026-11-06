@@ -1,0 +1,454 @@
+{
+  "schema": "UK_v30_independent_geography_source_documentary_QA_v1",
+  "reviewer": "/root/v26_source_qa",
+  "written_utc": "2026-11-06T12:18:31.570419+00:00",
+  "passed": true,
+  "checks_passed": 91,
+  "checks": [
+    {
+      "check": "actual_v29_canonical_baseline_pin",
+      "passed": true
+    },
+    {
+      "check": "one_unique_Rambaut_geographyfact",
+      "passed": true
+    },
+    {
+      "check": "eleven_unique_holds",
+      "passed": true
+    },
+    {
+      "check": "twelve_fixed_geography_followups",
+      "passed": true
+    },
+    {
+      "check": "three_groups_four_exactscope",
+      "passed": true
+    },
+    {
+      "check": "69_unique_existingplace_unknown_targets",
+      "passed": true
+    },
+    {
+      "check": "targetpool_matches_actualv29rows",
+      "passed": true
+    },
+    {
+      "check": "accepted_held_disjoint_complete_scope",
+      "passed": true
+    },
+    {
+      "check": "all_scope_nonblank_unknown_nativewindow",
+      "passed": true
+    },
+    {
+      "check": "zero_firstbirthplace_followups",
+      "passed": true
+    },
+    {
+      "check": "exact_declared_six_geography_fields",
+      "passed": true
+    },
+    {
+      "check": "Rambaut_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "Rambaut_fixed_nativeauthority_DOB_unique",
+      "passed": true
+    },
+    {
+      "check": "Rambaut_frozenraw_Waterford_exact",
+      "passed": true
+    },
+    {
+      "check": "Rambaut_frozenBPgrade_S1_not_newgeograde",
+      "passed": true
+    },
+    {
+      "check": "Rambaut_newgrade_geographic_support_only",
+      "passed": true
+    },
+    {
+      "check": "Rambaut_actual_fullsource_name",
+      "passed": true
+    },
+    {
+      "check": "Rambaut_actualexact_sourceDOB",
+      "passed": true
+    },
+    {
+      "check": "Rambaut_direct_birthcountry_refinement",
+      "passed": true
+    },
+    {
+      "check": "Rambaut_sourcequote_actualnine_under25",
+      "passed": true
+    },
+    {
+      "check": "Rambaut_originalauthor_and_publication_version",
+      "passed": true
+    },
+    {
+      "check": "Rambaut_root_primary_original_locator",
+      "passed": true
+    },
+    {
+      "check": "Rambaut_no_BPevidence_or_personcountry_coord_replacement_fields",
+      "passed": true
+    },
+    {
+      "check": "Rambaut_unknown_raw_metadata_null",
+      "passed": true
+    },
+    {
+      "check": "Rambaut_no_stale_proposal_pending_fields",
+      "passed": true
+    },
+    {
+      "check": "DIB_one_distinct_actual_person_work_context",
+      "passed": true
+    },
+    {
+      "check": "DIB_actualauthor_monthprecision_and_matchingDOB",
+      "passed": true
+    },
+    {
+      "check": "DIB_root_actualcontext_not_independent_birthproof",
+      "passed": true
+    },
+    {
+      "check": "Rambaut_familyordinalcontrast_unadjudicated",
+      "passed": true
+    },
+    {
+      "check": "RS_CURRENT_10965_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_CURRENT_10965_held_raw_birthplace_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA173_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA173_held_raw_birthplace_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA187_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA187_held_raw_birthplace_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1998_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1998_held_raw_birthplace_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2007_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2007_held_raw_birthplace_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4571_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4571_held_raw_birthplace_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4636_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4636_held_raw_birthplace_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4774_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4774_held_raw_birthplace_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5003_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5003_held_raw_birthplace_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6938_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6938_held_raw_birthplace_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA8835_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA8835_held_raw_birthplace_exact",
+      "passed": true
+    },
+    {
+      "check": "Jerry_empty_authority_actual_native_name_preserved",
+      "passed": true
+    },
+    {
+      "check": "generic_USA_France_not_automapped",
+      "passed": true
+    },
+    {
+      "check": "Pagel_birthonlyBerlin_plus_genericGermanytaxonomy_not_combined",
+      "passed": true
+    },
+    {
+      "check": "Ross_middleomission_yearonly_and_nationality_no_bypass",
+      "passed": true
+    },
+    {
+      "check": "Jardine_geographyheld_no_NIAS_yearonlybypass",
+      "passed": true
+    },
+    {
+      "check": "six_old_DOBconflict_objects_exact_prefix",
+      "passed": true
+    },
+    {
+      "check": "seven_active_DOBconflicts_only_Jardine_added",
+      "passed": true
+    },
+    {
+      "check": "Jardine_native14_sourceactual12_same_month_year",
+      "passed": true
+    },
+    {
+      "check": "Jardine_actual_fullnative_name_and_new2013body",
+      "passed": true
+    },
+    {
+      "check": "Jardine_safe_actual4word_vitalquote",
+      "passed": true
+    },
+    {
+      "check": "Jardine_quality_observation_not_native_or_geographicgrade",
+      "passed": true
+    },
+    {
+      "check": "Jardine_no_DOB_BPgrade_correctdate_or_temporalrepair",
+      "passed": true
+    },
+    {
+      "check": "Jardine_not_accepted_geography",
+      "passed": true
+    },
+    {
+      "check": "inherited_provisional_parsed_date_discrepancies.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "inherited_birthplace_source_conflicts.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "inherited_source_date_precision_holds.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "inherited_source_derived_age_inconsistencies.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "inherited_lifespan_endpoint_discrepancies.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "inherited_cross_source_reported_age_contrasts.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "inherited_omitted_middle_name_admission.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "inherited_source_ordinal_age_wording_observations.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "prior_v29_activeDOB_snapshot_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "prior_v29_firstpasscloseout_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "v29_103blank_window_not_in_geo_followup_scope",
+      "passed": true
+    },
+    {
+      "check": "Tomes_provisional_still_separate_not_eighth",
+      "passed": true
+    },
+    {
+      "check": "three_actual8queryledgers",
+      "passed": true
+    },
+    {
+      "check": "24workerqueries_withinbudgets",
+      "passed": true
+    },
+    {
+      "check": "19worker_navigation_withinbudgets",
+      "passed": true
+    },
+    {
+      "check": "4workerfinds_zeroGETs",
+      "passed": true
+    },
+    {
+      "check": "A_late_prioracceptedcontext_deviation_disclosed",
+      "passed": true
+    },
+    {
+      "check": "A_reusedRG_not_newbody_or_fact_support",
+      "passed": true
+    },
+    {
+      "check": "workerreports_preserved_exact",
+      "passed": true
+    },
+    {
+      "check": "root3newfirstopens_zeroothercalls",
+      "passed": true
+    },
+    {
+      "check": "aggregate_request_counts_exact",
+      "passed": true
+    },
+    {
+      "check": "parent_final_decisions_exact",
+      "passed": true
+    },
+    {
+      "check": "newquotedworks_not_inherited_current_BPfacts",
+      "passed": true
+    },
+    {
+      "check": "newquotedworks_no_old_input_audit_hits",
+      "passed": true
+    },
+    {
+      "check": "quote_work_budgets_include_old_frozen_sources",
+      "passed": true
+    },
+    {
+      "check": "no_sourcecaches_images_in_study",
+      "passed": true
+    },
+    {
+      "check": "preliminary_sourceQA_before_finalfacts",
+      "passed": true
+    }
+  ],
+  "accepted_fact_path": "inputs/accepted_geography.json",
+  "accepted_fact_sha256_at_review": "4390f50fa688235d6f24419ea5601a0f112051ea8a386f0c6fabd5604b3ebb32",
+  "accepted_geography_sha256_at_review": "4390f50fa688235d6f24419ea5601a0f112051ea8a386f0c6fabd5604b3ebb32",
+  "active_DOB_conflicts_sha256_at_review": "93fc69c77bc85e2fe032b42f88f66d5dd59332d4d4bd0bca0ff36b11d3a00ad4",
+  "blocking_issues": [],
+  "accepted_geographic_binding": {
+    "record_id": "RS_PAST_NA2892",
+    "native_DOB": "1859-09-21",
+    "native_authority": "Rambaut; Arthur Alcock (1859 - 1923)",
+    "frozen_raw_birthplace": "Waterford",
+    "frozen_BPsource_grade": "S1",
+    "new_source_birthplace_context": "Waterford, Ireland",
+    "new_geographic_support_grade": "S2",
+    "new_grade_role": "geographic_support_only",
+    "new_hemisphere": "north",
+    "fixed_authority_DOB_key_count": 1
+  },
+  "new_qualified_DOB_conflict": {
+    "record_id": "RS_PAST_NA8835",
+    "native_DOB": "1944-04-14",
+    "new_actual_source_DOB": "1944-04-12",
+    "actual_full_source_name": "Lisa Anne Jardine CBE",
+    "source_observation_quality": "S3_original_journalist_biographical_observation_only",
+    "geography_adopted": false,
+    "native_or_BP_or_DOBgrade_repair": false,
+    "old_six_objects_exact": true
+  },
+  "eight_other_inherited_issue_sidecars_byte_identical": [
+    "provisional_parsed_date_discrepancies.json",
+    "birthplace_source_conflicts.json",
+    "source_date_precision_holds.json",
+    "source_derived_age_inconsistencies.json",
+    "lifespan_endpoint_discrepancies.json",
+    "cross_source_reported_age_contrasts.json",
+    "omitted_middle_name_admission.json",
+    "source_ordinal_age_wording_observations.json"
+  ],
+  "declared_six_GEO_FIELDS": [
+    "geo_resolution_status",
+    "geography_decision",
+    "hemisphere",
+    "northern_birthplace_candidate",
+    "reason",
+    "southern_birthplace_separate"
+  ],
+  "prior_v29_firstpass_historical_copy_byte_identical": true,
+  "prior_blank_window_count": 103,
+  "new_birthplaces": 0,
+  "protocol_disclosures": {
+    "A": "Priorindividualholds preinspected, but Kassanisv20acceptedRGcover-context inspection lateaftercurrentnonproductivecover/download attempt. Reusedcover notnewqualifiedbodycoverage, firstobserveddownload404stopped; no geographyadoption fromit. Actualtiming/deviationretained, no retrospectivepreinspectionclaim.",
+    "B": "NewactualPagelBerlinbornbody lacksbirthcountry; genericNPGGermanytaxonomy notcombined. OldCUP/otherclosedroutesnotreopened; allerrors/metadata-onlyroles retained.",
+    "C": "NewfullJardine2013actualDOBday12 qualifiesseventhflag; oldAnnualReport/Natureprojectionsnotpromoted, NIASyearonlynotusedasbypass. Othernewchallenge/failedroutesstopped, no borncountryfromnationality/work/family.",
+    "root": "ThreeobservedneworiginalURLsprelogged: RambautODNBgeographicprimary/DIBprofessionalidentitycontext/JardineactualDOBconflict. No informationalindependence/rawbytes/HTTP200 or unobservedprimarycareerclaim."
+  },
+  "quote_audit": {
+    "new_original_works_old_package_identifier_hits": {
+      "RambautODNB": [],
+      "RambautDIB": [],
+      "JardineIndependent": [],
+      "PagelObservatory": []
+    },
+    "new_quoted_words_by_work": {
+      "RambautODNB": 9,
+      "RambautDIB": 0,
+      "JardineIndependent": 4,
+      "PagelObservatory_held": 4
+    },
+    "same_inherited_birthplace_work_new_quote_additions": 0,
+    "note": "Checkednewworkidentifiers againstallpriorstudyJSON andactualcanonicalmastertext; oldBell/Bunn/CUP/RSpicture/NIAS/AnnualReport quotes unchanged, no sameworknewquotedwordsadded."
+  },
+  "no_new_admission_method_exception": true,
+  "review_scope": "Independentdocumentarysource/schema/scope/fact/quote/protocolreview; workers/root acquiredactualoriginals. Reviewer didnotnetwork-fetchsources/readrawbytes/inspectpixels/executeproductionmain. Runtimefullobjectimmutability/rollback/outputreplay tobecheckedbyindependentfinalQA afterproduction.",
+  "limitations": [
+    "Existingrawbirthplaces/sourcegrades/claims/nativeidentity/DOBtiers arefrozen; S2newgeographicsupport notS1BPsourcedowngrade orDOBtierchange.",
+    "RambautODNBdirectWaterfordIreland isprimarygeographicproof; DIBactualcareercontext notmisattributedtothepublicExtract orcountedindependentcorroboration. Ancillaryfamilyordinalcontrastnotadjudicated.",
+    "JardineactualnewfullnativeCVday12contrastsfrozen14; no correctbirthday/native-parser-errorverdict. Priorunacquiredprojectionsremainunqualified and NIASyearonlydoesnotclearflag.",
+    "GenericUSA/France/people-placeGermanytaxonomy ornationality/cityfamiliarity donotauto-resolvehemisphere.",
+    "v29firstpasscloseout is historicalbyte-identicalcopy;103blankwindowrecords notpartofgeography-onlyscope, notnewcohortfreeze.",
+    "Sourcequotesnewworks <=25includingoldworkaudit; no fullsourcecache/rawHTTPstatus/requesttime/hashclaims."
+  ],
+  "no_network_source_code_mainoutputs_or_Git_mutation_by_reviewer": true
+}
