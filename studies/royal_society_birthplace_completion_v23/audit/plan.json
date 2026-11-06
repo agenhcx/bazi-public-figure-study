@@ -1,0 +1,53 @@
+{
+  "written_utc": "2026-11-05T23:55:48.077973+00:00",
+  "baseline_commit": "b3c22b66be309470b5e17ad1d0f681bf71ed581f",
+  "baseline_canonical_sha256": "728502a5f0a71570a262a894dc800a9073ff19bbba68e2c7a7dd7027a5f8f2b9",
+  "fixed_blank_window_pool": 131,
+  "individual_followup_groups": {
+    "a": [
+      "RS_PAST_NA4139",
+      "RS_PAST_NA4064",
+      "RS_PAST_NA4074",
+      "RS_PAST_NA4591"
+    ],
+    "b": [
+      "RS_PAST_NA3474",
+      "RS_PAST_NA4233",
+      "RS_PAST_NA4301",
+      "RS_PAST_NA4642"
+    ],
+    "c": [
+      "RS_PAST_NA4616",
+      "RS_PAST_NA4630",
+      "RS_PAST_NA7048",
+      "RS_PAST_NA5422"
+    ]
+  },
+  "geography_pilot_ids": [],
+  "source_strategy": "Twelve not-yet-individually-reviewed targets across three four-record groups; new original university/society/authorededitedbiography sources, including distinct informative original-work carriers when observed. No closed bulk index reruns.",
+  "budgets": {
+    "per_group_queries": 8,
+    "per_group_navigation_attempts": 10,
+    "root_source_or_author_verification_opens": 10,
+    "root_adaptive_author_query": 1
+  },
+  "admission": "Full native name components and actually stated compatible DOBprecision plus distinctivecareeranchors. Explicit subject birth relation only. Preserve actual source endpoint precision, do not fabricate missing dates. Birthdate/identityconflicts hold/no datelessbypass. Native identity/DOB never repaired. Existing death-onlyexception only with exactDOB/identity/eligibilitygates and separate unresolvedendpoint. S2authorededitedoriginalorverifiedexpert; journalist/uncreditedmetadata conservativeS3; nohost-onlyS1. Earlier worker original body may support adoption if later root access fails, with roles/ref/limits explicit and no independentbody/byte/HTTP200/versionchangeclaim.",
+  "geography": "Onlybirth-linked country/whole-region supports hemisphere; city/address-only maystayunknown. No nationality/family/education/work/death/footer/map inference.",
+  "frozen": [
+    "DOB",
+    "calendar",
+    "identity",
+    "eligibility",
+    "QIDs",
+    "DOBtiers",
+    "old_evidence",
+    "country",
+    "coords",
+    "all_prior_facts",
+    "untargeted_complete_objects"
+  ],
+  "active_DOB_conflicts": "Argyris/Laver/Wells unchanged. Waterfieldage82/computed81 and Midwinterdeathendpoint discrepancy remain separate historicalissues.",
+  "quote_policy": "<=25distinctEnglishwords/originalwork; no fullsource/projectioncache.",
+  "retrieval": "Priorintentbeforequeries/opens. Stopfailed403/429/timeouts; no retry/variants/bypass/rawGET. Unknownrawstatus/time/hashnull, toolerrorsseparate.",
+  "no_analysis_or_final_freeze": true
+}

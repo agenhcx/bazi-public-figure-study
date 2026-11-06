@@ -1,0 +1,111 @@
+{
+  "schema": "UK_v23_independent_local_final_QA_v1",
+  "reviewer": "/root/v23_final_qa",
+  "written_utc": "2026-11-06T00:07:31.534055+00:00",
+  "status": "PASS",
+  "validation_categories_passed": 26,
+  "checks": [
+    "five pinned production outputs match before QA",
+    "actual v22 and v23 canonical hashes",
+    "self-contained v22 reconstruction exact all4983 objects",
+    "fixed cohort order and unique keys",
+    "scope131queue/12reviewed/1fact+11holds disjoint partition",
+    "exact1changed Coles and4982completeidentical objects",
+    "every changed object frozen fields/prior facts and full previous+absent rollback",
+    "new grade/hemisphere support separate from native DOB grades",
+    "overall and2644window independent counts",
+    "blank/nonblank diagnostics independently match",
+    "summary deltas and no geography-only collection/adoption",
+    "CSV68old meanings/positions plus6v23 columns",
+    "CSV rows/current updates and prior contexts exact",
+    "remaining unknown CSV186 matches masterorder",
+    "old3 activeDOBconflictobjects preserved and Menter fourthappend",
+    "Menter exact acquired2Aug vs native22Aug retained without adoption",
+    "all conflict/age/death/Adam completeobjects unchanged",
+    "inherited internalage/deathsidecars byteidentical",
+    "actual Colesquote5/Menterheldquote6 and <=25",
+    "crosssourceage separate precise primarydates vs secondaryyear/relativeMonday",
+    "primary original plus secondaryprecision/authorgrade roles",
+    "request accounting and screenshot limit exact",
+    "no fulloriginal/cache/image formats distributed",
+    "docs scope/counts/precision/sourceaccess limits present",
+    "two isolated cleanreplays all5outputs equal originalpins",
+    "production5outputs untouched after QA"
+  ],
+  "baseline_canonical_sha256": "728502a5f0a71570a262a894dc800a9073ff19bbba68e2c7a7dd7027a5f8f2b9",
+  "final_canonical_sha256": "9547b9e958d6526acf578a20f3b42e63e5a95de3aeca91a3c244d9620ee7ab01",
+  "records": 4983,
+  "changed_complete_objects": 1,
+  "unchanged_complete_objects": 4982,
+  "overall": {
+    "north": 4176,
+    "unknown": 620,
+    "south": 187
+  },
+  "window_counts": {
+    "north": 2276,
+    "unknown": 186,
+    "south": 182
+  },
+  "blank_diagnostics": {
+    "all_blank_raw_birthplace": 552,
+    "window_blank_raw_birthplace": 130,
+    "all_unknown": 620,
+    "all_unknown_with_blank_raw_birthplace": 552,
+    "all_unknown_with_nonblank_raw_birthplace": 68,
+    "window_unknown": 186,
+    "window_unknown_with_blank_raw_birthplace": 130,
+    "window_unknown_with_nonblank_raw_birthplace": 56
+  },
+  "main_pre_QA_output_pins": {
+    "birthplace_rows.jsonl.gz": "95e5e0d2356a494d56250faed57495cf56c716b2bf8e078615688e933c6d529a",
+    "birthplaces.csv": "4a71b327b35fe8af812cbdf094f427e7cf5cbe9607559058c99ec33d4e6178ca",
+    "changes.json": "658936a929f530c45c7822c932bc74f36d723860961d556da50880dce7df6c2f",
+    "remaining_unknown_window.csv": "02fb283ba716fd00344ef40d4325fd8ebc89f4c6521bde543385466d34dc67db",
+    "summary.json": "6180ad23717ce348c4b2d358952eaf4e4a00f7a49e22720dc88385d250b8472d"
+  },
+  "isolated_replay_runs": [
+    {
+      "run": 1,
+      "clean_exit": true,
+      "five_hashes": {
+        "birthplace_rows.jsonl.gz": "95e5e0d2356a494d56250faed57495cf56c716b2bf8e078615688e933c6d529a",
+        "birthplaces.csv": "4a71b327b35fe8af812cbdf094f427e7cf5cbe9607559058c99ec33d4e6178ca",
+        "changes.json": "658936a929f530c45c7822c932bc74f36d723860961d556da50880dce7df6c2f",
+        "remaining_unknown_window.csv": "02fb283ba716fd00344ef40d4325fd8ebc89f4c6521bde543385466d34dc67db",
+        "summary.json": "6180ad23717ce348c4b2d358952eaf4e4a00f7a49e22720dc88385d250b8472d"
+      },
+      "matched_original_pins": true
+    },
+    {
+      "run": 2,
+      "clean_exit": true,
+      "five_hashes": {
+        "birthplace_rows.jsonl.gz": "95e5e0d2356a494d56250faed57495cf56c716b2bf8e078615688e933c6d529a",
+        "birthplaces.csv": "4a71b327b35fe8af812cbdf094f427e7cf5cbe9607559058c99ec33d4e6178ca",
+        "changes.json": "658936a929f530c45c7822c932bc74f36d723860961d556da50880dce7df6c2f",
+        "remaining_unknown_window.csv": "02fb283ba716fd00344ef40d4325fd8ebc89f4c6521bde543385466d34dc67db",
+        "summary.json": "6180ad23717ce348c4b2d358952eaf4e4a00f7a49e22720dc88385d250b8472d"
+      },
+      "matched_original_pins": true
+    }
+  ],
+  "main_outputs_rerun_or_mutated": false,
+  "quote_words_by_record": {
+    "RS_PAST_NA3474": 5
+  },
+  "held_Menter_quote_words": 6,
+  "documentation_checks": {
+    "files": [
+      "README.md",
+      "CONTINUATION.md"
+    ],
+    "counts_scope_limits_consistent": true,
+    "precision_and_source_access_limits_checked": true
+  },
+  "limitations": [
+    "Independent local structural/data/replay verification only; no network, new original-source acquisition or raw HTTP-byte inspection.",
+    "Source quality/semantic checks are reviewed separately in independent_source_qa.json. Coles cross-source reported age contrast keeps the secondary source year-only and relative-death precision; Menter is a blocking literal birthday-day conflict.",
+    "No production inputs, code, master outputs or Git operations changed; this audit and scratch harness script only."
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "written_utc": "2026-11-06T00:02:47.445102+00:00",
+  "intent_file": "root_intent.json",
+  "counts": {
+    "discovery_queries": 0,
+    "source_open_operations": 3,
+    "parsed_finds": 0,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "observations": [
+    {
+      "record_id": "RS_PAST_NA3474",
+      "source_ref": "turn1299305view0",
+      "status": "primaryoriginalfullidentity_exactDOB_explicitbornCardiff",
+      "adopted": true
+    },
+    {
+      "record_id": "RS_PAST_NA4591",
+      "source_ref": "turn1299305view1",
+      "status": "originalborn2Aug_vs_native22Aug_blockingDOBconflict",
+      "adopted": false
+    },
+    {
+      "record_id": "RS_PAST_NA3474",
+      "source_ref": "turn4113062view0",
+      "status": "secondaryyear_onlyDOB_relativeMondaydeath_reported71",
+      "role": "supportingbirthplace_city/year_and_agecontrast",
+      "independence_claimed": false
+    }
+  ],
+  "quote_words_by_original_work": {
+    "Coles_primary": 5,
+    "Menter_held": 6,
+    "Coles_Felix": 0
+  },
+  "raw_HTTP_status": null,
+  "raw_bytes_sha256": null,
+  "exact_request_utc": null,
+  "limits": "Parsedoriginalbodyverification only; no rawsourcebytes/status/time/hash. Only relevantbodylines printed; no originalcache/images/fulltext distributed. No failedretry/variants/bypass."
+}
