@@ -1,0 +1,52 @@
+{
+  "written_utc": "2026-11-06T10:41:03.141758+00:00",
+  "scope": "v26_scope_c.json",
+  "purpose": "Discover first original subject-linked birthplace assertions; no native changes",
+  "queries_planned": [
+    "\"Ettrick William Creak\" born",
+    "\"Herbert Leader Hawkins\" born",
+    "\"John William Evans\" geologist born",
+    "\"Frederick William Carter\" born"
+  ],
+  "second_query_budget_reserved": "One adaptive original-source/biographical memo query per subject if needed, total <=8",
+  "navigation_budget": 10,
+  "retrieval_rules": "Intent precedes calls. No failure retries/variants/rawGET/bypass. Minimal facts/locators/<=25 quote words per originalwork; fullsource not retained. Exact rawHTTPtime/status/hash unavailable null.",
+  "adaptive_intents": [
+    {
+      "written_utc": "2026-11-06T10:41:13.303059+00:00",
+      "queries": [
+        "\"Ettrick William Creak\" \"born\" \"1835\" biography",
+        "\"Herbert Leader Hawkins\" \"born\" \"1887\" obituary",
+        "\"John William Evans\" \"born\" \"1857\" biography memoir",
+        "\"Frederick William Carter\" \"1870\" obituary born"
+      ],
+      "opens": [
+        "turn1290194search38 ReadingHawkins institutional biography",
+        "turn1290194search3 originalNatureCreak obituary"
+      ]
+    },
+    {
+      "written_utc": "2026-11-06T10:41:24.467918+00:00",
+      "opens": [
+        "turn6835531search2 BHLoriginalHawkinsobituarymetadataandobservedarticlelink",
+        "turn1290194search23 Evansfamilyhistoricalentry originalcompilednotcivilverified",
+        "turn1290194search4 ScienceMuseumCreakoriginalpersonentry"
+      ]
+    },
+    {
+      "written_utc": "2026-11-06T10:41:39.719980+00:00",
+      "navigations": [
+        "turn6835531view0 link12 observedReadingHawkinspapers",
+        "turn6835531search5 CarteroriginalRoyalSocietybody",
+        "turn1290194search8 EvansoriginalCambridgeobituarybody"
+      ]
+    },
+    {
+      "written_utc": "2026-11-06T10:42:03.413744+00:00",
+      "navigations": [
+        "turn6835531view0 observedlink11 JSTORoriginalAllenHawkinsmemoir first attempt",
+        "turn1290194search0 RoyalSocietyCreak actualDOB/body; no Norfolkfamily-to-birth inference"
+      ]
+    }
+  ]
+}

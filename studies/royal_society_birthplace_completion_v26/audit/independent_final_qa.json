@@ -1,0 +1,121 @@
+{
+  "schema": "UK_v26_independent_local_final_QA_v1",
+  "reviewer": "/root/v26_final_qa",
+  "written_utc": "2026-11-06T10:51:47.654031+00:00",
+  "status": "PASS",
+  "validation_categories_passed": 30,
+  "checks": [
+    "five pinned production outputs match before QA",
+    "v25 baseline and v26 current canonical exactly pinned",
+    "self-contained v25 reconstruction equals all4983 baseline complete objects",
+    "fixed cohort order and unique keys",
+    "scope123queue12reviewed5facts7holds disjoint partition",
+    "exact5changed and4978 complete identical objects",
+    "all frozen fields prior facts and exact previous plus absent rollback",
+    "separate newbirthplace grade roles S2three S3two and North2 unknown3",
+    "independent overall and2644window counts",
+    "blank nonblank diagnostics independently recomputed",
+    "remaining118blank queue includes42 neverindividuallyreviewed using allholdsunion",
+    "summary deltas and no geographyonly adoption",
+    "CSV86old positions and meaning plus6v26 fields",
+    "CSV4983 rows current fields and historical columns exact",
+    "remaining183unknown CSV matches master order",
+    "all8 inherited issue and method sidecars byteidentical",
+    "six activeDOB and separate oneprovisional glyph case unchanged",
+    "all issue records Wager Adam currentholds completeobjects unchanged",
+    "Bunn yearonly source not promoted to exactnativeJanuary15",
+    "other4 facts exactunchanged sourceDOB stated and allfullnative components observed",
+    "existingcounty North rule separated from3cityunknown facts",
+    "no current middleexception or pending proposal fields in acceptedfacts",
+    "actualquote counts12 8 9 5 9 eachunder25",
+    "request accounting24queries28worker6root34total5find0screenshot0GET",
+    "parent5facts7holds no newDOBconflict and originalroles",
+    "no fullsource cache or image formats distributed",
+    "README andCONTINUATION actual counts scope and source limits directlyreviewed",
+    "independent sourceQA finalized and matches acceptedfact hash",
+    "two isolated cleanreplays all5outputs equal originalpins",
+    "production5outputs untouched after QA"
+  ],
+  "baseline_canonical_sha256": "b36383e9ac72642059c2f9b5ff6c57187c8b04477bb5830ebf85b61a12cda730",
+  "final_canonical_sha256": "41aebb4d4c05b6c45889315892b5edcfa1f10c2a7d16fe75e6608e0e3dc07378",
+  "records": 4983,
+  "changed_complete_objects": 5,
+  "unchanged_complete_objects": 4978,
+  "overall": {
+    "north": 4179,
+    "unknown": 617,
+    "south": 187
+  },
+  "window_counts": {
+    "north": 2279,
+    "unknown": 183,
+    "south": 182
+  },
+  "blank_diagnostics": {
+    "all_blank_raw_birthplace": 540,
+    "window_blank_raw_birthplace": 118,
+    "all_unknown": 617,
+    "all_unknown_with_blank_raw_birthplace": 540,
+    "all_unknown_with_nonblank_raw_birthplace": 77,
+    "window_unknown": 183,
+    "window_unknown_with_blank_raw_birthplace": 118,
+    "window_unknown_with_nonblank_raw_birthplace": 65
+  },
+  "never_individually_reviewed_remaining": 42,
+  "main_pre_QA_output_pins": {
+    "birthplace_rows.jsonl.gz": "ede13554863f9c2faba679fa42ece61df814c03c981f4495dc6177de4e0aa9ff",
+    "birthplaces.csv": "6a160971fd62cb1fa93c8cae266a2a2f16c97fdff9eec438fae528a08c5ed83d",
+    "changes.json": "1c912c839116ed34f92ec87f3f34c596b35ae3f9e5f2195eadd2b56fc8d078ca",
+    "remaining_unknown_window.csv": "3af662eaeec294709887bc85b155c02be12ef8e4552a7395a3bcb29f7801918d",
+    "summary.json": "1e5234ce663f1114d69861efd2a0b2c74b72bcae25b78124726e57af86772c9d"
+  },
+  "isolated_replay_runs": [
+    {
+      "run": 1,
+      "clean_exit": true,
+      "five_hashes": {
+        "birthplace_rows.jsonl.gz": "ede13554863f9c2faba679fa42ece61df814c03c981f4495dc6177de4e0aa9ff",
+        "birthplaces.csv": "6a160971fd62cb1fa93c8cae266a2a2f16c97fdff9eec438fae528a08c5ed83d",
+        "changes.json": "1c912c839116ed34f92ec87f3f34c596b35ae3f9e5f2195eadd2b56fc8d078ca",
+        "remaining_unknown_window.csv": "3af662eaeec294709887bc85b155c02be12ef8e4552a7395a3bcb29f7801918d",
+        "summary.json": "1e5234ce663f1114d69861efd2a0b2c74b72bcae25b78124726e57af86772c9d"
+      },
+      "matched_original_pins": true
+    },
+    {
+      "run": 2,
+      "clean_exit": true,
+      "five_hashes": {
+        "birthplace_rows.jsonl.gz": "ede13554863f9c2faba679fa42ece61df814c03c981f4495dc6177de4e0aa9ff",
+        "birthplaces.csv": "6a160971fd62cb1fa93c8cae266a2a2f16c97fdff9eec438fae528a08c5ed83d",
+        "changes.json": "1c912c839116ed34f92ec87f3f34c596b35ae3f9e5f2195eadd2b56fc8d078ca",
+        "remaining_unknown_window.csv": "3af662eaeec294709887bc85b155c02be12ef8e4552a7395a3bcb29f7801918d",
+        "summary.json": "1e5234ce663f1114d69861efd2a0b2c74b72bcae25b78124726e57af86772c9d"
+      },
+      "matched_original_pins": true
+    }
+  ],
+  "main_outputs_rerun_or_mutated": false,
+  "quote_words_by_record": {
+    "RS_PAST_NA1134": 12,
+    "RS_PAST_NA173": 8,
+    "RS_PAST_NA1855": 9,
+    "RS_PAST_NA187": 5,
+    "RS_PAST_NA780": 9
+  },
+  "documentation_checks": {
+    "files": [
+      "README.md",
+      "CONTINUATION.md"
+    ],
+    "counts_scope_limits_consistent": true,
+    "review_method": "Direct review of actual Robison publicextract, Bunn yearonly and unexpanded signature, Bell verified-author-context role, Davidson warning/unacquiredmemoir/projection distinction, Evans compiledsource/city-only geography, inherited sixDOB/provisionalglyph and other distinctissue scope."
+  },
+  "limitations": [
+    "Independent local structural/data/replay verification only; no network, new original-source acquisition or rawHTTP-byte inspection.",
+    "Source semantic/genre quality reviewed separately in independent_source_qa.json; original-body locators supplied by collectors/root are not a new original-acquisition claim by this reviewer.",
+    "Davidson source warning/unopened projection are retained without actualcontrarybody or correct-place/equivalence verdict.",
+    "Bunn supports sourceyear1905 only; exact nativeJanuary15 remains frozen and unconfirmed by this source.",
+    "No production inputs, facts, code, master outputs or Git operations changed; this audit and scratch harness only."
+  ]
+}
