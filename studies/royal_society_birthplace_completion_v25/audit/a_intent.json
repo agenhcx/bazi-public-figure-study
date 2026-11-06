@@ -1,0 +1,152 @@
+{
+  "schema": "v25_a_prior_request_intent_v1",
+  "written_utc": "2026-11-06T00:43:29.869115+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA1176",
+    "RS_PAST_NA1177",
+    "RS_PAST_NA1090",
+    "RS_PAST_NA1476"
+  ],
+  "budget": {
+    "queries": 8,
+    "navigation": 10
+  },
+  "query_intents": [
+    {
+      "id": "A_Q1",
+      "record_id": "RS_PAST_NA1176",
+      "q": "\"Richard Assheton\" \"born\" biography"
+    },
+    {
+      "id": "A_Q2",
+      "record_id": "RS_PAST_NA1177",
+      "q": "\"Clive Cuthbertson\" \"born\" obituary"
+    },
+    {
+      "id": "A_Q3",
+      "record_id": "RS_PAST_NA1090",
+      "q": "\"William Sawney Bisat\" \"born\""
+    },
+    {
+      "id": "A_Q4",
+      "record_id": "RS_PAST_NA1476",
+      "q": "\"Bernard Smith\" geologist \"born\" 1881"
+    },
+    {
+      "id": "A_Q5",
+      "record_id": "RS_PAST_NA1176",
+      "q": "\"Richard Assheton\" embryologist obituary born",
+      "written_utc": "2026-11-06T00:44:11.059082+00:00"
+    },
+    {
+      "id": "A_Q6",
+      "record_id": "RS_PAST_NA1177",
+      "q": "\"Clive Cuthbertson\" physicist biography birth",
+      "written_utc": "2026-11-06T00:44:11.059082+00:00"
+    },
+    {
+      "id": "A_Q7",
+      "record_id": "RS_PAST_NA1177",
+      "q": "\"Clive Cuthbertson\" \"1863\" -site:makingscience.royalsociety.org -site:catalogues.royalsociety.org",
+      "written_utc": "2026-11-06T00:44:50.646951+00:00"
+    },
+    {
+      "id": "A_Q8",
+      "record_id": "RS_PAST_NA1176",
+      "q": "\"Richard Assheton\" \"obituary\" -Cross",
+      "written_utc": "2026-11-06T00:44:50.646951+00:00"
+    }
+  ],
+  "navigation_intents": [
+    {
+      "id": "A_N1",
+      "record_id": "RS_PAST_NA1090",
+      "url": "https://www.ypsyork.org/resources/yorkshire-scientists-and-innovators/william-sawney-bisat/",
+      "purpose": "Verifyfullnative/bornDoncaster/year1886/authorcareer inoriginalsocietybody.",
+      "written_utc": "2026-11-06T00:44:11.059082+00:00"
+    },
+    {
+      "id": "A_N2",
+      "record_id": "RS_PAST_NA1090",
+      "url": "https://www.sagt.org.uk/notable-geologists",
+      "purpose": "Inspectobservedcrediblecontrary1887profileheaderlead; no inferredcorrectdate,contraryqualifiedbodymusthold.",
+      "written_utc": "2026-11-06T00:44:11.059082+00:00"
+    },
+    {
+      "id": "A_N3",
+      "record_id": "RS_PAST_NA1476",
+      "url": "https://earthwise.bgs.ac.uk/index.php/Bernard_Smith",
+      "purpose": "VerifyoriginalinstitutionalarchivebioactualbornGrantham/exactDOB/fullname/career,sourcegenreprecision.",
+      "written_utc": "2026-11-06T00:44:11.059082+00:00"
+    },
+    {
+      "id": "A_N4",
+      "record_id": "RS_PAST_NA1177",
+      "url": "https://www.jstor.org/stable/i231367",
+      "purpose": "InspectobservedoriginalissuefornamedBalyCuthbertsonmemoirlink/body, notbiographicalfactfrombibliography.",
+      "written_utc": "2026-11-06T00:45:49.485608+00:00"
+    },
+    {
+      "id": "A_N5",
+      "record_id": "RS_PAST_NA1176",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Anatomischer_Anzeiger_%28IA_anatomischeranze49anat%29.pdf",
+      "purpose": "FirstreadobservedoriginaloldanatomicaljournalpotentialAsshetonnoticebody; stopsize/failure.",
+      "written_utc": "2026-11-06T00:45:49.485608+00:00"
+    },
+    {
+      "id": "A_N6",
+      "record_id": "RS_PAST_NA1177",
+      "source_ref": "turn3172888view0",
+      "lineno": 120,
+      "purpose": "InspectknownissueCuthbertsonitemandactualarticleURLbeforefirstarticlebodyopen.",
+      "written_utc": "2026-11-06T00:46:11.113431+00:00"
+    },
+    {
+      "id": "A_N7",
+      "record_id": "RS_PAST_NA1177",
+      "url": "https://www.jstor.org/stable/768853",
+      "purpose": "FirstactualauthoredoriginalCuthbertsonarticlebodyrouteobservedfromissue; stopfailure/accesswall.",
+      "written_utc": "2026-11-06T00:46:49.214343+00:00"
+    },
+    {
+      "id": "A_N8",
+      "record_id": "RS_PAST_NA1476",
+      "source_ref": "turn4994945view1",
+      "link_id": 29,
+      "purpose": "FirstobservedattributedBailey1952originalbookchapterbody carriedBGS; see ifbornlocationproof exists, notupgradefrombibliographyonly.",
+      "written_utc": "2026-11-06T00:47:27.501864+00:00"
+    },
+    {
+      "id": "A_N9",
+      "record_id": "RS_PAST_NA1476",
+      "source_ref": "turn4994945view1",
+      "link_id": 32,
+      "purpose": "FirstobservedNPGsubjectcataloguebody; inspectdirectbirth-region/identityifpresent, notborrowassociatedplace/nationality.",
+      "written_utc": "2026-11-06T00:48:05.810515+00:00"
+    }
+  ],
+  "limits": "No failed-route retry/variants/bypass/rawGET. Searchprojectionsleadsnotproof. RawHTTPstatus/time/hashunknownnull. Original sourceprose<=25words/work/no fullcache.",
+  "parsed_find_intents": [
+    {
+      "id": "A_F1",
+      "source_ref": "turn4410949view1",
+      "pattern": "William Sawney Bisat (1887",
+      "purpose": "Acquirecontraryyearheaderandboundbodycontext.",
+      "written_utc": "2026-11-06T00:44:50.646951+00:00"
+    },
+    {
+      "id": "A_F2",
+      "source_ref": "turn4410949view2",
+      "pattern": "Bernard Smith was born",
+      "purpose": "AcquireexactBGSbornclauseandcareercontext.",
+      "written_utc": "2026-11-06T00:44:50.646951+00:00"
+    },
+    {
+      "id": "A_F3",
+      "source_ref": "turn9565257view0",
+      "pattern": "Clive Cuthbertson",
+      "purpose": "LocateactualCuthbertsonarticleURLafterreturnedparseoffsetchangedwithXMLlinks, notinferURL.",
+      "written_utc": "2026-11-06T00:46:27.955204+00:00"
+    }
+  ]
+}

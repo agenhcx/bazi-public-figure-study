@@ -1,0 +1,524 @@
+{
+  "schema": "UK_v25_sources_a_v1",
+  "worker": "/root/v25_sources_a",
+  "written_utc": "2026-11-06T00:50:05.048096+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA1090",
+    "RS_PAST_NA1176",
+    "RS_PAST_NA1177",
+    "RS_PAST_NA1476"
+  ],
+  "intent_file": "v25_a_intent.json",
+  "counts": {
+    "discovery_queries": 8,
+    "web_navigation_attempts": 9,
+    "parsed_find_operations": 3,
+    "screenshots": 0,
+    "raw_HTTP_or_PDF_GETs": 0,
+    "body_verified_birthplace_candidates": 1,
+    "holds": 3,
+    "new_original_header_DOB_conflicts": 1,
+    "unused_navigation_budget": 1
+  },
+  "budgets": {
+    "discovery_queries": 8,
+    "web_navigation_attempts": 10
+  },
+  "candidates": [
+    {
+      "record_id": "RS_PAST_NA1476",
+      "native": {
+        "record_id": "RS_PAST_NA1476",
+        "authority_name": "Smith; Bernard (1881 - 1936)",
+        "native_dob": "1881-02-13",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "0aa57dad0f89b801e1ee925306f3a8717eec8e43086c8ff6ebc5c2af0aa6274f"
+      },
+      "status": "candidate_original_institutional_archive_biographical_metadata_explicit_first_birthplace",
+      "raw_birthplace": "Grantham",
+      "source_url": "https://earthwise.bgs.ac.uk/index.php/Bernard_Smith",
+      "source_title": "Bernard Smith — Pioneers of the British Geological Survey",
+      "source_author": null,
+      "source_kind": "original_institutional_archive_compilation_with_uncredited_biographical_paragraph",
+      "source_grade_proposal": "S3",
+      "source_grade_basis": "Original BGS archive compilation directly states the birth relation, full subject, exact day and career, but the born paragraph has no acquired named byline or claim-specific birth authority. ConservativeS3, not civil registration/host-onlyS1 or attribution of this birth clause to separately linked authored books.",
+      "source_grade_role": "person_birthplace_support_only",
+      "source_quote": "was born in Grantham on 13 February 1881",
+      "source_quote_word_count": 8,
+      "source_locator": "turn4994945view1:L114 archive item GSM/DR/Sm bornclause;L121-122 full BernardSmith/exactDOB/directGrantham/career/exactdeath;L12-19 timeline/FRS1935. Original initial open turn4410949view2 returned shorter representation; cached find provides complete body.",
+      "source_body_ref": "turn4994945view1",
+      "source_birthdate": "1881-02-13",
+      "source_birthdate_precision": "exact_day_in_original_institutional_biographical_born_clause",
+      "source_death_date": "1936-08-19",
+      "source_DOB_matches_native": true,
+      "observed_source_full_name": "Bernard Smith",
+      "source_lifespan_native_compatibility": "Full1881–1936 subject and exact1881-02-13 match native; source death1936-08-19 is an observation, not native date repair.",
+      "identity_review": [
+        "All native Bernard Smith components occur directly in heading/archive label and born paragraph.",
+        "Exact13February1881 matches native;1936 deathyear and subject Director/FRS profile agree native lifespan.",
+        "BGS geologist1906/DistrictGeologist1920/AssistantDirector1931/Director1935/FRS1935 provide distinctive coherent professional anchors."
+      ],
+      "reviewed_hemisphere_proposal": "unknown",
+      "geographic_basis": "Only Grantham is birth-linked. BGS institution/England-Wales survey work and bibliographic London/Edinburgh are not birthplace-country qualifiers. Keepunknown without familiar-city or institution inference.",
+      "publication_date": null,
+      "publication_date_precision": "unknown; page revision2020-09-01 is not publicationdate",
+      "page_last_edited_date": "2020-09-01",
+      "page_revision_is_publication_date": false,
+      "caveats": [
+        "Uncredited original archive-compilation birth paragraph receivesS3.",
+        "Separate E.B.Bailey1952 attributed history chapter was acquired and describes same career/exactdeath but has no birthplace; it is identity/career-only context, not birthproof or gradeupgrade.",
+        "NPG original subject profile acquired fullBernardSmith1881–1936/Director description but no born-place/date-day; not country/independentbirth confirmation.",
+        "Only the explicit1881–1936 subject biography/archive item is used; unrelated publication-list entries are not author-matched or treated as biographical source.",
+        "No source rawbytes/status/hash/exactrequesttime acquired; no fullsourcecache redistributed."
+      ],
+      "supporting_original_observations": [
+        {
+          "url": "https://earthwise.bgs.ac.uk/index.php/1935_Bernard_Smith,_Director_-_Geological_Survey_of_Great_Britain_(by_E.B._Bailey)",
+          "source_ref": "turn8688226view0",
+          "title": "1935 Bernard Smith, Director — Geological Survey of Great Britain",
+          "source_author": "Sir Edward Bailey",
+          "publication_year": "1952",
+          "source_kind": "original_authored_history_book_transcription_on_institutional_site",
+          "locator": "L3bookattribution;L8Director1935;L17-18career/firstpersoncolleaguecontext;L40death19August1936.",
+          "birthplace_relation_verified": false,
+          "source_quote": "",
+          "informational_independence_claimed": false
+        },
+        {
+          "url": "https://www.npg.org.uk/collections/search/person/mp141538/bernard-smith",
+          "source_ref": "turn1362831view0",
+          "title": "Bernard Smith",
+          "source_kind": "original_institutional_portrait_subject_profile",
+          "locator": "L61name;L63lifespan1881–1936/DirectorofGeologicalSurveyandMuseumPracticalGeology.",
+          "birthplace_relation_verified": false,
+          "source_quote": "",
+          "informational_independence_claimed": false
+        }
+      ],
+      "no_master_change": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original HTML/PDF text or tool-reported error, not raw HTTP/PDF bytes"
+    }
+  ],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA1090",
+      "native": {
+        "record_id": "RS_PAST_NA1090",
+        "authority_name": "Bisat; William Sawney (1886 - 1973)",
+        "native_dob": "1886-10-19",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "1b79a2bfa948ef2879d1abc722781fddb29372cd0fd70e40c23798cd7f703d7d"
+      },
+      "status": "hold_acquired_source_header_birthyear_conflict",
+      "hold_type": "source_header_birthyear_conflict",
+      "reason": "Acquired original SAGT subject header says1887–1973 vs native1886-10-19. Original YPS signed body header1886–1973 and another SAGT paragraph1886–1973 are compatible year observations but do not adjudicate contrary original header. Same full subject/engineering/amateurCarboniferousgoniatite/BGScareer; no different-person assumption. No birthday/country/place repair or datelessbypass.",
+      "source_url": "https://www.sagt.org.uk/notable-geologists",
+      "source_ref": "turn4994945view0",
+      "source_header_birthyear": "1887",
+      "source_birthdate_precision": "birthyear_in_original_profile_lifespan_header_only",
+      "native_birthdate": "1886-10-19",
+      "source_quote": "William Sawney Bisat (1887 - 1973)",
+      "source_quote_word_count": 6,
+      "source_locator": "turn4994945view0:L142; compatible source contextsYPSL37 andSAGTL181 retained.",
+      "source_grade_adopted": null,
+      "held_raw_birthplace": "Doncaster",
+      "held_original_observations": [
+        {
+          "source_url": "https://www.ypsyork.org/resources/yorkshire-scientists-and-innovators/william-sawney-bisat/",
+          "source_ref": "turn4410949view0",
+          "source_title": "William Sawney Bisat",
+          "source_author": "David Rowe",
+          "source_kind": "original_signed_scientific_society_biographical_article",
+          "source_quote": "Bisat was born in Doncaster",
+          "source_quote_word_count": 5,
+          "source_locator": "L36-39fullWilliamSawneyBisat/lifespan1886–1973/byline;L44directbornDoncaster;L45-50engineering/geologicalcareer; sourcefullbodyalsoFRS1947 andsocietyhonours.",
+          "source_birthdate": "1886",
+          "source_birthdate_precision": "year_only_in_subject_lifespan_header",
+          "source_deathyear": "1973",
+          "raw_birthplace": "Doncaster",
+          "source_grade_if_no_conflict": "ConservativeS2 originalsignedsocietybiography; no grade adopted in this hold.",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "retrieval_representation": "web-tool parsed original HTML/PDF text or tool-reported error, not raw HTTP/PDF bytes"
+        },
+        {
+          "source_url": "https://www.sagt.org.uk/notable-geologists",
+          "source_ref": "turn4994945view0",
+          "source_title": "Notable Geologists — William Sawney Bisat section",
+          "source_author": null,
+          "source_kind": "original_uncredited_geology_trust_biographical_compilation",
+          "source_quote": "Born in Doncaster",
+          "source_quote_word_count": 3,
+          "source_locator": "L142 fullWilliamSawneyBisat header1887–1973;L144directbornDoncaster/HArnoldengineering;L151-161goniatitework/BGS/medals;L181samepageothersectionmentionsWilliamSawneyBisat1886–1973.",
+          "source_header_birthyear": "1887",
+          "source_birthdate_precision": "year_only_in_subject_lifespan_header_not_exact_born_sentence",
+          "source_deathyear": "1973",
+          "raw_birthplace": "Doncaster",
+          "source_grade_if_no_conflict": "ConservativeS3 uncredited institutional compiled metadata; no grade adopted.",
+          "compatible_other_observation": "Same acquired pageL181 calls WilliamSawneyBisat1886–1973 in Culpincontext; no header typo/correct-date verdict.",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "retrieval_representation": "web-tool parsed original HTML/PDF text or tool-reported error, not raw HTTP/PDF bytes"
+        }
+      ],
+      "source_exact_born_day_conflict_observed": false,
+      "birthyear_header_conflict_observed": true,
+      "geography_decision": "unchanged_unknown_due_to_active_source_birthyear_conflict",
+      "no_source_header_or_native_DOB_verdict": true,
+      "no_master_change": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original HTML/PDF text or tool-reported error, not raw HTTP/PDF bytes"
+    },
+    {
+      "record_id": "RS_PAST_NA1176",
+      "native": {
+        "record_id": "RS_PAST_NA1176",
+        "authority_name": "Assheton; Richard (1863 - 1915)",
+        "native_dob": "1863-12-23",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "5795548aef363a4d60aeade0781697a37b1801f3a4a77809d147e978225991e1"
+      },
+      "status": "hold_no_qualified_acquired_original_born_place_body",
+      "hold_type": "original_birthplace_body_unavailable",
+      "reason": "Original anatomical journal source lead was first opened on observed Wikimedia original-work carrier, but tool rejected whole PDF44656308bytes. No readable original Assheton born-place body acquired. OriginalRS and bibliography discovery identify subject/date/obituary references but do not supply birthplace. RichardAsshetonCross1823–1914 statesman searchlead is differentperson, not opened/adopted or targetDOBconflict.",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Anatomischer_Anzeiger_%28IA_anatomischeranze49anat%29.pdf",
+      "source_ref": "turn3172888view1",
+      "tool_reported_error": "400 Content length is too large:44656308",
+      "source_grade_adopted": null,
+      "raw_birthplace_candidate": null,
+      "no_literature_exhaustion_claim": true,
+      "no_master_change": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original HTML/PDF text or tool-reported error, not raw HTTP/PDF bytes"
+    },
+    {
+      "record_id": "RS_PAST_NA1177",
+      "native": {
+        "record_id": "RS_PAST_NA1177",
+        "authority_name": "Cuthbertson; Clive (1863 - 1943)",
+        "native_dob": "1863-11-29",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "09aff34f7385f5c1ddf6d29a36a02056ba814f95e69d0fd8549f15934077aceb"
+      },
+      "status": "hold_original_memoir_body_unavailable",
+      "hold_type": "original_birthplace_body_unavailable",
+      "reason": "Original1944RS issue acquired metadata/title/author E.C.C.Baly, then first actual article route returned only oneGoogleTagManagerline, no memoir subject born-place body. No birthplace/date/grade adopted from bibliography, portrait/discovery or inferred from a profession. No failedroute retry/variants/bypass performed.",
+      "source_url": "https://www.jstor.org/stable/768853",
+      "source_ref": "turn8845463view0",
+      "source_title": "Clive Cuthbertson.1863–1943",
+      "source_author": "E. C. C. Baly",
+      "source_kind": "original_scientific_society_memoir_carrier_but_body_not_acquired",
+      "publication_year": "1944",
+      "publication_date_precision": "year_in_original_issue_metadata",
+      "publication_locator": "ObituaryNoticesofFellowsoftheRoyalSociety4(13),628–654(Nov1944); RoyalSocietycatalogue/bibliography says629–654, page-range difference notadjudicated.",
+      "source_grade_adopted": null,
+      "body_readable_lines": 1,
+      "original_issue_observations": [
+        {
+          "source_ref": "turn3172888view0",
+          "url": "https://www.jstor.org/stable/i231367",
+          "locator": "L122-126 originalissueCuthbertsonarticle/title/Baly; nextparse turn3506201view0:L150-155 actualarticleURL",
+          "birthplace_relation_verified": false
+        }
+      ],
+      "no_master_change": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original HTML/PDF text or tool-reported error, not raw HTTP/PDF bytes"
+    }
+  ],
+  "new_active_DOB_conflicts": [
+    {
+      "record_id": "RS_PAST_NA1090",
+      "native_dob": "1886-10-19",
+      "source_header_birthyear": "1887",
+      "source_precision": "year_only_in_original_profile_lifespan_header",
+      "source_url": "https://www.sagt.org.uk/notable-geologists",
+      "source_ref": "turn4994945view0",
+      "source_locator": "L142",
+      "source_quote": "William Sawney Bisat (1887 - 1973)",
+      "conflict_kind": "source_profile_header_birthyear1887_vs_native1886",
+      "source_exact_born_day_conflict": false,
+      "compatible_other_observations": "YPSheader1886–1973; sameSAGTpageL1811886–1973, no correctheader/year verdict.",
+      "policy": "HoldBP/geography/nativeDOB; requireseparateDOB/sourceheaderadjudication, no datelessbypass or inferredtypo."
+    }
+  ],
+  "query_ledger": [
+    {
+      "id": "A_Q1",
+      "record_id": "RS_PAST_NA1176",
+      "q": "\"Richard Assheton\" \"born\" biography",
+      "result_refs": [
+        "turn8275588search0",
+        "turn8275588search6"
+      ],
+      "discovery_only": true
+    },
+    {
+      "id": "A_Q2",
+      "record_id": "RS_PAST_NA1177",
+      "q": "\"Clive Cuthbertson\" \"born\" obituary",
+      "result_refs": [
+        "turn8275588search1"
+      ],
+      "discovery_only": true
+    },
+    {
+      "id": "A_Q3",
+      "record_id": "RS_PAST_NA1090",
+      "q": "\"William Sawney Bisat\" \"born\"",
+      "result_refs": [
+        "turn8275588search2",
+        "turn8275588search4",
+        "turn8275588search5",
+        "turn8275588search8"
+      ],
+      "discovery_only": true
+    },
+    {
+      "id": "A_Q4",
+      "record_id": "RS_PAST_NA1476",
+      "q": "\"Bernard Smith\" geologist \"born\" 1881",
+      "result_refs": [
+        "turn8275588search3",
+        "turn8275588search7"
+      ],
+      "discovery_only": true
+    },
+    {
+      "id": "A_Q5",
+      "record_id": "RS_PAST_NA1176",
+      "q": "\"Richard Assheton\" embryologist obituary born",
+      "written_utc": "2026-11-06T00:44:11.059082+00:00",
+      "result_refs": [
+        "turn4410949search0",
+        "turn4410949search8",
+        "turn4410949search9"
+      ],
+      "discovery_only": true
+    },
+    {
+      "id": "A_Q6",
+      "record_id": "RS_PAST_NA1177",
+      "q": "\"Clive Cuthbertson\" physicist biography birth",
+      "written_utc": "2026-11-06T00:44:11.059082+00:00",
+      "result_refs": [
+        "turn4410949search3",
+        "turn4410949search4"
+      ],
+      "discovery_only": true
+    },
+    {
+      "id": "A_Q7",
+      "record_id": "RS_PAST_NA1177",
+      "q": "\"Clive Cuthbertson\" \"1863\" -site:makingscience.royalsociety.org -site:catalogues.royalsociety.org",
+      "written_utc": "2026-11-06T00:44:50.646951+00:00",
+      "result_refs": [
+        "turn4994945search0",
+        "turn4994945search1",
+        "turn4994945search2",
+        "turn4994945search8",
+        "turn4994945search10"
+      ],
+      "discovery_only": true
+    },
+    {
+      "id": "A_Q8",
+      "record_id": "RS_PAST_NA1176",
+      "q": "\"Richard Assheton\" \"obituary\" -Cross",
+      "written_utc": "2026-11-06T00:44:50.646951+00:00",
+      "result_refs": [
+        "turn4994945search3",
+        "turn4994945search4",
+        "turn4994945search5",
+        "turn4994945search6"
+      ],
+      "discovery_only": true
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "id": "A_N1",
+      "record_id": "RS_PAST_NA1090",
+      "url": "https://www.ypsyork.org/resources/yorkshire-scientists-and-innovators/william-sawney-bisat/",
+      "purpose": "Verifyfullnative/bornDoncaster/year1886/authorcareer inoriginalsocietybody.",
+      "written_utc": "2026-11-06T00:44:11.059082+00:00",
+      "result_ref": "turn4410949view0",
+      "result": "body_acquired",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "id": "A_N2",
+      "record_id": "RS_PAST_NA1090",
+      "url": "https://www.sagt.org.uk/notable-geologists",
+      "purpose": "Inspectobservedcrediblecontrary1887profileheaderlead; no inferredcorrectdate,contraryqualifiedbodymusthold.",
+      "written_utc": "2026-11-06T00:44:11.059082+00:00",
+      "result_ref": "turn4410949view1",
+      "result": "body_acquired",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "id": "A_N3",
+      "record_id": "RS_PAST_NA1476",
+      "url": "https://earthwise.bgs.ac.uk/index.php/Bernard_Smith",
+      "purpose": "VerifyoriginalinstitutionalarchivebioactualbornGrantham/exactDOB/fullname/career,sourcegenreprecision.",
+      "written_utc": "2026-11-06T00:44:11.059082+00:00",
+      "result_ref": "turn4410949view2",
+      "result": "body_acquired_shorterrepresentation",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "id": "A_N4",
+      "record_id": "RS_PAST_NA1177",
+      "url": "https://www.jstor.org/stable/i231367",
+      "purpose": "InspectobservedoriginalissuefornamedBalyCuthbertsonmemoirlink/body, notbiographicalfactfrombibliography.",
+      "written_utc": "2026-11-06T00:45:49.485608+00:00",
+      "result_ref": "turn3172888view0",
+      "result": "originalissuemetadata_acquired",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "id": "A_N5",
+      "record_id": "RS_PAST_NA1176",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Anatomischer_Anzeiger_%28IA_anatomischeranze49anat%29.pdf",
+      "purpose": "FirstreadobservedoriginaloldanatomicaljournalpotentialAsshetonnoticebody; stopsize/failure.",
+      "written_utc": "2026-11-06T00:45:49.485608+00:00",
+      "result_ref": "turn3172888view1",
+      "result": "tool_size_error_stopped",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "id": "A_N6",
+      "record_id": "RS_PAST_NA1177",
+      "source_ref": "turn3172888view0",
+      "lineno": 120,
+      "purpose": "InspectknownissueCuthbertsonitemandactualarticleURLbeforefirstarticlebodyopen.",
+      "written_utc": "2026-11-06T00:46:11.113431+00:00",
+      "result_ref": "turn9565257view0",
+      "result": "cachedissuecontext_acquired_parseoffsetchanged",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "id": "A_N7",
+      "record_id": "RS_PAST_NA1177",
+      "url": "https://www.jstor.org/stable/768853",
+      "purpose": "FirstactualauthoredoriginalCuthbertsonarticlebodyrouteobservedfromissue; stopfailure/accesswall.",
+      "written_utc": "2026-11-06T00:46:49.214343+00:00",
+      "result_ref": "turn8845463view0",
+      "result": "one_line_no_subjectbody_stopped",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "id": "A_N8",
+      "record_id": "RS_PAST_NA1476",
+      "source_ref": "turn4994945view1",
+      "link_id": 29,
+      "purpose": "FirstobservedattributedBailey1952originalbookchapterbody carriedBGS; see ifbornlocationproof exists, notupgradefrombibliographyonly.",
+      "written_utc": "2026-11-06T00:47:27.501864+00:00",
+      "result_ref": "turn8688226view0",
+      "result": "originalauthoredhistory_career_death_noBP",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "id": "A_N9",
+      "record_id": "RS_PAST_NA1476",
+      "source_ref": "turn4994945view1",
+      "link_id": 32,
+      "purpose": "FirstobservedNPGsubjectcataloguebody; inspectdirectbirth-region/identityifpresent, notborrowassociatedplace/nationality.",
+      "written_utc": "2026-11-06T00:48:05.810515+00:00",
+      "result_ref": "turn1362831view0",
+      "result": "originalportraitprofile_identity_noBP",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    }
+  ],
+  "parsed_find_ledger": [
+    {
+      "id": "A_F1",
+      "source_ref": "turn4410949view1",
+      "pattern": "William Sawney Bisat (1887",
+      "purpose": "Acquirecontraryyearheaderandboundbodycontext.",
+      "written_utc": "2026-11-06T00:44:50.646951+00:00",
+      "result_ref": "turn4994945view0"
+    },
+    {
+      "id": "A_F2",
+      "source_ref": "turn4410949view2",
+      "pattern": "Bernard Smith was born",
+      "purpose": "AcquireexactBGSbornclauseandcareercontext.",
+      "written_utc": "2026-11-06T00:44:50.646951+00:00",
+      "result_ref": "turn4994945view1"
+    },
+    {
+      "id": "A_F3",
+      "source_ref": "turn9565257view0",
+      "pattern": "Clive Cuthbertson",
+      "purpose": "LocateactualCuthbertsonarticleURLafterreturnedparseoffsetchangedwithXMLlinks, notinferURL.",
+      "written_utc": "2026-11-06T00:46:27.955204+00:00",
+      "result_ref": "turn3506201view0"
+    }
+  ],
+  "quote_ledger": {
+    "BernardSmithBGS": 8,
+    "BisatYPS": 5,
+    "BisatSAGT": {
+      "born_excerpt": 3,
+      "header_excerpt": 6,
+      "distinct_total_at_most": 9
+    }
+  },
+  "protocol_deviations": [],
+  "limits": [
+    "No original source rawbytes/status/hash/exactrequesttime acquired; toolsizeerror labeledseparately.",
+    "Searchprojections leadsnotproof; no Wikipedia birthfact adoption or original-body claim for bibliographic titles.",
+    "SAGT contrary year was deliberately inspected as an observed credible original-sourcelead; original body conflict preserved rather than silently choosing YPS1886.",
+    "Differentperson AsshetonCross excluded; no aliases, initials, middlecomponents or nativeidentity expanded.",
+    "No original source fullHTML/PDF/images/projectioncache redistributed; no independentinformation/sourcebodycorroboration inferred from multiplehosted contexts.",
+    "No nativeDOB/calendar/identity/eligibility/grades/country/QID/coords/main/code/Git modifications or BaZi/outcomes/statisticaldedup/finalfreeze."
+  ],
+  "no_master_or_native_changes": true,
+  "unopened_distinct_original_leads": [
+    {
+      "record_id": "RS_PAST_NA1476",
+      "url": "http://doi.org/10.1098/rsbm.1938.0004",
+      "observed_at": "turn4994945view1:L26",
+      "title": "Dr. Bernard Smith,1881–1936",
+      "source_author": "William George Fearnsides",
+      "source_kind": "original_scientific_society_memoir_DOI_cited_by_BGS",
+      "opened": false,
+      "birthplace_relation_verified": false,
+      "note": "Distinct original-work route observed, not assumedbody/gradeupgrade; parentmayfirstinspectifusefulwithinrootbudget."
+    }
+  ]
+}
