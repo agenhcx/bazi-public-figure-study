@@ -1,0 +1,732 @@
+{
+  "schema": "UK_v34_independent_geography_source_documentary_QA_v1",
+  "reviewer": "/root/v32_source_qa",
+  "written_utc": "2026-11-06T23:24:41.134817+00:00",
+  "phase": "final",
+  "passed": true,
+  "checks_passed": 150,
+  "checks": [
+    {
+      "check": "actual_v33_baseline_canonical_pin",
+      "passed": true
+    },
+    {
+      "check": "fixed4983native_unique_records",
+      "passed": true
+    },
+    {
+      "check": "actual64nonblank_unknown_window_pool",
+      "passed": true
+    },
+    {
+      "check": "fixed12scope_threegroups4",
+      "passed": true
+    },
+    {
+      "check": "scope_within_actual_nonblankunknown_pool",
+      "passed": true
+    },
+    {
+      "check": "complete_targeted_scope_objects_exactbaseline",
+      "passed": true
+    },
+    {
+      "check": "103blank_window_outside_scope",
+      "passed": true
+    },
+    {
+      "check": "zero_firstbirthplacegroups",
+      "passed": true
+    },
+    {
+      "check": "all9globalDOBcases_excluded",
+      "passed": true
+    },
+    {
+      "check": "Ewins_Barber_knownplaceholds_excluded",
+      "passed": true
+    },
+    {
+      "check": "Tomes_separate_provisional_not10thactive",
+      "passed": true
+    },
+    {
+      "check": "Coles_selected_existing_crosssourceage_not_alternateDOB",
+      "passed": true
+    },
+    {
+      "check": "Coles_native_exactdate_matches_old_primary_observation",
+      "passed": true
+    },
+    {
+      "check": "v32_Wynne_priorgeofact_originalBP_S2_geoonlyS3_North",
+      "passed": true
+    },
+    {
+      "check": "v33_Guggenheim_priorgeofact_originalBP_S2_geoonlyS3_North",
+      "passed": true
+    },
+    {
+      "check": "64target_ids_equal_actualpool",
+      "passed": true
+    },
+    {
+      "check": "fixed12followups_reviewed",
+      "passed": true
+    },
+    {
+      "check": "accepted_held_complete_disjoint_partition",
+      "passed": true
+    },
+    {
+      "check": "actual_replay_exact6GEO_FIELDS",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA645_nativeDOB_authorityexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA645_fixednativekey_unique",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA645_frozen_rawBP_grade",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA645_geography_only_role",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA645_S2S3_NorthSouth_only",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA645_actualdateprecision_compatible",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA645_exactdayconfirmation_not_overstated",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA645_explicit_source_identity_date_place_basis_role",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA645_quote_under25",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA645_rawmetadata_null",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA645_no_frozen_personcountry_QIDcoords_or_BP_replacementkeys",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA645_no_stale_proposal_pending_fields",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA645_no_known_DOBcase_adoption",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA661_nativeDOB_authorityexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA661_fixednativekey_unique",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA661_frozen_rawBP_grade",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA661_geography_only_role",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA661_S2S3_NorthSouth_only",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA661_actualdateprecision_compatible",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA661_exactdayconfirmation_not_overstated",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA661_explicit_source_identity_date_place_basis_role",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA661_quote_under25",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA661_rawmetadata_null",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA661_no_frozen_personcountry_QIDcoords_or_BP_replacementkeys",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA661_no_stale_proposal_pending_fields",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA661_no_known_DOBcase_adoption",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA3474_held_nativeDOB_authorityexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA3474_held_rawBPexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4568_held_nativeDOB_authorityexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4568_held_rawBPexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5494_held_nativeDOB_authorityexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5494_held_rawBPexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6231_held_nativeDOB_authorityexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6231_held_rawBPexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6313_held_nativeDOB_authorityexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6313_held_rawBPexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6434_held_nativeDOB_authorityexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6434_held_rawBPexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA663_held_nativeDOB_authorityexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA663_held_rawBPexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6655_held_nativeDOB_authorityexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6655_held_rawBPexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA669_held_nativeDOB_authorityexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA669_held_rawBPexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6847_held_nativeDOB_authorityexact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6847_held_rawBPexact",
+      "passed": true
+    },
+    {
+      "check": "inherited_provisional_parsed_date_discrepancies.json_byteidentical",
+      "passed": true
+    },
+    {
+      "check": "inherited_birthplace_source_conflicts.json_byteidentical",
+      "passed": true
+    },
+    {
+      "check": "inherited_source_date_precision_holds.json_byteidentical",
+      "passed": true
+    },
+    {
+      "check": "inherited_source_derived_age_inconsistencies.json_byteidentical",
+      "passed": true
+    },
+    {
+      "check": "inherited_lifespan_endpoint_discrepancies.json_byteidentical",
+      "passed": true
+    },
+    {
+      "check": "inherited_cross_source_reported_age_contrasts.json_byteidentical",
+      "passed": true
+    },
+    {
+      "check": "inherited_omitted_middle_name_admission.json_byteidentical",
+      "passed": true
+    },
+    {
+      "check": "inherited_source_ordinal_age_wording_observations.json_byteidentical",
+      "passed": true
+    },
+    {
+      "check": "prior_v11_holds.json_historical_bytes_unchanged",
+      "passed": true
+    },
+    {
+      "check": "prior_v12_holds.json_historical_bytes_unchanged",
+      "passed": true
+    },
+    {
+      "check": "prior_v29_first_pass_queue_closeout.json_historical_bytes_unchanged",
+      "passed": true
+    },
+    {
+      "check": "prior9activeDOBobjects_unchanged",
+      "passed": true
+    },
+    {
+      "check": "only_new_Church_case_appended",
+      "passed": true
+    },
+    {
+      "check": "Church_DOB_hold_not_geographic_adoption",
+      "passed": true
+    },
+    {
+      "check": "a_workerreport_exact_scratch",
+      "passed": true
+    },
+    {
+      "check": "a_queryledger_within8",
+      "passed": true
+    },
+    {
+      "check": "a_navigationledger_within10",
+      "passed": true
+    },
+    {
+      "check": "a_worker_scope_partition",
+      "passed": true
+    },
+    {
+      "check": "a_intent_retained_exact",
+      "passed": true
+    },
+    {
+      "check": "b_workerreport_exact_scratch",
+      "passed": true
+    },
+    {
+      "check": "b_queryledger_within8",
+      "passed": true
+    },
+    {
+      "check": "b_navigationledger_within10",
+      "passed": true
+    },
+    {
+      "check": "b_worker_scope_partition",
+      "passed": true
+    },
+    {
+      "check": "b_intent_retained_exact",
+      "passed": true
+    },
+    {
+      "check": "c_workerreport_exact_scratch",
+      "passed": true
+    },
+    {
+      "check": "c_queryledger_within8",
+      "passed": true
+    },
+    {
+      "check": "c_navigationledger_within10",
+      "passed": true
+    },
+    {
+      "check": "c_worker_scope_partition",
+      "passed": true
+    },
+    {
+      "check": "c_intent_retained_exact",
+      "passed": true
+    },
+    {
+      "check": "two_expected_geofacts_ten_holds",
+      "passed": true
+    },
+    {
+      "check": "Parkes_primary_full_exactDOB_bornLancashire_S3North",
+      "passed": true
+    },
+    {
+      "check": "Parkes_original_street_BP_S2_frozen",
+      "passed": true
+    },
+    {
+      "check": "Parkes_primary_root_worker_refs_explicit",
+      "passed": true
+    },
+    {
+      "check": "Parkes_primary_two_word_countyquote",
+      "passed": true
+    },
+    {
+      "check": "Parkes_page_top_date_not_publication_update_version",
+      "passed": true
+    },
+    {
+      "check": "Parkes_registration_quarter_not_alternate_birthmonth",
+      "passed": true
+    },
+    {
+      "check": "Parkes_school_explicit_identity_city_career_only",
+      "passed": true
+    },
+    {
+      "check": "Parkes_school_city_quote7_under25",
+      "passed": true
+    },
+    {
+      "check": "Parkes_school_underlying_biography_unacquired_no_grade_authorship_transfer",
+      "passed": true
+    },
+    {
+      "check": "Parkes_school_reported89_arithmetic_compatible_no_new_age_issue",
+      "passed": true
+    },
+    {
+      "check": "Parkes_host_and_unacquired_records_not_civil_independent_editing",
+      "passed": true
+    },
+    {
+      "check": "McNeill_complete_name_exactDOB_directScotland_S3North",
+      "passed": true
+    },
+    {
+      "check": "McNeill_original_street_BP_S2_frozen",
+      "passed": true
+    },
+    {
+      "check": "McNeill_literal_FMW_unexpanded_not_invented_author",
+      "passed": true
+    },
+    {
+      "check": "McNeill_actual_portal_body_not_authenticated_publisher",
+      "passed": true
+    },
+    {
+      "check": "McNeill_sourceclass_S3_narrow_excerpt_no_general_mirror_rule",
+      "passed": true
+    },
+    {
+      "check": "McNeill_canonical_firstclick_failed_body_unacquired_no_retry",
+      "passed": true
+    },
+    {
+      "check": "McNeill_two_word_birthcountryquote",
+      "passed": true
+    },
+    {
+      "check": "McNeill_unqualified_career_election_projection_not_DOB_conflict",
+      "passed": true
+    },
+    {
+      "check": "McNeill_worker_conditional_proposal_retained",
+      "passed": true
+    },
+    {
+      "check": "Church_new_v34_exact_HTML_day24_vs_native28",
+      "passed": true
+    },
+    {
+      "check": "Church_actual_fullname_root_worker_refs",
+      "passed": true
+    },
+    {
+      "check": "Church_new_S3_observation_only_no_BP_DOB_grade_change",
+      "passed": true
+    },
+    {
+      "check": "Church_fourword_root_quote_within_worker7word_budget",
+      "passed": true
+    },
+    {
+      "check": "Church_no_named_byline_or_publication_inferred_from_navigation",
+      "passed": true
+    },
+    {
+      "check": "Church_Devon_stays_held_due_to_day_conflict_not_dateglyph_case",
+      "passed": true
+    },
+    {
+      "check": "ten_active_unique_with_prior9_not_new_recounted",
+      "passed": true
+    },
+    {
+      "check": "prior_v33_activeinventory_copy_byteexact",
+      "passed": true
+    },
+    {
+      "check": "Coles_hold_preserves_agecontrast_not_DOB_repair",
+      "passed": true
+    },
+    {
+      "check": "Mackintosh_notice_age79_not_converted_to_DOB",
+      "passed": true
+    },
+    {
+      "check": "Whiddington_zero_readable_body_no_retry_or_source_transfer",
+      "passed": true
+    },
+    {
+      "check": "Chibnall_later_returnEngland_not_birthcountry",
+      "passed": true
+    },
+    {
+      "check": "Mills_old_ScienceMuseum403_not_retried_or_projection_adopted",
+      "passed": true
+    },
+    {
+      "check": "Groves_tool_content_size_failure_no_body_or_alternatecarrier",
+      "passed": true
+    },
+    {
+      "check": "Reid_closed1976_source_not_retried",
+      "passed": true
+    },
+    {
+      "check": "Todd_ancestry_not_person_birthcountry",
+      "passed": true
+    },
+    {
+      "check": "worker_actual24queries12nav1find",
+      "passed": true
+    },
+    {
+      "check": "B_actual_5opens1click_not6opens",
+      "passed": true
+    },
+    {
+      "check": "A_separate_exactintent_writes_exit0_verified_before8queries",
+      "passed": true
+    },
+    {
+      "check": "B_all_separate_intent_writes_exit0_verified",
+      "passed": true
+    },
+    {
+      "check": "C_all_queries_opens_intent_guard_verified",
+      "passed": true
+    },
+    {
+      "check": "all_workers_zero_screenshots_and_GETs",
+      "passed": true
+    },
+    {
+      "check": "parent_aggregate24queries15opens1click2finds_exact",
+      "passed": true
+    },
+    {
+      "check": "parent_two_geofacts_one_newDOBobs_no_historical_addition",
+      "passed": true
+    },
+    {
+      "check": "root4opens1cachedfind_no_clicks_or_queries",
+      "passed": true
+    },
+    {
+      "check": "root_all_originalURLs_intented_and_cachedfind_scoped",
+      "passed": true
+    },
+    {
+      "check": "root_intent_entries_precede_finaladjudication",
+      "passed": true
+    },
+    {
+      "check": "current_sourceclass_twoS3_geoonly_no_method_amendment",
+      "passed": true
+    },
+    {
+      "check": "current_McNeill_narrow_actual_excerpt_no_general_mirror",
+      "passed": true
+    },
+    {
+      "check": "Kiddle_explicit_Wiki_childrewrite_boundary_preserved",
+      "passed": true
+    },
+    {
+      "check": "prior_v33_sourceclass_bytes_preserved",
+      "passed": true
+    },
+    {
+      "check": "root_new_work_quote_counts_exact",
+      "passed": true
+    },
+    {
+      "check": "four_new_works_no_inherited_input_audit_quote_hits",
+      "passed": true
+    },
+    {
+      "check": "preliminary_methodQA_before_finalfacts",
+      "passed": true
+    },
+    {
+      "check": "no_fullsource_caches_images",
+      "passed": true
+    }
+  ],
+  "blocking_issues": [],
+  "declared_six_GEO_FIELDS": [
+    "geo_resolution_status",
+    "geography_decision",
+    "hemisphere",
+    "northern_birthplace_candidate",
+    "reason",
+    "southern_birthplace_separate"
+  ],
+  "no_new_admission_method_exception": true,
+  "review_scope": "Documentary source/native binding/scope/protocol review only. Workers/root acquired source observations; reviewer did not network-fetch originals, inspect pixels/rawbytes or execute production. Final QA independently checks runtime rollback/frozen objects and deterministic output replays.",
+  "no_network_source_code_mainoutputs_audits_or_Git_mutation_by_reviewer": true,
+  "accepted_fact_path": "inputs/accepted_geography.json",
+  "accepted_fact_sha256_at_review": "c14e33fb416d776ef5143974a8515c48cc41d0fa38d1c53676c7959dd32eed2f",
+  "accepted_geography_sha256_at_review": "c14e33fb416d776ef5143974a8515c48cc41d0fa38d1c53676c7959dd32eed2f",
+  "active_DOB_conflicts_sha256_at_review": "d00d3ed2a781aa3ccbefd6e20aa276744b747a2ecad1cafb38114a6f34534eac",
+  "source_class_adjudication_sha256_at_review": "a920a7defda787a36d94a66ebb7329994c8656c1f510edc867fc8b9991523ab5",
+  "accepted_geographic_bindings": [
+    {
+      "record_id": "RS_PAST_NA645",
+      "native_DOB": "1900-09-10",
+      "native_authority": "Parkes; Sir; Alan Sterling (1900 - 1990)",
+      "source_full_name": "Alan Sterling Parkes",
+      "source_birthdate": "1900-09-10",
+      "frozen_raw_birthplace": "Bank House, Castleton, near Rochdale",
+      "frozen_BP_source_grade": "S2",
+      "source_birthplace_context": "Lancashire",
+      "new_source_grade": "S3",
+      "new_hemisphere": "north",
+      "quote_words": 2,
+      "fixed_native_key_matches": 1
+    },
+    {
+      "record_id": "RS_PAST_NA661",
+      "native_DOB": "1892-08-19",
+      "native_authority": "McNeill; Sir; James McFadyen (1892 - 1964)",
+      "source_full_name": "Sir James McFadyen McNeill (displayed surname-firstheading)",
+      "source_birthdate": "1892-08-19",
+      "frozen_raw_birthplace": "6 Cameron Street, Clydebank",
+      "frozen_BP_source_grade": "S2",
+      "source_birthplace_context": "Clydebank, Scotland",
+      "new_source_grade": "S3",
+      "new_hemisphere": "north",
+      "quote_words": 2,
+      "fixed_native_key_matches": 1
+    }
+  ],
+  "inherited_eight_issue_sidecars_byte_identical": [
+    "provisional_parsed_date_discrepancies.json",
+    "birthplace_source_conflicts.json",
+    "source_date_precision_holds.json",
+    "source_derived_age_inconsistencies.json",
+    "lifespan_endpoint_discrepancies.json",
+    "cross_source_reported_age_contrasts.json",
+    "omitted_middle_name_admission.json",
+    "source_ordinal_age_wording_observations.json"
+  ],
+  "protocol_disclosures": {
+    "A": "8queries4opens0finds; all exactinitial/adaptiveintentwrites separatelyvalidatedexit0 beforewebcalls, no deviations. Colesagecontrastretained; Mackintoshage79notconvertedDOB; newChurchHTMLdatecontrastblocksgeography despiteDevon; Whiddingtontextlessredirectnotactualbody.",
+    "B": "8actualqueries in2batcharrays,5opens1click1find. ParkesprimarylocalhistoryBornLancashire/exactDOB/fullnative/profession plussecondaryschoolcity/career; underlyingrecords/biographyunacquired. McNeillactualportalentry/writtenworktitle/literalFMW observed, canonicalfirstclick500/inaccessible/unacquired/no retry. ChibnallreturnEnglandnotbirth; Millsold403closed/searchprojectionnotbody. Allintentwritesvalidatedexit0.",
+    "C": "8queries2opens0finds. Bothnewroutesfailedfirstattempt: Grovescontentsizelimit/Barkerfetcherror; no partialbody/variant. Reidold1976routeclosed; ToddCumberlandancestry/geocandidate notsubjectbirthregion. Specificintentwrites reread/exit0 beforecalls; no deviations.",
+    "root": "0queries4opens1cachedfind/0clicks. ChurchactualS3DOBobservationonly; Parkesprimarycountyplussecondaryschoolidentity/city/career; McNeillactualthirdpartyattributedreferenceexcerpt inspectedafterworker, notauthenticatedbook/publisherbody. Exactrootintents recordedbeforecalls, no failedcanonicalretry, rawstatus/time/hashunknownnull."
+  },
+  "source_counts": {
+    "queries": 24,
+    "worker_opens": 11,
+    "worker_clicks": 1,
+    "worker_navigation_attempts": 12,
+    "root_opens": 4,
+    "total_opens": 15,
+    "total_clicks": 1,
+    "total_navigation_attempts": 16,
+    "worker_finds": 1,
+    "root_finds": 1,
+    "total_finds": 2,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "quote_audit": {
+    "new_work_identifiers_prior_input_audit_hits": {
+      "Trumpington_Parkes": [],
+      "Hulme_Parkes_support": [],
+      "Academic_McNeill_excerpt": [],
+      "Church_profile": []
+    },
+    "quoted_words_by_work": {
+      "Trumpington_Parkes": 2,
+      "Hulme_Parkes_support": 7,
+      "Academic_McNeill_excerpt": 2,
+      "Church_profile_worker_full_clause": 7,
+      "Church_profile_root_subset": 4
+    },
+    "Church_root_subset_in_worker_full_clause": true,
+    "all_new_work_passages_under25": true,
+    "no_new_literal_quotes_from_inherited_work": true
+  },
+  "active_DOB_inventory_reconciliation": {
+    "total_active": 10,
+    "prior9objects_unchanged": true,
+    "new_qualified_HTML_observation_record_ids": [
+      "RS_PAST_NA5494"
+    ],
+    "historical_inventory_additions": 0,
+    "Thompson_and_Fawcett_prior_cases_not_recounted": true,
+    "Tomes_provisional_separate_not11thactive": true
+  },
+  "source_class_review": {
+    "McNeill": "Actuallyacquiredattributedcompiledreferenceexcerpt inlanguageportal; no originaleditedbook/publisherbodyauthentication, genericmirroradmission, authorinitialexpansion or sourceindependenceclaim. S3geographic_support_only underexistingcompiledreferenceboundary; failedcanonicalbodyunacquired.",
+    "Parkes": "ActualuncreditedlocalhistorystructuredBorncountyclaim S3; schoolS3identity/city/careeronly andunderlyingmemoirunacquired.",
+    "Church": "ActualnichebotanicalcompiledHTML S3DOBobservationonly; no articlebylinefromowner/aboutnavigation, no geographyadoption despiteDevon."
+  },
+  "source_QA_correction_record": "v34_source_qa_correction.json",
+  "initial_failed_report_preserved": "v34_source_qa_initial_failed_report.json",
+  "limitations": [
+    "Documentary review only; reviewer did not network-acquire sources, authenticate originalbooktext, inspectpixels/rawbytes or executeproduction.",
+    "FinalQA independently verifies completeobjectimmutability/rollback and deterministicmainoutputreplays.",
+    "McNeilladmissionisnarrowS3actualportalreferenceexcerpt; edition/publisher/editorialprocess/textintegrity andindependenceunverified. LiteralFMWunexpanded, noS2/originalpublisherbody/general-mirror policy.",
+    "Parkespage-top2023date notpublication/update/version; Dec1900registrationquarter notalternatebirthday; secondaryschoolcareerbiographyunacquired, streetaddressnotnewlyconfirmed.",
+    "ChurchHTMLdatecontrastisqualifiedsourceobservationonly, notcorrectbirthday/typo/civilorparserverdict. DevonqualifierdoesnotbypassDOBhold.",
+    "Coles71-v70agecontrastandTomesprovisionalparsedglyphcase remainseparatefromactiveDOBcases.",
+    "Allnewworkquote passages <=25words, no fullsourcecaches, rawHTTPstatus/time/hash or sourceindependence claims."
+  ]
+}

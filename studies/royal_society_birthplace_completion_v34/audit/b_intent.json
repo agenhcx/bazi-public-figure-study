@@ -1,0 +1,153 @@
+{
+  "written_utc": "2026-11-06T23:10:51.312127+00:00",
+  "scope": "v34_scope_b.json",
+  "scope_sha256": "112b14d038b5560d3a47c4d8b90b24a92f12ccb5da7ee20d6821dcb1a4d14021",
+  "full4objects_read_before_queries": true,
+  "prior_targeted_current_audits_read_sha256": {
+    "prior_v29_method_qa.json": "d8621dea7cdfa6aed37a91e037376c7efadd8da2fcc1c7720ecc9ba2ec43aa38",
+    "prior_v29_first_pass_queue_closeout.json": "29d5a08c382fc5d1587c99e09a43a3c6c4559f9c971ef4efd5b8fb3f05407503",
+    "prior_v13_holds.json": "9b54ad12c2a8aa10d3bbc6cefbbf84f8322474a6585310ce86559da2900e05ee"
+  },
+  "additional_historical_context_read": [
+    "v17/audit/sources_b.json targetedChibnall/Parkes",
+    "v17/audit/root_parkes_followup.json",
+    "v17/audit/bulk_rse.json targeted3",
+    "v29/audit/sources_c.json targetedMcNeill",
+    "v29/audit/root_followups.json targetedMcNeill"
+  ],
+  "targets": [
+    {
+      "record_id": "RS_PAST_NA6313",
+      "authority_name": "Chibnall; Albert Charles (1894 - 1988); biochemist",
+      "DOB": "1894-01-28",
+      "frozen_rawplace": "Hammersmith, London",
+      "original_BP_grade": "S2",
+      "prior_BP_urls": [
+        "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/579805141"
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA6434",
+      "authority_name": "Mills; Edmund James (1840 - 1921)",
+      "DOB": "1840-12-08",
+      "frozen_rawplace": "London",
+      "original_BP_grade": "S1",
+      "prior_BP_urls": [
+        "https://catalogues.royalsociety.org/calmview/Record.aspx?src=CalmView.Persons&id=NA6434"
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA645",
+      "authority_name": "Parkes; Sir; Alan Sterling (1900 - 1990)",
+      "DOB": "1900-09-10",
+      "frozen_rawplace": "Bank House, Castleton, near Rochdale",
+      "original_BP_grade": "S2",
+      "prior_BP_urls": [
+        "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/581566933"
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA661",
+      "authority_name": "McNeill; Sir; James McFadyen (1892 - 1964)",
+      "DOB": "1892-08-19",
+      "frozen_rawplace": "6 Cameron Street, Clydebank",
+      "original_BP_grade": "S2",
+      "prior_BP_urls": [
+        "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/581154831"
+      ]
+    }
+  ],
+  "closed_or_nonnew_work": [
+    {
+      "record_id": "RS_PAST_NA6434",
+      "work": "https://collection.sciencemuseumgroup.org.uk/people/cp107942/edmund-james-mills",
+      "status": "Prior403,noactualbody,searchbornUKnotadopted; noalternate/retry."
+    },
+    {
+      "record_id": "RS_PAST_NA6434",
+      "work": "https://www.nature.com/articles/107432a0.pdf",
+      "status": "Oldactual1921abstractJMT/exactDOB/Londononly, notnewwork/fullsubscriptionunread."
+    },
+    {
+      "record_id": "RS_PAST_NA645",
+      "work": "https://royalsocietypublishing.org/doi/pdf/10.1098/rsbm.2006.0019",
+      "status": "Prior403closed,noalternatememoircarrierretry."
+    },
+    {
+      "record_id": "RS_PAST_NA645",
+      "work": "Wellcomevxxntyq4/ScienceMuseumap28569/RAIhistorywiki/HeapODNB40018",
+      "status": "Oldwellcomeandmuseumcareeronly; RAIisODNBtranscriptionleadnotneworiginal; rootacceptedODNBbirthcitycompoundonly."
+    },
+    {
+      "record_id": "RS_PAST_NA6313",
+      "work": "PerryODNB40008/RSEBiographicalIndex1",
+      "status": "Alreadyacceptedbirthcityonly;RSEboundentrynoobservedbirthplace,noqueryreuseasnewwork."
+    },
+    {
+      "record_id": "RS_PAST_NA661",
+      "work": "JBrownODNB581154831",
+      "status": "Oldacceptedstreetcityonly;Arranmotherchildhoodnotbornregion;noinitialexpansion."
+    }
+  ],
+  "calls": [
+    {
+      "kind": "system2_search_query",
+      "queries": [
+        "\"Albert Charles Chibnall\" born England",
+        "\"Edmund James Mills\" born England",
+        "\"Alan Sterling Parkes\" born Lancashire",
+        "\"James McFadyen McNeill\" born Scotland"
+      ],
+      "purpose": "Neworiginalpersonalbiography/referencewithdirectborncountry or wholecounty; oldacceptedworks/failuresnotretried."
+    },
+    {
+      "written_utc": "2026-11-06T23:11:09.569993+00:00",
+      "kind": "system1_search_query",
+      "queries": [
+        "\"Albert Charles Chibnall\" born \"London, England\"",
+        "\"Edmund James Mills\" biography born",
+        "\"Alan Sterling Parkes\" \"born\" \"Lancashire\"",
+        "\"James McFadyen McNeill\" \"born\" Clydebank"
+      ],
+      "purpose": "Strongeroriginalreferencecoveragegaps; RS2006ParkesfailedworkcloseddespiteindexedpositiveLancashire. Seeknewworkonly."
+    },
+    {
+      "written_utc": "2026-11-06T23:11:27.564033+00:00",
+      "kind": "open",
+      "urls": [
+        "https://trumpingtonlocalhistorygroup.org/people/f7063.htm",
+        "https://www.hulmegrammar.org/ArchiveWebPages/ww1/ww1boys.html",
+        "https://www.mkheritage.org.uk/sherington/people/individuals/sherington-historical-society-a-c-chibnall/",
+        "https://mathshistory.st-andrews.ac.uk/Biographies/Kerr/"
+      ],
+      "purpose": "Distinctlocalgenealogical/schoolhistory/personhistoricalprofessionalbiography bodies. Readactualneworiginalfullname/DOB/career/bornregion not oldRSfailedwork or sameODNB/RSE reuse. MacTutorKerronlyif actualboundMcNeillpassage; notKerrbirthplace."
+    },
+    {
+      "written_utc": "2026-11-06T23:11:52.882033+00:00",
+      "kind": "cached_find",
+      "source_ref": "turn6978585view1",
+      "pattern": "Alan Sterling Parkes",
+      "purpose": "Locate actualsubjectschool-historyentry forfullnative/exactDOB/Castleton+reproductivebiologistcareer; nootherboysorhostregionassignment."
+    },
+    {
+      "written_utc": "2026-11-06T23:12:37.598528+00:00",
+      "kind": "open",
+      "urls": [
+        "https://translate.academic.ru/a%20difficult%20subject/xx/en/"
+      ],
+      "purpose": "Inspectobservedsearch36unopenednewBiographicalHistoryofTechnologynamedMcNeillreferencelead; linklocatoronlyoractualworkiforiginalsourceattributed. No Wiki sourceclass expansion;stopfirsterror/challenge/noalternate."
+    },
+    {
+      "written_utc": "2026-11-06T23:13:02.144036+00:00",
+      "kind": "click",
+      "source_ref": "turn4553961view0",
+      "link_id": 49,
+      "purpose": "SuccessfulactualnewBiographicalHistoryofTechnologyentry alreadygivesfullMcNeill/exact1892-08-19/directClydebankScotland/FMWcareer. Followobservedcanonicalentrylinkfor actualworkattribution/provenance/bookdate, not failedsourcevariant. No assumedRoutledgeedition/authorinitialsexpansion."
+    }
+  ],
+  "budget": {
+    "queries": 8,
+    "opens": 10
+  },
+  "gates": "Allnativecomponents/actuallycompatibleDOBprecision/distinctivecareer/directbornregion+storedplacebinding; cities/work/family/nationalitynotbirthcountry; noDOB/placeholdbypass; originalBP/DOB/priorfactsfrozen; noWikiKiddlepuremirrors; <=25quotedwords/workincludingprior; stopfailedroutes/noalternates/rawGET; rawstatus/requesttime/bytehashnull."
+}

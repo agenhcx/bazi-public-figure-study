@@ -1,0 +1,147 @@
+{
+  "schema": "UK_v34_geography_only_independent_final_QA_v1",
+  "reviewer": "/root/v34_final_qa",
+  "written_utc": "2026-11-06T23:28:51.661278+00:00",
+  "status": "PASS",
+  "validation_categories_passed": 50,
+  "checks": [
+    "root final canonical and adopted IDs supplied before QA",
+    "five completed production output pins match before QA",
+    "v33 baseline and v34 current canonical match root pins",
+    "self-contained v33 reconstruction all4983 complete objects exact",
+    "all prior loaders and geography and birthplace helpers verbatim",
+    "all prior geography constants unchanged",
+    "fixed record order unique keys and UK cohort",
+    "64 stored-place unknown queue and12 fixed complete disjoint outcomes",
+    "three groups four each match predeclared scope and no first birthplace inputs",
+    "only six existing geography fields mutable",
+    "complete changed object set exactly accepted geography IDs",
+    "all native and BP fields and prior evidence frozen with exact six-field rollback",
+    "all103 window blank and all525 blank complete objects unchanged",
+    "all current holds preserve complete objects",
+    "all raw birthplace and source grades unchanged",
+    "adopted documentary facts carry geography-only grade roles identity place and parsed-source limits",
+    "Parkes original detailed place S2 frozen new direct county S3 North",
+    "Parkes root local genealogy role and separate school support not civil or source publication claim",
+    "McNeill source actually attributed reference excerpt in carrier S3 without book body or initial expansion",
+    "McNeill root carrier role and failed canonical route preserve no book claim or retry",
+    "independent overall and2644 window counts",
+    "unchanged blank counts and resolved nonblank unknown diagnostics recomputed",
+    "summary zero newBP and geography counts grade roles exact",
+    "changes contain only current geography refinements originalBP unchanged",
+    "CSV134 old columns retain positions plus6 newgeo=140",
+    "all4983 CSV rows preserve old meanings except adopted current hemisphere cells",
+    "remaining unknown CSV equals master native-window order",
+    "eight other issue files byte exact and nine prior active DOB objects unchanged",
+    "ten active DOB cases append only Church with Tomes provisional separate",
+    "prior v33 active conflict file retained byte exact",
+    "Church new actual HTML exact-day observation is distinct from uncertain parsed-glyph issue",
+    "inherited Thompson v12 case and v33 root reverification roles remain unchanged",
+    "inherited Fawcett v33 March header and May born-body contrast remains unresolved",
+    "both prior inventory cases preserve native and BP grade roles with unknown raw metadata",
+    "all inherited historical audit files remain byte exact",
+    "historical v29 first-pass closeout retains v29 hash and same103 blank IDs",
+    "untargeted prior issue geography and source-class complete objects unchanged",
+    "known place holds and prior active DOB cases excluded from currentselection",
+    "sourceQA passed with exact current facts activeDOB and source-class hash bindings",
+    "no full-source caches PDFs or images distributed",
+    "README continuation final canonical and v34 labels updated",
+    "parent adjudication describes current baseline geography-only phase",
+    "actual source request accounting equals root final declared counts",
+    "worker reports preserved byte exact",
+    "all prior active DOB conflict subjects excluded and all ten current conflict objects unchanged",
+    "new Church conflict stays a current hold with no geography adoption",
+    "inherited Thompson historical context and provenance note byte exact",
+    "current source class decision no new exception prior v33 review byte exact",
+    "two isolated clean replays all5 outputs equal original pins",
+    "production five outputs untouched after QA"
+  ],
+  "baseline_canonical_sha256": "773cd149b4ee77d77233d81ac37fefa1e861a98c375b3d1c285ae36a32aa9847",
+  "final_canonical_sha256": "271a32070f8dae8c54933f1ebaacc5ae141427a3448f8f1562000f8842a0c632",
+  "records": 4983,
+  "changed_complete_objects": 2,
+  "unchanged_complete_objects": 4981,
+  "new_birthplaces": 0,
+  "geography_only_resolutions": 2,
+  "accepted_record_ids": [
+    "RS_PAST_NA645",
+    "RS_PAST_NA661"
+  ],
+  "overall": {
+    "north": 4197,
+    "unknown": 599,
+    "south": 187
+  },
+  "window_counts": {
+    "north": 2297,
+    "unknown": 165,
+    "south": 182
+  },
+  "blank_diagnostics": {
+    "all_blank_raw_birthplace": 525,
+    "window_blank_raw_birthplace": 103,
+    "all_unknown": 599,
+    "all_unknown_with_blank_raw_birthplace": 525,
+    "all_unknown_with_nonblank_raw_birthplace": 74,
+    "window_unknown": 165,
+    "window_unknown_with_blank_raw_birthplace": 103,
+    "window_unknown_with_nonblank_raw_birthplace": 62
+  },
+  "main_pre_QA_output_pins": {
+    "birthplace_rows.jsonl.gz": "27ae04633241a049a77f2916243aa516e945f3dc923236e3196dfa62af097a58",
+    "birthplaces.csv": "eb2e386876920a4564b5596594404e09c2786d23e178e59fd1792897904f342a",
+    "changes.json": "b8a86746ca2136fd1022237a2244cfedab72737bfe664e41e17955745c67858c",
+    "remaining_unknown_window.csv": "b20f43ee5fbeb7ba96381328dc52bff56054378e2ee8b2143f7796b44f76c45a",
+    "summary.json": "f1de99975d9afaf31a4a69232c334c37945c038c685e16c6ce4d37d66a58dbb9"
+  },
+  "isolated_replay_runs": [
+    {
+      "run": 1,
+      "clean_exit": true,
+      "five_hashes": {
+        "birthplace_rows.jsonl.gz": "27ae04633241a049a77f2916243aa516e945f3dc923236e3196dfa62af097a58",
+        "birthplaces.csv": "eb2e386876920a4564b5596594404e09c2786d23e178e59fd1792897904f342a",
+        "changes.json": "b8a86746ca2136fd1022237a2244cfedab72737bfe664e41e17955745c67858c",
+        "remaining_unknown_window.csv": "b20f43ee5fbeb7ba96381328dc52bff56054378e2ee8b2143f7796b44f76c45a",
+        "summary.json": "f1de99975d9afaf31a4a69232c334c37945c038c685e16c6ce4d37d66a58dbb9"
+      },
+      "matched_original_pins": true
+    },
+    {
+      "run": 2,
+      "clean_exit": true,
+      "five_hashes": {
+        "birthplace_rows.jsonl.gz": "27ae04633241a049a77f2916243aa516e945f3dc923236e3196dfa62af097a58",
+        "birthplaces.csv": "eb2e386876920a4564b5596594404e09c2786d23e178e59fd1792897904f342a",
+        "changes.json": "b8a86746ca2136fd1022237a2244cfedab72737bfe664e41e17955745c67858c",
+        "remaining_unknown_window.csv": "b20f43ee5fbeb7ba96381328dc52bff56054378e2ee8b2143f7796b44f76c45a",
+        "summary.json": "f1de99975d9afaf31a4a69232c334c37945c038c685e16c6ce4d37d66a58dbb9"
+      },
+      "matched_original_pins": true
+    }
+  ],
+  "main_outputs_rerun_or_mutated": false,
+  "new_active_DOB_conflict_inventory_entries": 1,
+  "active_DOB_conflict_count": 10,
+  "all9_prior_active_DOB_conflict_objects_unchanged": true,
+  "historical_v29_closeout_hash_preserved": true,
+  "quote_words": {
+    "RS_PAST_NA645": 2,
+    "RS_PAST_NA661": 2
+  },
+  "documentation_checks": {
+    "files": [
+      "README.md",
+      "CONTINUATION.md"
+    ],
+    "counts_scope_limits_consistent": true,
+    "review_method": "Direct final documentary review plus complete structural equality and rollback, documentary source semantics separately reviewed by sourceQA. All originalBP/DOBtiers and previous facts retained; only six geographic fields and versioned context may change."
+  },
+  "limitations": [
+    "Independent local data/structural/replay verification only; no network or original-source acquisition/rawHTTP inspection by this reviewer.",
+    "Source semantic/genre/source-newness reviewed separately in independent_source_qa.json; recorded parsed source locators are not new acquisition claims by this reviewer.",
+    "New source grades are geographic_support_only and do not upgrade original birthplaces or DOB grades.",
+    "Nine prior qualified DOB conflict objects and eight other issue/method sidecars unchanged; one new Church exact-day source observation is appended without native correction or geography adoption. Thompson historical v12 case with v33 root reverification and Fawcett v33 actual header/body contrast are prior facts, not newly recounted conflicts; Tomes provisional distinct. v29 first-pass closeout stays historical with its v29hash and all103blank objects unchanged.",
+    "No production facts, inputs, code, main outputs or Git changed; this audit and scratch harness only."
+  ]
+}
