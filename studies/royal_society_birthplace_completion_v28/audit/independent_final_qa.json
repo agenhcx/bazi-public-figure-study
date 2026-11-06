@@ -1,0 +1,123 @@
+{
+  "schema": "UK_v28_independent_local_final_QA_v1",
+  "reviewer": "/root/v26_final_qa",
+  "written_utc": "2026-11-06T11:28:30.864034+00:00",
+  "status": "PASS",
+  "validation_categories_passed": 34,
+  "checks": [
+    "five pinned production outputs match before QA",
+    "v27 baseline and v28 current canonical exactly pinned",
+    "self-contained v27 reconstruction equals all4983 baseline complete objects",
+    "fixed cohort order and unique keys",
+    "scope114queue12reviewed2facts10holds disjoint partition",
+    "exact2changed and4981 complete identical objects",
+    "all frozen fields prior facts and exact previous plus absent rollback",
+    "separate newbirthplace grade roles S2one S3one and North2",
+    "independent overall and2644window counts",
+    "blank nonblank diagnostics independently recomputed",
+    "remaining112blank queue includes18 neverindividuallyreviewed using allholdsunion",
+    "summary deltas and no geographyonly adoption",
+    "CSV98old positions and meaning plus6v28 fields",
+    "CSV4983 rows current fields and historical columns exact",
+    "remaining179unknown CSV matches master order",
+    "all9 inherited issue and method sidecars byteidentical",
+    "six activeDOB and separate oneprovisional glyph case unchanged",
+    "all issue records Wager Adam Shortt currentholds completeobjects unchanged",
+    "both exactunchanged sourceDOB and fullnative components observed",
+    "Sykes rootneworiginal ODNB fullnative exactDOB byline andcountyNorth",
+    "Ganellin actualCharon noCharles substitution andexplicitEnglandNorth",
+    "Ganellin undatedcurrenttense no2026alive deathconfirmation or endpointcase",
+    "Sykes workerhold preserved explicitrootcurrentholdoverride neworiginalref",
+    "boundedlocatorquery amendment noadmissionexception and prequeryintent",
+    "C3lateexactintent calls concernholds Ganellinearlierprospective unaffected",
+    "no current middleexception or pending proposal fields in acceptedfacts",
+    "actualquote counts9 and6 eachunder25",
+    "request accounting25queries18worker2root20total2find0screenshot0GET",
+    "parent2facts10holds no newDOBprovisionalendpointnamecase and originalroles",
+    "no fullsource cache or image formats distributed",
+    "README andCONTINUATION actual counts scope and source limits directlyreviewed",
+    "independent sourceQA finalized and matches acceptedfact hash",
+    "two isolated cleanreplays all5outputs equal originalpins",
+    "production5outputs untouched after QA"
+  ],
+  "baseline_canonical_sha256": "ac6d3db5594801b9c55e271b392eb245fc8ae66216c0031eb5686ba82a545118",
+  "final_canonical_sha256": "697389a67f48c88f214b8efc832a1f8744fcab34a4882f581215d75c8755403e",
+  "records": 4983,
+  "changed_complete_objects": 2,
+  "unchanged_complete_objects": 4981,
+  "overall": {
+    "north": 4183,
+    "unknown": 613,
+    "south": 187
+  },
+  "window_counts": {
+    "north": 2283,
+    "unknown": 179,
+    "south": 182
+  },
+  "blank_diagnostics": {
+    "all_blank_raw_birthplace": 534,
+    "window_blank_raw_birthplace": 112,
+    "all_unknown": 613,
+    "all_unknown_with_blank_raw_birthplace": 534,
+    "all_unknown_with_nonblank_raw_birthplace": 79,
+    "window_unknown": 179,
+    "window_unknown_with_blank_raw_birthplace": 112,
+    "window_unknown_with_nonblank_raw_birthplace": 67
+  },
+  "never_individually_reviewed_remaining": 18,
+  "main_pre_QA_output_pins": {
+    "birthplace_rows.jsonl.gz": "28b3b9d1f5a59c81da67456e4ee8e45dfa7fb4b83e7c2395ee1ec0a060016c32",
+    "birthplaces.csv": "2b892e06d152594c68b0ce273f1dc8af60e20c8c56515959fd4b74e9b0153686",
+    "changes.json": "4f0c599d71f9d79abb0f3994ffd3a039d67140169dc166404a30e5d43e03ff71",
+    "remaining_unknown_window.csv": "335a34aa404cb1432b315f64041c7bd976827aab43772aa72848e23d772ad784",
+    "summary.json": "c9262ca9eca5b8042cf1d44ad0f24446374d9cf1ab82fce7bf92c4a5cefca4b9"
+  },
+  "isolated_replay_runs": [
+    {
+      "run": 1,
+      "clean_exit": true,
+      "five_hashes": {
+        "birthplace_rows.jsonl.gz": "28b3b9d1f5a59c81da67456e4ee8e45dfa7fb4b83e7c2395ee1ec0a060016c32",
+        "birthplaces.csv": "2b892e06d152594c68b0ce273f1dc8af60e20c8c56515959fd4b74e9b0153686",
+        "changes.json": "4f0c599d71f9d79abb0f3994ffd3a039d67140169dc166404a30e5d43e03ff71",
+        "remaining_unknown_window.csv": "335a34aa404cb1432b315f64041c7bd976827aab43772aa72848e23d772ad784",
+        "summary.json": "c9262ca9eca5b8042cf1d44ad0f24446374d9cf1ab82fce7bf92c4a5cefca4b9"
+      },
+      "matched_original_pins": true
+    },
+    {
+      "run": 2,
+      "clean_exit": true,
+      "five_hashes": {
+        "birthplace_rows.jsonl.gz": "28b3b9d1f5a59c81da67456e4ee8e45dfa7fb4b83e7c2395ee1ec0a060016c32",
+        "birthplaces.csv": "2b892e06d152594c68b0ce273f1dc8af60e20c8c56515959fd4b74e9b0153686",
+        "changes.json": "4f0c599d71f9d79abb0f3994ffd3a039d67140169dc166404a30e5d43e03ff71",
+        "remaining_unknown_window.csv": "335a34aa404cb1432b315f64041c7bd976827aab43772aa72848e23d772ad784",
+        "summary.json": "c9262ca9eca5b8042cf1d44ad0f24446374d9cf1ab82fce7bf92c4a5cefca4b9"
+      },
+      "matched_original_pins": true
+    }
+  ],
+  "main_outputs_rerun_or_mutated": false,
+  "quote_words_by_record": {
+    "RS_PAST_NA2245": 9,
+    "RS_PAST_NA4189": 6
+  },
+  "documentation_checks": {
+    "files": [
+      "README.md",
+      "CONTINUATION.md"
+    ],
+    "counts_scope_limits_consistent": true,
+    "review_method": "Direct review of SykesactualODNBpublicExtract versusretainedworkerhold/encyclopediaobservation, explicitrootboundedlocatorquerypurposeamendment withoutsourceadmissionexception, GanellinactualCharonRobin/fullDOB/LondonEngland andundatedcurrenttenseendpointlimits, C3lateexactintentcalls affectingholdsonly, inherited9sidecars/sixDOB/provisionalglyph andotherdistinctissues."
+  },
+  "limitations": [
+    "Independent local structural/data/replay verification only; no network, new original-source acquisition or rawHTTP-byte inspection.",
+    "Source semantic/genre quality reviewed separately in independent_source_qa.json; original-body locators supplied by collectors/root are not a new original-acquisition claim by this reviewer.",
+    "SykesoriginalODNBbody was newlyacquired by root after a boundedpurposeamendment and observedworklocatorquery; retainedworkercatalogue/encyclopediareport is not relabelled primaryproof or informationalindependence.",
+    "Ganellinundatedcurrenttenseoccupationprose is not datedalive2026 or deathendpointconfirmation/contradiction. No Charlesalias/nameconflict/substitution inferred.",
+    "ThreeCexactnavigationintents were not persistedbeforecalls afterlocalappendfailure; disclosure notbackdated. Thosecalls concernthreeholds; adoptedGanellinwas earlierprospectivelyintented.",
+    "No production inputs, facts, code, master outputs or Git operations changed; this audit and scratch harness only."
+  ]
+}

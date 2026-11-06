@@ -1,0 +1,497 @@
+{
+  "schema": "v28_sources_b_v1",
+  "worker": "/root/v26_sources_b",
+  "batch_role": "v28groupb_followup",
+  "written_utc": "2026-11-06T11:21:09.244954+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA3113",
+    "RS_PAST_NA3622",
+    "RS_PAST_NA3626",
+    "RS_PAST_NA386"
+  ],
+  "intent_file": "v28_b_intent.json",
+  "counts": {
+    "discovery_queries": 8,
+    "web_navigation_attempts": 9,
+    "parsed_find_operations": 0,
+    "cached_screenshot_attempts": 0,
+    "ImageContent_blocks_exposed_from_screenshot": 0,
+    "raw_HTTP_or_PDF_GETs": 0,
+    "body_verified_birthplace_candidates": 0,
+    "holds": 4,
+    "new_confirmed_printed_DOB_conflicts": 0,
+    "new_confirmed_original_birthplace_conflicts": 0
+  },
+  "budgets": {
+    "queries": 8,
+    "navigation": 10
+  },
+  "candidates": [],
+  "holds": [
+    {
+      "status": "hold_no_acquired_original_birthplace_body",
+      "hold_type": "no_acquired_original_birthplace_body",
+      "source_grade_adopted": null,
+      "source_quote": "",
+      "source_quote_word_count": 0,
+      "geography_decision": "unchanged_unknown",
+      "frozen_preserved": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA3113",
+      "native": {
+        "record_id": "RS_PAST_NA3113",
+        "authority_name": "Smith; Harry (1935 - 2015)",
+        "native_dob": "1935-09-19",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "e68e3b3fa70e0a8313b7cecd6b1f57c8fb50dc2a68d7517e34543303e8ed406f"
+      },
+      "reason": "Nativeexact1935-09-19/lifespan1935-2015 identifiesbotanistsearchlead, not unrelatedHarrySmithpersons. BothobservedoriginalmemoirDOIanddistinctMolecularEcologyobituaryDOI singlefirstopens returnednotaccessibleviatool. No originalbornbody acquired, so no city/country/DOBgradeadoption.",
+      "source_url": "https://doi.org/10.1098/rsbm.2017.0045",
+      "source_ref": "turn9932645view2",
+      "source_title": "HarrySmith,19September1935-9February2015",
+      "source_author": "Donald Grierson (bibliographicsearchprojectiononly; originalbyline/bodynotacquired)",
+      "source_kind": "observed_originalmemoir_route_notbodyacquired",
+      "source_birthdate": "1935-09-19",
+      "source_birthdate_precision": "exact_day_in_discovery_bibliographic_title_only",
+      "discovery_refs": [
+        "turn9745439search52",
+        "turn1456307search0",
+        "turn1456307search5"
+      ],
+      "failed_retrievals": [
+        {
+          "source_url": "https://doi.org/10.1098/rsbm.2017.0045",
+          "source_ref": "turn9932645view2",
+          "actual_tool_result": "URL https://doi.org/10.1098/rsbm.2017.0045 is not accessible via this tool.",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "no_retry_after_failure": true,
+          "body_acquired": false
+        },
+        {
+          "source_url": "https://doi.org/10.1111/mec.13196",
+          "source_ref": "turn9932645view3",
+          "actual_tool_result": "URL https://doi.org/10.1111/mec.13196 is not accessible via this tool.",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "no_retry_after_failure": true,
+          "body_acquired": false
+        }
+      ],
+      "caveats": [
+        "No sourcebody/detailedplaceassertion or printedDOBconfirmation. Search-onlyWikipediaandrequest-fulltextRGmetadataare notoriginalbirthplaceproof.",
+        "Initialcommonnamequeryreturnedunrelatedicehockey/genealogypersons; differentfullnames/dates/careers not merged or treatedasnativeDOBconflicts.",
+        "Distinctoriginalobituaryfirstopen is separatework, not failedmemoirroute retry; neither originalbodyacquired."
+      ]
+    },
+    {
+      "status": "hold_no_acquired_original_birthplace_body",
+      "hold_type": "no_acquired_original_birthplace_body",
+      "source_grade_adopted": null,
+      "source_quote": "",
+      "source_quote_word_count": 0,
+      "geography_decision": "unchanged_unknown",
+      "frozen_preserved": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA3622",
+      "native": {
+        "record_id": "RS_PAST_NA3622",
+        "authority_name": "Rowson; Lionel Edward Aston (1914 - 1989)",
+        "native_dob": "1914-05-28",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "37e3b0aa0b05d747aac72c7869fb1e0edf97182e3ac4e0806846d644f20541a6"
+      },
+      "reason": "ActualoriginalASUauthoredexperimentshistory readforRowsonprofessionalcontext, but no subjectbirthplace/actualbornpredicate inarticlebody. Bibliographicoriginalmemoirlead acquired; memoirJSTORsinglefirstopen notaccessible. No originalbirthplacebody forsubject.",
+      "source_url": "https://embryo.asu.edu/pages/christopher-polge-and-lionel-edward-aston-rowsons-experiments-freezing-bull-spermatozoa-1950",
+      "source_ref": "turn4059111view1",
+      "source_title": "ChristopherPolgeandLionelEdwardAstonRowsonsExperimentsontheFreezingofBullSpermatozoa(1950-1952)",
+      "source_author": "Bailey Renee (displayed byline; citation form elsewhere Renee,Bailey retained without adjudication)",
+      "source_editor": "Kevin M. Gleason",
+      "publication_date": "2017-12-19",
+      "source_kind": "original_authored_edited_university_history_article_for_career_context_only",
+      "source_locator": "turn4059111view1:L28-32 fullnative/title/byline/pubdate;L37-42 veterinaryembryotransfer/freezingresearchcareer;L67-70 memoircitationonly;L82-91 editor/publisher. No subjectbornpredicate inactualarticlebody.",
+      "source_birthdate": "1914-05-28",
+      "source_birthdate_precision": "exact_day_in_cited_memoir_title_only_not_article_birth_assertion",
+      "failed_retrievals": [
+        {
+          "source_url": "https://www.jstor.org/stable/770412",
+          "source_ref": "turn9932645view1",
+          "actual_tool_result": "URL https://www.jstor.org/stable/770412 is not accessible via this tool.",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "no_retry_after_failure": true,
+          "body_acquired": false
+        }
+      ],
+      "unopened_observed_original_publisher_link": "http://rsbm.royalsocietypublishing.org/content/roybiogmem/46/483.full.pdf",
+      "unopened_link_locator": "turn4059111view1:L70 link28",
+      "caveats": [
+        "ProfessionalCambridgeEnglandworklocationisnotbirthcountry; no inference.",
+        "ActualASUarticlecitesChristopherPolge2000memoirbutcitationisnotmemoirbodyacquisition.",
+        "PublisherPDFlinknotopenedafterfailedJSTORsameworkroutewithinconservativefailedroutehandling; no claimpublisherPDFwouldfail orworkgloballyinaccessible. One navigationbudgetslot remainsunused."
+      ]
+    },
+    {
+      "status": "hold_no_acquired_original_birthplace_body",
+      "hold_type": "original_career_body_lacks_birthplace_and_birthdate",
+      "source_grade_adopted": null,
+      "source_quote": "",
+      "source_quote_word_count": 0,
+      "geography_decision": "unchanged_unknown",
+      "frozen_preserved": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA3626",
+      "native": {
+        "record_id": "RS_PAST_NA3626",
+        "authority_name": "Chesters; John Hugh (1906 - 1994)",
+        "native_dob": "1906-10-16",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "7c85a3fb2b90d245a6d8f14ff7e563822450224aa683ad8c5db4335d44d86ad0"
+      },
+      "reason": "ActualoriginalAIMEawardbiographicalbody givesfullJohnHughChesters andcoherentsteelrefractoriescareer,but noDOBorbirthplace. SeparateinferredWikipedialookup failedDisabledError,no body/citationnewlead. No birthplacerecovery.",
+      "source_url": "https://aimehq.org/what-we-do/awards/aime-benjamin-f-fairless-award/john-hugh-chesters",
+      "source_ref": "turn1456307view1",
+      "source_title": "JohnHughChesters(AIST),BenjaminF.FairlessAward1973",
+      "source_author": null,
+      "source_kind": "original_unsigned_professional_award_profile_career_context_only",
+      "source_locator": "turn1456307view1:L60-70 fullnative/award1973/Sheffieldphysics1928/PhD1931/refractoriesresearch/CorporateLabsBritishSteel1970-retired1971/FRS1969/OBE1970. No born/dateofbirthassertion.",
+      "source_birthdate": null,
+      "source_birthdate_precision": "not_stated_in_acquired_AIME_body",
+      "failed_retrievals": [
+        {
+          "source_url": "https://en.wikipedia.org/wiki/John_Hugh_Chesters",
+          "source_ref": "turn4059111view0",
+          "actual_tool_result": "Failed to fetch https://en.wikipedia.org/wiki/John_Hugh_Chesters: DisabledError",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "no_retry_after_failure": true,
+          "body_acquired": false
+        }
+      ],
+      "caveats": [
+        "Sheffieldstudy/UKoffice/USstudyorfellowshipdatesarenotbirthdate/placeorcountry.",
+        "KnownconventionalWikipediatitleURLwasaninferrednavigationlookup, not a search-observedoriginalsource; disabledresultnotadopted. No retry/variant.",
+        "No career-date-to-age inference or native correction."
+      ]
+    },
+    {
+      "status": "hold_no_acquired_original_birthplace_body",
+      "hold_type": "no_acquired_original_birthplace_body",
+      "source_grade_adopted": null,
+      "source_quote": "",
+      "source_quote_word_count": 0,
+      "geography_decision": "unchanged_unknown",
+      "frozen_preserved": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA386",
+      "native": {
+        "record_id": "RS_PAST_NA386",
+        "authority_name": "Nicol; Joseph Arthur Colin (1915 - 2004)",
+        "native_dob": "1915-12-05",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "d130760e05525294849dcee9c16a45f81ec78b6edb7da2ae1df08160c2019b71"
+      },
+      "reason": "Originalmemoircarrierfirstopen502; separateoriginalTexasJournalreminiscencePDFtimeout; separateCOREreportCV403. Discoveryprojections containToronto/exactDOBandCanada respectively,but noneoftheseoriginalbodies acquired. No projectionadoption, countryfromcitizenshiporcityfameinference.",
+      "source_url": "https://citeseerx.ist.psu.edu/document?doi=f9f55b8b863608357d171b4861ad953d1c324295&repid=rep1&type=pdf",
+      "source_ref": "turn1456307view0",
+      "source_title": "JosephArthurColinNicol,5December1915-20December2004",
+      "source_author": "Linda Maddock (discoveryprojectiononly, originalmemoirbody/bylinenotverified)",
+      "source_kind": "originalmemoir_route_notbodyacquired",
+      "source_birthdate": "1915-12-05",
+      "source_birthdate_precision": "exact_day_in_searchprojection_bibliographic_header_only",
+      "discovery_refs": [
+        "turn9745439search48",
+        "turn9745439search49",
+        "turn9745439search51",
+        "turn1456307search4",
+        "turn1456307search7"
+      ],
+      "failed_retrievals": [
+        {
+          "source_url": "https://citeseerx.ist.psu.edu/document?doi=f9f55b8b863608357d171b4861ad953d1c324295&repid=rep1&type=pdf",
+          "source_ref": "turn1456307view0",
+          "actual_tool_result": "Failed to fetch https://citeseerx.ist.psu.edu/document?doi=f9f55b8b863608357d171b4861ad953d1c324295&repid=rep1&type=pdf: (502) Bad Gateway",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "no_retry_after_failure": true,
+          "body_acquired": false
+        },
+        {
+          "source_url": "https://texas.microscopy.org/files/galleries/38-1Journal-1.pdf",
+          "source_ref": "turn9932645view0",
+          "actual_tool_result": "Failed to fetch https://texas.microscopy.org/files/galleries/38-1Journal-1.pdf: TimeoutError",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "no_retry_after_failure": true,
+          "body_acquired": false
+        },
+        {
+          "source_url": "https://files01.core.ac.uk/download/pdf/211342114.pdf",
+          "source_ref": "turn4059111view2",
+          "actual_tool_result": "Failed to fetch https://files01.core.ac.uk/download/pdf/211342114.pdf: (403) Forbidden",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "no_retry_after_failure": true,
+          "body_acquired": false
+        }
+      ],
+      "caveats": [
+        "No originalmemoirbody/Torontoassertion adopted from searchprojection.",
+        "OriginalTexasreminiscenceCanadaassertionexistsindiscoveryprojectiononly; no actualdateprecision/bodyidentity verification.",
+        "Canadian citizenship/leftCanadafamily sentence not rewritten as explicitbirthcountry. No alternateResearchGatecarrieropenedafterfailedCiteSeerXroute.",
+        "No screenshot/rawHTTPsourcecache/GET,bypassorretries."
+      ]
+    }
+  ],
+  "query_log": [
+    {
+      "query_index": 1,
+      "engine": "system2",
+      "query": "\"Harry Smith\" \"1935\" \"born\"",
+      "observed_call_result_ref_prefix": "turn9745439",
+      "topic_relevant_observed_refs": [
+        "turn9745439search52",
+        "turn9745439search50"
+      ],
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "intent_timing": "Exactstringprelistedbeforeexecution ininitialintent"
+    },
+    {
+      "query_index": 2,
+      "engine": "system2",
+      "query": "\"Lionel Edward Aston Rowson\" born",
+      "observed_call_result_ref_prefix": "turn9745439",
+      "topic_relevant_observed_refs": [
+        "turn9745439search0",
+        "turn9745439search12",
+        "turn9745439search55"
+      ],
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "intent_timing": "Exactstringprelistedbeforeexecution ininitialintent"
+    },
+    {
+      "query_index": 3,
+      "engine": "system2",
+      "query": "\"John Hugh Chesters\" born",
+      "observed_call_result_ref_prefix": "turn9745439",
+      "topic_relevant_observed_refs": [
+        "turn9745439search9",
+        "turn9745439search37",
+        "turn9745439search40"
+      ],
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "intent_timing": "Exactstringprelistedbeforeexecution ininitialintent"
+    },
+    {
+      "query_index": 4,
+      "engine": "system2",
+      "query": "\"Joseph Arthur Colin Nicol\" born",
+      "observed_call_result_ref_prefix": "turn9745439",
+      "topic_relevant_observed_refs": [
+        "turn9745439search48",
+        "turn9745439search49",
+        "turn9745439search51",
+        "turn9745439search4"
+      ],
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "intent_timing": "Exactstringprelistedbeforeexecution ininitialintent"
+    },
+    {
+      "query_index": 5,
+      "engine": "system1",
+      "query": "\"Harry Smith\" botanist \"born\" obituary",
+      "observed_call_result_ref_prefix": "turn1456307",
+      "topic_relevant_observed_refs": [
+        "turn1456307search0",
+        "turn1456307search5"
+      ],
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "intent_timing": "Exactadaptivestringprelistedbeforeexecution inintentadaptive_exact_queries_prelisted"
+    },
+    {
+      "query_index": 6,
+      "engine": "system1",
+      "query": "\"Lionel Edward Aston Rowson\" \"born\"",
+      "observed_call_result_ref_prefix": "turn1456307",
+      "topic_relevant_observed_refs": [
+        "turn1456307search1",
+        "turn1456307search8"
+      ],
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "intent_timing": "Exactadaptivestringprelistedbeforeexecution inintentadaptive_exact_queries_prelisted"
+    },
+    {
+      "query_index": 7,
+      "engine": "system1",
+      "query": "\"John Hugh Chesters\" \"born\" \"1906\"",
+      "observed_call_result_ref_prefix": "turn1456307",
+      "topic_relevant_observed_refs": [
+        "turn1456307search2",
+        "turn1456307search3"
+      ],
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "intent_timing": "Exactadaptivestringprelistedbeforeexecution inintentadaptive_exact_queries_prelisted"
+    },
+    {
+      "query_index": 8,
+      "engine": "system1",
+      "query": "\"Joseph Arthur Colin Nicol\" \"Canada\" \"1915\" memoir",
+      "observed_call_result_ref_prefix": "turn1456307",
+      "topic_relevant_observed_refs": [
+        "turn1456307search4",
+        "turn1456307search6",
+        "turn1456307search7"
+      ],
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "intent_timing": "Exactadaptivestringprelistedbeforeexecution inintentadaptive_exact_queries_prelisted"
+    }
+  ],
+  "query_result_mapping_limit": "Toolreturnedaggregatefourqueryresults, no backendperquerymappingexposed. Topic-relevantobservedrefs arenotfabricatedexactquery-resultallocation.",
+  "navigation_log": [
+    {
+      "ref": "turn1456307view0",
+      "target": "NicolCiteSeerXoriginalmemoircarrier",
+      "result": "toolreported502BadGateway;stopped"
+    },
+    {
+      "ref": "turn1456307view1",
+      "target": "ChestersAIMEoriginalprofile",
+      "result": "parsedoriginalcareerbody;nobornorDOB"
+    },
+    {
+      "ref": "turn9932645view0",
+      "target": "NicoldistinctoriginalTexasJournalreminiscencePDF",
+      "result": "TimeoutError;stopped"
+    },
+    {
+      "ref": "turn9932645view1",
+      "target": "RowsonJSTORoriginalmemoir",
+      "result": "notaccessibleviathistool;stopped"
+    },
+    {
+      "ref": "turn9932645view2",
+      "target": "SmithoriginalRSmemoirDOI",
+      "result": "notaccessibleviathistool;stopped"
+    },
+    {
+      "ref": "turn9932645view3",
+      "target": "SmithdistinctoriginalMolecularEcologyobituaryDOI",
+      "result": "notaccessibleviathistool;stopped"
+    },
+    {
+      "ref": "turn4059111view0",
+      "target": "ChestersinferredWikipediaurlnavigationlookup",
+      "result": "DisabledError;stopped"
+    },
+    {
+      "ref": "turn4059111view1",
+      "target": "RowsonASUoriginalauthoredexperimentshistory",
+      "result": "parsedoriginalarticle;nopersonbornassertion;memoircitationonly"
+    },
+    {
+      "ref": "turn4059111view2",
+      "target": "NicoldistinctCOREreportwithCV",
+      "result": "toolreported403Forbidden;stopped"
+    }
+  ],
+  "error_ledger": [
+    {
+      "source_url": "https://citeseerx.ist.psu.edu/document?doi=f9f55b8b863608357d171b4861ad953d1c324295&repid=rep1&type=pdf",
+      "source_ref": "turn1456307view0",
+      "actual_tool_result": "Failed to fetch https://citeseerx.ist.psu.edu/document?doi=f9f55b8b863608357d171b4861ad953d1c324295&repid=rep1&type=pdf: (502) Bad Gateway",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "no_retry_after_failure": true,
+      "body_acquired": false
+    },
+    {
+      "source_url": "https://texas.microscopy.org/files/galleries/38-1Journal-1.pdf",
+      "source_ref": "turn9932645view0",
+      "actual_tool_result": "Failed to fetch https://texas.microscopy.org/files/galleries/38-1Journal-1.pdf: TimeoutError",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "no_retry_after_failure": true,
+      "body_acquired": false
+    },
+    {
+      "source_url": "https://www.jstor.org/stable/770412",
+      "source_ref": "turn9932645view1",
+      "actual_tool_result": "URL https://www.jstor.org/stable/770412 is not accessible via this tool.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "no_retry_after_failure": true,
+      "body_acquired": false
+    },
+    {
+      "source_url": "https://doi.org/10.1098/rsbm.2017.0045",
+      "source_ref": "turn9932645view2",
+      "actual_tool_result": "URL https://doi.org/10.1098/rsbm.2017.0045 is not accessible via this tool.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "no_retry_after_failure": true,
+      "body_acquired": false
+    },
+    {
+      "source_url": "https://doi.org/10.1111/mec.13196",
+      "source_ref": "turn9932645view3",
+      "actual_tool_result": "URL https://doi.org/10.1111/mec.13196 is not accessible via this tool.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "no_retry_after_failure": true,
+      "body_acquired": false
+    },
+    {
+      "source_url": "https://en.wikipedia.org/wiki/John_Hugh_Chesters",
+      "source_ref": "turn4059111view0",
+      "actual_tool_result": "Failed to fetch https://en.wikipedia.org/wiki/John_Hugh_Chesters: DisabledError",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "no_retry_after_failure": true,
+      "body_acquired": false
+    },
+    {
+      "source_url": "https://files01.core.ac.uk/download/pdf/211342114.pdf",
+      "source_ref": "turn4059111view2",
+      "actual_tool_result": "Failed to fetch https://files01.core.ac.uk/download/pdf/211342114.pdf: (403) Forbidden",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "no_retry_after_failure": true,
+      "body_acquired": false
+    }
+  ],
+  "protocol_deviations": [],
+  "retrieval_limits": [
+    "No originalbirthplacebody acquired inthisgroup, even though twooriginalcareer-contextbodies acquired. Zero candidates isnotzero biographiesreadclaim.",
+    "Allactualfailedrouteoutputsretainedverbatimminimalerrors; rawHTTPstatus/requesttime/bytehashnotexposed,null. Notaccessible/DisabledError/timeoutarenotrelabeled403.",
+    "Eightqueriesandninenavigationsactual; remainingone navigationbudgetslotunusedwhenonlyalternatefailed-workroutes/low-informationleadsremained. No fabricated10thread.",
+    "No fulloriginalHTML/PDF/images/searchprojectioncachesretained. Onlyminimalfacts/locators/shorterrors.",
+    "Nineinheritedissuefilesandallnative/main/Git/studyfilesuntouched.",
+    "No observedoriginalDOB/placecontradiction, sourcegradeupgrade, hemisphereinferenceorcorrectdateverdict."
+  ]
+}
