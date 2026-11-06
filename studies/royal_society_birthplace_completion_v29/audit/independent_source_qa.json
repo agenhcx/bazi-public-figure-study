@@ -1,0 +1,944 @@
+{
+  "schema": "UK_v29_independent_source_documentary_QA_v1",
+  "reviewer": "/root/v26_source_qa",
+  "written_utc": "2026-11-06T11:49:24.254200+00:00",
+  "passed": true,
+  "checks_passed": 193,
+  "checks": [
+    {
+      "check": "actual_v28_baseline_canonical_pin",
+      "passed": true
+    },
+    {
+      "check": "nine_unique_expected_accepted",
+      "passed": true
+    },
+    {
+      "check": "nine_unique_held",
+      "passed": true
+    },
+    {
+      "check": "eighteen_unique_individuals",
+      "passed": true
+    },
+    {
+      "check": "three_fixed_groups_of_six",
+      "passed": true
+    },
+    {
+      "check": "reviewed_exactly_plan_scope",
+      "passed": true
+    },
+    {
+      "check": "112_unique_blank_target_queue",
+      "passed": true
+    },
+    {
+      "check": "accepted_held_disjoint_complete_partition",
+      "passed": true
+    },
+    {
+      "check": "reviewed_within_frozen_queue",
+      "passed": true
+    },
+    {
+      "check": "all_scope_blank_unknown_nativewindow",
+      "passed": true
+    },
+    {
+      "check": "no_geography_onlypilot",
+      "passed": true
+    },
+    {
+      "check": "all_remaining_neverreviewed18_selected",
+      "passed": true
+    },
+    {
+      "check": "prospective_remaining103blank_all_have_hold_followup",
+      "passed": true
+    },
+    {
+      "check": "94_priorheld_plus9_currentholds_remain103",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4208_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4208_fixed_authority_DOB_unique_key",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4208_actual_source_fullname",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4208_actual_place_date",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4208_actual_dateprecision_not_overstated",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4208_final_grade_hemisphere",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4208_actual_quote_wordcount_limit",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4208_birthplacegrade_separate_nativeDOBgrade",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4208_identity_geo_locator_explicit",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4208_root_original_body_role",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4208_unknown_raw_metadata_null",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4208_no_personcountry_QIDcoords_added",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4208_no_stale_proposal_pending_fields",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4384_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4384_fixed_authority_DOB_unique_key",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4384_actual_source_fullname",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4384_actual_place_date",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4384_actual_dateprecision_not_overstated",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4384_final_grade_hemisphere",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4384_actual_quote_wordcount_limit",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4384_birthplacegrade_separate_nativeDOBgrade",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4384_identity_geo_locator_explicit",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4384_root_original_body_role",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4384_unknown_raw_metadata_null",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4384_no_personcountry_QIDcoords_added",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4384_no_stale_proposal_pending_fields",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA504_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA504_fixed_authority_DOB_unique_key",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA504_actual_source_fullname",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA504_actual_place_date",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA504_actual_dateprecision_not_overstated",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA504_final_grade_hemisphere",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA504_actual_quote_wordcount_limit",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA504_birthplacegrade_separate_nativeDOBgrade",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA504_identity_geo_locator_explicit",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA504_root_original_body_role",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA504_unknown_raw_metadata_null",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA504_no_personcountry_QIDcoords_added",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA504_no_stale_proposal_pending_fields",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5088_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5088_fixed_authority_DOB_unique_key",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5088_actual_source_fullname",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5088_actual_place_date",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5088_actual_dateprecision_not_overstated",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5088_final_grade_hemisphere",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5088_actual_quote_wordcount_limit",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5088_birthplacegrade_separate_nativeDOBgrade",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5088_identity_geo_locator_explicit",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5088_root_original_body_role",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5088_unknown_raw_metadata_null",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5088_no_personcountry_QIDcoords_added",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5088_no_stale_proposal_pending_fields",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5089_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5089_fixed_authority_DOB_unique_key",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5089_actual_source_fullname",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5089_actual_place_date",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5089_actual_dateprecision_not_overstated",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5089_final_grade_hemisphere",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5089_actual_quote_wordcount_limit",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5089_birthplacegrade_separate_nativeDOBgrade",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5089_identity_geo_locator_explicit",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5089_root_original_body_role",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5089_unknown_raw_metadata_null",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5089_no_personcountry_QIDcoords_added",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5089_no_stale_proposal_pending_fields",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6300_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6300_fixed_authority_DOB_unique_key",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6300_actual_source_fullname",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6300_actual_place_date",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6300_actual_dateprecision_not_overstated",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6300_final_grade_hemisphere",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6300_actual_quote_wordcount_limit",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6300_birthplacegrade_separate_nativeDOBgrade",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6300_identity_geo_locator_explicit",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6300_root_original_body_role",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6300_unknown_raw_metadata_null",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6300_no_personcountry_QIDcoords_added",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6300_no_stale_proposal_pending_fields",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA661_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA661_fixed_authority_DOB_unique_key",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA661_actual_source_fullname",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA661_actual_place_date",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA661_actual_dateprecision_not_overstated",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA661_final_grade_hemisphere",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA661_actual_quote_wordcount_limit",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA661_birthplacegrade_separate_nativeDOBgrade",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA661_identity_geo_locator_explicit",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA661_root_original_body_role",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA661_unknown_raw_metadata_null",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA661_no_personcountry_QIDcoords_added",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA661_no_stale_proposal_pending_fields",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA753_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA753_fixed_authority_DOB_unique_key",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA753_actual_source_fullname",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA753_actual_place_date",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA753_actual_dateprecision_not_overstated",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA753_final_grade_hemisphere",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA753_actual_quote_wordcount_limit",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA753_birthplacegrade_separate_nativeDOBgrade",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA753_identity_geo_locator_explicit",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA753_root_original_body_role",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA753_unknown_raw_metadata_null",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA753_no_personcountry_QIDcoords_added",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA753_no_stale_proposal_pending_fields",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA8828_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA8828_fixed_authority_DOB_unique_key",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA8828_actual_source_fullname",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA8828_actual_place_date",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA8828_actual_dateprecision_not_overstated",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA8828_final_grade_hemisphere",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA8828_actual_quote_wordcount_limit",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA8828_birthplacegrade_separate_nativeDOBgrade",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA8828_identity_geo_locator_explicit",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA8828_root_original_body_role",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA8828_unknown_raw_metadata_null",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA8828_no_personcountry_QIDcoords_added",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA8828_no_stale_proposal_pending_fields",
+      "passed": true
+    },
+    {
+      "check": "fiveS2_fourS3",
+      "passed": true
+    },
+    {
+      "check": "sevenNorth_twoUnknown_noSouth",
+      "passed": true
+    },
+    {
+      "check": "seven_exact_DOB_two_year_only",
+      "passed": true
+    },
+    {
+      "check": "Pickavance_actualbom_unverifiedprintedpredicate",
+      "passed": true
+    },
+    {
+      "check": "Pickavance_no_OCR_or_numeric_date_place_ambiguity_verdict",
+      "passed": true
+    },
+    {
+      "check": "Pickavance_screenshot_textmarker0images_not_creationfailure",
+      "passed": true
+    },
+    {
+      "check": "Pickavance_safe_placeonly_quote",
+      "passed": true
+    },
+    {
+      "check": "Pickavance_copyright_not_publication_or_filename",
+      "passed": true
+    },
+    {
+      "check": "Pickavance_separate_unparsedbulletin_not_corrob",
+      "passed": true
+    },
+    {
+      "check": "Grosveld_badmetadata_flags_unrepaired",
+      "passed": true
+    },
+    {
+      "check": "Grosveld_no_WhosWho_or_independentbirth_verification",
+      "passed": true
+    },
+    {
+      "check": "Grosveld_actualquotedFrank_not_inferredalias",
+      "passed": true
+    },
+    {
+      "check": "Grosveld_no_2026deathconfirmation",
+      "passed": true
+    },
+    {
+      "check": "Jameson_conservativebylinedS3_no2026deathconfirmation",
+      "passed": true
+    },
+    {
+      "check": "Jameson_encyclopediadependence_retained",
+      "passed": true
+    },
+    {
+      "check": "Ford_actualyear1912_not_exactOct24",
+      "passed": true
+    },
+    {
+      "check": "Ford_original_authored_article_month2009",
+      "passed": true
+    },
+    {
+      "check": "Ditchburn_sourceage84_consistent",
+      "passed": true
+    },
+    {
+      "check": "Ditchburn_2022pubdate_not_1987death",
+      "passed": true
+    },
+    {
+      "check": "Keen_sourceyear1890_no_exactSep5",
+      "passed": true
+    },
+    {
+      "check": "Keen_nearqualifier_preserved",
+      "passed": true
+    },
+    {
+      "check": "Keen_other_authoredcatalogue_not_birthproof_or_gradeupgrade",
+      "passed": true
+    },
+    {
+      "check": "McNeill_literal_JBrown_and_cityonly_unknown",
+      "passed": true
+    },
+    {
+      "check": "Relf_actual_RoderickCollar_ODNB_exactdate",
+      "passed": true
+    },
+    {
+      "check": "Wolfson_actual_extraGordon_separate_nativeunchanged",
+      "passed": true
+    },
+    {
+      "check": "Wolfson_editor_editedseries_no_exactpublicationyear",
+      "passed": true
+    },
+    {
+      "check": "Wolfson_exactDOB_life_cityonly_unknown",
+      "passed": true
+    },
+    {
+      "check": "all_held_nativeDOB_authority_unchanged",
+      "passed": true
+    },
+    {
+      "check": "Snow_dateless_fullname_not_bound_to_nativeDOB",
+      "passed": true
+    },
+    {
+      "check": "Brown_no_bornplace_in_actual_inspectedobituary",
+      "passed": true
+    },
+    {
+      "check": "Rainger_retirementdate_not_birthdate",
+      "passed": true
+    },
+    {
+      "check": "inherited_active_source_DOB_conflicts.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "inherited_provisional_parsed_date_discrepancies.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "inherited_birthplace_source_conflicts.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "inherited_source_date_precision_holds.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "inherited_source_derived_age_inconsistencies.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "inherited_lifespan_endpoint_discrepancies.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "inherited_cross_source_reported_age_contrasts.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "inherited_omitted_middle_name_admission.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "inherited_source_ordinal_age_wording_observations.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "six_activeDOBconflicts_none_new",
+      "passed": true
+    },
+    {
+      "check": "Tomes_provisional_only_not_Pickavance",
+      "passed": true
+    },
+    {
+      "check": "Shortt_ordinalcase_only_unchanged",
+      "passed": true
+    },
+    {
+      "check": "each12_actualqueryledger",
+      "passed": true
+    },
+    {
+      "check": "worker36queries_withinupfrontbudgets",
+      "passed": true
+    },
+    {
+      "check": "worker26open_or_click_ledgers",
+      "passed": true
+    },
+    {
+      "check": "worker27nav_includingscreenshot_within14each",
+      "passed": true
+    },
+    {
+      "check": "worker7finds_onefailedAfind",
+      "passed": true
+    },
+    {
+      "check": "worker_one_shot_textmarker_no_visualclaim",
+      "passed": true
+    },
+    {
+      "check": "workers_rawGETzero",
+      "passed": true
+    },
+    {
+      "check": "explicit_protocol_disclosures_present",
+      "passed": true
+    },
+    {
+      "check": "reported_protocoldeviations_none",
+      "passed": true
+    },
+    {
+      "check": "A_adaptivepurpose_not_falseallqueriesprewritten",
+      "passed": true
+    },
+    {
+      "check": "workerreports_preserved_exact",
+      "passed": true
+    },
+    {
+      "check": "root9_firstoriginals_prelogged",
+      "passed": true
+    },
+    {
+      "check": "root11opens_4finds_zeroquery_shot_GET",
+      "passed": true
+    },
+    {
+      "check": "root_within_upfront16open_1querybudget",
+      "passed": true
+    },
+    {
+      "check": "aggregate_source_counts_exact",
+      "passed": true
+    },
+    {
+      "check": "parent_final_decisions_exact",
+      "passed": true
+    },
+    {
+      "check": "parent_firstpass_only_completionboundary",
+      "passed": true
+    },
+    {
+      "check": "no_sourcecache_images_in_study",
+      "passed": true
+    },
+    {
+      "check": "preliminaryQA_before_finalfacts",
+      "passed": true
+    }
+  ],
+  "accepted_fact_sha256_at_review": "0bc47fa89ee0ad7f0b13f05c92ba3f8105cf983fabb059dac1b84aac94ed4bc8",
+  "blocking_issues": [],
+  "accepted_native_bindings": [
+    {
+      "record_id": "RS_PAST_NA4208",
+      "native_authority": "Grosveld; Franklin Gerardus (1948 - 2026); molecular biologist",
+      "native_DOB": "1948-08-18",
+      "source_actual_full_name": "Franklin Gerardus \"Frank\" Grosveld",
+      "source_date": "1948-08-18",
+      "source_date_precision": "exact_day_in_original_compiledprofile_born_clause",
+      "source_grade": "S3",
+      "hemisphere": "north",
+      "quote_words": 10,
+      "fixed_authority_DOB_key_matches": 1
+    },
+    {
+      "record_id": "RS_PAST_NA4384",
+      "native_authority": "Jameson; Guy Antony (1934 - 2026); aerospace engineer",
+      "native_DOB": "1934-11-20",
+      "source_actual_full_name": "Guy Antony Jameson",
+      "source_date": "1934-11-20",
+      "source_date_precision": "exact_day_in_original_bylinedprofile_born_parenthesis",
+      "source_grade": "S3",
+      "hemisphere": "north",
+      "quote_words": 6,
+      "fixed_authority_DOB_key_matches": 1
+    },
+    {
+      "record_id": "RS_PAST_NA504",
+      "native_authority": "Pickavance; Thomas Gerald (1915 - 1991)",
+      "native_DOB": "1915-10-19",
+      "source_actual_full_name": "Thomas Gerald Pickavance",
+      "source_date": "1915-10-19",
+      "source_date_precision": "exact_day_in_originalmemoir_header_and_parsed_birthnarrative",
+      "source_grade": "S2",
+      "hemisphere": "north",
+      "quote_words": 5,
+      "fixed_authority_DOB_key_matches": 1
+    },
+    {
+      "record_id": "RS_PAST_NA5088",
+      "native_authority": "Ford; Charles Edmund (1912 - 1999)",
+      "native_DOB": "1912-10-24",
+      "source_actual_full_name": "Charles Edmund Ford",
+      "source_date": "1912",
+      "source_date_precision": "year_only_in_lifespan_adjacent_to_born_clause_not_exact_native_day",
+      "source_grade": "S2",
+      "hemisphere": "north",
+      "quote_words": 4,
+      "fixed_authority_DOB_key_matches": 1
+    },
+    {
+      "record_id": "RS_PAST_NA5089",
+      "native_authority": "Ditchburn; Robert William (1903 - 1987)",
+      "native_DOB": "1903-01-14",
+      "source_actual_full_name": "Robert William Ditchburn",
+      "source_date": "1903-01-14",
+      "source_date_precision": "exact_day_in_born_clause",
+      "source_grade": "S3",
+      "hemisphere": "north",
+      "quote_words": 10,
+      "fixed_authority_DOB_key_matches": 1
+    },
+    {
+      "record_id": "RS_PAST_NA6300",
+      "native_authority": "Keen; Sir; Bernard Augustus (1890 - 1981); agriculturist",
+      "native_DOB": "1890-09-05",
+      "source_actual_full_name": "Sir Bernard Augustus Keen",
+      "source_date": "1890",
+      "source_date_precision": "yearonly",
+      "source_grade": "S3",
+      "hemisphere": "north",
+      "quote_words": 5,
+      "fixed_authority_DOB_key_matches": 1
+    },
+    {
+      "record_id": "RS_PAST_NA661",
+      "native_authority": "McNeill; Sir; James McFadyen (1892 - 1964)",
+      "native_DOB": "1892-08-19",
+      "source_actual_full_name": "Sir James McFadyen McNeill",
+      "source_date": "1892-08-19",
+      "source_date_precision": "exactday",
+      "source_grade": "S2",
+      "hemisphere": "unknown",
+      "quote_words": 11,
+      "fixed_authority_DOB_key_matches": 1
+    },
+    {
+      "record_id": "RS_PAST_NA753",
+      "native_authority": "Relf; Ernest Frederick (1888 - 1970)",
+      "native_DOB": "1888-10-02",
+      "source_actual_full_name": "Ernest Frederick Relf",
+      "source_date": "1888-10-02",
+      "source_date_precision": "exactday",
+      "source_grade": "S2",
+      "hemisphere": "north",
+      "quote_words": 9,
+      "fixed_authority_DOB_key_matches": 1
+    },
+    {
+      "record_id": "RS_PAST_NA8828",
+      "native_authority": "Wolfson; Leonard (1927 - 2010); Baron Wolfson of Marylebone",
+      "native_DOB": "1927-11-11",
+      "source_actual_full_name": "Leonard Gordon Wolfson",
+      "source_date": "1927-11-11",
+      "source_date_precision": "exactday",
+      "source_grade": "S2",
+      "hemisphere": "unknown",
+      "quote_words": 3,
+      "fixed_authority_DOB_key_matches": 1
+    }
+  ],
+  "inherited_issue_sidecars_byte_identical": [
+    "active_source_DOB_conflicts.json",
+    "provisional_parsed_date_discrepancies.json",
+    "birthplace_source_conflicts.json",
+    "source_date_precision_holds.json",
+    "source_derived_age_inconsistencies.json",
+    "lifespan_endpoint_discrepancies.json",
+    "cross_source_reported_age_contrasts.json",
+    "omitted_middle_name_admission.json",
+    "source_ordinal_age_wording_observations.json"
+  ],
+  "source_work_quote_word_counts": {
+    "https://prabook.com/web/frank.grosveld/609766": 10,
+    "https://cfdflow.com/article/professor-antony-jameson": 6,
+    "https://www.chilton-computing.org.uk/harwell/pdfs/holt-1997-thomas-gerald-pickavance-19-october-1915-12-november-1991.pdf": 5,
+    "https://www.scielo.br/j/hcsm/a/VXZsqXbrtn7Ynp5jzgy9nmj/?lang=en": 4,
+    "https://www.optica.org/about/newsroom/obituaries/2022/robert_william_ditchburn/": 10,
+    "https://archives.ucl.ac.uk/CalmView/Record.aspx?id=MS+ADD+297&src=CalmView.Catalog": 5,
+    "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/581154831": 11,
+    "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/581832733": 9,
+    "https://history.rcp.ac.uk/inspiring-physicians/leonard-gordon-wolfson-lord-wolfson-marylebone": 3
+  },
+  "protocol_disclosures": {
+    "A": "Sixinitialexactqueriesprelisted; adaptives7–12 covered by priorgeneralpurpose and exactwordings selectedafterinitialobservations, notfalseallwordingsprewritten. OnecachedRaingerfind returned403 afterearliercareer-onlybody, stopped; no sourceversionchange/earlierbodyinvalidityclaim. OnePickavancecachedscreenshot exposedtextmarkeronly/noImageContent/pixels, no printedglyph or creationfailureclaim.",
+    "B": "Actualqueries/metadata roles maintained; Ford year-only precision and unavailableotherBborn-body limits not treatedasexactbirthday/birthplaceproof. No reportedprotocoldeviation.",
+    "C": "Actualqueries/navigation/purposeledgers; Keen year-only precision and separateCSACcontext not upgraded. SquirefirstPDFredirectTagManageronly notinventedHTTPfailure/sourceDOBverdict. No reportedprotocoldeviation.",
+    "root": "NinefirstsourceURLs prelogged; twocachedsourceinspections/fourfinds withinexistingverificationpurpose/budgets, zeroqueries. Parsedbodyacquisition not rawbytes or informationalindependence."
+  },
+  "first_pass_completion": {
+    "previously_neverreviewed_blank_window_subjects": 18,
+    "reviewed": 18,
+    "previously_held_blank_window_subjects": 94,
+    "new_birthplaces": 9,
+    "new_holds": 9,
+    "remaining_blank_window_records": 103,
+    "remaining_never_individually_reviewed_blank_window_records": 0,
+    "all_birthplaces_complete": false,
+    "scope": "Fixednative1835–1985inclusiveUKblank-birthplacequeue only; not allUKglobalblankrecords/allcohorts/sourceexhaustion/finalfreeze."
+  },
+  "no_new_admission_method_exception": true,
+  "review_scope": "IndependentdocumentaryQA of actualminimalfacts/quotes/acquisitionroles/locators/identity/DOBprecision/geography/sourcegenre/representation/protocoltiming/inheritedissues. Originals acquiredbyworkers/root; reviewer didnotnetwork-fetchsources or inspectoriginalpixels/rawbytes.",
+  "limitations": [
+    "Nativeauthority+DOBuniqueness is withinfixed4983cohort, notglobalpersonuniqueness/crosscohortstatisticaldedup.",
+    "Pickavanceparsedbom contextualbirthassertion doesnot verifyprintedborn or OCRcause; exactdate/placevalues unambiguous, unlikeTomesmaterial6/8datevalueuncertainty.",
+    "GrosveldPrabookbadnonbirthtokens retainedunrepaired/S3, underlyingWhoWho and independentbirthverificationunacquired. Jamesonnamedbyline notverifiedexpert/S2 and encyclopediaoutlinks/dependence retained.",
+    "WolfsonadditionalactualsourceGordon notaddedtonative; allnativepersonalcomponentsstated so omitted-middleexceptionnotinvoked.",
+    "Ford/Keenyearonly doesnotconfirmnativeOctober24/September5; nativeDOBgradesunchanged.",
+    "Firstindividualpass nowcompleteonlywithin112blankwindowqueue, with103blankrecords remainingunresolved/held; no exhaustivebirthplacecompletion/finalfreezeclaim.",
+    "UnknownrawHTTPstatus/requesttime/bytehashnull; actualtoolerrors/screenshotexposurelimits separate, no sourcecaches."
+  ],
+  "no_network_source_code_mainoutputs_or_Git_mutation_by_reviewer": true
+}

@@ -1,0 +1,26 @@
+{
+  "scope": "Explicit observed conflicts retained without native DOB repair or final correct-date verdict; this sidecar does not mutate cohort eligibility or identity.",
+  "records": [
+    {
+      "record_id": "RS_PAST_NA4005",
+      "native_dob": "1916-08-19",
+      "source_birthdate": "1913-08-19",
+      "source_precision": "exact_day_in_original_born_clause",
+      "source_url": "https://www.nationalacademies.org/read/13160/chapter/6",
+      "origin_version": "v18",
+      "active": true,
+      "policy": "Require a separate DOB adjudication before clearing this conflict; a source omitting birthdate must not silently bypass the hold. No DOB/calendar/eligibility/identity correction authorized in this birthplace workflow."
+    },
+    {
+      "record_id": "RS_PAST_NA4485",
+      "native_dob": "1929-06-03",
+      "source_header_birthyear": "1925",
+      "source_precision": "birthyear_in_profile_lifespan_header_only",
+      "source_url": "https://oa.anu.edu.au/obituary/laver-william-graeme-graeme-18708",
+      "origin_version": "v19",
+      "active": true,
+      "compatible_other_observation": "Webster original heading1929–2008 and ANU body age79; no exact native day proved and no source-header adjudication.",
+      "policy": "Keep hold pending separate date/source-header adjudication; do not bypass with dateless place material or silently dismiss the contrary heading."
+    }
+  ]
+}

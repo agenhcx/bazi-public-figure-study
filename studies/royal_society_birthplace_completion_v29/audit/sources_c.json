@@ -1,0 +1,488 @@
+{
+  "schema": "v29_sources_c_v1",
+  "worker": "/root/v26_sources_c assignedv29groupc",
+  "written_utc": "2026-11-06T11:39:40.542759+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA6300",
+    "RS_PAST_NA661",
+    "RS_PAST_NA753",
+    "RS_PAST_NA831",
+    "RS_PAST_NA8663",
+    "RS_PAST_NA8828"
+  ],
+  "intent_file": "v29_c_intent.json",
+  "counts": {
+    "discovery_queries": 12,
+    "web_navigation_attempts": 9,
+    "parsed_find_operations": 0,
+    "screenshots": 0,
+    "raw_HTTP_or_PDF_GETs": 0,
+    "body_verified_birthplace_candidates": 4,
+    "holds": 2
+  },
+  "candidates": [
+    {
+      "record_id": "RS_PAST_NA6300",
+      "native": {
+        "record_id": "RS_PAST_NA6300",
+        "authority_name": "Keen; Sir; Bernard Augustus (1890 - 1981); agriculturist",
+        "native_dob": "1890-09-05",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "8a650c28b1cfd1f1cf536139a419c798879d035ee62e0be0f5d5b2673091519b"
+      },
+      "status": "candidate_original_UCL_uncredited_adminhistory_S3_north_parentreview",
+      "raw_birthplace": "near Southend, Essex",
+      "source_url": "https://archives.ucl.ac.uk/CalmView/Record.aspx?id=MS+ADD+297&src=CalmView.Catalog",
+      "source_title": "Keen (Sir Bernard Augustus) Papers, MS ADD 297",
+      "source_author": null,
+      "source_kind": "originalinstitutionalarchivalcatalogue uncreditedcompiledAdminHistory",
+      "publication_year": null,
+      "publication_date_precision": "No publicationdate foractualUCLAdminHistory acquired; archivecoverage1931-1982 is not publicationdate.",
+      "source_grade_proposal": "S3",
+      "source_grade_basis": "OriginalUCLarchivalAdminHistory is uncreditedcompiledbiographicalmetadata, conservativeS3. Separate1983cataloguehasnamedcompilers but no birthplaceassertion, so neither attribution nor S2grade is transferred to UCLclaim.",
+      "source_grade_role": "person_birthplace_support_only",
+      "source_quote": "Born near Southend, Essex, 1890",
+      "source_locator": "turn9132432view2:L15fullnativeSirBernardAugustusKeen;L17bornnearSouthendEssex1890/FRS1935/soilphysicscareer/died1981;L18-20Pereiramemoir/custodycontext.",
+      "source_body_ref": "turn9132432view2",
+      "observed_source_full_name": "Sir Bernard Augustus Keen",
+      "source_birthdate": "1890",
+      "source_birthdate_precision": "yearonly",
+      "source_deathyear": "1981",
+      "source_DOB_native_compatibility": "Actual1890yearonly agrees unchangednative1890-09-05; actualdeath1981 agrees nativeauthority1890-1981. No exactSeptember5 claim fromUCLAdminHistory.",
+      "identity_review": [
+        "AllnativecomponentsBernardAugustusKeen actuallyinoriginaldescription, no inferredinitialexpansion.",
+        "Compatibleactuallystatedbirthyear1890/lifespan1890-1981; exactmonth/daynot supplied.",
+        "Originalsoilphysics/Rothamstedcareer/FRS1935/EastAfricanresearchorganization fingerprint coherent with agriculturnativeidentity; sourceonlycareeranchors not claimed independentlycorroboratednativefields."
+      ],
+      "reviewed_hemisphere_proposal": "north",
+      "geographic_basis": "Actualsubjectbirthclause explicitlynearSouthend,Essex; Essexwholecountyregion is northern. Preserve nearqualifier/no pointlocation/no silentSouthend-on-Seanormalization. No geography from extensiveforeignwork/travel or nationality.",
+      "geographic_support_grade_proposal": "S3",
+      "geographic_support_grade_role": "birthplace_whole_county_context_only_separatefrom_nativeDOBgrades",
+      "caveats": [
+        "Uncreditedarchivebiography, not civilbirthrecord/expertbylinedmemoir.",
+        "ObservedCSAC1983originalcatalogue(JeannineAlton/PeterHarper) givesnativefullname/1890-1981/career but no birthplace; do not claim independentbirthplacecorroboration or authorshipofUCLAdminHistory.",
+        "No originalDOBtier/country/QID/coordinates or finaleligibility changes."
+      ],
+      "additional_original_context": [
+        {
+          "url": "https://centreforscientificarchives.co.uk/wp-content/uploads/2024/01/KEEN_BERNARD_AUGUSTUS_v2.pdf",
+          "body_ref": "turn7003303view0",
+          "locator": "L0-11CSAC95/6/83/fullname1890-1981/compiledJeannineAltonPeterHarper/1983;L57-63careeroutlineborn1890schoolUCL;L96-100Pereiramemoirreference",
+          "role": "context_only_not_birthplacecorroboration_or_gradeupgrade",
+          "actual_publication_year": "1983",
+          "source_quote": "",
+          "quote_word_count": 0
+        }
+      ],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsedoriginalbody/actualtoolresult, not rawHTTPbytes",
+      "no_master_change": true,
+      "source_quote_word_count": 5
+    },
+    {
+      "record_id": "RS_PAST_NA661",
+      "native": {
+        "record_id": "RS_PAST_NA661",
+        "authority_name": "McNeill; Sir; James McFadyen (1892 - 1964)",
+        "native_dob": "1892-08-19",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "82b6cdf5aefdedf79da28e71cb845de4c90f670243891abc36860a4aa332af03"
+      },
+      "status": "candidate_original_ODNB_publicextract_S2_unknowngeo_parentreview",
+      "raw_birthplace": "6 Cameron Street, Clydebank",
+      "source_url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/581154831",
+      "source_title": "McNeill, Sir James McFadyen: (1892–1964), shipbuilder",
+      "source_author": "J Brown",
+      "source_kind": "originalauthorededited_ODNB_publicextract",
+      "publication_date": "2004-09-23",
+      "source_grade_proposal": "S2",
+      "source_grade_basis": "ActualauthoredJBrown biographypublicextract in editedODNBreferencework; no civilrecord/S1 or fullpaidarticle claim.",
+      "source_grade_role": "person_birthplace_support_only",
+      "source_quote": "was born on 19 August 1892, at 6 Cameron Street, Clydebank",
+      "source_locator": "turn9132432view0:L757nativefulltitle/lifespan;L761-775JBrown/publicationdate;L778directbirthplace/exactnativeDOB;L782-784Clydebankshipyard/Glasgownavalarchitecture/WWIcareer.",
+      "source_body_ref": "turn9132432view0",
+      "observed_source_full_name": "Sir James McFadyen McNeill",
+      "source_birthdate": "1892-08-19",
+      "source_birthdate_precision": "exactday",
+      "source_deathyear": "1964",
+      "source_DOB_native_compatibility": "Actual19August1892 matches unchangednative1892-08-19; actualtitlelifespan1892-1964 compatible nativeauthority.",
+      "identity_review": [
+        "AllnativeJamesMcFadyenMcNeill components actuallygiven ineditedtitle/body, no alias/initialexpansion.",
+        "ExactnativeDOB andlifespanmatch; coherent shipbuilding/JohnBrownClydebank/Glasgownavalarchitecture identitycontext."
+      ],
+      "reviewed_hemisphere_proposal": "unknown",
+      "geographic_basis": "Directsubjectbirthplace city/streetaddress only. Glasgow/France elsewhereare school/work/warcontext, Arranmotherfamily/childhoodnotbirth; no country/hemisphere from placefamiliarity.",
+      "caveats": [
+        "Publicextractactuallyacquired, no fullsubscriptionarticle/fullmemoir/civilrecordclaim.",
+        "AuthorliteralJBrown notexpanded or inferred to identity of otherJBrownscientist.",
+        "City/streetaddress remainsgeographyunknown; frozenpersoncountry/QID/coordinatesunchanged."
+      ],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsedoriginalbody/actualtoolresult, not rawHTTPbytes",
+      "no_master_change": true,
+      "source_quote_word_count": 11
+    },
+    {
+      "record_id": "RS_PAST_NA753",
+      "native": {
+        "record_id": "RS_PAST_NA753",
+        "authority_name": "Relf; Ernest Frederick (1888 - 1970)",
+        "native_dob": "1888-10-02",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "a581a6b8991e84b740adc237f4f2a73026c724ac3d69ed169b2202b8e501d34e"
+      },
+      "status": "candidate_original_ODNB_publicextract_S2_north_parentreview",
+      "raw_birthplace": "Beckenham, Kent",
+      "source_url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/581832733",
+      "source_title": "Relf, Ernest Frederick: (1888–1970), aerodynamicist",
+      "source_author": "Roderick Collar",
+      "source_kind": "originalauthorededited_ODNB_publicextract",
+      "publication_date": "2004-09-23",
+      "source_grade_proposal": "S2",
+      "source_grade_basis": "ActualRoderickCollar bylinedbiographypublicextract ineditedODNBreferencework; no host-onlyS1/civilverification claim.",
+      "source_grade_role": "person_birthplace_support_only",
+      "source_quote": "was born in Beckenham, Kent, on 2 October 1888",
+      "source_locator": "turn9132432view1:L757fullnativetitle/lifespan;L761byline/L775date;L777directBeckenhamKent/exactDOB;L779-780RoyalCollegeofScience/NPL/aerodynamicssuperintendentcareer.",
+      "source_body_ref": "turn9132432view1",
+      "observed_source_full_name": "Ernest Frederick Relf",
+      "source_birthdate": "1888-10-02",
+      "source_birthdate_precision": "exactday",
+      "source_deathyear": "1970",
+      "source_DOB_native_compatibility": "Actual2October1888 agrees unchangednative1888-10-02; title1888-1970 agrees nativeauthority.",
+      "identity_review": [
+        "AllnativeErnestFrederickRelf components directlytitle/body, no inferredinitial/alias.",
+        "ExactnativeDOB/lifespanmatch with NPL1912/Relfaerodynamicsdepartmentsuperintendent1925 and RoyalCollegeofScience distinctivecareer."
+      ],
+      "reviewed_hemisphere_proposal": "north",
+      "geographic_basis": "ActualsamebirthclauseBeckenham,Kent includeswholecountyregionKent, northern; cityfamiliarity alone not used. Portsmouthfamilyhome/Teddingtonworknotbirth.",
+      "geographic_support_grade_proposal": "S2",
+      "geographic_support_grade_role": "explicit_birthplace_whole_county_context_only_separatefrom_nativeDOBgrades",
+      "caveats": [
+        "Actualpublicextractnotfullpaidarticle; no acquiredcivilbirthrecord or independentcorroboration claim.",
+        "No country/QID/coords or originalDOBtierschanged."
+      ],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsedoriginalbody/actualtoolresult, not rawHTTPbytes",
+      "no_master_change": true,
+      "source_quote_word_count": 9
+    },
+    {
+      "record_id": "RS_PAST_NA8828",
+      "native": {
+        "record_id": "RS_PAST_NA8828",
+        "authority_name": "Wolfson; Leonard (1927 - 2010); Baron Wolfson of Marylebone",
+        "native_dob": "1927-11-11",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "9a46d80535bf983b03d089c27b1ca6dc654b0b64b00d1628df7d7bf9b3ee6a0d"
+      },
+      "status": "candidate_original_RCP_editor_obituary_S2_unknowngeo_parentreview",
+      "raw_birthplace": "London",
+      "source_url": "https://history.rcp.ac.uk/inspiring-physicians/leonard-gordon-wolfson-lord-wolfson-marylebone",
+      "source_title": "Leonard Gordon Wolfson, Lord Wolfson of Marylebone",
+      "source_author": "RCP editor",
+      "source_kind": "originaleditedRCP_historicalobituary_VolXII",
+      "publication_year": null,
+      "publication_date_precision": "Pageexplicitlyhistoricalobituary originallypublishedbetween2014and2018; exactyearnotassigned.",
+      "source_grade_proposal": "S2",
+      "source_grade_basis": "ActualRCPeditor attributededitedhistoricalobituary in RCPVolXIIseries, not simply uncreditedmetadata; actualpageexplainsoriginalprintbiography2014-2018. No verifiedpersonalmedicalexpert/byline expansion/civilrecord/S1claim.",
+      "source_grade_role": "person_birthplace_support_only",
+      "source_quote": "Born in London",
+      "source_locator": "turn2060994view0:L10actualfullLeonardGordonWolfson/titleMarylebone;L29exactDOB/death;L32-35originalseries/time/directbirthLondon;L37-45GUS/philanthropy/peer1985fingerprint;L48literalRCPeditor.",
+      "source_body_ref": "turn2060994view0",
+      "observed_source_full_name": "Leonard Gordon Wolfson",
+      "additional_source_name_component_not_added_to_native": "Gordon",
+      "source_birthdate": "1927-11-11",
+      "source_birthdate_precision": "exactday",
+      "source_deathdate": "2010-05-20",
+      "source_DOB_native_compatibility": "Actual11November1927 agrees unchangednative1927-11-11 and1927-2010lifespan. AllnativeLeonard/Wolfson/titleMarylebone componentsactuallypresent. SourcealsoexplicitlyGordon, not inferred or added to native. Parentadjudicates ordinaryallnative-componentbinding; sourceomissionv24exception not invoked.",
+      "identity_review": [
+        "NativeLeonardWolfson/titleBaronWolfsonofMarylebone alldirectlyrepresented inactualRCPfulltitle, sourceadditionallyGordon; no initials/nickname/substitutionexpansion.",
+        "ExactnativeDOB/compatiblelifespan; GUSmanagingdirector1962/chairman1981/WolfsonFoundation/1985lifepeer form distinctiveactualsourcecareerfingerprint.",
+        "No observedcompetingidentity/sourceDOB/placeconflict. SourceadditionalactualmiddleGordon keptonlyinobservedsourcefullname, authorityunchanged."
+      ],
+      "reviewed_hemisphere_proposal": "unknown",
+      "geographic_basis": "ExplicitbornLondoncityonly. FatherGlasgow/Russianfamily, Worcestereducation/familymove, Londonlaterhome and RCPfooteraddress do not establishsubjectbirthcountry.",
+      "caveats": [
+        "AttributionliteralRCPeditor, notexpanded to a namedindividual. Genre/editorialseries providesS2proposal, not hostalone.",
+        "CitedODNB/Guardian/Independentworks were not opened as independentcorroboration; do not treatthreecitedreferences as threeacquiredbirthplaceobservations.",
+        "No nativefullnameaddition ofGordon, authority/dates/lifespan/eligibility unchanged."
+      ],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsedoriginalbody/actualtoolresult, not rawHTTPbytes",
+      "no_master_change": true,
+      "source_quote_word_count": 3
+    }
+  ],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA831",
+      "native": {
+        "record_id": "RS_PAST_NA831",
+        "authority_name": "Squire; Herbert Brian (1909 - 1961)",
+        "native_dob": "1909-07-13",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "fe8d85e54fa3791d81708bb7fb1d01556b9881eed4b491547344b7ab47a8c8a7"
+      },
+      "status": "hold_original_birthplace_body_unavailable",
+      "hold_type": "original_birthplace_body_unavailable",
+      "reason": "ActualWikipediausedonlyasobservedmemoirlinkcarrier gives fullnative/exactnativeDOB/lifespan but schoolBedford/workcontextnotbirthplace. ActualJSTOR1962vol8index identifies S.B.Gates/A.D.Young authoredoriginalSquirememoir and observedDownloadlink. FirstDownloadclick redirected toarticlelanding, actualparsedonlyL0GoogleTagManager andno memoirbody. No explicittool403/challenge claim; no originalbirthplaceabsence/DOBverdict or alternatevariant retry.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Herbert_Squire",
+          "body_ref": "turn2060994view1",
+          "locator": "L116-129",
+          "role": "secondarylinkcarrieronly_notbirthplaceproof"
+        },
+        {
+          "url": "https://www.jstor.org/stable/i231385",
+          "body_ref": "turn7003303view1",
+          "locator": "L100-108",
+          "role": "originalmemoirbibliographicindexonly",
+          "original_article_title": "Herbert Brian Squire. 1909-1961",
+          "original_authors": [
+            "S. B. Gates",
+            "A. D. Young"
+          ],
+          "original_year": "1962",
+          "actual_index_pages": "118-135",
+          "secondary_reference_pages": "119-135",
+          "page_range_difference_not_nativeDOB_or_birthplace_conflict": true
+        },
+        {
+          "url": "https://www.jstor.org/stable/pdf/769466.pdf",
+          "actual_redirect_url": "https://www.jstor.org/stable/769466",
+          "body_ref": "turn3626515view0",
+          "actual_locator": "L0 GoogleTagManageronly",
+          "retrieval_limit": "Parsedtext/html1lineofTagManager; actualmemoirbodyunavailable, no explicitHTTPerror or challenge inferred.",
+          "stopped_without_retry": true
+        }
+      ],
+      "quotes_used": [],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsedoriginalbody/actualtoolresult, not rawHTTPbytes",
+      "no_master_change": true
+    },
+    {
+      "record_id": "RS_PAST_NA8663",
+      "native": {
+        "record_id": "RS_PAST_NA8663",
+        "authority_name": "Brown; John Milton (1941 - 2009)",
+        "native_dob": "1941-09-12",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "9a192b93602dd208a253d75e1ef9f48c8e3abf6898d4b3036d25fafcd5f555af"
+      },
+      "status": "hold_no_explicit_birthplace_in_inspected_original_obituary",
+      "hold_type": "no_explicit_birthplace_in_inspected_original_body",
+      "reason": "ActualExeterCollegeRegister2009 JohnRowlinson authoredobituary contains fullJohnMiltonBrownFRS/lifespan1941-2009 anddistinctivephysicalchemistry/gasspectroscopy/Peterhouse/FRS2003career. Inspectedobituarybody lacks explicitbirthplace; fatherWorcesterpost, educationCheltenham/Cambridge, Ottawa/Southampton/Oxfordwork and latertravelnotbirth. No exhaustiveabsenceclaimacrossentirecollegevolume; no birthdate/countryinference from school/year.",
+      "sources": [
+        {
+          "url": "https://staging.exeter.ox.ac.uk/inc/uploads/2017/07/register-09.pdf",
+          "actual_redirect_url": "https://staging.exeter.ox.ac.uk/wp-content/uploads/2017/07/register-09.pdf#page=1",
+          "body_ref": "turn6504238view0",
+          "locator": "L2volume2009;L31JohnRowlinsonbylineincontents;L740-790obituaryfullnative1941-2009/career;L4207-4208death10September2009age67",
+          "source_author": "John Rowlinson",
+          "source_title": "John Milton Brown, FRS (1941–2009)",
+          "source_publication_year": "2009",
+          "actual_birthdate_precision": "yearonly1941fromlifespanheading",
+          "birthplace_relation_verified": false
+        }
+      ],
+      "quotes_used": [],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsedoriginalbody/actualtoolresult, not rawHTTPbytes",
+      "no_master_change": true
+    }
+  ],
+  "query_ledger": [
+    {
+      "ordinal": 1,
+      "engine": "system2",
+      "query": "\"Bernard Augustus Keen\" born",
+      "observed_subject_relevant_response_refs": [
+        "turn9327549search0",
+        "turn9327549search15",
+        "turn9327549search50"
+      ]
+    },
+    {
+      "ordinal": 2,
+      "engine": "system2",
+      "query": "\"James McFadyen McNeill\" born",
+      "observed_subject_relevant_response_refs": [
+        "turn9327549search1",
+        "turn9327549search7"
+      ]
+    },
+    {
+      "ordinal": 3,
+      "engine": "system2",
+      "query": "\"Ernest Frederick Relf\" born",
+      "observed_subject_relevant_response_refs": [
+        "turn9327549search2",
+        "turn9327549search19",
+        "turn9327549search21"
+      ]
+    },
+    {
+      "ordinal": 4,
+      "engine": "system2",
+      "query": "\"Herbert Brian Squire\" born",
+      "observed_subject_relevant_response_refs": [
+        "turn9327549search5",
+        "turn9327549search48",
+        "turn9327549search34"
+      ]
+    },
+    {
+      "ordinal": 5,
+      "engine": "system2",
+      "query": "\"John Milton Brown\" \"1941\" born",
+      "observed_subject_relevant_response_refs": [
+        "turn6770128search25"
+      ]
+    },
+    {
+      "ordinal": 6,
+      "engine": "system2",
+      "query": "\"Leonard Wolfson\" born",
+      "observed_subject_relevant_response_refs": [
+        "turn6770128search1",
+        "turn6770128search3",
+        "turn6770128search29"
+      ]
+    },
+    {
+      "ordinal": 7,
+      "engine": "system1",
+      "query": "\"Bernard Augustus Keen\" biography \"born\"",
+      "observed_subject_relevant_response_refs": [
+        "turn9132432search0",
+        "turn9132432search8"
+      ]
+    },
+    {
+      "ordinal": 8,
+      "engine": "system1",
+      "query": "\"James McFadyen McNeill\" obituary biography",
+      "observed_subject_relevant_response_refs": [
+        "turn9132432search1",
+        "turn9132432search3"
+      ]
+    },
+    {
+      "ordinal": 9,
+      "engine": "system1",
+      "query": "\"Ernest Frederick Relf\" biography born",
+      "observed_subject_relevant_response_refs": [
+        "turn9132432search2",
+        "turn9132432search4",
+        "turn9132432search7"
+      ]
+    },
+    {
+      "ordinal": 10,
+      "engine": "system1",
+      "query": "\"Herbert Brian Squire\" memoir born",
+      "observed_subject_relevant_response_refs": [
+        "turn9132432search5",
+        "turn9132432search10",
+        "turn9132432search11"
+      ]
+    },
+    {
+      "ordinal": 11,
+      "engine": "system1",
+      "query": "\"John Milton Brown\" obituary",
+      "observed_subject_relevant_response_refs": [
+        "turn6504238search0",
+        "turn6504238search3"
+      ]
+    },
+    {
+      "ordinal": 12,
+      "engine": "system1",
+      "query": "\"Leonard Wolfson\" \"11 November 1927\" biography",
+      "observed_subject_relevant_response_refs": [
+        "turn6504238search4",
+        "turn6504238search5"
+      ]
+    }
+  ],
+  "query_ledger_representation": "Exactactualqueries. Two4querybatches/two2querybatches combinedresults; refsare observedsubjectrelevantresults, notguaranteedperquerytoolmapping. No missingresponseIDsreconstructed. Firstdisplaylargequeryresulttruncated, retainedtoolresults re-inspectedlocally withoutnetwork; sourceevidencefromactualopenedbodies not projection.",
+  "navigation_ledger": [
+    {
+      "ordinal": 1,
+      "ref": "turn9132432view0",
+      "url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/581154831",
+      "outcome": "ActualODNBMcNeillpublicextract/fullnative/exactDOB/directaddressbirth candidateS2unknowngeo"
+    },
+    {
+      "ordinal": 2,
+      "ref": "turn9132432view1",
+      "url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/581832733",
+      "outcome": "ActualODNBRelfpublicextract/fullnative/exactDOB/directBeckenhamKent candidateS2north"
+    },
+    {
+      "ordinal": 3,
+      "ref": "turn9132432view2",
+      "url": "https://archives.ucl.ac.uk/CalmView/Record.aspx?id=MS+ADD+297&src=CalmView.Catalog",
+      "outcome": "ActualUCLKeenarchivefullnative/year1890/directnearSouthendEssex candidateS3north"
+    },
+    {
+      "ordinal": 4,
+      "ref": "turn6504238view0",
+      "url": "https://staging.exeter.ox.ac.uk/inc/uploads/2017/07/register-09.pdf",
+      "outcome": "ActualExeterBrownobituaryfullnative/year1941/careerbut no explicitbirthplace in inspectedbody"
+    },
+    {
+      "ordinal": 5,
+      "ref": "turn2060994view0",
+      "url": "https://history.rcp.ac.uk/inspiring-physicians/leonard-gordon-wolfson-lord-wolfson-marylebone",
+      "outcome": "ActualRCPeditorWolfsonobit/exactDOB/directLondon candidateS2unknowngeo; actualadditionalmiddleGordonpreservedsourceonly"
+    },
+    {
+      "ordinal": 6,
+      "ref": "turn2060994view1",
+      "url": "https://en.wikipedia.org/wiki/Herbert_Squire",
+      "outcome": "SecondarySquirememoirlinkcarrieronly"
+    },
+    {
+      "ordinal": 7,
+      "ref": "turn7003303view0",
+      "url": "https://centreforscientificarchives.co.uk/wp-content/uploads/2024/01/KEEN_BERNARD_AUGUSTUS_v2.pdf",
+      "outcome": "Actualnamedcompiled1983CSACKeencatalogue, birthyearonly/no birthplace; no UCLclaimgradeupgrade/corroboration"
+    },
+    {
+      "ordinal": 8,
+      "ref": "turn7003303view1",
+      "url": "https://www.jstor.org/stable/i231385",
+      "outcome": "Actual1962vol8index/Squireauthor/title/Downloadlink; no memoirbody"
+    },
+    {
+      "ordinal": 9,
+      "ref": "turn3626515view0",
+      "url": "https://www.jstor.org/stable/pdf/769466.pdf",
+      "outcome": "ObservedDownloadclickredirectsto stable769466 actualL0TagManageronly, no memoirbody/expliciterror; stoppedno variantretry"
+    }
+  ],
+  "protocol_deviations": [],
+  "protocol_review": "Initialgeneraladaptivepurpose and exactquery/navigationintents persistedbeforecalls. Eachlocalwritecommand exitcodeactuallycheckedbeforedependentnetwork thisbatch. No failedroute retries/variants/accessbypass/rawGETs or sourcechildren/fullsourcecaches/maincode/study/Git/mastermutations. Nineinheritedissue/methodfiles untouched. No newlyqualifiedDOB/name/placeconflict identified; actualsourceextraGordon/not-nativecomponent keptdistinctwithoutnativechange. NativeDOB/authority/lifespan/cohorteligibility/country/QID/coordinates/originalDOBgrades allfrozen."
+}
