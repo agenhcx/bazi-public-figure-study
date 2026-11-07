@@ -1,0 +1,51 @@
+{
+  "written_utc": "2026-11-07T01:24:43.384987+00:00",
+  "status": "prospectively_frozen_before_V39_external_queries",
+  "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+  "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+  "method_preregistration_origin": "Original V36 policy and all historical application scopes stay byte-exact. V39 extends fixed application only.",
+  "baseline_commit": "1b7b6d829f21011c6c9b608b9ce8a555f0db7b2c",
+  "baseline_canonical_sha256": "b371ce32b5d2792d60d70b0c63bae4b0ce8084edf995c04e55587b89df04d6f6",
+  "fixed_record_ids": [
+    "RS_PAST_NA1513",
+    "RS_PAST_NA2111",
+    "RS_PAST_NA173",
+    "RS_PAST_NA3620",
+    "RS_PAST_NA2080",
+    "RS_PAST_NA5962"
+  ],
+  "groups": {
+    "a": [
+      "RS_PAST_NA1513",
+      "RS_PAST_NA2111"
+    ],
+    "b": [
+      "RS_PAST_NA173",
+      "RS_PAST_NA3620"
+    ],
+    "c": [
+      "RS_PAST_NA2080",
+      "RS_PAST_NA5962"
+    ]
+  },
+  "fixed_nonblank_unknown_window_pool": 57,
+  "rules_unchanged": true,
+  "method_amendment_created": false,
+  "method_reused_from_version": 36,
+  "scope_application_extension": true,
+  "no_new_admission_method_exception": true,
+  "current_audit_path": "audit/method_application_scope_v39.json",
+  "legacy_application_scope_file_sha256": {
+    "method_application_scope.json": "ae080b06f8abad9ed7575783486795c977e44ce5e5024bfa2096e16816a44d94",
+    "method_application_scope_v38.json": "bd7540715a6b4649ffe79371e38ee2b650bd0176013fbb5418efa02b8995fad0"
+  },
+  "mandatory_rules": "Unchanged V36 mandatory actual full native personal name, exact native DOB, coherent distinctive career, compatible lifespan, frozen birthplace agreement; actual direct born-whole-region or personally born-place hyperlink actually followed then actual target whole-region, or acquired P19/P131 chain. S3 geographic_support_only. Actual incompatible date/place held; no source shopping, guessed URI/QID, nationality/work/centroid, mirrored body, or rewritten-summary primary-body promotion. Missing proof held. No country/coordinate/DOB/grade repair.",
+  "budgets": {
+    "per_group_queries": 4,
+    "per_group_navigation_attempts": 10,
+    "root_source_or_context_verification_opens": 18,
+    "root_adaptive_author_or_observed_original_work_locator_query": 1
+  },
+  "source_exhausted": false,
+  "final_freeze": false
+}

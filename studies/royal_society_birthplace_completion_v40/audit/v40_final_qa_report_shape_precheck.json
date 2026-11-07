@@ -1,0 +1,34 @@
+{
+  "schema": "UK_v40_final_QA_report_shape_precheck_v1",
+  "status": "PASS",
+  "historical_reconstruction_or_CLI_invoked": false,
+  "checks": [
+    "all9sourceQAinventorySHAs_counts_and_shapes",
+    "alltailreaders_keys_and_parent_issue_counts",
+    "full_actual_worker_root_sourcecounts_by_operation_and_exact_reportcopies",
+    "finaldocs_currentcanonical_no_placeholders",
+    "no_distributed_source_caches",
+    "allisolatedruntimeauditfiles_present",
+    "harnessAST"
+  ],
+  "source_counts": {
+    "worker_queries": 10,
+    "root_queries": 1,
+    "total_queries": 11,
+    "worker_navigation_attempts": 10,
+    "worker_source_open_operations": 5,
+    "worker_click_operations": 5,
+    "root_source_opens": 8,
+    "root_click_operations": 1,
+    "total_navigation_attempts": 19,
+    "total_source_open_operations": 13,
+    "total_click_operations": 6,
+    "worker_parsed_finds": 5,
+    "root_parsed_finds": 0,
+    "total_parsed_finds": 5,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "production_mutated": false,
+  "network_used": false
+}
