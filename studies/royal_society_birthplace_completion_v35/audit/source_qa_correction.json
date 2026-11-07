@@ -1,0 +1,31 @@
+{
+  "schema": "UK_v35_source_QA_harness_corrections_v1",
+  "written_utc": "2026-11-06T23:56:23.504408+00:00",
+  "initial_report_path": "v35_source_qa_initial_failed_report.json",
+  "initial_report_sha256": "75ff9f84827a522b514e9ca371664d44524dfba9b40a58f2bc6027ff5edc0ded",
+  "initial_result": {
+    "passed": false,
+    "checks_passed": 121,
+    "blocking_issues": [
+      {
+        "check": "root_exactURL_intents_and_wrapper_cachedfind",
+        "passed": false
+      },
+      {
+        "check": "queue_window_explicit_not_all_historical_cohort",
+        "passed": false
+      }
+    ]
+  },
+  "corrections": [
+    "Actualrootcachedfind targeted literal header11January1897, not thefullpersonname the harness originallyassumed. Testnowchecks actualrecordedpattern.",
+    "Windowcloseoutscope correctlyuseduppercaseWITHIN; harnessnowcase-normalizes itsstringmatch. No sourcewindow/datadefinitionchanged."
+  ],
+  "separate_documentary_disclosure": "Originalrootintentintro stale fixed12 descriptivecount is preservedbyteexact, withnewdated root_intent_scope_clarification.json provingactualscope6/3opens1find andseparatevalid12-openmaximum. No retrospectivepre-requestrewrite orscopeoverrun.",
+  "final_result": {
+    "passed": true,
+    "checks_passed": 125,
+    "blocking_issues": []
+  },
+  "reviewer_source_fact_production_or_Git_edits": false
+}

@@ -1,0 +1,337 @@
+{
+  "schema": "UK_v35_geography_only_source_followup_lane_a_v1",
+  "worker": "/root/v32_sources_a",
+  "written_utc": "2026-11-06T23:38:28.669803+00:00",
+  "intent_file": "v35_a_intent.json",
+  "scope": [
+    "RS_PAST_NA6941",
+    "RS_PAST_NA780"
+  ],
+  "baseline_commit": "ea8f974cb7029714906c2f5ceb9cc1e1bc2594e1",
+  "phase": "geography_only_original_person_birth_context_followup",
+  "usage": {
+    "discovery_queries": 4,
+    "query_limit": 4,
+    "source_open_operations": 2,
+    "navigation_attempts": 2,
+    "parsed_finds": 1,
+    "navigation_attempts_including_cached_finds": 3,
+    "navigation_limit": 6,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "usage_definition": "navigation_attempts isactualsourceopens; cachedfindseparate. Totalnavigationoperations3withinbudget6.",
+  "prior_context_review": {
+    "full_scope_records_read_before_queries": true,
+    "targeted_currentv34individualholds_and_v24_v26originalsourcecontexts_read_before_queries": true,
+    "original_BP_sources": {
+      "RS_PAST_NA6941": [
+        "https://www.cumbrianlives.org.uk/lives/herbert-augustus-hills.html"
+      ],
+      "RS_PAST_NA780": [
+        "https://www.turle.name/the_doctors/indiI25.html"
+      ]
+    },
+    "closed_or_previously_inspected_works": [
+      "GroveHillsKevinGriceCumbrianLivesnamedchildparagraph directLondon/exact1864-08-01/FRS1911/RAS1913-15 alreadyacquired. Parententrydeathyearinconsistency unrelatedchildDOB, no clearance/correction.",
+      "GroveHillsNature110551a0 failed500idpredirect, NPGmp76047failedrouteclosed; MNRAS1923obituarylistPDF1923MNRAS..83R.232. acquired2pageslistonly/noDOB/BP; no failedworkvariants/reopeningoldlist.",
+      "EvansTurlefamilycompiledpersonalentry full/exact1857-07-27/BarbicanLondonstreetaddress/compatiblelife1857-1930/geologistcareeralreadyacquired; Englandinlatercensusresidencenotbirth. CitationsDWB/FrancesHartman notacquiredoriginalbirthproof.",
+      "EvansCambridge1931originalobituarylandingpreviouslymetadataonly; no actualsubjectbody, stopclosedtextlessbodyroute/no variants. Different1855-1943JohnWilliamEvansdiscoveryexcludednotDOBconflict."
+    ],
+    "other_actual_DOB_or_place_holds_found": false,
+    "projection_limits": "GroveHillsWikiHighHeadCastlebirthprojectionnotoriginalbody/placeconflict; originalNatureOctober2deathprojectionunacquiredvsacceptedSeptember26noexactdeathverdict. Bothnativeendyear1922unchanged."
+  },
+  "candidates": [],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA6941",
+      "native": {
+        "record_id": "RS_PAST_NA6941",
+        "authority_name": "Grove-Hills; Edmond Herbert (1864 - 1922)",
+        "native_dob": "1864-08-01",
+        "raw_birthplace": "London",
+        "birthplace_source_grade": "S3",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "878ae14be6fa1bb609e04e87c77dbec6aa2d8c4e0ed35cc019052ca23325d740"
+      },
+      "status": "hold_actual_new_original_place_conflict",
+      "hold_type": "explicit_original_subject_birthplace_conflict",
+      "reason": "ActualnewRogerHutchinsODNBpublicextract fullnativecomponents/compatibleexact1864-08-01/life1864-1922/coherentRoyalEngineersastronomycareer directlystatesbornHighHeadCastle,Cumberland. ExistingacceptedactualKevinGriceCumbrianLivesnamedchildparagraphdirectlystatesLondonwithsameexactDOB/fullnative. Theseareconflictingexplicitbirthplaces, not consistentrefinement ofLondon. Holdgeography/wholeobject; no newrawcitycorrection/gradechange/chosenplace/hemisphere. Rootmayappendqualifiedplaceconflictinventory preservingGotch/otherpriorholds; workernotmodifyinventory.",
+      "source_url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/580658625",
+      "source_title": "Hills, Edmond Herbert Grove- [pseud. Colonel Rivers]: (1864–1922), astronomer",
+      "source_author": "Roger Hutchins",
+      "source_kind": "original_attributed_edited_national_biographical_reference_public_extract",
+      "source_grade_proposal": "S2",
+      "source_grade_adopted": null,
+      "source_grade_basis": "ActualattributededitedODNBpublicExtract/byline/sourcepublication/version/directborn/career, ordinaryS2referencegenre. No fullpaywalledchapter/civilbirthrecord/hostS1orverifiedindependenceclaim. Newgradeifinventoryusedappliestonewobservationonly; originalLondonS3unchanged.",
+      "source_grade_role_if_inventory_observation_used": "birthplace_conflict_observation_only_no_BP_or_DOB_grade_change",
+      "source_quote": "was born on 1 August 1864 at High Head Castle, Cumberland",
+      "source_quote_word_count": 11,
+      "source_body_ref": "turn7111391view0",
+      "source_ref": "turn7111391view0",
+      "parent_source_ref": null,
+      "source_initial_open_ref": "turn3817480view0",
+      "source_body_acquisition_role": "worker_actual_new_original_ODNB_public_extract_body_located_in_cached_find_after_initial_source_open",
+      "source_locator": "L757invertedfullnative/life1864-1922/title;L761/763RogerHutchins;L775publication2004-09-23/L779version2012-01-05;L781directbornexact1864-08-01HighHeadCastleCumberland;L782Winchester/Woolwich/RoyalEngineers1884;L783-785RAS/eclipses/spectroscopy/geodesycareer.",
+      "observed_source_full_name": "Hills, Edmond Herbert Grove-",
+      "source_name_rendering_review": "ODNBbibliographicinversionpositionsGrove- beforeHillswhenreadinordinarynameorder; allnativeEdmondHerbertGrove-Hillscomponents explicitlypresent. No initials/nickname/pseudonymexpansion, omittedmiddleexception/nativealiasaddition. Nativeauthorityunchanged.",
+      "source_birthdate": "1864-08-01",
+      "source_birthdate_precision": "exact_day_in_original_public_extract_direct_born_clause",
+      "source_lifespan": "1864-1922",
+      "source_DOB_native_compatibility": "Exact1864-08-01 agrees unchangednative; sourcefullheading1864-1922agreesnativelifespanyears. Exactdeathdaynotstatedintheacquiredextract/no October2sourceclaim.",
+      "identity_review": [
+        "AllnativecomponentsEdmondHerbertGrove-HillsappearintheactualinvertedODNBheadinganddirectbornclause; ordinarybibliographicrenderingnotanameexception.",
+        "Exactnative1864-08-01andlifespan1864-1922bindsamepersonwithoutdatecorrection.",
+        "RoyalEngineers1884/RAS1893/1894lunarlongitudephotography/1893Senegaleclipsespectrum/1896Japanand1898Indiaeclipses/secretaryeclipsecommittee distinctivecareercoheresacceptedmilitarycartographerastronomer.",
+        "Parentresidence/familypropertiesnotused; actualdirectsubjectbornHighHeadCastleconflictsactualsubjectbornLondon."
+      ],
+      "source_place_observed": "High Head Castle, Cumberland",
+      "stored_place_relation_review": "Explicitcompetingplace vsfrozenLondon, not supportedLondoncountryqualification/consistentrefinement. Cannotadoptgeowithoutarbitrarilychoosingplace.",
+      "reviewed_hemisphere_proposal": "unknown",
+      "geographic_basis": "CumberlandbirthregionmightotherwisequalifyNorth, but actualstoredLondonvsHighHeadCastleplaceconflictblocksadoption. No rawcity/country/coordschange.",
+      "publication_date": "2004-09-23",
+      "publication_date_precision": "day_in_actual_publisher_publication_metadata",
+      "source_version_date": "2012-01-05",
+      "source_version_date_precision": "day_in_actual_publisher_ThisVersion_metadata_notnewretrievalchange",
+      "prior_accepted_BP_observation": {
+        "source_url": "https://www.cumbrianlives.org.uk/lives/herbert-augustus-hills.html",
+        "source_title": "Herbert Augustus Hills (1837-1909)",
+        "source_author": "Kevin Grice",
+        "source_grade": "S3",
+        "source_grade_role": "original_person_birthplace_support_only",
+        "actual_source_full_name": "Edmond Herbert Grove-Hills",
+        "actual_born_date": "1864-08-01",
+        "actual_place": "London",
+        "source_quote": "born 1st August 1864 in London",
+        "source_quote_word_count": 6,
+        "original_worker_ref": "turn5483059view0",
+        "original_root_ref": "turn9078359view1",
+        "original_locator": "v24workerL13title/L15KevinGrice/L49fullnative/exactDOB/directLondon/deathcareer/L50FRS1911RAS1913-15; originalrootL49-50.",
+        "v35_body_acquired": false,
+        "role": "Exactexistingacceptedcuratedobservationcompared; no v35reopen/newcorroborationclaim",
+        "full_prior_context_file": "v35_grovehills_prior_context.json",
+        "prior_quality_caveats_unchanged": true
+      },
+      "caveats": [
+        "OnlyactualpublicExtractacquired; remainderofpaywalledchapterunread/noauthbypass.",
+        "EarlierWiki/KiddleHighHeadCastleprojectionswerenotqualifiedoriginalbody; currentactualODNBisnewacquisition, notbackdatedoldproof orindependenceclaim.",
+        "OldNature110551a0failure/NPGfailedroute/memoirlistnoBPstayclosed; no failedworkvariant/retry/rawGET.",
+        "OriginalCumbrianfather-entrydates/deathdayqualityflagsremainunchanged; no childDOBconflict or exactdeathdayverdict newlycreated.",
+        "Allquotes<=25words/work: newODNB11words/oldCumbrian6existingwords; nofullsourceHTML/familynarrative/imagesredistributed."
+      ],
+      "native_and_original_birthplace_fields_unchanged": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original HTML text, not raw HTTP bytes",
+      "no_master_change": true
+    },
+    {
+      "record_id": "RS_PAST_NA780",
+      "native": {
+        "record_id": "RS_PAST_NA780",
+        "authority_name": "Evans; John William (1857 - 1930)",
+        "native_dob": "1857-07-27",
+        "raw_birthplace": "Barbican, London (2 Beech Street, Barbican, London)",
+        "birthplace_source_grade": "S3",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "10a2ff7720b14950986300ed8605200daf36e29117b9edab82b6991deefcc12d"
+      },
+      "status": "hold_new_original_reference_no_explicit_subject_birthplace",
+      "hold_type": "new_original_named_child_birthdate_only_no_born_region",
+      "reason": "ActualdistinctDWB1959originalfamilyentry hasnamedJOHNWILLIAMEVANS1857-1930/exact27July1857/geologistcareerFRS1919/GeologicalSocietypresident1924-26; inspectedchildparagraphL19-21 suppliesdateonly, no explicitchildbornplace. LondonatL21isdeath, notbirth. Do nottransferancestor/parentlocations, Welshancestryorworkregions. ExistingTurleBarbicanLondonstreetaddressS3andnativeDOB/gradesremainunchanged.",
+      "source_url": "https://biography.wales/article/s-EVAN-WIL-1734.html?lang%5B%5D=cy&lang%5B%5D=en&order=asc&page=122&query=William+Llewelyn+Davies&rows=12&sort=sort_name",
+      "source_title": "EVANS, WILLIAM (1734-1805), early Calvinistic Methodist exhorter — named John William Evans paragraph",
+      "source_author": null,
+      "source_kind": "original_edited_Dictionary_of_Welsh_Biography_family_entry_named_descendant_paragraph",
+      "source_grade_adopted": null,
+      "source_grade_role": "nonadopted_original_identity_date_context_only",
+      "source_quote": "",
+      "source_quote_word_count": 0,
+      "source_body_ref": "turn3817480view1",
+      "source_ref": "turn3817480view1",
+      "source_body_acquisition_role": "worker_actual_new_original_edited_reference_named_child_paragraph_acquired",
+      "source_locator": "L19fullJOHNWILLIAMEVANS/life1857-1930/exactborn27July1857/dateonly;L20geologistcareer/GeologicalSociety1924-26/FRS1919;L21death1930-11-16London/ancestrycontext;L23sourcesheading/L30publication1959.",
+      "observed_source_full_name": "John William Evans",
+      "source_birthdate": "1857-07-27",
+      "source_birthdate_precision": "exact_day_in_named_descendant_born_date_clause_no_place",
+      "source_lifespan": "1857-1930",
+      "source_death_date": "1930-11-16",
+      "source_DOB_native_compatibility": "Actualexact1857-07-27/lifespan1857-1930matchnativewithoutrepair; noDOBtierupgrade orunderlyingTurleaddresscorroboration.",
+      "identity_review": [
+        "AllnativeJohnWilliamEvanscomponentsdirectlyappearintheexplicitnameddescendantparagraph, no otherEvanssubstitution.",
+        "ExactnativeDOB1857-07-27/life1857-1930matchactualsourceprecision.",
+        "UniversityCollege/Bar1878/DSc1891/geologicaltravel/presidentGeologicalSociety1924-26/FRS1919coherentgeologistcareerbindsubject.",
+        "No actualDOB/name/placeconflictobserved; actualbornplaceabsentfrominspectedchildparagraphnotallliterature."
+      ],
+      "source_place_observed": null,
+      "birthplace_relation_verified": false,
+      "geographic_basis": "Birthdatedirectlystatedbutnoplaceintheinspectednamedsubjectclause. DeathLondon/ancestry/widerfamilyregionsnotbirth; frozenrawBarbicanLondonremainsgeounknown.",
+      "publication_date": "1959",
+      "publication_date_precision": "year_from_original_reference_published_date",
+      "caveats": [
+        "No namedauthorbylineacquired; querystringWilliamLlewelynDaviesnotusedassourceauthor.",
+        "Originalreferencecontextdoesnotproveeveryfamilyhistoryaddressdetailorinformationindependence. No claimDWBcorroborates2BeechStreetBarbican.",
+        "No reportedalternateDOBfromdifferent1855-1943politician/otherEvanssearchresults.",
+        "No fullsourceHTML/cache/familydetailsredistributed; no sourcequote used."
+      ],
+      "native_and_original_birthplace_fields_unchanged": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original HTML text, not raw HTTP bytes",
+      "no_master_change": true
+    }
+  ],
+  "query_ledger": [
+    {
+      "operation_number": 1,
+      "record_id": "RS_PAST_NA6941",
+      "engine": "system2",
+      "query": "\"Edmond Herbert Grove-Hills\" \"born\" \"England\"",
+      "result_group_ref_prefix": "turn6940641search",
+      "role": "discoveryonlyunlessseparatelyopenedoriginalbody",
+      "individual_query_result_mapping": "Combinedbatch; exactbackendperqueryassignmentnotexposed/notinvented",
+      "prior_intent_file": "v35_a_intent.json",
+      "separate_preintent_validated_exit0": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "operation_number": 2,
+      "record_id": "RS_PAST_NA780",
+      "engine": "system2",
+      "query": "\"John William Evans\" \"1857\" \"born\" \"England\"",
+      "result_group_ref_prefix": "turn6940641search",
+      "role": "discoveryonlyunlessseparatelyopenedoriginalbody",
+      "individual_query_result_mapping": "Combinedbatch; exactbackendperqueryassignmentnotexposed/notinvented",
+      "prior_intent_file": "v35_a_intent.json",
+      "separate_preintent_validated_exit0": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "operation_number": 3,
+      "record_id": "RS_PAST_NA6941",
+      "engine": "system1",
+      "query": "\"Hills\" \"Edmond Herbert\" \"Oxford Dictionary\"",
+      "result_group_ref_prefix": "turn1633622search",
+      "role": "discoveryonlyunlessseparatelyopenedoriginalbody",
+      "individual_query_result_mapping": "Combinedbatch; exactbackendperqueryassignmentnotexposed/notinvented",
+      "prior_intent_file": "v35_a_intent.json",
+      "separate_preintent_validated_exit0": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "operation_number": 4,
+      "record_id": "RS_PAST_NA780",
+      "engine": "system1",
+      "query": "\"John William Evans\" \"Dictionary of Welsh Biography\"",
+      "result_group_ref_prefix": "turn1633622search",
+      "role": "discoveryonlyunlessseparatelyopenedoriginalbody",
+      "individual_query_result_mapping": "Combinedbatch; exactbackendperqueryassignmentnotexposed/notinvented",
+      "prior_intent_file": "v35_a_intent.json",
+      "separate_preintent_validated_exit0": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "operation_number": 1,
+      "record_id": "RS_PAST_NA6941",
+      "input": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/580658625",
+      "result_ref": "turn3817480view0",
+      "outcome": "OriginalODNB974linesparsed; initialdisplaymenusonly/header, actualbirthbodylocatedlaterviapreintentedcachedfind",
+      "prior_intent_file": "v35_a_intent.json",
+      "separate_preintent_validated_exit0": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original HTML text, not raw HTTP bytes",
+      "no_master_change": true
+    },
+    {
+      "operation_number": 2,
+      "record_id": "RS_PAST_NA780",
+      "input": "https://biography.wales/article/s-EVAN-WIL-1734.html?lang%5B%5D=cy&lang%5B%5D=en&order=asc&page=122&query=William+Llewelyn+Davies&rows=12&sort=sort_name",
+      "result_ref": "turn3817480view1",
+      "outcome": "ActualoriginalDWB40linebody/namedchildexactnativeDOB/career; childbornplaceabsentfrominspectedL19-21; deathLondonnotbirth",
+      "prior_intent_file": "v35_a_intent.json",
+      "separate_preintent_validated_exit0": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original HTML text, not raw HTTP bytes",
+      "no_master_change": true
+    }
+  ],
+  "parsed_find_ledger": [
+    {
+      "operation_number": 1,
+      "record_id": "RS_PAST_NA6941",
+      "source_ref": "turn3817480view0",
+      "pattern": "was born",
+      "result_ref": "turn7111391view0",
+      "outcome": "ActualcachedoriginalpublicExtractL757-785acquired/fullnative/exactDOB/directHighHeadCastleCumberland/authorpublicationcareer; placeconflictheld",
+      "prior_intent_file": "v35_a_intent.json",
+      "separate_preintent_validated_exit0": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original HTML text, not raw HTTP bytes",
+      "no_master_change": true
+    }
+  ],
+  "quote_ledger": [
+    {
+      "original_work": "RogerHutchinsODNB_GroveHills",
+      "quote": "was born on 1 August 1864 at High Head Castle, Cumberland",
+      "word_count": 11,
+      "inherited_same_work_words": 0
+    },
+    {
+      "original_work": "KevinGriceCumbrianLivesHerbertAugustusHills",
+      "quote": "born 1st August 1864 in London",
+      "word_count": 6,
+      "role": "Repeatedexactexistingv24shortquote; no newsourceacquisition/expandedquotation"
+    }
+  ],
+  "unopened_distinct_original_leads": [
+    {
+      "record_id": "RS_PAST_NA6941",
+      "url": "https://academic.oup.com/mnras/article/83/4/241/1072718",
+      "observed_ref": "turn1633622search3",
+      "title": "Edmond Herbert Grove-Hills, Colonel R.E.",
+      "publication_date_lead": "1923-02-09",
+      "pages_lead": "241-244",
+      "role": "Unopenedgenuinelydistinctsubjectobituaryfromprevious1923obituarylistpages232ff; noactualbody/bornplace/sourcegradeassumed.",
+      "reason_not_opened": "Currentactualplaceconflictmeansnofurthercountry-onlyworkmaybypass/arbitrarilychoose. Rootmayfirstinspectifneededforcompetingdocumentaryclaims, notoldfailedNature/NPGvariant."
+    }
+  ],
+  "other_bibliographic_leads": [
+    {
+      "record_id": "RS_PAST_NA780",
+      "observed_url": "https://earthwise.bgs.ac.uk/index.php/Geologists%3A_biographies_and_obituaries%2C_a_bibliography_%E2%80%94_E",
+      "observed_ref": "turn6940641search4",
+      "role": "UnopenedbibliographicindexprojectioncitesdistinctEvansMineralogicalMagazine23no141(1933)pp349-350 andProceedingsGeologistsAssociation42no1(1931)pp69-70. ExactoriginalworkURLsnotacquired; cannotinventDOI/body/bornregion. DifferentfromCambridgeGeologicalMagazine68(1931)pp47-48metadata-onlyclosedroute.",
+      "not_adopted": true
+    }
+  ],
+  "protocol_deviations": [],
+  "representation_limits": [
+    "All2fullcurrentrecords/priorv24v26individualsourcecontexts/holdsreadbeforequeries; nohiddenqualifiedDOB/placeholdfound, earlierWikiHighHeadprojectionremainedunacquiredoriginalproof.",
+    "Eachquery/open/findexactintentdurablysaved/JSONvalidated/exit0inspectedinseparatetoolcallBEFOREwebcall; no lateintent/dependentnetworkafterlocalerror.",
+    "FirstODNBopenoriginalheader974linesbutmenus-onlyinitialdisplay; actualbodyclaimreliesonlaterpreintentedcachedfindturn7111391view0L781, notunseeninitialdisplay.",
+    "NewODNBdifferentdirectplaceversusactualexistingLondonisheld; originalS3BP/rawplace/sourceURL/oldcuratedfactunchanged. No independentoldbodyreacquisition/supersession/correctplaceverdict.",
+    "DWBactualnamedchildexactDOB/career/date-onlybornevidence doesnotcorroborateTurleplace/address; death/ancestry/familylocationnotbirth.",
+    "RawHTTPstatus/bytes/hash/exactrequesttimeunknownnull; no fullsourcecache/images/familydetailsdistributed.",
+    "No failedworkvariant/retry/rawGET/authbypass/master/nativeBP/DOB/eligibility/QID/coords/analysis/dedup/outcome/finalcohortfreezechanges. Boundedsourcepassnotsourceexhaustion."
+  ],
+  "no_native_or_master_changes": true
+}
