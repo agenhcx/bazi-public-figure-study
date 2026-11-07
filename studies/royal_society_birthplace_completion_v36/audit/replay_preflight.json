@@ -1,0 +1,43 @@
+{
+  "written_utc": "2026-11-07T00:16:00.064148+00:00",
+  "status": "pass",
+  "checks": [
+    "exact_v35_canonical_hash",
+    "all4983_baseline_complete_objects_match_v35_output",
+    "geography_pool62_exact_and_blankqueue103_separate",
+    "current6_geography_scope_exact",
+    "everypriorloader_alllegacyapplyhelpers_allpriorconstants_scopes_verbatim",
+    "allfrozeninputbytes_preserved",
+    "v35currentinputbytes_frozen",
+    "newmethod_constants_exactly_match_prospective_preregistration",
+    "all_three_proof_modes_structural_fixtures_accept_linked_terminal_literal_without_inventedURI",
+    "reject_wrongmethod_wrongproofmode_wronggrade_DOB_missingfullname_emptychain",
+    "reject_missingchainlocator_targetkind_entityURI_nonterminal_literal_or_invalid_P19_P131path",
+    "v36two_geographyonly_fixture_changes",
+    "untargeted_complete_objects",
+    "allbirthplace_native_priorfields_frozen_except_sixgeo",
+    "exactrollback_allcomplete_objects",
+    "absentgeofield_snapshot_rollback",
+    "reject_wrongstoredplace_DOB_unresolvedhemisphere_missingdateprecision",
+    "geographic_support_role_without_BP_DOB_upgrade",
+    "five_isolatedoutputs",
+    "isolatedsummary_geopool62_reviewed6_newBP0_geoonly2_blank103",
+    "CSV146priorpositions_and_allcellmeanings_unchanged_plus6v36geo",
+    "CSV4983rows_rectangular",
+    "deterministicgzip_fixture",
+    "no_production_outputs_orfacts_reviewed_audits_docs_written"
+  ],
+  "check_count": 24,
+  "elapsed_seconds": 89.943,
+  "scope": "Synthetic isolated geography-only fixtures and actual frozen v35 reconstruction only; source quality or factual geographic admission not inferred; no production current facts/reviewed/audits/docs/outputs/Git changed.",
+  "baseline_canonical_sha256": "271a32070f8dae8c54933f1ebaacc5ae141427a3448f8f1562000f8842a0c632",
+  "current_geography_target_pool": 62,
+  "current_geography_followups": 6,
+  "untargeted_blank_window_queue": 103,
+  "csv_columns": 152,
+  "current_inputs_root_must_supply": [
+    "inputs/accepted_geography.json",
+    "inputs/reviewed_record_ids.json",
+    "audit/followup_holds.json"
+  ]
+}
