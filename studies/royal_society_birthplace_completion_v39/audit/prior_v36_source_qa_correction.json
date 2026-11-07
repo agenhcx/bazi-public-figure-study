@@ -1,0 +1,30 @@
+{
+  "schema": "UK_v36_source_QA_preflight_harness_correction_v1",
+  "written_utc": "2026-11-07T00:32:20.904648+00:00",
+  "initial_preflight_report": "v36_source_qa_initial_preflight_failed_report.json",
+  "initial_preflight_report_sha256": "c1fdaf35c501ecf1d8d5aa93cb1c2f8c27aad49547f91f20eaff99d245b9229c",
+  "initial_preflight_result": {
+    "passed": false,
+    "checks_passed": 19,
+    "blocking_issues": [
+      {
+        "check": "generic_UK_or_centroid_not_enough",
+        "passed": false
+      }
+    ]
+  },
+  "cause": "Preregistered region gate says genericUKP17alone with lower-case generic; scratchpreflight searched case-sensitive GenericUKP17alone. The actual unchanged gate already forbids genericUKP17/centroid substitutions.",
+  "correction": "Case-normalize only the scratch substring checks; preregistration SHA/admission criteria/sourcefacts/production unchanged.",
+  "final_preflight_result": {
+    "passed": true,
+    "checks_passed": 20,
+    "blocking_issues": []
+  },
+  "final_documentary_result": {
+    "passed": true,
+    "checks_passed": 121,
+    "blocking_issues": []
+  },
+  "failed_final_source_report_exists": false,
+  "reviewer_source_fact_production_or_Git_edits": false
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "UK_v39_source_documentary_prefinal_clarification_findings_v1",
+  "written_utc": "2026-11-07T01:33:52.039130+00:00",
+  "reviewer": "/root/v39_source_qa",
+  "source_qa_final_not_yet_run": true,
+  "factual_evidence_or_method_blocker": false,
+  "accepted_geography_sha256_at_observation": "fbd8c77980d65b2dd2c5f54d6205561f90a45723b00b5f671c77323b285b64c3",
+  "followup_holds_sha256_at_observation": "ab63bd0f98dd4fc4a3bc39f5a224c0bf234440a5b89c3b35159ac8dd96931387",
+  "findings": [
+    {
+      "record_id": "RS_PAST_NA5962",
+      "field": "caveats",
+      "observation": "Accepted fact retains a worker-stage caveat saying root first-body verification and final adjudication are pending, despite current root evidence and parent_adjudication_utc.",
+      "requested_clarification": "Frame caveat explicitly as worker-stage history or remove stale current-pending wording while preserving worker source report."
+    },
+    {
+      "record_id": "RS_PAST_NA2080",
+      "field": "reported_age_arithmetic_observation_pending_root_review",
+      "observation": "Final geography hold retains true from worker stage while current age sidecar has completed root review and parent_adjudication_required=false.",
+      "requested_clarification": "Resolve current pending flag or explicitly preserve it as historical worker-stage metadata with current parent review completion."
+    }
+  ]
+}
