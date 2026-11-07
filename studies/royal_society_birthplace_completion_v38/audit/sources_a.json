@@ -1,0 +1,390 @@
+{
+  "written_utc": "2026-11-07T01:10:55.600160+00:00",
+  "group": "a",
+  "phase": "canonical_community_reference_geography_method_application",
+  "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+  "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+  "method_application_scope_sha256": "bd7540715a6b4649ffe79371e38ee2b650bd0176013fbb5418efa02b8995fad0",
+  "intent_file": "v38_a_intent.json",
+  "full2nativeobjects/priorholdsbeforequeries": true,
+  "prior_context_review": {
+    "full_scope_objects_read": true,
+    "all9issueinventories_read_before_queries": true,
+    "individual_prior_holds_read": [
+      "prior_v30_holds.json Pagel actual Observator/Berlinonly and NPGGermanytaxonomy not birth",
+      "prior_v32_holds.json Spath OCLCtextless closed",
+      "prior_v25_method_qa.json Spath tentativeSouthAfrica projection notactual conflict"
+    ],
+    "inventory_file_pins": {
+      "active_source_DOB_conflicts.json": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+      "provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+      "source_derived_age_inconsistencies.json": "9a299ead41add638a45fd85603a59ee3c42e1b0284af5c06c5e273a3affac18a",
+      "lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+      "cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+      "birthplace_source_conflicts.json": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+      "source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+      "omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+      "source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+    }
+  },
+  "intent_writes_validated_exit0_separately_beforeweb": true,
+  "retrieval_counts": {
+    "queries": 2,
+    "navigation_attempts": 7,
+    "source_open_operations": 3,
+    "click_operations": 4,
+    "parsed_finds": 1,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "query_ledger": [
+    {
+      "written_utc": "2026-11-07T01:07:31.399540+00:00",
+      "operation": "query",
+      "engine": "system2",
+      "record_id": "RS_PAST_NA1611",
+      "query": "\"Leonard Frank Spath\" site:wikipedia.org",
+      "purpose": "Locate actual canonical community original person URI; no projection adoption; exact fullnative/DOB/career and born-place edge required.",
+      "kind": "query",
+      "result_ref": "turn7239725search1"
+    },
+    {
+      "written_utc": "2026-11-07T01:07:31.399540+00:00",
+      "operation": "query",
+      "engine": "system2",
+      "record_id": "RS_PAST_NA4636",
+      "query": "\"Bernard Ephraim Julius Pagel\" site:wikipedia.org",
+      "purpose": "Locate actual canonical community original person URI; no projection adoption; exact fullnative/DOB/career and born-place edge required.",
+      "kind": "query",
+      "result_ref": "turn7239725search3"
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "written_utc": "2026-11-07T01:07:42.988362+00:00",
+      "operation": "open",
+      "record_id": "RS_PAST_NA1611",
+      "url": "https://en.wikipedia.org/wiki/Leonard_Frank_Spath",
+      "discovery_ref": "turn7239725search1",
+      "purpose": "First actual canonical person body; fullnative/exactDOB/career/place-edge inspection, no projection adoption.",
+      "kind": "open",
+      "result_ref": "turn7373260view0"
+    },
+    {
+      "written_utc": "2026-11-07T01:07:42.988362+00:00",
+      "operation": "open",
+      "record_id": "RS_PAST_NA4636",
+      "url": "https://de.wikipedia.org/wiki/Bernard_Pagel",
+      "discovery_ref": "turn7239725search3",
+      "purpose": "First actual canonical person body; fullnative/exactDOB/career/place-edge inspection, no projection adoption.",
+      "kind": "open",
+      "result_ref": "turn7373260view1"
+    },
+    {
+      "written_utc": "2026-11-07T01:07:54.208010+00:00",
+      "operation": "click",
+      "record_id": "RS_PAST_NA1611",
+      "ref_id": "turn7373260view0",
+      "link_id": 20,
+      "purpose": "Actual observed Deutsch interlanguage link to distinct canonical person work; English born field dateonly/no place is absence not contradiction.",
+      "kind": "click",
+      "result_ref": "turn2807097view0"
+    },
+    {
+      "written_utc": "2026-11-07T01:07:54.208010+00:00",
+      "operation": "click",
+      "record_id": "RS_PAST_NA4636",
+      "ref_id": "turn7373260view1",
+      "link_id": 45,
+      "purpose": "Actual personalbornBerlin hyperlink45 from exactDOB fullnative lead; follow actual target to inspect whole-region field, not guessedBerlinURI.",
+      "kind": "click",
+      "result_ref": "turn2807097view1"
+    },
+    {
+      "written_utc": "2026-11-07T01:08:17.208230+00:00",
+      "operation": "click",
+      "record_id": "RS_PAST_NA1611",
+      "ref_id": "turn2807097view0",
+      "link_id": 22,
+      "purpose": "Actual observed French interlanguage link to distinct canonical person work; successful EN/DE articles dateonly/no birth-place are absence of proof, not conflict.",
+      "kind": "click",
+      "result_ref": "turn3701073view0"
+    },
+    {
+      "written_utc": "2026-11-07T01:08:43.801202+00:00",
+      "operation": "cached_context_open",
+      "record_id": "RS_PAST_NA4636",
+      "ref_id": "turn2807097view1",
+      "lineno": 425,
+      "purpose": "Read cached successful actual born-link target Berlin context around geographic infobox, not failed work or fresh URL variant. Actual L501 geographic Germany already observed.",
+      "kind": "cached_context_open",
+      "result_ref": "turn6967938view0"
+    },
+    {
+      "written_utc": "2026-11-07T01:08:43.801202+00:00",
+      "operation": "click",
+      "record_id": "RS_PAST_NA1611",
+      "ref_id": "turn2807097view0",
+      "link_id": 39,
+      "purpose": "First actual observed canonical Wikidata person item from successful Germanpersonbody; inspect actual fullnative/P569/P19 path only if acquired; firsttextless/failure closes.",
+      "kind": "click",
+      "result_ref": "turn6967938view1"
+    }
+  ],
+  "parsed_find_ledger": [
+    {
+      "written_utc": "2026-11-07T01:08:17.208230+00:00",
+      "operation": "find",
+      "record_id": "RS_PAST_NA4636",
+      "ref_id": "turn2807097view1",
+      "pattern": "Deutschland",
+      "purpose": "Cached parsed actual Berlin born-link target to locate whole-region country field; no coordinate inference or guessedtarget.",
+      "kind": "find",
+      "result_ref": "turn3701073view1",
+      "match_verdict": "toolreturnedactualL501context; no complete-rank/rawgraphverdict"
+    }
+  ],
+  "candidates": [
+    {
+      "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+      "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+      "method_application_scope_sha256": "bd7540715a6b4649ffe79371e38ee2b650bd0176013fbb5418efa02b8995fad0",
+      "proof_mode": "explicit_person_born_place_hyperlink_then_actual_target_place_region",
+      "source_url": "https://de.wikipedia.org/wiki/Bernard_Pagel",
+      "source_title": "Bernard Pagel – Wikipedia (German)",
+      "source_author": null,
+      "source_kind": "canonical_Wikipedia_original_community_person_reference_body",
+      "source_quote": "Berlin",
+      "source_quote_word_count": 1,
+      "observed_source_full_name": "Bernard Ephraim Julius Pagel",
+      "source_birthdate": "1930-01-04",
+      "source_birthdate_as_displayed": "4. Januar 1930",
+      "source_birthdate_precision": "exact_day_actually_displayed_in_person_birth_parenthetical",
+      "source_lifespan": "1930-2007; exact displayed death14.Juli2007",
+      "source_DOB_native_compatibility": "Actual displayed4.Januar1930 normalizes1930-01-04 and agrees unchanged native. Actually displayed1930-2007 lifespan agrees authority. Calendar model unobserved; no civil validation or DOBgrade upgrade.",
+      "identity_review": [
+        "All native Bernard Ephraim Julius Pagel components actually appear in German lead L113 and full alias L157; no middle expansion or name exception.",
+        "Exact actual4January1930 and compatible observed1930-2007 lifespan bind native authority.",
+        "Actual RGO astronomer, Sussex guest/professor1967, NORDITA Copenhagen1990, elemental-abundance research career L119-121 coherently binds native subject.",
+        "No actual incompatible DOB/place/identity observed in this bounded pass; earlier CUP/Observatory city-only and NPG generic taxonomy holds remain historical, not retroactively approved."
+      ],
+      "geographic_basis": "Actual canonical personal born-Berlin hyperlink45 was followed to actual geographic city Berlin target. Target L485 expressly city/state of Bundesrepublik Deutschland; L501 geographic city in NE Bundesrepublik Deutschland and surrounded Brandenburg. Current Germany whole-region North under existing extent gate, not familiarcity/nationality/family/employer/centroid inference. No country assigned to native person.",
+      "publication_date": null,
+      "publication_date_precision": "not_observed",
+      "source_revision_id": null,
+      "source_revision_utc": null,
+      "observed_displayed_footer_metadata": {
+        "oldid": "249930331",
+        "last_edited_literal": "31. Oktober 2024 um21:22Uhr",
+        "locator": "turn7373260view1:L166/L178",
+        "limits": "Displayed footer only; no raw revision/history authentication or printed timezone, no exact revisionUTC asserted."
+      },
+      "source_calendar_model": null,
+      "source_statement_rank": null,
+      "source_editorial_validation": null,
+      "source_informational_independence": null,
+      "record_id": "RS_PAST_NA4636",
+      "native_dob": "1930-01-04",
+      "authority_name": "Pagel; Bernard Ephraim Julius (1930 - 2007)",
+      "frozen_raw_birthplace": "Berlin",
+      "frozen_birthplace_source_grade": "S2",
+      "source_grade": "S3",
+      "source_grade_role": "geographic_support_only",
+      "reviewed_hemisphere": "north",
+      "proof_chain": [
+        {
+          "source_url": "https://de.wikipedia.org/wiki/Bernard_Pagel",
+          "source_node_label": "Bernard Ephraim Julius Pagel",
+          "edge_property": "explicit_subject_birthplace_hyperlink",
+          "tool_ref": "turn7373260view1",
+          "locator": "L113 fullnative/exact4.Januar1930 inBerlin hyperlink45/death2007;L119-121 distinctiveastronomycareer;L159-160 exactDOB/GEBURTSORTBerlinlink45.",
+          "acquisition_role": "worker_actual_canonical_person_body_and_actual_person_born_link45_click",
+          "target_kind": "entity",
+          "target_label": "Berlin",
+          "target_uri": "https://de.wikipedia.org/wiki/Berlin",
+          "source_qid": null,
+          "target_qid": null,
+          "worker_tool_ref": "turn7373260view1",
+          "worker_follow_link_result_ref": "turn2807097view1"
+        },
+        {
+          "source_url": "https://de.wikipedia.org/wiki/Berlin",
+          "source_node_label": "Berlin",
+          "edge_property": "explicit_geographic_country_region_statement",
+          "tool_ref": "turn6967938view0",
+          "locator": "L485 Berlin capital and Land of BundesrepublikDeutschland;L501 city NEBundesrepublikDeutschland/entirelysurroundedBrandenburg. Actual clicked target turn2807097view1, cachedfind turn3701073view1 also exposedL501.",
+          "acquisition_role": "worker_actual_person_born_link45_target_body_cached_context",
+          "target_kind": "literal",
+          "target_label": "Bundesrepublik Deutschland",
+          "target_uri": null,
+          "source_qid": null,
+          "target_qid": null,
+          "target_uri_limit": "Actual literal terminal region value, no observed value hyperlink URI/QID; country equivalence Germany is linguistic normalization only.",
+          "source_node_type": "geographic_city_and_city_state",
+          "source_quote": "Bundesrepublik Deutschland",
+          "source_quote_word_count": 2
+        }
+      ],
+      "source_body_ref": "turn7373260view1",
+      "worker_source_body_ref": "turn7373260view1",
+      "worker_actual_edge_follow_ref": "turn2807097view1",
+      "source_locator": "turn7373260view1:L113 fullnative/exactDOB/bornBerlinlink45;L119-121astronomycareer. Actual click45 -> turn2807097view1 canonicalBerlin. Target cachedfind turn3701073view1:L501 and cachedcontext turn6967938view0:L485/L501 explicitly Germany region.",
+      "source_body_acquisition_role": "worker_actual_canonical_person_body_plus_actual_birthlink45_follow_and_cached_target_region_context;root_verification_pending",
+      "source_grade_basis": "Unchanged V36 prospective canonical original community source/link method applied under fixed V38 scope. S3 geographic support only from actual fullnative/exactDOB/career/born-place link and actual target city-country region. Community editorial/civil/calendar accuracy and informational independence unverified; old BerlinS2 and DOBtiers unchanged.",
+      "source_birthplace_context": "Berlin actual personal-born hyperlink target; Bundesrepublik Deutschland actual target-place geographic region statement.",
+      "place_binding_review": "Frozen rawBerlin matches literal source bornBerlin, and actual click45 lands geographicBerlin city/state in Germany. No different locality equivalence or street claim. All oldBPfacts/S2/sourceURLs and nativeDOB/country/QIDs/coordinates frozen. Modern admin text disambiguates city; no1930street boundary or country-law backprojection claimed.",
+      "source_exact_native_month_day_confirmed": true,
+      "native_death_endpoint_confirmed_by_source": true,
+      "native_DOB_source_grade_unchanged": true,
+      "original_birthplace_fields_and_source_grades_unchanged": true,
+      "retrieval_representation": "web-tool parsed canonical person/place HTML text and cached parsed target context, not raw HTTP bytes/pixels.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "caveats": [
+        "V36 admission rules reused unchanged, not retroactive approval of old generic NPG Germany taxonomy or previous city-only sources.",
+        "Worker actually followed personal born-Berlin link45; parent may separately add root source verification roles.",
+        "Actual terminal literal Bundesrepublik Deutschland has no observed value URI/QID in acquired context, null retained. Target coordinates were not used or assigned.",
+        "Modern geographic place/state relation supports whole-region North only; not a specific1930 street, country/legal status verification, civil birth proof or source independence claim.",
+        "Observed German person and target footer metadata stay source-specific. Raw bytes/status/requesttime/calendar/statementrank/editorial verification unknown/null."
+      ]
+    }
+  ],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA1611",
+      "native": {
+        "record_id": "RS_PAST_NA1611",
+        "dob": "1882-10-20",
+        "source_authorised_full_name": "Spath; Leonard Frank (1882 - 1957)",
+        "raw_birthplace": "Munich",
+        "birthplace_source_grade": "S3",
+        "hemisphere": "unknown"
+      },
+      "phase": "canonical_community_reference_geography_method_application",
+      "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+      "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+      "method_application_scope_sha256": "bd7540715a6b4649ffe79371e38ee2b650bd0176013fbb5418efa02b8995fad0",
+      "status": "hold_no_acquired_subject_born_place_or_direct_region",
+      "hold_type": "canonical_person_bodies_match_date_career_but_no_qualifying_birthplace_edge",
+      "reason": "Actual English and German canonical personal bodies supply full native/exact20October1882/lifespan1957/ammonitology/Birkbeck/NHMcareer, but no direct subject-born locality or born-region. German London link is museumwork only. French observed language link returned header/total223 without exposedbody, closed no retry. First actual observed Wikidata itemclick Q6525295 returned rewritten-summary headeronly, no propertybody acquired; P19currentstatus unknown, not verified absence. Existing MunichS3 remains frozen; no city-name inference or old uncertain SouthAfrica projection adoption.",
+      "source_url": "https://en.wikipedia.org/wiki/Leonard_Frank_Spath",
+      "source_ref": "turn7373260view0",
+      "source_body_acquired": true,
+      "source_quote": "",
+      "source_quote_word_count": 0,
+      "source_grade_adopted": null,
+      "reviewed_hemisphere": "unknown",
+      "proof_mode": null,
+      "proof_chain": [],
+      "source_observations": [
+        {
+          "source_url": "https://en.wikipedia.org/wiki/Leonard_Frank_Spath",
+          "source_body_ref": "turn7373260view0",
+          "observed_source_full_name": "Leonard Frank Spath",
+          "source_birthdate": "1882-10-20",
+          "source_lifespan": "1882-1957",
+          "source_place_observed": null,
+          "observed_birth_place_link_uri": null,
+          "source_locator": "L107fullname/L108exactDOB/L109death2March1957aged75/L123full/exactDOB/career/L128Birkbeck1912/BritishMuseum; English Born fielddateonly.",
+          "observed_displayed_oldid": "1337686647",
+          "observed_displayed_last_edit_literal": "10February2026at22:25UTC",
+          "footer_locator": "L184/L206",
+          "role": "actual_matching_person_identity_and_date_only; ageinconsistency separatelyretained, no geographyproof"
+        },
+        {
+          "source_url": "https://de.wikipedia.org/wiki/Leonard_Spath",
+          "source_body_ref": "turn2807097view0",
+          "observed_source_full_name": "Leonard Frank Spath",
+          "source_birthdate": "1882-10-20",
+          "source_lifespan": "1882-1957",
+          "source_place_observed": null,
+          "observed_birth_place_link_uri": null,
+          "non_birth_hyperlink_not_used": {
+            "label": "London",
+            "role": "NaturalHistoryMuseumwork_location",
+            "locator": "L111",
+            "followed_for_geography": false
+          },
+          "source_locator": "L111 fullnative/exactDOB/death1957/museumLondon;L113Birkbeck1912/NHMcurator;L145-146date/death, no GEBURTSORT field.",
+          "observed_displayed_oldid": "246161305",
+          "observed_displayed_last_edit_literal": "23Juni2024um21:55Uhr",
+          "footer_locator": "L150/L159",
+          "role": "actual_matching_person_identity_date_and_career_only"
+        },
+        {
+          "source_url": "https://fr.wikipedia.org/wiki/Leonard_Frank_Spath",
+          "source_body_ref": "turn3701073view0",
+          "actual_person_body_acquired": false,
+          "role": "actualobservedFrenchinterlanguageclick22; returnedheader/total223only/noexposedbody;closednoretry",
+          "raw_HTTP_status": null
+        },
+        {
+          "source_url": "https://www.wikidata.org/wiki/Q6525295",
+          "source_body_ref": "turn6967938view1",
+          "actual_person_graph_acquired": false,
+          "current_P19_status": "unknown",
+          "role": "firstactualobservedGermanWikidatalink39click;toolrewrittensummaryheaderonly,total624,nostatementbodyacquired;closednoretry",
+          "raw_HTTP_status": null
+        }
+      ],
+      "geography_decision": "unchanged_unknown",
+      "native_and_existing_birthplace_fields_frozen": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "bounded_discovery_limits": "Successful EN/DE actual bodies lacking birthplace and two closed inaccessible/unexposed canonical work representations are not source-exhaustion/global birthplace absence claims. Two queries used of4; no need spend remaining scope on failedworkvariants."
+    }
+  ],
+  "new_DOB_or_place_conflicts": [],
+  "new_auxiliary_source_quality_observations": [
+    {
+      "record_id": "RS_PAST_NA1611",
+      "source_url": "https://en.wikipedia.org/wiki/Leonard_Frank_Spath",
+      "source_body_ref": "turn7373260view0",
+      "observed_source_birthdate": "1882-10-20",
+      "observed_source_death_date": "1957-03-02",
+      "observed_reported_age": 75,
+      "arithmetic_age_from_observed_dates": 74,
+      "source_quote": "(aged 75)",
+      "source_quote_word_count": 2,
+      "source_locator": "L108exact20October1882/L109death2March1957andliteralaged75; L123bothmatchingdates/fullnative/geologistammonitology;L128career.",
+      "status": "unresolved_one_source_reported_age_inconsistency_not_an_explicit_disagreeing_birthdate",
+      "kind": "one_source_reported_age_arithmetic_inconsistency",
+      "origin_version": "v38",
+      "source_grade_role": "auxiliary_source_quality_observation_only; no_DOB_or_geography_adoption",
+      "no_source_or_native_DOB_or_age_repair": true,
+      "not_an_active_alternate_DOB_case": true,
+      "interpretation": "Both stated exact dates match native birth/authority lifespan. Conventional completedage from those displayed dates is74, source says75. Do not infer alternate birthday, fix age or decide typo. Spath independently held for no acquired birthplace proof.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    }
+  ],
+  "unopened_distinct_original_work_leads": [],
+  "source_quote_words_by_original_work": {
+    "GermanPagelCanonicalPerson": 1,
+    "GermanBerlinCanonicalPlace": 2,
+    "EnglishSpathCanonicalPerson": 2,
+    "GermanSpathCanonicalPerson": 0,
+    "FrenchSpathHeaderOnly": 0,
+    "SpathWikidataHeaderOnly": 0
+  },
+  "protocol_limits": {
+    "per_group_queries": 4,
+    "per_group_source_navigation": 10,
+    "no_failedwork_variants_retries_rawGET": true,
+    "no_fullsource_caches": true,
+    "no_information_independence_claim": true,
+    "actual_metadata_limits": "Parsed source-body text/locators, not rawbytes/status/requests or trusted revisions/calendar/civilproof. Successful cachedBerlin targetcontext operations distinct from fresh work retries."
+  },
+  "raw_HTTP_status": null,
+  "raw_bytes_sha256": null,
+  "exact_request_utc": null,
+  "no_repo_master_Git_edit": true,
+  "no_source_exhaustion_finalfreeze_or_DOB_BPtierupgrade": true,
+  "method_amendment_created": false,
+  "scope_application_extension": true,
+  "no_new_admission_method_exception": true,
+  "parent_verification_pending": true
+}
