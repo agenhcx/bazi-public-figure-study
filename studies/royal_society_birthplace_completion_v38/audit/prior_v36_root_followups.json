@@ -1,0 +1,47 @@
+{
+  "written_utc": "2026-11-07T00:25:24.006323+00:00",
+  "intent_file": "root_intent.json",
+  "counts": {
+    "discovery_queries": 1,
+    "source_open_operations": 2,
+    "click_operations": 0,
+    "parsed_finds": 0,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "observations": [
+    {
+      "record_id": "RS_PAST_NA3578",
+      "url": "https://de.wikipedia.org/wiki/Martin_Hinton",
+      "ref": "turn7602668view0",
+      "locator": "L117fullnative/exact1883-06-29/bornLondonlink50/career;L125explicitbornLondonlink50",
+      "role": "root_actual_canonical_person_body_birthlink_observed_after_worker_actual_follow",
+      "adopted_geography": true
+    },
+    {
+      "record_id": "RS_PAST_NA3578",
+      "url": "https://de.wikipedia.org/wiki/London",
+      "ref": "turn7602668view1",
+      "locator": "L434London;L440actualLandesteilEngland;L464capitalofEngland/geographiccity",
+      "role": "root_actual_observed_birthlink_target_place_body_not_guessedcity",
+      "adopted_geography": false,
+      "supports_primary_geofact": true
+    }
+  ],
+  "root_reclicked_person_edge": false,
+  "worker_actual_follow_link_result_ref": "turn8849164view0",
+  "locator_query": {
+    "record_id": "RS_PAST_NA872",
+    "query": "\"William Scott Farren\" (site:de.wikipedia.org OR site:fr.wikipedia.org OR site:es.wikipedia.org)",
+    "ref": "turn7602668search0",
+    "outcome": "ReturnedEnglishdisambiguationreference only; no actualotherlanguagepersonURI/body, no absenceclaim/dateconflictfromdifferentactors."
+  },
+  "quote_words_by_original_work": {
+    "Martin_Hinton_German": 1,
+    "London_German": 1
+  },
+  "raw_HTTP_status": null,
+  "raw_bytes_sha256": null,
+  "exact_request_utc": null,
+  "no_source_caches_or_images_distributed": true
+}

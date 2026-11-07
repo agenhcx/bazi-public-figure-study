@@ -1,0 +1,101 @@
+{
+  "status": "PASS",
+  "direct_baseline": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_checkout/studies/scientist_birthplace_completion_v2/outputs/birthplace_rows.jsonl.gz",
+  "sha256": "2b7897d0c4e2655ecb6f10311e1bdf7b06b8eeae3f181e9bebe92cbc7f066ee0",
+  "records": 11094,
+  "cohorts": {
+    "CAS": {
+      "records": 1230,
+      "hemispheres": {
+        "unknown": 224,
+        "north": 1003,
+        "south": 3
+      }
+    },
+    "DE_Leopoldina": {
+      "records": 778,
+      "hemispheres": {
+        "north": 655,
+        "unknown": 117,
+        "south": 6
+      }
+    },
+    "Fields_main": {
+      "records": 63,
+      "hemispheres": {
+        "north": 57,
+        "south": 4,
+        "unknown": 2
+      }
+    },
+    "France": {
+      "records": 775,
+      "hemispheres": {
+        "north": 702,
+        "unknown": 70,
+        "south": 3
+      }
+    },
+    "Japan": {
+      "records": 368,
+      "hemispheres": {
+        "north": 234,
+        "unknown": 134
+      }
+    },
+    "NAS": {
+      "records": 2242,
+      "hemispheres": {
+        "unknown": 574,
+        "north": 1637,
+        "south": 31
+      }
+    },
+    "Nobel_science": {
+      "records": 655,
+      "hemispheres": {
+        "north": 634,
+        "south": 21
+      }
+    },
+    "UK_Royal_Society": {
+      "records": 4983,
+      "hemispheres": {
+        "north": 4155,
+        "unknown": 645,
+        "south": 183
+      }
+    }
+  },
+  "unit": "cohort records; no cross-cohort deduplication",
+  "canonical_cohort_object_sha256": {
+    "CAS": "138829d9a0133b6ad9fb4664a686f46531ff709707b9ec9f604e8e813b297265",
+    "DE_Leopoldina": "90253d7c90153b117730d711c4b2a1856cf0235bb6a62d43ba2014a98b89e74b",
+    "Fields_main": "970c8c839dd00e803be2fc3b63e67f101b2be736ae96ca386dfa501c7b16d9ab",
+    "France": "6ca09f57078ce3abff9adc8f6e78ebf39f188995c0c9d8f2c06da2b4b89fda7c",
+    "Japan": "837f2d4c4926293e4f15b82d6a3ce4cab661a489d5c83c00432a4a8bd9efd02f",
+    "NAS": "79c3011df19d835d654cbfd870f2d88312b2c15f6393217ac1559e7a6f6e894b",
+    "Nobel_science": "a2cd05d5fa0802f215e7bf386fd3f9a197f156afe5a665860dc208ff71db56ab",
+    "UK_Royal_Society": "1f93a16b5a020a74f2959c2a9ec194d1f4534fad4059b12b1644bbe9ba07ab6d"
+  },
+  "v2_three_award_overlay_records": [
+    {
+      "cohort": "Fields_main",
+      "record_id": "fields-12ddab1dd74af07f",
+      "object_sha256": "de89522d803de38f864a3ff0e9b9ad82849a1ccd47588afb3c5e34aa925f583d"
+    },
+    {
+      "cohort": "Fields_main",
+      "record_id": "fields-c847084f96ea991e",
+      "object_sha256": "e5964a7e291f2f4f7c163816f160dd0d0abd82f9085b170259acf13cdbf5286d"
+    },
+    {
+      "cohort": "Nobel_science",
+      "record_id": "1052",
+      "object_sha256": "b449f4928242815a772eb92d85e7fe72a71ad1002e40c7c991da998d6110fe63"
+    }
+  ],
+  "CAS_accepted_Gregorian_blank": 1230,
+  "Nobel_native_DOB_blank": 655,
+  "new_facts_count": "dynamic; pending source freezes"
+}

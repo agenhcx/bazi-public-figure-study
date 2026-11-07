@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "completed_at_utc": "2026-10-29T01:01:22.544085Z",
+  "queries": [
+    {
+      "name_jp": "志賀 潔",
+      "query": "志賀潔 生年月日 記念館 年譜",
+      "engine": "system2",
+      "tool_batch": "turn1372",
+      "timestamp_utc": null
+    },
+    {
+      "name_jp": "三島 徳七",
+      "query": "三島徳七 生年月日 年譜 東京大学",
+      "engine": "system2",
+      "tool_batch": "turn1372",
+      "timestamp_utc": null
+    },
+    {
+      "name_jp": "駒井 卓",
+      "query": "駒井卓 生年月日 1886 京都大学",
+      "engine": "system2",
+      "tool_batch": "turn1369",
+      "timestamp_utc": null,
+      "note": "Delegated collector query contains a candidate year; source body independently required and observed, not blinded verification."
+    }
+  ],
+  "body_requests": [
+    {
+      "name_jp": "志賀 潔",
+      "operation": "open",
+      "url": "https://www.town.yamamoto.miyagi.jp/site/museum/163.html",
+      "status": "body_observed",
+      "timestamp_utc": null,
+      "accepted_date": "1871-02-07"
+    },
+    {
+      "name_jp": "仁科 芳雄",
+      "operation": "open",
+      "url": "https://www.nishina-mf.or.jp/doctor/",
+      "status": "body_observed",
+      "timestamp_utc": null,
+      "accepted_date": "1890-12-06"
+    },
+    {
+      "name_jp": "駒井 卓",
+      "operation": "open",
+      "url": "https://gsj3.org/wordpress_v2/wp-content/themes/gsj3/assets/docs/pdf/gsj/GSJ_81-4.pdf",
+      "status": "body_observed",
+      "timestamp_utc": null,
+      "accepted_date": "1886-05-09"
+    },
+    {
+      "name_jp": "和達 清夫",
+      "operation": "open",
+      "url": "https://www.jstage.jst.go.jp/article/agcjchikyukagaku/58/1/58_KJ00004409996/_pdf",
+      "status": "body_observed",
+      "timestamp_utc": null,
+      "accepted_date": "1902-09-08"
+    },
+    {
+      "name_jp": "三島 徳七",
+      "operation": "open",
+      "url": "https://www.jpo.go.jp/resources/report/sonota-info/document/panhu/panhu04.pdf",
+      "status": "blocked",
+      "timestamp_utc": null,
+      "failure": "403 Forbidden; no retry."
+    },
+    {
+      "name_jp": "三島 徳七",
+      "operation": "open",
+      "url": "https://da.dl.itc.u-tokyo.ac.jp/portal/assets/e9682ffc-0f86-4916-9a96-7ec54ee66ee3",
+      "status": "body_observed",
+      "timestamp_utc": null,
+      "accepted_date": null,
+      "note": "No birthday in metadata;1930-03-28 is publication/document date and was not used."
+    }
+  ],
+  "same_source_checks": [
+    {
+      "name_jp": "駒井 卓",
+      "operations": [
+        "find explicit birth wording",
+        "screenshot P27 / printed p28 to verify row/name binding"
+      ],
+      "timestamp_utc": null
+    },
+    {
+      "name_jp": "和達 清夫",
+      "operations": [
+        "find explicit birth wording in same PDF"
+      ],
+      "timestamp_utc": null
+    }
+  ],
+  "stop_rule": "Only fixed five cases processed. No second targeted search. Mishima stopped after one failed official PDF and one alternate official body. Other four stopped after explicit source date.",
+  "timestamp_note": "Per-request timestamps unknown=null; completed_at_utc is actual finalization time.",
+  "source_pages_or_pdf_full_text_saved": false,
+  "old_repository_or_freezes_modified": false,
+  "bazi_computed": false
+}

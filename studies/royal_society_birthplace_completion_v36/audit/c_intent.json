@@ -1,0 +1,137 @@
+{
+  "written_utc": "2026-11-07T00:12:31.560385+00:00",
+  "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+  "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+  "scope": [
+    "RS_PAST_NA813",
+    "RS_PAST_NA872"
+  ],
+  "full_prior_context_read_before_queries": true,
+  "initial_output_truncation_recovered": "Rydefullobjectrereadseparately; Farrenfullobjectrecovereduntruncatedminifiedwithallpriorv13/v35holds beforequeries.",
+  "full_prior_context_sha256": {
+    "RS_PAST_NA813": "f9aac7080a83a9897ef6ee201f4782f6c5d9b22528e5320b30411c2dfa1cb95f",
+    "RS_PAST_NA872": "fb7db09784b77d76f1c60be4ecb190a118eb0635f5ea8d5571fdee75c466fa35"
+  },
+  "prior_holds": {
+    "RS_PAST_NA813": "FrozenBrightonS2/native1898-04-15; oldWirelessWorldJuly1961first403 andRS1962DOIfullbodytoolnotaccessibleclosed; no workvariants/retry.",
+    "RS_PAST_NA872": "FrozenCambridgeS2/native1892-04-03; oldPersefailedrouteclosed. V35Hookefamilyprojectfullnative/year1892/RAEcareer but no exactDOB orbornregion, familyschools/fensnotbirth. No qualifiedpriorDOB/placeconflictfound."
+  },
+  "historical_lookup_leads": {
+    "RS_PAST_NA813": {
+      "qid": "Q18917430",
+      "status": "historicallookupidentityonly, oldsupplementnoP19value notcurrentgraphverification"
+    },
+    "RS_PAST_NA872": {
+      "qid": "Q18954649",
+      "status": "historicallookupidentityonly, oldsupplementnoP19value notcurrentgraphverification"
+    }
+  },
+  "initial_queries": [
+    {
+      "record_id": "RS_PAST_NA813",
+      "engine": "system2",
+      "q": "site:en.wikipedia.org \"John Walter Ryde\""
+    },
+    {
+      "record_id": "RS_PAST_NA872",
+      "engine": "system2",
+      "q": "site:en.wikipedia.org \"William Scott Farren\""
+    }
+  ],
+  "planned_strategy": "Inspectactualcanonicalcommunitypersonarticlefirstfullnative/exactnativeDOB/distinctivecareer/actualbirthplace. If directbornEnglandqualifies usemode1; otherwise followactualbirth-placehyperlink toactualtargetplacebody withwholeEngland/Scotland/Wales/NI. EveryURI/link/edge/ref acquired. IfgraphneededfirstcanonicalWikidatacallwillbeexactplannedbeforecall; no currentP19absenceclaimfromoldfield. CanonicalWikiarticle isdifferentworkfromWikidata, notfailedroutevariant.",
+  "budgets": {
+    "queries": 4,
+    "navigation_attempts": 10
+  },
+  "new_class_limits": "S3geographic_support_onlycanonicalWikipedia/Wikidataactualbody allowedprospectively underhashmethod. No Wiki-childrewrites; no nativeidentity/DOBvalidation/gradeupgrade/civil/independentediting/independenceclaim. Unknowncalendar/rank/revisionmetadata remainnull. AnyactualincompatibleDOB/placeheld.",
+  "quote_policy": "<=25quotedwords/originalworkincludinginherited; minimalstructuredfacts/locatorsno fullsourcecaches.",
+  "raw_HTTP_status": null,
+  "raw_bytes_sha256": null,
+  "exact_request_utc": null,
+  "open_plan_1": {
+    "written_utc": "2026-11-07T00:12:51.120873+00:00",
+    "operations": [
+      {
+        "record_id": "RS_PAST_NA813",
+        "url": "https://www.wikidata.org/wiki/Q18917430",
+        "purpose": "Firstactualcanonicalpersongraphbody fromhistoricallookup lead; verifyallnative/exactDOB/career andactualP19/observedcanonicalWikilink. OldP19absencecannotbeassumedcurrent."
+      },
+      {
+        "record_id": "RS_PAST_NA872",
+        "url": "https://www.wikidata.org/wiki/Q18954649",
+        "purpose": "Firstactualcanonicalpersongraphbody fromhistoricallookup lead; exactpersonbindingandactualP19/links. Absencenotcontradiction; no nativeQIDupdates."
+      },
+      {
+        "record_id": "RS_PAST_NA872",
+        "url": "https://en.wikipedia.org/wiki/William_Scott_Farren",
+        "observed_ref": "turn2239076search0",
+        "purpose": "Firstcanonicalcommunitypersonbody as distinctworkfromgraph; actualfullnative/exact1892-04-03/career/directbornplaceorlink; anyincompatibleDOB/placeheld."
+      }
+    ]
+  },
+  "adaptive_queries": {
+    "written_utc": "2026-11-07T00:13:12.565977+00:00",
+    "queries": [
+      {
+        "record_id": "RS_PAST_NA813",
+        "engine": "system1",
+        "q": "site:wikipedia.org \"John Walter Ryde\""
+      },
+      {
+        "record_id": "RS_PAST_NA813",
+        "engine": "system1",
+        "q": "site:wikipedia.org \"John Ryde\" \"1898\""
+      }
+    ],
+    "reason": "InitialexactEnglishcanonicalpersonqueryreturnednoRydehitinmergedresults, notanabsenceclaim. ActualWikidatapersonfirstopenfailedclosed, noalternategraphcarrier/API. Seekactualcanonicalcommunityarticleasdifferentwork/language; no guessedarticleURL."
+  },
+  "open_plan_2": {
+    "written_utc": "2026-11-07T00:13:34.211758+00:00",
+    "operations": [
+      {
+        "record_id": "RS_PAST_NA813",
+        "url": "https://en.wikipedia.org/wiki/List_of_fellows_of_the_Royal_Society_P%2C_Q%2C_R",
+        "observed_ref": "turn1900885search6",
+        "purpose": "Firstactualcanonicalcommunitylistbody toinspectRydeentry/observedpersonhyperlink ifany. Searchresultnotproofnorabsence. Listwithname/exactDOBalone notadequatebirthregion/career; donotguesspersonarticlefromlabel."
+      }
+    ],
+    "failure_note": "BothWikidatapersonfirstopensreturnednotaccessible andclosedwithoutAPI/entityJSON/languagevariants. CanonicalWikilist isdifferentwork, notgraphretry."
+  },
+  "find_plan_1": {
+    "written_utc": "2026-11-07T00:13:49.283809+00:00",
+    "operations": [
+      {
+        "ref": "turn4905697view0",
+        "pattern": "John Walter Ryde",
+        "purpose": "ReadactualRydecanonicallistrowandanyobservedpersonlink, notfreshHTTP/guessedURL."
+      },
+      {
+        "ref": "turn6559578view2",
+        "pattern": "Born",
+        "purpose": "SelectiveexistingcanonicalFarrenpersonbodybirthfield check; do notfollowCambridgeschoollinkasbornedge."
+      }
+    ]
+  },
+  "bounded_interlanguage_followup": {
+    "written_utc": "2026-11-07T00:17:00.385080+00:00",
+    "prior_report_preserved": "v36_sources_c_pass1.json",
+    "prior_report_sha256": "f028bf0ef15ee4e73facb5a549dfc50c04e2f94bffa5c439551b0dbc7de9e1c7",
+    "query_budget_exhausted": true,
+    "queries_planned": 0,
+    "operations": [
+      {
+        "kind": "find",
+        "ref": "turn6559578view2",
+        "pattern": "Deutsch",
+        "purpose": "InspectexistingactualEnglishpersonarticleforobservedGermanpersoninterlanguage link only; no guessedURIs/graphretry."
+      },
+      {
+        "kind": "find",
+        "ref": "turn6559578view2",
+        "pattern": "languages",
+        "purpose": "Inspectexistingarticlelanguagearea foractualcanonicalother-languagepersonURI ifany. Sourcefindnomatch/contextnotglobalabsenceproof."
+      }
+    ],
+    "bounded_stop": "Ifnoactualinterlanguagepersonlinkobserved, retainhold; neverfollowEnglishCambridgeschool/worklinks. AnyactualDOB/placeconflictheld; allfailedWikidataentitiesclosed. FollownewcanonicalcommunitylanguagepersononlyifactualURIobserved and exactnextintentvalidatedbeforecall."
+  }
+}

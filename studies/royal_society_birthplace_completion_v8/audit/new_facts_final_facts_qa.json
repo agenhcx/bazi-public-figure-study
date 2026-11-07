@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "accepted_facts_checked": 6,
+  "by_route": {
+    "historical_dnb": 2,
+    "australian_directory": 4
+  },
+  "native_DOB_and_acceptance_unchanged": true,
+  "base_sha256": "3aa09ae1720ed7abc06b49cb49f9002aa91b0a8a65ac0c0bafe18f455dc8eff7",
+  "source_hash_and_excerpt_checks": true,
+  "accepted_input_sha256": {
+    "historical_dnb": "128d5c22b7dda218d01191cbb272c9282e3ae8f5ec134e58800fc4da49961143",
+    "australian_directory": "2d02fab936c2b76763f2fc8bbc168ccad4d9f1ca4fdf63f4677b8090b1813159"
+  },
+  "scope_note": "Australian initial three-navigation-page zero result is only a partial probe. Any later expanded directory/body coverage must be reported separately and no zero result means absent from all directories.",
+  "DNB_grade_note": "No scans visually inspected, so the two DNBWikisource facts remainS3 regardless of original edited book metadata.",
+  "notes": "QA made no new network request and modified no repo or native DOB/source-group/identity fields."
+}

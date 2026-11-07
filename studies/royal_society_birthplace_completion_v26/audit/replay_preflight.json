@@ -1,0 +1,35 @@
+{
+  "written_utc": "2026-11-06T10:43:37.744797+00:00",
+  "status": "pass",
+  "checks": [
+    "exact_v25_canonical_hash",
+    "all4983_baseline_complete_objects_match_v25_output",
+    "target123_exact",
+    "current12_scope_exact",
+    "everypriorloader_verbatim",
+    "allfrozeninputbytes_preserved",
+    "v25currentinputbytes_frozen",
+    "v26two_fixture_changes",
+    "untargeted_complete_objects",
+    "frozenfields_unchanged",
+    "exactrollback_allcomplete_objects",
+    "five_isolatedoutputs",
+    "isolatedsummary_expected",
+    "CSV86priorcolumns_unchanged_plus6v26",
+    "CSV4983rows_rectangular",
+    "deterministicgzip_fixture",
+    "no_production_outputs_orfacts_written"
+  ],
+  "check_count": 17,
+  "elapsed_seconds": 61.912,
+  "scope": "Synthetic isolated fixture and actual frozen v25 reconstruction only; no production source facts/audits/docs/mainoutputs/Git changed.",
+  "baseline_canonical_sha256": "b36383e9ac72642059c2f9b5ff6c57187c8b04477bb5830ebf85b61a12cda730",
+  "current_target_pool": 123,
+  "current_individual_followups": 12,
+  "csv_columns": 92,
+  "current_inputs_root_must_supply": [
+    "inputs/accepted_birthplaces.json",
+    "inputs/reviewed_record_ids.json",
+    "audit/followup_holds.json"
+  ]
+}

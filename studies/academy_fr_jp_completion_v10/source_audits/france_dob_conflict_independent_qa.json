@@ -1,0 +1,35 @@
+{
+  "audit_kind": "independent_Dassault_DOB_source_discrepancy_QA",
+  "reviewer": "v10_france_c",
+  "completed_utc": "2026-10-30T11:24:59.698200+00:00",
+  "independent_qa_passed": true,
+  "source_claims_sha256": "b91c246142750ba7c56fb089e52f6f3b685d6c1d9a648b0cdebc684a687c61a7",
+  "candidate_group_id": "CTHS_112065",
+  "source_dates_body_verified": [
+    "1882-01-13",
+    "1882-01-18"
+  ],
+  "actual_original_source_sha256s": {
+    "CTHS_HTML": "305d8c729ccba9da82c9e06dafa0261375728ed47d4c7e7f21b7b67640612107",
+    "Academy_1969_PDF": "86deb7aa21ba03b79815ce3925a2214763459a0db9728a6028dc1b22affc26db"
+  },
+  "actual_PDF_pages_visually_read": [
+    1,
+    4
+  ],
+  "actual_HTML_body_read": true,
+  "same_person_identity_passed": true,
+  "identity_reason": "CTHS names Paul/general/DariusPaul, birthParis, death30May1969, freeAcademymembership1953–1969 andTardi1969citation. PDFp1 givesGeneralPaulDassault/AdolpheBloch father/familynamechange1955/aircraft-builderyoungerbrother/death30May1969; p4 explicitlyfree-member15June1953. These identifythesamesubject,notbrotherMarcel.",
+  "sources_not_assumed_independent": true,
+  "source_dependency_note": "CTHS cites the same1969TardiAcademynotice; twoexpressions are nottwoindependentreports. The actualCTHScapturedfieldreads13 andactualPDFp1imageclearlyreads18; no OCR conversionfrom18to13performed.",
+  "DOB_conflict_quarantine_recommended": true,
+  "accept_neither_date": true,
+  "accepted_DOB_replacement_recommended": null,
+  "raw_both_expressions_must_be_preserved": true,
+  "membership_event_separate_and_supported": "1953-06-15 ordinary_free_full_member",
+  "collector_master_DOB_fields_modified": false,
+  "source_majority_used": false,
+  "analysis_cohort_frozen": false,
+  "bazi_variables_computed": 0,
+  "source_body_redistributed": false
+}

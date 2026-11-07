@@ -1,0 +1,414 @@
+{
+  "written_utc": "2026-11-07T01:10:45.021956+00:00",
+  "group": "b",
+  "phase": "canonical_community_reference_geography_method_application",
+  "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+  "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+  "method_application_scope_sha256": "bd7540715a6b4649ffe79371e38ee2b650bd0176013fbb5418efa02b8995fad0",
+  "intent_file": "v38_b_intent.json",
+  "full2nativeobjects/priorholdsbeforequeries": true,
+  "intent_writes_validated_exit0_separately_beforeweb": true,
+  "prior_context_review": {
+    "all9_issue_inventories_loaded_and_target_exclusions_checked_before_queries": true,
+    "issue_file_pins": {
+      "active_source_DOB_conflicts.json": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+      "provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+      "source_derived_age_inconsistencies.json": "9a299ead41add638a45fd85603a59ee3c42e1b0284af5c06c5e273a3affac18a",
+      "lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+      "cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+      "birthplace_source_conflicts.json": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+      "source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+      "omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+      "source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+    },
+    "full_target_scope_objects_read_before_queries": true,
+    "individual_prior_holds_read_before_queries": [
+      "prior_v11_holds.json Maitlis",
+      "prior_v30_holds.json Maitlis",
+      "prior_v34_holds.json Mackintosh"
+    ],
+    "prior_failed_routes_not_retried": [
+      "Mackintosh CambridgePsychometrics403",
+      "Maitlis ResearchGate429 memoir route",
+      "Maitlis dictionaryPDF400Timeout"
+    ],
+    "prior_closed_or_countryless_sources_remain_historical": true
+  },
+  "retrieval_counts": {
+    "queries": 3,
+    "navigation_attempts": 4,
+    "source_open_operations": 2,
+    "click_operations": 2,
+    "parsed_finds": 1,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "query_ledger": [
+    {
+      "kind": "search",
+      "engine": "system2",
+      "query": "\"Nicholas John Mackintosh\" site:en.wikipedia.org",
+      "refs": [
+        "turn1476156search1"
+      ],
+      "outcome": "FRSlistprojection only, no actualpersonalbody; no guessedURI opened."
+    },
+    {
+      "kind": "search",
+      "engine": "system2",
+      "query": "\"Peter Michael Maitlis\" site:en.wikipedia.org",
+      "refs": [
+        "turn1476156search0",
+        "turn1476156search3"
+      ],
+      "outcome": "Observed English canonical personURL plus Russian canonicalURL; no projection-only admission."
+    },
+    {
+      "kind": "search",
+      "engine": "system1",
+      "query": "\"Nicholas Mackintosh\" site:wikipedia.org",
+      "refs": [
+        "turn2934470search4"
+      ],
+      "outcome": "Canonical Englishperson URL observed; Kiwixmirrorprojection/oldclosedPsychometrics/CCCnotopened."
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "kind": "open",
+      "record_id": "RS_PAST_NA4571",
+      "url": "https://en.wikipedia.org/wiki/Peter_Maitlis",
+      "ref": "turn2934470view0",
+      "body_acquired": true,
+      "outcome": "fullnative/exactDOB/career/bornBerlin unlinked"
+    },
+    {
+      "kind": "open",
+      "record_id": "RS_PAST_NA4568",
+      "url": "https://en.wikipedia.org/wiki/Nicholas_Mackintosh",
+      "ref": "turn8270421view0",
+      "body_acquired": true,
+      "outcome": "fullnative/exactDOB/career/directBornLondonEngland"
+    },
+    {
+      "kind": "click",
+      "record_id": "RS_PAST_NA4571",
+      "from_ref": "turn2934470view0",
+      "link_id": 25,
+      "url": "https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%B9%D1%82%D0%BB%D0%B8%D1%81,_%D0%9F%D0%B8%D1%82%D0%B5%D1%80",
+      "ref": "turn8270421view1",
+      "body_acquired": true,
+      "outcome": "Russian canonical person fullnativeEnglishalias/exactDOB/career/actualbornBerlinlink78; rewritten-summary toolheader caveat retained"
+    },
+    {
+      "kind": "click",
+      "record_id": "RS_PAST_NA4571",
+      "from_ref": "turn8270421view1",
+      "link_id": 78,
+      "url": "https://ru.wikipedia.org/wiki/%D0%91%D0%B5%D1%80%D0%BB%D0%B8%D0%BD",
+      "ref": "turn5448877view0",
+      "body_acquired": true,
+      "outcome": "actual bornlinktarget canonicalBerlin acquired, longnavigationprefix; countrylocatedcachedfind"
+    }
+  ],
+  "parsed_find_ledger": [
+    {
+      "kind": "find",
+      "record_id": "RS_PAST_NA4571",
+      "from_ref": "turn5448877view0",
+      "pattern": "Страна",
+      "ref": "turn3704383view0",
+      "outcome": "Actual target CountryGermany atL686, literalplainvalue; L724cityGermany. Cachedfindisnot separate newsourceopen; findwrapperdidnotreportexplicitmatchingstatus, observedlocatedtext used only."
+    }
+  ],
+  "candidates": [
+    {
+      "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+      "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+      "method_application_scope_sha256": "bd7540715a6b4649ffe79371e38ee2b650bd0176013fbb5418efa02b8995fad0",
+      "record_id": "RS_PAST_NA4568",
+      "native_dob": "1935-07-09",
+      "authority_name": "Mackintosh; Nicholas John (1935 - 2015)",
+      "frozen_raw_birthplace": "the Royal Northern Hospital in Islington, London",
+      "frozen_birthplace_source_grade": "S2",
+      "source_author": null,
+      "source_kind": "canonical_Wikipedia_original_community_person_reference_body",
+      "source_grade": "S3",
+      "source_grade_role": "geographic_support_only",
+      "reviewed_hemisphere": "north",
+      "publication_date": null,
+      "publication_date_precision": "not_observed",
+      "source_revision_id": null,
+      "source_revision_utc": null,
+      "source_calendar_model": null,
+      "source_statement_rank": null,
+      "source_editorial_validation": null,
+      "source_informational_independence": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "source_exact_native_month_day_confirmed": true,
+      "native_death_endpoint_confirmed_by_source": true,
+      "native_DOB_source_grade_unchanged": true,
+      "original_birthplace_fields_and_source_grades_unchanged": true,
+      "retrieval_representation": "web-tool parsed canonical community HTML text; not raw response bytes, rendered pixels, revision authentication or civil verification",
+      "proof_mode": "direct_born_region_in_actual_canonical_person_body",
+      "source_url": "https://en.wikipedia.org/wiki/Nicholas_Mackintosh",
+      "source_title": "Nicholas Mackintosh – Wikipedia",
+      "source_quote": "London, England",
+      "source_quote_word_count": 2,
+      "observed_source_full_name": "Nicholas John Seymour Mackintosh",
+      "source_birthdate": "1935-07-09",
+      "source_birthdate_as_displayed": "9 July 1935",
+      "source_birthdate_precision": "exact_day_in_actual_Born_field_and_lead",
+      "source_lifespan": "1935-2015; actual displayed death8February2015",
+      "source_DOB_native_compatibility": "Actual9July1935 agrees unchangednative1935-07-09; source lifespan1935-2015 matches authority. Stated-date agreement only, calendar/civil validation unknown.",
+      "identity_review": [
+        "Actual Nicholas John Seymour Mackintosh includes every native Nicholas John Mackintosh component. Seymour is an extra source name only; oldODNB extraMunro remains originalsourcecontext, neither source extension is inserted into native name. No omitted-middle exception used.",
+        "Actual exact9July1935 and compatibledeath8February2015/lifespan1935-2015.",
+        "Actual experimentalpsychologist/intelligence/psychometrics/animallearning, OxfordBA1960/DPhil1963 underStuartSutherland, Cambridgehead1981-2002 andFRS1987 coherently bind subject.",
+        "No actually incompatibleDOB/place/identity observed in this bounded review; oldCambridgeReporter lackedDOB/place and is not contradicted."
+      ],
+      "geographic_basis": "Actual personBorn field directly states London,England. England is wholly North under existingextentgate. Not inferred from nationality, Cambridgecareer, familiarLondon city knowledge or coordinates.",
+      "proof_chain": [
+        {
+          "source_url": "https://en.wikipedia.org/wiki/Nicholas_Mackintosh",
+          "source_node_label": "Nicholas John Seymour Mackintosh",
+          "edge_property": "explicit_subject_born_region_literal",
+          "tool_ref": "turn8270421view0",
+          "locator": "L109 fullnative plus extraSeymour;L110 exact9July1935;L111 BornLondon,England;L121full/date/psychology;L126Oxforddegree/Sutherland;L131Cambridgehead1981-2002.",
+          "acquisition_role": "worker_first_actual_canonical_person_body_direct_Born_region_observation",
+          "target_kind": "literal",
+          "target_label": "England",
+          "target_uri": null,
+          "source_qid": null,
+          "target_qid": null,
+          "target_uri_limit": "Direct born-region literal used; the composite London,England hyperlink was not followed and no target URI/QID assigned."
+        }
+      ],
+      "source_body_ref": "turn8270421view0",
+      "worker_source_body_ref": "turn8270421view0",
+      "source_locator": "Actualcanonicalbody turn8270421view0:L109allnative/L110exactDOB/L111BornLondonEngland;L121psychology/L126Oxford1960-DPhil1963Sutherland/L131Cambridge1981-2002;L112death2015.",
+      "source_body_acquisition_role": "worker_actual_canonical_person_body_direct_region; parent_verification_pending",
+      "worker_actual_edge_follow_ref": null,
+      "source_grade_basis": "Unchanged V36 canonicalcommunity reference method prospectively scoped V38; actualfullnative/exactDOB/coherentcareer plus directBornEngland qualifies S3geographyonly. Original hospitalIslingtonLondonS2 and nativeDOBtiers unchanged; communityediting/independence/calendar unverified.",
+      "source_birthplace_context": "Born London, England (actual personal infobox); frozen finer hospital/Islington text not independently confirmed by this source.",
+      "place_binding_review": "Actual bornLondon matches broaderLondon literal already contained in frozen RoyalNorthernHospitalinIslington,London. No substitutedcity/hospital/street equivalence or point coordinates claimed; original finerplace andS2 remain frozen.",
+      "observed_displayed_footer_metadata": {
+        "oldid": "1342254466",
+        "last_edited_literal": "7 March 2026, at 23:30 (UTC)",
+        "locator": "turn8270421view0:L158/L183",
+        "limits": "Displayed footer only; not raw revision authentication. Current body embeds references including priorODNB, no independent corroboration claim."
+      },
+      "caveats": [
+        "S3geographic_support_only; no nativeDOB/BP grade, rawplace, country, QID, coordinate, eligibility or priorfact edit.",
+        "Nativefull name is Nicholas John Mackintosh; sourceextraSeymour allowed ordinary allnativecomponents present, not an omitted-middle exception. SourceextraMunro in priorODNB remains as history only.",
+        "England is literally in actual personalBorn field; unclicked composite LondonEngland link URI not guessed.",
+        "Current canonical community article cites original sources, possibly including existingODNB evidence; informational independence/editorial accuracy unknown.",
+        "Parent firstbody verification pending; this report is a worker candidate, not production adoption."
+      ]
+    }
+  ],
+  "holds": [
+    {
+      "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+      "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+      "method_application_scope_sha256": "bd7540715a6b4649ffe79371e38ee2b650bd0176013fbb5418efa02b8995fad0",
+      "record_id": "RS_PAST_NA4571",
+      "native": {
+        "record_id": "RS_PAST_NA4571",
+        "authority_name": "Maitlis; Peter Michael (1933 - 2022); chemist",
+        "native_dob": "1933-01-15",
+        "raw_birthplace": "Berlin",
+        "birthplace_source_grade": "S3",
+        "hemisphere": "unknown"
+      },
+      "status": "hold_primary_canonical_person_representation_explicitly_rewritten_summary",
+      "hold_type": "primary_person_body_representation_not_qualified_original",
+      "reason": "Actual Englishcanonicalbody fullnative/exactDOB/career but Berlin unlinked. Russianperson result explicitly labelled rewritten summary; actualbornBerlin link78 was followed to normal canonicalBerlin CountryGermany, but target cannot cure primaryperson representation uncertainty under unchangedmethod. Root firstRussianperson acquisition also explicitly rewritten. Hold, no URLencoding variants/retry/sourceconflict or nativechange.",
+      "source_url": "https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%B9%D1%82%D0%BB%D0%B8%D1%81,_%D0%9F%D0%B8%D1%82%D0%B5%D1%80",
+      "source_ref": "turn8270421view1",
+      "source_body_ref": "turn8270421view1",
+      "source_locator": "L137 fullnative/exactDOB/career;L142actualbornBerlinlink78; explicittoolheader rewritten-summary marker. Rootturn1978583view1 same marker per parentnotification.",
+      "source_body_acquired": true,
+      "qualified_original_person_body_acquired": false,
+      "source_grade_adopted": null,
+      "source_quote": "",
+      "source_quote_word_count": 0,
+      "reviewed_hemisphere": "unknown",
+      "geography_decision": "unchanged_unknown",
+      "proof_chain": [],
+      "unadopted_actual_followed_chain_retained_in": "provisional_chain_observations",
+      "no_new_geographic_assignment": true,
+      "native_and_original_birthplace_fields_unchanged": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "new_conflict_observed": false
+    }
+  ],
+  "new_DOB_or_place_conflicts": [],
+  "unopened_distinct_original_work_leads": [],
+  "source_quote_words_by_original_work": {
+    "https://en.wikipedia.org/wiki/Nicholas_Mackintosh": 2,
+    "https://en.wikipedia.org/wiki/Peter_Maitlis": 0,
+    "https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%B9%D1%82%D0%BB%D0%B8%D1%81,_%D0%9F%D0%B8%D1%82%D0%B5%D1%80": 1,
+    "https://ru.wikipedia.org/wiki/%D0%91%D0%B5%D1%80%D0%BB%D0%B8%D0%BD": 1
+  },
+  "protocol_limits": {
+    "query_budget": 4,
+    "source_navigation_budget": 10,
+    "unused_query_budget": 1,
+    "no_need_to_exhaust_budget": true,
+    "first_failed_textless_challenge_size_stops_work": true,
+    "no_failedwork_retry_variant_rawGET": true,
+    "no_source_caches_or_fullprojections_saved": true,
+    "quote_limit_words_per_original_work": 25
+  },
+  "raw_HTTP_status": null,
+  "raw_bytes_sha256": null,
+  "exact_request_utc": null,
+  "no_repo_master_Git_edit": true,
+  "no_source_exhaustion_finalfreeze_or_DOB_BPtierupgrade": true,
+  "method_amendment_created": false,
+  "method_reused_from_version": 36,
+  "scope_application_extension": true,
+  "no_new_admission_method_exception": true,
+  "parent_adjudication_pending": false,
+  "provisional_chain_observations": [
+    {
+      "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+      "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+      "method_application_scope_sha256": "bd7540715a6b4649ffe79371e38ee2b650bd0176013fbb5418efa02b8995fad0",
+      "record_id": "RS_PAST_NA4571",
+      "native_dob": "1933-01-15",
+      "authority_name": "Maitlis; Peter Michael (1933 - 2022); chemist",
+      "frozen_raw_birthplace": "Berlin",
+      "frozen_birthplace_source_grade": "S3",
+      "source_author": null,
+      "source_kind": "tool_rewritten_summary_of_canonical_Wikipedia_person_not_admitted",
+      "source_grade": null,
+      "source_grade_role": "unadopted_candidate_chain_observation_only",
+      "reviewed_hemisphere": "unknown",
+      "publication_date": null,
+      "publication_date_precision": "not_observed",
+      "source_revision_id": null,
+      "source_revision_utc": null,
+      "source_calendar_model": null,
+      "source_statement_rank": null,
+      "source_editorial_validation": null,
+      "source_informational_independence": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "source_exact_native_month_day_confirmed": true,
+      "native_death_endpoint_confirmed_by_source": true,
+      "native_DOB_source_grade_unchanged": true,
+      "original_birthplace_fields_and_source_grades_unchanged": true,
+      "retrieval_representation": "web-tool parsed canonical community HTML text; not raw response bytes, rendered pixels, revision authentication or civil verification",
+      "proof_mode": "explicit_person_born_place_hyperlink_then_actual_target_place_region",
+      "source_url": "https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%B9%D1%82%D0%BB%D0%B8%D1%81,_%D0%9F%D0%B8%D1%82%D0%B5%D1%80",
+      "source_title": "Мейтлис, Питер — Википедия",
+      "source_quote": "Берлине",
+      "source_quote_word_count": 1,
+      "observed_source_full_name": "Peter Michael Maitlis",
+      "source_birthdate": "1933-01-15",
+      "source_birthdate_as_displayed": "15 января 1933",
+      "source_birthdate_precision": "exact_day_in_actual_person_lead_Born_datefield_and_born_clause",
+      "source_lifespan": "1933-2022; exactdisplayeddeath18May2022",
+      "source_DOB_native_compatibility": "Actual15January1933 normalizesunchangednative1933-01-15; lifespan1933-2022 matchesauthority. Calendar/civil verification unknown.",
+      "identity_review": [
+        "Actual RussianpersonleadL137 displays full English Peter Michael Maitlis, no guessed translation/initials expansion.",
+        "Exact15января1933 and compatible18May2022/lifespan1933-2022 appear atL121-122/L137/L142.",
+        "Actualorganometallicchemist/platinumgroupchemistry/metallomesogens/FRS1984/McMaster1962/Sheffield1972 coherently bind subject.",
+        "Separate actualEnglishbody turn2934470view0 fullPeterMichael/exact15Jan1933/lifespanL112/bornBerlinL116 and McMaster1962-72/Sheffield1972-2002L122 supports matchingidentity, not a birthplace country edge; no informationalindependence claimed.",
+        "No actually incompatibleDOB/place/identity observed; priorOldHendonian bornBerlin1933 lackedcountry and oldmemoir/dictionary failures remainclosed."
+      ],
+      "geographic_basis": "ActualpersonalbornBerlin hyperlink78 actuallyfollowed to RussianBerlin target. Acquired targetcachedCountry field Страна|Германия atL686 andcityGermanyL724; terminalGermany whollyNorth under existingextentgate. No birthcountry fromUKnationality, familyemigration or familiarcity inferred.",
+      "proof_chain": [
+        {
+          "source_url": "https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%B9%D1%82%D0%BB%D0%B8%D1%81,_%D0%9F%D0%B8%D1%82%D0%B5%D1%80",
+          "source_node_label": "Peter Michael Maitlis",
+          "edge_property": "explicit_subject_birthplace_hyperlink",
+          "tool_ref": "turn8270421view1",
+          "locator": "L137actualEnglishfullalias/exact15January1933/lifespan;L142personalborn15January1933inBerlin hyperlink78;L148-149McMaster/Sheffieldcareer.",
+          "acquisition_role": "worker_actual_observed_English_interlanguage_link25_follow_to_Russian_person_body_then_actual_born_link78_follow",
+          "target_kind": "entity",
+          "target_label": "Берлин (Berlin)",
+          "target_uri": "https://ru.wikipedia.org/wiki/%D0%91%D0%B5%D1%80%D0%BB%D0%B8%D0%BD",
+          "source_qid": null,
+          "target_qid": null,
+          "worker_tool_ref": "turn8270421view1",
+          "worker_follow_link_result_ref": "turn5448877view0",
+          "source_representation_caveat": "Toolheader explicitly says rewritten summary of canonical original URL; detailed personalHTMLtext and actualbornlink observed, not raw authenticated original. Parent/sourceQA must decide actualbody sufficiency without changing method."
+        },
+        {
+          "source_url": "https://ru.wikipedia.org/wiki/%D0%91%D0%B5%D1%80%D0%BB%D0%B8%D0%BD",
+          "source_node_label": "Берлин (Berlin)",
+          "edge_property": "Страна",
+          "tool_ref": "turn3704383view0",
+          "locator": "Acquiredtarget via actualbornlink78:turn5448877view0; cachedfind Страна ->turn3704383view0:L679capitalGermany/L680Berlin/L686Страна|Германия/L724cityGermany.",
+          "acquisition_role": "worker_actual_born_link78_target_body_then_cached_countryfield_locator",
+          "target_kind": "literal",
+          "target_label": "Германия",
+          "target_label_English_translation": "Germany",
+          "target_uri": null,
+          "source_qid": null,
+          "target_qid": null,
+          "target_uri_limit": "Actual literal country value; no value URI/QID observed or guessed.",
+          "source_node_type": "geographic_city",
+          "source_quote": "Германия",
+          "source_quote_word_count": 1
+        }
+      ],
+      "source_body_ref": "turn8270421view1",
+      "worker_source_body_ref": "turn8270421view1",
+      "source_locator": "turn8270421view1:L137actualfullEnglishPeterMichael/exact15Jan1933/lifespan/L142bornBerlinlink78; workeractualclick78->turn5448877view0 canonicalRussianBerlin; cachedcountryfind turn3704383view0:L686Germany/L724cityGermany. Personalheader rewritten-summary representation flagged; parentreview pending.",
+      "source_body_acquisition_role": "worker_actual_interlanguage_person_body_and_actual_born_link_target; parsed_person_header_rewritten_summary_flag_requires_parent_assessment",
+      "worker_actual_edge_follow_ref": "turn5448877view0",
+      "source_grade_basis": "Candidate only under unchanged V36 S3communityperson-place method, pending parent assessment of tool rewritten-summary marker. Allnative/exactDOB/career and actual bornlink+targetCountryGermany observed. No originalBerlinS3 orDOBtier upgrade.",
+      "source_birthplace_context": "ActualpersonalbornBerlin link; actual target Страна|Германия (Country Germany).",
+      "place_binding_review": "Берлин is ordinary Russian label for Berlin, matched explicitEnglishalias/sourceEnglishbornBerlin/frozenrawBerlin. No othercity, historicalstreet or politicalcitizenship inferred. Modern country relationship supports whole-region hemisphere only, not citizenship/historical1933admin verification.",
+      "supporting_identity_context": {
+        "source_url": "https://en.wikipedia.org/wiki/Peter_Maitlis",
+        "source_body_ref": "turn2934470view0",
+        "source_locator": "L112fullPeterMichael/exact15Jan1933-18May2022;L116bornBerlin unlinked;L122McMaster/Sheffieldcareer",
+        "observed_full_name": "Peter Michael Maitlis",
+        "source_birthdate": "1933-01-15",
+        "actual_born_place_observed": true,
+        "actual_person_born_place_hyperlink_observed": false,
+        "source_quote": null,
+        "source_quote_word_count": 0,
+        "body_acquisition_role": "worker_actual_English_identity_context_only; priornativeEnglishBPsource notrepaired or upgraded"
+      },
+      "source_representation_caveat": "Toolheader says rewritten summary of canonical Russian article URL. Parsedbody contains fullname/date/career and explicitbornlink actuallyfollowed to canonicalBerlin, but notrawsourceauthentication. Parent/sourceQA assessment required before adoption; do not label raworiginalbody independentlyauthenticated.",
+      "observed_person_redirect": {
+        "clicked_from_ref": "turn2934470view0",
+        "link_id": 25,
+        "result_ref": "turn8270421view1",
+        "initial_observed_url": "https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%B9%D1%82%D0%BB%D0%B8%D1%81%2C_%D0%9F%D0%B8%D1%82%D0%B5%D1%80",
+        "actual_result_url": "https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%B9%D1%82%D0%BB%D0%B8%D1%81,_%D0%9F%D0%B8%D1%82%D0%B5%D1%80",
+        "limit": "Observed comma-encoding redirect only, no sourceversion or identity change inferred."
+      },
+      "caveats": [
+        "Worker candidate, not productionadoption. Russianpersontoolheader rewritten-summary marker explicitly retained, requires parent/sourceQA actualbodyassessment under unchangedmethod.",
+        "Actual bornlink78 was followed; cachedfind locatedCountryGermany at actual target. No terminalGermanyURI/QID guessed; coordinates notused or assigned.",
+        "OriginalBerlinS3/native1933-01-15/oldclaims/evidence/nativefields remainunchanged; firstbirthday/sourcegradeupgrade or civilcalendarvalidation notperformed.",
+        "Englishactual bornBerlin unlinked is identitycontext only and cannot independentlyprovide geography; Russian otherlanguage is distinctcommunitywork, no informationalindependence claim.",
+        "OldHendonian countryhold, ResearchGate429 and dictionarytimeoutclosed routes remain frozen; no retry/bypass or abstract-family-emigration country inference."
+      ],
+      "proposed_hemisphere_before_representation_review": "north",
+      "proposed_geographic_support_grade_before_representation_review": "S3",
+      "adopted": false,
+      "parent_adjudication": "Hold under unchanged actual original canonical body rule: primary person result explicitly labelled rewritten summary, even though detailed text and actual link were acquired. Normal target city text cannot cure primary-person representation uncertainty. No URL variants/retry."
+    }
+  ],
+  "parent_protocol_followup": {
+    "notified_utc": "2026-11-07T01:11:10.248299+00:00",
+    "root_Mackintosh_ref": "turn1978583view0",
+    "root_Maitlis_Russian_ref": "turn1978583view1",
+    "root_Berlin_Russian_ref": "turn1978583view2",
+    "acquisition_role": "Parent notification of its first verification bodies, not additional worker acquisitions; rootoperations excluded worker counts.",
+    "decision": "Mackintosh directBornEngland accepted forrootcuration. Maitlisheld forprimaryrewritten-summary representation; actualunadoptedbornlinkchain preserved. No moreworkerqueries/URLvariants/retry."
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "schema": "v28_b_retrieval_intent",
+  "written_utc": "2026-11-06T11:18:15.111752+00:00",
+  "purpose": "Original-source birthplace followup of exactly v28scopeb four fixed subjects, all native identity/DOB/cohort/grade/eligibility frozen.",
+  "general_adaptive_purpose": "After initialqueries use up tofour adaptivequeries for originalbiography/memoircarriers/missingfullnames or actuallystateddateprecision or bylinecredentials. Recordselectedexactadaptivequeries beforeexecution whenknown. Navigateobservedoriginals and necessarybirth/identity/bylinepublicationcontext, stopfailedroutes withoutvariants/retries/rawGET/accessbypass.",
+  "queries_prelisted": [
+    {
+      "index": 1,
+      "engine": "system2",
+      "q": "\"Harry Smith\" \"1935\" \"born\""
+    },
+    {
+      "index": 2,
+      "engine": "system2",
+      "q": "\"Lionel Edward Aston Rowson\" born"
+    },
+    {
+      "index": 3,
+      "engine": "system2",
+      "q": "\"John Hugh Chesters\" born"
+    },
+    {
+      "index": 4,
+      "engine": "system2",
+      "q": "\"Joseph Arthur Colin Nicol\" born"
+    }
+  ],
+  "limits": {
+    "queries": 8,
+    "navigation_attempts": 10
+  },
+  "gates": "Actualfullnativecomponents/compatibledateprecision/distinctivecareer/directborn mandatory; exactnativeDOBstrictv24boundedmiddleomissiononly,noinitial/nicknameexpansion. DOB/placeconflictsheld,norepair. S2authorededitedmemoir/refbio/verifiedexpert,S3uncreditedcompiled/journalistconservative,not hostonlyS1. Explicitbirthlinkedcountry/wholeregion onlyhemisphere,cityaloneunknown. <=25Englishquotewords/originalwork/minimalfactsonly,noHTML/PDF/image/projectioncaches. Nineinheritedissuefiles untouched. Actualquerystatus/ref/counters/limits/protocoldeviationstruthful,unknownrawHTTP/bytes/requesttime null.",
+  "adaptive_exact_queries_prelisted": {
+    "written_utc": "2026-11-06T11:18:36.246502+00:00",
+    "queries": [
+      {
+        "index": 5,
+        "engine": "system1",
+        "q": "\"Harry Smith\" botanist \"born\" obituary"
+      },
+      {
+        "index": 6,
+        "engine": "system1",
+        "q": "\"Lionel Edward Aston Rowson\" \"born\""
+      },
+      {
+        "index": 7,
+        "engine": "system1",
+        "q": "\"John Hugh Chesters\" \"born\" \"1906\""
+      },
+      {
+        "index": 8,
+        "engine": "system1",
+        "q": "\"Joseph Arthur Colin Nicol\" \"Canada\" \"1915\" memoir"
+      }
+    ]
+  }
+}

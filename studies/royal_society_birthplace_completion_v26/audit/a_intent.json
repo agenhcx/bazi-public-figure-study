@@ -1,0 +1,17 @@
+{
+  "schema": "v26_a_source_intent_v1",
+  "written_utc": "2026-11-06T10:40:47.661899+00:00",
+  "scope": [
+    "RS_PAST_NA1134",
+    "RS_PAST_NA1196",
+    "RS_PAST_NA1323",
+    "RS_PAST_NA1361"
+  ],
+  "planned_queries": [
+    "Robert Robison 1883 1941 born obituary",
+    "George Walker physicist 1874 born obituary",
+    "Samuel Walter Johnson Smith born 1871",
+    "Guy Dunstan Bengough born 1876"
+  ],
+  "followup_intent": "Within8queries10navigationattempts, examine first informative original scientific memoir or authored/institutional biography for exact subject birth assertion and actualDOBprecision. Stop failures and no access bypass. Subjectname/DOB/career binding, conflictingdates/places held; no native changes, no city-only hemisphere inference. Minimal quotes<=25words/work; no fullsource caches."
+}

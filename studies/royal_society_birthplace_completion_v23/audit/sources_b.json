@@ -1,0 +1,394 @@
+{
+  "schema": "v23_group_b_source_observations_v1",
+  "written_utc": "2026-11-05T23:59:51.286876+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA3474",
+    "RS_PAST_NA4233",
+    "RS_PAST_NA4301",
+    "RS_PAST_NA4642"
+  ],
+  "intent_file": "v23_b_intent.json",
+  "counts": {
+    "discovery_queries": 8,
+    "web_navigation_attempts": 9,
+    "parsed_find_operations": 0,
+    "screenshots": 0,
+    "raw_HTTP_or_PDF_GETs": 0,
+    "body_verified_birthplace_candidates": 1,
+    "holds": 3,
+    "unused_navigation_budget": 1
+  },
+  "candidates": [
+    {
+      "record_id": "RS_PAST_NA3474",
+      "native": {
+        "record_id": "RS_PAST_NA3474",
+        "authority_name": "Coles; Bryan Randell (1926 - 1997)",
+        "native_dob": "1926-06-09",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "f93574647478baf3f79431bd9c9fe03e40b621a441a73697d112a926b75e2f54"
+      },
+      "status": "candidate_original_signed_edited_obituary_exact_native_DOB_explicit_first_birthplace",
+      "raw_birthplace": "Cardiff",
+      "source_url": "https://www.the-independent.com/news/people/obituary-professor-bryan-coles-1273472.html",
+      "source_title": "Obituary: Professor Bryan Coles",
+      "source_author": "David Edwards",
+      "source_kind": "original_signed_edited_newspaper_obituary",
+      "publication_date": "1997-03-16",
+      "publication_date_precision": "day_from_originalbyline_timestamp",
+      "source_grade_proposal": "S3",
+      "source_grade_basis": "Original signed edited obituary acquired with byline; original author-profile link returned404, so no relevant professional-expert or colleague role acquired. ConservativeS3 instead of grading from host or familiar author name. Parent may adjudicate without assumed expertise.",
+      "source_grade_role": "person_birthplace_support_only",
+      "source_quote": "born Cardiff 9 June 1926",
+      "source_quote_word_count": 5,
+      "source_locator": "turn2759049view0:L32 originalbyline/publication;L53-69careernarrative;L54directbornCardiff;L70fullBryanRandellColes/exactDOB/place/deathdate. Earlierbodyturn6100559view0:L147byline/L174-190career.",
+      "source_body_ref": "turn2759049view0",
+      "source_webrefs": [
+        "turn6100559view0",
+        "turn2759049view0"
+      ],
+      "source_birthdate": "1926-06-09",
+      "source_birthdate_precision": "exact_day_in_subject_vital_line",
+      "source_DOB_matches_native": true,
+      "source_death_date": "1997-02-24",
+      "source_lifespan_compatible_with_native": true,
+      "observed_source_full_name": "Bryan Randell Coles",
+      "identity_review": [
+        "All native components Bryan Randell Coles explicitly appear in originalvital lineL70.",
+        "Exact9June1926 matches native;24February1997 death agrees native1926-1997lifespan.",
+        "Imperialsolidstatephysicsprofessor1966-91, ProRector1986-91,FRS1991 and experimentalalloy/Kondospinglass research bind subject. No name expansion or date correction."
+      ],
+      "reviewed_hemisphere_proposal": "unknown",
+      "geographic_basis": "Only Cardiff is directly birth-linked. UniversityofWales is education, ImperialLondon is workplace, and deathLondon is not birthcountry. No explicitbirth-linkedcountry/whole-region qualifier; keepunknown without familiarcity inference.",
+      "supporting_original_observation": {
+        "url": "https://felixonline.co.uk/articles/1081-professor-bryan-coles-dies-aged-71/",
+        "source_ref": "turn6100559view1",
+        "title": "Professor Bryan Coles dies aged71",
+        "source_author": "Jeremy Clarke",
+        "publication_date": "1997-02-28",
+        "source_kind": "original_signed_student_newspaper_tribute",
+        "locator": "L21headline/22byline/24publication;L26fullBryanRandell/bornCardiff/year1926;L27-30distinctiveImperialcareer/FRS.",
+        "source_birthdate": "1926",
+        "source_birthdate_precision": "year_only_in_born_clause",
+        "birthplace_relation_verified": true,
+        "source_quote": "",
+        "information_independence_claimed": false,
+        "age_contrast": "Headline reports71. Compare to primaryIndependent exact1926-06-09/1997-02-24, whose conventional arithmeticage is70. Felix itself supplies onlybirthyear and relativeMondaydeath, so do not claim Felix states both exactdates, infer an alternateDOB or adjudicate a typo."
+      },
+      "source_reported_age_cross_source_contrast": {
+        "age_reporting_source_url": "https://felixonline.co.uk/articles/1081-professor-bryan-coles-dies-aged-71/",
+        "reported_age": 71,
+        "age_reporting_source_birth_precision": "year_only",
+        "exact_date_source_url": "https://www.the-independent.com/news/people/obituary-professor-bryan-coles-1273472.html",
+        "exact_date_source_birthdate": "1926-06-09",
+        "exact_date_source_death_date": "1997-02-24",
+        "arithmetic_age_from_primary_exact_dates": 70,
+        "status": "unresolved_cross_source_reported_age_contrast_not_explicit_alternate_DOB",
+        "no_source_or_native_DOB_or_age_repair": true
+      },
+      "caveats": [
+        "Author credentials not acquired: linkedauthorpage404stopped. ConservativeS3 proposal, no S2expertrole assumption.",
+        "SecondaryFelixheadlineage contrast recorded separately with its year-only precision; no competing exact born date observed.",
+        "No rawsourcebytes/HTTPstatus/hash/exactrequesttime acquired. No fulloriginalHTML/PDF/cache/familydetails redistributed."
+      ],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original HTML text, not raw HTTP bytes",
+      "no_master_change": true,
+      "geography_assignment_performed": false
+    }
+  ],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA4233",
+      "native": {
+        "record_id": "RS_PAST_NA4233",
+        "authority_name": "Hudson; Robert Francis (1922 - 2012)",
+        "native_dob": "1922-12-15",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "f7b8cf13eda41dcf7b8badae6d8140172c3350522bb54158707d79a1acbb73d4"
+      },
+      "status": "hold_no_bound_original_birthplace_body_discovered",
+      "hold_type": "original_birthplace_body_unavailable",
+      "reason": "Three discovery queries found bibliographic/authorship and roster references but no bound original biographical born-place body for the1922-2012chemist. The RoseHills RobertFrancisHudson1954-2019 musician is a different-person discovery lead, not opened/adopted or treated as a sourceDOBconflict for native. No source birthplace/grade/geography adopted.",
+      "discovery_noise_excluded": {
+        "url": "https://www.rosehills.com/obituaries/whittier-ca/robert-hudson-8771012",
+        "reason": "Discoveryonly1954-2019musician incompatible with native1922-2012chemist; no originalbodyacquired."
+      },
+      "no_literature_exhaustion_claim": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "no_master_change": true,
+      "geography_assignment_performed": false
+    },
+    {
+      "record_id": "RS_PAST_NA4301",
+      "native": {
+        "record_id": "RS_PAST_NA4301",
+        "authority_name": "Bawn; Cecil Edwin Henry (1908 - 2003)",
+        "native_dob": "1908-11-06",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "007967c0a58fa44d957cf56307eda1f979658984a634f6deab5858289971b02f"
+      },
+      "status": "hold_original_biographical_bodies_unavailable",
+      "hold_type": "original_birthplace_body_unavailable",
+      "reason": "OriginalRichardPuddephattRSmemoirDOI and distinctoriginalOUPWhoWasWhoentry DOI both tool-inaccessible and stopped. OfficialScienceInMaking discovery lists fullnative/datebutnobirthplace; no date/nationality/workplace inference or sourcegrade adoption.",
+      "sources": [
+        {
+          "url": "https://doi.org/10.1098/rsbm.2020.0034",
+          "source_ref": "turn2759049view2",
+          "tool_result": "notaccessible",
+          "original_body_acquired": false
+        },
+        {
+          "url": "https://doi.org/10.1093/ww/9780199540884.013.U6837",
+          "source_ref": "turn6890275view1",
+          "tool_result": "notaccessible",
+          "original_body_acquired": false
+        }
+      ],
+      "unopened_distinct_original_lead": {
+        "url": "https://makingscience.royalsociety.org/people/na4301/cecil-edwin-henry-bawn",
+        "discovery_ref": "turn8054311search3",
+        "lead_scope": "DOBonly06/11/1908, noBPvisible; notopened/adopted"
+      },
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "no_master_change": true,
+      "geography_assignment_performed": false
+    },
+    {
+      "record_id": "RS_PAST_NA4642",
+      "native": {
+        "record_id": "RS_PAST_NA4642",
+        "authority_name": "Pateman; John Arthur Joseph (1926 - 2011)",
+        "native_dob": "1926-05-18",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "87d617fafbf7ba5b06805d57a06c8ecd737466bfa08da7f491a12fda1c140573"
+      },
+      "status": "hold_original_birthplace_body_unavailable",
+      "hold_type": "original_birthplace_body_unavailable",
+      "reason": "OriginalAspergillus tribute timedout; originalRSmemoirDOI inaccessible; distinct observedJSTORcarrier returned no readablelines. Stopped all without retry. DiscoveryAspergillustribute uses JohnArthurPateman withoutJoseph and career but nobornplace; no source fullnative binding or birthplacebodyadopted.",
+      "sources": [
+        {
+          "url": "https://www.aspergillus.org.uk/image_library/john-pateman-1926-2011/",
+          "source_ref": "turn2759049view1",
+          "tool_result": "timeout",
+          "original_body_acquired": false
+        },
+        {
+          "url": "https://doi.org/10.1098/rsbm.2018.0003",
+          "source_ref": "turn6890275view0",
+          "tool_result": "notaccessible",
+          "original_body_acquired": false
+        },
+        {
+          "url": "https://www.jstor.org/stable/26774174",
+          "source_ref": "turn6890275view2",
+          "tool_result": "zero_readable_lines",
+          "original_body_acquired": false
+        }
+      ],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "no_master_change": true,
+      "geography_assignment_performed": false
+    }
+  ],
+  "query_ledger": [
+    {
+      "q": "\"Bryan Randell Coles\" \"born\"",
+      "engine": "system1",
+      "observed_refs": [
+        "turn8054311search0",
+        "turn8054311search1",
+        "turn8054311search2"
+      ]
+    },
+    {
+      "q": "\"Robert Francis Hudson\" \"born\"",
+      "engine": "system1",
+      "observed_refs": [
+        "turn8054311search5",
+        "turn8054311search9"
+      ]
+    },
+    {
+      "q": "\"Cecil Edwin Henry Bawn\" \"born\"",
+      "engine": "system1",
+      "observed_refs": [
+        "turn8054311search3",
+        "turn8054311search4",
+        "turn8054311search11"
+      ]
+    },
+    {
+      "q": "\"John Arthur Joseph Pateman\" \"born\"",
+      "engine": "system1",
+      "observed_refs": [
+        "turn8054311search8",
+        "turn8054311search7"
+      ]
+    },
+    {
+      "q": "\"Robert Francis Hudson\" obituary chemist",
+      "engine": "system1",
+      "observed_refs": [
+        "turn6100559search6",
+        "turn6100559search0",
+        "turn6100559search1"
+      ]
+    },
+    {
+      "q": "\"Cecil Edwin Henry Bawn\" obituary born",
+      "engine": "system1",
+      "observed_refs": [
+        "turn6100559search2",
+        "turn6100559search3",
+        "turn6100559search7"
+      ]
+    },
+    {
+      "q": "\"John Pateman\" \"born\" 1926",
+      "engine": "system1",
+      "observed_refs": [
+        "turn6100559search4",
+        "turn6100559search8"
+      ]
+    },
+    {
+      "q": "\"Robert Francis Hudson\" chemist Kent obituary",
+      "engine": "system1",
+      "observed_refs": [
+        "turn2759049search0",
+        "turn2759049search1",
+        "turn2759049search3",
+        "turn2759049search4"
+      ]
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "record_id": "RS_PAST_NA3474",
+      "url": "https://www.the-independent.com/news/people/obituary-professor-bryan-coles-1273472.html",
+      "source_ref": "turn6100559view0",
+      "result": "original_signed_body_read_birthplace;initial_returned_lines_to190_notvital_line",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA3474",
+      "url": "https://felixonline.co.uk/articles/1081-professor-bryan-coles-dies-aged-71/",
+      "source_ref": "turn6100559view1",
+      "result": "original_student_newspaper_body_read_yearprecisionbirthplace_and_reportedageheadline",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA3474",
+      "url": "https://www.the-independent.com/news/people/obituary-professor-bryan-coles-1273472.html",
+      "source_ref": "turn2759049view0",
+      "result": "parsedcontext_open_priorref_turn6100559view0_lineno188;fullvital_line_readL70;successfulbodycontextnotfailedrouteretry",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA4642",
+      "url": "https://www.aspergillus.org.uk/image_library/john-pateman-1926-2011/",
+      "source_ref": "turn2759049view1",
+      "result": "tool_timeout_stopped_no_retry",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA4301",
+      "url": "https://doi.org/10.1098/rsbm.2020.0034",
+      "source_ref": "turn2759049view2",
+      "result": "tool_inaccessible_stopped_no_retry",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA4642",
+      "url": "https://doi.org/10.1098/rsbm.2018.0003",
+      "source_ref": "turn6890275view0",
+      "result": "tool_inaccessible_stopped_no_retry",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA4301",
+      "url": "https://doi.org/10.1093/ww/9780199540884.013.U6837",
+      "source_ref": "turn6890275view1",
+      "result": "distinct_original_WhoWasWho_work_tool_inaccessible_stopped",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA4642",
+      "url": "https://www.jstor.org/stable/26774174",
+      "source_ref": "turn6890275view2",
+      "result": "distinct_observed_original_memoir_carrier_no_readable_lines_notfailedDOIvariant",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA3474",
+      "url": "https://www.the-independent.com/author/david-edwards",
+      "source_ref": "turn6890275view3",
+      "result": "observed_byline_link_click_tool404_stopped_authorcredentialsnotacquired",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    }
+  ],
+  "quote_ledger": [
+    {
+      "work": "IndependentColesobituary",
+      "quote": "born Cardiff 9 June 1926",
+      "words": 5
+    },
+    {
+      "work": "FelixColesstudentpaper",
+      "quote": "",
+      "words": 0
+    }
+  ],
+  "source_derived_age_contrasts": [
+    {
+      "age_reporting_source_url": "https://felixonline.co.uk/articles/1081-professor-bryan-coles-dies-aged-71/",
+      "reported_age": 71,
+      "age_reporting_source_birth_precision": "year_only",
+      "exact_date_source_url": "https://www.the-independent.com/news/people/obituary-professor-bryan-coles-1273472.html",
+      "exact_date_source_birthdate": "1926-06-09",
+      "exact_date_source_death_date": "1997-02-24",
+      "arithmetic_age_from_primary_exact_dates": 70,
+      "status": "unresolved_cross_source_reported_age_contrast_not_explicit_alternate_DOB",
+      "no_source_or_native_DOB_or_age_repair": true
+    }
+  ],
+  "protocol_deviations": [],
+  "limits": [
+    "All requests had priorintent. No originalsource/fullHTML/PDF/images/projectioncache or rawbytes retained.",
+    "OriginalIndependent Coles body read twice: initialbornnarrative, thensuccessfulcontextreadfullvital line; not a failedroute retry.",
+    "RawHTTPstatus/time/hashunknownnull; parsedtextnotrawbytes.",
+    "No observed originalbodyDOBconflict; Felixreportedagecrosssourcecontrast preserved without inferredDOB/agecorrection.",
+    "No data/code/master/Git/nativefield edits, BaZi/outcomes/statisticaldedup/finalfreeze."
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "schema": "UK_v16_method_QA_name_binding_addendum_v1",
+  "reviewer": "/root/v16_method_qa",
+  "written_utc": "2026-11-05T00:14:46.039982+00:00",
+  "materials_read": [
+    "v16_sources_b.json",
+    "v16_method_qa.json",
+    "v16_plan.json"
+  ],
+  "verification_limit": "Method assessment of the worker report; no new source requests and no independent original-body fetch in this addendum.",
+  "purpose": "Make the reviewed extra-observed-given-name case explicit and distinguish it from expanding an observed initial using a native identity field.",
+  "Mackintosh": {
+    "record_id": "RS_PAST_NA4568",
+    "native_authority_name": "Mackintosh; Nicholas John (1935 - 2015)",
+    "native_DOB": "1935-07-09",
+    "reported_source_name": "Nicholas John Seymour Munro Mackintosh",
+    "reported_source_date": "1935-07-09",
+    "reported_other_anchors": [
+      "Source lifespan1935–2015",
+      "Experimental/comparative psychology identity",
+      "Winchester and Oxford Magdalen animal-learning DPhil under Stuart Sutherland",
+      "FRS1987 in the original college memoir"
+    ],
+    "classification": "reviewed_source_name_superset_with_additional_observed_given_components",
+    "not_classified_as": [
+      "exact full-name string equality",
+      "mere orthographic normalization",
+      "initial expansion",
+      "a correction or completion of the frozen native name"
+    ],
+    "decision": "Parent acceptance is methodologically defensible as an explicitly documented case interpretation, conditional on the observed source body and a unique native-component-plus-exact-date binding.",
+    "reason": "Every native personal-name component is explicitly present, in compatible order with the same surname. Additional source-given components Seymour and Munro do not themselves replace or contradict a native component. Exact native DOB, lifespan and distinctive professional anchors substantially resolve the person binding.",
+    "required_checks": [
+      "All native given-name components and surname occur explicitly in the source subject, without dropping or substituting a native component.",
+      "Matching native components plus exact source date produce one relevant frozen UK candidate, with no competing person or incompatible life/career anchor.",
+      "Original birthplace clause and the additional observed source names remain auditable; do not claim the two name strings are identical.",
+      "Keep the frozen native authority name, record key, DOB, identity/eligibility and original DOB-source grade unchanged. Store the longer source spelling only in versioned evidence, not as an adopted identity correction or new canonical alias."
+    ],
+    "method_status": "This is a reviewed additional-given-name exception to the initial method note wording of harmless orthographic normalization. Record it as a case-level v16 interpretation with truthful timing; do not silently broaden that earlier wording or rewrite v15."
+  },
+  "Brown": {
+    "record_id": "RS_PAST_NA3971",
+    "native_authority_name": "Brown; David Anthony (1936 - 2023); pharmacologist",
+    "reported_autobiography_author": "David A. Brown",
+    "reported_companion_obituary": "Mala Shah signed Physiological Society obituary1936–2023 with an explicit citation/link to the exact2020 autobiography and matching UCL/pharmacology career.",
+    "reported_source_DOB_status": "No own birthdate in autobiography; companion obituary provides birth/death years only.",
+    "decision": "Holding the birthplace candidate is consistent with the current explicit-component identity gate.",
+    "reason": "The exact-paper link and distinctive career strongly support a same-person lead, but the opened original sources do not positively observe Anthony. Expanding A to Anthony from the native field would supply the missing component rather than record it from a source; this differs from Mackintosh where every native component is actually present and the source merely adds more.",
+    "hold_meaning": "Insufficient positive binding under this conservative workflow, not evidence that the author is a different person and not an allegation that the autobiographical birthplace is false.",
+    "required_reporting": [
+      "Retain the autobiography and companion obituary as linked evidence leads.",
+      "State full Anthony expansion not yet observed in the opened sources; do not label a date conflict or identity contradiction.",
+      "Do not infer native birthdate from birth/death years or expand author initials in the source transcription.",
+      "Keep all master fields unchanged for this held record."
+    ]
+  },
+  "boundary": "The two dispositions distinguish observed additional source components from an unobserved native component. They are explicit reviewed identity interpretations, not a universal automatic superset/initial-matching algorithm.",
+  "no_new_search": true,
+  "no_master_mutation": true,
+  "no_Git_operations": true
+}

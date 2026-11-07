@@ -1,0 +1,9 @@
+# v13 France A — frozen five-person source batch
+
+The batch proposes one ordinary-membership start at year precision for Robert Debré and retains four source-route holds. Accepted data are not edited; the positive proposal awaits exact independent source QA and root approval.
+
+Debré's actual tracked v1 CTHS original is reopened offline and byte-hashed. Within one original body, the preserved name,7December1882birthday and medical/pediatric career match; the literal writer/co-writer credit names Académie des sciences and Julien Marie, and exact society506types the subject as member for1961. The distinct1976section change and1934Medicine Academy membership are separate. The old v11HTTP500response is not reused as positive evidence. Historical capture time and original HTTP envelope/status remain unknown; the historical harvest CSV reports HTTP_200 separately. Archive identity/hash/member and actual reopening time are disclosed.
+
+Five exact previously observed Academy URLs received one attempt each, with zero searches/retries/guessed variants. Ozenda, Kahane and Montagnier memorial URLs each normally301redirected to the generic current-member directory, giving three final200responses without the selected subject. Adoutte's exact HTML and nominal PDF URLs each returned404HTML. All five actual response bodies were read. There is no actual PDF and no PDF visual review. The five target URL attempts comprise eight HTTP GETs including three normal redirects. These outcomes do not establish lifetime nonmembership or historical source absence.
+
+Raw originals and derived full texts stay private. Public files provide source hashes, statuses, exact locators, archive provenance and bounded evidence. Identity/DOB claims, all25inherited chronology holds, exact birthday conflicts and Casimir/Chagas/Bronk role controls remain unchanged. No analysis cohort or BaZi computation.

@@ -1,0 +1,152 @@
+{
+  "schema": "v17_three_remaining_legacy_routes_finite_closeout",
+  "baseline_commit": "4686d63b73357f9b29a4838f0827341c425f23ed",
+  "canonical_state": "studies/academy_fr_jp_completion_v15/",
+  "completed_utc": "2026-11-01T09:50:42.431863+00:00",
+  "fixed_target_ids": [
+    "CTHS_107447",
+    "CTHS_111797",
+    "CTHS_112619"
+  ],
+  "activity": {
+    "exact_target_attempts": 3,
+    "actual_HTTP_GETs": 6,
+    "normal_HTTP_to_HTTPS_301_redirects": 3,
+    "actual_404_final_responses": 3,
+    "new_search_queries": 0,
+    "retries": 0,
+    "guessed_URL_variants": 0,
+    "generic_directory_followup_GETs": 0,
+    "actual_parent_archival_originals_rehashed_for_URL_binding": 3,
+    "own_subject_body_reviews": 0,
+    "qualifying_ordinary_membership_originals_recovered": 0,
+    "new_membership_approvals": 0,
+    "new_identity_approvals": 0,
+    "new_DOB_claims": 0,
+    "new_DOB_approvals": 0,
+    "Japan_activity": 0
+  },
+  "source_readings": [
+    {
+      "candidate_group_id": "CTHS_107447",
+      "name": "VAGO Constantin",
+      "target_attempts": 1,
+      "actual_GETs": 2,
+      "normal_redirects": 1,
+      "http_status_sequence": [
+        301,
+        404
+      ],
+      "returned_404_body_sha256": "466dc96d85b81e6bcad8a2df7c85dd29fa766163f91545f891f1466172c4905f",
+      "actual_404_body_rehashed_and_read": true,
+      "read_scope": "main landmark of captured404HTML; literalerror message and navigation only",
+      "bounded_error_text": "Retour Il n'y a rien ici Erreur cette page n'existe pas... Retour sur la page d'accueil",
+      "actual_own_subject_biography_recovered": false,
+      "observed_ordinary_member_role": null,
+      "observed_election_date": null,
+      "observed_election_year": null,
+      "source_assignment_disposition": "endpoint_404_no_target_membership_evidence_parked",
+      "membership_approval_proposed": false,
+      "identity_or_DOB_approval_proposed": false,
+      "original_baseline_flags_and_values_to_preserve": {
+        "membership_accepted": "0",
+        "identity_accepted": "1",
+        "dob_accepted": "1",
+        "election_date_conflict": "",
+        "review_flags": "round30_individual_adjudication_recorded|round30_membership_hold"
+      },
+      "no_lifetime_membership_exclusion_inferred": true
+    },
+    {
+      "candidate_group_id": "CTHS_111797",
+      "name": "LEWY Erwin",
+      "target_attempts": 1,
+      "actual_GETs": 2,
+      "normal_redirects": 1,
+      "http_status_sequence": [
+        301,
+        404
+      ],
+      "returned_404_body_sha256": "0491dad44b6bd384073f23a400aed02d84a156f48f278e4051249cb3f47cce6a",
+      "actual_404_body_rehashed_and_read": true,
+      "read_scope": "main landmark of captured404HTML; literalerror message and navigation only",
+      "bounded_error_text": "Retour Il n'y a rien ici Erreur cette page n'existe pas... Retour sur la page d'accueil",
+      "actual_own_subject_biography_recovered": false,
+      "observed_ordinary_member_role": null,
+      "observed_election_date": null,
+      "observed_election_year": null,
+      "source_assignment_disposition": "endpoint_404_no_target_membership_evidence_parked",
+      "membership_approval_proposed": false,
+      "identity_or_DOB_approval_proposed": false,
+      "original_baseline_flags_and_values_to_preserve": {
+        "membership_accepted": "0",
+        "identity_accepted": "1",
+        "dob_accepted": "1",
+        "election_date_conflict": "",
+        "review_flags": "round31_individual_adjudication_recorded|round31_membership_hold"
+      },
+      "no_lifetime_membership_exclusion_inferred": true
+    },
+    {
+      "candidate_group_id": "CTHS_112619",
+      "name": "LAPORTE Yves",
+      "target_attempts": 1,
+      "actual_GETs": 2,
+      "normal_redirects": 1,
+      "http_status_sequence": [
+        301,
+        404
+      ],
+      "returned_404_body_sha256": "1cfa22f2c021d2684a4412ab87ee16ddb3e66c607af598cd4a19f18b9ba7dd48",
+      "actual_404_body_rehashed_and_read": true,
+      "read_scope": "main landmark of captured404HTML; literalerror message and navigation only",
+      "bounded_error_text": "Retour Il n'y a rien ici Erreur cette page n'existe pas... Retour sur la page d'accueil",
+      "actual_own_subject_biography_recovered": false,
+      "observed_ordinary_member_role": null,
+      "observed_election_date": null,
+      "observed_election_year": null,
+      "source_assignment_disposition": "endpoint_404_no_target_membership_evidence_parked",
+      "membership_approval_proposed": false,
+      "identity_or_DOB_approval_proposed": false,
+      "original_baseline_flags_and_values_to_preserve": {
+        "membership_accepted": "0",
+        "identity_accepted": "1",
+        "dob_accepted": "1",
+        "election_date_conflict": "0",
+        "review_flags": "round34_individual_adjudication_recorded|round34_membership_hold"
+      },
+      "no_lifetime_membership_exclusion_inferred": true
+    }
+  ],
+  "route_family_closeout": {
+    "earlier_v16_exact_endpoints": [
+      "http://www.academie-sciences.fr/academie/membre/Abragam_Anatole.htm",
+      "http://www.academie-sciences.fr/academie/membre/Aigrain_Pierre.htm"
+    ],
+    "earlier_v16_outcome": "Each was requested once and followed normalHTTPtoHTTPS301 to404HTML; these were not retried in v17.",
+    "remaining_v17_exact_endpoints": [
+      "http://www.academie-sciences.fr/academie/membre/Vago_Constantin.htm",
+      "http://www.academie-sciences.fr/academie/membre/LewyBertaud_Erwin.htm",
+      "http://www.academie-sciences.fr/academie/membre/Laporte_Yves.htm"
+    ],
+    "all_five_observed_exact_legacy_endpoints_now_attempted": true,
+    "further_same_family_retry_or_guessed_variants_authorized": false,
+    "scope_limit": "The five actual observed links have all returned404 after their normal scheme redirects across v16/v17. This is an endpoint-route closeout, not proof that all possible historical URLs fail or that these people never had ordinary membership.",
+    "reopen_condition": "A newly observed distinct substantive original or exact source-provided replacement URL, with prior failed routes not retried automatically."
+  },
+  "canonical_accepted_values_modified": false,
+  "canonical_expected_counts_unchanged": {
+    "France_candidate_groups": 877,
+    "France_identity_approved": 787,
+    "France_DOB_approved": 775,
+    "France_strict_membership_approved": 643,
+    "France_all_three": 640,
+    "France_gaps": 237
+  },
+  "raw_warning_or_hold_release_proposed": false,
+  "analysis_cohort_frozen": false,
+  "bazi_variables_computed": 0,
+  "outreach_count": 0,
+  "no_full_successor_ledger_needed_for_zero_gain_report": true,
+  "private_full_response_bodies_redistributed": false
+}

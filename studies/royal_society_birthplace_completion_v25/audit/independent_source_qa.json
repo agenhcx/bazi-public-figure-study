@@ -1,0 +1,378 @@
+{
+  "schema": "UK_v25_independent_documentary_source_QA_v1",
+  "reviewer": "/root/v25_source_qa",
+  "written_utc": "2026-11-06T01:00:34.713268+00:00",
+  "result": "PASS_with_explicit_documentary_verification_limits",
+  "blocking_issues": [],
+  "actual_checks_passed": 70,
+  "checks": [
+    {
+      "check": "two_unique_accepted_records",
+      "passed": true
+    },
+    {
+      "check": "ten_unique_held_records",
+      "passed": true
+    },
+    {
+      "check": "twelve_unique_reviewed_records",
+      "passed": true
+    },
+    {
+      "check": "reviewed_matches_declared_individual_scope",
+      "passed": true
+    },
+    {
+      "check": "125_record_blank_target_queue",
+      "passed": true
+    },
+    {
+      "check": "accepted_and_held_disjoint_complete_partition",
+      "passed": true
+    },
+    {
+      "check": "reviewed_scope_within_frozen_blank_queue",
+      "passed": true
+    },
+    {
+      "check": "expected_two_accepted_subjects",
+      "passed": true
+    },
+    {
+      "check": "both_final_birthplace_support_grades_S3",
+      "passed": true
+    },
+    {
+      "check": "both_geographies_unknown",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1476_native_DOB_exact_unchanged",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1476_native_authority_exact_unchanged",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1476_native_target_blank_and_unknown",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1476_native_authority_DOB_unique_in_fixed_cohort",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1476_full_source_name_matches_reported_body",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1476_actual_place_and_source_date_preserved",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1476_actual_quote_count_and_limit",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1476_explicit_date_precision_and_original_locator",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1476_identity_and_geography_rationales_present",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1476_grade_role_separate_from_original_DOB",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1476_unknown_raw_HTTP_fields_null",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1476_no_person_country_QID_coordinates_added",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1611_native_DOB_exact_unchanged",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1611_native_authority_exact_unchanged",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1611_native_target_blank_and_unknown",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1611_native_authority_DOB_unique_in_fixed_cohort",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1611_full_source_name_matches_reported_body",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1611_actual_place_and_source_date_preserved",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1611_actual_quote_count_and_limit",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1611_explicit_date_precision_and_original_locator",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1611_identity_and_geography_rationales_present",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1611_grade_role_separate_from_original_DOB",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1611_unknown_raw_HTTP_fields_null",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1611_no_person_country_QID_coordinates_added",
+      "passed": true
+    },
+    {
+      "check": "Smith_source_date_exact_native_day",
+      "passed": true
+    },
+    {
+      "check": "Smith_page_revision_not_publication",
+      "passed": true
+    },
+    {
+      "check": "Smith_supporting_histories_not_birthplace_corrob",
+      "passed": true
+    },
+    {
+      "check": "Spath_source_year_only_not_native_month_day",
+      "passed": true
+    },
+    {
+      "check": "Spath_actual_author_volume_year",
+      "passed": true
+    },
+    {
+      "check": "Spath_no_source_exact_deathdate_invented",
+      "passed": true
+    },
+    {
+      "check": "first_five_inherited_DOB_conflict_objects_exact",
+      "passed": true
+    },
+    {
+      "check": "six_active_DOB_conflict_records",
+      "passed": true
+    },
+    {
+      "check": "new_Bisat_header_conflict_not_exact_day",
+      "passed": true
+    },
+    {
+      "check": "Bisat_not_adopted_and_held",
+      "passed": true
+    },
+    {
+      "check": "one_provisional_Tomes_record",
+      "passed": true
+    },
+    {
+      "check": "Tomes_distinct_parsed8_and_native6",
+      "passed": true
+    },
+    {
+      "check": "Tomes_printed_day_not_confirmed",
+      "passed": true
+    },
+    {
+      "check": "Tomes_not_new_active_literal_DOB_conflict",
+      "passed": true
+    },
+    {
+      "check": "Tomes_held_ungraded_and_not_adopted",
+      "passed": true
+    },
+    {
+      "check": "Tomes_screenshot_exposure_limit_no_failure_claim",
+      "passed": true
+    },
+    {
+      "check": "Tomes_no_unverified_day_in_quote",
+      "passed": true
+    },
+    {
+      "check": "inherited_birthplace_source_conflicts.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "inherited_source_date_precision_holds.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "inherited_source_derived_age_inconsistencies.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "inherited_lifespan_endpoint_discrepancies.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "inherited_cross_source_reported_age_contrasts.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "inherited_omitted_middle_name_admission.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "worker_query_ledgers_24",
+      "passed": true
+    },
+    {
+      "check": "worker_navigation_ledgers_29",
+      "passed": true
+    },
+    {
+      "check": "worker_count_objects_match_ledger_lengths",
+      "passed": true
+    },
+    {
+      "check": "root_six_source_attempts_zero_queries",
+      "passed": true
+    },
+    {
+      "check": "aggregate_requests_match_final_parent",
+      "passed": true
+    },
+    {
+      "check": "finds_screenshot_and_rawGET_accounted",
+      "passed": true
+    },
+    {
+      "check": "worker_screenshot_only_B_actual_limit",
+      "passed": true
+    },
+    {
+      "check": "worker_protocol_deviations_none_reported",
+      "passed": true
+    },
+    {
+      "check": "root_optional_DOI_is_unadopted_not_birthproof",
+      "passed": true
+    },
+    {
+      "check": "parent_decisions_match_review",
+      "passed": true
+    },
+    {
+      "check": "all_held_native_dates_exact",
+      "passed": true
+    },
+    {
+      "check": "no_source_caches_or_images_in_current_study",
+      "passed": true
+    },
+    {
+      "check": "initial_method_review_before_fact_write",
+      "passed": true
+    }
+  ],
+  "materials_read": [
+    "v25plan and actual v24native objects for12targets",
+    "v24parent/method/omittedmiddle/conflict audits",
+    "finalv25sources_a/b/c and actualrequestledgers/intents",
+    "root original-body observation messages",
+    "finalv25acceptedfacts/holds/parent/rootaudits andissue sidecars"
+  ],
+  "actual_native_identity_date_quote_checks": [
+    {
+      "record_id": "RS_PAST_NA1476",
+      "native_dob": "1881-02-13",
+      "native_authority": "Smith; Bernard (1881 - 1936)",
+      "fixed_authority_DOB_key_count": 1,
+      "observed_source_full_name": "Bernard Smith",
+      "source_date": "1881-02-13",
+      "source_precision": "exact_day_in_original_institutional_biographical_born_clause",
+      "quote_words": 8
+    },
+    {
+      "record_id": "RS_PAST_NA1611",
+      "native_dob": "1882-10-20",
+      "native_authority": "Spath; Leonard Frank (1882 - 1957)",
+      "fixed_authority_DOB_key_count": 1,
+      "observed_source_full_name": "Leonard Frank Spath",
+      "source_date": "1882",
+      "source_precision": "year_only_in_subject_lifespan_heading",
+      "quote_words": 4
+    }
+  ],
+  "case_reviews": {
+    "Smith": "Original BGS uncredited bornparagraph directly supplies fullBernardSmith/exactnative1881-02-13/Grantham/career;S3/unknown. Separate Bailey1952authoredhistory andNPGprofile are identity/career only. Revision2020-09-01notpublicationdate; optionalmemoirrouteunverified/lostdisplaystatus is not proof/gradeupgrade.",
+    "Spath": "Actual separately titled WilliamJamesKennedyhistoricalabstract inside2022editedconferencevolume, fullLeonardFrank/year1882/directMunich/coherentcareer;S3/unknown. Source exactOctober20 notconfirmed. Repositorycovermetadata for anothercontribution not actualSpathbyline; Germanbybirth is not country/hemisphere assignment. Unacquired1957SouthAfricaleaddiscovery-only, not qualifyingcorroboration/contraryclaim.",
+    "Bisat": "Qualified originalHTMLprofileheader1887 versusnative1886; compatibleYPS/samepage1886 doesnotadjudicatetypo or exactOctober19. SixthactiveDOBhold, not exactborn-dayconflict. No BP/geo/date repair or datelessbypass.",
+    "Tomes": "Parsed1846-06-08/native1846-06-06, actualprintedglyphunverified. Screenshottextmarker/zeroImageContentexposed/no dependablevisualdayconfirmation; not a screenshotcreationfailureclaim. Provisional hold separatefromsixqualifiedactiveDOBconflicts. Safe4wordbirthplacequoteno unverifiedprintedday."
+  },
+  "scope_review": "Twelvefixedindividualfollowups from125blankqueue,2firstBPs bothS3/geounknown,10holds/no geography-onlypilot; queueisnotbiographiesreadcount.",
+  "conflict_review": "First5DOBconflictobjects exactunchanged, Bisat appended sixth; Tomesglyphholdseparate. Six inheritedissue/methodsidecars byte-identical; priorWager shortsource/unconfirmedmiddles amendment notnewlyapplied or rewritten.",
+  "quote_review": {
+    "new_work_counts": {
+      "BernardSmithBGS": 8,
+      "KennedySpath2022": 4,
+      "BisatYPS": 5,
+      "BisatSAGT_header_plus_born_at_most": 9,
+      "Tomes_safe_born_clause": 4
+    },
+    "all_new_excerpts_under25": true,
+    "scope": "Newv25excerpts/roles checked; repeatedidenticalexcerpts not extra distinctwords. No newfullsourcebody/images or originalretrieval by this QA."
+  },
+  "request_accounting": {
+    "worker_queries": 24,
+    "worker_nav": 29,
+    "root_nav": 6,
+    "total_nav": 35,
+    "parsed_finds": 5,
+    "cached_screenshot_attempts": 1,
+    "ImageContent_blocks_exposed_to_Tomes_worker": 0,
+    "raw_GETs": 0,
+    "root_display_filter_limit": "OptionalfirstSmithDOI exactfinalstatus/bodydetail unretained/unverified; no reconstructederror, proof/gradeupgrade or retry. Workerprotocoldeviations none reported."
+  },
+  "timing": {
+    "initial_method_review_utc": "2026-11-06T00:48:24.656168+00:00",
+    "parent_final_fact_write_utc": "2026-11-06T00:56:35.840379+00:00",
+    "final_source_QA_utc": "2026-11-06T01:00:34.713268+00:00",
+    "interpretation": "Method note afterobservations/beforefacts, finalfactQA afterfacts. No blindpreregistration or exactoriginalrequesttime claim."
+  },
+  "nonblocking_documentation_notes": [
+    "Spath source_grade_basis retains a truthful worker-stage proposal phrase; final source_gradeS3 and parentadjudication make the final decision explicit. No source-grade ambiguity in final structured fields."
+  ],
+  "verification_limits": [
+    "Documentary review of actualnative/projectfacts and worker/root original-source observations. This reviewer made no networkrequests, originalsourcebody/image/rawbyte acquisition or independent informational-corroboration claim.",
+    "No productionfacts/inputs/main/code/output/master/Git changes or replays; local software/replayQA is separate.",
+    "Only final method note/audit report and scratchchecking helper are written by this QA; older sourcebytes/caches not re-fetched or rewritten."
+  ],
+  "accepted_fact_sha256_at_review": "45d827675ed879deb9357e2c82bd1b82d1e9b8eff957c8800103fb7c4c0f5e96",
+  "reviewed_audit_sha256": {
+    "parent_adjudication.json": "94f99e1fbb883f68b59051619ae31bc94cc054ddc10c825d2c75571f5d784b90",
+    "root_followups.json": "f6b6a2a80b9aa16be7adae3452998ba988c2e6b183e3f445ed4d5160de433627",
+    "followup_holds.json": "499bd2c8658e99d259484241c8bb0b69f0a30aab04c3a86b4c6fcded5bc83cf0",
+    "active_source_DOB_conflicts.json": "9a6912399bab98c088d76c647ceb20eb4bd2963d84a493a2dd583e6be28e4dec",
+    "provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+    "birthplace_source_conflicts.json": "6ddf58a7f13b3aee13c1424a1594cec521e3d2523817db2c4ac7915652687538",
+    "source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+    "source_derived_age_inconsistencies.json": "9a299ead41add638a45fd85603a59ee3c42e1b0284af5c06c5e273a3affac18a",
+    "lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+    "cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+    "omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5"
+  },
+  "audit_mutations": "Copied finalized method_qa.json only; no other existing files changed."
+}

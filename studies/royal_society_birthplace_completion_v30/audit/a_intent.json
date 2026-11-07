@@ -1,0 +1,29 @@
+{
+  "schema": "v30_a_geography_intent_v1",
+  "written_utc": "2026-11-06T12:04:09.897334+00:00",
+  "scope": [
+    "RS_CURRENT_10965",
+    "RS_PAST_NA2007",
+    "RS_PAST_NA1998",
+    "RS_PAST_NA2892"
+  ],
+  "prior_holds_reviewed_before_discovery": {
+    "Rambaut": "v29auditprior_v12_holds:RASDOB-only;DIBtaxonomycity-onlyprojection;ADSno readablelines. Thoseclosedroutesnotrepeated/varied. Needgenuinelynewactualbodyworkornewpersonoriginalsource.",
+    "Young": "v29auditprior_v13_holds:enwikimirrors/unrelatedpeopleunproductiveclosed; originalnativeFranceunqualified;no mirror reruns.",
+    "JerryAdams": "Noindividualholdfoundintargetedv29*holds scan; frozenEOASUSAoriginalBPandselectedsourcequoteinspected. Neednewexplicitbornstate/regionnotgenericUSA.",
+    "Kassanis": "Noindividualholdfoundin*holds; currentacceptedMacedonianbornrawplace/S3RoyalSocietyportraitsourcefrozen. Seeknewbirthlinkedhistoricalregion/countryactualbody,nopresentcountryfromGreeknationality."
+  },
+  "initial_queries": [
+    "\"Jerry Adams\" born Covington Kentucky 1940",
+    "\"Pierre Henry John Young\" born",
+    "\"Basil Kassanis\" born",
+    "\"Arthur Alcock Rambaut\" born Ireland"
+  ],
+  "general_adaptive_intent": "Withinremainingfourqueries,useobserveduniqueoriginalwork/title/author/fullsubject/careerleadstofindgenuinelyneworiginalborn-country-or-wholeregioncontext; actualquerywordingsrecordedafterdiscoverywithoutbackdating. No repeatsclosedmirrorloops orfailedroutes/variants; nobypass/rawGET/fullcaches.",
+  "gates": "Geographyonly:no firstBP/rawplace/BPgrade/sourceURL/claims/nativecountrycoords/DOB/cohort/identitychanges. Actualfullnativecomponents/compatibleactualDOBprecision/distinctivecareer/directborncountry-wholeregion plus reviewedrelationtostoredplace. GenericUSA/Franceunknown,needstate/metroregion; no famouscity/nationality/work/deathinference. Macedonianbornnotmoderncountryfromnationality. ExtraobservedJerryMcKinleyallowedwithoutnativeeditifJerryAdams/date/careerordinarybinding; no unobservednickname/initialexpansion. Conflictshold,no datelessbypass. Gradegeographic_support_only. Quotes<=25word/workincludingpriorfrozenquotes.",
+  "budgets": {
+    "queries": 8,
+    "navigation": 10
+  },
+  "nine_inherited_issue_files_untouched": true
+}

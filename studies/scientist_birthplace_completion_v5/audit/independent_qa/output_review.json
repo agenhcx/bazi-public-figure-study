@@ -1,0 +1,130 @@
+{
+  "status": "PASS",
+  "baseline_sha256": "abbce4e99ad51252dd5e127a0609bc6c4950c121afa2dd126bfc2187b39cd4e8",
+  "cohort_records": 11094,
+  "changed_rows": 6,
+  "unchanged_rows": 11088,
+  "changed_keys": [
+    [
+      "NAS",
+      "https://www.nasonline.org/directory-entry/carl-d-anderson-qydvwd/"
+    ],
+    [
+      "NAS",
+      "https://www.nasonline.org/directory-entry/clinton-n-woolsey-ssgzxj/"
+    ],
+    [
+      "NAS",
+      "https://www.nasonline.org/directory-entry/h-h-barschall-7kg1rw/"
+    ],
+    [
+      "NAS",
+      "https://www.nasonline.org/directory-entry/n-e-bradbury-l7groc/"
+    ],
+    [
+      "NAS",
+      "https://www.nasonline.org/directory-entry/r-b-leighton-vsp2hu/"
+    ],
+    [
+      "NAS",
+      "https://www.nasonline.org/directory-entry/richard-b-bernstein-pt9ewc/"
+    ]
+  ],
+  "before_counts": {
+    "CAS": {
+      "unknown": 224,
+      "north": 1003,
+      "south": 3
+    },
+    "DE_Leopoldina": {
+      "north": 655,
+      "unknown": 117,
+      "south": 6
+    },
+    "Fields_main": {
+      "north": 59,
+      "south": 4
+    },
+    "France": {
+      "north": 702,
+      "unknown": 70,
+      "south": 3
+    },
+    "Japan": {
+      "north": 234,
+      "unknown": 134
+    },
+    "NAS": {
+      "unknown": 559,
+      "north": 1652,
+      "south": 31
+    },
+    "Nobel_science": {
+      "north": 634,
+      "south": 21
+    },
+    "UK_Royal_Society": {
+      "north": 4155,
+      "unknown": 645,
+      "south": 183
+    }
+  },
+  "after_counts": {
+    "CAS": {
+      "unknown": 224,
+      "north": 1003,
+      "south": 3
+    },
+    "DE_Leopoldina": {
+      "north": 655,
+      "unknown": 117,
+      "south": 6
+    },
+    "Fields_main": {
+      "north": 59,
+      "south": 4
+    },
+    "France": {
+      "north": 702,
+      "unknown": 70,
+      "south": 3
+    },
+    "Japan": {
+      "north": 234,
+      "unknown": 134
+    },
+    "NAS": {
+      "unknown": 555,
+      "north": 1656,
+      "south": 31
+    },
+    "Nobel_science": {
+      "north": 634,
+      "south": 21
+    },
+    "UK_Royal_Society": {
+      "north": 4155,
+      "unknown": 645,
+      "south": 183
+    }
+  },
+  "all_existing_native_fields_equal": true,
+  "all_21_prior_versioned_overlay_objects_equal": true,
+  "20_prior_overlay_complete_rows_equal_and_Anderson_authorized_geography_exception": true,
+  "all_4983_UK_objects_equal": true,
+  "Nobel_all_native_DOB_blank": true,
+  "CAS_all_accepted_Gregorian_DOB_blank": true,
+  "country_and_point_assignments": 0,
+  "all_CSV_cells_equal_to_source_rows": true,
+  "summary_counts_and_native_windows_recomputed": true,
+  "seven_output_byte_replay": true,
+  "output_sha256": {
+    "all_country_birthplace_summary.csv": "976ccb6586100461f8031119edace7ed347ce15e8398ab4f92e131a13a7ee828",
+    "birthplace_rows.jsonl.gz": "15f3d58b3334fbc5c32229b0c122ff5e693379fbf9759794e1e3ae87ac06d152",
+    "birthplaces.csv": "206ce8cca91fa14c346fd214c0e29bbe0f12668965b94113ff63b2174e8f955f",
+    "changed_records.csv": "069b9ef64b4e7bb2ca0f7e1dec1c941e2264e15d68c83616967c295d4598c8bd",
+    "changes.jsonl.gz": "55cda5054c6c4a1f515bc85d63f9ff824a9ebf71af39a71f2be33e765bc8ed1c",
+    "remaining_unknown.csv": "d3e176a5d634451859d98c0e6dcd14c6e98e71b455db01fb73555d02ae0bf328",
+    "summary.json": "1d444b3fa5a46ffac1e9f1a349fbbc60760893bad732ee69d36dfb2ea4afc60c"
+  }
+}

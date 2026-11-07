@@ -1,0 +1,135 @@
+{
+  "schema": "UK_v14_final_independent_QA_v1",
+  "written_utc": "2026-11-04T23:48:27.941757+00:00",
+  "reviewer": "v14_qa",
+  "status": "PASS",
+  "scope": "Independent local final review; no new source requests and no master mutation. Report written once after all checks completed.",
+  "checks": {
+    "record_count": 4983,
+    "unique_ids": 4983,
+    "valid_native_ISO_dates": 4983,
+    "all_complete_objects_equal_v13": true,
+    "all_old_fields_and_nested_evidence_equal_v13": true,
+    "record_order_equal_v13": true,
+    "gzip_byte_identical_v13": true,
+    "canonical_jsonl_sha256": "1b6318ed3e7056886949b47ff08f65eaa518a355cede9de67be934088eadf108",
+    "overall": {
+      "north": 4159,
+      "unknown": 641,
+      "south": 183
+    },
+    "native_dob_window": {
+      "inclusive_start": "1835-01-01",
+      "inclusive_end": "1985-12-31",
+      "records": 2644,
+      "counts": {
+        "north": 2259,
+        "unknown": 207,
+        "south": 178
+      },
+      "unknown_nonblank_raw_birthplace": 38,
+      "unknown_blank_raw_birthplace": 169
+    },
+    "accepted_geography_empty": true,
+    "candidate_support_only": 3,
+    "unsupported_historical_alias": 1,
+    "all_four_principal_hemispheres_unknown": true,
+    "new_geography_fields_in_main_objects": 0,
+    "new_person_birthplace_observations": 0,
+    "new_first_birthplace_records": 0,
+    "new_geographic_resolutions": 0,
+    "no_candidate_evidence_promoted_into_main": true,
+    "original_DOB_and_birthplace_grades_unchanged": true,
+    "separate_S3_candidate_geographic_support_role": true,
+    "CSV_old_columns_equal_v13": true,
+    "CSV_new_geographic_columns": [
+      "qualified_geography_context",
+      "geographic_support_grade",
+      "geography_source_url",
+      "geographic_support_grade_role",
+      "geo_context_version"
+    ],
+    "CSV_new_geographic_column_values_all_blank": true,
+    "main_CSV_rows": 4983,
+    "unknown_window_CSV_rows": 207,
+    "summary_and_empty_changes_match_independent_counts": true,
+    "seven_method_gates_recorded_for_each_target": true,
+    "method_and_source_input_hashes_verified": true,
+    "protocol_precedes_recorded_new_source_intent": true,
+    "gate_adoption_precedes_recorded_main_decision": true,
+    "request_ledger_counts": {
+      "source_a": {
+        "discovery_queries": 8,
+        "original_navigation_attempts": 10
+      },
+      "source_b": {
+        "discovery_queries": 8,
+        "original_navigation_attempts": 10
+      },
+      "root": {
+        "original_opens": 3,
+        "parsed_text_finds": 2
+      }
+    }
+  },
+  "isolated_replay": {
+    "procedure": "Copied script, inputs and audit dependencies to a new isolated temporary study directory without any outputs; invoked script using current Python; compared every output byte.",
+    "outputs": {
+      "birthplace_rows.jsonl.gz": {
+        "byte_identical": true,
+        "sha256": "76cde0037b8fe2eea1a413d96e71a1220ecc1c6e4daa82908c04152106f16412"
+      },
+      "summary.json": {
+        "byte_identical": true,
+        "sha256": "5a973ee8df9f36be4b37643b10841be6fa8f5f731286bbde57dbd7d65cff71a4"
+      },
+      "changes.json": {
+        "byte_identical": true,
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      },
+      "birthplaces.csv": {
+        "byte_identical": true,
+        "sha256": "1f79ef4e338f6188ba772a7818d0244fcd31794456de9c153ec22e20337acab4"
+      },
+      "remaining_unknown_window.csv": {
+        "byte_identical": true,
+        "sha256": "e443141e68f675ca321dbcc14503ffe67235b80f986018e11bbb06a4daf0d949"
+      }
+    },
+    "all_five_outputs_byte_identical": true
+  },
+  "prose_review": {
+    "status": "PASS",
+    "files_read": [
+      "README.md",
+      "CONTINUATION.md",
+      "scripts/replay.py",
+      "inputs/accepted_geography.json",
+      "audit/protocol.json",
+      "audit/method_review.json",
+      "audit/decision_gate_adoption.json",
+      "audit/candidate_decision_review.json",
+      "audit/geography_candidates.json",
+      "audit/holds.json",
+      "audit/root_source_review.json",
+      "audit/geo_source_lane_a.json",
+      "audit/geo_source_lane_b.json",
+      "audit/v14_geo_a_intent.json",
+      "audit/v14_geo_b_intent.json"
+    ],
+    "verified_claims": [
+      "Three genuine compound geographic candidate supports and one unsupported historical alias hold are retained only in audit; no main-table resolution is claimed.",
+      "Whole-object equality, unchanged counts, blank five separate geography CSV columns and zero new biographical birthplace observations are accurately stated.",
+      "Official geographic existence is distinguished from identifying the accepted birth-source referent; real alternative and critical-response coverage gaps remain explicit.",
+      "Unread Canadian NRCan leads are not verified southern counterexamples or valid type exclusions.",
+      "Blencoe to Blencow/Blencowe has no observed explicit geographic alias bridge and is not silently normalized.",
+      "Finchley collector April2025 and root July2026 observations are kept separately without raw-byte identity, proven-revision or backdating claims.",
+      "Historic England dates/building are not treated as Walker birthhouse or personal birthpoint proof.",
+      "Protocol timing and later interpretive-gate adoption are distinguished; no source-blind preregistration is claimed.",
+      "S3 is a separate potential geographic-support role; original birthday and birthplace grades and evidence remain unchanged.",
+      "Self-contained replay succeeds using only packaged v10 carrier and frozen stage inputs; other cohorts, statistical deduplication, BaZi/outcome analysis and final freeze are outside this batch."
+    ],
+    "limitations": "QA validates the retained local acquisition audit and transformation, not original web-server bytes or complete worldwide geographic uniqueness; no original-source re-acquisition was performed.",
+    "material_issues": []
+  }
+}

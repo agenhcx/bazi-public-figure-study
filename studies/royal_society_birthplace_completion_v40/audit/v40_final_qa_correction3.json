@@ -1,0 +1,13 @@
+{
+  "schema": "UK_v40_final_QA_harness_correction_v1",
+  "written_utc": "2026-11-07T02:05:46.577691+00:00",
+  "attempt": "lightweight_report_shape_precheck_before_third_full_run",
+  "error": "Inherited V39 assertion required all root observations to be opens. V40 explicitly includes query and click observations.",
+  "correction": "Recompute root observations by operation: source_locator_query, open, click and parsed find; compare each to the declared counts and require all observations accounted for. Source counts and production remain unchanged.",
+  "data_source_or_production_failure": false,
+  "failure_report": "v40_final_qa_shape_precheck_failure_report.json",
+  "failure_report_sha256": "224f12e1795e92d7b046d832657a763506623f675d38964f996facc83df52482",
+  "preserved_attempt_log": "v40_final_qa_shape_precheck_attempt1.log",
+  "attempt_log_sha256": "a29d5661403667d90963ba1bdcc2cc64ecf9ccd2ab1dee8b777327e37b98e14f",
+  "pre_correction_harness_sha256": "5746cd40296a2db5ad335cfcc03468642c6556b0e39b7a522532e87ca9ef6978"
+}

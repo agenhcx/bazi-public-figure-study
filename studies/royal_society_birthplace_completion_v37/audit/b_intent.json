@@ -1,0 +1,49 @@
+{
+  "written_utc": "2026-11-07T00:51:30.726795+00:00",
+  "group": "b",
+  "fixed_ids": [
+    "RS_PAST_NA6231",
+    "RS_PAST_NA4918"
+  ],
+  "full_native_objects_and_prior_holds_read": true,
+  "entries": [
+    {
+      "operation": "system2_search_query",
+      "query": "site:en.wikipedia.org \"Richard Whiddington\" \"1885\"",
+      "purpose": "Locate first canonical community biography, actual full name/exact native DOB and born link needed."
+    },
+    {
+      "operation": "system2_search_query",
+      "query": "site:en.wikipedia.org \"Neil Kensington Adam\"",
+      "purpose": "Locate first canonical community biography; Cambridge education cannot substitute for actual birth link."
+    },
+    {
+      "operation": "open",
+      "ref_id": "https://en.wikipedia.org/wiki/Neil_Kensington_Adam",
+      "purpose": "First actual canonical person body; inspect exact DOB, birth-region and career after search projection."
+    },
+    {
+      "operation": "system2_search_query",
+      "query": "\"Richard Whiddington\" (site:de.wikipedia.org OR site:fr.wikipedia.org OR site:en.wikipedia.org)",
+      "purpose": "First canonical community person locator; first query only returned Royal Society roster, not personal body."
+    },
+    {
+      "operation": "open",
+      "ref_id": "https://it.wikipedia.org/wiki/Neil_Kensington_Adam",
+      "purpose": "First actual distinct canonical article exposed by initial query with projected 6 November1891 incompatible DOB. Inspect, do not ignore known competing lead or assert conflict from projection alone."
+    },
+    {
+      "operation": "system1_search_query",
+      "query": "\"Richard Whiddington\" Wikipedia Wikidata",
+      "purpose": "Final bounded stronger locator query; two routine canonical article searches returned roster only. No guessed person article URI."
+    },
+    {
+      "operation": "open",
+      "ref_id": "https://www.wikidata.org/wiki/Q18734291",
+      "purpose": "First actual canonical Wikidata body from frozen native lookup_qid Q18734291, only an unverified identity seed. Inspect all native name/exact DOB/career and any actual P19/P131; no assumed person identity or native QID repair. Prior no_value_P19 is absence of proof, not incompatibility. Stop if unavailable/textless."
+    }
+  ],
+  "raw_HTTP_status": null,
+  "raw_bytes_sha256": null,
+  "exact_request_utc": null
+}

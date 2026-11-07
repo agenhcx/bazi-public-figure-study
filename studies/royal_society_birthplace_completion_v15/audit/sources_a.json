@@ -1,0 +1,291 @@
+{
+  "schema": "v15_new_primary_birthsource_pilot_a_v1",
+  "worker": "/root/v15_sources_a",
+  "completed_utc": "2026-11-04T23:57:01.378891+00:00",
+  "scope": [
+    "RS_PAST_NA3607",
+    "RS_PAST_NA3629",
+    "RS_PAST_NA3957",
+    "RS_PAST_NA3652"
+  ],
+  "counts": {
+    "discovery_queries": 6,
+    "original_navigation_attempts": 7,
+    "parsed_text_find_attempts": 1,
+    "body_verified_candidates": 2,
+    "holds": 2
+  },
+  "candidates": [
+    {
+      "native": {
+        "record_id": "RS_PAST_NA3607",
+        "name": "Solly",
+        "source_authorised_full_name": "Zuckerman; Solly (1904 - 1993); Baron Zuckerman of Burnham Thorpe",
+        "dob": "1904-05-30",
+        "raw_birthplace": "",
+        "full_queue_object_sha256": "64a0bcb1eb27154fe0321817c17541328f9ac3feefb58b8458bc261921f1738d",
+        "unique_identical_authority_name_and_DOB_in_queue": true
+      },
+      "status": "candidate_original_body_verified_parent_adjudication_required",
+      "raw_birthplace_candidate": "Cape Town, South Africa",
+      "source_url": "https://archivecollections.uea.ac.uk/sz",
+      "source_title": "UEA Archives: SZ — Solly Zuckerman Archive",
+      "source_author": null,
+      "source_author_note": "Institutional administrative/biographical history. The archive creator is Solly Zuckerman; no individual narrative author was stated. Creator is not assumed to be narrative author.",
+      "source_institution": "University of East Anglia Archives",
+      "source_grade_proposal": "S2",
+      "grade_basis": "Original institutional archival biographical description, with direct personal birth clause; conservative proposal for parent review, not a master grade update.",
+      "source_publication_date": null,
+      "evidence_quote": "Solly Zuckerman (SZ) was born on May 30th 1904 in Cape Town, South Africa",
+      "quote_word_count": 14,
+      "locator": "Administrative/Biographical history, first sentence; parsed lines 63–64. Name/creator at lines 40–42 and 59–61; title at line 79.",
+      "webrefs": [
+        "turn66search0",
+        "turn68view0"
+      ],
+      "body_DOB": "1904-05-30",
+      "body_date_precision": "day",
+      "body_date_matches_native": true,
+      "identity_anchors": [
+        "Source personal name Solly Zuckerman (1904–1993) matches authorized full name and lifespan.",
+        "The explicit day-month-year birth clause matches native DOB exactly.",
+        "Source identifies FRS election in 1943 and Baron Zuckerman of Burnham Thorpe, matching the authority title."
+      ],
+      "identity_result": "Pilot queue target and source subject bind uniquely by full name, exact DOB, lifespan, and distinctive title. No unsupported name expansion.",
+      "place_scope": "Literal city and country are within the born clause. No national affiliation, employer, parents, or footer was used as birthplace.",
+      "conflicts_observed": [],
+      "retrieval_representation": "tool-parsed original HTML text",
+      "raw_http_response_saved": false,
+      "http_status": null,
+      "exact_request_utc": null,
+      "new_route": "UEA original archival collection, distinct from closed RS directory, enwiki, Crossref, EOAS and AAS routes."
+    },
+    {
+      "native": {
+        "record_id": "RS_PAST_NA3957",
+        "name": "Edward Arthur",
+        "source_authorised_full_name": "Boyse; Edward Arthur (1923 - 2007)",
+        "dob": "1923-08-11",
+        "raw_birthplace": "",
+        "full_queue_object_sha256": "83a01c5105bf446dd8518303ad68d33db4e99eb25fdac8b6b8e3762dd0a4e886",
+        "unique_identical_authority_name_and_DOB_in_queue": true
+      },
+      "status": "candidate_original_body_verified_parent_adjudication_required",
+      "raw_birthplace_candidate": "St Botolph's Lodge nursing home, Richmond Road, Worthing, Sussex",
+      "source_url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/579671003",
+      "source_title": "Boyse, Edward Arthur [Ted]: (1923–2007), immunologist",
+      "source_author": "Harvey Cantor",
+      "source_institution": "Oxford University Press, Oxford Dictionary of National Biography",
+      "source_grade_proposal": "S2",
+      "grade_basis": "Original publisher page, signed biographical article; direct born clause present in publicly available extract. No dependency on publisher full-body access.",
+      "source_publication_date": "2011-01-06",
+      "doi": "10.1093/ref:odnb/99062",
+      "evidence_quote": "was born on 11 August 1923 at St Botolph's Lodge nursing home, Richmond Road, Worthing, Sussex",
+      "quote_word_count": 16,
+      "locator": "Published public Extract, first sentence; parsed line 777. Full subject heading at 757, author 761–763, DOI 771, publication date 775.",
+      "webrefs": [
+        "turn69search1",
+        "turn72view0"
+      ],
+      "body_DOB": "1923-08-11",
+      "body_date_precision": "day",
+      "body_date_matches_native": true,
+      "identity_anchors": [
+        "Full subject heading Edward Arthur [Ted] Boyse and lifespan 1923–2007 match native authorized name.",
+        "Direct birth clause has exact native DOB.",
+        "Subject is identified as an immunologist and medical graduate, compatible with Boyse professional identity."
+      ],
+      "identity_result": "Pilot queue target and signed article subject bind uniquely by full authorized name, exact DOB, lifespan, and professional identity. No expansion inferred from initials or degree.",
+      "place_scope": "Nursing-home/address, town, and Sussex all occur inside the direct born clause. Later family residence not substituted for place of birth.",
+      "conflicts_observed": [],
+      "retrieval_representation": "tool-parsed original publisher HTML public extract",
+      "raw_http_response_saved": false,
+      "http_status": null,
+      "exact_request_utc": null,
+      "new_route": "Original signed ODNB article; distinct from closed RS directory, enwiki and bibliographic metadata routes."
+    }
+  ],
+  "holds": [
+    {
+      "native": {
+        "record_id": "RS_PAST_NA3629",
+        "name": "George Joseph",
+        "source_authorised_full_name": "Popjak; George Joseph (1914 - 1998)",
+        "dob": "1914-05-05",
+        "raw_birthplace": "",
+        "full_queue_object_sha256": "da289bc77e5f16cefd5f994e609c59329b746f7b3bbbbf45e64f6ef353850489",
+        "unique_identical_authority_name_and_DOB_in_queue": true
+      },
+      "status": "hold_original_birth_clause_body_not_verified",
+      "raw_birthplace_lead": "Kiskundorozsma, Hungary",
+      "source_url": "https://digicoll.lib.berkeley.edu/record/81436/files/inmemoriam2000.pdf",
+      "source_title": "University of California: In Memoriam 2000",
+      "source_author": null,
+      "source_grade_proposal": null,
+      "discovery_quote": "He was born May 5th, 1914, in Kiskundorozsma, Hungary.",
+      "quote_word_count": 9,
+      "discovery_webrefs": [
+        "turn66search48"
+      ],
+      "discovery_DOB": "1914-05-05",
+      "discovery_date_precision": "day",
+      "discovery_date_matches_native": true,
+      "identity_index": {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/10195905/",
+        "webref": "turn75view0",
+        "title": "In memoriam. Professor George Joseph Popj'ak, MD, DSc, FRS May 5, 1914-December 30, 1998",
+        "locator": "Parsed lines 167–177; no authors listed; no abstract at line 209.",
+        "publication": "Arterioscler Thromb Vasc Biol. 1999 Apr;19(4):830–1.",
+        "author": null,
+        "full_name_and_exact_DOB_match": true,
+        "birthplace_in_index_body": false
+      },
+      "identity_anchors": [
+        "UC discovery result concerns George Popják, UCLA biochemistry/psychiatry professor, and contains native exact date.",
+        "Separate observed PubMed obituary index explicitly expands George Joseph Popj'ak and exact lifespan dates."
+      ],
+      "hold_reason": "UC birth sentence currently available only as discovery excerpt. Original PDF body was not successfully recovered/located, and original Berkeley catalog route explicitly returned 403. PubMed confirms full-name/date identity but does not supply a birth-place sentence. Do not promote excerpt to body-verified evidence.",
+      "catalog_fetch": {
+        "url": "https://digicoll.lib.berkeley.edu/record/81436",
+        "webref": "turn74view0",
+        "observed_error": "Failed to fetch ... (403) Forbidden",
+        "http_status": 403,
+        "exact_request_utc": null
+      },
+      "conflicts_observed": [],
+      "raw_http_response_saved": false,
+      "source_body_verified": false,
+      "new_route": "Official UC memorial volume and original UC Berkeley digital catalog; no closed-route retry."
+    },
+    {
+      "native": {
+        "record_id": "RS_PAST_NA3652",
+        "name": "William Wilton",
+        "source_authorised_full_name": "Douglas; William Wilton (1922 - 1998)",
+        "dob": "1922-08-15",
+        "raw_birthplace": "",
+        "full_queue_object_sha256": "bdfafc958ee95667e78ec8248cdcdb0834cf0df4d3bc3667f19a58adc9271f6d",
+        "unique_identical_authority_name_and_DOB_in_queue": true
+      },
+      "status": "hold_no_new_birthplace_body",
+      "source_url": "https://royalsocietypublishing.org/doi/epdf/10.1098/rsbm.1999.0077",
+      "source_title": "William Wilton Douglas. 15 August 1922 – 2 July 1998",
+      "source_author": "J. M. Ritchie",
+      "source_author_provenance": "Original memoir bibliographic lead from Utah bibliography, not verified in inaccessible memoir body.",
+      "publication": "Biographical Memoirs of Fellows of the Royal Society 46 (2000), 145–164",
+      "doi": "10.1098/rsbm.1999.0077",
+      "source_grade_proposal": null,
+      "webrefs": [
+        "turn69search7",
+        "turn72view1"
+      ],
+      "hold_reason": "Observed full-memoir epdf route was inaccessible via tool. No source-body born/place clause was recovered. Discovery query mention of Hawick was a hypothesis, not evidence, and is not adopted.",
+      "body_DOB": null,
+      "body_date_precision": null,
+      "raw_birthplace_candidate": null,
+      "http_status": null,
+      "exact_request_utc": null,
+      "observed_tool_error": "URL https://royalsocietypublishing.org/doi/epdf/10.1098/rsbm.1999.0077 is not accessible via this tool.",
+      "raw_http_response_saved": false,
+      "new_route": "Original memoir epdf full-body attempt, distinct from closed metadata search; no retry."
+    }
+  ],
+  "ledger": [
+    {
+      "kind": "discovery_query_batch",
+      "count": 4,
+      "queries": [
+        "Solly Zuckerman born Cape Town UEA archives",
+        "George Popjak born Hungary UCLA in memoriam",
+        "Edward Arthur Boyse born Worthing University Arizona obituary",
+        "William Wilton Douglas born Hawick Physiological Society obituary"
+      ],
+      "preplanned": true,
+      "plan_recorded_utc": "2026-11-04T23:52:49.006607+00:00",
+      "exact_request_utc": null
+    },
+    {
+      "kind": "original_open_batch",
+      "count": 3,
+      "urls": [
+        "https://archivecollections.uea.ac.uk/sz",
+        "https://digicoll.lib.berkeley.edu/record/81436/files/inmemoriam2000.pdf",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC1971189/"
+      ],
+      "preplanned": true,
+      "plan_note": "Next-open intent was written before request but the next_original_opens field was later overwritten; its original timestamp was not retained.",
+      "exact_request_utc": null,
+      "raw_HTTP_saved": false
+    },
+    {
+      "kind": "discovery_query_batch",
+      "count": 2,
+      "queries": [
+        "\"William Wilton Douglas\" born obituary",
+        "\"Edward Arthur Boyse\" \"Worthing\" \"Sussex\" obituary"
+      ],
+      "preplanned": false,
+      "plan_recorded_after_call": true,
+      "exact_request_utc": null,
+      "deviation": "Two adaptive followup queries were appended to the intent only after the request. They must not be represented as preregistered."
+    },
+    {
+      "kind": "original_open_batch",
+      "count": 2,
+      "urls": [
+        "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/579671003",
+        "https://royalsocietypublishing.org/doi/epdf/10.1098/rsbm.1999.0077"
+      ],
+      "preplanned": true,
+      "plan_recorded_utc": "2026-11-04T23:53:26.497046+00:00",
+      "exact_request_utc": null,
+      "webrefs": [
+        "turn72view0",
+        "turn72view1"
+      ],
+      "raw_HTTP_saved": false
+    },
+    {
+      "kind": "parsed_text_find",
+      "count": 1,
+      "ref": "turn68view1",
+      "pattern": "Popj",
+      "webref": "turn72view2",
+      "outcome": "non-retryable error; no original text recovered",
+      "exact_request_utc": null
+    },
+    {
+      "kind": "original_open",
+      "count": 1,
+      "url": "https://digicoll.lib.berkeley.edu/record/81436",
+      "preplanned": true,
+      "plan_file": "v15_a_intent.json additional_planned_opens",
+      "webref": "turn74view0",
+      "observed_http_status": 403,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "original_open",
+      "count": 1,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10195905/",
+      "preplanned": true,
+      "plan_file": "v15_a_intent.json additional_planned_opens",
+      "webref": "turn75view0",
+      "observed_http_status": null,
+      "exact_request_utc": null
+    }
+  ],
+  "limits": {
+    "maximum_discovery_queries": 6,
+    "maximum_original_navigation_attempts": 8,
+    "no_master_modified": true,
+    "no_Git_operations": true,
+    "no_native_DOB_or_identity_changes": true,
+    "no_source_grade_changes_applied": true,
+    "no_hemisphere_assigned": true,
+    "no_country_or_location_inference_beyond_literal_born_clause": true,
+    "original_sources_fulltexts_or_PDF_bytes_not_distributed": true,
+    "retrieval_representation": "All observations are search excerpts or tool-parsed source text. Parsed text is not raw HTTP. Unknown HTTP status and request times are null."
+  },
+  "intent_file": "/workspace/scratch/262552d8c0f0/v15_a_intent.json"
+}

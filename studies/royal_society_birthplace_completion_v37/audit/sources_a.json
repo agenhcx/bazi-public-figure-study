@@ -1,0 +1,292 @@
+{
+  "written_utc": "2026-11-07T00:53:39.616207+00:00",
+  "group": "a",
+  "phase": "canonical_community_person_place_geography_pilot_v37",
+  "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+  "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+  "method_application_scope_sha256": "ae080b06f8abad9ed7575783486795c977e44ce5e5024bfa2096e16816a44d94",
+  "intent_file": "v37_a_intent.json",
+  "full2nativeobjects/priorholdsbeforequeries": true,
+  "intent_writes_validated_exit0_separately_beforeweb": true,
+  "retrieval_counts": {
+    "queries": 4,
+    "navigation_attempts": 3,
+    "source_open_operations": 2,
+    "click_operations": 1,
+    "parsed_finds": 0,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "query_ledger": [
+    {
+      "engine": "system2",
+      "query": "\"Harry Smith\" \"microbiologist\" site:en.wikipedia.org",
+      "results": [
+        "turn2506012search0",
+        "turn2506012search1",
+        "turn2506012search3",
+        "turn2506012search5"
+      ],
+      "role": "discovery_only"
+    },
+    {
+      "engine": "system2",
+      "query": "\"Claude Gordon Douglas\" site:en.wikipedia.org",
+      "results": [
+        "turn2506012search2",
+        "turn2506012search4"
+      ],
+      "role": "discovery_only; listFebruary27 notactualbody"
+    },
+    {
+      "engine": "system2",
+      "query": "\"Harry Smith\" \"1921\" (site:de.wikipedia.org OR site:fr.wikipedia.org OR site:es.wikipedia.org OR site:it.wikipedia.org)",
+      "results": [
+        "turn6538381search0",
+        "turn6538381search1",
+        "turn6538381search2",
+        "turn6538381search3",
+        "turn6538381search4",
+        "turn6538381search5"
+      ],
+      "role": "distinct-language originalwork discovery, no qualifying newpersonURI observed; Englishfailedwork not retried"
+    },
+    {
+      "engine": "system1",
+      "query": "\"Harry Smith\" \"microbiologist\" site:wikidata.org",
+      "results": [
+        "turn5675981search0",
+        "turn5675981search1",
+        "turn5675981search2",
+        "turn5675981search3",
+        "turn5675981search4",
+        "turn5675981search5",
+        "turn5675981search6"
+      ],
+      "role": "actualpersonentity locator only; Q5958234 wrongperson, no qualified matchingentityURI observed"
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "operation": "open",
+      "record_id": "RS_PAST_NA4113",
+      "source_url": "https://en.wikipedia.org/wiki/Harry_Smith_%28microbiologist%29",
+      "source_ref": "turn6058347view0",
+      "body_acquired": false,
+      "result": "Unknown error fetching; route closed without retry or variant",
+      "raw_HTTP_status": null
+    },
+    {
+      "operation": "open",
+      "record_id": "RS_PAST_NA1580",
+      "source_url": "https://en.wikipedia.org/wiki/Claude_Gordon_Douglas",
+      "source_ref": "turn6058347view1",
+      "body_acquired": true,
+      "locator": "L106identity/exactDOB/life/bornLeicesterlink41;L110-116career;L154/175footerobservations"
+    },
+    {
+      "operation": "click",
+      "record_id": "RS_PAST_NA1580",
+      "source_ref": "turn6058347view1",
+      "id": 41,
+      "target_url": "https://en.wikipedia.org/wiki/Leicester",
+      "result_ref": "turn6538381view0",
+      "body_acquired": true,
+      "locator": "L278cityEngland/L289CountryEngland",
+      "role": "actual_person_born_place_hyperlink_follow"
+    }
+  ],
+  "parsed_find_ledger": [],
+  "candidates": [
+    {
+      "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+      "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+      "method_application_scope_sha256": "ae080b06f8abad9ed7575783486795c977e44ce5e5024bfa2096e16816a44d94",
+      "proof_mode": "explicit_person_born_place_hyperlink_then_actual_target_place_region",
+      "source_url": "https://en.wikipedia.org/wiki/Claude_Gordon_Douglas",
+      "source_title": "Claude Gordon Douglas - Wikipedia",
+      "source_author": null,
+      "source_kind": "canonical_Wikipedia_original_community_person_reference_body",
+      "source_quote": "Leicester",
+      "source_quote_word_count": 1,
+      "observed_source_full_name": "Claude Gordon Douglas",
+      "source_birthdate": "1882-02-26",
+      "source_birthdate_as_displayed": "26 February 1882",
+      "source_birthdate_precision": "exact_day_actually_displayed_in_person_birth_parenthetical",
+      "source_lifespan": "1882-1963; exact displayed death23March1963",
+      "source_DOB_native_compatibility": "Actual displayed26February1882 agrees unchanged native1882-02-26; lifespan1882-1963 agrees authority. Day-as-stated identity match only; calendar model and civil validation unknown.",
+      "identity_review": [
+        "Full native Claude Gordon Douglas actually displayed in canonical personal heading and lead, no initials expansion.",
+        "Exact actual26February1882 and compatible lifespan1882-1963 bind native authority.",
+        "Respiratory physiology, Douglas Bag, Haldane collaboration and Oxford appointments are coherent distinctive career anchors in L106/L110-116.",
+        "No incompatible DOB/place/identity in acquired person body. Old and current English FRS list February27 remains searchprojection only, not acquired original body or qualified active conflict; no contrary original body dismissed."
+      ],
+      "geographic_basis": "Actual personal birth parenthetical links Leicester; actual followed Leicester city page states Country England. England whole North region under existing extent rule. No familiar-city, nationality, father/work/school/death or centroid inference.",
+      "publication_date": null,
+      "publication_date_precision": "not_observed",
+      "source_revision_id": null,
+      "source_revision_utc": null,
+      "observed_displayed_footer_metadata": {
+        "oldid": "1346882523",
+        "last_edited_literal": "3 April 2026, at 12:39 (UTC)",
+        "locator": "turn6058347view1:L154/L175",
+        "limits": "Displayed footer only, not authenticated raw revision, source bytes or exact request time."
+      },
+      "source_calendar_model": null,
+      "source_statement_rank": null,
+      "source_editorial_validation": null,
+      "source_informational_independence": null,
+      "record_id": "RS_PAST_NA1580",
+      "native_dob": "1882-02-26",
+      "authority_name": "Douglas; Claude Gordon (1882 - 1963)",
+      "frozen_raw_birthplace": "Leicester",
+      "frozen_birthplace_source_grade": "S2",
+      "source_grade": "S3",
+      "source_grade_role": "geographic_support_only",
+      "reviewed_hemisphere": "north",
+      "proof_chain": [
+        {
+          "source_url": "https://en.wikipedia.org/wiki/Claude_Gordon_Douglas",
+          "source_node_label": "Claude Gordon Douglas",
+          "edge_property": "explicit_subject_birthplace_hyperlink",
+          "tool_ref": "turn6058347view1",
+          "locator": "L106 fullnative/exact26February1882 in Leicester hyperlink41/23March1963/respiratoryphysiology and DouglasBag.",
+          "acquisition_role": "worker_actual_canonical_person_body_and_actual_born_link41_click",
+          "target_kind": "entity",
+          "target_label": "Leicester",
+          "target_uri": "https://en.wikipedia.org/wiki/Leicester",
+          "source_qid": null,
+          "target_qid": null,
+          "worker_tool_ref": "turn6058347view1",
+          "worker_follow_link_result_ref": "turn6538381view0"
+        },
+        {
+          "source_url": "https://en.wikipedia.org/wiki/Leicester",
+          "source_node_label": "Leicester",
+          "edge_property": "Country",
+          "tool_ref": "turn6538381view0",
+          "locator": "L278 city in England; L279Leicester/L289Country England. Country label itself hyperlink230 but terminal England value is literal with no observed URI.",
+          "acquisition_role": "worker_actual_person_born_place_link41_target_body",
+          "target_kind": "literal",
+          "target_label": "England",
+          "target_uri": null,
+          "source_qid": null,
+          "target_qid": null,
+          "target_uri_limit": "Actual literal England value; no terminal-region URI or QID guessed.",
+          "source_node_type": "geographic_city",
+          "source_quote": "England",
+          "source_quote_word_count": 1
+        }
+      ],
+      "source_body_ref": "turn6058347view1",
+      "worker_source_body_ref": "turn6058347view1",
+      "source_locator": "turn6058347view1:L106 fullnative/exactDOB/Leicester actualbornlink41/compatiblelife; L110-116career; actualclick41 lands turn6538381view0 https://en.wikipedia.org/wiki/Leicester L278cityEngland/L289CountryEngland.",
+      "source_body_acquisition_role": "worker_actual_canonical_person_and_actual_followed_birthplace_target_bodies",
+      "worker_actual_edge_follow_ref": "turn6538381view0",
+      "source_grade_basis": "Unchanged prospective V36 S3 canonical community reference method applied to prospectively frozen V37 scope. Actual fullnative/exactDOB/career, actual personal-born Leicester hyperlink and actually acquired target Country England support geography only; original LeicesterS2 and all DOB/source tiers preserved. Community editorial/civil/information-independence authority unverified.",
+      "source_birthplace_context": "Leicester actual personal birth hyperlink; England literal Country in actual target place body",
+      "place_binding_review": "Exact literal stored Leicester matches observed actual person birth-link target Leicester. No different city, alias, street, father or career inference. Frozen rawplace/sourceURL/claim/S2, nativeDOB/country/QIDs/coords/eligibility and all old evidence unchanged.",
+      "source_exact_native_month_day_confirmed": true,
+      "native_death_endpoint_confirmed_by_source": true,
+      "native_DOB_source_grade_unchanged": true,
+      "original_birthplace_fields_and_source_grades_unchanged": true,
+      "retrieval_representation": "web-tool parsed canonical community person and place HTML text; not raw HTTP response bytes or pixels",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "caveats": [
+        "Original V36 source admission policy is reused unchanged; V37 extends fixed application scope prospectively, not retroactive Kiddle/mirror approval.",
+        "Worker actually followed observed personal birth link41; parent separately reported reading the already observed person and target URLs, not a parent reclick. Parent may add its own refs during final adjudication.",
+        "Literal terminal England has no observed value hyperlink URI/QID, so those remain null. Actual city coordinates not used or assigned.",
+        "Displayed personal footer oldid/date are recorded as footer observations only; no raw revision authentication, civil birth validation or informational independence claim.",
+        "Old DouglasArchives actual bornLeicester/exact26February observation stays frozen; original community article cites that work, so no independent corroboration claimed."
+      ]
+    }
+  ],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA4113",
+      "phase": "canonical_community_person_place_geography_pilot_v37",
+      "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+      "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+      "method_application_scope_sha256": "ae080b06f8abad9ed7575783486795c977e44ce5e5024bfa2096e16816a44d94",
+      "native": {
+        "record_id": "RS_PAST_NA4113",
+        "authority_name": "Smith; Harry (1921 - 2011)",
+        "native_dob": "1921-08-07",
+        "existing_raw_birthplace": "Northampton",
+        "existing_birthplace_source_grade": "S1",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "95a55b4eab16588027d0cd15d9cc73fb91e0ba7599e83006ac03a06e89b7158e"
+      },
+      "status": "hold_canonical_person_body_first_fetch_failed_and_no_distinct_person_URI_located",
+      "hold_type": "no_acquired_qualifying_birthplace_edge_or_direct_region",
+      "reason": "First actual English canonical personal body open failed unknownfetch and was closed without retry/URL variant. Bounded distinct-language and Wikidata locator queries located no actual compatible person URI with full native exactDOB/career/birthplace proof. English searchprojections are discovery only; city context not adopted. Old Kiddle derivative remains excluded, not retroapproved.",
+      "source_url": "https://en.wikipedia.org/wiki/Harry_Smith_%28microbiologist%29",
+      "source_ref": "turn6058347view0",
+      "source_body_acquired": false,
+      "failed_retrievals": [
+        {
+          "source_url": "https://en.wikipedia.org/wiki/Harry_Smith_%28microbiologist%29",
+          "source_ref": "turn6058347view0",
+          "actual_tool_result": "Failed to fetch https://en.wikipedia.org/wiki/Harry_Smith_%28microbiologist%29: Unknown error fetching https://en.wikipedia.org/wiki/Harry_Smith_(microbiologist)",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "body_acquired": false,
+          "no_retry_after_failure": true
+        }
+      ],
+      "source_quote": "",
+      "source_quote_word_count": 0,
+      "source_grade_adopted": null,
+      "reviewed_hemisphere": "unknown",
+      "geography_decision": "unchanged_unknown",
+      "native_and_existing_birthplace_fields_frozen": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "bounded_discovery_limits": [
+        "Fourth query returned Q5958234 KarlAugustHaraldSmith Swedishbotanist1889-1971, discovery-only wrong person not opened or used; no guessed microbiologistQID.",
+        "Other language query yielded no actually observed compatible original person URI; not global language/article absence or source exhaustion.",
+        "Other ODNB/MicrobiologySociety/FEMS/Independent discoveries remain unacquired, no originalbody claims."
+      ]
+    }
+  ],
+  "new_DOB_or_place_conflicts": [],
+  "unopened_distinct_original_work_leads": [
+    {
+      "record_id": "RS_PAST_NA4113",
+      "source_url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/582686323",
+      "source_ref": "turn5675981search0",
+      "role": "discovery_only_not_acquired",
+      "note": "NewODNBsearchprojection streetNorthamptononly; no country claim or inference."
+    },
+    {
+      "record_id": "RS_PAST_NA4113",
+      "source_url": "https://microbiologysociety.org/who-we-are/our-history/past-presidents.html",
+      "source_ref": "turn5675981search1",
+      "role": "discovery_only_not_acquired"
+    }
+  ],
+  "source_quote_words_by_original_work": {
+    "https://en.wikipedia.org/wiki/Claude_Gordon_Douglas": 1,
+    "https://en.wikipedia.org/wiki/Leicester": 1,
+    "https://en.wikipedia.org/wiki/Harry_Smith_%28microbiologist%29": 0
+  },
+  "protocol_limits": [
+    "No guessed URI/QID/country, no familiarcity/nationality/family/school/work/death-location inference.",
+    "Harry English first body failure closed; four total queries, three source-nav operations; no fallback/retry variant/rawGET.",
+    "Prior Kiddle observation remains excluded and prior Douglas listFeb27 stays unacquiredprojection, no retroqualification or conflictclearance.",
+    "Original DOB/BP source grades, claims, native fields and prior context frozen. S3 candidate is geographic support only.",
+    "No full source HTML/PDF/images/rawJSON/projectioncaches persisted. Tool parsedbody not rawstatus/bytes, unknown metadata null."
+  ],
+  "raw_HTTP_status": null,
+  "raw_bytes_sha256": null,
+  "exact_request_utc": null,
+  "no_repo_master_Git_edit": true,
+  "no_source_exhaustion_finalfreeze_or_DOB_BPtierupgrade": true,
+  "method_amendment_created": false,
+  "scope_application_extension": true,
+  "no_new_admission_method_exception": true
+}

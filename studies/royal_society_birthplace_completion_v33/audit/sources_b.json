@@ -1,0 +1,304 @@
+{
+  "written_utc": "2026-11-06T22:39:21.192983+00:00",
+  "group": "b",
+  "phase": "geography_only_v33",
+  "intent_file": "v33_b_intent.json",
+  "full_prior_context_read_before_queries": true,
+  "retrieval_counts": {
+    "queries": 8,
+    "navigation_attempts": 4,
+    "parsed_finds": 1,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "query_ledger": [
+    {
+      "engine": "system2",
+      "queries": [
+        "\"Stephen Esslemont Woods\" born Wales",
+        "\"Henry Gerard Thornton\" born England",
+        "\"Alexander Pedler\" born England biography",
+        "\"Edward Fawcett\" born Cumberland anatomist"
+      ],
+      "result_collection": "turn5049522",
+      "role": "discovery_only"
+    },
+    {
+      "engine": "system1",
+      "queries": [
+        "\"Stephen Esslemont Woods\" obituary biography",
+        "\"Henry Gerard Thornton\" biography born",
+        "\"Alexander Pedler\" biography \"born\" London",
+        "\"Edward Fawcett\" biography \"Little\" Cumberland"
+      ],
+      "result_collection": "turn8698255",
+      "role": "discovery_only"
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "record_id": "RS_PAST_NA331",
+      "source_url": "https://www.cumbrianlives.org.uk/lives-index/f.html",
+      "ref": "turn1914481view0",
+      "status": "actual_original_reference_index_body",
+      "source_locator": "FirstopenL0title/L14-34earlieralphabeticalFentries;cachedliteralfindturn6588077view0",
+      "finding": "Firstbody does not showEdwardFawcett; literalfindFawcett,EdwardreturnedNo matching text found. No universalabsenceclaim, no genericCumberlandtobirthmapping. No personcountryclaimadopted.",
+      "limit": "Firstopenparsedtotal621lines, laterfind626; source-versionstabilitynotverified, no rawhash.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed text, notrawHTTPbytes"
+    },
+    {
+      "record_id": "RS_PAST_NA331",
+      "source_url": "https://prabook.com/web/professor_edward.fawcett/746801",
+      "ref": "turn1914481view1",
+      "status": "actual_original_compiled_biographical_profile_with_internal_DOB_contrast",
+      "source_locator": "L15/99fullProfessorEdwardFAWCETT;L19headerMarch18,1867;L103BritishProfessorofAnatomy;L106bornMay18,1867;L110-121Edinburgh/BristolProfessorDean/M.D1906career;L142Born/L144March18,1867",
+      "finding": "Actuallydisplayedcompiledprofileheader/footerMarch18,1867versusownbornbodyMay18,1867. BodyMaymatchesnative; headerMarchisactualnotsearch-only. FullnativeanddetailedEdinburgh/BristolAnatomy/deancareerbindsameperson. No country/placeofsubjectbirthactuallystated; Britishnationality/Oxfordshirefathercontext/schoolnotbirth.",
+      "source_grade_proposal": "S3_for_new_DOB_observation_only; noBP/geographygradeadopted",
+      "no_typo_or_correct_date_verdict": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed text, notrawHTTPbytes"
+    },
+    {
+      "record_id": "RS_PAST_NA2863",
+      "source_url": "https://darwin-editorial.darwinproject.ac.uk/view/nameregs/nameregs_6507",
+      "ref": "turn1914481view2",
+      "status": "first_open_failed_tool502_BadGateway_no_retry",
+      "finding": "NeworiginalDarwinname-registerroutefirstopenfailed502; no actualbody acquired. Searchprojectionfullnative/life1849-1918/career, no birthcountry andnotpromotedtoactualbody.",
+      "source_locator": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed text, notrawHTTPbytes"
+    },
+    {
+      "record_id": "RS_PAST_NA331",
+      "source_url": "https://embryology.med.unsw.edu.au/embryology/index.php?title=Embryology_History_-_Edward_Fawcett",
+      "ref": "turn1914481view3",
+      "status": "actual_original_institutional_history_intro_and_bibliography",
+      "source_locator": "L190subjectheading;L202name;L205life1867-1942/BristolAnatomyDean/retire1934;L209-210Congress1909/AnatomicalSociety1927-29;L211deathSep23,1942;L216-251primaryresearchbibliography",
+      "finding": "Actualownhistoricalintro fullnative/lifespanyears/distinctivecareer but no actualsubjectDOB or bornplace. It is not used as a carrier bypass for closedPMC1942obituary. No countryfromUNSW/RoyalSoc/Britishcareer. SourceSep23death retainedasobservationonly, no nativedeathdatecomparison or alternateDOB inference.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed text, notrawHTTPbytes"
+    }
+  ],
+  "parsed_find_ledger": [
+    {
+      "source_ref": "turn1914481view0",
+      "pattern": "Fawcett, Edward",
+      "result_ref": "turn6588077view0",
+      "status": "No matching text found for \"Fawcett, Edward\"",
+      "limit": "Boundedliteralparsedfindonly; notabsenceproof. First621andlater626parsedlinecounts retained, notsameversionclaim."
+    }
+  ],
+  "candidates": [],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA2154",
+      "native": {
+        "record_id": "RS_PAST_NA2154",
+        "source_authorised_full_name": "Woods; Stephen Esslemont (1912 - 1994)",
+        "dob": "1912-01-12",
+        "raw_birthplace": "Cardiff",
+        "birthplace_source_grade": "S2"
+      },
+      "hold_type": "no_new_distinct_original_birthcountry_source",
+      "reason": "BoundednewqueriesrepeatedtheoldBarbourRS1998abstract/aggregators/roster. ActualexistingCardiffbirthplaceisstillcityonly; Scottishparentsandwifeobituarynotcountryofsubjectbirth. Priorv11inaccessibleRSfullmemoirworknotretriedthroughJSTOR/variant. No newactualpersonbirthcountryacquired.",
+      "prior_hold_preserved": "prior_v11_holds.json",
+      "discovery_refs": [
+        "turn5049522search0",
+        "turn5049522search2",
+        "turn8698255search0",
+        "turn8698255search1"
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA2460",
+      "native": {
+        "record_id": "RS_PAST_NA2460",
+        "source_authorised_full_name": "Thornton; Sir; Henry Gerard (1892 - 1977)",
+        "dob": "1892-01-22",
+        "raw_birthplace": "London",
+        "birthplace_source_grade": "S2"
+      },
+      "hold_type": "no_new_distinct_original_birthcountry_source",
+      "reason": "NewqueriesexposedRSprofile/letters/NPGindexes, no newdirectborncountrywork. WrittenatDownGreenWheathampsteadHertfordshireEnglandandRothamstedaddressesarework/correspondencecontext, notbirth. PriorAIM25archiveindex fullname/lifespannobornclauseholdpreserved. FrozenLondon/S2/completeobjectunchanged.",
+      "prior_hold_preserved": "prior_v13_holds.json",
+      "discovery_refs": [
+        "turn5049522search4",
+        "turn5049522search19",
+        "turn5049522search20",
+        "turn5049522search21",
+        "turn8698255search2",
+        "turn8698255search8"
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA2863",
+      "native": {
+        "record_id": "RS_PAST_NA2863",
+        "source_authorised_full_name": "Pedler; Sir; Alexander (1849 - 1918)",
+        "dob": "1849-05-21",
+        "raw_birthplace": "197 Fleet Street, London",
+        "birthplace_source_grade": "S2"
+      },
+      "hold_type": "new_original_reference_first_open_failed_no_birthcountry",
+      "reason": "NewDarwinname-registerfirstopen502stopped. ExistingRoyMacLeodODNBextractnotnewworkandstillFleetStreetLondononly. DodsknightageprojectionDOBandfatherDulwich/school/careernotdirectsubjectbirthregion. No newqualifiedborncountry; native/rawplace/S2/allv24factsunchanged.",
+      "sources_reviewed": [
+        {
+          "record_id": "RS_PAST_NA2863",
+          "source_url": "https://darwin-editorial.darwinproject.ac.uk/view/nameregs/nameregs_6507",
+          "ref": "turn1914481view2",
+          "status": "first_open_failed_tool502_BadGateway_no_retry",
+          "finding": "NeworiginalDarwinname-registerroutefirstopenfailed502; no actualbody acquired. Searchprojectionfullnative/life1849-1918/career, no birthcountry andnotpromotedtoactualbody.",
+          "source_locator": null,
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "retrieval_representation": "web-tool parsed text, notrawHTTPbytes"
+        }
+      ],
+      "discovery_refs": [
+        "turn5049522search13",
+        "turn5049522search30",
+        "turn8698255search3",
+        "turn8698255search4",
+        "turn8698255search6"
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA331",
+      "native": {
+        "record_id": "RS_PAST_NA331",
+        "source_authorised_full_name": "Fawcett; Edward (1867 - 1942)",
+        "dob": "1867-05-18",
+        "raw_birthplace": "Little Blencoe, near Penrith",
+        "birthplace_source_grade": "S2"
+      },
+      "hold_type": "actual_new_DOB_header_body_contrast_and_no_direct_birthregion",
+      "reason": "NewPrabookactualMarch18header/Bornfooter versusMay18bornbodyretainedasqualifiedsourceobservationforrootreview; noDOBrepair/correctclaimchoice. NewUNSWhistoryintrohasfullnative/career/yearslifespanbutnosubjectDOB/bornplace. CumbrianLivesliteralnamefindnotmatched; no countryfromindexscope. OldPMCchallengeworknotretried; Blencoe/Blencow/Blencowealiasunprovenholdpreserved. No country-only/year-onlybypass. Completeproductionrowunchanged.",
+      "sources_reviewed": [
+        {
+          "record_id": "RS_PAST_NA331",
+          "source_url": "https://www.cumbrianlives.org.uk/lives-index/f.html",
+          "ref": "turn1914481view0",
+          "status": "actual_original_reference_index_body",
+          "source_locator": "FirstopenL0title/L14-34earlieralphabeticalFentries;cachedliteralfindturn6588077view0",
+          "finding": "Firstbody does not showEdwardFawcett; literalfindFawcett,EdwardreturnedNo matching text found. No universalabsenceclaim, no genericCumberlandtobirthmapping. No personcountryclaimadopted.",
+          "limit": "Firstopenparsedtotal621lines, laterfind626; source-versionstabilitynotverified, no rawhash.",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "retrieval_representation": "web-tool parsed text, notrawHTTPbytes"
+        },
+        {
+          "record_id": "RS_PAST_NA331",
+          "source_url": "https://prabook.com/web/professor_edward.fawcett/746801",
+          "ref": "turn1914481view1",
+          "status": "actual_original_compiled_biographical_profile_with_internal_DOB_contrast",
+          "source_locator": "L15/99fullProfessorEdwardFAWCETT;L19headerMarch18,1867;L103BritishProfessorofAnatomy;L106bornMay18,1867;L110-121Edinburgh/BristolProfessorDean/M.D1906career;L142Born/L144March18,1867",
+          "finding": "Actuallydisplayedcompiledprofileheader/footerMarch18,1867versusownbornbodyMay18,1867. BodyMaymatchesnative; headerMarchisactualnotsearch-only. FullnativeanddetailedEdinburgh/BristolAnatomy/deancareerbindsameperson. No country/placeofsubjectbirthactuallystated; Britishnationality/Oxfordshirefathercontext/schoolnotbirth.",
+          "source_grade_proposal": "S3_for_new_DOB_observation_only; noBP/geographygradeadopted",
+          "no_typo_or_correct_date_verdict": true,
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "retrieval_representation": "web-tool parsed text, notrawHTTPbytes"
+        },
+        {
+          "record_id": "RS_PAST_NA331",
+          "source_url": "https://embryology.med.unsw.edu.au/embryology/index.php?title=Embryology_History_-_Edward_Fawcett",
+          "ref": "turn1914481view3",
+          "status": "actual_original_institutional_history_intro_and_bibliography",
+          "source_locator": "L190subjectheading;L202name;L205life1867-1942/BristolAnatomyDean/retire1934;L209-210Congress1909/AnatomicalSociety1927-29;L211deathSep23,1942;L216-251primaryresearchbibliography",
+          "finding": "Actualownhistoricalintro fullnative/lifespanyears/distinctivecareer but no actualsubjectDOB or bornplace. It is not used as a carrier bypass for closedPMC1942obituary. No countryfromUNSW/RoyalSoc/Britishcareer. SourceSep23death retainedasobservationonly, no nativedeathdatecomparison or alternateDOB inference.",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "retrieval_representation": "web-tool parsed text, notrawHTTPbytes"
+        }
+      ],
+      "DOB_observation_ref": "turn1914481view1",
+      "prior_holds_preserved": [
+        "prior_v12_holds.json",
+        "prior_v14_holds.json"
+      ],
+      "excluded_discovery_only": "NaturesearchprojectiondeathSeptember22notactualbody. Do notmakequalifiedcross-sourceendpointconflictagainstactualUNSWSeptember23 solelyfromsearch. Wiki/newikisCumberlandnotadmissibleoriginalnewwork."
+    }
+  ],
+  "new_DOB_observations": [
+    {
+      "record_id": "RS_PAST_NA331",
+      "native": {
+        "record_id": "RS_PAST_NA331",
+        "source_authorised_full_name": "Fawcett; Edward (1867 - 1942)",
+        "dob": "1867-05-18",
+        "raw_birthplace": "Little Blencoe, near Penrith",
+        "birthplace_source_grade": "S2"
+      },
+      "observation_type": "compiled_profile_header_footer_vs_born_body_exact_month_day_contrast",
+      "source_url": "https://prabook.com/web/professor_edward.fawcett/746801",
+      "source_title": "Professor Edward FAWCETT (born March 18, 1867), British professor of anatomy | World Biographical Encyclopedia",
+      "source_author": null,
+      "source_kind": "actual_original_uncredited_compiled_profile",
+      "source_grade_proposal": "S3",
+      "source_grade_role": "new_DOB_observation_only",
+      "source_body_ref": "turn1914481view1",
+      "source_locator": "L15/99fullname;L19header1867-03-18;L106bornbody1867-05-18;L110-121detailedEdinburgh/Bristolcareer;L142Born/L1441867-03-18",
+      "source_quote": "March 18, 1867",
+      "source_quote_word_count": 9,
+      "observed_source_full_name": "Professor Edward FAWCETT",
+      "source_birthdate_in_header_and_born_footer": "1867-03-18",
+      "source_birthdate_in_explicit_body_born_clause": "1867-05-18",
+      "source_birthdate_precision": "exact_day_in_actual_header_footer_and_born_body",
+      "native_dob": "1867-05-18",
+      "native_lifespan": "1867-1942",
+      "source_lifespan": null,
+      "source_DOB_native_compatibility": "ActualMay18bornbodymatchesnative; actualMarch18header/footerdoesnot. Bothclaimsfromsameidentity-boundprofile preserved, nochosenclaimorerrorcausediagnosis.",
+      "identity_review": [
+        "AllnativeEdwardFawcettnamecomponents directlydisplayed.",
+        "Sameactualprofile details EdinburghM.B./C.M1889/M.D1906andBristolAnatomyprof1893-1909/dean1905-9/continuingsince1909, coherentdistinctivesubjectfingerprint.",
+        "No dateless/yearonlyDOBbypass; actualinternalday-monthcontrastexplicit."
+      ],
+      "publication_date": null,
+      "publication_date_precision": "not_observed",
+      "caveats": [
+        "PrabookcompiledprofileunderlyingWhoWho/editorialprovenanceunverified; conservativeS3observation, noindependence/civilregistryclaim.",
+        "Do notlabelheaderMarchasconfirmedcorrectDOB, typo, transcription/OCRerror, or automaticallyclearMay18nativeDOB.",
+        "NewactiveDOBcaseappendisrootadjudication; workerdoesnotmutateexisting7casefile.",
+        "No adoptedDOB/BP/geographyvalues; completeproductionmasterobjectunchanged."
+      ],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "source_quote_body_fragment": "was born on May 18, 1867",
+      "source_quote_fragments_are_noncontiguous": true
+    }
+  ],
+  "unopened_distinct_original_work_leads": [
+    {
+      "record_id": "RS_PAST_NA331",
+      "source_url": "https://www.nature.com/articles/150455a0",
+      "discovery_ref": "turn5049522search15",
+      "source_title": "Prof. E. Fawcett, F.R.S",
+      "role": "unopened_originalNatureobituary_lead",
+      "limit": "DistinctworkfromclosedPMC1942obituaryandRS1943notice, but noactualbody/fullDOB/birthregionverified. SearchpreviewdeathSept22notqualifiedconflict. CurrentnewPrabookDOBcontrastmustnotbebypassedbythislead."
+    }
+  ],
+  "source_quote_words_by_original_work": {
+    "https://prabook.com/web/professor_edward.fawcett/746801": 9
+  },
+  "raw_HTTP_status": null,
+  "raw_bytes_sha256": null,
+  "exact_request_utc": null,
+  "all_source_headers_refs_and_final_statuses_retained": true,
+  "no_master_or_repo_edit": true,
+  "no_source_exhaustion_claim": true,
+  "no_sourceclass_expansion": true
+}

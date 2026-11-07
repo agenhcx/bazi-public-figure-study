@@ -1,0 +1,42 @@
+{
+  "written_utc": "2026-11-05T00:20:57.928621+00:00",
+  "baseline_commit": "72edac7cceca5cc4aa077dddc8c5fde401059b36",
+  "fixed_blank_window_pool": 159,
+  "individual_followup_groups": {
+    "a": [
+      "RS_PAST_NA4155",
+      "RS_PAST_NA5003",
+      "RS_PAST_NA629",
+      "RS_PAST_NA5508"
+    ],
+    "b": [
+      "RS_PAST_NA6313",
+      "RS_PAST_NA645",
+      "RS_PAST_NA637",
+      "RS_PAST_NA4592"
+    ]
+  },
+  "bulk_route": "New Royal Society of Edinburgh original former-fellows biographical index, if available. Scan fixed159 native identities; distinguish index-string screening from actual person-entry reading. No Royal Society of London directory retry.",
+  "budgets": {
+    "individual_group_queries": 6,
+    "individual_group_original_nav": 8,
+    "bulk_queries": 4,
+    "bulk_original_nav": 6
+  },
+  "admission": "Carry v16 full-source-name/component-superset plus compatible actually stated dates and distinct lifespan/career/FRS anchors; no initials expansion/native DOB repair. Explicit subject birthplace required in original available body. City-only firstBP may be accepted with geographyunknown.",
+  "grades": "New birthplaceS2 for signed/edited/institutional original biographical narrative; weaker uncredited life noticeS3, no grade determined by host alone. Original DOB tiers frozen.",
+  "counting": "159bulkidentityscreen !=159 biographies read. Fixed8individualfollowups; actual bulk candidateentries and unique reviewedIDs reported separately. No outcome/statisticaldedup.",
+  "frozen": [
+    "DOB",
+    "calendar",
+    "nativeidentity",
+    "eligibility",
+    "QID",
+    "DOBtiers",
+    "country",
+    "coords",
+    "prior_evidence",
+    "untargeted_completeobjects"
+  ],
+  "quotes": "<=25 English words/source, no full original sourcePDF/HTML/images in distributed artifacts. Source rawHTTP metadata only if actually captured."
+}

@@ -1,0 +1,30 @@
+{
+  "source_url": "https://api.nobelprize.org/2.1/laureates?limit=100&offset=1000&sort=asc&format=json",
+  "request_started_utc": "2026-11-02T23:17:26.374236+00:00",
+  "pagination_authorization": "Parent expanded original one-request cap to two after first official response reported1028 total and1000 returned; this is the single finite overflow page, no third request.",
+  "http_status": 200,
+  "headers": {
+    "date": "Mon, 02 Nov 2026 23:17:32 GMT",
+    "content-type": "application/json",
+    "server": "envoy",
+    "access-control-allow-headers": "X-Requested-With, Content-Type, Accept, Origin, Authorization",
+    "access-control-allow-methods": "GET",
+    "access-control-allow-origin": "*",
+    "cache-control": "public, max-age=60",
+    "expires": "Mon, 02 Nov 2026 23:18:32 GMT",
+    "pragma": "no-cache",
+    "x-powered-by": "PHP/8.5.12",
+    "vary": "accept-encoding",
+    "last-modified": "Mon, 02 Nov 2026 23:17:32 GMT",
+    "cf-cache-status": "MISS",
+    "cf-ray": "a546da660ef972fa-SJC",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "x-envoy-upstream-service-time": "939",
+    "connection": "close",
+    "transfer-encoding": "chunked"
+  },
+  "source_sha256": "a76f1d54be231dcdc643f88a1f7719df7e65a75a5fde7aa8a838ee41dc222503",
+  "bytes": 105697,
+  "laureates": 28,
+  "completed_utc": "2026-11-02T23:17:32.480760+00:00"
+}

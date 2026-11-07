@@ -1,0 +1,10 @@
+{
+  "upstream_artifacts": {
+    "geo49/row_results.jsonl": "dcd1bd65eebc86067397831103cf5f9349a7a318f4e4651c433d1b136cfc5685",
+    "pending53/accepted.jsonl": "117cdef8f4be5dfad983dd282f1ff3a9caeae762fac33c31e14d19b3a134bea5",
+    "crosswalk/accepted.jsonl": "c2b2d8a0d4177da4a49c4fe02cd438e151a66609eb1a4a50d4d55b2ea9b6b8f5",
+    "new_facts_geo/new_fact_geography.jsonl": "c87ee4dd64063e7461422888f20201da841c9f7d52794ac3c619911c7ac8a79e",
+    "fact_qa/final_facts_qa.jsonl": "329b7cbab7021fdfb2dc089266c438d4957109bb1901d7f5637d3123ae0793a9"
+  },
+  "projection": "Normalized replay names and independent geography review. Preserve source raw place, quote, tier and native DOB. NA5011 source-name-era note is an annotation, not a correction. Deterministic gzip. Nobel projection contains identity/birth only; full award API payloads excluded."
+}

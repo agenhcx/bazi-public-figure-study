@@ -1,0 +1,423 @@
+{
+  "schema": "v31_sources_b_v1",
+  "worker": "/root/v26_sources_b",
+  "batch_role": "v31groupb_geography_only",
+  "written_utc": "2026-11-06T12:38:35.106214+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA1580",
+    "RS_PAST_NA4166",
+    "RS_PAST_NA8736",
+    "RS_PAST_NA8744"
+  ],
+  "intent_file": "v31_b_intent.json",
+  "full_prior_accepted_BP_geography_context_and_targeted_holds_reviewed_before_queries": true,
+  "prior_review_representation_note": "InitialfullfourrowrendercontainedlargeDouglasnestedduplicatedevidenceandtruncatedasmallpartofGartonv20context. FullGartonv20contextwasthenreadseparatelybeforeintent/discovery. FullpriorFinlay/Douglas/Cullisholdsread. Missingtextwasnotassumedreviewed.",
+  "counts": {
+    "discovery_queries": 8,
+    "web_navigation_attempts": 5,
+    "parsed_find_operations": 2,
+    "cached_screenshot_attempts": 0,
+    "ImageContent_blocks_exposed_from_screenshot": 0,
+    "raw_HTTP_or_PDF_GETs": 0,
+    "body_verified_geography_candidates": 0,
+    "new_first_birthplace_candidates": 0,
+    "holds": 4,
+    "new_confirmed_printed_DOB_conflicts": 0,
+    "new_confirmed_original_birthplace_conflicts": 0
+  },
+  "budgets": {
+    "queries": 8,
+    "navigation": 10
+  },
+  "candidates": [],
+  "holds": [
+    {
+      "phase": "geography_only_original_person_birth_context_followup",
+      "source_grade_role": "geographic_support_only",
+      "source_grade_adopted": null,
+      "reviewed_hemisphere": "unknown",
+      "geography_decision": "unchanged_unknown",
+      "native_and_existing_birthplace_fields_frozen": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA8736",
+      "native": {
+        "record_id": "RS_PAST_NA8736",
+        "authority_name": "Cullis; Anthony George (1946 - 2021)",
+        "native_dob": "1946-01-16",
+        "existing_raw_birthplace": "Worcester",
+        "existing_birthplace_source_grade": "S1",
+        "existing_birthplace_source_url": "https://catalogues.royalsociety.org/calmview/Record.aspx?src=CalmView.Persons&id=NA8736",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "1c125804109b68d9692ec5516894b52a6d335a994230dad2b8b06dca5faa8f54"
+      },
+      "status": "hold_new_original_ODNB_street_refinement_without_birth_region",
+      "hold_type": "explicit_new_geographic_qualifier_missing",
+      "reason": "Actualnew2025authoredODNBextractgives48HallowRoad,Worcester/exactDOBbutnobirthcounty/country. ItsEnglandreturn1975andMalvernWorcestershirearecareercontext,asintheclosedoldmemoirandnotbirthregion. No rawstreetreplacementor georesolution.",
+      "source_url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/579357223",
+      "source_ref": "turn7388868view2",
+      "source_title": "Cullis,AnthonyGeorge[Tony](1946-2021),electricalengineer",
+      "source_author": "Thomas Walther",
+      "source_kind": "original_authored_edited_ODNB_public_extract",
+      "publication_date": "2025-06-12",
+      "publication_date_precision": "displayed_publication_date",
+      "source_observed_name": "Anthony George Cullis",
+      "birth_source_all_native_components_confirmed": true,
+      "source_birthdate": "1946-01-16",
+      "source_birthdate_precision": "exact_day_in_actual_born_clause",
+      "source_lifespan": "1946-2021",
+      "source_quote": "was born at 48 Hallow Road, Worcester",
+      "source_quote_word_count": 7,
+      "source_locator": "turn7388868view2:L757title/fullnative/lifespan;L761ThomasWalther;L778exactDOB/direct48HallowRoadWorcester;L779Oxforddegree/electronmicroscopy;L781returnEngland/MalvernWorcestershirecareer. Initialopen turn2461004view0.",
+      "explicit_binding_to_existing_stored_place": "Actualnewbornwording48HallowRoad,WorcesterhasunchangedWorcestercitycomponentandaddsstreetdetail; no country/whole-regionqualifier. StoredrawWorcesterunchanged. NoWorcesterParkorotherprefixobserved/admitted; noequivalenceassumptionneeded.",
+      "identity_review": [
+        "AllnativeAnthonyGeorgeCulliscomponentsactuallyintitleandbornparagraph, exact16January1946agreesnative/lifespan1946-2021.",
+        "Oxfordmaterials/electronmicroscopy/AT&TBellLabs/semiconductorepitaxy/Malverncareerconsistent source-onlyprofessionalcontext.",
+        "Tonyinbracketswithinfullnativeheadingnotexpandedfromanunrelatednickname. No identityexceptionorrepairinvoked."
+      ],
+      "caveats": [
+        "2025ODNBarticleand2026oldRSmemoirsharedThomasWaltherauthor,notindependentinformationclaims. Newpublicextractdoesnotunlockbirthcountry.",
+        "No old2026memoir/Worcestershireworkpassagererun,work-to-birthinferenceorrawplace/sourcegradeedit.",
+        "Onlyshortnewborn-placeexcerptquoted; oldmemoirquoteunalteredanddistinctoriginalwork."
+      ]
+    },
+    {
+      "phase": "geography_only_original_person_birth_context_followup",
+      "source_grade_role": "geographic_support_only",
+      "source_grade_adopted": null,
+      "reviewed_hemisphere": "unknown",
+      "geography_decision": "unchanged_unknown",
+      "native_and_existing_birthplace_fields_frozen": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA8744",
+      "native": {
+        "record_id": "RS_PAST_NA8744",
+        "authority_name": "Finlay; Bland James (1952 - 2021); biologist",
+        "native_dob": "1952-03-16",
+        "existing_raw_birthplace": "Edinburgh",
+        "existing_birthplace_source_grade": "S1",
+        "existing_birthplace_source_url": "https://catalogues.royalsociety.org/calmview/Record.aspx?src=CalmView.Persons&id=NA8744",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "f84f280bafe329ce1848ac7c9ca37598583712a3ad9e84960018850c8ab885a7"
+      },
+      "status": "hold_new_original_member_yearbook_date_and_work_UK_without_birth_region",
+      "hold_type": "explicit_new_geographic_qualifier_missing",
+      "reason": "ActualnewRoyalDanishAcademy2016-2017yearbookmemberentryfullnativeanddaymarkedF.16-03-1952,butDorsetUKisCentreEcologyHydrologyworkaddress. NoEdinburghorborncountryassertion. DistinctBerninger2022PersonalMemoriesarticlefirstDOIopennotaccessible; oldFenchel125906/Copenhagenbibliographyclosednotreopened.",
+      "source_url": "https://fliphtml5.com/bbdz/jati/Oversigt_over_Selskabets_Virksomhed_2016-2017/",
+      "source_ref": "turn2866409view0",
+      "source_title": "Oversigt over Selskabets Virksomhed2016-2017, VidenskabernesSelskab, members: BlandJamesFinlay",
+      "source_author": "Royal Danish Academy yearbook member compilation; no personal biographical author shown",
+      "source_kind": "original_institutional_member_yearbook_on_digital_carrier",
+      "publication_date": "2016-2017",
+      "publication_date_precision": "edition_span_not_exact_publicationday",
+      "source_observed_name": "Bland James Finlay",
+      "birth_source_all_native_components_confirmed": true,
+      "source_birthdate": "1952-03-16",
+      "source_birthdate_precision": "day_in_F_marked_member_vital_date_metadata_no_birthplace_predicate",
+      "source_literal_date_label": "F.16-03-1952",
+      "source_quote": "",
+      "source_quote_word_count": 0,
+      "source_locator": "turn2866409view0:L1032-1033 fullBlandJamesFinlay/ProfessorDr/F.16-03-1952/member2006/NAT/CentreEcologyHydrologyDorsetUK/Biodiversity. ParsedadjacentEvanEvansUBCCanadaentrykeptseparate; no CanadaattributiontoFinlay. Initialopen turn7388868view0.",
+      "explicit_binding_to_existing_stored_place": "NoactualEdinburghorbirthcountryassertioninnewentry; UKandDorsetbelongtoinstitution/work, notstoredEdinburghbirthplace.",
+      "failed_retrievals": [
+        {
+          "source_url": "https://doi.org/10.1016/j.protis.2022.125910",
+          "source_ref": "turn7388868view1",
+          "actual_tool_result": "URL https://doi.org/10.1016/j.protis.2022.125910 is not accessible via this tool.",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "body_acquired": false,
+          "no_retry_after_failure": true
+        }
+      ],
+      "caveats": [
+        "Memberdatefullnativecompatible,butvitaldateandworkcountryjuxtapositionisnotaborn-countryrelation. No dob/identity/geo correction.",
+        "CarrierFlipHTML5notindependentsecondsource; no originalbookPDF/images/fullmembercache retained.",
+        "NewBerningerarticle10.1016/j.protis.2022.125910differentworkfromclosedFenchel125906; neithernewbodyacquirednoroldfailedrouteretried.",
+        "No initialsB.J.expanded; fullnativeactuallyinyearbook. CountryofworkUK/adjacentCanada ignoredforbirth."
+      ]
+    },
+    {
+      "phase": "geography_only_original_person_birth_context_followup",
+      "source_grade_role": "geographic_support_only",
+      "source_grade_adopted": null,
+      "reviewed_hemisphere": "unknown",
+      "geography_decision": "unchanged_unknown",
+      "native_and_existing_birthplace_fields_frozen": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA4166",
+      "native": {
+        "record_id": "RS_PAST_NA4166",
+        "authority_name": "Garton; William Reginald Stephen (1912 - 2002)",
+        "native_dob": "1912-03-07",
+        "existing_raw_birthplace": "Chelsea",
+        "existing_birthplace_source_grade": "S2",
+        "existing_birthplace_source_url": "https://www.researchgate.net/publication/247606535_William_Reginald_Stephen_Garton_7_March_1912--28_August_2002",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "d09ee362e411913fd8eb616516353667d84a069f6edcd41cc3550dbbcfd5b009"
+      },
+      "status": "hold_new_original_archive_catalogue_first_route_403",
+      "hold_type": "no_new_explicit_birth_country_region",
+      "reason": "Fulloldv20signedmemoirChelseaonly/Londonerinspirit-upbringing/ImperialUKworkaddressreviewedfirst. NewdistinctImperialarchiveinventoryPDFfirstopen403stopped. No neworiginalbodydirectbirthregion, newDOBprooforplacebinding. OldImperialHTML403andoldmemoirnotreopened.",
+      "source_url": "https://www.imperial.ac.uk/media/imperial-college/administration-and-support-services/records-and-archives/public/Garton%2C-Professor-William-Reginald-Stephen-FRS-list-of-papers.pdf",
+      "source_ref": "turn2461004view1",
+      "source_title": "WilliamReginaldStephenGarton1912-2002: archiveinventorylistofpapers",
+      "source_author": null,
+      "source_kind": "new_original_archive_inventory_work_route_notbodyacquired",
+      "source_quote": "",
+      "source_quote_word_count": 0,
+      "source_birthdate": null,
+      "source_birthdate_precision": "not_verified_in_new_original_body",
+      "explicit_binding_to_existing_stored_place": "No neworiginalbirthcountry/wholeregionqualifiertobindstoredChelsea. Discoverybirthyear/workcareeronlycannotresolve.",
+      "failed_retrievals": [
+        {
+          "source_url": "https://www.imperial.ac.uk/media/imperial-college/administration-and-support-services/records-and-archives/public/Garton%2C-Professor-William-Reginald-Stephen-FRS-list-of-papers.pdf",
+          "source_ref": "turn2461004view1",
+          "actual_tool_result": "Failed to fetch https://www.imperial.ac.uk/media/imperial-college/administration-and-support-services/records-and-archives/public/Garton%2C-Professor-William-Reginald-Stephen-FRS-list-of-papers.pdf: (403) Forbidden",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "body_acquired": false,
+          "no_retry_after_failure": true
+        }
+      ],
+      "caveats": [
+        "NewinventoryPDFisdifferentworkfromoldbiographicalImperialHTML, firstattemptnotretry/alternatepathstosamefailedbody. After403noPDFvariant/carrier/rawGET.",
+        "StoredChelsea/rawBP/sourcegradeS2/URL/claims/exactDOB/v20factsfrozen.",
+        "No LondonCountyCouncilscholarship/ImperialworklocationorUKfooterbirthinference."
+      ]
+    },
+    {
+      "phase": "geography_only_original_person_birth_context_followup",
+      "source_grade_role": "geographic_support_only",
+      "source_grade_adopted": null,
+      "reviewed_hemisphere": "unknown",
+      "geography_decision": "unchanged_unknown",
+      "native_and_existing_birthplace_fields_frozen": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA1580",
+      "native": {
+        "record_id": "RS_PAST_NA1580",
+        "authority_name": "Douglas; Claude Gordon (1882 - 1963)",
+        "native_dob": "1882-02-26",
+        "existing_raw_birthplace": "Leicester",
+        "existing_birthplace_source_grade": "S2",
+        "existing_birthplace_source_url": "https://doi.org/10.1098/rsbm.1964.0004 | https://api.crossref.org/journals/1748-8494/works?rows=3&query=Claude+Gordon+Douglas+1882+-+1963&select=DOI%2Ctitle%2Cabstract%2Cpublisher%2Ccontainer-title%2CURL%2Clink%2Cpublished-print",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "6ff27e1e35da02741e36badd56fc340b71cd64116313b43686a851c75484ee3c"
+      },
+      "status": "hold_new_original_compiled_biography_born_Leicester_only",
+      "hold_type": "explicit_new_geographic_qualifier_missing",
+      "reason": "ActualnewDouglasArchivescompiledbiographyfullnative/exactDOB/careerbutdirectbornclauseonlyLeicester. LeicesterRoyalInfirmaryisfatherwork, Londonmother/education/workareseparate. No birthcountry/Leicestershirequalifier orgeoadoption.",
+      "source_url": "https://www.douglashistory.co.uk/history/claude_douglas.htm",
+      "source_ref": "turn2461004view2",
+      "source_title": "Claude Gordon Douglas,1882-1963",
+      "source_author": null,
+      "source_kind": "original_unsigned_compiled_subject_biography_on_family_history_site",
+      "publication_date": null,
+      "publication_date_precision": "unknown;searchcrawl/modifiedtimestamps_not_publicationdate",
+      "source_observed_name": "Claude Gordon Douglas",
+      "birth_source_all_native_components_confirmed": true,
+      "source_birthdate": "1882-02-26",
+      "source_birthdate_precision": "exact_day_in_actual_born_clause",
+      "source_lifespan": "1882-1963",
+      "source_death_date": "1963-03-23",
+      "source_quote": "was born in Leicester",
+      "source_quote_word_count": 4,
+      "source_locator": "turn2461004view2:L101-104 fullnative/lifespan/directbornLeicester26Feb1882/Oxfordphysiologycontext;L108-114 respiratoryphysiology/Douglasbag/Haldanecareer; sourceinitialopenparsed162lines.",
+      "explicit_binding_to_existing_stored_place": "ActualnewbornLeicesterexactlymatchesexistingrawLeicesterbutnobirthlinkedcountry/county. Unknowngeo remains.",
+      "identity_review": [
+        "FullnativeClaudeGordonDouglasactualheading/bornsentence; exact26February1882matchesnativeandlifespan1882-1963.",
+        "Oxfordphysiology/Haldanecollaboration/Douglasbag/RAMC workarecoherentsource-onlyprofessionalanchors.",
+        "Actualnewsource26Februaryagreesnative; oldEnglishWikipediaD,E,FlistFeb27queryprojectionnotacquiredoriginalcontrarybodyorqualifiedDOBconflict."
+      ],
+      "caveats": [
+        "Scotlandsite-navigation/sidebarorparentsmedicalqualifications/worklocationsnotbirthcountry.",
+        "No originalsourcegradeupgradeorinformationindependenceclaim; compiledarticlecouldderiveODNB/memoir,nocivilrecordverification.",
+        "OldS2Crossrefdepositedmemoirabstract/oldPeterHarpercatalogue/NPGidentitycontextremainfrozen/notrerun.",
+        "NoLeicestershirefromfamiliarLeicester; actualbornplacestillcityonly."
+      ]
+    }
+  ],
+  "query_log": [
+    {
+      "query_index": 1,
+      "engine": "system2",
+      "query": "\"Anthony George Cullis\" \"born\" Worcester",
+      "observed_call_result_ref_prefix": "turn1155214",
+      "topic_relevant_observed_refs": [
+        "turn1155214search0",
+        "turn1155214search47"
+      ],
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "intent_timing": "Exactstringprelistedbeforeexecutionininitialintent"
+    },
+    {
+      "query_index": 2,
+      "engine": "system2",
+      "query": "\"Bland James Finlay\" \"born\" Edinburgh",
+      "observed_call_result_ref_prefix": "turn1155214",
+      "topic_relevant_observed_refs": [
+        "turn1155214search48",
+        "turn1155214search24"
+      ],
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "intent_timing": "Exactstringprelistedbeforeexecutionininitialintent"
+    },
+    {
+      "query_index": 3,
+      "engine": "system2",
+      "query": "\"William Reginald Stephen Garton\" \"born\" England",
+      "observed_call_result_ref_prefix": "turn1155214",
+      "topic_relevant_observed_refs": [
+        "turn1155214search46",
+        "turn1155214search4"
+      ],
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "intent_timing": "Exactstringprelistedbeforeexecutionininitialintent"
+    },
+    {
+      "query_index": 4,
+      "engine": "system2",
+      "query": "\"Claude Gordon Douglas\" \"born\" England",
+      "observed_call_result_ref_prefix": "turn1155214",
+      "topic_relevant_observed_refs": [
+        "turn1155214search1",
+        "turn1155214search2",
+        "turn1155214search49"
+      ],
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "intent_timing": "Exactstringprelistedbeforeexecutionininitialintent"
+    },
+    {
+      "query_index": 5,
+      "engine": "system1",
+      "query": "\"Bland Finlay\" \"born\" \"Scotland\"",
+      "observed_call_result_ref_prefix": "turn2461004",
+      "topic_relevant_observed_refs": [
+        "turn2461004search4"
+      ],
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "intent_timing": "Exactadaptivestringprelistedbeforeexecutioninintentadaptive_exact_queries_prelisted"
+    },
+    {
+      "query_index": 6,
+      "engine": "system1",
+      "query": "\"Anthony George Cullis\" \"Worcester\" \"England\"",
+      "observed_call_result_ref_prefix": "turn2461004",
+      "topic_relevant_observed_refs": [
+        "turn2461004search0",
+        "turn2461004search1",
+        "turn2461004search5"
+      ],
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "intent_timing": "Exactadaptivestringprelistedbeforeexecutioninintentadaptive_exact_queries_prelisted"
+    },
+    {
+      "query_index": 7,
+      "engine": "system1",
+      "query": "\"William Reginald Stephen Garton\" \"Chelsea\" \"England\"",
+      "observed_call_result_ref_prefix": "turn2461004",
+      "topic_relevant_observed_refs": [
+        "turn2461004search2",
+        "turn2461004search6"
+      ],
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "intent_timing": "Exactadaptivestringprelistedbeforeexecutioninintentadaptive_exact_queries_prelisted"
+    },
+    {
+      "query_index": 8,
+      "engine": "system1",
+      "query": "\"Claude Gordon Douglas\" \"Leicestershire\"",
+      "observed_call_result_ref_prefix": "turn2461004",
+      "topic_relevant_observed_refs": [
+        "turn2461004search3",
+        "turn2461004search7"
+      ],
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "intent_timing": "Exactadaptivestringprelistedbeforeexecutioninintentadaptive_exact_queries_prelisted"
+    }
+  ],
+  "query_result_mapping_limit": "Toolreturnedaggregatemultiqueryresults, noexactbackendquery-resultallocationexposed. Topicrefsmatchactualobservedresults, notfabricatedmapping.",
+  "navigation_log": [
+    {
+      "ref": "turn2461004view0",
+      "target": "CullisnewODNB2025publicextract",
+      "result": "actualauthoredoriginalbody,findlocatedstreetWorcesteronly"
+    },
+    {
+      "ref": "turn2461004view1",
+      "target": "GartonnewarchiveinventoryPDF",
+      "result": "toolreported403Forbidden,stopped"
+    },
+    {
+      "ref": "turn2461004view2",
+      "target": "Douglasnewcompiledfamilyhistorybiography",
+      "result": "actualfullnative/exactDOB/bornLeicesteronly"
+    },
+    {
+      "ref": "turn7388868view0",
+      "target": "Finlayneworiginal2016-17Academyyearbookondigitalcarrier",
+      "result": "actualparsedyearbook,findlocatedmemberentry/no birthregion"
+    },
+    {
+      "ref": "turn7388868view1",
+      "target": "FinlaydistinctBerningerPersonalMemories2022articleDOI125910",
+      "result": "notaccessibleviatool,stopped;notoldFenchel125906route"
+    }
+  ],
+  "parsed_find_log": [
+    {
+      "source_ref": "turn2461004view0",
+      "pattern": "was born",
+      "result_ref": "turn7388868view2",
+      "result": "actualCullisODNBborn48HallowRoadWorcester/exactnativeDOB;Englandreturn/MalvernWorcestershireworkonly"
+    },
+    {
+      "source_ref": "turn7388868view0",
+      "pattern": "Bland James Finlay",
+      "result_ref": "turn2866409view0",
+      "result": "actualfullnative/F.16-03-1952/memberworkDorsetUK,nobirthplacecontext"
+    }
+  ],
+  "error_ledger": [
+    {
+      "source_url": "https://www.imperial.ac.uk/media/imperial-college/administration-and-support-services/records-and-archives/public/Garton%2C-Professor-William-Reginald-Stephen-FRS-list-of-papers.pdf",
+      "source_ref": "turn2461004view1",
+      "actual_tool_result": "Failed to fetch https://www.imperial.ac.uk/media/imperial-college/administration-and-support-services/records-and-archives/public/Garton%2C-Professor-William-Reginald-Stephen-FRS-list-of-papers.pdf: (403) Forbidden",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "body_acquired": false,
+      "no_retry_after_failure": true
+    },
+    {
+      "source_url": "https://doi.org/10.1016/j.protis.2022.125910",
+      "source_ref": "turn7388868view1",
+      "actual_tool_result": "URL https://doi.org/10.1016/j.protis.2022.125910 is not accessible via this tool.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "body_acquired": false,
+      "no_retry_after_failure": true
+    }
+  ],
+  "protocol_deviations": [],
+  "retrieval_limits": [
+    "Fiveunusednavigationbudgetslotsnotclaimedreads; eightactualqueries/fiveactualnav/twofind. Closedpriorworks/failedroutesnotreopenedforextraquota.",
+    "Three neworiginalsubjectcontextbodies acquired(CullisODNB,Douglascompiledbio,Finlayyearbook);noneoffersqualifieddirectbirthcountry/wholeregion. Bodyacquisitionnotgeographicresolution.",
+    "OldBP/DOB/grade/claims/evidence/sourceURLs/native/calendar/authority/QIDs/country/coords/allpriorfactsandnineissuefilesfrozen. No newgeography_followup_v31fact proposed, no master/code/Gitmutation.",
+    "No village/city/prefixequivalenceassumption; noWorcesterParkobservedfromsourcesoradopted, newCullisstreetwordinghasunchangedWorcestercityonly.",
+    "Minimalsubjectfacts/shortquotes/locatorsonly, no sourceHTML/PDF/images/memberindexcacheorpubliccontactdataretained/distributed.",
+    "Sourceerrorstringsaretoolreported,unknownrawHTTPstatus/requesttime/bytehashnull. AuditUTCtimeisreportwrite.",
+    "No sourceDOB/placeconflictobservedinacquirednewbodies, no parser/provenance/correctdateverdict oroldholdclearingwithdateless/year-onlysource."
+  ]
+}

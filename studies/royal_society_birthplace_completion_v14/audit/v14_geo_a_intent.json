@@ -1,0 +1,78 @@
+{
+  "schema": "v14_geo_a_request_intent_v1",
+  "created_utc": "2026-11-04T23:36:25.628129+00:00",
+  "scope": [
+    "RS_PAST_NA1727",
+    "RS_PAST_NA6847"
+  ],
+  "rules": "frozen birthfield; geography-only; no hemisphere or personal entity/country/coordinate assignment; unknown HTTP status/timing remain null; parsed text not raw HTTP bytes",
+  "requests": [
+    {
+      "planned_utc": "2026-11-04T23:36:25.628143+00:00",
+      "type": "discovery",
+      "batch": 1,
+      "queries": [
+        "\"Lowther Street\" \"Carlisle\" council Cumberland",
+        "\"Carleton\" \"Carlisle\" village Cumberland gazetteer",
+        "\"Lowther Street\" \"Carlisle\" Australia New Zealand",
+        "\"Carleton\" \"Carlisle\" village Australia Canada"
+      ],
+      "purpose": "authoritative compound relations and bounded alternative geography; snippets leads only"
+    },
+    {
+      "planned_utc": "2026-11-04T23:36:38.921037+00:00",
+      "type": "original_navigation",
+      "batch": 2,
+      "urls": [
+        "https://www.cumberland.gov.uk/parking-roads-and-transport/parking/find-car-park-near-you/lowther-street-car-park-carlisle",
+        "https://historicengland.org.uk/listing/the-list/list-entry/1217895",
+        "https://www.carlisle.gov.uk/Portals/24/Documents/Carlisle%20South/Landscape%20and%20Townscape%20Appraisal%20for%20Carlisle%20South.pdf",
+        "https://co-curate.ncl.ac.uk/carleton-carlisle/",
+        "https://toponymes.rncan.gc.ca/search-place-names/search?category=O&page=431&pedisable=true&province%2525252525252525255B0%2525252525252525255D=72&q=&sort-field=name&theme%2525252525252525255B0%2525252525252525255D=10"
+      ],
+      "purpose": "read original council and statutory heritage relations; inspect signed historical gazetteer lineage; inspect observed Canadian alternative/type record"
+    },
+    {
+      "planned_utc": "2026-11-04T23:37:08.781908+00:00",
+      "type": "discovery",
+      "batch": 3,
+      "queries": [
+        "\"Carleton\" \"St. Cuthbert, Carlisle\" Lewis",
+        "site:toponymes.rncan.gc.ca \"Carlisle\" \"Carleton\"",
+        "\"Lowther Street\" \"Carlisle\" -Cumberland -Cumbria -England -Walker -Miles"
+      ],
+      "purpose": "seek attributable historical gazetteer original edition transcription; canonical official observed alternative record; bounded compound countercandidate query outside expected region"
+    },
+    {
+      "planned_utc": "2026-11-04T23:37:21.149914+00:00",
+      "type": "discovery",
+      "batch": 4,
+      "queries": [
+        "site:british-history.ac.uk/topographical-dict/england \"Carleton\" \"Carlisle\""
+      ],
+      "purpose": "seek original attributed Lewis gazetteer entry in scholarly edition"
+    },
+    {
+      "planned_utc": "2026-11-04T23:37:34.767024+00:00",
+      "type": "original_navigation",
+      "batch": 5,
+      "urls": [
+        "https://www.carlisle.gov.uk/Portals/24/Documents/Carlisle%20South/Landscape%20and%20Townscape%20Appraisal%20for%20Carlisle%20South.pdf#page=1",
+        "https://lakesguides.co.uk/html/lgaz/LK02156.htm",
+        "https://www.lakesguides.co.uk/html/lgaz/lk02155.htm",
+        "https://toponymes.rncan.gc.ca/search-place-names/search?q=Carlisle"
+      ],
+      "purpose": "verify commissioned geography authorship; inspect Carlisle and Penrith Carleton original gazetteer data lineages; retry observed Canadian alternative with simple official search URL"
+    },
+    {
+      "planned_utc": "2026-11-04T23:37:53.410478+00:00",
+      "type": "original_navigation",
+      "batch": 6,
+      "urls": [
+        "https://lakesguides.co.uk/html/lgaz/LK02156.htm"
+      ],
+      "locator": "parsed lines 0 onward",
+      "purpose": "verify Carleton St Cuthbert Without feature type and regional gazetteer header; final navigation within10 request budget"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+# Continue after UK birthplace v6
+
+Fixed base outputs/uk_birthplace_rows.jsonl.gz:4983 rows;4146north,181south,656unknown. Native DOB window1835–1985:2644 rows;2246north,176south,222unknown. Unknown656=600 no active birthplace evidence+56 explicit place/geo unresolved. Native DOB/calendar/formal identity/eligibility/DOB groups unchanged. No outcome/BaZi analysis, statistical cross-cohort deduplication or final cohort freeze.
+
+The v5 pending queue53 is now fully read:3 earlyjournal2053-9118 (NA1324/1752/1754) and50 laterjournal1748-8494. All53HTTP200,21S2 accepted,32held,0retry/0new429. Do not repeat them or treat held as unrequested. v3cohort40/v4cohort100/v5attempted12/early32 and enwiki300+66+earlier9 remain covered. The prior wrong-journal coverage gap for the3 early IDs is closed.
+
+Potential next routes, not a new approved sample: the earlier journal selection stopped at official deathyear2021; some remaining window/no-birthplace past fellows have deathyear2022plus and were not covered in these batches. A descriptive candidate CSV is under audit if present. Deaths pre1932 also require a different source route. Existing top3 abstract holds could have full memoirs elsewhere, but do not imply more Crossref queries are useful. Current3 (Chen/Lauritzen/Jerry) already had6 new URLs in v5,3successfulbody,no BP; avoid repetition.
+
+v6 geographic additions:3old holds resolved via explicit source birth-region/context (Whitby England,Scottish-born Glasgow,County Durham);22newfacts=21S2+1S1,12north/10held. Keep56current geographic holds and all alternatives, particularly Home. NA5011 source-name-era note is preserved:1908 birthday precedes Petrograd1914–24 naming; same physical city Q656 is north, no DOB/raw correction. Historical name pair unique-city flag is false for no_unique_geographic_entity_selected, true for unique_city_entity_resolved_from_qualified_historical_name_pair; birthpoint still unassigned.
+
+Crosswalk: current Nobel API2pages1000+28=1028uniqueID yielded only Churchill among this round’s UK unresolved-birthplace targets by exact full name/nativeDOB, rawbirthplaceWoodstock,UnitedKingdom. Full awards/outcome API payloads stay transient; published birth-only projection and rawSHA/meta are auditable. No Nobel/other-country roster changes and no DOB tier upgrade. Other-cohort birthday-only collisions were all rejected. No statistical deduplication was performed.
+
+Network discipline: only one Crossref collector job, single-thread, shared stop marker across journals, min3s start interval, request/after-wait rechecks, stop entire job on429 and capture allheaders/Retry-After. Never run old unpatched workers in parallel. v6 actual minimum4.43s/0new429; its exact-code mock-network guard test is bundled. v5 stop incident remains in v5audit (actual32=16pre/2inflight/14post;18accepted=8/1/9), not erased or re-described as a successful stop. No extra retries/bypass to complete a batch.
+
+Active geography lookup state remains94supported/2legacy-quarantined/3identity-unverified; old9wrong birthplace candidates stay inactive. Use active_geography_lookup_qid; original lookup_qid/wikidata_qid are historical values. Source birthday flags remain frozen during birthplace enrichment. Other countries remain v5unchanged.
+
+Reproduce via README two one-line offline commands. Continue existing draft branch; no merge without separate instruction. Save repo-backed work in Git, export ZIP.

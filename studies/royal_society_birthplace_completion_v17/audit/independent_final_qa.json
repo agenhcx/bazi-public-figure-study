@@ -1,0 +1,342 @@
+{
+  "schema": "UK_v17_independent_final_qa_v1",
+  "reviewer": "/root/v17_final_qa",
+  "written_utc": "2026-11-05T00:35:44.430185+00:00",
+  "checks": [
+    {
+      "check": "Replay Python AST parses",
+      "passed": true
+    },
+    {
+      "check": "Pre-QA hash snapshot contains five outputs",
+      "passed": true
+    },
+    {
+      "check": "Current five outputs equal pre-QA hashes",
+      "passed": true
+    },
+    {
+      "check": "Replay run1 exits zero",
+      "passed": true
+    },
+    {
+      "check": "Replay run1 output five hashes unchanged",
+      "passed": true
+    },
+    {
+      "check": "Replay run2 exits zero",
+      "passed": true
+    },
+    {
+      "check": "Replay run2 output five hashes unchanged",
+      "passed": true
+    },
+    {
+      "check": "Two replays byte-identical to each other",
+      "passed": true
+    },
+    {
+      "check": "Reconstructed v16 all complete objects equal actual v16 output",
+      "passed": true
+    },
+    {
+      "check": "v16 canonical hash equals expected lock",
+      "passed": true
+    },
+    {
+      "check": "Exactly 4983 fixed distinct record IDs",
+      "passed": true
+    },
+    {
+      "check": "Record order unchanged",
+      "passed": true
+    },
+    {
+      "check": "4972 entire objects unchanged and eleven changed",
+      "passed": true
+    },
+    {
+      "check": "Changed row IDs equal exactly eleven accepted IDs",
+      "passed": true
+    },
+    {
+      "check": "Only mutable birthplace/geography old fields changed",
+      "passed": true
+    },
+    {
+      "check": "No old fields removed",
+      "passed": true
+    },
+    {
+      "check": "New keys whitelist only",
+      "passed": true
+    },
+    {
+      "check": "Eleven rollback snapshots restore complete exact baseline objects",
+      "passed": true
+    },
+    {
+      "check": "All native DOB strings unchanged",
+      "passed": true
+    },
+    {
+      "check": "All frozen nonwhitelist fields across all4983 rows exact",
+      "passed": true
+    },
+    {
+      "check": "Frozen DOB-grade fields preserved",
+      "passed": true
+    },
+    {
+      "check": "Frozen QID fields preserved",
+      "passed": true
+    },
+    {
+      "check": "Frozen country/coordinates fields preserved",
+      "passed": true
+    },
+    {
+      "check": "Frozen eligibility/identity/calendar fields preserved",
+      "passed": true
+    },
+    {
+      "check": "Frozen old evidence/hash/official status fields preserved",
+      "passed": true
+    },
+    {
+      "check": "All v15 fact objects preserved",
+      "passed": true
+    },
+    {
+      "check": "All v16 fact objects preserved",
+      "passed": true
+    },
+    {
+      "check": "All11 birthplaces previously blank/unknown",
+      "passed": true
+    },
+    {
+      "check": "All new birthplace grades S2",
+      "passed": true
+    },
+    {
+      "check": "Eleven source DOBs equal native at stated day precision",
+      "passed": true
+    },
+    {
+      "check": "Seven prose plus four structured observations",
+      "passed": true
+    },
+    {
+      "check": "Four structured sources empty quotes with string locators",
+      "passed": true
+    },
+    {
+      "check": "All prose quotations <=25words and nonempty",
+      "passed": true
+    },
+    {
+      "check": "Six North plus five unresolved geography",
+      "passed": true
+    },
+    {
+      "check": "All-table hemisphere counts exact",
+      "passed": true
+    },
+    {
+      "check": "Window2644 counts2269N181S194U",
+      "passed": true
+    },
+    {
+      "check": "Window unknown148blank46nonblank",
+      "passed": true
+    },
+    {
+      "check": "All unknown570blank58nonblank",
+      "passed": true
+    },
+    {
+      "check": "159 frozen blank targets exactly ordered reconstructed v16",
+      "passed": true
+    },
+    {
+      "check": "Fixed8 individual IDs",
+      "passed": true
+    },
+    {
+      "check": "15 reviewed unique IDs within159 including fixed8",
+      "passed": true
+    },
+    {
+      "check": "11accepted4holds exact disjoint reviewed partition",
+      "passed": true
+    },
+    {
+      "check": "Expected four hold identities",
+      "passed": true
+    },
+    {
+      "check": "Bulk159coverage one-to-one equals frozen target IDs",
+      "passed": true
+    },
+    {
+      "check": "Six bound bulk targets four BP two no-BP",
+      "passed": true
+    },
+    {
+      "check": "Four rejected alternative person segments for two targets",
+      "passed": true
+    },
+    {
+      "check": "Bulk actual review8 targets;151remaining",
+      "passed": true
+    },
+    {
+      "check": "ReviewedIDs exactly fixed8 union bulk8, overlapChibnall",
+      "passed": true
+    },
+    {
+      "check": "Bulk four accepted IDs present in main facts",
+      "passed": true
+    },
+    {
+      "check": "Bulk two parts one work/compilers correct",
+      "passed": true
+    },
+    {
+      "check": "Raw request logs two403/no savedPDF",
+      "passed": true
+    },
+    {
+      "check": "Unseen printed pages null for Gemmill/Hardy/Masterman",
+      "passed": true
+    },
+    {
+      "check": "Actual PDF pages recorded357/423/141",
+      "passed": true
+    },
+    {
+      "check": "MainCSV4983rows same record order",
+      "passed": true
+    },
+    {
+      "check": "CSV retains old headers and adds6 v17 headers",
+      "passed": true
+    },
+    {
+      "check": "CSV old values preserved for4972 untargeted rows",
+      "passed": true
+    },
+    {
+      "check": "CSV v15/v16 fact columns unchanged for all4983 rows",
+      "passed": true
+    },
+    {
+      "check": "Unknown windowCSV194rows exact unknownIDs",
+      "passed": true
+    },
+    {
+      "check": "Summary new_birthplaces",
+      "passed": true
+    },
+    {
+      "check": "Summary new_geographic_resolutions",
+      "passed": true
+    },
+    {
+      "check": "Summary new_birthplaces_with_unresolved_geography",
+      "passed": true
+    },
+    {
+      "check": "Summary unchanged_complete_rows",
+      "passed": true
+    },
+    {
+      "check": "Summary actual_unique_reviewed_records",
+      "passed": true
+    },
+    {
+      "check": "Summary followup_held_records",
+      "passed": true
+    },
+    {
+      "check": "Summary fixed_individual_source_followups",
+      "passed": true
+    },
+    {
+      "check": "No originalHTML/PDF/images distributed",
+      "passed": true
+    },
+    {
+      "check": "No source projection cache distributed",
+      "passed": true
+    },
+    {
+      "check": "SourceQA no blockers",
+      "passed": true
+    },
+    {
+      "check": "Prose/source requestcounts reconcile16queries24webnav23original1secondary+2rawGET162find",
+      "passed": true,
+      "reviewer": "/root/v17_final_qa/prose_counts"
+    },
+    {
+      "check": "Prose reviewed15 equals8individual+8bulk−1overlap and11accepted4holds",
+      "passed": true,
+      "reviewer": "/root/v17_final_qa/prose_counts"
+    },
+    {
+      "check": "Prose distinguishes159searches from6boundentryplus4alternative-personentrysegments and151remainingprojections",
+      "passed": true,
+      "reviewer": "/root/v17_final_qa/prose_counts"
+    },
+    {
+      "check": "Prose preservesunknownrawHTTPmetadata and bothactual403logs without200claim",
+      "passed": true,
+      "reviewer": "/root/v17_final_qa/prose_counts"
+    },
+    {
+      "check": "Prose sourcebookonecompiledwork/twoparts and nofirsthandbirthregisterupgrade",
+      "passed": true,
+      "reviewer": "/root/v17_final_qa/prose_counts"
+    },
+    {
+      "check": "Prose nullunobservedprintedpages/PDFpagelocatorswithoutoffsetguess",
+      "passed": true,
+      "reviewer": "/root/v17_final_qa/prose_counts"
+    },
+    {
+      "check": "Prose retainsDudleyFRSyearinconsistency/MooreunrelatedcaveatwithoutDOBorqualificationrepair",
+      "passed": true,
+      "reviewer": "/root/v17_final_qa/prose_counts"
+    },
+    {
+      "check": "Prose originalDOBtiers/sourcebirthplacegradesseparate and noothercohortoroutcomeanalysis",
+      "passed": true,
+      "reviewer": "/root/v17_final_qa/prose_counts"
+    }
+  ],
+  "check_count": 76,
+  "blocking_findings": [],
+  "output_sha256": {
+    "birthplace_rows.jsonl.gz": "11edf3cd53874dbce4c93db913a9a2ef4c7eed8088097bf60bfb2dd1b9fb976b",
+    "birthplaces.csv": "a2c9c3827a9e4e1e979b8f2b25c3dd19e39f97de1555d8db0f21f909b3af1ce3",
+    "changes.json": "829e0fa0986fd2e07f9949900a1834cc72c388df968fdca535d74076f6ff5e54",
+    "remaining_unknown_window.csv": "a3adb214e4ead4c2c7ef33a4abf6e3930430d6e3d0def00190c8ccac9dc4dc97",
+    "summary.json": "47c0cb918d97631554a06d3c3b7d53c7156d558a7946d0fbb1149a66f7fa5d03"
+  },
+  "validation_limits": [
+    "No new network source acquisition; source identity and original observations reviewed through source audit.",
+    "Manifest and ZIP not yet created, so not verified by this QA.",
+    "Generated __pycache__ is excluded from distribution scope and must be excluded by packager.",
+    "Main replay deterministic/self-contained; original source acquisition and159-query screening are not rerun by replay."
+  ],
+  "prose_counts_review_pending": false,
+  "nonblocking_findings": [
+    {
+      "file": "audit/sources_b.json",
+      "issue": "Historical worker source_quote_word_count for Merton is8; actual whitespace-delimited quote has7words. Independent source QA correctly records7.",
+      "effect": "No effect on <=25-word policy, identity, adoption, facts or generated output. Worker observation preserved rather than silently edited."
+    }
+  ]
+}

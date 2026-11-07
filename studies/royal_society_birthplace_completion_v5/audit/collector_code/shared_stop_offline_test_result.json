@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "tested_utc": "2026-11-02T13:22:24.187425+00:00",
+  "test_type": "Exact patched collector bytes copied into isolated temporary fixtures and executed with urllib opener and socket connections mocked",
+  "patched_collector_sha256": "dd69dec954ff69565a3b32cd865b013e656b78d138790fe2466970bfa8d01e7a",
+  "as_run_collector_sha256_unchanged": "418ea942caa5534a77a515b3564d4d5bf3b2ff8d8244d20552f14ec15081ed87",
+  "test_script_sha256": "733e61d2f540983dbc8c903a21308e0093746b8beeba86177015634c6e21a7cb",
+  "real_network_requests": 0,
+  "socket_connection_attempts": 0,
+  "cases": [
+    {
+      "case": "shared_marker_already_exists",
+      "status": "PASS",
+      "fake_urlopen_calls": 0,
+      "not_attempted_rows": 3
+    },
+    {
+      "case": "local_marker_already_exists",
+      "status": "PASS",
+      "fake_urlopen_calls": 0,
+      "not_attempted_rows": 3
+    },
+    {
+      "case": "fake_429_writes_shared_marker_and_stops_queue",
+      "status": "PASS",
+      "fake_urlopen_calls": 1,
+      "attempted_rows": 1,
+      "not_attempted_rows": 2,
+      "shared_marker_created": true
+    },
+    {
+      "case": "fresh_peer_observes_previous_worker_429_marker",
+      "status": "PASS",
+      "fake_urlopen_calls": 0,
+      "not_attempted_rows": 3
+    },
+    {
+      "case": "shared_marker_arrives_during_gate_wait",
+      "status": "PASS",
+      "fake_urlopen_calls": 1,
+      "attempted_rows": 1,
+      "not_attempted_rows": 2,
+      "external_stop_rechecked_after_interval": true
+    }
+  ],
+  "scope_limit": "These offline tests exercise existing shared/local markers, a simulated HTTP429, queued work, fresh peer recognition and an external stop arriving during the interval gate wait. They do not claim the earlier as-run process stopped correctly or validate live service behavior."
+}

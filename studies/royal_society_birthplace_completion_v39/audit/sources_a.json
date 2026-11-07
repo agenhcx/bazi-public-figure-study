@@ -1,0 +1,289 @@
+{
+  "written_utc": "2026-11-07T01:27:51.068348+00:00",
+  "group": "a",
+  "phase": "canonical_community_reference_geography_method_application",
+  "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+  "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+  "method_application_scope_sha256": "cc12b3159a035064dbde6a35e0778642fdb25d988e9e399617b216062127b17e",
+  "current_method_application_scope_audit_path": "audit/method_application_scope_v39.json",
+  "intent_file": "v39_a_intent.json",
+  "full2nativeobjects/priorholdsbeforequeries": true,
+  "prior_context_review": {
+    "full_scope_objects_read": true,
+    "all9issueinventories_read_before_queries": true,
+    "active_DOB_count": 13,
+    "partial_birthplace_count": 2,
+    "source_derived_age_count": 2,
+    "separate_Ewins_Barber_holds_read": true,
+    "individual_prior_holds_read": [
+      "prior_v13_holds.json:Pollock/Rimington",
+      "prior_v32_holds.json:Pollock/Rimington",
+      "prior_v11_holds.json:Ewins",
+      "prior_v12_holds.json:Barber"
+    ],
+    "inventory_file_pins": {
+      "active_source_DOB_conflicts.json": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+      "provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+      "source_derived_age_inconsistencies.json": "e095513676cfd206a684328fa925d7c201f045e8f0b919ca2143b5dde4293fa0",
+      "lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+      "cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+      "birthplace_source_conflicts.json": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+      "source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+      "omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+      "source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+    }
+  },
+  "intent_writes_validated_exit0_separately_beforeweb": true,
+  "retrieval_counts": {
+    "queries": 4,
+    "navigation_attempts": 2,
+    "source_open_operations": 2,
+    "click_operations": 0,
+    "parsed_finds": 0,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "query_ledger": [
+    {
+      "written_utc": "2026-11-07T01:26:15.755814+00:00",
+      "operation": "query",
+      "engine": "system2",
+      "record_id": "RS_PAST_NA1513",
+      "query": "\"Martin Rivers Pollock\" site:wikipedia.org",
+      "purpose": "Locate first actual canonical original community person body; projections discovery only; full native components, exact unchanged DOB, compatible lifespan/career and frozen born-place binding required.",
+      "result_refs": [
+        "turn5093125search0"
+      ]
+    },
+    {
+      "written_utc": "2026-11-07T01:26:15.755820+00:00",
+      "operation": "query",
+      "engine": "system2",
+      "record_id": "RS_PAST_NA2111",
+      "query": "\"Claude Rimington\" site:wikipedia.org",
+      "purpose": "Locate first actual canonical original community person body; projections discovery only; full native components, exact unchanged DOB, compatible lifespan/career and frozen born-place binding required.",
+      "result_refs": []
+    },
+    {
+      "written_utc": "2026-11-07T01:26:30.088149+00:00",
+      "operation": "query",
+      "engine": "system1",
+      "record_id": "RS_PAST_NA1513",
+      "query": "\"Martin Pollock\" Wikipedia",
+      "purpose": "Fill routine-engine canonical-person discovery coverage gap; different engine query, not failed-work body retry; no projection adoption.",
+      "result_refs": [
+        "turn8856749search0",
+        "turn8856749search1",
+        "turn8856749search5",
+        "turn8856749search6"
+      ]
+    },
+    {
+      "written_utc": "2026-11-07T01:26:30.088162+00:00",
+      "operation": "query",
+      "engine": "system1",
+      "record_id": "RS_PAST_NA2111",
+      "query": "\"Claude Rimington\" Wikipedia",
+      "purpose": "Fill routine-engine canonical-person discovery coverage gap; different engine query, not failed-work body retry; no projection adoption.",
+      "result_refs": [
+        "turn8856749search2",
+        "turn8856749search3",
+        "turn8856749search4",
+        "turn8856749search7",
+        "turn8856749search8",
+        "turn8856749search9"
+      ]
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "written_utc": "2026-11-07T01:26:57.717586+00:00",
+      "operation": "open",
+      "record_id": "RS_PAST_NA1513",
+      "url": "https://www.wikidata.org/wiki/Q21166663",
+      "discovery_provenance": "v39_scope_a.json actual frozen lookup_qid; lookup_identity_provenance accepted_exact_dob_final_v1.csv cohort_key+record_id; not a guessed QID",
+      "purpose": "First current canonical Wikidata actual person body; all native components/exact DOB/career/lifespan required before any actual P19/P131 path. Prior supplement no-value P19 is retained, no contradiction claimed. First failure/textless/challenge closes work without variants.",
+      "result_ref": "turn5509620view0",
+      "outcome": "tool reports URL not accessible; no actual graph statements acquired; work closed no retry"
+    },
+    {
+      "written_utc": "2026-11-07T01:26:57.717602+00:00",
+      "operation": "open",
+      "record_id": "RS_PAST_NA2111",
+      "url": "https://www.wikidata.org/wiki/Q18576001",
+      "discovery_provenance": "v39_scope_a.json actual frozen lookup_qid; lookup_identity_provenance accepted_exact_dob_final_v1.csv cohort_key+record_id; not a guessed QID",
+      "purpose": "First current canonical Wikidata actual person body; all native components/exact DOB/career/lifespan required before any actual P19/P131 path. Prior supplement no-value P19 is retained, no contradiction claimed. First failure/textless/challenge closes work without variants.",
+      "result_ref": "turn5509620view1",
+      "outcome": "tool reports URL not accessible; no actual graph statements acquired; work closed no retry"
+    }
+  ],
+  "parsed_find_ledger": [],
+  "candidates": [],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA1513",
+      "native": {
+        "record_id": "RS_PAST_NA1513",
+        "authority_name": "Pollock; Martin Rivers (1914 - 1999)",
+        "native_dob": "1914-12-10",
+        "raw_birthplace": "Liverpool",
+        "birthplace_source_grade": "S2",
+        "hemisphere": "unknown"
+      },
+      "status": "hold_no_new_qualified_geographic_support",
+      "hold_type": "canonical_Wikipedia_person_not_discovered_and_current_Wikidata_first_body_unavailable",
+      "reason": "Bounded four-query group pass did not discover an actual canonical Wikipedia person article for this subject. First current canonical Wikidata URL from actually stored frozen lookup_qid was inaccessible through the tool, so no current subject body/full-name/DOB/career/lifespan/P19 or P131 statement acquired. Work closed without variants or raw GET. Preserve all frozen geography and prior individual holds.",
+      "source_url": "https://www.wikidata.org/wiki/Q21166663",
+      "source_ref": "turn5509620view0",
+      "source_body_ref": null,
+      "source_kind": "canonical_Wikidata_actual_person_and_place_statements_attempt_only_unacquired",
+      "source_grade_adopted": null,
+      "source_grade_role_if_acquired": "geographic_support_only",
+      "proof_mode": null,
+      "proof_chain": [],
+      "geography_decision": "unchanged_unknown",
+      "reviewed_hemisphere": null,
+      "source_quote": null,
+      "source_quote_word_count": 0,
+      "source_exact_native_month_day_confirmed": false,
+      "native_death_endpoint_confirmed_by_source": false,
+      "identity_binding_acquired": false,
+      "birthplace_relation_verified": false,
+      "new_conflict_observed": false,
+      "current_P19_absence_verified": false,
+      "prior_supplement_no_value_P19_retained_as_history_only": true,
+      "new_actual_body_acquired": false,
+      "tool_reported_error": "URL is not accessible via this tool",
+      "raw_HTTP_status": null,
+      "source_capture_kind": "web-tool error representation only; no source body or raw HTTP bytes",
+      "acquisition_role": "first_current_canonical_Wikidata_graph_open_attempt_using_actual_frozen_lookup_qid",
+      "discovery_provenance": "v39_scope_a.json lookup_qid and original cohort_key+record_id lookup_identity_provenance; QID not guessed and no personal QID field assigned",
+      "prior_holds_preserved": [
+        "prior_v13_holds.json",
+        "prior_v32_holds.json"
+      ],
+      "native_DOB_source_grade_unchanged": true,
+      "original_birthplace_fields_and_source_grades_unchanged": true,
+      "no_master_change": true,
+      "caveats": [
+        "No actual canonical person source was acquired; unacquired search projection is not full identity or birth-place proof.",
+        "Search absence is bounded discovery outcome, not a claim no article exists globally.",
+        "No failed original archive/memoir/Independent/Guardian/ODNB work reopened, no mirror or rewritten-summary promoted.",
+        "Prior no-value P19 is historical; this failed open cannot verify current graph completeness, rank or absence.",
+        "All 13 active DOB holds, two partial global birthplace holds, separate Ewins/Barber holds and Waterfield/Spath age observations remain binding."
+      ],
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "source_calendar_model": null,
+      "source_statement_rank": null,
+      "source_revision_id": null,
+      "source_revision_utc": null,
+      "source_editorial_validation": null,
+      "source_informational_independence": null
+    },
+    {
+      "record_id": "RS_PAST_NA2111",
+      "native": {
+        "record_id": "RS_PAST_NA2111",
+        "authority_name": "Rimington; Claude (1902 - 1993)",
+        "native_dob": "1902-11-17",
+        "raw_birthplace": "London",
+        "birthplace_source_grade": "S2",
+        "hemisphere": "unknown"
+      },
+      "status": "hold_no_new_qualified_geographic_support",
+      "hold_type": "canonical_Wikipedia_person_not_discovered_and_current_Wikidata_first_body_unavailable",
+      "reason": "Bounded four-query group pass did not discover an actual canonical Wikipedia person article for this subject. First current canonical Wikidata URL from actually stored frozen lookup_qid was inaccessible through the tool, so no current subject body/full-name/DOB/career/lifespan/P19 or P131 statement acquired. Work closed without variants or raw GET. Preserve all frozen geography and prior individual holds.",
+      "source_url": "https://www.wikidata.org/wiki/Q18576001",
+      "source_ref": "turn5509620view1",
+      "source_body_ref": null,
+      "source_kind": "canonical_Wikidata_actual_person_and_place_statements_attempt_only_unacquired",
+      "source_grade_adopted": null,
+      "source_grade_role_if_acquired": "geographic_support_only",
+      "proof_mode": null,
+      "proof_chain": [],
+      "geography_decision": "unchanged_unknown",
+      "reviewed_hemisphere": null,
+      "source_quote": null,
+      "source_quote_word_count": 0,
+      "source_exact_native_month_day_confirmed": false,
+      "native_death_endpoint_confirmed_by_source": false,
+      "identity_binding_acquired": false,
+      "birthplace_relation_verified": false,
+      "new_conflict_observed": false,
+      "current_P19_absence_verified": false,
+      "prior_supplement_no_value_P19_retained_as_history_only": true,
+      "new_actual_body_acquired": false,
+      "tool_reported_error": "URL is not accessible via this tool",
+      "raw_HTTP_status": null,
+      "source_capture_kind": "web-tool error representation only; no source body or raw HTTP bytes",
+      "acquisition_role": "first_current_canonical_Wikidata_graph_open_attempt_using_actual_frozen_lookup_qid",
+      "discovery_provenance": "v39_scope_a.json lookup_qid and original cohort_key+record_id lookup_identity_provenance; QID not guessed and no personal QID field assigned",
+      "prior_holds_preserved": [
+        "prior_v13_holds.json",
+        "prior_v32_holds.json"
+      ],
+      "native_DOB_source_grade_unchanged": true,
+      "original_birthplace_fields_and_source_grades_unchanged": true,
+      "no_master_change": true,
+      "caveats": [
+        "No actual canonical person source was acquired; unacquired search projection is not full identity or birth-place proof.",
+        "Search absence is bounded discovery outcome, not a claim no article exists globally.",
+        "No failed original archive/memoir/Independent/Guardian/ODNB work reopened, no mirror or rewritten-summary promoted.",
+        "Prior no-value P19 is historical; this failed open cannot verify current graph completeness, rank or absence.",
+        "All 13 active DOB holds, two partial global birthplace holds, separate Ewins/Barber holds and Waterfield/Spath age observations remain binding."
+      ],
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "source_calendar_model": null,
+      "source_statement_rank": null,
+      "source_revision_id": null,
+      "source_revision_utc": null,
+      "source_editorial_validation": null,
+      "source_informational_independence": null
+    }
+  ],
+  "discovery_only_sources": [
+    {
+      "record_id": "RS_PAST_NA1513",
+      "ref": "turn5093125search0",
+      "url": "https://en.wikipedia.org/wiki/List_of_fellows_of_the_Royal_Society_P%2C_Q%2C_R",
+      "finding": "Fellow list projection only, no subject person article born-region proof acquired; not opened."
+    },
+    {
+      "record_id": "RS_PAST_NA1513",
+      "refs": [
+        "turn8856749search0",
+        "turn8856749search1",
+        "turn8856749search5",
+        "turn8856749search6"
+      ],
+      "finding": "Original archive/old Guardian and unrelated modern artist/archival objects; no discovered canonical person body, no source text copied, no failed-work retry."
+    },
+    {
+      "record_id": "RS_PAST_NA2111",
+      "refs": [
+        "turn8856749search2",
+        "turn8856749search3",
+        "turn8856749search4",
+        "turn8856749search7",
+        "turn8856749search8",
+        "turn8856749search9"
+      ],
+      "finding": "Royal Society/pubmed and surname/disambiguation projections; no subject canonical person body discovered, none promoted or opened."
+    }
+  ],
+  "quote_ledger": {
+    "new_work_quotes": [],
+    "new_quoted_words": 0,
+    "historical_scope_quotes_preserved_in_native_objects_only": true,
+    "per_work_limit_words": 25,
+    "no_full_HTML_JSON_PDF_images_or_projection_caches_created": true
+  },
+  "bounded_pass_complete": true,
+  "source_exhausted": false,
+  "final_freeze": false,
+  "repo_master_or_git_modified": false,
+  "method_amendment_created": false,
+  "scope_application_extension": true
+}

@@ -1,0 +1,75 @@
+{
+  "written_utc": "2026-11-06T11:00:06.212998+00:00",
+  "intent_file": "root_intent.json",
+  "counts": {
+    "discovery_queries": 0,
+    "source_open_operations": 5,
+    "parsed_finds": 1,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "observations": [
+    {
+      "record_id": "RS_PAST_NA1951",
+      "ref": "turn4785273view0",
+      "locator": "L0-14@P0-1fulltitle/life1903-1989/HaywardHarper/NCUACS1999;L53@P5fullWilliamKenneth/directborn1903-10-30/AssamIndia;L62-68gaschemicalcareer;L113-115@P7death1989-11-28/FRS1966;L141-143@P8authors/Bath1999.",
+      "status": "original_primary_body_verified",
+      "adopted": true
+    },
+    {
+      "record_id": "RS_PAST_NA2016",
+      "ref": "turn5681114view0",
+      "locator": "Cachedturn1702327view0L757fullGeoffreyMorse/life1908-1989/L761AlanMuirWood/L775pub2004-09-23/L777directbornKensington/exact1908-11-13/L779-781distinctivecivilengineeringcareer.",
+      "status": "original_primary_body_verified",
+      "adopted": true
+    },
+    {
+      "record_id": "RS_PAST_NA1994",
+      "ref": "turn1731107view0",
+      "locator": "WorkeroriginalPDFL148-149@PDF6issue148/Feb1969;L196-199MinistryofTechnologypressreleaseattribution;L217-223fullNormanLaurence/exact1924-09-01/directLeeds;L224-247UKAEAcareer. Laterrootfirstattemptturn5681114view1timedout; no rootbodyproof.",
+      "status": "worker_primary_body_verified_root_later_first_attempt_timeout_stopped",
+      "adopted": true
+    },
+    {
+      "record_id": "RS_PAST_NA2005",
+      "ref": "turn5681114view2",
+      "locator": "L166lotidentity;L169fullHenryEdward/exact1887-04-15/directDhariwalIndia;L171parasitologycareer/death1987-11-09/ordinalagephrase. SeparateWellcometurn5681114view3L0full/life/L45PunjabApril1887monthonly/L46-48career/L47deathyear1987.",
+      "status": "original_primary_body_verified",
+      "adopted": true
+    },
+    {
+      "record_id": "RS_PAST_NA2005",
+      "ref": "turn5681114view3",
+      "status": "additionalWellcomeoriginalmonthonlyPunjab_verified_separatewording",
+      "adopted_as_primary": false
+    }
+  ],
+  "failed_attempts": [
+    {
+      "record_id": "RS_PAST_NA1994",
+      "ref": "turn5681114view1",
+      "actual_tool_result": "(400) Timeout fetching",
+      "raw_HTTP_status": null,
+      "retried": false
+    }
+  ],
+  "cached_find_results": [
+    {
+      "ref": "turn1702327view0",
+      "outcome": "BinnieactualODNBpublicExtract/fullnative/exactDOB/bornKensington/byline/pubdate"
+    }
+  ],
+  "quote_words_by_original_work": {
+    "HutchisonNCUACS": 9,
+    "BinnieODNB": 8,
+    "FranklinATOM": 8,
+    "FranklinIChemE": 7,
+    "ShorttNoonans_born": 9,
+    "ShorttNoonans_ordinal": 4,
+    "ShorttWellcome": 7
+  },
+  "raw_HTTP_status": null,
+  "raw_bytes_sha256": null,
+  "exact_request_utc": null,
+  "no_original_caches_or_images_distributed": true
+}

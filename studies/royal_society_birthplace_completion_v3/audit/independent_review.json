@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "baseline_rows": 4983,
+  "all_preexisting_non_geography_fields_equal": true,
+  "hemisphere_counts": {
+    "north": 4081,
+    "unknown": 722,
+    "south": 180
+  },
+  "window_1835_1985_counts": {
+    "north": 2184,
+    "unknown": 285,
+    "south": 175
+  },
+  "new_unknown_to_known": 135,
+  "known_to_unknown": [
+    "RS_CURRENT_11487",
+    "RS_CURRENT_37377"
+  ],
+  "geo75_classified": 50,
+  "new_facts": 113,
+  "new_facts_distinct_people": 105,
+  "new_fact_people_classified": 85,
+  "quarantined_current_qid_links": 23,
+  "quarantined_geographic_candidates": 9,
+  "other_country_rows_exactly_unchanged": true,
+  "home_alternatives_retained_and_hemisphere_unknown": true,
+  "metadata_note": "Home discrepancy flag now correctly propagates to the top-level row; field and body alternatives are retained and the hemisphere remains unknown.",
+  "inputs_sha256": {
+    "studies/royal_society_birthplace_completion_v3/outputs/uk_birthplace_rows.jsonl.gz": "550faaf8314b3597a7000ae093fe296c9fefe7795a125c811ae2db65916470e2",
+    "studies/royal_society_birthplace_completion_v3/outputs/summary.json": "471f595949d6fa8e8681b896a87f2820bf0489acccf1be6d7ac0af823497dd72",
+    "studies/royal_society_birthplace_completion_v3/scripts/assemble.py": "93b70c6b3913c9975c9a4946e5031cc5198cc6de53ac07adb10ed7076be8943b"
+  }
+}

@@ -1,0 +1,271 @@
+{
+  "schema": "UK_v28_sources_a_v1",
+  "worker": "/root/v26_sources_a continued asassignedv28sourceA",
+  "written_utc": "2026-11-06T11:20:09.893487+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA2092",
+    "RS_PAST_NA2121",
+    "RS_PAST_NA2133",
+    "RS_PAST_NA2245"
+  ],
+  "intent_file": "v28_a_intent.json",
+  "counts": {
+    "discovery_queries": 8,
+    "web_navigation_attempts": 5,
+    "parsed_find_operations": 2,
+    "screenshots": 0,
+    "raw_HTTP_or_PDF_GETs": 0,
+    "body_verified_birthplace_candidates": 0,
+    "holds": 4,
+    "new_active_DOB_conflicts": 0,
+    "unused_navigation_budget": 5
+  },
+  "budgets": {
+    "discovery_queries": 8,
+    "web_navigation_attempts": 10
+  },
+  "candidates": [],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA2092",
+      "native": {
+        "record_id": "RS_PAST_NA2092",
+        "authority_name": "Sawicki; Roman Mieczyslaw (1930 - 1990)",
+        "native_dob": "1930-04-20",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "2eb2b511cb24baee7654bee098d33d8553fb5c4527f7de1e82bab4b488c0db93"
+      },
+      "status": "hold_originalscientificmemoir_access_gap",
+      "hold_type": "no_acquired_original_bornplace_body",
+      "reason": "SearchprojectionofauthoredscientificmemoirgivesfullRomanMieczyslawSawicki/exact20April1930/life1930–1990/FRS1987/insecticideresistancecareer/bylineI.Denholm/M.ElliottandWilnoPolandplacelead. ActualoriginalPDFopenfailedrestrictedURL; nooriginalbody/image/rawbytesacquired. Projectionparsedbomnotvisuallyverified/corrected/quoted; no literalbornprooforplace/hemisphereadoption. NativeDOBunchanged.",
+      "source_url": "https://repository.rothamsted.ac.uk/id/eprint/7802/1/397.full.pdf",
+      "source_ref": "turn9545765view0",
+      "unverified_search_projection_ref": "turn1835791search5",
+      "unadopted_place_lead": "Wilno in Poland",
+      "source_grade_adopted": null,
+      "held_raw_birthplace": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "native_unchanged": true
+    },
+    {
+      "record_id": "RS_PAST_NA2121",
+      "native": {
+        "record_id": "RS_PAST_NA2121",
+        "authority_name": "Binnie; Alfred Maurice (1901 - 1986)",
+        "native_dob": "1901-02-06",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "b7aebf7583c93dc16cc161bd6061bf8e5ce8dcfc66f7b3ea687ea4ee332dc951"
+      },
+      "status": "hold_originalmemorial_oversize_and_no_birthplaceproof",
+      "hold_type": "originalsource_access_and_birthplace_evidence_gap",
+      "reason": "SearchprojectionofAlpineJournalmemorialnamesfullAlfredMauriceBinnie/exact6February1901/life1901–1986andengineering/Cambridgecareerbuttheexcerptonlystatesborn-date,nobirthplace. OriginalPDFtoolrejected12,014,449bytesasoversize; stopped. AlternativeAlpinwiki/searchcopiesandWikipedialistexact7Februarydateprojectionnotoriginalbiographicalbornbody, noadoptionornewconfirmedDOBconflict. SchoolWeymouth/Cambridge/workOxfordandmountaintravelnotbirthplace.",
+      "source_url": "https://www.alpinejournal.org.uk/Contents/Contents_1988-89_files/AJ%201988%20305-328%20In%20Memoriam.pdf",
+      "source_ref": "turn9545765view1",
+      "unverified_search_projection_ref": "turn1835791search6",
+      "source_grade_adopted": null,
+      "held_raw_birthplace": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "native_unchanged": true
+    },
+    {
+      "record_id": "RS_PAST_NA2133",
+      "native": {
+        "record_id": "RS_PAST_NA2133",
+        "authority_name": "Powell; Thomas Philip Stroud (1923 - 1996)",
+        "native_dob": "1923-07-13",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "410d35caca81a9d22ebdb36897fecbe274f44f228784f5885ed6313b8902c220"
+      },
+      "status": "hold_originalbibliographicmetadata_only_no_bornplace_body",
+      "hold_type": "memoir_fulltext_unavailable_from_observedmetadata",
+      "reason": "AcquiredoriginalPubMedrecordnamesfullThomasPhilipStroudPowell/exact13July1923–8February1996inmemoirtitle/authoredR.W.Guillery/1997vol43pp411–427. This ismetadata,notactualmemoirbiographicalbody,anddoesnotassertbirthplace. CachedfindsfoundnoDOI/Fulltextlinks. Wikilistsearchprojection14Julyisnotacquiredoriginalbornline/newqualifieddateconflict. No nationality/MeSHjournalcountry inferredasbirthcountry.",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/11619981/",
+      "source_ref": "turn9545765view3",
+      "source_locator": "L168–199 fullmemoirtitle/author/metadata; cachedfindturn1134866view1noFulltextlinksmatch;turn1134866view2noDOImatch.",
+      "observed_source_full_name": "Thomas Philip Stroud Powell",
+      "source_birthdate": "1923-07-13",
+      "source_birthdate_precision": "exact_day_in_originalbibliographic_memoir_title_only_not_biographical_born_clause",
+      "source_grade_adopted": null,
+      "held_raw_birthplace": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "native_unchanged": true
+    },
+    {
+      "record_id": "RS_PAST_NA2245",
+      "native": {
+        "record_id": "RS_PAST_NA2245",
+        "authority_name": "Sykes; Sir; Charles (1905 - 1982)",
+        "native_dob": "1905-02-27",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "77ba6108a168e4d4ed0be6e88b7e492b76f942497c91657e703b2bce31d92b7a"
+      },
+      "status": "hold_cited_original_ODNB_article_not_acquired_encyclopedia_context_only",
+      "hold_type": "original_source_gap_after_non_subject_redirect",
+      "reason": "AcquiredencyclopediapagefullynamesSirCharlesSykes/exact27February1905–29January1982/metallurgy/Sheffield/MetropolitanVickers/FRS1943andexplicitbornClowneDerbyshire. CitedODNBarticlelinkredirectedgenericODNBhomepagewithoutsubjectbody. Conservativeholdpendingactualoriginalcitedbiography; no attributionoftheWikipediawordingtoODNB,nogradeupgradeorclaimindependentorigins. Originalencyclopediaobservationretainedforparentpolicydecision, notsilentlydiscarded.",
+      "source_url": "https://en.wikipedia.org/wiki/Charles_Sykes_%28metallurgist%29",
+      "source_ref": "turn9545765view2",
+      "source_locator": "L105 fullSirCharlesSykes/exactnativeDOB/lifespan;L106 directClowneDerbyshirebirth/school/scientificcareer;L108–113 FRS1943andmetallurgycareer/death;L127citedODNBarticlelink54.",
+      "observed_source_full_name": "Charles Sykes",
+      "source_birthdate": "1905-02-27",
+      "source_birthdate_precision": "exact_day_in_acquired_encyclopedia_lead_only",
+      "source_DOB_matches_native": true,
+      "unadopted_original_encyclopedia_born_place": "Clowne, Derbyshire",
+      "source_quote": "He was born in Clowne, Derbyshire",
+      "source_quote_word_count": 6,
+      "source_grade_adopted": null,
+      "held_raw_birthplace": null,
+      "cited_original_url": "https://www.oxforddnb.com/index/101031743/Charles-Sykes",
+      "cited_original_retrieval_ref": "turn1134866view0",
+      "cited_original_final_url": "https://academic.oup.com/oxford-dictionary-of-national-biography",
+      "cited_original_body_acquired": false,
+      "native_unchanged": true
+    }
+  ],
+  "new_active_DOB_conflicts": [],
+  "query_ledger": [
+    {
+      "query_index": 1,
+      "engine": "system2",
+      "query": "\"Roman Mieczyslaw Sawicki\" born",
+      "response_ref_prefix": "turn3274205search",
+      "intent_note": "Initialfourwordingsprewritten; adaptivequeries5–8coveredbypriorgeneralintentbutexactwordingschosenafterinitialobservation. No falseclaimallwordingsprewritten; exactrequestUTCunknown."
+    },
+    {
+      "query_index": 2,
+      "engine": "system2",
+      "query": "\"Alfred Maurice Binnie\" born",
+      "response_ref_prefix": "turn3274205search",
+      "intent_note": "Initialfourwordingsprewritten; adaptivequeries5–8coveredbypriorgeneralintentbutexactwordingschosenafterinitialobservation. No falseclaimallwordingsprewritten; exactrequestUTCunknown."
+    },
+    {
+      "query_index": 3,
+      "engine": "system2",
+      "query": "\"Thomas Philip Stroud Powell\" born",
+      "response_ref_prefix": "turn3274205search",
+      "intent_note": "Initialfourwordingsprewritten; adaptivequeries5–8coveredbypriorgeneralintentbutexactwordingschosenafterinitialobservation. No falseclaimallwordingsprewritten; exactrequestUTCunknown."
+    },
+    {
+      "query_index": 4,
+      "engine": "system2",
+      "query": "\"Charles Sykes\" \"1905\" born",
+      "response_ref_prefix": "turn3274205search",
+      "intent_note": "Initialfourwordingsprewritten; adaptivequeries5–8coveredbypriorgeneralintentbutexactwordingschosenafterinitialobservation. No falseclaimallwordingsprewritten; exactrequestUTCunknown."
+    },
+    {
+      "query_index": 5,
+      "engine": "system1",
+      "query": "\"Roman Mieczyslaw Sawicki\" \"1930\"",
+      "response_ref_prefix": "turn1835791search",
+      "intent_note": "Initialfourwordingsprewritten; adaptivequeries5–8coveredbypriorgeneralintentbutexactwordingschosenafterinitialobservation. No falseclaimallwordingsprewritten; exactrequestUTCunknown."
+    },
+    {
+      "query_index": 6,
+      "engine": "system1",
+      "query": "\"Alfred Maurice Binnie\" \"born\" \"1901\"",
+      "response_ref_prefix": "turn1835791search",
+      "intent_note": "Initialfourwordingsprewritten; adaptivequeries5–8coveredbypriorgeneralintentbutexactwordingschosenafterinitialobservation. No falseclaimallwordingsprewritten; exactrequestUTCunknown."
+    },
+    {
+      "query_index": 7,
+      "engine": "system1",
+      "query": "\"Thomas Philip Stroud Powell\" \"born\" \"1923\"",
+      "response_ref_prefix": "turn1835791search",
+      "intent_note": "Initialfourwordingsprewritten; adaptivequeries5–8coveredbypriorgeneralintentbutexactwordingschosenafterinitialobservation. No falseclaimallwordingsprewritten; exactrequestUTCunknown."
+    },
+    {
+      "query_index": 8,
+      "engine": "system1",
+      "query": "\"Charles Sykes\" metallurgist born",
+      "response_ref_prefix": "turn1835791search",
+      "intent_note": "Initialfourwordingsprewritten; adaptivequeries5–8coveredbypriorgeneralintentbutexactwordingschosenafterinitialobservation. No falseclaimallwordingsprewritten; exactrequestUTCunknown."
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "attempt": 1,
+      "subject": "RS_PAST_NA2092",
+      "url": "https://repository.rothamsted.ac.uk/id/eprint/7802/1/397.full.pdf",
+      "ref": "turn9545765view0",
+      "outcome": "Failed to fetch: Failed to fetch restricted URL; stopped; no alternatecarrier/format/retry/rawGET"
+    },
+    {
+      "attempt": 2,
+      "subject": "RS_PAST_NA2121",
+      "url": "https://www.alpinejournal.org.uk/Contents/Contents_1988-89_files/AJ%201988%20305-328%20In%20Memoriam.pdf",
+      "ref": "turn9545765view1",
+      "outcome": "Failed to fetch:(400)Content length is too large:12014449; stopped; no alternatecarrier/format/retry/rawGET"
+    },
+    {
+      "attempt": 3,
+      "subject": "RS_PAST_NA2245",
+      "url": "https://en.wikipedia.org/wiki/Charles_Sykes_%28metallurgist%29",
+      "ref": "turn9545765view2",
+      "outcome": "Original encyclopedia page acquired; explicitClowneDerbyshirebornclause/nativeexactDOB/career, but originalcitedODNBbiography notyetacquired; retainedasencyclopedicdiscoverycontextonly"
+    },
+    {
+      "attempt": 4,
+      "subject": "RS_PAST_NA2133",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11619981/",
+      "ref": "turn9545765view3",
+      "outcome": "OriginalPubMedbibliographicmetadataacquired; memoirfulltext/bornplaceabsent"
+    },
+    {
+      "attempt": 5,
+      "subject": "RS_PAST_NA2245",
+      "url": "https://www.oxforddnb.com/index/101031743/Charles-Sykes",
+      "operation": "click(turn9545765view2,id54)",
+      "ref": "turn1134866view0",
+      "outcome": "Redirected togenericODNBlanding https://academic.oup.com/oxford-dictionary-of-national-biography . NoSykesarticlebody; notHTTPfailurebutnon-subjectbody. NoattempttoinventcurrentarticleURL."
+    }
+  ],
+  "parsed_find_ledger": [
+    {
+      "input_ref": "turn9545765view3",
+      "pattern": "Full text links",
+      "result_ref": "turn1134866view1",
+      "outcome": "No matching text found"
+    },
+    {
+      "input_ref": "turn9545765view3",
+      "pattern": "DOI",
+      "result_ref": "turn1134866view2",
+      "outcome": "No matching text found"
+    }
+  ],
+  "quote_ledger": [
+    {
+      "work": "https://en.wikipedia.org/wiki/Charles_Sykes_%28metallurgist%29",
+      "quote": "He was born in Clowne, Derbyshire",
+      "words": 6
+    }
+  ],
+  "protocol_deviations": [],
+  "limits": [
+    "8queries/5navigationattempts/2cachedfinds; twoactualtoolfailedopensandonegenericnon-subjectredirect. No retries/variants/rawGETs/screenshots.",
+    "RomanPolandandBinnieexactdatearesearchprojectionobservationsonly, notoriginalbodyproof.",
+    "AcquiredSykesencyclopediahasdirectbornplacebutoriginalODNBlinkreturnsnon-subjectlanding; heldpendingparentjudgmentratherthanclaimingODNBwasread.",
+    "No newqualifiedDOBconflictsfromunacquiredWikipedialistorothersearchprojections.",
+    "No inferredcountry/coordinates/southernhemisphereassignmentfromnationality/host/school/work/death/familiarcity.",
+    "Nineinheritedissue/methodfilesuntouched; thisworkeronlywritesassignedintent/report. No mainnative/master/code/Gitchanges.",
+    "No fullsourcePDF/HTML/image/projectioncache retainedordistributed; shortquote/minimalfacts/locatorsonly."
+  ],
+  "no_master_or_native_changes": true,
+  "unopened_distinct_original_leads": [
+    {
+      "record_id": "RS_PAST_NA2121",
+      "url": "https://history.queens.cam.ac.uk/sites/default/files/downloads/record-1988.pdf",
+      "ref": "turn3274205search43",
+      "limit": "Originalcollegebulletinleadnotopened; projectioncontainsreporteddeath1987butsubjectline/bodycontextunverified,notnewqualifiedendpointdiscrepancy."
+    }
+  ]
+}

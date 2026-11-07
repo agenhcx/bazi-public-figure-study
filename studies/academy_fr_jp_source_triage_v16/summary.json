@@ -1,0 +1,103 @@
+{
+  "schema": "academy_fr_jp_source_triage_v16",
+  "date": "2026-11-01",
+  "parent_git_commit": "8e545eadbdf232e4c5839aebf62a19ead00e2c46",
+  "canonical_data_study": "studies/academy_fr_jp_completion_v15",
+  "new_data_version_created": false,
+  "new_approvals": {
+    "identity": 0,
+    "DOB": 0,
+    "France_ordinary_membership": 0,
+    "Japan_section": 0
+  },
+  "new_raw_birth_claims": 0,
+  "france": {
+    "candidate_groups": 877,
+    "identity_approved": 787,
+    "DOB_approved": 775,
+    "strict_ordinary_memberships": 643,
+    "all_three": 640,
+    "remaining_multidimensional_gaps": 237,
+    "gap_dimensions": {
+      "membership_only": 135,
+      "identity_membership_DOB": 90,
+      "membership_DOB": 9,
+      "DOB_only": 3
+    },
+    "DOB_unapproved": 102,
+    "raw_missing_day_groups": 73,
+    "exact_DOB_conflicts": 4,
+    "held_singleton_DOB_groups": 25,
+    "membership_unapproved": 234,
+    "membership_unapproved_CTHS": 135,
+    "membership_unapproved_other": 99,
+    "unapplied_DOB_gate_held_membership_leads": 6,
+    "known_unrequested_legacy_HTML_links": 3,
+    "inherited_formal_election_holds": 25,
+    "inherited_additional_actual_same_subject_election_conflicts": 1,
+    "membership_history_rows": 485,
+    "case_history_rows": 32
+  },
+  "japan": {
+    "identities": 482,
+    "structured_birth_claims": 528,
+    "day_statuses": 368,
+    "Section_II": 438,
+    "Section_I_exclusions": 10,
+    "scope_unresolved": 34,
+    "nonexcluded_DOB_pending": 104,
+    "combined_queue": 112,
+    "DOB_holds": 46,
+    "calendar_outcomes_preserved": 4,
+    "new_section_proposals": 0
+  },
+  "source_work": {
+    "France": {
+      "search_queries": 2,
+      "target_URL_attempts": 2,
+      "HTTP_GETs": 4,
+      "normal_redirects": 2,
+      "retries": 0,
+      "new_own_subject_Academy_bodies_recovered": 0,
+      "legacy_targets_ending404": 2,
+      "CTHS_archived_pages_rehashed_and_mechanically_parsed": 135,
+      "bounded_notice_components_manually_read": 10,
+      "full_new_person_adjudications": 0
+    },
+    "Japan": {
+      "search_queries": 0,
+      "distinct_URL_attempts": 3,
+      "HTTP_GETs": 3,
+      "normal_redirects": 0,
+      "retries": 0,
+      "actual_manifest_bodies_read": 1,
+      "original_images_visually_read": 2,
+      "own_subject_original_person_reviews": 1,
+      "local_only_other_scope_cases": 33
+    },
+    "total_direct_HTTP_GETs": 7,
+    "total_search_queries": 2,
+    "total_retries": 0
+  },
+  "preservation": {
+    "all57_canonical_v15_files_unchanged": true,
+    "all_prior_holds_and_accepted_values_unchanged": true,
+    "new_canonical_processing_or_decision_rows": 0,
+    "no_DOB_or_section_inference_from_degrees": true,
+    "no_missing_day_imputation": true,
+    "no_mother_son_or_alias_merge": true
+  },
+  "limits": {
+    "remaining_groups_are_not_a_national_missing_person_count": true,
+    "remaining3legacy_HTML_links_not_requested_or_declared_failed": true,
+    "no_claim_all_public_sources_exhausted": true,
+    "no_national_collection_completion_or_cohort_freeze": true
+  },
+  "professors_paused": true,
+  "Fields_parked": true,
+  "analysis_cohort_frozen": false,
+  "bazi_variables_computed": 0,
+  "outreach_count": 0,
+  "background_source_jobs_scheduled": 0,
+  "next_step": "Park low-yield cases unless a new directly attributable original is found. A future data-changing successor must start from V15.final_japan(), all528 claims,485 France membership rows and32 case rows; this triage does not replace those ledgers."
+}

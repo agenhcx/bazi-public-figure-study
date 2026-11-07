@@ -1,0 +1,72 @@
+{
+  "Nobel_native_DOB_all_left_blank": true,
+  "Nobel_rows_not_changed": true,
+  "baseline_NAS_unknown": 543,
+  "cached_physics_source_lane_HTTP_captures": 0,
+  "cityNow_coordinate_precision_rank_globe_not_invented": true,
+  "expected_NAS_unknown_after_these_unique_reviews": 514,
+  "explicit_region_extent_observations": 29,
+  "frozen": true,
+  "geographic_inference_grade": "S3, separate from S1 official structured sources or S2 memoirs",
+  "inputs_sha256": {
+    "academy_v7_workers/nobel_chem_med/retained_facts.jsonl": "1d2597cc930987ee2e8a755755531209771aa3d2606ee1e41dcf4a12d8071b47",
+    "academy_v7_workers/nobel_physics/retained_facts.jsonl": "413147916a58547bbcb848ed45ae1475e19937264265371a59ca73f3f72eb144",
+    "academy_v7_workers/vol79/retained_facts.jsonl": "a3412d01b5784170b8a75b88231457856c26ff5b0c582ba7a3b222705487e17e",
+    "academy_v7_workers/vol80/retained_facts.jsonl": "4d986b89ec58599bc26984fc3b72f2729e352c91c42750afb59823469fcc2f1b",
+    "uk_birthplace_checkout/studies/scientist_birthplace_completion_v6/outputs/birthplace_rows.jsonl.gz": "8e880fcf4a659a1c8753a5a0ad4c06552ddd9d0d545334b0e81a2459907d7356"
+  },
+  "multiple_source_targets": [
+    {
+      "all_raw_birthplaces": [
+        "Owosso, MI, USA",
+        "Owosso, Michigan"
+      ],
+      "all_source_grades": [
+        "S1",
+        "S2"
+      ],
+      "cohort": "NAS",
+      "consistent": true,
+      "name": "Alfred D. Hershey",
+      "record_id": "https://www.nasonline.org/directory-entry/alfred-d-hershey-8eamd9/",
+      "source_observation_count": 2
+    }
+  ],
+  "native_ID_DOB_calendar_eligibility_flags_QID_changes": 0,
+  "new_birthpoint_coordinate_assignments": 0,
+  "new_country_assignments": 0,
+  "new_geography_queries": 0,
+  "new_geography_source_captures": 0,
+  "new_source_lane_HTTP_captures": 2,
+  "new_unique_place_entity_assignments": 0,
+  "old_queries_retried": 0,
+  "old_v2_v6_overlays_preserved": true,
+  "original_official_attached_cityNow_coordinate_observations": 1,
+  "person_queries": 0,
+  "primary_target_source_grade_counts": {
+    "S1": 26,
+    "S2": 3
+  },
+  "query_retries": 0,
+  "schema": "scientist_birthplace_completion_v7_NAS_geographic_review",
+  "source_identity_QA_separate": true,
+  "source_lane_observation_counts": {
+    "nobel_chem_med": 17,
+    "nobel_physics": 9,
+    "vol79": 3,
+    "vol80": 1
+  },
+  "source_observation_count": 30,
+  "source_observation_grade_counts": {
+    "S1": 26,
+    "S2": 4
+  },
+  "source_observation_hemisphere_counts": {
+    "north": 30
+  },
+  "statistical_cross_cohort_deduplication": false,
+  "unique_reviewed_NAS_targets": 29,
+  "unique_target_hemisphere_counts": {
+    "north": 29
+  }
+}

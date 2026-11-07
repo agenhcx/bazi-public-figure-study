@@ -1,0 +1,55 @@
+{
+  "written_utc": "2026-11-06T12:35:16.414858+00:00",
+  "scope_file": "v31_scope_c.json",
+  "purpose": "Geographic_support_only forfourfixednonblankUKrecords; fulltargetedprioracceptedBP/geocontexts andpriorholdsactuallyreadbeforequeries. AllBP/native/priorfactsremainfrozen.",
+  "prior_context_review": {
+    "RS_PAST_NA5065": "FulloriginalRSselectedcandidateLondonambiguous/S1 andpriorv12BalzanLondon-onlyexact6Jan1920/UKheaderBritishcitizennotbirthcountry read. Balzanoldcityonlyworknotreopened. IMDbFeb6projectionunacquired/not qualifiedconflict, no nativedatefix.",
+    "RS_PAST_NA4747": "Fullv22ODNBMichaelPepperpublicextractexact28Mar1932/direct24PolygonAveArdwickManchester/S2/cityonly andseparateUCLidentityonlytribute read. NeitherbirthaddressnorUCLwork/footer/fathertravelcountryresolvegeo.",
+    "RS_PAST_NA5962": "Fullv18BristolarchivefullArthurRoderick/year1908/life1908-1986/WestEaling/S2; underlyingattachedPDF0lines/textmarkeronlyclosed; priorWikipediaEnglandprojectionunadopted; namedcataloguecompilersnotautomaticallyauthorsofwebprose.",
+    "RS_PAST_NA7080": "Fullv17Waterston/MacmillanShearerRSEindexfullname/exact10Feb1896/Nottingham/S2; oldseparaterawPDF403stoppedclosed. No newsourcefromsameclosedroute."
+  },
+  "planned_queries": [
+    "\"John Maynard Smith\" born England biography",
+    "\"Derek Harry Roberts\" born England",
+    "\"Arthur Roderick Collar\" born England",
+    "\"Alister Clavering Hardy\" born England"
+  ],
+  "general_adaptive_query_purpose_before_work": "Reserveonefollowupqueryeach(max8) togenuinelyneworiginalreferencebiography/memoir/authoredinstitutionalbody with fullnative/actuallycompatibleDOBprecision/career/directbirthcountryorwholeregionandreviewedconsistentrefinementofstoredcity. Exactqueries/navintentpersistedbeforecalls/checkexit. No oldfailedroute retries/variants/closedsourcecityloops.",
+  "budgets": {
+    "queries": 8,
+    "navigation_attempts": 10
+  },
+  "source_rules": "AllrawBP/BPgrade/claims/selectedsourcefacts/nativeDOB/identity/lifespans/cohorteligibility/country/QID/coords frozen; proposedsourcegrades geographic_support_only. No familiarcity/nationality/work/family/footerinference. Existingv24omittedmiddlestrictactualexactDOB/completefirstsurname/compatiblelife/cohortunique/noconflictsonly; no initialnicknameexpansion/newrule. <=25distinctEnglishquotewords/workacrossold/new; avoidduplicatingoldworksquotes. No sourcechildren/code/study/Git/main/rawGET/fullcaches/failedroutebypass. UnknownrawHTTPtime/status/hashnull.",
+  "adaptive_intents": [
+    {
+      "written_utc": "2026-11-06T12:35:47.346297+00:00",
+      "purpose": "Genuinelyneworiginalcountry-qualifiedsources forSmith/Hardy, newRoberts/Collaroriginalregion-qualifiedmemoir/publicextract. ExistingoldBalzan/ODNBRoberts/Bristol/RSEsourcesremainclosedunchanged.",
+      "queries": [
+        "\"John Maynard Smith\" \"London, England\" Kyoto",
+        "\"Derek Harry Roberts\" \"Manchester\" biography",
+        "\"Arthur Roderick Collar\" \"born\" \"Middlesex\"",
+        "\"Alister Clavering Hardy\" \"Nottingham, England\" biography"
+      ],
+      "navigations": [
+        "turn2914959search2 originalKyotoPrizeSmithstructuredbiography",
+        "turn2914959search3 originalGiffordLecturesHardybiographycountryclause"
+      ]
+    },
+    {
+      "written_utc": "2026-11-06T12:36:46.848794+00:00",
+      "purpose": "RobertsfirstgenuinelynewRoyalSocfellowprofile body foractualbirthregion/date/fullnamecontext; CollarWikipediasolelyoriginaldifferentmemoirlinkcarrier. DoNOTopennewCSACcarrierofoldclosedunderlyingCollarcataloguePDF asretryvariant.",
+      "navigations": [
+        "turn9482862search7 originalRoyalSocDerekRobertsprofile",
+        "turn2914959search48 CollarWikipediaoriginaldifferentmemoirlinkcarrieronly"
+      ]
+    },
+    {
+      "written_utc": "2026-11-06T12:37:17.714337+00:00",
+      "purpose": "Two genuinelydifferentoriginalCollarworks firstbodyattempts, PugsleyODNBarticle and BishopRS1987memoir via actualobservedDOIlinks. NeitherisfailedoldBristol/NCUACScataloguework; no alternativevariants afterfailure.",
+      "navigations": [
+        "turn9888111view1 link98 originalPugsleyODNB10.1093/ref:odnb/40052",
+        "turn9888111view1 link90 originalBishopmemoir10.1098/rsbm.1987.0006"
+      ]
+    }
+  ]
+}

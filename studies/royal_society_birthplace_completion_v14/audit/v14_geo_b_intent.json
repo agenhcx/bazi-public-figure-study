@@ -1,0 +1,53 @@
+{
+  "created_before_requests_utc": "2026-11-04T23:35:39.750948+00:00",
+  "scope": [
+    "RS_PAST_NA331",
+    "RS_PAST_NA663"
+  ],
+  "initial_queries": [
+    "\"Little Blencoe\" Penrith geography",
+    "\"Church End\" Finchley Middlesex history",
+    "\"Blencoe\" \"Blencow\"",
+    "\"Church End\" \"Finchley\" -London -Barnet -Middlesex"
+  ],
+  "geography_only": true,
+  "budgets": {
+    "queries": 8,
+    "original_navigations": 10
+  },
+  "later_requests": [
+    {
+      "planned_utc": "2026-11-04T23:36:07.181535+00:00",
+      "opens": [
+        "https://www.barnet.gov.uk/planning-and-building-control/conservation-and-heritage/conservation-areas/finchley-church-end-0",
+        "https://visionofireland.org/place/26527",
+        "https://leicester.contentdm.oclc.org/digital/api/collection/p16445coll4/id/268482/download"
+      ],
+      "queries": [
+        "\"Little Blencoe\" -Fawcett -surname -family",
+        "\"Little Blencow\" \"Blencoe\" geography",
+        "\"Little Blencowe\" \"Blencoe\" geography",
+        "\"Finchley\" geonames"
+      ]
+    },
+    {
+      "planned_utc": "2026-11-04T23:36:40.070394+00:00",
+      "original_opens": [
+        "https://www.barnet.gov.uk/libraries/local-studies-and-archives/pocket-histories/finchley-friern-barnet-and-totteridge/east",
+        "https://lwmfhs.org/downloads/parish/Finchley.pdf",
+        "https://co-curate.ncl.ac.uk/little-blencow-cumbria/",
+        "https://www.geonames.org/2649441",
+        "https://www.geonames.org/search.html?q=Finchley"
+      ],
+      "reason": "Whole-compound ChurchEnd-Finchley geography, historicalcounty witness and global candidate/type lookup; investigate LittleBlencow possible candidate without treating unproved spelling alias as accepted."
+    },
+    {
+      "planned_utc": "2026-11-04T23:37:01.269755+00:00",
+      "original_opens": [
+        "https://specialcollections.le.ac.uk/digital/collection/p16445coll4/id/268482/",
+        "https://www.british-history.ac.uk/vch/middx/vol6/pp38-55"
+      ],
+      "purpose": "Bibliographic metadata for observed original directory page; original authoredcountyhistory if accessible. VCH Finchl ey page locator is discovery from source citation volume, not a verified page match until response."
+    }
+  ]
+}

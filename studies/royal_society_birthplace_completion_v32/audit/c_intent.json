@@ -1,0 +1,117 @@
+{
+  "written_utc": "2026-11-06T22:24:05.091410+00:00",
+  "phase": "v32_geography_only",
+  "scope": [
+    "RS_PAST_NA2044",
+    "RS_PAST_NA2080",
+    "RS_PAST_NA2099",
+    "RS_PAST_NA2111"
+  ],
+  "prior_full_context_read": true,
+  "initial_full_read_output_truncated": true,
+  "truncation_recovered": "Desty and Beverton entire objects reread separately before any queries; Crisp/Rimington entire objects visible. Prior targeted holds and historical request ledgers inspected.",
+  "prior_context_sources": [
+    {
+      "record_id": "RS_PAST_NA2044",
+      "authority": "Crisp; Dennis John (1916 - 1990)",
+      "native_dob": "1916-04-29",
+      "raw_birthplace": "London",
+      "source_urls": [
+        "https://ijnh.seahistory.org/www/wp-content/uploads/sites/2/2012/01/HISTOC08.pdf"
+      ],
+      "sha256": "fa4b3b3c03907af465dd502cf21cd3f824f55721566048bbd187b209578d04ac"
+    },
+    {
+      "record_id": "RS_PAST_NA2080",
+      "authority": "Desty; Denis Henry (1923 - 1994); chemical engineer and inventor",
+      "native_dob": "1923-10-21",
+      "raw_birthplace": "Southampton",
+      "source_urls": [
+        "https://doi.org/10.1098/rsbm.1995.0009"
+      ],
+      "sha256": "4762ecb277c8e85437bea8621d5adf7ee42c09643d36dbb6fa14c3dbc60f6da1"
+    },
+    {
+      "record_id": "RS_PAST_NA2099",
+      "authority": "Beverton; Raymond John Heaphy (1922 - 1995)",
+      "native_dob": "1922-08-29",
+      "raw_birthplace": "5 Forest Glade, Leytonstone, east London",
+      "source_urls": [
+        "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/579604668"
+      ],
+      "sha256": "299259ea2438b3fda0c947bb640aed5aa03db0b59aa2c2807788e4eec59b11d3"
+    },
+    {
+      "record_id": "RS_PAST_NA2111",
+      "authority": "Rimington; Claude (1902 - 1993)",
+      "native_dob": "1902-11-17",
+      "raw_birthplace": "London",
+      "source_urls": [
+        "https://doi.org/10.1098/rsbm.1996.0022"
+      ],
+      "sha256": "24b33707e1e2077cca99db5b6bfe688d6642b750a581eeec36afc5001a1baef1"
+    }
+  ],
+  "closed_routes": [
+    "Desty DOI 10.1098/rsbm.1995.0009 inaccessible v11: no variants/retry. UniversitySouthampton2019bodycareeronly, not new work.",
+    "Crisp JSTOR769998 unreadablememoir v20; newsletterHISTOC08 alreadyused Londononly. No memoirbody retry.",
+    "Beverton ODNBpublicExtractalreadyused birthaddress eastLondononly.",
+    "Rimington Independent1993alreadyused Londononly; no repeat or same-work variant."
+  ],
+  "initial_queries": [
+    {
+      "record_id": "RS_PAST_NA2044",
+      "q": "\"Dennis John Crisp\" obituary \"England\""
+    },
+    {
+      "record_id": "RS_PAST_NA2080",
+      "q": "\"Denis Henry Desty\" biography Hampshire"
+    },
+    {
+      "record_id": "RS_PAST_NA2099",
+      "q": "\"Raymond John Heaphy Beverton\" \"born\" England"
+    },
+    {
+      "record_id": "RS_PAST_NA2111",
+      "q": "\"Claude Rimington\" født London"
+    }
+  ],
+  "budgets": {
+    "queries": 8,
+    "navigation": 10
+  },
+  "gates": "Actualoriginalworkbody/fullnative/actuallycompatibleDOBprecision/distinctivecareer/directbornregion explicitlyboundtostoredplace. Cityalone/nationality/work/family/death/footerinsufficient. No Wiki/Kiddlemirror/newsourceclass. FrozenBP/DOB; only proposedgeocontext.",
+  "quote_policy": "<=25Englishwords/originalwork acrossinheritedpackage; minimumquoteorstructuredfacts.",
+  "raw_HTTP_status": null,
+  "raw_bytes_sha256": null,
+  "exact_request_utc": null,
+  "navigation_plan_written_utc": "2026-11-06T22:24:30.541478+00:00",
+  "navigation_plan": [
+    {
+      "record_id": "RS_PAST_NA2044",
+      "url": "https://escholarship.org/uc/item/46t92266",
+      "reason": "New revised cumulated bibliography publisherlanding, inspect source distinctness and birthqualifier, not retry old newsletter or failedCrispmemoir."
+    },
+    {
+      "record_id": "RS_PAST_NA2080",
+      "url": "https://wellcomecollection.org/concepts/fh9rkyfa",
+      "reason": "New conceptrecord body; inspect explicit birthfields andderivation. Do not infer frommetadata unlessoriginalworkboundarymet."
+    },
+    {
+      "record_id": "RS_PAST_NA2099",
+      "ref": "turn5127731search47",
+      "reason": "New ICES memorial work differentfrominheritedODNB; inspect directbirthcountry/context/fullname/DOB."
+    }
+  ],
+  "adaptive_query_intent_disclosure": "Initial4queriesdurablylistedbeforecall. Additional4S1querieswerewithinpredeclared8querybudgetbutexactwordingnotdurablyaddedbeforecall; actualwording/results retainedinreport. No claimofper-querydurableintentforsecondbatch.",
+  "cached_find_plan": {
+    "written_utc": "2026-11-06T22:24:39.097471+00:00",
+    "source_ref": "turn9719571view2",
+    "patterns": [
+      "born",
+      "London",
+      "England"
+    ],
+    "purpose": "Selectiveexistingparsedtextchecks for directbirthgeography and fullnativebinding; not freshHTTP/retry."
+  }
+}

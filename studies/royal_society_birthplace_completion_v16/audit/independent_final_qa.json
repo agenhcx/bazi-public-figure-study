@@ -1,0 +1,411 @@
+{
+  "schema": "UK_v16_independent_final_QA_v1",
+  "reviewer": "/root/v16_final_qa",
+  "completed_utc": "2026-11-05T00:17:49.975387+00:00",
+  "decision": "pass",
+  "check_count": 60,
+  "checks": [
+    {
+      "check": "Five pre-QA outputs hash exactly",
+      "passed": true,
+      "details": {
+        "birthplace_rows.jsonl.gz": "78a7ea5839cd2a8750ef4919922b23c0c636816e45dbb104d0cc2c3680a10c6c",
+        "birthplaces.csv": "4aad6d978903bfde227bb574be6e0e5c49525af05d2c7cfabdfdc422f473bb4b",
+        "changes.json": "c7d3af152783d5262282cfd3f9e1d668c874bc739bbea776a38517682fb7d71e",
+        "remaining_unknown_window.csv": "9a75a8f894c61f415fb3efc97b2731e29fb77099f3115190cf3a742cf78097cb",
+        "summary.json": "58eb56cef74a718e4477cb561c8275e41324d5d1ed05c903ca68480554d6b712"
+      }
+    },
+    {
+      "check": "Replay pass1 exits0",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Replay pass1 preserves all five bytes",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Replay pass2 exits0",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Replay pass2 preserves all five bytes",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Self-contained v15 reconstruction fullobject exact",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "v15 canonical SHA pinned",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "4983 fixed keys and order",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Twelve followups partition five facts seven holds",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "164 frozen blank window queue exact and ordered",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Changed row whitelist RS_PAST_NA4568",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Complete previous fields snapshot RS_PAST_NA4568",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Exact rollback RS_PAST_NA4568",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Changed row whitelist RS_PAST_NA4680",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Complete previous fields snapshot RS_PAST_NA4680",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Exact rollback RS_PAST_NA4680",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Changed row whitelist RS_PAST_NA4774",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Complete previous fields snapshot RS_PAST_NA4774",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Exact rollback RS_PAST_NA4774",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Changed row whitelist RS_PAST_NA5416",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Complete previous fields snapshot RS_PAST_NA5416",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Exact rollback RS_PAST_NA5416",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Changed row whitelist RS_PAST_NA6897",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Complete previous fields snapshot RS_PAST_NA6897",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Exact rollback RS_PAST_NA6897",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "4978 fullobjects identical and exactly five intended changes",
+      "passed": true,
+      "details": {
+        "RS_PAST_NA4568": [
+          "birthplace_claim_excerpt",
+          "birthplace_claim_status",
+          "birthplace_evidence_kind",
+          "birthplace_followup_v16",
+          "birthplace_source_grade",
+          "birthplace_source_url",
+          "birthplace_source_urls",
+          "geo_resolution_status",
+          "geography_decision",
+          "raw_birthplace",
+          "reason"
+        ],
+        "RS_PAST_NA4680": [
+          "birthplace_claim_excerpt",
+          "birthplace_claim_status",
+          "birthplace_evidence_kind",
+          "birthplace_followup_v16",
+          "birthplace_source_grade",
+          "birthplace_source_url",
+          "birthplace_source_urls",
+          "geo_resolution_status",
+          "geography_decision",
+          "raw_birthplace",
+          "reason"
+        ],
+        "RS_PAST_NA4774": [
+          "birthplace_claim_excerpt",
+          "birthplace_claim_status",
+          "birthplace_evidence_kind",
+          "birthplace_followup_v16",
+          "birthplace_source_grade",
+          "birthplace_source_url",
+          "birthplace_source_urls",
+          "geo_resolution_status",
+          "geography_decision",
+          "raw_birthplace",
+          "reason"
+        ],
+        "RS_PAST_NA5416": [
+          "birthplace_claim_excerpt",
+          "birthplace_claim_status",
+          "birthplace_evidence_kind",
+          "birthplace_followup_v16",
+          "birthplace_source_grade",
+          "birthplace_source_url",
+          "birthplace_source_urls",
+          "geo_resolution_status",
+          "geography_decision",
+          "hemisphere",
+          "raw_birthplace",
+          "reason",
+          "southern_birthplace_separate"
+        ],
+        "RS_PAST_NA6897": [
+          "birthplace_claim_excerpt",
+          "birthplace_claim_status",
+          "birthplace_evidence_kind",
+          "birthplace_followup_v16",
+          "birthplace_source_grade",
+          "birthplace_source_url",
+          "birthplace_source_urls",
+          "geo_resolution_status",
+          "geography_decision",
+          "hemisphere",
+          "northern_birthplace_candidate",
+          "raw_birthplace",
+          "reason"
+        ]
+      }
+    },
+    {
+      "check": "DOB and all old evidence/identity/QID/country/coordinate fields frozen",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "All v15 supplement objects unchanged",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Overall 4163N186S634U",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Window2644 2263N181S200U",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Window159blank41nonblankunknown",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Five first births two geography resolutions three unresolved",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Four S2 one S3 birthplace support independent of originalDOB grades",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "New source quotes <=25words",
+      "passed": true,
+      "details": {
+        "RS_PAST_NA4680": 5,
+        "RS_PAST_NA5416": 10,
+        "RS_PAST_NA4568": 14,
+        "RS_PAST_NA4774": 8,
+        "RS_PAST_NA6897": 10
+      }
+    },
+    {
+      "check": "Exact source date three, year one, noDOB one",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Raftery and Ross no independent exactday confirmation",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Mackintosh source-superset disclosed and native unchanged",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Brown hold not an adopted source fact",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "CSV4983 order matches fullJSON",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "CSV preserves all v15 columns plus separate v16",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "CSV five v16 records exact grades",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "UnknownCSV200 exactwindowkeys",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Gzip fixed zero mtime nofilename",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Input stays selfcontained target_ids.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Input stays selfcontained v13_accepted_context.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Input stays selfcontained v11_accepted_context.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Input stays selfcontained accepted_birthplaces.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Input stays selfcontained followup_ids.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Input stays selfcontained v15_target_ids.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Input stays selfcontained v12_accepted_context.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Input stays selfcontained v15_followup_ids.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Input stays selfcontained v14_accepted_geography.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Input stays selfcontained v15_accepted_birthplaces.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Input stays selfcontained uk_birthplace_rows_v10.jsonl.gz",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "No original rawHTML/PDF/images inside distribution",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Summary scope and noanalysis flags",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Source QA and method/addendum present",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Source ledgers aggregate18queries23nav22original1RSS14find",
+      "passed": true,
+      "details": "Independent read-only subreview source_audit_counts confirmed A6queries7nav(6original+1RSS), B6queries8nav13find, C6queries8nav1find."
+    },
+    {
+      "check": "Root five original opens honestly timed",
+      "passed": true,
+      "details": "Root intent retains2 earlier unplanned opens plus3 planned; parent adjudication lists5."
+    },
+    {
+      "check": "Prose and method amendment scope/date precision truthful",
+      "passed": true,
+      "details": "README/CONTINUATION distinguish5firstBPs vs2geo; v16 method amendment and later source-superset addendum are disclosed, Brown is a positive identity lead held under full-name gate rather than conflict/different-person claim."
+    }
+  ],
+  "output_sha256": {
+    "birthplace_rows.jsonl.gz": "78a7ea5839cd2a8750ef4919922b23c0c636816e45dbb104d0cc2c3680a10c6c",
+    "birthplaces.csv": "4aad6d978903bfde227bb574be6e0e5c49525af05d2c7cfabdfdc422f473bb4b",
+    "changes.json": "c7d3af152783d5262282cfd3f9e1d668c874bc739bbea776a38517682fb7d71e",
+    "remaining_unknown_window.csv": "9a75a8f894c61f415fb3efc97b2731e29fb77099f3115190cf3a742cf78097cb",
+    "summary.json": "58eb56cef74a718e4477cb561c8275e41324d5d1ed05c903ca68480554d6b712"
+  },
+  "full_object_changed_ids": [
+    "RS_PAST_NA4568",
+    "RS_PAST_NA4680",
+    "RS_PAST_NA4774",
+    "RS_PAST_NA5416",
+    "RS_PAST_NA6897"
+  ],
+  "limits": [
+    "No source bodies re-fetched by final QA. Source narrative/identity/grade observations were checked from retained reports and independent source/method reviews; root original-source reading is documented separately.",
+    "Manifest and ZIP not yet created at review time and not verified by this QA.",
+    "Replay creates Python __pycache__; packager must exclude generated bytecode caches. No raw source HTML/PDF/images found in study."
+  ],
+  "blocking_findings": []
+}

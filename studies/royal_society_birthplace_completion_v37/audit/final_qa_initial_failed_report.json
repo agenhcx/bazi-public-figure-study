@@ -1,0 +1,14 @@
+{
+  "schema": "V37_final_QA_harness_exception_report_v1",
+  "written_utc": "2026-11-07T00:59:46.486319+00:00",
+  "stage": "initial_full_final_QA_before_isolated_replays",
+  "status": "HARNESS_ERROR",
+  "actual_exit_code": 1,
+  "exception": "KeyError: method_review",
+  "failed_harness_line": 143,
+  "reason": "FinalQA assumed V36 report nested method_review key. Actual V37 sourceQA records equivalent proof-mode binding in accepted_geographic_bindings and checks list.",
+  "source_or_data_failure_claimed": false,
+  "isolated_replays_started": false,
+  "actual_failure_log": "v37_final_qa_initial_failed_run.log",
+  "initial_harness_sha256": "011e2c39e69e4f84ab6a2fd87e8b022af596d75d2de6276a268438538f212cd8"
+}

@@ -1,0 +1,94 @@
+{
+  "schema": "v24_b_prior_intent_v1",
+  "written_utc": "2026-11-06T00:11:57.938742+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA6968",
+    "RS_PAST_NA2977",
+    "RS_PAST_NA2863",
+    "RS_PAST_NA178"
+  ],
+  "budgets": {
+    "queries": 8,
+    "navigation_attempts": 10
+  },
+  "discovery_intents": [
+    {
+      "query": "\"Horace Tabberer Brown\" \"born\"",
+      "purpose": "Find new original historical authored biography/memoir with explicit full subject born relation; discovery not proof."
+    },
+    {
+      "query": "\"Henry Richardson Procter\" \"born\"",
+      "purpose": "Find new original historical authored biography/memoir with explicit full subject born relation; discovery not proof."
+    },
+    {
+      "query": "\"Alexander Pedler\" \"born\"",
+      "purpose": "Find new original historical authored biography/memoir with explicit full subject born relation; discovery not proof."
+    },
+    {
+      "query": "\"Victor Herbert Veley\" \"born\"",
+      "purpose": "Find new original historical authored biography/memoir with explicit full subject born relation; discovery not proof."
+    }
+  ],
+  "navigation_intents": [
+    {
+      "written_utc": "2026-11-06T00:12:19.341620+00:00",
+      "url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/581678577",
+      "purpose": "ReadoriginalsignededitedODNBpublicExtractfullPedler/exactDOB/directbirthaddress."
+    },
+    {
+      "written_utc": "2026-11-06T00:12:19.341623+00:00",
+      "url": "https://pubs.rsc.org/en/content/articlelanding/1928/jr/jr9280003299",
+      "purpose": "Readoriginalpublisherworkmetadata/authorship/firstpage, notassumeProcterbodyaccessible."
+    },
+    {
+      "written_utc": "2026-11-06T00:12:19.341625+00:00",
+      "url": "https://electronicsandbooks.com/edt/manual/Magazine/J/Journal%20of%20the%20Chemical%20Society%20%28Resumed%29%20UK/1928/JR9280003299.pdf",
+      "purpose": "ReadobservedcarriedoriginalpublishedobituaryPDF forProcter;verifyfullidentity/DOB/bornplace and sectionauthor/publication. No rawPDFbytes."
+    },
+    {
+      "written_utc": "2026-11-06T00:12:48.060827+00:00",
+      "ref": "turn3492803view1",
+      "lineno": 38,
+      "purpose": "ReadalreadyacquiredoriginalRSCmetadataandactualPDFlink after externalcarrier yieldedno usablebody; differentfirstpublisherroute may supplywholeoriginalwork."
+    },
+    {
+      "written_utc": "2026-11-06T00:12:48.060830+00:00",
+      "url": "https://doi.org/10.1098/rsbm.1934.0007",
+      "purpose": "Firstoriginalpublisherresolverinspection forVeley signedGardnermemoir, DOIexplicitlyobservedindiscoveryreference. No birthprooffromreferencealone."
+    },
+    {
+      "written_utc": "2026-11-06T00:13:46.403899+00:00",
+      "url": "https://www.nhm.ac.uk/CalmView/Record.aspx?id=PX2198&pos=1&src=CalmView.Persons",
+      "purpose": "FirsttargetedoriginalarchivalpersonrecordinspectionforBrown, lookforactualbirthfield; do notinferfromassociatedpapers."
+    },
+    {
+      "written_utc": "2026-11-06T00:13:46.403909+00:00",
+      "url": "https://pictures.royalsociety.org/image-rs-7810",
+      "purpose": "Firstoriginalinstitutionalportraitcatalogue forBrown, inspectexplicitbornmetadataonly; nationalitynotbirth."
+    },
+    {
+      "written_utc": "2026-11-06T00:13:46.403911+00:00",
+      "url": "https://www.npg.org.uk/collections/search/portrait/mw236879/Victor-Herbert-Veley",
+      "purpose": "Firstoriginalportraitcatalogue forVeley; inspectdirectbirthfield, no portraitcreationlocationorphotoaddressinference."
+    }
+  ],
+  "constraints": "Fullnativecomponents, actualcompatibleDOBprecision and distinctivecareeranchors; birthdateconflicthold; <=25words/work; no rawGET/cache/retry/variants/bypass, no native/master/code/Git change.",
+  "adaptive_intents": [
+    {
+      "written_utc": "2026-11-06T00:12:19.341609+00:00",
+      "queries": [
+        "\"Horace Tabberer Brown\" \"born\" obituary memoir",
+        "\"Victor Herbert Veley\" \"born\" Gardner"
+      ],
+      "purpose": "Find actual originalbornbody forremainingBrown/Veley; roster/date-only/closedenwiki notbirthproof."
+    },
+    {
+      "written_utc": "2026-11-06T00:12:48.060809+00:00",
+      "queries": [
+        "\"Horace Tabberer Brown\" \"obnd\" OR \"odnb\" OR \"born at\"",
+        "\"Victor Herbert Veley\" \"born at\" OR \"born in\""
+      ],
+      "purpose": "Finaltwoqueryallowance: seekoriginalbornbody ratherthan dates-onlyroster."
+    }
+  ]
+}

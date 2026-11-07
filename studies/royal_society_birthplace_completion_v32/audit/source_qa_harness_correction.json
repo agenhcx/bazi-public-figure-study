@@ -1,0 +1,24 @@
+{
+  "schema": "UK_v32_source_QA_harness_correction_v1",
+  "written_utc": "2026-11-06T22:31:24.707232+00:00",
+  "initial_observed_result": {
+    "passed": false,
+    "checks_passed": 101,
+    "blocking_issues": [
+      {
+        "check": "BernardSmith_newappointment_abstract_not_birth_context",
+        "passed": false
+      }
+    ]
+  },
+  "initial_result_record_role": "Known initial tool-reported result; original full report file was overwritten by the corrected full rerun and is not claimed byte-preserved.",
+  "cause": "Harness searched literal lower-case not aDOBconflict inside actual preserved source_career_limit beginning Not aDOBconflict. Case-sensitive spelling caused the documentary check to fail despite identical semantic statement.",
+  "correction": "Compare lower-cased string to lower-cased literal. Source/facts/holds/production were not edited for this correction; admission gates unchanged.",
+  "actual_preserved_source_statement": "New1935notice reports FRS1933 while priorBGSprofile reports1935; no nativefellowship/date/career repair or independenceclaim. Not aDOBconflict.",
+  "corrected_result": {
+    "passed": true,
+    "checks_passed": 116,
+    "blocking_issues": []
+  },
+  "no_facts_or_production_mutated": true
+}

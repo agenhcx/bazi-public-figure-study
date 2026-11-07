@@ -1,0 +1,430 @@
+{
+  "schema": "UK_v34_geography_only_source_followup_lane_a_v1",
+  "worker": "/root/v32_sources_a",
+  "written_utc": "2026-11-06T23:13:16.772877+00:00",
+  "intent_file": "v34_a_intent.json",
+  "scope": [
+    "RS_PAST_NA3474",
+    "RS_PAST_NA4568",
+    "RS_PAST_NA5494",
+    "RS_PAST_NA6231"
+  ],
+  "baseline_commit": "433064a032cf85a26c81959621df4240c9d02190",
+  "phase": "geography_only_original_person_birth_context_followup",
+  "usage": {
+    "discovery_queries": 8,
+    "query_limit": 8,
+    "navigation_attempts": 4,
+    "navigation_limit": 10,
+    "parsed_finds": 0,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "prior_context_review": {
+    "full_scope_records_read_before_queries": true,
+    "targetedcurrentv33historicalaudit_read": true,
+    "additional_targetedoriginal_v13_v16_v23_v24_source_entries_read": true,
+    "original_BP_sources": {
+      "RS_PAST_NA3474": [
+        "https://www.the-independent.com/news/people/obituary-professor-bryan-coles-1273472.html"
+      ],
+      "RS_PAST_NA4568": [
+        "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/579372118"
+      ],
+      "RS_PAST_NA5494": [
+        "https://heritagesearch.oxfordshire.gov.uk/image_collections/other/church"
+      ],
+      "RS_PAST_NA6231": [
+        "https://doi.org/10.1098/rsbm.1971.0030"
+      ]
+    },
+    "closed_or_previously_inspected_works": [
+      "ColesDavidEdwardsIndependent1997full/exactnative/Cardiffonly andJeremyClarkeFelix1997yearonlyCardiff alreadyread; authorDavidEdwardslink404closed; no reopening",
+      "Colesagecontrast71versusprimaryarithmetic70retainednotalternateDOB/no clearance",
+      "MackintoshADickinsonODNB2019fullnative-longname/exact1935-07-09/hospitalIslingtonLondononly alreadyacquired; CorpusChristiPelican2015signedBakerMurphymemoir exactDOB/Londononlyalreadyacquired; Cambridgepsychometricsprofile403closed/noretryvariants",
+      "ChurchOxfordshireheritageoriginalfull/year1865/Plymouthonly sourceworkeractual/rootlater403closed; no reopening or alternatecarrier",
+      "Whiddington1971RSmemoirabstract full/exact1885-11-25/Londononly andFeatherrevisedFalconerODNBextract Londononly previouslyacquired; no reopening"
+    ],
+    "other_historical_DOB_or_place_holds_found": false,
+    "sidecars": "All9DOBobjects/eightotherissuefilesfrozen; globalinventoriesnotexhaustive. Anynewactualcontradictionblocked, no yearonly/countrybypass."
+  },
+  "candidates": [],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA3474",
+      "native": {
+        "record_id": "RS_PAST_NA3474",
+        "authority_name": "Coles; Bryan Randell (1926 - 1997)",
+        "native_dob": "1926-06-09",
+        "raw_birthplace": "Cardiff",
+        "birthplace_source_grade": "S3",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "082319491b8378e276409811734f4adf0d0d2d416d46a9b95f21e2ae54f121b2"
+      },
+      "status": "hold_no_new_qualified_geographic_support",
+      "hold_type": "distinct_original_memoir_body_unavailable",
+      "reason": "Firstdistinct1999DavidCaplinRSmemoirJSTOR770263 route toolnotaccessible,stopped/no variants. PriorDavidEdwards1997IndependentandJeremyClarkeFelixCardiffonly claims unchanged. Colespriorcross-sourceage71vsprimaryarithmetic70contrast explicitlyretained; notalternateDOB, no age/datecorrectionorclearance. No Cardiff/Walesfromfamiliarcity/universityinference.",
+      "source_url": "https://www.jstor.org/stable/770263",
+      "source_ref": "turn2494303view0",
+      "source_grade_adopted": null,
+      "source_quote": "",
+      "source_quote_word_count": 0,
+      "prior_age_contrast_sidecar": "audit/cross_source_reported_age_contrasts.json",
+      "native_and_original_birthplace_fields_unchanged": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original HTML text or tool-reported unavailable/textless result, not raw HTTP/PDF bytes",
+      "no_master_change": true
+    },
+    {
+      "record_id": "RS_PAST_NA4568",
+      "native": {
+        "record_id": "RS_PAST_NA4568",
+        "authority_name": "Mackintosh; Nicholas John (1935 - 2015)",
+        "native_dob": "1935-07-09",
+        "raw_birthplace": "the Royal Northern Hospital in Islington, London",
+        "birthplace_source_grade": "S2",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "29a5ff93330089d6f43ee0165ad69e90b498da69012b4c1d5694f6f4ac74160f"
+      },
+      "status": "hold_new_original_notice_no_direct_born_place_or_DOB",
+      "hold_type": "new_original_notice_lacks_DOB_and_birthplace",
+      "reason": "ActualdistinctCambridgeReporter2015obituarynotice fullNicholasJohnMackintosh/experimentalpsychologyKingCollege/death2015-02-08/age79, butno acquiredactualDOB orbornregion. Do notderiveDOBfromageorcountryfromuniversity/host. EarlierADickinsonODNBhospitalIslingtonLondonandCCC2015Baker/MurphyLondononlyfactsremainunchanged. CambridgePsychometrics403route remainsclosed.",
+      "source_url": "https://www.admin.cam.ac.uk/reporter/2014-15/weekly/6375/section3.shtml",
+      "source_ref": "turn2494303view1",
+      "source_title": "Obituaries — Cambridge University Reporter6375",
+      "source_kind": "original_uncredited_university_obituary_notice",
+      "source_author": null,
+      "source_locator": "L2/4issue6375/date2015-02-11;L43obituaryheading/L45fullnative/experimentalpsychologyKingCollege/death2015-02-08/reported79.",
+      "source_birthdate": null,
+      "source_birthdate_precision": "not_stated_in_actual_notice",
+      "source_lifespan": null,
+      "source_death_date": "2015-02-08",
+      "source_reported_age": 79,
+      "source_age_converted_to_DOB": false,
+      "observed_source_full_name": "Nicholas John Mackintosh",
+      "source_DOB_native_compatibility": "NoactualDOBstated; do notderivebirthdayfromdeath/age79.",
+      "source_place_observed": null,
+      "birthplace_relation_verified": false,
+      "publication_date": "2015-02-11",
+      "publication_date_precision": "day_in_original_issue_heading",
+      "source_grade_adopted": null,
+      "source_quote": "",
+      "source_quote_word_count": 0,
+      "native_and_original_birthplace_fields_unchanged": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original HTML text or tool-reported unavailable/textless result, not raw HTTP/PDF bytes",
+      "no_master_change": true
+    },
+    {
+      "record_id": "RS_PAST_NA5494",
+      "native": {
+        "record_id": "RS_PAST_NA5494",
+        "authority_name": "Church; Arthur Harry (1865 - 1937)",
+        "native_dob": "1865-03-28",
+        "raw_birthplace": "Plymouth",
+        "birthplace_source_grade": "S3",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "906485256970c31d479164921cf6ff46589a4d57a023c79aed7f89bd6450c017"
+      },
+      "status": "hold_actual_original_HTML_exact_source_DOB_conflict",
+      "hold_type": "new_actual_original_reference_exact_day_DOB_conflict",
+      "reason": "ActualneworiginalnichebotanicalreferenceHTML fullArthurHarryChurch/life1865-1937/directbornPlymouthDevon explicitlystates24March1865, versusunchangednative28March1865. Career coherentAberystwyth/Jesus/Oxfordbotany. Geographyremainsheld despiteDevonqualifier; no yearonly/datefree/countrybypass, typo/nativecorrection or civilverificationverdict. ActualHTMLtext, not an unverifiedscanneddateglyph/searchprojection-onlycase. RootmayadjudicateappendqualifiedsourceDOBobservation; workerdoesnotmodify globalinventory/master.",
+      "source_url": "https://www.botanicalartandartists.com/about-arthur-harry-church.html",
+      "source_title": "About Arthur Harry Church — BOTANICAL ART & ARTISTS",
+      "source_author": null,
+      "source_kind": "original_niche_botanical_history_compiled_selfpublished_reference_profile_unverified_editing",
+      "source_grade_proposal": "S3",
+      "source_grade_adopted": null,
+      "source_grade_basis": "ConservativeS3 originalcompiled nichebotanicalreference withactualfullsubject/lifespan/date/career/bornrelation; no claim-specificnamedbyline, independentlyverifiededitorialreview or civilbirthauthority acquired. AboutKatherineTyrrellnavigationlink doesnotestablishclaimbyline. Nohost-onlyS1/S2or informationalindependenceclaim.",
+      "source_grade_role_if_inventory_observation_used": "DOB_discrepancy_observation_only_no_BP_or_DOB_grade_change",
+      "source_quote": "Born 24th March 1865 in Plymouth, Devon.",
+      "source_quote_word_count": 7,
+      "source_body_ref": "turn9969444view0",
+      "source_ref": "turn9969444view0",
+      "source_locator": "L233fullArthurHarryChurch/lifespan1865-1937;L239biographyheading;L242directBorn24March1865PlymouthDevon;L243-248Aberystwyth/JesusCollege1891/Oxfordfirst1894/researchfellow1908-12/retirement1930;L271death1937-04-24.",
+      "source_body_acquisition_role": "worker_actual_new_original_HTML_profile_body_verified",
+      "observed_source_full_name": "Arthur Harry Church",
+      "source_birthdate": "1865-03-24",
+      "source_birthdate_precision": "exact_day_in_direct_born_clause_original_HTML",
+      "source_lifespan": "1865-1937",
+      "source_death_date": "1937-04-24",
+      "source_DOB_native_compatibility": "Exactsource1865-03-24 conflicts with native1865-03-28; sameyear/lifespancompatibilitydoesnotclearactualdayconflict.",
+      "identity_review": [
+        "AllnativeArthurHarryChurchcomponents appearactualL233andimagecollectionheading, notinitialsexpanded.",
+        "Actual1865-1937lifespan compatible withnativeauthority; exactborn24March conflicts28March andpreventsadoption.",
+        "AberystwythexternalLondonbotanydegree/JesusCollegeOxford1891/first1894/Oxfordbotanyretirement1930andfloralillustrationcareer coherentlybinddistinctivesubject.",
+        "No competingname/person/alternativecity asserted; native and allpriorfacts unchanged."
+      ],
+      "source_place_observed": "Plymouth, Devon",
+      "stored_place_relation_review": "DirectsourcePlymouthDevon is consistentqualifiedextension ofstoredPlymouth, butDOBconflictblocksnorthadoption. No newrawBP/country/coords assignment.",
+      "reviewed_hemisphere_proposal": "unknown",
+      "geographic_basis": "StoredPlymouthalonepreviouslyunresolved. NewactualbornDevoncontext potentiallyqualifiesnorthernregion butcannotbeadoptedwithsamebodyexactDOBconflict.",
+      "publication_date": null,
+      "publication_date_precision": "unknown; webcrawl not publicationdate",
+      "caveats": [
+        "No originalrawHTTPbytes/status/requesttime/hash or screenshot/imagepixelscaptured. ParsedoriginalHTMLdateobservation not visuallyverifiedcivilrecord.",
+        "Sourceediting/namedclaimbyline/underlyingbirthprovenanceunverified; no independenceorWiki-derivationverdictfromnavigationlinks.",
+        "UnacquiredRoyalSocietycurrentsearchprojection28Marchmatchesnative butdoesnotprove24Marchtypo orcleardiscrepancy. No alternatebody/datecorrection.",
+        "Only7-wordquote distributedforneworiginalwork; no fullsourceHTML/images/familydetails."
+      ],
+      "native_and_original_birthplace_fields_unchanged": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original HTML text or tool-reported unavailable/textless result, not raw HTTP/PDF bytes",
+      "no_master_change": true
+    },
+    {
+      "record_id": "RS_PAST_NA6231",
+      "native": {
+        "record_id": "RS_PAST_NA6231",
+        "authority_name": "Whiddington; Richard (1885 - 1970)",
+        "native_dob": "1885-11-25",
+        "raw_birthplace": "London",
+        "birthplace_source_grade": "S2",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "29e25d3b4669c84119efa413113eb16ac5b9c5b36797def5b679db3c87c1d059"
+      },
+      "status": "hold_new_original_historical_essay_no_readable_body",
+      "hold_type": "new_original_work_textless_response",
+      "reason": "FirstdistinctKyoto2020historicalessayPDFroute automaticallyredirectedtoURLwithoutdspace and returnedzero readablelines. Stopped/noURLvariant/retry/rawGET. SearchprojectionexactDOB/LondononlyandLeedsEnglandworkcontext notacquiredoriginalbody/birthcountryproof; no transferredFeather1971attribution or informationalindependenceclaim. Existing1971memoirabstractandODNB Londononlyfactsunchanged.",
+      "source_url": "https://repository.kulib.kyoto-u.ac.jp/dspace/bitstream/2433/255656/1/eoas_4_3.pdf",
+      "source_final_url_observed": "https://repository.kulib.kyoto-u.ac.jp/bitstream/2433/255656/1/eoas_4_3.pdf",
+      "source_ref": "turn2494303view2",
+      "source_locator": "ToolresultContenttypeHTML/TotalLines0/Thispagehasnoreadablelines; nosubjectbody.",
+      "source_grade_adopted": null,
+      "source_quote": "",
+      "source_quote_word_count": 0,
+      "native_and_original_birthplace_fields_unchanged": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original HTML text or tool-reported unavailable/textless result, not raw HTTP/PDF bytes",
+      "no_master_change": true
+    }
+  ],
+  "query_ledger": [
+    {
+      "operation_number": 1,
+      "record_id": "RS_PAST_NA3474",
+      "engine": "system2",
+      "query": "\"Bryan Randell Coles\" \"Cardiff\" \"Wales\"",
+      "result_group_ref_prefix": "turn5624840search",
+      "role": "discovery_only_until_separate_originalbody_acquisition",
+      "individual_query_result_mapping": "Combinedquerybatch; no inventedexactbackendperqueryassignment",
+      "prior_intent_file": "v34_a_intent.json",
+      "durable_exact_preintent_saved_and_exit0_verified_in_separate_toolcall": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "operation_number": 2,
+      "record_id": "RS_PAST_NA4568",
+      "engine": "system2",
+      "query": "\"Nicholas John Mackintosh\" \"born\" \"England\"",
+      "result_group_ref_prefix": "turn5624840search",
+      "role": "discovery_only_until_separate_originalbody_acquisition",
+      "individual_query_result_mapping": "Combinedquerybatch; no inventedexactbackendperqueryassignment",
+      "prior_intent_file": "v34_a_intent.json",
+      "durable_exact_preintent_saved_and_exit0_verified_in_separate_toolcall": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "operation_number": 3,
+      "record_id": "RS_PAST_NA5494",
+      "engine": "system2",
+      "query": "\"Arthur Harry Church\" \"Plymouth\" \"Devon\"",
+      "result_group_ref_prefix": "turn5624840search",
+      "role": "discovery_only_until_separate_originalbody_acquisition",
+      "individual_query_result_mapping": "Combinedquerybatch; no inventedexactbackendperqueryassignment",
+      "prior_intent_file": "v34_a_intent.json",
+      "durable_exact_preintent_saved_and_exit0_verified_in_separate_toolcall": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "operation_number": 4,
+      "record_id": "RS_PAST_NA6231",
+      "engine": "system2",
+      "query": "\"Richard Whiddington\" \"born\" \"England\"",
+      "result_group_ref_prefix": "turn5624840search",
+      "role": "discovery_only_until_separate_originalbody_acquisition",
+      "individual_query_result_mapping": "Combinedquerybatch; no inventedexactbackendperqueryassignment",
+      "prior_intent_file": "v34_a_intent.json",
+      "durable_exact_preintent_saved_and_exit0_verified_in_separate_toolcall": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "operation_number": 5,
+      "record_id": "RS_PAST_NA3474",
+      "engine": "system1",
+      "query": "\"Bryan Randell Coles\" memoir obituary biography",
+      "result_group_ref_prefix": "turn9969444search",
+      "role": "discovery_only_until_separate_originalbody_acquisition",
+      "individual_query_result_mapping": "Combinedquerybatch; no inventedexactbackendperqueryassignment",
+      "prior_intent_file": "v34_a_intent.json",
+      "durable_exact_preintent_saved_and_exit0_verified_in_separate_toolcall": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "operation_number": 6,
+      "record_id": "RS_PAST_NA4568",
+      "engine": "system1",
+      "query": "\"Nicholas John Mackintosh\" memoir obituary birth",
+      "result_group_ref_prefix": "turn9969444search",
+      "role": "discovery_only_until_separate_originalbody_acquisition",
+      "individual_query_result_mapping": "Combinedquerybatch; no inventedexactbackendperqueryassignment",
+      "prior_intent_file": "v34_a_intent.json",
+      "durable_exact_preintent_saved_and_exit0_verified_in_separate_toolcall": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "operation_number": 7,
+      "record_id": "RS_PAST_NA5494",
+      "engine": "system1",
+      "query": "\"Arthur Harry Church\" biography obituary born -site:botanicalartandartists.com",
+      "result_group_ref_prefix": "turn9969444search",
+      "role": "discovery_only_until_separate_originalbody_acquisition",
+      "individual_query_result_mapping": "Combinedquerybatch; no inventedexactbackendperqueryassignment",
+      "prior_intent_file": "v34_a_intent.json",
+      "durable_exact_preintent_saved_and_exit0_verified_in_separate_toolcall": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "operation_number": 8,
+      "record_id": "RS_PAST_NA6231",
+      "engine": "system1",
+      "query": "\"Richard Whiddington\" biography born London Middlesex",
+      "result_group_ref_prefix": "turn9969444search",
+      "role": "discovery_only_until_separate_originalbody_acquisition",
+      "individual_query_result_mapping": "Combinedquerybatch; no inventedexactbackendperqueryassignment",
+      "prior_intent_file": "v34_a_intent.json",
+      "durable_exact_preintent_saved_and_exit0_verified_in_separate_toolcall": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "operation_number": 1,
+      "record_id": "RS_PAST_NA5494",
+      "input": "https://www.botanicalartandartists.com/about-arthur-harry-church.html",
+      "result_ref": "turn9969444view0",
+      "outcome": "ActualneworiginalHTMLbodyfullnative/exactday24March1865/PlymouthDevon/career;heldDOBconflictwithnative28March",
+      "prior_intent_file": "v34_a_intent.json",
+      "durable_exact_preintent_saved_and_exit0_verified_in_separate_toolcall": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original HTML text or tool-reported unavailable/textless result, not raw HTTP/PDF bytes",
+      "no_master_change": true
+    },
+    {
+      "operation_number": 2,
+      "record_id": "RS_PAST_NA3474",
+      "input": "https://www.jstor.org/stable/770263",
+      "result_ref": "turn2494303view0",
+      "outcome": "URLnotaccessibleviathistool;stopped/noactualmemoirbody",
+      "prior_intent_file": "v34_a_intent.json",
+      "durable_exact_preintent_saved_and_exit0_verified_in_separate_toolcall": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original HTML text or tool-reported unavailable/textless result, not raw HTTP/PDF bytes",
+      "no_master_change": true
+    },
+    {
+      "operation_number": 3,
+      "record_id": "RS_PAST_NA4568",
+      "input": "https://www.admin.cam.ac.uk/reporter/2014-15/weekly/6375/section3.shtml",
+      "result_ref": "turn2494303view1",
+      "outcome": "Actualneworiginaluniversitynotice52lines/fullnative/death2015-02-08/age79;noDOB/directbirthplace",
+      "prior_intent_file": "v34_a_intent.json",
+      "durable_exact_preintent_saved_and_exit0_verified_in_separate_toolcall": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original HTML text or tool-reported unavailable/textless result, not raw HTTP/PDF bytes",
+      "no_master_change": true
+    },
+    {
+      "operation_number": 4,
+      "record_id": "RS_PAST_NA6231",
+      "input": "https://repository.kulib.kyoto-u.ac.jp/dspace/bitstream/2433/255656/1/eoas_4_3.pdf",
+      "result_ref": "turn2494303view2",
+      "outcome": "Automaticredirectwithoutdspace;HTML0readablelines;stopped/noactualessaybody",
+      "prior_intent_file": "v34_a_intent.json",
+      "durable_exact_preintent_saved_and_exit0_verified_in_separate_toolcall": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original HTML text or tool-reported unavailable/textless result, not raw HTTP/PDF bytes",
+      "no_master_change": true
+    }
+  ],
+  "parsed_find_ledger": [],
+  "quote_ledger": [
+    {
+      "record_id": "RS_PAST_NA5494",
+      "original_work": "BotanicalArtAndArtists_AboutArthurHarryChurch",
+      "quote": "Born 24th March 1865 in Plymouth, Devon.",
+      "word_count": 7,
+      "inherited_same_work_quote_words": 0,
+      "all_current_package_words_from_work": 7
+    }
+  ],
+  "unopened_distinct_original_leads": [],
+  "discovery_leads_not_adopted": [
+    {
+      "record_id": "RS_PAST_NA5494",
+      "observed_url": "https://www.oldashburton.co.uk/st-lawrence-chapel---the-grammar-school.php",
+      "observed_ref": "turn5624840search2",
+      "role": "UnopenedlocalhistorypageprojectionPlymouth/year1865/career and citationtoA.G.TansleyChurchmemoir,ObituaryNoticesRoyalSocietyvol2no7pp432-443. No originalmemoirURLacquiredfromthisquery.",
+      "reason_not_opened": "Noqueryprojectionregionalbornproof; afteractualnewChurchDOBconflict no country-onlycompatibleyearworkmaybypasshold. No originalmemoirclaim/grade transferred."
+    },
+    {
+      "record_id": "RS_PAST_NA6231",
+      "observed_url": "https://academictree-staging.thetransmitter.org/physics/peopleinfo.php?pid=643402",
+      "observed_ref": "turn5624840search1",
+      "role": "UnopenedcompiledacademiclineageprofileprojectionLondononly;LeedsEnglandrefersworkaffiliation. Notadopted/no hostcountryinference."
+    },
+    {
+      "record_id": "RS_PAST_NA4568",
+      "observed_ref": "turn5624840search5",
+      "role": "PureWiki-derivedprofileprojectionLondonEngland notadoptedunderoriginal-workboundary."
+    },
+    {
+      "record_id": "RS_PAST_NA5494",
+      "observed_url": "https://makingscience.royalsociety.org/people/na5494/arthur-harry-church",
+      "observed_ref": "turn9969444search5",
+      "role": "Unopenedofficialprofiledateprojection28March1865 matchesnativebutdoesnotclearactual24Marchnewreferenceconflict orproveatypo."
+    }
+  ],
+  "protocol_deviations": [],
+  "representation_limits": [
+    "EachintentsaveandJSONvalidationoccurredinseparatefunctions.exec beforewebcall; actualexit0/exactentriesinspected, no failedlocalwrite/networkcontinuation orlate/backdatedqueryintent.",
+    "All4completepriorrecordsandtargetedhistoricalholds/sourcecontexts readbeforequeries; no hiddenadditionalDOB/placeholdfoundforthese4. ColesagecontrastretaineddistinctfromDOBconflict.",
+    "Allnewqueryprojectionsremain discoveryonly exceptChurchnewactualHTMLbody/Cambridgenewactualnoticeseparatelyopened.",
+    "No rawHTTPbytes/status/hash/exactrequesttime exposed; allunknownnull. ActualHTMLdateisnotindependentlyverifiedcivilbirthdate; no sourceversion/typo/nativecorrectionverdict.",
+    "No fullsourceHTML/PDF/cache/images/familydetails distributed. Failed/textlessworksclosedwithoutvariant/retry/rawGET/authbypass.",
+    "No master/nativeDOB/BPgrade/country/QID/coords/priorfacts/eligibility/dedup/analysis/outcomes/finalcohortfreezechanges. Sourcepassboundednotexhaustive."
+  ],
+  "no_native_or_master_changes": true
+}

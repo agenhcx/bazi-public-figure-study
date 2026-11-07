@@ -1,0 +1,292 @@
+{
+  "schema": "UK_v24_sources_b_v1",
+  "worker": "/root/v24_sources_b",
+  "written_utc": "2026-11-06T00:14:56.703939+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA178",
+    "RS_PAST_NA2863",
+    "RS_PAST_NA2977",
+    "RS_PAST_NA6968"
+  ],
+  "intent_file": "v24_b_intent.json",
+  "counts": {
+    "discovery_queries": 8,
+    "web_navigation_attempts": 8,
+    "parsed_find_operations": 0,
+    "screenshots": 0,
+    "raw_HTTP_or_PDF_GETs": 0,
+    "body_verified_birthplace_candidates": 1,
+    "holds": 3,
+    "unused_navigation_budget": 2
+  },
+  "candidates": [
+    {
+      "record_id": "RS_PAST_NA2863",
+      "native": {
+        "record_id": "RS_PAST_NA2863",
+        "authority_name": "Pedler; Sir; Alexander (1849 - 1918)",
+        "native_dob": "1849-05-21",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "150653c1c82ea9d29c3c1b4122f1932f35dd15589a5565c63247788cb3e9be10"
+      },
+      "status": "candidate_original_signed_ODNB_public_Extract_explicit_first_birthplace",
+      "raw_birthplace": "197 Fleet Street, London",
+      "source_url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/581678577",
+      "source_title": "Pedler, Sir Alexander: (1849–1918), chemist",
+      "source_author": "Roy M MacLeod",
+      "source_kind": "original_signed_edited_ODNB_public_extract",
+      "publication_date": "2004-09-23",
+      "publication_date_precision": "day_in_originalpublishermetadata",
+      "doi": "10.1093/ref:odnb/48706",
+      "source_grade_proposal": "S2",
+      "source_grade_basis": "OriginalpublisherattributededitedbiographicalpublicExtractwithdirectbirthclause; conservativeS2, notcivilregistration/host-onlyS1/paidfullchapteracquisition.",
+      "source_quote": "was born on 21 May 1849, at 197 Fleet Street, London",
+      "source_quote_word_count": 11,
+      "source_locator": "turn3492803view0:L757fullsubject/lifespan/profession;L761-763author;L771DOI;L775publication;L777exactnativeDOB/directbirthaddress;L778-779distinctiveRoyalInstitution/helium/valericacidcareer.",
+      "source_body_ref": "turn3492803view0",
+      "source_birthdate": "1849-05-21",
+      "source_birthdate_precision": "exact_day_in_born_clause",
+      "source_DOB_matches_native": true,
+      "source_deathyear_in_subject_header": "1918",
+      "source_deathdate_in_birthplace_source": null,
+      "observed_source_full_name": "Sir Alexander Pedler",
+      "identity_review": [
+        "AllnativeAlexanderPedlercomponentsandSir directlyappearoriginalheading/bornclause.",
+        "Exact21May1849and1849-1918header agree unchangednativeDOB/lifespan; no sourceexactdeathdateobserved.",
+        "Chemist/RoyalInstitutionchemicalassistant1867/NormanLockyerheliumobservations1868/Franklandvalericacidstudy distinctivelybindsubject."
+      ],
+      "reviewed_hemisphere_proposal": "unknown",
+      "geographic_basis": "OnlybirthaddressFleetStreet/Londonexplicit. No birth-linkedcountry/whole-regionqualifier. School/work/familycontextnotcountry; keepunknownwithoutfamiliarcityinference.",
+      "caveats": [
+        "PublicoriginalExtractonly; paidfullchapter/PDFnotacquired.",
+        "Sourceheaderdeathyear1918only, no exactdeathdayconfirmation.",
+        "No nativeDOB/calendar/identity/eligibility/grades/country/QID/coordinateschanges."
+      ],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-toolparsedoriginalHTMLtext,notrawHTTPbytes",
+      "no_master_change": true
+    }
+  ],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA6968",
+      "native": {
+        "record_id": "RS_PAST_NA6968",
+        "authority_name": "Brown; Horace Tabberer (1848 - 1925)",
+        "native_dob": "1848-07-20",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "ad52673bd3bffc8ed01ce0219f9fb3c1766c03d633f042923319d3a108a03c46"
+      },
+      "status": "hold_no_explicit_birthplace_in_acquired_original_catalogue_bodies",
+      "hold_type": "no_explicit_birthplace_in_original_metadata",
+      "reason": "OriginalNHMarchivalpersoncatalogueandRSportraitbodyconfirmfullname/year/professionalanchorsbutnoexplicitbirthplace. Britishnationality, photographer187APiccadillyLondon, associatedUK andcareerBurtonnotbirth. BurtonStaffordshire/England remainsclosedenwikidiscoveryleadnotadopted. No qualifiedoriginalbornbody.",
+      "source_refs": [
+        "turn9838123view0",
+        "turn9838123view1"
+      ],
+      "source_birthdate_precision": "year_only_in_acquiredoriginalcatalogues",
+      "source_grade_adopted": null,
+      "no_master_change": true
+    },
+    {
+      "record_id": "RS_PAST_NA2977",
+      "native": {
+        "record_id": "RS_PAST_NA2977",
+        "authority_name": "Procter; Henry Richardson (1848 - 1927)",
+        "native_dob": "1848-05-06",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "9e9f44d7e55d1497779ca8abad082817c050b818e9b8100172242a78f74de017"
+      },
+      "status": "hold_original_born_body_unavailable",
+      "hold_type": "original_birthplace_body_unavailable",
+      "reason": "OriginalRSCpublisherlandingreadmetadataonly; externaloriginalPDFcarrierreturnedno usablebodyinobservedabbreviatedresult, exacttoolfailuretextnotretained. Laterpublishermetadatareopenreturnedtool403andstopped. Original1928PDFsearchprojectionexplicitnativeDOB/LowlightsNorthShieldsisnotacquiredbodyandnotadopted.",
+      "source_refs": [
+        "turn3492803view1",
+        "turn3492803view2",
+        "turn3533380view0"
+      ],
+      "unverified_original_body_lead": {
+        "url": "https://electronicsandbooks.com/edt/manual/Magazine/J/Journal%20of%20the%20Chemical%20Society%20%28Resumed%29%20UK/1928/JR9280003299.pdf",
+        "work_title": "Obituarynotices:FrederickMollwoPerkin1869–1928;HenryRichardsonProcter1848–1927;MadyarGopalRau1891–1928",
+        "doi": "10.1039/JR9280003299",
+        "journal": "JournaloftheChemicalSociety1928pp3299–3308",
+        "search_ref": "turn2442669search8",
+        "body_acquired": false,
+        "source_quote": "",
+        "source_grade_adopted": null
+      },
+      "no_master_change": true
+    },
+    {
+      "record_id": "RS_PAST_NA178",
+      "native": {
+        "record_id": "RS_PAST_NA178",
+        "authority_name": "Veley; Victor Herbert (1856 - 1933)",
+        "native_dob": "1856-02-10",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "885e9e15659715337dca7ddceb01aa22a31ac29aa942d390b1e97bfbe4005141"
+      },
+      "status": "hold_original_memoir_and_catalogue_unavailable",
+      "hold_type": "original_birthplace_body_unavailable",
+      "reason": "OriginalJAGardnermemoirresolvertool-inaccessibleandfirstNPGportraitcatalogue403,stopped. RSdiscoveryhasdateonly,nobornplace. UnopenedgenealogyprojectionMar1856/ChelmsfordEssexnotoriginalbodyprooforactualDOBconflictadjudication; no birthmonth/registrationquarterinterpretation or inventedcorrection.",
+      "source_refs": [
+        "turn3533380view1",
+        "turn9838123view2"
+      ],
+      "unverified_genealogy_projection": {
+        "url": "https://townsley.info/Strangeway/GedSite/g6/p5507.htm",
+        "ref": "turn3533380search4",
+        "body_acquired": false,
+        "not_qualified_source_DOB_conflict": true,
+        "no_birthdate_or_registration_semantics_adjudication": true
+      },
+      "source_grade_adopted": null,
+      "no_master_change": true
+    }
+  ],
+  "query_ledger": [
+    {
+      "q": "\"Horace Tabberer Brown\" \"born\"",
+      "refs": "turn2442669search0/5/9",
+      "kind": "discovery_only"
+    },
+    {
+      "q": "\"Henry Richardson Procter\" \"born\"",
+      "refs": "turn2442669search8/7",
+      "kind": "discovery_only"
+    },
+    {
+      "q": "\"Alexander Pedler\" \"born\"",
+      "refs": "turn2442669search1/2",
+      "kind": "discovery_only"
+    },
+    {
+      "q": "\"Victor Herbert Veley\" \"born\"",
+      "refs": "turn2442669search3/4/6",
+      "kind": "discovery_only"
+    },
+    {
+      "q": "\"Horace Tabberer Brown\" \"born\" obituary memoir",
+      "refs": "turn3492803search0/1/8",
+      "kind": "discovery_only"
+    },
+    {
+      "q": "\"Victor Herbert Veley\" \"born\" Gardner",
+      "refs": "turn3492803search2/3/4",
+      "kind": "discovery_only"
+    },
+    {
+      "q": "\"Horace Tabberer Brown\" \"odnb\" OR \"born at\"",
+      "refs": "turn3533380search0/1/6/9",
+      "kind": "discovery_only"
+    },
+    {
+      "q": "\"Victor Herbert Veley\" \"born at\" OR \"born in\"",
+      "refs": "turn3533380search2/3/4/5/7/8",
+      "kind": "discovery_only"
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "op": 1,
+      "record_id": "RS_PAST_NA2863",
+      "url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/581678577",
+      "ref": "turn3492803view0",
+      "result": "OriginalsignedODNBpublicExtractbodyread; qualifiedbirthplacecandidate.",
+      "raw_HTTP_status": null
+    },
+    {
+      "op": 2,
+      "record_id": "RS_PAST_NA2977",
+      "url": "https://pubs.rsc.org/en/content/articlelanding/1928/jr/jr9280003299",
+      "ref": "turn3492803view1",
+      "result": "Originalpublisherlandingmetadataread; collectiveobituarytitle/DOI/journal; noProcterbornbodyacquired.",
+      "raw_HTTP_status": null
+    },
+    {
+      "op": 3,
+      "record_id": "RS_PAST_NA2977",
+      "url": "https://electronicsandbooks.com/edt/manual/Magazine/J/Journal%20of%20the%20Chemical%20Society%20%28Resumed%29%20UK/1928/JR9280003299.pdf",
+      "ref": "turn3492803view2",
+      "result": "No usableoriginalbodyobserved. Abbreviatedtooloutputretainedonlyref/sourceheaderanddidnotretainexactfailuretext; unknownrawstatus. Stoppedwithoutretry.",
+      "raw_HTTP_status": null,
+      "exact_tool_failure_text_retained": false
+    },
+    {
+      "op": 4,
+      "record_id": "RS_PAST_NA2977",
+      "ref": "turn3492803view1",
+      "url": "https://pubs.rsc.org/en/content/articlelanding/1928/jr/jr9280003299",
+      "result_ref": "turn3533380view0",
+      "result": "PrioracquiredpublishermetadatareopenedforactualPDFlink; laterreturnedtool403, stoppednoretry/variants.",
+      "tool_reported_error": "403 Forbidden",
+      "raw_HTTP_status": null
+    },
+    {
+      "op": 5,
+      "record_id": "RS_PAST_NA178",
+      "url": "https://doi.org/10.1098/rsbm.1934.0007",
+      "ref": "turn3533380view1",
+      "result": "OriginalGardnermemoirresolvertool-inaccessible; stopped.",
+      "raw_HTTP_status": null
+    },
+    {
+      "op": 6,
+      "record_id": "RS_PAST_NA6968",
+      "url": "https://www.nhm.ac.uk/CalmView/Record.aspx?id=PX2198&pos=1&src=CalmView.Persons",
+      "ref": "turn9838123view0",
+      "result": "Originalarchivalpersoncatalogueread; fullname/year/profession/associatedpapersbutnoexplicitbirthplace.",
+      "raw_HTTP_status": null
+    },
+    {
+      "op": 7,
+      "record_id": "RS_PAST_NA6968",
+      "url": "https://pictures.royalsociety.org/image-rs-7810",
+      "ref": "turn9838123view1",
+      "result": "Originalportraitcataloguebodyread; name/year/chemistry/FRS1889/Copley1920, noexplicitbornplace. Britishnationality/photographerLondonaddress/associatedUKnotbirth.",
+      "raw_HTTP_status": null
+    },
+    {
+      "op": 8,
+      "record_id": "RS_PAST_NA178",
+      "url": "https://www.npg.org.uk/collections/search/portrait/mw236879/Victor-Herbert-Veley",
+      "ref": "turn9838123view2",
+      "result": "FirstoriginalNPGcatalogueopenreturnedtool403; stopped.",
+      "tool_reported_error": "403 Forbidden",
+      "raw_HTTP_status": null
+    }
+  ],
+  "quote_ledger": [
+    {
+      "original_work": "PedlerODNB48706",
+      "quote": "was born on 21 May 1849, at 197 Fleet Street, London",
+      "whitespace_words": 11,
+      "limit": 25
+    }
+  ],
+  "protocol_deviations": [
+    {
+      "kind": "abbreviated_output_lost_exact_carrier_error_text",
+      "source_ref": "turn3492803view2",
+      "disclosure": "Onlysourceheader/refandabsenceofusablebodyretainedinmodelprint; exactfailuretextnotretained. No sourcebody/rawstatusclaimed, no retryperformed. All eightnavigationattemptscounted.",
+      "effect": "Procterholdretained; no evidenceadoptedfromfailedcarrier."
+    },
+    {
+      "kind": "minor_prior_query_text_variation",
+      "disclosure": "Prior final Brown intent included an extra obnd/odnb alternative term; actual logged final Brown query omitted the obnd typo alternative and retained odnb OR born-at. Topic/purpose were declared beforehand; queryledger preserves actual request text rather than claiming exact verbatim match.",
+      "effect": "No new recordscope/sourceclass or evidenceadoption from unverified projection."
+    }
+  ],
+  "limits": [
+    "No fulloriginalHTML/PDF/images/projectioncachesdistributed.",
+    "Toolparsedtextnotrawbytes; rawstatus/time/hashunknownnull.",
+    "No sourceDOB/identityconflictassertedfromunopenedsearchprojections.",
+    "No native/master/code/Git orBaZi/outcome/statisticaldedup/finalfreeze edits."
+  ]
+}

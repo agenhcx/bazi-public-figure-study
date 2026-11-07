@@ -1,0 +1,16 @@
+{
+  "schema": "UK_v40_final_QA_harness_correction_v1",
+  "written_utc": "2026-11-07T02:02:39.625823+00:00",
+  "first_attempt": "harness_literal_edge_label_error_after21_checks_before_isolated_replays",
+  "error": "Inherited harness required exactly explicit_subject_birthplace_hyperlink, although the method schema requires an actually observed birthplace hyperlink and nonempty edge_property without this fixed label. Mills and Reid use source-specific explicit labels.",
+  "correction": "Retain unchanged allowed proof mode, nonempty typed acquired-edge metadata, at least two observations, entity first target and exact first-target/next-source URI continuity; compare full actual proofchain to independently reviewed sourceQA. Remove only the unprescribed fixed edge_property literal. No new source/admission method exception.",
+  "data_source_or_production_failure": false,
+  "production_output_pins_unchanged": true,
+  "failure_report": "v40_final_qa_attempt1_failure_report.json",
+  "failure_report_sha256": "29a83713a0d1aa1e3b8adaa69189281f4d8bf06cc4ef2f5a8f42089c747e4e05",
+  "preserved_first_attempt_log": "v40_final_qa_attempt1.log",
+  "first_attempt_log_sha256": "7f5fa4d3d5c67a775997197c69a4a52dd65a5bac4ef6d6f8e01c53df0fa8c5aa",
+  "pre_correction_harness_sha256": "3ccbe8f6d3503fdae913686123e0a68c97afb7b48dc51e2700d6bbd59981373d",
+  "production_mutated_by_reviewer": false,
+  "network_used": false
+}

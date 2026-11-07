@@ -1,0 +1,298 @@
+{
+  "search_queries": [
+    "site:academie-sciences.fr \"Laveran\" \"élu\"",
+    "site:academie-sciences.fr \"Lwoff\" \"élu\"",
+    "site:academie-sciences.fr \"Moissan\" \"élu\"",
+    "site:academie-sciences.fr \"Sabatier\" \"21 avril 1913\"",
+    "site:academie-sciences.fr \"André Lwoff\" \"1966\"",
+    "site:academie-sciences.fr \"Henri Moissan\" \"Académie\" \"1891\"",
+    "site:academie-sciences.fr \"Étienne Wolff\" \"1963\"",
+    "site:academie-sciences.fr/pdf/eloges \"Delage\" OR \"Filhol\" OR \"Joubin\"",
+    "site:academie-sciences.fr/pdf/eloges \"Grassé\" OR \"Cuénot\" OR \"Wolff\"",
+    "site:academie-sciences.fr/pdf/eloges \"Delépine\" OR \"Moureu\" OR \"Montel\""
+  ],
+  "search_calls": 3,
+  "HTTP_sources": [
+    {
+      "url": "https://www.academie-sciences.fr/pdf/eloges/sabatier_notice.pdf",
+      "sha256": "5386d70622d42b0003032f7ccabed7252fe64eb565ce821df6a0166f49ffa3ce",
+      "bytes": 1272764,
+      "pdf": true,
+      "source_id": "sabatier",
+      "http_status": 200
+    },
+    {
+      "url": "https://www.academie-sciences.fr/pdf/eloges/laveran_notice.pdf",
+      "sha256": "69f70c02fd7c7d2c6a70eae1fa9c4d64fc472c896fb305233bcbf2b826e7e46e",
+      "bytes": 577376,
+      "pdf": true,
+      "source_id": "laveran",
+      "http_status": 200
+    },
+    {
+      "url": "https://www.academie-sciences.fr/pdf/dossiers/Picard/Picard_pdf/Picard_cinquante.pdf",
+      "sha256": "60e920551ce66cf0f535da359b202d2ae0a3f38f7306045f7226107d8dedee4b",
+      "bytes": 1257930,
+      "pdf": true,
+      "source_id": "picard",
+      "http_status": 200
+    },
+    {
+      "source_id": "mesnil",
+      "url": "https://www.academie-sciences.fr/pdf/eloges/mesnil_notice.pdf",
+      "retrieved_utc": "2026-10-29T12:42:53.562117+00:00",
+      "discovery": "bounded same-directory official obituary filename probe; success requires actual PDF body",
+      "error": "HTTP Error 404: Not Found",
+      "http_status": 404
+    },
+    {
+      "source_id": "bertrand",
+      "url": "https://www.academie-sciences.fr/pdf/eloges/bertrand_notice.pdf",
+      "retrieved_utc": "2026-10-29T12:42:53.565009+00:00",
+      "discovery": "bounded same-directory official obituary filename probe; success requires actual PDF body",
+      "http_status": 200,
+      "final_url": "https://www.academie-sciences.fr/pdf/eloges/bertrand_notice.pdf",
+      "bytes": 2848107,
+      "sha256": "aa51895db488568a862835ea2657e222da608386200d56131eeff6686e950989",
+      "pdf": true
+    },
+    {
+      "source_id": "delage",
+      "url": "https://www.academie-sciences.fr/pdf/eloges/delage_notice.pdf",
+      "retrieved_utc": "2026-10-29T12:42:53.565642+00:00",
+      "discovery": "bounded same-directory official obituary filename probe; success requires actual PDF body",
+      "http_status": 200,
+      "final_url": "https://www.academie-sciences.fr/pdf/eloges/delage_notice.pdf",
+      "bytes": 1037825,
+      "sha256": "05d26252e9c34c8b32e674a04ebbab126feb26b468c9ec8eab711f9f6af92540",
+      "pdf": true
+    },
+    {
+      "source_id": "filhol",
+      "url": "https://www.academie-sciences.fr/pdf/eloges/filhol_notice.pdf",
+      "retrieved_utc": "2026-10-29T12:42:53.566630+00:00",
+      "discovery": "bounded same-directory official obituary filename probe; success requires actual PDF body",
+      "error": "HTTP Error 404: Not Found",
+      "http_status": 404
+    },
+    {
+      "source_id": "grasse",
+      "url": "https://www.academie-sciences.fr/pdf/eloges/grasse_notice.pdf",
+      "retrieved_utc": "2026-10-29T12:42:57.320309+00:00",
+      "discovery": "bounded same-directory official obituary filename probe; success requires actual PDF body",
+      "error": "HTTP Error 404: Not Found",
+      "http_status": 404
+    },
+    {
+      "source_id": "joubin",
+      "url": "https://www.academie-sciences.fr/pdf/eloges/joubin_notice.pdf",
+      "retrieved_utc": "2026-10-29T12:42:57.605292+00:00",
+      "discovery": "bounded same-directory official obituary filename probe; success requires actual PDF body",
+      "error": "HTTP Error 404: Not Found",
+      "http_status": 404
+    },
+    {
+      "source_id": "lwoff",
+      "url": "https://www.academie-sciences.fr/pdf/eloges/lwoff_notice.pdf",
+      "retrieved_utc": "2026-10-29T12:42:57.795873+00:00",
+      "discovery": "bounded same-directory official obituary filename probe; success requires actual PDF body",
+      "error": "HTTP Error 404: Not Found",
+      "http_status": 404
+    },
+    {
+      "source_id": "millot",
+      "url": "https://www.academie-sciences.fr/pdf/eloges/millot_notice.pdf",
+      "retrieved_utc": "2026-10-29T12:42:57.796200+00:00",
+      "discovery": "bounded same-directory official obituary filename probe; success requires actual PDF body",
+      "error": "HTTP Error 404: Not Found",
+      "http_status": 404
+    },
+    {
+      "source_id": "wolff",
+      "url": "https://www.academie-sciences.fr/pdf/eloges/wolff_notice.pdf",
+      "retrieved_utc": "2026-10-29T12:43:01.326104+00:00",
+      "discovery": "bounded same-directory official obituary filename probe; success requires actual PDF body",
+      "error": "HTTP Error 404: Not Found",
+      "http_status": 404
+    },
+    {
+      "source_id": "gallien",
+      "url": "https://www.academie-sciences.fr/pdf/eloges/gallien_notice.pdf",
+      "retrieved_utc": "2026-10-29T12:43:01.548044+00:00",
+      "discovery": "bounded same-directory official obituary filename probe; success requires actual PDF body",
+      "error": "HTTP Error 404: Not Found",
+      "http_status": 404
+    },
+    {
+      "source_id": "villat",
+      "url": "https://www.academie-sciences.fr/pdf/eloges/villat_notice.pdf",
+      "retrieved_utc": "2026-10-29T12:43:01.616029+00:00",
+      "discovery": "bounded same-directory official obituary filename probe; success requires actual PDF body",
+      "error": "HTTP Error 404: Not Found",
+      "http_status": 404
+    },
+    {
+      "source_id": "delepine",
+      "url": "https://www.academie-sciences.fr/pdf/eloges/delepine_notice.pdf",
+      "retrieved_utc": "2026-10-29T12:43:01.621058+00:00",
+      "discovery": "bounded same-directory official obituary filename probe; success requires actual PDF body",
+      "http_status": 200,
+      "final_url": "https://www.academie-sciences.fr/pdf/eloges/delepine_notice.pdf",
+      "bytes": 418981,
+      "sha256": "0d33f286a0b295b6712850227e097adc144372df665864e5c9f869372e5f4dd3",
+      "pdf": true
+    },
+    {
+      "source_id": "matignon",
+      "url": "https://www.academie-sciences.fr/pdf/eloges/matignon_notice.pdf",
+      "retrieved_utc": "2026-10-29T12:43:18.978332+00:00",
+      "discovery": "bounded same-directory official obituary filename probe; success requires actual PDF body",
+      "http_status": 200,
+      "final_url": "https://www.academie-sciences.fr/pdf/eloges/matignon_notice.pdf",
+      "bytes": 616526,
+      "sha256": "6404fbd2624750a03b7ead62fbee95e19d6581f0a3ac25e51c18db6d46d5e7c4",
+      "pdf": true
+    },
+    {
+      "source_id": "tiffeneau",
+      "url": "https://www.academie-sciences.fr/pdf/eloges/tiffeneau_notice.pdf",
+      "retrieved_utc": "2026-10-29T12:43:19.583964+00:00",
+      "discovery": "bounded same-directory official obituary filename probe; success requires actual PDF body",
+      "error": "HTTP Error 404: Not Found",
+      "http_status": 404
+    },
+    {
+      "source_id": "montel",
+      "url": "https://www.academie-sciences.fr/pdf/eloges/montel_notice.pdf",
+      "retrieved_utc": "2026-10-29T12:43:19.603926+00:00",
+      "discovery": "bounded same-directory official obituary filename probe; success requires actual PDF body",
+      "error": "HTTP Error 404: Not Found",
+      "http_status": 404
+    },
+    {
+      "source_id": "moureu",
+      "url": "https://www.academie-sciences.fr/pdf/eloges/moureu_notice.pdf",
+      "retrieved_utc": "2026-10-29T12:43:19.760652+00:00",
+      "discovery": "bounded same-directory official obituary filename probe; success requires actual PDF body",
+      "http_status": 200,
+      "final_url": "https://www.academie-sciences.fr/pdf/eloges/moureu_notice.pdf",
+      "bytes": 2720233,
+      "sha256": "021355ac3e9b8295de97e02ac1d86b5ab5f27565008d940a5bd823130a0571ee",
+      "pdf": true
+    },
+    {
+      "source_id": "mondor",
+      "url": "https://www.academie-sciences.fr/pdf/eloges/mondor_notice.pdf",
+      "retrieved_utc": "2026-10-29T12:43:22.822672+00:00",
+      "discovery": "bounded same-directory official obituary filename probe; success requires actual PDF body",
+      "error": "HTTP Error 404: Not Found",
+      "http_status": 404
+    },
+    {
+      "source_id": "henneguy",
+      "url": "https://www.academie-sciences.fr/pdf/eloges/henneguy_notice.pdf",
+      "retrieved_utc": "2026-10-29T12:43:22.863055+00:00",
+      "discovery": "bounded same-directory official obituary filename probe; success requires actual PDF body",
+      "http_status": 200,
+      "final_url": "https://www.academie-sciences.fr/pdf/eloges/henneguy_notice.pdf",
+      "bytes": 1016649,
+      "sha256": "57598eb0237b39fe3725d836b701aa2b1f31bb8947197d6b766f959daff04f42",
+      "pdf": true
+    },
+    {
+      "source_id": "fage",
+      "url": "https://www.academie-sciences.fr/pdf/eloges/fage_notice.pdf",
+      "retrieved_utc": "2026-10-29T12:43:22.980730+00:00",
+      "discovery": "bounded same-directory official obituary filename probe; success requires actual PDF body",
+      "http_status": 200,
+      "final_url": "https://www.academie-sciences.fr/pdf/eloges/fage_notice.pdf",
+      "bytes": 258737,
+      "sha256": "763f6a4a3af12e782b57004a644ce2a6ee1ba83cafa0fb0eb4917ea48d64a9b6",
+      "pdf": true
+    },
+    {
+      "source_id": "marchal",
+      "url": "https://www.academie-sciences.fr/pdf/eloges/marchal_notice.pdf",
+      "retrieved_utc": "2026-10-29T12:43:24.573499+00:00",
+      "discovery": "bounded same-directory official obituary filename probe; success requires actual PDF body",
+      "http_status": 200,
+      "final_url": "https://www.academie-sciences.fr/pdf/eloges/marchal_notice.pdf",
+      "bytes": 1291718,
+      "sha256": "6d56eeffa3ef103323778eabbb5ff53176e080eff8be20556911f4a88659721f",
+      "pdf": true
+    },
+    {
+      "source_id": "roubaud",
+      "url": "https://www.academie-sciences.fr/pdf/eloges/roubaud_notice.pdf",
+      "retrieved_utc": "2026-10-29T12:43:26.125552+00:00",
+      "discovery": "bounded same-directory official obituary filename probe; success requires actual PDF body",
+      "http_status": 200,
+      "final_url": "https://www.academie-sciences.fr/pdf/eloges/roubaud_notice.pdf",
+      "bytes": 211746,
+      "sha256": "df17c02c96c7de2ca50b2ebdb2030967d59e04b2789864db2d74784ee96aafb5",
+      "pdf": true
+    },
+    {
+      "source_id": "malavard",
+      "url": "https://www.academie-sciences.fr/pdf/eloges/malavard_notice.pdf",
+      "retrieved_utc": "2026-10-29T12:43:26.374262+00:00",
+      "discovery": "bounded same-directory official obituary filename probe; success requires actual PDF body",
+      "error": "HTTP Error 404: Not Found",
+      "http_status": 404
+    },
+    {
+      "source_id": "claude",
+      "url": "https://www.academie-sciences.fr/pdf/eloges/claude_notice.pdf",
+      "retrieved_utc": "2026-10-29T12:43:26.398784+00:00",
+      "discovery": "bounded same-directory official obituary filename probe; success requires actual PDF body",
+      "error": "HTTP Error 404: Not Found",
+      "http_status": 404
+    },
+    {
+      "source_id": "cuenot",
+      "url": "https://www.academie-sciences.fr/pdf/eloges/cuenot_notice.pdf",
+      "retrieved_utc": "2026-10-29T12:43:26.440233+00:00",
+      "discovery": "observed URL",
+      "http_status": 200,
+      "final_url": "https://www.academie-sciences.fr/pdf/eloges/cuenot_notice.pdf",
+      "bytes": 4617953,
+      "sha256": "851b9b7bf9a562e0f0eb0f5e6eb93ea88e72f1a6364a5db9945cee5645aeb0ff",
+      "pdf": true
+    },
+    {
+      "source_id": "moissan",
+      "url": "https://www.academie-sciences.fr/pdf/dossiers/fonds_pdf/Fonds_Moissan.pdf",
+      "retrieved_utc": "2026-10-29T12:43:29.849379+00:00",
+      "discovery": "observed URL",
+      "http_status": 200,
+      "final_url": "https://www.academie-sciences.fr/pdf/dossiers/fonds_pdf/Fonds_Moissan.pdf",
+      "bytes": 236656,
+      "sha256": "7069c9b50e5a53e02a603046ad20146a86109c662c1df5793c4f682cca5a1887",
+      "pdf": true
+    },
+    {
+      "source_id": "bertin",
+      "url": "https://www.academie-sciences.fr/pdf/eloges/bertin_notice.pdf",
+      "retrieved_utc": "2026-10-29T12:48:41.400344+00:00",
+      "discovery": "bounded official obituary filename probe",
+      "http_status": 200,
+      "pdf": true,
+      "bytes": 232662,
+      "sha256": "32feb26e2ca2fde0b36bd8fd105b1d8b1f249c11b8e9778b54bce872530151b6"
+    },
+    {
+      "source_id": "maire",
+      "url": "https://www.academie-sciences.fr/pdf/eloges/maire_notice.pdf",
+      "retrieved_utc": "2026-10-29T12:48:45.431359+00:00",
+      "discovery": "bounded official obituary filename probe",
+      "http_status": 200,
+      "pdf": true,
+      "bytes": 2532900,
+      "sha256": "7b7f2711a86241f58a94a667068c1b13ec5b97676fba8209c0f874a2eae230d6"
+    }
+  ],
+  "additional_network_requests_after_source30": 0,
+  "actual_source_bytes_verified": true,
+  "local_PDF_visual_review_done_for_all_positive_evidence": true,
+  "render_issue_note": "One truncated private Henneguy PNG was regenerated as a complete JPEG and viewed; original PDF bytes were unaffected."
+}

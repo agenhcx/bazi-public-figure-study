@@ -1,0 +1,361 @@
+{
+  "schema": "v31_sources_c_v1",
+  "worker": "/root/v26_sources_c assignedv31groupc",
+  "written_utc": "2026-11-06T12:39:03.479289+00:00",
+  "phase": "geography_only",
+  "scope_record_ids": [
+    "RS_PAST_NA4747",
+    "RS_PAST_NA5065",
+    "RS_PAST_NA5962",
+    "RS_PAST_NA7080"
+  ],
+  "intent_file": "v31_c_intent.json",
+  "prior_context_review": "Beforequeriesactuallyreadall4completeacceptedBP/geographyversionedcontexts/selectedevidence/priorgeographyfields and recursivelymatchedv30audit*holds; onlyMaynardSmithprior_v12holdtargetfound/read. Seeprospectiveintentperrecorddetails.",
+  "counts": {
+    "discovery_queries": 8,
+    "web_navigation_attempts": 6,
+    "parsed_find_operations": 0,
+    "screenshots": 0,
+    "raw_HTTP_or_PDF_GETs": 0,
+    "geographic_candidates": 2,
+    "holds": 2,
+    "qualified_new_DOB_or_place_conflict_proposals": 0,
+    "new_birthplace_proposals": 0
+  },
+  "candidates": [
+    {
+      "record_id": "RS_PAST_NA5065",
+      "native": {
+        "record_id": "RS_PAST_NA5065",
+        "authority_name": "Smith; John Maynard (1920 - 2004)",
+        "native_dob": "1920-01-06",
+        "raw_birthplace": "London",
+        "hemisphere": "unknown",
+        "frozen_birthplace_source_grade": "S1",
+        "frozen_birthplace_source_url": "https://catalogues.royalsociety.org/calmview/Record.aspx?src=CalmView.Persons&id=NA5065",
+        "complete_object_canonical_sha256": "ec5744004d6b4d28d37cc005df7e16d4d6277411d71a37aef136d064654b5244"
+      },
+      "status": "candidate_new_original_Kyoto_birthcountry_S3_north_parentreview",
+      "frozen_raw_birthplace": "London",
+      "source_place_observed": "London, England",
+      "reviewed_hemisphere_proposal": "north",
+      "source_url": "https://www.kyotoprize.org/en/laureates/john_maynard_smith/",
+      "source_title": "John Maynard Smith | Kyoto Prize",
+      "source_author": null,
+      "source_kind": "originaluncreditedinstitutionalprizelaureatebiographicaltimeline",
+      "publication_year": null,
+      "publication_date_precision": "Actual2001awardyearnotrelabeledarticlepublicationdate; articlepublicationdateunknown.",
+      "source_grade_proposal": "S3",
+      "source_grade_basis": "ActualoriginaluncreditedcompiledKyotoPrizebiographicaltimeline, conservativeS3geographicsupport. No hostonlyS1/prizewinnercivilverification or nativeDOB/BPgradeupgrade.",
+      "source_body_ref": "turn9482862view0",
+      "source_locator": "L34completeJohnMaynardSmith;L38lifespan1920-2004;L74-87ESS/evolutionarybiology2001prizecontext;L90-94biography1920/directBorninLondonEngland;L103-115UCL/Sussexcareers.",
+      "source_quote": "Born in London, England",
+      "observed_source_full_name": "John Maynard Smith",
+      "source_birthdate": "1920",
+      "source_birthdate_precision": "yearonly_from_biographical_timeline",
+      "source_lifespan": "1920-2004",
+      "source_DOB_native_compatibility": "Actualbirthyear1920/lifespan1920-2004 agree unchangednative1920-01-06/authority1920-2004. ExactJan6 notclaimedfromthissource. Allnativefullcomponentspresent, no v24omittedmiddleexception needed.",
+      "identity_review": [
+        "AllnativecomponentsJohnMaynardSmith directlyactualheading, no initials/nickname/name-substitutionexpansion.",
+        "Actualbirthyear/lifespancompatible; distinctiveESS/game-theory/evolutionbiology/UCL/Sussex careerfingerprint coherent.",
+        "PriorBalzanoldexactJan6London-onlysource/UKheaderBritishcitizenshipnotusedasnewbirthcountryproof. PriorunopenedIMDbFeb6secondarysearchprojectionremainsunqualifiedlead, not anactiveoriginalDOBconflict or actualbodyadoption; no attempttocorrectdates."
+      ],
+      "stored_place_relation_review": "ActualnewtimelineLondonEngland containsunchangedstoredLondoncitystring and addsdirectbirthlinkedEnglandcountry. Consistentcountryrefinementonly; no existingBPclaim/rawplace/sourcegrade/URL/evidence replacement.",
+      "geographic_basis": "ActualbirthrowexplicitLondon,England; Englandwholeextentnorth. No countryfromBritishcitizenship/BalzanUKheader/prizehost/UCL/Sussexwork or familiarLondoncity.",
+      "caveats": [
+        "Originalcompiledtimelineyearonly, no exactnativebirthdayverification/civilrecord/independentcorroboration claim.",
+        "Onlyproposedgeographyfields/contextmutable; storedLondon/S1BP/RSacceptedidentityevidencefullyfrozen.",
+        "NewKyoto4wordquoteonly; priorBalzanworkquotesunchanged/no originalBalzanrepeat."
+      ],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsedoriginalbody or exacttoolresult, not rawHTTPbytes",
+      "no_master_change": true,
+      "source_grade_role": "geographic_support_only",
+      "raw_birthplace_unchanged": true,
+      "DOB_and_BP_source_grades_unchanged": true,
+      "source_quote_word_count": 4
+    },
+    {
+      "record_id": "RS_PAST_NA7080",
+      "native": {
+        "record_id": "RS_PAST_NA7080",
+        "authority_name": "Hardy; Sir; Alister Clavering (1896 - 1985)",
+        "native_dob": "1896-02-10",
+        "raw_birthplace": "Nottingham",
+        "hemisphere": "unknown",
+        "frozen_birthplace_source_grade": "S2",
+        "frozen_birthplace_source_url": "https://rse.org.uk/wp-content/uploads/2021/07/RSE-Fellows-BiographicalIndex-1.pdf",
+        "complete_object_canonical_sha256": "3b6e52e134b0e999796763540ea58ad9f656bfe37d7fa98668a08f9e7934c62c"
+      },
+      "status": "candidate_new_original_Gifford_birthcountry_S3_north_parentreview",
+      "frozen_raw_birthplace": "Nottingham",
+      "source_place_observed": "Nottingham, England",
+      "reviewed_hemisphere_proposal": "north",
+      "source_url": "https://giffordlectures.org/speaker/alister-clavering-hardy/",
+      "source_title": "Alister Clavering Hardy | The Gifford Lectures",
+      "source_author": null,
+      "source_kind": "originaluncreditedinstitutionallecturerbiographicalprofile",
+      "publication_year": null,
+      "publication_date_precision": "No explicitarticlepublicationdateacquired; lecture/bookdatesnotpublicationdateofwebbiography.",
+      "source_grade_proposal": "S3",
+      "source_grade_basis": "ActualoriginaluncreditedcompiledGiffordspeakerbiography, conservativeS3geographicsupport. LinkedODNBbiography notacquiredasclaimsource; no transferredexpertbyline/S2orhostonlyS1.",
+      "source_body_ref": "turn9482862view1",
+      "source_locator": "L18completeAlisterClaveringHardy;L24-25Biography/exact10Feb1896/directNottinghamEngland;L25-28CPR/Discovery/Hull/Aberdeen/LinacreOxford/religiousexperience/publicationfingerprint.",
+      "source_quote": "was born on 10 February 1896 in Nottingham, England",
+      "observed_source_full_name": "Alister Clavering Hardy",
+      "source_birthdate": "1896-02-10",
+      "source_birthdate_precision": "exactday",
+      "source_deathdate": null,
+      "source_DOB_native_compatibility": "Actual10February1896 matches unchangednative1896-02-10; sourcehasnoactualdeathdatecontradictingnative1985. Allnativefullcomponentsactual, no nameexception.",
+      "identity_review": [
+        "FullAlisterClaveringHardy directlyheadingandbirthsentence, noinitial/nicknameexpansion.",
+        "ExactunchangednativeDOB pluscontinuousplanktonrecorder/Discoveryexpedition/LinacreOxford/AlisterHardyResearchCentre fingerprint coherent.",
+        "KnownoldRSEindexexactDOB/Nottinghamonly remainshistoricalacceptedBP; oldraw403routeclosedandnotreopened."
+      ],
+      "stored_place_relation_review": "ActualnewsubjectbornclauseNottinghamEngland preservesexistingstoredNottinghamcitystring and addsdirectbirthlinkedEngland. Consistentgeographyrefinementonly; no oldRSEBPsourcegrade/rawcity/sourceevidencechange.",
+      "geographic_basis": "Englandexplicitlyinactualsubjectbirthsentence andwhollynorth. NotderivedfromBritishnationality/nottinghamfamiliarity/Hull/Aberdeen/Oxfordwork/ScottishGiffordwillfooter.",
+      "caveats": [
+        "Uncreditedspeakerbiography/countrycontextonly; no independentcivilverification or transferredauthorshipfromlinkedODNB.",
+        "Nativelifespan1896-1985unchanged; sourcebirthdateactualmatchingdoesnotupgradefrozenDOBtiers.",
+        "OldNottingham/S2BPgradesourcefullyfrozen, newS3roleonlygeographicsupport; existingRSEquotationsunchanged."
+      ],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsedoriginalbody or exacttoolresult, not rawHTTPbytes",
+      "no_master_change": true,
+      "source_grade_role": "geographic_support_only",
+      "raw_birthplace_unchanged": true,
+      "DOB_and_BP_source_grades_unchanged": true,
+      "source_quote_word_count": 9
+    }
+  ],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA4747",
+      "native": {
+        "record_id": "RS_PAST_NA4747",
+        "authority_name": "Roberts; Sir; Derek Harry (1932 - 2021); engineer",
+        "native_dob": "1932-03-28",
+        "raw_birthplace": "24 Polygon Avenue, Ardwick, Manchester",
+        "hemisphere": "unknown",
+        "frozen_birthplace_source_grade": "S2",
+        "frozen_birthplace_source_url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/579392614",
+        "complete_object_canonical_sha256": "11c004324400e48c6bb0f7c9df35fbd14be0e007f6916c90b2fef8c3474587cf"
+      },
+      "status": "hold_no_new_explicit_birthregion_in_actual_original_profile",
+      "hold_type": "no_direct_birthregion_and_source_binding_precision_insufficient",
+      "reason": "GenuinelynewactualRoyalSocfellowprofile givesSirDerekRoberts/industrialsemiconductorGEC/twoUCLProvostterms/death17Feb2021, but no middleHarry/actualDOB/directbirthplacecountryorwholeregion. No v24exception withoutactualexactnativeDOB, and noplaceproofanyway. OriginalpriorODNBaddressArdwickManchester remainsrawandS2frozen; fatherFranceEnglandtravel/UCLwork/footerandEnglishnationalitynotbirthregion.",
+      "sources": [
+        {
+          "url": "https://royalsociety.org/people/derek-roberts-12185/",
+          "body_ref": "turn9888111view0",
+          "locator": "L191-198",
+          "actual_source_name": "Sir Derek Roberts",
+          "unconfirmed_native_component": "Harry",
+          "actual_source_birthdate": null,
+          "actual_source_deathdate": "2021-02-17",
+          "actual_birthplace_relation": false,
+          "source_kind": "originaluncreditedinstitutionalfellowcareerprofile",
+          "no_exhaustive_claim_beyond_inspectedprofile_body": true
+        }
+      ],
+      "prior_context_read": [
+        "completebirthplace_followup_v22acceptedODNBfact/identityonlyUCLtribute/geocaveats/rollbackcontext",
+        "fullpriorgeographyfields; no targetedpriorhold entryfound"
+      ],
+      "quotes_used": [],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsedoriginalbody or exacttoolresult, not rawHTTPbytes",
+      "no_master_change": true,
+      "source_grade_role": "geographic_support_only",
+      "raw_birthplace_unchanged": true,
+      "DOB_and_BP_source_grades_unchanged": true
+    },
+    {
+      "record_id": "RS_PAST_NA5962",
+      "native": {
+        "record_id": "RS_PAST_NA5962",
+        "authority_name": "Collar; Arthur Roderick (1908 - 1986)",
+        "native_dob": "1908-02-22",
+        "raw_birthplace": "West Ealing",
+        "hemisphere": "unknown",
+        "frozen_birthplace_source_grade": "S2",
+        "frozen_birthplace_source_url": "https://archives.bristol.ac.uk/Record.aspx?id=DM1192&src=CalmView.Catalog",
+        "complete_object_canonical_sha256": "643fd6ad0125f1c4571434fe23b64446d8e53ec6f95a6055fba39284d906d132"
+      },
+      "status": "hold_new_original_birthregion_body_unavailable",
+      "hold_type": "original_birthcountry_bodies_unavailable",
+      "reason": "ActualWikipediausedonlyasobservednewdifferentoriginalworklinkcarrier, notEnglandbirthproof. FirstgenuinelydifferentPugsleyODNBarticleDOI500nonretryableandBishopRS1987memoirDOI403stopped. ExistingBristolNCUACSunderlyingcataloguePDF0readable/textmarkerrouteclosed; newCSACcarrierofsameworknotopened asvariantretry. No mapcountryfromWestEalingfamiliarity/Englishnationality. PriorBristolWestEaling/1908/S2BPfrozen; no nativeDOBcorrectionfromsecondaryWikipedia-list23Febprojection.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Arthur_Roderick_Collar",
+          "body_ref": "turn9888111view1",
+          "locator": "L119-130secondaryDOB/WestEalingEngland;L174BishopmemoirDOI;L176PugsleyODNBDOI",
+          "role": "originaldifferentwork_linkcarrieronly_notgeographyproof",
+          "secondary_country_not_adopted": true
+        },
+        {
+          "url": "https://doi.org/10.1093%2Fref%3Aodnb%2F40052",
+          "body_ref": "turn6836263view0",
+          "exact_tool_error": "Failed to fetch https://doi.org/10.1093%2Fref%3Aodnb%2F40052: (500) Redirected to https://www.oxforddnb.com/view/article/40052 which is not accessible via this tool. (non-retryable error)",
+          "stopped_without_retry_or_variant": true,
+          "original_work_discovery_only": "A.G.PugsleyODNB2004Collar(Arthur)Roderick1908-1986",
+          "no_original_body_acquired": true
+        },
+        {
+          "url": "https://doi.org/10.1098%2Frsbm.1987.0006",
+          "body_ref": "turn6836263view1",
+          "exact_tool_error": "Failed to fetch https://doi.org/10.1098%2Frsbm.1987.0006: (403) Forbidden",
+          "stopped_without_retry_or_variant": true,
+          "original_work_discovery_only": "R.E.D.Bishop1987ArthurRoderickCollar22February1908-12February1986",
+          "no_original_body_acquired": true
+        }
+      ],
+      "prior_context_read": [
+        "completebirthplace_followup_v18Bristolarchive1908/WestEaling/S2/fullidentity/catalogueauthorrole/attachedPDF0linesandtextmarkerlimits/oldWikipediaEnglandnotproof",
+        "fullpriorgeographyfields; no targetedpriorholdentryfound"
+      ],
+      "quotes_used": [],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsedoriginalbody or exacttoolresult, not rawHTTPbytes",
+      "no_master_change": true,
+      "source_grade_role": "geographic_support_only",
+      "raw_birthplace_unchanged": true,
+      "DOB_and_BP_source_grades_unchanged": true
+    }
+  ],
+  "query_ledger": [
+    {
+      "ordinal": 1,
+      "engine": "system2",
+      "query": "\"John Maynard Smith\" born England biography",
+      "observed_subject_relevant_response_refs": [
+        "turn2914959search1",
+        "turn2914959search2",
+        "turn2914959search8",
+        "turn2914959search14"
+      ],
+      "no_observed_distinct_subject_result_in_combined_block": false
+    },
+    {
+      "ordinal": 2,
+      "engine": "system2",
+      "query": "\"Derek Harry Roberts\" born England",
+      "observed_subject_relevant_response_refs": [
+        "turn2914959search30",
+        "turn2914959search39",
+        "turn2914959search57"
+      ],
+      "no_observed_distinct_subject_result_in_combined_block": false
+    },
+    {
+      "ordinal": 3,
+      "engine": "system2",
+      "query": "\"Arthur Roderick Collar\" born England",
+      "observed_subject_relevant_response_refs": [
+        "turn2914959search4",
+        "turn2914959search5",
+        "turn2914959search48"
+      ],
+      "no_observed_distinct_subject_result_in_combined_block": false
+    },
+    {
+      "ordinal": 4,
+      "engine": "system2",
+      "query": "\"Alister Clavering Hardy\" born England",
+      "observed_subject_relevant_response_refs": [
+        "turn2914959search0",
+        "turn2914959search3",
+        "turn2914959search13"
+      ],
+      "no_observed_distinct_subject_result_in_combined_block": false
+    },
+    {
+      "ordinal": 5,
+      "engine": "system1",
+      "query": "\"John Maynard Smith\" \"London, England\" Kyoto",
+      "observed_subject_relevant_response_refs": [
+        "turn9482862search0",
+        "turn9482862search1",
+        "turn9482862search6"
+      ],
+      "no_observed_distinct_subject_result_in_combined_block": false
+    },
+    {
+      "ordinal": 6,
+      "engine": "system1",
+      "query": "\"Derek Harry Roberts\" \"Manchester\" biography",
+      "observed_subject_relevant_response_refs": [
+        "turn9482862search2",
+        "turn9482862search7"
+      ],
+      "no_observed_distinct_subject_result_in_combined_block": false
+    },
+    {
+      "ordinal": 7,
+      "engine": "system1",
+      "query": "\"Arthur Roderick Collar\" \"born\" \"Middlesex\"",
+      "observed_subject_relevant_response_refs": [],
+      "no_observed_distinct_subject_result_in_combined_block": true
+    },
+    {
+      "ordinal": 8,
+      "engine": "system1",
+      "query": "\"Alister Clavering Hardy\" \"Nottingham, England\" biography",
+      "observed_subject_relevant_response_refs": [
+        "turn9482862search3",
+        "turn9482862search4",
+        "turn9482862search5"
+      ],
+      "no_observed_distinct_subject_result_in_combined_block": false
+    }
+  ],
+  "query_ledger_representation": "Exactactualqueries; combinedfourqueryresultsrefssubjectrelevantsubsetnotguaranteedperquerymapping. No distinctCollarresultobservedinsecondcombinedblock, so query7refsleftempty/notinvented. Country/querytermshypothesesnotfacts.",
+  "navigation_ledger": [
+    {
+      "ordinal": 1,
+      "ref": "turn9482862view0",
+      "url": "https://www.kyotoprize.org/en/laureates/john_maynard_smith/",
+      "outcome": "Actualnewfullnative/year1920/life1920-2004/directLondonEngland candidateS3Northgeoonly"
+    },
+    {
+      "ordinal": 2,
+      "ref": "turn9482862view1",
+      "url": "https://giffordlectures.org/speaker/alister-clavering-hardy/",
+      "outcome": "Actualnewfullnative/exact10Feb1896/directNottinghamEngland candidateS3Northgeoonly"
+    },
+    {
+      "ordinal": 3,
+      "ref": "turn9888111view0",
+      "url": "https://royalsociety.org/people/derek-roberts-12185/",
+      "outcome": "ActualnewRobertsoriginalcareerprofile noHarry/actualDOB/birthregion; hold"
+    },
+    {
+      "ordinal": 4,
+      "ref": "turn9888111view1",
+      "url": "https://en.wikipedia.org/wiki/Arthur_Roderick_Collar",
+      "outcome": "Collaroriginaldifferentmemoir/ODNBlinkcarrieronly; notEnglandproof"
+    },
+    {
+      "ordinal": 5,
+      "ref": "turn6836263view0",
+      "url": "https://doi.org/10.1093%2Fref%3Aodnb%2F40052",
+      "outcome": "FirstPugsleyODNBarticleDOI500nonretryablepublishernotaccessible stopped"
+    },
+    {
+      "ordinal": 6,
+      "ref": "turn6836263view1",
+      "url": "https://doi.org/10.1098%2Frsbm.1987.0006",
+      "outcome": "FirstBishopRS1987memoirDOI403stopped"
+    }
+  ],
+  "protocol_deviations": [],
+  "protocol_review": "Fulltargetedpriorcontextbeforequeries; prospectiveexactquery/navintentsandactualcheckoflocalwriteexitbeforeeachnetworkbatch. No oldclosedBalzan/ODNBRoberts/BristolNCUACSPDF/RSEraw403reruns, alternatecarriersoffailedsamework, rawGET/fullcaches/sourcechildren/code/study/Git/mainmutations. QuotesonlynewKyoto/Giffordworks; allpriorquotes/factsunchanged. No nativeDOB/identity/rawBP/BPgrade/sourceclaim/evidence/country/QID/coords/originalDOBtier changes. CandidategradeS3solelygeographic_support_only. All9inheritedissue/methodfilesuntouched; no newqualifiedconflictsobserved."
+}

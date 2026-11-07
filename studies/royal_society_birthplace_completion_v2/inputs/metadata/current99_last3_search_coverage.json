@@ -1,0 +1,156 @@
+{
+  "scope": "bounded extra birthplace-only search for three remaining current99 people",
+  "queries": [
+    {
+      "engine": "system2",
+      "queries": [
+        "Steffen Lauritzen \"born\" \"1950\"",
+        "Richard Peto \"born\" \"1943\"",
+        "Xiaodong Chen \"born\" \"1975\""
+      ],
+      "note": "Exploratory discovery only; wrong 1950 Lauritzen query was corrected using immutable native 1947 record; no date or place accepted from mismatched people."
+    },
+    {
+      "engine": "system1",
+      "queries": [
+        "\"Steffen Lauritzen\" \"born\"",
+        "\"Xiaodong Chen\" \"born\" NTU",
+        "\"Steffen Lauritzen\" \"cv\""
+      ]
+    },
+    {
+      "engine": "system1",
+      "queries": [
+        "\"Steffen Lilholt Lauritzen\" \"født\"",
+        "\"陈晓东\" \"出生\" \"南洋理工\"",
+        "\"Xiaodong Chen\" \"born in\" chemistry"
+      ]
+    },
+    {
+      "engine": "system2",
+      "queries": [
+        "\"Steffen Lauritzen\" \"birthplace\"",
+        "\"陈晓东\" \"出生于\" 南洋",
+        "site:leopoldina.org \"Xiaodong Chen\" \"CV\""
+      ]
+    }
+  ],
+  "people": {
+    "RS_CURRENT_11792": {
+      "candidate_urls_attempted": 3,
+      "http_records": [
+        {
+          "key": "lauritzen_cv",
+          "url": "https://web.math.ku.dk/~lauritzen/cv.html",
+          "retrieved_utc": "2026-11-02T00:19:49.317580+00:00",
+          "error": "HTTPError:HTTP Error 503: Service Unavailable"
+        },
+        {
+          "key": "lauritzen_royalsociety",
+          "url": "https://royalsociety.org/people/steffen-lauritzen-11792/",
+          "retrieved_utc": "2026-11-02T00:19:49.318091+00:00",
+          "error": "",
+          "status": 200,
+          "final_url": "https://royalsociety.org/people/steffen-lauritzen-11792/",
+          "sha256": "bbeef149285c7afd47f2516ee5940bf2ee752e4a6c0039d8b71941dfdd77bf79",
+          "bytes": 81822,
+          "cv_links": [],
+          "birth_contexts": []
+        },
+        {
+          "key": "lauritzen_lex",
+          "url": "https://denstoredanske.lex.dk/Steffen_Lilholt_Lauritzen",
+          "retrieved_utc": "2026-11-02T00:19:49.318760+00:00",
+          "error": "HTTPError:HTTP Error 404: Not Found"
+        }
+      ],
+      "result": "unknown_after_bounded_search",
+      "rejection_reason": "Lauritzen own CV search-index content gives Danish citizen and date only; Royal Society says started life and career in Denmark without explicit born-place; Lex URL404."
+    },
+    "RS_CURRENT_12088": {
+      "candidate_urls_attempted": 1,
+      "http_records": [
+        {
+          "key": "peto_kingfaisal_book",
+          "url": "https://kingfaisalprize.org/wp-content/uploads/2024/07/WINNERS-BOOK_-Medicine_En.pdf",
+          "retrieved_utc": "2026-11-02T00:19:49.316791+00:00",
+          "error": "",
+          "status": 200,
+          "final_url": "https://kingfaisalprize.org/wp-content/uploads/2024/07/WINNERS-BOOK_-Medicine_En.pdf",
+          "sha256": "ac546688942120470431b355bf7efb64771483310da216a5dbf07c6f321535c9",
+          "bytes": 21421877,
+          "birth_contexts": [
+            "David C. Morley King Faisal Prize UK Medicine 1982 (Primary Health Care) David Cornelius Morley was born in Kettering, U.K., children in developing countries so that they can provide in 1923. He obtained his bachelor in medicine and care for their younger siblings. One of his famous books bachelor in su",
+            "ool-age 14 Professor Wallace Peters King Faisal Prize UK Medicine 1983 (Malaria) Wallace Peters was born in London, U.K., in 1924. He Professor Peters’ research in tropical medicine spans obtained his bachelor of medicine and bachelor of sur- nearly 60 years, during which he has authored hundreds gery d",
+            "ichael Field King Faisal Prize USA Medicine 1984 Co-Laureate (Diarrheal Diseases) Michael Field was born in London, U.K., in 1933. He University, they were able to show that cholera toxins in- obtained his BA from the University of Chicago in 1953 creased adenylate cyclase activity and the secretion of ",
+            " King Faisal Prize USA Medicine 1984 Co-Laureate (Diarrheal Diseases) John Satterfield Fordtran was born in San Antonio, TX, Gastrointestinal Endoscopy; Gastrointestinal Disease U.S.A., in 1931. He obtained his BA in biology from the and Secretory Diarrhea. University of Texas in 1952 and MD from Tulane",
+            " III King Faisal Prize USA Medicine 1984 Co-Laureate (Diarrheal Diseases) William Greenough III was born in Providence, RI, the International Center for Diarrheal Disease Research U.S.A., in 1932. He received his Bachelor’s in chemis- in Dhaka, Bangladesh. He also served as President of try from Amherst",
+            "Beasley King Faisal Prize USA Medicine 1985 Co-Laureate (Viral Hepatitis) Robert Palmer Beasley was born in Glendale, CA, Professor Beasley wrote the WHO policy guidelines on U.S.A., in 1936. He earned his undergraduate degree the hepatitis B virus immunization. He worked on a vari- from Dartmouth Colle",
+            "rio Rizzetto King Faisal Prize Italy Medicine 1985 Co-Laureate (Viral Hepatitis) Mario Rizzetto was born in Padova, Italy, in 1945. He presence of the hepatitis B virus, had bewildered hepati- qualifed in medicine and surgery from the Universi- tis researchers for many years. Its discovery was a major t",
+            "azzo King Faisal Prize Italy Medicine 1986 Co-Laureate (Diabetes Mellitus) Gian Franco Bottazzo was born in Venice, Italy, in which controls the body’s immune defenses, on the sur- 1946. He graduated in medicine from Padova Universi- face of damaged beta cells. The discovery of the link ty, then complet",
+            "sor Lelio Orci King Faisal Prize Italy Medicine 1986 Co-Laureate (Diabetes Mellitus) Lelio Orci was born in San Giovani, Italy, in 1937. He basis of vesicular trafficking. These studies have pro- obtained his MD from the College of Medicine at Rome foundly enriched our knowledge of Diabetes and con- Uni",
+            "King Faisal Prize Switzerland Medicine 1986 Co-Laureate (Diabetes Mellitus) Albert Ernst Renold was born in Switzerland in 1923 physiological aspects of the disease peculiar to a given and graduated in Medicine in 1948. Prior to his death in animal. These studies have since been used in diabetes 1988, h",
+            "Russell Jones King Faisal Prize UK Medicine 1987 (Prevention of Blindness) Barrie Russell Jones was born in Wellington, New Zea- motherapeutic measures and surgical procedures to prevent land, in 1921. He received his B.Sc. from Victoria College blindness due to trachoma. In later years, he turned his a",
+            "vyn F. Greaves King Faisal Prize UK Medicine 1988 Co-Laureate (Leukemia) Melvyn Francis Greaves was born in Norwich, U.K., Professor Greaves introduced new methods for the bi- in 1941. He received his B.Sc. in Zoology in 1964 ological classification of leukemias that led to insights and Ph.D. in Immunol",
+            "Janet D. Rowley King Faisal Prize USA Medicine 1988 Co-Laureate (Leukemia) Janet Davison Rowley was born in New York, NY, U.S.A., Professor Rowley in the early 1970’s identified a specific in 1925. She was awarded a scholarship, at the age of 15, genetic translocation, exchange of genetic material be- t",
+            "G. Edwards King Faisal Prize UK Medicine 1989 Co-Laureate (Infertility) Robert Geoffrey Edwards was born in Batley, U.K., in for further innovations in the treatment of infertility, such 1925. He received his B.Sc. in Zoology in 1951 from Uni- as intracytoplasmic sperm injection, embryo biopsy and versi",
+            ". This culminated in the first production. He was the founder, editor-in-chief or member successful birth of a “test tube” baby on 25 July 1978. of the editorial board of several scientific journals. This milestone event in the fight against infertility cap- tured the imagination of the public and focuse"
+          ]
+        }
+      ],
+      "result": "birthplace_observed_Reading_UK",
+      "rejection_reason": ""
+    },
+    "RS_CURRENT_37377": {
+      "candidate_urls_attempted": 3,
+      "http_records": [
+        {
+          "key": "chen_leopoldina",
+          "url": "https://www.leopoldina.org/en/members/member-list/detail/xiaodong-chen",
+          "retrieved_utc": "2026-11-02T00:19:49.320237+00:00",
+          "error": "",
+          "status": 200,
+          "final_url": "https://www.leopoldina.org/en/members/member-list/detail/xiaodong-chen",
+          "sha256": "91d66fbe104e02594604d2fbd115958e0e6e3ccb0682e6f49cab03a640f791ed",
+          "bytes": 180988,
+          "cv_links": [
+            "https://www.leopoldina.org/mitglieder/mitgliederverzeichnis/detail/xiaodong-chen",
+            "https://www.leopoldina.org/mitglieder/mitgliederverzeichnis/detail/xiaodong-chen",
+            "https://www.facebook.com/sharer/sharer.php?u=https://www.leopoldina.org/en/members/member-list/detail/xiaodong-chen",
+            "https://twitter.com/intent/tweet?url=https://www.leopoldina.org/en/members/member-list/detail/xiaodong-chen",
+            "https://www.linkedin.com/shareArticle?mini=true&url=https://www.leopoldina.org/en/members/member-list/detail/xiaodong-chen"
+          ],
+          "birth_contexts": []
+        },
+        {
+          "key": "chen_ntu",
+          "url": "https://www3.ntu.edu.sg/home/CHENXD/PI.html",
+          "retrieved_utc": "2026-11-02T00:19:58.130287+00:00",
+          "error": "",
+          "status": 200,
+          "final_url": "https://www3.ntu.edu.sg/home/CHENXD/PI.html",
+          "sha256": "3d32941229e150af73e5e9d3d937421298087c6a5aad0576f296a1cc1245252a",
+          "bytes": 6347,
+          "cv_links": [
+            "https://www.youtube.com/@ChenXD_Research_Group",
+            "https://www.linkedin.com/in/xiaodong-chen-a036781b5/",
+            "https://x.com/ChenXD_NTU_Sg",
+            "https://en.wikipedia.org/wiki/Xiaodong_Chen_(materials_scientist)"
+          ],
+          "birth_contexts": []
+        },
+        {
+          "key": "chen_wiley_author_profile",
+          "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/anie.201811655",
+          "retrieved_utc": "2026-11-02T00:20:37.213456+00:00",
+          "error": "HTTPError:HTTP Error 403: Forbidden"
+        }
+      ],
+      "result": "unknown_after_bounded_search",
+      "rejection_reason": "Correct NTU materials scientist profile and Leopoldina body have career but no explicit birthplace; Wiley denied403. Different Tianjin optical scientist, singer, diplomat and1965-bornchemicalengineer rejected as other identities."
+    }
+  },
+  "original_DOB_or_native_flags_modified": false,
+  "no_nationality_as_birthplace": true,
+  "no_new_birthday_adjudication": true
+}

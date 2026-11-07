@@ -1,0 +1,230 @@
+[
+  {
+    "record_id": "RS_PAST_NA4585",
+    "native": {
+      "record_id": "RS_PAST_NA4585",
+      "authority_name": "Matthews; Peter Bryan Conrad (1928 - 2020)",
+      "native_dob": "1928-12-23",
+      "raw_birthplace": "",
+      "hemisphere": "unknown",
+      "complete_object_canonical_sha256": "414509320dfd5399c088a3b0282f6be9155b4b99c4f18cb0fba5b7831171a996"
+    },
+    "status": "hold_no_explicit_birthplace_in_acquired_original_body_and_other_routes_unavailable",
+    "hold_type": "original_birthplace_body_unavailable",
+    "reason": "OriginalPhysoc fullidentity/exactDOB but no explicitBP. OxfordDPAG and distinctOxfordMedicine403 stopped. DistinctKingsCollegeannualreport was then first-opened under finalsharedA nav and returned tool404; stopped. Cambridgebirth remains search-only, notadopted.",
+    "sources": [
+      {
+        "url": "https://www.dpag.ox.ac.uk/news/peter-b-c-matthews-frs-obituary",
+        "ref": "turn7608655view1",
+        "outcome": "tool_reported403Forbidden_no_body",
+        "raw_HTTP_status": null,
+        "birthplace_relation_verified": false
+      },
+      {
+        "url": "https://www.medsci.ox.ac.uk/files/alumni/oxford-medicine-june-2020.pdf",
+        "ref": "turn8821294view0",
+        "outcome": "tool_reported403Forbidden_no_body",
+        "raw_HTTP_status": null,
+        "birthplace_relation_verified": false
+      },
+      {
+        "url": "https://www.physoc.org/magazine-articles/obituary-peter-bryan-conrad-matthews-1928-2020/",
+        "ref": "turn8821294view1",
+        "initial_ref": "turn7608655view2",
+        "title": "Obituary: Peter Bryan Conrad Matthews1928–2020",
+        "author": "Bob Banks (Durham University)",
+        "source_kind": "original_signed_scientific_society_obituary",
+        "publication_issue": "Spring(May)2020,issue118",
+        "doi": "10.36866/pn.118.49",
+        "locator": "L524issue;L527fullsubjectheading;L534byline;L539exactDOB;L554death2020-03-02/age91.",
+        "source_birthdate": "1928-12-23",
+        "source_birthdate_precision": "day",
+        "source_DOB_matches_native": true,
+        "source_death_date": "2020-03-02",
+        "birthplace_relation_verified": false,
+        "body_summary": "Original gives exactbirthdate but no birthplace. Cambridge explicitly attaches to school attendance; notusedasbirth.",
+        "source_quote": "",
+        "source_grade_proposal": null
+      },
+      {
+        "url": "https://www.kings.cam.ac.uk/sites/default/files/documents/kings-annual-report-2020-web18082021-1-1.pdf",
+        "ref": "turn8477048view0",
+        "outcome": "tool_reported404NotFound_stopped_no_retry",
+        "raw_HTTP_status": null,
+        "record_id": "RS_PAST_NA4585",
+        "purpose": "Finalsharedgroupnav on new originalcollegepublication lead after childbudgetexhausted"
+      }
+    ],
+    "unopened_original_lead": {
+      "url": "https://www.kings.cam.ac.uk/sites/default/files/documents/kings-annual-report-2020-web18082021-1-1.pdf",
+      "search_ref": "turn1414685search3",
+      "source_body_verified": false,
+      "purpose": "Originalcollegeannualreport source projection includes fullsubjectheading and explicitCambridgebirth. Parent may inspect if overallgroupnavbudget remains. Not birthplace proof in this subset.",
+      "later_group_parent_open_ref": "turn8477048view0",
+      "later_group_parent_open_result": "tool404_no_body; no longer unopened in combinedgroup report"
+    },
+    "raw_HTTP_status": null,
+    "raw_bytes_sha256": null,
+    "exact_request_utc": null,
+    "retrieval_representation": "web-tool parsed original HTML/PDF text, not raw HTTP bytes",
+    "raw_bytes_captured": false,
+    "no_master_change": true,
+    "geography_assignment_performed": false
+  },
+  {
+    "record_id": "RS_PAST_NA8672",
+    "native": {
+      "record_id": "RS_PAST_NA8672",
+      "authority_name": "Fletcher; Roger (1939 - 2016); mathematician",
+      "native_dob": "1939-01-29",
+      "raw_birthplace": "",
+      "hemisphere": "unknown",
+      "complete_object_canonical_sha256": "6fdb3662a1572983fc902b57447162a4938111c7544f8fd99a0ef23bf860d5c6",
+      "authority_name_and_DOB_count_in_4983": 1
+    },
+    "status": "hold_no_explicit_birthplace_in_acquired_original_lecture_memoir_body_unavailable",
+    "hold_type": "original_birthplace_body_unavailable",
+    "reason": "Original conference lecture confirms full native Roger Fletcher, exact29January1939/lifespan1939-2016 and optimization identity, but inspected original biographical section supplies no birthplace. Original memoir DOI returned tool-reported403 and stopped. No birthplace inferred from Dundee/Leeds/Cambridge affiliations or Scottish death context.",
+    "sources": [
+      {
+        "url": "https://numericalanalysisconference.org.uk/conferences/2025/slides/16",
+        "ref": "turn9412493view1",
+        "title": "Fletcher-Powell 2025 Lecture: Nonlinear Techniques to Solve Linear Optimization Problems: Think of Interior Point Methods",
+        "author": "Jacek Gondzio",
+        "source_kind": "original_conference_lecture_slides_not_original_memoir_body",
+        "publication_date": "2025-06",
+        "publication_date_precision": "month_on_title_footer",
+        "locator": "L0-15@P0author/date; L24-32@P3-4 full RogerFletcher/exactdates/memoir citation; L49-95@P6-10optimizationcareer.",
+        "source_birthdate": "1939-01-29",
+        "source_birthdate_precision": "exact_day_in_cited_memoir_title",
+        "compatible_with_native": true,
+        "birthplace_relation_verified": false,
+        "original_memoir_body_acquired": false
+      },
+      {
+        "url": "https://doi.org/10.1098/rsbm.2024.0037",
+        "ref": "turn9642229view0",
+        "title": "Roger Fletcher. 29 January 1939—15 July 2016",
+        "source_authors_in_observed_lecture_citation": [
+          "N. I. M. Gould",
+          "J. A. J. Hall"
+        ],
+        "source_kind": "original_scientific_memoir_DOI_resolver_attempt",
+        "tool_reported_error": "Failed to fetch (403) Forbidden",
+        "original_body_acquired": false,
+        "retry_performed": false
+      }
+    ],
+    "identity_review": [
+      "Full native Roger Fletcher and compatible exact native birthday are printed in the original lecture cited memoir title.",
+      "Optimization, DFP/BFGS contributions and named PhD students supply distinctive career context; no place used as birth location.",
+      "Memoir publication title is only a citation in acquired lecture; do not claim original memoir born narrative acquired."
+    ],
+    "raw_HTTP_status": null,
+    "raw_bytes_sha256": null,
+    "exact_request_utc": null,
+    "no_master_change": true
+  },
+  {
+    "record_id": "RS_PAST_NA8700",
+    "native": {
+      "record_id": "RS_PAST_NA8700",
+      "authority_name": "Wells; Peter Neil Temple (1936 - 2017)",
+      "native_dob": "1936-06-19",
+      "raw_birthplace": "",
+      "hemisphere": "unknown",
+      "complete_object_canonical_sha256": "699a7fa47d2fe8a261abf9d150a809bf8b4338eb563045308e0e26f014165c9b",
+      "authority_name_and_DOB_count_in_4983": 1
+    },
+    "status": "hold_original_explicit_born_date_conflicts_with_native",
+    "hold_type": "source_exact_DOB_conflict",
+    "reason": "Original BIR subject born sentence states19May1936, conflicting with frozen native19June1936. No birthplace/hemisphere adoption and no native correction. Death-endpoint-only exception cannot apply to a birth-month conflict; dateless alternative cannot bypass it.",
+    "raw_birthplace_candidate_held": "Bristol, England",
+    "source_url": "https://bir.org.uk/media-centre/news/2017/may/professor-peter-wells-1936-2017.aspx",
+    "source_ref": "turn9412493view0",
+    "source_title": "Professor Peter Wells 1936-2017",
+    "source_author": null,
+    "source_kind": "original_scientific_institution_uncredited_obituary_news_body",
+    "publication_date": "2017-05",
+    "publication_date_precision": "month_in_original_URL_only; not independently dated by returned body",
+    "source_quote": "Peter Neil Temple Wells was born in Bristol, England, on 19 May 1936",
+    "source_quote_word_count": 13,
+    "source_locator": "L91title; L95BIRpresident1984-85/BJRassociateeditor1980-85; L96fullnativecomponents/direct bornplace/date; L97-100medicalultrasoundcareer.",
+    "source_birthdate": "1936-05-19",
+    "source_birthdate_precision": "exact_day_in_born_sentence",
+    "native_birthdate": "1936-06-19",
+    "conflict_kind": "month_difference_May_versus_June_same_day_year",
+    "source_full_name": "Peter Neil Temple Wells",
+    "identity_review": [
+      "All native full-name components directly present in original L96.",
+      "L91/95title and death2017/lifespan1936-2017 compatible with native lifespan.",
+      "Distinctive BIRpresidency1984-85, BJRassociateeditor1980-85 and development of medical ultrasound scanners bind the target.",
+      "Original exact born date disagrees with native month; this is not a common-name alternative or a death-only endpoint discrepancy."
+    ],
+    "conditional_source_grade_if_no_conflict": "S3 for uncredited original institutional biography, not host-only S1; no grade adopted",
+    "geography_decision": "unchanged_unknown_due_to_source_DOB_conflict",
+    "geographic_caveat": "England is birth-linked in the held source but cannot be used to resolve hemisphere while DOB-source conflict remains active.",
+    "additional_discovery_only": {
+      "url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/579400901",
+      "search_ref": "turn8428623search0",
+      "author_in_discovery": "Hywel Thomas",
+      "source_birthdate_in_discovery": "1936-05-19",
+      "original_body_open_result": "tool-inaccessible turn2121334view0; stopped without retry",
+      "independent_body_corroboration_claimed": false,
+      "no_source_quote_distributed": true
+    },
+    "raw_HTTP_status": null,
+    "raw_bytes_sha256": null,
+    "exact_request_utc": null,
+    "retrieval_representation": "web-tool parsed original HTML body, not raw HTTP bytes",
+    "no_master_change": true
+  },
+  {
+    "record_id": "RS_PAST_NA9858",
+    "native": {
+      "record_id": "RS_PAST_NA9858",
+      "authority_name": "O'Brien; Paul (1954 - 2018)",
+      "native_dob": "1954-01-22",
+      "prior_raw_birthplace": "",
+      "prior_hemisphere": "unknown",
+      "full_target_object_canonical_sha256": "f81f674b162c1a4bc6defafa8fee793c0fd39a167887b050726293af559ddfa5"
+    },
+    "status": "hold_original_birthplace_body_unavailable",
+    "hold_type": "original_birthplace_body_unavailable",
+    "reason": "Original LSW AGM collection PDF could not be acquired due tool content-length limit. Distinct original authored Catlow obituary discovered in PMC, but direct PMCopen returned a reCAPTCHA/browser-check shell, not the obituary body. Both routes stopped. Oldham,Lancashire remains search-only; sourceDOBprecision not acquired and no birthday/place/grade/geography adopted.",
+    "sources": [
+      {
+        "url": "https://www.learnedsociety.wales/wp-content/uploads/2019/05/AGM-2019-All-papers.pdf",
+        "ref": "turn8498563view1",
+        "source_kind": "original scientific-society meeting papers, body unavailable",
+        "tool_result": "Failed to fetch: (400) Content length is too large:15362389",
+        "raw_HTTP_status": null,
+        "raw_bytes_sha256": null,
+        "exact_request_utc": null,
+        "birthplace_relation_body_verified": false
+      },
+      {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6364596/",
+        "ref": "turn5142654view0",
+        "source_title_from_discovery": "Obituary: Professor Paul O'Brien",
+        "source_author_from_discovery": "Richard Catlow",
+        "publication_from_discovery": "Proceedings of the Royal Society A, issue2019Jan",
+        "source_kind": "original RoyalSociety obituary carried in PMC; actual open only browsercheck/reCAPTCHA",
+        "tool_result": "Parsed3-line Checking your browser - reCAPTCHA shell; no obituary body",
+        "birthplace_relation_body_verified": false,
+        "source_DOB_precision_acquired": null,
+        "raw_HTTP_status": null,
+        "raw_bytes_sha256": null,
+        "exact_request_utc": null
+      }
+    ],
+    "unverified_discovery_birthplace_lead": "Oldham, Lancashire",
+    "unverified_discovery_ref": "turn2411984search0",
+    "no_master_change": true,
+    "geography_assignment_performed": false,
+    "retrieval_representation": "tool-parsed original route results; no raw HTTP/PDF bytes",
+    "raw_HTTP_status": null,
+    "raw_bytes_sha256": null,
+    "exact_request_utc": null
+  }
+]

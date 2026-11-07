@@ -1,0 +1,45 @@
+{
+  "written_utc": "2026-11-05T00:21:31.919517+00:00",
+  "scope": [
+    "RS_PAST_NA4155",
+    "RS_PAST_NA5003",
+    "RS_PAST_NA629",
+    "RS_PAST_NA5508"
+  ],
+  "queries": [
+    "Leonard George Goodwin born RCP lives fellows",
+    "Sheldon Francis Dudley born RCP lives fellows",
+    "Allan Watt Downie born RCP lives fellows",
+    "Benjamin Moore biochemist born RCP lives fellows"
+  ],
+  "budget_queries": 6,
+  "budget_original_navigation": 8,
+  "planned_original_opens": [
+    {
+      "written_utc": "2026-11-05T00:21:44.536023+00:00",
+      "urls": [
+        "https://history.rcp.ac.uk/inspiring-physicians/leonard-george-goodwin",
+        "https://history.rcp.ac.uk/inspiring-physicians/sir-sheldon-francis-dudley",
+        "https://history.rcp.ac.uk/inspiring-physicians/allan-watt-downie",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC3632847/"
+      ]
+    },
+    {
+      "written_utc": "2026-11-05T00:22:13.178865+00:00",
+      "urls": [
+        "https://www.newulsterbiography.co.uk/index.php/home/viewPerson/1973"
+      ],
+      "reason": "PMC challenge not retried. Newly discovered original signed dictionary biography provides distinct publisher route."
+    }
+  ],
+  "notes": "Native fields frozen; original explicit birth assertion required; no original rawbytes unless actually requested; tool parsed text not raw HTTP.",
+  "adaptive_queries": [
+    {
+      "written_utc": "2026-11-05T00:21:55.605267+00:00",
+      "queries": [
+        "\"Benjamin Moore FRS (1867\u20131922)\" \"Ulster\"",
+        "\"Benjamin Moore\" biochemist \"born\" \"1867\" -wikipedia -newikis"
+      ]
+    }
+  ]
+}

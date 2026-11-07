@@ -1,0 +1,410 @@
+{
+  "schema": "UK_v20_sources_a_original_body_candidates_and_holds_v1",
+  "written_utc": "2026-11-05T15:01:22.577637+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA4036",
+    "RS_PAST_NA4166",
+    "RS_PAST_NA4179",
+    "RS_PAST_NA4490"
+  ],
+  "intent_file": "v20_a_intent.json",
+  "counts": {
+    "discovery_queries": 6,
+    "holds": 3,
+    "original_source_host_or_resolver_navigation_attempts": 6,
+    "external_original_work_carrier_attempts": 1,
+    "screenshots": 0,
+    "web_navigation_attempts": 7,
+    "raw_GETs": 0,
+    "body_verified_birthplace_candidates": 1,
+    "held_explicit_birthplace_observations": 1,
+    "parsed_text_find_operations": 0
+  },
+  "budget": {
+    "discovery_queries_limit": 6,
+    "web_navigation_limit": 8,
+    "unused_navigation_capacity": 1
+  },
+  "dispositions": [
+    {
+      "record_id": "RS_PAST_NA4036",
+      "status": "hold_native_lifespan_endpoint_conflict_despite_exact_DOB_and_full_name"
+    },
+    {
+      "record_id": "RS_PAST_NA4166",
+      "status": "candidate_original_published_body_explicit_first_birthplace"
+    },
+    {
+      "record_id": "RS_PAST_NA4179",
+      "status": "hold_no_explicit_subject_birthplace_in_acquired_original_body"
+    },
+    {
+      "record_id": "RS_PAST_NA4490",
+      "status": "hold_original_memoir_body_unavailable"
+    }
+  ],
+  "candidates": [
+    {
+      "record_id": "RS_PAST_NA4166",
+      "native": {
+        "record_id": "RS_PAST_NA4166",
+        "authority_name": "Garton; William Reginald Stephen (1912 - 2002)",
+        "native_dob": "1912-03-07",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "f828ece89620c9eebbac3b9a131da494c27e2c831a39d32cd5f3bd605320c4d7",
+        "authority_name_and_DOB_count_in_all_4983": 1
+      },
+      "status": "candidate_original_published_body_explicit_first_birthplace",
+      "raw_birthplace": "Chelsea",
+      "source_url": "https://www.researchgate.net/publication/247606535_William_Reginald_Stephen_Garton_7_March_1912--28_August_2002",
+      "source_final_carrier_url_observed": "https://www.researchgate.net/publication/247606535_William_Reginald_Stephen_Garton_7_March_1912-28_August_2002",
+      "source_title": "William Reginald Stephen Garton. 7 March 1912—28 August 2002",
+      "source_author": "Jean-Patrick Connerade",
+      "source_kind": "original_signed_published_Royal_Society_memoir_text_on_author_upload_carrier",
+      "source_grade_proposal": "S2",
+      "source_grade_basis": "Original signed published biographical memoir identified by original byline, journal volume/pages/DOI/copyright and visible full original text; ResearchGate is the carrier, not asserted as an independent source or host-only basis for grade. Conservative S2, not civil registration or S1.",
+      "source_grade_role": "new_person_birthplace_support_only",
+      "doi": "10.1098/rsbm.2008.0023",
+      "publication_year": "2009",
+      "publication_date_precision": "year",
+      "publication_date_caveat": "Carrier top metadata says December2009, while article-reprint metadata says published1January2009. Retain only observed2009 year; do not adjudicate exact publication day/month from conflicting carrier metadata.",
+      "publication_locator": "Biographical Memoirs of Fellows of the Royal Society55,77–90(2009)",
+      "source_quote": "was born in Chelsea on 7 March 1912",
+      "source_quote_word_count": 8,
+      "source_quote_note": "Whitespace joined across parsed original reprint lines104/106; no wording added.",
+      "source_locator": "Carrier original fulltext title/name and exactdates at75–87; FRS1969 at89, original byline91; born Chelsea and exactdate104/106; DOI/copyright/journalprinted79 at133.",
+      "source_webrefs": [
+        "turn3336282view0"
+      ],
+      "source_birthdate": "1912-03-07",
+      "source_birthdate_precision": "day_in_born_clause_and_subject_header",
+      "source_DOB_matches_native": true,
+      "source_death_date": "2002-08-28",
+      "observed_source_full_name": "William Reginald Stephen Garton",
+      "identity_review": [
+        "All native full-name components directly present in original published memoir title and body.",
+        "Exact7March1912 matches native birthday;1912–2002 lifespan and28August2002 death agree native authority.",
+        "Atomic spectroscopy/autoionisation, Imperial College career and FRS1969 provide distinctive subject anchors; no Reg/WRS expansion supplied from native."
+      ],
+      "identity_conflicts_observed": [],
+      "geography_assignment_performed": false,
+      "geographic_basis_for_parent": "Chelsea alone is birth-linked. Londoner in spirit/upbringing is not an explicit birth-country/whole-region qualifier, and Imperial workplace address LondonSW7UK is not birthplace context. Keep geography unknown without familiar-city or affiliation inference.",
+      "caveats": [
+        "Imperial original biography page gave same discovery lead but original bodyopen403; not adopted as a separate acquired source or independent corroboration.",
+        "Original memoir fulltext read through an author-upload carrier; no original PDF bytes, rawSHA or direct first-publisher-body acquisition claimed.",
+        "Carrier original article text shows signed byline and original journal/copyright/DOI. No fulltext, PDF or image redistributed; only8-word born excerpt.",
+        "No sourceDOB/calendar/identity/eligibility/grade/country/QID/coordinates changes performed."
+      ],
+      "retrieval_representation": "web-tool parsed HTML containing original published memoir reprint text, not rawPDF/HTTP bytes",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    }
+  ],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA4036",
+      "native": {
+        "authority_name": "Midwinter; John Edwin (1938 - 2011); electrical engineer",
+        "native_dob": "1938-03-08",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "6ac3084cdcafb4951d4b84f458db3394610cfba0ce3e1dce861d6b3504a549f0"
+      },
+      "status": "hold_native_lifespan_endpoint_conflict_despite_exact_DOB_and_full_name",
+      "hold_type": "native_lifespan_endpoint_conflict",
+      "raw_birthplace_candidate": "Newbury, Berkshire",
+      "source_url": "https://www.theguardian.com/technology/2021/dec/12/john-midwinter-obituary",
+      "source_title": "John Midwinter obituary",
+      "source_author": "Polina Bayvel",
+      "publication_date": "2021-12-12",
+      "last_modified_date": "2022-01-20",
+      "source_kind": "original_signed_newspaper_obituary_by_UCL_optical_communications_colleague",
+      "source_grade_proposal": null,
+      "source_grade_if_independently_admitted": "S2",
+      "source_grade_caveat": "No grade adopted. This is a signed original narrative, not host-only S1. It is outside the narrower university/college/scientific-society/ODNB source class sought here; retained as a held source observation for parent review.",
+      "source_quote": "Born in Newbury, Berkshire",
+      "source_quote_word_count": 5,
+      "source_locator": "Parsed original L61 byline; L63 publication metadata; L80 born relation; L86 subject name and vital dates.",
+      "source_webrefs": [
+        "turn6662317view0"
+      ],
+      "observed_source_full_name": "John Edwin Midwinter",
+      "source_birthdate": "1938-03-08",
+      "source_birthdate_precision": "day",
+      "source_DOB_matches_native": true,
+      "source_death_date": "2021-11-13",
+      "source_lifespan_compatible_with_native": false,
+      "identity_review": {
+        "source_full_native_name_components_present": true,
+        "source_exact_DOB_matches_native": true,
+        "source_lifespan_compatible_with_native": false,
+        "native_endpoint_preserved": true,
+        "career_binding_original": "See independent UCL original observation below; same Midwinter optical-communications/UCL subject. No initial or nickname expansion."
+      },
+      "reason": "Strict group admission requires a compatible native lifespan as well as full-name/DOB/career binding. This source has an endpoint discrepancy, distinct from a DOB disagreement. Keep first-BP observation held; any parent exception requires separately documented review without altering frozen native facts.",
+      "supporting_original_observation": {
+        "url": "https://www.ucl.ac.uk/engineering/news/2021/dec/professor-john-midwinter-true-optical-fibre-communications-pioneer",
+        "title": "Professor John Midwinter: a true optical fibre communications pioneer",
+        "publication_date": "2021-12-16",
+        "author_observation": "Opening identifies Professor Polina Bayvel as the person remembering Midwinter; later additional memories explicitly attributed to Nick Doran. Nick Doran is not asserted to be sole article author.",
+        "ref": "turn6662317view1",
+        "locator": "L83-92 article heading, Polina Bayvel attribution and age83; L111 subject appearance in2016; L115-121 UCL career/retirement; L124-127 contributor attribution.",
+        "body_summary": "Institutional original tribute reports recent death at age83 in2021 and detailed same optical-communications/UCL career. Returned body does not supply subject birthplace or full Edwin component, so it cannot independently satisfy first-BP proof. A 2016 subject appearance also conflicts native2011 endpoint.",
+        "source_quote": null
+      },
+      "geography_assignment_performed": false,
+      "no_master_change": true,
+      "retrieval_representation": "web-tool parsed original HTML, not raw HTTP bytes",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA4179",
+      "native": {
+        "authority_name": "Haszeldine; Robert Neville (1925 - 2016)",
+        "native_dob": "1925-05-03",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "4682b251b240409c0102a7f88f77d90bf9c1820976d5fed6df335b39efd05378"
+      },
+      "status": "hold_no_explicit_subject_birthplace_in_acquired_original_body",
+      "hold_type": "no_explicit_birthplace_original_memoir_unavailable",
+      "raw_birthplace_candidate": null,
+      "source_url": "https://fluorine.ch.man.ac.uk/history.php",
+      "source_title": "A history of Fluorine Chemistry in Manchester",
+      "source_author": null,
+      "source_author_caveat": "No individual author visible in returned original university history narrative; institutional host alone is not a grade assignment.",
+      "source_kind": "original_university_history_narrative",
+      "source_grade_proposal": null,
+      "observed_source_full_name": "Robert Neville Haszeldine",
+      "source_birthdate": "1925-05-03",
+      "source_birthdate_precision": "day",
+      "source_DOB_matches_native": true,
+      "source_death_date": "2016-10-13",
+      "source_lifespan_compatible_with_native": true,
+      "source_locator": "Parsed original Haszeldine section L45-54; L46 full native name and exact DOB; L47 death; L46-48 Cambridge/UMIST career and principalship.",
+      "source_webrefs": [
+        "turn6662317view2"
+      ],
+      "identity_review": [
+        "All native name components and exact3May1925 are directly present, with source1925–2016 lifespan compatible.",
+        "Cambridge research/teaching1949–57, UMIST chair/headfrom1957 and principal1967–82 distinguish the chemist."
+      ],
+      "reason": "Acquired narrative gives subject birthdate but no birth location. Greater Manchester modifies Stockport Grammar School, and Birmingham/Cambridge/UMIST locations describe education/work. Great Langdale describes retirement. None is reused as birthplace.",
+      "inaccessible_original_memoir": {
+        "url": "https://royalsocietypublishing.org/doi/10.1098/rsbm.2018.0035",
+        "doi": "10.1098/rsbm.2018.0035",
+        "title_lead": "Robert Neville Haszeldine. 3 May 1925—13 October 2016",
+        "author_leads": [
+          "R. W. Munn",
+          "D. R. Taylor"
+        ],
+        "publication_year_lead": "2019",
+        "publication_locator_lead": "Biographical Memoirs of Fellows of the Royal Society66:243–265",
+        "ref": "turn6662317view3",
+        "outcome": "tool_reported403_stopped_no_retry",
+        "metadata_not_body_caveat": "Authorship/title/journal are discovery leads, not a claim that the original memoir body was acquired."
+      },
+      "unadopted_discovery_variation": {
+        "url": "https://www.admin.cam.ac.uk/reporter/2016-17/weekly/6447/6447.pdf",
+        "ref": "turn1981817search4",
+        "observation": "Discovery excerpt appeared to give death31October2016, whereas acquired Manchester body says13October2016. This original notice was not opened and no formal body-verified source conflict or date repair is inferred."
+      },
+      "source_quote": null,
+      "geography_assignment_performed": false,
+      "no_master_change": true,
+      "retrieval_representation": "web-tool parsed original HTML, not raw HTTP bytes",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA4490",
+      "native": {
+        "record_id": "RS_PAST_NA4490",
+        "authority_name": "Ledwith; Anthony (1933 - 2015)",
+        "native_dob": "1933-08-14",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "fa61e39b9f3fe29fb6e323350807bbfae174298a2b08b085b14bd1196daac44a",
+        "authority_name_and_DOB_count_in_all_4983": 1
+      },
+      "status": "hold_original_memoir_body_unavailable",
+      "hold_type": "original_memoir_body_unavailable",
+      "source_url": "https://doi.org/10.1098/rsbm.2017.0029",
+      "source_title_lead": "Anthony Ledwith CBE. 14 August1933–5January2015",
+      "source_author_lead": "W J Feast",
+      "doi": "10.1098/rsbm.2017.0029",
+      "source_grade_proposal": null,
+      "raw_birthplace_candidate": null,
+      "reason": "Two-query discovery returned an unadopted Wikipedia biography/reference lead but no original born-place body. Original memoir DOI route was inaccessible via tool; stopped without retry. No field reused from closed enwiki, no birthplace/date adopted from discovery.",
+      "source_refs": [
+        "turn4743513search25",
+        "turn9809406view1"
+      ],
+      "new_unopened_original_reference_lead": {
+        "title": "Former Royal Society of Chemistry president dies",
+        "author_lead": "Emma Stoye",
+        "date_lead": "2015-01-09",
+        "publisher_lead": "Royal Society of Chemistry / Chemistry World",
+        "exact_URL_observed": null,
+        "note": "Citation title visible in discovery result only; no guessed URL opened. Parent may seek an original body separately within overall budget."
+      },
+      "no_master_change": true
+    }
+  ],
+  "query_ledger": [
+    {
+      "engine": "system2",
+      "query": "John Edwin Midwinter born obituary university",
+      "ref": "turn9228621search",
+      "preplanned": true,
+      "exact_request_utc": null
+    },
+    {
+      "engine": "system2",
+      "query": "Robert Neville Haszeldine born obituary university",
+      "ref": "turn9228621search",
+      "preplanned": true,
+      "exact_request_utc": null
+    },
+    {
+      "engine": "system1",
+      "query": "\"John Midwinter obituary\" Guardian",
+      "ref": "turn1981817search",
+      "preplanned": false,
+      "exact_request_utc": null,
+      "timing_caveat": "Intent was recorded after this adaptive query request, before source opens; do not represent it as preregistered."
+    },
+    {
+      "engine": "system1",
+      "query": "\"Robert Neville Haszeldine\" \"born\"",
+      "ref": "turn1981817search",
+      "preplanned": false,
+      "exact_request_utc": null,
+      "timing_caveat": "Intent was recorded after this adaptive query request, before source opens; do not represent it as preregistered."
+    },
+    {
+      "engine": "system2",
+      "query": "William Reginald Stephen Garton born obituary Imperial",
+      "ref": "turn4743513search",
+      "preplanned": true,
+      "exact_request_utc": null
+    },
+    {
+      "engine": "system2",
+      "query": "Anthony Ledwith born obituary Sheffield Lancaster",
+      "ref": "turn4743513search",
+      "preplanned": true,
+      "exact_request_utc": null
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "url": "https://www.theguardian.com/technology/2021/dec/12/john-midwinter-obituary",
+      "ref": "turn6662317view0",
+      "role": "original_signed_obituary",
+      "outcome": "original_body_acquired_in_parsedHTML_explicit_birthplace_held_for_native_lifespan_conflict",
+      "tool_reported_status": null,
+      "raw_HTTP_status": null,
+      "exact_request_utc": null,
+      "raw_bytes_sha256": null
+    },
+    {
+      "url": "https://www.ucl.ac.uk/engineering/news/2021/dec/professor-john-midwinter-true-optical-fibre-communications-pioneer",
+      "ref": "turn6662317view1",
+      "role": "original_institutional_tribute",
+      "outcome": "body_acquired_in_parsedHTML_no_explicit_birthplace_in_returned_body",
+      "tool_reported_status": null,
+      "raw_HTTP_status": null,
+      "exact_request_utc": null,
+      "raw_bytes_sha256": null
+    },
+    {
+      "url": "https://fluorine.ch.man.ac.uk/history.php",
+      "ref": "turn6662317view2",
+      "role": "original_university_history_narrative",
+      "outcome": "body_acquired_in_parsedHTML_no_explicit_birthplace_for_Haszeldine",
+      "tool_reported_status": null,
+      "raw_HTTP_status": null,
+      "exact_request_utc": null,
+      "raw_bytes_sha256": null
+    },
+    {
+      "url": "https://royalsocietypublishing.org/doi/10.1098/rsbm.2018.0035",
+      "ref": "turn6662317view3",
+      "role": "new_individual_original_signed_Royal_Society_memoir",
+      "outcome": "tool_reported403_stopped_no_retry",
+      "tool_reported_status": 403,
+      "raw_HTTP_status": null,
+      "exact_request_utc": null,
+      "raw_bytes_sha256": null
+    },
+    {
+      "url": "https://www.imperial.ac.uk/physics/about-us/contact-us/fellows-of-the-royal-society/",
+      "ref": "turn9809406view0",
+      "role": "original_institutional_biography_host",
+      "outcome": "tool_reported403_stopped_no_retry",
+      "tool_reported_status": 403,
+      "raw_HTTP_status": null,
+      "exact_request_utc": null
+    },
+    {
+      "url": "https://doi.org/10.1098/rsbm.2017.0029",
+      "ref": "turn9809406view1",
+      "role": "original_published_work_DOI_resolver",
+      "outcome": "tool_notaccessible_stopped_no_retry",
+      "tool_reported_status": null,
+      "raw_HTTP_status": null,
+      "exact_request_utc": null
+    },
+    {
+      "url": "https://www.researchgate.net/publication/247606535_William_Reginald_Stephen_Garton_7_March_1912--28_August_2002",
+      "ref": "turn3336282view0",
+      "role": "author_uploaded_original_published_work_carrier",
+      "outcome": "original_signed_memoir_fulltext_acquired_in_parsedHTML",
+      "tool_reported_status": null,
+      "raw_HTTP_status": null,
+      "exact_request_utc": null
+    }
+  ],
+  "quote_ledger": [
+    {
+      "original_work": "John Midwinter obituary",
+      "source": "https://www.theguardian.com/technology/2021/dec/12/john-midwinter-obituary",
+      "distributed_born_excerpt_words": 5,
+      "note": "Guardian limited to compact source metadata, factual name/date/place fields and this excerpt; career anchors come from the separate UCL original."
+    },
+    {
+      "original_work": "William Reginald Stephen Garton. 7 March 1912—28 August 2002",
+      "doi": "10.1098/rsbm.2008.0023",
+      "distributed_born_excerpt_words": 8
+    }
+  ],
+  "protocol_deviations": [
+    {
+      "kind": "adaptive_query_intent_logged_after_request",
+      "affected_queries": [
+        "\"John Midwinter obituary\" Guardian",
+        "\"Robert Neville Haszeldine\" \"born\""
+      ],
+      "disclosure": "Two system1 adaptive queries ran before their intent addition. Intent timestamp retained truthfully. All7planned original/carrier opens had intent recorded before request; no preregistration claim for those2queries."
+    },
+    {
+      "kind": "held_lifespan_conflict_no_exception_in_group",
+      "record_id": "RS_PAST_NA4036",
+      "disclosure": "Discovery revealed native2011/source2021 endpoint disagreement before original body opens. Exact native birthdate agrees. Group retains strict hold; no retrospective gate relaxation or native correction."
+    }
+  ],
+  "limits": [
+    "No source or master changes, no Git operations, and no adopted BP/DOB/identity/eligibility/source-grade/country/hemisphere/QID/coordinate changes.",
+    "Six discovery queries, seven navigation attempts; no spare request sent without an observed useful original URL. Two tool failures403 and one inaccessible DOI were stopped without retry.",
+    "Garton original published signed memoir read through an author-upload carrier. Carrier is not claimed as an independent second source or first-publisher raw acquisition.",
+    "No full source HTML/PDF/images/cache distributed. RawHTTP statuses, exact request times and raw byte hashes remain null; tool-reported403 recorded separately.",
+    "No closed-source field reuse, nickname/initial expansion, native DOB repair, or geography from school/work/residence/nationality/family/death/footer.",
+    "Own native hashes cover full frozen objects in v20_blank_queue.json; no claim of a full4983name/DOBuniqueness pass for Midwinter or Haszeldine."
+  ]
+}

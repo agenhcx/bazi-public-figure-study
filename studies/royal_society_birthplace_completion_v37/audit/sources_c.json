@@ -1,0 +1,505 @@
+{
+  "written_utc": "2026-11-07T00:53:39.105457+00:00",
+  "group": "c",
+  "phase": "unchanged_V36_method_V37_fixed_scope_application",
+  "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+  "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+  "method_application_scope_sha256": "ae080b06f8abad9ed7575783486795c977e44ce5e5024bfa2096e16816a44d94",
+  "scope": [
+    "RS_PAST_NA2099",
+    "RS_PAST_NA6938"
+  ],
+  "intent_file": "v37_c_intent.json",
+  "prior_context_review": "Both full native objects and historical V19 Beverton/ V18 Christopherson facts, V30 Christopherson original-work access hold and V32 Beverton ICES geography hold read before queries. Initial combined output truncated; complete Christopherson and individual prior holds read separately. Active DOB and partial birthplace conflict inventories inspected before queries; all9 current issue inventories additionally loaded/target absence checked during report assembly. No target DOB/place conflict found; partial global inventories not treated exhaustive.",
+  "inventory_file_pins": {
+    "active_source_DOB_conflicts.json": "46272fba77cfe8488bdffdb8dc6e1c293fe6b201b02597f7820ad11491d1ba24",
+    "birthplace_source_conflicts.json": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+    "provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+    "source_derived_age_inconsistencies.json": "9a299ead41add638a45fd85603a59ee3c42e1b0284af5c06c5e273a3affac18a",
+    "lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+    "cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+    "source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+    "omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+    "source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+  },
+  "candidates": [],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA2099",
+      "native": {
+        "record_id": "RS_PAST_NA2099",
+        "authority_name": "Beverton; Raymond John Heaphy (1922 - 1995)",
+        "native_dob": "1922-08-29",
+        "prior_raw_birthplace": "5 Forest Glade, Leytonstone, east London",
+        "prior_birthplace_source_grade": "S2"
+      },
+      "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+      "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+      "method_application_scope_sha256": "ae080b06f8abad9ed7575783486795c977e44ce5e5024bfa2096e16816a44d94",
+      "status": "hold_person_binding_passes_but_no_birthplace_edge",
+      "hold_type": "no_completed_canonical_birthplace_proof",
+      "proof_mode": null,
+      "proof_chain": [],
+      "reason": "Actual canonical English person body fullnative/exactDOB/career compatible but Born field date only, no born-place link. Actual clicked Wikidata item likewise yielded no acquired P19; partial rewritten representation/find does not establish global no-value or all-ranks absence. Existing ODNB address/name history and ICES V32 hold preserved. Bounded other-language locator query returned no actual new language person URI; no guessed URI or famous-London inference.",
+      "source_observations": [
+        {
+          "source_url": "https://en.wikipedia.org/wiki/Ray_Beverton",
+          "tool_ref": "turn8134244view0",
+          "locator": "L107 full native name; L109 Born exact29August1922, date only; L110 death23July1995; L113 founderfisheriesscience/1957Holtbook; L117-121 Lowestoftresearch/ICESeditor/deputydirector. L58-60 Addlanguages/Addlinks, no observed other-language person URI.",
+          "observed_source_full_name": "Raymond John Heaphy Beverton",
+          "source_birthdate": "1922-08-29",
+          "source_birthdate_precision": "exact_day_in_Born_field_and_lead",
+          "source_death_date": "1995-07-23",
+          "source_lifespan": "1922-08-29–1995-07-23",
+          "identity_review": [
+            "All native Raymond John Heaphy Beverton components actually in body; Ray nickname not used for expansion.",
+            "Literal exact native date agrees; observed 1922–1995 lifespan compatible.",
+            "Founder fisheries science, Beverton-Holt1957book, Lowestoft/ICESeditor coherent distinctive subject anchors.",
+            "Old ODNB born surname Bareham then Bartram/Beverton history remains explicit separate historical source context; current article does not restate or independently verify that history and no native identity edit."
+          ],
+          "source_place_observed": null,
+          "observed_birth_place_link_uri": null,
+          "role": "actual_canonical_community_person_body_identity_passes_but_no_birth_place_edge",
+          "observed_footer_revision_id": "1356048414",
+          "observed_footer_last_edit_utc": "2026-05-25T12:44:00Z",
+          "footer_locator": "turn8134244view0:L158/175",
+          "verified_raw_response_revision": null,
+          "source_quote": null,
+          "source_quote_word_count": 0,
+          "observed_calendar_model": null,
+          "observed_claim_rank": null
+        },
+        {
+          "source_url": "https://www.wikidata.org/wiki/Q7297195",
+          "tool_ref": "turn9525098view0",
+          "actual_clicked_from_person_body": {
+            "ref_id": "turn8134244view0",
+            "link_id": 38
+          },
+          "role": "actual_canonical_person_item_tool_rewritten_summary_identity_observations_but_no_acquired_P19_edge",
+          "actual_person_item_text_acquired": true,
+          "retrieval_representation": "Tool explicitly labels rewritten summary of canonical item; not raw structured entity JSON or complete all-ranks view.",
+          "locator": "FullaliasL91/L101; birthdateL145-146; deathL166-168; biologyL194-205; nativeFRSIDL516-518; cachedfindturn8379039view0 returns partialrepresentation without explicit NoMatch verdict.",
+          "observed_source_full_name": "Raymond John Heaphy Beverton",
+          "source_birthdate": "1922-08-29",
+          "source_birthdate_precision": "exact_day_literal_with_displayed_Gregorian_annotation",
+          "observed_calendar_model": "Gregorian_as_displayed_tool_text_only_no_model_URI_observed",
+          "observed_claim_rank": null,
+          "current_P19_status": "No P19 value or entity link acquired in inspected text; not verified absence/no-value/completeness/all-rank assertion.",
+          "source_quote": null,
+          "source_quote_word_count": 0,
+          "source_revision_id": null,
+          "source_revision_utc": null,
+          "source_informational_independence": null
+        }
+      ],
+      "source_grade_adopted": null,
+      "source_quote": null,
+      "source_quote_word_count": 0,
+      "master_object_unchanged": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA6938",
+      "native": {
+        "record_id": "RS_PAST_NA6938",
+        "authority_name": "Christopherson; Sir; Derman Guy (1915 - 2000)",
+        "native_dob": "1915-09-06",
+        "prior_raw_birthplace": "Plumstead, south-east London",
+        "prior_birthplace_source_grade": "S2"
+      },
+      "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+      "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+      "method_application_scope_sha256": "ae080b06f8abad9ed7575783486795c977e44ce5e5024bfa2096e16816a44d94",
+      "status": "hold_person_binding_passes_but_no_birthplace_edge",
+      "hold_type": "no_completed_canonical_birthplace_proof",
+      "proof_mode": null,
+      "proof_chain": [],
+      "reason": "Actual English fullnative/exactDOB/career compatible, but linked Plumstead/London describe father vicar post and Devon is later family move. Not a direct subject born-place edge. Actual clicked Wikidata item no acquired P19 proof, with partial rewritten find not globalabsence. Historical failed2004memoir remains closed, not retried via DOI/JSTOR/alternatecarrier. Other-language locator query returned no actual new language person URI. Frozen Plumstead/south-eastLondonS2 remains unknown.",
+      "source_observations": [
+        {
+          "source_url": "https://en.wikipedia.org/wiki/Derman_Christopherson",
+          "tool_ref": "turn8134244view1",
+          "locator": "L109 fullnative/exact6September1915/death7November2000; L115 Plumstead/London links within father vicar description, not subject birthplace; L116-119 Oxford1937/Harvard1938/SouthwellDPhil1941; L127-129 Leeds1949/Imperial/Durham1960-79/Magdalene1978-85; L62-64 Addlanguages/Addlinks.",
+          "observed_source_full_name": "Sir Derman Guy Christopherson",
+          "source_birthdate": "1915-09-06",
+          "source_birthdate_precision": "exact_day_in_person_lead",
+          "source_death_date": "2000-11-07",
+          "source_lifespan": "1915-09-06–2000-11-07",
+          "identity_review": [
+            "All native Derman Guy Christopherson components actually in source, Sir honorific not personal name.",
+            "Literal exact native date and observed1915–2000 lifespan compatible.",
+            "Oxfordengineering1937/HarvardHenryfellow1938/Southwell1941/Leeds1949/Imperial/Durham/Magdalene coherent distinct engineering administrator career."
+          ],
+          "source_place_observed": null,
+          "observed_birth_place_link_uri": null,
+          "role": "actual_canonical_community_person_body_identity_passes_but_no_direct_subject_birth_place_edge",
+          "non_birth_hyperlinks_not_used": [
+            {
+              "label": "Plumstead",
+              "link_id": 54,
+              "role": "father_vicar_post",
+              "locator": "turn8134244view1:L115",
+              "followed_for_geography": false
+            },
+            {
+              "label": "London",
+              "link_id": 55,
+              "role": "father_vicar_post_qualifier",
+              "locator": "turn8134244view1:L115",
+              "followed_for_geography": false
+            },
+            {
+              "label": "Devon",
+              "link_id": 57,
+              "role": "family_move_after_birth",
+              "locator": "turn8134244view1:L115",
+              "followed_for_geography": false
+            }
+          ],
+          "observed_footer_revision_id": "1363742659",
+          "observed_footer_last_edit_utc": "2026-07-12T03:34:00Z",
+          "footer_locator": "turn8134244view1:L166/198",
+          "verified_raw_response_revision": null,
+          "source_quote": null,
+          "source_quote_word_count": 0,
+          "observed_calendar_model": null,
+          "observed_claim_rank": null
+        },
+        {
+          "source_url": "https://www.wikidata.org/wiki/Q5262678",
+          "tool_ref": "turn9525098view1",
+          "actual_clicked_from_person_body": {
+            "ref_id": "turn8134244view1",
+            "link_id": 42
+          },
+          "role": "actual_canonical_person_item_tool_rewritten_summary_identity_observations_but_no_acquired_P19_edge",
+          "actual_person_item_text_acquired": true,
+          "retrieval_representation": "Tool explicitly labels rewritten summary of canonical item; not raw structured entity JSON or complete all-ranks view.",
+          "locator": "FullaliasesL91-106; birthdateL149-151; deathL158-160; engineering/employersL186-241; cachedfindturn8379039view1 returns partialrepresentation without explicit NoMatch verdict.",
+          "observed_source_full_name": "Derman Guy Christopherson",
+          "source_birthdate": "1915-09-06",
+          "source_birthdate_precision": "exact_day_literal_with_displayed_Gregorian_annotation",
+          "observed_calendar_model": "Gregorian_as_displayed_tool_text_only_no_model_URI_observed",
+          "observed_claim_rank": null,
+          "current_P19_status": "No P19 value or entity link acquired in inspected text; not verified absence/no-value/completeness/all-rank assertion.",
+          "source_quote": null,
+          "source_quote_word_count": 0,
+          "source_revision_id": null,
+          "source_revision_utc": null,
+          "source_informational_independence": null
+        }
+      ],
+      "source_grade_adopted": null,
+      "source_quote": null,
+      "source_quote_word_count": 0,
+      "master_object_unchanged": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    }
+  ],
+  "new_DOB_or_place_conflicts": [],
+  "request_ledger": [
+    {
+      "operation": "system2_search_query",
+      "record_id": "RS_PAST_NA2099",
+      "q": "Raymond John Heaphy Beverton site:wikipedia.org",
+      "output_ref_or_prefix": "turn7809815search",
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "operation": "system2_search_query",
+      "record_id": "RS_PAST_NA6938",
+      "q": "Derman Guy Christopherson site:wikipedia.org",
+      "output_ref_or_prefix": "turn7809815search",
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "operation": "open",
+      "record_id": "RS_PAST_NA2099",
+      "url": "https://en.wikipedia.org/wiki/Ray_Beverton",
+      "observed_from": "turn7809815search0",
+      "purpose": "Actual canonical person body full identity/exact DOB and born-place edge; no nationality inference.",
+      "output_ref_or_prefix": "turn8134244view0",
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "operation": "open",
+      "record_id": "RS_PAST_NA6938",
+      "url": "https://en.wikipedia.org/wiki/Derman_Christopherson",
+      "observed_from": "turn7809815search1",
+      "purpose": "Actual canonical person body full identity/exact DOB and any actual subject born-place edge; father birthplace/work not substituted.",
+      "output_ref_or_prefix": "turn8134244view1",
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "operation": "click",
+      "record_id": "RS_PAST_NA2099",
+      "ref_id": "turn8134244view0",
+      "link_id": 38,
+      "purpose": "Actual observed Wikidata item, inspect native full name/exact date/P19; English actual body no born locality.",
+      "output_ref_or_prefix": "turn9525098view0",
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "operation": "click",
+      "record_id": "RS_PAST_NA6938",
+      "ref_id": "turn8134244view1",
+      "link_id": 42,
+      "purpose": "Actual observed Wikidata item, inspect native full name/exact date/P19; English actual Plumstead links belong father vicar context, not subject birth.",
+      "output_ref_or_prefix": "turn9525098view1",
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "operation": "find",
+      "record_id": "RS_PAST_NA2099",
+      "ref_id": "turn9525098view0",
+      "pattern": "place of birth",
+      "purpose": "Cached acquired representation locator only; no verified global absence/all-rank claim.",
+      "output_ref_or_prefix": "turn8379039view0",
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "outcome": "Tool returned partial rewritten item text without a place-of-birth edge and without explicit NoMatch verdict; not verified global absence."
+    },
+    {
+      "operation": "find",
+      "record_id": "RS_PAST_NA6938",
+      "ref_id": "turn9525098view1",
+      "pattern": "place of birth",
+      "purpose": "Cached acquired representation locator only; no verified global absence/all-rank claim.",
+      "output_ref_or_prefix": "turn8379039view1",
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "outcome": "Tool returned partial rewritten item text without a place-of-birth edge and without explicit NoMatch verdict; not verified global absence."
+    },
+    {
+      "operation": "system2_search_query",
+      "record_id": "RS_PAST_NA2099",
+      "q": "\"Raymond John Heaphy Beverton\" (site:de.wikipedia.org OR site:fr.wikipedia.org OR site:es.wikipedia.org)",
+      "output_ref_or_prefix": "turn8379039search",
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "outcome": "Merged results returned English pages, no actual different-language canonical person URI; not global article absence."
+    },
+    {
+      "operation": "system2_search_query",
+      "record_id": "RS_PAST_NA6938",
+      "q": "\"Derman Guy Christopherson\" (site:de.wikipedia.org OR site:fr.wikipedia.org OR site:es.wikipedia.org)",
+      "output_ref_or_prefix": "turn8379039search",
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "outcome": "Merged results returned English pages, no actual different-language canonical person URI; not global article absence."
+    }
+  ],
+  "query_ledger": [
+    {
+      "operation": "system2_search_query",
+      "record_id": "RS_PAST_NA2099",
+      "q": "Raymond John Heaphy Beverton site:wikipedia.org",
+      "output_ref_or_prefix": "turn7809815search",
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "operation": "system2_search_query",
+      "record_id": "RS_PAST_NA6938",
+      "q": "Derman Guy Christopherson site:wikipedia.org",
+      "output_ref_or_prefix": "turn7809815search",
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "operation": "system2_search_query",
+      "record_id": "RS_PAST_NA2099",
+      "q": "\"Raymond John Heaphy Beverton\" (site:de.wikipedia.org OR site:fr.wikipedia.org OR site:es.wikipedia.org)",
+      "output_ref_or_prefix": "turn8379039search",
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "outcome": "Merged results returned English pages, no actual different-language canonical person URI; not global article absence."
+    },
+    {
+      "operation": "system2_search_query",
+      "record_id": "RS_PAST_NA6938",
+      "q": "\"Derman Guy Christopherson\" (site:de.wikipedia.org OR site:fr.wikipedia.org OR site:es.wikipedia.org)",
+      "output_ref_or_prefix": "turn8379039search",
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "outcome": "Merged results returned English pages, no actual different-language canonical person URI; not global article absence."
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "operation": "open",
+      "record_id": "RS_PAST_NA2099",
+      "url": "https://en.wikipedia.org/wiki/Ray_Beverton",
+      "observed_from": "turn7809815search0",
+      "purpose": "Actual canonical person body full identity/exact DOB and born-place edge; no nationality inference.",
+      "output_ref_or_prefix": "turn8134244view0",
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "operation": "open",
+      "record_id": "RS_PAST_NA6938",
+      "url": "https://en.wikipedia.org/wiki/Derman_Christopherson",
+      "observed_from": "turn7809815search1",
+      "purpose": "Actual canonical person body full identity/exact DOB and any actual subject born-place edge; father birthplace/work not substituted.",
+      "output_ref_or_prefix": "turn8134244view1",
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "operation": "click",
+      "record_id": "RS_PAST_NA2099",
+      "ref_id": "turn8134244view0",
+      "link_id": 38,
+      "purpose": "Actual observed Wikidata item, inspect native full name/exact date/P19; English actual body no born locality.",
+      "output_ref_or_prefix": "turn9525098view0",
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "operation": "click",
+      "record_id": "RS_PAST_NA6938",
+      "ref_id": "turn8134244view1",
+      "link_id": 42,
+      "purpose": "Actual observed Wikidata item, inspect native full name/exact date/P19; English actual Plumstead links belong father vicar context, not subject birth.",
+      "output_ref_or_prefix": "turn9525098view1",
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    }
+  ],
+  "parsed_find_ledger": [
+    {
+      "operation": "find",
+      "record_id": "RS_PAST_NA2099",
+      "ref_id": "turn9525098view0",
+      "pattern": "place of birth",
+      "purpose": "Cached acquired representation locator only; no verified global absence/all-rank claim.",
+      "output_ref_or_prefix": "turn8379039view0",
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "outcome": "Tool returned partial rewritten item text without a place-of-birth edge and without explicit NoMatch verdict; not verified global absence."
+    },
+    {
+      "operation": "find",
+      "record_id": "RS_PAST_NA6938",
+      "ref_id": "turn9525098view1",
+      "pattern": "place of birth",
+      "purpose": "Cached acquired representation locator only; no verified global absence/all-rank claim.",
+      "output_ref_or_prefix": "turn8379039view1",
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "outcome": "Tool returned partial rewritten item text without a place-of-birth edge and without explicit NoMatch verdict; not verified global absence."
+    }
+  ],
+  "counts": {
+    "queries": 4,
+    "navigation_attempts": 4,
+    "opens": 2,
+    "clicks": 2,
+    "parsed_finds": 2,
+    "screenshots": 0,
+    "raw_GETs": 0,
+    "adoptable_geography_proofs": 0,
+    "held": 2
+  },
+  "retrieval_counts": {
+    "queries": 4,
+    "source_navigation_attempts": 4,
+    "opens": 2,
+    "clicks": 2,
+    "parsed_finds": 2,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "budget": {
+    "queries_limit": 4,
+    "navigation_limit": 10
+  },
+  "protocol_disclosure": "Every exact query/open/click/find saved and JSON validated exit0 in separate local call before associated web call. No retries/variants/raw GET/auth bypass. Original prior failed memoir stayed closed. No complete source cache created. Tool refs and observed footer values are parsed representations, not raw byte hashes/live version or civil birth verification.",
+  "unknown_source_metadata": {
+    "raw_HTTP_status": null,
+    "raw_bytes_sha256": null,
+    "exact_request_utc": null,
+    "unobserved_revision_metadata": null,
+    "claim_rank": null,
+    "independent_editorial_verification": null,
+    "informational_independence": null
+  },
+  "quote_policy": "0 new quoted English words; structured facts/URLs/locators only; old source quotes frozen. No full HTML/JSON/PDF/image/projection caches.",
+  "source_quote_words_by_original_work": {},
+  "unopened_distinct_original_work_leads": [],
+  "no_analysis_or_final_freeze": true,
+  "repo_or_master_modified": false,
+  "no_source_exhaustion_finalfreeze_or_DOB_BPtierupgrade": true
+}

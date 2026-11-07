@@ -1,0 +1,105 @@
+{
+  "schema": "v24_a_prior_intents_v1",
+  "written_utc": "2026-11-06T00:11:47.578706+00:00",
+  "query_intents": [
+    {
+      "q": "\"Francis Gotch\" \"born\"",
+      "purpose": "Discover original subject biography with explicit born relation, exact full identity and stated source date precision."
+    },
+    {
+      "q": "\"John Christian Malet\" \"born\"",
+      "purpose": "Discover original subject biography with explicit born relation, exact full identity and stated source date precision."
+    },
+    {
+      "q": "\"Arthur Harry Church\" \"born\"",
+      "purpose": "Discover original subject biography with explicit born relation, exact full identity and stated source date precision."
+    },
+    {
+      "q": "\"John Alexander McClelland\" \"born\"",
+      "purpose": "Discover original subject biography with explicit born relation, exact full identity and stated source date precision."
+    },
+    {
+      "written_utc": "2026-11-06T00:12:49.744041+00:00",
+      "q": "\"John Christian Malet\" biography",
+      "purpose": "Discover first targeted informative original individual biography/memoir body, not closedbulkindexrerun."
+    },
+    {
+      "written_utc": "2026-11-06T00:12:49.744041+00:00",
+      "q": "\"John Christian Malet\" \"born\" Ireland Cork",
+      "purpose": "Discover first targeted informative original individual biography/memoir body, not closedbulkindexrerun."
+    },
+    {
+      "written_utc": "2026-11-06T00:12:49.744041+00:00",
+      "q": "\"Francis Gotch\" \"Liverpool\" biography obituary",
+      "purpose": "Discover first targeted informative original individual biography/memoir body, not closedbulkindexrerun."
+    },
+    {
+      "written_utc": "2026-11-06T00:12:49.744041+00:00",
+      "q": "\"Arthur Harry Church\" \"Plymouth\" biography",
+      "purpose": "Discover first targeted informative original individual biography/memoir body, not closedbulkindexrerun."
+    }
+  ],
+  "navigation_intents": [
+    {
+      "written_utc": "2026-11-06T00:12:15.349839+00:00",
+      "record_id": "RS_PAST_NA6228",
+      "url": "https://www.npg.org.uk/collections/search/personExtended/mp06204/francis-gotch?tab=biography",
+      "purpose": "Inspect original institutionalcompiledbiography bornrelation/fullidentity/actualdate; NPGnotS1hostalone."
+    },
+    {
+      "written_utc": "2026-11-06T00:12:15.349839+00:00",
+      "record_id": "RS_PAST_NA5494",
+      "url": "https://heritagesearch.oxfordshire.gov.uk/image_collections/other/church",
+      "purpose": "Inspect original councilcollectionbiography fullArthurHarry/bornPlymouth/yearprecision/career; uncreditedmetadataS3conditional."
+    },
+    {
+      "written_utc": "2026-11-06T00:12:15.349839+00:00",
+      "record_id": "RS_PAST_NA5506",
+      "url": "https://www.rti.org/sites/default/files/resources/bk-0003-1109-chapter04.pdf",
+      "purpose": "Inspect originalauthoredscientificbookchapter proposedNov18birthversusDec1baptism; if acquiredconflicthold allBP/geo."
+    },
+    {
+      "written_utc": "2026-11-06T00:12:15.349839+00:00",
+      "record_id": "RS_PAST_NA5506",
+      "url": "https://www.dib.ie/index.php/biography/mcclelland-john-alexander-a5597",
+      "purpose": "Inspect originalauthoredDictionaryIrishBiography actualbaptismvsbirth precision, no baptismDOB substitution."
+    },
+    {
+      "written_utc": "2026-11-06T00:13:33.084378+00:00",
+      "record_id": "RS_PAST_NA6228",
+      "url": "https://static.physoc.org/app/uploads/2019/03/22194732/79-a.pdf",
+      "purpose": "Inspect observed distinct originalPhysocarchives article with bornBristol projection, comparewithoutassumingprojectionasproof or dateadjudication."
+    },
+    {
+      "written_utc": "2026-11-06T00:13:33.084378+00:00",
+      "record_id": "RS_PAST_NA6648",
+      "url": "https://www.ancestry.com/genealogy/records/prof-john-christian-malet-24-fj407f",
+      "purpose": "FirstinspectoriginalpubliccompiledgenealogyrecordleadCork/exactDOB; contributor/provenance/identityprecision gates, notsnippetproof."
+    },
+    {
+      "written_utc": "2026-11-06T00:13:33.084378+00:00",
+      "record_id": "RS_PAST_NA6648",
+      "url": "https://www.youwho.ie/malet.html",
+      "purpose": "Firstinspectoriginallocalhistorybiographyfullnative/mathcareer/approxdate andbirthplace; recordactualprecision, not inferreddatefix."
+    }
+  ],
+  "limits": "8queries10navigationattempts; no failedretry/variants/bypass/rawGET; sourcefactsnotadoptedfromsearchprojections.",
+  "parsed_find_intents": [
+    {
+      "written_utc": "2026-11-06T00:14:12.290634+00:00",
+      "ref": "turn4667889view0",
+      "pattern": "Biographical information on Francis Gotch",
+      "purpose": "LocatealreadyacquiredoriginalPhysocarticlebody toverifyBristolbornclaim andauthor/fullsubject context."
+    }
+  ],
+  "late_logged_context_intents": [
+    {
+      "logged_utc": "2026-11-06T00:19:38.042200+00:00",
+      "ref": "turn4667889view2",
+      "lineno": 350,
+      "result_ref": "turn3910330view0",
+      "purpose": "SecondparsedcontextreadforMaletfullbody.",
+      "timing": "Loggedafterrequest; notpriorintent."
+    }
+  ]
+}

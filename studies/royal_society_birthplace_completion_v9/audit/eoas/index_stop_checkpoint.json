@@ -1,0 +1,29 @@
+{
+  "stop_reason": "Root instructed network freeze after repeated identical 503s. Process interrupted at next boundary; no further requests authorized at this checkpoint.",
+  "observed_ledger_attempts": 21,
+  "observed_ledger_last_completed_url": "https://www.eoas.info/browsew_people.htm",
+  "observed_ledger_last_finished_utc": "2026-11-03T13:35:17.684533+00:00",
+  "possible_interrupted_request": {
+    "url": "https://www.eoas.info/browsex_people.htm",
+    "status": "interrupted_uncertain_request_initiation",
+    "started_utc": null,
+    "start_time_bound_lower_utc": "2026-11-03T13:35:17.684533+00:00",
+    "start_time_bound_upper_utc": null,
+    "note": "Sequential worker was interrupted with exit 130 after W failure was logged; X was next in observed navigation. Its intent/start was not durably logged before interruption; conservatively count one possible request, not unrequested. No response bytes/status captured."
+  },
+  "unrequested_letters": [
+    "Y",
+    "Z"
+  ],
+  "v8_excluded_letters": [
+    "L",
+    "M"
+  ],
+  "HTTP_429_observed": false,
+  "retry_count": 0,
+  "redirect_follow_count": 0,
+  "written_utc": "2026-11-03T13:37:25.101477+00:00",
+  "biography_body_requests": 0,
+  "additional_network_authorized": false,
+  "checkpoint_type": "Historical index-stop checkpoint, before root authorized exactly three selected biography requests"
+}

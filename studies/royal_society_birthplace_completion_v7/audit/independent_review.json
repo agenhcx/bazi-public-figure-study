@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "baseline_rows": 4983,
+  "all_preexisting_non_geography_fields_equal": true,
+  "native_DOB_calendar_identity_eligibility_source_groups_and_historical_QIDs_unchanged": true,
+  "geography_lookup_identity_layer_unchanged": true,
+  "hemisphere_counts": {
+    "north": 4150,
+    "unknown": 652,
+    "south": 181
+  },
+  "window_1835_1985_counts": {
+    "north": 2250,
+    "unknown": 218,
+    "south": 176
+  },
+  "new_unknown_to_known": 4,
+  "newly_classified_people_in_window": 4,
+  "known_to_unknown": [],
+  "geo56_classified": 1,
+  "new_fact_candidates": 3,
+  "new_fact_unique_people": 3,
+  "new_fact_people_classified": 3,
+  "new_fact_source_grades": {
+    "S2": 3
+  },
+  "first_active_birthplace_facts_added": [
+    "RS_PAST_NA4038",
+    "RS_PAST_NA4226"
+  ],
+  "qualified_new_source_for_existing_birthplace": [
+    "RS_PAST_NA3471"
+  ],
+  "original_S1_Dublin_grade_raw_and_source_SHA_preserved": true,
+  "Macalister_auxiliary_not_added_as_new_birthplace_fact": true,
+  "all4979_untouched_rows_completely_equal": true,
+  "geography_resolution_grade_separate": "S3",
+  "current_lookup_state": {
+    "active": 94,
+    "quarantined": 2,
+    "identity_pending": 3
+  },
+  "all9_old_quarantined_candidates_inactive": true,
+  "Home_unknown_and_original_alternatives_retained": true,
+  "other_country_rows_exactly_unchanged": true,
+  "unknown_breakdown": {
+    "explicit_place_but_geography_unresolved": 54,
+    "no_active_explicit_birthplace_evidence": 598
+  },
+  "inputs_sha256": {
+    "studies/royal_society_birthplace_completion_v7/outputs/uk_birthplace_rows.jsonl.gz": "3aa09ae1720ed7abc06b49cb49f9002aa91b0a8a65ac0c0bafe18f455dc8eff7",
+    "studies/royal_society_birthplace_completion_v7/outputs/summary.json": "bc15c71333d76b31d8ed4e45dcd07206b03950eafceda15bb1abbe83ff6163dd",
+    "studies/royal_society_birthplace_completion_v7/scripts/assemble.py": "dfaf8020ace24ec502f269baaa37140c836d1ea3f14ccc60dbba691139a11b72"
+  },
+  "independent_offline_replay_all_output_files_byte_identical": true,
+  "independent_replay_output_files": [
+    "all_country_birthplace_summary.csv",
+    "changed_records.csv",
+    "changes.jsonl.gz",
+    "remaining_unknown.csv",
+    "summary.json",
+    "uk_birthplace_rows.jsonl.gz",
+    "uk_birthplaces.csv"
+  ],
+  "README_CONTINUATION_numbers_scope_first_vs_additional_birthplace_sources_and_auxiliary_date_precision_consistent": true,
+  "MacTutor_page_specific_authors_verified": true,
+  "Macalister_caption_year_precision_distinct_from_exact_Naissance_identity_date_without_place": true,
+  "documents_sha256": {
+    "README.md": "46def426e1bd2be244f726b67d29f1d6e36a3ca5f61fd4d4fa3574fc87cf10f4",
+    "CONTINUATION.md": "365184d21c89014d9f59dbfc55be03fcb5a7c3d20402898771c6c9c387b2d632"
+  }
+}

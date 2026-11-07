@@ -1,0 +1,191 @@
+{
+  "audit_kind": "v16_independent_source_scope_and_closeout_QA",
+  "reviewer": "v16_scope_review",
+  "reviewed_utc": "2026-11-01T09:38:42.469181+00:00",
+  "independent_scope_QA_passed": true,
+  "baseline_commit": "8e545eadbdf232e4c5839aebf62a19ead00e2c46",
+  "baseline_manifest_sha256": "823f59ca90138478e350eb10ae4d08010e94d6c70a6067118440e04f110f9e79",
+  "canonical_v15_pinned_files_rehashed": 57,
+  "canonical_v15_all_pins_unchanged": true,
+  "exact_handoff_sha256": {
+    "france_inventory/membership0_inventory.json": "96170d5f6d01b7e59767c3146d235a7c12a3ee84b29a771785d08d0c2954cc7c",
+    "france_inventory/membership0_census.csv": "fe7234a787e3f3db0ace282cb5c9fd67ae61c63511f1afef507eb0d3fa610a21",
+    "france_inventory/unapplied_membership_evidence_DOB_gate_held.json": "a80126233e1e5f1d1491a1dfce21dd7a11a4af6ec877e540b558b37e8fe27dc0",
+    "france_primary/primary_route_triage.json": "0b085fcea9b1f3b19e328b604530c0510adf71f046b7a27cc533b078e02777ae",
+    "france_primary/actual_request_receipts.json": "7286165968ab0b891c62e14f4c9bc9032403f5dd9542a47a1d686e05e8d45000",
+    "japan_routes/public/MANIFEST.json": "98082c0dc87735bf13f149e416fcd3e44641a7a2534e8c2a342e151dfd0d354a"
+  },
+  "france": {
+    "candidate_groups": 877,
+    "identity_approved": 787,
+    "DOB_approved": 775,
+    "membership_approved": 643,
+    "all_three": 640,
+    "gaps": 237,
+    "gap_dimensions": {
+      "identity|membership|dob": 90,
+      "membership": 135,
+      "membership|dob": 9,
+      "dob": 3
+    },
+    "membership0": 234,
+    "membership0_CTHS": 135,
+    "membership0_other": 99,
+    "not_234_established_ordinary_members_missing_DOB": true,
+    "archive_row_hashes_independently_verified": 135,
+    "archive_role_scope": "Hash reopening and mechanical bounded-credit/component screen; not135 complete new individual adjudications. The collector reports10 focused manual component readings and0 complete new individual semantic adjudications.",
+    "source_origin_credit_screens": 52,
+    "credit_screens_not_membership_acceptances": true,
+    "six_DOB_gate_held_leads": 6,
+    "six_leads_unapplied_and_old_holds_preserved": true,
+    "no_quality_gate_relaxation": true,
+    "ledger_absence_not_claimed_never_previously_reviewed": true,
+    "exact_archive_anchor_bindings_independently_verified": [
+      {
+        "candidate_group_id": "CTHS_107447",
+        "parent_sha256": "22d397be1fb35bea880e5a9e98ad1e159df9a8ec22839af113956fd12bce6ba6",
+        "source_url": "http://www.academie-sciences.fr/academie/membre/Vago_Constantin.htm"
+      },
+      {
+        "candidate_group_id": "CTHS_111758",
+        "parent_sha256": "d00d1cbe0937b2523feec6928ada21be4de4137631c73599c2f9d16cf0e96852",
+        "source_url": "http://www.academie-sciences.fr/academie/membre/Abragam_Anatole.htm"
+      },
+      {
+        "candidate_group_id": "CTHS_111759",
+        "parent_sha256": "e4290b01cc834a9574642deea77e666d722a7852dee1f1ded5b25b6434e7d146",
+        "source_url": "http://www.academie-sciences.fr/academie/membre/Aigrain_Pierre.htm"
+      },
+      {
+        "candidate_group_id": "CTHS_111797",
+        "parent_sha256": "65476004a5dd9cae6d19329b76754f2d9766c3caf0eed837a5e027c5dfab1c1d",
+        "source_url": "http://www.academie-sciences.fr/academie/membre/LewyBertaud_Erwin.htm"
+      },
+      {
+        "candidate_group_id": "CTHS_112619",
+        "parent_sha256": "9396da897445642ed2dd0fbf2ecba27274da787523c2f3297961e0bb879dce3d",
+        "source_url": "http://www.academie-sciences.fr/academie/membre/Laporte_Yves.htm"
+      }
+    ],
+    "selected_legacy_source_failures": [
+      {
+        "candidate_group_id": "CTHS_111758",
+        "source_sha256": "45246e9c3380b51679c42bbbf70f0c59afeee58372137db4c900216afe386da6",
+        "http_status": 404,
+        "actual_error_body_independently_read": true
+      },
+      {
+        "candidate_group_id": "CTHS_111759",
+        "source_sha256": "063b11575023b40be90214d07c2f89f7b61621bc1b05bbd65b2f7f1b8016b17d",
+        "http_status": 404,
+        "actual_error_body_independently_read": true
+      }
+    ],
+    "three_other_exact_legacy_links_not_requested": true,
+    "source_route_branch22_may_include_CTHS_IDs": true
+  },
+  "japan": {
+    "public_manifest_sha256": "98082c0dc87735bf13f149e416fcd3e44641a7a2534e8c2a342e151dfd0d354a",
+    "public_pins_verified": 12,
+    "manifest_sha256": "8f422f5c6cb80c8d0bea2155c7e3057b4d8f7c5aa8e02d04178507cc0dc7709e",
+    "manifest_actual_image_declarations_independently_checked": true,
+    "actual_images": [
+      {
+        "canvas": 106,
+        "source_url": "https://dl.ndl.go.jp/api/iiif/1070913/R0000106/full/full/0/default.jpg",
+        "source_sha256": "d3bd237fcee800af77403948fef7202951ca82a36056e243b6870db1da502d0b",
+        "source_bytes": 1854809,
+        "actual_full_image_independently_visually_read": true
+      },
+      {
+        "canvas": 107,
+        "source_url": "https://dl.ndl.go.jp/api/iiif/1070913/R0000107/full/full/0/default.jpg",
+        "source_sha256": "8ebb54775156ff7a276c6ea8501dc9007515f2b82d0f04f4f7588f817cf920ea",
+        "source_bytes": 1788884,
+        "actual_full_image_independently_visually_read": true
+      }
+    ],
+    "own_subject": "妹澤克惟",
+    "preserved_member_key": "jpa-unlinked-f85799efdd6bf1bb",
+    "source_locator": "Canvas106 printed208 right leaf; own named column, second Japanese member column from left, between丘淺次郎and春木一郎.",
+    "observed_heading": "帝國學士院前會員及客員",
+    "observed_election_era": "自昭和十八年八月二十五日",
+    "observed_retirement_era": "至同十九年四月二十三日",
+    "preserved_membership_interval_corroborated": [
+      "1943-08-25",
+      "1944-04-23"
+    ],
+    "membership_interval_not_new_DOB": true,
+    "source_has_no_explicit_I_II_binding": true,
+    "no_section_inferred_from_degree_name_order_or_absence": true,
+    "ordinary_guest_class_not_newly_adjudicated": true,
+    "canvas107_former_Tokyo_tables_no_direct_division_binding": true,
+    "section_proposals": 0,
+    "new_DOB_claims": 0,
+    "source_processed_people": 1,
+    "local_readonly_route_map_people": 34,
+    "not34_new_body_reviews": true,
+    "known_II": 438,
+    "known_I": 10,
+    "unresolved": 34
+  },
+  "source_activity": {
+    "total_HTTP_GETs": 7,
+    "France_GETs": 4,
+    "Japan_GETs": 3,
+    "normal_redirect_GETs": 2,
+    "search_queries": 2,
+    "retries": 0,
+    "independent_reviewer_network_GETs": 0,
+    "independent_reviewer_queries": 0
+  },
+  "scope_conclusions": {
+    "new_membership_approvals": 0,
+    "new_DOB_approvals": 0,
+    "new_section_approvals": 0,
+    "source_failure_not_person_exclusion": true,
+    "no_national_completion_claim": true,
+    "no_national_or_analysis_cohort_freeze": true,
+    "no_all_public_sources_exhausted_claim": true,
+    "professor_collection_paused": true,
+    "approved_closeout_wording": "This bounded pass found no new qualifying approval. Preserve the v15 canonical tables and park the documented difficult cases pending a new original. Three exact legacy links remain unrequested; the public-source universe is not claimed exhausted.",
+    "small_audit_only_successor_is_appropriate": true,
+    "no_reducer_or_table_duplication_needed": true
+  },
+  "limitations": [
+    "Not an independent full semantic reread of135 French biographies or every historical adjudication.",
+    "Existing historical, alias and source holds are not adjudicated anew.",
+    "1947 route review is prior metadata only; unavailable original bodies were not claimed reread.",
+    "This QA verifies local source scope/provenance and unchanged canonical pins; it does not claim a hosted CI run."
+  ],
+  "repo_data_edits_by_reviewer": 0,
+  "analysis_or_bazi_computation": 0,
+  "main_v16_report_files_reviewed_sha256": {
+    "README.md": "eea2517c4bb8c1ca69367135bb81ab2f193014161151a778f5eb6782487c0d9b",
+    "summary.json": "ff18ee321f71b5009ebce9dd3b4e7a993aa58aa1859efcd7b6aba127964e3bf4",
+    "canonical_v15_pins.json": "701db976df69b288a0370d23ed7a8e93d8c855d2bf2ea7ccc08e7e53ede6b5bc"
+  },
+  "all_source_handoff_copies_match_frozen_workers_sha256": {
+    "france_inventory/membership0_census.csv": "fe7234a787e3f3db0ace282cb5c9fd67ae61c63511f1afef507eb0d3fa610a21",
+    "france_inventory/membership0_inventory.json": "96170d5f6d01b7e59767c3146d235a7c12a3ee84b29a771785d08d0c2954cc7c",
+    "france_inventory/unapplied_membership_evidence_DOB_gate_held.json": "a80126233e1e5f1d1491a1dfce21dd7a11a4af6ec877e540b558b37e8fe27dc0",
+    "france_primary/actual_request_receipts.json": "7286165968ab0b891c62e14f4c9bc9032403f5dd9542a47a1d686e05e8d45000",
+    "france_primary/primary_route_triage.json": "0b085fcea9b1f3b19e328b604530c0510adf71f046b7a27cc533b078e02777ae",
+    "france_primary/root_authorized_source_plan.json": "4fd7d54afc313becf209486baf2715c78a2d01d0b576272be0fef7e9f53bbac9",
+    "japan_routes/1947_route_review.json": "135514a283fd7574c13ec0b664c84c04b24ff9283a3b388ec08761e4ca0f90d9",
+    "japan_routes/MANIFEST.json": "98082c0dc87735bf13f149e416fcd3e44641a7a2534e8c2a342e151dfd0d354a",
+    "japan_routes/README.md": "50732ed5b542fecd416cc12a7015aab2aaaff7ac78e520a65a5a234292e0a5af",
+    "japan_routes/claims.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "japan_routes/holds.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "japan_routes/prior_route_audit.json": "709545b2cf62be771038a78f8b5ee3758571b2f8064807846686cbd8140bbea0",
+    "japan_routes/processed.csv": "af999df0b09a995e0df4fe0608a7675030c7355bbd292f377b5acedec6c8cd91",
+    "japan_routes/readonly_remaining34_route_map.csv": "efe242e6ea15c65c0c948f75d4915880fdb914fbbae50aa12b06ce7bdfabaa6b",
+    "japan_routes/requests.json": "ddeba9b22711716688169a72efd4fbc8872da2c9498ca855b3e620e7b4932716",
+    "japan_routes/section_proposals.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "japan_routes/source_body_readings.json": "f87f2755f88d68411433add5d97e86b54bb9f405ec02a1452df5c75462253a18",
+    "japan_routes/source_manifest.json": "41790d26e6c9b3e6a84e5862fdf5981d15de3ca73c86db6ecac67aba970f27c4",
+    "japan_routes/summary.json": "bf797407829c8fd7b05520279a81f9161ecfd3a052097572739789e60fb7a11d"
+  },
+  "main_report_scope_and_newness_wording_reviewed": true,
+  "canonical_v15_pins_include_MANIFEST_plus56_files": true
+}

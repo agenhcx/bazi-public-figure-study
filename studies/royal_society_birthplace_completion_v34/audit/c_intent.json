@@ -1,0 +1,116 @@
+{
+  "written_utc": "2026-11-06T23:10:56.399905+00:00",
+  "phase": "v34_geography_only",
+  "scope": [
+    "RS_PAST_NA663",
+    "RS_PAST_NA6655",
+    "RS_PAST_NA669",
+    "RS_PAST_NA6847"
+  ],
+  "full_prior_contexts_read_before_queries": true,
+  "prior_context_sha256": {
+    "RS_PAST_NA663": "825ba50bb75c418a95dd3d06d6c4ec72d5aa3ecad5061fbe597af6451c53c0ff",
+    "RS_PAST_NA6655": "0687232b8c92d1e1731074f4948f996bcf995cbed10e0ef4061c8ff0e0a1b4af",
+    "RS_PAST_NA669": "2ef8e4f48b4c5b3d769b652a5edeb6c3043ea962c8be12284d279585c23f8ded",
+    "RS_PAST_NA6847": "45324d2f3ab884512e648d4513f6e5eb5ac262212172400ac8a1f6e47762a7ca"
+  },
+  "historical_reviews": [
+    "v33auditpriorv12holdBarker",
+    "v33auditpriorv13holdsReidTodd",
+    "v33auditpriorv14geographycandidatesandholdsBarkerTodd are candidatesupportonly notnewbirthreferentproof",
+    "v24auditsourcescfullGrovesrecord/query/nav/find/quoteledgers"
+  ],
+  "closed_or_used_routes": {
+    "Barker": [
+      "RS10.1098/rsbm.1972.0003tool403closedallworkvariants",
+      "v14geocandidateFinchleyChurchEnd notsubjectbinding"
+    ],
+    "Groves": [
+      "AlpineJournal1920TubbyoriginalalreadyadoptedHighgateyear1841/compatible/no country; sameworknotreopened"
+    ],
+    "Reid": [
+      "DundeephysiologycollectionnoBPlace",
+      "1976BellParsonsPubMed796437/PMC1307676scannedbodyandPDFbrowserchallengeclosedallworkvariants",
+      "RSobituary1948.0026abstractCanterburyonly"
+    ],
+    "Todd": [
+      "Nature1801024a0AndrewesbodyaccountwallclosedPDFvariants",
+      "NatureCumberlandancestrynotsubjectbirth",
+      "CumbrianLivesTindex/findno-matchnotnewwork",
+      "v14CarletonCarlislelandscapegazetteergeocandidateonlynotreferentproof",
+      "RS1958.0022abstractCarletonnearCarlisleonly"
+    ]
+  },
+  "initial_queries": [
+    {
+      "record_id": "RS_PAST_NA663",
+      "engine": "system2",
+      "q": "\"John Barker\" \"1901\" \"born\" plant biochemist England"
+    },
+    {
+      "record_id": "RS_PAST_NA6655",
+      "engine": "system2",
+      "q": "\"Charles Edward Groves\" \"Highgate\" Middlesex"
+    },
+    {
+      "record_id": "RS_PAST_NA669",
+      "engine": "system2",
+      "q": "\"Edward Waymouth Reid\" \"Canterbury\" \"Kent\" biography"
+    },
+    {
+      "record_id": "RS_PAST_NA6847",
+      "engine": "system2",
+      "q": "\"Charles Todd\" \"1869\" \"Carleton\" \"Cumberland\""
+    }
+  ],
+  "budgets": {
+    "queries": 8,
+    "original_opens": 10
+  },
+  "method": "Neworiginalworks/fullnative/compatibleactualDOBprecision/distinctivecareer/directborncountryorwholeregion bindingexistingrawplaceonly. No city/nationality/work/family/deathinference, no sourceclass/date/placeholdbypass. All exact adaptivequeries/opens/finds writtenandexit0validatedbeforewebcall.",
+  "raw_HTTP_status": null,
+  "raw_bytes_sha256": null,
+  "exact_request_utc": null,
+  "adaptive_queries": {
+    "written_utc": "2026-11-06T23:11:14.638451+00:00",
+    "queries": [
+      {
+        "record_id": "RS_PAST_NA663",
+        "engine": "system1",
+        "q": "\"John Barker\" \"1901\" biography Finchley -site:en.wikipedia.org -site:openalex.org -site:researchgate.net"
+      },
+      {
+        "record_id": "RS_PAST_NA6655",
+        "engine": "system1",
+        "q": "\"Charles Edward Groves\" \"born\" \"England\" -site:en.wikipedia.org"
+      },
+      {
+        "record_id": "RS_PAST_NA669",
+        "engine": "system1",
+        "q": "\"Edward Waymouth Reid\" \"biographical\" Canterbury"
+      },
+      {
+        "record_id": "RS_PAST_NA6847",
+        "engine": "system1",
+        "q": "\"Charles Todd\" \"1869\" biography -site:en.wikipedia.org -site:newikis.com"
+      }
+    ]
+  },
+  "open_plan_1": {
+    "written_utc": "2026-11-06T23:11:36.694057+00:00",
+    "operations": [
+      {
+        "record_id": "RS_PAST_NA6655",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Journal_%28IA_journalchem39soci%29.pdf",
+        "observed_ref": "turn3575832search49",
+        "purpose": "NeworiginalJournalofSocietyofChemicalIndustry1920volume39 obituary scans, notWikipediaarticlemirror andnotoldAlpineJournal; inspectactualchemistrymemorial/fullname/year1841/directbirthregion. Stopontextless/size/failure; noalternateIAcarrier."
+      },
+      {
+        "record_id": "RS_PAST_NA663",
+        "url": "https://slatters.org.uk/Trumpington/f3785.htm",
+        "observed_ref": "turn3575832search1",
+        "purpose": "Neworiginalcompiledlocalhistoryprofile withactualexactDOB/plantphysiology; inspectownsourceprovenanceandbirthregionwithout assumingLondonFinchleyequivalence. HostnotS1; anydate/placecontradictionhold."
+      }
+    ]
+  }
+}

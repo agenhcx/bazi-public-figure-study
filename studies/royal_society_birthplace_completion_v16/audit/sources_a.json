@@ -1,0 +1,286 @@
+{
+  "schema": "v16_new_original_birthplace_sources_a_v1",
+  "worker": "/root/v16_sources_a",
+  "completed_utc": "2026-11-05T00:10:30.463826+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA3088",
+    "RS_PAST_NA3964",
+    "RS_PAST_NA4211",
+    "RS_PAST_NA4680"
+  ],
+  "intent_file": "v16_a_intent.json",
+  "counts": {
+    "discovery_queries": 6,
+    "original_navigation_budget": 8,
+    "actual_navigation_attempts_including_failed_nonoriginal_mirror": 7,
+    "original_navigation_attempts_excluding_mirror": 6,
+    "body_verified_birthplace_candidates": 1,
+    "holds": 3,
+    "raw_HTTP_or_PDF_requests": 0
+  },
+  "queries": [
+    {
+      "q": "Alan Davison MIT born obituary 1936",
+      "engine": "system2",
+      "preplanned": true,
+      "intent_file": "v16_a_intent.json",
+      "exact_request_utc": null
+    },
+    {
+      "q": "Edward Reich Rockefeller born 1927 obituary",
+      "engine": "system2",
+      "preplanned": true,
+      "intent_file": "v16_a_intent.json",
+      "exact_request_utc": null
+    },
+    {
+      "q": "Rainer Walter Guillery Oxford born obituary",
+      "engine": "system2",
+      "preplanned": true,
+      "intent_file": "v16_a_intent.json",
+      "exact_request_utc": null
+    },
+    {
+      "q": "Michael Augustine Raftery Caltech born obituary",
+      "engine": "system2",
+      "preplanned": true,
+      "intent_file": "v16_a_intent.json",
+      "exact_request_utc": null
+    },
+    {
+      "q": "\"Edward Reich\" biochemist obituary Rockefeller 1927",
+      "engine": "system1",
+      "preplanned": true,
+      "intent_file": "v16_a_intent.json",
+      "exact_request_utc": null
+    },
+    {
+      "q": "\"Michael Augustine Raftery\" obituary born",
+      "engine": "system1",
+      "preplanned": true,
+      "intent_file": "v16_a_intent.json",
+      "exact_request_utc": null
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5835781/",
+      "ref": "turn82view0",
+      "outcome": "challenge_page_no_article_body",
+      "observed_tool_error_status": null,
+      "raw_HTTP_status": null,
+      "raw_HTTP_bytes_saved": false,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26833907/",
+      "ref": "turn82view1",
+      "outcome": "parsed_projection_only_HHS_footer_no_article_metadata_or_body",
+      "observed_tool_error_status": null,
+      "raw_HTTP_status": null,
+      "raw_HTTP_bytes_saved": false,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "url": "https://ora.ox.ac.uk/objects/uuid%3A20d2c68b-ef04-47aa-9ab1-2519ce285902/files/m5cbc39a5157ffcc747176abb8d69af3f",
+      "ref": "turn86view0",
+      "outcome": "tool_reported_403_no_body",
+      "observed_tool_error_status": 403,
+      "raw_HTTP_status": null,
+      "raw_HTTP_bytes_saved": false,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "url": "https://royalsocietypublishing.org/rsbm/article/doi/10.1098/rsbm.2025.0005/363145/Michael-Augustine-Raftery8-February-1936-1-August",
+      "ref": "turn86view1",
+      "outcome": "tool_reported_403_no_body",
+      "observed_tool_error_status": 403,
+      "raw_HTTP_status": null,
+      "raw_HTTP_bytes_saved": false,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "url": "https://www.mayonews.ie/news/opinion/michael-augustine-raftery-7521177",
+      "ref": "turn86view2",
+      "outcome": "original_newspaper_obituary_body_explicit_born_clause",
+      "observed_tool_error_status": null,
+      "raw_HTTP_status": null,
+      "raw_HTTP_bytes_saved": false,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "url": "https://obituaries83.rssing.com/chan-7437767/all_p11.html",
+      "ref": "turn86view3",
+      "outcome": "tool_reported_400_timeout_no_body",
+      "observed_tool_error_status": 400,
+      "raw_HTTP_status": null,
+      "raw_HTTP_bytes_saved": false,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "url": "https://web.mit.edu/retireesassoc/obit/mem-2015.html",
+      "ref": "turn92view0",
+      "outcome": "original_retiree_index_only_no_birthplace_or_subject_link",
+      "observed_tool_error_status": null,
+      "raw_HTTP_status": null,
+      "raw_HTTP_bytes_saved": false,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    }
+  ],
+  "candidates": [
+    {
+      "native": {
+        "record_id": "RS_PAST_NA4680",
+        "authority_name": "Raftery; Michael Augustine (1936 - 2007); biochemist",
+        "native_dob": "1936-02-08",
+        "native_raw_birthplace": "",
+        "full_queue_object_sha256": "37fff9bb327e12b8583ca6718b077cb0361451e1821bc26ac00d07def9465c51"
+      },
+      "record_id": "RS_PAST_NA4680",
+      "status": "candidate_first_birthplace_geography_unknown_source_class_parent_review",
+      "raw_birthplace": "Galway",
+      "source_url": "https://www.mayonews.ie/news/opinion/michael-augustine-raftery-7521177",
+      "source_ref": "turn86view2",
+      "source_title": "Michael Augustine Raftery,",
+      "source_author": null,
+      "source_institutional_byline": "The Mayo News",
+      "source_author_note": "Original publisher credits The Mayo News; no individual writer is named. A family relationship or author identity is not inferred.",
+      "source_kind": "original_professional_newspaper_obituary_or_local_tribute",
+      "source_grade_proposal": "S2_pending_parent_review",
+      "grade_caveat": "Original edited professional newspaper narrative with visible publisher institutional byline and editorial code notice, but outside strongest academic/signed-memoir class. Parent may conservatively admit S3; do not label S1, signed scholarly, or peer reviewed.",
+      "source_publication_date": "2007-09-26",
+      "source_page_updated_date": "2023-04-13",
+      "source_quote": "He was born in Galway",
+      "source_quote_word_count": 5,
+      "source_locator": "turn86view2 L10 full name; L12 institutional byline; L14 publication date; L18 explicit born clause and age/deathday; L19–21 Caltech career; L40–43 FRS/Minnesota/retirement/family anchors.",
+      "source_birthdate_precision": "no_DOB_in_body; age_at_death_only",
+      "source_birthdate": null,
+      "source_lifespan_precision": "death month/day August1 in article published2007; age71; compatible with native1936-02-08, not an independent exact-day confirmation",
+      "identity_review": [
+        "Source heading exactly Michael Augustine Raftery, matching authorized native full name.",
+        "Age71 at August1 death in 2007 is compatible with native1936-02-08; no date conflict observed, no native date correction or precision upgrade.",
+        "Caltech chemical biology/acetylcholine receptor research, 23-year Caltech career beginning1964, FRS1986, later University of Minnesota, retirement2001 and children M Daniel/Jennifer/John Kevin provide multiple distinctive anchors."
+      ],
+      "identity_result": "Strong full-name and distinctive career/family anchor binding with compatible age-only date; parent adjudication required under v16 partial-date rule.",
+      "reviewed_hemisphere_proposal": "unknown",
+      "geographic_basis": "Only Galway is within the direct born clause. Shrule, Co Mayo modifies parents/home and upbringing, not the birthplace. Later references to Ireland, educational institutions, employer, US death location or publisher footer must not qualify the birth-place referent. Keep unknown; no country/entity/point assigned.",
+      "conflicts_observed": [],
+      "retrieval_representation": "tool-parsed original publisher HTML text",
+      "raw_HTTP_saved": false,
+      "raw_HTTP_status": null,
+      "exact_request_utc": null,
+      "raw_bytes_sha256": null,
+      "original_Royal_Society_memoir_body": "Observed2026 original signed memoir URL returned403; no born clause from that unavailable source adopted. Bibliographic lead identifies Angela Vincent and Daniel Raftery, not asserted as authors of newspaper notice."
+    }
+  ],
+  "holds": [
+    {
+      "native": {
+        "record_id": "RS_PAST_NA3088",
+        "authority_name": "Davison; Alan (1936 - 2015)",
+        "native_dob": "1936-03-24",
+        "native_raw_birthplace": "",
+        "full_queue_object_sha256": "46c8b2f41cac8c35f4e1e7034ea987a45b68c541a8b6bff596f27dc069b9dbdf"
+      },
+      "record_id": "RS_PAST_NA3088",
+      "status": "hold_no_new_birthplace_body",
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/26833907/",
+        "https://obituaries83.rssing.com/chan-7437767/all_p11.html",
+        "https://web.mit.edu/retireesassoc/obit/mem-2015.html"
+      ],
+      "source_refs": [
+        "turn82view1",
+        "turn86view3",
+        "turn92view0"
+      ],
+      "reason": "PubMed observed projection exposed HHS footer only. MIT News RSS mirror discovery route timed out400. Original MIT retirees2015 list names Alan Davison in Chemistry at L81–82, but gives neither DOB/BP nor a Davison obituary link, so conditional followup stopped. No new original person-born/place body recovered.",
+      "discovery_leads": [
+        "PMID26833907 title In Memoriam: Alan Davison, PhD,1936–2015.",
+        "Original MIT News article text appeared in search-only mirror result; original article URL/body was not acquired.",
+        "Legacy Boston Globe obituary appeared as a discovery lead only; not opened."
+      ],
+      "source_grade_proposal": null,
+      "raw_birthplace": null,
+      "no_master_change": true
+    },
+    {
+      "native": {
+        "record_id": "RS_PAST_NA3964",
+        "authority_name": "Reich; Edward (1927 - 2018)",
+        "native_dob": "1927-04-03",
+        "native_raw_birthplace": "",
+        "full_queue_object_sha256": "66e4ee1979af3a0db801414a14ba9012e69dca63ed69bfed575a8615e1674dc6"
+      },
+      "record_id": "RS_PAST_NA3964",
+      "status": "hold_no_new_explicit_birthplace_source",
+      "source_urls": [],
+      "reason": "Two discovery queries gave official Royal Society current biographical summary, American Academy career/election metadata, Rockefeller1973 News and Notes catalog lead and unrelated same-name obituaries. No original source body containing the target birth-place clause was acquired. Closed RS roster and unrelated consumer activist1903–1983 not reopened.",
+      "discovery_leads": [
+        {
+          "url": "https://royalsociety.org/people/edward-reich-12160/",
+          "ref": "turn82search0",
+          "role": "search-only identity/career/deathday metadata, not birthplace evidence"
+        },
+        {
+          "url": "https://digitalcommons.rockefeller.edu/news_and_notes_1973/7/",
+          "ref": "turn82search3",
+          "role": "search-only institutional issue metadata, full PDF not read"
+        }
+      ],
+      "same_name_rejections": [
+        "Wikipedia Edward Reich1903–1983 consumer activist is incompatible with target1927–2018 biochemist.",
+        "Legacy subjects EdwardReich1962–2017 and EdwardReich2019 funeral notice are not established as target; no fact reuse."
+      ],
+      "source_grade_proposal": null,
+      "raw_birthplace": null,
+      "no_master_change": true
+    },
+    {
+      "native": {
+        "record_id": "RS_PAST_NA4211",
+        "authority_name": "Guillery; Rainer Walter (1929 - 2017)",
+        "native_dob": "1929-08-28",
+        "native_raw_birthplace": "",
+        "full_queue_object_sha256": "db2163adf7aea4a6df9cdc49be968b124c282cbdcd3a345a048317ed1db4d051"
+      },
+      "record_id": "RS_PAST_NA4211",
+      "status": "hold_original_bodies_access_blocked",
+      "source_urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC5835781/",
+        "https://ora.ox.ac.uk/objects/uuid%3A20d2c68b-ef04-47aa-9ab1-2519ce285902/files/m5cbc39a5157ffcc747176abb8d69af3f"
+      ],
+      "source_refs": [
+        "turn82view0",
+        "turn86view0"
+      ],
+      "reason": "PMC returned browser checking/challenge page, no article body; Oxford original repository PDF returned tool-reported403. No retry or alternate access bypass, no direct birthplace body adopted.",
+      "discovery_lead": {
+        "title": "Rainer Walter Guillery FRS,28th August1929–7th April2017",
+        "ref": "turn80search0",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5835781/",
+        "role": "compatible full-name/date title only; search excerpt lacks target birth-place clause"
+      },
+      "source_grade_proposal": null,
+      "raw_birthplace": null,
+      "no_master_change": true
+    }
+  ],
+  "stopping_rule": "Six-query budget reached. Seventh navigation MITretirees index had no subject obituary link, so its conditional eighth followup was not sent.403/400/challenge routes not retried.",
+  "limits": [
+    "Partial-date identity must retain age-only precision, not native exact-day confirmation.",
+    "No hemisphere/country/entity/coordinates assigned by this worker.",
+    "Galway remains unqualified; CoMayo applies to family/upbringing, not bornplace.",
+    "Professional newspaper proposedS2 is conditional outside strongest academic source class; parent may conservatively chooseS3.",
+    "No original fulltext or PDF redistributed; only5-word quote from one candidate source.",
+    "Unknown rawHTTP status/requesttimes/hash are null; tool error codes are labeled tool-reported only.",
+    "No master or Git mutation, no DOB/calendar/identity/sourcegrade/eligibility changes."
+  ]
+}

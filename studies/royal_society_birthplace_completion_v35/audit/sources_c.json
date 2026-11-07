@@ -1,0 +1,225 @@
+{
+  "written_utc": "2026-11-06T23:37:57.025565+00:00",
+  "scope": [
+    "RS_PAST_NA8828",
+    "RS_PAST_NA907"
+  ],
+  "intent_file": "v35_c_intent.json",
+  "historical_context_file": "v35_franklin_historical_context.json",
+  "prior_context_review": "BothFULLmasterobjects readbeforequeries, alltargetindividualholdsandWolfsonmethodcontext. Franklinv13hiddenheaderholdrecoveredfromcompleteactualsourceobservation/rootreview/workerledgerbeforeanyqueries andreportedroot; no Franklinwebcalls.",
+  "candidates": [],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA8828",
+      "native": {
+        "record_id": "RS_PAST_NA8828",
+        "authority_name": "Wolfson; Leonard (1927 - 2010); Baron Wolfson of Marylebone",
+        "native_dob": "1927-11-11",
+        "prior_raw_birthplace": "London",
+        "prior_birthplace_source_grade": "S2"
+      },
+      "status": "hold_source_birthdate_header_discrepancy",
+      "hold_type": "new_actual_DOB_header_observation_parent_qualification",
+      "reason": "ActualnewLondonRemembersBirth1/11/1927headerdiffersnative11/11/1927 onfullnative/peerage/career-boundprofile; holdnoplace/country/yearonlybypass. No birthcountryevidence. NewStCatz2010yearbookfirstopenrestrictedURLfailed/stopped. ActualsourceGordonordinaryfullnativepresent, no nativechange/omittedmiddleexception.",
+      "source_observation_reference": "new_source_DOB_observations[0]",
+      "master_object_unchanged": true
+    },
+    {
+      "record_id": "RS_PAST_NA907",
+      "native": {
+        "record_id": "RS_PAST_NA907",
+        "authority_name": "Franklin; Kenneth James (1897 - 1966)",
+        "native_dob": "1897-11-25",
+        "prior_raw_birthplace": "London",
+        "prior_birthplace_source_grade": "S2"
+      },
+      "status": "hold_inherited_v13_RCP_reprint_DOB_header_discrepancy",
+      "hold_type": "prior_qualified_or_provisional_discrepancy_parent_reconciliation",
+      "reason": "PrequeryhistoricalreviewfoundactualpriorV13RCP25Nov1897versusUKKidneycreditedreprint11Jan1897DOBheadersanddifferentdeathdates. Priorrootreadboth. Inheritedholdpreserved; zeroFranklinwebqueries/opens. This is historicalexistingobservation, notnewsourcecollectiondiscovery, andnot1923astronomer. Rootreconcilesformalqualification; no source/native/BP/datefix.",
+      "historical_context_file": "v35_franklin_historical_context.json",
+      "master_object_unchanged": true
+    }
+  ],
+  "new_source_DOB_observations": [
+    {
+      "record_id": "RS_PAST_NA8828",
+      "native": {
+        "record_id": "RS_PAST_NA8828",
+        "authority_name": "Wolfson; Leonard (1927 - 2010); Baron Wolfson of Marylebone",
+        "native_dob": "1927-11-11",
+        "prior_raw_birthplace": "London",
+        "prior_birthplace_source_grade": "S2"
+      },
+      "source_url": "https://www.londonremembers.com/subjects/lord-wolfson-of-marylebone",
+      "source_title": "Lord Wolfson of Marylebone",
+      "source_author": null,
+      "source_kind": "Actualuncreditedcompiledmemorialpersonprofile",
+      "source_grade_proposal": "S3_new_DOB_header_observation_only",
+      "source_grade_basis": "Actualoriginalcompiledpersonprofile with fullnative/coherentcareer/dateheader; no acquiredindependenteditorialpeerreview/civilverification/host-onlyS1. ImagecreditGuardian isnotproofindependentbiographicalcorroboration orbodyauthortransfer.",
+      "source_quote": "Born 1/11/1927",
+      "source_quote_word_count": 2,
+      "source_body_ref": "turn4520057view0",
+      "source_locator": "L33actualBorn1/11/1927/Died20/5/2010;L34titleLordWolfsonofMarylebone;L40fullLeonardGordonWolfson/businessmanphilanthropist/GUS/Foundation/secondbaronet;L51lifeyears1927-2010.",
+      "observed_source_full_name": "Leonard Gordon Wolfson",
+      "observed_source_birthdate_literal": "1/11/1927",
+      "observed_source_death_date_literal": "20/5/2010",
+      "source_birthdate_normalized_candidate": "1927-11-01",
+      "normalization_status": "Day-month-year interpretation is an inference from adjacentdeath20/5/2010 andBritishcontext, not a printedmonthname/formatlegend. Preserveliteral. UnderbothconventionalD/MandM/Dorder,1/11 differsfromnative11/11.",
+      "source_birthdate_precision": "day_in_numeric_Born_header; actualformatlegendnotobserved",
+      "source_lifespan": "1927–2010",
+      "source_DOB_native_compatibility": "Observednumericbirthheader1/11/1927doesnotmatchnative1927-11-11; NOTcompatible/no correctionmade. No country/year-only bypass.",
+      "identity_review": [
+        "AllnativeLeonardWolfsonandtitleMarylebonepresent inactualsource; sourceadditionalGordonkeptasactualsource-onlycomponent, no omittedmiddlerule/nativeedit.",
+        "ActualGUS/Foundationchairmanship/secondbaronet/businessmanphilanthropistfingerprint anddeath20/5/2010 coherentlybindsameperson. Not1919Americanmicrobiologist/discoverydifferentpeople.",
+        "Sourcebirthyeardoesnotlicenseignoringactualdifferentdayheader."
+      ],
+      "source_place_observed": null,
+      "birthplace_or_geography_adopted": false,
+      "original_birthplace_and_DOB_fields_unchanged": true,
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "caveats": [
+        "No exactcalendar/civilrecordverification/typoverdict.",
+        "Copyright2026andsearchcrawldatesnotpublicationdates.",
+        "No actualsourcebirthcountry orcoordinates; memorialLondonlocationnotbirthcountry.",
+        "Parentqualifieswhetherthisactualsourceheaderobservation entersactiveDOBinventory; workerdoesnoteditinventory."
+      ],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "Web-tool parsed actualHTMLtext, notrawHTTPbytes"
+    }
+  ],
+  "historical_issue_reconciliation": {
+    "record_id": "RS_PAST_NA907",
+    "inherited": true,
+    "new_source_discovery": false,
+    "new_current_source_body": false,
+    "prior_root_actual_body_observations_preserved": true,
+    "native_DOB_unchanged": true,
+    "parent_qualification_required": true
+  },
+  "request_ledger": [
+    {
+      "kind": "search",
+      "record_id": "RS_PAST_NA8828",
+      "engine": "system2",
+      "q": "\"Leonard Wolfson\" \"born\" \"England\"",
+      "batch": 1,
+      "result_ref_prefix": "turn1873244search",
+      "merged_results_not_individually_attributed": true,
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "search",
+      "record_id": "RS_PAST_NA8828",
+      "engine": "system2",
+      "q": "\"Leonard Gordon Wolfson\" biography birthplace",
+      "batch": 1,
+      "result_ref_prefix": "turn1873244search",
+      "merged_results_not_individually_attributed": true,
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "search",
+      "record_id": "RS_PAST_NA8828",
+      "engine": "system1",
+      "q": "\"Wolfson\" \"1927\" \"born\" \"London\" biography -site:en.wikipedia.org -site:history.rcp.ac.uk -site:newikis.com",
+      "batch": 2,
+      "result_ref_prefix": "turn6309158search",
+      "merged_results_not_individually_attributed": true,
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "search",
+      "record_id": "RS_PAST_NA8828",
+      "engine": "system1",
+      "q": "\"Leonard Gordon Wolfson\" \"born\" -site:en.wikipedia.org -site:history.rcp.ac.uk -site:thepeerage.com -site:newikis.com",
+      "batch": 2,
+      "result_ref_prefix": "turn6309158search",
+      "merged_results_not_individually_attributed": true,
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "open",
+      "record_id": "RS_PAST_NA8828",
+      "url": "https://www.londonremembers.com/subjects/lord-wolfson-of-marylebone",
+      "ref": "turn4520057view0",
+      "outcome": "Parsedactual127lineoriginalcompiledmemorialsubjectprofile. Actualnumericbirthheader1/11/1927/death20/5/2010L33; titleL34/fullnativeplusGordonandcoherentGUS/Foundation/secondbaronetcareerL40; no birthcountry. Dateheaderdiffersnative11/11/1927 sohold; no typography/correctbirthdayverdict.",
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "open",
+      "record_id": "RS_PAST_NA8828",
+      "url": "https://www.stcatz.ox.ac.uk/wp-content/uploads/2018/10/The-Year-2010-web.pdf",
+      "ref": "turn4520057view1",
+      "outcome": "ToolInternalError FailedtofetchrestrictedURL. No actualyearbookbody/statusacquired; stoppedwithoutvariant/retry/rawGET.",
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    }
+  ],
+  "counts": {
+    "queries": 4,
+    "navigation_attempts": 2,
+    "parsed_finds": 0,
+    "screenshots": 0,
+    "raw_GETs": 0,
+    "Franklin_queries": 0,
+    "Franklin_opens": 0,
+    "reviewed": 2,
+    "candidates": 0,
+    "holds": 2,
+    "new_actual_source_DOB_header_observations": 1
+  },
+  "budget": {
+    "queries_limit": 4,
+    "navigation_limit": 6
+  },
+  "protocol_disclosure": "Exactinitial/adaptivequeries/opensdurablywritten/JSONvalidated; writevalidationexit0shown in separatecalls BEFOREeachwebcall. AllfourqueriesWolfsononly. No furtherWolfsongeosearchafteractualdaydiscrepancy; StCatzfirstfailedworkstoppedno variants/retries/rawGET. No sourcecaches/screenshots/fullHTML/PDF distributed.",
+  "quote_policy": "NewLondonRemembers2quotedwords; allinheritedquotesunaltered and historicalcontextcopiesretainexistingminimalquotes. Sourcebodytextnotdumpedtofiles.",
+  "unopened_distinct_original_work_leads": [
+    {
+      "record_id": "RS_PAST_NA8828",
+      "discovery_ref": "turn6309158search3",
+      "url": "https://www.theguardian.com/business/2010/jun/17/lord-wolfson-obituary",
+      "status": "DistinctunopenedGuardianobituary; discoverybornLondononly/exactnativeDOB. No bodyacquired/no sourcegradeclaim orclearingnewdayhold."
+    },
+    {
+      "record_id": "RS_PAST_NA8828",
+      "url": "https://www.independent.co.uk/news/obituaries/leonard-wolfson-businessman-and-philanthropist-1990944.html",
+      "observed_prior_locator": "birthplace_followup_v29 RCPcitationlist, notcurrentacquisition",
+      "status": "DistinctunopenedpriorRCPbibliographylead; actualbody/country/dateunverified. No datelessbypass."
+    },
+    {
+      "record_id": "RS_PAST_NA8828",
+      "url": "https://www.oxforddnb.com/view/article/103360?docPos=3",
+      "observed_prior_locator": "birthplace_followup_v29 RCPcitationlist, notcurrentacquisition",
+      "status": "DistinctunopenedpriorRCPbibliographylead; actualbody/country/dateunverified. No failedworkvariants/retriesperformed."
+    }
+  ],
+  "no_analysis_or_final_freeze": true,
+  "repo_or_master_modified": false
+}

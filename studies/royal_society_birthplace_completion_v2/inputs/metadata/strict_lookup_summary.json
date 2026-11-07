@@ -1,0 +1,51 @@
+{
+  "created_utc": "2026-11-02T00:46:02.578130+00:00",
+  "network_requests_from_join": 0,
+  "official_progress_records": 4884,
+  "Wikidata_member_entities": 9777,
+  "Wikidata_member_entities_with_unique_Gregorian_day_DOB_value_candidate_before_inventory": 5870,
+  "Wikidata_DOB_value_candidate_holds": {
+    "multiple_or_no_DOB_values_including_deprecated": 1174,
+    "not_unique_day_precision_Gregorian_DOB": 1972,
+    "no_non_deprecated_DOB_statement": 761
+  },
+  "counts": {
+    "v1_existing_lookup_retained": 2859,
+    "unlinked_with_official_parseable_fullname": 2014,
+    "no_exact_fullname_plus_DOB_plus_membership_match": 469,
+    "unique_new_candidates_before_P569_inventory": 1324,
+    "strict_unique_new_lookup_seeds": 1324,
+    "holds": 232,
+    "new_lookup_seeds_with_current_P19": 1064
+  },
+  "hold_reasons": {
+    "exact_name_and_raw_day_candidates_fail_DOB_gate": 221,
+    "no_unambiguous_surname_field": 11
+  },
+  "official_progress_source_path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v2_workers/official/official_birthplace_rows.jsonl",
+  "official_progress_snapshot": "official_name_join_snapshot.jsonl",
+  "official_progress_sha256": "aefb80bfa803b87ed54aa64c117ce5de85521e3d34109075abbb0882cd46578c",
+  "member_response_sha256": "cec4954009bff4233ce8accf3498478257f001851e467ed93e56c35fef675a79",
+  "member_response_P569_coverage": "date-value tuples only; does not include all somevalue/novalue statements",
+  "P569_statement_inventory": {
+    "required_for_every_final_seed": true,
+    "candidate_QIDs": 1324,
+    "candidate_QIDs_with_complete_inventory": 1324,
+    "candidate_QIDs_pending_inventory": 0,
+    "final_seed_QIDs_passing_all_statement_gate": 1324,
+    "distinct_statements_in_candidate_inventory": 1324,
+    "gate_hold_reasons": {},
+    "cache_sha256": "956bf5a6cb8df8e4256cf9e6b30f33a9ac4fb677157ed3732f9d5c27f4324767"
+  },
+  "exact_normalization_rules": [
+    "Unicode NFKC and casefold",
+    "collapse whitespace",
+    "normalize typographic apostrophes and hyphens",
+    "delete full-stop punctuation without expanding initials",
+    "remove only leading fixed titles Sir,Dame,Dr,Prof,Professor",
+    "authorised name: first semicolon field surname, skip independent title fields, next field given name before lifespan",
+    "no accent removal, no surname rearrangement, no alias expansion, no fuzzy matching"
+  ],
+  "identity_acceptance_assigned": false,
+  "DOB_or_acceptance_modified": false
+}

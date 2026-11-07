@@ -1,0 +1,113 @@
+{
+  "schema": "UK_v20_independent_local_final_QA_v1",
+  "reviewer": "/root/v20_final_qa",
+  "written_utc": "2026-11-05T15:20:34.129190+00:00",
+  "status": "PASS",
+  "validation_categories_passed": 20,
+  "checks": [
+    "Exact v19 canonical hash and4983 records reconstructed equal actual v19 master.",
+    "4983fixed unique keys/order/UKcohort; 4changed objects exactly;4979untargeted complete objects unchanged.",
+    "All old fieldnames retained; only whitelisted BP/geography/currentcontext changes in4subjects.",
+    "Each4changed completeobject reverses exactly with retained previousfield and absentfield snapshots.",
+    "NativeDOB/authority/identity/eligibility/country/QIDs/coords, sourcehash/officialstatus,selected/prior/versioned evidence unchanged.",
+    "Reviewed9=8firstBPsubjects+1existingplacegeo pilot; disjoint partition4BP+0geo+5holds; targetpool141 exact.",
+    "New birthplace grades2S2/2S3 have person_birthplace_support_only role; original DOBgrades unchanged.",
+    "Adam geo pilot completeobject unchanged; no v20geographyonly objects or CSVvalues assigned.",
+    "Midwinter original authority endpoint2011/DOB1938-03-08 unchanged; source2021 discrepancy separate/unresolved; no native deathcorrection.",
+    "Crisp conventional structuredformat interpretation/no literalborn/nolegend disclosed; Kassanis rawadjective retained and primarysourceDOB yearonly.",
+    "Only Midwinter North; Garton/Crisp/Kassanis unknown.",
+    "Argyris/Laver activeDOB sidecar byteidentical to v19 and both completeobjects unchanged.",
+    "Overall4172North/186South/625unknown;window2644=2272North/181South/191unknown.",
+    "Blankdiagnostics recomputed exact:window137blank+54nonblankunknown;all559blank+66nonblankunknown.",
+    "Changes4firstBP and summaryadmission counts exact.",
+    "CSV45oldcolumns retained in order plus11new=56;4983rows/order;untargetedoldvaluesunchanged;newvalues limited4subjects;191remainingwindow records exact.",
+    "5mainoutputfiles matched preQA pins before tests; both isolated replay runs exited cleanly and each of5hashes matched pins and oneanother; mainoutputs untouched afterward.",
+    "Gzip header has blankfilename/zeromtime; canonicalfinalhash verified.",
+    "No original PDF/HTML/images/rawsource caches distributed;4acceptedsourcequotes <=25words;actual lengths8/4/2/7.",
+    "README and CONTINUATION read;counts/scope/limits/freeze/method amendment/DOBvsdeathconflict/retrieval/replay/Gitexceptions consistent."
+  ],
+  "baseline_canonical_sha256": "5c8d93078101a69b32c9652c6bcbc99ce926c2dd4bd50547e235071ae377c043",
+  "final_canonical_sha256": "bbe9e22d00c4bfb3fb7a390df6a18a349e0abe64ba2986cd5075650f62ae9f2b",
+  "records": 4983,
+  "changed_complete_objects": 4,
+  "unchanged_complete_objects": 4979,
+  "overall": {
+    "north": 4172,
+    "unknown": 625,
+    "south": 186
+  },
+  "window_counts": {
+    "north": 2272,
+    "unknown": 191,
+    "south": 181
+  },
+  "blank_diagnostics": {
+    "all_blank_raw_birthplace": 559,
+    "window_blank_raw_birthplace": 137,
+    "all_unknown": 625,
+    "all_unknown_with_blank_raw_birthplace": 559,
+    "all_unknown_with_nonblank_raw_birthplace": 66,
+    "window_unknown": 191,
+    "window_unknown_with_blank_raw_birthplace": 137,
+    "window_unknown_with_nonblank_raw_birthplace": 54
+  },
+  "main_pre_QA_output_pins": {
+    "birthplace_rows.jsonl.gz": "ef5348dd7e846550776f8153ff21b482182bc017549a65fac77dce6de75d7171",
+    "birthplaces.csv": "8ea253e6159394e4317b1b116d58ebcccb994cf054054205de93c6091b2dee46",
+    "changes.json": "f8d5b48175f31c9175552af751fde721dd506c9155c433a958e43136296b9197",
+    "remaining_unknown_window.csv": "01c2bda08e6f602b7f88364038dfdc6a6ccec8ea1843008ab44028e4e6b94740",
+    "summary.json": "80c9904129ea9904df6ee8031da74f96d72f3ff4381c3c4d237819cf44854c7d"
+  },
+  "isolated_replay_runs": [
+    {
+      "run": 1,
+      "clean_exit": true,
+      "five_hashes": {
+        "birthplace_rows.jsonl.gz": "ef5348dd7e846550776f8153ff21b482182bc017549a65fac77dce6de75d7171",
+        "birthplaces.csv": "8ea253e6159394e4317b1b116d58ebcccb994cf054054205de93c6091b2dee46",
+        "changes.json": "f8d5b48175f31c9175552af751fde721dd506c9155c433a958e43136296b9197",
+        "remaining_unknown_window.csv": "01c2bda08e6f602b7f88364038dfdc6a6ccec8ea1843008ab44028e4e6b94740",
+        "summary.json": "80c9904129ea9904df6ee8031da74f96d72f3ff4381c3c4d237819cf44854c7d"
+      },
+      "matched_original_pins": true
+    },
+    {
+      "run": 2,
+      "clean_exit": true,
+      "five_hashes": {
+        "birthplace_rows.jsonl.gz": "ef5348dd7e846550776f8153ff21b482182bc017549a65fac77dce6de75d7171",
+        "birthplaces.csv": "8ea253e6159394e4317b1b116d58ebcccb994cf054054205de93c6091b2dee46",
+        "changes.json": "f8d5b48175f31c9175552af751fde721dd506c9155c433a958e43136296b9197",
+        "remaining_unknown_window.csv": "01c2bda08e6f602b7f88364038dfdc6a6ccec8ea1843008ab44028e4e6b94740",
+        "summary.json": "80c9904129ea9904df6ee8031da74f96d72f3ff4381c3c4d237819cf44854c7d"
+      },
+      "matched_original_pins": true
+    }
+  ],
+  "main_outputs_rerun_or_mutated": false,
+  "quote_words_by_record": {
+    "RS_PAST_NA1998": 2,
+    "RS_PAST_NA2044": 7,
+    "RS_PAST_NA4036": 4,
+    "RS_PAST_NA4166": 8
+  },
+  "documentation_checks": {
+    "files": [
+      "README.md",
+      "CONTINUATION.md"
+    ],
+    "counts_scope_limits_consistent": true,
+    "CONTINUATION_Midwinter_quote_count_corrected_to4": true
+  },
+  "harness_correction": {
+    "first_run": "The initial QA script passed all structural, field, rollback, CSV, both isolated replay/hash, no-cache and <=25-word checks before a final exact quote-length assertion incorrectly expected5 rather than4 for the Midwinter phrase. It exited at that final assertion (qa_v20_final.py original line116).",
+    "correction": "Corrected the scratch harness expectation to4, checked actual lengths8/4/2/7, checked current docs and unchanged5outputpins. Both completed isolated replay runs were not repeated; the original assertion location is downstream of all replay comparisons. No data/code/facts/mainoutputs changed.",
+    "source_audit_correction": "The inherited worker word-count typo is preserved in the original report; root_followups and continuation are corrected by sourceQA/root."
+  },
+  "limitations": [
+    "Local independent structural/data/replay verification only; no original source acquisition or raw HTTP-byte inspection.",
+    "Source semantic/grade quality reviewed separately in independent_source_qa.json; no informational-independence claim.",
+    "Exact-quote-count harness typo corrected after the completed replays; replayevidence retained without unnecessary repeat.",
+    "No Git, inputs, production code, master output, nativefacts, BaZi/outcomes or finalcohort edits performed."
+  ]
+}

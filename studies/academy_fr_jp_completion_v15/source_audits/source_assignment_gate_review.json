@@ -1,0 +1,87 @@
+{
+  "reviewer": "independent_v15_review",
+  "review_time_utc": "2026-11-01T09:04:50.443577+00:00",
+  "baseline_commit": "2ba3d1161a6151a1f18dccda25e5073411c06f2c",
+  "network_GETs": 0,
+  "source_reviews": [
+    {
+      "candidate_group_id": "CTHS_128379",
+      "html_sha256": "510bc84765d6ba08840cf84035c01201c95a5e12bf54a11c81f59ce76397b7e3",
+      "actual_html_bytes_independently_read": true,
+      "html_observation": {
+        "own_header_name": "Hélène Bouchiat",
+        "own_header_birthyear": 1958,
+        "own_header_election_month": "2010-11",
+        "body_biography_named_subject": "Marie-Anne Bouchiat",
+        "body_correspondent_date": "1986-10-06",
+        "body_member_date": "1988-06-20"
+      },
+      "html_disposition": "Mixed-subject profile; do not assign body dates to daughter or claim current profile internally clean. Preserve old raw warning and existing mother record.",
+      "primary_election_pdf_sha256": "7a290a6f3483b5120a0477ce39b10f8f3d9fb8607b09f2d840e7a655285c9f23",
+      "actual_pdf_sha256_rechecked": true,
+      "actual_pdf_page4_image_and_text_independently_read": true,
+      "pdf_observation": {
+        "governing_list": "Nine ordinary members elected30November2010",
+        "own_subject": "Hélène Bouchiat",
+        "own_DOB": "1958-05-08",
+        "own_career": "CNRS/Laboratoire de physique des solides/Paris-Sud Orsay"
+      },
+      "recommended_membership": "accept_direct_ordinary_event_from_separate_actual_Academy_issued_PDF",
+      "accepted_election_date": "2010-11-30",
+      "old_bad_response_bytes_recovered": false,
+      "old_bad_response_claimed_reread": false,
+      "previous_conflict_explicitly_resolved": false
+    },
+    {
+      "candidate_group_id": "PROFILE2_08407b6d0479b1d0",
+      "html_sha256": "c92bca31e34d52f7d518647add883ffe49168afd327d611eb1f0d37746def58c",
+      "actual_html_bytes_independently_read": true,
+      "html_observation": {
+        "own_header_name": "Nicole Le Douarin",
+        "own_header_birthyear": 1930,
+        "own_header_election_month": "2006-01",
+        "own_body_member_date": "1982-02-15",
+        "own_body_correspondent_date": "1980-02-04",
+        "own_body_career": "Professeure honoraire au Collège de France",
+        "body_biography_named_subject": "Nicole Le Douarin"
+      },
+      "recommended_membership": "hold_explicit_same_subject_header_body_election_conflict",
+      "accepted_election_date": null,
+      "accepted_election_year": null,
+      "rejected_inferences": [
+        "Do not identify2006as perpetual-secretary date without actual source evidence",
+        "Do not select1982because body seems more detailed",
+        "Do not use Pontifical Academy nomination as French event"
+      ],
+      "machine_readable_conflict_required": true,
+      "previous_conflict_explicitly_resolved": false,
+      "recommended_new_hold": {
+        "legacy_election_date_conflict": "preserve blank",
+        "v15_status": "unresolved_same_subject_header_body_election_year_conflict",
+        "observed_election_years": [
+          1982,
+          2006
+        ],
+        "additional_machine_conflict_rows": 1,
+        "future_positive_validator_must_block": true
+      }
+    }
+  ],
+  "recommended_preservation": [
+    "Every pre-existing raw/source warning literal unchanged",
+    "25pre-existing formal chronology hold rows remain1",
+    "No DOB/canonical identity/source-family/raw-claim changes",
+    "No mother/daughter merge or mother-row edit",
+    "Four exact-DOB conflicts and fatherDangeard birthyear guard unchanged",
+    "Japan3CSVs byte-identical and full528claim final state retained"
+  ],
+  "recommended_tests": [
+    "Reject Hélène promotion from mixed-subject web body alone",
+    "Reject Nicole promotion selecting either2006or1982 from current contradictory source",
+    "Mutated previous_conflict_explicitly_resolved=True must reject",
+    "Positive PDF dates bound to governing page4 not15March2011headline or21June2011reception",
+    "Only exact candidate membership scope mutable; all identity/DOB fields unchanged",
+    "New Nicole machine-readable conflict guard rejects future approval even though inherited election_date_conflict is blank"
+  ],
+  "review_limit": "This is a semantic recommendation, not final-handoff SHA binding or final production-field audit."
+}

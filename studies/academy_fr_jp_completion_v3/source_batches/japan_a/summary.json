@@ -1,0 +1,46 @@
+{
+  "assigned_candidates": 60,
+  "assigned_status_counts": {
+    "not_processed": 12,
+    "bounded_search_no_usable_body_birth_claim": 10,
+    "source_date_conflict_hold": 3,
+    "body_day_claim": 33,
+    "source_calendar_hold": 2
+  },
+  "assigned_processed_people": 48,
+  "institutional_claim_rows": 8,
+  "institutional_people": 8,
+  "institutional_day_people": 5,
+  "institutional_day_people_without_known_source_conflict": 4,
+  "secondary_claim_rows": 36,
+  "secondary_people": 34,
+  "secondary_day_people": 34,
+  "formal_new_conflict_people": 3,
+  "gsj_bulk_separate": {
+    "table_positions": 27,
+    "distinct_names": 25,
+    "distinct_candidate_names_with_body_day": 8,
+    "calendar_comparable_days": 6,
+    "pre1873_unconverted_days": 2,
+    "old_seed_duplicate_people": 1,
+    "matched_names_with_blank_birth": [
+      "古畑種基"
+    ],
+    "new_candidates_added": 0,
+    "bazi_computed": 0,
+    "final_cohort_accepted": false,
+    "matched_table_positions": 10,
+    "distinct_matched_candidate_names_including_blank_birth": 9
+  },
+  "full_body_claim_rows_including_secondary_and_gsj": 52,
+  "distinct_people_with_any_body_claim_including_gsj": 44,
+  "raw_source_requests": 43,
+  "raw_valid_bodies": 42,
+  "failed_raw_source_requests": 1,
+  "no_collector_calendar_conversion": true,
+  "no_default_dates": true,
+  "cohort_frozen": false,
+  "final_cohort_accepted": false,
+  "bazi_variables_computed": 0,
+  "limits": "Editorial reference days are a separately attributed secondary layer. Institutional year-only sources do not imply institutional support for a secondary day. GSJ bulk contains old seed and out-of-shard candidate overlaps; parent must merge by stable ID and retain holds."
+}

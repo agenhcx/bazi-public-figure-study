@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/262552d8c0f0/qa_v39_final.py", line 379, in <module>
+    main()
+  File "/workspace/scratch/262552d8c0f0/qa_v39_final.py", line 204, in main
+    old_records = issue_records(old_obj); new_records = issue_records(new_obj)
+                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/262552d8c0f0/qa_v39_final.py", line 37, in issue_records
+    def issue_records(obj): return obj['records'] if isinstance(obj, dict) else obj
+                                   ~~~^^^^^^^^^^^
+KeyError: 'records'

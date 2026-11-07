@@ -1,0 +1,7 @@
+# v7 source and integration audits
+
+Audit reports identify their exact source, public metadata and code snapshot. Original captured-byte hashes and derived-text hashes are distinct. Reports state whether relevant PDF pages were visually verified. Failed original captures require an exact root approval for the member, URL, derived-body hash, HTTP failure status and observed actual-body/root verification references; ancestor exceptions remain unchanged.
+
+Public batches contain only top-level JSON, CSV and README metadata. Private bodies, page images and helper code are excluded. Source-supplied calendar pairs are evidence rather than collector conversions. New body claims cannot automatically release inherited calendar, conflict or quality holds. The two exact root-approved routing decisions additionally require final independent Dates QA and matching new source SHA256/day/pair metadata; all old noncomparable claims remain unchanged. Every selected identity has an explicit processing outcome, and not-searched cases remain unprocessed.
+
+The integration audit records complete predecessor ledger and claim-field preservation, effective hold retention, source-tier separation, unchanged section and fixed-selection scope, all prior French review columns and chronology holds, nine prepared-input and eight output byte replays, and zero analysis outputs. A report reviewed at an earlier snapshot does not claim the same hash for later edits.

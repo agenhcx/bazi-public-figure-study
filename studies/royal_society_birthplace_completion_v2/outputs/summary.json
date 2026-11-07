@@ -1,0 +1,55 @@
+{
+  "schema": "royal_society_birthplace_completion_v2",
+  "baseline": 4983,
+  "hemisphere_counts": {
+    "north": 3955,
+    "unknown": 855,
+    "south": 173
+  },
+  "previous_counts": {
+    "north": 1818,
+    "unknown": 3095,
+    "south": 70
+  },
+  "official_catalogue_rows_processed": 4884,
+  "official_catalogue_nonempty_birthplace": 3070,
+  "official_catalogue_errors": 0,
+  "current99_explicit_birthplace": 86,
+  "strict_lookup_rows": 1324,
+  "partial_official_preview": false,
+  "manual_hemisphere_resolutions": 2,
+  "source_grade_counts_for_selected_geography": {
+    "S1": 3007,
+    "S2": 36,
+    "S3": 1149,
+    "S1_or_S2_existing_body_metadata_not_reopened": 10,
+    "unknown": 781
+  },
+  "native_DOB_and_eligibility_preserved": true,
+  "cross_cohort_deduplicated": false,
+  "birth_window_changed": false,
+  "source_quality_DOB_groups_unchanged": true,
+  "geography_source_preference": "S1, S2, existing verified-body metadata, S3; equal-tier cross-hemisphere claims held; all weaker discrepancies retained",
+  "inputs_sha256": {
+    "studies/royal_society_birthplace_completion_v2/inputs/official_birthplace_fields.jsonl.gz": "6a8309d4ce4ee062ae57f0f79af8708685276394179e182bbddd89b9cb758d25",
+    "studies/royal_society_birthplace_completion_v2/inputs/current99_birthplace_rows.jsonl.gz": "a4f2ccae9aceeec83ad295a4f411b7802b88db17814ad7c49c4a4bdacad7647e",
+    "studies/academy_birthplace_screen_v1/outputs/birthplace_rows.jsonl.gz": "2ad00462255629a603bc4a95aa64158141b5a9b105359baece528a163aa93d92",
+    "studies/academy_birthplace_screen_v1/inputs/supplements/main.jsonl.gz": "c0d81a011c4beea32642cdda05cb31b987afb35cc88c77cbeb9745823bc02141",
+    "studies/royal_society_birthplace_completion_v2/inputs/strict_link_birthplace_rows.jsonl.gz": "216765a23d178989a309b425d2970c9f0444ea1b0680744e41ef7313dac4151f",
+    "studies/royal_society_birthplace_completion_v2/inputs/manual_hemisphere_resolutions.json": "5a0de01076cd099a2b2c5fe43e0df8aeac8ef0410cdfa2d22909bfb79d195c51"
+  },
+  "descriptive_existing_native_DOB_window_1835_1985": {
+    "rows": 2644,
+    "hemisphere_counts": {
+      "north": 2104,
+      "unknown": 372,
+      "south": 168
+    },
+    "not_new_calendar_or_final_cohort_adjudication": true
+  },
+  "unknown_breakdown": {
+    "no_explicit_birthplace_evidence": 780,
+    "explicit_place_but_geography_unresolved": 75,
+    "confirmed_cross_hemisphere_conflicts": 0
+  }
+}

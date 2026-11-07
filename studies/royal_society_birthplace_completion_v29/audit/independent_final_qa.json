@@ -1,0 +1,140 @@
+{
+  "schema": "UK_v29_independent_local_final_QA_v1",
+  "reviewer": "/root/v26_final_qa",
+  "written_utc": "2026-11-06T11:54:06.325148+00:00",
+  "status": "PASS",
+  "validation_categories_passed": 40,
+  "checks": [
+    "five pinned production outputs match before QA",
+    "v28 baseline and v29 current canonical exactly pinned",
+    "self-contained v28 reconstruction equals all4983 baseline complete objects",
+    "fixed cohort order and unique keys",
+    "all18 followups fixed as3groups of6 before discovery",
+    "scope112queue18reviewed9facts9holds disjoint partition",
+    "exact9changed and4974 complete identical objects",
+    "all frozen fields prior facts and exact previous plus absent rollback",
+    "separate newbirthplace grade roles S2five S3four North7 unknown2",
+    "independent overall and2644window counts",
+    "blank nonblank diagnostics independently recomputed",
+    "exact18 previouslyneverreviewed equal fixedfollowupscope",
+    "remaining103blank queue includes0 neverindividuallyreviewed using allholdsunion",
+    "firstpasscloseout independentbaseline currentIDs andcounts exact",
+    "firstpasscloseout fouractualinputhashes and inheritedholdfileinventory",
+    "summary deltas and no geographyonly adoption",
+    "CSV104old positions and meaning plus6v29 fields",
+    "CSV4983 rows current fields and historical columns exact",
+    "remaining172unknown CSV matches master order",
+    "all9 inherited issue and method sidecars byteidentical",
+    "six activeDOB and separate oneprovisional glyph case unchanged",
+    "all issue records Wager Adam Shortt currentholds completeobjects unchanged",
+    "seven exactsourceDOB two yearonly allfullnative components and rootbodyroles",
+    "Ford1912 andKeen1890 yearonly no exactnativedaypromotion",
+    "fiveS2 andfourS3 subjectgradeassignments exact",
+    "sevenbirthlinkedcountryregionsNorth McNeillWolfsoncityonlyunknown",
+    "Pickavance literalparsedbom semanticcontext safe5quote no printedpredicateorOCRclaim",
+    "Pickavance actualcopyright1993 notformalissue orfilename1997 publicationdate",
+    "Grosveld actualfullnative explicitFrank notinferredalias qualitybadtokenflagsunrepaired",
+    "Wolfson actualadditionalGordon retainedseparately nativeauthorityunchanged ordinarybinding",
+    "three6subjectcollectors no reportedprotocoldeviation",
+    "no current middleexception or pending proposal fields in acceptedfacts",
+    "nine actualquote counts10 6 5 4 10 5 11 9 3 eachunder25",
+    "request accounting36queries37opens1shot38nav11find0GET",
+    "parent9facts9holds no newDOBdateglyphendpointmiddlecase and originalroles",
+    "no fullsource cache or image formats distributed",
+    "README andCONTINUATION actual counts scope and source limits directlyreviewed",
+    "independent sourceQA finalized and matches acceptedfact hash",
+    "two isolated cleanreplays all5outputs equal originalpins",
+    "production5outputs untouched after QA"
+  ],
+  "baseline_canonical_sha256": "697389a67f48c88f214b8efc832a1f8744fcab34a4882f581215d75c8755403e",
+  "final_canonical_sha256": "e528b4afce6ded29ff6af749b4d46a8d7b9d0bce7d57d34ac8f1366421bbce73",
+  "records": 4983,
+  "changed_complete_objects": 9,
+  "unchanged_complete_objects": 4974,
+  "overall": {
+    "north": 4190,
+    "unknown": 606,
+    "south": 187
+  },
+  "window_counts": {
+    "north": 2290,
+    "unknown": 172,
+    "south": 182
+  },
+  "blank_diagnostics": {
+    "all_blank_raw_birthplace": 525,
+    "window_blank_raw_birthplace": 103,
+    "all_unknown": 606,
+    "all_unknown_with_blank_raw_birthplace": 525,
+    "all_unknown_with_nonblank_raw_birthplace": 81,
+    "window_unknown": 172,
+    "window_unknown_with_blank_raw_birthplace": 103,
+    "window_unknown_with_nonblank_raw_birthplace": 69
+  },
+  "previously_never_individually_reviewed": 18,
+  "never_individually_reviewed_remaining": 0,
+  "first_followup_queue_complete": true,
+  "birthplace_cohort_complete": false,
+  "main_pre_QA_output_pins": {
+    "birthplace_rows.jsonl.gz": "751c64e6d54c33de9977c515e2512bd49c3d46dca22428188e1b302e7cdab8fe",
+    "birthplaces.csv": "371551961184cc24f409f2b6abf915c5ef66ee4ffbb439156e93809fa72a4ec6",
+    "changes.json": "7f93d383384c2eb8acea4c5a8d912ed9b7fa4bfa3ceeb6d4d2cc71afd22d5743",
+    "remaining_unknown_window.csv": "6ad189970ce89ea10a47bc55873920564205cd190d6f7281693a074c58d07c34",
+    "summary.json": "d82434986ce373e860f4dd6c3ae1fa54cddc828181814520eeb01e8239eb16d2"
+  },
+  "isolated_replay_runs": [
+    {
+      "run": 1,
+      "clean_exit": true,
+      "five_hashes": {
+        "birthplace_rows.jsonl.gz": "751c64e6d54c33de9977c515e2512bd49c3d46dca22428188e1b302e7cdab8fe",
+        "birthplaces.csv": "371551961184cc24f409f2b6abf915c5ef66ee4ffbb439156e93809fa72a4ec6",
+        "changes.json": "7f93d383384c2eb8acea4c5a8d912ed9b7fa4bfa3ceeb6d4d2cc71afd22d5743",
+        "remaining_unknown_window.csv": "6ad189970ce89ea10a47bc55873920564205cd190d6f7281693a074c58d07c34",
+        "summary.json": "d82434986ce373e860f4dd6c3ae1fa54cddc828181814520eeb01e8239eb16d2"
+      },
+      "matched_original_pins": true
+    },
+    {
+      "run": 2,
+      "clean_exit": true,
+      "five_hashes": {
+        "birthplace_rows.jsonl.gz": "751c64e6d54c33de9977c515e2512bd49c3d46dca22428188e1b302e7cdab8fe",
+        "birthplaces.csv": "371551961184cc24f409f2b6abf915c5ef66ee4ffbb439156e93809fa72a4ec6",
+        "changes.json": "7f93d383384c2eb8acea4c5a8d912ed9b7fa4bfa3ceeb6d4d2cc71afd22d5743",
+        "remaining_unknown_window.csv": "6ad189970ce89ea10a47bc55873920564205cd190d6f7281693a074c58d07c34",
+        "summary.json": "d82434986ce373e860f4dd6c3ae1fa54cddc828181814520eeb01e8239eb16d2"
+      },
+      "matched_original_pins": true
+    }
+  ],
+  "main_outputs_rerun_or_mutated": false,
+  "quote_words_by_record": {
+    "RS_PAST_NA4208": 10,
+    "RS_PAST_NA4384": 6,
+    "RS_PAST_NA504": 5,
+    "RS_PAST_NA5088": 4,
+    "RS_PAST_NA5089": 10,
+    "RS_PAST_NA6300": 5,
+    "RS_PAST_NA661": 11,
+    "RS_PAST_NA753": 9,
+    "RS_PAST_NA8828": 3
+  },
+  "documentation_checks": {
+    "files": [
+      "README.md",
+      "CONTINUATION.md"
+    ],
+    "counts_scope_limits_consistent": true,
+    "review_method": "Direct review of all18previouslyneverreviewed fixed3x6scope,9adoptions9holds and first-followupcompletionboundary; Pickavanceparsedbom/semanticcontext/safequote/textmarker-onlyscreenshot/printedpredicateunverified; GrosveldexplicitFrank/fullnative/qualitybadtokenflagsunrepaired; WolfsonactualadditionalGordon/nativeauthorityunchanged/ordinarybinding; FordKeenyearonly; inherited9sidecars/sixDOB/provisionalglyph/distinctissues."
+  },
+  "limitations": [
+    "Independent local structural/data/replay verification only; no network, new original-source acquisition or rawHTTP-byte inspection.",
+    "Source semantic/genre quality reviewed separately in independent_source_qa.json; original-body locators supplied by collectors/root are not a new original-acquisition claim by this reviewer.",
+    "All18remainingpreviouslyneverreviewed subjectshadfirstfollowup;103blankwindowrecordsremainheld/unresolved. Thisisnot sourceexhaustion, completedbirthplacecohort or finalfreeze.",
+    "Pickavanceprintedbirthpredicatewasnotvisuallyverified; parsedbom is retainedwithoutliteralbornquote/OCR-cause/date-placeambiguity or screenshotcreationfailureclaim. No glyphverification by this reviewer.",
+    "Grosveldcompiledsource retainsbadtokenqualityflags andexplicitFrank; no silentrepair, inferredalias, WhoWhoacquisition or independentbirthclaim. WolfsonadditionalactualGordon stayssource-only/nativeunchanged, not an omitted-middleexception.",
+    "Ford/Keen sourceyearonly doesnot confirm nativeexactOctober24/September5.",
+    "No production inputs, facts, code, master outputs or Git operations changed; this audit and scratch harness only."
+  ]
+}

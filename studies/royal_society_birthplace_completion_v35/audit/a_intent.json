@@ -1,0 +1,92 @@
+{
+  "written_before_requests_utc": "2026-11-06T23:35:09.608665+00:00",
+  "scope": [
+    "RS_PAST_NA6941",
+    "RS_PAST_NA780"
+  ],
+  "phase": "geography_only",
+  "baseline_commit": "ea8f974cb7029714906c2f5ceb9cc1e1bc2594e1",
+  "prior_context_review": {
+    "full_scope_records_read_before_queries": true,
+    "targeted_currentv34individualholds_and_v24_v26originalsourcecontexts_read_before_queries": true,
+    "original_BP_sources": {
+      "RS_PAST_NA6941": [
+        "https://www.cumbrianlives.org.uk/lives/herbert-augustus-hills.html"
+      ],
+      "RS_PAST_NA780": [
+        "https://www.turle.name/the_doctors/indiI25.html"
+      ]
+    },
+    "closed_or_previously_inspected_works": [
+      "GroveHillsKevinGriceCumbrianLivesnamedchildparagraph directLondon/exact1864-08-01/FRS1911/RAS1913-15 alreadyacquired. Parententrydeathyearinconsistency unrelatedchildDOB, no clearance/correction.",
+      "GroveHillsNature110551a0 failed500idpredirect, NPGmp76047failedrouteclosed; MNRAS1923obituarylistPDF1923MNRAS..83R.232. acquired2pageslistonly/noDOB/BP; no failedworkvariants/reopeningoldlist.",
+      "EvansTurlefamilycompiledpersonalentry full/exact1857-07-27/BarbicanLondonstreetaddress/compatiblelife1857-1930/geologistcareeralreadyacquired; Englandinlatercensusresidencenotbirth. CitationsDWB/FrancesHartman notacquiredoriginalbirthproof.",
+      "EvansCambridge1931originalobituarylandingpreviouslymetadataonly; no actualsubjectbody, stopclosedtextlessbodyroute/no variants. Different1855-1943JohnWilliamEvansdiscoveryexcludednotDOBconflict."
+    ],
+    "other_actual_DOB_or_place_holds_found": false,
+    "projection_limits": "GroveHillsWikiHighHeadCastlebirthprojectionnotoriginalbody/placeconflict; originalNatureOctober2deathprojectionunacquiredvsacceptedSeptember26noexactdeathverdict. Bothnativeendyear1922unchanged."
+  },
+  "initial_queries": [
+    {
+      "record_id": "RS_PAST_NA6941",
+      "q": "\"Edmond Herbert Grove-Hills\" \"born\" \"England\""
+    },
+    {
+      "record_id": "RS_PAST_NA780",
+      "q": "\"John William Evans\" \"1857\" \"born\" \"England\""
+    }
+  ],
+  "budgets": {
+    "queries": 4,
+    "navigation_attempts": 6,
+    "cached_finds": "separateledger"
+  },
+  "pre_request_guard": "Separatetoolcall write+validateintent/inspectexit0andexactentries BEFORE eachwebcall. OnlocalwritefailureSTOPnetwork/dependentsfirst. No backdating.",
+  "admission": "Genuinelynewpersonaloriginalwork/fullnative/actualcompatibleDOBprecision/coherentcareer/directborncountryorwholeregionbindingstoredplace. No city/family/nationality/workplaceinference. AllDOB/BP/sourcegrade/priorfactsmasterfrozen; anydate/placeconflictheld. Geographic_support_only; S3compiledreferencewithprovenancelimits allowed, no pureWiki-childrewrite/hostS1. Stopfailedwork403/timeout/size/textless/notaccessible; no variants/retry/rawGET/authbypass. <=25words/workinclusiveofpriorquotes. Rawstatus/hash/exactrequesttimeunknownnull.",
+  "adaptive_pre_request_plans": [
+    {
+      "written_before_requests_utc": "2026-11-06T23:35:23.289732+00:00",
+      "queries": [
+        {
+          "record_id": "RS_PAST_NA6941",
+          "q": "\"Hills\" \"Edmond Herbert\" \"Oxford Dictionary\""
+        },
+        {
+          "record_id": "RS_PAST_NA780",
+          "q": "\"John William Evans\" \"Dictionary of Welsh Biography\""
+        }
+      ],
+      "reason": "InitialS2mostlypreviousLondononly/bibliographicindex/pureWiki-childrewrites. StrongerS1targetedneworiginalreferenceworklocators; no factualadoptionfrom HighHeadCastleprojection/DWBcitation. Twoqueriesexhaust4budget; futurebodyopenswillhaveexactobservedURLpreintent."
+    },
+    {
+      "written_before_requests_utc": "2026-11-06T23:35:40.886913+00:00",
+      "opens": [
+        {
+          "record_id": "RS_PAST_NA6941",
+          "url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/580658625",
+          "observed_ref": "turn1633622search0",
+          "purpose": "FirstoriginalRogerHutchinsODNBfullnative/compatibleexact1864-08-01/career/body and directHighHeadCastleCumberland claim, possiblyconflictsstoredLondon. No placeadoption/datecorrectionfromprojection; actualbodyrequired."
+        },
+        {
+          "record_id": "RS_PAST_NA780",
+          "url": "https://biography.wales/article/s-EVAN-WIL-1734.html?lang%5B%5D=cy&lang%5B%5D=en&order=asc&page=122&query=William+Llewelyn+Davies&rows=12&sort=sort_name",
+          "observed_ref": "turn1633622search4",
+          "purpose": "FirstoriginalDWB1959familyentry containingexplicitnamedJohnWilliamEvans1857-1930/exactDOB/geologistcareer. Inspectifchildbornregiondirect; parent/ancestorbirth,doctorLondonpractice andsubjectLondondeathnotbirth."
+        }
+      ],
+      "reason": "4querybudgetexhausted;2neworiginaleditedreferencebodies. PriorclosedNature/NPG/Cambridgemetadata routesnotreopened. Allactualdate/placecontradictionsheld; nootherfamilylocationinference."
+    },
+    {
+      "written_before_requests_utc": "2026-11-06T23:36:00.864108+00:00",
+      "finds": [
+        {
+          "record_id": "RS_PAST_NA6941",
+          "source_ref": "turn3817480view0",
+          "pattern": "was born",
+          "purpose": "LocateactualODNBpublicextractin974lineoriginalalreadyacquired; firstdisplayonlymenus/header, nobirthbodyclaimyet. Verifyactualfullnative/exactDOB/directplace beforeconflictdisposition."
+        }
+      ],
+      "reason": "Cachedfindwithinfirstacquiredneworiginalbody, notfailedrouteretry/rawGET. Exactintentvalidatedbeforecall."
+    }
+  ]
+}

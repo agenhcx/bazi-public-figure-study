@@ -1,0 +1,381 @@
+{
+  "schema": "v30_sources_c_v1",
+  "worker": "/root/v26_sources_c assignedv30groupc",
+  "written_utc": "2026-11-06T12:08:12.550698+00:00",
+  "phase": "geography_only",
+  "scope_record_ids": [
+    "RS_PAST_NA4774",
+    "RS_PAST_NA5003",
+    "RS_PAST_NA6938",
+    "RS_PAST_NA8835"
+  ],
+  "intent_file": "v30_c_intent.json",
+  "prior_holds_inspected": [
+    "prior_v11_holds.json Jardineexactcase; allv29audit*holds recursivelycheckedfortargetIDs, onlyJardinetargetholdfound"
+  ],
+  "counts": {
+    "discovery_queries": 8,
+    "web_navigation_attempts": 7,
+    "parsed_find_operations": 0,
+    "screenshots": 0,
+    "raw_HTTP_or_PDF_GETs": 0,
+    "geographic_candidates": 0,
+    "holds": 4,
+    "qualified_new_DOB_conflict_proposals": 1,
+    "new_birthplace_proposals": 0
+  },
+  "candidates": [],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA5003",
+      "native": {
+        "record_id": "RS_PAST_NA5003",
+        "authority_name": "Dudley; Sir; Sheldon Francis (1884 - 1956)",
+        "native_dob": "1884-08-16",
+        "raw_birthplace": "Lisbon",
+        "hemisphere": "unknown",
+        "frozen_birthplace_source_grade": "S2",
+        "frozen_birthplace_source_url": "https://history.rcp.ac.uk/inspiring-physicians/sir-sheldon-francis-dudley",
+        "complete_object_canonical_sha256": "ad511d442f49132e68f11696c0832787ce58667324ac986d62d0b44d42be2a8a"
+      },
+      "status": "hold_no_new_birthlinked_country_or_wholeregion_body_acquired",
+      "hold_type": "new_original_geographic_body_blocked_by_observed_challenge",
+      "reason": "TargetedcountryqueryrecoveredolderRCPcityonlysource and genuinelydifferent2018Dudleyhistoricalpaper. FirstactualPMCoriginalpaper navigation exposed Checkingyourbrowser-reCAPTCHA, no articlebody; stopped without solve/alternatecarrier/variant/rawGET. ExistingLisbonrawBP/gradeclaimsfrozen. Sourceheader/cityfamiliarity/fatherspost/navalservice/nationalitydonotestablishbirthlinkedPortugal. KnownoldRCPinternalFRS1941/1951observationnotreinterpretedasDOBconflict or corrected.",
+      "sources": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6169416/",
+          "body_ref": "turn1390586view0",
+          "observed_tool_title": "Checking your browser - reCAPTCHA",
+          "retrieval_limit": "text/html3lines, observedchallenge noactualarticlebody acquired",
+          "stopped_without_retry_or_bypass": true,
+          "discovery_only_title": "Sir Sheldon Francis Dudley, his Contributions to Diphtheria and the Aftermath of the Sinking of HMS Curacoa by the Queen Mary",
+          "no_birthcountry_assertion_acquired": true
+        }
+      ],
+      "quotes_used": [],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsedbody or exacttoolresult, not rawHTTPbytes",
+      "no_master_change": true,
+      "source_grade_role": "geographic_support_only_followup_no_nativeDOB_or_BPgrade_upgrade",
+      "raw_birthplace_unchanged": true
+    },
+    {
+      "record_id": "RS_PAST_NA4774",
+      "native": {
+        "record_id": "RS_PAST_NA4774",
+        "authority_name": "Ross; Graham Garland (1944 - 2021); theoretical physicist",
+        "native_dob": "1944-09-13",
+        "raw_birthplace": "Aberdeen",
+        "hemisphere": "unknown",
+        "frozen_birthplace_source_grade": "S2",
+        "frozen_birthplace_source_url": "https://admin.wadham.ox.ac.uk/media/documents/Gazette_2022.pdf",
+        "complete_object_canonical_sha256": "edbf0765e4a72b172e53cfa0453018814d7122bd57bebaaebb69a2e681345098"
+      },
+      "status": "hold_no_directbirthlinked_country_and_native_binding_precision_not_met",
+      "hold_type": "actualnew_original_cityonly_and_source_name_date_precision_hold",
+      "reason": "NewORAoriginalhistoricalworklanding failedDisabledError andclosed; no sameworkalternatecarrierretried. GenuinelydifferentoriginalCERNcourierobituaryactuallyacquired states bornAberdeen1944, with separate Scottishtheorist description; Scotlandnot inactualbornclause and notbirthcountryinferencefromnationality. ActualbodyusesGrahamRosswithoutGarland andyearonly1944, so strictv24source-omittedmiddleexactDOBgatealsofails. StoredAberdeenconsistentasstringbutgeo remainsunknown; no fullnativebinding via unacquiredwork or priorWadhamtruthtransfer.",
+      "sources": [
+        {
+          "url": "https://ora.ox.ac.uk/objects/uuid%3A6ac1e5f5-1838-4e5a-ac48-ebc93733fd09",
+          "body_ref": "turn1390586view1",
+          "exact_tool_error": "Failed to fetch https://ora.ox.ac.uk/objects/uuid%3A6ac1e5f5-1838-4e5a-ac48-ebc93733fd09: DisabledError",
+          "stopped_without_retry_or_samework_variant": true
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Graham_Ross_(physicist)",
+          "body_ref": "turn5515433view0",
+          "locator": "L111AberdeenScotlandsecondaryinfobox;L152observedCERNoriginalworklink",
+          "role": "linkcarrier_only_not_geographyproof",
+          "secondary_infobox_not_adopted": true
+        },
+        {
+          "url": "https://cerncourier.com/a/graham-ross-1944-2021/",
+          "body_ref": "turn9532688view0",
+          "locator": "L49title1944-2021;L51publicationdate;L55Scottishtheorist/31Oct2021death;L56bornAberdeen1944;L57gluondiscoverywork;L63FRS1991/Dirac2012;L66authorsaffiliations",
+          "source_title": "Graham Ross 1944–2021",
+          "actual_source_name": "Graham Ross",
+          "unconfirmed_native_component": "Garland",
+          "actual_source_birthdate": "1944",
+          "actual_birthdate_precision": "yearonly",
+          "actual_source_deathdate": "2021-10-31",
+          "authors": [
+            "John Ellis",
+            "Frank Close",
+            "Subir Sarkar"
+          ],
+          "actual_byline_affiliations": "JohnEllisKing’sCollegeLondon/CERN; FrankCloseandSubirSarkarUniversityofOxford",
+          "actual_publication_date": "2021-11-21",
+          "new_source_genre": "originalauthoredscientificobituary, not geographyadmitted",
+          "stored_place_relation": "ActualAberdeenbirthcitystringconsistentwithfrozenAberdeen, but nostatedbirthlinkedScotland/country/wholeregion",
+          "exactDOB_not_claimed": true,
+          "no_country_from_Scottish_nationality": true,
+          "quotes_used": []
+        }
+      ],
+      "quotes_used": [],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsedbody or exacttoolresult, not rawHTTPbytes",
+      "no_master_change": true,
+      "source_grade_role": "geographic_support_only_followup_no_nativeDOB_or_BPgrade_upgrade",
+      "raw_birthplace_unchanged": true
+    },
+    {
+      "record_id": "RS_PAST_NA6938",
+      "native": {
+        "record_id": "RS_PAST_NA6938",
+        "authority_name": "Christopherson; Sir; Derman Guy (1915 - 2000)",
+        "native_dob": "1915-09-06",
+        "raw_birthplace": "Plumstead, south-east London",
+        "hemisphere": "unknown",
+        "frozen_birthplace_source_grade": "S2",
+        "frozen_birthplace_source_url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/579807932",
+        "complete_object_canonical_sha256": "02b35d52911987fa243797262ed5c9dfe865a116be31d9e0a1586b55ccca0cd1"
+      },
+      "status": "hold_no_new_original_birthlinked_country_body_acquired",
+      "hold_type": "original_geographic_body_unavailable",
+      "reason": "NeworiginalDowson/Higginson2004memoirfoundviaactualsecondarylinkcarrier; firstobservedDOIclickreturnednonretryable500/publishernotaccessible andstoppedwithoutJSTORorothercarrierretry. ExistingPlumsteadsoutheastLondon/ODNBsource/BPgradeandrawfrozen. SecondarytextfatherChurchofEngland/PorlockDevonwork andschoolsnotexplicitbirthcountry. No countryfromLondonfamiliarity.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Derman_Christopherson",
+          "body_ref": "turn5515433view1",
+          "locator": "L109fullnative/lifespansecondary;L115parentalvicarPlumstead/familymove;L162actualoriginalmemoirDOIlink",
+          "role": "originalwork_linkcarrier_only_not_geographyproof",
+          "original_work_discovery_only": "DuncanDowson/GordonHigginson(2004),SirDermanGuyChristopherson(6September1915-7November2000);electedFRS1960"
+        },
+        {
+          "url": "https://doi.org/10.1098%2Frsbm.2004.0005",
+          "body_ref": "turn9532688view1",
+          "exact_tool_error": "Failed to fetch https://doi.org/10.1098%2Frsbm.2004.0005: (500) Redirected to https://royalsocietypublishing.org/doi/10.1098/rsbm.2004.0005 which is not accessible via this tool. (non-retryable error)",
+          "stopped_without_retry_or_alternatecarrier_variant": true,
+          "no_original_memoir_body_acquired": true
+        }
+      ],
+      "quotes_used": [],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsedbody or exacttoolresult, not rawHTTPbytes",
+      "no_master_change": true,
+      "source_grade_role": "geographic_support_only_followup_no_nativeDOB_or_BPgrade_upgrade",
+      "raw_birthplace_unchanged": true
+    },
+    {
+      "record_id": "RS_PAST_NA8835",
+      "native": {
+        "record_id": "RS_PAST_NA8835",
+        "authority_name": "Jardine; Lisa Anne (1944 - 2015)",
+        "native_dob": "1944-04-14",
+        "raw_birthplace": "Oxford",
+        "hemisphere": "unknown",
+        "frozen_birthplace_source_grade": "S1",
+        "frozen_birthplace_source_url": "https://catalogues.royalsociety.org/calmview/Record.aspx?src=CalmView.Persons&id=NA8835",
+        "complete_object_canonical_sha256": "2ab72baede63d487dfbd42299b949d54a4a26b9246f469dce6472a4fc0c7c8b9"
+      },
+      "status": "hold_qualified_new_original_DOB_conflict_no_geography_adoption",
+      "hold_type": "new_qualified_original_DOB_conflict",
+      "reason": "Genuinelyneworiginal2013SteveConnorIndependentinterviewactualCVtable directlyfullLisaAnneJardineCBE/Born12April1944, versus unchangednative14April1944. UCLrenaissancestudies/HFEA2008/GoingDutch2009careercoherentlyidentifiessubject. Thisisactualbodynewconflictqualification, not retrospectivepromotionofoldunacquiredAnnualReport/Naturesearchprojections. No geographyadoption/no NIASOxfordUKyearonly bypass/no nativeDOBcorrection. Interviewitselfdoesnotsupplydirectbirthplacecountry.",
+      "sources": [
+        {
+          "url": "https://www.the-independent.com/life-style/health-and-families/features/lisa-jardine-nobody-wants-to-run-stories-about-the-people-who-go-through-ivf-for-nothing-8919813.html",
+          "body_ref": "turn1390586view2",
+          "source_title": "Lisa Jardine: ‘Nobody wants to run stories about the people who go through IVF for nothing’",
+          "source_author": "Steve Connor",
+          "publication_date": "2013-11-03",
+          "source_kind": "originalauthorednewspaperinterview_with_explicitbiographicalCVtable",
+          "conservative_source_quality_note": "Journalistbylineactuallyacquired; relevantscientificexpertcredentialsnotacquired, conservativeS3forthisnewobservation. No nativeDOBorBPsourcegradeassigned/changed.",
+          "locator": "L35SteveConnor/date;L84CVheading;L86actualfullLisaAnneJardineCBE;L88literalBorn12April1944;L70/94UCLrenaissancestudies;L96HFEA2008;L99GoingDutch2009Cundill",
+          "actual_observed_full_name": "Lisa Anne Jardine CBE",
+          "source_birthdate": "1944-04-12",
+          "source_birthdate_precision": "exactday",
+          "source_deathdate": null,
+          "native_birthdate": "1944-04-14",
+          "actual_quote": "Born: 12 April 1944",
+          "actual_quote_word_count": 4,
+          "actual_birthplace_relation": false,
+          "no_actualdeathendpoint_assertion": true
+        }
+      ],
+      "prior_hold_inspected": {
+        "file": "prior_v11_holds.json",
+        "prior_source_url": "https://nias.knaw.nl/fellow/jardine-l-a/",
+        "prior_source_date_precision": "yearonly1944",
+        "old_unacquired_original_url": "https://www.jesus.cam.ac.uk/sites/default/files/inline/files/Annual%20Report%202016.pdf",
+        "prior_projection_status": "Searchprojection12April1944 only; relevantpagebody/pixelsnotacquired and oldtimeout routeclosed. No rerun.",
+        "no_prior_projection_reclassified_as_actualbody": true
+      },
+      "quotes_used": [
+        "Born: 12 April 1944"
+      ],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsedbody or exacttoolresult, not rawHTTPbytes",
+      "no_master_change": true,
+      "source_grade_role": "geographic_support_only_followup_no_nativeDOB_or_BPgrade_upgrade",
+      "raw_birthplace_unchanged": true
+    }
+  ],
+  "qualified_DOB_conflict_proposals": [
+    {
+      "record_id": "RS_PAST_NA8835",
+      "origin_version": "v30",
+      "authority_name": "Jardine; Lisa Anne (1944 - 2015)",
+      "native_dob": "1944-04-14",
+      "source_birthdate": "1944-04-12",
+      "source_birthdate_precision": "exactday",
+      "observed_source_full_name": "Lisa Anne Jardine CBE",
+      "source_url": "https://www.the-independent.com/life-style/health-and-families/features/lisa-jardine-nobody-wants-to-run-stories-about-the-people-who-go-through-ivf-for-nothing-8919813.html",
+      "source_body_ref": "turn1390586view2",
+      "source_author": "Steve Connor",
+      "source_publication_date": "2013-11-03",
+      "source_kind": "actualoriginalnewspaperinterviewCVtable",
+      "source_observation_quality": "conservativeS3_new_observation_only_not_nativeDOBorBPgrade",
+      "locator": "L86fullnative/L88exactDOB;L70/94UCLRenStudies/L96HFEA2008/L99GoingDutch2009",
+      "source_quote": "Born: 12 April 1944",
+      "source_quote_word_count": 4,
+      "identity_review": "Allnativecomponentsactuallystated; distinctiveUCL/HFEA2008/awardwinninghistorianfingerprint; noinitial/alias/middlenameexception. Source2013suppliesnocontrarylifespanendpoint and no birthcountry.",
+      "qualification_change": "FirstacquiredgenuinelyneworiginalexactDOBbody. Priorv11AnnualReport/Naturesearchprojectionsremaindiscoveryonly, not retrospectivelyqualified.",
+      "decision_proposal": "appendqualifiedactiveDOBconflict_preserveold6objects_and_holdallgeography",
+      "native_DOB_unchanged": true,
+      "raw_birthplace_unchanged": true,
+      "frozen_BPgrade_unchanged": "S1",
+      "no_native_date_verdict_or_correction": true,
+      "no_civil_birth_record_verification": true,
+      "no_yearonly_dateless_bypass": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsedbody or exacttoolresult, not rawHTTPbytes",
+      "no_master_change": true,
+      "source_grade_role": "geographic_support_only_followup_no_nativeDOB_or_BPgrade_upgrade"
+    }
+  ],
+  "query_ledger": [
+    {
+      "ordinal": 1,
+      "engine": "system2",
+      "query": "\"Sheldon Francis Dudley\" born Portugal",
+      "observed_subject_relevant_response_refs": [
+        "turn5210078search3",
+        "turn5210078search20",
+        "turn5210078search25"
+      ]
+    },
+    {
+      "ordinal": 2,
+      "engine": "system2",
+      "query": "\"Graham Garland Ross\" born Scotland",
+      "observed_subject_relevant_response_refs": [
+        "turn5210078search37",
+        "turn5210078search51",
+        "turn5210078search56"
+      ]
+    },
+    {
+      "ordinal": 3,
+      "engine": "system2",
+      "query": "\"Derman Guy Christopherson\" born England",
+      "observed_subject_relevant_response_refs": [
+        "turn5210078search0",
+        "turn5210078search1",
+        "turn5210078search49"
+      ]
+    },
+    {
+      "ordinal": 4,
+      "engine": "system2",
+      "query": "\"Lisa Anne Jardine\" born April",
+      "observed_subject_relevant_response_refs": [
+        "turn5210078search4",
+        "turn5210078search5",
+        "turn5210078search11"
+      ]
+    },
+    {
+      "ordinal": 5,
+      "engine": "system1",
+      "query": "\"Sheldon Francis Dudley\" \"Lisbon\" \"Portugal\"",
+      "observed_subject_relevant_response_refs": [
+        "turn1390586search0",
+        "turn1390586search1"
+      ]
+    },
+    {
+      "ordinal": 6,
+      "engine": "system1",
+      "query": "\"Graham Garland Ross\" \"Aberdeen\" \"Scotland\"",
+      "observed_subject_relevant_response_refs": [
+        "turn1390586search6"
+      ]
+    },
+    {
+      "ordinal": 7,
+      "engine": "system1",
+      "query": "\"Derman Guy Christopherson\" \"born\" \"England\" biography",
+      "observed_subject_relevant_response_refs": [
+        "turn1390586search2",
+        "turn1390586search3",
+        "turn1390586search4"
+      ]
+    },
+    {
+      "ordinal": 8,
+      "engine": "system1",
+      "query": "\"Lisa Anne Jardine\" \"12 April 1944\" obituary",
+      "observed_subject_relevant_response_refs": [
+        "turn1390586search5"
+      ]
+    }
+  ],
+  "query_ledger_representation": "Exactactualqueries; eachfourquerybatchcombinedresults, observedsubjectrelevantrefssubsetnotguaranteedperquerymapping. Country/querywordsare hypotheses notfacts. No missingresponseIDsreconstructed.",
+  "navigation_ledger": [
+    {
+      "ordinal": 1,
+      "ref": "turn1390586view0",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6169416/",
+      "outcome": "ObservedCheckingbrowser-reCAPTCHA challenge, no Dudleyarticlebody; stoppedno alternatecarrier/bypass"
+    },
+    {
+      "ordinal": 2,
+      "ref": "turn1390586view1",
+      "url": "https://ora.ox.ac.uk/objects/uuid%3A6ac1e5f5-1838-4e5a-ac48-ebc93733fd09",
+      "outcome": "RossoriginalhistorylandingDisabledError stoppedno sameworkalternatecarrier"
+    },
+    {
+      "ordinal": 3,
+      "ref": "turn1390586view2",
+      "url": "https://www.the-independent.com/life-style/health-and-families/features/lisa-jardine-nobody-wants-to-run-stories-about-the-people-who-go-through-ivf-for-nothing-8919813.html",
+      "outcome": "ActualJardineoriginalfullnative/exact12Apr1944 versusnative14Apr; qualifiedDOBconflictproposal andholdgeo"
+    },
+    {
+      "ordinal": 4,
+      "ref": "turn5515433view0",
+      "url": "https://en.wikipedia.org/wiki/Graham_Ross_(physicist)",
+      "outcome": "Linkcarrieronly for genuinelydifferentCERNwork, notgeographyproof"
+    },
+    {
+      "ordinal": 5,
+      "ref": "turn5515433view1",
+      "url": "https://en.wikipedia.org/wiki/Derman_Christopherson",
+      "outcome": "Linkcarrieronlyfororiginalmemoir, notgeographyproof"
+    },
+    {
+      "ordinal": 6,
+      "ref": "turn9532688view0",
+      "url": "https://cerncourier.com/a/graham-ross-1944-2021/",
+      "outcome": "ActualRossoriginalbornAberdeen1944 only; separateScottishnationality/noGarland/exactday; holdsgeography"
+    },
+    {
+      "ordinal": 7,
+      "ref": "turn9532688view1",
+      "url": "https://doi.org/10.1098%2Frsbm.2004.0005",
+      "outcome": "ChristophersonfirstmemoirDOI500redirectpublishernotaccessible/nonretryable; stoppedno alternative"
+    }
+  ],
+  "protocol_deviations": [],
+  "protocol_review": "Allinitial/adaptivequery/navigationintentsprospectivelypersistedandlocalwriteexitcheckedbeforedependentnetwork. No oldclosedoriginalRCP/ODNB/Wadhamcityonlybody/NIAS/AnnualReport reruns; no failedroute retries/variants/bypass/rawGET. No fullsourcecaches/distribution/sourcechildren/code/study/Git/mainchanges. Quotes4wordsinnewIndependentworkonly; oldfrozenquotesunchanged. All9inheritedissuefilesuntouchedbyworker; rootmayappendqualifiedJardinecasepreservingoldobjects. Geographic_support_only task, no BP/nativeDOBgrade/rawplace/claims/selectedevidence/provenancechanges."
+}

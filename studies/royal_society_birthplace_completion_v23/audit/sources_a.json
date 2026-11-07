@@ -1,0 +1,368 @@
+{
+  "schema": "UK_v23_sources_a_v1",
+  "worker": "/root/v23_sources_a",
+  "written_utc": "2026-11-05T23:59:54.311508+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA4064",
+    "RS_PAST_NA4074",
+    "RS_PAST_NA4139",
+    "RS_PAST_NA4591"
+  ],
+  "intent_file": "v23_a_intent.json",
+  "counts": {
+    "discovery_queries": 8,
+    "web_navigation_attempts": 8,
+    "parsed_find_operations": 0,
+    "screenshots": 0,
+    "raw_HTTP_or_PDF_GETs": 0,
+    "birthplace_candidates": 0,
+    "holds": 4,
+    "new_original_body_DOB_conflicts": 1,
+    "unused_navigation_budget": 2
+  },
+  "budgets": {
+    "queries": 8,
+    "navigation_attempts": 10
+  },
+  "candidates": [],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA4064",
+      "native": {
+        "record_id": "RS_PAST_NA4064",
+        "authority_name": "Hall; Michael George (1931 - 2022); applied mathematician",
+        "native_dob": "1931-10-16",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "f279e9c2566cc345919cb8a6f2b7323c78792cb6c6923dd429df8c3aaa2f0382"
+      },
+      "status": "hold_no_explicit_birthplace_or_fullnativeDOBidentity_in_acquired_original_profile",
+      "hold_type": "no_explicit_birthplace_in_original_profile",
+      "reason": "Original society profile describes MichaelHall applied/computational aeronauticalmathematics/CFD/election1993 and death8June2022, but does not supply nativeGeorge middlecomponent, native birthdate/year or birthplace. Do not expand firstname/middle or infer country from aeronautical workplace.",
+      "source_url": "https://royalsociety.org/people/michael-hall-11565/",
+      "source_ref": "turn3058975view1",
+      "source_title": "Dr Michael Hall FRS",
+      "source_author": null,
+      "source_kind": "original_uncredited_scientific_society_fellow_profile",
+      "source_locator": "L191shortsubjectname; L192-194CFD/aeronauticalcareer/consultancy; L195death; L202elected1993.",
+      "observed_source_name": "Michael Hall",
+      "source_birthdate": null,
+      "source_birthdate_precision": "not_stated",
+      "source_death_date": "2022-06-08",
+      "source_grade_adopted": null,
+      "original_body_verified_birthplace": false,
+      "geography_decision": "unchanged_unknown",
+      "discovery_wrong_person_excluded": "MichaelGeorgeHall1942–2023 newspaperzone-manager/Spokane alumnus and MichaelGeorgeHallborn1982 companyofficer projections are not this1931–2022CFDscientist; neither opened or treated as target DOB conflict.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original HTML/text or tool error, not raw HTTP bytes",
+      "no_master_change": true
+    },
+    {
+      "record_id": "RS_PAST_NA4074",
+      "native": {
+        "record_id": "RS_PAST_NA4074",
+        "authority_name": "Dawson; Rex Malcolm Chaplin (1924 - 2021); biochemist",
+        "native_dob": "1924-06-03",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "0b6046790e7645ea939ecdda6779404c06d196c0bcbb76ca9d1b8756c9f6adc4"
+      },
+      "status": "hold_full_original_born_body_unavailable_and_growingup_context_not_birthplace",
+      "hold_type": "original_birthplace_body_unavailable",
+      "reason": "Original memoir carrier title/abstract confirms fullRexMalcolmChaplin/exactnative3June1924/compatibledeath, but explicitly hasno fullsubjectmemoirtext; relatedpaper fulltext links are not this memoir. Original BiochemicalSociety excerpt givesStokeGoldingLeicestershire asgrowingup, notborn. Direct RSmemoir DOI inaccessible and distinct Biochemist obituaryarticle DOI403; failedpublisherissue403. Allstopped withoutvariants/retry. No birthplace or grade adopted.",
+      "source_url": "https://www.researchgate.net/publication/368943640_Rex_Malcolm_Chaplin_Dawson_3_June_1924-29_March_2021",
+      "source_ref": "turn3058975view2",
+      "source_title": "Rex Malcolm Chaplin Dawson. 3 June 1924—29 March 2021",
+      "source_author": "Robin Irvine Frs",
+      "source_author_note": "Literal carrier display; no normalization to the society memorial author RobIrvine claimed as an independent identity proof.",
+      "source_kind": "external_carrier_original_scientific_society_memoir_title_and_abstract_only",
+      "source_locator": "L2fullsubject/exactdates; L4-7publication/DOI; L19-21/L35-42subjectfulltextunavailable; abstract23.",
+      "source_birthdate": "1924-06-03",
+      "source_birthdate_precision": "exact_day_in_subject_memoir_title_only_not_born_clause",
+      "source_death_date": "2021-03-29",
+      "original_body_verified_birthplace": false,
+      "source_grade_adopted": null,
+      "geography_decision": "unchanged_unknown",
+      "additional_original_observations": [
+        {
+          "url": "https://www.biochemistry.org/membership-and-communities/in-memoriam/",
+          "ref": "turn9219465view1",
+          "author_display": "Rob Irvine (University of Cambridge)",
+          "locator": "L275-291 targetedDawsonentry:abbreviatedRMCname/year1924–2021, author287,growingup288,fullobitlink291.",
+          "source_birthdate_precision": "year_only_in_memorial_heading",
+          "born_relation_observed": false,
+          "unadopted_context": "Stoke Golding, Leicestershire is growing-up location only; UK is general memorialmetadata, not a born-country clause.",
+          "source_quote": ""
+        },
+        {
+          "url": "https://doi.org/10.1098/rsbm.2022.0040",
+          "ref": "turn9219465view0",
+          "result": "tool-inaccessible, stopped"
+        },
+        {
+          "url": "https://portlandpress.com/biochemist/issue/43/5",
+          "ref": "turn9219465view2",
+          "result": "issuecontents tool403, stopped"
+        },
+        {
+          "url": "https://doi.org/10.1042/bio_2021_178",
+          "ref": "turn4803866view0",
+          "result": "firstdistinctoriginalBiochemistobituary DOI observedon society memorial link39; tool403, stopped"
+        }
+      ],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original HTML/text or tool error, not raw HTTP bytes",
+      "no_master_change": true
+    },
+    {
+      "record_id": "RS_PAST_NA4139",
+      "native": {
+        "record_id": "RS_PAST_NA4139",
+        "authority_name": "Smith; Stanley Desmond (1931 - 2023); physicist",
+        "native_dob": "1931-03-03",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "155ee334178da0f861e0b26b6d813ae1ba79bb50ee2ad47f51e6d782e596a84d"
+      },
+      "status": "hold_original_memoir_body_unavailable",
+      "hold_type": "original_birthplace_body_unavailable",
+      "reason": "Original2025RSmemoir DOI route returned tool403 and stopped. ResearchGate discovery explicitly saysno fulltext available; no body/sourcebirthplace acquired. Initial companymetadata nationality/residence/monthofbirth is not birthplace and was not opened/adopted.",
+      "source_url": "https://doi.org/10.1098/rsbm.2025.0018",
+      "source_ref": "turn3058975view0",
+      "tool_reported_error": "403 Forbidden",
+      "source_title_from_discovery": "Stanley Desmond Smith. 3 March 1931 — 1 August 2023",
+      "source_author_from_discovery": "Andrew Walker",
+      "source_birthdate": null,
+      "source_birthdate_precision": "not_acquired_from_original_body",
+      "discovery_compatible_date_only": "1931-03-03",
+      "source_grade_adopted": null,
+      "original_body_verified_birthplace": false,
+      "unopened_original_work_carrier": {
+        "url": "https://www.researchgate.net/publication/396774060_Stanley_Desmond_Smith_3_March_1931_-_1_August_2023_3_March_1931_-_1_August_2023",
+        "ref": "turn6280850search0",
+        "body_acquired": false,
+        "discovery_no_full_text_available": true
+      },
+      "geography_decision": "unchanged_unknown",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original HTML/text or tool error, not raw HTTP bytes",
+      "no_master_change": true
+    },
+    {
+      "record_id": "RS_PAST_NA4591",
+      "native": {
+        "record_id": "RS_PAST_NA4591",
+        "authority_name": "Menter; Sir; James Woodham (1921 - 2006)",
+        "native_dob": "1921-08-22",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "0cacb582b664a7b5b547385459fa6877d6f67e8916bfc08c0c7c468158e58bd2"
+      },
+      "status": "hold_original_explicit_born_date_conflicts_with_native",
+      "hold_type": "source_exact_DOB_conflict",
+      "reason": "Original signed Independent subject vital line states2August1921 whereas frozen nativeDOB is22August1921. Fullnativecomponents and distinctive electronmicroscopy/TIRL/QMC/FRS career bind same subject. No BP/geography/nativeDOB adoption or correction; no datelessbypass or death-onlyexception.",
+      "source_url": "https://www.independent.co.uk/news/obituaries/sir-james-menter-6232398.html",
+      "source_ref": "turn9323730view0",
+      "source_title": "Sir James Menter",
+      "source_author": "Don W. Pashley",
+      "additional_signed_contributor": "Sir John Meurig Thomas",
+      "source_kind": "original_signed_edited_newspaper_obituary_with_named_scientific_contributions",
+      "publication_date": "2006-07-28",
+      "publication_date_precision": "day",
+      "source_full_name": "James Woodham Menter",
+      "source_quote": "born Teynham, Kent 2 August 1921",
+      "source_quote_word_count": 6,
+      "source_locator": "L154title/158publication; L184fullnativecomponents/directbornplace/exactDOB/deathdate/TIRL-FRS-QMCcareer; author signature204; separate signedThomascontribution205ff.",
+      "source_birthdate": "1921-08-02",
+      "source_birthdate_precision": "exact_day_in_subject_born_vital_line",
+      "source_death_date": "2006-07-18",
+      "native_birthdate": "1921-08-22",
+      "conflict_kind": "same_month_year_but_day2_versus22",
+      "raw_birthplace_candidate_held": "Teynham, Kent",
+      "source_grade_adopted": null,
+      "identity_review": [
+        "All native James Woodham Menter components appear in original vital lineL184.",
+        "Original electronmicroscopist/TIRLdirector1961–68/FRS1966/InstitutePhysicsPresident1970–72/QMCPrincipal1976–86 uniquely bind target.",
+        "Source lifespan years1921–2006 agree native; only observed actualbirthday day disagrees. This is not a death-only endpoint discrepancy."
+      ],
+      "geography_decision": "unchanged_unknown_due_to_active_source_DOB_conflict",
+      "other_compatible_discovery_only": {
+        "url": "https://www.researchgate.net/publication/247606386_Sir_James_Woodham_Menter_22_August_1921_-_18_July_2006",
+        "ref": "turn4407790search5",
+        "observed_title_birthdate": "1921-08-22",
+        "observed_DOI": "10.1098/rsbm.2008.0015",
+        "body_acquired": false,
+        "no_correct_date_or_header_typo_verdict": true,
+        "note": "Publishermemoirtitle discovery agrees native, but does not clear the acquired contrary original born line. Parent directed no further Menter date research."
+      },
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original HTML/text or tool error, not raw HTTP bytes",
+      "no_master_change": true
+    }
+  ],
+  "new_active_DOB_conflicts": [
+    {
+      "record_id": "RS_PAST_NA4591",
+      "native_dob": "1921-08-22",
+      "source_birthdate": "1921-08-02",
+      "source_precision": "exact_day_in_original_born_vital_line",
+      "source_url": "https://www.independent.co.uk/news/obituaries/sir-james-menter-6232398.html",
+      "source_ref": "turn9323730view0",
+      "source_locator": "L184",
+      "source_quote": "born Teynham, Kent 2 August 1921",
+      "source_quote_word_count": 6,
+      "active": true,
+      "policy": "Require separateDOBadjudication, no birthplace/geo/nativecorrection/datelessbypass. Nativecompatiblememoirtitle onlydiscoverynotconflictclearance."
+    }
+  ],
+  "query_ledger": [
+    {
+      "query": "\"Stanley Desmond Smith\" \"born\"",
+      "search_engine": "system1",
+      "result_batch_ref": "turn4407790search",
+      "purpose": "Find new original subject biography with explicit birth relation/full native identity and dates."
+    },
+    {
+      "query": "\"Michael George Hall\" \"born\"",
+      "search_engine": "system1",
+      "result_batch_ref": "turn4407790search",
+      "purpose": "Find new original subject biography with explicit birth relation/full native identity and dates."
+    },
+    {
+      "query": "\"Rex Malcolm Chaplin Dawson\" \"born\"",
+      "search_engine": "system1",
+      "result_batch_ref": "turn4407790search",
+      "purpose": "Find new original subject biography with explicit birth relation/full native identity and dates."
+    },
+    {
+      "query": "\"James Woodham Menter\" \"born\"",
+      "search_engine": "system1",
+      "result_batch_ref": "turn4407790search",
+      "purpose": "Find new original subject biography with explicit birth relation/full native identity and dates."
+    },
+    {
+      "query": "\"Stanley Desmond Smith\" obituary",
+      "search_engine": "system1",
+      "result_batch_ref": "turn6280850search",
+      "purpose": "Find targeted original society/university memoir body after initialdiscovery weak/wrongperson results."
+    },
+    {
+      "query": "\"Michael George Hall\" \"Royal Society\"",
+      "search_engine": "system1",
+      "result_batch_ref": "turn6280850search",
+      "purpose": "Find targeted original society/university memoir body after initialdiscovery weak/wrongperson results."
+    },
+    {
+      "query": "\"Rex Dawson\" obituary \"Biochemical\"",
+      "search_engine": "system1",
+      "result_batch_ref": "turn6280850search",
+      "purpose": "Find targeted original society/university memoir body after initialdiscovery weak/wrongperson results."
+    },
+    {
+      "query": "\"Rex Malcolm Chaplin Dawson\" memoir",
+      "search_engine": "system1",
+      "result_batch_ref": "turn6280850search",
+      "purpose": "Find targeted original society/university memoir body after initialdiscovery weak/wrongperson results."
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "record_id": "RS_PAST_NA4591",
+      "url": "https://www.independent.co.uk/news/obituaries/sir-james-menter-6232398.html",
+      "ref": "turn9323730view0",
+      "result": "originalbodyverified_explicitDOBconflict",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA4139",
+      "url": "https://doi.org/10.1098/rsbm.2025.0018",
+      "ref": "turn3058975view0",
+      "result": "tool403_stopped",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA4064",
+      "url": "https://royalsociety.org/people/michael-hall-11565/",
+      "ref": "turn3058975view1",
+      "result": "originalcareerprofile_noBP_orfullnativeDOBname",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA4074",
+      "url": "https://www.researchgate.net/publication/368943640_Rex_Malcolm_Chaplin_Dawson_3_June_1924-29_March_2021",
+      "ref": "turn3058975view2",
+      "result": "originalmemoirtitle_abstractonly_noBPbody",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA4074",
+      "url": "https://doi.org/10.1098/rsbm.2022.0040",
+      "ref": "turn9219465view0",
+      "result": "toolinaccessible_stopped",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA4074",
+      "url": "https://www.biochemistry.org/membership-and-communities/in-memoriam/",
+      "ref": "turn9219465view1",
+      "result": "originalmemorialexcerpt_growingupnotbirth",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA4074",
+      "url": "https://portlandpress.com/biochemist/issue/43/5",
+      "ref": "turn9219465view2",
+      "result": "issuecontents403_stopped",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA4074",
+      "url": "https://doi.org/10.1042/bio_2021_178",
+      "ref": "turn4803866view0",
+      "result": "distinctoriginalBiochemistobituaryarticle403_stopped",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    }
+  ],
+  "parsed_find_ledger": [],
+  "quote_ledger": [
+    {
+      "original_work": "Independent_Menter_2006",
+      "quote": "born Teynham, Kent 2 August 1921",
+      "distinct_English_quote_words": 6
+    }
+  ],
+  "protocol_deviations": [],
+  "limits": [
+    "No fulloriginalsourceHTML/PDF/images/sourceprojectioncache stored or distributed. Only bounded six-word excerpt for held Menter work.",
+    "Original Hall profile and Dawson title/abstract/memorial excerpt do not supply qualifying firstbirthplace. Wrong-person discovery noise excluded, not fabricatedtargetconflicts.",
+    "All8queries/8nav havepriorintent; two permittednavunused because no new informative observed originalroute. Failedroutesstopped, no retries/variants/rawGET/bypass.",
+    "Biochemist article DOI is a first distinct originalarticlework linkedfrom originalsocietybody, separatefromfailed issuecontents/RSmemoir. Failed403thenstopped; no PDFvariant requested.",
+    "One opened memorial list was inspected only for targetDawson, not a newbulk/othercohort screen; unrelated entriesnotadopted.",
+    "All native DOB/calendar/identity/eligibility/sourcegrades/oldfacts/country/QIDs/coordinates/master/code/Git untouched.",
+    "No BaZi/outcomes/statisticaldedup/finalfreeze."
+  ]
+}

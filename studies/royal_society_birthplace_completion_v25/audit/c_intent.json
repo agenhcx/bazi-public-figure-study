@@ -1,0 +1,141 @@
+{
+  "schema": "v25_c_actual_prior_intent_v1",
+  "written_utc": "2026-11-06T00:43:54.260558+00:00",
+  "scope": [
+    "RS_PAST_NA8257",
+    "RS_PAST_NA785",
+    "RS_PAST_NA1823",
+    "RS_PAST_NA1611"
+  ],
+  "budgets": {
+    "queries": 8,
+    "nav": 10
+  },
+  "query_intents": [
+    {
+      "before_utc": "2026-11-06T00:43:54.260572+00:00",
+      "record_id": "RS_PAST_NA8257",
+      "query": "\"James Ernest Marsh\" \"born\"",
+      "purpose": "Discover new informative original biographical body; projections are leads only."
+    },
+    {
+      "before_utc": "2026-11-06T00:43:54.260580+00:00",
+      "record_id": "RS_PAST_NA785",
+      "query": "\"George Stuart Graham-Smith\" \"born\"",
+      "purpose": "Discover new informative original biographical body; projections are leads only."
+    },
+    {
+      "before_utc": "2026-11-06T00:43:54.260582+00:00",
+      "record_id": "RS_PAST_NA1823",
+      "query": "\"Thomas Wallace\" \"1891\" \"born\"",
+      "purpose": "Discover new informative original biographical body; projections are leads only."
+    },
+    {
+      "before_utc": "2026-11-06T00:43:54.260585+00:00",
+      "record_id": "RS_PAST_NA1611",
+      "query": "\"Leonard Frank Spath\" \"born\"",
+      "purpose": "Discover new informative original biographical body; projections are leads only."
+    },
+    {
+      "before_utc": "2026-11-06T00:44:20.368082+00:00",
+      "record_id": "RS_PAST_NA1823",
+      "query": "\"Thomas Wallace\" \"horticulturalist\" \"born\"",
+      "purpose": "Discover distinct original body with subject binding; do not adopt projections."
+    },
+    {
+      "before_utc": "2026-11-06T00:44:20.368095+00:00",
+      "record_id": "RS_PAST_NA1823",
+      "query": "\"Thomas Wallace\" \"1891\" \"Silksworth\" memoir",
+      "purpose": "Discover distinct original body with subject binding; do not adopt projections."
+    },
+    {
+      "before_utc": "2026-11-06T00:44:20.368097+00:00",
+      "record_id": "RS_PAST_NA1611",
+      "query": "\"Leonard Frank Spath\" memoir 1957 DOI",
+      "purpose": "Discover distinct original body with subject binding; do not adopt projections."
+    },
+    {
+      "before_utc": "2026-11-06T00:45:08.474813+00:00",
+      "record_id": "RS_PAST_NA8257",
+      "query": "\"James Ernest Marsh\" biography birthplace Rainhill",
+      "purpose": "Find distinct original born-place body; parentRainhillresidencenotbirth."
+    }
+  ],
+  "navigation_intents": [
+    {
+      "before_utc": "2026-11-06T00:44:20.368100+00:00",
+      "record_id": "RS_PAST_NA8257",
+      "url": "https://electronicsandbooks.com/edt/manual/Magazine/J/Journal%20of%20the%20Chemical%20Society%20%28Resumed%29%20UK/1938/JR9380001126.pdf",
+      "purpose": "Read original JCS obituary as external carrier; distinguish parent residence from birth place."
+    },
+    {
+      "before_utc": "2026-11-06T00:44:20.368102+00:00",
+      "record_id": "RS_PAST_NA785",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/70881396B797CEF0FDBFB0607D204599/S002217240001531Xa.pdf/george_stuart_grahamsmith_25_september_187530_august_1950.pdf",
+      "purpose": "Read original authored obituary for exact date/fullname/born place, no paternalIndia inference."
+    },
+    {
+      "before_utc": "2026-11-06T00:45:08.474828+00:00",
+      "record_id": "RS_PAST_NA1823",
+      "url": "https://doi.org/10.1098/rsbm.1966.0025",
+      "purpose": "First original memoir publisher route from observedcitation; stopfailedroute."
+    },
+    {
+      "before_utc": "2026-11-06T00:45:08.474831+00:00",
+      "record_id": "RS_PAST_NA1823",
+      "url": "https://doi.org/10.1038/206558a0",
+      "purpose": "Distinct original named scientific obituary firstpublisherroute; no failedretry."
+    },
+    {
+      "before_utc": "2026-11-06T00:45:08.474833+00:00",
+      "record_id": "RS_PAST_NA1611",
+      "url": "https://cris.vub.be/ws/portalfiles/portal/95135783/abstracts_online_1_.pdf",
+      "purpose": "First original conferenceabstractbook body observedscientificrepository; verify fullsubject/year/Munichassertion/genre/author."
+    },
+    {
+      "before_utc": "2026-11-06T00:46:01.748192+00:00",
+      "record_id": "RS_PAST_NA1823",
+      "source_ref": "turn9888644search3",
+      "purpose": "One targeted bibliographic body to observe distinct original1957Nature citation URL only. No enwiki birthfacts adopted or bulk loop."
+    },
+    {
+      "before_utc": "2026-11-06T00:46:26.686985+00:00",
+      "record_id": "RS_PAST_NA1611",
+      "source_ref": "turn8951203view2",
+      "lineno": 2440,
+      "purpose": "Inspect actualabstracttitle/yearlifespan/author/affiliation/Munichbirthclause/professionalanchors, minimalexcerpt."
+    },
+    {
+      "before_utc": "2026-11-06T00:46:26.686999+00:00",
+      "record_id": "RS_PAST_NA1823",
+      "source_ref": "turn8045538view0",
+      "link_id": 71,
+      "purpose": "First observed distinctoriginal1957Nature profile citation; no wiki biographicalfactadoption."
+    },
+    {
+      "before_utc": "2026-11-06T00:46:45.585234+00:00",
+      "record_id": "RS_PAST_NA1823",
+      "source_ref": "turn8045538view0",
+      "lineno": 180,
+      "purpose": "Inspect bibliographyonly for observed external1957Nature URL; prior click71 reachedfootnoteanchor, not originalbody. No wiki DOB/place adoption."
+    },
+    {
+      "before_utc": "2026-11-06T00:46:55.200028+00:00",
+      "record_id": "RS_PAST_NA1823",
+      "source_ref": "turn6762619view0",
+      "link_id": 160,
+      "purpose": "First originalNature1957articlePDF from observedbibliographiclink; distinctworkfromfailed1965obituary, stopiffailed."
+    }
+  ],
+  "other_intents": [
+    {
+      "before_utc": "2026-11-06T00:46:01.748176+00:00",
+      "record_id": "RS_PAST_NA1611",
+      "operation": "find",
+      "source_ref": "turn8951203view2",
+      "pattern": "LEONARD FRANK SPATH",
+      "purpose": "Locate original authoredabstract body in alreadyacquiredconferencebook; do not use searchprojectionasproof."
+    }
+  ],
+  "retrieval_limits": "No failedretry/variants/bypass/rawGET; unknownrawtime/status/hashnull. <=25wordsperwork,no fullsourcecache."
+}

@@ -1,0 +1,176 @@
+{
+  "schema": "UK_v20_single_existing_birthplace_authority_graph_pilot_v1",
+  "worker": "/root/v20_geo_authority_pilot",
+  "written_utc": "2026-11-05T14:58:50.551696+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA4918"
+  ],
+  "native": {
+    "record_id": "RS_PAST_NA4918",
+    "authority_name": "Adam; Neil Kensington (1891 - 1973); chemist",
+    "native_dob": "1891-11-05",
+    "stored_raw_birthplace": "Cambridge",
+    "stored_birthplace_grade": "S3",
+    "stored_hemisphere": "unknown",
+    "complete_input_object_canonical_sha256": "059ecd185ab9ce80687c9380397cbd3dda5414953f3aacde7699e0d45eb597ac"
+  },
+  "decision": "hold_no_original_semantic_person_or_place_body_acquired",
+  "candidates": [],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA4918",
+      "native_dob": "1891-11-05",
+      "authority_name": "Adam; Neil Kensington (1891 - 1973); chemist",
+      "frozen_raw_birthplace": "Cambridge",
+      "hold_type": "authority_graph_bodies_unavailable",
+      "reason": "The preselected institutional lobid API documentation showed Anubis access denial and its person JSON was tool-inaccessible. Parent then directed one first inspection of the distinct original DNB base record already linked by the prior profile; it too was tool-inaccessible. No subject-record DOB, semantic placeOfBirth edge or typed place record was acquired. Both source routes stopped with no endpoint variants, retry, raw GET or city/map inference.",
+      "no_master_change": true,
+      "no_geography_grade_or_hemisphere_assignment": true
+    }
+  ],
+  "counts": {
+    "discovery_queries": 2,
+    "original_web_navigation_attempts": 3,
+    "parsed_text_find_operations": 0,
+    "raw_HTTP_or_PDF_GETs": 0,
+    "screenshots": 0,
+    "person_graph_records_body_verified": 0,
+    "place_graph_records_body_verified": 0,
+    "new_geographic_candidates": 0,
+    "new_birthplaces": 0,
+    "held_records": 1
+  },
+  "method": {
+    "preplanned_basis": "v20_plan.json fixed one existing-place target and required positive semantic subject-to-birthplace identifier plus typed geography, not fuzzy city matching.",
+    "chosen_provider": "Published institutional lobid GND service chosen before any endpoint failure. Official service discovery identifies hbz and GND RDF/EntityFacts as its data basis; this is provider-level discovery, not proof that the target record contains any particular fact.",
+    "stopping_rule": "Lobid route stopped after denial/inaccessible JSON. A subsequently authorized first inspection of original DNB base record also failed and stopped. No endpoint variants, rawGET, UA/proxy/auth changes or bot-protection bypass.",
+    "no_portal_source_assumption": "The GND122880773 link was displayed in the earlier Deutsche Biographie profile. It is only an authority pointer until separately inspected; not assumed to be the supplier of that portal birthdate or birthplace.",
+    "no_independence_claim": "Different presentations/providers of GND would be the same underlying authority work, not independent corroboration. None was successfully read here.",
+    "grade_role": "Only potential future S3 geographic_support_only was planned. No new source grade assigned or adopted in this pilot.",
+    "no_negative_data_claim": "Access failure establishes neither absence of placeOfBirth in GND nor an absent biography or wrong existing birthplace. No country/hemisphere inference or DOB verdict.",
+    "source_owner_fallback": "One distinct original DNB base record was first opened after parent instruction and a timestamped adaptive intent, following the already displayed person authority URI. It was not a retry of the denied lobid service; no original DNB HTML/RDF alternate endpoint was attempted.",
+    "timing_amendment": "The original source-owner fallback was planned after the provider failure and before that request; it is an adaptive source step, not retrospectively a source-blind preregistration."
+  },
+  "gate_review": [
+    {
+      "gate": "Fixed target and frozen input",
+      "status": "pass",
+      "evidence": "One v19 object, NA4918, existing Cambridge and unknown hemisphere; no master mutation."
+    },
+    {
+      "gate": "Original semantic person body",
+      "status": "not_met",
+      "evidence": "Neither the selected published provider person JSON nor the original DNB base record yielded a semantic person body."
+    },
+    {
+      "gate": "Full subject name and actual compatible external DOB/lifespan/profession",
+      "status": "unresolved",
+      "evidence": "Native values retained, but no actual provider or DNB target record body acquired. Do not assert GND date compatibility or conflict."
+    },
+    {
+      "gate": "Explicit semantic person placeOfBirth identifier",
+      "status": "not_met",
+      "evidence": "No person graph data acquired; no place URI followed."
+    },
+    {
+      "gate": "Typed place entity and explicit region/country/latitude",
+      "status": "not_tested",
+      "evidence": "No actual birth-place URI observed, so no city-name search or map fallback."
+    },
+    {
+      "gate": "No fuzzy/default-map/citizenship inference",
+      "status": "pass",
+      "evidence": "No geographic fact proposed from Cambridge label, index nationality or search mirror."
+    },
+    {
+      "gate": "Grade role and frozen boundaries",
+      "status": "pass",
+      "evidence": "No source-grade, raw birthplace, DOB/grade, identity, eligibility, QID, country or personal-coordinate changes."
+    },
+    {
+      "gate": "Adoption",
+      "status": "hold",
+      "evidence": "Unresolved positive semantic gates prevent hemisphere adoption."
+    }
+  ],
+  "query_ledger": [
+    {
+      "engine": "system1",
+      "query": "site:lobid.org/gnd API GND data source hbz DNB license",
+      "refs": [
+        "turn7676078search0",
+        "turn7676078search1",
+        "turn7676078search5"
+      ],
+      "role": "institutional provider provenance and published API discovery only",
+      "exact_request_utc": null
+    },
+    {
+      "engine": "system1",
+      "query": "site:d-nb.info/gnd/122880773 Neil Kensington Adam",
+      "refs": [
+        "turn7676078search2",
+        "turn7676078search3",
+        "turn7676078search4"
+      ],
+      "role": "No target semantic record body found; generic official GND dataset discovery only",
+      "exact_request_utc": null
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "url": "https://lobid.org/gnd/api",
+      "ref": "turn6789498view0",
+      "outcome": "Anubis access-denied HTML page; no API documentation body",
+      "tool_reported_HTTP_status": null,
+      "raw_HTTP_status": null,
+      "exact_request_utc": null,
+      "raw_bytes_sha256": null,
+      "raw_bytes_saved": false,
+      "source_body_available_for_purpose": false
+    },
+    {
+      "url": "https://lobid.org/gnd/122880773.json",
+      "ref": "turn6789498view1",
+      "outcome": "URL inaccessible via tool; no person JSON fields",
+      "tool_reported_HTTP_status": null,
+      "raw_HTTP_status": null,
+      "exact_request_utc": null,
+      "raw_bytes_sha256": null,
+      "raw_bytes_saved": false,
+      "source_body_available_for_purpose": false
+    },
+    {
+      "url": "https://d-nb.info/gnd/122880773",
+      "ref": "turn3289815view0",
+      "outcome": "Original authority-owner base record first inspection inaccessible via tool; no person fields; stopped",
+      "tool_reported_HTTP_status": null,
+      "raw_HTTP_status": null,
+      "exact_request_utc": null,
+      "raw_bytes_sha256": null,
+      "raw_bytes_saved": false,
+      "source_body_available_for_purpose": false,
+      "adaptive_intent_written_utc": "2026-11-05T14:57:55.261087+00:00"
+    }
+  ],
+  "unopened_other_representations_note": "No extra DNB RDF/HTML endpoint, additional lobid route, place identifier or default-map destination was opened or invented after failures.",
+  "discovery_noise_excluded": "A nonprimary Wikipedia mirror appeared among search results; it was not opened, not used for geography/date, and not converted into a new original-source DOB conflict.",
+  "source_DOB_conflict_observed_in_acquired_semantic_record": null,
+  "source_DOB_conflict_note": "No semantic target record acquired; status is unassessed, not verified absence of conflict.",
+  "retrieval_notes": [
+    "All observations are tool-parsed search projections or error pages, not raw HTTP response bytes.",
+    "The access-denied page did not expose an actual HTTP status; do not relabel it403.",
+    "Unknown raw statuses, request times and source-byte hashes remain null.",
+    "No full source HTML/JSON/RDF, graph dump, map, contact detail or parsed cache is distributed; only minimal factual intent/error metadata."
+  ],
+  "intent_file": "v20_geo_authority_pilot_intent.json",
+  "prose_quotation_words_distributed": 0,
+  "no_master_mutation": true,
+  "no_Git_operations": true,
+  "no_native_DOB_or_grade_change": true,
+  "no_Birthplace_grade_change": true,
+  "no_country_QID_or_person_coordinates_assignment": true,
+  "no_analysis_or_statistical_dedup": true,
+  "attempted_original_authority_pointer": "https://d-nb.info/gnd/122880773",
+  "parent_adaptive_direction_recorded": true
+}

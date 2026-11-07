@@ -1,0 +1,80 @@
+{
+  "assignment_scope": {
+    "query_artifacts_assign_country_to_person": false,
+    "query_artifacts_assign_exact_birthpoint_to_person": false,
+    "query_artifacts_assign_unique_entity_to_person": false,
+    "required_downstream_constraint": "Use only north hemisphere; preserve raw place, native flags, person/place QIDs, country, birthpoint and DOB/source grading independence."
+  },
+  "input_locks_verified": [
+    {
+      "actual_sha256": "2b7897d0c4e2655ecb6f10311e1bdf7b06b8eeae3f181e9bebe92cbc7f066ee0",
+      "expected_sha256": "2b7897d0c4e2655ecb6f10311e1bdf7b06b8eeae3f181e9bebe92cbc7f066ee0",
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_checkout/studies/scientist_birthplace_completion_v2/outputs/birthplace_rows.jsonl.gz"
+    },
+    {
+      "actual_sha256": "38ff4742639faf72a9a9878e8ddb919a38ef9d6a40ff86fbbba67fbd519f28a4",
+      "expected_sha256": "38ff4742639faf72a9a9878e8ddb919a38ef9d6a40ff86fbbba67fbd519f28a4",
+      "path": "/workspace/scratch/7e8aa4e0d4af/academy_v3_workers/fields/accepted.jsonl"
+    },
+    {
+      "actual_sha256": "5f0a5ada12f2d8f4ac4170c99dd846e0330d18cbbc2fdc38a4b928290974ea17",
+      "expected_sha256": "5f0a5ada12f2d8f4ac4170c99dd846e0330d18cbbc2fdc38a4b928290974ea17",
+      "path": "/workspace/scratch/7e8aa4e0d4af/academy_v3_workers/fields/raw/fields_v3_body_001.webcapture.json"
+    },
+    {
+      "actual_sha256": "f941752a001da2b8e5015afc4e134e7b5814e062027b0dbb99fdbcc957057880",
+      "expected_sha256": "f941752a001da2b8e5015afc4e134e7b5814e062027b0dbb99fdbcc957057880",
+      "path": "/workspace/scratch/7e8aa4e0d4af/academy_v3_workers/fields/raw/fields_v3_body_003.webcapture.json"
+    }
+  ],
+  "network_requests_by_this_reviewer": 0,
+  "notes": [
+    "No new NAS source content read.",
+    "No source fact additions or repository/Git edits by reviewer.",
+    "Geographic candidate QID is evidence provenance only, not an assigned birthplace entity."
+  ],
+  "query_scope": {
+    "Earth_coordinate_property": "P625 direct statements via p:/ps:/psv:",
+    "LIMIT_present": false,
+    "P31_P17_returned": true,
+    "birthdate_query": false,
+    "exact_source_locality": "Châtenay-Malabry",
+    "languages": [
+      "en",
+      "fr"
+    ],
+    "match_properties": [
+      "rdfs:label",
+      "skos:altLabel"
+    ],
+    "person_query": false,
+    "query_execution_guard": "ledger existence prevents second run; no retry loop; redirects disabled",
+    "rank_filter_applied": false,
+    "rank_globe_precision_present": true
+  },
+  "response_review": {
+    "all_16_bindings_retained": true,
+    "candidate_type": "Q484170 commune of France",
+    "coordinate_latitude": "48.765277777778",
+    "coordinate_longitude": "2.2780555555556",
+    "coordinate_precision_degrees": "0.00027777777777778",
+    "coordinate_rank": "NormalRank",
+    "direct_Earth_coordinate_statements": 1,
+    "filter_reason": "Returned candidate is a geographic locality (commune), compatible with the source country qualifier. No homonym was discarded.",
+    "hemisphere_supported": "north",
+    "http_status": 200,
+    "interpretation": "Locality reference coordinate supports only hemisphere. Precision is coordinate resolution, not a bound on locality extent or an exact birthpoint.",
+    "latitude_minus_precision": "48.76500000000022222",
+    "physical_address_candidates_returned": 0,
+    "raw_and_parsed_semantically_equal": true,
+    "raw_response_sha256": "bdd226f0fc55d5fb82d9d3af2ec616307a58f04aac24bb1f07681a84e9e95847",
+    "returned_candidate_ids": [
+      "http://www.wikidata.org/entity/Q200945"
+    ],
+    "source_France_qualifier_compatible": "P17 Q142",
+    "unique_returned_homonyms": 1
+  },
+  "review_kind": "independent_offline_query_QA",
+  "reviewed_utc": "2026-11-03T14:42:48.654462+00:00",
+  "status": "pass"
+}

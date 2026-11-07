@@ -1,0 +1,403 @@
+{
+  "schema": "v25_sources_c_v1",
+  "worker": "/root/v25_sources_c",
+  "written_utc": "2026-11-06T00:50:05.033189+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA1611",
+    "RS_PAST_NA1823",
+    "RS_PAST_NA785",
+    "RS_PAST_NA8257"
+  ],
+  "intent_file": "v25_c_intent.json",
+  "counts": {
+    "discovery_queries": 8,
+    "web_navigation_attempts": 10,
+    "parsed_find_operations": 1,
+    "screenshots": 0,
+    "raw_HTTP_or_PDF_GETs": 0,
+    "body_verified_birthplace_candidates": 1,
+    "holds": 3
+  },
+  "candidates": [
+    {
+      "record_id": "RS_PAST_NA1611",
+      "native": {
+        "record_id": "RS_PAST_NA1611",
+        "authority_name": "Spath; Leonard Frank (1882 - 1957)",
+        "native_dob": "1882-10-20",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "25d823f7699e0b1305ab28cf8def370110169e21da41638f3e7718d5b74142ea"
+      },
+      "status": "candidate_direct_authored_conference_historical_abstract_birthplace_S3_parent_review",
+      "raw_birthplace": "Munich",
+      "source_url": "https://cris.vub.be/ws/portalfiles/portal/95135783/abstracts_online_1_.pdf",
+      "source_title": "Leonard Frank Spath (1882-1957)",
+      "source_author": "William James Kennedy",
+      "source_kind": "original_authored_historical_conference_abstract_in_edited_scientific_abstract_volume_carried_on_institutional_repository",
+      "source_publication_title": "11th International Cretaceous Symposium, Warsaw, Poland 2022, Abstract Volume",
+      "source_editors": [
+        "John W. M. Jagt",
+        "Elena Jagt-Yazykova",
+        "Ireneusz Walaszczyk",
+        "Anna Zylinska"
+      ],
+      "publication_year": "2022",
+      "publication_date_precision": "year_from_original_volume_frontmatter_and_repository_cover",
+      "source_grade_proposal": "S3",
+      "source_grade_basis": "ConservativeS3 for direct historical birthplace assertion in an authored conference abstract, without an acquired claim-specific civil/birth-record citation. Author subject expertise and Oxford affiliation are observed, but no peer-review/civil-verification or host-onlyS1 claim. Parent may separately adjudicate genre; no grade adopted by this worker.",
+      "source_grade_role": "person_birthplace_support_only",
+      "source_quote": "his birthplace was Munich",
+      "source_quote_word_count": 4,
+      "source_locator": "turn4111970view0:L2444@PDFindex98 fullnativeheading/lifespan;L2445author/L2446-2447OxfordMuseumandEarthSciencesaffiliations;L2453explicitMunich;L2457-2467Birkbeck/NHM/ammonitologycareer. Originalvolume2022/frontmatterturn8951203view2:L0-29.",
+      "source_body_ref": "turn4111970view0",
+      "source_birthdate": "1882",
+      "source_birthdate_precision": "year_only_in_subject_lifespan_heading",
+      "source_deathyear": "1957",
+      "source_DOB_native_compatibility": "Year1882 agrees native1882-10-20 and lifespan1882-1957 agrees native; exactmonth/day not supplied by this abstract.",
+      "observed_source_full_name": "Leonard Frank Spath",
+      "identity_review": [
+        "All native full components Leonard Frank Spath directly in originaltitle and body.",
+        "Subjectyear1882-1957 matches unchanged native lifespan; exactDOBday/month not claimed from this source.",
+        "Ammonitology, Birkbeck1908-1912/geology, LondonNaturalHistoryMuseumcuration1912 and GaultAmmonoidea1923-1943 coherently identify subject.",
+        "No sourceDOB, name or competingactualbirthplace conflict observed in acquired qualifyingbody; no name expansion or native repair."
+      ],
+      "reviewed_hemisphere_proposal": "unknown",
+      "geographic_basis": "Munich alone is an explicit birthplace. Germanbybirth wording is not converted into a birth-country/entity/hemisphere assignment; Oxfordaffiliation, Croydonupbringing, Londonwork and Tunisiafieldwork are not birthplace context. Keepunknown.",
+      "caveats": [
+        "Original2022conferenceabstract only, not a civilbirthrecord or acquired fullhistoricalbiography; no independent corroboration claimed.",
+        "Repository cover metadata describes a different deposited Maastrichtian contribution; the fullvolume contains the actual separately titled WilliamJamesKennedySpathabstract. Do not attribute Spath text to Vellekoop or use repository2026download/crawldate as publicationdate.",
+        "Older1957memoir search projection says birthplaceunknown and SouthAfricahearsayunconfirmed. Original1957memoirbody was not acquired by this worker; projection is neither corroboration nor an acquired contrarybirthplace claim, and SouthAfrica is not adopted.",
+        "No personalcountry/QID/coordinates or originalDOBsourcegrade assigned/changed; no family/privatehistory narrative, contacts, fullsource/cache/images redistributed."
+      ],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original text or tool result, not raw HTTP/PDF bytes",
+      "no_master_change": true
+    }
+  ],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA8257",
+      "native": {
+        "record_id": "RS_PAST_NA8257",
+        "authority_name": "Marsh; James Ernest (1860 - 1938)",
+        "native_dob": "1860-07-05",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "2e5d7b30d72d33e2ce2fdfa772815c26b0932f268c634ec5fe6ed20a5eaa8c03"
+      },
+      "status": "hold_original_birthplace_body_unavailable_parent_residence_not_birth",
+      "hold_type": "original_birthplace_body_unavailable",
+      "reason": "OriginalJCSmemoir externalcarrier timedout and was stopped. Discovery passage gives exactnativeDOB but RainhillLancashire modifies parentsresidence, not explicit subjectbirthplace. NPGgrandchild discovery says born1860 and broughtupRainhill; upbringing not birth. Neither projection adopted, no sourceDOB/age/death verdict.",
+      "source_url": "https://electronicsandbooks.com/edt/manual/Magazine/J/Journal%20of%20the%20Chemical%20Society%20%28Resumed%29%20UK/1938/JR9380001126.pdf",
+      "source_ref": "turn9888644view0",
+      "unopened_other_leads": [
+        {
+          "url": "https://www.npg.org.uk/collections/search/person/mp142574/james-ernest-marsh",
+          "kind": "discoveryonlygrandchildcomment",
+          "birthplace_relation_verified": false,
+          "no_residence_or_upbringing_inference": true
+        }
+      ],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original text or tool result, not raw HTTP/PDF bytes",
+      "no_master_change": true
+    },
+    {
+      "record_id": "RS_PAST_NA785",
+      "native": {
+        "record_id": "RS_PAST_NA785",
+        "authority_name": "Graham-Smith; George Stuart (1875 - 1950)",
+        "native_dob": "1875-09-25",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "ea1613c3bf065b06fa7fb688636ab6d59382ef39b2fb878ff300a470ecf13814"
+      },
+      "status": "hold_no_explicit_birthplace_in_inspected_original_obituary",
+      "hold_type": "no_explicit_birthplace_in_inspected_original_body",
+      "reason": "Acquired originalCUPtitle/opening/careerbody fullGeorgeStuartGraham-Smith/exact25September1875/30August1950 bindsnative and supplies professionalCambridgepathology/FRS1919 anchors. Openingbornclause supplies dateonly; IndianArmy refers to father and Clifton/Cambridge/GuyHospital are school/work, not birth. No qualifyingbirthplace acquired. No claim of exhaustiveabsence across all11pages.",
+      "source_url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/70881396B797CEF0FDBFB0607D204599/S002217240001531Xa.pdf/george_stuart_grahamsmith_25_september_187530_august_1950.pdf",
+      "source_ref": "turn9888644view1",
+      "source_title": "George Stuart Graham-Smith:25 September1875–30 August1950",
+      "source_kind": "original_publisher_scientific_obituary",
+      "doi": "10.1017/S002217240001531X",
+      "source_locator": "L0-3@PDFindex0fullnative/lifespan/date-onlybornclause;L10-19education;L99-109@PDFindex3FRS1919/career;L207@PDFindex5exactdeathdate.",
+      "source_birthdate": "1875-09-25",
+      "source_birthdate_precision": "exact_day_in_subject_header_and_born_clause",
+      "source_quote": "",
+      "birthplace_relation_verified": false,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original text or tool result, not raw HTTP/PDF bytes",
+      "no_master_change": true
+    },
+    {
+      "record_id": "RS_PAST_NA1823",
+      "native": {
+        "record_id": "RS_PAST_NA1823",
+        "authority_name": "Wallace; Thomas (1891 - 1965)",
+        "native_dob": "1891-09-05",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "6e8bc1183a44397e37a0658beecd843c3b960035307f09d90fd90f07eafaac1f"
+      },
+      "status": "hold_original_bound_born_place_body_unavailable",
+      "hold_type": "original_birthplace_body_unavailable",
+      "reason": "Firstoriginal1966RSmemoir and distinct1965Natureobituary DOI routes tool-inaccessible; stopped. One targetedWiki bibliography route sought distinct1957Naturecitation, whose actualexternal link resolved to DouglasMcKie HistoryandPhilosophyarticle rather than Wallacebody. No publishercitationfix, URLvariant, sourcebirthplace/grade/dateadoption or targetDOBconflict from different-topiccontent. No Wikibiographicalfacts used.",
+      "source_urls": [
+        "https://doi.org/10.1098/rsbm.1966.0025",
+        "https://doi.org/10.1038/206558a0",
+        "https://www.nature.com/articles/180267b0.pdf"
+      ],
+      "source_refs": [
+        "turn8951203view0",
+        "turn8951203view1",
+        "turn6379104view0"
+      ],
+      "source_title_leads": [
+        "Thomas Wallace,1891-1965",
+        "Obituary.Prof.ThomasWallace,CBE,FRS",
+        "HorticulturalChemistryatBristol:Prof.T.Wallace,CBE,FRS"
+      ],
+      "birthplace_relation_verified": false,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original text or tool result, not raw HTTP/PDF bytes",
+      "no_master_change": true
+    }
+  ],
+  "query_ledger": [
+    {
+      "record_id": "RS_PAST_NA8257",
+      "query": "\"James Ernest Marsh\" \"born\"",
+      "result_refs": [
+        "turn1109858search0",
+        "turn1109858search6",
+        "turn1109858search1"
+      ],
+      "role": "discoveryonlyunlessseparatelyopened"
+    },
+    {
+      "record_id": "RS_PAST_NA785",
+      "query": "\"George Stuart Graham-Smith\" \"born\"",
+      "result_refs": [
+        "turn1109858search7",
+        "turn1109858search2"
+      ],
+      "role": "discoveryonlyunlessseparatelyopened"
+    },
+    {
+      "record_id": "RS_PAST_NA1823",
+      "query": "\"Thomas Wallace\" \"1891\" \"born\"",
+      "result_refs": [
+        "turn1109858search9"
+      ],
+      "role": "discoveryonlyunlessseparatelyopened"
+    },
+    {
+      "record_id": "RS_PAST_NA1611",
+      "query": "\"Leonard Frank Spath\" \"born\"",
+      "result_refs": [
+        "turn1109858search3",
+        "turn1109858search4",
+        "turn1109858search5",
+        "turn1109858search8"
+      ],
+      "role": "discoveryonlyunlessseparatelyopened"
+    },
+    {
+      "record_id": "RS_PAST_NA1823",
+      "query": "\"Thomas Wallace\" \"horticulturalist\" \"born\"",
+      "result_refs": [
+        "turn9888644search3",
+        "turn9888644search4"
+      ],
+      "role": "discoveryonlyunlessseparatelyopened"
+    },
+    {
+      "record_id": "RS_PAST_NA1823",
+      "query": "\"Thomas Wallace\" \"1891\" \"Silksworth\" memoir",
+      "result_refs": [
+        "turn9888644search0",
+        "turn9888644search5"
+      ],
+      "role": "discoveryonlyunlessseparatelyopened"
+    },
+    {
+      "record_id": "RS_PAST_NA1611",
+      "query": "\"Leonard Frank Spath\" memoir 1957 DOI",
+      "result_refs": [
+        "turn9888644search1",
+        "turn9888644search2",
+        "turn9888644search6",
+        "turn9888644search7",
+        "turn9888644search8"
+      ],
+      "role": "discoveryonlyunlessseparatelyopened"
+    },
+    {
+      "record_id": "RS_PAST_NA8257",
+      "query": "\"James Ernest Marsh\" biography birthplace Rainhill",
+      "result_refs": [
+        "turn8951203search0",
+        "turn8951203search1",
+        "turn8951203search2",
+        "turn8951203search3",
+        "turn8951203search5"
+      ],
+      "role": "discoveryonlyunlessseparatelyopened"
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "operation_number": 1,
+      "record_id": "RS_PAST_NA8257",
+      "input": "https://electronicsandbooks.com/edt/manual/Magazine/J/Journal%20of%20the%20Chemical%20Society%20%28Resumed%29%20UK/1938/JR9380001126.pdf",
+      "result_ref": "turn9888644view0",
+      "outcome": "tool TimeoutError; stopped, no body acquired",
+      "prior_intent_file": "v25_c_intent.json",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original text or tool result, not raw HTTP/PDF bytes"
+    },
+    {
+      "operation_number": 2,
+      "record_id": "RS_PAST_NA785",
+      "input": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/70881396B797CEF0FDBFB0607D204599/S002217240001531Xa.pdf/george_stuart_grahamsmith_25_september_187530_august_1950.pdf",
+      "result_ref": "turn9888644view1",
+      "outcome": "Original11pagePDF parsed body acquired; full name/exactDOB/career, no birthplace in inspected opening/career narrative",
+      "prior_intent_file": "v25_c_intent.json",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original text or tool result, not raw HTTP/PDF bytes"
+    },
+    {
+      "operation_number": 3,
+      "record_id": "RS_PAST_NA1823",
+      "input": "https://doi.org/10.1098/rsbm.1966.0025",
+      "result_ref": "turn8951203view0",
+      "outcome": "tool-inaccessible; stopped",
+      "prior_intent_file": "v25_c_intent.json",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original text or tool result, not raw HTTP/PDF bytes"
+    },
+    {
+      "operation_number": 4,
+      "record_id": "RS_PAST_NA1823",
+      "input": "https://doi.org/10.1038/206558a0",
+      "result_ref": "turn8951203view1",
+      "outcome": "tool-inaccessible; distinctoriginalwork stopped",
+      "prior_intent_file": "v25_c_intent.json",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original text or tool result, not raw HTTP/PDF bytes"
+    },
+    {
+      "operation_number": 5,
+      "record_id": "RS_PAST_NA1611",
+      "input": "https://cris.vub.be/ws/portalfiles/portal/95135783/abstracts_online_1_.pdf",
+      "result_ref": "turn8951203view2",
+      "outcome": "Original2022conferenceabstractvolume parsed398pages acquired; relevantSpathbody located later",
+      "prior_intent_file": "v25_c_intent.json",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original text or tool result, not raw HTTP/PDF bytes"
+    },
+    {
+      "operation_number": 6,
+      "record_id": "RS_PAST_NA1823",
+      "input": "turn9888644search3",
+      "result_ref": "turn8045538view0",
+      "outcome": "TargetedWikipedia bibliography inspection only; no Wiki birth/date facts adopted",
+      "prior_intent_file": "v25_c_intent.json",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original text or tool result, not raw HTTP/PDF bytes"
+    },
+    {
+      "operation_number": 7,
+      "record_id": "RS_PAST_NA1611",
+      "input": "turn8951203view2@2440",
+      "result_ref": "turn4111970view0",
+      "outcome": "Alreadyacquiredoriginalabstractbody context verified fulltitle/year/author/Munich",
+      "prior_intent_file": "v25_c_intent.json",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original text or tool result, not raw HTTP/PDF bytes"
+    },
+    {
+      "operation_number": 8,
+      "record_id": "RS_PAST_NA1823",
+      "input": "turn8045538view0 link71",
+      "result_ref": "turn4111970view1",
+      "outcome": "Footnoteanchor returned samebibliographicpage, not originalarticle; no factadoption",
+      "prior_intent_file": "v25_c_intent.json",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original text or tool result, not raw HTTP/PDF bytes"
+    },
+    {
+      "operation_number": 9,
+      "record_id": "RS_PAST_NA1823",
+      "input": "turn8045538view0@175",
+      "result_ref": "turn6762619view0",
+      "outcome": "Targetedbibliographiccontext observed actualNaturelink160; no Wiki biographicalfactsadopted",
+      "prior_intent_file": "v25_c_intent.json",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original text or tool result, not raw HTTP/PDF bytes"
+    },
+    {
+      "operation_number": 10,
+      "record_id": "RS_PAST_NA1823",
+      "input": "turn6762619view0 link160",
+      "result_ref": "turn6379104view0",
+      "outcome": "Observed1957NaturePDFcitation resolved to HistoryandPhilosophyofScience/DouglasMcKiearticle HTML; not Wallacebody, no citationcorrection/URLvariant or subjectDOBconflict inferred",
+      "prior_intent_file": "v25_c_intent.json",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original text or tool result, not raw HTTP/PDF bytes"
+    }
+  ],
+  "parsed_find_ledger": [
+    {
+      "source_ref": "turn8951203view2",
+      "pattern": "LEONARD FRANK SPATH",
+      "result_ref": "turn8045538view1",
+      "role": "locaterelevantoriginalabstractbody",
+      "prior_intent_file": "v25_c_intent.json"
+    }
+  ],
+  "quote_ledger": [
+    {
+      "original_work": "Kennedy2022Spathconferenceabstract",
+      "quote": "his birthplace was Munich",
+      "word_count": 4
+    }
+  ],
+  "protocol_deviations": [],
+  "limits": [
+    "No rawPDF/HTMLbytes/status/time/hash acquired; sourceparsedtextnotrawbytes.",
+    "No fullsource/cache/images/contacts/familydetails distributed.",
+    "No retries/variants/bypass afterfailedroutes. TargetedWikiopen/click/context were bibliographicreference navigation, not a newbulkindex or adopted Wikibiographicalsource. Footnoteanchor and originalNaturecitationtarget mismatch faithfully recorded.",
+    "No statisticaldedup/BaZi/outcomes/finalcohortfreeze or code/main/master/Git operations."
+  ],
+  "no_native_or_master_changes": true
+}

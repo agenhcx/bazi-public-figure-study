@@ -1,0 +1,98 @@
+{
+  "schema": "v23_group_b_prior_intent_v1",
+  "written_utc": "2026-11-05T23:56:30.272714+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA3474",
+    "RS_PAST_NA4233",
+    "RS_PAST_NA4301",
+    "RS_PAST_NA4642"
+  ],
+  "query_budget": 8,
+  "navigation_budget": 10,
+  "requests": [
+    {
+      "kind": "discovery_query",
+      "q": "\"Bryan Randell Coles\" \"born\"",
+      "purpose": "Find original biography born-place body, exact full identity/date."
+    },
+    {
+      "kind": "discovery_query",
+      "q": "\"Robert Francis Hudson\" \"born\"",
+      "purpose": "Find original biography born-place body, exact full identity/date."
+    },
+    {
+      "kind": "discovery_query",
+      "q": "\"Cecil Edwin Henry Bawn\" \"born\"",
+      "purpose": "Find original biography born-place body, exact full identity/date."
+    },
+    {
+      "kind": "discovery_query",
+      "q": "\"John Arthur Joseph Pateman\" \"born\"",
+      "purpose": "Find original biography born-place body, exact full identity/date."
+    }
+  ],
+  "adaptive_requests": [
+    {
+      "written_utc": "2026-11-05T23:56:44.922030+00:00",
+      "queries": [
+        "\"Robert Francis Hudson\" obituary chemist",
+        "\"Cecil Edwin Henry Bawn\" obituary born",
+        "\"John Pateman\" \"born\" 1926"
+      ],
+      "opens": [
+        {
+          "url": "https://www.the-independent.com/news/people/obituary-professor-bryan-coles-1273472.html",
+          "purpose": "Read original signed edited obituary born clause/fullname/date/author."
+        },
+        {
+          "url": "https://felixonline.co.uk/articles/1081-professor-bryan-coles-dies-aged-71/",
+          "purpose": "Read original institutional studentnewspaper obituary birthclause/identity, assess actualsourceprecision and age inconsistency."
+        }
+      ]
+    },
+    {
+      "written_utc": "2026-11-05T23:57:13.575913+00:00",
+      "queries": [
+        "\"Robert Francis Hudson\" chemist Kent obituary"
+      ],
+      "opens": [
+        {
+          "ref": "turn6100559view0",
+          "lineno": 188,
+          "purpose": "Read original obituary fullnativevitaldates/bornplace line beyond initialreturned excerpt."
+        },
+        {
+          "url": "https://www.aspergillus.org.uk/image_library/john-pateman-1926-2011/",
+          "purpose": "Inspect observedoriginalscientifictribute for born relation/fullnativecomponents and linked originalobituary."
+        },
+        {
+          "url": "https://doi.org/10.1098/rsbm.2020.0034",
+          "purpose": "First original scientificmemoir DOI route for Bawn; fullbody ifavailable, stopfailure."
+        }
+      ]
+    },
+    {
+      "written_utc": "2026-11-05T23:58:12.824472+00:00",
+      "opens": [
+        {
+          "url": "https://doi.org/10.1098/rsbm.2018.0003",
+          "purpose": "First originalPatemanmemoir DOIroute, inspectbody ifavailable; stopfailure."
+        },
+        {
+          "url": "https://doi.org/10.1093/ww/9780199540884.013.U6837",
+          "purpose": "First distinctoriginalOUPWhoWasWhoBawnentry observedinbibliographicdiscovery; inspectpublicbodyforbirthplace."
+        },
+        {
+          "ref": "turn6100559view0",
+          "link_id": 107,
+          "purpose": "Inspectoriginalbyline-linkedauthorpageforexpertise; do notinferfromfamiliarname."
+        },
+        {
+          "url": "https://www.jstor.org/stable/26774174",
+          "purpose": "First observed distinctcarrieroforiginalPatemanpublishedmemoir; notfailedDOIretryorURLvariant, inspectactualbodyifreturned."
+        }
+      ]
+    }
+  ],
+  "limits": "No full source cache; stop failures and no retries/bypass. Unknown rawstatus/time/hash null."
+}

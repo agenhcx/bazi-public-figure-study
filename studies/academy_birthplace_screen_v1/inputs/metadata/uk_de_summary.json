@@ -1,0 +1,47 @@
+{
+  "scope": "First pass over existing stored explicit birthplace excerpts/notes; not a completed birthplace acquisition or final cohort filter.",
+  "baseline": {
+    "UK_Royal_Society": 4983,
+    "DE_Leopoldina": 778
+  },
+  "counts": {
+    "UK_Royal_Society": {
+      "unknown": 4948,
+      "north": 30,
+      "south": 5
+    },
+    "DE_Leopoldina": {
+      "unknown": 765,
+      "north": 13
+    }
+  },
+  "unique_accepted_QID_seeds": {
+    "UK_Royal_Society": 99,
+    "DE_Leopoldina": 724
+  },
+  "past_RS_P8612_external_ID_seeds": 4884,
+  "inputs_sha256": {
+    "data/royal_society_past_dob_closeout_v1/accepted_exact_dob_final_v1.csv": "1f6a0fcb52fda3230e2e3a0005b9a71aa054f6e44d0e63ea0daac2588d45f1b4",
+    "data/royal_society_dob_freeze_v1/royal_society_current_exact_dob_final_v1.csv": "8e3f3bc7607c0f0dafbfab26375136eab9e6e4692447527f65794faff2d5d662",
+    "data/royal_society_current_dob_candidate_v1/current_exact_dob_candidate_pool_v1.csv": "39ebe85be9dd9341f285980b89645ace537a2362ba823efc2941529a13c9f306",
+    "data/leopoldina_manual_adjudication_closeout_v1/final/accepted_exact_dob_combined_primary_v1_1.csv": "d54d35c808d744b6fa39995ea5cd75724fa0aceea5af72126ebc750fbe51519e",
+    "data/leopoldina_manual_adjudication_closeout_v1/final/manual_source_evidence_ledger_v1.csv": "e5ff8fc36ccdf09905105040f61eb7d21c9be579306059488d6996566d0ae809",
+    "data/leopoldina_manual_adjudication_freeze_v1/input_snapshots/round2_manual_source_review_v1.csv": "0c780c41774cfe8fa9d43e20f0b46e46885c001ac5ed10ce378614c964bd4752",
+    "data/leopoldina_manual_adjudication_freeze_v1/input_snapshots/positive_source_review_v2.csv": "055506750259fb5b9b18c395153faf288a2e287c07252c6ce2efbfca0753adc4"
+  },
+  "limitations": [
+    "No final baseline CSV has a dedicated birthplace column.",
+    "Royal Society original collector discarded raw HTML and retained DOB only; current checkout has no corresponding raw pages.",
+    "Germany original source caches are not in the current checkout; a few body excerpts and review notes retain place claims.",
+    "Manual city-to-country/hemisphere mappings are provisional, no geographic source or coordinates have been newly verified.",
+    "Recorded coordinates remain null; birthplace grade is not inherited from DOB grade.",
+    "No nationality, institution, society membership, discovery location, ancestry/origin or death place was used as birthplace.",
+    "All unlocated records are retained as unknown; this does not mean their birthplaces are unavailable online.",
+    "DOB, calendar, identity and membership holds unchanged; no BaZi variables or outcome analyses."
+  ],
+  "next_bulk_routes": [
+    "UK past: exact P8612=NA archive-ID Wikidata join, then P19 place and P625 coordinates; or refetch official Place of birth fields with full response caching.",
+    "UK current: 99/99 exact cohort_key joins to previously stored QIDs.",
+    "Germany: 724 accepted QIDs can batch fetch P19/P625; 54 official-only accepted records have no accepted QID."
+  ]
+}

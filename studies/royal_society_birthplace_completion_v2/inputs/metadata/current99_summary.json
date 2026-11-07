@@ -1,0 +1,55 @@
+{
+  "cohort": "UK_Royal_Society_current99",
+  "baseline_rows": 99,
+  "explicit_birthplace_rows": 86,
+  "hemisphere_counts": {
+    "north": 66,
+    "south": 20,
+    "unknown": 13
+  },
+  "primary_URLs_attempted": 99,
+  "primary_successes": 89,
+  "second_existing_institution_URLs_attempted": 21,
+  "second_successes": 21,
+  "new_body_read_for_selected_place": 74,
+  "reused_existing_body_metadata": 12,
+  "source_grade_counts": {
+    "S1": 38,
+    "S2": 36,
+    "unknown": 13,
+    "S1_or_S2_existing_body_metadata_not_reopened": 12
+  },
+  "missing_names": [
+    "Jocelyn Bell Burnell",
+    "Richard Catlow",
+    "Zoubin Ghahramani",
+    "Ben Green",
+    "Philip Kocienski",
+    "Steffen Lauritzen",
+    "Raghunath Mashelkar",
+    "Iain Mattaj",
+    "Gero Miesenböck",
+    "Ghillean Prance",
+    "Martin Rees",
+    "Andy Haldane",
+    "Xiaodong Chen"
+  ],
+  "native_DOB_or_acceptance_modified": false,
+  "source_CSV_sha256": "8e3f3bc7607c0f0dafbfab26375136eab9e6e4692447527f65794faff2d5d662",
+  "output_sha256": "e1563e211297a4b86faacdbf412e699597fced2a1349ef54e5695c46d41f0dff",
+  "limitations": [
+    "No nationality, society affiliation, work address or education location used as birthplace.",
+    "Each person had at most two existing institution/CV/editorial source URLs attempted, except original cached references reused without requests.",
+    "Unknown14 are no target-born-place in the bounded body reads; Wikidata source supplements may independently retain geographic information.",
+    "Multi-person documents were not globally regex-extracted: Plumb section explicitly identified, Peto first Placeofbirth belongs to a different person and was rejected.",
+    "GraemeClark explicit EOAS birth field contradicts prior Wikidata Sweden claim; correction recommendation independent of DOB flags.",
+    "Region-only Clyde coast and Bavaria retained as broad explicit birth regions with no invented coordinates."
+  ],
+  "bounded_last3_added_people": [
+    "Richard Peto"
+  ],
+  "bounded_last3_still_unknown": [
+    "Steffen Lauritzen",
+    "Xiaodong Chen"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "Fields_facts_sha256": "38ff4742639faf72a9a9878e8ddb919a38ef9d6a40ff86fbbba67fbd519f28a4",
+  "Fields_query_response_sha256": "bdd226f0fc55d5fb82d9d3af2ec616307a58f04aac24bb1f07681a84e9e95847",
+  "NAS_facts_sha256": "ca1fe908b781e09591ae2d3760620e51f151afee90c431c122b0c317f29d7fd9",
+  "NAS_review_sha256": "1f05ec4c0a2a6243bbc27b0377c704b34fd01681abdec9c41f095863ecba8f64",
+  "baseline_sha256": "2b7897d0c4e2655ecb6f10311e1bdf7b06b8eeae3f181e9bebe92cbc7f066ee0",
+  "checks": {
+    "NAS_extension_zero_queries": true,
+    "all_NAS_input_hashes_match": true,
+    "all_full_frozen_NAS_baseline_rows_equal": true,
+    "all_native_DOBs_preserved": true,
+    "all_nine_ids_unique": true,
+    "all_original_Fields_input_hashes_match": true,
+    "all_original_birth_quotes_verified_at_cited_HTML_line": true,
+    "all_seven_state_extents_explicit_in_the_same_birth_clause": true,
+    "all_source_fact_files_unmodified": true,
+    "baseline_file_unmodified": true,
+    "held_Chandrasekhar_not_an_input": true,
+    "hemisphere_only_no_country_or_birthpoint_or_unique_entity_assignment": true,
+    "no_supplemental_source_quotes_added": true,
+    "original_Fields_review_byte_for_byte_preserved": true,
+    "seven_NAS_source_grades_remain_S2": true,
+    "source_capture_metadata_preserved": true,
+    "source_grades_and_DOB_grades_independent_of_geographic_grade": true,
+    "total_single_locality_query_zero_retries": true
+  },
+  "combined_review_sha256": "703dc8f1a7cd881f9e8921aad582862eba467c0fb10432d49a8186be32c1bb9e",
+  "frozen_Fields_review_sha256": "5c83523b485f98b3446a3fc78f2c0677df7a68d80bfa9599812e15430bd2abb0",
+  "input_lock_paths": [
+    "/workspace/scratch/7e8aa4e0d4af/academy_v3_workers/geography/input_locks.json",
+    "/workspace/scratch/7e8aa4e0d4af/academy_v3_workers/geography/nas_input_locks.json"
+  ],
+  "review_rows": 9,
+  "source_quote_policy": "No new source quotes; source-explicit state extents verified against the already frozen birth excerpts and cited HTML lines.",
+  "status": "pass",
+  "verified_utc": "2026-11-03T14:47:46.545143+00:00"
+}

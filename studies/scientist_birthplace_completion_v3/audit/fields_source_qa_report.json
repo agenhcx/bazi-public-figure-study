@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "accepted_facts": 2,
+  "S1": 2,
+  "discovery_queries": 2,
+  "body_requests": 4,
+  "retries": 0,
+  "all_five_capture_hashes_match": true,
+  "native_DOB_groups_and_precision_unchanged": true,
+  "Hugo_birth_row": "Standalone asterisk date/place heading immediately beneath exact name; not a footnote or death row.",
+  "Smirnov_precision": "Source year 1970 compatible with native year only; month/day not corroborated by this source.",
+  "source_grade_basis": "Original official ICM prize biography and official HLF laureate profile; grade independent of DOB evidence tier.",
+  "capture_semantics": "Normalized web-tool JSON only; no original publisher bytes or visual verification claimed.",
+  "country_and_coordinates_assigned": false,
+  "geographic_scope_note": "No France-wide hemisphere inference; geographic review separate.",
+  "facts": [
+    {
+      "cohort": "Fields_main",
+      "record_id": "fields-de5a4b4e279eaf4f",
+      "source_sha256": "5f0a5ada12f2d8f4ac4170c99dd846e0330d18cbbc2fdc38a4b928290974ea17",
+      "source_grade": "S1",
+      "evidence_kind": "explicit_born_statement"
+    },
+    {
+      "cohort": "Fields_main",
+      "record_id": "fields-ef72cb77368d48fe",
+      "source_sha256": "f941752a001da2b8e5015afc4e134e7b5814e062027b0dbb99fdbcc957057880",
+      "source_grade": "S1",
+      "evidence_kind": "structured_birth_row"
+    }
+  ]
+}

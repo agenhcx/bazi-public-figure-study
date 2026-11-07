@@ -1,0 +1,425 @@
+{
+  "reviewer": "/root/france_historical_next",
+  "review_completed_utc": "2026-10-29T13:41:54.896385+00:00",
+  "scope": "Independent cached-body review of all13FranceB strict positives plus3cached cross-source additions. No new retrieval.",
+  "input_decisions_file": "france_b/decisions.json",
+  "input_decisions_sha256": "a7901b1c3c698a899631a1eef5c53836c3cb25af403f56ee1f32a525e0257190",
+  "strict_positives_reviewed": 13,
+  "strict_pass": 13,
+  "strict_fail": 0,
+  "unique_actual_B_body_hashes_reverified": 14,
+  "pdf_strict_cases_independently_visually_reviewed": 7,
+  "html_strict_cases_independently_reviewed": 6,
+  "strict_day_precision": 8,
+  "strict_year_precision": 5,
+  "new_network_requests": 0,
+  "candidate_identity_or_DOB_changes": 0,
+  "lifetime_exclusions_introduced": 0,
+  "bazi_computed": 0,
+  "analysis_cohort_frozen": false,
+  "rows": [
+    {
+      "candidate_group_id": "CTHS_111767",
+      "name": "AUBOUIN Jean",
+      "qa_status": "pass",
+      "strict_membership_supported": true,
+      "accepted_election_date_reviewed": "1981-11-16",
+      "accepted_election_year_reviewed": 1981,
+      "precision_reviewed": "day",
+      "source_asof_not_substituted": true,
+      "ordinary_vs_correspondent_distinction_retained": true,
+      "identity_and_DOB_not_modified": true,
+      "source_observation": "Image separates correspondent1978 from full member16November1981; subject Jean Aubouin and geology career are explicit.",
+      "page_images_independently_viewed": [
+        "aubouin_1.png"
+      ],
+      "evidence_checks": [
+        {
+          "source_url": "https://www.academie-sciences.fr/pdf/membre/AubouinJ_bio032011.pdf",
+          "source_sha256": "52dc962429270e4cd3eb56a24db0c50a4a443d5faa2f296236f838ee4a1eb1ef",
+          "actual_body_sha256_reverified": true,
+          "source_locator": "PDF p1 introductory paragraph",
+          "review_method": "independent PDF page-image inspection",
+          "role_and_date_supported": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_111769",
+      "name": "BACH Jean-François",
+      "qa_status": "pass",
+      "strict_membership_supported": true,
+      "accepted_election_date_reviewed": "1985-05-20",
+      "accepted_election_year_reviewed": 1985,
+      "precision_reviewed": "day",
+      "source_asof_not_substituted": true,
+      "ordinary_vs_correspondent_distinction_retained": true,
+      "identity_and_DOB_not_modified": true,
+      "source_observation": "Actual obituary body separates correspondent1977 from full member20May1985; secretary term2006–2015 is a separate office.",
+      "page_images_independently_viewed": [],
+      "evidence_checks": [
+        {
+          "source_url": "https://www.academie-sciences.fr/communique-de-presse-deces-de-jean-francois-bach-secretaire-perpetuel-honoraire-de-lacademie-des",
+          "source_sha256": "aa15a48921c9a7cae4cda9050eecbd8caf292b899b5f042d4c11cb1a93c1cbd7",
+          "actual_body_sha256_reverified": true,
+          "source_locator": "HTML obituary opening, after correspondent date",
+          "review_method": "independent actual-HTML parse and surrounding-body read",
+          "role_and_date_supported": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_111846",
+      "name": "BREZIS Haïm",
+      "qa_status": "pass",
+      "strict_membership_supported": true,
+      "accepted_election_date_reviewed": "1988-06-13",
+      "accepted_election_year_reviewed": 1988,
+      "precision_reviewed": "day",
+      "source_asof_not_substituted": true,
+      "ordinary_vs_correspondent_distinction_retained": true,
+      "identity_and_DOB_not_modified": true,
+      "source_observation": "Actual Haïm Brézis obituary block gives correspondent1986 then full member13June1988. Adjacent memorial subjects are not transferred.",
+      "page_images_independently_viewed": [],
+      "evidence_checks": [
+        {
+          "source_url": "https://www.academie-sciences.fr/memoriam",
+          "source_sha256": "3d785d6125d25335f768eafcf196acc66675e67e13a37d835df795afd6fc728e",
+          "actual_body_sha256_reverified": true,
+          "source_locator": "HTML subject heading Haïm Brézis; first obituary paragraph",
+          "review_method": "independent actual-HTML parse and surrounding-body read",
+          "role_and_date_supported": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_112033",
+      "name": "COPPENS Yves",
+      "qa_status": "pass",
+      "strict_membership_supported": true,
+      "accepted_election_date_reviewed": "1985-06-24",
+      "accepted_election_year_reviewed": 1985,
+      "precision_reviewed": "day",
+      "source_asof_not_substituted": true,
+      "ordinary_vs_correspondent_distinction_retained": true,
+      "identity_and_DOB_not_modified": true,
+      "source_observation": "Image gives correspondent25April1983 then full member24June1985. Its malformed life-date header repeats1934for death; that error remains noted and changes no DOB or election field.",
+      "page_images_independently_viewed": [
+        "coppens_1.png"
+      ],
+      "evidence_checks": [
+        {
+          "source_url": "https://www.academie-sciences.fr/pdf/membre/CoppensY_bio0511.pdf",
+          "source_sha256": "cb4ddc3380c0eed93ccddaeac320d6694a5cf9e57fe41c00cca46c76619eb527",
+          "actual_body_sha256_reverified": true,
+          "source_locator": "PDF p1, membership line",
+          "review_method": "independent PDF page-image inspection",
+          "role_and_date_supported": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_111934",
+      "name": "CARTAN Henri",
+      "qa_status": "pass",
+      "strict_membership_supported": true,
+      "accepted_election_date_reviewed": "1974-01-28",
+      "accepted_election_year_reviewed": 1974,
+      "precision_reviewed": "day",
+      "source_asof_not_substituted": true,
+      "ordinary_vs_correspondent_distinction_retained": true,
+      "identity_and_DOB_not_modified": true,
+      "source_observation": "Actual Institut body names Henri Cartan and dates correspondent1965 then full member28January1974; life dates distinguish Élie.",
+      "page_images_independently_viewed": [],
+      "evidence_checks": [
+        {
+          "source_url": "https://podcasts.institutdefrance.fr/academiciens/henri-cartan",
+          "source_sha256": "82131b9ef4590808977886e467b8c4abf15a3c597823e3b7ab8153b10938a77f",
+          "actual_body_sha256_reverified": true,
+          "source_locator": "HTML biographical paragraph after Academy rubric",
+          "review_method": "independent actual-HTML parse and surrounding-body read",
+          "role_and_date_supported": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_111950",
+      "name": "Jean-Pierre Changeux",
+      "qa_status": "pass",
+      "strict_membership_supported": true,
+      "accepted_election_date_reviewed": "1988-06-06",
+      "accepted_election_year_reviewed": 1988,
+      "precision_reviewed": "day",
+      "source_asof_not_substituted": true,
+      "ordinary_vs_correspondent_distinction_retained": true,
+      "identity_and_DOB_not_modified": true,
+      "source_observation": "Actual Academy and Institut bodies both explicitly give correspondent1980 then full member6June1988. The duplicate text is not treated as independent corroboration.",
+      "page_images_independently_viewed": [],
+      "evidence_checks": [
+        {
+          "source_url": "https://academie-sciences.fr/jean-pierre-changeux",
+          "source_sha256": "44e12126b10552ab70c8e09d1cdad76061de1132104f2c844beeee2ab78e55f0",
+          "actual_body_sha256_reverified": true,
+          "source_locator": "HTML Biographie first paragraph",
+          "review_method": "independent actual-HTML parse and surrounding-body read",
+          "role_and_date_supported": true
+        },
+        {
+          "source_url": "https://podcasts.institutdefrance.fr/academiciens/jean-pierre-changeux",
+          "source_sha256": "4ff1815e097bf7045901f02728406afba62903b83c555bdb4b018b41b1fd82d3",
+          "actual_body_sha256_reverified": true,
+          "source_locator": "HTML biographical paragraph after Membre de l’Académie des sciences rubric",
+          "review_method": "independent actual-HTML parse and surrounding-body read",
+          "role_and_date_supported": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_111976",
+      "name": "CHARPAK Georges",
+      "qa_status": "pass",
+      "strict_membership_supported": true,
+      "accepted_election_date_reviewed": null,
+      "accepted_election_year_reviewed": 1985,
+      "precision_reviewed": "year",
+      "source_asof_not_substituted": true,
+      "ordinary_vs_correspondent_distinction_retained": true,
+      "identity_and_DOB_not_modified": true,
+      "source_observation": "Actual Institut body explicitly says Charpak elected member in1985; no day is inferred, and the physicist is distinct from metallurgist Charpy.",
+      "page_images_independently_viewed": [],
+      "evidence_checks": [
+        {
+          "source_url": "https://podcasts.institutdefrance.fr/academiciens/georges-charpak",
+          "source_sha256": "06d02a249e2fe20d24b255da8950096d0732ca87850dbadad0b6383b2d9a578b",
+          "actual_body_sha256_reverified": true,
+          "source_locator": "HTML first biographical paragraph after named rubric",
+          "review_method": "independent actual-HTML parse and surrounding-body read",
+          "role_and_date_supported": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_112054",
+      "name": "CURIE Pierre",
+      "qa_status": "pass",
+      "strict_membership_supported": true,
+      "accepted_election_date_reviewed": "1905-07-03",
+      "accepted_election_year_reviewed": 1905,
+      "precision_reviewed": "day",
+      "source_asof_not_substituted": true,
+      "ordinary_vs_correspondent_distinction_retained": true,
+      "identity_and_DOB_not_modified": true,
+      "source_observation": "Actual Institut body explicitly dates Pierre Curie’s Academy physics election3July1905; named life dates/career distinguish Jacques and Marie.",
+      "page_images_independently_viewed": [],
+      "evidence_checks": [
+        {
+          "source_url": "https://podcasts.institutdefrance.fr/academiciens/pierre-curie",
+          "source_sha256": "9428319b812258b8cbc14feaf7511f5506184ed9f0f93dbd705e82c50d8c7388",
+          "actual_body_sha256_reverified": true,
+          "source_locator": "HTML first biographical lines under Pierre CURIE",
+          "review_method": "independent actual-HTML parse and surrounding-body read",
+          "role_and_date_supported": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_112061",
+      "name": "DARBOUX Gaston",
+      "qa_status": "pass",
+      "strict_membership_supported": true,
+      "accepted_election_date_reviewed": null,
+      "accepted_election_year_reviewed": 1884,
+      "precision_reviewed": "year",
+      "source_asof_not_substituted": true,
+      "ordinary_vs_correspondent_distinction_retained": true,
+      "identity_and_DOB_not_modified": true,
+      "source_observation": "Image explicitly dates Darboux election1884 and perpetual-secretary office1900 separately; speaker Élie Cartan is not the biography subject.",
+      "page_images_independently_viewed": [
+        "darboux_41.png"
+      ],
+      "evidence_checks": [
+        {
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/darboux_notice.pdf",
+          "source_sha256": "7644cda5fade86e803b8653f9f3aa599bf6ee9ca20290ca2971db7caf534d8df",
+          "actual_body_sha256_reverified": true,
+          "source_locator": "PDF p41, printed p473, Élie Cartan speech biography paragraph",
+          "review_method": "independent PDF page-image inspection",
+          "role_and_date_supported": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_111926",
+      "name": "CABANNES Jean",
+      "qa_status": "pass",
+      "strict_membership_supported": true,
+      "accepted_election_date_reviewed": null,
+      "accepted_election_year_reviewed": 1946,
+      "precision_reviewed": "year",
+      "source_asof_not_substituted": true,
+      "ordinary_vs_correspondent_distinction_retained": true,
+      "identity_and_DOB_not_modified": true,
+      "source_observation": "Image explicitly dates Cabannes election1946 replacing Charles Fabry; cover types member of physics section. Funeral1959is not substituted.",
+      "page_images_independently_viewed": [
+        "cabannes_1.png",
+        "cabannes_2.png"
+      ],
+      "evidence_checks": [
+        {
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/cabannes_notice.pdf",
+          "source_sha256": "5ff0a1e725ecf785bb0eca5753d970f4af9fe223a1bbf087a0716513d2cc58fb",
+          "actual_body_sha256_reverified": true,
+          "source_locator": "PDF p2 printed p321; full-role cover p1",
+          "review_method": "independent PDF page-image inspection",
+          "role_and_date_supported": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_111977",
+      "name": "CHARPY Georges",
+      "qa_status": "pass",
+      "strict_membership_supported": true,
+      "accepted_election_date_reviewed": null,
+      "accepted_election_year_reviewed": 1918,
+      "precision_reviewed": "year",
+      "source_asof_not_substituted": true,
+      "ordinary_vs_correspondent_distinction_retained": true,
+      "identity_and_DOB_not_modified": true,
+      "source_observation": "Image explicitly contrasts correspondent1913 with full member1918; named metallurgical career and birth1865distinguish Charpak.",
+      "page_images_independently_viewed": [
+        "charpy_2.png"
+      ],
+      "evidence_checks": [
+        {
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/charpy_notice.pdf",
+          "source_sha256": "ea64716b13721c531f9f4fc43ee1fe90506783fe063d9608309adc739ab6861c",
+          "actual_body_sha256_reverified": true,
+          "source_locator": "PDF p2 printed p472, following Correspondant de l’Académie des Sciences en1913",
+          "review_method": "independent PDF page-image inspection",
+          "role_and_date_supported": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_112025",
+      "name": "CHEVENARD Pierre",
+      "qa_status": "pass",
+      "strict_membership_supported": true,
+      "accepted_election_date_reviewed": null,
+      "accepted_election_year_reviewed": 1946,
+      "precision_reviewed": "year",
+      "source_asof_not_substituted": true,
+      "ordinary_vs_correspondent_distinction_retained": true,
+      "identity_and_DOB_not_modified": true,
+      "source_observation": "Image explicitly gives1946entry to Academy applications-to-industry division; cover confirms full member subtype, and1961deposit is separate.",
+      "page_images_independently_viewed": [
+        "chevenard_1.png",
+        "chevenard_5.png"
+      ],
+      "evidence_checks": [
+        {
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/chevenard_notice.pdf",
+          "source_sha256": "11b68aa3c7cb843382b28cf182aa75570335a0c5adfa7d32079ea979955f8eda",
+          "actual_body_sha256_reverified": true,
+          "source_locator": "PDF p5 printed p485; typed applications-division member cover p1",
+          "review_method": "independent PDF page-image inspection",
+          "role_and_date_supported": true
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_111839",
+      "name": "BOURCART Jacques",
+      "qa_status": "pass",
+      "strict_membership_supported": true,
+      "accepted_election_date_reviewed": "1960-03-28",
+      "accepted_election_year_reviewed": 1960,
+      "precision_reviewed": "day",
+      "source_asof_not_substituted": true,
+      "ordinary_vs_correspondent_distinction_retained": true,
+      "identity_and_DOB_not_modified": true,
+      "source_observation": "Image explicitly dates Bourcart election28March1960 replacing Durand-Viel in geography/navigation. Cover types that section;1965funeral is separate.",
+      "page_images_independently_viewed": [
+        "bourcart_1.png",
+        "bourcart_6.png"
+      ],
+      "evidence_checks": [
+        {
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/bourcart_notice.pdf",
+          "source_sha256": "6ada92a146c2111fee96b3fe6f9997f8b664b50e972a48e03d540893ffc56367",
+          "actual_body_sha256_reverified": true,
+          "source_locator": "PDF p6 printed p250; typed section-member cover p1",
+          "review_method": "independent PDF page-image inspection",
+          "role_and_date_supported": true
+        }
+      ]
+    }
+  ],
+  "cross_source_addendum": {
+    "file": "france_cross_source_addendum.json",
+    "sha256": "93f99a511c990d5642db93b350d42c87074e495732f015f173da6d03bedac86f",
+    "rows_reviewed": 3,
+    "strict_new": 1,
+    "role_bound_only": 2,
+    "qa_pass": 3,
+    "rows": [
+      {
+        "candidate_group_id": "CTHS_112038",
+        "name": "COT Donatien",
+        "qa_status": "pass",
+        "membership_accepted_reviewed": 1,
+        "election_year_reviewed": 1946,
+        "membership_as_of_year_reviewed": null,
+        "source_sha256": "8757f89f93e13f9f206dd81a9134eb53a4fac2689153c7cebffcc93deaef64ae",
+        "source_locator": "PDF p1, original funeral speech11April1956; Donatien Cot byline and first-person self-report at bottom",
+        "actual_body_sha256_reverified": true,
+        "independent_PDF_visual_review": true,
+        "identity_and_DOB_not_modified": true,
+        "source_observation": "The named Academy-member author speaks in first person about joining the geography/navigation section in1946. This is Cot’s entry, not Tilho’s. Only year is accepted."
+      },
+      {
+        "candidate_group_id": "CTHS_111791",
+        "name": "BÉHAL Auguste",
+        "qa_status": "pass",
+        "membership_accepted_reviewed": 0,
+        "election_year_reviewed": null,
+        "membership_as_of_year_reviewed": 1933,
+        "source_sha256": "4dfb0a6b72f115a6c678d0152ed0a066e898a566561bb8da1a382a87368e1dc6",
+        "source_locator": "PDF p9 printedp455; author-heading inside same26June1933 original bust ceremony begunp7",
+        "actual_body_sha256_reverified": true,
+        "independent_PDF_visual_review": true,
+        "identity_and_DOB_not_modified": true,
+        "source_observation": "The image names Auguste Béhal as Academy des sciences member, although he speaks for the medicine Academy. It belongs to the26June1933ceremony begun onPDF page7; source date is a bound only."
+      },
+      {
+        "candidate_group_id": "CTHS_112030",
+        "name": "COLIN Henri",
+        "qa_status": "pass",
+        "membership_accepted_reviewed": 0,
+        "election_year_reviewed": null,
+        "membership_as_of_year_reviewed": 1938,
+        "source_sha256": "3b8aacc61d6b5000c1b00699e7f11317393fc4b99cd62d8ae386f6557e8a772a",
+        "source_locator": "PDF p1 original notice presented8August1938; named author full-member byline",
+        "actual_body_sha256_reverified": true,
+        "independent_PDF_visual_review": true,
+        "identity_and_DOB_not_modified": true,
+        "source_observation": "The image names Henri Colin as Academy member on the same page as the8August1938presentation. Botanical authorship accords with fixed accepted identity;1938is not made an election year."
+      }
+    ]
+  },
+  "FranceA_refinement_summary": {
+    "file": "france_a_source_refinements.json",
+    "new_strict_delta": 1,
+    "inherited_conflict_strict_downgrade": 1,
+    "net_strict_delta": 0,
+    "existing_strict_year_to_day_refinement": 1,
+    "original_A_metadata_unchanged": true,
+    "effective_A_strict_after_ID_upsert": 9,
+    "effective_A_day_precision": 3,
+    "effective_A_year_precision": 6,
+    "effective_A_role_bound_only": 10,
+    "Louis_de_Broglie_inherited_1873_1933_conflict_retained": true
+  },
+  "max_quote_words_per_A_body_across_original_refinement_cross_addendum": 21
+}

@@ -1,0 +1,216 @@
+{
+  "schema": "UK_v22_B_own_Bagshawe_Hunt_source_observations_v1",
+  "written_utc": "2026-11-05T23:45:58.746973+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA4193",
+    "RS_PAST_NA6876"
+  ],
+  "intent_file": "v22_b_intent.json",
+  "counts": {
+    "discovery_queries": 3,
+    "web_navigation_attempts": 5,
+    "parsed_find_operations": 1,
+    "screenshots": 0,
+    "raw_HTTP_or_PDF_GETs": 0,
+    "birthplace_candidates": 0,
+    "holds": 2
+  },
+  "candidates": [],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA4193",
+      "native": {
+        "record_id": "RS_PAST_NA4193",
+        "authority_name": "Bagshawe; Kenneth Dawson (1925 - 2022); oncologist",
+        "native_dob": "1925-08-17",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "1979f61cb74937a37a77de32d447a522d53b67bfc8ae7ae845fd462a5403266e"
+      },
+      "status": "hold_original_born_body_unavailable",
+      "hold_type": "original_birthplace_body_unavailable",
+      "reason": "Lancet original PDF tool-inaccessible; distinct BMJ original obituary PDF tool403; distinct Royal Society2024 memoir DOI tool-inaccessible. Stopped all three without retry or variants. Marple near Manchester UK/exact1925-08-17 remain discovery-only, not original-body evidence. No BP/geo/sourcegrade/DOBadoption.",
+      "raw_birthplace_candidate": null,
+      "source_grade_proposal": null,
+      "original_source_body_verified": false,
+      "source_birthdate": null,
+      "source_birthdate_precision": "none_acquired_in_original_body",
+      "original_attempts": [
+        {
+          "url": "https://www.thelancet.com/article/S0140673623003604/pdf",
+          "ref": "turn6547588view0",
+          "tool_result": "URLnotaccessible",
+          "actual_born_body_acquired": false
+        },
+        {
+          "url": "https://www.bmj.com/bmj/section-pdf/1081914?path=%2Fbmj%2F381%2F8380%2FComment.full.pdf",
+          "ref": "turn6298002view0",
+          "tool_result": "Failedtofetch403Forbidden",
+          "raw_HTTP_status": null,
+          "actual_born_body_acquired": false
+        },
+        {
+          "url": "https://doi.org/10.1098/rsbm.2023.0050",
+          "ref": "turn9890169view0",
+          "tool_result": "URLnotaccessible",
+          "actual_born_body_acquired": false
+        }
+      ],
+      "discovery_only": {
+        "source": "Lancetpublishersearchprojection turn6444332search7",
+        "place": "Marple near Manchester, UK",
+        "dob": "1925-08-17",
+        "deathdate": "2022-12-27",
+        "not_bodyverified_or_adopted": true
+      },
+      "unopened_other_leads": [
+        {
+          "url": "https://history.rcp.ac.uk/inspiring-physicians/kenneth-dawson-bagshawe",
+          "note": "PublishersearchprojectionexactDOB/deathdatebutawaitingobituary; unopened/noBPverified."
+        }
+      ],
+      "geography_decision": "unchanged_unknown",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed text/error observations, not raw HTTP/PDF bytes",
+      "no_master_change": true
+    },
+    {
+      "record_id": "RS_PAST_NA6876",
+      "native": {
+        "record_id": "RS_PAST_NA6876",
+        "authority_name": "Hunt; John David (1936 - 2012)",
+        "native_dob": "1936-12-12",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "8076fa91222e9d0c87892069fac62cd235c17def449ca32b6b8ea3fa184c095b"
+      },
+      "status": "hold_no_explicit_birthplace_in_acquired_college_entry_memoir_body_unavailable",
+      "hold_type": "no_explicit_birthplace_original_memoir_unavailable",
+      "reason": "Original Christ’s2013 college entry supplies full JohnDavidHunt heading, exact nativeDOB/deathdate and metallurgy/FRS career, but born clause gives date only with no birthplace. DOI memoir unavailable. RaisedWestCountryEngland appears only in unopened carried abstract discovery and cannot become birthplace.",
+      "raw_birthplace_candidate": null,
+      "source_grade_proposal": null,
+      "source_url": "https://www.christs.cam.ac.uk/sites/default/files/2025-02/2013%20Magazine.pdf",
+      "source_ref": "turn7570954view0",
+      "source_title": "Christ’s College Magazine no.238 (2013), In memoriam: John David Hunt FRS (m.1957)",
+      "source_author": null,
+      "source_kind": "original_college_magazine_uncredited_subject_entry",
+      "publication_date": "2013",
+      "publication_date_precision": "year_in_original_cover_and_publication_metadata",
+      "source_birthdate": "1936-12-12",
+      "source_birthdate_precision": "exact_day_in_born_clause",
+      "source_death_date": "2012-12-08",
+      "source_lifespan_compatible_with_native": true,
+      "source_locator": "turn7570954view0:L4383-4395@PDFindex110 (PDFpage111/printed109); full subject4383, date-onlyborn4384, CambridgePhD1963/Oxfordmetallurgy1966/readership1990/professor1996 at4386-4390, FRS2001 at4393-4394, death4395. Originalmetadata turn6460726view0:L0-17.",
+      "source_quote": "",
+      "identity_review": [
+        "All native name components JohnDavidHunt appear in original heading; exact12December1936 and8December2012 match nativeDOB/lifespan.",
+        "CambridgePhD1963, Oxfordmetallurgy1966/readership1990/professor1996 and FRS2001 distinctively bind the native subject.",
+        "No commonname funeral results adopted; unrelated1964/other subjects discarded at discovery, not treated as nativeDOBconflicts."
+      ],
+      "birthplace_relation_verified": false,
+      "original_memoir_attempt": {
+        "url": "https://doi.org/10.1098/rsbm.2022.0046",
+        "ref": "turn6298002view1",
+        "tool_result": "URLnotaccessible",
+        "body_acquired": false
+      },
+      "unopened_other_leads": [
+        {
+          "url": "https://www.researchgate.net/publication/370124255_John_David_Hunt_12_December_1936-8_December_2012",
+          "title": "John David Hunt. 12December1936—8December2012",
+          "note": "Original scholarly memoir carried abstract discovery only; requestfulltext/noPDF indicated, raisedWestCountry is upbringing notbirth; no independent fullbody acquisition."
+        }
+      ],
+      "geography_decision": "unchanged_unknown",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed text/error observations, not raw HTTP/PDF bytes",
+      "no_master_change": true
+    }
+  ],
+  "query_ledger": [
+    {
+      "query": "\"Kenneth Dawson Bagshawe\" born obituary",
+      "refs": [
+        "turn6444332search0",
+        "turn6444332search6",
+        "turn6444332search7",
+        "turn6444332search1"
+      ],
+      "intent_prior": true
+    },
+    {
+      "query": "\"John David Hunt\" born obituary",
+      "refs": [
+        "turn6444332search8",
+        "turn6444332search9"
+      ],
+      "intent_prior": true
+    },
+    {
+      "query": "\"John David Hunt\" \"born\" \"1936\"",
+      "refs": [
+        "turn6547588search8",
+        "turn6547588search9",
+        "turn6547588search1"
+      ],
+      "intent_prior": true
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "url": "https://www.thelancet.com/article/S0140673623003604/pdf",
+      "ref": "turn6547588view0",
+      "result": "toolinaccessible",
+      "stopped_no_retry": true
+    },
+    {
+      "url": "https://www.bmj.com/bmj/section-pdf/1081914?path=%2Fbmj%2F381%2F8380%2FComment.full.pdf",
+      "ref": "turn6298002view0",
+      "result": "toolreported403",
+      "stopped_no_retry": true
+    },
+    {
+      "url": "https://doi.org/10.1098/rsbm.2022.0046",
+      "ref": "turn6298002view1",
+      "result": "toolinaccessible",
+      "stopped_no_retry": true
+    },
+    {
+      "url": "https://www.christs.cam.ac.uk/sites/default/files/2025-02/2013%20Magazine.pdf",
+      "ref": "turn6460726view0",
+      "result": "original132pagePDFparsedtext; subjectentrylatercachedfind",
+      "no_raw_PDF_bytes": true
+    },
+    {
+      "url": "https://doi.org/10.1098/rsbm.2023.0050",
+      "ref": "turn9890169view0",
+      "result": "toolinaccessible",
+      "stopped_no_retry": true,
+      "budget": "childreturned1unusednav; finalshared8thnav"
+    }
+  ],
+  "parsed_find_ledger": [
+    {
+      "ref": "turn6460726view0",
+      "pattern": "John David Hunt",
+      "result_ref": "turn7570954view0",
+      "intent_prior": true,
+      "new_URL_or_raw_GET": false
+    }
+  ],
+  "quote_ledger": {
+    "Hunt_college_entry": 0,
+    "Bagshawe_original_bodies": 0
+  },
+  "protocol_deviations": [],
+  "limits": [
+    "No original born-place body acquired for either target; no place adopted from discovery.",
+    "RawHTTPstatus/precisefetchtime/hashunknownnull; toolerrors separate.",
+    "No original sourcecache/fullPDF/HTML/image/contact/familydetails redistributed; no new sourcequote retained.",
+    "No nativeDOB/calendar/identity/eligibility/sourcegrade/country/coordinates/master/Git edits."
+  ]
+}

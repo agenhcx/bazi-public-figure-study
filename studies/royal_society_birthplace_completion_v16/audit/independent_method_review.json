@@ -1,0 +1,100 @@
+{
+  "schema": "UK_v16_independent_identity_and_birthplace_method_review_v1",
+  "reviewer": "/root/v16_method_qa",
+  "written_utc": "2026-11-05T00:10:31.443608+00:00",
+  "materials_read": [
+    "v16_plan.json",
+    "academy_repo/studies/royal_society_birthplace_completion_v15/README.md",
+    "academy_repo/studies/royal_society_birthplace_completion_v15/audit/protocol_and_parent_review.json"
+  ],
+  "scope": "Prospective interpretation of v16 person-source binding and separate first-birthplace/geography admission; no network or source-body verification, no master mutation.",
+  "decision": "Admissible as an explicitly documented v16 method amendment, subject to record-level gates; no permanent date or identity correction and no statistical inference.",
+  "distinction_from_v15": {
+    "v15_observed_rule": "v15 protocol explicitly required unique full-name plus exact-date binding; all five accepted v15 sources met that batch condition.",
+    "v16_proposal": "v16 plan permits compatible partial source dates plus distinguishing anchors. A source with no birth date at all requires a separate explicit no-source-DOB category; it must not be reported as an exact or partial DOB match.",
+    "status": "This is a v16 collection/admission interpretation, not an immutable rule recovered from v15 and not a source-blind preregistration. Preserve v15 unchanged and record amendment timing truthfully before final v16 acceptance."
+  },
+  "admission_gates": [
+    {
+      "gate": "Scope",
+      "requirement": "Target is one of the fixed 12 followups and one of the 164 frozen v15 blank-birthplace window records; native record key is fixed."
+    },
+    {
+      "gate": "Original body",
+      "requirement": "Read an original available biography/obituary body or public original extract. A discovery snippet, bibliography, inaccessible source, or search title cannot supply the adopted birth clause."
+    },
+    {
+      "gate": "Person binding",
+      "requirement": "Explicit full native authority name, allowing only documented harmless orthographic normalization, plus multiple distinctive concordant lifespan/membership/career anchors. Do not expand initials or change the native identity. Check the frozen UK pool for candidate ambiguity."
+    },
+    {
+      "gate": "Date disclosure",
+      "requirement": "Record source_birthdate_precision truthfully. Exact-date, year-only, month/year, age-at-death-only, and no-DOB are distinct. Compare what is actually stated for compatibility; do not infer or store a new native birthday or claim its independent verification."
+    },
+    {
+      "gate": "Residual identity uncertainty",
+      "requirement": "For no-DOB or age-only cases, full-name agreement alone is insufficient. Require at least two distinctive, substantively different concordant anchors such as FRS election year and a specific multi-institution career sequence, plus compatible lifespan/age where available. Multiple facts from one article remain one source, not independent corroborating sources. Hold unresolved alternative-person or explicit date conflicts."
+    },
+    {
+      "gate": "Birth relation",
+      "requirement": "An explicit born-in/at or equivalently unambiguous subject-birthplace assertion is required. Residence, family roots, childhood, schooling, employment, nationality, death or funeral place do not substitute."
+    },
+    {
+      "gate": "Literal place first",
+      "requirement": "Retain the actual born-clause place wording. A first stored birthplace may be accepted while hemisphere stays unknown; count these as birthplace additions but not geographic resolutions."
+    },
+    {
+      "gate": "Separate geography",
+      "requirement": "Under the current strict workflow, hemisphere adoption requires explicit birth-linked country/region resolving wholly to one hemisphere. No inference from the familiar city, newspaper region, parents, childhood, employer, national identity or footer."
+    },
+    {
+      "gate": "Source grade role",
+      "requirement": "Grade new birthplace support separately from frozen native DOB tiers. Authorship, original publication role and visible editorial provenance determine grade; an official host or professional hosting alone is not S1/S2 proof."
+    },
+    {
+      "gate": "Frozen and reversible",
+      "requirement": "Modify only allowed current birthplace/geography fields; retain full prior-field and prior-absent-field snapshots. Leave native DOB, calendar, authority identity, eligibility, QID, country, coordinates, DOB source tiers, original selected evidence/status/hashes and all untargeted complete objects unchanged."
+    }
+  ],
+  "Raftery_candidate_assessment": {
+    "material_limit": "Assessment is conditional on parent-reported observations, not a direct reading of the Mayo News body.",
+    "reported_subject": "Michael Augustine Raftery; death in 2007 aged71; FRS1986; Caltech23years and Minnesota career; explicit born-in Galway.",
+    "identity": "This combination can justify a uniquely bound first-birthplace candidate even without a birth date, if full name and anchors are actually present in the source body, no competing frozen record or contradictory date is observed, and parent separately verifies the body.",
+    "source_DOB_status": "No stated source birth date; record null birthdate and precision no_DOB_age_at_death_only. Native1936-02-08 is preserved, not independently verified or reconstructed from age.",
+    "birthplace": "Galway may be stored literally from the direct birth clause if verified.",
+    "hemisphere": "Keep unknown from the reported evidence. Co Mayo describing parents or growing up does not qualify Galway as the birth country/region. Do not assign Ireland, a unique Galway entity or coordinates.",
+    "grade": "Conservative S3 pending visible authorship/editorial-provenance review. An uncredited newspaper life notice should not receive S2 merely because it is professionally published. S2 could be considered only with documented original authored/edited biographical provenance; otherwise retain S3 and caveats."
+  },
+  "required_audit_fields": [
+    "source_birthdate_or_null",
+    "source_birthdate_precision",
+    "native_date_compatibility_result_without_repair",
+    "full_name_binding",
+    "distinctive_anchor_list",
+    "identity_uniqueness_check",
+    "source_kind",
+    "source_author_or_null",
+    "source_grade_basis",
+    "explicit_birth_quote_and_locator",
+    "raw_birthplace",
+    "reviewed_hemisphere",
+    "geographic_basis_or_unresolved_reason",
+    "parent_decision_timing"
+  ],
+  "counting_and_claims": [
+    "164 is the remaining blank-field pool; 12 is the actual fixed original-source followup scope. Do not claim 164 original biographies read.",
+    "First birthplace additions, newly resolved hemisphere records and additions whose geography remains unknown must be counted separately.",
+    "New S2/S3 birthplace support does not alter the existing DOB-based S2 versus S2+S3 analysis groups.",
+    "No revised statistical hypothesis, selection-weight inference, outcome analysis, cross-cohort statistical deduplication or final freeze follows from this collection step."
+  ],
+  "blocking_conditions_for_individual_acceptance": [
+    "Unverified original birth clause",
+    "Unresolved person ambiguity",
+    "Explicit incompatible source date or identity anchor",
+    "Geographic assignment based solely on an unqualified familiar place or non-birth association",
+    "Claiming exact DOB verification from age/year/no-DOB evidence"
+  ],
+  "no_new_search": true,
+  "no_master_mutation": true,
+  "no_Git_operations": true
+}

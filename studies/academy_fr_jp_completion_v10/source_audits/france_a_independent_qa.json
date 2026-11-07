@@ -1,0 +1,126 @@
+{
+  "audit_kind": "independent_france_a_source_QA",
+  "reviewer": "v10_france_c",
+  "reviewed_worker": "v10_france_a",
+  "completed_utc": "2026-10-30T11:27:51.753306+00:00",
+  "independent_qa_passed": true,
+  "decisions_sha256": "caef363cb86a21617df2ac9520dcdf102c04b90110f7b54fb430bd66760c0289",
+  "worker_manifest_sha256": "bfe204e15ce4078a160d546c4269e9fd7e9b2d0f6995c8c88f05bb6b01545827",
+  "public_manifest_pins_passed": 8,
+  "actual_original_hashes_checked": 9,
+  "actual_PDF_original_hashes_checked": 8,
+  "actual_HTML_original_hashes_checked": 1,
+  "actual_pdf_pages_visually_reviewed": 11,
+  "actual_HTML_bodies_read": [
+    "hatt_cths"
+  ],
+  "strict_fixed_decisions_passed": 4,
+  "held_fixed_decisions_passed": 3,
+  "claim_checks": [
+    {
+      "candidate_group_id": "CTHS_104104",
+      "name": "Albert Calmette",
+      "decision": "strict1927",
+      "source_id": "calmette",
+      "actual_pdf_pages": [
+        4
+      ],
+      "finding": "Actual printed958 explicitly distinguishes1907Correspondant from1927MembreTITULAIRE in rural economy; sameparagraph AlbertCalmette born12July1863/PasteurLillecareer. No Painlevé role transfer.",
+      "source_sha256": "4124143954e87c991d4c89c2f5e7415c78695f3a19cf0acb82bd97490b7dbcfb",
+      "body_and_identity_checks_passed": true
+    },
+    {
+      "candidate_group_id": "CTHS_111931",
+      "name": "Jules Carpentier",
+      "decision": "strict1907",
+      "source_id": "carpentier",
+      "actual_pdf_pages": [
+        1,
+        2,
+        7
+      ],
+      "finding": "Actual subject Member heading onp1 is separatefromauthor d’Ocagne; p2 birth30August1851/Polytech1871 scientific-instrument career, p7 explicit Academy entry1907. No Bureau-des-Longitudes1897 substitution.",
+      "source_sha256": "4f1ce9019ed432e9385bb8a938f9f1965cb5d03493cc0db556d2e400e31d155a",
+      "body_and_identity_checks_passed": true
+    },
+    {
+      "candidate_group_id": "CTHS_112065",
+      "name": "Paul/Darius Paul Dassault",
+      "decision": "strict1953-06-15; DOBquarantine separately required",
+      "source_id": "dassault",
+      "actual_pdf_pages": [
+        1,
+        4
+      ],
+      "finding": "SubjectheadingfreeMemberp1 andp4 direct15June1953free-member election passed. Actualp1DOB18January1882 materially conflictswithactualCTHS13January1882; source-membershipapproval cannot preservebirth13asaccepted. SeparateindependentDOBQA bindsbothbodies; neitherdatechosen.",
+      "source_sha256": "86deb7aa21ba03b79815ce3925a2214763459a0db9728a6028dc1b22affc26db",
+      "body_and_identity_checks_passed": true
+    },
+    {
+      "candidate_group_id": "CTHS_112479",
+      "name": "Philippe Hatt",
+      "decision": "strict1897",
+      "source_id": "hatt_cths",
+      "actual_pdf_pages": [],
+      "actual_HTML_read": true,
+      "finding": "ActualHTML explicitlytypesAcadémie des sciences membership1897–1915 and careerline membership1897; exactsamebody institutionalwritercredit Académiedessciences independentlyread. Birth17July1840/Strasbourg, hydrographer/Polytech1859/missions identifyacceptedperson. RootexactAcademy-authored-independent-host branch; no genericCTHSacceptance or soleauthor overclaim.",
+      "source_sha256": "2c77512968569735bde836559d3181b70c05256bbd3745e7080cacc93febe96f",
+      "body_and_identity_checks_passed": true
+    },
+    {
+      "candidate_group_id": "CTHS_107315",
+      "name": "Georges Perrier",
+      "decision": "ordinaryrole/asof1946hold",
+      "source_id": "perrier",
+      "actual_pdf_pages": [
+        1,
+        2
+      ],
+      "finding": "ActualsubjectMemberGeography/Navigationheadingat20February1946funeral; bodyonlysince20years and1940presidency. No subtractionto1926election; no authorDurand-Vielroletransfer.",
+      "source_sha256": "11d6e39659b677525b6d373d3713899a2a7e06d1f29305d7ef4058b631a63f86",
+      "body_and_identity_checks_passed": true
+    },
+    {
+      "candidate_group_id": "CTHS_111418",
+      "name": "Alexandre Guilliermond",
+      "decision": "1935eventrole-untypedhold",
+      "source_id": "guilliermond",
+      "actual_pdf_pages": [
+        1,
+        22
+      ],
+      "finding": "Actualp22 February1935Lamarckchairsuccession retained; onlyauthorRogerHeimexplicitMemberp1. No subjectordinaryrole fromsection/chairsuccession, consistentChardonnet/Graviergate.",
+      "source_sha256": "27f16694d05d369faa80d1ad877b5bbb4910d1b5e8f6ffae0fffe487d6f3db05",
+      "body_and_identity_checks_passed": true
+    },
+    {
+      "candidate_group_id": "CTHS_111975",
+      "name": "Gaston Charlot",
+      "decision": "1970ballotoutcome-unproclaimedhold",
+      "source_id": "charlot",
+      "actual_pdf_pages": [
+        6
+      ],
+      "finding": "Actualp6/printed13715June1970Chemistrymembervacancy, candidatevotes32then34vs31then30, endsatballottable. No explicitproclamationintheseprovidedpages; no arithmeticwinner/electionday inference.",
+      "source_sha256": "0dd2f084b086659c3438c46dd64821544682c2275da817af2ef40ec0b51f29c9",
+      "body_and_identity_checks_passed": true
+    }
+  ],
+  "all28_fixed_people_individually_targeted": true,
+  "literal_query_count": 44,
+  "all_fixed_people_have_mapped_literal_query": true,
+  "known_inadvertent_prior404refetch_count": 3,
+  "prior404refetches_transparently_disclosed": true,
+  "Dassault_DOB_conflict_requires_root_quarantine": true,
+  "independent_Dassault_DOB_QA_file": "independent_qa_dassault_dob.json",
+  "independent_Dassault_DOB_QA_sha256": "4aed568f1e022050165da639d6646ae8d23c43d2c868475e952855637efd4b22",
+  "membership_approval_does_not_clear_DOB_conflict": true,
+  "collector_DOB_fields_unchanged": true,
+  "no_generic_CTHS_rule_relaxation": true,
+  "author_subject_roles_separated": true,
+  "relative_arithmetic_used": false,
+  "source_majority_used": false,
+  "bazi_computed": 0,
+  "analysis_cohort_frozen": false,
+  "source_body_redistributed": false
+}

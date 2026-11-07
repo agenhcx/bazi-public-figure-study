@@ -1,0 +1,210 @@
+{
+  "lane": "v7 fresh official Nobelchemistry+medicinecategoryAPIbulkmatchforNASbirthplaceonly",
+  "baseline_sha256": "8e880fcf4a659a1c8753a5a0ad4c06552ddd9d0d545334b0e81a2459907d7356",
+  "baseline_records": 11094,
+  "NAS_records": 2242,
+  "NAS_unknowns_compared": 543,
+  "Nobel_science_rows": 655,
+  "Nobel_native_DOB_all_blank_and_unchanged": true,
+  "source_API_objects": 435,
+  "API_category_counts": {
+    "che": 200,
+    "med": 235
+  },
+  "source_category_SHA256": {
+    "che": "8fd0d5b3e4c6528b13c5993c13c14453e7d739a9fe7a57c7d2d6486d1c7040c8",
+    "med": "dc4bd5e0d8f301273e8d5e4cb9955eff3c1ed316cb1f29fd468dec5b76b562d3"
+  },
+  "source_urls": {
+    "che": "https://api.nobelprize.org/2.1/laureates?nobelPrizeCategory=che&limit=1000&offset=0&sort=asc&format=json",
+    "med": "https://api.nobelprize.org/2.1/laureates?nobelPrizeCategory=med&limit=1000&offset=0&sort=asc&format=json"
+  },
+  "fresh_original_API_HTTP_requests": 2,
+  "search_queries": 0,
+  "retries": 0,
+  "HTTP_errors": 0,
+  "alternate_endpoints_used": false,
+  "safe_header_allowlist": [
+    "content-type",
+    "content-length",
+    "last-modified",
+    "etag"
+  ],
+  "no_cookies_auth_IP_headers_captured": true,
+  "source_acquisition_start_utc": "2026-11-04T01:05:37.581506+00:00",
+  "source_acquisition_end_utc": "2026-11-04T01:06:37.415968+00:00",
+  "source_acquisition_elapsed_seconds": 59.834462,
+  "frozen_utc": "2026-11-04T01:14:01.386918+00:00",
+  "elapsed_seconds_at_offline_freeze": 503.805412,
+  "retained_S1_fact_observations": 17,
+  "unique_NAS_targets_this_lane": 17,
+  "held": 0,
+  "no_compatible_name_routes": 526,
+  "native_exact_DOB_conflicts": 0,
+  "named_alias_exception": {
+    "native": "Bruce Merrifield",
+    "API_id": "261",
+    "knownName.en": "Bruce Merrifield",
+    "fullName.en": "Robert Bruce Merrifield",
+    "native_DOB": "1921-07-15",
+    "root_authorized": true,
+    "ordered_full_tokens_complete_family_and_bidirectional_uniqueness": true
+  },
+  "cross_lane_overlap": [
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/alfred-d-hershey-8eamd9/",
+      "name": "Alfred D. Hershey",
+      "this_API_id": "392",
+      "other_lane": "vol80",
+      "other_source_grade": "S2",
+      "other_raw_birthplace": "Owosso, Michigan"
+    }
+  ],
+  "overlap_merge_role": "RetainthisS1observationandVol80S2supportforHershey; rootupdatesoneNASstatisticalrow. No crosscohortstatisticaldeduplication.",
+  "source_grade": "S1",
+  "source_prize_context_complete_fields": [
+    "awardYear",
+    "dateAwarded",
+    "sortOrder",
+    "portion",
+    "prizeStatus",
+    "category.en",
+    "categoryFullName.en",
+    "motivation.en",
+    "affiliations_text_only",
+    "observed_official_links"
+  ],
+  "source_prize_context_role": "Fullawardcontextwithtext-onlyaffiliationsandobservedlinksretainedfromsameoriginalAPIobjects; affiliationsnotbirthplaceevidence.",
+  "prize_context_metadata_completed_offline": true,
+  "sourcegroup_purpose": "birthplaceevidencegrade;independentDOBsourcegroupsandtiersnotmodified",
+  "source_coordinates_QIDs_used": false,
+  "geography_country_point_assignments": 0,
+  "native_DOB_calendar_identity_eligibility_QIDs_modified": false,
+  "Nobel_DOB_adoption": false,
+  "baseline_hash_unchanged_at_end": true,
+  "public_original_API_bodies": "original_chemistry_response.bin andoriginal_medicine_response.binretaincompletepublicofficialJSONbytesforreproducibility;rawduplicatestransientexcluded;noHTTPmetadata secrets",
+  "independent_source_QA_status": "rootv4_qa reviewinglocalcaptures",
+  "no_more_source_requests": true,
+  "facts": [
+    {
+      "record_id": "https://www.nasonline.org/directory-entry/alfred-d-hershey-8eamd9/",
+      "name": "Alfred D. Hershey",
+      "native_dob": "1908-12-04",
+      "raw_birthplace": "Owosso, MI, USA",
+      "source_sha256": "dc4bd5e0d8f301273e8d5e4cb9955eff3c1ed316cb1f29fd468dec5b76b562d3"
+    },
+    {
+      "record_id": "https://www.nasonline.org/directory-entry/andre-cournand-qgizyn/",
+      "name": "André Cournand",
+      "native_dob": "1895-09-24",
+      "raw_birthplace": "Paris, France",
+      "source_sha256": "dc4bd5e0d8f301273e8d5e4cb9955eff3c1ed316cb1f29fd468dec5b76b562d3"
+    },
+    {
+      "record_id": "https://www.nasonline.org/directory-entry/barbara-mcclintock-x3z8mp/",
+      "name": "Barbara McClintock",
+      "native_dob": "1902-06-16",
+      "raw_birthplace": "Hartford, CT, USA",
+      "source_sha256": "dc4bd5e0d8f301273e8d5e4cb9955eff3c1ed316cb1f29fd468dec5b76b562d3"
+    },
+    {
+      "record_id": "https://www.nasonline.org/directory-entry/brian-k-kobilka-jvdmgd/",
+      "name": "Brian K. Kobilka",
+      "native_dob": "1955-05-30",
+      "raw_birthplace": "Little Falls, MN, USA",
+      "source_sha256": "8fd0d5b3e4c6528b13c5993c13c14453e7d739a9fe7a57c7d2d6486d1c7040c8"
+    },
+    {
+      "record_id": "https://www.nasonline.org/directory-entry/bruce-merrifield-v667zj/",
+      "name": "Bruce Merrifield",
+      "native_dob": "1921-07-15",
+      "raw_birthplace": "Fort Worth, TX, USA",
+      "source_sha256": "8fd0d5b3e4c6528b13c5993c13c14453e7d739a9fe7a57c7d2d6486d1c7040c8"
+    },
+    {
+      "record_id": "https://www.nasonline.org/directory-entry/d-carleton-gajdusek-91uiu3/",
+      "name": "D. Carleton Gajdusek",
+      "native_dob": "1923-09-09",
+      "raw_birthplace": "Yonkers, NY, USA",
+      "source_sha256": "dc4bd5e0d8f301273e8d5e4cb9955eff3c1ed316cb1f29fd468dec5b76b562d3"
+    },
+    {
+      "record_id": "https://www.nasonline.org/directory-entry/e-a-doisy-tk1kut/",
+      "name": "E. A. Doisy",
+      "native_dob": "1893-11-13",
+      "raw_birthplace": "Hume, IL, USA",
+      "source_sha256": "dc4bd5e0d8f301273e8d5e4cb9955eff3c1ed316cb1f29fd468dec5b76b562d3"
+    },
+    {
+      "record_id": "https://www.nasonline.org/directory-entry/frederick-c-robbins-fsgsd7/",
+      "name": "Frederick C. Robbins",
+      "native_dob": "1916-08-25",
+      "raw_birthplace": "Auburn, AL, USA",
+      "source_sha256": "dc4bd5e0d8f301273e8d5e4cb9955eff3c1ed316cb1f29fd468dec5b76b562d3"
+    },
+    {
+      "record_id": "https://www.nasonline.org/directory-entry/g-w-beadle-zkceia/",
+      "name": "G. W. Beadle",
+      "native_dob": "1903-10-22",
+      "raw_birthplace": "Wahoo, NE, USA",
+      "source_sha256": "dc4bd5e0d8f301273e8d5e4cb9955eff3c1ed316cb1f29fd468dec5b76b562d3"
+    },
+    {
+      "record_id": "https://www.nasonline.org/directory-entry/george-d-snell-lfxzly/",
+      "name": "George D. Snell",
+      "native_dob": "1903-12-19",
+      "raw_birthplace": "Bradford, MA, USA",
+      "source_sha256": "dc4bd5e0d8f301273e8d5e4cb9955eff3c1ed316cb1f29fd468dec5b76b562d3"
+    },
+    {
+      "record_id": "https://www.nasonline.org/directory-entry/george-e-palade-zlyny9/",
+      "name": "George E. Palade",
+      "native_dob": "1912-11-19",
+      "raw_birthplace": "Iasi, Romania",
+      "source_sha256": "dc4bd5e0d8f301273e8d5e4cb9955eff3c1ed316cb1f29fd468dec5b76b562d3"
+    },
+    {
+      "record_id": "https://www.nasonline.org/directory-entry/gregg-l-semenza-vb33db/",
+      "name": "Gregg L. Semenza",
+      "native_dob": "1956-07-12",
+      "raw_birthplace": "New York, NY, USA",
+      "source_sha256": "dc4bd5e0d8f301273e8d5e4cb9955eff3c1ed316cb1f29fd468dec5b76b562d3"
+    },
+    {
+      "record_id": "https://www.nasonline.org/directory-entry/h-gobind-khorana-ebjqdy/",
+      "name": "H. Gobind Khorana",
+      "native_dob": "1922-01-09",
+      "raw_birthplace": "Raipur, India",
+      "source_sha256": "dc4bd5e0d8f301273e8d5e4cb9955eff3c1ed316cb1f29fd468dec5b76b562d3"
+    },
+    {
+      "record_id": "https://www.nasonline.org/directory-entry/herbert-c-brown-glljk7/",
+      "name": "Herbert C. Brown",
+      "native_dob": "1912-05-22",
+      "raw_birthplace": "London, United Kingdom",
+      "source_sha256": "8fd0d5b3e4c6528b13c5993c13c14453e7d739a9fe7a57c7d2d6486d1c7040c8"
+    },
+    {
+      "record_id": "https://www.nasonline.org/directory-entry/hermann-muller-nwucsl/",
+      "name": "Hermann Muller",
+      "native_dob": "1890-12-21",
+      "raw_birthplace": "New York, NY, USA",
+      "source_sha256": "dc4bd5e0d8f301273e8d5e4cb9955eff3c1ed316cb1f29fd468dec5b76b562d3"
+    },
+    {
+      "record_id": "https://www.nasonline.org/directory-entry/jack-w-szostak-jachey/",
+      "name": "Jack W. Szostak",
+      "native_dob": "1952-11-09",
+      "raw_birthplace": "London, United Kingdom",
+      "source_sha256": "dc4bd5e0d8f301273e8d5e4cb9955eff3c1ed316cb1f29fd468dec5b76b562d3"
+    },
+    {
+      "record_id": "https://www.nasonline.org/directory-entry/john-h-northrop-ya6vfb/",
+      "name": "John H. Northrop",
+      "native_dob": "1891-07-05",
+      "raw_birthplace": "Yonkers, NY, USA",
+      "source_sha256": "8fd0d5b3e4c6528b13c5993c13c14453e7d739a9fe7a57c7d2d6486d1c7040c8"
+    }
+  ]
+}

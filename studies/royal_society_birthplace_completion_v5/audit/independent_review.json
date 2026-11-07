@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "baseline_rows": 4983,
+  "all_preexisting_non_geography_fields_equal": true,
+  "native_DOB_calendar_identity_eligibility_source_groups_and_historical_QIDs_unchanged": true,
+  "geography_lookup_identity_layer_unchanged": true,
+  "hemisphere_counts": {
+    "north": 4131,
+    "unknown": 671,
+    "south": 181
+  },
+  "window_1835_1985_counts": {
+    "north": 2231,
+    "unknown": 237,
+    "south": 176
+  },
+  "new_unknown_to_known": 19,
+  "all_new_classified_people_in_window": true,
+  "known_to_unknown": [],
+  "geo48_classified": 6,
+  "new_fact_candidates": 20,
+  "new_fact_unique_people": 20,
+  "new_fact_people_classified": 13,
+  "new_fact_source_grades": {
+    "S2": 20
+  },
+  "geography_resolution_grade_separate": "S3",
+  "current_lookup_state": {
+    "active": 94,
+    "quarantined": 2,
+    "identity_pending": 3
+  },
+  "all18_early_fact_timing_flags_match_operation_coverage": true,
+  "early_accepted_timing_partition": {
+    "pre_complete": 8,
+    "inflight": 1,
+    "post_start": 9
+  },
+  "all9_old_quarantined_candidates_inactive": true,
+  "Home_unknown_and_original_alternatives_retained": true,
+  "other_country_rows_exactly_unchanged": true,
+  "unknown_breakdown": {
+    "explicit_place_but_geography_unresolved": 49,
+    "no_active_explicit_birthplace_evidence": 622
+  },
+  "inputs_sha256": {
+    "studies/royal_society_birthplace_completion_v5/outputs/uk_birthplace_rows.jsonl.gz": "0b3e0c92d04ea680511f78eea39f4c36e08b3dd81850a42b5cd6dde46f805e03",
+    "studies/royal_society_birthplace_completion_v5/outputs/summary.json": "e49b9f6ac2f2f2b1c80a4bb40063fff0803f1284c89a5e4225841c92ad5e5762",
+    "studies/royal_society_birthplace_completion_v5/scripts/assemble.py": "5009f25a7e42f4a4d71b0a26b40998e7b08ddc0aa4171781e784159eb03897de"
+  },
+  "README_and_CONTINUATION_counts_coverage_and_stop_event_consistent": true,
+  "documents_sha256": {
+    "README.md": "e28575d1e08867dd501d645f7e83f617c8aa089ac23cf41f9eeec94a8dfd8912",
+    "CONTINUATION.md": "27ea785cfc8707a5f562caa6177deaff1b01a9b1badeb44689ab38c3379845e5"
+  },
+  "Crossref_operation_scope_review": {
+    "actual_early_requests": 32,
+    "pre_completed": 16,
+    "inflight_at_stop": 2,
+    "post_stop_started": 14,
+    "accepted_early_facts_timing_partition": [
+      8,
+      1,
+      9
+    ],
+    "further_Crossref_requests_after_original_process_end": 0,
+    "stop_failure_not_hidden": true
+  }
+}

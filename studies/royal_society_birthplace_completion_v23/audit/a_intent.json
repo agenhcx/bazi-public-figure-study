@@ -1,0 +1,114 @@
+{
+  "written_utc": "2026-11-05T23:56:15.720491+00:00",
+  "scope": [
+    "RS_PAST_NA4139",
+    "RS_PAST_NA4064",
+    "RS_PAST_NA4074",
+    "RS_PAST_NA4591"
+  ],
+  "query_intents": [
+    {
+      "query": "\"Stanley Desmond Smith\" \"born\"",
+      "purpose": "Find new original subject biography with explicit birth relation/full native identity and dates.",
+      "before_request": true
+    },
+    {
+      "query": "\"Michael George Hall\" \"born\"",
+      "purpose": "Find new original subject biography with explicit birth relation/full native identity and dates.",
+      "before_request": true
+    },
+    {
+      "query": "\"Rex Malcolm Chaplin Dawson\" \"born\"",
+      "purpose": "Find new original subject biography with explicit birth relation/full native identity and dates.",
+      "before_request": true
+    },
+    {
+      "query": "\"James Woodham Menter\" \"born\"",
+      "purpose": "Find new original subject biography with explicit birth relation/full native identity and dates.",
+      "before_request": true
+    },
+    {
+      "written_utc": "2026-11-05T23:56:35.959221+00:00",
+      "query": "\"Stanley Desmond Smith\" obituary",
+      "purpose": "Find targeted original society/university memoir body after initialdiscovery weak/wrongperson results.",
+      "before_request": true
+    },
+    {
+      "written_utc": "2026-11-05T23:56:35.959221+00:00",
+      "query": "\"Michael George Hall\" \"Royal Society\"",
+      "purpose": "Find targeted original society/university memoir body after initialdiscovery weak/wrongperson results.",
+      "before_request": true
+    },
+    {
+      "written_utc": "2026-11-05T23:56:35.959221+00:00",
+      "query": "\"Rex Dawson\" obituary \"Biochemical\"",
+      "purpose": "Find targeted original society/university memoir body after initialdiscovery weak/wrongperson results.",
+      "before_request": true
+    },
+    {
+      "written_utc": "2026-11-05T23:56:35.959221+00:00",
+      "query": "\"Rex Malcolm Chaplin Dawson\" memoir",
+      "purpose": "Find targeted original society/university memoir body after initialdiscovery weak/wrongperson results.",
+      "before_request": true
+    }
+  ],
+  "navigation_intents": [
+    {
+      "written_utc": "2026-11-05T23:56:35.959221+00:00",
+      "url": "https://www.independent.co.uk/news/obituaries/sir-james-menter-6232398.html",
+      "purpose": "Verify original exact birthdate/name/profession; discovery2August differsnative22August so potentialDOBhold, no birthplaceadoption unless resolvedseparately.",
+      "before_request": true
+    },
+    {
+      "written_utc": "2026-11-05T23:57:06.092884+00:00",
+      "record_id": "RS_PAST_NA4139",
+      "url": "https://doi.org/10.1098/rsbm.2025.0018",
+      "purpose": "First originalmemoir resolver inspection from observedDOI; seek actualbornbody.",
+      "before_request": true
+    },
+    {
+      "written_utc": "2026-11-05T23:57:06.092884+00:00",
+      "record_id": "RS_PAST_NA4064",
+      "url": "https://royalsociety.org/people/michael-hall-11565/",
+      "purpose": "First originalsocietyprofile inspection; inspect fullidentity/date/birth relation and observedoriginalmemoir links.",
+      "before_request": true
+    },
+    {
+      "written_utc": "2026-11-05T23:57:06.092884+00:00",
+      "record_id": "RS_PAST_NA4074",
+      "url": "https://www.researchgate.net/publication/368943640_Rex_Malcolm_Chaplin_Dawson_3_June_1924-29_March_2021",
+      "purpose": "First observedoriginalmemoir carrierbody; title/exactDOB known but birthplace mustbe acquiredoriginalbody.",
+      "before_request": true
+    },
+    {
+      "written_utc": "2026-11-05T23:57:53.566236+00:00",
+      "record_id": "RS_PAST_NA4074",
+      "url": "https://doi.org/10.1098/rsbm.2022.0040",
+      "purpose": "First original Dawsonmemoir publisherresolver from observedDOI; RGcarrieronlyabstract/no fulltext. DistinctworkfromfailedSmithDOI.",
+      "before_request": true
+    },
+    {
+      "written_utc": "2026-11-05T23:57:53.566236+00:00",
+      "record_id": "RS_PAST_NA4074",
+      "url": "https://www.biochemistry.org/membership-and-communities/in-memoriam/",
+      "purpose": "First originalscientificsocietyDawson obituary excerpt; distinguishgrowinguplocation frombirth andinspectobservedfullobitlink.",
+      "before_request": true
+    },
+    {
+      "written_utc": "2026-11-05T23:57:53.566236+00:00",
+      "record_id": "RS_PAST_NA4074",
+      "url": "https://portlandpress.com/biochemist/issue/43/5",
+      "purpose": "First originalpublisherissue containingobservedDawsonobituary; locate actualarticlelink, notsnippetproof.",
+      "before_request": true
+    },
+    {
+      "written_utc": "2026-11-05T23:58:13.251460+00:00",
+      "record_id": "RS_PAST_NA4074",
+      "source_ref": "turn9219465view1",
+      "link_id": 39,
+      "purpose": "First distinct original Biochemist obituaryarticle DOI observed in originalsocietybody; not RSmemoir nor failed issuecontents URL. Seekfullbornbody; stop any errorwithnovariants.",
+      "before_request": true
+    }
+  ],
+  "limits": "8queries10nav; no children/rawGET/retry/variants/bypass; originalbodyproofonly; no fullsourcecache."
+}

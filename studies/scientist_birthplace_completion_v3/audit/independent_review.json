@@ -1,0 +1,339 @@
+{
+  "status": "PASS",
+  "direct_baseline_sha256": "2b7897d0c4e2655ecb6f10311e1bdf7b06b8eeae3f181e9bebe92cbc7f066ee0",
+  "global_sha256": "6df02f0b3a535c8b5447ee704ddc96f473509ed9c2df84b25d6b40064a5dff44",
+  "records": 11094,
+  "cohorts": {
+    "CAS": {
+      "records": 1230,
+      "hemispheres": {
+        "unknown": 224,
+        "north": 1003,
+        "south": 3
+      }
+    },
+    "DE_Leopoldina": {
+      "records": 778,
+      "hemispheres": {
+        "north": 655,
+        "unknown": 117,
+        "south": 6
+      }
+    },
+    "Fields_main": {
+      "records": 63,
+      "hemispheres": {
+        "north": 59,
+        "south": 4
+      }
+    },
+    "France": {
+      "records": 775,
+      "hemispheres": {
+        "north": 702,
+        "unknown": 70,
+        "south": 3
+      }
+    },
+    "Japan": {
+      "records": 368,
+      "hemispheres": {
+        "north": 234,
+        "unknown": 134
+      }
+    },
+    "NAS": {
+      "records": 2242,
+      "hemispheres": {
+        "unknown": 567,
+        "north": 1644,
+        "south": 31
+      }
+    },
+    "Nobel_science": {
+      "records": 655,
+      "hemispheres": {
+        "north": 634,
+        "south": 21
+      }
+    },
+    "UK_Royal_Society": {
+      "records": 4983,
+      "hemispheres": {
+        "north": 4155,
+        "unknown": 645,
+        "south": 183
+      }
+    }
+  },
+  "key": "(cohort, record_id)",
+  "new_facts": 9,
+  "changed_records": 9,
+  "changes": [
+    {
+      "cohort": "Fields_main",
+      "record_id": "fields-de5a4b4e279eaf4f",
+      "name": "Stanislav Smirnov",
+      "preexisting_fields_changed": [
+        "birthplace_evidence_kind",
+        "birthplace_locator",
+        "birthplace_source_grade",
+        "birthplace_source_url",
+        "hemisphere",
+        "northern_birthplace_candidate",
+        "raw_birthplace",
+        "reason"
+      ],
+      "fields_added": [
+        "birthplace_evidence_excerpt",
+        "birthplace_source_sha256",
+        "birthplace_source_urls",
+        "v3_birthplace_fact_evidence",
+        "v3_geographic_review",
+        "v3_geography_before_overlay"
+      ],
+      "raw_birthplace": "St. Petersburg, Russia",
+      "hemisphere": "north",
+      "native_dob": "1970-09-03",
+      "birthplace_source_grade": "S1"
+    },
+    {
+      "cohort": "Fields_main",
+      "record_id": "fields-ef72cb77368d48fe",
+      "name": "Hugo Duminil-Copin",
+      "preexisting_fields_changed": [
+        "birthplace_evidence_kind",
+        "birthplace_locator",
+        "birthplace_source_grade",
+        "birthplace_source_url",
+        "hemisphere",
+        "northern_birthplace_candidate",
+        "raw_birthplace",
+        "reason"
+      ],
+      "fields_added": [
+        "birthplace_evidence_excerpt",
+        "birthplace_source_sha256",
+        "birthplace_source_urls",
+        "v3_birthplace_fact_evidence",
+        "v3_geographic_review",
+        "v3_geography_before_overlay"
+      ],
+      "raw_birthplace": "Châtenay-Malabry, France",
+      "hemisphere": "north",
+      "native_dob": "1985-08-26",
+      "birthplace_source_grade": "S1"
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/donald-w-kerst-8t27xz/",
+      "name": "Donald W. Kerst",
+      "preexisting_fields_changed": [
+        "birthplace_evidence_excerpt",
+        "birthplace_evidence_kind",
+        "birthplace_source_grade",
+        "birthplace_source_url",
+        "hemisphere",
+        "locality_resolution",
+        "northern_birthplace_candidate",
+        "raw_birthplace",
+        "reason"
+      ],
+      "fields_added": [
+        "birthplace_locator",
+        "birthplace_source_sha256",
+        "birthplace_source_urls",
+        "v3_birthplace_fact_evidence",
+        "v3_geographic_review",
+        "v3_geography_before_overlay"
+      ],
+      "raw_birthplace": "Galena, Illinois",
+      "hemisphere": "north",
+      "native_dob": "1911-11-01",
+      "birthplace_source_grade": "S2"
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/j-e-varner-7bfrec/",
+      "name": "J. E. Varner",
+      "preexisting_fields_changed": [
+        "birthplace_evidence_excerpt",
+        "birthplace_evidence_kind",
+        "birthplace_source_grade",
+        "birthplace_source_url",
+        "hemisphere",
+        "locality_resolution",
+        "northern_birthplace_candidate",
+        "raw_birthplace",
+        "reason"
+      ],
+      "fields_added": [
+        "birthplace_locator",
+        "birthplace_source_sha256",
+        "birthplace_source_urls",
+        "v3_birthplace_fact_evidence",
+        "v3_geographic_review",
+        "v3_geography_before_overlay"
+      ],
+      "raw_birthplace": "Nashport, Ohio",
+      "hemisphere": "north",
+      "native_dob": "1921-10-07",
+      "birthplace_source_grade": "S2"
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/l-a-dubridge-krundi/",
+      "name": "L. A. DuBridge",
+      "preexisting_fields_changed": [
+        "birthplace_evidence_excerpt",
+        "birthplace_evidence_kind",
+        "birthplace_source_grade",
+        "birthplace_source_url",
+        "hemisphere",
+        "locality_resolution",
+        "northern_birthplace_candidate",
+        "raw_birthplace",
+        "reason"
+      ],
+      "fields_added": [
+        "birthplace_locator",
+        "birthplace_source_sha256",
+        "birthplace_source_urls",
+        "v3_birthplace_fact_evidence",
+        "v3_geographic_review",
+        "v3_geography_before_overlay"
+      ],
+      "raw_birthplace": "Terre Haute, Indiana",
+      "hemisphere": "north",
+      "native_dob": "1901-09-21",
+      "birthplace_source_grade": "S2"
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/m-m-rhoades-vnjycr/",
+      "name": "M. M. Rhoades",
+      "preexisting_fields_changed": [
+        "birthplace_evidence_excerpt",
+        "birthplace_evidence_kind",
+        "birthplace_source_grade",
+        "birthplace_source_url",
+        "hemisphere",
+        "locality_resolution",
+        "northern_birthplace_candidate",
+        "raw_birthplace",
+        "reason"
+      ],
+      "fields_added": [
+        "birthplace_locator",
+        "birthplace_source_sha256",
+        "birthplace_source_urls",
+        "v3_birthplace_fact_evidence",
+        "v3_geographic_review",
+        "v3_geography_before_overlay"
+      ],
+      "raw_birthplace": "Graham, Missouri",
+      "hemisphere": "north",
+      "native_dob": "1903-07-24",
+      "birthplace_source_grade": "S2"
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/paul-j-kramer-l5rtvs/",
+      "name": "Paul J. Kramer",
+      "preexisting_fields_changed": [
+        "birthplace_evidence_excerpt",
+        "birthplace_evidence_kind",
+        "birthplace_source_grade",
+        "birthplace_source_url",
+        "hemisphere",
+        "locality_resolution",
+        "northern_birthplace_candidate",
+        "raw_birthplace",
+        "reason"
+      ],
+      "fields_added": [
+        "birthplace_locator",
+        "birthplace_source_sha256",
+        "birthplace_source_urls",
+        "v3_birthplace_fact_evidence",
+        "v3_geographic_review",
+        "v3_geography_before_overlay"
+      ],
+      "raw_birthplace": "Brookville, Indiana",
+      "hemisphere": "north",
+      "native_dob": "1904-05-08",
+      "birthplace_source_grade": "S2"
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/r-g-herb-ovp2tw/",
+      "name": "R. G. Herb",
+      "preexisting_fields_changed": [
+        "birthplace_evidence_excerpt",
+        "birthplace_evidence_kind",
+        "birthplace_source_grade",
+        "birthplace_source_url",
+        "hemisphere",
+        "locality_resolution",
+        "northern_birthplace_candidate",
+        "raw_birthplace",
+        "reason"
+      ],
+      "fields_added": [
+        "birthplace_locator",
+        "birthplace_source_sha256",
+        "birthplace_source_urls",
+        "v3_birthplace_fact_evidence",
+        "v3_geographic_review",
+        "v3_geography_before_overlay"
+      ],
+      "raw_birthplace": "Navarino on a small farm in north-central Wisconsin",
+      "hemisphere": "north",
+      "native_dob": "1908-01-22",
+      "birthplace_source_grade": "S2"
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/w-w-morgan-5f09yz/",
+      "name": "W. W. Morgan",
+      "preexisting_fields_changed": [
+        "birthplace_evidence_excerpt",
+        "birthplace_evidence_kind",
+        "birthplace_source_grade",
+        "birthplace_source_url",
+        "hemisphere",
+        "locality_resolution",
+        "northern_birthplace_candidate",
+        "raw_birthplace",
+        "reason"
+      ],
+      "fields_added": [
+        "birthplace_locator",
+        "birthplace_source_sha256",
+        "birthplace_source_urls",
+        "v3_birthplace_fact_evidence",
+        "v3_geographic_review",
+        "v3_geography_before_overlay"
+      ],
+      "raw_birthplace": "Bethesda, Tennessee",
+      "hemisphere": "north",
+      "native_dob": "1906-01-03",
+      "birthplace_source_grade": "S2"
+    }
+  ],
+  "unchanged_direct_baseline_objects": 11085,
+  "all_preexisting_non_geographic_fields_preserved_type_sensitive": true,
+  "countries_and_coordinates_all_preserved": true,
+  "UK_opaque_equal_objects": 4983,
+  "selected_fact_payloads_match_checked_source_facts": true,
+  "S2_signed_memoirs_not_labelled_first_party": true,
+  "v2_award_overlay_objects_opaque_equal": 3,
+  "CAS_1230_accepted_Gregorian_blank": true,
+  "Nobel_655_native_DOB_blank_and_scope_flags_preserved": true,
+  "cross_cohort_deduplication": false,
+  "total_hemispheres": {
+    "unknown": 1757,
+    "north": 9086,
+    "south": 251
+  }
+}

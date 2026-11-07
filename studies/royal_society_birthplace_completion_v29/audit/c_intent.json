@@ -1,0 +1,62 @@
+{
+  "written_utc": "2026-11-06T11:34:30.541432+00:00",
+  "scope_file": "v29_scope_c.json",
+  "purpose": "Firstoriginalbirthplace discovery for exactlysix frozenremainingUKidentities in fixedv29scope. No nativeDOB/name/lifespan/calendar/cohorteligibility/country/QID/coordinatechanges.",
+  "planned_queries": [
+    "\"Bernard Augustus Keen\" born",
+    "\"James McFadyen McNeill\" born",
+    "\"Ernest Frederick Relf\" born",
+    "\"Herbert Brian Squire\" born",
+    "\"John Milton Brown\" \"1941\" born",
+    "\"Leonard Wolfson\" born"
+  ],
+  "general_adaptive_query_purpose_before_work": "Reserveonefollowupquerypersubject(max12total) for originalmemoir/authoredinstitutional/history/referencework or observedsubject-specificsourcebody. Exactadaptivequeries andnavigationintents persistedbeforecalls; inspectlocalwriteexit beforedependentnetwork. No failedroute retry/variant/accessbypass/rawGET.",
+  "budgets": {
+    "queries": 12,
+    "navigation_attempts": 14
+  },
+  "source_rules": "Actualfullnativecomponents/compatibleactuallystatedDOBprecision/distinctivecareer/directsubjectbornrelation. Onlystrictinheritedv20endpoint/v24omittedmiddle exceptions if allgatesactuallymet, no automaticcombination or newexceptions/initialexpansion. ActualDOB/name/placeconflictsheld, no repair/datelessbypass. S2actualauthorededitedgenre/verifiedexpert, otherwiseconservativeS3. City/addressaloneunknowngeo; directlybirthlinkedcountry/wholecountyregion onlyresolvehemisphere. <=25quoteEnglishwords/work; no fullsourcecaches. UnknownrawHTTPtime/status/hashnull. Allnineinheritedissuefilesuntouched.",
+  "adaptive_intents": [
+    {
+      "written_utc": "2026-11-06T11:35:07.694284+00:00",
+      "purpose": "Sixsubject-specific followups to actualauthoredoriginalbiography/memoir/referencebody andidentitycontext; earliergenericsearchall6selectedBEFOREanydiscovery. No actualfactsfromprojections.",
+      "queries": [
+        "\"Bernard Augustus Keen\" biography \"born\"",
+        "\"James McFadyen McNeill\" obituary biography",
+        "\"Ernest Frederick Relf\" biography born",
+        "\"Herbert Brian Squire\" memoir born",
+        "\"John Milton Brown\" obituary",
+        "\"Leonard Wolfson\" \"11 November 1927\" biography"
+      ],
+      "navigations": [
+        "turn9327549search7 actualODNBMcNeillpublicextract",
+        "turn9327549search19 actualODNBRelfpublicextract",
+        "turn9327549search15 actualUCLKeenarchivebiography",
+        "turn6770128search25 actualExeterOxford2009registerBrownobituary"
+      ]
+    },
+    {
+      "written_utc": "2026-11-06T11:36:13.267446+00:00",
+      "purpose": "Wolfson firstactualRCPeditedhistoricalobituary exactname/date/directbirth; SquiresecondaryWikipedia solelyobservedoriginalmemoirlinkcarrier, not birthproof.",
+      "navigations": [
+        "turn6770128search3 actualRCPWolfsonmemoir",
+        "turn9327549search48 SquireWikipediaoriginalmemoirlinkcarrieronly"
+      ]
+    },
+    {
+      "written_utc": "2026-11-06T11:36:54.705144+00:00",
+      "purpose": "FirstoriginalCSACKeenarchivalcataloguebody toobservebiographicalintro/actualeditorattribution; firstSquireJSTORoriginalmemoirvolumeindex as observedsourcecarrier for exactmemoirbodylink, no failure retry/variant.",
+      "navigations": [
+        "turn9327549search50 actualCSACKeenoriginalPDFcatalogue",
+        "turn9132432search10 actualJSTOR1962vol8index Squireoriginalmemoirlink"
+      ]
+    },
+    {
+      "written_utc": "2026-11-06T11:37:15.670392+00:00",
+      "purpose": "FirstactualSquireoriginalmemoirbody via observedJSTORpublicDownloadlink28; no earlierfailedSquireroute exists. Stoponchallenge/403/fetchfailure, no alternatevariant retry.",
+      "navigations": [
+        "turn7003303view1 observedlink28 Download for HerbertBrianSquire1909-1961(S.B.Gates,A.D.Young), stable769466"
+      ]
+    }
+  ]
+}

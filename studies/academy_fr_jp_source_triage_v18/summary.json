@@ -1,0 +1,94 @@
+{
+  "schema": "academy_fr_jp_source_triage_v18",
+  "date": "2026-11-01",
+  "parent_git_commit": "a392edba4c34be218670261083d3b1efaf1bd6a5",
+  "canonical_data_study": "studies/academy_fr_jp_completion_v15",
+  "new_data_version_created": false,
+  "new_approvals": {
+    "identity": 0,
+    "DOB": 0,
+    "France_ordinary_membership": 0,
+    "Japan_section": 0
+  },
+  "new_raw_birth_claims": 0,
+  "source_activity": {
+    "France": {
+      "queries": 2,
+      "direct_HTTP_GETs": 1,
+      "HTTP_status": 403,
+      "response_bytes": 5991,
+      "redirects": 0,
+      "retries": 0,
+      "substantive_original_bodies_read": 0,
+      "original_scan_pages_read": 0,
+      "actual_archived_components_reread": 2,
+      "new_unapplied_TOC_scan_leads": 6
+    },
+    "Japan": {
+      "queries": 2,
+      "direct_HTTP_GETs": 1,
+      "HTTP_status": 403,
+      "response_bytes": 919,
+      "redirects": 0,
+      "retries": 0,
+      "catalogue_bodies_read": 0,
+      "person_original_reviews": 0,
+      "digital_image_links_verified": 0
+    },
+    "total_queries": 4,
+    "total_direct_HTTP_GETs": 2,
+    "retries": 0,
+    "old_five_closed_legacy_links_retried": 0
+  },
+  "france": {
+    "candidate_groups": 877,
+    "identity_approved": 787,
+    "DOB_approved": 775,
+    "strict_ordinary_memberships": 643,
+    "all_three": 640,
+    "remaining_multidimensional_gaps": 237,
+    "membership_only_gaps": 135,
+    "DOB_unapproved": 102,
+    "raw_missing_day_groups": 73,
+    "exact_DOB_conflicts": 4,
+    "held_singleton_DOB_groups": 25,
+    "membership_history_rows": 485,
+    "case_history_rows": 32,
+    "formal_election_holds": 25,
+    "additional_actual_same_subject_election_conflict": 1
+  },
+  "japan": {
+    "identities": 482,
+    "birth_claims": 528,
+    "day_statuses": 368,
+    "Section_II": 438,
+    "Section_I_exclusions": 10,
+    "scope_unresolved": 34,
+    "nonexcluded_DOB_pending": 104,
+    "combined_queue": 112,
+    "DOB_holds": 46,
+    "calendar_outcomes": 4
+  },
+  "preservation": {
+    "all57_canonical_v15_files_unchanged": true,
+    "all24_v16_audit_files_unchanged": true,
+    "all9_v17_audit_files_unchanged": true,
+    "six_prior_v16_DOB_gate_leads_still_held": true,
+    "six_v18_TOC_scan_leads_are_different_unapplied_candidates": true,
+    "all_prior_raw_claims_accepted_values_alias_and_chronology_holds_unchanged": true
+  },
+  "prior_source_audit_manifest_sha256": {
+    "v16": "61212302cd9f2c0bb0e5f10de2a918d7e4670cfbad55221e8fd4d88ef780dc56",
+    "v17": "2b50e25f11d6696275296e5afa745c12af1ca73e9cc868a6b7db132e0e8af8b7"
+  },
+  "collection_phase": "low_yield_tail_parked_pending_distinct_accessible_original",
+  "national_collection_complete": false,
+  "all_public_sources_exhausted_claim": false,
+  "analysis_cohort_frozen": false,
+  "bazi_variables_computed": 0,
+  "outreach_count": 0,
+  "professors_paused": true,
+  "Fields_parked": true,
+  "background_collection_jobs_scheduled": 0,
+  "successor_data_API": "V15.final_japan()"
+}

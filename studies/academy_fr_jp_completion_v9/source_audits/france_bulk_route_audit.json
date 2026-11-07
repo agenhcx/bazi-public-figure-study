@@ -1,0 +1,170 @@
+{
+  "audit_kind": "bounded_read_only_france_bulk_source_route_discovery",
+  "date": "2026-10-29",
+  "completed_utc": "2026-10-30T00:59:22.288618+00:00",
+  "baseline_commit": "928c3a5444bba55e421b400c2579e8ac5a29d0f9",
+  "worker": "v9_france_source_scout",
+  "scope": "Find a new bulk official Academy/Institut original serving the fixed60 v9 France candidates; no person-level date adjudication.",
+  "search_query_count": 8,
+  "distinct_new_url_open_count": 3,
+  "source_body_captures_saved": 0,
+  "new_birth_claims": 0,
+  "new_membership_claims": 0,
+  "repository_writes_by_scout": 0,
+  "queries": [
+    {
+      "query_number": 1,
+      "engine": "system2",
+      "query_literal": "site.academie-sciences.fr \"liste\" \"membres\" \"élus\" \"1900\" pdf",
+      "search_call_group": 1,
+      "disposition": "Discovery only; no qualified new bulk original captured and no person/date claim created."
+    },
+    {
+      "query_number": 2,
+      "engine": "system2",
+      "query_literal": "site.academie-sciences.fr \"Liste des membres\" \"notice\"",
+      "search_call_group": 1,
+      "disposition": "Discovery only; no qualified new bulk original captured and no person/date claim created."
+    },
+    {
+      "query_number": 3,
+      "engine": "system1",
+      "query_literal": "site.academie-sciences.fr \"Répertoire biographique\" membres",
+      "search_call_group": 2,
+      "disposition": "Discovery only; no qualified new bulk original captured and no person/date claim created."
+    },
+    {
+      "query_number": 4,
+      "engine": "system1",
+      "query_literal": "site.bibliotheque-institutdefrance.fr \"Académie des sciences\" \"annuaire\"",
+      "search_call_group": 2,
+      "disposition": "Discovery only; no qualified new bulk original captured and no person/date claim created."
+    },
+    {
+      "query_number": 5,
+      "engine": "system1",
+      "query_literal": "site.academie-sciences.fr \"élus\" \"Mesnil\" \"Bertin\"",
+      "search_call_group": 2,
+      "disposition": "Discovery only; no qualified new bulk original captured and no person/date claim created."
+    },
+    {
+      "query_number": 6,
+      "engine": "system2",
+      "query_literal": "\"Index biographique de l'Académie des sciences\" \"gallica.bnf.fr/ark\"",
+      "search_call_group": 3,
+      "disposition": "Discovery only; no qualified new bulk original captured and no person/date claim created."
+    },
+    {
+      "query_number": 7,
+      "engine": "system2",
+      "query_literal": "\"Annuaire\" \"Académie des sciences\" \"1935\" \"gallica.bnf.fr\"",
+      "search_call_group": 3,
+      "disposition": "Discovery only; no qualified new bulk original captured and no person/date claim created."
+    },
+    {
+      "query_number": 8,
+      "engine": "system2",
+      "query_literal": "\"Index biographique\" \"1978-1993\" Gallica",
+      "search_call_group": 3,
+      "disposition": "Discovery only; no qualified new bulk original captured and no person/date claim created."
+    }
+  ],
+  "search_call_result_examples": {
+    "1": [
+      "turn1907search0",
+      "turn1907search17",
+      "turn1907search23",
+      "turn1907search26"
+    ],
+    "2": [
+      "turn1908search0",
+      "turn1908search1",
+      "turn1908search3",
+      "turn1908search4",
+      "turn1908search8"
+    ],
+    "3": [
+      "turn1912search0",
+      "turn1912search3",
+      "turn1912search9",
+      "turn1912search36"
+    ]
+  },
+  "url_opens": [
+    {
+      "url": "https://catalogue.bnf.fr/affiner.do?afficheRegroup=false&critereRecherche=&index=SUJ3&listeAffinages=SujConstr_11862135_&motRecherche=&nbResultParPage=100&numNotice=11862135&triResultParPage=5&trouveDansFiltre=NoticePUB&typeNotice=c",
+      "body_ref": "turn1909view0",
+      "actual_body_observed": false,
+      "disposition": "Web fetch TimeoutError. No body evidence; stopped this exact URL."
+    },
+    {
+      "url": "https://catalogue.bnf.fr/rechercher.do?index=SUJ3&numNotice=11862135&typeNotice=c",
+      "body_ref": "turn1917view0",
+      "actual_body_observed": true,
+      "disposition": "BnF catalogue result body observed, with80 bibliographic notices and Gallica facets. Metadata only; no indexed members election/DOB pages captured."
+    },
+    {
+      "url": "https://www.academie-sciences.fr/fr/Liste-des-membres-depuis-la-creation-de-l-Academie-des-sciences/les-membres-du-passe-dont-le-nom-commence-par-m.html",
+      "redirected_url": "https://www.academie-sciences.fr/les-academiciens",
+      "body_ref": "turn1917view1",
+      "actual_body_observed": true,
+      "source_locator": "Actual web body lines267–272",
+      "disposition": "Old historical letter page redirects to current directory. Site explains it contains current members and members deceased less than5 years; older historical records are delegated to archives. No historical candidate membership event inferred."
+    }
+  ],
+  "current_site_scope": {
+    "url": "https://www.academie-sciences.fr/les-academiciens",
+    "body_ref": "turn1917view1",
+    "source_locator": "lines267–272",
+    "paraphrase": "Current site intentionally covers current members and those deceased within less than five years, with a separate archive link for older historical members.",
+    "archive_portal_reopened": false,
+    "archive_portal_reason": "Previously parked Anubis/challenge route; not retried during this bounded scout."
+  },
+  "known_prior_bulk_indexes_not_retried": [
+    {
+      "title": "Index biographique de l’Académie des sciences,1666–1978",
+      "edition": "4th,1979,513pages",
+      "catalogue_url": "https://catalogue.bnf.fr/ark:/12148/cb34645901t",
+      "provenance": "Existing repository source-discovery documentation; this round did not capture original index pages.",
+      "new_request_to_this_url": false,
+      "person_event_evidence_accepted": false
+    },
+    {
+      "title": "Index biographique de l’Académie des sciences,supplément1978–1993",
+      "edition": "1994,133pages",
+      "catalogue_url": "https://catalogue.bnf.fr/ark:/12148/cb35792869s",
+      "digitized_item_url": "https://gallica.bnf.fr/ark:/12148/bd6t5922329w",
+      "provenance": "Existing citation audit records catalogue digitization and LIBRE DE DROITS metadata. Existing editor/pages audit records earlier Gallica OCR/IIIF/OAI HTTP403 from GitHub. These are prior findings, not new observed403s in this round.",
+      "prior_route_status": "Bounded Gallica OCR/IIIF/OAI access already parked after403; not retried.",
+      "new_request_to_catalogue_or_digitized_item": false,
+      "original_pages_observed_in_this_round": false,
+      "person_event_evidence_accepted": false
+    }
+  ],
+  "prior_repository_metadata_files": [
+    {
+      "path": "FRANCE_ACADEMY_SOURCE_DISCOVERY_V1.md",
+      "sha256": "319bfd9d50e0b3c97d4037c4b8f026b4ad8efd36181f4287119c80cbadf3b9b9"
+    },
+    {
+      "path": "FRANCE_ACADEMY_CTHS_HISTORICAL_SOURCE_CITATION_AUDIT_V1.md",
+      "sha256": "af5e9f19336681edbc1988733dc86838a081d1fc1b4ee452e706f9798ce96791"
+    },
+    {
+      "path": "FRANCE_ACADEMY_CTHS_EDITOR_AND_1989_PAGES_V1.md",
+      "sha256": "3e91bd3f12571e1f1cf6e12207e787888105567f0b47ea4ff18f5434ef247dd1"
+    }
+  ],
+  "outcome": "No new usable bulk original found within this8-query/3-open budget. Existing accessible individual Academy originals remain the concrete collection route for this round.",
+  "national_or_lifetime_source_exhaustion_claimed": false,
+  "limitations": [
+    "Search output is grouped per service call, so result references are call-level examples rather than claimed exact per-query mappings.",
+    "Catalogue metadata and search snippets are not treated as original membership or birth evidence.",
+    "No retry of previously parked Gallica403, archive challenge, consumed Institut medal catalogue or consumed letter11 source.",
+    "Failure to find a bulk original in this bounded search does not establish that none exists."
+  ],
+  "source_body_redistributed": false,
+  "analysis_cohort_frozen": false,
+  "bazi_variables_computed": 0,
+  "outreach_performed": false
+}

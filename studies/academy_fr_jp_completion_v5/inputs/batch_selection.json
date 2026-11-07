@@ -1,0 +1,52 @@
+{
+  "japan_claim_files": [
+    "japan_a/claims.json",
+    "japan_a/secondary_claims.json",
+    "japan_b/claims.json",
+    "japan_b/secondary_dictionary_claims.json",
+    "japan_c/claims.json",
+    "japan_c/secondary_claims.json"
+  ],
+  "japan_processed_files": [
+    "japan_a/processed.csv",
+    "japan_b/processed.csv",
+    "japan_c/processed.csv"
+  ],
+  "japan_hold_files": [
+    "japan_a/holds.json",
+    "japan_b/holds.json",
+    "japan_c/holds.json"
+  ],
+  "france_decision_files": [
+    "france_a/decisions.json",
+    "france_b/decisions.json",
+    "france_addenda/france_cross_source_addendum.json"
+  ],
+  "france_processed_files": [
+    "france_a/processed.csv",
+    "france_b/processed.csv"
+  ],
+  "reviewed_source_tiers": [
+    "institutional_association_memorial_biography",
+    "institutional_library_reference_answer_secondary",
+    "institutional_government_scientist_biography",
+    "institutional_professional_association_historical_biography",
+    "institutional_professional_association_interview_biography",
+    "institutional_scientific_alumni_association_obituary",
+    "learned_society_journal_obituary",
+    "learned_society_published_autobiography",
+    "research_foundation_memorial_cv",
+    "university_institute_founder_cv"
+  ],
+  "france_cross_source_candidate_ids": [
+    "CTHS_111885"
+  ],
+  "web_body_capture_exceptions": [
+    {
+      "member_key": "jpa:suzuki_atsuto",
+      "source_url": "https://www.iwate-pu.ac.jp/whatsnew/folder30/鈴木学長略歴.pdf",
+      "extracted_body_sha256": "8f7d6cdd80f1a3bdae1a850a6f4dac09fe07aa45f58d6800590a03c7baba07ab",
+      "root_verification_ref": "turn1715view0"
+    }
+  ]
+}

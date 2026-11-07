@@ -1,0 +1,114 @@
+{
+  "schema": "UK_v21_independent_local_final_QA_v1",
+  "reviewer": "/root/v21_final_qa",
+  "written_utc": "2026-11-05T23:40:39.300342+00:00",
+  "status": "PASS",
+  "validation_categories_passed": 23,
+  "checks": [
+    "five pinned production outputs match before QA",
+    "actual v20 and v21 canonical SHA256",
+    "self-contained v20 reconstruction exact all4983 objects",
+    "fixed cohort order and unique keys",
+    "scope137queue/8reviewed/4facts+4holds disjoint partition",
+    "exact4changed and4979completeidentical objects",
+    "every changed object frozen fields/prior facts and complete previous+absent rollback",
+    "new grade/hemisphere counts separate from DOB grades",
+    "overall and2644window counts match independent recomputation",
+    "blank/nonblank unknown diagnostics",
+    "summary deltas and no geography-only collection/adoption",
+    "CSV preserves old56 meanings/positions plus6v21 columns",
+    "CSV row projection/current updates and prior contextual columns exact",
+    "remaining unknown window CSV187 matches masterorder",
+    "two inherited activeDOB records exactly preserved plus Wells May/June conflict",
+    "Wells/Argyris/Laver/Midwinter/Adam complete objects remain unchanged",
+    "Midwinter death endpoint sidecar bytes unchanged",
+    "Waterfield age inconsistency separate without DOB repair",
+    "actual accepted/held quote lengths bounded",
+    "no distributed original fullsource/cache/image formats",
+    "docs actualcounts/scope/limits present",
+    "two isolated clean replays all5outputs equal originalpins",
+    "production5outputs untouched after QA"
+  ],
+  "baseline_canonical_sha256": "bbe9e22d00c4bfb3fb7a390df6a18a349e0abe64ba2986cd5075650f62ae9f2b",
+  "final_canonical_sha256": "91b14b75fa13811abed8122644ed4b10f739fef5695ee72ed62ad5fd296bcac2",
+  "records": 4983,
+  "changed_complete_objects": 4,
+  "unchanged_complete_objects": 4979,
+  "overall": {
+    "north": 4175,
+    "unknown": 621,
+    "south": 187
+  },
+  "window_counts": {
+    "north": 2275,
+    "unknown": 187,
+    "south": 182
+  },
+  "blank_diagnostics": {
+    "all_blank_raw_birthplace": 555,
+    "window_blank_raw_birthplace": 133,
+    "all_unknown": 621,
+    "all_unknown_with_blank_raw_birthplace": 555,
+    "all_unknown_with_nonblank_raw_birthplace": 66,
+    "window_unknown": 187,
+    "window_unknown_with_blank_raw_birthplace": 133,
+    "window_unknown_with_nonblank_raw_birthplace": 54
+  },
+  "main_pre_QA_output_pins": {
+    "birthplace_rows.jsonl.gz": "acf675b13ce641621bd83a8ee60b3108b3a29b77175e8203f94bec34b12eb8d6",
+    "birthplaces.csv": "5ca53758310e4e80e95c9a89d810da419c92719a7c69934fee6d01939fdde80d",
+    "changes.json": "eb228b7ed2808d04521164edf1a2449ad1d93503431edcf6daa2c7652a820ea7",
+    "remaining_unknown_window.csv": "471cf8b5f6d2a1014f5fcb6168a4a041d25a9868b60f82a6f9f905807af59abe",
+    "summary.json": "27c024a9ca1d14cc80000d5cb997fd3974ce834c7e88fd9ea33e8b7078e6ac15"
+  },
+  "isolated_replay_runs": [
+    {
+      "run": 1,
+      "clean_exit": true,
+      "five_hashes": {
+        "birthplace_rows.jsonl.gz": "acf675b13ce641621bd83a8ee60b3108b3a29b77175e8203f94bec34b12eb8d6",
+        "birthplaces.csv": "5ca53758310e4e80e95c9a89d810da419c92719a7c69934fee6d01939fdde80d",
+        "changes.json": "eb228b7ed2808d04521164edf1a2449ad1d93503431edcf6daa2c7652a820ea7",
+        "remaining_unknown_window.csv": "471cf8b5f6d2a1014f5fcb6168a4a041d25a9868b60f82a6f9f905807af59abe",
+        "summary.json": "27c024a9ca1d14cc80000d5cb997fd3974ce834c7e88fd9ea33e8b7078e6ac15"
+      },
+      "matched_original_pins": true
+    },
+    {
+      "run": 2,
+      "clean_exit": true,
+      "five_hashes": {
+        "birthplace_rows.jsonl.gz": "acf675b13ce641621bd83a8ee60b3108b3a29b77175e8203f94bec34b12eb8d6",
+        "birthplaces.csv": "5ca53758310e4e80e95c9a89d810da419c92719a7c69934fee6d01939fdde80d",
+        "changes.json": "eb228b7ed2808d04521164edf1a2449ad1d93503431edcf6daa2c7652a820ea7",
+        "remaining_unknown_window.csv": "471cf8b5f6d2a1014f5fcb6168a4a041d25a9868b60f82a6f9f905807af59abe",
+        "summary.json": "27c024a9ca1d14cc80000d5cb997fd3974ce834c7e88fd9ea33e8b7078e6ac15"
+      },
+      "matched_original_pins": true
+    }
+  ],
+  "main_outputs_rerun_or_mutated": false,
+  "quote_words_by_record": {
+    "RS_PAST_NA4076": 14,
+    "RS_PAST_NA4651": 5,
+    "RS_PAST_NA4834": 9,
+    "RS_PAST_NA5885": 6
+  },
+  "held_Wells_quote_words": 13,
+  "documentation_checks": {
+    "files": [
+      "README.md",
+      "CONTINUATION.md"
+    ],
+    "counts_scope_limits_consistent": true,
+    "mechanism": "Read-only helper independently compared exact counts, scopes, source qualifications and audit sidecars; explicit documentary assertions separately checked after replay launch. The final scratch script contains these explicit assertions.",
+    "helper_reviewer": "/root/v21_final_qa/doc_audit",
+    "helper_network_or_file_mutation": false,
+    "helper_confirmed": "4adoptions/3S2+1S3/3North+1South/4holds/8reviewed/137queue/4979unchanged; all/window/blank counts; WellsMayJune, Waterfieldage, Midwinterendpoint, Perkinsgenre and Townsendendpoint limits; boundedquotes/no original-source caches."
+  },
+  "limitations": [
+    "Independent local structural/data/replay verification; no network, new original-source acquisition or raw HTTP-byte inspection.",
+    "Source semantic/grade quality is reviewed separately in independent_source_qa.json; local data QA does not claim informationally independent source corroboration.",
+    "No production inputs, code, master outputs or Git operations changed by this reviewer; only this audit and scratch helper script written."
+  ]
+}

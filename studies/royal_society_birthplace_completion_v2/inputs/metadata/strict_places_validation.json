@@ -1,0 +1,42 @@
+{
+  "all_seed_field_comparisons": 52960,
+  "all_seed_field_mismatches": 0,
+  "cache_verification": {
+    "cache_summary_path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v2_workers/strict_places/runs/final_cache_verify_20261102/summary.json",
+    "cache_summary_sha256": "71d558d611261091b48b5ff127005a101f001c432ca2f46dab710776ef3dee1c",
+    "cache_validation_path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v2_workers/strict_places/runs/final_cache_verify_20261102/validation.json",
+    "cache_validation_sha256": "72f9b3301804dba06eaf6e9e254a6575ebf22c839db0b34614c73911e6f87039",
+    "geographic_and_current_source_field_projection_mismatches": 0,
+    "network_attempts": 0,
+    "run_id": "final_cache_verify_20261102",
+    "stats": {
+      "person_qid_cache_hits": 1324,
+      "person_qids_new": 0,
+      "person_qids_requested": 1324,
+      "place_qid_new_normalized_cache_hits": 357,
+      "place_qid_prior_cache_hits": 289,
+      "place_qids_new_to_fetch": 0,
+      "place_qids_requested": 646
+    }
+  },
+  "frozen_field_comparisons": 14564,
+  "frozen_field_mismatches": 0,
+  "frozen_field_names": [
+    "DOB_or_acceptance_modified",
+    "Wikidata_DOB_value_claims_from_member_query",
+    "baseline_identity_provenance",
+    "dob",
+    "dob_or_native_acceptance_modified",
+    "final_analysis_eligibility_assigned",
+    "identity_acceptance_assigned",
+    "identity_link_provenance",
+    "lookup_identity_provenance",
+    "original_DOB",
+    "original_identity_flags_preserved"
+  ],
+  "network_attempts": 2,
+  "new_DOB_tuple_schema_rows": 1324,
+  "output_rows": 1324,
+  "result": "passed",
+  "seed_rows": 1324
+}

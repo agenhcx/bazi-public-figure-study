@@ -1,0 +1,88 @@
+{
+  "lane": "NAS official BiographicalMemoirsVolume77",
+  "frozen_utc": "2026-11-04T00:47:59.404393+00:00",
+  "source_clock_start_utc": "2026-11-04T00:44:17.308850+00:00",
+  "source_acquisition_end_utc": "2026-11-04T00:45:57.845307+00:00",
+  "elapsed_seconds_at_freeze": 222.095543,
+  "baseline_sha256": "15f3d58b3334fbc5c32229b0c122ff5e693379fbf9759794e1e3ae87ac06d152",
+  "baseline_records": 11094,
+  "NAS_records": 2242,
+  "NAS_unknowns_bulkmatched": 555,
+  "observed_TOC_named_subjects": 20,
+  "strong_unknown_name_routes": 6,
+  "chapter_bodies_requested": 6,
+  "image_requests": 0,
+  "original_body_requests_total": 6,
+  "final_body_request_cap": 6,
+  "original_body_allowance_transferred_toVol76": 2,
+  "chapter_body_original200_captures": 6,
+  "retained_literal_place_facts": 5,
+  "held_source_native_DOB_conflict": 1,
+  "deferred_good_routes_unread": 0,
+  "unknowns_without_compatible_TOC_route": 549,
+  "discovery_queries": 1,
+  "index_navigation_requests": 1,
+  "retries": 0,
+  "HTTP_errors": 0,
+  "source_grade": "S2",
+  "geography_or_native_metadata_changes": 0,
+  "final_classification_pending": "RootQAandgeography; lane assigns no hemisphere/country/point",
+  "full_raw_original_HTML_and_derived_text": "transientunderraw;excludeoriginalbodiesandfulltextsfromdistribution",
+  "safe_header_allowlist": [
+    "content-type",
+    "content-length",
+    "last-modified",
+    "etag"
+  ],
+  "no_cookies_auth_or_private_headers_captured": true,
+  "facts_file": "retained_facts.jsonl",
+  "held_file": "held.jsonl",
+  "coverage_file": "coverage.jsonl",
+  "intent_file": "intent_ledger.jsonl",
+  "query_and_index_limits_honored": true,
+  "source_budget_honored": true,
+  "independent_source_QA_status": "rootv4_qa reviewinglocalcaptures",
+  "facts": [
+    {
+      "record_id": "https://www.nasonline.org/directory-entry/a-m-pappenheimer-jr-umskfb/",
+      "name": "A. M. Pappenheimer Jr.",
+      "native_dob": "1908-11-25",
+      "raw_birthplace": "Cedarhurst, New York",
+      "source_sha256": "accb31c19a1a2873366af1e17932b31f740e494d5ccd448f8b522e94a567f032"
+    },
+    {
+      "record_id": "https://www.nasonline.org/directory-entry/carl-w-gottschalk-9bumwr/",
+      "name": "Carl W. Gottschalk",
+      "native_dob": "1922-04-28",
+      "raw_birthplace": "Salem, Virginia",
+      "source_sha256": "4bd733b502e588c22f3fbea84ebcab10f246b47e34e2b3c0cb21f3ef82bd04ac"
+    },
+    {
+      "record_id": "https://www.nasonline.org/directory-entry/gertrude-s-goldhaber-rpnyr2/",
+      "name": "Gertrude S. Goldhaber",
+      "native_dob": "1911-07-14",
+      "raw_birthplace": "Mannheim, Germany",
+      "source_sha256": "3c271d5e8adb5652f5bb6e52c74276a0b0a2ce73d13877fd45218491fc90f7d3"
+    },
+    {
+      "record_id": "https://www.nasonline.org/directory-entry/i-m-kolthoff-pcxmpw/",
+      "name": "I. M. Kolthoff",
+      "native_dob": "1894-02-11",
+      "raw_birthplace": "Almelo, Netherlands",
+      "source_sha256": "4724632196ff803a262c03769d7f555915511df7aac34e540d5644c5752ea5e1"
+    },
+    {
+      "record_id": "https://www.nasonline.org/directory-entry/john-kirkwood-3at1kf/",
+      "name": "John Kirkwood",
+      "native_dob": "1907-05-30",
+      "raw_birthplace": "the small town of Gotebo, Oklahoma",
+      "source_sha256": "67aff1b3551625c4c86e2df67f6cd9969c1a4d4fbd1fddbf8a82be86d87bfea4"
+    }
+  ],
+  "hold": {
+    "name": "Philip P. Cohen",
+    "native_dob": "1908-09-26",
+    "source_dob": "1908-09-28",
+    "candidate_raw_birthplace": "Derry, New Hampshire"
+  }
+}

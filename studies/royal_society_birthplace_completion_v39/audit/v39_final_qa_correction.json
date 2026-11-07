@@ -1,0 +1,14 @@
+{
+  "written_utc": "2026-11-07T01:39:27.934561+00:00",
+  "type": "independent_final_QA_harness_only_correction",
+  "first_attempt_exit": 1,
+  "failure_report": "v39_final_qa_failure_report.json",
+  "preserved_first_attempt_log": "v39_final_qa_attempt1.log",
+  "error": "KeyError records for omitted_middle_name_admission.json, a historical metadata-object sidecar with no records array",
+  "correction": "issue_records returns obj.get(records,[]) for metadata-object sidecars, matching sourceQA inventory-count convention; complete file byte-equality remains mandatory when there is no append",
+  "passed_before_error": 27,
+  "production_files_modified": false,
+  "source_facts_runtime_or_Git_modified": false,
+  "source_network_requests": 0,
+  "harness_sha256_after_correction": "41f5a9aca99986b9898bcedde50d62f2283e955ff43bf049fd05b4574dff5903"
+}

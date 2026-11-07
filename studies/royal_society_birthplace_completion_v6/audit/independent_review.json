@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "baseline_rows": 4983,
+  "all_preexisting_non_geography_fields_equal": true,
+  "native_DOB_calendar_identity_eligibility_source_groups_and_historical_QIDs_unchanged": true,
+  "geography_lookup_identity_layer_unchanged": true,
+  "hemisphere_counts": {
+    "north": 4146,
+    "unknown": 656,
+    "south": 181
+  },
+  "window_1835_1985_counts": {
+    "north": 2246,
+    "unknown": 222,
+    "south": 176
+  },
+  "new_unknown_to_known": 15,
+  "newly_classified_people_in_window": 15,
+  "known_to_unknown": [],
+  "geo49_classified": 3,
+  "new_fact_candidates": 22,
+  "new_fact_unique_people": 22,
+  "new_fact_people_classified": 12,
+  "new_fact_source_grades": {
+    "S2": 21,
+    "S1": 1
+  },
+  "geography_resolution_grade_separate": "S3",
+  "current_lookup_state": {
+    "active": 94,
+    "quarantined": 2,
+    "identity_pending": 3
+  },
+  "all9_old_quarantined_candidates_inactive": true,
+  "Home_unknown_and_original_alternatives_retained": true,
+  "other_country_rows_exactly_unchanged": true,
+  "unknown_breakdown": {
+    "explicit_place_but_geography_unresolved": 56,
+    "no_active_explicit_birthplace_evidence": 600
+  },
+  "inputs_sha256": {
+    "studies/royal_society_birthplace_completion_v6/outputs/uk_birthplace_rows.jsonl.gz": "32c7ec7dbbf02450300359cdd18fa0a29bcd6b49577e5cac085812263f605809",
+    "studies/royal_society_birthplace_completion_v6/outputs/summary.json": "62a030cf1d22be1cf1a3ded08cc6aa8e3473e92bff5b67101cf42a407fde3b2e",
+    "studies/royal_society_birthplace_completion_v6/scripts/assemble.py": "8b2b87ad810c6fdd110d980eaffa51fb75a242ed8a272127dfabf99875576d5d"
+  },
+  "source_historical_name_pair_city_binding_metadata_and_timing_discrepancy_preserved": true,
+  "independent_offline_replay_all_output_files_byte_identical": true,
+  "independent_replay_output_files": [
+    "all_country_birthplace_summary.csv",
+    "changed_records.csv",
+    "changes.jsonl.gz",
+    "remaining_unknown.csv",
+    "summary.json",
+    "uk_birthplace_rows.jsonl.gz",
+    "uk_birthplaces.csv"
+  ],
+  "README_CONTINUATION_counts_scope_history_and_unique_match_claims_consistent": true,
+  "descriptive_recent_death_route_candidates": 18,
+  "future_route_list_is_existing_unresolved_rows_not_roster_or_eligibility_change": true,
+  "documents_sha256": {
+    "README.md": "dd599b28330f229ed497861ed3a474114a59bd10f8660b9400b39b32988e81a4",
+    "CONTINUATION.md": "91416605ea2df6926d03443d7d331ea09385d07081bc3233bd888d9a8ccc99db"
+  }
+}

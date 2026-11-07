@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "frozen": true,
+  "direct_baseline_sha256": "2b7897d0c4e2655ecb6f10311e1bdf7b06b8eeae3f181e9bebe92cbc7f066ee0",
+  "global_master_sha256": "6df02f0b3a535c8b5447ee704ddc96f473509ed9c2df84b25d6b40064a5dff44",
+  "records": 11094,
+  "new_facts": 9,
+  "source_grade_counts": {
+    "S1": 2,
+    "S2": 7
+  },
+  "held_not_applied": 1,
+  "unchanged_direct_baseline_objects": 11085,
+  "UK_opaque_equal_objects": 4983,
+  "v2_award_overlay_objects_opaque_equal": 3,
+  "total_hemispheres": {
+    "unknown": 1757,
+    "north": 9086,
+    "south": 251
+  },
+  "seven_output_replay": "byte identical",
+  "report_sha256": {
+    "baseline_qa_report.json": "2af8d4d64bcb74fad56806fb3cc04c035a9e5f75369b2b3ec2db2886caa8ba6d",
+    "fields_source_qa_report.json": "e8448a77d6d3e052570b42e505bcec21e6fa983af2167ee4153ca2cbf424ac2c",
+    "nas_source_qa_report.json": "1556dd01d4a360a3e3ff5539063c2cb9c17ce7a0e65b0f33dfa0dabcab9d306d",
+    "source_qa_report.json": "5c4366f8f4800f14a4eb5b92a846143bf10366206f7c02381abfb8579bddc8d2",
+    "global_row_qa_report.json": "d5543db93113aeb7b9e87e616bb5b76922172f2ad4b48007da563c3600f223ef",
+    "csv_summary_replay_qa_report.json": "5cc4bcf7de4d7b81a70d9d841d624247a6f15b9c674aadc5f8b9bfd8d7e2599d",
+    "prose_metadata_qa_report.json": "4ddf2024846db4e31f838afeda9739558b73cb87abc19b22701a0fb9b2cd33a1"
+  },
+  "document_sha256": {
+    "README.md": "4b2a70fcb7ec8442878bf73f72712cb50c8a105751d5b3f6c6235030e6b24b59",
+    "CONTINUATION.md": "3b20d2318e4889a36e5acc927765891cf00077ed462c94f180ff543dd84b59c6"
+  },
+  "output_sha256": {
+    "all_country_birthplace_summary.csv": "ef47045d081b4f6e271258ce0f4335c735832ce347e54b160a18b6b1a1982bc3",
+    "birthplace_rows.jsonl.gz": "6df02f0b3a535c8b5447ee704ddc96f473509ed9c2df84b25d6b40064a5dff44",
+    "birthplaces.csv": "970adc9d796450af231d08fae45010a9c52e5892edb79e9fdb691618847daf76",
+    "changed_records.csv": "93ec3518614541f78a2fccfff6c454cc84c60b9304948b824d6db3957e6bdbf5",
+    "changes.jsonl.gz": "eb8c8c569f16d0c471366300a85d068a310d8c752f8d05992e9275fe757815ef",
+    "remaining_unknown.csv": "afa1651240e7acfff544637b1ecf1492171b3ca29b400792fdd94d4d062961c7",
+    "summary.json": "b0210c192d5ae2472290e3d76b915bdcf6c4be9e651c1fc7dfa1efc6a2f75e35"
+  },
+  "new_QA_network_requests": 0,
+  "write_scope": "academy_v3_workers/qa only"
+}

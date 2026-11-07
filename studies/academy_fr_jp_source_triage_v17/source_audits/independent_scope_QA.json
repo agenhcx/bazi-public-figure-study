@@ -1,0 +1,126 @@
+{
+  "schema": "v17_independent_remaining_legacy_route_scope_QA",
+  "reviewer": "v16_scope_review",
+  "reviewed_utc": "2026-11-01T09:51:37.266851+00:00",
+  "independent_QA_passed": true,
+  "baseline_commit": "4686d63b73357f9b29a4838f0827341c425f23ed",
+  "canonical_data_study": "studies/academy_fr_jp_completion_v15",
+  "canonical_all57_pins_verified_unchanged": true,
+  "v16_all24_audit_files_verified_unchanged": true,
+  "v16_manifest_sha256": "61212302cd9f2c0bb0e5f10de2a918d7e4670cfbad55221e8fd4d88ef780dc56",
+  "collector_manifest_sha256": "e5bdc009ece677f77914f2020b6e3d77ab7f2a6f537f59a2ee4b6c309258088c",
+  "exact_source_handoff_sha256": {
+    "request_receipts.json": "2bc7dd3b82d8ad99889fc6ece28c0abbc0f7b6e652b38314ac1cedd5e6e2bb0e",
+    "route_closeout_report.json": "8e0d4fd3f58d14b1a77025f6e48aa2aa69adf951f71dbc665b47ff16288fb58d",
+    "source_plan.json": "f2b1a8334a15d916df5b7a60bf48f99dfcf7cf83d18ec0d7ef26582df6b481fb"
+  },
+  "candidate_source_checks": [
+    {
+      "candidate_group_id": "CTHS_107447",
+      "parent_sha256": "22d397be1fb35bea880e5a9e98ad1e159df9a8ec22839af113956fd12bce6ba6",
+      "literal_source_URL": "http://www.academie-sciences.fr/academie/membre/Vago_Constantin.htm",
+      "actual_tar_parent_rehashed_and_literal_href_verified": true,
+      "v16_state_explicit_not_requested": true,
+      "actual_response_hashes": [
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "466dc96d85b81e6bcad8a2df7c85dd29fa766163f91545f891f1466172c4905f"
+      ],
+      "status_sequence": [
+        301,
+        404
+      ],
+      "actual_final_error_body_independently_read": true,
+      "no_target_subject_body_or_membership_event": true,
+      "no_approval_or_person_exclusion": true,
+      "legacy_flags_and_accepted_values_unchanged": true
+    },
+    {
+      "candidate_group_id": "CTHS_111797",
+      "parent_sha256": "65476004a5dd9cae6d19329b76754f2d9766c3caf0eed837a5e027c5dfab1c1d",
+      "literal_source_URL": "http://www.academie-sciences.fr/academie/membre/LewyBertaud_Erwin.htm",
+      "actual_tar_parent_rehashed_and_literal_href_verified": true,
+      "v16_state_explicit_not_requested": true,
+      "actual_response_hashes": [
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "0491dad44b6bd384073f23a400aed02d84a156f48f278e4051249cb3f47cce6a"
+      ],
+      "status_sequence": [
+        301,
+        404
+      ],
+      "actual_final_error_body_independently_read": true,
+      "no_target_subject_body_or_membership_event": true,
+      "no_approval_or_person_exclusion": true,
+      "legacy_flags_and_accepted_values_unchanged": true
+    },
+    {
+      "candidate_group_id": "CTHS_112619",
+      "parent_sha256": "9396da897445642ed2dd0fbf2ecba27274da787523c2f3297961e0bb879dce3d",
+      "literal_source_URL": "http://www.academie-sciences.fr/academie/membre/Laporte_Yves.htm",
+      "actual_tar_parent_rehashed_and_literal_href_verified": true,
+      "v16_state_explicit_not_requested": true,
+      "actual_response_hashes": [
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "1cfa22f2c021d2684a4412ab87ee16ddb3e66c607af598cd4a19f18b9ba7dd48"
+      ],
+      "status_sequence": [
+        301,
+        404
+      ],
+      "actual_final_error_body_independently_read": true,
+      "no_target_subject_body_or_membership_event": true,
+      "no_approval_or_person_exclusion": true,
+      "legacy_flags_and_accepted_values_unchanged": true
+    }
+  ],
+  "actual_HTTP_GETs": 6,
+  "normal_redirect_GETs": 3,
+  "exact_target_attempts": 3,
+  "reviewer_network_GETs": 0,
+  "search_queries": 0,
+  "retries": 0,
+  "guessed_URLs": 0,
+  "new_target_subject_body_reviews": 0,
+  "new_approvals": 0,
+  "new_raw_DOB_claims": 0,
+  "Japan_new_activity": 0,
+  "six_DOB_gate_held_membership_leads_unapplied": true,
+  "old_holds_and_quality_gates_retained": true,
+  "old_canonical_France_counts": {
+    "candidate_groups": 877,
+    "identity": 787,
+    "DOB": 775,
+    "membership": 643,
+    "all_three": 640,
+    "gaps": 237
+  },
+  "old_canonical_Japan_counts": {
+    "identities": 482,
+    "claims": 528,
+    "day": 368,
+    "II": 438,
+    "I": 10,
+    "unresolved": 34,
+    "combined_queue": 112
+  },
+  "finite_route_closure": {
+    "exact_observed_legacy_endpoints": 5,
+    "attempted_in_v16": 2,
+    "attempted_in_v17": 3,
+    "all_five_actual_final_404s": true,
+    "unrequested_from_this_observed_list_remaining": 0,
+    "old_two_not_retried": true,
+    "source_failure_not_lifetime_ineligibility": true,
+    "not_all_possible_historical_URLs_or_public_sources_exhausted": true,
+    "reopen_only_new_distinct_original_or_source_provided_replacement": true
+  },
+  "scope_limits": [
+    "No positive identity, DOB, French membership or Japanese section proposal.",
+    "HTTP404 proves this exact endpoint did not supply a subject body; it does not prove a person was not a member.",
+    "Finite closeout applies only to five literal observed legacy links, not all Academy/public historical sources.",
+    "No new data version, country-table duplication, national completion or cohort freeze is supported or required.",
+    "No full unit-test suite or hosted CI is claimed by this independent source review."
+  ],
+  "repo_or_canonical_edits_performed": 0,
+  "bazi_analysis_performed": 0
+}

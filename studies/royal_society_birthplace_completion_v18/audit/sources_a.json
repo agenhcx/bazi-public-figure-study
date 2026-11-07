@@ -1,0 +1,340 @@
+{
+  "schema": "UK_v18_original_birthplace_sources_a_v1",
+  "worker": "/root/v18_sources_a",
+  "written_utc": "2026-11-05T00:43:16.824913+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA1744",
+    "RS_PAST_NA3830",
+    "RS_PAST_NA4918",
+    "RS_PAST_NA8089"
+  ],
+  "intent_file": "v18_a_intent.json",
+  "counts": {
+    "discovery_queries": 6,
+    "navigation_attempts": 8,
+    "original_host_navigation_attempts": 7,
+    "external_original_work_mirror_navigation_attempts": 1,
+    "parsed_text_find_operations": 0,
+    "raw_HTTP_or_PDF_byte_requests": 0,
+    "body_verified_birthplace_candidates": 1,
+    "conditional_source_class_candidates": 1,
+    "holds": 3
+  },
+  "candidates": [
+    {
+      "record_id": "RS_PAST_NA4918",
+      "native": {
+        "record_id": "RS_PAST_NA4918",
+        "authority_name": "Adam; Neil Kensington (1891 - 1973); chemist",
+        "native_dob": "1891-11-05",
+        "prior_raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "62991bc87ebfb991920ef26d211dff14035030e4284036077007f400696f6a14",
+        "native_authority_name_and_DOB_count_in_all_UK": 1
+      },
+      "status": "candidate_explicit_birthplace_structured_authority_index_conditional_source_class",
+      "raw_birthplace": "Cambridge",
+      "source_url": "https://www.deutsche-biographie.de/122880773.html?language=en",
+      "source_title": "Adam, Neil Kensington",
+      "source_author": null,
+      "source_kind": "original_institutional_biographical_authority_index_profile",
+      "source_grade_proposal": "S3_pending_parent_review",
+      "source_grade_role": "new_person_birthplace_support_only",
+      "source_grade_basis": "Conservative S3 proposal: original portal explicitly displays structured birth and life-date facts, but no signed scholarly biography or documented upstream provenance for displayed birth-place fact. Institutional hosting and a linked GND identifier do not establish civil documentation or S1/S2 quality.",
+      "evidence_format": "structured_birthplace_field",
+      "source_raw_field_label": "Place of birth",
+      "source_quote": "",
+      "source_quote_word_count": 0,
+      "source_locator": "turn130view0: full headingL21; Dates of LifeL23–24; Place of birth label/valueL25–26; GNDidentifierL29–30; index-entry citationL70–72.",
+      "source_birthdate": "1891-11-05",
+      "source_birthdate_precision": "exact_day_in_same_profile_dates_of_life_field_not_birthplace_clause",
+      "source_death_date": "1973-07-19",
+      "source_DOB_matches_native": true,
+      "observed_source_full_name": "Adam, Neil Kensington",
+      "source_webrefs": [
+        "turn130view0"
+      ],
+      "publication_date": null,
+      "publication_date_note": "Dynamic citation access date05.11.2026 is not article publication date.",
+      "identity_review": [
+        "Full native name Neil Kensington Adam explicitly occurs in portal heading; all authority components observed, no initials expansion.",
+        "Exact displayed birth1891-11-05 matches native day; death1973-07-19 and lifespan1891–1973 match native authority.",
+        "Separate original AIP catalogue explicitly names Neil Kensington Adam, physicalchemist/FRS/FRIC and the distinctive Trinity1915–1923, SheffieldSorby1921–1929, Southamptonchemistryprofessor1937–1957 sequence. This is professional identity support, not independent birthplace corroboration."
+      ],
+      "identity_conflicts_observed": [],
+      "source_DOB_conflicts_observed_in_opened_original_bodies": false,
+      "source_fact_provenance_caveat": "Original portal labels birth place, but upstream provenance of displayed birth-place/life-date facts not stated. Linked GND122880773 is a displayed authority identifier only; not presumed the actual supplier of birthplace or independently verified. No QID/GND transfer into UK identity fields.",
+      "geography_assignment_performed": false,
+      "reviewed_hemisphere_proposal": "unknown",
+      "geographic_basis": "Only Cambridge is explicitly labelled as birth place. No birth-linked country or region; British nationality, Cambridge education or Southampton/UCL work do not qualify birthplace. No country/entity/point/coordinates inferred.",
+      "supporting_original_identity_source": {
+        "url": "https://history.aip.org/history/catalog/icos/2306.html",
+        "web_ref": "turn133view0",
+        "source_title": "Adam, Neil Kensington. Neil K. Adam papers,1925–1970.",
+        "source_author": null,
+        "source_kind": "original_institutional_archival_catalogue",
+        "locator": "Full nameL4, papersL6–8, physicalchemistry/careerL9, SouthamptonrepositoryL23.",
+        "source_role": "full professional identity and career only; no own DOB or birthplace observed",
+        "birthplace_or_DOB_independent_confirmation": false
+      },
+      "additional_original_no_birthplace_source": {
+        "url": "https://www.treccani.it/enciclopedia/neil-kensington-adam/",
+        "web_ref": "turn130view1",
+        "locator": "Full nameL8; chemistry/career/death1973 atL23; no birthplace or birthdate in observed article."
+      },
+      "unadopted_discovery_date_variation": "Old Wikipedia mirror search excerpt displayed6November1891; another mirror search excerpt displayed5November1891. Neither was opened or used as an original source; no birthday correction or formal same-person original-source conflict adjudication made. Opened authority profile displays5November, matching frozen native date.",
+      "retrieval_representation": "tool-parsed original portal HTML, not rawHTTP bytes",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "no_master_change": true
+    }
+  ],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA1744",
+      "native": {
+        "record_id": "RS_PAST_NA1744",
+        "authority_name": "Baly; Edward Charles Cyril (1871 - 1948)",
+        "native_dob": "1871-02-09",
+        "prior_raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "99690190c538c2d06a2a852dcb6844bb2573fe1355996e530164973b9eeb6a4b",
+        "native_authority_name_and_DOB_count_in_all_UK": 1
+      },
+      "status": "hold_no_original_birthplace_body",
+      "raw_birthplace_candidate": null,
+      "source_grade_proposal": null,
+      "reason": "Discovery queries returned frozen RoyalSociety roster metadata and unrelated genericODNB results; no new original body/public extract with subject-born/place clause recovered. Closed RoyalSociety directory not reopened.",
+      "discovery_only_lead": {
+        "web_ref": "turn122search1",
+        "role": "Original-roster discovery result supplies full name/date/election and Donnan obituary citation, no birthplace. Not an opened new biography body.",
+        "bibliographic_citation_observed": "Obituary Notices of Fellows of the Royal Society1948–1949 vol6 pp7–21, by F G Donnan"
+      }
+    },
+    {
+      "record_id": "RS_PAST_NA3830",
+      "native": {
+        "record_id": "RS_PAST_NA3830",
+        "authority_name": "Linstead; Sir; Reginald Patrick (1902 - 1966)",
+        "native_dob": "1902-08-28",
+        "prior_raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "66802914e4575f9787dfe11824dbe5ac38df2e789435d92d71b7560628a501e1",
+        "native_authority_name_and_DOB_count_in_all_UK": 1
+      },
+      "status": "hold_original_ODNB_legacy_redirect_inaccessible",
+      "raw_birthplace_candidate": null,
+      "source_grade_proposal": null,
+      "reason": "Original NPG person catalogue gives lifespan/chemistry identity and a generic PlaceLondon tag, but no explicit birth relation. Followed observed DOI link to originalODNB; legacy destination inaccessible via tool, nonretryable. No public born clause acquired. Generic NPG PlaceLondon is not birthplace evidence.",
+      "source_attempts": [
+        {
+          "url": "https://www.npg.org.uk/collections/search/person/mp80623/sir-reginald-patrick-linstead",
+          "web_ref": "turn123view0",
+          "outcome": "original_institutional_person_catalogue_no_birth_relation",
+          "role": "original",
+          "tool_reported_status": null,
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "raw_bytes_saved": false
+        },
+        {
+          "url": "https://doi.org/10.1093/ref%3Aodnb/34549",
+          "web_ref": "turn130view3",
+          "outcome": "observed_NPGlink_click_redirected_to_inaccessible_legacyODNB_nonretryable_no_body",
+          "role": "original",
+          "tool_reported_status": 500,
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "raw_bytes_saved": false
+        }
+      ],
+      "original_ODNB_lead": {
+        "doi": "10.1093/ref:odnb/34549",
+        "observed_click_source": "turn123view0 link59",
+        "destination_reported": "https://www.oxforddnb.com/view/article/34549",
+        "body_observed": false,
+        "note": "Current publisher public-extract URL was not discovered within budget. No failed endpoint retried."
+      }
+    },
+    {
+      "record_id": "RS_PAST_NA8089",
+      "native": {
+        "record_id": "RS_PAST_NA8089",
+        "authority_name": "Ruhemann; Siegfried (1859 - 1942)",
+        "native_dob": "1859-01-04",
+        "prior_raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "cb1de9702ac45f69469894ccd34a6399f6568deab40cd29e98884756f4af7b63",
+        "native_authority_name_and_DOB_count_in_all_UK": 1
+      },
+      "status": "hold_original_birth_clause_body_unavailable",
+      "raw_birthplace_candidate": null,
+      "source_grade_proposal": null,
+      "reason": "External carrier of original1944 JournalChemicalSociety obituaryPDF timed out; originalRSCpublisher landing returned403. Stopped both, no retries or full body. Search-only birthplace lead cannot be adopted.",
+      "source_attempts": [
+        {
+          "url": "https://electronicsandbooks.com/edt/manual/Magazine/J/Journal%20of%20the%20Chemical%20Society%20%28Resumed%29%20UK/1944/JR9440000040.pdf",
+          "web_ref": "turn123view2",
+          "outcome": "mirror_carrier_of_original_published_obituary_PDF_timedout_no_body_no_retry",
+          "role": "external_carrier_of_original_work",
+          "tool_reported_status": null,
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "raw_bytes_saved": false
+        },
+        {
+          "url": "https://pubs.rsc.org/en/content/articlelanding/1944/jr/jr9440000040",
+          "web_ref": "turn130view2",
+          "outcome": "tool_reported403_originalpublisher_no_body_no_retry",
+          "role": "original",
+          "tool_reported_status": 403,
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "raw_bytes_saved": false
+        }
+      ],
+      "discovery_only_lead": {
+        "url": "https://electronicsandbooks.com/edt/manual/Magazine/J/Journal%20of%20the%20Chemical%20Society%20%28Resumed%29%20UK/1944/JR9440000040.pdf",
+        "web_ref": "turn122search52",
+        "source_title": "Obituary Notices, Journal of the Chemical Society1944,p40ff",
+        "place_spelling_observed_in_search": "Johannesburg in East Prussia",
+        "source_birthdate_precision": "year_only1859 in discovery excerpt, not acquired body",
+        "note": "Do not silently correct toJohannisburg or infer SouthAfrica from familiar Johannesburg. Original section header/authorship and subject birth clause not read in body."
+      }
+    }
+  ],
+  "query_ledger": [
+    {
+      "engine": "system2",
+      "count": 4,
+      "queries": [
+        "Edward Charles Cyril Baly born Oxford Dictionary National Biography",
+        "Reginald Patrick Linstead born Oxford Dictionary National Biography",
+        "Neil Kensington Adam born biography",
+        "Siegfried Ruhemann born Oxford Dictionary National Biography"
+      ],
+      "webref": "turn122search",
+      "preplanned": true,
+      "exact_request_utc": null
+    },
+    {
+      "engine": "system1",
+      "count": 2,
+      "queries": [
+        "\"Baly, Edward Charles Cyril\" site:academic.oup.com",
+        "\"Linstead, Sir Reginald Patrick\" site:academic.oup.com"
+      ],
+      "webref": "turn123search",
+      "outcome": "No results found for both exactquoted queries",
+      "preplanned": true,
+      "exact_request_utc": null
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "url": "https://www.npg.org.uk/collections/search/person/mp80623/sir-reginald-patrick-linstead",
+      "web_ref": "turn123view0",
+      "outcome": "original_institutional_person_catalogue_no_birth_relation",
+      "role": "original",
+      "tool_reported_status": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "raw_bytes_saved": false
+    },
+    {
+      "url": "http://www.chem.ucl.ac.uk/resources/history/people/adam.html",
+      "web_ref": "turn123view1",
+      "outcome": "tool_reported403_originalinstitutional_legacybiography_no_body_no_retry",
+      "role": "original",
+      "tool_reported_status": 403,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "raw_bytes_saved": false
+    },
+    {
+      "url": "https://electronicsandbooks.com/edt/manual/Magazine/J/Journal%20of%20the%20Chemical%20Society%20%28Resumed%29%20UK/1944/JR9440000040.pdf",
+      "web_ref": "turn123view2",
+      "outcome": "mirror_carrier_of_original_published_obituary_PDF_timedout_no_body_no_retry",
+      "role": "external_carrier_of_original_work",
+      "tool_reported_status": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "raw_bytes_saved": false
+    },
+    {
+      "url": "https://www.deutsche-biographie.de/122880773.html?language=en",
+      "web_ref": "turn130view0",
+      "outcome": "original_authority_index_profile_explicit_birthplace_label_exactDOB",
+      "role": "original",
+      "tool_reported_status": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "raw_bytes_saved": false
+    },
+    {
+      "url": "https://www.treccani.it/enciclopedia/neil-kensington-adam/",
+      "web_ref": "turn130view1",
+      "outcome": "original_encyclopedia_career_and_deathyear_only_no_birthplace",
+      "role": "original",
+      "tool_reported_status": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "raw_bytes_saved": false
+    },
+    {
+      "url": "https://pubs.rsc.org/en/content/articlelanding/1944/jr/jr9440000040",
+      "web_ref": "turn130view2",
+      "outcome": "tool_reported403_originalpublisher_no_body_no_retry",
+      "role": "original",
+      "tool_reported_status": 403,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "raw_bytes_saved": false
+    },
+    {
+      "url": "https://doi.org/10.1093/ref%3Aodnb/34549",
+      "web_ref": "turn130view3",
+      "outcome": "observed_NPGlink_click_redirected_to_inaccessible_legacyODNB_nonretryable_no_body",
+      "role": "original",
+      "tool_reported_status": 500,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "raw_bytes_saved": false
+    },
+    {
+      "url": "https://history.aip.org/history/catalog/icos/2306.html",
+      "web_ref": "turn133view0",
+      "outcome": "original_catalogue_professionalidentity_only_no_birthplace_orDOB",
+      "role": "original",
+      "tool_reported_status": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "raw_bytes_saved": false
+    }
+  ],
+  "limits": [
+    "All8navigation/6query budget used; no sourcefinds/rawGETs.",
+    "No fullsourceHTML/PDF/pageimages redistributed; only structuredfact extraction and paraphrased observations.",
+    "Adam newBPsourcegradeS3 is conditional parent judgment; originalDOBtiers andmaster unchanged.",
+    "All current candidateDOB/sourcebirthplace displayed explicitly; unknown upstream provenance fully disclosed, no GNDsource-origin assumption.",
+    "Toolparsedtext is not rawHTTP; toolreported403/500 separately identified and rawstatuses/times/hashesnull.",
+    "No retries after403, timeout or nonretryable legacyDOIredirect.",
+    "No hemisphere/country/entity/point/coordinates/QID/DOB/nativeidentity/eligibility changes.",
+    "NPGPlaceLondon and TreccaniSouthampton/Londonwork tags not birth places.",
+    "No inference from search-only RuhemannEastPrussia lead, and no spelling/country repair.",
+    "No literature-exhaustion claim."
+  ]
+}

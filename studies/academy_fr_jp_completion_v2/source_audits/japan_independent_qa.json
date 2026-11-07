@@ -1,0 +1,312 @@
+{
+  "reviewed_at_utc": "2026-10-29T12:05:22.426601+00:00",
+  "reviewer": "japan_institution_c (independent from A/B/bulk authors)",
+  "input_snapshots": {
+    "academy_completion_workers/japan_institution_a/claims.json": "5b62e4d3c14d7cdbd0b89b7d912db8927a3ef9e81106dd6112c4b921793eab0b",
+    "academy_completion_workers/japan_institution_b/claims.json": "ff33815273bf3b58a29611c75f7b843ecbf6034162a0beb3fd23b376ac7ae8b6"
+  },
+  "review_scope": {
+    "A_claims": 42,
+    "B_claims": 29,
+    "A_sha_claims_matched_to_actual_private_bytes": 41,
+    "B_sha_claims_matched_to_actual_private_bytes": 26,
+    "A_unique_hashed_body_files": 39,
+    "B_unique_hashed_body_files": 24,
+    "false_success_body_files_found": 1,
+    "new_birthday_web_searches": 0,
+    "original_worker_files_modified": false,
+    "MacTutor_biographies_checked": 9,
+    "local_capture_unavailable_claims": [
+      "A:jpia-042",
+      "B:竹市雅俊",
+      "B:長尾真",
+      "B:鈴木梅太郎"
+    ],
+    "limit": "Claims with no private body capture remain at their original separate web observation status; no independent byte-level confirmation claimed for them."
+  },
+  "errors_requiring_overlay": [
+    {
+      "issue_id": "JP-QA-001",
+      "severity": "source_capture_metadata_error",
+      "member_key": "jpa:kitagawa_susumu",
+      "name_jp": "北川 進",
+      "input_claim_path": "academy_completion_workers/japan_institution_b/claims.json",
+      "input_claim_zero_based_index": 5,
+      "source_url": "https://www.kitagawa.icems.kyoto-u.ac.jp/wp-content/uploads/2018/10/Kitagawa_CV_JP_181010.pdf",
+      "finding": "The claimed raw-source hash is a 195-byte HTML site-unavailable response, not the CV PDF whose birth statement was observed separately with the web tool.",
+      "evidence": {
+        "body_path": "academy_completion_workers/japan_institution_b/private/5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7",
+        "body_sha256": "5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7",
+        "raw": "<title>Site Unavailable</title> / Unable to access this site."
+      },
+      "root_action": {
+        "source_sha256": null,
+        "source_sha256_status": "web body observed; local capture is unavailable-page HTML, not supporting source bytes",
+        "preserve_web_body_claim": true,
+        "preserve_original_capture_log": true,
+        "raw_capture_success_count_adjustment": -1
+      },
+      "date_adjudication": "No DOB correction inferred. Retain 1951-07-04 only under its original separately observed web-body evidence; do not present the error HTML as its auditable source body."
+    }
+  ],
+  "confirmed_requested_resolutions": [
+    {
+      "case_id": "JP-QA-FUJISAWA",
+      "name_jp": "藤沢 利喜太郎",
+      "member_key": "jpa-unlinked-366ff2fa431b1cd6",
+      "finding": "The Mathematics Society chronology itself supplies both 1861-10-12 and 文久元年九月九日 in one birth row.",
+      "evidence": {
+        "body_path": "academy_completion_workers/japan_institution_a/private/special_2.html",
+        "body_sha256": "14ddfdbd4f26e01b2aeec73d0c0e58ab830cd353db442358f9cb249e849f547a",
+        "raw": "1861年10月12日（文久元年九月九日） 新潟生",
+        "location": "藤澤利喜太郎略年譜 first row"
+      },
+      "root_action": {
+        "calendar": "not_stated",
+        "source_supplied_equivalence": true,
+        "count_as_body_day_claim": true,
+        "calendar_hold_based_only_on_not_literally_Gregorian": false
+      },
+      "note": "Do not call this a collector conversion or competing Gregorian dates; no Gregorian adjudication implied."
+    },
+    {
+      "case_id": "JP-QA-HANAFUSA",
+      "name_jp": "花房 秀三郎",
+      "member_key": "jpa:hanafusa_hidesaburo",
+      "finding": "PDF slide 21 visibly gives Showa4 December1 and the correct Rockefeller oncogene researcher. Claim 1929-12-01 is a faithful era-year transcription.",
+      "evidence": {
+        "body_path": "academy_completion_workers/japan_institution_b/private/0e661996c5faa3f97d2b500c7d73e07f80fbeb6b40ea215c41d4e69044404d10",
+        "body_sha256": "0e661996c5faa3f97d2b500c7d73e07f80fbeb6b40ea215c41d4e69044404d10",
+        "raw": "わが師・花房秀三郎：勇気を学ぶ / 昭和4年12月1日生。 / ロックフェラー大教授",
+        "location": "PDF index20, visual inspection and text extraction"
+      },
+      "root_action": "Keep source day claim and existing no-collector-calendar-conversion annotation."
+    },
+    {
+      "case_id": "JP-QA-KATORI-TANAKA-PRECISION",
+      "finding": "Both B claims correctly stop at month; the source PDFs give no birth day in the inspected biographical passages.",
+      "evidence": [
+        {
+          "body_path": "academy_completion_workers/japan_institution_b/private/652721bf0d5d30a261a5ef8dc7a6ace0be78758850fd6aef570a6a22a35cff16",
+          "body_sha256": "652721bf0d5d30a261a5ef8dc7a6ace0be78758850fd6aef570a6a22a35cff16",
+          "raw": "香取秀俊 / 専攻学科目 量子エレクトロニクス / 生年月 昭和三九年九月",
+          "location": "PDF index0, visual inspection and text extraction"
+        },
+        {
+          "body_path": "academy_completion_workers/japan_institution_b/private/9c929256df4221394fe96f20ffd2781ea6ee06a14bf7bae17e751da1c92df96e",
+          "body_sha256": "9c929256df4221394fe96f20ffd2781ea6ee06a14bf7bae17e751da1c92df96e",
+          "raw": "Koichi TANAKA / 株式会社島津製作所・フェロー / 1959年8月富山県に生まれる。",
+          "location": "PDF index0, text extraction; render lacks Japanese fonts"
+        }
+      ],
+      "root_action": "Keep Katori 1964-09 and Tanaka1959-08 in these source claims; do not pad a day. Another explicit day source can coexist separately."
+    },
+    {
+      "case_id": "JP-QA-NISHIMURA-COLLISION",
+      "finding": "Kyoto two same-name records are correctly separated by metallurgy versus anatomy/embryology. The medicine record birth field is empty.",
+      "evidence": [
+        {
+          "body_path": "academy_completion_workers/japan_kyoto_bulk/private/detail_000706.html",
+          "body_sha256": "d1c4f4a46bedc6e52aed5573918095959cf0a6d507e5ab2642a8f2503ba908c1",
+          "raw": "氏名 西村秀雄 / 工学部、工学研究所 / 生年月日 1892/2/16 / 冶金学第四講座 / 死去1978/5/22"
+        },
+        {
+          "body_path": "academy_completion_workers/japan_kyoto_bulk/private/detail_000707.html",
+          "body_sha256": "1f40a122437b0c7641df17eaa3eee850a44213c8debbc63cfb165a6d7f3f84ed",
+          "raw": "氏名 西村秀雄 / 附属医学専門部、医学部 / 生年月日 [empty] / 生物組織ノ超顕微鏡的構造ノ研究 / 死去1995/10/17"
+        }
+      ],
+      "mapping_confirmed": {
+        "000706": "jpa-unlinked-a8fc2a0b9c3ac0d3",
+        "000707": "jpa-unlinked-363d031907d26f0c"
+      },
+      "root_action": "Keep rejected cross-pairs; never copy the metallurgy birthday to the anatomy candidate."
+    }
+  ],
+  "source_conflicts_to_retain_or_enrich": [
+    {
+      "case_id": "JP-QA-TAMARU",
+      "name_jp": "田丸 卓郎",
+      "member_key": "jpa-unlinked-c10277ddddcdd816",
+      "finding": "Kyoto biography really says 1882/10, but its same record also dates high-school entry1887 and university graduation1895. Existing municipal biography explicitly supplies a competing full date1872-09-29.",
+      "evidence": [
+        {
+          "body_path": "academy_completion_workers/japan_kyoto_bulk/private/detail_000583.html",
+          "body_sha256": "477ed6c820bdb69f0544026eb2c6f750a5b2919c6d0a44ad818c4c7f621d7479",
+          "raw": "生年月日1882/10 / 1887第一高等中学校に入学 / 1895同学物理学科を卒へ大学院に入学す"
+        },
+        {
+          "body_path": "academy_completion_workers/japan_kyoto_bulk/private/tamaru_morioka.html",
+          "body_sha256": "7f228d24ad2102d4547972357f9717140cec63232a1f49d469fbed1d82709570",
+          "raw": "田丸卓郎は1872年(明治5年)9月29日、盛岡市大清水小路にて…生まれた。"
+        }
+      ],
+      "source_urls": [
+        "https://kensaku.kua1.archives.kyoto-u.ac.jp/rireki/?c=detail&id=000583",
+        "https://www.city.morioka.iwate.jp/kanko_sports_bunka/rkeishi_bunkazai/senjin/1009527/1009575.html"
+      ],
+      "root_action": "Retain the DOB conflict hold; do not select or silently repair Kyoto1882. Add the already captured municipal full-date expression as a separate body day claim with pre1873-calendar-unspecified hold; do not infer a Gregorian conversion.",
+      "inference": "Internal career chronology makes1882 questionable; this is a QA inference, not proof of a corrected birthdate."
+    },
+    {
+      "case_id": "JP-QA-ISHIKAWA",
+      "name_jp": "石川 千代松",
+      "member_key": "jpa-unlinked-65f5f21826307672",
+      "finding": "Source explicitly says birthdate has multiple accounts; existing A caveat is required.",
+      "evidence": {
+        "body_path": "academy_completion_workers/japan_institution_a/private/ndl_6508.html",
+        "body_sha256": "7aa00dfde2c838d71f39b30d1e760040edfd3cea4882651a68cd55d52290f847",
+        "raw": "動物学者 / 生年月日には諸説あり。"
+      },
+      "root_action": "Keep source-explicit competing-accounts hold; do not present NDL1860-01-30 as adjudicated."
+    }
+  ],
+  "calendar_holds_confirmed": [
+    {
+      "member_key": "jpa-unlinked-f92f39500c06ff7b",
+      "name_jp": "丘 浅次郎",
+      "evidence": {
+        "body_path": "academy_completion_workers/japan_institution_a/private/ndl_4302.html",
+        "body_sha256": "2ea8eb1480d4169b8997a3b15e26623e9117e65998263981a382c070b48ef6d6",
+        "raw": "明治元年11月18日 / 1868年11月18日"
+      },
+      "root_action": "Keep existing pre1873 calendar hold; no collector conversion or Gregorian birthday acceptance."
+    },
+    {
+      "member_key": "jpa-unlinked-4ed3afac92825ad9",
+      "name_jp": "小藤 文次郎",
+      "evidence": {
+        "body_path": "academy_completion_workers/japan_institution_a/private/special_4.html",
+        "body_sha256": "4ab1c061d3954de917ba6847998fa387033ba8bfdc546a229637e5cc734dad27",
+        "raw": "小藤文次郎は安政3（1856）年3月4日"
+      },
+      "root_action": "Keep existing pre1873 calendar hold; no collector conversion or Gregorian birthday acceptance."
+    },
+    {
+      "member_key": "jpa-unlinked-eabfb6c33df81d73",
+      "name_jp": "寺尾 寿",
+      "evidence": {
+        "body_path": "academy_completion_workers/japan_institution_a/private/special_5.pdf",
+        "body_sha256": "f04cc6e10382a2a225e62e9c6bb1b93d364d6c50649cc0a82bcf78a8f0fce51b",
+        "raw": "寺尾寿は1855（安政2）年9月25日",
+        "location": "Terao PDF printed p332 visually inspected"
+      },
+      "root_action": "Keep existing pre1873 calendar hold; no collector conversion or Gregorian birthday acceptance."
+    }
+  ],
+  "other_observed_date_transcription_errors": [],
+  "other_false200_capture_responses": [],
+  "unresolved_same_name_join_errors_found": [],
+  "identity_assignment_crosschecks": {
+    "supported_to_remove_identity_assignment_hold_only": [
+      {
+        "member_key": "jpa-unlinked-3a793d0d8e9d64db",
+        "name_jp": "山川 健次郎",
+        "kyoto_id": "000958",
+        "basis": "Two institutional biographies match physics/Yale education and Tokyo/Kyoto university presidency, not merely the written name.",
+        "evidence": [
+          {
+            "body_path": "academy_completion_workers/japan_institution_a/private/ndl_470.html",
+            "body_sha256": "8aeaad87f952f36536315f1cdc663909dda598e568cc66cb51bfe2e7a5555afe",
+            "raw": "物理学者 / イェール大学 / 大正2(1913)年再び東京帝大総長 / 京都帝大総長も兼任"
+          },
+          {
+            "body_path": "academy_completion_workers/japan_kyoto_bulk/private/detail_000958.html",
+            "body_sha256": "659d38dfa1b2645a0a78969b0f955faddd8d19fdd0f221c46f9c16622d2c86c5",
+            "raw": "エール大学校 / 三年間物理学修行 / 1913任東京帝国大学総長 / 1914兼任京都帝国大学総長"
+          }
+        ],
+        "source_claim_ids": [
+          "jpia-004",
+          "Kyoto000958"
+        ],
+        "root_action": "Identity linkage has professional/career corroboration; remove identity_assignment_hold for this pair only. Keep Kyoto pre1873 lunar calendar hold; no DOB-calendar conflict adjudication."
+      },
+      {
+        "member_key": "jpa-unlinked-5966755c4ba2e705",
+        "name_jp": "鳥養 利三郎",
+        "kyoto_id": "000638",
+        "basis": "Municipal biography explicitly identifies electrical engineering, Kyoto presidency and Japan Academy membership, with same birthday and death as university personnel record.",
+        "evidence": [
+          {
+            "body_path": "academy_completion_workers/japan_kyoto_city/private/web_directory_and_find_003.json",
+            "body_sha256": "1b08d1a3ac985885285993a374691161c90ccd1ff7762b661fa686d784f8c21a",
+            "raw": "鳥養利三郎 / 電気工学 / 京都帝国大学総長 / 日本学士院会員 / 明治20年2月8日（昭和51年9月24日逝去）",
+            "location": "Persisted web retrieval text, not original HTML"
+          },
+          {
+            "body_path": "academy_completion_workers/japan_kyoto_bulk/private/detail_000638.html",
+            "body_sha256": "deb814a03080d930b7ba1fa582bff529a261b316a2af61535d069675e6e0797e",
+            "raw": "氏名鳥養利三郎 / 専門電気工学 / 生年月日1887/2/8 / 1945任京都帝国大学総長 / 死去1976/9/24"
+          }
+        ],
+        "source_claim_ids": [
+          "KyotoCity:鳥養利三郎:turn1488view2",
+          "Kyoto000638"
+        ],
+        "root_action": "Remove identity_assignment_hold for this corroborated pair only; no final cohort acceptance inferred."
+      },
+      {
+        "member_key": "jpa-unlinked-c10277ddddcdd816",
+        "name_jp": "田丸 卓郎",
+        "kyoto_id": "000583",
+        "basis": "Municipal historical biography identifies the theoretical physicist/romanization advocate and imperial-university physics graduate, overlapping the Kyoto archive physics-degree and career record. Birth-year disagreement remains a separate source conflict.",
+        "evidence": [
+          {
+            "body_path": "academy_completion_workers/japan_kyoto_bulk/private/tamaru_morioka.html",
+            "body_sha256": "7f228d24ad2102d4547972357f9717140cec63232a1f49d469fbed1d82709570",
+            "raw": "田丸卓郎(1872年～1932年) 理論物理学者・ローマ字国字論者 / 帝国大学理科大学 / 田中舘愛橘"
+          },
+          {
+            "body_path": "academy_completion_workers/japan_kyoto_bulk/private/detail_000583.html",
+            "body_sha256": "477ed6c820bdb69f0544026eb2c6f750a5b2919c6d0a44ad818c4c7f621d7479",
+            "raw": "氏名田丸卓郎 / 1895同学物理学科を卒へ大学院に入学す / 1906理学博士"
+          }
+        ],
+        "source_claim_ids": [
+          "Kyoto000583",
+          "Morioka:1009575"
+        ],
+        "root_action": "Professional identity corroborated; any identity hold may be resolved separately, but DOB conflict hold must remain and1882 must not be selected."
+      }
+    ],
+    "not_independently_corroborated_in_this_qa": [
+      {
+        "member_key": "jpa-unlinked-fbabe422e7e03156",
+        "name_jp": "木原 均",
+        "kyoto_id": "000321"
+      },
+      {
+        "member_key": "jpa-unlinked-89c097af3927138c",
+        "name_jp": "松山 基範",
+        "kyoto_id": "000885"
+      },
+      {
+        "member_key": "jpa-unlinked-8f5cd16961fbaf69",
+        "name_jp": "岡村 誠三",
+        "kyoto_id": "000205"
+      },
+      {
+        "member_key": "jpa:nozaki_hitosi",
+        "name_jp": "野崎 一",
+        "kyoto_id": "000719"
+      },
+      {
+        "member_key": "jpa-unlinked-21d207f1f0cdeea3",
+        "name_jp": "林 春雄",
+        "kyoto_id": "000753"
+      },
+      {
+        "member_key": "jpa-unlinked-20cf2a764e3669da",
+        "name_jp": "松本 信一",
+        "kyoto_id": "000878"
+      },
+      {
+        "member_key": "jpa-unlinked-a04b414413ac7f8f",
+        "name_jp": "木村 廉",
+        "kyoto_id": "000331"
+      }
+    ],
+    "remaining_action": "Retain identity_assignment_hold for these seven pending a second institutional career source; university archive detail alone was read but not promoted to independent corroboration."
+  }
+}

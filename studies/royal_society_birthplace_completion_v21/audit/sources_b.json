@@ -1,0 +1,427 @@
+{
+  "schema": "UK_v21_group_B_original_birthplace_sources_v1",
+  "worker": "/root/v21_sources_b",
+  "written_utc": "2026-11-05T23:32:33.844719+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA8672",
+    "RS_PAST_NA8700",
+    "RS_PAST_NA5885",
+    "RS_PAST_NA9858"
+  ],
+  "budget": {
+    "discovery_queries_max": 6,
+    "navigation_attempts_max": 8,
+    "delegated_Fletcher_Wells": {
+      "queries": 3,
+      "navigation": 4
+    },
+    "own_Pickett_OBrien": {
+      "queries": 3,
+      "navigation": 3
+    },
+    "unused_navigation": 1
+  },
+  "counts": {
+    "discovery_queries": 6,
+    "web_navigation_attempts": 7,
+    "parsed_text_find_operations": 0,
+    "screenshots": 0,
+    "raw_HTTP_or_PDF_GETs": 0,
+    "body_verified_birthplace_candidates": 1,
+    "holds": 3,
+    "new_original_body_DOB_conflicts": 1,
+    "known_external_original_work_carrier_attempts": 1,
+    "known_external_original_work_carrier_note": "PMC for original Catlow scientific-society obituary, bodynotacquired; other originalhosts remain separately described."
+  },
+  "candidates": [
+    {
+      "record_id": "RS_PAST_NA5885",
+      "native": {
+        "record_id": "RS_PAST_NA5885",
+        "authority_name": "Pickett; George Richard (1939 - 2024); physicist",
+        "native_dob": "1939-04-10",
+        "prior_raw_birthplace": "",
+        "prior_hemisphere": "unknown",
+        "full_target_object_canonical_sha256": "008476c07cef0840bf380f1cf242ee8e5c13168cfc792aa82e1b3a8b2fa182fc"
+      },
+      "status": "candidate_original_explicit_birthplace_conservative_S3_pending_parent_genre_adjudication",
+      "raw_birthplace": "Biddenham, Bedfordshire",
+      "source_url": "https://www.theguardian.com/science/2024/aug/30/george-pickett-obituary",
+      "source_title": "George Pickett obituary",
+      "source_author": "Mick O'Hare",
+      "source_kind": "original_signed_edited_newspaper_obituary",
+      "source_grade_proposal": "S3",
+      "source_grade_basis": "Signed original edited obituary with acquired byline; acquired page does not establish writer as subject professional colleague. ConservativeS3 proposal rather than silently extending v20 signed-expert-colleague newspaperS2 admission or grading from host. Parent may separately adjudicate the genre.",
+      "source_grade_role": "person_birthplace_support_only",
+      "source_quote": "Pickett was born in Biddenham, Bedfordshire",
+      "source_quote_word_count": 6,
+      "source_locator": "turn8498563view0: bylineL65; publication/versionL67; explicit birth clauseL83; FRS1997/SimonPrizeL84; full George Richard Pickett, exactDOB and deathL88.",
+      "source_webrefs": [
+        "turn8498563view0"
+      ],
+      "source_birthdate": "1939-04-10",
+      "source_birthdate_precision": "day_in_subject_vital_dates",
+      "source_DOB_matches_native": true,
+      "source_death_date": "2024-07-21",
+      "source_lifespan_compatible_with_native": true,
+      "publication_date": "2024-08-30",
+      "last_modified_date": "2025-04-02",
+      "identity_review": [
+        "All native name components George Richard Pickett explicitly appear at originalL88, with exact10April1939 and compatible2024death.",
+        "Lancaster1970appointment, low-temperaturephysics1988chair/ultra-low-temperaturelaboratory, FRS1997 and SimonPrize1998 provide distinctive same-person professional anchors.",
+        "No nickname/initial expansion, native DOB repair or death-endpoint exception needed."
+      ],
+      "geographic_basis": "Birth clause explicitly supplies Bedfordshire as whole-region qualifier for Biddenham. Under existing wholly-northern region rule this can supportNorth; no personal country/entity/coordinate assignment. Parent geographic review required.",
+      "reviewed_hemisphere_proposal": "north",
+      "geography_assignment_performed": false,
+      "discovery_variant_caveat": "Unopened Times discovery projection says Bedford rather than Biddenham. It is not bodyverified or adopted as a separate original observation; no alternative birthplace/civil-record verdict made. Both returned names are retained only as source-lead context, not merged or geocoded.",
+      "caveats": [
+        "Original Guardian acquired body supports the factual candidate; source genre grade remains parent decision.",
+        "No author expertise/colleague relationship was acquired; author byline alone does not establish those roles.",
+        "No fulloriginalHTML/PDF/image/rawbytes redistributed; only six-word birth excerpt.",
+        "No raw HTTP status/time/hash known."
+      ],
+      "retrieval_representation": "web-tool parsed original HTML, not raw HTTP bytes",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "no_master_change": true
+    }
+  ],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA8700",
+      "native": {
+        "record_id": "RS_PAST_NA8700",
+        "authority_name": "Wells; Peter Neil Temple (1936 - 2017)",
+        "native_dob": "1936-06-19",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "699a7fa47d2fe8a261abf9d150a809bf8b4338eb563045308e0e26f014165c9b",
+        "authority_name_and_DOB_count_in_4983": 1
+      },
+      "status": "hold_original_explicit_born_date_conflicts_with_native",
+      "hold_type": "source_exact_DOB_conflict",
+      "reason": "Original BIR subject born sentence states19May1936, conflicting with frozen native19June1936. No birthplace/hemisphere adoption and no native correction. Death-endpoint-only exception cannot apply to a birth-month conflict; dateless alternative cannot bypass it.",
+      "raw_birthplace_candidate_held": "Bristol, England",
+      "source_url": "https://bir.org.uk/media-centre/news/2017/may/professor-peter-wells-1936-2017.aspx",
+      "source_ref": "turn9412493view0",
+      "source_title": "Professor Peter Wells 1936-2017",
+      "source_author": null,
+      "source_kind": "original_scientific_institution_uncredited_obituary_news_body",
+      "publication_date": "2017-05",
+      "publication_date_precision": "month_in_original_URL_only; not independently dated by returned body",
+      "source_quote": "Peter Neil Temple Wells was born in Bristol, England, on 19 May 1936",
+      "source_quote_word_count": 13,
+      "source_locator": "L91title; L95BIRpresident1984-85/BJRassociateeditor1980-85; L96fullnativecomponents/direct bornplace/date; L97-100medicalultrasoundcareer.",
+      "source_birthdate": "1936-05-19",
+      "source_birthdate_precision": "exact_day_in_born_sentence",
+      "native_birthdate": "1936-06-19",
+      "conflict_kind": "month_difference_May_versus_June_same_day_year",
+      "source_full_name": "Peter Neil Temple Wells",
+      "identity_review": [
+        "All native full-name components directly present in original L96.",
+        "L91/95title and death2017/lifespan1936-2017 compatible with native lifespan.",
+        "Distinctive BIRpresidency1984-85, BJRassociateeditor1980-85 and development of medical ultrasound scanners bind the target.",
+        "Original exact born date disagrees with native month; this is not a common-name alternative or a death-only endpoint discrepancy."
+      ],
+      "conditional_source_grade_if_no_conflict": "S3 for uncredited original institutional biography, not host-only S1; no grade adopted",
+      "geography_decision": "unchanged_unknown_due_to_source_DOB_conflict",
+      "geographic_caveat": "England is birth-linked in the held source but cannot be used to resolve hemisphere while DOB-source conflict remains active.",
+      "additional_discovery_only": {
+        "url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/579400901",
+        "search_ref": "turn8428623search0",
+        "author_in_discovery": "Hywel Thomas",
+        "source_birthdate_in_discovery": "1936-05-19",
+        "original_body_open_result": "tool-inaccessible turn2121334view0; stopped without retry",
+        "independent_body_corroboration_claimed": false,
+        "no_source_quote_distributed": true
+      },
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original HTML body, not raw HTTP bytes",
+      "no_master_change": true
+    },
+    {
+      "record_id": "RS_PAST_NA8672",
+      "native": {
+        "record_id": "RS_PAST_NA8672",
+        "authority_name": "Fletcher; Roger (1939 - 2016); mathematician",
+        "native_dob": "1939-01-29",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "6fdb3662a1572983fc902b57447162a4938111c7544f8fd99a0ef23bf860d5c6",
+        "authority_name_and_DOB_count_in_4983": 1
+      },
+      "status": "hold_no_explicit_birthplace_in_acquired_original_lecture_memoir_body_unavailable",
+      "hold_type": "original_birthplace_body_unavailable",
+      "reason": "Original conference lecture confirms full native Roger Fletcher, exact29January1939/lifespan1939-2016 and optimization identity, but inspected original biographical section supplies no birthplace. Original memoir DOI returned tool-reported403 and stopped. No birthplace inferred from Dundee/Leeds/Cambridge affiliations or Scottish death context.",
+      "sources": [
+        {
+          "url": "https://numericalanalysisconference.org.uk/conferences/2025/slides/16",
+          "ref": "turn9412493view1",
+          "title": "Fletcher-Powell 2025 Lecture: Nonlinear Techniques to Solve Linear Optimization Problems: Think of Interior Point Methods",
+          "author": "Jacek Gondzio",
+          "source_kind": "original_conference_lecture_slides_not_original_memoir_body",
+          "publication_date": "2025-06",
+          "publication_date_precision": "month_on_title_footer",
+          "locator": "L0-15@P0author/date; L24-32@P3-4 full RogerFletcher/exactdates/memoir citation; L49-95@P6-10optimizationcareer.",
+          "source_birthdate": "1939-01-29",
+          "source_birthdate_precision": "exact_day_in_cited_memoir_title",
+          "compatible_with_native": true,
+          "birthplace_relation_verified": false,
+          "original_memoir_body_acquired": false
+        },
+        {
+          "url": "https://doi.org/10.1098/rsbm.2024.0037",
+          "ref": "turn9642229view0",
+          "title": "Roger Fletcher. 29 January 1939—15 July 2016",
+          "source_authors_in_observed_lecture_citation": [
+            "N. I. M. Gould",
+            "J. A. J. Hall"
+          ],
+          "source_kind": "original_scientific_memoir_DOI_resolver_attempt",
+          "tool_reported_error": "Failed to fetch (403) Forbidden",
+          "original_body_acquired": false,
+          "retry_performed": false
+        }
+      ],
+      "identity_review": [
+        "Full native Roger Fletcher and compatible exact native birthday are printed in the original lecture cited memoir title.",
+        "Optimization, DFP/BFGS contributions and named PhD students supply distinctive career context; no place used as birth location.",
+        "Memoir publication title is only a citation in acquired lecture; do not claim original memoir born narrative acquired."
+      ],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "no_master_change": true
+    },
+    {
+      "record_id": "RS_PAST_NA9858",
+      "native": {
+        "record_id": "RS_PAST_NA9858",
+        "authority_name": "O'Brien; Paul (1954 - 2018)",
+        "native_dob": "1954-01-22",
+        "prior_raw_birthplace": "",
+        "prior_hemisphere": "unknown",
+        "full_target_object_canonical_sha256": "f81f674b162c1a4bc6defafa8fee793c0fd39a167887b050726293af559ddfa5"
+      },
+      "status": "hold_original_birthplace_body_unavailable",
+      "hold_type": "original_birthplace_body_unavailable",
+      "reason": "Original LSW AGM collection PDF could not be acquired due tool content-length limit. Distinct original authored Catlow obituary discovered in PMC, but direct PMCopen returned a reCAPTCHA/browser-check shell, not the obituary body. Both routes stopped. Oldham,Lancashire remains search-only; sourceDOBprecision not acquired and no birthday/place/grade/geography adopted.",
+      "sources": [
+        {
+          "url": "https://www.learnedsociety.wales/wp-content/uploads/2019/05/AGM-2019-All-papers.pdf",
+          "ref": "turn8498563view1",
+          "source_kind": "original scientific-society meeting papers, body unavailable",
+          "tool_result": "Failed to fetch: (400) Content length is too large:15362389",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "birthplace_relation_body_verified": false
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6364596/",
+          "ref": "turn5142654view0",
+          "source_title_from_discovery": "Obituary: Professor Paul O'Brien",
+          "source_author_from_discovery": "Richard Catlow",
+          "publication_from_discovery": "Proceedings of the Royal Society A, issue2019Jan",
+          "source_kind": "original RoyalSociety obituary carried in PMC; actual open only browsercheck/reCAPTCHA",
+          "tool_result": "Parsed3-line Checking your browser - reCAPTCHA shell; no obituary body",
+          "birthplace_relation_body_verified": false,
+          "source_DOB_precision_acquired": null,
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null
+        }
+      ],
+      "unverified_discovery_birthplace_lead": "Oldham, Lancashire",
+      "unverified_discovery_ref": "turn2411984search0",
+      "no_master_change": true,
+      "geography_assignment_performed": false,
+      "retrieval_representation": "tool-parsed original route results; no raw HTTP/PDF bytes",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    }
+  ],
+  "dispositions": [
+    {
+      "record_id": "RS_PAST_NA5885",
+      "decision": "S3_first_birthplace_candidate_parent_grade_and_geography_review",
+      "place": "Biddenham, Bedfordshire"
+    },
+    {
+      "record_id": "RS_PAST_NA8672",
+      "decision": "hold_no_original_birthplace_body"
+    },
+    {
+      "record_id": "RS_PAST_NA8700",
+      "decision": "hold_new_original_exact_DOB_conflict_May19_vs_nativeJune19"
+    },
+    {
+      "record_id": "RS_PAST_NA9858",
+      "decision": "hold_original_birthplace_body_unavailable"
+    }
+  ],
+  "query_ledger": [
+    {
+      "q": "\"George Richard Pickett\" obituary born",
+      "ref": "turn6109440search0",
+      "intent_file": "v21_b_intent.json",
+      "worker": "own"
+    },
+    {
+      "q": "\"Paul O'Brien\" \"1954\" \"born\" Manchester obituary",
+      "refs": [
+        "turn6109440search6",
+        "turn6109440search7",
+        "turn6109440search8"
+      ],
+      "intent_file": "v21_b_intent.json",
+      "worker": "own"
+    },
+    {
+      "q": "\"Paul O'Brien\" obituary \"born\" Oldham",
+      "refs": [
+        "turn2411984search0",
+        "turn2411984search4"
+      ],
+      "intent_file": "v21_b_intent.json",
+      "worker": "own"
+    },
+    {
+      "operation": 1,
+      "engine": "system2",
+      "q": "\"Roger Fletcher\" obituary born Dundee Royal Society",
+      "relevant_refs": [
+        "turn8428623search2",
+        "turn8428623search25",
+        "turn8428623search3",
+        "turn8428623search6",
+        "turn8428623search27"
+      ],
+      "intent_recorded_before": true,
+      "worker": "delegated_Fletcher_Wells"
+    },
+    {
+      "operation": 2,
+      "engine": "system2",
+      "q": "\"Peter Neil Temple Wells\" born biography",
+      "relevant_refs": [
+        "turn8428623search0",
+        "turn8428623search1",
+        "turn8428623search14"
+      ],
+      "intent_recorded_before": true,
+      "worker": "delegated_Fletcher_Wells"
+    },
+    {
+      "operation": 3,
+      "engine": "system1",
+      "q": "\"Roger Fletcher\" \"born\" 1939",
+      "relevant_refs": [
+        "turn2121334search0",
+        "turn2121334search3",
+        "turn2121334search6"
+      ],
+      "intent_recorded_before": true,
+      "different_person_noise": "Different Roger Fletcher1939-08-22–2026 was rejected as discovery noise; no original body opened/adopted.",
+      "worker": "delegated_Fletcher_Wells"
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "url": "https://www.theguardian.com/science/2024/aug/30/george-pickett-obituary",
+      "ref": "turn8498563view0",
+      "outcome": "original_obituary_body_acquired",
+      "intent_recorded_before": true,
+      "worker": "own"
+    },
+    {
+      "url": "https://www.learnedsociety.wales/wp-content/uploads/2019/05/AGM-2019-All-papers.pdf",
+      "ref": "turn8498563view1",
+      "outcome": "tool_content_length_limit_no_body",
+      "intent_recorded_before": true,
+      "no_retry": true,
+      "worker": "own"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6364596/",
+      "ref": "turn5142654view0",
+      "outcome": "reCAPTCHA_browsercheck_shell_no_obituary_body",
+      "intent_recorded_before": true,
+      "no_retry_or_bypass": true,
+      "worker": "own"
+    },
+    {
+      "operation": 1,
+      "url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/579400901",
+      "ref": "turn2121334view0",
+      "result": "tool_inaccessible",
+      "raw_HTTP_status": null,
+      "retry": false,
+      "intent_recorded_before": true,
+      "worker": "delegated_Fletcher_Wells"
+    },
+    {
+      "operation": 2,
+      "url": "https://bir.org.uk/media-centre/news/2017/may/professor-peter-wells-1936-2017.aspx",
+      "ref": "turn9412493view0",
+      "result": "original_parsed_HTML_body_read",
+      "raw_HTTP_status": null,
+      "intent_recorded_before": true,
+      "worker": "delegated_Fletcher_Wells"
+    },
+    {
+      "operation": 3,
+      "url": "https://numericalanalysisconference.org.uk/conferences/2025/slides/16",
+      "ref": "turn9412493view1",
+      "result": "original_parsed_PDF_lecture_text_read",
+      "pages_reported": 41,
+      "raw_HTTP_status": null,
+      "intent_recorded_before": true,
+      "worker": "delegated_Fletcher_Wells"
+    },
+    {
+      "operation": 4,
+      "url": "https://doi.org/10.1098/rsbm.2024.0037",
+      "ref": "turn9642229view0",
+      "result": "tool_reported403_stopped",
+      "raw_HTTP_status": null,
+      "retry": false,
+      "intent_recorded_before": true,
+      "worker": "delegated_Fletcher_Wells"
+    }
+  ],
+  "intent_files": [
+    "v21_b_intent.json",
+    "v21_b_fw_intent.json"
+  ],
+  "delegated_report_file": "v21_b_fw.json",
+  "own_report_file": "v21_b_own.json",
+  "quote_ledger": [
+    {
+      "original_work": "GuardianPickett2024",
+      "quote": "Pickett was born in Biddenham, Bedfordshire",
+      "whitespace_words": 6
+    },
+    {
+      "original_work": "BIRWells2017obituary",
+      "quote": "Peter Neil Temple Wells was born in Bristol, England, on 19 May 1936",
+      "whitespace_words": 13
+    }
+  ],
+  "protocol_deviations": [],
+  "limits": [
+    "Allqueries/opens had priorintent in correspondingfiles; no retrospectivepreregistration claim.",
+    "No native/master/code/Git mutation. OriginalDOBtiers/identity/eligibility/calendar/country/QIDs/coords unchanged.",
+    "No date repair or dateless bypass for Wells. Death-only endpoint exception does not cover a May-versus-June born-date conflict.",
+    "GuardianPickett writer MickOHare is acquiredbyline only; expertcolleague role notverified. ConservativeS3proposal pendingparent genredecision.",
+    "OriginalPMC and LSWfailedroutes stopped; their searchprojections are leadsnotbodyproof. No independentbodyconfirmation or exactDOBsupplied forOBrien.",
+    "AllrawHTTPstatus/time/hashunknownnull; web-toolparsedtext is not rawbytes. Toolerrors heldseparate.",
+    "No fullsourceHTML/PDF/lecture/imagecache or allsourceprojections redistributed. Shortquotes <=25distinctwords/originalwork.",
+    "No BaZi/outcomes/statisticaldedup/finalcohortfreeze; no literatureexhaustion claim."
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "written_utc": "2026-11-06T23:45:22.917838+00:00",
+  "intent_file": "root_intent.json",
+  "counts": {
+    "discovery_queries": 0,
+    "source_open_operations": 3,
+    "click_operations": 0,
+    "parsed_finds": 1,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "observations": [
+    {
+      "record_id": "RS_PAST_NA6941",
+      "url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/580658625",
+      "ref": "turn7839473view0",
+      "locator": "L757full/L761author/L775pub/L779version/L781directHighHeadCastleCumberland/exactDOB/L782-785career",
+      "role": "new_S2_original_public_extract_place_conflict_observation_only",
+      "adopted_geography": false
+    },
+    {
+      "record_id": "RS_PAST_NA8828",
+      "url": "https://www.londonremembers.com/subjects/lord-wolfson-of-marylebone",
+      "ref": "turn7839473view1",
+      "locator": "L23literalBorn1/11/1927/Died20/5/2010;L24title;L30fullLeonardGordon/GUSFoundationcareer",
+      "role": "new_S3_actual_numeric_header_observation_only",
+      "adopted_geography": false
+    },
+    {
+      "record_id": "RS_PAST_NA907",
+      "url": "https://www.ukkidney.org/about-us/history/obituaries/kenneth-james-franklin",
+      "ref": "turn7839473view2",
+      "cached_find_ref": "turn5681537view0",
+      "locator": "L253full/L255wrapperdate11January1897-4August1966;L257-259physiologycareer",
+      "role": "historical_V13_reproduction_wrapper_reverification_and_inventory_completion_notnewwork_or_originalRCPbody",
+      "adopted_geography": false
+    }
+  ],
+  "quote_words_by_original_work": {
+    "ODNB_Grove_Hills_new_selected_quote": 5,
+    "Cumbrian_Grove_Hills_additional_quote": 0,
+    "LondonRemembers_Wolfson": 2,
+    "UKKidney_Franklin_new_header_fragment": 3
+  },
+  "raw_HTTP_status": null,
+  "raw_bytes_sha256": null,
+  "exact_request_utc": null,
+  "no_original_caches_or_images_distributed": true,
+  "retained_intent_scope_template_note": "See root_intent_scope_clarification.json: retainedpurposefixed12 labelstale, actualcurrentrecordscope6/operationbudget12 separate. Originalintentbytesunchanged."
+}

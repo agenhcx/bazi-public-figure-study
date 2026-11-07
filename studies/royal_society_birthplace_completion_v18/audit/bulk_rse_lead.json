@@ -1,0 +1,180 @@
+{
+  "schema": "UK_v18_RSE_unopened_compact_list_opportunity_v1",
+  "worker": "/root/v18_bulk_rse_lead",
+  "written_utc": "2026-11-05T00:43:54.344242+00:00",
+  "fixed_target_count": 148,
+  "decision": "stop_after_official_metadata_and_bounded_pilot; no_full_pool_rescreen",
+  "decision_basis": "The newly opened192-page first-name-first compact list differs in presentation from the known506/538-page surname-first index. Edition/authorship/date/independence relationship was not established, and two shared benchmark entries reproduce the observed missing-birthplace fields. This does not prove byte identity or complete content equivalence. Per parent direction, do not rerun148queries without an established informative source/method opportunity.",
+  "source_document": {
+    "url": "https://rse.org.uk/wp-content/uploads/2021/05/all_fellows.pdf",
+    "source_title_observed": "FORMER RSE FELLOWS 1783-2002",
+    "tool_title": "untitled",
+    "source_body_ref": "turn126view0",
+    "PDF_pages": 192,
+    "tool_total_parsed_lines": 23444,
+    "source_kind_observed": "compact first-name-first institutional former-fellows list with dated subject headers, optional labeled birthplace, election, profession and fellow type",
+    "source_author": null,
+    "publication_date": null,
+    "publication_date_precision": null,
+    "metadata_caveat": "No author or publication/edition date observed in the inspected document windows. URL2021/05 and search-engine relative publication ages are not adopted as publication date.",
+    "raw_HTTP_status": null,
+    "raw_bytes_sha256": null,
+    "exact_request_utc": null,
+    "retrieval_representation": "web-tool parsed original PDF text; no original PDF bytes downloaded or saved"
+  },
+  "related_official_context": {
+    "url": "https://rse.org.uk/fellowship/past-fellows/",
+    "ref": "turn135view0",
+    "locator": "Lines37–48",
+    "context": "Official current page describes the1783–2002 biographical index, ISBN0 90219884X, and compilers Charles Waterston and Angus Shearer, linking the known two-part PDFs. The inspected page does not link or explicitly identify the192-page all_fellows export.",
+    "relation_to_v17_work": "Undetermined; distinct presentation, not established newer edition or independent work. Do not assign the related index compilers/date automatically to this PDF.",
+    "raw_HTTP_status": null,
+    "exact_request_utc": null,
+    "raw_bytes_sha256": null
+  },
+  "counts": {
+    "discovery_queries": 1,
+    "original_web_navigation_attempts": 2,
+    "raw_HTTP_or_PDF_byte_requests": 0,
+    "full_148_pool_screen_operations": 0,
+    "in_pool_pilot_find_operations": 2,
+    "out_of_pool_benchmark_find_operations": 1,
+    "total_parsed_text_find_operations": 3,
+    "in_pool_positively_bound_subject_entries_reviewed": 1,
+    "out_of_pool_benchmark_entries_reviewed": 1,
+    "new_birthplace_candidates": 0,
+    "alternative_person_rejections": 0
+  },
+  "in_pool_pilot_coverage": [
+    {
+      "record_id": "RS_PAST_NA3358",
+      "native_authority_name": "McCance; Sir; Andrew (1889 - 1983)",
+      "native_dob": "1889-03-30",
+      "pattern": "ANDREW MCCANCE",
+      "find_ref": "turn132view0",
+      "tool_reported_no_matching_text": true,
+      "disposition": "pilot_no_bound_target_header",
+      "limitation": "Single formatted-name query in tool-parsed PDF; not complete normalized corpus absence or evidence that no biography exists."
+    },
+    {
+      "record_id": "RS_PAST_NA1376",
+      "native_authority_name": "Masterman; Arthur Thomas (1869 - 1941)",
+      "native_dob": "1869-04-09",
+      "pattern": "ARTHUR THOMAS MASTERMAN",
+      "find_ref": "turn132view1",
+      "disposition": "bound_subject_entry_no_birthplace_in_observed_segment",
+      "PDF_page_one_based": 118,
+      "printed_page": null,
+      "source_header_start_line": 14407,
+      "source_birthdate": "1869-04-09",
+      "source_death_date": "1941-02-10",
+      "source_birthdate_precision": "exact_day_in_subject_header",
+      "profession_paraphrase": "Natural historian.",
+      "entry_limit": "Observed header/date proceeds through election/profession without a Place of Birth field before the next person. No birthplace inferred from adjacent other-person fields or source host."
+    }
+  ],
+  "out_of_pool_benchmarks": [
+    {
+      "record_id": "RS_PAST_NA6313",
+      "native_authority_name": "Chibnall; Albert Charles (1894 - 1988); biochemist",
+      "reason_out_of_scope": "Already has v17 adopted ODNB birthplace, so absent from current148blank pool. Used solely to compare source presentation/field omissions.",
+      "pattern": "ALBERT CHARLES CHIBNALL",
+      "find_ref": "turn132view2",
+      "PDF_page_one_based": 34,
+      "printed_page": null,
+      "source_header_start_line": 4065,
+      "source_birthdate": "1894-01-28",
+      "source_death_date": "1988-01-10",
+      "profession_paraphrase": "Biochemist.",
+      "disposition": "known_comparison_entry_without_birthplace_in_observed_segment",
+      "no_main_review_ID_or_fact_update": true
+    }
+  ],
+  "candidates": [],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA1376",
+      "native_dob": "1869-04-09",
+      "authority_name": "Masterman; Arthur Thomas (1869 - 1941)",
+      "hold_type": "bound_compact_index_entry_no_birthplace_in_observed_segment",
+      "source_url": "https://rse.org.uk/wp-content/uploads/2021/05/all_fellows.pdf",
+      "source_ref": "turn132view1",
+      "source_locator": "PDFpage118(one-based), parsed14407–14410, targetheader14407. Printedpage notobserved.",
+      "reason": "The compact original list binds the target full name and exactDOB, but observed entry supplies no birthplace field; no new birthplace fact or inference adopted. This is an additional source inspection, not a claim that all literature lacks birthplace."
+    }
+  ],
+  "query_ledger": [
+    {
+      "engine": "system1",
+      "query": "site:rse.org.uk \"all_fellows.pdf\" \"Former\"",
+      "refs": [
+        "turn132search0",
+        "turn132search1",
+        "turn132search2",
+        "turn132search3"
+      ],
+      "exact_request_utc": null
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "url": "https://rse.org.uk/wp-content/uploads/2021/05/all_fellows.pdf",
+      "ref": "turn126view0",
+      "outcome": "original192pagePDFparsedbodyavailable",
+      "raw_HTTP_status": null,
+      "exact_request_utc": null,
+      "raw_bytes_sha256": null
+    },
+    {
+      "url": "https://rse.org.uk/fellowship/past-fellows/",
+      "ref": "turn135view0",
+      "outcome": "officialworkcontextpage; didnotlink192pageexport orbinditsedition/authorship",
+      "raw_HTTP_status": null,
+      "exact_request_utc": null,
+      "raw_bytes_sha256": null
+    }
+  ],
+  "parsed_find_ledger": [
+    {
+      "ref": "turn126view0",
+      "pattern": "ANDREW MCCANCE",
+      "result_ref": "turn132view0",
+      "in_current_pool": true
+    },
+    {
+      "ref": "turn126view0",
+      "pattern": "ARTHUR THOMAS MASTERMAN",
+      "result_ref": "turn132view1",
+      "in_current_pool": true
+    },
+    {
+      "ref": "turn126view0",
+      "pattern": "ALBERT CHARLES CHIBNALL",
+      "result_ref": "turn132view2",
+      "in_current_pool": false,
+      "role": "known_v17_benchmark_only"
+    }
+  ],
+  "source_capture_lock": {
+    "scratch_path": "v18_rse_lead_cache/observed_parsed_results.json",
+    "bytes": 44780,
+    "sha256": "0d6e0e14ccb7ac04518018ed9bffd90aaff7be9fa17fdc05517397216a993538",
+    "representation": "JSON of web-tool parsed projections and metadata results, not original HTTP/PDF bytes",
+    "not_distributed": true
+  },
+  "source_quotation_policy": {
+    "distinct_prose_words_quoted": 0,
+    "note": "Only factual labels/dates/names and paraphrased observations retained; no whole source entries, fulltext, PDF or images distributed."
+  },
+  "intent_file": "v18_bulk_rse_lead_intent.json",
+  "limits": [
+    "No rawGET or403/429retry. Known v17 two-part PDF URLs not reopened or rescreened.",
+    "Only two current-pool pilot names were queried, plus one out-of-pool known benchmark; no148fullscreen or negative corpus claim.",
+    "No original publication date/authorship/independence invented from the official host or related book.",
+    "No source grade/hemisphere/country/coordinates/QID/DOBtiers/master/Git mutation.",
+    "Parent chose to end this opportunity after metadata/pilot; future work needs an informative new source or method basis rather than repeated full-pool queries."
+  ],
+  "no_master_mutation": true,
+  "no_Git_operations": true,
+  "no_original_fulltext_PDF_or_images_distributed": true
+}

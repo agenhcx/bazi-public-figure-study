@@ -1,0 +1,365 @@
+{
+  "schema": "UK_v17_independent_source_adjudication_v1",
+  "reviewer": "/root/v17_source_qa",
+  "written_utc": "2026-11-05T00:29:18.198011+00:00",
+  "decision": "Eleven first-birthplace observations admissible as conservative S2, with six north and five geography unknown; four target holds remain.",
+  "materials_read": [
+    "v17_sources_a.json",
+    "v17_sources_b.json",
+    "v17_root_parkes.json",
+    "v17_bulk_rse.json",
+    "v17_rse_source_cache/parsed_find_projections.json",
+    "v17_blank_queue.json",
+    "v16 complete UK master"
+  ],
+  "verification_limits": {
+    "new_network_requests": 0,
+    "raw_original_PDF_or_HTML_bytes_read": false,
+    "primary_biography_review": "Seven primary observations reviewed from structured worker/root records, exact quotations and source locators; source QA did not independently refetch those original pages. Root separately reports reading all seven original bodies/public extracts.",
+    "RSE_direct_projection_review": "Reviewer directly inspected already-captured original-PDF tool-parsed find projections for all six bound target entries and four alternative-person segments. This is original parsed text, not raw PDF bytes or an independent source.",
+    "source_authorship_metadata": "RSE publication/compiler metadata reviewed from the structured bulk report and its original-page references; not independently re-fetched. Observed compiler is A Macmillan Shearer, not an earlier hypothetical spelling.",
+    "actual_HTTP": "Both RSE direct raw requests403 and stopped. Cached parsed source text remained available. No attempt to equate parsed availability with rawHTTP200 or rawbyte capture."
+  },
+  "record_checks": [
+    {
+      "record_id": "RS_PAST_NA4155",
+      "native_authority_name": "Goodwin; Leonard George (1915 - 2008)",
+      "native_dob": "1915-07-11",
+      "source_birthdate": "1915-07-11",
+      "source_birthdate_precision": "exact_day_in_subject_header_not_repeated_in_born_clause",
+      "source_grade_decision": "S2",
+      "source_url": "https://history.rcp.ac.uk/inspiring-physicians/leonard-george-goodwin",
+      "raw_birthplace": "Wood Green, London",
+      "reviewed_hemisphere": "unknown",
+      "native_authority_key_count_in_UK4983": 1,
+      "complete_queue_object_matches_v16": true,
+      "blank_birthplace_unknown_and_window_before": true,
+      "source_quote_word_count": 12,
+      "structured_field_without_prose_quote": false,
+      "source_identity_date_conflict_blocker": false
+    },
+    {
+      "record_id": "RS_PAST_NA5003",
+      "native_authority_name": "Dudley; Sir; Sheldon Francis (1884 - 1956)",
+      "native_dob": "1884-08-16",
+      "source_birthdate": "1884-08-16",
+      "source_birthdate_precision": "exact_day_in_subject_header_not_repeated_in_born_clause",
+      "source_grade_decision": "S2",
+      "source_url": "https://history.rcp.ac.uk/inspiring-physicians/sir-sheldon-francis-dudley",
+      "raw_birthplace": "Lisbon",
+      "reviewed_hemisphere": "unknown",
+      "native_authority_key_count_in_UK4983": 1,
+      "complete_queue_object_matches_v16": true,
+      "blank_birthplace_unknown_and_window_before": true,
+      "source_quote_word_count": 10,
+      "structured_field_without_prose_quote": false,
+      "source_identity_date_conflict_blocker": false
+    },
+    {
+      "record_id": "RS_PAST_NA629",
+      "native_authority_name": "Downie; Allan Watt (1901 - 1988)",
+      "native_dob": "1901-09-05",
+      "source_birthdate": "1901-09-05",
+      "source_birthdate_precision": "exact_day_in_subject_header_not_repeated_in_born_clause",
+      "source_grade_decision": "S2",
+      "source_url": "https://history.rcp.ac.uk/inspiring-physicians/allan-watt-downie",
+      "raw_birthplace": "the Mid Street cottage in Rosehearty, Aberdeenshire",
+      "reviewed_hemisphere": "north",
+      "native_authority_key_count_in_UK4983": 1,
+      "complete_queue_object_matches_v16": true,
+      "blank_birthplace_unknown_and_window_before": true,
+      "source_quote_word_count": 10,
+      "structured_field_without_prose_quote": false,
+      "source_identity_date_conflict_blocker": false
+    },
+    {
+      "record_id": "RS_PAST_NA5508",
+      "native_authority_name": "Moore; Benjamin (1867 - 1922); biochemist",
+      "native_dob": "1867-01-14",
+      "source_birthdate": "1867-01-14",
+      "source_birthdate_precision": "exact_day_in_separate_born_field_not_repeated_in_place_clause",
+      "source_grade_decision": "S2",
+      "source_url": "https://www.newulsterbiography.co.uk/index.php/home/viewPerson/1973",
+      "raw_birthplace": "Paisley, Renfrewshire (near Glasgow)",
+      "reviewed_hemisphere": "north",
+      "native_authority_key_count_in_UK4983": 1,
+      "complete_queue_object_matches_v16": true,
+      "blank_birthplace_unknown_and_window_before": true,
+      "source_quote_word_count": 8,
+      "structured_field_without_prose_quote": false,
+      "source_identity_date_conflict_blocker": false
+    },
+    {
+      "record_id": "RS_PAST_NA6313",
+      "native_authority_name": "Chibnall; Albert Charles (1894 - 1988); biochemist",
+      "native_dob": "1894-01-28",
+      "source_birthdate": "1894-01-28",
+      "source_birthdate_precision": "day_in_birth_clause",
+      "source_grade_decision": "S2",
+      "source_url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/579805141",
+      "raw_birthplace": "Hammersmith, London",
+      "reviewed_hemisphere": "unknown",
+      "native_authority_key_count_in_UK4983": 1,
+      "complete_queue_object_matches_v16": true,
+      "blank_birthplace_unknown_and_window_before": true,
+      "source_quote_word_count": 9,
+      "structured_field_without_prose_quote": false,
+      "source_identity_date_conflict_blocker": false
+    },
+    {
+      "record_id": "RS_PAST_NA4592",
+      "native_authority_name": "Merton; Patrick Anthony (1920 - 2000)",
+      "native_dob": "1920-10-08",
+      "source_birthdate": "1920-10-08",
+      "source_birthdate_precision": "exact_day_in_biography_header_not_repeated_in_birth_clause",
+      "source_grade_decision": "S2",
+      "source_url": "https://history.rcp.ac.uk/inspiring-physicians/patrick-anthony-merton",
+      "raw_birthplace": "Woldingham in Kent",
+      "reviewed_hemisphere": "north",
+      "native_authority_key_count_in_UK4983": 1,
+      "complete_queue_object_matches_v16": true,
+      "blank_birthplace_unknown_and_window_before": true,
+      "source_quote_word_count": 7,
+      "structured_field_without_prose_quote": false,
+      "source_identity_date_conflict_blocker": false
+    },
+    {
+      "record_id": "RS_PAST_NA645",
+      "native_authority_name": "Parkes; Sir; Alan Sterling (1900 - 1990)",
+      "native_dob": "1900-09-10",
+      "source_birthdate": "1900-09-10",
+      "source_birthdate_precision": "day_in_birth_clause",
+      "source_grade_decision": "S2",
+      "source_url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/581566933",
+      "raw_birthplace": "Bank House, Castleton, near Rochdale",
+      "reviewed_hemisphere": "unknown",
+      "native_authority_key_count_in_UK4983": 1,
+      "complete_queue_object_matches_v16": true,
+      "blank_birthplace_unknown_and_window_before": true,
+      "source_quote_word_count": 12,
+      "structured_field_without_prose_quote": false,
+      "source_identity_date_conflict_blocker": false
+    },
+    {
+      "record_id": "RS_PAST_NA1266",
+      "native_authority_name": "Gemmill; James Fairlie (1867 - 1926)",
+      "native_dob": "1867-11-28",
+      "source_birthdate": "1867-11-28",
+      "source_birthdate_precision": "exact_day_in_subject_header",
+      "source_grade_decision": "S2",
+      "source_url": "https://rse.org.uk/wp-content/uploads/2021/07/RSE-Fellows-BiographicalIndex-1.pdf",
+      "raw_birthplace": "Hillhead, Mauchline, Ayrshire",
+      "reviewed_hemisphere": "north",
+      "native_authority_key_count_in_UK4983": 1,
+      "complete_queue_object_matches_v16": true,
+      "blank_birthplace_unknown_and_window_before": true,
+      "source_quote_word_count": 0,
+      "structured_field_without_prose_quote": true,
+      "source_identity_date_conflict_blocker": false
+    },
+    {
+      "record_id": "RS_PAST_NA2688",
+      "native_authority_name": "Comber; Peter George Le (1941 - 1992)",
+      "native_dob": "1941-02-19",
+      "source_birthdate": "1941-02-19",
+      "source_birthdate_precision": "exact_day_in_subject_header",
+      "source_grade_decision": "S2",
+      "source_url": "https://rse.org.uk/wp-content/uploads/2021/07/RSE-Fellows-BiographicalIndex-1.pdf",
+      "raw_birthplace": "Ilford, Essex",
+      "reviewed_hemisphere": "north",
+      "native_authority_key_count_in_UK4983": 1,
+      "complete_queue_object_matches_v16": true,
+      "blank_birthplace_unknown_and_window_before": true,
+      "source_quote_word_count": 0,
+      "structured_field_without_prose_quote": true,
+      "source_identity_date_conflict_blocker": false
+    },
+    {
+      "record_id": "RS_PAST_NA3483",
+      "native_authority_name": "Mitchell; George Francis (1912 - 1997)",
+      "native_dob": "1912-10-15",
+      "source_birthdate": "1912-10-15",
+      "source_birthdate_precision": "exact_day_in_subject_header",
+      "source_grade_decision": "S2",
+      "source_url": "https://rse.org.uk/wp-content/uploads/2021/07/RSE-Fellows-BiographicalIndex-2.pdf",
+      "raw_birthplace": "Ireland",
+      "reviewed_hemisphere": "north",
+      "native_authority_key_count_in_UK4983": 1,
+      "complete_queue_object_matches_v16": true,
+      "blank_birthplace_unknown_and_window_before": true,
+      "source_quote_word_count": 0,
+      "structured_field_without_prose_quote": true,
+      "source_identity_date_conflict_blocker": false
+    },
+    {
+      "record_id": "RS_PAST_NA7080",
+      "native_authority_name": "Hardy; Sir; Alister Clavering (1896 - 1985)",
+      "native_dob": "1896-02-10",
+      "source_birthdate": "1896-02-10",
+      "source_birthdate_precision": "exact_day_in_subject_header",
+      "source_grade_decision": "S2",
+      "source_url": "https://rse.org.uk/wp-content/uploads/2021/07/RSE-Fellows-BiographicalIndex-1.pdf",
+      "raw_birthplace": "Nottingham",
+      "reviewed_hemisphere": "unknown",
+      "native_authority_key_count_in_UK4983": 1,
+      "complete_queue_object_matches_v16": true,
+      "blank_birthplace_unknown_and_window_before": true,
+      "source_quote_word_count": 0,
+      "structured_field_without_prose_quote": true,
+      "source_identity_date_conflict_blocker": false
+    }
+  ],
+  "source_grade_review": {
+    "primary_seven": "Original signed/edited RCP historical biographies, signed ODNB public extracts and signed Dictionary of Ulster Biography article support conservative S2; no S1 promotion by institutional host. Merton is credited to RCP editor, not asserted individually signed or civil birth record.",
+    "RSE_four": "Original named-compiler edited institutional reference index supplies explicit Place of Birth fields and full headers with exact dates; conservative S2. Compilation is not a birth register and acknowledges omissions/errors. Two PDF parts are one work, not independent corroborating sources.",
+    "original_DOB_tiers": "All new grades are person-birthplace support only; no original DOB tier or DOB-based S2/S2+S3 panel is upgraded."
+  },
+  "special_case_reviews": [
+    {
+      "record_id": "RS_PAST_NA5003",
+      "decision": "accept_S2_geography_unknown",
+      "reason": "Full Sir Sheldon Francis Dudley and exact native DOB uniquely bind the RCP subject. Born-into-Naval-service sentence explicitly locates birth at Lisbon. Internal FRS1941/1951 inconsistency is recorded and excluded as a binding anchor; it is not an observed DOB/place conflict or a license to repair membership."
+    },
+    {
+      "record_id": "RS_PAST_NA629",
+      "decision": "accept_S2_north",
+      "reason": "The born clause explicitly includes Allan and twin Richard in the Mid Street cottage, Rosehearty, Aberdeenshire. Subject heading and exact date are Allan Watt Downie; no reuse of separate Allan Watson Downie record."
+    },
+    {
+      "record_id": "RS_PAST_NA5508",
+      "decision": "accept_S2_north_with_existing_quality_note",
+      "reason": "Signed biographical dictionary subject, separate exact Born field and literal Paisley/Renfrewshire birth clause bind native biochemist. Worker unrelated award-field quality note remains an observation; this QA does not independently adjudicate that other historical fact or alter any Nobel/academy data. No alternative birth/date was observed."
+    },
+    {
+      "record_id": "RS_PAST_NA4592",
+      "decision": "accept_S2_north",
+      "reason": "RCP edited biography gives exact date in subject header and Woldingham in Kent within birth clause. Hemisphere support uses explicit Kent region only; no unique town entity, corrected county, national identity or point coordinates assigned. Cited Times article was not separately acquired or treated as independent corroboration."
+    },
+    {
+      "record_id": "RS_PAST_NA645",
+      "decision": "accept_S2_geography_unknown",
+      "reason": "Root acquired original signed R B Heap ODNB public extract after the earlier worker original-body hold. Exact native date and full name directly match; birth place Bank House, Castleton, near Rochdale is explicit. RAI transcription remains only a prior lead and RS403 remains historical. Schooling/ancestral regions do not supply birthplace geography."
+    },
+    {
+      "record_id": "RS_PAST_NA2688",
+      "decision": "accept_S2_north_no_alias_exception",
+      "reason": "The actual RSE header is COMBER, PETER GEORGE LE, exactly matching native formal surname/given component arrangement. No reconstructed LeComber surname, extra-name exception or native identity correction is needed. Exact19/02/1941, physicist/Dundee career and explicit Ilford, Essex field bind the target."
+    },
+    {
+      "record_id": "RS_PAST_NA3483",
+      "decision": "accept_S2_north_country_or_island_only",
+      "reason": "The original Place of Birth field literally says Ireland. It supports northern hemisphere without assigning a political country entity or finer location; do not infer Dublin from work or education."
+    },
+    {
+      "record_id": "RS_PAST_NA7080",
+      "decision": "accept_S2_geography_unknown",
+      "reason": "Explicit full titled name, exact native day and zoologist career bind the RSE subject. Literal birthplace Nottingham has no adopted birth-linked country/region qualifier; no famous-city inference."
+    }
+  ],
+  "geographic_decision_counts": {
+    "unknown": 5,
+    "north": 6
+  },
+  "geographic_basis": "Only explicit birth-linked Ayrshire, Essex, Ireland, Aberdeenshire, Renfrewshire and Kent support six north decisions. Wood Green/London, Lisbon, Hammersmith/London, Bank House/Castleton/nearRochdale and Nottingham remain unknown. No geography from family, schooling, workplace, death or footer.",
+  "source_date_precision": "All eleven sources give exact native day in their own birth clause, separate Born field or same-subject header. These are source identity observations; frozen original DOB/calendar/source tiers remain unchanged.",
+  "source_and_target_counting": {
+    "fixed_blank_window_pool": 159,
+    "fixed_individual_followups": 8,
+    "bulk_formatted_name_finds": 159,
+    "bulk_bound_target_entries": 6,
+    "bulk_alternative_person_entry_segments": 4,
+    "bulk_targets_with_alternative_rejection_review": 2,
+    "bulk_unique_targets_with_entry_or_rejection_review": 8,
+    "bulk_remaining_projections_without_bound_target_or_rejection_review": 151,
+    "actual_unique_reviewed_targets_union": 15,
+    "accepted_first_birthplaces": 11,
+    "held_targets": 4,
+    "overlap": "Chibnall is one of fixed8 and one of six RSE-bound entries; it is adopted only from independent ODNB birth clause, not from the RSE no-birthplace entry.",
+    "not_claimed": "159 biographies read, normalized complete rawtext absence, full literature exhaustion or new cohort members."
+  },
+  "hold_reviews": [
+    {
+      "record_id": "RS_PAST_NA637",
+      "reason": "Haydon original memoir inaccessible and publisher preview lacks a read birthplace body."
+    },
+    {
+      "record_id": "RS_PAST_NA1376",
+      "reason": "Masterman bound original index header/date/career but no birthplace in observed entry segment; father/school regions not adopted."
+    },
+    {
+      "record_id": "RS_PAST_NA1614",
+      "reason": "William Watson and William John Watson alternative entries have incompatible life years; reject alternatives rather than changing target DOB or claiming same-person contradiction."
+    },
+    {
+      "record_id": "RS_PAST_NA5620",
+      "reason": "John James Graham Brown and John Macdonald Brown alternative entries have additional observed names and incompatible lifespan/death observations; reject alternatives without native identity/date correction."
+    }
+  ],
+  "quotation_review": {
+    "maximum_quote_word_count_in_primary_sources": 12,
+    "primary_quote_counts_by_URL": {
+      "https://history.rcp.ac.uk/inspiring-physicians/leonard-george-goodwin": 12,
+      "https://history.rcp.ac.uk/inspiring-physicians/sir-sheldon-francis-dudley": 10,
+      "https://history.rcp.ac.uk/inspiring-physicians/allan-watt-downie": 10,
+      "https://www.newulsterbiography.co.uk/index.php/home/viewPerson/1973": 8,
+      "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/579805141": 9,
+      "https://history.rcp.ac.uk/inspiring-physicians/patrick-anthony-merton": 7,
+      "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/581566933": 12,
+      "https://rse.org.uk/wp-content/uploads/2021/07/RSE-Fellows-BiographicalIndex-1.pdf": 0,
+      "https://rse.org.uk/wp-content/uploads/2021/07/RSE-Fellows-BiographicalIndex-2.pdf": 0
+    },
+    "RSE_combined_prose_quote_words": 0,
+    "structured_fact_policy": "Four source-place field values and names/dates are structured factual observations, with original field labels and exact page/line locators. Do not fabricate prose quotes or redistribute full entry text, PDFs, HTML or cached projections.",
+    "parsed_projection_bytes_hash_verified": true
+  },
+  "frozen_requirements": [
+    "NativeDOB/calendar/identity/eligibility/QID/originalDOBgrades/country/coords unchanged",
+    "Current birthplace/geography updates versioned with prior-field and prior-absent snapshots",
+    "All preexisting evidence/status/hashes and v15/v16 supplements retained",
+    "All untargeted complete objects identical",
+    "No other cohort mutation, statistical deduplication, BaZi/outcomes or final freeze"
+  ],
+  "issues_for_parent_action": [
+    "Use RSE observed compiler A Macmillan Shearer.",
+    "Describe COMBER,PETERGEORGELE as matching formal native components, not an alias/compound normalization exception.",
+    "Count six bound target entries and four alternative-person segments for two rejected targets; use15unique reviewedIDs and11facts/4holds as parent intends.",
+    "Keep structured evidence_format, original Place of Birth field role and nonempty locators when source_quote is empty.",
+    "Do not redistribute cached parsed_find_projections.json or full original source pages."
+  ],
+  "blocking_findings": [],
+  "bulk_audit_fresh_count_snapshot": {
+    "discovery_queries": 3,
+    "original_web_navigation_attempts": 4,
+    "direct_public_PDF_byte_requests": 2,
+    "total_original_navigation_or_byte_requests": 6,
+    "direct_raw_HTTP_403": 2,
+    "parsed_document_find_operations": 159,
+    "target_entries_positively_bound": 6,
+    "explicit_birthplace_candidates": 4,
+    "bound_entry_no_birthplace_in_observed_segment": 2,
+    "other_person_same_component_rejection_targets": 2,
+    "other_person_entry_segments_reviewed_for_rejection": 4,
+    "unique_targets_with_entry_or_rejection_review": 8,
+    "remaining_targets_without_bound_header_in_returned_projection": 151,
+    "raw_PDFs_saved": 0
+  },
+  "RSE_locator_caveat": "Bulk report corrected unobserved printed page numbers for Gemmill, Hardy and Masterman to null; one-based PDF pages357,423,141 remain observed. This QA does not claim printed pagination for those entries.",
+  "source_operational_count_snapshot": {
+    "individual_queries": 12,
+    "bulk_queries": 3,
+    "root_adaptive_queries": 1,
+    "total_queries": 16,
+    "worker_web_navigation": 17,
+    "root_web_navigation": 7,
+    "total_web_navigation": 24,
+    "total_original_web_navigation": 23,
+    "secondary_provenance_navigation": 1,
+    "raw_public_PDF_GETs": 2,
+    "raw_public_PDF_GET_statuses": [
+      403,
+      403
+    ],
+    "parsed_find_operations": 162,
+    "counting_note": "Snapshot uses final structured worker ledgers and parent root-navigation/find accounting. No direct HTTP statuses inferred from parsed text."
+  }
+}

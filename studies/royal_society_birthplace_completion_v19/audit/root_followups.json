@@ -1,0 +1,76 @@
+{
+  "schema": "UK_v19_parent_adaptive_source_followups_v1",
+  "written_utc": "2026-11-05T14:18:33.158496+00:00",
+  "counts": {
+    "original_navigation_attempts": 8,
+    "queries": 0,
+    "parsed_finds": 0,
+    "raw_GETs": 0,
+    "screenshots": 0
+  },
+  "Finney": {
+    "record_id": "RS_PAST_NA4124",
+    "outcome": "hold_original_birthplace_body_unavailable",
+    "attempts": [
+      {
+        "url": "https://imstat.org/wp-content/uploads/2020/04/Bulletin49_3.pdf",
+        "ref": "turn3361630view0",
+        "tool_reported_status": 502,
+        "outcome": "failed_originalPDFfetch_stopped_no_retry"
+      },
+      {
+        "url": "https://doi.org/10.1111/rssa.12450",
+        "ref": "turn1344098view0",
+        "tool_reported_status": null,
+        "outcome": "originaljournalDOI_notaccessible_tool_stopped_no_retry"
+      }
+    ],
+    "note": "Original IMSHTML502 worker observation retained. PDF was a new representation, DOI a new original-publisher route from observed citation; no body supplied an admitted born clause. Discovery excerpt not adopted."
+  },
+  "Lauritzen": {
+    "record_id": "RS_CURRENT_11792",
+    "outcome": "hold_original_CV_read_no_birthplace",
+    "wrapper_url": "https://www.ae-info.org/ae/Member/Lauritzen_Steffen/CV",
+    "wrapper_ref": "turn3361630view1",
+    "observed_attachment_link": 129,
+    "attachment_url": "https://www.ae-info.org/attach/User/Lauritzen_Steffen/CV/Curriculum_Vitae_for_Steffen_L.pdf",
+    "attachment_ref": "turn2949693view0",
+    "PDF_pages": 5,
+    "source_title": "Curriculum Vitae for Steffen L. Lauritzen",
+    "source_birthdate": "1947-04-22",
+    "source_birthdate_precision": "exact_day_in_personal_information_field; no birthplace",
+    "source_last_modified_observed": "2014-07-30",
+    "source_publication_date": null,
+    "locator": "PDFpage1 lines0–3 name/date; lines2/5–9 nationality/businessaddress are not birthplace; PDFpage5 lines160/167 FRS2011/footer modification.",
+    "identity_review": "All stored Steffen Lauritzen components explicitly present, source adds initialL without expansion; exact native DOB, Oxford/Aalborg/Copenhagen career and FRS2011 bind current record.",
+    "country_caveat": "Danish citizenship, Denmark residence, Aalborg employment and Oxford business address do not supply birthplace. No geographic assignment.",
+    "privacy_and_quote_note": "Only minimal factual identity/date observations retained; contact details, family details and whole CV not redistributed. No new DOB grade confirmation."
+  },
+  "candidate_reinspection": [
+    {
+      "record_id": "RS_PAST_NA4667",
+      "ref": "turn1344098view1",
+      "outcome": "original_ASU_body_read_fullname_exactDOB_birthplace"
+    },
+    {
+      "record_id": "RS_PAST_NA2099",
+      "ref": "turn1344098view2",
+      "outcome": "original_ODNB_publicextract_read_exactDOB_birthaddress_namehistory"
+    },
+    {
+      "record_id": "RS_PAST_NA4614",
+      "ref": "turn1344098view3",
+      "outcome": "original_edited_TrinityPDF_entry_read_birthyear_region_namedfamilyauthors"
+    },
+    {
+      "record_id": "RS_PAST_NA4636",
+      "url": "https://assets.cambridge.org/97805218/40309/frontmatter/9780521840309_frontmatter.pdf",
+      "ref": "turn1344098view4",
+      "tool_reported_status": 503,
+      "outcome": "parent_reopen_failed503_stopped_no_retry",
+      "earlier_observation": "Worker had already read original publisher parsedPDF body at turn4878966view0, birthfullnameliteraldate/sourcebookmetadata retained in sources_c. That earlier observation remains; parent did not independently read this body, does not claim rawbyte identity/HTTP200 or version change."
+    }
+  ],
+  "retrieval": "All observations tool-parsed originalHTML/PDF or tool-reportederror. Unknown rawHTTPstatus/exactrequesttimes/rawbyteSHA null; no rawGET/PDFbytes.",
+  "timing": "Eachparentrequestwasplannedafterworkerleads/beforethatrequest; no sourceblindpreregistration."
+}

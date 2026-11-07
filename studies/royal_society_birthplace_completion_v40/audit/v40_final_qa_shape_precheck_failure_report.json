@@ -1,0 +1,27 @@
+{
+  "schema": "UK_v40_final_QA_report_shape_precheck_failure_v1",
+  "status": "FAIL",
+  "written_utc": "2026-11-07T02:05:46.577470+00:00",
+  "error_type": "AssertionError",
+  "error": "Inherited V39 assertion required all root observations to be opens. V40 explicitly includes query and click observations.",
+  "historical_reconstruction_or_CLI_invoked": false,
+  "declared_root_counts": {
+    "discovery_queries": 1,
+    "source_open_operations": 8,
+    "click_operations": 1,
+    "parsed_finds": 0,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "actual_observation_count": 10,
+  "actual_observation_operations": {
+    "click": 1,
+    "open": 8,
+    "source_locator_query": 1
+  },
+  "production_mutated": false,
+  "network_used": false,
+  "preserved_log": "v40_final_qa_shape_precheck_attempt1.log",
+  "preserved_log_sha256": "a29d5661403667d90963ba1bdcc2cc64ecf9ccd2ab1dee8b777327e37b98e14f",
+  "pre_correction_harness_sha256": "5746cd40296a2db5ad335cfcc03468642c6556b0e39b7a522532e87ca9ef6978"
+}

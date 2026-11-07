@@ -1,0 +1,42 @@
+{
+  "lane": "NAS official NAP Biographical Memoirs Volume74 only",
+  "baseline_sha256": "6df02f0b3a535c8b5447ee704ddc96f473509ed9c2df84b25d6b40064a5dff44",
+  "baseline_counts": {
+    "all_records": 11094,
+    "NAS": 2242,
+    "NAS_north": 1644,
+    "NAS_south": 31,
+    "NAS_unknown": 567
+  },
+  "unknowns_compared_to_all20_TOC_headings": 567,
+  "source_requests": {
+    "web_discovery_query": 1,
+    "index_navigation": 1,
+    "chapter_body": 3
+  },
+  "body_attempts": 3,
+  "body_retries": 0,
+  "body_HTTP_statuses": [
+    200,
+    200,
+    200
+  ],
+  "facts": 2,
+  "holds": 1,
+  "facts_names": [
+    "Scott E. Forbush",
+    "Stephen Kuffler"
+  ],
+  "holds_names": [
+    "David Harker"
+  ],
+  "frozen_at_utc": "2026-11-03T23:58:47.896224+00:00",
+  "no_more_source_requests": true,
+  "clock_start_utc": "2026-11-03T23:55:08.829420+00:00",
+  "stop_rules": "stop on any429 or two equivalent403/503; none encountered",
+  "coverage": "all567 compared by canonical full names and surname/first-initial/name tokens, no lifespan independently matched because baseline lacks death/lifespan fields",
+  "no_geography_assignment": true,
+  "source_grade": "S2 signed edited memoir; official host alone does not make S1",
+  "remaining_source_candidates": 0,
+  "next_source_expansions": "none this lane"
+}

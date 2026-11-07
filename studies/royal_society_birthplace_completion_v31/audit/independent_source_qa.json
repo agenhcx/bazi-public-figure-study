@@ -1,0 +1,528 @@
+{
+  "schema": "UK_v31_independent_geography_source_documentary_QA_v1",
+  "reviewer": "/root/v26_source_qa",
+  "written_utc": "2026-11-06T12:50:33.190603+00:00",
+  "passed": true,
+  "checks_passed": 105,
+  "checks": [
+    {
+      "check": "actual_v30_baseline_canonical_pin",
+      "passed": true
+    },
+    {
+      "check": "two_unique_expected_geographicfacts",
+      "passed": true
+    },
+    {
+      "check": "ten_unique_holds",
+      "passed": true
+    },
+    {
+      "check": "twelve_fixed_geographic_followups",
+      "passed": true
+    },
+    {
+      "check": "three_fixed_groups_four_exactscope",
+      "passed": true
+    },
+    {
+      "check": "68_unique_nonblank_unknown_targets",
+      "passed": true
+    },
+    {
+      "check": "targetpool_equals_actualv30nativewindow",
+      "passed": true
+    },
+    {
+      "check": "accepted_held_disjoint_complete_partition",
+      "passed": true
+    },
+    {
+      "check": "all_scope_nonblank_unknown_nativewindow",
+      "passed": true
+    },
+    {
+      "check": "zero_firstbirthplace_followups",
+      "passed": true
+    },
+    {
+      "check": "known_Ewins_Barber_placeconflicts_preexcluded",
+      "passed": true
+    },
+    {
+      "check": "declared_exact_six_geography_fields",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5065_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5065_fixed_authority_DOB_unique",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5065_actual_full_source_name",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5065_frozen_raw_BP_and_grade_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5065_actual_directcountry_context_consistent",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5065_newS3_geographic_only_North",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5065_nativeDOB_BPgrades_unchanged_flags",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5065_source_dateprecision_not_overstated",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5065_actual_quote_count_limit",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5065_actual_root_original_ref_role",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5065_unknown_raw_metadata_null",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5065_no_BPclaim_or_personcountry_QIDcoords_replacement_fields",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5065_no_stale_proposal_pending_fields",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA7080_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA7080_fixed_authority_DOB_unique",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA7080_actual_full_source_name",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA7080_frozen_raw_BP_and_grade_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA7080_actual_directcountry_context_consistent",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA7080_newS3_geographic_only_North",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA7080_nativeDOB_BPgrades_unchanged_flags",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA7080_source_dateprecision_not_overstated",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA7080_actual_quote_count_limit",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA7080_actual_root_original_ref_role",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA7080_unknown_raw_metadata_null",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA7080_no_BPclaim_or_personcountry_QIDcoords_replacement_fields",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA7080_no_stale_proposal_pending_fields",
+      "passed": true
+    },
+    {
+      "check": "Maynard_sourceyear1920_not_exactJan6",
+      "passed": true
+    },
+    {
+      "check": "Maynard_nativeendpoint2004_year_supported_only",
+      "passed": true
+    },
+    {
+      "check": "Maynard_awardyear_not_web_publication",
+      "passed": true
+    },
+    {
+      "check": "Maynard_prior_regiononlyhold_exactnativeDOB_observed",
+      "passed": true
+    },
+    {
+      "check": "Maynard_no_actual_DOBconflict_yearonly_bypass",
+      "passed": true
+    },
+    {
+      "check": "Hardy_actualexact1896DOB_fullcomponents",
+      "passed": true
+    },
+    {
+      "check": "Hardy_no_publication_or_deathendpoint_assigned",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1580_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1580_held_raw_birthplace_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4113_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4113_held_raw_birthplace_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4155_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4155_held_raw_birthplace_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4166_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4166_held_raw_birthplace_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4680_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4680_held_raw_birthplace_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4747_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4747_held_raw_birthplace_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5962_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA5962_held_raw_birthplace_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6868_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6868_held_raw_birthplace_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA8736_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA8736_held_raw_birthplace_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA8744_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA8744_held_raw_birthplace_exact",
+      "passed": true
+    },
+    {
+      "check": "Harry_actual_Kiddle_countryclaim_retained_notadopted",
+      "passed": true
+    },
+    {
+      "check": "Harry_rootdidnot_reopen_or_claimbodyverification",
+      "passed": true
+    },
+    {
+      "check": "Harry_explicit_derivative_sourceclass_hold_not_correctnessverdict",
+      "passed": true
+    },
+    {
+      "check": "Harry_no_newclass_exception_or_legacy_downgrade",
+      "passed": true
+    },
+    {
+      "check": "CFDFlow_distinction_correct_with_encyclopedia_outlinks",
+      "passed": true
+    },
+    {
+      "check": "Harry_quote5words_under25",
+      "passed": true
+    },
+    {
+      "check": "Raftery_missing_actualdate_not_manufactured_from_URL_age",
+      "passed": true
+    },
+    {
+      "check": "Goodwin_northLondon_citysubarea_not_Earthhemisphere",
+      "passed": true
+    },
+    {
+      "check": "Finlay_Dorset_workaddress_not_birthcountry",
+      "passed": true
+    },
+    {
+      "check": "Cullis_MalvernWorcestershire_career_not_birthcountry",
+      "passed": true
+    },
+    {
+      "check": "inherited_active_source_DOB_conflicts.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "inherited_provisional_parsed_date_discrepancies.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "inherited_birthplace_source_conflicts.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "inherited_source_date_precision_holds.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "inherited_source_derived_age_inconsistencies.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "inherited_lifespan_endpoint_discrepancies.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "inherited_cross_source_reported_age_contrasts.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "inherited_omitted_middle_name_admission.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "inherited_source_ordinal_age_wording_observations.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "seven_activeDOBflags_no_newcase",
+      "passed": true
+    },
+    {
+      "check": "Tomes_still_separate_provisional",
+      "passed": true
+    },
+    {
+      "check": "old_Ewins_Barber_individualholdfiles_unchanged",
+      "passed": true
+    },
+    {
+      "check": "prior_v29_closeout_historical_copy_unchanged",
+      "passed": true
+    },
+    {
+      "check": "103blank_window_outside_geo_scope",
+      "passed": true
+    },
+    {
+      "check": "three_actual8queryledgers",
+      "passed": true
+    },
+    {
+      "check": "24queries_within_upfrontbudgets",
+      "passed": true
+    },
+    {
+      "check": "16worker_navigation_withinbudgets",
+      "passed": true
+    },
+    {
+      "check": "5workerfinds_zeroGETs",
+      "passed": true
+    },
+    {
+      "check": "A_Goodwin_unretained_terminalstatus_disclosed",
+      "passed": true
+    },
+    {
+      "check": "fullprior_context_review_persisted_before_queries",
+      "passed": true
+    },
+    {
+      "check": "workerreports_exact_preserved",
+      "passed": true
+    },
+    {
+      "check": "root2prelogged_newopens_zeroothercalls",
+      "passed": true
+    },
+    {
+      "check": "root_only_2adopted_geographicbodies",
+      "passed": true
+    },
+    {
+      "check": "aggregate_source_counts_exact",
+      "passed": true
+    },
+    {
+      "check": "parent_final_decisions_exact",
+      "passed": true
+    },
+    {
+      "check": "accepted_newwork_quotes_not_inherited_master",
+      "passed": true
+    },
+    {
+      "check": "accepted_newworks_no_prior_input_audit_hits",
+      "passed": true
+    },
+    {
+      "check": "new_quotes_each_under25_including_held_source",
+      "passed": true
+    },
+    {
+      "check": "no_fullsourcecaches_images",
+      "passed": true
+    },
+    {
+      "check": "preliminaryQA_before_finalfacts",
+      "passed": true
+    }
+  ],
+  "accepted_fact_path": "inputs/accepted_geography.json",
+  "accepted_fact_sha256_at_review": "8f503a3ff82129d075af080a3ab4b0adcaa584ab1663c4bfa613c6d89cf7d5cd",
+  "accepted_geography_sha256_at_review": "8f503a3ff82129d075af080a3ab4b0adcaa584ab1663c4bfa613c6d89cf7d5cd",
+  "active_DOB_conflicts_sha256_at_review": "93fc69c77bc85e2fe032b42f88f66d5dd59332d4d4bd0bca0ff36b11d3a00ad4",
+  "source_class_adjudication_sha256_at_review": "073a0b0d423c4c2e325d2e91b5fee735565cffc47b0416dbcac588e471da3ecf",
+  "blocking_issues": [],
+  "accepted_geographic_bindings": [
+    {
+      "record_id": "RS_PAST_NA5065",
+      "native_DOB": "1920-01-06",
+      "native_authority": "Smith; John Maynard (1920 - 2004)",
+      "frozen_raw_birthplace": "London",
+      "frozen_BP_source_grade": "S1",
+      "new_source_birthplace_context": "London, England",
+      "source_date": "1920",
+      "new_source_grade": "S3",
+      "new_grade_role": "geographic_support_only",
+      "new_hemisphere": "north",
+      "quote_words": 4,
+      "fixed_authority_DOB_key_matches": 1
+    },
+    {
+      "record_id": "RS_PAST_NA7080",
+      "native_DOB": "1896-02-10",
+      "native_authority": "Hardy; Sir; Alister Clavering (1896 - 1985)",
+      "frozen_raw_birthplace": "Nottingham",
+      "frozen_BP_source_grade": "S2",
+      "new_source_birthplace_context": "Nottingham, England",
+      "source_date": "1896-02-10",
+      "new_source_grade": "S3",
+      "new_grade_role": "geographic_support_only",
+      "new_hemisphere": "north",
+      "quote_words": 9,
+      "fixed_authority_DOB_key_matches": 1
+    }
+  ],
+  "inherited_nine_issue_sidecars_byte_identical": [
+    "active_source_DOB_conflicts.json",
+    "provisional_parsed_date_discrepancies.json",
+    "birthplace_source_conflicts.json",
+    "source_date_precision_holds.json",
+    "source_derived_age_inconsistencies.json",
+    "lifespan_endpoint_discrepancies.json",
+    "cross_source_reported_age_contrasts.json",
+    "omitted_middle_name_admission.json",
+    "source_ordinal_age_wording_observations.json"
+  ],
+  "declared_six_GEO_FIELDS": [
+    "geo_resolution_status",
+    "geography_decision",
+    "hemisphere",
+    "northern_birthplace_candidate",
+    "reason",
+    "southern_birthplace_separate"
+  ],
+  "prior_blank_window_count": 103,
+  "new_birthplaces": 0,
+  "source_class_adjudication": {
+    "record_id": "RS_PAST_NA4113",
+    "country_assertion_retained": "Northampton, England",
+    "new_geographic_source_grade_adopted": null,
+    "root_independently_reopened_body": false,
+    "actual_worker_body_and_Wikipedia_children_derivation_retained": true,
+    "decision": "Hold under current new-original-work source class; no new exception, correctness verdict or retroactive legacy-BP downgrade."
+  },
+  "Maynard_prior_DOB_boundary": "ActualpriorBalzanbodyalreadyreportedfullnative/exactJan6; inheritedv12decisionwascountry-region-onlyhold. IMDbFeb6 is explicitexcludedunopenedsecondaryprojection, notqualifiedactualsourceDOBconflict/legacydatehold. NewKyotoyear1920 fullnative/career/directEngland compatibleprecisionisgeographicrefinement only, not dateadjudication/clearinganactualflag. This differs from Jardineexplicitlegacydatehold and newqualified12-v-14case.",
+  "protocol_disclosures": {
+    "A": "Fullprioracceptedcontextsandholdsreviewedbeforequeries. OneGoodwinEnglandcachedfindselectivedisplay omittedterminalstatus; no reconstructedmatch/absence or retry. FirstoriginalbodybornnorthLondon observation hasitsownrole. ActualKiddlederived-countryclaim preservedworker-only/nonadopted.",
+    "B": "Fullprioracceptedcontext/holdsreviewed, missingGartonlarge-outputchunk rereadbeforequeries. NewDOB-only/workaddress/city-only metadata notbirthregion; actualroutefailuresstopped.",
+    "C": "NewKyoto/Giffordbody admitted; Robertsname-date-placeproofinsufficient and Collarneworiginalroutesfailed, secondaryprojectionsnotnewqualifiedDOB/namecase. Onequeryresultrefs[] unretained/notinvented.",
+    "root": "TwoobservedneworiginalURLs prelogged/verified; zeroqueries/finds/GETs. No independentparentreopen/bodyclaimforHarryKiddle. Sourceclassadjudicationholdsderivedrewrite withoutcorrectness/nativegradeorlegacyclaimsverdict."
+  },
+  "quote_audit": {
+    "new_work_identifiers_old_package_hits": {
+      "MaynardKyoto": [],
+      "HardyGifford": [],
+      "HarryKiddle": []
+    },
+    "new_quoted_words": {
+      "MaynardKyoto": 4,
+      "HardyGifford": 9,
+      "HarryKiddle_held": 5,
+      "Raftery_held_abstract": 2
+    },
+    "same_inherited_BP_work_new_quote_additions": 0
+  },
+  "no_new_admission_method_exception": true,
+  "review_scope": "Independentdocumentarysource/schema/scope/fact/quote/protocolreview; workers/root acquiredoriginals. Reviewer didnotnetwork-fetchsources/readrawbytes/inspectpixels/executeproductionmain. Runtimefullobjectimmutability/rollback/outputreplay reservedforindependentfinalQA afterproduction.",
+  "limitations": [
+    "NewS3geographicsupport doesnotchangeoriginalLondonS1/NottinghamS2BPclaims or nativeDOBsourcegrades.",
+    "MaynardKyotoyear1920only doesnotconfirmJan6; actualoldBalzanJan6 and excludedunopenedIMDbFeb6 have distinctacquisition/qualificationroles, not a knownactualDOBconflict bypass.",
+    "Hardyactualexact1896-02-10 supportsbirthcountry; articlepublicationdateandnative1985deathendpointnotconfirmed.",
+    "KnownEwinsBristol-v-Blackpool/BarberLetchworth-v-Hatfield stayexcluded and unresolved, despiteothercities/countriespossiblysharinghemisphere. Gotchsidecarnotexhaustive.",
+    "KiddleexplicitWiki-childrewrite observation held bycurrentoriginal-workclass; actualcountryclaimnotcalledincorrect and legacyWikiBPgradesnotretroactivelychanged.",
+    "Goodwinunretainedcachedfindterminalstatus isnotwhole-sourceabsenceproof. No inventedstatus/error/match/glyph/dateverdict.",
+    "103blankwindowrecords outsidegeoonlyscope and v29firstpasscloseout stayshistorical; no newBP/finalfreeze.",
+    "Allnewquotedworks checkedagainstcurrentinheritedmasterandpriorstudyJSON; no sameworknewquotes/fullsourcecaches/rawHTTPstatus/time/hashclaims."
+  ],
+  "no_network_source_code_mainoutputs_or_Git_mutation_by_reviewer": true
+}

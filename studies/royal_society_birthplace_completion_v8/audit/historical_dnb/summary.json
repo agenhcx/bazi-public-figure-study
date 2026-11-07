@@ -1,0 +1,31 @@
+{
+  "schema": "UK_v8_bounded_historical_DNB_transcription",
+  "frozen_utc": "2026-11-03T00:18:24.806641+00:00",
+  "baseline_rows": 4983,
+  "target_window_unknown_death_pre1932": 24,
+  "web_discovery_queries": 5,
+  "direct_API_requests": 4,
+  "article_body_requests": 2,
+  "index_API_requests": 2,
+  "direct_API_HTTP_status_counts": {
+    "200": 4
+  },
+  "retries": 0,
+  "HTTP429": 0,
+  "direct_API_request_note": "index_links.json (three verified1912 volume titles in one API call, continuation not followed); index1927 parse; two article parses. Only bounded available indices examined, not a full DNB census.",
+  "accepted": 2,
+  "accepted_source_grade_counts": {
+    "S3": 2
+  },
+  "held_target_rows": 22,
+  "raw_birthplace_or_native_modified": false,
+  "geography_assigned": false,
+  "scan_images_fetched_or_read": 0,
+  "original_edited_book_metadata_retained_but_not_S2_verified": true,
+  "input_base_sha256": "3aa09ae1720ed7abc06b49cb49f9002aa91b0a8a65ac0c0bafe18f455dc8eff7",
+  "output_sha256": {
+    "accepted.jsonl": "128d5c22b7dda218d01191cbb272c9282e3ae8f5ec134e58800fc4da49961143",
+    "coverage.jsonl": "933fd4c3582ab842759f3c17e0f59a553d5937dfdc29d3876d11c4edfdeccc7c",
+    "held.jsonl": "455e9af1519e5bde873444c6c2fedac7b4e8dd312453bf2a3d25f51f52bd9cf2"
+  }
+}

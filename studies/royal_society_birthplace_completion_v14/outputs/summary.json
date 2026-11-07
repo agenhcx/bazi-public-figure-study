@@ -1,0 +1,49 @@
+{
+  "schema": "royal_society_birthplace_completion_v14",
+  "method": "reviewed full-compound geography of already adopted explicit birthplaces",
+  "baseline_v13_source_commit": "09568feae7af46e5c4ca312e512cf60df3bf8904",
+  "baseline_v13_canonical_jsonl_sha256": "1b6318ed3e7056886949b47ff08f65eaa518a355cede9de67be934088eadf108",
+  "baseline_v12_canonical_jsonl_sha256": "1b6318ed3e7056886949b47ff08f65eaa518a355cede9de67be934088eadf108",
+  "reconstructed_v11_canonical_jsonl_sha256": "577515b90cff05d61288222a4daf595aaaed76a1baa16ab96391720b02c32da6",
+  "underlying_v10_gzip_sha256": "e44f6dc02cc0cafece9b792164f016da0f08de5736ac62442d176d45b19a5799",
+  "records": 4983,
+  "counting_unit": "fixed UK cohort records",
+  "reviewed_records": 4,
+  "newly_classified": 0,
+  "new_geographic_resolutions": 0,
+  "new_person_birthplace_observations": 0,
+  "new_first_birthplace_records": 0,
+  "geographic_support_grade_counts": {},
+  "geographic_support_grade_role": "geographic_support_only",
+  "new_hemisphere_counts": {},
+  "overall": {
+    "north": 4159,
+    "unknown": 641,
+    "south": 183
+  },
+  "native_dob_window": "1835-1985 inclusive",
+  "native_dob_window_records": 2644,
+  "native_dob_window_counts": {
+    "north": 2259,
+    "unknown": 207,
+    "south": 178
+  },
+  "newly_classified_in_native_dob_window": 0,
+  "unchanged_complete_rows": 4983,
+  "held_records": 4,
+  "holds": {
+    "candidate_support_only": 3,
+    "unsupported_historical_alias": 1
+  },
+  "native_fields_and_prior_evidence_preserved": true,
+  "all_v11_v12_and_v13_evidence_objects_preserved": true,
+  "original_birthplace_and_DOB_source_grades_preserved": true,
+  "other_cohorts_modified": false,
+  "country_or_personal_coordinates_assigned": false,
+  "DOB_calendar_identity_eligibility_modified": false,
+  "cross_cohort_deduplication": false,
+  "BaZi_or_outcomes": false,
+  "final_cohort_freeze": false,
+  "gzip_note": "Output uses GzipFile with empty filename and zero mtime; baseline identity uses canonical objects, not cross-Python gzip header equality.",
+  "recovery_note": "Self-contained UK v10 carrier plus frozen v11/v12/v13 contexts; no comprehensive v8 NAS/DE increment reconstruction."
+}

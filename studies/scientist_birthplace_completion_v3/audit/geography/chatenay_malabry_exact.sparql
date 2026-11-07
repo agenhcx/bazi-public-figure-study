@@ -1,0 +1,38 @@
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX ps: <http://www.wikidata.org/prop/statement/>
+PREFIX psv: <http://www.wikidata.org/prop/statement/value/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+SELECT DISTINCT ?item ?matchedLiteral ?matchKind ?itemLabel
+  ?instanceOf ?instanceOfLabel ?country ?countryLabel
+  ?coordinateStatement ?rank ?latitude ?longitude ?precision ?globe
+WHERE {
+  {
+    SELECT DISTINCT ?item ?matchedLiteral ?matchKind WHERE {
+      VALUES ?matchedLiteral { "Châtenay-Malabry"@en "Châtenay-Malabry"@fr }
+      { ?item rdfs:label ?matchedLiteral . BIND("label" AS ?matchKind) }
+      UNION
+      { ?item skos:altLabel ?matchedLiteral . BIND("alias" AS ?matchKind) }
+    }
+  }
+  OPTIONAL { ?item rdfs:label ?itemLabel . FILTER(LANG(?itemLabel) IN ("en", "fr")) }
+  OPTIONAL {
+    ?item wdt:P31 ?instanceOf .
+    OPTIONAL { ?instanceOf rdfs:label ?instanceOfLabel . FILTER(LANG(?instanceOfLabel) IN ("en", "fr")) }
+  }
+  OPTIONAL {
+    ?item wdt:P17 ?country .
+    OPTIONAL { ?country rdfs:label ?countryLabel . FILTER(LANG(?countryLabel) IN ("en", "fr")) }
+  }
+  OPTIONAL {
+    ?item p:P625 ?coordinateStatement .
+    ?coordinateStatement ps:P625 ?coordinate ; wikibase:rank ?rank ; psv:P625 ?coordinateValue .
+    ?coordinateValue wikibase:geoLatitude ?latitude ; wikibase:geoLongitude ?longitude ; wikibase:geoGlobe ?globe .
+    OPTIONAL { ?coordinateValue wikibase:geoPrecision ?precision . }
+    FILTER(?globe = wd:Q2)
+  }
+}
+ORDER BY ?item ?coordinateStatement ?instanceOf ?country ?matchedLiteral ?matchKind ?itemLabel ?instanceOfLabel ?countryLabel

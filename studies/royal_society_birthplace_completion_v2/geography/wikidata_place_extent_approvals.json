@@ -1,0 +1,5175 @@
+{
+  "schema": "Wikidata_geographic_extent_approvals_v1",
+  "source_provenance": "Exact existing P19 place QIDs -> geographical P131* ancestors; no person or DOB query",
+  "anchor_extents": {
+    "Q21": {
+      "label": "England",
+      "hemisphere": "north"
+    },
+    "Q22": {
+      "label": "Scotland",
+      "hemisphere": "north"
+    },
+    "Q25": {
+      "label": "Wales",
+      "hemisphere": "north"
+    },
+    "Q26": {
+      "label": "Northern Ireland",
+      "hemisphere": "north"
+    },
+    "Q27": {
+      "label": "Ireland",
+      "hemisphere": "north"
+    },
+    "Q16": {
+      "label": "Canada",
+      "hemisphere": "north"
+    },
+    "Q35": {
+      "label": "Denmark",
+      "hemisphere": "north"
+    },
+    "Q34": {
+      "label": "Sweden",
+      "hemisphere": "north"
+    },
+    "Q33": {
+      "label": "Finland",
+      "hemisphere": "north"
+    },
+    "Q183": {
+      "label": "Germany",
+      "hemisphere": "north"
+    },
+    "Q39": {
+      "label": "Switzerland",
+      "hemisphere": "north"
+    },
+    "Q40": {
+      "label": "Austria",
+      "hemisphere": "north"
+    },
+    "Q38": {
+      "label": "Italy",
+      "hemisphere": "north"
+    },
+    "Q36": {
+      "label": "Poland",
+      "hemisphere": "north"
+    },
+    "Q218": {
+      "label": "Romania",
+      "hemisphere": "north"
+    },
+    "Q17": {
+      "label": "Japan",
+      "hemisphere": "north"
+    },
+    "Q833": {
+      "label": "Malaysia",
+      "hemisphere": "north"
+    },
+    "Q334": {
+      "label": "Singapore",
+      "hemisphere": "north"
+    },
+    "Q668": {
+      "label": "India",
+      "hemisphere": "north"
+    },
+    "Q854": {
+      "label": "Sri Lanka",
+      "hemisphere": "north"
+    },
+    "Q148": {
+      "label": "China",
+      "hemisphere": "north"
+    },
+    "Q928": {
+      "label": "Philippines",
+      "hemisphere": "north"
+    },
+    "Q408": {
+      "label": "Australia",
+      "hemisphere": "south"
+    },
+    "Q664": {
+      "label": "New Zealand",
+      "hemisphere": "south"
+    },
+    "Q258": {
+      "label": "South Africa",
+      "hemisphere": "south"
+    },
+    "Q1027": {
+      "label": "Mauritius",
+      "hemisphere": "south"
+    },
+    "Q1029": {
+      "label": "Mozambique",
+      "hemisphere": "south"
+    },
+    "Q414": {
+      "label": "Argentina",
+      "hemisphere": "south"
+    },
+    "Q298": {
+      "label": "Chile",
+      "hemisphere": "south"
+    },
+    "Q785": {
+      "label": "Jersey",
+      "hemisphere": "north"
+    },
+    "Q25230": {
+      "label": "Guernsey",
+      "hemisphere": "north"
+    },
+    "Q9676": {
+      "label": "Isle of Man",
+      "hemisphere": "north"
+    },
+    "Q244": {
+      "label": "Barbados",
+      "hemisphere": "north"
+    },
+    "Q766": {
+      "label": "Jamaica",
+      "hemisphere": "north"
+    },
+    "Q754": {
+      "label": "Trinidad and Tobago",
+      "hemisphere": "north"
+    },
+    "Q790": {
+      "label": "Haiti",
+      "hemisphere": "north"
+    },
+    "Q812": {
+      "label": "Florida",
+      "hemisphere": "north"
+    }
+  },
+  "query_sources": [
+    {
+      "batch": 1,
+      "place_qids": [
+        "Q21",
+        "Q22",
+        "Q27",
+        "Q34",
+        "Q36",
+        "Q62",
+        "Q84",
+        "Q145",
+        "Q163",
+        "Q183",
+        "Q220",
+        "Q239",
+        "Q244",
+        "Q268",
+        "Q490",
+        "Q597",
+        "Q766",
+        "Q785",
+        "Q790",
+        "Q812",
+        "Q1040",
+        "Q1055",
+        "Q1085",
+        "Q1761",
+        "Q1780",
+        "Q1792",
+        "Q1904",
+        "Q1989",
+        "Q2079",
+        "Q2132",
+        "Q2256",
+        "Q2795",
+        "Q2966",
+        "Q3141",
+        "Q3159",
+        "Q3410",
+        "Q3852",
+        "Q3909",
+        "Q3929",
+        "Q9005",
+        "Q9679",
+        "Q9824",
+        "Q10686",
+        "Q16087",
+        "Q18125",
+        "Q19660",
+        "Q19798",
+        "Q22905",
+        "Q23051",
+        "Q23064",
+        "Q23079",
+        "Q23082",
+        "Q23088",
+        "Q23103",
+        "Q23106",
+        "Q23109",
+        "Q23111",
+        "Q23148",
+        "Q23159",
+        "Q23204",
+        "Q23240",
+        "Q23276",
+        "Q23298",
+        "Q23306",
+        "Q23346",
+        "Q24826",
+        "Q25230",
+        "Q26163",
+        "Q34217",
+        "Q35654",
+        "Q36036",
+        "Q39178",
+        "Q40191",
+        "Q41262",
+        "Q42932",
+        "Q54769",
+        "Q72216",
+        "Q122744",
+        "Q125163",
+        "Q127212",
+        "Q148349",
+        "Q149836",
+        "Q149942",
+        "Q150120",
+        "Q161885",
+        "Q172157",
+        "Q174665",
+        "Q179325",
+        "Q179385",
+        "Q188304",
+        "Q188313",
+        "Q188489",
+        "Q189960",
+        "Q192240",
+        "Q201149",
+        "Q202088",
+        "Q202174",
+        "Q203349",
+        "Q206687",
+        "Q206934",
+        "Q207257",
+        "Q207851",
+        "Q208713",
+        "Q209142",
+        "Q211106",
+        "Q217039",
+        "Q252580",
+        "Q275863",
+        "Q288781",
+        "Q427422",
+        "Q464955",
+        "Q507854",
+        "Q530296",
+        "Q535233",
+        "Q565532",
+        "Q594706",
+        "Q597906",
+        "Q607669",
+        "Q617799",
+        "Q650068",
+        "Q650682",
+        "Q654216",
+        "Q693450",
+        "Q702259",
+        "Q726347",
+        "Q727520",
+        "Q730706",
+        "Q750444",
+        "Q823600",
+        "Q851718",
+        "Q862832",
+        "Q868642",
+        "Q876122",
+        "Q884571",
+        "Q893314",
+        "Q904472",
+        "Q915930",
+        "Q922620",
+        "Q923574",
+        "Q930204",
+        "Q931120",
+        "Q936263",
+        "Q936641",
+        "Q940733",
+        "Q941901",
+        "Q984857",
+        "Q986070",
+        "Q991600",
+        "Q1000938",
+        "Q1002826",
+        "Q1003140",
+        "Q1006232",
+        "Q1007106",
+        "Q1009718",
+        "Q1011062",
+        "Q1011728",
+        "Q1018184",
+        "Q1024900",
+        "Q1049514",
+        "Q1070656",
+        "Q1146838",
+        "Q1148460",
+        "Q1247384",
+        "Q1291082",
+        "Q1327770",
+        "Q1368969",
+        "Q1427108",
+        "Q1490411",
+        "Q1586842",
+        "Q1610680",
+        "Q1702713",
+        "Q1751974",
+        "Q1794588",
+        "Q1828038",
+        "Q1830879",
+        "Q1904228",
+        "Q1911414",
+        "Q1964975",
+        "Q2015708",
+        "Q2153758"
+      ],
+      "url": "https://query.wikidata.org/sparql?query=SELECT+%3Fplace+%3Fanchor+WHERE+%7B+VALUES+%3Fplace+%7Bwd%3AQ21+wd%3AQ22+wd%3AQ27+wd%3AQ34+wd%3AQ36+wd%3AQ62+wd%3AQ84+wd%3AQ145+wd%3AQ163+wd%3AQ183+wd%3AQ220+wd%3AQ239+wd%3AQ244+wd%3AQ268+wd%3AQ490+wd%3AQ597+wd%3AQ766+wd%3AQ785+wd%3AQ790+wd%3AQ812+wd%3AQ1040+wd%3AQ1055+wd%3AQ1085+wd%3AQ1761+wd%3AQ1780+wd%3AQ1792+wd%3AQ1904+wd%3AQ1989+wd%3AQ2079+wd%3AQ2132+wd%3AQ2256+wd%3AQ2795+wd%3AQ2966+wd%3AQ3141+wd%3AQ3159+wd%3AQ3410+wd%3AQ3852+wd%3AQ3909+wd%3AQ3929+wd%3AQ9005+wd%3AQ9679+wd%3AQ9824+wd%3AQ10686+wd%3AQ16087+wd%3AQ18125+wd%3AQ19660+wd%3AQ19798+wd%3AQ22905+wd%3AQ23051+wd%3AQ23064+wd%3AQ23079+wd%3AQ23082+wd%3AQ23088+wd%3AQ23103+wd%3AQ23106+wd%3AQ23109+wd%3AQ23111+wd%3AQ23148+wd%3AQ23159+wd%3AQ23204+wd%3AQ23240+wd%3AQ23276+wd%3AQ23298+wd%3AQ23306+wd%3AQ23346+wd%3AQ24826+wd%3AQ25230+wd%3AQ26163+wd%3AQ34217+wd%3AQ35654+wd%3AQ36036+wd%3AQ39178+wd%3AQ40191+wd%3AQ41262+wd%3AQ42932+wd%3AQ54769+wd%3AQ72216+wd%3AQ122744+wd%3AQ125163+wd%3AQ127212+wd%3AQ148349+wd%3AQ149836+wd%3AQ149942+wd%3AQ150120+wd%3AQ161885+wd%3AQ172157+wd%3AQ174665+wd%3AQ179325+wd%3AQ179385+wd%3AQ188304+wd%3AQ188313+wd%3AQ188489+wd%3AQ189960+wd%3AQ192240+wd%3AQ201149+wd%3AQ202088+wd%3AQ202174+wd%3AQ203349+wd%3AQ206687+wd%3AQ206934+wd%3AQ207257+wd%3AQ207851+wd%3AQ208713+wd%3AQ209142+wd%3AQ211106+wd%3AQ217039+wd%3AQ252580+wd%3AQ275863+wd%3AQ288781+wd%3AQ427422+wd%3AQ464955+wd%3AQ507854+wd%3AQ530296+wd%3AQ535233+wd%3AQ565532+wd%3AQ594706+wd%3AQ597906+wd%3AQ607669+wd%3AQ617799+wd%3AQ650068+wd%3AQ650682+wd%3AQ654216+wd%3AQ693450+wd%3AQ702259+wd%3AQ726347+wd%3AQ727520+wd%3AQ730706+wd%3AQ750444+wd%3AQ823600+wd%3AQ851718+wd%3AQ862832+wd%3AQ868642+wd%3AQ876122+wd%3AQ884571+wd%3AQ893314+wd%3AQ904472+wd%3AQ915930+wd%3AQ922620+wd%3AQ923574+wd%3AQ930204+wd%3AQ931120+wd%3AQ936263+wd%3AQ936641+wd%3AQ940733+wd%3AQ941901+wd%3AQ984857+wd%3AQ986070+wd%3AQ991600+wd%3AQ1000938+wd%3AQ1002826+wd%3AQ1003140+wd%3AQ1006232+wd%3AQ1007106+wd%3AQ1009718+wd%3AQ1011062+wd%3AQ1011728+wd%3AQ1018184+wd%3AQ1024900+wd%3AQ1049514+wd%3AQ1070656+wd%3AQ1146838+wd%3AQ1148460+wd%3AQ1247384+wd%3AQ1291082+wd%3AQ1327770+wd%3AQ1368969+wd%3AQ1427108+wd%3AQ1490411+wd%3AQ1586842+wd%3AQ1610680+wd%3AQ1702713+wd%3AQ1751974+wd%3AQ1794588+wd%3AQ1828038+wd%3AQ1830879+wd%3AQ1904228+wd%3AQ1911414+wd%3AQ1964975+wd%3AQ2015708+wd%3AQ2153758%7D+VALUES+%3Fanchor+%7Bwd%3AQ21+wd%3AQ22+wd%3AQ25+wd%3AQ26+wd%3AQ27+wd%3AQ16+wd%3AQ35+wd%3AQ34+wd%3AQ33+wd%3AQ183+wd%3AQ39+wd%3AQ40+wd%3AQ38+wd%3AQ36+wd%3AQ218+wd%3AQ17+wd%3AQ833+wd%3AQ334+wd%3AQ668+wd%3AQ854+wd%3AQ148+wd%3AQ928+wd%3AQ408+wd%3AQ664+wd%3AQ258+wd%3AQ1027+wd%3AQ1029+wd%3AQ414+wd%3AQ298+wd%3AQ785+wd%3AQ25230+wd%3AQ9676+wd%3AQ244+wd%3AQ766+wd%3AQ754+wd%3AQ790+wd%3AQ812%7D+%3Fplace+wdt%3AP131%2A+%3Fanchor.+%7D&format=json",
+      "retrieved_utc": "2026-11-02T00:32:06.872309+00:00",
+      "bytes": 100812,
+      "sha256": "ad93cfc747bdf4186066be1ab07121c36efc17702c7e16d7888d3454bd549448",
+      "response_file": "place_containment_1.json"
+    },
+    {
+      "batch": 2,
+      "place_qids": [
+        "Q2172326",
+        "Q2213391",
+        "Q2227457",
+        "Q2305561",
+        "Q2340968",
+        "Q2368947",
+        "Q2393654",
+        "Q2448978",
+        "Q2450886",
+        "Q2457657",
+        "Q2526023",
+        "Q2536016",
+        "Q2576950",
+        "Q2607069",
+        "Q2985912",
+        "Q3047556",
+        "Q3311985",
+        "Q3316008",
+        "Q3492069",
+        "Q3699290",
+        "Q4549752",
+        "Q4918124",
+        "Q5126358",
+        "Q5211070",
+        "Q5246451",
+        "Q5367753",
+        "Q5437466",
+        "Q5450927",
+        "Q5469181",
+        "Q6277213",
+        "Q6692921",
+        "Q7164590",
+        "Q7180524",
+        "Q7242055",
+        "Q7305561",
+        "Q7370488",
+        "Q7685713",
+        "Q7796532",
+        "Q9284353",
+        "Q9295049",
+        "Q10543836",
+        "Q10572724",
+        "Q11635414",
+        "Q15030884",
+        "Q15273742",
+        "Q17532486",
+        "Q17546768",
+        "Q17551070",
+        "Q20895942",
+        "Q26404733",
+        "Q26473164",
+        "Q26898080",
+        "Q28224734",
+        "Q30151210",
+        "Q46998262",
+        "Q65430768",
+        "Q67301652",
+        "Q67311402",
+        "Q102392481",
+        "Q104262437",
+        "Q112660052",
+        "Q113307918",
+        "Q133305647"
+      ],
+      "url": "https://query.wikidata.org/sparql?query=SELECT+%3Fplace+%3Fanchor+WHERE+%7B+VALUES+%3Fplace+%7Bwd%3AQ2172326+wd%3AQ2213391+wd%3AQ2227457+wd%3AQ2305561+wd%3AQ2340968+wd%3AQ2368947+wd%3AQ2393654+wd%3AQ2448978+wd%3AQ2450886+wd%3AQ2457657+wd%3AQ2526023+wd%3AQ2536016+wd%3AQ2576950+wd%3AQ2607069+wd%3AQ2985912+wd%3AQ3047556+wd%3AQ3311985+wd%3AQ3316008+wd%3AQ3492069+wd%3AQ3699290+wd%3AQ4549752+wd%3AQ4918124+wd%3AQ5126358+wd%3AQ5211070+wd%3AQ5246451+wd%3AQ5367753+wd%3AQ5437466+wd%3AQ5450927+wd%3AQ5469181+wd%3AQ6277213+wd%3AQ6692921+wd%3AQ7164590+wd%3AQ7180524+wd%3AQ7242055+wd%3AQ7305561+wd%3AQ7370488+wd%3AQ7685713+wd%3AQ7796532+wd%3AQ9284353+wd%3AQ9295049+wd%3AQ10543836+wd%3AQ10572724+wd%3AQ11635414+wd%3AQ15030884+wd%3AQ15273742+wd%3AQ17532486+wd%3AQ17546768+wd%3AQ17551070+wd%3AQ20895942+wd%3AQ26404733+wd%3AQ26473164+wd%3AQ26898080+wd%3AQ28224734+wd%3AQ30151210+wd%3AQ46998262+wd%3AQ65430768+wd%3AQ67301652+wd%3AQ67311402+wd%3AQ102392481+wd%3AQ104262437+wd%3AQ112660052+wd%3AQ113307918+wd%3AQ133305647%7D+VALUES+%3Fanchor+%7Bwd%3AQ21+wd%3AQ22+wd%3AQ25+wd%3AQ26+wd%3AQ27+wd%3AQ16+wd%3AQ35+wd%3AQ34+wd%3AQ33+wd%3AQ183+wd%3AQ39+wd%3AQ40+wd%3AQ38+wd%3AQ36+wd%3AQ218+wd%3AQ17+wd%3AQ833+wd%3AQ334+wd%3AQ668+wd%3AQ854+wd%3AQ148+wd%3AQ928+wd%3AQ408+wd%3AQ664+wd%3AQ258+wd%3AQ1027+wd%3AQ1029+wd%3AQ414+wd%3AQ298+wd%3AQ785+wd%3AQ25230+wd%3AQ9676+wd%3AQ244+wd%3AQ766+wd%3AQ754+wd%3AQ790+wd%3AQ812%7D+%3Fplace+wdt%3AP131%2A+%3Fanchor.+%7D&format=json",
+      "retrieved_utc": "2026-11-02T00:32:13.404254+00:00",
+      "bytes": 23182,
+      "sha256": "8236f5a69bf758600d797092c6cf149e04ef3b9c7cb10777bb743ee4db7c146d",
+      "response_file": "place_containment_2.json"
+    }
+  ],
+  "approvals": {
+    "Q1000938": {
+      "qid": "Q1000938",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q36"
+      ],
+      "anchors": [
+        {
+          "qid": "Q36",
+          "label": "Poland",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q1002826": {
+      "qid": "Q1002826",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q1006232": {
+      "qid": "Q1006232",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q1007106": {
+      "qid": "Q1007106",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q1009718": {
+      "qid": "Q1009718",
+      "hemisphere": "south",
+      "anchor_qids": [
+        "Q408"
+      ],
+      "anchors": [
+        {
+          "qid": "Q408",
+          "label": "Australia",
+          "hemisphere": "south"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q1011062": {
+      "qid": "Q1011062",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q1011728": {
+      "qid": "Q1011728",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q22"
+      ],
+      "anchors": [
+        {
+          "qid": "Q22",
+          "label": "Scotland",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q1018184": {
+      "qid": "Q1018184",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q218"
+      ],
+      "anchors": [
+        {
+          "qid": "Q218",
+          "label": "Romania",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q102392481": {
+      "qid": "Q102392481",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q183"
+      ],
+      "anchors": [
+        {
+          "qid": "Q183",
+          "label": "Germany",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q1024900": {
+      "qid": "Q1024900",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q25"
+      ],
+      "anchors": [
+        {
+          "qid": "Q25",
+          "label": "Wales",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q1040": {
+      "qid": "Q1040",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q183"
+      ],
+      "anchors": [
+        {
+          "qid": "Q183",
+          "label": "Germany",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q1049514": {
+      "qid": "Q1049514",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q10543836": {
+      "qid": "Q10543836",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q34"
+      ],
+      "anchors": [
+        {
+          "qid": "Q34",
+          "label": "Sweden",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q1055": {
+      "qid": "Q1055",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q183"
+      ],
+      "anchors": [
+        {
+          "qid": "Q183",
+          "label": "Germany",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q10572724": {
+      "qid": "Q10572724",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q34"
+      ],
+      "anchors": [
+        {
+          "qid": "Q34",
+          "label": "Sweden",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q10686": {
+      "qid": "Q10686",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q26"
+      ],
+      "anchors": [
+        {
+          "qid": "Q26",
+          "label": "Northern Ireland",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q1070656": {
+      "qid": "Q1070656",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q16"
+      ],
+      "anchors": [
+        {
+          "qid": "Q16",
+          "label": "Canada",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q113307918": {
+      "qid": "Q113307918",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q38"
+      ],
+      "anchors": [
+        {
+          "qid": "Q38",
+          "label": "Italy",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q1146838": {
+      "qid": "Q1146838",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q27"
+      ],
+      "anchors": [
+        {
+          "qid": "Q27",
+          "label": "Ireland",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q1148460": {
+      "qid": "Q1148460",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q11635414": {
+      "qid": "Q11635414",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q17"
+      ],
+      "anchors": [
+        {
+          "qid": "Q17",
+          "label": "Japan",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q122744": {
+      "qid": "Q122744",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q1247384": {
+      "qid": "Q1247384",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q22"
+      ],
+      "anchors": [
+        {
+          "qid": "Q22",
+          "label": "Scotland",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q125163": {
+      "qid": "Q125163",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q127212": {
+      "qid": "Q127212",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q1291082": {
+      "qid": "Q1291082",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q22"
+      ],
+      "anchors": [
+        {
+          "qid": "Q22",
+          "label": "Scotland",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q1327770": {
+      "qid": "Q1327770",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q133305647": {
+      "qid": "Q133305647",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q34"
+      ],
+      "anchors": [
+        {
+          "qid": "Q34",
+          "label": "Sweden",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q1368969": {
+      "qid": "Q1368969",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q1427108": {
+      "qid": "Q1427108",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q16"
+      ],
+      "anchors": [
+        {
+          "qid": "Q16",
+          "label": "Canada",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q148349": {
+      "qid": "Q148349",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q1490411": {
+      "qid": "Q1490411",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q16"
+      ],
+      "anchors": [
+        {
+          "qid": "Q16",
+          "label": "Canada",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q149836": {
+      "qid": "Q149836",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q149942": {
+      "qid": "Q149942",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q150120": {
+      "qid": "Q150120",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q15030884": {
+      "qid": "Q15030884",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q15273742": {
+      "qid": "Q15273742",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q1586842": {
+      "qid": "Q1586842",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q22"
+      ],
+      "anchors": [
+        {
+          "qid": "Q22",
+          "label": "Scotland",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q16087": {
+      "qid": "Q16087",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q183"
+      ],
+      "anchors": [
+        {
+          "qid": "Q183",
+          "label": "Germany",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q163": {
+      "qid": "Q163",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q1702713": {
+      "qid": "Q1702713",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q26"
+      ],
+      "anchors": [
+        {
+          "qid": "Q26",
+          "label": "Northern Ireland",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q172157": {
+      "qid": "Q172157",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q174665": {
+      "qid": "Q174665",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q218"
+      ],
+      "anchors": [
+        {
+          "qid": "Q218",
+          "label": "Romania",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q1751974": {
+      "qid": "Q1751974",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q183"
+      ],
+      "anchors": [
+        {
+          "qid": "Q183",
+          "label": "Germany",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q17532486": {
+      "qid": "Q17532486",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q17546768": {
+      "qid": "Q17546768",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q17551070": {
+      "qid": "Q17551070",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q1761": {
+      "qid": "Q1761",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q27"
+      ],
+      "anchors": [
+        {
+          "qid": "Q27",
+          "label": "Ireland",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q1792": {
+      "qid": "Q1792",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q36"
+      ],
+      "anchors": [
+        {
+          "qid": "Q36",
+          "label": "Poland",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q179325": {
+      "qid": "Q179325",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q27"
+      ],
+      "anchors": [
+        {
+          "qid": "Q27",
+          "label": "Ireland",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q179385": {
+      "qid": "Q179385",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q1794588": {
+      "qid": "Q1794588",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q18125": {
+      "qid": "Q18125",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q1828038": {
+      "qid": "Q1828038",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q27"
+      ],
+      "anchors": [
+        {
+          "qid": "Q27",
+          "label": "Ireland",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q183": {
+      "qid": "Q183",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q183"
+      ],
+      "anchors": [
+        {
+          "qid": "Q183",
+          "label": "Germany",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q1830879": {
+      "qid": "Q1830879",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q27"
+      ],
+      "anchors": [
+        {
+          "qid": "Q27",
+          "label": "Ireland",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q188304": {
+      "qid": "Q188304",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q188313": {
+      "qid": "Q188313",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q188489": {
+      "qid": "Q188489",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q16"
+      ],
+      "anchors": [
+        {
+          "qid": "Q16",
+          "label": "Canada",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q189960": {
+      "qid": "Q189960",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q1904": {
+      "qid": "Q1904",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q16"
+      ],
+      "anchors": [
+        {
+          "qid": "Q16",
+          "label": "Canada",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q1904228": {
+      "qid": "Q1904228",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q16"
+      ],
+      "anchors": [
+        {
+          "qid": "Q16",
+          "label": "Canada",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q1911414": {
+      "qid": "Q1911414",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q192240": {
+      "qid": "Q192240",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q1964975": {
+      "qid": "Q1964975",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q19660": {
+      "qid": "Q19660",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q218"
+      ],
+      "anchors": [
+        {
+          "qid": "Q218",
+          "label": "Romania",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q19798": {
+      "qid": "Q19798",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q1989": {
+      "qid": "Q1989",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q16"
+      ],
+      "anchors": [
+        {
+          "qid": "Q16",
+          "label": "Canada",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q201149": {
+      "qid": "Q201149",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q22"
+      ],
+      "anchors": [
+        {
+          "qid": "Q22",
+          "label": "Scotland",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q2015708": {
+      "qid": "Q2015708",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q202088": {
+      "qid": "Q202088",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q202174": {
+      "qid": "Q202174",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q22"
+      ],
+      "anchors": [
+        {
+          "qid": "Q22",
+          "label": "Scotland",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q203349": {
+      "qid": "Q203349",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q206687": {
+      "qid": "Q206687",
+      "hemisphere": "south",
+      "anchor_qids": [
+        "Q664"
+      ],
+      "anchors": [
+        {
+          "qid": "Q664",
+          "label": "New Zealand",
+          "hemisphere": "south"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q206934": {
+      "qid": "Q206934",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q22"
+      ],
+      "anchors": [
+        {
+          "qid": "Q22",
+          "label": "Scotland",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q207257": {
+      "qid": "Q207257",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q22"
+      ],
+      "anchors": [
+        {
+          "qid": "Q22",
+          "label": "Scotland",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q2079": {
+      "qid": "Q2079",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q183"
+      ],
+      "anchors": [
+        {
+          "qid": "Q183",
+          "label": "Germany",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q20895942": {
+      "qid": "Q20895942",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q209142": {
+      "qid": "Q209142",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q22"
+      ],
+      "anchors": [
+        {
+          "qid": "Q22",
+          "label": "Scotland",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q21": {
+      "qid": "Q21",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q211106": {
+      "qid": "Q211106",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q22"
+      ],
+      "anchors": [
+        {
+          "qid": "Q22",
+          "label": "Scotland",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q2132": {
+      "qid": "Q2132",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q16"
+      ],
+      "anchors": [
+        {
+          "qid": "Q16",
+          "label": "Canada",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q2153758": {
+      "qid": "Q2153758",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q217039": {
+      "qid": "Q217039",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q2172326": {
+      "qid": "Q2172326",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q22": {
+      "qid": "Q22",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q22"
+      ],
+      "anchors": [
+        {
+          "qid": "Q22",
+          "label": "Scotland",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q220": {
+      "qid": "Q220",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q38"
+      ],
+      "anchors": [
+        {
+          "qid": "Q38",
+          "label": "Italy",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q2213391": {
+      "qid": "Q2213391",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q2227457": {
+      "qid": "Q2227457",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q2256": {
+      "qid": "Q2256",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q22905": {
+      "qid": "Q22905",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q23051": {
+      "qid": "Q23051",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q25"
+      ],
+      "anchors": [
+        {
+          "qid": "Q25",
+          "label": "Wales",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q2305561": {
+      "qid": "Q2305561",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q23064": {
+      "qid": "Q23064",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q23079": {
+      "qid": "Q23079",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q23082": {
+      "qid": "Q23082",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q23088": {
+      "qid": "Q23088",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q23103": {
+      "qid": "Q23103",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q23106": {
+      "qid": "Q23106",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q23109": {
+      "qid": "Q23109",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q23111": {
+      "qid": "Q23111",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q23148": {
+      "qid": "Q23148",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q23159": {
+      "qid": "Q23159",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q23204": {
+      "qid": "Q23204",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q23240": {
+      "qid": "Q23240",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q23276": {
+      "qid": "Q23276",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q23298": {
+      "qid": "Q23298",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q23306": {
+      "qid": "Q23306",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q23346": {
+      "qid": "Q23346",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q2340968": {
+      "qid": "Q2340968",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q2368947": {
+      "qid": "Q2368947",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q27"
+      ],
+      "anchors": [
+        {
+          "qid": "Q27",
+          "label": "Ireland",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q2393654": {
+      "qid": "Q2393654",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q244": {
+      "qid": "Q244",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q244"
+      ],
+      "anchors": [
+        {
+          "qid": "Q244",
+          "label": "Barbados",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q2448978": {
+      "qid": "Q2448978",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q2450886": {
+      "qid": "Q2450886",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q16"
+      ],
+      "anchors": [
+        {
+          "qid": "Q16",
+          "label": "Canada",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q2457657": {
+      "qid": "Q2457657",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q24826": {
+      "qid": "Q24826",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q25230": {
+      "qid": "Q25230",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q25230"
+      ],
+      "anchors": [
+        {
+          "qid": "Q25230",
+          "label": "Guernsey",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q2536016": {
+      "qid": "Q2536016",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q25"
+      ],
+      "anchors": [
+        {
+          "qid": "Q25",
+          "label": "Wales",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q2576950": {
+      "qid": "Q2576950",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q2607069": {
+      "qid": "Q2607069",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q26163": {
+      "qid": "Q26163",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q26404733": {
+      "qid": "Q26404733",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q26473164": {
+      "qid": "Q26473164",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q268": {
+      "qid": "Q268",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q36"
+      ],
+      "anchors": [
+        {
+          "qid": "Q36",
+          "label": "Poland",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q26898080": {
+      "qid": "Q26898080",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q27": {
+      "qid": "Q27",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q27"
+      ],
+      "anchors": [
+        {
+          "qid": "Q27",
+          "label": "Ireland",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q2795": {
+      "qid": "Q2795",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q183"
+      ],
+      "anchors": [
+        {
+          "qid": "Q183",
+          "label": "Germany",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q28224734": {
+      "qid": "Q28224734",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q38"
+      ],
+      "anchors": [
+        {
+          "qid": "Q38",
+          "label": "Italy",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q288781": {
+      "qid": "Q288781",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q2966": {
+      "qid": "Q2966",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q183"
+      ],
+      "anchors": [
+        {
+          "qid": "Q183",
+          "label": "Germany",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q2985912": {
+      "qid": "Q2985912",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q3047556": {
+      "qid": "Q3047556",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q3141": {
+      "qid": "Q3141",
+      "hemisphere": "south",
+      "anchor_qids": [
+        "Q408"
+      ],
+      "anchors": [
+        {
+          "qid": "Q408",
+          "label": "Australia",
+          "hemisphere": "south"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q3311985": {
+      "qid": "Q3311985",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q25230"
+      ],
+      "anchors": [
+        {
+          "qid": "Q25230",
+          "label": "Guernsey",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q3316008": {
+      "qid": "Q3316008",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q34": {
+      "qid": "Q34",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q34"
+      ],
+      "anchors": [
+        {
+          "qid": "Q34",
+          "label": "Sweden",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q3410": {
+      "qid": "Q3410",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q34217": {
+      "qid": "Q34217",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q3492069": {
+      "qid": "Q3492069",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q16"
+      ],
+      "anchors": [
+        {
+          "qid": "Q16",
+          "label": "Canada",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q35654": {
+      "qid": "Q35654",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q22"
+      ],
+      "anchors": [
+        {
+          "qid": "Q22",
+          "label": "Scotland",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q36": {
+      "qid": "Q36",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q36"
+      ],
+      "anchors": [
+        {
+          "qid": "Q36",
+          "label": "Poland",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q3699290": {
+      "qid": "Q3699290",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q3852": {
+      "qid": "Q3852",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q183"
+      ],
+      "anchors": [
+        {
+          "qid": "Q183",
+          "label": "Germany",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q39178": {
+      "qid": "Q39178",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q754"
+      ],
+      "anchors": [
+        {
+          "qid": "Q754",
+          "label": "Trinidad and Tobago",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q3929": {
+      "qid": "Q3929",
+      "hemisphere": "south",
+      "anchor_qids": [
+        "Q1027"
+      ],
+      "anchors": [
+        {
+          "qid": "Q1027",
+          "label": "Mauritius",
+          "hemisphere": "south"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q40191": {
+      "qid": "Q40191",
+      "hemisphere": "south",
+      "anchor_qids": [
+        "Q408"
+      ],
+      "anchors": [
+        {
+          "qid": "Q408",
+          "label": "Australia",
+          "hemisphere": "south"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q41262": {
+      "qid": "Q41262",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q427422": {
+      "qid": "Q427422",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q34"
+      ],
+      "anchors": [
+        {
+          "qid": "Q34",
+          "label": "Sweden",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q42932": {
+      "qid": "Q42932",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q38"
+      ],
+      "anchors": [
+        {
+          "qid": "Q38",
+          "label": "Italy",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q4549752": {
+      "qid": "Q4549752",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q464955": {
+      "qid": "Q464955",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q490": {
+      "qid": "Q490",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q38"
+      ],
+      "anchors": [
+        {
+          "qid": "Q38",
+          "label": "Italy",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q4918124": {
+      "qid": "Q4918124",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q507854": {
+      "qid": "Q507854",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q183"
+      ],
+      "anchors": [
+        {
+          "qid": "Q183",
+          "label": "Germany",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q5126358": {
+      "qid": "Q5126358",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q16"
+      ],
+      "anchors": [
+        {
+          "qid": "Q16",
+          "label": "Canada",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q5211070": {
+      "qid": "Q5211070",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q22"
+      ],
+      "anchors": [
+        {
+          "qid": "Q22",
+          "label": "Scotland",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q5246451": {
+      "qid": "Q5246451",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q530296": {
+      "qid": "Q530296",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q22"
+      ],
+      "anchors": [
+        {
+          "qid": "Q22",
+          "label": "Scotland",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q535233": {
+      "qid": "Q535233",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q5367753": {
+      "qid": "Q5367753",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q5437466": {
+      "qid": "Q5437466",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q5469181": {
+      "qid": "Q5469181",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q54769": {
+      "qid": "Q54769",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q34"
+      ],
+      "anchors": [
+        {
+          "qid": "Q34",
+          "label": "Sweden",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q565532": {
+      "qid": "Q565532",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q594706": {
+      "qid": "Q594706",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q16"
+      ],
+      "anchors": [
+        {
+          "qid": "Q16",
+          "label": "Canada",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q597906": {
+      "qid": "Q597906",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q617799": {
+      "qid": "Q617799",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q6277213": {
+      "qid": "Q6277213",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q22"
+      ],
+      "anchors": [
+        {
+          "qid": "Q22",
+          "label": "Scotland",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q650068": {
+      "qid": "Q650068",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q650682": {
+      "qid": "Q650682",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q25"
+      ],
+      "anchors": [
+        {
+          "qid": "Q25",
+          "label": "Wales",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q654216": {
+      "qid": "Q654216",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q22"
+      ],
+      "anchors": [
+        {
+          "qid": "Q22",
+          "label": "Scotland",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q65430768": {
+      "qid": "Q65430768",
+      "hemisphere": "south",
+      "anchor_qids": [
+        "Q664"
+      ],
+      "anchors": [
+        {
+          "qid": "Q664",
+          "label": "New Zealand",
+          "hemisphere": "south"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q6692921": {
+      "qid": "Q6692921",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q67301652": {
+      "qid": "Q67301652",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q693450": {
+      "qid": "Q693450",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q702259": {
+      "qid": "Q702259",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q183"
+      ],
+      "anchors": [
+        {
+          "qid": "Q183",
+          "label": "Germany",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q7164590": {
+      "qid": "Q7164590",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q25"
+      ],
+      "anchors": [
+        {
+          "qid": "Q25",
+          "label": "Wales",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q7180524": {
+      "qid": "Q7180524",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q22"
+      ],
+      "anchors": [
+        {
+          "qid": "Q22",
+          "label": "Scotland",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q72216": {
+      "qid": "Q72216",
+      "hemisphere": "south",
+      "anchor_qids": [
+        "Q408"
+      ],
+      "anchors": [
+        {
+          "qid": "Q408",
+          "label": "Australia",
+          "hemisphere": "south"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q7242055": {
+      "qid": "Q7242055",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q22"
+      ],
+      "anchors": [
+        {
+          "qid": "Q22",
+          "label": "Scotland",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q726347": {
+      "qid": "Q726347",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q727520": {
+      "qid": "Q727520",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q22"
+      ],
+      "anchors": [
+        {
+          "qid": "Q22",
+          "label": "Scotland",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q7305561": {
+      "qid": "Q7305561",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q730706": {
+      "qid": "Q730706",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q7370488": {
+      "qid": "Q7370488",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q750444": {
+      "qid": "Q750444",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q34"
+      ],
+      "anchors": [
+        {
+          "qid": "Q34",
+          "label": "Sweden",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q766": {
+      "qid": "Q766",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q766"
+      ],
+      "anchors": [
+        {
+          "qid": "Q766",
+          "label": "Jamaica",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q7685713": {
+      "qid": "Q7685713",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q7796532": {
+      "qid": "Q7796532",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q785": {
+      "qid": "Q785",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q785"
+      ],
+      "anchors": [
+        {
+          "qid": "Q785",
+          "label": "Jersey",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q790": {
+      "qid": "Q790",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q790"
+      ],
+      "anchors": [
+        {
+          "qid": "Q790",
+          "label": "Haiti",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q812": {
+      "qid": "Q812",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q812"
+      ],
+      "anchors": [
+        {
+          "qid": "Q812",
+          "label": "Florida",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q823600": {
+      "qid": "Q823600",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q84": {
+      "qid": "Q84",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q851718": {
+      "qid": "Q851718",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q862832": {
+      "qid": "Q862832",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q868642": {
+      "qid": "Q868642",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q876122": {
+      "qid": "Q876122",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q16"
+      ],
+      "anchors": [
+        {
+          "qid": "Q16",
+          "label": "Canada",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q884571": {
+      "qid": "Q884571",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q183"
+      ],
+      "anchors": [
+        {
+          "qid": "Q183",
+          "label": "Germany",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q893314": {
+      "qid": "Q893314",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q904472": {
+      "qid": "Q904472",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q25"
+      ],
+      "anchors": [
+        {
+          "qid": "Q25",
+          "label": "Wales",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q915930": {
+      "qid": "Q915930",
+      "hemisphere": "south",
+      "anchor_qids": [
+        "Q664"
+      ],
+      "anchors": [
+        {
+          "qid": "Q664",
+          "label": "New Zealand",
+          "hemisphere": "south"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q922620": {
+      "qid": "Q922620",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q9284353": {
+      "qid": "Q9284353",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q36"
+      ],
+      "anchors": [
+        {
+          "qid": "Q36",
+          "label": "Poland",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q9295049": {
+      "qid": "Q9295049",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_2.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q930204": {
+      "qid": "Q930204",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q931120": {
+      "qid": "Q931120",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q936263": {
+      "qid": "Q936263",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q936641": {
+      "qid": "Q936641",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q940733": {
+      "qid": "Q940733",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q35"
+      ],
+      "anchors": [
+        {
+          "qid": "Q35",
+          "label": "Denmark",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q941901": {
+      "qid": "Q941901",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q668"
+      ],
+      "anchors": [
+        {
+          "qid": "Q668",
+          "label": "India",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q9679": {
+      "qid": "Q9679",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q21"
+      ],
+      "anchors": [
+        {
+          "qid": "Q21",
+          "label": "England",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q9824": {
+      "qid": "Q9824",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q668"
+      ],
+      "anchors": [
+        {
+          "qid": "Q668",
+          "label": "India",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q984857": {
+      "qid": "Q984857",
+      "hemisphere": "north",
+      "anchor_qids": [
+        "Q36"
+      ],
+      "anchors": [
+        {
+          "qid": "Q36",
+          "label": "Poland",
+          "hemisphere": "north"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    },
+    "Q991600": {
+      "qid": "Q991600",
+      "hemisphere": "south",
+      "anchor_qids": [
+        "Q408"
+      ],
+      "anchors": [
+        {
+          "qid": "Q408",
+          "label": "Australia",
+          "hemisphere": "south"
+        }
+      ],
+      "reason": "active_geographic_P131_containment_in_wholly_single_hemisphere_extents",
+      "source_response_files": [
+        "place_containment_1.json"
+      ],
+      "geography_source_grade": "S3",
+      "no_country_centroid_used": true,
+      "P17_not_used_as_birth_country": true,
+      "new_coordinates_must_not_contradict_extent": true
+    }
+  },
+  "not_independent_birthplace_evidence": true,
+  "no_DOB_identity_acceptance_changes": true
+}

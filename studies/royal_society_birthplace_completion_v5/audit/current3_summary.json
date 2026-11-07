@@ -1,0 +1,102 @@
+{
+  "created_utc": "2026-11-02T13:20:52.979275+00:00",
+  "scope": "Birthplace-only bounded unseen S1/S2 source check for Chen, Lauritzen and Jerry Adams",
+  "people": 3,
+  "accepted": 0,
+  "held": 3,
+  "new_body_URL_attempts": 6,
+  "successful_new_bodies_reviewed": 3,
+  "source_grade_counts": {
+    "S1": 5,
+    "S2": 1
+  },
+  "http_status_counts": {
+    "200": 3,
+    "403": 1,
+    "503": 1,
+    "404": 1
+  },
+  "person_results": [
+    {
+      "record_id": "RS_CURRENT_37377",
+      "native_dob": "1975-12-13",
+      "status": "held_no_explicit_birthplace_in_bounded_new_sources",
+      "body_URL_attempts": 2,
+      "result_path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v5_workers/current2/chen_result.json",
+      "result_sha256": "296db73c44a672655a078eb5c3591bc3e9403b8e2bc9ca670434b31a15dc4884",
+      "manifest_path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v5_workers/current2/chen_manifest.json",
+      "manifest_sha256": "dbadad0a53a481c717330f8b98c5e992b531c9369ed4e3b6f119df75051cdee0"
+    },
+    {
+      "record_id": "RS_CURRENT_11792",
+      "native_dob": "1947-04-22",
+      "status": "held_no_explicit_birthplace_in_bounded_new_sources",
+      "body_URL_attempts": 2,
+      "result_path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v5_workers/current2/lauritzen_result.json",
+      "result_sha256": "d8ffe404a9af185f8bd57b689db347319892e23ee8f7ec5abce8c185d2572e36",
+      "manifest_path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v5_workers/current2/lauritzen_manifest.json",
+      "manifest_sha256": "bd54be0de76bbd1dd71c122b961f783caef555fc378580476b68bdb2f204fe45"
+    },
+    {
+      "record_id": "RS_CURRENT_10965",
+      "native_dob": "1940-06-17",
+      "status": "held_no_finer_explicit_birthplace_in_bounded_new_sources",
+      "body_URL_attempts": 2,
+      "result_path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v5_workers/current2/jerry_result.json",
+      "result_sha256": "22d33b5ade3b721e3c14f04d10fea97d493fe862d11af4ab98878949e102932e",
+      "manifest_path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v5_workers/current2/jerry_manifest.json",
+      "manifest_sha256": "80ba36b96d0ed856d88bac5176b46ea905a0c7a3a543706f39876acc568c8a7a"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.chemsoc.org.cn/member/fellow/51907.html",
+      "source_grade": "S1",
+      "http_status": 200,
+      "source_sha256": "63e63f1ab43c4c4cd1306d1cb88530adc3f8ce5680655a9cabc352899e7af905",
+      "raw_path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v5_workers/current2/raw/chen_chemsoc.html"
+    },
+    {
+      "url": "https://www.advancedsciencenews.com/hall-of-fame-highlight-xiaodong-chen/",
+      "source_grade": "S2",
+      "http_status": 403,
+      "source_sha256": "5364822f232c648019cf5b23612f32238787e830bf7e8dca3a910b1fd11a7576",
+      "raw_path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v5_workers/current2/raw/chen_asn_profile.html"
+    },
+    {
+      "url": "https://www.math.ku.dk/Nyheder/prof_lauritzen/",
+      "source_grade": "S1",
+      "http_status": 503,
+      "source_sha256": "2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6",
+      "raw_path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v5_workers/current2/lauritzen_ku_appointment.raw.html"
+    },
+    {
+      "url": "https://vbn.aau.dk/da/clippings/steffen-lilholt-lauritzen",
+      "source_grade": "S1",
+      "http_status": 200,
+      "source_sha256": "a072502ba970f39986aff94d2774e1ce03fc3b13a98863efa765ba368653531d",
+      "raw_path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v5_workers/current2/lauritzen_aau_pressprofile.raw.html"
+    },
+    {
+      "url": "https://www.wehi.edu.au/people/jerry-adams/",
+      "source_grade": "S1",
+      "http_status": 404,
+      "source_sha256": "b7c919244684a4cf59d1733ddaa792d4f1244653919afd36259bf93edfa1eec4",
+      "raw_path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v5_workers/current2/jerry_wehi_profile.raw.html"
+    },
+    {
+      "url": "https://science.org.au/about-us/academy-fellows/discover-our-fellows/jerry-adams",
+      "source_grade": "S1",
+      "http_status": 200,
+      "source_sha256": "c69b69d2f3ce217cc08f63392ba83c9575d9c41aa577e059d66e9fd862cb3e06",
+      "raw_path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v5_workers/current2/jerry_aas_profile.raw.html"
+    }
+  ],
+  "native_DOB_unchanged": true,
+  "native_lookup_qid_unchanged": true,
+  "formal_identity_flags_unchanged": true,
+  "old_wrong_QID_reused": false,
+  "retries": 0,
+  "new_entity_requests": 0,
+  "repo_modified_by_worker": false
+}

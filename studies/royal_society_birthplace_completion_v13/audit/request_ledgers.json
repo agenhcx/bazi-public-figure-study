@@ -1,0 +1,608 @@
+[
+  {
+    "lane": "a",
+    "worker": "v13_sources_a",
+    "created_utc": "2026-11-04T23:22:28.878033+00:00",
+    "scope": [
+      "RS_PAST_NA1475",
+      "RS_PAST_NA2111",
+      "RS_PAST_NA2146",
+      "RS_PAST_NA2460",
+      "RS_PAST_NA6231",
+      "RS_PAST_NA907"
+    ],
+    "budget": {
+      "queries_used": 8,
+      "queries_limit": 8,
+      "original_navigation_items_used": 10,
+      "original_navigation_limit": 10,
+      "open_items": 7,
+      "find_items": 3
+    },
+    "request_ledger": [
+      {
+        "entry": 1,
+        "kind": "search",
+        "engine": "system2",
+        "query": "\"Edgar Hartley Kettle\" born London England biography",
+        "request_started_utc": null,
+        "request_completed_utc": null,
+        "http_status": null,
+        "http_bytes": null,
+        "tool_outcome": "returned search results",
+        "note": null
+      },
+      {
+        "entry": 2,
+        "kind": "search",
+        "engine": "system2",
+        "query": "\"Claude Rimington\" born London England biography",
+        "request_started_utc": null,
+        "request_completed_utc": null,
+        "http_status": null,
+        "http_bytes": null,
+        "tool_outcome": "returned search results",
+        "note": null
+      },
+      {
+        "entry": 3,
+        "kind": "search",
+        "engine": "system2",
+        "query": "\"Oscar Victor Sayer Heath\" born London England",
+        "request_started_utc": null,
+        "request_completed_utc": null,
+        "http_status": null,
+        "http_bytes": null,
+        "tool_outcome": "returned search results",
+        "note": null
+      },
+      {
+        "entry": 4,
+        "kind": "search",
+        "engine": "system2",
+        "query": "\"Henry Gerard Thornton\" born London Middlesex",
+        "request_started_utc": null,
+        "request_completed_utc": null,
+        "http_status": null,
+        "http_bytes": null,
+        "tool_outcome": "returned search results",
+        "note": null
+      },
+      {
+        "entry": 5,
+        "kind": "search",
+        "engine": "system2",
+        "query": "\"Richard Whiddington\" born London Middlesex",
+        "request_started_utc": null,
+        "request_completed_utc": null,
+        "http_status": null,
+        "http_bytes": null,
+        "tool_outcome": "returned search results",
+        "note": null
+      },
+      {
+        "entry": 6,
+        "kind": "search",
+        "engine": "system2",
+        "query": "\"Kenneth James Franklin\" born London England",
+        "request_started_utc": null,
+        "request_completed_utc": null,
+        "http_status": null,
+        "http_bytes": null,
+        "tool_outcome": "returned search results",
+        "note": null
+      },
+      {
+        "entry": 7,
+        "kind": "search",
+        "engine": "system1",
+        "query": "site:academic.oup.com \"Kettle\" \"1882\" \"born\"",
+        "request_started_utc": null,
+        "request_completed_utc": null,
+        "http_status": null,
+        "http_bytes": null,
+        "tool_outcome": "returned search results",
+        "note": "Queries 7 and 8 returned unrelated subjects rather than an exact-subject ODNB result."
+      },
+      {
+        "entry": 8,
+        "kind": "search",
+        "engine": "system1",
+        "query": "site:academic.oup.com \"Rimington\" \"1902\"",
+        "request_started_utc": null,
+        "request_completed_utc": null,
+        "http_status": null,
+        "http_bytes": null,
+        "tool_outcome": "returned search results",
+        "note": "Queries 7 and 8 returned unrelated subjects rather than an exact-subject ODNB result."
+      },
+      {
+        "navigation_item": 1,
+        "kind": "open",
+        "target": "https://history.rcp.ac.uk/inspiring-physicians/edgar-hartley-kettle",
+        "webref": "turn39view0",
+        "request_started_utc": null,
+        "request_completed_utc": null,
+        "http_status": null,
+        "http_bytes": null,
+        "tool_outcome": "parsed text returned",
+        "parse_is_http_response_bytes": false
+      },
+      {
+        "navigation_item": 2,
+        "kind": "open",
+        "target": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/583054003",
+        "webref": "turn39view1",
+        "request_started_utc": null,
+        "request_completed_utc": null,
+        "http_status": null,
+        "http_bytes": null,
+        "tool_outcome": "parsed text returned",
+        "parse_is_http_response_bytes": false
+      },
+      {
+        "navigation_item": 3,
+        "kind": "open",
+        "target": "https://www.ukkidney.org/about-us/history/obituaries/kenneth-james-franklin",
+        "webref": "turn39view2",
+        "request_started_utc": null,
+        "request_completed_utc": null,
+        "http_status": null,
+        "http_bytes": null,
+        "tool_outcome": "parsed text returned",
+        "parse_is_http_response_bytes": false
+      },
+      {
+        "navigation_item": 4,
+        "kind": "open",
+        "target": "https://history.rcp.ac.uk/inspiring-physicians/kenneth-james-franklin",
+        "webref": "turn44view0",
+        "request_started_utc": null,
+        "request_completed_utc": null,
+        "http_status": null,
+        "http_bytes": null,
+        "tool_outcome": "parsed text returned",
+        "parse_is_http_response_bytes": false
+      },
+      {
+        "navigation_item": 5,
+        "kind": "open",
+        "target": "https://www.jjhc.info/heathoscarpetervictorsayer1997",
+        "webref": "turn44view1",
+        "request_started_utc": null,
+        "request_completed_utc": null,
+        "http_status": null,
+        "http_bytes": null,
+        "tool_outcome": "parsed text returned",
+        "parse_is_http_response_bytes": false
+      },
+      {
+        "navigation_item": 6,
+        "kind": "open",
+        "target": "https://www.independent.co.uk/news/people/obituary-professor-claude-rimington-1460840.html",
+        "webref": "turn44view2",
+        "request_started_utc": null,
+        "request_completed_utc": null,
+        "http_status": null,
+        "http_bytes": null,
+        "tool_outcome": "parsed text returned",
+        "parse_is_http_response_bytes": false
+      },
+      {
+        "navigation_item": 7,
+        "kind": "open",
+        "target": "https://atom.aim25.com/index.php/travel?listLimit=50&onlyDirect=1&page=4&sf_culture=en&sort=date&sortDir=asc",
+        "webref": "turn44view3",
+        "request_started_utc": null,
+        "request_completed_utc": null,
+        "http_status": null,
+        "http_bytes": null,
+        "tool_outcome": "parsed text returned",
+        "parse_is_http_response_bytes": false
+      },
+      {
+        "navigation_item": 8,
+        "kind": "find",
+        "target": "turn39view1: Extract",
+        "webref": "turn44view4",
+        "request_started_utc": null,
+        "request_completed_utc": null,
+        "http_status": null,
+        "http_bytes": null,
+        "tool_outcome": "parsed text returned",
+        "parse_is_http_response_bytes": false
+      },
+      {
+        "navigation_item": 9,
+        "kind": "find",
+        "target": "turn44view3: Thornton",
+        "webref": "turn46view0",
+        "request_started_utc": null,
+        "request_completed_utc": null,
+        "http_status": null,
+        "http_bytes": null,
+        "tool_outcome": "parsed text returned",
+        "parse_is_http_response_bytes": false
+      },
+      {
+        "navigation_item": 10,
+        "kind": "find",
+        "target": "turn44view2: Claude Rimington, biochemist",
+        "webref": "turn46view1",
+        "request_started_utc": null,
+        "request_completed_utc": null,
+        "http_status": null,
+        "http_bytes": null,
+        "tool_outcome": "parsed text returned",
+        "parse_is_http_response_bytes": false
+      }
+    ],
+    "limitations": [
+      "No new explicit region-qualified birthplace found within the bounded source review.",
+      "Exact network request times, HTTP status, and raw HTTP byte lengths were not exposed; recorded as null.",
+      "Native names and dates are frozen; no hemisphere adjudication or master/Git changes performed."
+    ],
+    "new_routes_not_exhausted": [
+      "Thornton AIM25 collection record behind link105 not opened; collection summary lacks a birth clause.",
+      "Heath original obituary source not reached; only family-history page and snippet inspected."
+    ],
+    "target_completion_recorded_after_initial_searches": true,
+    "intent_file": "/workspace/scratch/262552d8c0f0/v13_a_intent.json"
+  },
+  {
+    "lane": "b",
+    "worker": "v13_sources_b",
+    "request_ledger": [
+      {
+        "kind": "search",
+        "queries": [
+          "\"Martin Rivers Pollock\" \"born\" Liverpool Lancashire",
+          "\"Herbert Marcus Powell\" \"born\" Coventry Warwickshire",
+          "\"Edward Waymouth Reid\" \"born\" Canterbury Kent"
+        ],
+        "planned_before_request": true,
+        "request_time_utc": null,
+        "response_time_utc": null,
+        "status": null,
+        "result_note": "Result rendered by web search tool but output exceeded model context; not treated as evidence."
+      },
+      {
+        "kind": "search",
+        "queries": [
+          "\"Charles Todd\" \"1869\" \"born\" Carlisle Cumberland",
+          "\"John Walter Ryde\" \"born\" Brighton Sussex",
+          "\"William Scott Farren\" \"born\" Cambridge England"
+        ],
+        "planned_at_utc": "2026-11-04T23:20:23.783121+00:00",
+        "request_time_utc": null,
+        "response_time_utc": null,
+        "status": null,
+        "result_refs": [
+          "turn40search36",
+          "turn40search0",
+          "turn40search2"
+        ]
+      },
+      {
+        "kind": "search",
+        "queries": [
+          "site:oxforddnb.com \"Pollock, Martin\" OR \"Powell, Herbert\" OR \"Reid, Edward\"",
+          "\"Edward Waymouth Reid\" Kent birthplace"
+        ],
+        "planned_at_utc": "2026-11-04T23:20:35.199612+00:00",
+        "request_time_utc": null,
+        "response_time_utc": null,
+        "status": null,
+        "result_refs": [
+          "turn42search2",
+          "turn42search3",
+          "turn42search5"
+        ]
+      },
+      {
+        "kind": "open",
+        "targets": [
+          "https://www.cumbrianlives.org.uk/lives-index/t.html",
+          "https://archives.trin.cam.ac.uk/index.php/actor/browse?languages=en&page=215&sf_culture=es&sort=identifier&sortDir=asc",
+          "https://www.oxforddnb.com/search?q=Martin+Rivers+Pollock",
+          "https://www.oxforddnb.com/search?q=Herbert+Marcus+Powell"
+        ],
+        "planned_at_utc": "2026-11-04T23:20:50.109151+00:00",
+        "request_time_utc": null,
+        "response_time_utc": null,
+        "http_status": null,
+        "result_refs": [
+          "turn45view0",
+          "turn45view1",
+          "turn45view2",
+          "turn45view3"
+        ],
+        "note": "Two ODNB URLs inaccessible via tool; status not exposed."
+      },
+      {
+        "kind": "find",
+        "targets": [
+          {
+            "ref": "turn45view0",
+            "pattern": "Todd, Charles"
+          }
+        ],
+        "planned_at_utc": "2026-11-04T23:21:14.540322+00:00",
+        "request_time_utc": null,
+        "response_time_utc": null,
+        "http_status": null,
+        "result_refs": [
+          "turn47view0"
+        ],
+        "note": "No matching Todd, Charles text."
+      },
+      {
+        "kind": "open",
+        "targets": [
+          "https://pubmed.ncbi.nlm.nih.gov/796437/",
+          "https://app.dundee.ac.uk/museum/collections/physiology/index.html",
+          "https://www.perse.co.uk/community/old-perseans/inspiring-old-perseans/",
+          "https://www.nature.com/articles/1801024a0.pdf"
+        ],
+        "planned_at_utc": "2026-11-04T23:21:37.728482+00:00",
+        "request_time_utc": null,
+        "response_time_utc": null,
+        "http_status": null,
+        "result_refs": [
+          "turn49view0",
+          "turn49view1",
+          "turn49view2",
+          "turn49view3"
+        ],
+        "note": "PubMed biography metadata and free full-text link; Dundee page has no birth; Perse inaccessible; Nature PDF URL returned HTML article metadata."
+      },
+      {
+        "kind": "click",
+        "targets": [
+          {
+            "ref": "turn49view0",
+            "link_id": 14,
+            "description": "PMC1307676 full biography article"
+          }
+        ],
+        "planned_at_utc": "2026-11-04T23:21:52.540608+00:00",
+        "request_time_utc": null,
+        "response_time_utc": null,
+        "http_status": null,
+        "result_refs": [
+          "turn50view0"
+        ],
+        "note": "Scanned article pages; body text not present in parsed HTML."
+      },
+      {
+        "kind": "click",
+        "targets": [
+          {
+            "ref": "turn50view0",
+            "link_id": 14,
+            "description": "PMC proceedings PDF for first biography pages"
+          }
+        ],
+        "planned_at_utc": "2026-11-04T23:22:04.960941+00:00",
+        "request_time_utc": null,
+        "response_time_utc": null,
+        "http_status": null,
+        "result_refs": [
+          "turn51view0"
+        ],
+        "note": "PDF route produced reCAPTCHA/checking-browser HTML, not PDF bytes. No retry or circumvention."
+      }
+    ],
+    "limitations": [
+      "The first three discovery query outputs exceeded context and were not retained as accessible evidence. No result or absence is asserted from that response.",
+      "No exact remote HTTP status or remote timings are exposed by these tool results; unknowns remain null.",
+      "Parsed text and metadata are not represented as original HTTP bytes.",
+      "No source grade changes or DOB grade changes are made.",
+      "No hemisphere, country, coordinates or main-table mutations are performed."
+    ],
+    "intent_file": "/workspace/scratch/262552d8c0f0/v13_b_intent.json"
+  },
+  {
+    "lane": "c",
+    "schema": "v13_sources_c/1",
+    "worker": "v13_sources_c",
+    "audit_written_utc": "2026-11-04T23:22:22.429165+00:00",
+    "scope_record_ids": [
+      "RS_PAST_NA6434",
+      "RS_PAST_NA3578",
+      "RS_PAST_NA8736",
+      "RS_PAST_NA2007",
+      "RS_PAST_NA6868"
+    ],
+    "usage": {
+      "search_queries": 8,
+      "original_navigations": 7,
+      "parsed_text_find": 2,
+      "retries": 0
+    },
+    "request_ledger": [
+      {
+        "operation": "search",
+        "query_index": 1,
+        "engine": "system2",
+        "q": "\"Edmund James Mills\" born London biography",
+        "exact_request_started_utc": null,
+        "exact_request_completed_utc": null,
+        "durable_plan": "v13_c_intent.json",
+        "http_status": null
+      },
+      {
+        "operation": "search",
+        "query_index": 2,
+        "engine": "system2",
+        "q": "\"Martin Alister Campbell Hinton\" born biography",
+        "exact_request_started_utc": null,
+        "exact_request_completed_utc": null,
+        "durable_plan": "v13_c_intent.json",
+        "http_status": null
+      },
+      {
+        "operation": "search",
+        "query_index": 3,
+        "engine": "system2",
+        "q": "\"Anthony George Cullis\" born Worcester",
+        "exact_request_started_utc": null,
+        "exact_request_completed_utc": null,
+        "durable_plan": "v13_c_intent.json",
+        "http_status": null
+      },
+      {
+        "operation": "search",
+        "query_index": 4,
+        "engine": "system2",
+        "q": "\"Pierre Henry John Young\" born France",
+        "exact_request_started_utc": null,
+        "exact_request_completed_utc": null,
+        "durable_plan": "v13_c_intent.json",
+        "http_status": null
+      },
+      {
+        "operation": "search",
+        "query_index": 5,
+        "engine": "system1",
+        "q": "\"Roger Philip Ekins\" \"born\"",
+        "exact_request_started_utc": null,
+        "exact_request_completed_utc": null,
+        "durable_plan": "v13_c_intent.json",
+        "http_status": null
+      },
+      {
+        "operation": "search",
+        "query_index": 6,
+        "engine": "system1",
+        "q": "\"Pierre Young\" \"né\" Concorde",
+        "exact_request_started_utc": null,
+        "exact_request_completed_utc": null,
+        "durable_plan": "v13_c_intent.json",
+        "http_status": null
+      },
+      {
+        "operation": "search",
+        "query_index": 7,
+        "engine": "system1",
+        "q": "\"Martin Alister Campbell Hinton\" \"born\" England",
+        "exact_request_started_utc": null,
+        "exact_request_completed_utc": null,
+        "durable_plan": "v13_c_intent.json",
+        "http_status": null
+      },
+      {
+        "operation": "search",
+        "query_index": 8,
+        "engine": "system1",
+        "q": "\"Pierre Young\" obituary 1985 born",
+        "exact_request_started_utc": null,
+        "exact_request_completed_utc": null,
+        "durable_plan": "v13_c_intent.json",
+        "http_status": null
+      },
+      {
+        "operation": "original_navigation",
+        "navigation_index": 1,
+        "url": "https://collection.sciencemuseumgroup.org.uk/people/cp107942/edmund-james-mills",
+        "web_ref": "turn38view0",
+        "outcome": "tool-reported403,no body",
+        "exact_request_started_utc": null,
+        "exact_request_completed_utc": null,
+        "durable_plan": "v13_c_intent.json",
+        "http_status": null,
+        "raw_http_sha256": null
+      },
+      {
+        "operation": "original_navigation",
+        "navigation_index": 2,
+        "url": "https://www.lindahall.org/about/news/scientist-of-the-day/martin-alister-hinton/",
+        "web_ref": "turn38view1",
+        "outcome": "Original authored institutional biography parsed",
+        "exact_request_started_utc": null,
+        "exact_request_completed_utc": null,
+        "durable_plan": "v13_c_intent.json",
+        "http_status": null,
+        "raw_http_sha256": null
+      },
+      {
+        "operation": "original_navigation",
+        "navigation_index": 3,
+        "url": "https://eprints.whiterose.ac.uk/id/eprint/243596/",
+        "web_ref": "turn38view2",
+        "outcome": "Original universityrepositorymetadata parsed",
+        "exact_request_started_utc": null,
+        "exact_request_completed_utc": null,
+        "durable_plan": "v13_c_intent.json",
+        "http_status": null,
+        "raw_http_sha256": null
+      },
+      {
+        "operation": "original_navigation",
+        "navigation_index": 4,
+        "url": "https://eprints.whiterose.ac.uk/id/eprint/243596/1/rsbm.2026.0002.pdf",
+        "web_ref": "turn41view2",
+        "outcome": "Observed link6clicked,originalpublishedPDF parsed",
+        "exact_request_started_utc": null,
+        "exact_request_completed_utc": null,
+        "durable_plan": "v13_c_intent.json",
+        "http_status": null,
+        "raw_http_sha256": null
+      },
+      {
+        "operation": "original_navigation",
+        "navigation_index": 5,
+        "url": "https://royalsocietypublishing.org/rsbm/article-pdf/75/1/93/1448322/rsbm.2023.0020.pdf",
+        "web_ref": "turn41view0",
+        "outcome": "tool-reported403,no body",
+        "exact_request_started_utc": null,
+        "exact_request_completed_utc": null,
+        "durable_plan": "v13_c_intent.json",
+        "http_status": null,
+        "raw_http_sha256": null
+      },
+      {
+        "operation": "original_navigation",
+        "navigation_index": 6,
+        "url": "https://www.nature.com/articles/107432a0.pdf",
+        "web_ref": "turn41view1",
+        "outcome": "Originalabstract/preview only,redirectobserved",
+        "exact_request_started_utc": null,
+        "exact_request_completed_utc": null,
+        "durable_plan": "v13_c_intent.json",
+        "http_status": null,
+        "raw_http_sha256": null
+      },
+      {
+        "operation": "original_navigation",
+        "navigation_index": 7,
+        "url": "https://www.historylinksarchive.org.uk/pictures/document/11892.pdf?r=1736742",
+        "web_ref": "turn48view0",
+        "outcome": "New original authored historyarticle3pagePDF parsed",
+        "exact_request_started_utc": null,
+        "exact_request_completed_utc": null,
+        "durable_plan": "v13_c_intent.json",
+        "http_status": null,
+        "raw_http_sha256": null
+      },
+      {
+        "operation": "parsed_text_find",
+        "input_ref": "turn41view2",
+        "pattern": "Worcester",
+        "output_ref": "turn43view0",
+        "exact_request_started_utc": null,
+        "exact_request_completed_utc": null
+      },
+      {
+        "operation": "parsed_text_find",
+        "input_ref": "turn41view2",
+        "pattern": "England",
+        "output_ref": "turn43view1",
+        "exact_request_started_utc": null,
+        "exact_request_completed_utc": null
+      }
+    ],
+    "timing_note": "Durable plans written before listed calls. Exact call clocks not captured; null retained. audit_written_utc is not response time.",
+    "intent_file": "v13_c_intent.json"
+  }
+]

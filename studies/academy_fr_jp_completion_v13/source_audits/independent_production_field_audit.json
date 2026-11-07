@@ -1,0 +1,200 @@
+{
+  "audit_kind": "independent_read_only_v13_production_field_audit",
+  "reviewer": "v13_audit",
+  "completed_utc": "2026-11-01T08:08:24.519111+00:00",
+  "independent_qa_passed": true,
+  "baseline_commit": "6712097552d3d69b36c092c300aa03da4f02a9b0",
+  "audited_CSV_sha256s": {
+    "france_accepted_all_three.csv": "6372602f29c00dacd444d194b479f76da98c0d0b6165c9fce292e75c1f9d927e",
+    "france_case_adjudications.csv": "e44237b561b62020c6b3fa8281ee9fdc625d15f129887c49d1814f773d31699d",
+    "france_master877.csv": "62a7b1c89433e2ab9d37896f9703c9644eaddc8b596a6f4b7c9a74a0977fbca9",
+    "france_membership_decisions.csv": "65a37c54c7c438692160c5adfea443591722c9c295a10f67274d9c9e810fcb20",
+    "france_remaining_gaps.csv": "d1977498eb13323e807099f73149892b03605f681eb892ca10bf8d486f54368c",
+    "japan_birth_claims.csv": "c0a7820ea8149829d3b58caae18fefbb7b15fbc68f3ca1cb1f86582f793aff4c",
+    "japan_master.csv": "f901f568d0a5c85e8ace5ae928d5a3473b9e7691131941075b9cd19d1c7a3021",
+    "japan_next_action_queue.csv": "b36bf64ab5b28f8bd08e795fa4817e0ce85a669a075ebdedbb2cf1786b8d9022"
+  },
+  "result": {
+    "changed_old_fields_by_candidate": {
+      "CTHS_101455": [
+        "membership_role_supported",
+        "election_cutoff_stable",
+        "election_date_conflict",
+        "source_evidence_review_version"
+      ],
+      "CTHS_102823": [
+        "identity_accepted",
+        "dob_accepted",
+        "accepted_canonical_person_name",
+        "accepted_dob_iso",
+        "membership_role_supported",
+        "election_cutoff_stable",
+        "election_date_conflict",
+        "completion_status",
+        "completion_remaining_dimensions",
+        "source_evidence_review_version"
+      ],
+      "CTHS_102836": [
+        "identity_accepted",
+        "dob_accepted",
+        "accepted_canonical_person_name",
+        "accepted_dob_iso",
+        "membership_role_supported",
+        "election_cutoff_stable",
+        "election_date_conflict",
+        "completion_status",
+        "completion_remaining_dimensions",
+        "source_evidence_review_version"
+      ],
+      "CTHS_102838": [
+        "identity_accepted",
+        "membership_accepted",
+        "dob_accepted",
+        "accepted_canonical_person_name",
+        "accepted_dob_iso",
+        "accepted_full_member_election_year",
+        "membership_role_supported",
+        "election_cutoff_stable",
+        "election_date_conflict",
+        "completion_status",
+        "completion_remaining_dimensions",
+        "source_evidence_review_version",
+        "accepted_election_precision",
+        "role_cutoff_and_dob_supported"
+      ],
+      "CTHS_112069": [
+        "membership_accepted",
+        "accepted_full_member_election_year",
+        "membership_role_supported",
+        "election_cutoff_stable",
+        "election_date_conflict",
+        "completion_status",
+        "completion_remaining_dimensions",
+        "source_evidence_review_version",
+        "accepted_election_precision",
+        "role_cutoff_and_dob_supported"
+      ],
+      "CTHS_128414": [
+        "membership_role_supported",
+        "election_cutoff_stable",
+        "election_date_conflict",
+        "source_evidence_review_version"
+      ],
+      "CTHS_128438": [
+        "membership_role_supported",
+        "election_cutoff_stable",
+        "election_date_conflict",
+        "source_evidence_review_version"
+      ],
+      "CTHS_5236": [
+        "membership_role_supported",
+        "election_cutoff_stable",
+        "election_date_conflict",
+        "source_evidence_review_version"
+      ],
+      "PROFILE2_39000bb1e114bf0c": [
+        "identity_accepted",
+        "membership_accepted",
+        "dob_accepted",
+        "accepted_canonical_person_name",
+        "accepted_dob_iso",
+        "accepted_full_member_election_year",
+        "membership_role_supported",
+        "election_cutoff_stable",
+        "election_date_conflict",
+        "completion_status",
+        "completion_remaining_dimensions",
+        "source_evidence_review_version",
+        "accepted_election_precision",
+        "role_cutoff_and_dob_supported"
+      ],
+      "PROFILE2_738d6d5c74a7a874": [
+        "identity_accepted",
+        "dob_accepted",
+        "accepted_canonical_person_name",
+        "accepted_dob_iso",
+        "membership_role_supported",
+        "election_cutoff_stable",
+        "election_date_conflict",
+        "completion_status",
+        "completion_remaining_dimensions",
+        "source_evidence_review_version"
+      ]
+    },
+    "caseids": [
+      "CTHS_102823",
+      "CTHS_102836",
+      "CTHS_102838",
+      "PROFILE2_39000bb1e114bf0c",
+      "PROFILE2_738d6d5c74a7a874"
+    ],
+    "membership_positiveids": [
+      "CTHS_112069",
+      "CTHS_102838",
+      "PROFILE2_39000bb1e114bf0c"
+    ],
+    "France_current": {
+      "identity_accepted": 785,
+      "dob_accepted": 773,
+      "membership_accepted": 641
+    },
+    "all_three": 638,
+    "remaining": 239,
+    "casehistory": 30,
+    "membershiphistory": 481,
+    "all_untouched_old_fields_preserved": true,
+    "protectedrows_every_oldfield_preserved": true,
+    "Japan3CSVbytes_identical": true
+  },
+  "all877_original_raw_claims_source_origin_firstparty_flags_identifiers_displaynames_and_groups_preserved": true,
+  "all780_old_approved_identities_and768_old_approved_DOB_values_preserved": true,
+  "all638_old_strict_membership_rows_every_old_field_preserved": true,
+  "only5_exact_B5_oldzero_identity_DOB_cases_promoted": true,
+  "new_case_values_and_singleton_dates_bound_to_final_source_QA": true,
+  "all_three_new_memberships_direct_observed_year_precision": [
+    {
+      "candidate_group_id": "CTHS_112069",
+      "accepted_canonical_person_name": "Robert Anselme Debré",
+      "accepted_full_member_election_year": "1961",
+      "accepted_election_precision": "year"
+    },
+    {
+      "candidate_group_id": "CTHS_102838",
+      "accepted_canonical_person_name": "Raoul Pierre Émile Combes",
+      "accepted_full_member_election_year": "1948",
+      "accepted_election_precision": "year"
+    },
+    {
+      "candidate_group_id": "PROFILE2_39000bb1e114bf0c",
+      "accepted_canonical_person_name": "Christophe Salomon",
+      "accepted_full_member_election_year": "2017",
+      "accepted_election_precision": "year"
+    }
+  ],
+  "old25_case_ledger_rows_every_old_CSV_field_preserved": true,
+  "old471_membership_ledger_rows_every_old_CSV_field_preserved": true,
+  "all16_C_rows_every_old_field_preserved": true,
+  "all25_chronology_hold_rows_every_old_field_preserved": true,
+  "all4_exact_DOB_conflict_rows_every_old_field_preserved": true,
+  "Dassault13_vs18January1882_neither_selected_and_membership_preserved": true,
+  "all12_six_aliaspair_rows_every_old_field_preserved": true,
+  "father102829_all_three_zero_and5_machine_birthyear_control_fields_preserved": true,
+  "father_original_exact1862_date_not_replaced_or_voted_against1867year": true,
+  "son112057_every_old_field_preserved": true,
+  "Casimir_Chagas_Bronk_and_other_foreign_role_controls_preserved": true,
+  "Costantin_publication1833_vs1883_anomaly_preserved_in_appended_case": true,
+  "France73_missing_raw_day_cases_and4_exact_raw_conflicts_preserved": true,
+  "all482_Japan_rows_and528_claim_rows_and112_queue_rows_byte_identical": true,
+  "Japan46_holds_and4_prior_calendar_outcomes_and_v10_v11_scope_gains_preserved": true,
+  "France_fixed26_is10_subject_case_source_reviews_plus16_bulk_route_screens": true,
+  "C16_screen_metrics_not_equated_with_biography_or_DOB_completion": true,
+  "japan_new_source_DOB_or_scope_activity_zero": true,
+  "no_new_raw_DOB_claims_BaZi_analysis_freeze_or_outreach": true,
+  "new_source_QA_reports_bound": {
+    "B5_case_and_Salomon_membership_QA_sha256": "69cabbc3ae112564cab96c2b1e243291eb5a0192ed2d00f88e5368363cfda027",
+    "C_source_only_QA_sha256": "153f6345b157ec452ed56aace13b13a33b6cc8fff37148ba73ffb89847ae9f8c"
+  },
+  "repository_writes_by_auditor": 0,
+  "auditor_network_requests": 0,
+  "scope_note": "Audits produced country CSV fields and source-QA bindings. Final production README/tests/metadata inventory and replay are separate packaging checks still pending at time of this report."
+}

@@ -1,0 +1,370 @@
+{
+  "schema": "UK_v28_independent_source_documentary_QA_v1",
+  "reviewer": "/root/v26_source_qa",
+  "written_utc": "2026-11-06T11:25:52.528943+00:00",
+  "passed": true,
+  "checks_passed": 74,
+  "checks": [
+    {
+      "check": "two_unique_expected_accepted",
+      "passed": true
+    },
+    {
+      "check": "ten_unique_held",
+      "passed": true
+    },
+    {
+      "check": "twelve_unique_individuals",
+      "passed": true
+    },
+    {
+      "check": "scope_equals_plan_groups",
+      "passed": true
+    },
+    {
+      "check": "114_unique_blank_target_queue",
+      "passed": true
+    },
+    {
+      "check": "disjoint_complete_accepted_held_partition",
+      "passed": true
+    },
+    {
+      "check": "reviewed_in_target_queue",
+      "passed": true
+    },
+    {
+      "check": "all_scope_blank_unknown_nativewindow",
+      "passed": true
+    },
+    {
+      "check": "no_geography_onlypilot",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2245_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2245_unique_authority_DOB_fixedcohort",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2245_actual_full_source_name",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2245_actual_place_and_exact_sourceDOB",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2245_final_grade_and_North",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2245_actual_quote_count_limit",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2245_sourcegrade_separate_frozenDOBgrade",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2245_explicit_dateprecision_identity_geo_locator",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2245_actual_root_original_body_ref",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2245_unknown_raw_status_time_hash_null",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2245_no_person_country_QIDcoords_added",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2245_no_stale_proposal_pending_fields",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4189_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4189_unique_authority_DOB_fixedcohort",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4189_actual_full_source_name",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4189_actual_place_and_exact_sourceDOB",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4189_final_grade_and_North",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4189_actual_quote_count_limit",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4189_sourcegrade_separate_frozenDOBgrade",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4189_explicit_dateprecision_identity_geo_locator",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4189_actual_root_original_body_ref",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4189_unknown_raw_status_time_hash_null",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4189_no_person_country_QIDcoords_added",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4189_no_stale_proposal_pending_fields",
+      "passed": true
+    },
+    {
+      "check": "Sykes_literal_initials_not_expanded",
+      "passed": true
+    },
+    {
+      "check": "Sykes_actual_edited_ODNB_publication",
+      "passed": true
+    },
+    {
+      "check": "Sykes_root_new_original_role_not_worker_birthproof",
+      "passed": true
+    },
+    {
+      "check": "Ganellin_actual_CharonRobin_no_substitution",
+      "passed": true
+    },
+    {
+      "check": "Ganellin_unsigned_conservativeS3",
+      "passed": true
+    },
+    {
+      "check": "Ganellin_undated_profile_no_endpoint_confirmation",
+      "passed": true
+    },
+    {
+      "check": "Ganellin_no_2026_alive_or_deathverdict",
+      "passed": true
+    },
+    {
+      "check": "all_held_nativeDOB_authority_unchanged",
+      "passed": true
+    },
+    {
+      "check": "Bateman_secondarydiscrepancy_not_newqualifiedoriginalDOB",
+      "passed": true
+    },
+    {
+      "check": "Treisman_historical2002_not_datedalive2026",
+      "passed": true
+    },
+    {
+      "check": "Wilkinson_no_actual_endpointbody",
+      "passed": true
+    },
+    {
+      "check": "inherited_active_source_DOB_conflicts.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "inherited_provisional_parsed_date_discrepancies.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "inherited_birthplace_source_conflicts.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "inherited_source_date_precision_holds.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "inherited_source_derived_age_inconsistencies.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "inherited_lifespan_endpoint_discrepancies.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "inherited_cross_source_reported_age_contrasts.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "inherited_omitted_middle_name_admission.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "inherited_source_ordinal_age_wording_observations.json_byte_identical",
+      "passed": true
+    },
+    {
+      "check": "six_activeDOBconflicts_no_newacceptedcase",
+      "passed": true
+    },
+    {
+      "check": "Tomes_provisional_separate",
+      "passed": true
+    },
+    {
+      "check": "Shortt_single_qualifiedordinal_preserved",
+      "passed": true
+    },
+    {
+      "check": "all_actual8queries_each",
+      "passed": true
+    },
+    {
+      "check": "worker24queries_withinbudgets",
+      "passed": true
+    },
+    {
+      "check": "worker18navigation_withinbudgets",
+      "passed": true
+    },
+    {
+      "check": "worker2finds_zeroGETs",
+      "passed": true
+    },
+    {
+      "check": "A_lateexactadaptiveledger_generalpriorpurpose_disclosed",
+      "passed": true
+    },
+    {
+      "check": "C_failedexactintentappend_precisely_disclosed",
+      "passed": true
+    },
+    {
+      "check": "C_failedappend_affects_holds_not_Ganellinfact",
+      "passed": true
+    },
+    {
+      "check": "workerreports_preserved_exact",
+      "passed": true
+    },
+    {
+      "check": "worker_Sykes_hold_remains_original",
+      "passed": true
+    },
+    {
+      "check": "Sykes_dated_override_only_currenthold",
+      "passed": true
+    },
+    {
+      "check": "root_retrieval_amendment_actual_exactquery",
+      "passed": true
+    },
+    {
+      "check": "root_retrieval_amendment_afterinitialplan_beforefacts",
+      "passed": true
+    },
+    {
+      "check": "root_one_query_twoopens_zeroothercalls",
+      "passed": true
+    },
+    {
+      "check": "root_both_actualoriginals_observations",
+      "passed": true
+    },
+    {
+      "check": "aggregate_request_counts_exact",
+      "passed": true
+    },
+    {
+      "check": "parent_final_decision_counts_exact",
+      "passed": true
+    },
+    {
+      "check": "no_sourcecaches_images",
+      "passed": true
+    },
+    {
+      "check": "preliminaryQA_before_finalfacts",
+      "passed": true
+    }
+  ],
+  "accepted_fact_sha256_at_review": "1c8790f52bdaaba96ba2e75af1008edc01186998bfebaa7d8322a9c641ab90b9",
+  "blocking_issues": [],
+  "accepted_native_bindings": [
+    {
+      "record_id": "RS_PAST_NA2245",
+      "native_authority": "Sykes; Sir; Charles (1905 - 1982)",
+      "native_DOB": "1905-02-27",
+      "actual_source_full_name": "Sir Charles Sykes",
+      "actual_source_DOB": "1905-02-27",
+      "source_grade": "S2",
+      "hemisphere": "north",
+      "quote_words": 9,
+      "fixed_authority_DOB_key_matches": 1
+    },
+    {
+      "record_id": "RS_PAST_NA4189",
+      "native_authority": "Ganellin; Charon Robin (1934 - 2026); medicinal chemist",
+      "native_DOB": "1934-01-25",
+      "actual_source_full_name": "Charon Robin Ganellin",
+      "actual_source_DOB": "1934-01-25",
+      "source_grade": "S3",
+      "hemisphere": "north",
+      "quote_words": 6,
+      "fixed_authority_DOB_key_matches": 1
+    }
+  ],
+  "inherited_issue_sidecars_byte_identical": [
+    "active_source_DOB_conflicts.json",
+    "provisional_parsed_date_discrepancies.json",
+    "birthplace_source_conflicts.json",
+    "source_date_precision_holds.json",
+    "source_derived_age_inconsistencies.json",
+    "lifespan_endpoint_discrepancies.json",
+    "cross_source_reported_age_contrasts.json",
+    "omitted_middle_name_admission.json",
+    "source_ordinal_age_wording_observations.json"
+  ],
+  "source_work_quote_word_counts": {
+    "SykesODNB": 9,
+    "GanellinNIHF": 6
+  },
+  "protocol_disclosures": {
+    "A": "Queries5–8 exactstrings laterledgered under priorgeneraladaptivepurpose; notexactallprelisted.",
+    "B": "Exactadaptivequeriesprelisted, aggregateper-queryresultmappinglimits explicit; no reporteddeviation.",
+    "C": "Attemptedexact3laternavigationintentappend failedPythonSyntaxError, samecellstillnetworkedwithoutcheckingfailedexit; initialgeneralpurpose existed, exact3intents onlypostobservationalnotbackdated. AffectedBateman/Wilkinson/Treismanholds only. EarlierGanellinprospectiveintentunaffected.",
+    "root": "Explicitpost-observation/pre-queryretrievalpurposeamendment broadenedoneauthorquery tooneauthor-or-observedoriginal-worklocatorquery withinunchangedcount1; actualdatedplan/exactquery retained. No admissionrulechange/accessfailurevariant/guessedURL claim."
+  },
+  "retrieval_purpose_amendment": {
+    "written_utc": "2026-11-06T11:20:02.796777+00:00",
+    "query": "site:academic.oup.com/oxford-dictionary-of-national-biography \"Sykes\" \"1905\" \"Charles\"",
+    "admission_change": false,
+    "query_count_limit_increased": false,
+    "timing_limit": "ActualrawrequestUTCunknown; prospectiveorder recorded by parent inactualplan/intent and toolcallhistory, not independentlymeasuredrawHTTPtiming."
+  },
+  "no_new_admission_method_exception": true,
+  "review_scope": "Independentdocumentaryreview of minimalfacts/quotes/originalacquisitionroles/locators/actualtimingdisclosures/nativebinding/inheritedissues. Sources acquiredbyworkers/root; reviewer didnotnetwork-fetchoriginals or inspectoriginalpixels/rawbytes.",
+  "limitations": [
+    "Nativeauthority+DOBunique withinfixed4983cohort only, no globalpersonuniqueness/crosscohortstatisticaldedup.",
+    "Ganellinundatedpresenttense doesnotconfirmnative2026endpoint, actualdeathdate or datedalive2026; no sourceCharlescomponentcontradictionobserved.",
+    "Treismanhistorical2002awardprose/yearonly/missingHenry/no bornplace and Wilkinsonnooriginalbody do notinvokeendpoint-onlyexception.",
+    "BatemanWikipedia12March1915/native21March1915 is a retainedsecondarydiscrepancy, notnewqualifiedoriginalDOBconflict or correctednativebirthday.",
+    "Sykesworker priorhold/encyclopediaobservationretainedunchanged; currentrootactualODNBalone supportsadoption, notmisattributionorindependence.",
+    "RawHTTPstatus/requesttime/bytehashunknownnull; actualtoolerrors and localintent-appendfailure separate; no backdating/no sourcecaches."
+  ],
+  "no_network_source_code_mainoutputs_or_Git_mutation_by_reviewer": true
+}

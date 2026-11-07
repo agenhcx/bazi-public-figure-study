@@ -1,0 +1,159 @@
+{
+  "audit_kind": "independent_read_only_v10_integration_audit",
+  "reviewer": "v10_audit",
+  "completed_utc": "2026-10-30T11:37:24.438912+00:00",
+  "independent_qa_passed": true,
+  "errors": [],
+  "inherited_Japan_claims_every_CSV_field_preserved": 528,
+  "inherited_Japan_structured_ledger_exactly_preserved": true,
+  "all_old_Japan_row_fields_preserved_except_exact_approved_scope_pair": true,
+  "approved_new_scope_ids": [
+    "jpa-unlinked-0e74d049141c9fd7",
+    "jpa-unlinked-29e021ed17d66ad4",
+    "jpa-unlinked-3a793d0d8e9d64db",
+    "jpa-unlinked-4ed3afac92825ad9",
+    "jpa-unlinked-501b5814ef8eb21f",
+    "jpa-unlinked-685499c7cac8c622",
+    "jpa-unlinked-b3170067960e401e",
+    "jpa-unlinked-b6a85346dd06dbc7",
+    "jpa-unlinked-eabfb6c33df81d73",
+    "jpa-unlinked-f72252fc4e77931a"
+  ],
+  "only_old_fields_allowed_to_change_on_those_ids": [
+    "broad_section_supported",
+    "section_evidence_status"
+  ],
+  "old368_day_statuses_expressions_and_tier_flags_preserved": true,
+  "all46_old_hold_statuses_notes_preserved": true,
+  "four_prior_exact_calendar_releases_preserved": {
+    "jpa-unlinked-a9d1e2cde713ae0e": "1865-06-08",
+    "jpa-unlinked-d4cbc74833986120": "1870-04-10",
+    "jpa-unlinked-7ecae30c03b86d5f": "1865-08-01",
+    "jpa-unlinked-eabfb6c33df81d73": "1855-11-04"
+  },
+  "Japan_current": {
+    "body_day_no_known_conflict": 368,
+    "body_claim_rows": 528,
+    "body_birth_people": 433,
+    "broad_section_ii_supported": 438,
+    "section_i_excluded": 7,
+    "section_unresolved": 37,
+    "nonexcluded_science_and_unresolved_candidates": 475,
+    "section_ii_and_body_day_no_known_conflict": 360,
+    "nonexcluded_dob_not_day_count": 107,
+    "next_action_queue_count": 115,
+    "institutional_or_university_supported_day_no_known_conflict": 215,
+    "edited_reference_only_day_no_known_conflict": 150,
+    "other_attributed_secondary_only_day_no_known_conflict": 3
+  },
+  "France_identity_fields_and_all_other_DOB_fields_preserved": true,
+  "France755_identity_and743_DOB": true,
+  "France_Dassault_exact_root_approved_DOB_quarantine": {
+    "candidate_group_id": "CTHS_112065",
+    "old_day_archived": "1882-01-13",
+    "raw_both_days_preserved": [
+      "1882-01-13",
+      "1882-01-18"
+    ],
+    "accepted_day_blank": true,
+    "DOB_approval_suspended": true,
+    "membership_separate_and_accepted": true,
+    "actual_HTML13_and_PDFp1_image18_independently_read_and_rehashed": true,
+    "sources_share_Tardi1969_reference_not_independent_votes": true,
+    "source_pair_sha256": "b91c246142750ba7c56fb089e52f6f3b685d6c1d9a648b0cdebc684a687c61a7",
+    "independent_source_QA_sha256": "4aed568f1e022050165da639d6646ae8d23c43d2c868475e952855637efd4b22",
+    "other743_prior_approved_DOB_days_unchanged": true
+  },
+  "France25_original_chronology_hold_rows_every_field_preserved": true,
+  "France394_original_strict_members_every_old_field_preserved": true,
+  "France_current": {
+    "candidate_groups": 877,
+    "baseline": {
+      "identity_accepted": 755,
+      "membership_accepted": 394,
+      "dob_accepted": 744
+    },
+    "current": {
+      "identity_accepted": 755,
+      "membership_accepted": 408,
+      "dob_accepted": 743
+    },
+    "new_strict_memberships": 14,
+    "all_three_accepted": 405,
+    "all_three_remaining_gaps": 472,
+    "membership_cases_reviewed": 24,
+    "role_supported": 468,
+    "cutoff_stable": 463,
+    "role_cutoff_and_dob_supported": 458,
+    "known_election_conflict_rows": 25,
+    "role_date_note": "Role/cutoff support and election chronology are separate. Strict approvals are not relaxed. Nonordinary observed events do not prove lifetime nonmembership.",
+    "collection_complete": false,
+    "national_missing_birthdays": null,
+    "analysis_cohort_frozen": false,
+    "bazi_computed": 0,
+    "baseline_all_three_accepted": 392,
+    "all_three_net_change": 13,
+    "inherited_v9_membership_decision_rows": 171,
+    "source_backed_decisions": 24,
+    "known_exact_DOB_conflict_rows": 4,
+    "new_exact_DOB_conflict_quarantines": 1,
+    "DOB_quarantined_candidate_ids": [
+      "CTHS_112065"
+    ],
+    "newly_processed_v10_candidates": 82,
+    "cross_source_additional_candidate_ids": [],
+    "cross_source_additional_candidates": 0
+  },
+  "processing_checks": {
+    "france_a": {
+      "selected": 28,
+      "literal_queries": 44,
+      "all_individually_queried_with_literal_ID_mapping": true
+    },
+    "france_b": {
+      "selected": 27,
+      "literal_queries": 47,
+      "all_individually_queried_with_literal_ID_mapping": true
+    },
+    "france_c": {
+      "selected": 27,
+      "literal_queries": 38,
+      "all_individually_queried_with_literal_ID_mapping": true
+    },
+    "japan_scope": {
+      "selected_and_locally_triaged": 47,
+      "individually_scope_queried_people": 5,
+      "not_individually_scope_queried_people": 42,
+      "scope_source_body_review_people": 12,
+      "DOB_search_or_body_review_people": 0
+    }
+  },
+  "French_prior_unknown_coverage89_fixed82_individually_queried": true,
+  "French_current_unknown_coverage_gap_ids": [
+    "CTHS_101472",
+    "CTHS_102263",
+    "CTHS_102846",
+    "CTHS_107107",
+    "CTHS_111515",
+    "CTHS_111774",
+    "CTHS_111796"
+  ],
+  "French_remaining7_all_old_chronology_holds": true,
+  "Japan_DOB_processed_delta_empty_despite_section_work": true,
+  "France_Dassault_excluded_from_all_three_and_present_in_gap_table": true,
+  "derived_country_tables_match_master_predicates": true,
+  "actual_no_analysis_flags_verified": true,
+  "network_requests_for_this_final_field_audit": 0,
+  "repository_writes": 0,
+  "analysis_cohort_frozen": false,
+  "bazi_variables_computed": 0,
+  "source_body_redistributed": false,
+  "file_sha256": {
+    "scripts/continue.py": "15a6cb804bc1511462dd33c1702ea27f70143b525e9c952f03f2bc49c4b00579",
+    "inputs/japan_section_approvals.json": "92c9fe58dde061eeeccbf301aa0b7b5e07f17a27914a27b589fd338abeff2aeb",
+    "outputs/japan_master.csv": "0c92b0f49921032c801f9f78ad3d4c323d626bacd277a30e3a5f5fa56bc2e268",
+    "outputs/japan_birth_claims.csv": "c0a7820ea8149829d3b58caae18fefbb7b15fbc68f3ca1cb1f86582f793aff4c",
+    "outputs/france_master877.csv": "6875e92350e28690839b9ed2042657a05fcee867978050399ae8dee06c6c7dad",
+    "outputs/summary.json": "6fbc2d72951fc8c003c81470b37fad75974e48cf6af7627b9033eb050dd9f1f8"
+  }
+}

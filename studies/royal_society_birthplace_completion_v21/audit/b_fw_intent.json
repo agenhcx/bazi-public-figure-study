@@ -1,0 +1,47 @@
+{
+  "written_utc": "2026-11-05T23:30:08.175962+00:00",
+  "budget": {
+    "queries": 3,
+    "opens": 4
+  },
+  "operations": [
+    {
+      "type": "query",
+      "q": "\"Roger Fletcher\" obituary born Dundee Royal Society"
+    },
+    {
+      "type": "query",
+      "q": "\"Peter Neil Temple Wells\" born biography"
+    },
+    {
+      "written_utc": "2026-11-05T23:30:20.406133+00:00",
+      "type": "open",
+      "url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/579400901",
+      "purpose": "Verify original full name/exact birthdate and birthplace; discoveryMay19conflictsnativeJune19, so hold regardless of birthplace if original confirms."
+    },
+    {
+      "written_utc": "2026-11-05T23:30:20.406192+00:00",
+      "type": "query",
+      "q": "\"Roger Fletcher\" \"born\" 1939",
+      "purpose": "Find original birth-place body, not career/death-only biography."
+    },
+    {
+      "written_utc": "2026-11-05T23:30:33.576369+00:00",
+      "type": "open",
+      "url": "https://bir.org.uk/media-centre/news/2017/may/professor-peter-wells-1936-2017.aspx",
+      "purpose": "Distinct original institutional biography first body read; verify birthdayconflict; noODNBretry."
+    },
+    {
+      "written_utc": "2026-11-05T23:30:33.576386+00:00",
+      "type": "open",
+      "url": "https://numericalanalysisconference.org.uk/conferences/2025/slides/16",
+      "purpose": "Original Fletcher-Powell conference lecture with named memoir authors; inspect original body for place/date/identity."
+    },
+    {
+      "written_utc": "2026-11-05T23:30:43.079574+00:00",
+      "type": "open",
+      "url": "https://doi.org/10.1098/rsbm.2024.0037",
+      "purpose": "One original authored scientific memoir resolver/body attempt; no prior endpoint retry."
+    }
+  ]
+}

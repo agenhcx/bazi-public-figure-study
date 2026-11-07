@@ -1,0 +1,111 @@
+{
+  "written_utc": "2026-11-07T01:13:56.724481+00:00",
+  "intent_file": "root_intent.json",
+  "counts": {
+    "discovery_queries": 0,
+    "source_open_operations": 10,
+    "click_operations": 0,
+    "parsed_finds": 0,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "observations": [
+    {
+      "record_id": "RS_PAST_NA4636",
+      "url": "https://de.wikipedia.org/wiki/Bernard_Pagel",
+      "ref": "turn6297734view1",
+      "locator": "L115 full Bernard Ephraim Julius Pagel/exact4January1930/inBerlin bornlink46;L120bornBerlin/L121RGO-Sussex-NORDITAcareer/life1930-2007. Worker parsedlink45 actually followed, rootlink46 difference not sourceversion proof.",
+      "role": "root_actual_canonical_person_birthlink_observed_after_worker_actual_follow",
+      "supports_adopted_geography": true
+    },
+    {
+      "record_id": "RS_PAST_NA4636",
+      "url": "https://de.wikipedia.org/wiki/Berlin",
+      "ref": "turn6297734view2",
+      "locator": "L485 Berlin capital and Land of Bundesrepublik Deutschland;L501 geographiccity NEGermany/withinBrandenburg. No coordinates/historicalsovereignty assigned.",
+      "role": "root_actual_previously_observed_person_birthlink_target_body_after_worker_actual_follow",
+      "supports_adopted_geography": true
+    },
+    {
+      "record_id": "RS_PAST_NA4568",
+      "url": "https://en.wikipedia.org/wiki/Nicholas_Mackintosh",
+      "ref": "turn1978583view0",
+      "locator": "L111 Nicholas John Seymour Mackintosh(all nativecomponents plus sourceextraSeymour)/L112exact9July1935/L113BornLondon,England/L123fullnative-life-psychology/L128Oxford-Sutherland/L133Cambridgecareer1981-2002.",
+      "role": "root_actual_canonical_person_direct_Born_region_literal",
+      "supports_adopted_geography": true
+    },
+    {
+      "record_id": "RS_PAST_NA6313",
+      "url": "https://en.wikipedia.org/wiki/Albert_Chibnall",
+      "ref": "turn3758274view0",
+      "locator": "L109fullAlbertCharlesChibnall/L111exact28January1894/L112BornHammersmithlink39/L123fullDOB-biochemistry/L128explicitbornclause-link39/L131-133Imperial-Cambridgecareer. Workercachedpersonlocators differ, no sourceversion inference.",
+      "role": "root_actual_canonical_person_birthlink_observed_after_worker_actual_follow",
+      "supports_adopted_geography": true
+    },
+    {
+      "record_id": "RS_PAST_NA6313",
+      "url": "https://en.wikipedia.org/wiki/Hammersmith",
+      "ref": "turn3758274view1",
+      "locator": "L157Hammersmithgeographicdistrict/L170CountryEngland/L184WestLondondistrictEngland. Actual England anchorvalue text seen, targetURI not resolved, null not guessed.",
+      "role": "root_actual_previously_observed_person_birthlink_target_body_after_worker_actual_follow",
+      "supports_adopted_geography": true
+    },
+    {
+      "record_id": "RS_PAST_NA1611",
+      "url": "https://en.wikipedia.org/wiki/Leonard_Frank_Spath",
+      "ref": "turn6297734view0",
+      "locator": "RootL109full/L111Born20October1882/L112Died2March1957(aged75)/L125fullnative-dates-geology/L131Birkbeck-BritishMuseum; worker priorparsedL108-109.",
+      "role": "root_actual_original_person_one_source_age_arithmetic_observation_no_geography",
+      "supports_adopted_geography": false
+    },
+    {
+      "record_id": "RS_PAST_NA4571",
+      "url": "https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%B9%D1%82%D0%BB%D0%B8%D1%81%2C_%D0%9F%D0%B8%D1%82%D0%B5%D1%80",
+      "ref": "turn1978583view1",
+      "locator": "Header explicitly rewritten summary of canonical Russian URL;L139full/exactDOB/L144bornBerlinlink77, toolrepresentation not authenticated originalbody.",
+      "role": "root_rewritten_primary_person_representation_not_adopted",
+      "supports_adopted_geography": false
+    },
+    {
+      "record_id": "RS_PAST_NA4571",
+      "url": "https://ru.wikipedia.org/wiki/%D0%91%D0%B5%D1%80%D0%BB%D0%B8%D0%BD",
+      "ref": "turn1978583view2",
+      "locator": "L679BerlinGermanycapital/L686CountryGermany/L724 geographiccity; actualtarget cannot cure rewrittenprimaryperson.",
+      "role": "root_actual_place_body_primary_person_representation_still_held",
+      "supports_adopted_geography": false
+    },
+    {
+      "record_id": "RS_PAST_NA4774",
+      "url": "https://en.wikipedia.org/wiki/Graham_Ross_%28physicist%29",
+      "ref": "turn3758274view2",
+      "locator": "Header rewritten summary;L112year1944only/L113AberdeenScotland/L133full GrahamGarlandRoss/career.",
+      "role": "root_tool_rewritten_person_year_only_no_adoption",
+      "supports_adopted_geography": false
+    },
+    {
+      "record_id": "RS_PAST_NA4774",
+      "url": "https://ru.wikipedia.org/wiki/%D0%A0%D0%BE%D1%81%D1%81%2C_%D0%93%D1%80%D1%8D%D0%BC",
+      "ref": "turn3758274view3",
+      "locator": "Header rewritten summary;L124fullEnglishalias/L126year1944only/L127-128placeOxfordEnglandUK/L145fullcareer; provisionaltoolcontrast only.",
+      "role": "root_tool_rewritten_place_contrast_not_qualified_original_place_conflict",
+      "supports_adopted_geography": false
+    }
+  ],
+  "root_reclicked_person_edge": false,
+  "quote_words_by_original_work": {
+    "PagelGerman": 1,
+    "BerlinGerman": 2,
+    "MackintoshEnglish": 2,
+    "ChibnallEnglish": 1,
+    "HammersmithEnglish": 1,
+    "SpathEnglish": 1,
+    "MaitlisRussian": 0,
+    "BerlinRussian": 0,
+    "RossEnglish": 0,
+    "RossRussian": 0
+  },
+  "raw_HTTP_status": null,
+  "raw_bytes_sha256": null,
+  "exact_request_utc": null,
+  "no_source_caches_or_images_distributed": true
+}

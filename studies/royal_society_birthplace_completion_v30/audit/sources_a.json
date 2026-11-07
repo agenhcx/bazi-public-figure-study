@@ -1,0 +1,349 @@
+{
+  "schema": "UK_v30_sources_a_geography_v1",
+  "worker": "/root/v26_sources_a continuedasassignedv30sourceA",
+  "written_utc": "2026-11-06T12:08:29.001408+00:00",
+  "scope_record_ids": [
+    "RS_CURRENT_10965",
+    "RS_PAST_NA1998",
+    "RS_PAST_NA2007",
+    "RS_PAST_NA2892"
+  ],
+  "intent_file": "v30_a_intent.json",
+  "phase": "geography_only",
+  "counts": {
+    "discovery_queries": 8,
+    "web_navigation_attempts": 5,
+    "parsed_find_operations": 3,
+    "screenshots": 0,
+    "raw_HTTP_or_PDF_GETs": 0,
+    "new_geography_candidates": 1,
+    "new_first_birthplace_candidates": 0,
+    "holds": 3,
+    "new_active_DOB_conflicts": 0,
+    "unused_navigation_budget": 5
+  },
+  "budgets": {
+    "discovery_queries": 8,
+    "navigation_attempts": 10
+  },
+  "candidates": [
+    {
+      "record_id": "RS_PAST_NA2892",
+      "native": {
+        "record_id": "RS_PAST_NA2892",
+        "name": "Arthur Alcock",
+        "authority_name": "Rambaut; Arthur Alcock (1859 - 1923)",
+        "native_dob": "1859-09-21",
+        "raw_birthplace": "Waterford",
+        "birthplace_source_grade": "S1",
+        "birthplace_source_url": "https://catalogues.royalsociety.org/calmview/Record.aspx?src=CalmView.Persons&id=NA2892",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "78cd7b45830ecc07b2e8e50432132d0ab06279d9202861085d58dfbd473a1461"
+      },
+      "candidate_kind": "geography_only_consistent_birth_country_context",
+      "status": "candidate_original_authored_ODNB_explicit_birth_country_with_new_DIB_person_context",
+      "existing_raw_birthplace": "Waterford",
+      "existing_birthplace_source_grade": "S1",
+      "existing_birthplace_source_url": "https://catalogues.royalsociety.org/calmview/Record.aspx?src=CalmView.Persons&id=NA2892",
+      "stored_birthplace_modified": false,
+      "source_birthplace_context": "Waterford, Ireland",
+      "source_url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/581826061",
+      "source_title": "Rambaut, Arthur Alcock: (1859–1923), astronomer",
+      "source_author": "P A Wayman",
+      "source_kind": "original_authored_edited_ODNB_public_Extract",
+      "source_grade_proposal": "S2",
+      "geography_source_grade_proposal": "S2",
+      "source_grade_role": "geographic_support_only",
+      "source_grade_basis": "ActualattributededitedbiographicalreferenceworkpublicExtractstatesfullnativeArthurAlcockRambaut/exactDOB/lifespan/astronomer/directWaterfordIrelandbirth. GenuinelyneworiginalworkdistinctfrompriorRAS/DIBtaxonomy/ADSroutes. S2supportsnewgeographiccontextonly, nooriginalBP/DOBtierupgrade orhostS1claim.",
+      "source_quote": "was born at Waterford, Ireland, on 21 September 1859",
+      "source_quote_word_count": 9,
+      "source_body_ref": "turn2586506view0",
+      "source_locator": "Cachedfindturn4098210view1:L757fullnative/title;L761P.A.Wayman;L775publication2004-09-23/L779version2015-09-17;L781 fullsubject/lifespan1859–1923/astronomer/directbornWaterfordIreland/exact21September1859.",
+      "source_birthdate": "1859-09-21",
+      "source_birthdate_precision": "exact_day_in_original_public_Extract_born_clause",
+      "source_DOB_matches_native": true,
+      "observed_source_full_name": "Arthur Alcock Rambaut",
+      "source_lifespan_native_compatibility": "Exact1859-09-21/fullArthurAlcockRambaut/lifespan1859–1923compatible; no nativeDOB/identity/endpointrepair.",
+      "identity_review": [
+        "EveryfullnativeArthurAlcockRambautcomponentdirectlyinODNBtitle/bornclause, noinitial/nickname/omissionexceptionneeded.",
+        "Exactunchangednativebirthday21September1859andlifespan1859–1923compatible.",
+        "NewDIBpersonbodyindependentlyacquiredwithsamefullname/exactDOB/Waterfordcity/lifespananddistinctiveprofessionalanchors:AstronomerRoyalIreland1892/AndrewsProfessorTCD/RadcliffeObserverOxford1897/photographicstarcatalogue. It isadditionalidentitycontext,notclaimedinformationallyindependentofODNBoritsreferencedworks.",
+        "PriorRASDOB-onlyidentitycontextremainspriorobservationandnotreopened/newbirthproof."
+      ],
+      "reviewed_hemisphere_proposal": "north",
+      "reviewed_binding_to_existing_place": "OriginalODNBexplicitbornWaterfordIrelandincludesexactstoredWaterfordlabelandcompatiblefullsubject/DOB. Irelandbirthqualifierisconsistentrefinementoftheexistingcitylabel; DIBactualpersonbodylikewiseWaterfordcityandBornmetadataCo.Waterford. No competingbirthplaceassertionobserved. KeepstoredrawWaterford/BPgradeS1/BPsourceURL/claims/selectedevidenceunchanged.",
+      "geographic_basis": "Irelandexplicitlybirth-linkedinactualODNBbornclause; whollynortherncountry/islandcontext,noparentnationality/workplace/death/familiarcityinference. NewDIBCo.Waterfordmetadataisalsobirth-linkedwholeregion,butsupportisnotneededtoinfercountryfromcity. No nativecountryorcoordinatesfilled.",
+      "publication_date": "2004-09-23",
+      "version_date": "2015-09-17",
+      "supporting_original_observations": [
+        {
+          "url": "https://www.dib.ie/biography/rambaut-arthur-alcock-a7580",
+          "source_ref": "turn7799518view0",
+          "cached_author_ref": "turn8508056view1",
+          "title": "Rambaut, Arthur Alcock",
+          "source_author": "Patricia M. Byrne",
+          "source_kind": "original_authored_edited_DIB_person_biography",
+          "source_grade_role": "identity_and_consistent_birth_region_context_only; no BP/DOBtierupgrade",
+          "publication_date": "2009-10",
+          "publication_date_precision": "month_only_originalpublicationandlastrevisionOctober2009",
+          "locator": "L5–7byline;L8fullsubject/exactnativeDOB/lifespan/Waterfordcity;L13astronomerroyalIreland1892/AndrewsProfessor;L15RadcliffeObserverOxford1897;L19death1923-10-14;L28–30publication/revision;L43BornmetadataCo.Waterford.",
+          "source_birthdate": "1859-09-21",
+          "source_birthplace_context": "Waterford city; BornmetadataCo.Waterford",
+          "source_quote": "",
+          "informational_independence_claimed": false
+        }
+      ],
+      "caveats": [
+        "OnlyODNBpublicExtractread,remainderaccesswallnotbypassed/noclaimfullarticleacquired.",
+        "ODNBdescribessecondofthreesons; actualDIBdescribesthirdson. Non-nativefamilyordinalcontrastretainedwithoutadjudication; notDOB/placeconflictornativeidentityrepair.",
+        "DIBbibliographyreferencesP.A.Waymanhistory; noindependentorigin/corroborationcountclaimed.",
+        "GeographicS2factdoesnotchangeoriginalfrozenWaterfordS1birthplaceclaim/source/DOBgrades/nativecountry/coords/eligibility.",
+        "No rawHTTPbytes/status/time/hash acquired; parsedoriginalHTMLonly."
+      ],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "no_master_or_native_changes": true
+    }
+  ],
+  "holds": [
+    {
+      "record_id": "RS_CURRENT_10965",
+      "native": {
+        "record_id": "RS_CURRENT_10965",
+        "name": "Jerry Adams",
+        "authority_name": "",
+        "native_dob": "1940-06-17",
+        "raw_birthplace": "United States of America",
+        "birthplace_source_grade": "S2",
+        "birthplace_source_url": "https://www.eoas.info/biogs/P003088b.htm",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "8108acff3211b5597274df60828ac05d5f2d41e27c679cf5dde7438f89710443"
+      },
+      "status": "hold_no_new_original_birth_state_region_context",
+      "hold_type": "generic_USA_not_resolved",
+      "reason": "DiscoveryreturnedfrozenEOASUSAandencyclopedicprofiles,plusunrelatedJerryAdamsnamesakes. NewGenomeLegacyoralhistoryspeakerpageopen502stopped. Noactualfullsubject/compatibleDOB/birthlinkedstateorwholeregionbodyacquired. InitialCovingtonKentuckyquerywordswereunverifieddiscoveryseedonly,nolocationobservation/fact. ExtraMcKeeobservedinsearchmetadataisnotMcKinleyandnotnativeedit; nofirstname/nickname/initialexpansionorlocationtransferfromnamesakes. GenericstoredUSAcannotautomapNorth.",
+      "source_url": "https://genomelegacy.org/oralhistory/speaker/jerry-adams/",
+      "source_ref": "turn7799518view1",
+      "existing_raw_birthplace": "United States of America",
+      "proposed_hemisphere": null,
+      "geographic_source_grade_adopted": null,
+      "native_unchanged": true,
+      "birthplace_claims_unchanged": true
+    },
+    {
+      "record_id": "RS_PAST_NA2007",
+      "native": {
+        "record_id": "RS_PAST_NA2007",
+        "name": "Pierre Henry John",
+        "authority_name": "Young; Pierre Henry John (1926 - 1985)",
+        "native_dob": "1926-06-12",
+        "raw_birthplace": "France",
+        "birthplace_source_grade": "S3",
+        "birthplace_source_url": "https://en.wikipedia.org/wiki/Pierre_Young",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "9accdb6bb4584175ee96c8dbc9acc4068d8461bade5770a4166ba8f3b783d22d"
+      },
+      "status": "hold_no_genuinely_new_original_birth_region_body",
+      "hold_type": "generic_France_not_resolved",
+      "reason": "Twooriginal-workdiscoveryqueriesreturnedknownencyclopedia/mirrorandunrelatedPierreDarwinYoungpatterns,nopromisingneworiginalwork. Noneoftheclosedmirrors/unrelatedfuneralpageswasopened. Noactualbirth-linkedFrenchstate/region/metropolitancontextobtained; language/Frenchheritage/Paris-school/Herefordshireevacuationnotbirthregion. StoredFranceandcompletepriorBPcontextunchanged; noassumptionoverseasexcluded. Thisisboundednegativefollowup,notnewbodycoverage.",
+      "source_url": null,
+      "source_ref": null,
+      "discovery_refs": [
+        "turn9219415search50",
+        "turn2586506search9",
+        "turn2586506search3"
+      ],
+      "existing_raw_birthplace": "France",
+      "proposed_hemisphere": null,
+      "geographic_source_grade_adopted": null,
+      "native_unchanged": true,
+      "birthplace_claims_unchanged": true
+    },
+    {
+      "record_id": "RS_PAST_NA1998",
+      "native": {
+        "record_id": "RS_PAST_NA1998",
+        "name": "Basil",
+        "authority_name": "Kassanis; Basil (1911 - 1985)",
+        "native_dob": "1911-10-16",
+        "raw_birthplace": "Macedonian born",
+        "birthplace_source_grade": "S3",
+        "birthplace_source_url": "https://pictures.royalsociety.org/image-rs-21618",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "b7ecb1b7c24eec8c45f19c57ee8e8f5457d4b5a6d87fc2813958487795e1d7db"
+      },
+      "status": "hold_no_new_acquired_original_birth_country_region_narrative",
+      "hold_type": "historical_Macedonian_born_unresolved",
+      "reason": "RGmemoircarrierprovidesfullBasilKassanis/exactnativeDOB/lifespan/authoredcoverandabstractcareeronly; downloadstampsarenotbornbody. FirstobservedPDFdownloadnavigation404stopped. Latev20acceptedfactinspectionshowedcarriercover/abstractalreadyknown; cannotclaimgenuinelynewmemoirbodycoverage. Greeknationality/Greek-Yugoslavschooling/arrivalfromMacedonia/Englandworkdonotdeterminehistoricalbirthcountry/regionextent. ExistingliteralMacedonianbornandS3claimunchanged.",
+      "source_url": "https://www.researchgate.net/publication/247606177_Basil_Kassanis_16_October_1911_-_23_March_1985",
+      "source_ref": "turn4098210view0",
+      "download_failure_ref": "turn8508056view0",
+      "existing_raw_birthplace": "Macedonian born",
+      "proposed_hemisphere": null,
+      "geographic_source_grade_adopted": null,
+      "native_unchanged": true,
+      "birthplace_claims_unchanged": true,
+      "late_prior_context_checked": "inputs/v20_accepted_birthplaces.json: supporting_identity_only_original_work alreadyrecordsRGcover/abstract; sourcequoteMacedonianbornbelongsdifferentRoyalSocietypicturework."
+    }
+  ],
+  "new_active_DOB_conflicts": [],
+  "query_ledger": [
+    {
+      "query_index": 1,
+      "engine": "system2",
+      "query": "\"Jerry Adams\" born Covington Kentucky 1940",
+      "response_ref_prefix": "turn9219415search",
+      "intent_note": "Initialfourwordingsprewritten; adaptive5–8priorgeneralpurposerecorded,butexactwordingschosenafterinitialobservations; no backdatedrequestUTC orclaimallwordingsprewritten."
+    },
+    {
+      "query_index": 2,
+      "engine": "system2",
+      "query": "\"Pierre Henry John Young\" born",
+      "response_ref_prefix": "turn9219415search",
+      "intent_note": "Initialfourwordingsprewritten; adaptive5–8priorgeneralpurposerecorded,butexactwordingschosenafterinitialobservations; no backdatedrequestUTC orclaimallwordingsprewritten."
+    },
+    {
+      "query_index": 3,
+      "engine": "system2",
+      "query": "\"Basil Kassanis\" born",
+      "response_ref_prefix": "turn9219415search",
+      "intent_note": "Initialfourwordingsprewritten; adaptive5–8priorgeneralpurposerecorded,butexactwordingschosenafterinitialobservations; no backdatedrequestUTC orclaimallwordingsprewritten."
+    },
+    {
+      "query_index": 4,
+      "engine": "system2",
+      "query": "\"Arthur Alcock Rambaut\" born Ireland",
+      "response_ref_prefix": "turn9219415search",
+      "intent_note": "Initialfourwordingsprewritten; adaptive5–8priorgeneralpurposerecorded,butexactwordingschosenafterinitialobservations; no backdatedrequestUTC orclaimallwordingsprewritten."
+    },
+    {
+      "query_index": 5,
+      "engine": "system1",
+      "query": "\"Jerry Adams\" \"born\" \"1940\"",
+      "response_ref_prefix": "turn2586506search",
+      "intent_note": "Initialfourwordingsprewritten; adaptive5–8priorgeneralpurposerecorded,butexactwordingschosenafterinitialobservations; no backdatedrequestUTC orclaimallwordingsprewritten."
+    },
+    {
+      "query_index": 6,
+      "engine": "system1",
+      "query": "\"Pierre Young\" Concorde obituary born",
+      "response_ref_prefix": "turn2586506search",
+      "intent_note": "Initialfourwordingsprewritten; adaptive5–8priorgeneralpurposerecorded,butexactwordingschosenafterinitialobservations; no backdatedrequestUTC orclaimallwordingsprewritten."
+    },
+    {
+      "query_index": 7,
+      "engine": "system1",
+      "query": "\"Basil Kassanis\" \"born\" Macedonia",
+      "response_ref_prefix": "turn2586506search",
+      "intent_note": "Initialfourwordingsprewritten; adaptive5–8priorgeneralpurposerecorded,butexactwordingschosenafterinitialobservations; no backdatedrequestUTC orclaimallwordingsprewritten."
+    },
+    {
+      "query_index": 8,
+      "engine": "system1",
+      "query": "\"Jerry Adams\" \"born in\"",
+      "response_ref_prefix": "turn4098210search",
+      "intent_note": "Initialfourwordingsprewritten; adaptive5–8priorgeneralpurposerecorded,butexactwordingschosenafterinitialobservations; no backdatedrequestUTC orclaimallwordingsprewritten."
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "attempt": 1,
+      "subject": "RS_PAST_NA2892",
+      "url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/581826061",
+      "ref": "turn2586506view0",
+      "outcome": "NeworiginalODNBpublicExtractparsedbodyacquired; cachedfindlocatesbornclause"
+    },
+    {
+      "attempt": 2,
+      "subject": "RS_PAST_NA1998",
+      "url": "https://www.researchgate.net/publication/247606177_Basil_Kassanis_16_October_1911_-_23_March_1985",
+      "ref": "turn4098210view0",
+      "outcome": "Originalmemoircarriercover/abstractparsedbodyacquired,butnogeographicbornnarrative; lateinputinspectionshowsthiscover/abstractalreadyreadv20,notnewqualifiedbodycoverage"
+    },
+    {
+      "attempt": 3,
+      "subject": "RS_PAST_NA2892",
+      "url": "https://www.dib.ie/biography/rambaut-arthur-alcock-a7580",
+      "ref": "turn7799518view0",
+      "outcome": "GenuinelyneworiginalDIBpersonbiographybodyacquired(notoldtaxonomyroute); fullidentity/professionalcontext/BornCo.Waterfordmetadata"
+    },
+    {
+      "attempt": 4,
+      "subject": "RS_CURRENT_10965",
+      "url": "https://genomelegacy.org/oralhistory/speaker/jerry-adams/",
+      "ref": "turn7799518view1",
+      "outcome": "Failedtofetch:(502)BadGateway; stopped; noretry/variant"
+    },
+    {
+      "attempt": 5,
+      "subject": "RS_PAST_NA1998",
+      "url": "https://www.researchgate.net/publication/profile/Bryan-Harrison-3/publication/247606177_Basil_Kassanis_16_October_1911_-_23_March_1985/links/56a8b14608ae860e02577439/Basil-Kassanis-16-October-1911-23-March-1985.pdf",
+      "operation": "clickobservedDownloadfull-textPDFlink6fromturn4098210view0",
+      "ref": "turn8508056view0",
+      "outcome": "Failedtofetch:(404)NotFound; stopped; noalternatePDFcarrier/format/rawGET/retry"
+    }
+  ],
+  "parsed_find_ledger": [
+    {
+      "input_ref": "turn2586506view0",
+      "pattern": "was born",
+      "result_ref": "turn4098210view1",
+      "outcome": "NeworiginalODNBbornWaterfordIrelandfullname/exactDOB/publication/byline"
+    },
+    {
+      "input_ref": "turn4098210view0",
+      "pattern": "Download full-text",
+      "result_ref": "turn7799518view2",
+      "outcome": "ObservedactualPDFlin6/cover/abstract; nobirthnarrative"
+    },
+    {
+      "input_ref": "turn7799518view0",
+      "pattern": "By",
+      "result_ref": "turn8508056view1",
+      "outcome": "NewactualDIBpersonbylinePatriciaM.Byrne/publication/career/BornCo.Waterfordmetadata"
+    }
+  ],
+  "prior_context_audit": {
+    "before_discovery": "Targetedrecursivev29audit*holds inspected;Rambautprior_v12andYoungprior_v13read; Jerry/Kassanisnomatchingindividualholds. CurrentfrozenrowselectedBPsource/claimcontextinspected.",
+    "late_context_inspection": "AfterRGcover/downloadattempts,a targetedpriorinputs/auditURLscan foundRGalreadyinv20acceptedKassanisidentitycontext. Readactualacceptedfactthen; thiswaslateandcannotbeclaimedpre-discovery. ODNBexactcurrentURLandDIBpersonexactURLhadnopriorinput/auditJSONhits.",
+    "new_quote_work_check": "ODNBnewworkexactURLno priorinput/auditJSONhit;9newquotedwords. DIBpersonnonewquote. RGnonewquote; priorKassanis2wordMacedonianbornquoteisdifferentpicturecataloguework."
+  },
+  "quote_ledger": [
+    {
+      "work": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/581826061",
+      "quote": "was born at Waterford, Ireland, on 21 September 1859",
+      "new_words": 9,
+      "prior_frozen_quote_words_known": 0,
+      "role": "newgeographic_support_only"
+    },
+    {
+      "work": "https://www.dib.ie/biography/rambaut-arthur-alcock-a7580",
+      "quote": "",
+      "new_words": 0,
+      "role": "neworiginalidentity/contextfactswithnoaddedliteralquote"
+    },
+    {
+      "work": "https://www.researchgate.net/publication/247606177_Basil_Kassanis_16_October_1911_-_23_March_1985",
+      "quote": "",
+      "new_words": 0,
+      "role": "previouslyknowncover/abstractreobserved;nofullbornbody"
+    }
+  ],
+  "protocol_deviations": [
+    {
+      "type": "late_prior_accepted_context_inspection_nonproductive_carrier_reuse",
+      "description": "Requiredtargetedpriorholdswereinspectedbeforediscovery,butKassanisacceptedv20supportingRGcarriercontextwasnotreaduntilaftercurrentRGopen/downloadattempt. Currentcarriercover/abstractthereforecannotbecountedgenuinelynewqualifiedbodycoverage. ObservedPDFdownloadwasfirstcurrentattemptand404stopped;noretry/bypass/nativeadoptionoccurred."
+    }
+  ],
+  "limits": [
+    "Onegeographiccontextcandidateonly; zero newfirstBP/rawplace/grade/sourceclaimchanges.",
+    "RambautODNBexplicitIrelandisprimarynewbirth-countryproof; DIBgenuinelynewpersonbodyprovidesprofessionalfingerprint/consistentCo.Waterfordmetadata. Noindependentoriginclaimorbirthorderadjudication.",
+    "Youngnewdiscoveryproducedknownclosedpatterns; nooriginalbody/regionobtained,nobulkcoverageorFranceNorthclaim.",
+    "JerryCovingtonKentuckyisanunverifiedqueryseednotacquiredplaceevidence; no placefact/transferrednamesakeidentity.",
+    "Kassanispriorcarrierreuse/lateacceptedfactinspectionexplicit; RGdownload404stopped,notgenuinelynewbornnarrative.",
+    "No fullsourceHTML/PDF/images/searchprojectioncaches/rawbytesretainedordistributed. RawHTTPstatus/time/hashunknownnull; exacttoolerrorskeptseparate.",
+    "Nineissue/methodsidecarsuntouched; no code/study/main/Git/native/firstBP mutations."
+  ],
+  "no_master_or_native_changes": true
+}

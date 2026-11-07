@@ -1,0 +1,360 @@
+{
+  "schema": "v14_geo_b/1",
+  "audit_written_utc": "2026-11-04T23:38:49.491531+00:00",
+  "scope": [
+    "RS_PAST_NA331",
+    "RS_PAST_NA663"
+  ],
+  "intent_file": "v14_geo_b_intent.json",
+  "request_budget": {
+    "discovery_queries": 8,
+    "original_navigations": 10,
+    "retries_of_same_failed_route": 0
+  },
+  "source_acquisition_kind": "Parsed web/PDF text only; no rawHTTP bytehash or exactresponse timestamp claimed",
+  "candidate_supports": [
+    {
+      "record_id": "RS_PAST_NA663",
+      "native_dob": "1901-04-24",
+      "native_authority": "Barker; John (1901 - 1970)",
+      "frozen_raw_birthplace": "Church End, Finchley",
+      "status": "positive_compound_candidate_support_for_root_review_not_final_resolution",
+      "source_ids": [
+        "finchley_historical_directory",
+        "finchley_parish_guide_2025",
+        "finchley_geonames_entity"
+      ],
+      "component_binding": "ExactChurchEnd andFinchley jointly linked in originals, no spelling correction. Header/paragraph supplyMiddlesex; public registry suppliesFinchley populated-place hierarchy.",
+      "historical_type_match": "Original directory page reports1861/1871 population but publicationyear is not verified. ChurchEnd is explicitly placed underFinchley/Middlesex. The2025guide describes a smallsettlement in thatparish. No exact1901 boundary proof is claimed.",
+      "independence": "Historicaldirectory and2025guide are different publications but historicalsource-dependence unknown; GeoNames is registry witness with partly observedOSedit history, not proven independent underlyingsurvey.",
+      "global_candidate_coverage": "A broad exactcompound alternative search with London/Barnet/Middlesex exclusions was attempted. No compatibleopposing-region original was acquired; resultfilters/searchrecall are not exhaustive. GlobalGeoNames query attempt inaccessible.",
+      "no_geographic_decision_or_person_fields_assigned": true
+    }
+  ],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA331",
+      "native_dob": "1867-05-18",
+      "native_authority": "Fawcett; Edward (1867 - 1942)",
+      "frozen_raw_birthplace": "Little Blencoe, near Penrith",
+      "status": "hold_unproved_geographic_spelling_alias",
+      "source_ids": [
+        "little_blencow_lewis1848"
+      ],
+      "reason": "Observed original geographically supportsLittleBlencow nearPenrith/Cumberland but no original explicitly equates theplace-nameLittleBlencoe withLittleBlencow. Surnamevariations/habitational origin pages cannot substitute a geographic alias bridge.",
+      "unadopted_discovery_leads": [
+        {
+          "url": "https://www.geonames.org/2644370",
+          "web_ref": "turn55search1",
+          "status": "discovery_only_not_original_opened",
+          "finding": "LittleBlencow PPL, Greystoke/Cumbria hierarchy; noBlencoe aliasinreturnedexcerpt"
+        },
+        {
+          "url": "https://www.familysearch.org/en/surname?surname=BLENCOE",
+          "web_ref": "turn55search3",
+          "status": "surname_page_discovery_only_not_adopted",
+          "finding": "Habitational surname origin referencesGreatorLittleBlencow; not directplacealias"
+        },
+        {
+          "url": "https://blockbefore.com/ia/county-monona-ia.html",
+          "web_ref": "turn54search35",
+          "status": "discovery_only_not_original_opened",
+          "finding": "Blencoe inIowa is only componentname, noLittle orPenrith compound; not adopted or assignedhemisphere"
+        }
+      ],
+      "no_hemisphere_or_person_fields_assigned": true
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "finchley_historical_directory",
+      "url": "https://leicester.contentdm.oclc.org/digital/api/collection/p16445coll4/id/268482/download",
+      "web_ref": "turn55view2",
+      "owner": "University of Leicester, Historical Directories digital collection",
+      "source_kind": "Original printed historical directory page as digitized PDF; only parsed text viewed, no page pixels claimed",
+      "printed_page": 647,
+      "original_volume_title_author_year": "not recovered; do not invent Kelly/publisher/date",
+      "locator": "PDFpage0 line0 header and lines22–24 locality list",
+      "quote_fragments": [
+        "FINCHLEY. [MIDDLESEX.]",
+        "CHURCH END and BROWN's WELLS are other places here."
+      ],
+      "literal_components": [
+        "Finchley",
+        "Church End",
+        "Middlesex"
+      ],
+      "observed_relation": "The Finchley section is headedMiddlesex and its body explicitly callsChurchEnd another place here.",
+      "feature_type": "place within Finchley parish section; not a birthplace/person assertion",
+      "evidence_limit": "Volume bibliographic metadata not obtained; cannot call a government gazetteer or claim original named author. No visual scan inspection."
+    },
+    {
+      "source_id": "finchley_parish_guide_2025",
+      "url": "https://lwmfhs.org/downloads/parish/Finchley.pdf",
+      "web_ref": "turn58view1",
+      "owner": "London Westminster & Middlesex Family History Society",
+      "source_kind": "Original society parish guide, April2025",
+      "author": "corporate society; individual author not shown",
+      "locator": "PDFprintedp1, lines4–11",
+      "quote_fragments": [
+        "Finchley was an ancient parish in the county of Middlesex",
+        "a church and small settlement at Church End"
+      ],
+      "literal_components": [
+        "Finchley",
+        "Church End",
+        "Middlesex"
+      ],
+      "observed_relation": "The guide placesChurchEnd settlement within the parish described asFinchley inMiddlesex.",
+      "feature_type": "small settlement in parish",
+      "evidence_limit": "Source is society-authored history, not a person birth statement or an official government register; no claim its historical inputs are independent of olddirectory/VCH."
+    },
+    {
+      "source_id": "finchley_geonames_entity",
+      "url": "https://www.geonames.org/2649441",
+      "web_ref": "turn58view3",
+      "owner": "GeoNames",
+      "source_kind": "Original public editable global gazetteer entity record",
+      "registry_id": "2649441",
+      "locator": "lines60–104; edit-history115–116",
+      "quote_fragments": [
+        "P PPL Populated place",
+        "Greater London",
+        "Barnet"
+      ],
+      "feature_type": "P PPL populated place",
+      "observed_hierarchy": [
+        "United Kingdom",
+        "England",
+        "Greater London",
+        "Barnet",
+        "Finchley"
+      ],
+      "observed_reference_coordinate_text": "51.60096, -0.19518",
+      "personal_birthpoint_assigned": false,
+      "coordinate_metadata_precision_rank_globe": null,
+      "evidence_limit": "This is one observedentity, not a returned completeglobalcandidate pool. Point is not a personbirthpoint or countyextent. Alternate names/history may be editable. OSedit username observed, but full lineage not verified."
+    },
+    {
+      "source_id": "little_blencow_lewis1848",
+      "url": "https://co-curate.ncl.ac.uk/little-blencow-cumbria/",
+      "web_ref": "turn58view2",
+      "owner": "Newcastle University Co-Curate",
+      "source_kind": "Attributed extract fromSamuelLewis,A Topographical Dictionary of England,7thedition1848",
+      "author": "Samuel Lewis,1848; hosted extract added bySimonCotterill",
+      "locator": "lines3–4",
+      "quote_fragments": [
+        "BLENCOW, LITTLE, a township",
+        "union of Penrith",
+        "E. division of Cumberland",
+        "4¾ miles (W.N.W.) from Penrith"
+      ],
+      "literal_components": [
+        "Little Blencow",
+        "Penrith",
+        "Cumberland"
+      ],
+      "observed_relation": "Typed township recorded inPenrith union, Cumberland, with explicitdistance/direction fromPenrith.",
+      "feature_type": "township",
+      "evidence_limit": "No place-namealiasLittleBlencoe observed in this original extract. It supports a candidate with different spelling; does not bind the frozen literal."
+    }
+  ],
+  "request_ledger": [
+    {
+      "operation": "discovery_query",
+      "engine": "system2",
+      "q": "\"Little Blencoe\" Penrith geography",
+      "request_started_utc": null,
+      "request_finished_utc": null,
+      "raw_HTTP_bytes_or_hash": null,
+      "exact_call_times_not_retained": true
+    },
+    {
+      "operation": "discovery_query",
+      "engine": "system2",
+      "q": "\"Church End\" Finchley Middlesex history",
+      "request_started_utc": null,
+      "request_finished_utc": null,
+      "raw_HTTP_bytes_or_hash": null,
+      "exact_call_times_not_retained": true
+    },
+    {
+      "operation": "discovery_query",
+      "engine": "system2",
+      "q": "\"Blencoe\" \"Blencow\"",
+      "request_started_utc": null,
+      "request_finished_utc": null,
+      "raw_HTTP_bytes_or_hash": null,
+      "exact_call_times_not_retained": true
+    },
+    {
+      "operation": "discovery_query",
+      "engine": "system2",
+      "q": "\"Church End\" \"Finchley\" -London -Barnet -Middlesex",
+      "request_started_utc": null,
+      "request_finished_utc": null,
+      "raw_HTTP_bytes_or_hash": null,
+      "exact_call_times_not_retained": true
+    },
+    {
+      "operation": "discovery_query",
+      "engine": "system1",
+      "q": "\"Little Blencoe\" -Fawcett -surname -family",
+      "request_started_utc": null,
+      "request_finished_utc": null,
+      "raw_HTTP_bytes_or_hash": null,
+      "exact_call_times_not_retained": true
+    },
+    {
+      "operation": "discovery_query",
+      "engine": "system1",
+      "q": "\"Little Blencow\" \"Blencoe\" geography",
+      "request_started_utc": null,
+      "request_finished_utc": null,
+      "raw_HTTP_bytes_or_hash": null,
+      "exact_call_times_not_retained": true
+    },
+    {
+      "operation": "discovery_query",
+      "engine": "system1",
+      "q": "\"Little Blencowe\" \"Blencoe\" geography",
+      "request_started_utc": null,
+      "request_finished_utc": null,
+      "raw_HTTP_bytes_or_hash": null,
+      "exact_call_times_not_retained": true
+    },
+    {
+      "operation": "discovery_query",
+      "engine": "system1",
+      "q": "\"Finchley\" geonames",
+      "request_started_utc": null,
+      "request_finished_utc": null,
+      "raw_HTTP_bytes_or_hash": null,
+      "exact_call_times_not_retained": true
+    },
+    {
+      "operation": "original_navigation",
+      "url": "https://www.barnet.gov.uk/planning-and-building-control/conservation-and-heritage/conservation-areas/finchley-church-end-0",
+      "web_ref": "turn55view0",
+      "outcome": "tool_reported_403_no_body",
+      "tool_reported_status": 403,
+      "raw_HTTP_status": null,
+      "request_started_utc": null,
+      "request_finished_utc": null,
+      "raw_HTTP_bytes_or_hash": null
+    },
+    {
+      "operation": "original_navigation",
+      "url": "https://visionofireland.org/place/26527",
+      "web_ref": "turn55view1",
+      "outcome": "tool_timeout_no_body",
+      "tool_reported_status": null,
+      "raw_HTTP_status": null,
+      "request_started_utc": null,
+      "request_finished_utc": null,
+      "raw_HTTP_bytes_or_hash": null
+    },
+    {
+      "operation": "original_navigation",
+      "url": "https://leicester.contentdm.oclc.org/digital/api/collection/p16445coll4/id/268482/download",
+      "web_ref": "turn55view2",
+      "outcome": "original_historical_directory_PDF_parsed_page_acquired",
+      "tool_reported_status": null,
+      "raw_HTTP_status": null,
+      "request_started_utc": null,
+      "request_finished_utc": null,
+      "raw_HTTP_bytes_or_hash": null
+    },
+    {
+      "operation": "original_navigation",
+      "url": "https://www.barnet.gov.uk/libraries/local-studies-and-archives/pocket-histories/finchley-friern-barnet-and-totteridge/east",
+      "web_ref": "turn58view0",
+      "outcome": "tool_reported_403_no_body",
+      "tool_reported_status": 403,
+      "raw_HTTP_status": null,
+      "request_started_utc": null,
+      "request_finished_utc": null,
+      "raw_HTTP_bytes_or_hash": null
+    },
+    {
+      "operation": "original_navigation",
+      "url": "https://lwmfhs.org/downloads/parish/Finchley.pdf",
+      "web_ref": "turn58view1",
+      "outcome": "original_society_parish_guide_PDF_parsed_text_acquired",
+      "tool_reported_status": null,
+      "raw_HTTP_status": null,
+      "request_started_utc": null,
+      "request_finished_utc": null,
+      "raw_HTTP_bytes_or_hash": null
+    },
+    {
+      "operation": "original_navigation",
+      "url": "https://co-curate.ncl.ac.uk/little-blencow-cumbria/",
+      "web_ref": "turn58view2",
+      "outcome": "original_University_hosted_Lewis1848_extract_parsed_text_acquired",
+      "tool_reported_status": null,
+      "raw_HTTP_status": null,
+      "request_started_utc": null,
+      "request_finished_utc": null,
+      "raw_HTTP_bytes_or_hash": null
+    },
+    {
+      "operation": "original_navigation",
+      "url": "https://www.geonames.org/2649441",
+      "web_ref": "turn58view3",
+      "outcome": "original_registry_entity_parsed_text_acquired",
+      "tool_reported_status": null,
+      "raw_HTTP_status": null,
+      "request_started_utc": null,
+      "request_finished_utc": null,
+      "raw_HTTP_bytes_or_hash": null
+    },
+    {
+      "operation": "original_navigation",
+      "url": "https://www.geonames.org/search.html?q=Finchley",
+      "web_ref": "turn58view4",
+      "outcome": "tool_inaccessible_no_global_search_results",
+      "tool_reported_status": null,
+      "raw_HTTP_status": null,
+      "request_started_utc": null,
+      "request_finished_utc": null,
+      "raw_HTTP_bytes_or_hash": null
+    },
+    {
+      "operation": "original_navigation",
+      "url": "https://specialcollections.le.ac.uk/digital/collection/p16445coll4/id/268482/",
+      "web_ref": "turn59view0",
+      "outcome": "constructed_from_observed_download_id_metadata_route_inaccessible",
+      "tool_reported_status": null,
+      "raw_HTTP_status": null,
+      "request_started_utc": null,
+      "request_finished_utc": null,
+      "raw_HTTP_bytes_or_hash": null
+    },
+    {
+      "operation": "original_navigation",
+      "url": "https://www.british-history.ac.uk/vch/middx/vol6/pp38-55",
+      "web_ref": "turn59view1",
+      "outcome": "constructed_page_locator_from_observed_volume_citation_unverified_before_request_tool403_no_body",
+      "tool_reported_status": 403,
+      "raw_HTTP_status": null,
+      "request_started_utc": null,
+      "request_finished_utc": null,
+      "raw_HTTP_bytes_or_hash": null
+    }
+  ],
+  "coverage_limits": [
+    "No globaluniquenessclaim; GeoNamesglobalsearchinaccessible andwebsearchmayignorefilters/omitplaces.",
+    "Barnetgovernment originals2differentobserveddocuments tool403, neitherbodyread.",
+    "VCHpageURL was constructed fromknownvolume citation, not an observedexactpage; failed andsupplieszeroevidence.",
+    "Universitydirectory bibliographicmetadata route failed; sourceauthor/yearunknown.",
+    "No raworiginalPDF,fulltextorwholemapimagesdistributed.",
+    "Sourcecollectordoesnot makehemisphere decision ormodify personcountry/QID/coords."
+  ],
+  "baseline_complete_object_canonical_sha256": {
+    "RS_PAST_NA331": "9f0f90c5c695db2e2fa5946d8e0ffe558de9183f48299f5f6d1b9942789229d4",
+    "RS_PAST_NA663": "17617d9e4a9869a0b00556dffb249b4b2bcf96f121b26bae48b1eb2090e582b0"
+  },
+  "master_modified": false,
+  "hemisphere_assigned": false
+}

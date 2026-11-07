@@ -1,0 +1,48 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX schema: <http://schema.org/>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX ps: <http://www.wikidata.org/prop/statement/>
+PREFIX psv: <http://www.wikidata.org/prop/statement/value/>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+SELECT ?requestedName ?matchPredicate ?place ?englishLabel ?englishDescription
+       ?coordinateStatement ?coordinateWkt ?coordinateRank ?coordinateValue
+       ?latitude ?longitude ?globe ?precision
+       ?instanceStatement ?instanceOf ?instanceRank ?instanceOfLabel
+       ?countryStatement ?country ?countryRank ?countryLabel
+WHERE {
+  VALUES ?requestedName { "Berlin"@en "Detroit"@en }
+  VALUES ?matchPredicate { rdfs:label skos:altLabel }
+  ?place ?matchPredicate ?requestedName .
+  OPTIONAL { ?place rdfs:label ?englishLabel . FILTER(LANG(?englishLabel) = "en") }
+  OPTIONAL { ?place schema:description ?englishDescription . FILTER(LANG(?englishDescription) = "en") }
+  OPTIONAL {
+    ?place p:P625 ?coordinateStatement .
+    OPTIONAL { ?coordinateStatement ps:P625 ?coordinateWkt . }
+    OPTIONAL { ?coordinateStatement wikibase:rank ?coordinateRank . }
+    OPTIONAL {
+      ?coordinateStatement psv:P625 ?coordinateValue .
+      OPTIONAL { ?coordinateValue wikibase:geoLatitude ?latitude . }
+      OPTIONAL { ?coordinateValue wikibase:geoLongitude ?longitude . }
+      OPTIONAL { ?coordinateValue wikibase:geoGlobe ?globe . }
+      OPTIONAL { ?coordinateValue wikibase:geoPrecision ?precision . }
+    }
+  }
+  OPTIONAL {
+    ?place p:P31 ?instanceStatement .
+    OPTIONAL {
+      ?instanceStatement ps:P31 ?instanceOf .
+      OPTIONAL { ?instanceOf rdfs:label ?instanceOfLabel . FILTER(LANG(?instanceOfLabel) = "en") }
+    }
+    OPTIONAL { ?instanceStatement wikibase:rank ?instanceRank . }
+  }
+  OPTIONAL {
+    ?place p:P17 ?countryStatement .
+    OPTIONAL {
+      ?countryStatement ps:P17 ?country .
+      OPTIONAL { ?country rdfs:label ?countryLabel . FILTER(LANG(?countryLabel) = "en") }
+    }
+    OPTIONAL { ?countryStatement wikibase:rank ?countryRank . }
+  }
+}
+ORDER BY ?requestedName ?place ?coordinateStatement ?instanceStatement ?countryStatement ?matchPredicate

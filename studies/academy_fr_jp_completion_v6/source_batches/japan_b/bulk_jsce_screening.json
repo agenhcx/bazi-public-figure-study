@@ -1,0 +1,70 @@
+{
+  "source_url": "https://ftp.jsce.or.jp/president/successive_president/sp.txt",
+  "source_sha256": "57bcfb17d86b1b78e6cee9ca2a597e12cc7d995ab06b370f1797c24a28fb1f3e",
+  "roster_input": "studies/academy_fr_jp_completion_v5/outputs/japan_master.csv",
+  "roster_count": 482,
+  "biography_blocks_screened": 113,
+  "normalization": "NFKC, whitespace removal and explicit common glyph variants 﨑髙廣澤邊邉德龍→崎高広沢辺辺徳竜; no fuzzy identity merging",
+  "matches": [
+    {
+      "anchor": "president1",
+      "member_key": "jpa-unlinked-a7688ab1a1777b70",
+      "name_jp": "古市 公威",
+      "baseline_dob_status": "body_day_no_known_conflict"
+    },
+    {
+      "anchor": "president11",
+      "member_key": "jpa-unlinked-1da6b5d6c2d71731",
+      "name_jp": "中山 秀三郎",
+      "baseline_dob_status": "bounded_search_no_body_birth_claim"
+    },
+    {
+      "anchor": "president33",
+      "member_key": "jpa-unlinked-b329fc81d428f02f",
+      "name_jp": "田中 豊",
+      "baseline_dob_status": "bounded_search_no_body_birth_claim"
+    },
+    {
+      "anchor": "president37",
+      "member_key": "jpa-unlinked-f7f5b8dea31d1fd8",
+      "name_jp": "吉田 徳次郎",
+      "baseline_dob_status": "body_day_no_known_conflict"
+    },
+    {
+      "anchor": "president42",
+      "member_key": "jpa-unlinked-3411bc0c8cc0e999",
+      "name_jp": "青木 楠男",
+      "baseline_dob_status": "body_day_no_known_conflict"
+    },
+    {
+      "anchor": "president60",
+      "member_key": "jpa-unlinked-14d515442048824d",
+      "name_jp": "岡本 舜三",
+      "baseline_dob_status": "body_day_no_known_conflict"
+    },
+    {
+      "anchor": "president77",
+      "member_key": "jpa:horikawa_kiyoshi",
+      "name_jp": "堀川 清司",
+      "baseline_dob_status": "body_day_no_known_conflict"
+    }
+  ],
+  "extra_member_keys": [
+    "jpa-unlinked-a7688ab1a1777b70",
+    "jpa-unlinked-f7f5b8dea31d1fd8",
+    "jpa-unlinked-3411bc0c8cc0e999",
+    "jpa-unlinked-14d515442048824d",
+    "jpa:horikawa_kiyoshi"
+  ],
+  "root_approved_extra_member_keys": [
+    "jpa-unlinked-a7688ab1a1777b70",
+    "jpa-unlinked-f7f5b8dea31d1fd8",
+    "jpa-unlinked-3411bc0c8cc0e999",
+    "jpa-unlinked-14d515442048824d",
+    "jpa:horikawa_kiyoshi"
+  ],
+  "fixed_queue_keys_count": 17,
+  "new_http_requests_for_bulk_expansion": 0,
+  "event_type_validation": "Each dt has JSCE president term; dd begins separate birth–death lifespan and professional biography. Birth values come only from dd lifespan start.",
+  "calendar_policy": "Pre1873era month/day noncomparable; Furuichi claim-scoped hold does not override source-supplied modern NDL date."
+}

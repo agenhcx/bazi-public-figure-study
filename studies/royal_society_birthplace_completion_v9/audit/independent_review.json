@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "rows": 4983,
+  "changed_rows": [
+    "RS_PAST_NA4156",
+    "RS_PAST_NA4641"
+  ],
+  "hemisphere_counts": {
+    "north": 4155,
+    "unknown": 645,
+    "south": 183
+  },
+  "native_window_1835_1985_counts": {
+    "north": 2255,
+    "unknown": 211,
+    "south": 178
+  },
+  "unknown_breakdown": {
+    "no_explicit_birthplace": 591,
+    "geography_held": 54
+  },
+  "every_existing_non_geographic_field_equal": true,
+  "unchanged_rows_identical": 4981,
+  "all_prior_candidates_preserved": true,
+  "nine_quarantined_candidates_still_inactive": true,
+  "active_lookup_state_94_supported_2_quarantined_3_held_unchanged": true,
+  "all_csv_cells_consistent_with_json": true,
+  "summary_and_input_hashes_verified": true,
+  "other_country_rows_equal": true,
+  "seven_output_byte_replay_sha256": {
+    "uk_birthplace_rows.jsonl.gz": "e44f6dc02cc0cafece9b792164f016da0f08de5736ac62442d176d45b19a5799",
+    "changes.jsonl.gz": "1cd439dfd2563c92278d69e4f305ba56e2c7781b6d067628329a309f0193e118",
+    "uk_birthplaces.csv": "48fbbdceb23553c8f5355a4bb6bdf798ec0bb7494d183879c41d48f81d8d1081",
+    "remaining_unknown.csv": "ee676af63e10d1bfbe025863c1311c94896c488b05da34b0639187282e0cc8c5",
+    "changed_records.csv": "c0013043e453f8d1c9f8559bce0ad09a1764cff6dcb730ef13b2983b3e612d1c",
+    "summary.json": "5665725e2b0c59c35090dbcadb84ba5e54cd842d2b11f372424366cfbdd2941d",
+    "all_country_birthplace_summary.csv": "b37288c3bda1883cea2ff12d0c6ff4cdbae791d4a4b62ee83c30393470c1785f"
+  },
+  "field_differences": {
+    "RS_PAST_NA4156": {
+      "changed_existing_fields": [
+        "birthplace_claim_excerpt",
+        "birthplace_evidence_candidates",
+        "birthplace_evidence_kind",
+        "birthplace_source_grade",
+        "birthplace_source_url",
+        "birthplace_source_urls",
+        "geography_decision",
+        "hemisphere",
+        "northern_birthplace_candidate",
+        "raw_birthplace",
+        "reason",
+        "selected_birthplace_evidence",
+        "source_sha256"
+      ],
+      "added_fields": [
+        "v8_geography_before_this_overlay"
+      ]
+    },
+    "RS_PAST_NA4641": {
+      "changed_existing_fields": [
+        "birthplace_claim_excerpt",
+        "birthplace_evidence_candidates",
+        "birthplace_evidence_kind",
+        "birthplace_source_grade",
+        "birthplace_source_url",
+        "birthplace_source_urls",
+        "geography_decision",
+        "hemisphere",
+        "northern_birthplace_candidate",
+        "raw_birthplace",
+        "reason",
+        "selected_birthplace_evidence",
+        "source_sha256"
+      ],
+      "added_fields": [
+        "v8_geography_before_this_overlay"
+      ]
+    }
+  },
+  "network_requests": 0,
+  "written_only_under_qa": true
+}

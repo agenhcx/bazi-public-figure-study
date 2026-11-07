@@ -1,0 +1,47 @@
+{
+  "schema": "UK_Royal_Society_v7_recent18_Crossref_route",
+  "frozen_utc": "2026-11-02T23:46:48.840607+00:00",
+  "selected": 18,
+  "attempted": 18,
+  "not_attempted": 0,
+  "HTTP_status_counts": {
+    "200": 18
+  },
+  "accepted_explicit_birthplace": 0,
+  "held": 18,
+  "held_reason_counts": {
+    "no_same_subject_fullname_and_lifespan_match_in_top3": 8,
+    "matching_subject_edited_abstract_without_explicit_birthplace": 5,
+    "same_named_title_omits_lifespan_abstract_without_explicit_birthplace": 4,
+    "same_named_metadata_record_without_abstract": 1
+  },
+  "accepted_source_grade_counts": {},
+  "selection": "Exactly18 frozen v6 recent-death route candidates; official deathyears2022–2026, native DOB window1835–1985, no active birthplace, journal1748-8494 once top3. No extra metadata discovery or oldqueue retry.",
+  "source_scope": "Crossref publisher-deposited edited memoir abstracts only; original full memoirs not fetched. No match may reflect publication lag, indexing or query recall, not an error in native data.",
+  "native_DOB_calendar_identity_acceptance_modified": false,
+  "geography_or_birth_country_assigned": false,
+  "network_policy": {
+    "max_in_flight": 1,
+    "minimum_start_interval_seconds": 4.023386269000184,
+    "required_minimum_start_interval_seconds": 3.0,
+    "retries": 0,
+    "stop_reason": "all18_completed",
+    "single_Crossref_worker_only": true
+  },
+  "retry_after_preflight": "v6 had53HTTP200 and no429. No prior-run Retry-After restriction observed in v6; v7 captures all response headers and stops on first429.",
+  "inputs_sha256": {
+    "cohort.json": "3142d09d895d9ffda5cf37ec8ddbfb90242225503fdcd7adfcde4b8815e8cae1",
+    "retry_after_preflight.json": "d3c042333dc460311adbb4fc82d246199c9d131057ccbc3d9b6ebb634d2f90c7"
+  },
+  "input_base_sha256": "32c7ec7dbbf02450300359cdd18fa0a29bcd6b49577e5cac085812263f605809",
+  "input_queue_sha256": "69ef6ca6fcdc86e7ec5f429b4ed7398670cd9ed19ef0356f290bf48696797de3",
+  "collector_as_run_sha256": "06775aa69fbb412cb99067bbe5f7fab4b4f81a2819db61a5b3d2c1615e4f10e9",
+  "output_sha256": {
+    "accepted.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "coverage.jsonl": "8649f4d3c076a1cc80e52ccb1a4a1111c57eee8f891d45763bceb067445e308c",
+    "held.jsonl": "8649f4d3c076a1cc80e52ccb1a4a1111c57eee8f891d45763bceb067445e308c",
+    "raw_source_manifest.jsonl": "4b04670fd31f37e709100f18f7041b1bf0b4ec8914dc726b164782d6fbf6cf9c",
+    "request_ledger.jsonl": "0414140de6ebceda7b628194a70d3a222c872457e1ebae4ff7c9082fd6f0a195",
+    "fetch_summary.json": "14abba4080cf2aba95e17d62e8110cd19ed0762566dcace68260a0bec68f49e3"
+  }
+}

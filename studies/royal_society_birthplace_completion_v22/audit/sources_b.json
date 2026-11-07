@@ -1,0 +1,380 @@
+{
+  "schema": "UK_v22_B_original_sources_v1",
+  "written_utc": "2026-11-05T23:46:27.752333+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA4193",
+    "RS_PAST_NA6876",
+    "RS_PAST_NA3621",
+    "RS_PAST_NA3635"
+  ],
+  "intent_files": [
+    "v22_b_intent.json",
+    "v22_b_lw_intent.json"
+  ],
+  "own_report_file": "v22_b_own.json",
+  "delegated_report_file": "v22_b_lw.json",
+  "counts": {
+    "discovery_queries": 6,
+    "web_navigation_attempts": 8,
+    "parsed_find_operations": 1,
+    "screenshots": 0,
+    "raw_HTTP_or_PDF_GETs": 0,
+    "body_verified_birthplace_candidates": 1,
+    "holds": 3,
+    "known_external_original_work_carrier_attempts": 1,
+    "known_external_carrier_note": "CERNinstitutionalrepositorycarriedWetherelloriginalRSmemoir; otheroriginalhosts/resolversseparatelydescribed.",
+    "remaining_navigation_budget": 0
+  },
+  "budget": {
+    "queries_max": 6,
+    "nav_max": 8,
+    "transfer": "Childused3of4navandreturned1; parentusedown4plusreturned1forfirstrouteofdistinctBagshaweRSmemoir. No originalfailedworkendpointvariant/retry."
+  },
+  "candidates": [
+    {
+      "record_id": "RS_PAST_NA3635",
+      "native": {
+        "record_id": "RS_PAST_NA3635",
+        "authority_name": "Wetherell; Alan Marmaduke (1932 - 1998)",
+        "native_dob": "1932-12-31",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "90d1ccd96d63671ca8ad6cbdf0bf9efdfee0b6872dcf9121e97033f8e876143d",
+        "authority_name_and_DOB_count_in_4983": 1
+      },
+      "status": "candidate_original_signed_memoir_body_explicit_first_birthplace",
+      "raw_birthplace": "South Shields, England",
+      "source_url": "https://cds.cern.ch/record/2848104/files/rsbm.1999.0101.pdf",
+      "source_title": "Alan Marmaduke Wetherell. 31 December 1932 — 13 September 1998",
+      "source_author": "James V. Allaby",
+      "source_kind": "original_signed_scientific_society_memoir_carried_on_institutional_repository",
+      "source_grade_proposal": "S2",
+      "source_grade_basis": "Original authored published RS biographical memoir body with subject/title, byline/CERN affiliation, journalvolume/pages/copyright and observed author-subject collaboration narrative. CERN is the original-work carrier; not host-onlyS1 or civil registration.",
+      "source_quote": "was born on 31 December 1932 in South Shields, England",
+      "source_quote_word_count": 10,
+      "source_locator": "turn9151649view0: fulltitle/exactlifespanL0-4; FRS1971 L5; byline/authorCERNaffiliationL6-7; professionalcareerL8-19; directbornclausefullnativecomponents/exactDOB/placeL21@PDFindex2(printed567); originalcopyrightL30; authorfirstpersoncollaborationL99-102.",
+      "source_webrefs": [
+        "turn9151649view0"
+      ],
+      "publication_year": "2000",
+      "publication_date_precision": "year_in_original_journal_header",
+      "publication_locator": "Biographical Memoirs of Fellows of the Royal Society46,565–576(2000)",
+      "doi": "10.1098/rsbm.1999.0101",
+      "source_birthdate": "1932-12-31",
+      "source_birthdate_precision": "exact_day_in_born_clause_and_subject_header",
+      "source_DOB_matches_native": true,
+      "source_death_date": "1998-09-13",
+      "source_lifespan_compatible_with_native": true,
+      "observed_source_full_name": "Alan Marmaduke Wetherell",
+      "identity_review": [
+        "All native full-name components Alan Marmaduke Wetherell appear in original title and direct born clause.",
+        "Exact31December1932 matches native; original13September1998 death agrees native1932–1998 lifespan.",
+        "FRS1971, CERN1959appointment, ExperimentalPhysicsDivisionLeader1981–84 and Liverpool pion research bind the subject; unique native authority-plus-DOB key in4983.",
+        "Original namedauthor CERNaffiliation and first-person collaboration narrative directly establish scientific colleague context, without relying on familiar author name."
+      ],
+      "identity_conflicts_observed": [],
+      "reviewed_hemisphere_proposal": "north",
+      "geographic_basis": "Directbornclause explicitly supplies SouthShields,England. England is a wholly northern birth-linked region; no personalcountry/entity/coordinates assignment, nationality/work/death/footer or map inference.",
+      "caveats": [
+        "Original published memoir read as web-tool parsedPDF on CERN repository, not rawPDFbytes; no source-byte hash/status/exactfetchUTC acquired.",
+        "Header downloadstamp01February2023 is not publicationdate; retain only original2000year.",
+        "No original fullPDF/HTML/images/familydetails or projectioncache redistributed; bounded10word birth excerpt only."
+      ],
+      "retrieval_representation": "web-tool parsed original published PDF text, not raw HTTP/PDF bytes",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "raw_bytes_captured": false,
+      "no_master_change": true,
+      "geography_assignment_performed": false
+    }
+  ],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA4193",
+      "native": {
+        "record_id": "RS_PAST_NA4193",
+        "authority_name": "Bagshawe; Kenneth Dawson (1925 - 2022); oncologist",
+        "native_dob": "1925-08-17",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "1979f61cb74937a37a77de32d447a522d53b67bfc8ae7ae845fd462a5403266e"
+      },
+      "status": "hold_original_born_body_unavailable",
+      "hold_type": "original_birthplace_body_unavailable",
+      "reason": "Lancet original PDF tool-inaccessible; distinct BMJ original obituary PDF tool403; distinct Royal Society2024 memoir DOI tool-inaccessible. Stopped all three without retry or variants. Marple near Manchester UK/exact1925-08-17 remain discovery-only, not original-body evidence. No BP/geo/sourcegrade/DOBadoption.",
+      "raw_birthplace_candidate": null,
+      "source_grade_proposal": null,
+      "original_source_body_verified": false,
+      "source_birthdate": null,
+      "source_birthdate_precision": "none_acquired_in_original_body",
+      "original_attempts": [
+        {
+          "url": "https://www.thelancet.com/article/S0140673623003604/pdf",
+          "ref": "turn6547588view0",
+          "tool_result": "URLnotaccessible",
+          "actual_born_body_acquired": false
+        },
+        {
+          "url": "https://www.bmj.com/bmj/section-pdf/1081914?path=%2Fbmj%2F381%2F8380%2FComment.full.pdf",
+          "ref": "turn6298002view0",
+          "tool_result": "Failedtofetch403Forbidden",
+          "raw_HTTP_status": null,
+          "actual_born_body_acquired": false
+        },
+        {
+          "url": "https://doi.org/10.1098/rsbm.2023.0050",
+          "ref": "turn9890169view0",
+          "tool_result": "URLnotaccessible",
+          "actual_born_body_acquired": false
+        }
+      ],
+      "discovery_only": {
+        "source": "Lancetpublishersearchprojection turn6444332search7",
+        "place": "Marple near Manchester, UK",
+        "dob": "1925-08-17",
+        "deathdate": "2022-12-27",
+        "not_bodyverified_or_adopted": true
+      },
+      "unopened_other_leads": [
+        {
+          "url": "https://history.rcp.ac.uk/inspiring-physicians/kenneth-dawson-bagshawe",
+          "note": "PublishersearchprojectionexactDOB/deathdatebutawaitingobituary; unopened/noBPverified."
+        }
+      ],
+      "geography_decision": "unchanged_unknown",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed text/error observations, not raw HTTP/PDF bytes",
+      "no_master_change": true
+    },
+    {
+      "record_id": "RS_PAST_NA6876",
+      "native": {
+        "record_id": "RS_PAST_NA6876",
+        "authority_name": "Hunt; John David (1936 - 2012)",
+        "native_dob": "1936-12-12",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "8076fa91222e9d0c87892069fac62cd235c17def449ca32b6b8ea3fa184c095b"
+      },
+      "status": "hold_no_explicit_birthplace_in_acquired_college_entry_memoir_body_unavailable",
+      "hold_type": "no_explicit_birthplace_original_memoir_unavailable",
+      "reason": "Original Christ’s2013 college entry supplies full JohnDavidHunt heading, exact nativeDOB/deathdate and metallurgy/FRS career, but born clause gives date only with no birthplace. DOI memoir unavailable. RaisedWestCountryEngland appears only in unopened carried abstract discovery and cannot become birthplace.",
+      "raw_birthplace_candidate": null,
+      "source_grade_proposal": null,
+      "source_url": "https://www.christs.cam.ac.uk/sites/default/files/2025-02/2013%20Magazine.pdf",
+      "source_ref": "turn7570954view0",
+      "source_title": "Christ’s College Magazine no.238 (2013), In memoriam: John David Hunt FRS (m.1957)",
+      "source_author": null,
+      "source_kind": "original_college_magazine_uncredited_subject_entry",
+      "publication_date": "2013",
+      "publication_date_precision": "year_in_original_cover_and_publication_metadata",
+      "source_birthdate": "1936-12-12",
+      "source_birthdate_precision": "exact_day_in_born_clause",
+      "source_death_date": "2012-12-08",
+      "source_lifespan_compatible_with_native": true,
+      "source_locator": "turn7570954view0:L4383-4395@PDFindex110 (PDFpage111/printed109); full subject4383, date-onlyborn4384, CambridgePhD1963/Oxfordmetallurgy1966/readership1990/professor1996 at4386-4390, FRS2001 at4393-4394, death4395. Originalmetadata turn6460726view0:L0-17.",
+      "source_quote": "",
+      "identity_review": [
+        "All native name components JohnDavidHunt appear in original heading; exact12December1936 and8December2012 match nativeDOB/lifespan.",
+        "CambridgePhD1963, Oxfordmetallurgy1966/readership1990/professor1996 and FRS2001 distinctively bind the native subject.",
+        "No commonname funeral results adopted; unrelated1964/other subjects discarded at discovery, not treated as nativeDOBconflicts."
+      ],
+      "birthplace_relation_verified": false,
+      "original_memoir_attempt": {
+        "url": "https://doi.org/10.1098/rsbm.2022.0046",
+        "ref": "turn6298002view1",
+        "tool_result": "URLnotaccessible",
+        "body_acquired": false
+      },
+      "unopened_other_leads": [
+        {
+          "url": "https://www.researchgate.net/publication/370124255_John_David_Hunt_12_December_1936-8_December_2012",
+          "title": "John David Hunt. 12December1936—8December2012",
+          "note": "Original scholarly memoir carried abstract discovery only; requestfulltext/noPDF indicated, raisedWestCountry is upbringing notbirth; no independent fullbody acquisition."
+        }
+      ],
+      "geography_decision": "unchanged_unknown",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed text/error observations, not raw HTTP/PDF bytes",
+      "no_master_change": true
+    },
+    {
+      "record_id": "RS_PAST_NA3621",
+      "native": {
+        "record_id": "RS_PAST_NA3621",
+        "authority_name": "Lilly; Malcolm Douglas (1936 - 1998)",
+        "native_dob": "1936-08-09",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "d59079268c2412aa748b63b99f7e864c3ed9bad8561f41278308bef815866d02",
+        "authority_name_and_DOB_count_in_4983": 1
+      },
+      "status": "hold_original_birthplace_body_unavailable",
+      "hold_type": "original_birthplace_body_unavailable",
+      "reason": "Original CSA archivalcatalogue PDF rejected by webtool as content too large27448980bytes; distinct JSTOR memoirbody tool-inaccessible. Both stopped without retry. No original born-place body acquired. Discovery ElthamSouthLondon is upbringing, not birthplace; no location/date/grade/geography adopted.",
+      "sources": [
+        {
+          "url": "https://centreforscientificarchives.co.uk/wp-content/uploads/2024/01/LILLY_MALCOLM_DOUGLAS_v1.pdf",
+          "ref": "turn9151649view1",
+          "source_kind": "original_archival_catalogue_PDF",
+          "tool_result": "400contentlengthtoolerror27448980bytes; not rawHTTPstatus",
+          "birthplace_relation_verified": false
+        },
+        {
+          "url": "https://www.jstor.org/stable/770403",
+          "ref": "turn8699991view0",
+          "source_kind": "original_scientific_memoir_carrier",
+          "tool_result": "URLnotaccessibleviatool",
+          "birthplace_relation_verified": false
+        }
+      ],
+      "unopened_discovery_caveats": [
+        "CSA projection says exact9August1936 and grewupElthamSouthLondon; no born-place proof, no bodyacquisition.",
+        "UCL Clarke archive catalogue search projections title9August1939–18May1998 versus native1936 are unopened discovery leads only. No original title/body verified, no birthdateconflict clearing or correct-date verdict.",
+        "Original memoir bibliography identifies PatriciaHClarke/RSvolume46/pages317–332/year2000; inaccessible body not treated as birthplace proof."
+      ],
+      "source_quote": "",
+      "source_birthdate_precision": "no_acquired_original_DOB_body",
+      "geographic_basis": "No acquired explicit birthplace; nativeunknown unchanged.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "no_master_change": true,
+      "geography_assignment_performed": false
+    }
+  ],
+  "query_ledger": [
+    {
+      "query": "\"Kenneth Dawson Bagshawe\" born obituary",
+      "refs": [
+        "turn6444332search0",
+        "turn6444332search6",
+        "turn6444332search7",
+        "turn6444332search1"
+      ],
+      "intent_prior": true
+    },
+    {
+      "query": "\"John David Hunt\" born obituary",
+      "refs": [
+        "turn6444332search8",
+        "turn6444332search9"
+      ],
+      "intent_prior": true
+    },
+    {
+      "query": "\"John David Hunt\" \"born\" \"1936\"",
+      "refs": [
+        "turn6547588search8",
+        "turn6547588search9",
+        "turn6547588search1"
+      ],
+      "intent_prior": true
+    },
+    {
+      "q": "\"Malcolm Douglas Lilly\" born obituary",
+      "refs": [
+        "turn1892823search0",
+        "turn1892823search1",
+        "turn1892823search2",
+        "turn1892823search6"
+      ]
+    },
+    {
+      "q": "\"Alan Marmaduke Wetherell\" born obituary",
+      "refs": [
+        "turn1892823search3",
+        "turn1892823search5"
+      ]
+    },
+    {
+      "q": "\"Malcolm Douglas Lilly\" \"born\" -site:grafiati.com",
+      "refs": [
+        "turn7280605search0",
+        "turn7280605search1",
+        "turn7280605search2",
+        "turn7280605search3",
+        "turn7280605search8"
+      ]
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "url": "https://www.thelancet.com/article/S0140673623003604/pdf",
+      "ref": "turn6547588view0",
+      "result": "toolinaccessible",
+      "stopped_no_retry": true
+    },
+    {
+      "url": "https://www.bmj.com/bmj/section-pdf/1081914?path=%2Fbmj%2F381%2F8380%2FComment.full.pdf",
+      "ref": "turn6298002view0",
+      "result": "toolreported403",
+      "stopped_no_retry": true
+    },
+    {
+      "url": "https://doi.org/10.1098/rsbm.2022.0046",
+      "ref": "turn6298002view1",
+      "result": "toolinaccessible",
+      "stopped_no_retry": true
+    },
+    {
+      "url": "https://www.christs.cam.ac.uk/sites/default/files/2025-02/2013%20Magazine.pdf",
+      "ref": "turn6460726view0",
+      "result": "original132pagePDFparsedtext; subjectentrylatercachedfind",
+      "no_raw_PDF_bytes": true
+    },
+    {
+      "url": "https://doi.org/10.1098/rsbm.2023.0050",
+      "ref": "turn9890169view0",
+      "result": "toolinaccessible",
+      "stopped_no_retry": true,
+      "budget": "childreturned1unusednav; finalshared8thnav"
+    },
+    {
+      "url": "https://cds.cern.ch/record/2848104/files/rsbm.1999.0101.pdf",
+      "ref": "turn9151649view0",
+      "result": "originalsignedmemoirparsedPDFbodyacquired",
+      "raw_HTTP_status": null
+    },
+    {
+      "url": "https://centreforscientificarchives.co.uk/wp-content/uploads/2024/01/LILLY_MALCOLM_DOUGLAS_v1.pdf",
+      "ref": "turn9151649view1",
+      "result": "toolcontentlengtherror400;stopped",
+      "raw_HTTP_status": null
+    },
+    {
+      "url": "https://www.jstor.org/stable/770403",
+      "ref": "turn8699991view0",
+      "result": "toolinaccessible;stopped",
+      "raw_HTTP_status": null
+    }
+  ],
+  "parsed_find_ledger": [
+    {
+      "ref": "turn6460726view0",
+      "pattern": "John David Hunt",
+      "result_ref": "turn7570954view0",
+      "intent_prior": true,
+      "new_URL_or_raw_GET": false
+    }
+  ],
+  "quote_ledger": {
+    "Wetherell_original_RS_memoir": 10,
+    "Hunt_college_entry": 0,
+    "Bagshawe_original_bodies": 0
+  },
+  "protocol_deviations": [],
+  "limits": [
+    "Workerproposalsonly; parentwillverify/adjudicate,no finalmasteradoption here.",
+    "All query/open/cachedfind intents recordedbefore requests, sharedbudgettransferrecordedbefore finalopen.",
+    "SearchonlyBagshaweMarpleandLillygrewupEltham are notbirthplaceevidence; unopenedLilly1939titleprojection not an originalbodyDOBconflictverdict.",
+    "RawHTTPstatus/exactfetchUTC/byteshashunknownnull. Toolreportederrorsnotrawbyteclaims.",
+    "No rawGET/failedrouteretry/bypass/fullsourcecache/PDF/HTML/image/contact/familydetails distribution; boundedoriginalWetherell10wordexcerpt only.",
+    "No nativeDOB/calendar/identity/eligibility/originalgrades/country/QIDs/coordinates/master/code/Git mutation; noBaZi/outcomes/statisticaldedup/finalfreeze."
+  ]
+}

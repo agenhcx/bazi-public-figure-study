@@ -1,0 +1,100 @@
+{
+  "reviewer": "v9_japan_dates",
+  "reviewed_worker": "v9_japan_calendar",
+  "completed_utc": "2026-10-30T01:01:54.613104+00:00",
+  "independent_qa_passed": true,
+  "claims_sha256": "7150ced6b32791f180c357ba3c6095cf4b009f094780cbe202b13af81eca666d",
+  "worker_manifest_sha256": "1d4f72ff6246f0ae989996002834bd770829c629b58ca2051494aecaf2be31ac",
+  "public_manifest_pins_passed": 9,
+  "private_original_hashes_checked": 3,
+  "actual_local_pdf_pages_visually_reviewed": [
+    {
+      "source_sha256": "113c81ca35acd299111e4b5872f7abd433d881cbb7e50f2e8f315b5bb5d799af",
+      "pdf_pages": [
+        1,
+        36
+      ],
+      "printed_pages": [
+        464,
+        499
+      ]
+    },
+    {
+      "source_sha256": "3a8c6e09102a649e33526e1d11fb746060c3d3e2018bbf6a1b5eb00357f1f895",
+      "pdf_pages": [
+        1
+      ],
+      "printed_pages": [
+        155
+      ]
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_id": "21da55931836a960bb4b",
+      "member_key": "jpa-unlinked-eabfb6c33df81d73",
+      "source_sha256": "113c81ca35acd299111e4b5872f7abd433d881cbb7e50f2e8f315b5bb5d799af",
+      "exact_birth_pair_visually_passed": true,
+      "source_supplied_date_components_iso": "1855-11-04",
+      "same_footnote_identity_career_passed": true,
+      "source_supplied_pair_not_collector_conversion": true,
+      "calendar_literal_label_absent_accurately_disclosed": true,
+      "source_type": "Attributed Chubu University ARENA2013vol15 historical materials compilation, reproduced as full paginated PDF on viva-ars.com; not demonstrated peer reviewed.",
+      "publisher_context_independently_opened": [
+        "https://www.chubu.ac.jp/about/chubu-library/publication/arena/backnumber/2013-15/"
+      ],
+      "publisher_context_web_refs": [
+        "turn1928view0",
+        "turn1929view1"
+      ],
+      "publisher_context_original_sha256": "2747b2f8b38c4cdaa4d483c360300951ce68fe951979c56fb8c145ea82e6e408",
+      "publisher_context_checked_fields": [
+        "Chubu University issuer",
+        "issue15/year2013",
+        "release2013-05-30",
+        "ISBN4-8331-4107-9",
+        "exact title and Fukui Shuji author under materials section"
+      ],
+      "publisher_context_does_not_authenticate_or_link_actual_third_party_PDF": true,
+      "source_tier_passed": "third_party_attributed_university_publication_reproduction_secondary",
+      "source_tier_group_passed": "other_attributed_secondary",
+      "institutional_or_university_official_download_support_claimed": false,
+      "retained_historical_claim_id": "0bbaec28bb189b33e11c",
+      "historical_claim_calendar_comparable": false,
+      "baseline_other_comparable_claims": 0,
+      "historical_claim_field_preservation_required": true,
+      "baseline_hold_origin": "Exactly five-field synthesized v6-to-v7 calendar routing hold, reason pre_1873_era_month_day_calendar_unspecified_do_not_assume_gregorian; absent actual v6 explicit hold overlay.",
+      "comparable_body_contradiction_found": false,
+      "calendar_routing_recommendation": "Eligible only for exact root-approved source/date routing decision; reviewer writes no release.",
+      "source_quality_caveat_reviewed": true,
+      "source_quality_caveat_assessment": "Actual footnote19 date pair and Terao astronomer/Fukuoka/TokyoObservatory1888/JapaneseAstronomicalSociety1908 identity are legible and consistent. Pupil name renderedHirayamaOsamu is retained as a source caveat; no claim transferred to that other person and no source-wide blanket approval."
+    }
+  ],
+  "negative_source_checks": [
+    {
+      "member_key": "jpa-unlinked-4ed3afac92825ad9",
+      "source_sha256": "3a8c6e09102a649e33526e1d11fb746060c3d3e2018bbf6a1b5eb00357f1f895",
+      "actual_page1_visually_checked": true,
+      "calendar_expression_repeats_inherited_pre1873_era_month_day": true,
+      "no_source_supplied_modern_pair": true,
+      "no_new_claim_or_hold_release_written": true
+    }
+  ],
+  "processing_checks": {
+    "fixed_people": 2,
+    "all_targeted": true,
+    "person_queries_mapped": 6,
+    "publisher_context_queries_separately_counted": 3,
+    "no_selected_equals_searched_inference": true
+  },
+  "new_calendar_releases_written": 0,
+  "source_majority_used": false,
+  "bazi_computed": 0,
+  "final_cohort_accepted": false,
+  "source_body_redistributed": false,
+  "limitations": [
+    "Independent QA verifies the same captured source bytes, not a second independent historical birthday source.",
+    "University issue index supports bibliographic attribution only; actual birthday PDF bytes remain third-party reproduction evidence.",
+    "Root must decide exact Terao source/date release and preserve raw historical claim; no generic hold release allowed."
+  ]
+}

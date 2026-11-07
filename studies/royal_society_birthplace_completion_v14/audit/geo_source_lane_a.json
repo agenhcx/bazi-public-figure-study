@@ -1,0 +1,627 @@
+{
+  "schema": "v14_geo_a_compound_geography_collection_v1",
+  "created_utc": "2026-11-04T23:39:46.422226+00:00",
+  "scope": [
+    "RS_PAST_NA1727",
+    "RS_PAST_NA6847"
+  ],
+  "protocol_read_in_full": true,
+  "target_queue_objects_read_in_full": true,
+  "intent_path": "/workspace/scratch/262552d8c0f0/v14_geo_a_intent.json",
+  "frozen_birthfields_unchanged": true,
+  "main_table_or_git_modified": false,
+  "personal_country_QID_coordinates_assigned": false,
+  "hemisphere_decision_made": false,
+  "candidate_supports": [
+    {
+      "record_id": "RS_PAST_NA1727",
+      "raw_birthplace": "Lowther Street, Carlisle",
+      "status": "candidate_support_only_root_QA_decides",
+      "candidate": "Lowther Street, Carlisle, Cumberland official geography",
+      "positive_binding_source_ids": [
+        "S1",
+        "S2"
+      ],
+      "independence": "Cumberland Council administers the service/address; Historic England maintains the statutory listed-building record. They are separate original administrative records; no copied text observed.",
+      "strength": "Two original official sources explicitly link street and city; S2 supplies authority extent and a historical building date.",
+      "remaining_limits": [
+        "Modern record not a historical street-name continuity study.",
+        "Bounded alternative searches returned no competing whole street/city compound, which does not prove worldwide uniqueness.",
+        "Global street-level gazetteer was not inspected."
+      ],
+      "materialcoveragegap": true
+    },
+    {
+      "record_id": "RS_PAST_NA6847",
+      "raw_birthplace": "Carleton, a small village near Carlisle",
+      "status": "candidate_support_only_root_QA_decides",
+      "candidate": "Carleton, St Cuthbert Without, two miles southeast of Carlisle",
+      "positive_binding_source_ids": [
+        "S3",
+        "S4"
+      ],
+      "supporting_source_ids": [
+        "S5"
+      ],
+      "independence": "LUC/Nick Haynes 2017 council-commissioned landscape appraisal is a separate publication from Lewis 1848. Report refers to a different 1829 gazetteer for population; no Lewis copying observed in the relation sentence, though full source lineage independence cannot be guaranteed. S4 university overview and its Lewis extract count as one witness. S5 many map citations count as one inspected catalogue.",
+      "strength": "Original council-commissioned report explicitly binds settlement type, parish and proximity; attributed historical Lewis extract additionally binds Carlisle and Cumberland.",
+      "remaining_limits": [
+        "Lewis original scan not opened; attribution and transcription observed at university host.",
+        "Council report uses both hamlet and village and covers wider township; personal birthpoint is not resolved.",
+        "Observed Canadian co-occurrence could not be checked in original due timeout/inaccessibility.",
+        "No exhaustive worldwide Carleton/Carlisle proximity inventory."
+      ],
+      "materialcoveragegap": true
+    }
+  ],
+  "holds": [
+    {
+      "kind": "decision_hold",
+      "records": [
+        "RS_PAST_NA1727",
+        "RS_PAST_NA6847"
+      ],
+      "reason": "Source collector supplies evidence candidates only. Root and independent QA must assess sufficiency under protocol; no hemisphere assignment here."
+    },
+    {
+      "kind": "source_hold",
+      "source": "Natural Resources Canada original candidate/type record",
+      "reason": "Two original navigation failures. Search snippet retained as lead, not adopted type exclusion or full-compound geography proof.",
+      "materialcoveragegap": true
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "S1",
+      "url": "https://www.cumberland.gov.uk/parking-roads-and-transport/parking/find-car-park-near-you/lowther-street-car-park-carlisle",
+      "title": "Lowther Street car park, Carlisle",
+      "author": "Cumberland Council",
+      "source_kind": "original local-government service/location record",
+      "ref": "turn57view0",
+      "locator": "L24; address L85–90",
+      "short_quote": "Lowther Street / Carlisle / CA3 8DP / United Kingdom",
+      "quote_note": "Slash separators inserted between address lines.",
+      "observed_relation": "The original council record explicitly addresses its named Lowther Street car park on Lowther Street, Carlisle. The address gives a regional country extent in the source itself.",
+      "feature_type": "street in an address; car park is the record object, not the birthplace type",
+      "limits": "Modern service record, not a historical birthplace witness. Does not itself establish when the street was named."
+    },
+    {
+      "source_id": "S2",
+      "url": "https://historicengland.org.uk/listing/the-list/list-entry/1217895",
+      "title": "10, 12 AND 14, LOWTHER STREET",
+      "author": "Historic England / National Heritage List for England",
+      "source_kind": "original statutory heritage list entry 1217895",
+      "ref": "turn57view1",
+      "locator": "Location L213–227; Details L228–240; listing and amendment dates L179–186",
+      "short_quote": "Cumberland (Unitary Authority) … CARLISLE … LOWTHER STREET",
+      "quote_note": "Non-contiguous location and Details labels; ellipses explicit.",
+      "observed_relation": "The entry places the specified Lowther Street buildings under Cumberland (Unitary Authority); its Details heading names CARLISLE and LOWTHER STREET. The narrative dates the vaults and extension to 1868 and 1881.",
+      "feature_type": "listed building address on street",
+      "limits": "This is a positive street/city/authority binding, not a personal birthpoint; the buildings are not claimed to be Walker’s house."
+    },
+    {
+      "source_id": "S3",
+      "url": "https://www.carlisle.gov.uk/Portals/24/Documents/Carlisle%20South/Landscape%20and%20Townscape%20Appraisal%20for%20Carlisle%20South.pdf",
+      "title": "Landscape and Townscape Appraisal: St Cuthbert’s Garden Village",
+      "author": "LUC (Land Use Consultants Ltd), in association with Nick Haynes; commissioned by Carlisle City Council",
+      "publication_date": "May 2017; final version 2 May 2017",
+      "source_kind": "original council-commissioned landscape and townscape appraisal",
+      "refs": [
+        "turn57view2",
+        "turn62view0"
+      ],
+      "locator": "cover L0–6 and final version L26–31; §9.11 printed p58 / parsed L2211–2218; village wording §9.16 L2257–2260",
+      "short_quote": "Carleton is a hamlet and wider township in the historic Parish of St Cuthbert Without, two miles south-east of Carlisle",
+      "observed_relation": "The compound is positively bound: Carleton is a rural hamlet and township of historic St Cuthbert Without, two miles southeast of Carlisle, on the A6 London Road. The report also calls the settlement a village, so village/hamlet wording is not treated as a type contradiction.",
+      "feature_type": "hamlet; wider township; village in subsequent text",
+      "limits": "The quoted relation itself does not name a county. The county layer comes from the separately attributed historical gazetteer and catalogue. Not a new birth clause."
+    },
+    {
+      "source_id": "S4",
+      "url": "https://co-curate.ncl.ac.uk/carleton-carlisle/",
+      "title": "Carleton, Carlisle",
+      "author": "Samuel Lewis, A Topographical Dictionary of England, 7th edition, London, 1848; extract reproduced by Newcastle University Co-Curate",
+      "source_kind": "explicitly attributed primary gazetteer transcription on university host",
+      "ref": "turn57view3",
+      "locator": "L7–8 for attributed Lewis extract; L10 for distinct alternative Carletons",
+      "short_quote": "CARLETON, a township, in the parish of St. Cuthbert, Carlisle, union of Carlisle, Cumberland ward, E. division of the county of Cumberland",
+      "observed_relation": "Lewis’s attributed entry gives Carleton as a township of St Cuthbert, Carlisle, in the eastern division of Cumberland, and specifies 2½ miles southeast of Carlisle. Host warns that Penrith and Copeland Carletons are distinct.",
+      "feature_type": "township (Lewis); modern host calls it village",
+      "limits": "Original 1848 page scan was not opened. The host’s modern description misspells the name Calerton; that misspelling is not adopted as a historical alias. Host modern overview is not a second witness independent of its extract."
+    },
+    {
+      "source_id": "S5",
+      "url": "https://lakesguides.co.uk/html/lgaz/LK02156.htm",
+      "title": "Old Cumbria Gazetteer – Carleton, St Cuthbert Without",
+      "author": "Old Cumbria Gazetteer compiler not identified in accessed text; original map makers are individually attributed",
+      "source_kind": "regional catalogue/transcriptions referencing OS County Series and named historical maps",
+      "refs": [
+        "turn62view1",
+        "turn63view0"
+      ],
+      "locator": "header L5–10; OS reference L23–25; Ogilby L76–83; Bowen L107–114",
+      "short_quote": "Carleton, St Cuthbert Without … county:- Cumbria … locality type:- locality … locality type:- buildings",
+      "observed_relation": "Catalogue header locates this Carleton under St Cuthbert Without, formerly Cumberland, county Cumbria. It separately indexes OS County Series Cmd24.9, Ogilby 1675, Bowen 1720 and other named map editions.",
+      "feature_type": "locality/buildings in catalogue; historical map metadata interprets village/hamlet symbols",
+      "limits": "Map images were not opened; catalogue is not raw OS or original historical map proof. Multiple embedded map references do not count as multiple independently inspected witnesses. Its places list mixes similarly named places, so only the header and explicitly attributed entries are used."
+    },
+    {
+      "source_id": "S6",
+      "url": "https://www.lakesguides.co.uk/html/lgaz/lk02155.htm",
+      "title": "Old Cumbria Gazetteer – Carleton, Penrith",
+      "author": "Old Cumbria Gazetteer compiler not identified in accessed text",
+      "source_kind": "regional alternative-place catalogue",
+      "ref": "turn62view2",
+      "locator": "L5–19",
+      "short_quote": "Carleton, Penrith … civil parish:- Penrith (formerly Cumberland) … county:- Cumbria … locality type:- locality",
+      "observed_relation": "A separate Carleton is catalogued in Penrith parish, county Cumbria, with its own OS County Series Cmd59.5 reference.",
+      "feature_type": "locality/buildings",
+      "limits": "Does not bind this alternative to the birthfield phrase near Carlisle. No exclusion based merely on familiar or larger Carlisle; retained as an observed alternative name."
+    }
+  ],
+  "known_alternatives": [
+    {
+      "candidate": "Carleton, St Cuthbert Without, near Carlisle",
+      "targets": [
+        "RS_PAST_NA6847"
+      ],
+      "observation_level": "opened sources",
+      "feature_types": [
+        "hamlet",
+        "township",
+        "village",
+        "locality/buildings"
+      ],
+      "parent_region": "St Cuthbert Without / St Cuthbert, Carlisle; historic Cumberland; later Cumbria",
+      "positive_binding": "S3 explicitly two miles southeast of Carlisle; S4 independently gives 2½ miles southeast plus county",
+      "source_ids": [
+        "S3",
+        "S4",
+        "S5"
+      ],
+      "compatibility": "positive whole-compound candidate; no hemisphere decision"
+    },
+    {
+      "candidate": "Carleton, Penrith",
+      "targets": [
+        "RS_PAST_NA6847"
+      ],
+      "observation_level": "opened alternative catalogue and university distinction",
+      "feature_types": [
+        "locality",
+        "buildings"
+      ],
+      "parent_region": "Penrith parish; Cumbria (formerly Cumberland)",
+      "positive_binding": null,
+      "source_ids": [
+        "S4",
+        "S6"
+      ],
+      "compatibility": "same base name; observed sources identify a different parent parish; whole near-Carlisle relation not established for this candidate"
+    },
+    {
+      "candidate": "Carleton, Copeland / Drigg and Carleton",
+      "targets": [
+        "RS_PAST_NA6847"
+      ],
+      "observation_level": "university page explicitly distinguishes Copeland; gazetteer cross-place lists and search leads",
+      "feature_types": [
+        "village (search lead only)",
+        "township (Lewis index search lead only)"
+      ],
+      "parent_region": "Cumbria / historic Cumberland; Drigg or Dregg (lead only)",
+      "positive_binding": null,
+      "source_ids": [
+        "S4",
+        "S5"
+      ],
+      "compatibility": "different named parent area observed; no opened standalone original entry; not globally eliminated"
+    },
+    {
+      "candidate": "Carlisle, Carleton, New Brunswick",
+      "targets": [
+        "RS_PAST_NA6847",
+        "RS_PAST_NA1727"
+      ],
+      "observation_level": "official Natural Resources Canada search snippet only; original requests failed",
+      "feature_types": [
+        "Dispersed Rural Community (snippet only)"
+      ],
+      "parent_region": "Carleton location field; New Brunswick (snippet only)",
+      "source_urls": [
+        "https://toponymes.rncan.gc.ca/search-place-names/search?category=O&page=431&pedisable=true&province%2525252525252525255B0%2525252525252525255D=72&q=&sort-field=name&theme%2525252525252525255B0%2525252525252525255D=10"
+      ],
+      "refs": [
+        "turn56search4",
+        "turn60search2"
+      ],
+      "positive_binding": null,
+      "compatibility": "observed name co-occurrence has Carlisle as named community and Carleton as location, rather than proved Carleton village near Carlisle; no exclusion adopted because original inaccessible"
+    },
+    {
+      "candidate": "Carlisle, Wentworth, Ontario; Carlisle, Middlesex, Ontario",
+      "targets": [
+        "RS_PAST_NA1727",
+        "RS_PAST_NA6847"
+      ],
+      "observation_level": "official Natural Resources Canada snippets only",
+      "feature_types": [
+        "Dispersed Rural Community (snippet only)"
+      ],
+      "parent_region": "Ontario",
+      "source_urls": [
+        "https://toponymes.rncan.gc.ca/search-place-names/search?category=O&page=431&pedisable=true&province%2525252525252525255B0%2525252525252525255D=72&q=&sort-field=name&theme%2525252525252525255B0%2525252525252525255D=10"
+      ],
+      "refs": [
+        "turn60search2"
+      ],
+      "positive_binding": null,
+      "compatibility": "Carlisle alternatives only; no Lowther Street or Carleton-village relation seen"
+    },
+    {
+      "candidate": "Carleton Village, Shelburne, Nova Scotia",
+      "targets": [
+        "RS_PAST_NA6847"
+      ],
+      "observation_level": "official NRCan and historical Lovell gazetteer search leads; originals not opened",
+      "feature_types": [
+        "Community (NRCan snippet)",
+        "post village (Lovell snippet)"
+      ],
+      "parent_region": "Shelburne / Nova Scotia",
+      "source_urls": [
+        "https://toponymes.rncan.gc.ca/search-place-names/search?category=O&page=431&pedisable=false&province%252525252525255B0%252525252525255D=72&q=&sort-field=name&theme%252525252525255B0%252525252525255D=10&wbdisable=true",
+        "https://electriccanadian.com/gazetteer/005LetterC.pdf"
+      ],
+      "refs": [
+        "turn56search7",
+        "turn56search47"
+      ],
+      "positive_binding": null,
+      "compatibility": "village/community alternative name; no Carlisle proximity established"
+    },
+    {
+      "candidate": "Carleton, Prince county, Prince Edward Island",
+      "targets": [
+        "RS_PAST_NA6847"
+      ],
+      "observation_level": "Lovell derivative search snippet only",
+      "feature_types": [
+        "post village (snippet only)"
+      ],
+      "parent_region": "Prince county, PEI",
+      "source_urls": [
+        "https://canadiangenealogy.net/lovell/cardigan_to_charrington_canada.htm"
+      ],
+      "refs": [
+        "turn56search30"
+      ],
+      "positive_binding": null,
+      "compatibility": "no Carlisle proximity established; unverified original"
+    },
+    {
+      "candidate": "Carleton, Ash Township, Monroe County, Michigan; Carleton parish, Kent County, New Brunswick",
+      "targets": [
+        "RS_PAST_NA6847"
+      ],
+      "observation_level": "Wiktionary/derived dictionary search leads only, not authoritative support",
+      "feature_types": [
+        "village (Michigan snippet)",
+        "parish (New Brunswick snippet)"
+      ],
+      "parent_region": "Michigan; New Brunswick",
+      "source_urls": [
+        "https://en.wiktionary.org/wiki/Carleton"
+      ],
+      "refs": [
+        "turn56search28"
+      ],
+      "positive_binding": null,
+      "compatibility": "no compound Carlisle relation; original authority not opened"
+    },
+    {
+      "candidate": "Carlisle, Saint George parish, Antigua and Barbuda; Carlisle River, Victoria, Australia",
+      "targets": [
+        "RS_PAST_NA1727",
+        "RS_PAST_NA6847"
+      ],
+      "observation_level": "derived dictionary search snippet only, not authoritative support",
+      "feature_types": [
+        "village (Carlisle snippet)",
+        "locality (Carlisle River snippet)"
+      ],
+      "parent_region": "Saint George parish; Victoria",
+      "source_urls": [
+        "https://kaikki.org/dictionary/English/categories-place/Y1/Villages/Cardew--Carloggas.html"
+      ],
+      "refs": [
+        "turn56search31"
+      ],
+      "positive_binding": null,
+      "compatibility": "base-name or longer-name leads only; no full street/city or village-near-city relation observed"
+    },
+    {
+      "candidate": "Lowther Street, Carlisle, council address and Historic England entry",
+      "targets": [
+        "RS_PAST_NA1727"
+      ],
+      "observation_level": "two opened original official records",
+      "feature_types": [
+        "street"
+      ],
+      "parent_region": "Carlisle; Cumberland unitary authority; council original address additionally supplies United Kingdom",
+      "positive_binding": "S1 full street+city address; S2 street+city+authority list entry",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "compatibility": "positive whole-compound candidate; no competing full compound observed in bounded results"
+    }
+  ],
+  "coverage": {
+    "discovery_queries_used": 8,
+    "discovery_queries_max": 8,
+    "original_navigation_requests_used": 10,
+    "original_navigation_requests_max": 10,
+    "counting": "All open calls, including repeat locators and failures, counted conservatively.",
+    "alternative_searches_attempted": [
+      "Exact Lowther Street+Carlisle with Australia/New Zealand terms",
+      "Carleton+Carlisle+village with Australia/Canada terms",
+      "Exact Lowther Street+Carlisle excluding Cumberland/Cumbria/England/person names",
+      "Official NRCan Carlisle+Carleton candidate/type lookup"
+    ],
+    "actual_access": "Official council/heritage originals accessible. Attributed Lewis transcript accessible. Regional map catalogue accessible; underlying map images not opened. Canadian official search snippets surfaced, but two original navigations failed.",
+    "not_claimed": [
+      "global uniqueness",
+      "complete gazetteer coverage",
+      "absence of all competing compound localities",
+      "personal country/entity/coordinates",
+      "hemisphere"
+    ],
+    "no_hit_interpretation": "Empty or unreturned results are search coverage limits, never geographic exclusion.",
+    "material_coverage_gaps": [
+      {
+        "gap": "Official NRCan candidate/type originals inaccessible",
+        "affected_records": [
+          "RS_PAST_NA1727",
+          "RS_PAST_NA6847"
+        ],
+        "consequence": "Canadian Carlisle/Carleton co-occurrence remains a material unverified alternative lead; not excluded by snippets or failures."
+      },
+      {
+        "gap": "No global street-level or village-proximity inventory inspected",
+        "affected_records": [
+          "RS_PAST_NA1727",
+          "RS_PAST_NA6847"
+        ],
+        "consequence": "Bounded web results cannot establish global uniqueness or absence of a compatible opposing candidate."
+      },
+      {
+        "gap": "Lewis original page scan not inspected",
+        "affected_records": [
+          "RS_PAST_NA6847"
+        ],
+        "consequence": "County binding via attributed university transcription is support only and must pass root QA."
+      }
+    ]
+  },
+  "discovery_query_ledger": [
+    {
+      "query": "\"Lowther Street\" \"Carlisle\" council Cumberland",
+      "planned_utc": "2026-11-04T23:36:25.628143+00:00",
+      "request_started_utc": null,
+      "request_completed_utc": null,
+      "http_status": null,
+      "elapsed_seconds": null,
+      "search_service": "system2",
+      "note": "Request executed after intent persistence; exact tool transport timing and HTTP not exposed. Last British History query returned empty results."
+    },
+    {
+      "query": "\"Carleton\" \"Carlisle\" village Cumberland gazetteer",
+      "planned_utc": "2026-11-04T23:36:25.628143+00:00",
+      "request_started_utc": null,
+      "request_completed_utc": null,
+      "http_status": null,
+      "elapsed_seconds": null,
+      "search_service": "system2",
+      "note": "Request executed after intent persistence; exact tool transport timing and HTTP not exposed. Last British History query returned empty results."
+    },
+    {
+      "query": "\"Lowther Street\" \"Carlisle\" Australia New Zealand",
+      "planned_utc": "2026-11-04T23:36:25.628143+00:00",
+      "request_started_utc": null,
+      "request_completed_utc": null,
+      "http_status": null,
+      "elapsed_seconds": null,
+      "search_service": "system2",
+      "note": "Request executed after intent persistence; exact tool transport timing and HTTP not exposed. Last British History query returned empty results."
+    },
+    {
+      "query": "\"Carleton\" \"Carlisle\" village Australia Canada",
+      "planned_utc": "2026-11-04T23:36:25.628143+00:00",
+      "request_started_utc": null,
+      "request_completed_utc": null,
+      "http_status": null,
+      "elapsed_seconds": null,
+      "search_service": "system2",
+      "note": "Request executed after intent persistence; exact tool transport timing and HTTP not exposed. Last British History query returned empty results."
+    },
+    {
+      "query": "\"Carleton\" \"St. Cuthbert, Carlisle\" Lewis",
+      "planned_utc": "2026-11-04T23:37:08.781908+00:00",
+      "request_started_utc": null,
+      "request_completed_utc": null,
+      "http_status": null,
+      "elapsed_seconds": null,
+      "search_service": "system1",
+      "note": "Request executed after intent persistence; exact tool transport timing and HTTP not exposed. Last British History query returned empty results."
+    },
+    {
+      "query": "site:toponymes.rncan.gc.ca \"Carlisle\" \"Carleton\"",
+      "planned_utc": "2026-11-04T23:37:08.781908+00:00",
+      "request_started_utc": null,
+      "request_completed_utc": null,
+      "http_status": null,
+      "elapsed_seconds": null,
+      "search_service": "system1",
+      "note": "Request executed after intent persistence; exact tool transport timing and HTTP not exposed. Last British History query returned empty results."
+    },
+    {
+      "query": "\"Lowther Street\" \"Carlisle\" -Cumberland -Cumbria -England -Walker -Miles",
+      "planned_utc": "2026-11-04T23:37:08.781908+00:00",
+      "request_started_utc": null,
+      "request_completed_utc": null,
+      "http_status": null,
+      "elapsed_seconds": null,
+      "search_service": "system1",
+      "note": "Request executed after intent persistence; exact tool transport timing and HTTP not exposed. Last British History query returned empty results."
+    },
+    {
+      "query": "site:british-history.ac.uk/topographical-dict/england \"Carleton\" \"Carlisle\"",
+      "planned_utc": "2026-11-04T23:37:21.149914+00:00",
+      "request_started_utc": null,
+      "request_completed_utc": null,
+      "http_status": null,
+      "elapsed_seconds": null,
+      "search_service": "system2",
+      "note": "Request executed after intent persistence; exact tool transport timing and HTTP not exposed. Last British History query returned empty results."
+    }
+  ],
+  "original_navigation_ledger": [
+    {
+      "request_id": "N1",
+      "url": "https://www.cumberland.gov.uk/parking-roads-and-transport/parking/find-car-park-near-you/lowther-street-car-park-carlisle",
+      "ref": "turn57view0",
+      "result_kind": "parsed_original_text",
+      "error": null,
+      "request_started_utc": null,
+      "request_completed_utc": null,
+      "http_status": null,
+      "elapsed_seconds": null,
+      "raw_http_bytes_captured": false,
+      "raw_sha256": null
+    },
+    {
+      "request_id": "N2",
+      "url": "https://historicengland.org.uk/listing/the-list/list-entry/1217895",
+      "ref": "turn57view1",
+      "result_kind": "parsed_original_text",
+      "error": null,
+      "request_started_utc": null,
+      "request_completed_utc": null,
+      "http_status": null,
+      "elapsed_seconds": null,
+      "raw_http_bytes_captured": false,
+      "raw_sha256": null
+    },
+    {
+      "request_id": "N3",
+      "url": "https://www.carlisle.gov.uk/Portals/24/Documents/Carlisle%20South/Landscape%20and%20Townscape%20Appraisal%20for%20Carlisle%20South.pdf",
+      "ref": "turn57view2",
+      "result_kind": "parsed_original_pdf_text",
+      "error": null,
+      "request_started_utc": null,
+      "request_completed_utc": null,
+      "http_status": null,
+      "elapsed_seconds": null,
+      "raw_http_bytes_captured": false,
+      "raw_sha256": null
+    },
+    {
+      "request_id": "N4",
+      "url": "https://co-curate.ncl.ac.uk/carleton-carlisle/",
+      "ref": "turn57view3",
+      "result_kind": "parsed_attributed_primary_transcription",
+      "error": null,
+      "request_started_utc": null,
+      "request_completed_utc": null,
+      "http_status": null,
+      "elapsed_seconds": null,
+      "raw_http_bytes_captured": false,
+      "raw_sha256": null
+    },
+    {
+      "request_id": "N5",
+      "url": "https://toponymes.rncan.gc.ca/search-place-names/search?category=O&page=431&pedisable=true&province%2525252525252525255B0%2525252525252525255D=72&q=&sort-field=name&theme%2525252525252525255B0%2525252525252525255D=10",
+      "ref": "turn57view4",
+      "result_kind": "failed",
+      "error": "TimeoutError",
+      "request_started_utc": null,
+      "request_completed_utc": null,
+      "http_status": null,
+      "elapsed_seconds": null,
+      "raw_http_bytes_captured": false,
+      "raw_sha256": null
+    },
+    {
+      "request_id": "N6",
+      "url": "https://www.carlisle.gov.uk/Portals/24/Documents/Carlisle%20South/Landscape%20and%20Townscape%20Appraisal%20for%20Carlisle%20South.pdf",
+      "ref": "turn62view0",
+      "result_kind": "repeat_locator_authorship",
+      "error": null,
+      "request_started_utc": null,
+      "request_completed_utc": null,
+      "http_status": null,
+      "elapsed_seconds": null,
+      "raw_http_bytes_captured": false,
+      "raw_sha256": null
+    },
+    {
+      "request_id": "N7",
+      "url": "https://lakesguides.co.uk/html/lgaz/LK02156.htm",
+      "ref": "turn62view1",
+      "result_kind": "parsed_catalogue_text_maps_not_opened",
+      "error": null,
+      "request_started_utc": null,
+      "request_completed_utc": null,
+      "http_status": null,
+      "elapsed_seconds": null,
+      "raw_http_bytes_captured": false,
+      "raw_sha256": null
+    },
+    {
+      "request_id": "N8",
+      "url": "https://www.lakesguides.co.uk/html/lgaz/lk02155.htm",
+      "ref": "turn62view2",
+      "result_kind": "parsed_catalogue_text_maps_not_opened",
+      "error": null,
+      "request_started_utc": null,
+      "request_completed_utc": null,
+      "http_status": null,
+      "elapsed_seconds": null,
+      "raw_http_bytes_captured": false,
+      "raw_sha256": null
+    },
+    {
+      "request_id": "N9",
+      "url": "https://toponymes.rncan.gc.ca/search-place-names/search?q=Carlisle",
+      "ref": "turn62view3",
+      "result_kind": "failed",
+      "error": "URL not accessible via tool",
+      "request_started_utc": null,
+      "request_completed_utc": null,
+      "http_status": null,
+      "elapsed_seconds": null,
+      "raw_http_bytes_captured": false,
+      "raw_sha256": null
+    },
+    {
+      "request_id": "N10",
+      "url": "https://lakesguides.co.uk/html/lgaz/LK02156.htm",
+      "ref": "turn63view0",
+      "result_kind": "repeat_locator_header",
+      "error": null,
+      "request_started_utc": null,
+      "request_completed_utc": null,
+      "http_status": null,
+      "elapsed_seconds": null,
+      "raw_http_bytes_captured": false,
+      "raw_sha256": null
+    }
+  ],
+  "audit_notes": [
+    "Only parsed tool text and short excerpts recorded. No parsed text labelled as raw HTTP bytes.",
+    "HTTP statuses, transport timings, exact request start/completion times not exposed and remain null. Intent UTC timestamps are planning/capture times, not request timestamps.",
+    "No whole-page map or source text distributed; every source short_quote is at most25 English words."
+  ]
+}

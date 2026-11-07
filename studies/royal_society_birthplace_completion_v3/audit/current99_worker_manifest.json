@@ -1,0 +1,360 @@
+{
+  "created_utc": "2026-11-02T12:36:23.843315+00:00",
+  "scope": "Current 99 old QID linkage for geography only; no DOB or formal identity flag updates",
+  "repository_head": "3aa736341a33f47df3ca00e3d350491a285248b6",
+  "status_counts": {
+    "supported_name_exact_dob_membership": 72,
+    "quarantined_non_person_entity_for_geography": 14,
+    "quarantined_name_dob_mismatch_for_geography": 8,
+    "held_review_unknown": 3,
+    "strong_external_id_match": 1,
+    "quarantined_different_named_person_for_geography": 1
+  },
+  "archived_entity_QIDs": [
+    "Q112407025",
+    "Q1178695",
+    "Q1376032",
+    "Q1387666",
+    "Q15990061",
+    "Q16063497",
+    "Q186029",
+    "Q1897847",
+    "Q1960814",
+    "Q21165493",
+    "Q212210",
+    "Q239553",
+    "Q5217907",
+    "Q5591558",
+    "Q7086466",
+    "Q7251",
+    "Q728523",
+    "Q7358647",
+    "Q7364339",
+    "Q7635348",
+    "Q7806999",
+    "Q81031",
+    "Q92694",
+    "Q92779",
+    "Q951902"
+  ],
+  "frozen_member_response_P2070_not_queried": true,
+  "name_normalization": "Unicode NFKC, casefold, collapse whitespace only; every supported row also matches a literal label/alias",
+  "frozen_member_response_decompressed_sha256": "cec4954009bff4233ce8accf3498478257f001851e467ed93e56c35fef675a79",
+  "inputs": [
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_checkout/studies/royal_society_birthplace_completion_v2/outputs/uk_birthplace_rows.jsonl.gz",
+      "sha256": "739c0bf9ae48e61bd7a59378f186027c0cd87e9e248d1efc3ee0c8c8d9a5e773"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_checkout/studies/royal_society_birthplace_completion_v2/inputs/WD_Royal_Society_member_query.json.gz",
+      "sha256": "4f93a2fb99af11f044968f6dcc9c980356795b4c836c09ea56bcd05212d1719c"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_checkout/data/royal_society_dob_freeze_v1/royal_society_current_exact_dob_final_v1.csv",
+      "sha256": "8e3f3bc7607c0f0dafbfab26375136eab9e6e4692447527f65794faff2d5d662"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_checkout/studies/royal_society_birthplace_completion_v2/inputs/metadata/strict_lookup_summary.json",
+      "sha256": "cd00dd0fa43a01610e34cc84605e686799d4fd3c2b2dc47a555eeb337b73086b"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_checkout/studies/royal_society_birthplace_completion_v2/inputs/metadata/current99_summary.json",
+      "sha256": "8c66f5db2fd1621ae1c30097286db00fdec9fbb7d3fe8e3ad248d4ba3af03825"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_parent_projected_observation.json",
+      "sha256": "7a8e39ea1f6741a9756e0a0f56083bad33214a30ddb47cf8d9bcdeea7c2be8d5"
+    }
+  ],
+  "code": {
+    "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_build_current99_audit.py",
+    "sha256": "961b515cec148b0ef4d0563ff4b0e2980ba9bab7ba2a925ebcb52277affc42f1"
+  },
+  "additional_code": [
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_fetch_four_entitydata.py",
+      "sha256": "d4a5e3bd1fcb5ad246dfdb784144c4a484ce9153a9680ea0bbf79694c1aec60d"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_fetch_remaining_entitydata.py",
+      "sha256": "2c78e9e39f1cce5c1be03c2c98373361de30a28b8b0274d0574dcefaaa9cb7bb"
+    }
+  ],
+  "raw_and_metadata": [
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_clark_entity_attempt_1.json",
+      "sha256": "b4c043f5f7a087dc19bebb0a01301f6ae40794fa305d340b2569ccd33cca67dd"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_clark_entity_attempt_1.meta.json",
+      "sha256": "267ab92d6d96ece1e837526d2ed9334f3c24f82db5343c1f0118e0757ebd9948"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_clark_entity_attempt_2.json",
+      "sha256": "c9b01cd549ed73637799ee73b1f8f19ff971b8d748b1511ae67a50a2936bea9e"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_clark_entity_attempt_2.meta.json",
+      "sha256": "8b4fac8eb51197880d54dff1e339ea17419470914557a23ffc6a19cb18d68212"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_clark_entity_attempt_3.json",
+      "sha256": "deafa701e0207d7f7a8d14f161f850d3f5728ce77add606e917a84d7a3d2b79e"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_clark_entity_attempt_3.meta.json",
+      "sha256": "ec34247160c5f8bea85ef60a33479e9756d4b4124bd6a585c30695017d102347"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q1178695.json",
+      "sha256": "8a99c6903a9e90a616ed64e6f75b02163aae5ee50acd131fa300241e93b0c1ba"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q1178695.meta.json",
+      "sha256": "4b890ad9430a6d1ceb3a031adbfb42feb5cec994f194a93108f76437457c5ec5"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q1376032.json",
+      "sha256": "17db2555d2ac1745da33d9e5e92c544e4f5e2db9fe0c1f5de6558a39c3b673f7"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q1376032.meta.json",
+      "sha256": "9cf6f1fb4e0755d4d5270c77a06ea0622a91a6293c849861619008e4795fa76c"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q1387666.json",
+      "sha256": "c3110b8e188489026564663facc31592f3291f5dc16c10000c8d5600967e2d2d"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q1387666.meta.json",
+      "sha256": "6266390469634951cb03665d80b506e495befcb98165b17ce6d079e4c32a40ff"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q15990061.json",
+      "sha256": "1c498e1bc224cea5f8dc8469c377599b7fca3a30591a0f6ef256cbd16c580fbf"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q15990061.meta.json",
+      "sha256": "7b0385fa68b7f3cd88d5fca1cee8b935f3ee0e94004d39be27f09c92a30656ee"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q16063497.json",
+      "sha256": "b2fecc6aec3ad1d1dd5d434aa2895b25b9b39a57dd77643c27303667e9486d97"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q16063497.meta.json",
+      "sha256": "4812ca5e70df6859e2e8f6778e1e364266583b46e2d4d14a74de0a12db6b118e"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q186029.json",
+      "sha256": "9c2ce5797c9c6297cc4c426191f5dcd5ebd88bb42624278eb6a6f78e156f42e2"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q186029.meta.json",
+      "sha256": "157acdd1115c0f453fa514bdd50af0a976c4be57ce5a4c4e22f2183e5fe3919b"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q1897847.json",
+      "sha256": "393bd4e71ceaba5d48017a8b7a03b28d25d9bbbf0eee22f73234d237e9ff0317"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q1897847.meta.json",
+      "sha256": "15f221bab5fdfa3400e2ef8a4801629f847208925fb8085e80570a79bd066870"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q1960814.json",
+      "sha256": "010bfcf72fee873502f23717a2f16a746fb3edc84ea0ffcd8f5f238084182c83"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q1960814.meta.json",
+      "sha256": "84993d3f786a4364a6045eaabe6d2c5e0d7565fcc7227a7253b9254c1dd7b412"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q21165493.json",
+      "sha256": "e64a1ba626eb07bef9cebcebfb6a2600d74579be06ae84453f9ba676cdce5123"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q21165493.meta.json",
+      "sha256": "ec21bfa32cd43c6b411da5cb9cd2a06477c9799b210e28e3ce6609ef07b5844e"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q212210.json",
+      "sha256": "595652e3d7df544dffc9d025162d6be47c5145f82c63629d04382d14cd2f59ab"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q212210.meta.json",
+      "sha256": "0bbd05d76428587ea7d86fffd64ffc86dc57b3ac4dd13f049280693c49792246"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q239553.json",
+      "sha256": "9d55a6ad652694e99d5b79b4531a11f283e537c2530b6b59d665e59d1737d3fa"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q239553.meta.json",
+      "sha256": "32871a49fac9e359adde9d6553c089e6ff29895f121a06518d3fa60df76063ad"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q298432.json",
+      "sha256": "2a79c61f85d6f88e92a083c40b2b6c03b22b0c0bea02c72082cb323df5b02226"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q298432.meta.json",
+      "sha256": "37d5fe65448313d836e6b99da19fc3cf5df1844cd5db25b6c85998fa2a1cbb9e"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q356590.json",
+      "sha256": "a56644e1029d4f84fc3a769c585384772e5e40b5f71ad000a571c1e47fb2ea5f"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q356590.meta.json",
+      "sha256": "35bb727c376f70b541791f118dcd91b37220c4638a25c8175681c5f3f20d0306"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q4966705.json",
+      "sha256": "647abbe1cfe7983d35b5e2e221db75a6da67de1d5a9e85a2e1ba92e12561b195"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q4966705.meta.json",
+      "sha256": "8059831d76ec6c8f55568af2a1dc9d34262e56b36fcb4111ea090a0765fe181c"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q5217907.json",
+      "sha256": "569aa5925fc44957edf9176b1bb3102e770c54d9359bf5782b1ad16e161a4b85"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q5217907.meta.json",
+      "sha256": "09c85efca7bb8ee5561ad0ecfd1c0f27ca73dfc625b183b1de2fd4ed83369e1b"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q5591558.json",
+      "sha256": "7555d00f2c4040ab11a21310a7617fa49b27fb9a3eb6b40eb0db96d7d9433543"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q5591558.meta.json",
+      "sha256": "1e8120e2be8ec1b0281ad9cc462642b53335f1cebb9a4fbc5314ae73932011fd"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q7086466.json",
+      "sha256": "57b4e5c6e9730421aef55d2fed6742e57574aabbc5ef780621ed73d49fe278a0"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q7086466.meta.json",
+      "sha256": "9c904139b498653f4d3de396876d863456c673b9037f4646066daf9048c4f208"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q7251.json",
+      "sha256": "afe0ed23d8528545ddedc44d33e20cc08e52567d9c3da797dfced9c248036c25"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q7251.meta.json",
+      "sha256": "77ffa2c3fe46ba9cefa67b06e5e5327a5e4a973d0ae0368e6629b8b293265bcf"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q728523.json",
+      "sha256": "36f11aed469a971b9972db3f87f989ae27d78ad3fc96d08b183eccda865a0c39"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q728523.meta.json",
+      "sha256": "c9fa550a3cb3635727e0b60c0af44b4f478e3cc6fd71b85ada63a28875992a63"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q7358647.json",
+      "sha256": "3f8db8bb9dbc888d42ee1bbe2358afa3a9bbf2b78b5f993810d227bb008eb788"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q7358647.meta.json",
+      "sha256": "25d07b999f5048ae353c7eaafca6625565ede1e7c4f11aeff2bc4d402d9780f4"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q7364339.json",
+      "sha256": "2d028a2d97e78ec5f8b2680669e79c7adeb81e89355f04c146c8bde55291e113"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q7364339.meta.json",
+      "sha256": "5760e654c0bcbe8b68b9b0c1332ed71217ad9ea3d40415b56e4cafb5d4ed2569"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q7635348.json",
+      "sha256": "329a1e205d5a955f0959a16a407a513ed4185e4d8738e90ab043ae19b3492a82"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q7635348.meta.json",
+      "sha256": "630ae0edc70983df1b8df48c8bb1fff65563a05537e6c0e9c419b33dd322524a"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q7806999.json",
+      "sha256": "df74d732ab3a9f434b33e25a611d831b3d04ffa9fd88eb87e73fd96edbf4668f"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q7806999.meta.json",
+      "sha256": "ea389953a0933f08853fa6feb9a705d6235a4416d0190a59b3fdef37697b2f0d"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q81031.json",
+      "sha256": "dbd274c293ebf44f7480c147bf463ffe7215bdfa918a80011e6e2672d01c3c03"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q81031.meta.json",
+      "sha256": "ed16778e0e4893a5cd32b5e46c867808181f24207861d0ea6f3d7bd7177fb02b"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q92694.json",
+      "sha256": "9d24400db3a3010528d35e26f875350ce1ea78537ee228e75ab1088a905339e8"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q92694.meta.json",
+      "sha256": "355407d9301730516cff78860825403ba19005ffebd5382eb93de095909833b9"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q92779.json",
+      "sha256": "055b4e17e31958bcd3508e4ada7c62ce5344e587a07d452295619f5a8eab6796"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q92779.meta.json",
+      "sha256": "c484f570433f248b1e0bcce7c36136429c4fdc51a7b044e8573aa20805029fd7"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q951902.json",
+      "sha256": "a2a9a2e2e637033efc186ce846e36563096cb3c8e3efce2d88e353ea2e97eb5d"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_entitydata_Q951902.meta.json",
+      "sha256": "fe3093d8b395fbf629c94e7a9cc099ccc1c64c2943d7a0eaddcbbbc0607f0b5d"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_mismatch_entity_attempt_1.json",
+      "sha256": "36a3cde1c419147f3a81b4824137b1b62bc9640bf056333dbcad6ba231105b2a"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_mismatch_entity_attempt_1.meta.json",
+      "sha256": "9b600750bc0c9faf4d16d1b4684bf4678bd723681127604115cc238504e1d305"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_mismatch_entity_attempt_2.json",
+      "sha256": "87b76b9e0cd96a90a8c87774ac30ae56ee45364ddf5a0f35fbed058af746dc38"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_mismatch_entity_attempt_2.meta.json",
+      "sha256": "7217e7d299f69a623bf8b661fb3f904ff429554091971b26bb3283707e93f7e6"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_mismatch_entity_attempt_3.json",
+      "sha256": "5da3005d5e4cbb4d2ef63ebfd8eab10a68add0dbb95d8261120b5b29fe1a0a1e"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v3_workers/current_qid_audit/review_mismatch_entity_attempt_3.meta.json",
+      "sha256": "589426e0c54cc597f4d5f8d6d8ba3b2a9e8f7e5f7cc98c21fb6936f322cd9be3"
+    }
+  ],
+  "assertions": {
+    "rows": 99,
+    "native_DOB_all_match_frozen_final99": true,
+    "repository_files_modified_by_audit": false
+  },
+  "limitations": [
+    "Action API maxlag5 attempts exhausted their bounded retries. Follow-up one-attempt Special:EntityData requests preserve complete raw response bytes and metadata; no repeated request for the same QID through that route.",
+    "Absent frozen person rows are unknown, never mismatches.",
+    "Frozen response includes labels/aliases, DOB, membership, P19 and historical external ID, but not P2070.",
+    "Parent API observations have no preserved raw response: projection is explicitly labeled and hashed only as projection. Geography can be quarantined on observed name+DOB mismatch without P2070 absence."
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "reviewer": "france_modern_next; did not author France A decisions",
+  "scope": "Independent review of all 9 strict positives in the original France A delivery: subject identity, historical full-member category, actual election event and precision, original-body SHA, and necessary page images. The 10 holds were checked for null election fields. France B, authored by this reviewer, is outside the independent scope.",
+  "reviewed_decisions_sha256": "08e4d283bcb5208231beb8e0437b03effb85d27a5fb049ba190d4ddebfebc3c5",
+  "strict_positive_count": 9,
+  "strict_positive_pass_count": 8,
+  "strict_positive_fail_count": 0,
+  "mandatory_changes": [
+    {
+      "candidate_group_id": "CTHS_107107",
+      "action": "retain membership_accepted=0, role=1, cutoff=1, election_date_conflict=1; accepted election fields null",
+      "reason": "New1933HTML transcription is correct, but it does not resolve inherited printed1873election in same-person Academy original. Root integration overlay and workerArefinement already implement hold."
+    }
+  ],
+  "cases": [
+    {
+      "candidate_group_id": "CTHS_103477",
+      "name": "MANGIN Louis",
+      "qa_status": "pass",
+      "accepted_full_member_election_date": null,
+      "accepted_full_member_election_year": 1909,
+      "accepted_precision": "year",
+      "assessment": "PDF p22 prints1909; succeeding VanTieghem in ordinary botany section. Historical original speech date is not election.",
+      "evidence_checked": [
+        {
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/mangin_notice.pdf",
+          "source_sha256": "3b8aacc61d6b5000c1b00699e7f11317393fc4b99cd62d8ae386f6557e8a772a",
+          "hash_verified": true,
+          "source_locator": "PDF index 21 (one-based page 22); printed p.277",
+          "body_verified_independently": true,
+          "pdf_page_images_independently_viewed": [
+            22
+          ]
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_1039",
+      "name": "DEPÉRET Charles",
+      "qa_status": "pass",
+      "accepted_full_member_election_date": null,
+      "accepted_full_member_election_year": 1913,
+      "accepted_precision": "year",
+      "assessment": "PDF p1 explicitly separates corresponding1898 from full nonresident1913. Nonresident subtype is retained.",
+      "evidence_checked": [
+        {
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/deperet_notice.pdf",
+          "source_sha256": "7f236add3637792e3efa4539177615445d3f64f7eeb72dd4a4a87a888cf29cd5",
+          "hash_verified": true,
+          "source_locator": "PDF index 0 (one-based page 1)",
+          "body_verified_independently": true,
+          "pdf_page_images_independently_viewed": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_104930",
+      "name": "BATAILLON Eugène",
+      "qa_status": "pass",
+      "accepted_full_member_election_date": "1946-07-01",
+      "accepted_full_member_election_year": 1946,
+      "accepted_precision": "day",
+      "assessment": "PDF p27 prints1erjuillet1946 for Academy des sciences nonresident membership;1916 is correspondent. SonMarcel/Academy inscriptions are separate.",
+      "evidence_checked": [
+        {
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/bataillon_notice.pdf",
+          "source_sha256": "f3195fa6cd005ae7d58115e68e7ba9506bdce3721d2a7fb5c95fce3cbff5c36b",
+          "hash_verified": true,
+          "source_locator": "PDF index 26 (one-based page 27); printed p.535",
+          "body_verified_independently": true,
+          "pdf_page_images_independently_viewed": [
+            27
+          ]
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_105204",
+      "name": "GUIGNARD Léon",
+      "qa_status": "pass",
+      "accepted_full_member_election_date": "1895-02-11",
+      "accepted_full_member_election_year": 1895,
+      "accepted_precision": "day",
+      "assessment": "PDF p7 prints11Février1895 actual Academy entry and subjectfulltitle. OCR44 on another page is not a competing printed date.",
+      "evidence_checked": [
+        {
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/guignard_notice.pdf",
+          "source_sha256": "4dfb0a6b72f115a6c678d0152ed0a066e898a566561bb8da1a382a87368e1dc6",
+          "hash_verified": true,
+          "source_locator": "PDF index 6 (one-based page 7)",
+          "body_verified_independently": true,
+          "pdf_page_images_independently_viewed": [
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_107742",
+      "name": "TERMIER Pierre",
+      "qa_status": "pass",
+      "accepted_full_member_election_date": null,
+      "accepted_full_member_election_year": 1909,
+      "accepted_precision": "year",
+      "assessment": "PDF p2 prints membershipsince1909 and says admissionatage50in1909 succeedingGaudry; explicit year independently binds entry.",
+      "evidence_checked": [
+        {
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/termier_notice.pdf",
+          "source_sha256": "fbaff9a0d907f6eab9a4eaf372ff77f6ae1f0d114e796d8b798e550301973bca",
+          "hash_verified": true,
+          "source_locator": "PDF index 1 (one-based page 2); printed p.318",
+          "body_verified_independently": true,
+          "pdf_page_images_independently_viewed": [
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_110924",
+      "name": "HADAMARD Jacques",
+      "qa_status": "pass",
+      "accepted_full_member_election_date": null,
+      "accepted_full_member_election_year": 1912,
+      "accepted_precision": "year",
+      "assessment": "PDF p2 explicitly places Hadamard’s new election replacingPoincaré at end1912. Does not rely on1962minus50 arithmetic.",
+      "evidence_checked": [
+        {
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/hadamard_notice.pdf",
+          "source_sha256": "5eed7db646d4eae9a1b56a77b62b50d72376e85c788a5fd52c20106607dbbdc5",
+          "hash_verified": true,
+          "source_locator": "PDF index 1 (one-based page 2); printed p.731",
+          "body_verified_independently": true,
+          "pdf_page_images_independently_viewed": [
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_107108",
+      "name": "BROGLIE Maurice",
+      "qa_status": "pass",
+      "accepted_full_member_election_date": null,
+      "accepted_full_member_election_year": 1924,
+      "accepted_precision": "year",
+      "assessment": "PDF p14 prints1924 election into sectiondesmembreslibres; coverp1 identifiesMaurice1875–1960. Preserveacademicien_libre historical full subtype, not a foreignassociate/correspondent or brotherLouis.",
+      "evidence_checked": [
+        {
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/broglie_notice.pdf",
+          "source_sha256": "f3fe548ffbf1a84d8e63319f7c2bf4ac88a67a0b41a4c6e667e2ffdb8fcf7451",
+          "hash_verified": true,
+          "source_locator": "PDF index 13 (one-based page 14); printed p.638",
+          "body_verified_independently": true,
+          "pdf_page_images_independently_viewed": [
+            1,
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_107107",
+      "name": "BROGLIE Louis",
+      "qa_status": "source_transcription_pass_but_strict_membership_hold_inherited_date_conflict",
+      "accepted_full_member_election_date": null,
+      "accepted_full_member_election_year": null,
+      "accepted_precision": null,
+      "assessment": "Official Academy HTML introductory paragraph explicitly dates sciences fullmembership29May1933;12October1944 belongs to separate Académiefrançaise. Louis1892/NobelwaveidentitydistinctfromMaurice1875. Independent review of inherited astronomes.pdf p6 confirms the same Louis1892 birth and literal3mars1873 election. This is a real printed-source chronology error, not OCR. Date conflict remains held; no majority or plausibility replacement.",
+      "evidence_checked": [
+        {
+          "source_url": "https://www.academie-sciences.fr/pdf/dossiers/Broglie/Broglie_od1.htm",
+          "source_sha256": "c1239514b87a426bba2848297f12a168ef28958f95c1c3b3db948f7891781a83",
+          "hash_verified": true,
+          "source_locator": "HTML body: introductory membership paragraph",
+          "body_verified_independently": true,
+          "pdf_page_images_independently_viewed": []
+        }
+      ],
+      "final_membership_accepted": 0,
+      "election_date_conflict": 1,
+      "new_source_observed_election_date": "1933-05-29",
+      "inherited_source_checked": {
+        "source_url": "https://www.academie-sciences.fr/pdf/dossiers/ama/astronomes.pdf",
+        "source_sha256": "6738567269e95d7c043925e9bef209d71957f621376fcb03250d39dc812dab02",
+        "source_locator": "PDF p6, openingLouisBroglieentry",
+        "hash_verified": true,
+        "pdf_page_image_independently_viewed": true,
+        "quote": "Élu Membre … le 3 mars 1873"
+      }
+    },
+    {
+      "candidate_group_id": "CTHS_110963",
+      "name": "URBAIN Georges",
+      "qa_status": "pass",
+      "accepted_full_member_election_date": null,
+      "accepted_full_member_election_year": 1921,
+      "accepted_precision": "year",
+      "assessment": "PDF p17 chronology explicitly gives1921sectionChemiefullmember. Independently viewedp5 additionally specifies9mai1921; acceptingyearonlyisconservativeandvalid.",
+      "evidence_checked": [
+        {
+          "source_url": "https://www.academie-sciences.fr/pdf/eloges/urbain_notice.pdf",
+          "source_sha256": "597f2dc4dac75e579fd610e2d056fc7fa1be56dfa8f976fe0664fd40a22025f2",
+          "hash_verified": true,
+          "source_locator": "PDF index 16 (one-based page 17); printed p.17",
+          "body_verified_independently": true,
+          "pdf_page_images_independently_viewed": [
+            5,
+            17
+          ]
+        }
+      ]
+    }
+  ],
+  "hold_structure_check": {
+    "hold_count": 10,
+    "all_true_election_fields_null": true,
+    "no_hold_source_asof_promoted_to_election": true
+  },
+  "source_assignment_rejection_review": {
+    "candidate_group_id": "CTHS_108692",
+    "name": "CHARCOT Jean-Baptiste",
+    "status": "rejection_correct",
+    "reason": "1925birthcentenary medicine-sectionsource belongs to fatherJeanMartinCharcotborn1825; cannot be assigned to polar explorerJean-Baptisteborn1867. No lifetime exclusion follows."
+  },
+  "additional_cached_source_findings": [
+    {
+      "candidate_group_id": "CTHS_104385",
+      "name": "TILHO Jean",
+      "status": "supports_separate_refinement",
+      "actual_election_year": 1932,
+      "precision": "year",
+      "locator": "tilho_notice.pdfp3printedp658, sentencecontinuingp2correspondent1918",
+      "assessment": "Independent page3image explicitlyprints1932 élu membre titulaire, replacingFerrié. Does not transfer authorCot1946toTilho. WorkerAhasbeenmessaged and is writing separate refinement without altering stableA."
+    },
+    {
+      "candidate_group_id": "CTHS_110963",
+      "name": "URBAIN Georges",
+      "status": "supports_separate_precision_refinement",
+      "actual_election_date": "1921-05-09",
+      "precision": "day",
+      "locator": "urbain_notice.pdfp5printedp5",
+      "assessment": "Independent imageprintsactualelection9mai1921; agrees with currentyear1921. WorkerAiswritingseparaterefinement."
+    }
+  ],
+  "cross_source_addendum_excluded_from_independent_claims": "This reviewer authored the Cot / Béhal / Colin addendum. Its independent review was performed by the France A worker and is not counted as an independent pass in this report.",
+  "network_requests": 0,
+  "raw_full_source_publication": false,
+  "identity_or_dob_edits": 0,
+  "bazi_computed": 0,
+  "analysis_cohort_frozen": false,
+  "source_transcription_pass_count": 9,
+  "strict_positive_hold_inherited_conflict_count": 1,
+  "final_integration_note": "Original9new-source transcriptions pass. Only8original cases are strict-eligible after inheritedLouis1873/1933conflict guard; separately approvedTilho1932 adds1, so finalFranceA strict count remains9. Urbain precision refinement does not add a person."
+}

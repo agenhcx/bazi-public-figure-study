@@ -1,0 +1,430 @@
+{
+  "schema": "UK_v23_sources_c_v1",
+  "worker": "/root/v23_sources_c",
+  "written_utc": "2026-11-06T00:00:00.271971+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA4616",
+    "RS_PAST_NA4630",
+    "RS_PAST_NA5422",
+    "RS_PAST_NA7048"
+  ],
+  "intent_file": "v23_c_intent.json",
+  "counts": {
+    "discovery_queries": 8,
+    "web_navigation_attempts": 10,
+    "parsed_find_operations": 0,
+    "cached_screenshot_attempts": 1,
+    "raw_HTTP_or_PDF_GETs": 0,
+    "body_verified_birthplace_candidates": 0,
+    "holds": 4
+  },
+  "budgets": {
+    "queries": 8,
+    "nav": 10
+  },
+  "candidates": [],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA4616",
+      "native": {
+        "record_id": "RS_PAST_NA4616",
+        "authority_name": "Morrogh; Henton (1917 - 2003)",
+        "native_dob": "1917-09-29",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "44be882d1f60120215feef452e7725d995710e3fda8923660693fceea0749dfb"
+      },
+      "status": "hold_no_original_born_body_acquired",
+      "hold_type": "original_birthplace_body_unavailable",
+      "reason": "Original E.R.Evans RS memoir DOI was tool-inaccessible. Distinct original Japanese foundry-industry tribute page timed out; original BMetA people page has name/photo/link only, no birth information. All failed routes stopped; neither Birmingham BCIRA workplace nor patent/court affiliations are birthplaces.",
+      "sources": [
+        {
+          "url": "https://doi.org/10.1098/rsbm.2005.0019",
+          "source_ref": "turn4284512view1",
+          "result": "tool_inaccessible_stopped",
+          "source_locator": null,
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "record_id": "RS_PAST_NA4616",
+          "original_born_body_acquired": false
+        },
+        {
+          "url": "https://www.inokuchichuzosyo.co.jp/gyokaimigi.htm",
+          "source_ref": "turn6375346view0",
+          "result": "original_trade_news_page_TimeoutError_stopped",
+          "source_locator": null,
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "record_id": "RS_PAST_NA4616",
+          "original_born_body_acquired": false
+        },
+        {
+          "url": "https://bmeta.co.uk/people/",
+          "source_ref": "turn6375346view1",
+          "result": "original_association_people_page_name_photo_and_memoir_link_no_birthplace",
+          "source_locator": "L30HENTONMORROGH;body40lines",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "record_id": "RS_PAST_NA4616",
+          "original_born_body_acquired": false,
+          "birthplace_relation_verified": false
+        }
+      ],
+      "unopened_discovery_only_memoir": {
+        "author": "E. Raymond Evans",
+        "title": "Henton Morrogh CBE FRS FREng. 29 September 1917 – 20 September 2003",
+        "doi": "10.1098/rsbm.2005.0019",
+        "publication": "Biographical Memoirs of Fellows of the Royal Society51,303–314(2005)",
+        "source_ref": "turn2879468search8",
+        "body_verified": false
+      },
+      "source_grade_proposal": null
+    },
+    {
+      "record_id": "RS_PAST_NA4630",
+      "native": {
+        "record_id": "RS_PAST_NA4630",
+        "authority_name": "Nutman; Phillip Sadler (1914 - 2004)",
+        "native_dob": "1914-10-10",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "5677ea95667d87c4c51e3e1d74b7052bd3bfdf308819fd5ab1c1891c489288fd"
+      },
+      "status": "hold_original_born_projection_not_body_verified",
+      "hold_type": "original_birthplace_body_unavailable",
+      "reason": "Rothamsted original-work PDF URL was tool-restricted; first original publisher DOI route was inaccessible. Search projection contains a direct born-place/date statement and matching Phillip spelling but original body was not acquired, so no place/grade/geography/date verdict adopted.",
+      "sources": [
+        {
+          "url": "https://repository.rothamsted.ac.uk/id/eprint/31297/1/rsbm.2005.0020.pdf",
+          "source_ref": "turn4284512view0",
+          "result": "tool_restricted_URL_stopped",
+          "source_locator": null,
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "record_id": "RS_PAST_NA4630",
+          "original_born_body_acquired": false
+        },
+        {
+          "url": "https://doi.org/10.1098/rsbm.2005.0020",
+          "source_ref": "turn8222302view0",
+          "result": "first_original_publisher_route_tool_inaccessible_stopped",
+          "source_locator": null,
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "record_id": "RS_PAST_NA4630",
+          "original_born_body_acquired": false
+        }
+      ],
+      "unadopted_discovery_only": {
+        "source_ref": "turn2879468search9",
+        "source_spelling": "Phillip Sadler Nutman",
+        "source_birthdate_projection": "1914-10-10",
+        "birthplace_projection": "Lea, Malmesbury, Wiltshire",
+        "body_verified": false,
+        "actual_native_spelling_preserved": "Phillip Sadler",
+        "note": "Initial discovery query used Philip spelling as a search variant only. Original search projection actually supplies Phillip, matching native; no alias/name correction or inferred spelling conflict."
+      },
+      "source_grade_proposal": null
+    },
+    {
+      "record_id": "RS_PAST_NA7048",
+      "native": {
+        "record_id": "RS_PAST_NA7048",
+        "authority_name": "Farmer; Frank Reginald (1914 - 2001)",
+        "native_dob": "1914-12-18",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "81cb48c852bfe146d0a5fc5ed27bea0e8a16ddd40c412900f2f096800b2d4473"
+      },
+      "status": "hold_no_readable_original_born_body",
+      "hold_type": "original_birthplace_body_unavailable",
+      "reason": "Original SRA award-newsletter PDF acquired as16pages but returned no readable lines. One cached screenshot of known award page was attempted; no dependable birth relation/full-date information was extracted or relied upon from its returned representation. Award discovery text confirms professional subject but is not original birth-place proof.",
+      "sources": [
+        {
+          "url": "https://www.sra.org/wp-content/uploads/2024/05/RISK.V6.N4.pdf",
+          "source_ref": "turn4284512view2",
+          "result": "original_16page_PDF_acquired_but_zero_readable_lines",
+          "source_locator": null,
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "record_id": "RS_PAST_NA7048",
+          "original_born_body_acquired": false
+        }
+      ],
+      "screenshot_ref": "turn8222302view2",
+      "source_grade_proposal": null
+    },
+    {
+      "record_id": "RS_PAST_NA5422",
+      "native": {
+        "record_id": "RS_PAST_NA5422",
+        "authority_name": "Wynne; Charles Gorrie (1911 - 1999)",
+        "native_dob": "1911-05-18",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "be4f2d32440af24337f2504abbdea2204ce1785a43386818e9606fbbbc10bc33"
+      },
+      "status": "hold_original_born_place_body_not_acquired",
+      "hold_type": "original_birthplace_body_unavailable",
+      "reason": "Original RAS/OUP PDF route returned minimal metadata rather than article body. Public preview GIF returned unsupported content-type and ADS link resolved to inaccessible author search, not original article text. Original Guardian signed JonathanMaxwell obituary gives full CharlesGorrieWynne/exact18May1911 and1October1999, but no birthplace; Leicester therein is employment/schooling, not born relation. Leicester birth lead remains search-only from unacquired RAS article.",
+      "sources": [
+        {
+          "url": "https://academic.oup.com/astrogeo/article-pdf/41/2/2.37/597309/41-2-2.37.pdf",
+          "source_ref": "turn2879468view0",
+          "result": "redirected_to_original_publisher_minimal_metadata_only",
+          "source_locator": "L2 subjectfullheading;L4byline;L16journalDOI;L20publication;L21-27previewlink",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "record_id": "RS_PAST_NA5422",
+          "original_born_body_acquired": false
+        },
+        {
+          "url": "https://www.theguardian.com/news/1999/nov/12/guardianobituaries1",
+          "source_ref": "turn2879468view1",
+          "result": "original_signed_obituary_body_acquired_but_no_birthplace",
+          "source_locator": "L41-50career;L54byline;L55fullsubject/exactDOB/deathdate",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "record_id": "RS_PAST_NA5422",
+          "original_born_body_acquired": true,
+          "birthplace_relation_verified": false
+        },
+        {
+          "url": "observed publisher first-page preview link4 from turn2879468view0",
+          "source_ref": "turn4284512view3",
+          "result": "tool400_unsupported_image_gif_stopped",
+          "source_locator": null,
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "record_id": "RS_PAST_NA5422",
+          "original_born_body_acquired": false,
+          "exact_signed_preview_URL_not_redistributed": true
+        },
+        {
+          "url": "observed ADS author-bibliography link2 from turn2879468view0",
+          "source_ref": "turn8222302view1",
+          "result": "tool500_nonretryable_redirect_to_ADS_classicSearch_author_route_stopped",
+          "source_locator": null,
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "record_id": "RS_PAST_NA5422",
+          "original_born_body_acquired": false,
+          "not_individual_article_body": true
+        }
+      ],
+      "original_identity_observation": {
+        "source_ref": "turn2879468view1",
+        "locator": "L54-55",
+        "full_name": "Charles Gorrie Wynne",
+        "source_birthdate": "1911-05-18",
+        "source_birthdate_precision": "day_in_subject_vital_dates",
+        "source_death_date": "1999-10-01",
+        "source_author": "Jonathan Maxwell",
+        "publication_date": "1999-11-12",
+        "professional_anchors": [
+          "ImperialCollegeopticaldesign1960/professor1969",
+          "OpticaActaeditor1954-1965",
+          "FRS1970",
+          "astronomicaloptics"
+        ]
+      },
+      "unadopted_discovery_only": {
+        "source_ref": "turn4671202search6",
+        "place": "Leicester",
+        "exactDOB": "1911-05-18",
+        "original_RAS_body_verified": false
+      },
+      "source_grade_proposal": null
+    }
+  ],
+  "query_ledger": [
+    {
+      "query": "\"Henton Morrogh\" born",
+      "representative_discovery_ref": "turn4671202search0",
+      "evidence_role": "discovery_only_not_birthplace_proof"
+    },
+    {
+      "query": "\"Philip Sadler Nutman\" born",
+      "representative_discovery_ref": "turn4671202search3",
+      "evidence_role": "discovery_only_not_birthplace_proof"
+    },
+    {
+      "query": "\"Frank Reginald Farmer\" born",
+      "representative_discovery_ref": "turn4671202search5",
+      "evidence_role": "discovery_only_not_birthplace_proof"
+    },
+    {
+      "query": "\"Charles Gorrie Wynne\" born",
+      "representative_discovery_ref": "turn4671202search6",
+      "evidence_role": "discovery_only_not_birthplace_proof"
+    },
+    {
+      "query": "\"Henton Morrogh\" \"biographical\"",
+      "representative_discovery_ref": "turn2879468search8",
+      "evidence_role": "discovery_only_not_birthplace_proof"
+    },
+    {
+      "query": "\"Phillip Sadler Nutman\"",
+      "representative_discovery_ref": "turn2879468search9",
+      "evidence_role": "discovery_only_not_birthplace_proof"
+    },
+    {
+      "query": "\"Frank Reginald Farmer\" \"born\" obituary",
+      "representative_discovery_ref": "turn2879468search11",
+      "evidence_role": "discovery_only_not_birthplace_proof"
+    },
+    {
+      "query": "\"Henton Morrogh\" obituary",
+      "representative_discovery_ref": "turn8222302search5",
+      "evidence_role": "discovery_only_not_birthplace_proof"
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "url": "https://academic.oup.com/astrogeo/article-pdf/41/2/2.37/597309/41-2-2.37.pdf",
+      "source_ref": "turn2879468view0",
+      "result": "redirected_to_original_publisher_minimal_metadata_only",
+      "source_locator": "L2 subjectfullheading;L4byline;L16journalDOI;L20publication;L21-27previewlink",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA5422",
+      "original_born_body_acquired": false
+    },
+    {
+      "url": "https://www.theguardian.com/news/1999/nov/12/guardianobituaries1",
+      "source_ref": "turn2879468view1",
+      "result": "original_signed_obituary_body_acquired_but_no_birthplace",
+      "source_locator": "L41-50career;L54byline;L55fullsubject/exactDOB/deathdate",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA5422",
+      "original_born_body_acquired": true,
+      "birthplace_relation_verified": false
+    },
+    {
+      "url": "https://repository.rothamsted.ac.uk/id/eprint/31297/1/rsbm.2005.0020.pdf",
+      "source_ref": "turn4284512view0",
+      "result": "tool_restricted_URL_stopped",
+      "source_locator": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA4630",
+      "original_born_body_acquired": false
+    },
+    {
+      "url": "https://doi.org/10.1098/rsbm.2005.0019",
+      "source_ref": "turn4284512view1",
+      "result": "tool_inaccessible_stopped",
+      "source_locator": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA4616",
+      "original_born_body_acquired": false
+    },
+    {
+      "url": "https://www.sra.org/wp-content/uploads/2024/05/RISK.V6.N4.pdf",
+      "source_ref": "turn4284512view2",
+      "result": "original_16page_PDF_acquired_but_zero_readable_lines",
+      "source_locator": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA7048",
+      "original_born_body_acquired": false
+    },
+    {
+      "url": "observed publisher first-page preview link4 from turn2879468view0",
+      "source_ref": "turn4284512view3",
+      "result": "tool400_unsupported_image_gif_stopped",
+      "source_locator": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA5422",
+      "original_born_body_acquired": false,
+      "exact_signed_preview_URL_not_redistributed": true
+    },
+    {
+      "url": "https://doi.org/10.1098/rsbm.2005.0020",
+      "source_ref": "turn8222302view0",
+      "result": "first_original_publisher_route_tool_inaccessible_stopped",
+      "source_locator": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA4630",
+      "original_born_body_acquired": false
+    },
+    {
+      "url": "observed ADS author-bibliography link2 from turn2879468view0",
+      "source_ref": "turn8222302view1",
+      "result": "tool500_nonretryable_redirect_to_ADS_classicSearch_author_route_stopped",
+      "source_locator": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA5422",
+      "original_born_body_acquired": false,
+      "not_individual_article_body": true
+    },
+    {
+      "url": "https://www.inokuchichuzosyo.co.jp/gyokaimigi.htm",
+      "source_ref": "turn6375346view0",
+      "result": "original_trade_news_page_TimeoutError_stopped",
+      "source_locator": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA4616",
+      "original_born_body_acquired": false
+    },
+    {
+      "url": "https://bmeta.co.uk/people/",
+      "source_ref": "turn6375346view1",
+      "result": "original_association_people_page_name_photo_and_memoir_link_no_birthplace",
+      "source_locator": "L30HENTONMORROGH;body40lines",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA4616",
+      "original_born_body_acquired": false,
+      "birthplace_relation_verified": false
+    }
+  ],
+  "cached_screenshot_ledger": [
+    {
+      "source_ref": "turn4284512view2",
+      "result_ref": "turn8222302view2",
+      "page_index": 8,
+      "source_pages": 16,
+      "kind": "already_acquired_original_newsletter_page9",
+      "dependable_birthplace_information_extracted": false,
+      "verification_limit": "No born relation, exactdate or location was visually verified or used from screenshot; no image/cache distributed."
+    }
+  ],
+  "quote_ledger": [],
+  "protocol_deviations": [],
+  "limits": [
+    "No original born-place body verified for any of four targets; no literature-exhaustion claim.",
+    "No full source HTML/PDF/images/projection caches, familydetails or contact data distributed.",
+    "Original worker parsed representations are not raw bytes/status/time/hash; all unknown raw fields null.",
+    "All failed routes stopped without retry/variants/cached-reference reopening/bypass; no new DOBconflict or spelling repair adopted.",
+    "One observed ADS link was an author search, not a useful individual article carrier; failure preserved.",
+    "No BaZi/outcomes/statisticaldedup/finalfreeze/master/code/Git changes."
+  ],
+  "no_master_or_native_changes": true
+}

@@ -1,0 +1,57 @@
+{
+  "candidate_qids_are_evidence_only": true,
+  "candidates": [
+    {
+      "candidate_qid": "Q200945",
+      "candidate_review_reason": "Included for hemisphere proof only: exact English/French source locality label, direct P17 France, P31 commune of France. Candidate URI is retained evidence, not assigned as birthplace entity.",
+      "candidate_uri": "http://www.wikidata.org/entity/Q200945",
+      "direct_earth_coordinate_statements": [
+        {
+          "coordinateStatement": "http://www.wikidata.org/entity/statement/q200945-8B97120D-1680-46E1-B8E2-F00900B829A2",
+          "coordinate_use": "Geographic reference coordinate only; coordinate precision describes reference-point resolution, not locality extent or birthpoint uncertainty. No exact birthpoint or birthplace lat/lon assignment.",
+          "globe": "http://www.wikidata.org/entity/Q2",
+          "latitude": "48.765277777778",
+          "latitude_minus_reported_precision": "48.76500000000022222",
+          "latitude_plus_reported_precision": "48.76555555555577778",
+          "longitude": "2.2780555555556",
+          "precision": "2.7777777777778E-4",
+          "precision_safe_hemisphere": "north",
+          "rank": "http://wikiba.se/ontology#NormalRank"
+        }
+      ],
+      "included_for_hemisphere_only": true,
+      "instance_of": [
+        "http://www.wikidata.org/entity/Q484170"
+      ],
+      "instance_of_labels": [
+        "commune française@fr",
+        "commune of France@en"
+      ],
+      "labels": [
+        "Châtenay-Malabry@en",
+        "Châtenay-Malabry@fr"
+      ],
+      "matched_literals": [
+        "Châtenay-Malabry@en",
+        "Châtenay-Malabry@fr"
+      ],
+      "meaningful_geographic_type": true,
+      "p17_labels": [
+        "France@en",
+        "France@fr"
+      ],
+      "p17_values": [
+        "http://www.wikidata.org/entity/Q142"
+      ],
+      "raw_binding_count": 16,
+      "source_country_qualifier_compatible": true
+    }
+  ],
+  "filter_scope": "Source France qualifier plus meaningful geographic entity type only. All returned homonyms remain in this projection and the raw response, including any nonlocality or physical-address cases.",
+  "no_locality_entity_assignment": true,
+  "nonlocality_or_address_candidates_returned": 0,
+  "raw_bindings_count": 16,
+  "raw_response_retains_all_bindings": true,
+  "request_id": "geo_v3_exact_001",
+  "returned_homonym_count": 1
+}

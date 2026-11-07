@@ -1,0 +1,108 @@
+{
+  "schema": "UK_v36_independent_geography_source_documentary_QA_v1",
+  "reviewer": "/root/v32_source_qa",
+  "written_utc": "2026-11-07T00:14:22.653089+00:00",
+  "phase": "preflight",
+  "passed": false,
+  "checks_passed": 19,
+  "checks": [
+    {
+      "check": "actual_v35_baseline_canonical_pin",
+      "passed": true
+    },
+    {
+      "check": "fixed4983native_unique_records",
+      "passed": true
+    },
+    {
+      "check": "actual62nonblank_unknown_window_pool",
+      "passed": true
+    },
+    {
+      "check": "fixed6scope_threegroups2",
+      "passed": true
+    },
+    {
+      "check": "scope_within_actual_nonblankunknown_pool",
+      "passed": true
+    },
+    {
+      "check": "complete_targeted_scope_objects_exactbaseline",
+      "passed": true
+    },
+    {
+      "check": "103blank_window_outside_scope",
+      "passed": true
+    },
+    {
+      "check": "zero_firstbirthplacegroups",
+      "passed": true
+    },
+    {
+      "check": "all12globalDOBcases_excluded",
+      "passed": true
+    },
+    {
+      "check": "Ewins_Barber_knownplaceholds_excluded",
+      "passed": true
+    },
+    {
+      "check": "Tomes_separate_provisional_not13thactive",
+      "passed": true
+    },
+    {
+      "check": "all2partialplacecases_excluded",
+      "passed": true
+    },
+    {
+      "check": "prospective_preregistration_exact_SHA",
+      "passed": true
+    },
+    {
+      "check": "preregistration_fixed6_exactscope_method_id",
+      "passed": true
+    },
+    {
+      "check": "explicit_new_canonical_source_classes",
+      "passed": true
+    },
+    {
+      "check": "explicit_three_proof_modes",
+      "passed": true
+    },
+    {
+      "check": "preregister_exactDOB_fullnative_and_actualedges_mandatory",
+      "passed": true
+    },
+    {
+      "check": "generic_UK_or_centroid_not_enough",
+      "passed": false
+    },
+    {
+      "check": "preregister_S3geo_only_no_DOB_BP_gradeupgrade",
+      "passed": true
+    },
+    {
+      "check": "old_Kiddle_not_retroactively_admitted",
+      "passed": true
+    }
+  ],
+  "blocking_issues": [
+    {
+      "check": "generic_UK_or_centroid_not_enough",
+      "passed": false
+    }
+  ],
+  "declared_six_GEO_FIELDS": [
+    "geo_resolution_status",
+    "geography_decision",
+    "hemisphere",
+    "northern_birthplace_candidate",
+    "reason",
+    "southern_birthplace_separate"
+  ],
+  "no_new_admission_method_exception": false,
+  "explicit_prospective_admission_method_amendment": true,
+  "review_scope": "Documentary source/native binding/scope/protocol review only. Workers/root acquired source observations; reviewer did not network-fetch originals, inspect pixels/rawbytes or execute production. Final QA independently checks runtime rollback/frozen objects and deterministic output replays.",
+  "no_network_source_code_mainoutputs_audits_or_Git_mutation_by_reviewer": true
+}

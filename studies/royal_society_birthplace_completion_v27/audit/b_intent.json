@@ -1,0 +1,58 @@
+{
+  "schema": "v27_b_retrieval_intent",
+  "written_utc": "2026-11-06T10:54:59.001758+00:00",
+  "purpose": "Original-source birthplace followup of the four fixed scope_b subjects only; no native edits.",
+  "general_adaptive_purpose": "After first four queries, use up to four adaptive searches for original-work carriers, missing actual birthdate/full-name context, publication attribution or relevant author credentials; record exact adaptive query strings before execution when selected. Follow observed original-work/page links for direct birthplace body/identity/source-role verification. Do not reattempt failed routes/variants.",
+  "queries_prelisted": [
+    {
+      "index": 1,
+      "engine": "system2",
+      "q": "\"Leonard Francis La Cour\" born"
+    },
+    {
+      "index": 2,
+      "engine": "system2",
+      "q": "\"Norman Laurence Franklin\" born"
+    },
+    {
+      "index": 3,
+      "engine": "system2",
+      "q": "\"Henry Edward Shortt\" born"
+    },
+    {
+      "index": 4,
+      "engine": "system2",
+      "q": "\"Geoffrey Morse Binnie\" born"
+    }
+  ],
+  "limits": {
+    "queries": 8,
+    "navigation_attempts": 10
+  },
+  "protocol": "Actual fullnativecomponents/compatible statedDOBprecision/career/directborn mandatory. Existing boundedmiddleomission rule only with exactunchangedDOB and allothergates; no initialexpansion. Birthdate/place conflicts held. City aloneunknowngeo; explicitbirthlinkedwholecounty/country may supporthemisphere. Birthplacegrade separatefromnativeDOBgrade; <=25distinctEnglishquotewords/originalwork; minimalfacts/locators, no sourcecaches. UnknownrawHTTPstatus/hash/requesttime null. No failedroute retries/variants/challengebypass/rawGET. No facts/main/Git mutations.",
+  "adaptive_exact_queries_prelisted": {
+    "written_utc": "2026-11-06T10:55:34.118005+00:00",
+    "queries": [
+      {
+        "index": 5,
+        "engine": "system1",
+        "q": "\"Leonard Francis La Cour\" \"born\" -site:wikipedia.org"
+      },
+      {
+        "index": 6,
+        "engine": "system1",
+        "q": "\"Leonard Francis La Cour\" memoir pdf"
+      },
+      {
+        "index": 7,
+        "engine": "system1",
+        "q": "\"Norman Laurence Franklin\" \"Leeds\" obituary"
+      },
+      {
+        "index": 8,
+        "engine": "system1",
+        "q": "\"Henry Edward Shortt\" \"born\" \"Dhariwal\""
+      }
+    ]
+  }
+}

@@ -1,0 +1,482 @@
+{
+  "schema": "UK_v24_sources_c_original_biography_followups_v1",
+  "worker": "/root/v24_sources_c",
+  "written_utc": "2026-11-06T00:19:10.964281+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA6655",
+    "RS_PAST_NA6775",
+    "RS_PAST_NA6941",
+    "RS_PAST_NA8294"
+  ],
+  "intent_file": "v24_c_intent.json",
+  "counts": {
+    "discovery_queries": 8,
+    "web_navigation_attempts": 10,
+    "parsed_find_operations": 3,
+    "cached_screenshot_attempts": 1,
+    "raw_HTTP_or_PDF_GETs": 0,
+    "body_verified_birthplace_candidates": 2,
+    "holds": 2,
+    "held_explicit_born_observations": 1
+  },
+  "budgets": {
+    "queries": 8,
+    "navigation_attempts": 10,
+    "unused_query_budget": 0,
+    "unused_navigation_budget": 0
+  },
+  "candidates": [
+    {
+      "record_id": "RS_PAST_NA6655",
+      "native": {
+        "record_id": "RS_PAST_NA6655",
+        "authority_name": "Groves; Charles Edward (1841 - 1920)",
+        "native_dob": "1841-03-04",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "be2a641fe09ad87514befeedae568c531d710c53a5b5775340247a6a319eda5c"
+      },
+      "status": "candidate_original_authored_memorial_explicit_birthplace_year_only",
+      "raw_birthplace": "Highgate",
+      "source_url": "https://www.alpinejournal.org.uk/Contents/Contents_1920_files/AJ%201920%20Vol%2033%20260-271%20In%20Memoriam%20November.pdf",
+      "source_title": "Charles Edward Groves. 1841–1920",
+      "source_author": "A. H. Tubby",
+      "source_kind": "original_signed_edited_club_journal_memorial_carried_by_original_journal_archive",
+      "source_grade_proposal": "S2",
+      "source_grade_basis": "Original signed edited Alpine Journal memorial with full native heading, career/FRS anchors and named author signature; conservativeS2, not host-onlyS1, civil registration or a peer-review claim.",
+      "source_grade_role": "person_birthplace_support_only",
+      "source_quote": "Charles Groves was born at Highgate in 1841",
+      "source_quote_word_count": 8,
+      "source_locator": "turn4546782view0:L251-264@PDFindex7/printed265 fullnativeheading/lifespan/directbirthyear/place; career/JCSeditor/GuyHospital/FRS1883 at273-285@PDFindex8; authorA.H.Tubby369@PDFindex9/printed267. Cachedpageimage turn5483059view3 inspected original born word atPDFindex7.",
+      "source_body_ref": "turn4546782view0",
+      "source_birthdate": "1841",
+      "source_birthdate_precision": "year_only_in_direct_born_clause",
+      "source_DOB_native_compatibility": "Source states1841 only, compatible with native1841-03-04; exact day/month not confirmed by this source.",
+      "source_death_date": "1920-02-01",
+      "publication_year": "1920",
+      "publication_date_precision": "year_from_original_journal_issue_identity_filename",
+      "publication_locator": "Alpine Journal33, issue221, In Memoriam; Groves section printed265–267",
+      "identity_review": [
+        "Full Charles Edward Groves appears in original heading and section; birthyear1841/lifespan1841–1920 agree native.",
+        "JCS editor/subeditor, Guy Hospital lecturer/Thames Conservancy consulting chemist and FRS1883 bind the chemist; no initial or nickname expansion from native.",
+        "Original署名A.H.Tubby is retained unexpanded; personal memoir narrative and named signature observed."
+      ],
+      "reviewed_hemisphere_proposal": "unknown",
+      "geographic_basis": "Only Highgate is explicitly birth-linked. Kennington/later house and British-club context are not birth-country/whole-region qualifiers. Keepunknown, no familiar-place inference.",
+      "caveats": [
+        "ParsedPDF OCR rendered born as bgrn; cached original page7 screenshot was emitted and visually inspected, clearly showing born. Quotation uses the visually verified original word, not a silent raw-OCR transcription claim.",
+        "Original source confirms only birthyear, not nativeMarch4.",
+        "Source says in his seventy-ninth year at death; no contrary exact birthdate inferred.",
+        "No fullPDF/pageimage/HTML or source-projection cache distributed."
+      ],
+      "geography_assignment_performed": false,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original HTML/PDF text; cached original page image inspected where specified, not raw HTTP bytes",
+      "no_master_change": true
+    },
+    {
+      "record_id": "RS_PAST_NA6941",
+      "native": {
+        "record_id": "RS_PAST_NA6941",
+        "authority_name": "Grove-Hills; Edmond Herbert (1864 - 1922)",
+        "native_dob": "1864-08-01",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "6f066bbe27acc2a7b0586000426458081ad07f104c47806be1e1c2a27579cc7e"
+      },
+      "status": "candidate_authored_regional_compilation_named_child_born_clause_conservativeS3",
+      "raw_birthplace": "London",
+      "source_url": "https://www.cumbrianlives.org.uk/lives/herbert-augustus-hills.html",
+      "source_title": "Herbert Augustus Hills (1837-1909)",
+      "source_author": "Kevin Grice",
+      "source_kind": "original_signed_regional_compiled_biographical_entry_with_explicit_named_child_birth_assertion",
+      "source_grade_proposal": "S3",
+      "source_grade_basis": "ConservativeS3 for an incidental named-child paragraph in a regional compiled biography with broad references but no claim-specific birth-record citation. Named byline does not establish scholarly/civil birth verification; no host-basedS1 or expertS2 assumption.",
+      "source_grade_role": "person_birthplace_support_only",
+      "source_quote": "born 1st August 1864 in London",
+      "source_quote_word_count": 6,
+      "source_locator": "turn5483059view0:L13fatherentrytitle; byline15; childsection48; fullEdmondHerbertGrove-Hills/exactDOB/directLondon/deathdate/career49; FRS1911/RASpresidency1913–15 at50; broadreferences63-101.",
+      "source_body_ref": "turn5483059view0",
+      "source_birthdate": "1864-08-01",
+      "source_birthdate_precision": "exact_day_in_explicit_named_child_born_parenthesis",
+      "source_DOB_matches_native": true,
+      "source_death_date": "1922-09-26",
+      "source_lifespan_native_compatibility": "Birthdate matches native exactly and source lifespan years1864–1922 agree native authority. Native contains year1922 only; no native exact deathdate is corrected or adjudicated.",
+      "publication_date": null,
+      "publication_date_precision": "unknown; copyright range2019–2026 is not publicationdate",
+      "identity_review": [
+        "All native full components Edmond Herbert Grove-Hills explicitly appear in named-child paragraph with exact1August1864.",
+        "Military cartographer/astronomer, RoyalEngineers survey work, FRS1911 and RASpresident1913–15 provide distinctive same-person anchors.",
+        "Father/relative residence is not used to infer birthplace: London is directly asserted for the fullnamed subject."
+      ],
+      "reviewed_hemisphere_proposal": "unknown",
+      "geographic_basis": "London alone is birth-linked; no explicit birth-country/whole-region qualifier in subject clause. ParentpropertyHighHeadCastle/Cumberland and family/background locations are not childbirthplace. Keepunknown.",
+      "source_quality_caveats": [
+        "The father-entry heading1837-1909 differs from its father death1907 narrative; this unrelated editorial inconsistency is disclosed, not turned into a childDOB conflict or corrected.",
+        "Unacquired Nature searchprojection reports subject deathOctober2 whereas this acquired regional entry reportsSeptember26. No originalNature body was acquired (failedroute), no exact correctdeathdate/version verdict or independent corroboration is claimed. Both source/nativelifespanyears remain1922.",
+        "Unopened Wikipedia HighHeadCastle birthplace lead is not original-body evidence and is not used to override directLondon assertion or infer geography.",
+        "No information independence/civil-record verification asserted; article references are broad, not claim-linked."
+      ],
+      "caveats": [
+        "Explicit childbirth assertion, not family-place inference; named-child paragraph only.",
+        "No familygenealogy/fullsourceHTML/contactdetails redistributed."
+      ],
+      "geography_assignment_performed": false,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original HTML/PDF text; cached original page image inspected where specified, not raw HTTP bytes",
+      "no_master_change": true
+    }
+  ],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA8294",
+      "native": {
+        "record_id": "RS_PAST_NA8294",
+        "authority_name": "Wager; Harold William Taylor (1862 - 1929)",
+        "native_dob": "1862-03-11",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "d52d7e78192b4f865a1938934afabf4a09fd67185c34b2cb96a3fff48e554ee0"
+      },
+      "status": "hold_explicit_birthplace_body_but_full_native_components_not_acquired_in_birthsource",
+      "hold_type": "birth_source_full_native_name_components_unverified",
+      "reason": "Original signed RoyalSociety obituary explicitly statesHaroldWager exactnativeDOB/StroudGloucestershire/death1929 and matchingbotanicalFRS1904/Leedscareer, but WilliamTaylor components are absent from inspected subjectbody. Attempted NPG/RSfullnativepersonbodiesfailed. Fullnativeexpansion from a search projection is not made; parent may separately review/obtain an original fullidentity bridge.",
+      "raw_birthplace_candidate_held": "Stroud in Gloucestershire",
+      "source_url": "https://artefacts-discovery.researcher.life/full_text/DA-2/2d/2d784ddb8ceb3280bd20be875413eb2d/full_text/4a892fd929e7e926bf3efaa43868d3be.pdf",
+      "source_title": "Harold Wager—1862–1929, in Obituary Notices",
+      "source_author": "A. C. S.",
+      "source_kind": "original_signed_scientific_society_obituary_carried_on_external_originalwork_repository",
+      "source_grade_adopted": null,
+      "conditional_source_grade": "S2 if fullidentitygate independently satisfied; no grade adopted in this childreport",
+      "source_quote": "was born at Stroud in Gloucestershire on March 11, 1862",
+      "source_quote_word_count": 10,
+      "source_locator": "turn4546782view1:L750-752@PDFindex25/printedxix fullacquirednameHaroldWager/directbornplace/exactDOB/death; FRS1904/Leedscareer812-817@PDFindex26; authorinitials899@PDFindex28/printedxxii. FindTaylor returned unrelated Thiselton-Dyer text, not subjectmiddlecomponents.",
+      "source_body_ref": "turn4546782view1",
+      "source_birthdate": "1862-03-11",
+      "source_birthdate_precision": "exact_day_in_born_clause",
+      "source_death_date": "1929-11-17",
+      "observed_source_name": "Harold Wager",
+      "missing_native_components": [
+        "William",
+        "Taylor"
+      ],
+      "identity_review": [
+        "Observed Harold Wager/exact11March1862/17November1929/FRS1904/botanyLeeds strongly match context.",
+        "Native full HaroldWilliamTaylorWager is not manufactured from target; fullmiddlecomponents not acquired in born-source or attempted companionoriginalbody."
+      ],
+      "geography_decision": "unchanged_unknown_due_to_identity_gate_hold",
+      "conditional_geographic_basis": "Gloucestershire is directly birth-linked and whollynorthern if identitygate later resolved; no geographyadoption now.",
+      "publication_date": null,
+      "publication_date_precision": "unknown from acquired original compilation; downloadstamp08November2021 not publicationdate",
+      "limits": [
+        "External carrieroriginalPDFbody acquired, no rawbytes/status/hash.",
+        "No sourceDOB disagreement observed; this is fullidentitygate hold, not invented DOBconflict."
+      ],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original HTML/PDF text; cached original page image inspected where specified, not raw HTTP bytes",
+      "no_master_change": true,
+      "source_name_components_observed": [
+        "Harold",
+        "Wager"
+      ],
+      "native_authority_DOB_unique_key_count_in_4983": 1,
+      "native_first_surname_exact_DOB_binding_match_count_in_4983": 1,
+      "observed_professional_anchors": [
+        {
+          "fact": "1888DemonstratorBotanyYorkshireCollegeLeeds",
+          "locator": "turn4546782view1:L779-780@PDFindex25"
+        },
+        {
+          "fact": "FellowRoyalSociety1904",
+          "locator": "turn4546782view1:L812@PDFindex26"
+        },
+        {
+          "fact": "PresidentMycologicalSociety1910",
+          "locator": "turn4546782view1:L815@PDFindex26"
+        },
+        {
+          "fact": "PresidentYorkshireNaturalistsUnion1913",
+          "locator": "turn4546782view1:L816@PDFindex26"
+        },
+        {
+          "fact": "LeedshonoraryDSc1915",
+          "locator": "turn4546782view1:L817@PDFindex26"
+        },
+        {
+          "fact": "BoardofEducationInspectorservice",
+          "locator": "turn4546782view1:L883-888@PDFindex28"
+        }
+      ],
+      "parent_method_review_only": "WorkerstrictHOLDunchanged. All observed shortname/dates/careerfacts recorded for parent prospective method review; no expanded source fullname, inventedalias or birthplace/geo adoption by worker."
+    },
+    {
+      "record_id": "RS_PAST_NA6775",
+      "native": {
+        "record_id": "RS_PAST_NA6775",
+        "authority_name": "Festing; Edward Robert (1839 - 1912)",
+        "native_dob": "1839-08-10",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "9ce80cd7c6604c2d81eaf74c08e9e96e7ae19846cddc8dccfa4bce2441f73091"
+      },
+      "status": "hold_no_explicit_birthplace_in_acquired_original_institutional_bodies",
+      "hold_type": "no_explicit_birthplace_in_acquired_original_bodies",
+      "reason": "Original McGill archivalauthority has fullnative/year1839-1912 but emptyHistory/Places, no bornplace/date day. Original NPGpersonbody has fullnative/year1839-1912/ScienceMuseumdirector/chemist but noBP. FromeSomerset appears only in unacquired Wikipedia discovery lead and is notadopted; neither museumworkplace/footerLondon nor nationality supplies birth geography.",
+      "sources": [
+        {
+          "url": "https://archivalcollections.library.mcgill.ca/index.php/festing-edward-robert",
+          "source_ref": "turn1496986view1",
+          "locator": "L8/20fullnative; existenceyears36; emptyHistory38/Places40; sourceWikipedia86",
+          "birthplace_relation_verified": false
+        },
+        {
+          "url": "https://www.npg.org.uk/collections/search/person/mp149246/edward-robert-festing",
+          "source_ref": "turn5483059view1",
+          "locator": "L61fullnative; year/occupation63; no biographicalbornrelation",
+          "birthplace_relation_verified": false
+        }
+      ],
+      "source_quote": "",
+      "source_grade_adopted": null,
+      "geography_decision": "unchanged_unknown",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original HTML/PDF text; cached original page image inspected where specified, not raw HTTP bytes",
+      "no_master_change": true
+    }
+  ],
+  "query_ledger": [
+    {
+      "engine": "system2",
+      "q": "\"Charles Edward Groves\" born obituary",
+      "selected_result_refs": [
+        "turn4177209search10",
+        "turn4177209search34"
+      ],
+      "discovery_only_not_proof": true
+    },
+    {
+      "engine": "system2",
+      "q": "\"Edward Robert Festing\" born obituary",
+      "selected_result_refs": [
+        "turn4177209search23",
+        "turn4177209search26",
+        "turn4177209search28"
+      ],
+      "discovery_only_not_proof": true
+    },
+    {
+      "engine": "system2",
+      "q": "\"Edmond Herbert Grove-Hills\" born",
+      "selected_result_refs": [
+        "turn4177209search1",
+        "turn4177209search2",
+        "turn4177209search6",
+        "turn4177209search50"
+      ],
+      "discovery_only_not_proof": true
+    },
+    {
+      "engine": "system2",
+      "q": "\"Harold William Taylor Wager\" born",
+      "selected_result_refs": [
+        "turn4177209search0",
+        "turn4177209search12",
+        "turn4177209search18"
+      ],
+      "discovery_only_not_proof": true
+    },
+    {
+      "engine": "system1",
+      "q": "\"Charles Edward Groves\" \"1841\" \"1920\"",
+      "selected_result_refs": [
+        "turn5142019search0",
+        "turn5142019search9"
+      ],
+      "discovery_only_not_proof": true
+    },
+    {
+      "engine": "system1",
+      "q": "\"Edward Robert Festing\" \"Frome\" biography",
+      "selected_result_refs": [
+        "turn5142019search5",
+        "turn5142019search6"
+      ],
+      "discovery_only_not_proof": true
+    },
+    {
+      "engine": "system1",
+      "q": "\"Edmond Herbert Grove-Hills\" obituary \"High Head\"",
+      "selected_result_refs": [
+        "turn5142019search2",
+        "turn5142019search3",
+        "turn5142019search8"
+      ],
+      "discovery_only_not_proof": true
+    },
+    {
+      "engine": "system1",
+      "q": "\"Harold Wager\" \"1862\" \"born\"",
+      "selected_result_refs": [
+        "turn5142019search10"
+      ],
+      "discovery_only_not_proof": true
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "record_id": "RS_PAST_NA6655",
+      "url": "https://www.alpinejournal.org.uk/Contents/Contents_1920_files/AJ%201920%20Vol%2033%20260-271%20In%20Memoriam%20November.pdf",
+      "source_ref": "turn1496986view0",
+      "outcome": "originalPDFparsedbody_acquired",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA6775",
+      "url": "https://archivalcollections.library.mcgill.ca/index.php/festing-edward-robert",
+      "source_ref": "turn1496986view1",
+      "outcome": "originalauthoritybody_acquired_noBP",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA6941",
+      "url": "https://www.nature.com/articles/110551a0",
+      "source_ref": "turn1496986view2",
+      "outcome": "tool500nonretryableidpredirect_nooriginalbody_stopped",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA6941",
+      "url": "https://articles.adsabs.harvard.edu/pdf/1923MNRAS..83R.232.",
+      "source_ref": "turn1496986view3",
+      "outcome": "originaltwo-pagePDF_obituarylistonly_forGroveHills_noDOBorBPbio",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA8294",
+      "url": "https://artefacts-discovery.researcher.life/full_text/DA-2/2d/2d784ddb8ceb3280bd20be875413eb2d/full_text/4a892fd929e7e926bf3efaa43868d3be.pdf",
+      "source_ref": "turn1496986view4",
+      "outcome": "originalobituaryPDFbody_acquired_shortsubjectname",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA6941",
+      "url": "https://www.cumbrianlives.org.uk/lives/herbert-augustus-hills.html",
+      "source_ref": "turn5483059view0",
+      "outcome": "originalregionalcompiledbody_acquired_directLondon",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA6775",
+      "url": "https://www.npg.org.uk/collections/search/person/mp149246/edward-robert-festing",
+      "source_ref": "turn5483059view1",
+      "outcome": "originalinstitutionalbody_acquired_noBP",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA8294",
+      "url": "https://www.npg.org.uk/collections/search/person/mp76797/harold-william-taylor-wager",
+      "source_ref": "turn5483059view2",
+      "outcome": "toolerror_nooriginalbody_stopped",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA6941",
+      "url": "https://www.npg.org.uk/collections/search/person/mp76047/edmond-herbert-grove-hills-ne-hills",
+      "source_ref": "turn6753281view0",
+      "outcome": "toolerror_nooriginalbody_stopped",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA8294",
+      "url": "https://makingscience.royalsociety.org/people/na8294/harold-william-taylor-wager",
+      "source_ref": "turn3037060view0",
+      "outcome": "tool502_nooriginalbody_stopped",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    }
+  ],
+  "parsed_find_ledger": [
+    {
+      "source_ref": "turn1496986view0",
+      "pattern": "CHARLES EDWARD GROVES",
+      "result_ref": "turn4546782view0"
+    },
+    {
+      "source_ref": "turn1496986view4",
+      "pattern": "HAROLD WAGER",
+      "result_ref": "turn4546782view1"
+    },
+    {
+      "source_ref": "turn1496986view4",
+      "pattern": "Taylor",
+      "result_ref": "turn4546782view2",
+      "outcome": "OnlyunrelatedsubjectTaylorreference_noWagermiddlecomponentacquired"
+    }
+  ],
+  "cached_screenshot_ledger": [
+    {
+      "source_ref": "turn1496986view0",
+      "result_ref": "turn5483059view3",
+      "page_index": 7,
+      "page_printed": "265",
+      "image_content_returned": true,
+      "image_emitted_and_visually_inspected": true,
+      "observation": "OriginalwordbornclearlyvisibleinGrovesbirthclause; parsedbgrn isOCRartifact.",
+      "image_or_cache_distributed": false
+    }
+  ],
+  "quote_ledger": [
+    {
+      "work": "GrovesAlpineJournaloriginalmemorial",
+      "quote": "Charles Groves was born at Highgate in 1841",
+      "word_count": 8
+    },
+    {
+      "work": "CumbrianLivesHerbertAugustusHillsentry",
+      "quote": "born 1st August 1864 in London",
+      "word_count": 6
+    },
+    {
+      "work": "OriginalRoyalSocietyHaroldWagerobituary",
+      "quote": "was born at Stroud in Gloucestershire on March 11, 1862",
+      "word_count": 10
+    }
+  ],
+  "protocol_deviations": [],
+  "limits": [
+    "Searchresultsareonlyleads,includingdifferentmodernCharlesEdwardGrovespeople; no different-personleadadopted/DOBconflict.",
+    "No failedendpointretried, no rawGET, no accessbypass or URLvariantafterfailure.",
+    "No sourcebody/graph/citydefault derived from relatives/workplace/death/footer; knownbirthplacegeography leftunknown whereunqualified.",
+    "No fullsourcePDF/HTML/image/cache/contact/familydetailsredistributed; onlyminimalfactsandboundedquotes.",
+    "No sourceDOB/calendar/identity/eligibility/grades/country/QID/coords/mainobjects changed; parentfinaladjudication required."
+  ],
+  "no_master_or_Git_change": true,
+  "no_BaZi_outcomes_or_finalfreeze": true
+}

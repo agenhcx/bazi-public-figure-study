@@ -1,0 +1,149 @@
+{
+  "baseline_commit": "2ba3d1161a6151a1f18dccda25e5073411c06f2c",
+  "reviewed_utc": "2026-11-01T09:03:46.340256+00:00",
+  "purpose": "Offline inspection for an unused bulk current-academician source, bounded to actual v13 cached Academy directory responses.",
+  "network_requests": 0,
+  "queries": 0,
+  "processed_people": 0,
+  "membership_decisions": 0,
+  "dob_decisions": 0,
+  "source_url": "https://www.academie-sciences.fr/les-academiciens",
+  "reopened_actual_sources": [
+    {
+      "scratch_path": "academy_v13_workers/france_a/private_sources/fr13_a_1.html",
+      "bytes": 195743,
+      "sha256": "718840ae72f888ae5e95c8e281c6a02d45eff01574b60b6302c7980af39fe60f",
+      "historical_v13_response_HTTP_status": 200,
+      "current_network_request": false
+    },
+    {
+      "scratch_path": "academy_v13_workers/france_a/private_sources/fr13_a_2.html",
+      "bytes": 195744,
+      "sha256": "ea6665e5aabcf240b9d61b9d5424b45f74387a7f6425e346db1367ac871ea10c",
+      "historical_v13_response_HTTP_status": 200,
+      "current_network_request": false
+    },
+    {
+      "scratch_path": "academy_v13_workers/france_a/private_sources/fr13_a_3.html",
+      "bytes": 195744,
+      "sha256": "953262e87db50e06e701ab494fb821f8f2cab15d3e9b17ef358b511c3596237b",
+      "historical_v13_response_HTTP_status": 200,
+      "current_network_request": false
+    }
+  ],
+  "physical_body_review": {
+    "directory_cards": 8,
+    "bureau_cards": 4,
+    "literal_own_role_status_present": true,
+    "person_to_election_start_records_present": false,
+    "person_to_DOB_records_present": false,
+    "global_current_counts_not_evidence_for_individual_start": true,
+    "presidency_bureau_roles_not_election_dates": true,
+    "future_or_current_slider_domain_not_person_evidence": true
+  },
+  "directory_first_page_cards": [
+    {
+      "profile_url": "https://www.academie-sciences.fr/serge-abiteboul",
+      "name": "Serge Abiteboul",
+      "literal_card_status": "Académicien",
+      "literal_entry_date_present": false,
+      "literal_dob_present": false
+    },
+    {
+      "profile_url": "https://www.academie-sciences.fr/yves-agid",
+      "name": "Yves Agid",
+      "literal_card_status": "Académicien",
+      "literal_entry_date_present": false,
+      "literal_dob_present": false
+    },
+    {
+      "profile_url": "https://www.academie-sciences.fr/francis-albarede",
+      "name": "Francis Albarède",
+      "literal_card_status": "Académicien",
+      "literal_entry_date_present": false,
+      "literal_dob_present": false
+    },
+    {
+      "profile_url": "https://www.academie-sciences.fr/claude-allegre",
+      "name": "Claude Allègre",
+      "literal_card_status": "Membre historique",
+      "literal_entry_date_present": false,
+      "literal_dob_present": false
+    },
+    {
+      "profile_url": "https://www.academie-sciences.fr/genevieve-almouzni",
+      "name": "Geneviève Almouzni",
+      "literal_card_status": "ACADÉMICIENNE",
+      "literal_entry_date_present": false,
+      "literal_dob_present": false
+    },
+    {
+      "profile_url": "https://www.academie-sciences.fr/christian-amatore",
+      "name": "Christian Amatore",
+      "literal_card_status": "Académicien",
+      "literal_entry_date_present": false,
+      "literal_dob_present": false
+    },
+    {
+      "profile_url": "https://www.academie-sciences.fr/diego-sebastian-amigorena",
+      "name": "Diego-Sebastian Amigorena",
+      "literal_card_status": "Académicien",
+      "literal_entry_date_present": false,
+      "literal_dob_present": false
+    },
+    {
+      "profile_url": "https://www.academie-sciences.fr/nalini-anantharaman",
+      "name": "Nalini Anantharaman",
+      "literal_card_status": "ACADÉMICIENNE",
+      "literal_entry_date_present": false,
+      "literal_dob_present": false
+    }
+  ],
+  "actual_observed_public_routes": [
+    {
+      "route": "https://www.academie-sciences.fr/les-academiciens?page=1",
+      "origin": "literal rel=next Voir plus anchor",
+      "kind": "HTML pagination, eight cards per page",
+      "requested": false
+    },
+    {
+      "route": "https://www.academie-sciences.fr/views/ajax",
+      "origin": "drupalSettings.views.ajax_path and ajaxViews members/member display",
+      "kind": "rendered view endpoint; no person records in embedded settings",
+      "requested": false
+    },
+    {
+      "route": "https://www.academie-sciences.fr/search_api_autocomplete/members?display=members&&filter=search_name",
+      "origin": "data-autocomplete-path on literal name-search input",
+      "kind": "name autocomplete",
+      "requested": false
+    },
+    {
+      "route": "/les-academiciens?f%5B0%5D=entry_date%3A%28min%3A__range_slider_min__%2Cmax%3A__range_slider_max__%29",
+      "origin": "drupalSettings.facets.sliders.entry_date.url",
+      "kind": "year-range search template; placeholders not actual member dates",
+      "requested": false
+    }
+  ],
+  "slider_only": {
+    "min": 1925,
+    "max": 2026,
+    "values": [
+      1925,
+      2026
+    ]
+  },
+  "gate_conclusion": "No qualifying new bulk birthdate or literal membership-start evidence in cached body. Do not promote directory counts, filter-domain years, Bureau appointment text, or endpoint existence into person facts. Individual profile links already known; further pagination still requires individual year proof and will not resolve chronology holds.",
+  "first_page_controls": {
+    "Serge Abiteboul": "PROFILE2_b7ddae2f9fce26c6 already identity/DOB approved but formal election_date_conflict=1: Academy December 2008 vs Institut 10 December 2013; no release from directory/facet.",
+    "Diego-Sebastian Amigorena": "PROFILE2_7cd20c7e4bd4dc41 no raw exact DOB; current card only role and theme.",
+    "Francis Albarède": "PROFILE2_e6e007ec7bffed7a no raw exact DOB; current card only role/theme."
+  },
+  "no_repeat_actions": [
+    "No generic directory network refetch",
+    "No guessed JSON/API URLs",
+    "No previously blocked historical archive n155 retry",
+    "No whole-country completion declaration"
+  ],
+  "recommendation": "Park this bulk route unless a later actual source exposes literal own election-start dates or new bulk DOB data."
+}

@@ -1,0 +1,358 @@
+{
+  "schema": "UK_v31_sources_a_geography_v1",
+  "worker": "/root/v26_sources_a continuedasassignedv31sourceA",
+  "written_utc": "2026-11-06T12:39:51.584057+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA4113",
+    "RS_PAST_NA4155",
+    "RS_PAST_NA4680",
+    "RS_PAST_NA6868"
+  ],
+  "intent_file": "v31_a_intent.json",
+  "phase": "geography_only",
+  "counts": {
+    "discovery_queries": 8,
+    "web_navigation_attempts": 5,
+    "parsed_find_operations": 3,
+    "screenshots": 0,
+    "raw_HTTP_or_PDF_GETs": 0,
+    "new_geography_candidates_pending_quality_decision": 1,
+    "new_first_birthplace_candidates": 0,
+    "holds": 3,
+    "new_active_DOB_conflicts": 0,
+    "unused_navigation_budget": 5
+  },
+  "budgets": {
+    "discovery_queries": 8,
+    "navigation_attempts": 10
+  },
+  "candidates": [
+    {
+      "record_id": "RS_PAST_NA4113",
+      "native": {
+        "record_id": "RS_PAST_NA4113",
+        "name": "Harry",
+        "authority_name": "Smith; Harry (1921 - 2011)",
+        "native_dob": "1921-08-07",
+        "raw_birthplace": "Northampton",
+        "birthplace_source_grade": "S1",
+        "birthplace_source_url": "https://catalogues.royalsociety.org/calmview/Record.aspx?src=CalmView.Persons&id=NA4113",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "95a55b4eab16588027d0cd15d9cc73fb91e0ba7599e83006ac03a06e89b7158e"
+      },
+      "candidate_kind": "geography_only_compiled_encyclopedia_explicit_birth_country_pending_parent_quality_decision",
+      "status": "candidate_weak_S3_derived_children_encyclopedia_actual_birth_country_assertion",
+      "existing_raw_birthplace": "Northampton",
+      "existing_birthplace_source_grade": "S1",
+      "existing_birthplace_source_url": "https://catalogues.royalsociety.org/calmview/Record.aspx?src=CalmView.Persons&id=NA4113",
+      "stored_birthplace_modified": false,
+      "source_birthplace_context": "Northampton, England",
+      "source_url": "https://kids.kiddle.co/Harry_Smith_%28microbiologist%29",
+      "source_final_url": "https://kids.kiddle.co/Harry_Smith_(microbiologist)",
+      "source_title": "Harry Smith (microbiologist) facts for kids",
+      "source_author": null,
+      "source_kind": "original_uncredited_children_encyclopedia_page_openly_rewritten_from_selected_Wikipedia_content",
+      "source_grade_proposal": "S3",
+      "geography_source_grade_proposal": "S3",
+      "source_grade_role": "geographic_support_only",
+      "source_grade_basis": "ActualuncreditedcompiledprofileexplicitlystatesfullnativeHarrySmith/exactDOB/lifespan/directNorthamptonEnglandbirth/coherent1921microbiologistcareer. ConservativeS3proposalonlyunderexistinguncreditedcompiledmetadataclass; sourcefooteropenlydescribesWikipedia-basedrewriteforchildren,so provenance/qualityweakandparentmustdecideadmission. Noverifiedprimarybirthauthority/expertbyline/independentorigin/S2/S1claim.",
+      "source_quote": "was born in Northampton, England",
+      "source_quote_word_count": 5,
+      "source_body_ref": "turn6164415view2",
+      "source_locator": "L8/12 HarrySmithmicrobiologisttitle;L14–15 exact7August1921/death10December2011;L25 fullperson/biophyscareer;L34 explicitHarrySmithbornNorthamptonEngland;L36–46 pharmacy1942/chemistry/PortonDownanthrax/Birminghammicrobiology/CBE1993;L59openWikipedia-basedchildrenrewriteprovenance.",
+      "source_birthdate": "1921-08-07",
+      "source_birthdate_precision": "exact_day_in_actual_profile_Born_metadata_and_lead",
+      "source_death_date": "2011-12-10",
+      "source_DOB_matches_native": true,
+      "observed_source_full_name": "Harry Smith",
+      "source_lifespan_native_compatibility": "ActualfullHarrySmith/exactnative1921-08-07/lifespan1921–2011match. Thisis1921microbiologist,notbotanistHarrySmith1935. No initial/nickname/omittedmiddleexceptionorrepair.",
+      "identity_review": [
+        "EveryfullnativeHarrySmithcomponentdirectlystated.",
+        "Exact1921-08-07/death2011-12-10compatiblewithnativeauthority1921–2011; no dayrepair/inference.",
+        "Coherentdistinctivefingerprint: Northamptonpharmacystudies1942; PortonDownfrom1947/anthraxpathogenicity; BirminghamMicrobiologyProfessor; SocietyforGeneralMicrobiologyPresident; CBE1993. Source-onlyanchorsnotallindependentlypresentinnativerow."
+      ],
+      "reviewed_hemisphere_proposal": "north_pending_parent_S3_quality_admission",
+      "reviewed_binding_to_existing_place": "ActualbornclausecontainsstoredNorthamptonlabelwithexplicitEnglandqualifier; exactsamefullsubject/DOB/scientificfingerprint. Consistentgeographicrefinement,nocompetingbirthplaceobserved. KeepstoredNorthampton/S1/cataloguesourceURL/claims/selectedevidence/nativeallfieldsunchanged.",
+      "geographic_basis": "Englandactuallybirth-linkedinthecompiledprofilebornclause,whollynortherncountry/region. Do notderivefromBritishnationality/UniversityofBirmingham/PortonDown/work/death/footer. No nativecountryorcoordinatesassigned.",
+      "publication_date": null,
+      "publication_date_precision": "unknown; currentpagepublicationdateunacquired",
+      "caveats": [
+        "OpenlyWikipedia-basedrewrittenchildrenencyclopediaprovenanceisweak; newEnglandassertionnotverifiedagainstprimarysourceorcreditedbyline. RootmayholdratherthanadoptS3.",
+        "Notclaimedindependentofthealreadyknownencyclopedia/scientificsources.",
+        "OriginalODNBstreet-onlyandMicrobiologySocietyNorthampton-onlyrouteswerenotreopened; theydonotindependentlyconfirmEnglandbirthqualifier.",
+        "GeographygradeS3doesnotmodifyfrozenbirthplacegradeS1orDOBgrades.",
+        "No rawHTTPbytes/status/hash/exactrequesttime acquired."
+      ],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "no_master_or_native_changes": true
+    }
+  ],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA4680",
+      "native": {
+        "record_id": "RS_PAST_NA4680",
+        "name": "Michael Augustine",
+        "authority_name": "Raftery; Michael Augustine (1936 - 2007); biochemist",
+        "native_dob": "1936-02-08",
+        "raw_birthplace": "Galway",
+        "birthplace_source_grade": "S3",
+        "birthplace_source_url": "https://www.mayonews.ie/news/opinion/michael-augustine-raftery-7521177",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "92150016cff5cd39ce6e313bf5a6a6904145aeaa4ca9bd07b2be4516043be78b"
+      },
+      "status": "hold_new_birth_country_abstract_lacks_qualified_actual_DOBprecision",
+      "hold_type": "actualdatebinding_gap_after_publisher403",
+      "reason": "New2025authoredmemoiractualRGheadingcontainsfullMichaelAugustineRafteryandabstractexplicitIrish-born/acetylcholinereceptor/FRS1986scientificfingerprint. Butactualcurrentpageomitsbirthdate/lifespan,whileexact8February1936–1August2007wasobservedonlyinsearchprojection/initialURLslug; neverpromotedtodateproof. Cached1936findmatchesunrelatedrecommendedreferenceyearnotpersonDOB. FirstobservedpublisherDOIclick403stopped. OldMayoage71doesnotmanufactureDOBorallowdatelessnewcountrybypass. Geographyremainsunknown.",
+      "source_url": "https://www.researchgate.net/publication/398085395_Michael_Augustine_Raftery_8_February_1936_-_1_August_2007_8_February_1936_-_1_August_2007",
+      "source_final_url": "https://www.researchgate.net/publication/398085395_Michael_Augustine_Raftery",
+      "source_ref": "turn6164415view0",
+      "source_locator": "L1 fullnative;L3 November2025/L6DOI;L13AngelaVincent/L19DanielRafteryactualauthors;L30Irish-born;L31–33 scientificfingerprint/FRS1986;L42No full-textavailable.",
+      "source_author": "Angela Vincent and Daniel Raftery",
+      "source_kind": "original_authored_scientificmemoir_abstract_on_RGcarrier",
+      "source_birthdate": null,
+      "source_birthdate_precision": "none_in_actual_acquired_heading_or_abstract",
+      "held_birth_country_observation": "Irish-born",
+      "source_quote": "Irish-born scientist",
+      "source_quote_word_count": 2,
+      "geographic_source_grade_adopted": null,
+      "proposed_hemisphere": null,
+      "existing_raw_birthplace": "Galway",
+      "native_unchanged": true,
+      "birthplace_claims_unchanged": true
+    },
+    {
+      "record_id": "RS_PAST_NA4155",
+      "native": {
+        "record_id": "RS_PAST_NA4155",
+        "name": "Leonard George",
+        "authority_name": "Goodwin; Leonard George (1915 - 2008)",
+        "native_dob": "1915-07-11",
+        "raw_birthplace": "Wood Green, London",
+        "birthplace_source_grade": "S2",
+        "birthplace_source_url": "https://history.rcp.ac.uk/inspiring-physicians/leonard-george-goodwin",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "87a4eb3fb0ca61063b9960d861a176787dbe176004a604ebd9ed0851ecd0c497"
+      },
+      "status": "hold_new_original_memoir_birth_city_subarea_only",
+      "hold_type": "no_explicit_birth_country_or_disambiguated_wholeregion",
+      "reason": "Actualnew2021signedmemoirfullbodyconfirmsfullLeonardGeorgeGoodwin/exact11July1915–25November2008/careerandbornWoodGreen,northLondon. NorthLondonhereisacitysubareaofunqualifiedLondon; notautomaticallyEarthNorthernhemisphereorEnglandwithoutallowedwhole-regionrule. AuthorLondonUKaddress/footerandparentsRutland/familymovestoHampsteadarenotbirthcountry. StoredWoodGreenLondonS2unchanged.",
+      "source_url": "https://www.researchgate.net/publication/351139153_Leonard_George_Goodwin_11_July_1915-25_November_2008",
+      "source_ref": "turn6164415view1",
+      "source_locator": "L45–60 originalfulltitle/exactDOB/lifespan/vol71/2021/byMalcolmPeakerFRSandDameBridgetM.OgilvieFRS;L89–91directbirthaccommodationaboveashoeshopWoodGreennorthLondon;L66–84 chemotherapeuticcareer;L64authorUKaddressnotbirthqualifier.",
+      "source_author": "Malcolm Peaker FRS and Dame Bridget M. Ogilvie FRS",
+      "source_kind": "original_signed_scientificmemoir_fullparsedtext_on_carrier",
+      "source_birthdate": "1915-07-11",
+      "source_birthdate_precision": "exact_day_in_originalmemoir_header",
+      "held_source_birthplace_context": "Wood Green, north London",
+      "geographic_source_grade_adopted": null,
+      "proposed_hemisphere": null,
+      "existing_raw_birthplace": "Wood Green, London",
+      "native_unchanged": true,
+      "birthplace_claims_unchanged": true
+    },
+    {
+      "record_id": "RS_PAST_NA6868",
+      "native": {
+        "record_id": "RS_PAST_NA6868",
+        "name": "Roger Philip",
+        "authority_name": "Ekins; Roger Philip (1926 - 2016)",
+        "native_dob": "1926-09-22",
+        "raw_birthplace": "London",
+        "birthplace_source_grade": "S2",
+        "birthplace_source_url": "https://doi.org/10.1098/rsbm.2023.0020",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "f0484efb977e51434ed70725714c921bc510672c7dbfa314ab006cd12bdc21ce"
+      },
+      "status": "hold_no_new_original_birth_country_region_context",
+      "hold_type": "unqualified_London_unresolved",
+      "reason": "ActualnewencyclopediapageprovidesRogerEkins/exactnativeDOB/lifespan/biophysicscareerandreferencesfullRogerPhilipEkinsmemoir/WhosWho,butnoacquiredbirth-country/wholeregionclaim. No fieldcandidateadoptedandno initial/middleexceptiontriggeredbecausegeographicassertionabsent. ClosedoldpublisherPDF403/London-onlyabstractnotreopened. Britishnationality/UCLwork/residenceaddressesdonotqualifyLondonbirth. AnewRoyalSocietysearchprojectiondeathexact27July2016wasnotacquiredasoriginalbody/notqualifiednewendpointsidecarorDOBconflict.",
+      "source_url": "https://en.wikipedia.org/wiki/Roger_Ekins",
+      "source_ref": "turn3137353view0",
+      "source_locator": "L107name/exactDOB/life;L112–122scientificcareer/death;L126originalmemoircitationfullRogerPhilipEkins;L127WhosWholink; nobirthcountrycontextused.",
+      "geographic_source_grade_adopted": null,
+      "proposed_hemisphere": null,
+      "existing_raw_birthplace": "London",
+      "native_unchanged": true,
+      "birthplace_claims_unchanged": true
+    }
+  ],
+  "new_active_DOB_conflicts": [],
+  "query_ledger": [
+    {
+      "query_index": 1,
+      "engine": "system2",
+      "query": "\"Michael Augustine Raftery\" born Ireland",
+      "response_ref_prefix": "turn2925228search",
+      "intent_note": "Initialfourwordingsprewritten; adaptive5–8generalpurposeprewrittenbutexactwordingschosenafterobservedinitialresults; exactrequestUTCunknownnotbackdated."
+    },
+    {
+      "query_index": 2,
+      "engine": "system2",
+      "query": "\"Leonard George Goodwin\" born England",
+      "response_ref_prefix": "turn2925228search",
+      "intent_note": "Initialfourwordingsprewritten; adaptive5–8generalpurposeprewrittenbutexactwordingschosenafterobservedinitialresults; exactrequestUTCunknownnotbackdated."
+    },
+    {
+      "query_index": 3,
+      "engine": "system2",
+      "query": "\"Roger Philip Ekins\" born England",
+      "response_ref_prefix": "turn2925228search",
+      "intent_note": "Initialfourwordingsprewritten; adaptive5–8generalpurposeprewrittenbutexactwordingschosenafterobservedinitialresults; exactrequestUTCunknownnotbackdated."
+    },
+    {
+      "query_index": 4,
+      "engine": "system2",
+      "query": "\"Harry Smith\" \"1921\" born Northampton England",
+      "response_ref_prefix": "turn2925228search",
+      "intent_note": "Initialfourwordingsprewritten; adaptive5–8generalpurposeprewrittenbutexactwordingschosenafterobservedinitialresults; exactrequestUTCunknownnotbackdated."
+    },
+    {
+      "query_index": 5,
+      "engine": "system1",
+      "query": "\"Harry Smith\" microbiologist \"born\" \"England\"",
+      "response_ref_prefix": "turn8040524search",
+      "intent_note": "Initialfourwordingsprewritten; adaptive5–8generalpurposeprewrittenbutexactwordingschosenafterobservedinitialresults; exactrequestUTCunknownnotbackdated."
+    },
+    {
+      "query_index": 6,
+      "engine": "system1",
+      "query": "\"Roger Ekins\" \"born\" London UK",
+      "response_ref_prefix": "turn8040524search",
+      "intent_note": "Initialfourwordingsprewritten; adaptive5–8generalpurposeprewrittenbutexactwordingschosenafterobservedinitialresults; exactrequestUTCunknownnotbackdated."
+    },
+    {
+      "query_index": 7,
+      "engine": "system1",
+      "query": "\"Leonard Goodwin\" \"born\" Middlesex",
+      "response_ref_prefix": "turn8040524search",
+      "intent_note": "Initialfourwordingsprewritten; adaptive5–8generalpurposeprewrittenbutexactwordingschosenafterobservedinitialresults; exactrequestUTCunknownnotbackdated."
+    },
+    {
+      "query_index": 8,
+      "engine": "system1",
+      "query": "\"Michael Raftery\" \"born\" Galway Ireland",
+      "response_ref_prefix": "turn8040524search",
+      "intent_note": "Initialfourwordingsprewritten; adaptive5–8generalpurposeprewrittenbutexactwordingschosenafterobservedinitialresults; exactrequestUTCunknownnotbackdated."
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "attempt": 1,
+      "subject": "RS_PAST_NA4680",
+      "url": "https://www.researchgate.net/publication/398085395_Michael_Augustine_Raftery_8_February_1936_-_1_August_2007_8_February_1936_-_1_August_2007",
+      "ref": "turn6164415view0",
+      "final_url": "https://www.researchgate.net/publication/398085395_Michael_Augustine_Raftery",
+      "outcome": "Genuinelyneworiginal2025memoirabstractcarriedonRGacquired; fullnative/Irish-born/careerbutactualcurrentpagehasnoqualifiedDOB/lifespan; searchprojectionexactdatesnotpromoted"
+    },
+    {
+      "attempt": 2,
+      "subject": "RS_PAST_NA4155",
+      "url": "https://www.researchgate.net/publication/351139153_Leonard_George_Goodwin_11_July_1915-25_November_2008",
+      "ref": "turn6164415view1",
+      "outcome": "Neworiginal2021signedscientificmemoirfullparsedbodyacquired; fullnative/exactDOB/lifespan/career/bornWoodGreennorthLondonbutnoacquiredbirthcountry/wholeregiondisambiguation"
+    },
+    {
+      "attempt": 3,
+      "subject": "RS_PAST_NA4113",
+      "url": "https://kids.kiddle.co/Harry_Smith_%28microbiologist%29",
+      "ref": "turn6164415view2",
+      "outcome": "Newactualcompiledchildrenencyclopediabodyfullnative/exactDOB/lifespan/directNorthamptonEngland/career/footerprovenanceread; weakS3proposalpendingparentdecision"
+    },
+    {
+      "attempt": 4,
+      "subject": "RS_PAST_NA6868",
+      "url": "https://en.wikipedia.org/wiki/Roger_Ekins",
+      "ref": "turn3137353view0",
+      "outcome": "Newactualencyclopediabody/citationsacquired; nobirthcountrycontextread; city/work/nationalitynotsubstituted"
+    },
+    {
+      "attempt": 5,
+      "subject": "RS_PAST_NA4680",
+      "url": "https://doi.org/10.1098/rsbm.2025.0005",
+      "operation": "clickobservedDOIlink1fromturn6164415view0",
+      "ref": "turn9315520view0",
+      "outcome": "Failedtofetch:(403)Forbidden; stopped; no publisherPDF/DOIvariants/rawGET/accessbypass"
+    }
+  ],
+  "parsed_find_ledger": [
+    {
+      "input_ref": "turn6164415view0",
+      "pattern": "1936",
+      "result_ref": "turn3137353view1",
+      "outcome": "ActualmatchatunrelatedrecommendedreferenceOct1936,notRafterypersonDOB; nostatedDOBmanufactured"
+    },
+    {
+      "input_ref": "turn6164415view0",
+      "pattern": "Authors:",
+      "result_ref": "turn3137353view2",
+      "outcome": "ActualAngelaVincent/DanielRafterybyline/Irish-bornabstract; nofulltext"
+    },
+    {
+      "input_ref": "turn6164415view1",
+      "pattern": "England",
+      "result_ref": "turn9315520view1",
+      "outcome": "Cachedsourceheader/currentrepresentationdisplayed; selectiveoutputfilteromittedterminalmatch-statusdetail. No absent-England-or-matchfindinginferredfromthatlimiteddisplay,norepeatedcall."
+    }
+  ],
+  "prior_context_audit": {
+    "before_all_queries": "Fulluniquev16Raftery/v17Goodwinacceptedfactsandv12Harry/v13Ekinsholdsread,plusfulltargetedcurrentBPselectedevidence/geographycontexts(includingnestedEkinsv6Crossrefabstractfacts),notholdsonly.",
+    "review_file": "v31_a_prior_context_review.json",
+    "pre_navigation_newwork_check": "Beforeopeningnewworks, exactRGpublicationids398085395/351139153,newODNB580496700andKiddleHarryURLtokensscannedacrossallpriorv30inputs/auditJSON; nohits. Knownoldsourceworkswereexcludedfromopens.",
+    "quote_check": "PriorfrozenMayoquote5whitespacewords/RCPGoodwinquote12/HarryoldODNBstreetquote12/Ekinsoldmemoirbirthclaim7 remainfrozen; nonewquotestothoseworks. NewKiddle5/newRafterymemoir2; newGoodwinmemoir0quote. Countsareconservativewhitespacecountsandnotnewsourcequotations."
+  },
+  "quote_ledger": [
+    {
+      "work": "https://kids.kiddle.co/Harry_Smith_%28microbiologist%29",
+      "quote": "was born in Northampton, England",
+      "new_words": 5,
+      "prior_frozen_quote_words_known": 0,
+      "role": "geographic_support_only_pendingweakS3qualitydecision"
+    },
+    {
+      "work": "https://www.researchgate.net/publication/398085395_Michael_Augustine_Raftery_8_February_1936_-_1_August_2007_8_February_1936_-_1_August_2007",
+      "quote": "Irish-born scientist",
+      "new_words": 2,
+      "prior_frozen_quote_words_known": 0,
+      "role": "heldactualcountryadjective,nodatebinding"
+    },
+    {
+      "work": "https://www.researchgate.net/publication/351139153_Leonard_George_Goodwin_11_July_1915-25_November_2008",
+      "quote": "",
+      "new_words": 0,
+      "prior_frozen_quote_words_known": 0,
+      "role": "heldneworiginalmemoircitysubareaonly"
+    }
+  ],
+  "protocol_deviations": [
+    {
+      "type": "selective_display_terminal_status_omission",
+      "description": "GoodwinEnglandcachedfindresultselectiveprintretainedsourceheaderbutomittedterminalmatch-statusdetail. Itdoesnotjustifyabsence/matchclaim,noretrymade. Fulloriginalbirthclauselimitsarebasedonactualfirstbodyobservation."
+    }
+  ],
+  "limits": [
+    "OneweakS3derivedencyclopediacandidatependingparentqualitydecision; noautomaticofficial/independentgeographicconfirmation.",
+    "RafteryfullnativeIrish-bornabstractcannotbypasstheactualDOBprecisiongate; URLslug/searchprojectiondatesandoldMayoage71notmanufacturedbirthdates.",
+    "GoodwinnorthLondonbirthsubareaobservedbutEarthNorthernhemisphere/Englandnotinferred; authorUKaddressnotborncontext.",
+    "EkinsclosedpublisherPDFrouteuntouched; currentWikiwork/nationality/residence/careerdoesnotresolveLondon.",
+    "AllrawBP/grades/sourceURLs/claims/nativecountry/coords/DOB/identity/eligibility/priorfactsremainunchanged. Nineinheritedissuefilesuntouched; no code/study/main/Gitchanges.",
+    "No fullsourceHTML/PDF/images/searchprojectioncaches/rawbytesretainedordistributed; exactHTTP/requesttime/hashunknownnull."
+  ],
+  "no_master_or_native_changes": true,
+  "unopened_distinct_original_leads": [
+    {
+      "record_id": "RS_PAST_NA4155",
+      "url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/580496700",
+      "ref": "turn2925228search1",
+      "limit": "NewworkdiscoveryprojectionstreetWoodGreenLondononly,noadditionalcountry; notopened/notclaimedbodyproof."
+    },
+    {
+      "record_id": "RS_PAST_NA6868",
+      "url": "https://royalsociety.org/people/roger-ekins-11386/",
+      "ref": "turn8040524search2",
+      "limit": "Searchprojectioncareer/death27July2016only,nobirthregion; notopened/notnewqualifiedendpointconflict."
+    }
+  ]
+}

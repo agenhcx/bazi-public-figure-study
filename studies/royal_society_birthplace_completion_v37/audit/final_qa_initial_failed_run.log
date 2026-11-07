@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/262552d8c0f0/qa_v37_final.py", line 143, in <module>
+    check('sourceQA binds declared method schema application and actual proof modes',sourceqa['method_schema_sha256_at_review']==sha(S/'METHOD_SCHEMA.md') and sourceqa['method_application_scope_sha256_at_review']==sha(scope_path) and set(sourceqa['method_review']['actual_qualified_proof_modes'])=={f['proof_mode'] for f in facts} and sourceqa['method_review']['prior_Kiddle_mirrors_not_retroapproved'] is True)
+                                                                                                                                                                                                                                              ~~~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'method_review'

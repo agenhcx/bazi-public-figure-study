@@ -1,0 +1,54 @@
+{
+  "written_utc": "2026-11-06T11:18:21.694681+00:00",
+  "scope_file": "v28_scope_c.json",
+  "purpose": "First original-source directbirthplace collection for exactly four frozen UKsubjects. Observed native lifespan/name issues are not repaired; explicit conflict/precision/qualifiedv20endpoint exception only if allgatesactuallymet.",
+  "planned_queries": [
+    "\"Leslie Clifford Bateman\" born",
+    "\"William Lionel Wilkinson\" born",
+    "\"Richard Henry Treisman\" born",
+    "\"Charon Robin Ganellin\" born"
+  ],
+  "general_adaptive_query_purpose_before_work": "Reserve one actual adaptive query per subject, maximum8total, to find original memoir/institutionalbiography or resolve observed carrier/link/identitycontext (without native repair or sourceDOBconflictbypass). Exact adaptivequery and navigation intents recordedbeforecalls.",
+  "budgets": {
+    "queries": 8,
+    "navigation_attempts": 10
+  },
+  "source_rules": "Fullnativecomponents/actuallycompatibleDOBprecision/distinctivecareer/directsubjectbirth. No component substitution/initialexpansion. Existingv24omittedmiddle strictgates only. Nativeendpoints retained; v20specificdeathendpoint exception requires actualexactDOB/allfullname/additionaloriginalinstitutionalcontext/uniquekey/noDOBconflict/eligibilityeffect. S2actualauthoredgenre/verifiedexpert; conservativeS3otherwise; gradesbirthplaceonly. Cityaloneunknowngeo; directlybirthlinkedcountry/wholecountyregion supporthemisphere. <=25quotewords perwork; no fullsourcecaches,failedroute retries/variants/bypass/rawGET. UnknownrawHTTPtime/status/hashnull.",
+  "adaptive_intents": [
+    {
+      "written_utc": "2026-11-06T11:18:53.202598+00:00",
+      "purpose": "Find originalBatemanobituary with actualDOB precision, Wilkinsonfullnative31birthyear versus industrialprofile, Treismanoriginalprizebiography birthrelationship/fullmiddle/actualendpoint context, and Ganellinoriginalinstitutional confirmation/genre. No expansion or correction of nativecomponents.",
+      "queries": [
+        "\"Leslie Clifford Bateman\" obituary born",
+        "\"William Lionel Wilkinson\" \"1931\" biography",
+        "\"Richard Treisman\" \"born\" \"Oxford\" Jeantet",
+        "\"Charon Robin Ganellin\" biography birth"
+      ],
+      "opens": [
+        "turn8818428search0 actualNIHFfullnativeGanellin biography/directbornLondonEngland/exactnativeDOB"
+      ]
+    }
+  ],
+  "post_observation_protocol_note": {
+    "written_utc": "2026-11-06T11:19:52.689643+00:00",
+    "timing": "AFTER actualnavigationcalls, not backdated",
+    "detail": "An attempted exactnavigationintent append for BatemanWikipedia/WilkinsonnativeRSseed/TreismanJeantet failed with PythonSyntaxError. The samefunctions cell then proceeded to network without checking failedcommand exitcode. Generaladaptivepurpose existed beforediscovery, but this exactnavigationlist was not successfullywritten beforecalls. These3actualnavigationevents thereforehave lateexplicitintent documentation, not claimed fullyprospective. No retry or dataadoption occurred from this issue.",
+    "actual_navigations_already_observed": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Leslie_Clifford_Bateman",
+        "ref": "turn2750873view0",
+        "purpose": "Linkcarrier to actualoriginalNSTobituary; no sourcebodybirthplace adopted."
+      },
+      {
+        "url": "https://catalogues.royalsociety.org/calmview/Record.aspx?src=CalmView.Persons&id=NA3961",
+        "ref": "turn2750873view1",
+        "purpose": "FirstnativeRSrecord toinspect explicitbirthplace, failedtoolnotaccessible stopped."
+      },
+      {
+        "url": "https://www.jeantet.ch/en/laureat/doctor-richard-treisman/",
+        "ref": "turn2750873view2",
+        "purpose": "Actualoriginalprizebiography fullscope/date/name/birthrelation; birthyearonly/no birthplace/no middlename Henry."
+      }
+    ]
+  }
+}

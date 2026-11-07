@@ -1,0 +1,33 @@
+{
+  "worker": "v9_france_a",
+  "baseline_commit": "928c3a5444bba55e421b400c2579e8ac5a29d0f9",
+  "completed_utc": "2026-10-30T01:14:52.450677+00:00",
+  "fixed_queue_count": 30,
+  "processed_count": 30,
+  "targeted_search_people": 30,
+  "not_targeted_searched_people": 0,
+  "search_query_count": 44,
+  "distinct_url_attempt_count": 15,
+  "actual_source_access_operation_count": 19,
+  "captured_original_pdf_count": 9,
+  "actual_pdf_visual_page_count": 23,
+  "new_decision_count": 9,
+  "strict_membership_approved_count": 7,
+  "role_cutoff_only_hold_count": 1,
+  "election_event_role_untyped_hold_count": 1,
+  "role_or_event_only_hold_count": 2,
+  "unresolved_parked_count": 21,
+  "identity_dob_modified_count": 0,
+  "bazi_variables_computed": 0,
+  "cohort_accepted": false,
+  "analysis_frozen": false,
+  "source_body_redistributed": false,
+  "independent_qa_status": "pending_v9_france_b",
+  "limitations": [
+    "Historical person-level targeted coverage was unknown, not classified as never searched.",
+    "Six single official filename probes returned404 and were not retried with suffix variants.",
+    "Flahault formal role is supported by1936; actual election/start remains unresolved.",
+    "Accepted source precision remains literal: two accepted years only and five accepted exact days; one further exact day remains an untyped event hold.",
+    "Search outcomes and original-body approvals are reported separately; no national exhaustion."
+  ]
+}

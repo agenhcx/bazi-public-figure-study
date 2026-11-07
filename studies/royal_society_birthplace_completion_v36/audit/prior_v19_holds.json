@@ -1,0 +1,88 @@
+[
+  {
+    "record_id": "RS_CURRENT_11792",
+    "native_dob": "1947-04-22",
+    "authority_name": "",
+    "hold_type": "hold_no_new_explicit_birthplace_body",
+    "reason": "Parent followed visible new AE CV attachment and read five-page original CV: exact native1947-04-22 and full stored-name components plus source initialL, but no birthplace. Danish citizenship/residence, Aalborg job and Oxford address are not birthplace. Earlier KU timeout not retried.",
+    "source_audit_file": "audit/sources_c.json",
+    "no_master_change": true,
+    "native_full_name": "Steffen Lauritzen",
+    "parent_followup_file": "audit/root_followups.json",
+    "source_birthdate_observed": "1947-04-22",
+    "source_birthdate_precision": "exact_day_in_CV_personal_information_field; no birthplace"
+  },
+  {
+    "record_id": "RS_CURRENT_37377",
+    "native_dob": "1975-12-13",
+    "authority_name": "",
+    "hold_type": "hold_no_explicit_birthplace_in_acquired_original_bodies",
+    "reason": "Original Wiley author profile explicitly gives native full English name and exact1975-12-13 plus distinctive NTU/Fuzhou/Muenster career, but contains no birthplace. Original NTU PI page likewise gives career only. Chinese discovery query produced a university-visit report, not a born-place claim; no hometown, nationality, education or employer inference.",
+    "source_audit_file": "audit/sources_c.json",
+    "no_master_change": true,
+    "native_full_name": "Xiaodong Chen"
+  },
+  {
+    "record_id": "RS_PAST_NA3912",
+    "native_dob": "1938-05-16",
+    "authority_name": "Tooze; John (1938 - 2021); molecular biologist",
+    "hold_type": "hold_no_original_born_place_body_within_budget",
+    "reason": "Original EMBO biography and EMBL obituary bodies concern matching JohnTooze/EMBO career but no explicit born/place clause was observed; born finds no match. Original EMBL oral-history PDF returned tool-reported502 and was stopped without retry. Search-only Wikipedia birthplace lead not adopted.",
+    "source_audit_file": "audit/sources_b.json",
+    "no_master_change": true
+  },
+  {
+    "record_id": "RS_PAST_NA3979",
+    "native_dob": "1928-01-02",
+    "authority_name": "Jarrett; William Fleming Hoggan (1928 - 2011)",
+    "hold_type": "hold_no_original_birthplace_body",
+    "reason": "Original Glasgow body provides full native components, compatible birthyear and distinctive veterinary pathology career, but no explicit subject-born/place clause. Glasgow education, employment or footer not birthplace. Search-only wiki birthplace not adopted.",
+    "source_audit_file": "audit/sources_a.json",
+    "no_master_change": true
+  },
+  {
+    "record_id": "RS_PAST_NA4124",
+    "native_dob": "1917-01-03",
+    "authority_name": "Finney; David John (1917 - 2018)",
+    "hold_type": "hold_original_birthplace_body_not_acquired",
+    "reason": "Worker original IMS HTML502 followed by parent original BulletinPDF502 and journalDOI tool-inaccessibility. All stopped, no retries; no acquired original born-place clause. Strong search projection remains a lead, not adopted.",
+    "source_audit_file": "audit/sources_c.json",
+    "no_master_change": true,
+    "parent_followup_file": "audit/root_followups.json"
+  },
+  {
+    "record_id": "RS_PAST_NA4485",
+    "native_dob": "1929-06-03",
+    "authority_name": "Laver; William Graeme (1929 - 2008)",
+    "hold_type": "original_profile_header_birthyear_conflict",
+    "reason": "Original ANU-hosted profile heading explicitly1925–2008 conflicts with native1929. Same full-name/influenza/ANU/Webster career strongly binds subject, while body says diedaged79 in2008, internally compatible with1928/1929 rather than1925. Separate original Webster obituary header1929–2008 agrees native birthyear but supplies no exact own day. Do not choose or repair a date, dismiss the contrary header as a proven typo, or silently adopt birthplace under the date-conflict gate. Parent adjudication required; this is specifically a profile-header birthyear conflict, not a conflicting exact-day born sentence.",
+    "source_audit_file": "audit/sources_a.json",
+    "no_master_change": true,
+    "source_header_birthyear": "1925",
+    "source_date_precision": "birthyear_in_profile_lifespan_header_only",
+    "native_birthdate_preserved": "1929-06-03",
+    "source_url": "https://oa.anu.edu.au/obituary/laver-william-graeme-graeme-18708",
+    "source_DOB_conflict_active": true,
+    "source_date_conflict_detail": "ANU profile heading1925–2008 conflicts with frozen1929 birthyear; body age79 and original Webster1929–2008 heading are compatible with native year but do not prove a typo or correct date. No exact day confirmed by these source observations.",
+    "unadopted_birthplace_lead": "Diamond Creek, Victoria, described as a small town now outer suburb of Melbourne",
+    "conflict_policy": "Keep hold pending separate date/source-header adjudication; do not bypass with dateless place material or silently dismiss the contrary heading."
+  },
+  {
+    "record_id": "RS_PAST_NA4601",
+    "native_dob": "1928-05-05",
+    "authority_name": "Mitchison; Nicholas Avrion (1928 - 2022); zoologist and immunologist",
+    "hold_type": "hold_no_available_original_birthplace_body",
+    "reason": "Original EJI PDF route redirects to abs page containing authors/date/references only and no available born/place body; its distinct full-text route inaccessible. Distinct original Scandinavian Journal of Immunology full route returned403, stopped. Original BSI memorial body supplies full Nicholas Avrion and scientific career/lifespan but no birthplace. Search-only Hammersmith,London and exact DOB snippets are not adopted.",
+    "source_audit_file": "audit/sources_a.json",
+    "no_master_change": true
+  },
+  {
+    "record_id": "RS_PAST_NA4627",
+    "native_dob": "1921-12-27",
+    "authority_name": "Northcote; Donald Henry (1921 - 2004)",
+    "hold_type": "hold_original_memoir_birthplace_body_unavailable",
+    "reason": "ResearchGate carrier of original memoir exposed metadata/abstract and request-fulltext prompt; no subject birth-place clause observed. Original RoyalSociety memoir URL returned tool-reported403 and stopped without retry. Neither abstract career nor Cambridge affiliations supply birthplace.",
+    "source_audit_file": "audit/sources_b.json",
+    "no_master_change": true
+  }
+]

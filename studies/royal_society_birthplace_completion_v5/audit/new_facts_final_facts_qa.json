@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "accepted_facts_checked": 20,
+  "by_route": {
+    "memoir_remaining": 2,
+    "early_memoirs": 18
+  },
+  "identity_or_birthplace_hold_count_among_accepted": 0,
+  "source_hash_and_excerpt_checks": true,
+  "native_DOB_and_acceptance_unchanged": true,
+  "base_sha256": "9336e72186f8f7dd475b4b0bac432c324e9661acfd6256240fd8cc6d7ca40be3",
+  "accepted_input_sha256": {
+    "memoir_remaining": "2af6cc1bcc0a196635d673364724a223ec54faa4cffe9e9973f5ebad0b60d6ca",
+    "early_memoirs": "e0bfe21cde111bd718c70701c477de94e3890c56b8868e14a230fa4e03dd981d"
+  },
+  "early_memoirs_operation_audit": {
+    "actual_attempted_and_cached_review_scope": 32,
+    "HTTP200": 32,
+    "completed_before_stop_observation": 16,
+    "in_flight_at_recorded_stop": 2,
+    "request_started_after_recorded_stop": 14,
+    "coverage_sha256": "144676813f6ae26c486227286f73e2f4fd4ba7c1f0e8bbf85168e9a509817c08",
+    "operation_stop_audit_sha256": "bc87400e22ac6f2946f0b07af30bcd395147d545b16df4f900d44f4daf8fa8c6",
+    "note": "The 14 new starts after shared stop and 2 in-flight requests are retained as an operational event, not hidden or counted as only16attempted. Independent fact QA used already saved responses offline under the same identity and explicit-birthplace criteria. No new network requests were made by QA."
+  },
+  "special_cases": {
+    "Alec_Alexander_Sand": "Same paragraph explicitly links the same child Alec with Alexander Sand; own birth supported.",
+    "Gye_Bullock": "Surname change explicitly stated; own Breaston birth differs from father Adsett, native1884 unchanged.",
+    "Robison_Robinson": "Held by producer; no birthplace accepted in these inputs."
+  },
+  "notes": "Independent reading of cached original abstracts; original full names/lifespans and subject references reviewed manually, SHA/native DOB/excerpts checked mechanically. Birthplace grade S2 is independent of native DOB grade. No repo, native date or formal flag changed."
+}

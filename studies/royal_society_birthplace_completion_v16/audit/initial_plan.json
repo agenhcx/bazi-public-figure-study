@@ -1,0 +1,60 @@
+{
+  "written_utc": "2026-11-05T00:08:06.529456+00:00",
+  "baseline_commit": "46dc95e5acf3785f21ebf256683cbda6e6fb5449",
+  "scope_record_ids": [
+    "RS_PAST_NA3088",
+    "RS_PAST_NA3964",
+    "RS_PAST_NA4211",
+    "RS_PAST_NA4680",
+    "RS_PAST_NA5416",
+    "RS_PAST_NA3971",
+    "RS_PAST_NA4568",
+    "RS_PAST_NA4774",
+    "RS_PAST_NA4050",
+    "RS_PAST_NA6870",
+    "RS_PAST_NA6897",
+    "RS_PAST_NA4863"
+  ],
+  "source_groups": {
+    "a": [
+      "RS_PAST_NA3088",
+      "RS_PAST_NA3964",
+      "RS_PAST_NA4211",
+      "RS_PAST_NA4680"
+    ],
+    "b": [
+      "RS_PAST_NA5416",
+      "RS_PAST_NA3971",
+      "RS_PAST_NA4568",
+      "RS_PAST_NA4774"
+    ],
+    "c": [
+      "RS_PAST_NA4050",
+      "RS_PAST_NA6870",
+      "RS_PAST_NA6897",
+      "RS_PAST_NA4863"
+    ]
+  },
+  "target_pool": 164,
+  "source_strategy": "New university/archival profiles and signed original memoirs, avoiding already closed repeated routes. Individual original-body opportunities, not a statistical sample or source-blind preregistration.",
+  "per_group_limits": {
+    "queries": 6,
+    "original_navigations": 8
+  },
+  "admission": "Full native identity and compatible source date precision plus distinguishing anchors; exact date preferred. Explicit birth clause required. Do not infer or replace native day from partial dates. Source date conflicts held. First birthplace can be accepted while geography unknown.",
+  "frozen": [
+    "DOB",
+    "calendar",
+    "identity",
+    "eligibility",
+    "QID",
+    "DOB_source_grades",
+    "country",
+    "coordinates",
+    "prior_evidence",
+    "untargeted_objects"
+  ],
+  "grade_roles": "New person-birthplace support separate from DOB grades; S2 conservative for edited/original institutional narratives, weaker uncredited life notices S3 with explicit caveats.",
+  "quotes": "<=25 English words per source; original fulltexts/raw PDFs stay scratch, not distributed.",
+  "no_outcomes_or_statistical_dedup": true
+}

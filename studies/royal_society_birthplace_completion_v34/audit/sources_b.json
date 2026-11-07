@@ -1,0 +1,313 @@
+{
+  "written_utc": "2026-11-06T23:15:00.307225+00:00",
+  "group": "b",
+  "phase": "geography_only_v34",
+  "intent_file": "v34_b_intent.json",
+  "full_prior_context_before_queries": true,
+  "all_intent_writes_completed_exit0_separate_before_webcalls": true,
+  "retrieval_counts": {
+    "queries": 8,
+    "navigation_attempts": 6,
+    "source_open_operations": 5,
+    "click_operations": 1,
+    "parsed_finds": 1,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "query_ledger": [
+    {
+      "engine": "system2",
+      "queries": [
+        "\"Albert Charles Chibnall\" born England",
+        "\"Edmund James Mills\" born England",
+        "\"Alan Sterling Parkes\" born Lancashire",
+        "\"James McFadyen McNeill\" born Scotland"
+      ],
+      "result_collection": "turn9006007",
+      "role": "discoveryonlynotbodyproof"
+    },
+    {
+      "engine": "system1",
+      "queries": [
+        "\"Albert Charles Chibnall\" born \"London, England\"",
+        "\"Edmund James Mills\" biography born",
+        "\"Alan Sterling Parkes\" \"born\" \"Lancashire\"",
+        "\"James McFadyen McNeill\" \"born\" Clydebank"
+      ],
+      "result_collection": "turn3425643",
+      "role": "discoveryonlynotbodyproof"
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "record_id": "RS_PAST_NA645",
+      "url": "https://trumpingtonlocalhistorygroup.org/people/f7063.htm",
+      "ref": "turn6978585view0",
+      "status": "actual_original_compiled_genealogy_body",
+      "locator": "L18fullAlanSterlingParkes/L19SirAlanParkes;L25directBorn10Sep1900inLancashire;L27ReproductiveBiologist/L28death1990;L47FreeBMDsource/L50Biographyonline;L57Dec1900Rochdale8e11indexnote;L58deathindexborn10Sep1900",
+      "finding": "Fullnative/exactDOB/directBornLancashire/reproductiveprofession/deathyear1990, candidateS3geoonly.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed actualbody, not rawHTTPbytes"
+    },
+    {
+      "record_id": "RS_PAST_NA645",
+      "url": "https://www.hulmegrammar.org/ArchiveWebPages/ww1/ww1boys.html",
+      "ref": "turn6978585view1",
+      "status": "actual_original_schoolhistory_body_then_cachedfind",
+      "locator": "Firstopenunrelatedearlierboysexcluded;matchedParkeslaterturn6900056view0L2109-2113",
+      "finding": "Supportfullnative/exactDOB/Castleton/career; noprincipalborncountyfromthiscityonlysource.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed actualbody, not rawHTTPbytes"
+    },
+    {
+      "record_id": "RS_PAST_NA6313",
+      "url": "https://www.mkheritage.org.uk/sherington/people/individuals/sherington-historical-society-a-c-chibnall/",
+      "ref": "turn6978585view2",
+      "status": "actual_local_history_biography_with_explicit_archival_text_attribution",
+      "locator": "L72life1894-1988;L73fullnative/exactDOB/directLondon;L75-83proteinbiochemistrycareer/death1988-01-10;L84explicitbasedHarper/PowellUniversityBath1998biographicalwebpage;L93separateWikipedialink",
+      "finding": "Actualfullnative/exactDOB/career but cityLondononly. ReturntoEngland1924notbirthcountry. UnderlyingBathtextprovenanceexplicit; no country/gradechange or independenceclaim.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed actualbody, not rawHTTPbytes"
+    },
+    {
+      "record_id": "RS_PAST_NA661",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Kerr/",
+      "ref": "turn6978585view3",
+      "status": "actual_original_MacTutor_Kerrbiography_relevant_McNeill_quote",
+      "locator": "L29literalfullJamesMcFadyenMcNeillschoolquote;L48McCance1965memoirreference",
+      "finding": "FullnativeMcNeillnamedinKerrteachingnarrative, no actualMcNeillDOB/bornregion. KerrGirvanScotlandnotMcNeillbirthplace; reference1965worknotopened.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed actualbody, not rawHTTPbytes"
+    },
+    {
+      "record_id": "RS_PAST_NA661",
+      "url": "https://translate.academic.ru/a%20difficult%20subject/xx/en/",
+      "ref": "turn4553961view0",
+      "status": "actual_named_reference_excerpt_carrier_body",
+      "locator": "L67fullMcNeillSirJamesMcFadyen;L73directb19August1892ClydebankScotland;L75d24July1964;L78-85navalarchitect/Cunardliners/JohnBrown/MDcareer;L95FMW/L96Biographicalhistoryoftechnologyworktitleandcanonicalentrylink49",
+      "finding": "Fullnative/exactDOB/directClydebankScotland/distinctivecareer/FMWsignature; originalbookeditorialprovenanceunverified, parentclassreview.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed actualbody, not rawHTTPbytes"
+    },
+    {
+      "record_id": "RS_PAST_NA661",
+      "url": "observedlink49atturn4553961view0",
+      "ref": "turn8077345view0",
+      "status": "first_canonical_entry_click_tool500redirect_notaccessible_nonretryable_STOPPED",
+      "locator": null,
+      "finding": "Canonicalbodyunacquired, no retry/URLvariant. Actualpriorportalbodyownrolepreserved.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed actualbody, not rawHTTPbytes"
+    }
+  ],
+  "parsed_find_ledger": [
+    {
+      "source_ref": "turn6978585view1",
+      "pattern": "Alan Sterling Parkes",
+      "result_ref": "turn6900056view0",
+      "status": "actualsubjectmatched",
+      "locator": "L2109fullnative/L2111exactDOBcity/L2113career",
+      "source_total_lines": 3180
+    }
+  ],
+  "candidates": [
+    {
+      "record_id": "RS_PAST_NA645",
+      "native": {
+        "record_id": "RS_PAST_NA645",
+        "source_authorised_full_name": "Parkes; Sir; Alan Sterling (1900 - 1990)",
+        "dob": "1900-09-10",
+        "raw_birthplace": "Bank House, Castleton, near Rochdale",
+        "birthplace_source_grade": "S2"
+      },
+      "source_url": "https://trumpingtonlocalhistorygroup.org/people/f7063.htm",
+      "source_title": "Ruth Deanesly - Alan Sterling Parkes",
+      "source_author": null,
+      "source_kind": "actual_original_local_history_compiled_genealogical_structured_profile",
+      "source_grade_proposal": "S3",
+      "source_grade_role": "geographic_support_only",
+      "source_quote": "in Lancashire",
+      "source_quote_word_count": 2,
+      "source_field_format": "Under Husband: AlanSterlingParkes, actualBornfield10Sep1900inLancashire.",
+      "source_body_ref": "turn6978585view0",
+      "source_locator": "L18fullAlanSterlingParkes/L19SirAlanParkes;L25directBorn10Sep1900inLancashire;L27ReproductiveBiologist/L28death1990;L47FreeBMDsource/L50Biographyonline;L57Dec1900Rochdale8e11indexnote;L58deathindexborn10Sep1900",
+      "observed_source_full_name": "Alan Sterling Parkes",
+      "source_birthdate": "1900-09-10",
+      "source_birthdate_precision": "exact_day_in_actual_structured_Born_field",
+      "source_lifespan": "1900-1990 fromactualBorn/Diedfields;notclaimedliteralheader",
+      "source_DOB_native_compatibility": "Actual10Sep1900agreesunchangednative1900-09-10; deathyear1990agreesnativeauthority. Note4Dec1900Rochdale8e11isformattedFreeBMDindexcitation, notanexplicitdifferentbirthday; noalternateDOBinferred.",
+      "identity_review": [
+        "AllnativeAlanSterlingParkescomponents directlypresent inactualHusbandfield, completeexactnativeDOB andprofessionReproductiveBiologist distinguishsubject.",
+        "AdditionaldistinctactualHulmeschoolhistoryfullnative/exactDOB/Castleton/reproductiveendocrinology-cryobiology/knight1968bindsamepersonwithoutinitial/nicknameexpansion.",
+        "No observedsubjectidentity/date/placecontradiction; FreeBMDimage/civilbirthrecordnotacquired."
+      ],
+      "stored_place_relation_review": "FrozenBankHouse,Castleton,nearRochdale remainsliteral. NewgenealogicalsubjectBorncountyLancashire plus samefullnative/exactDOB/reproductiveprofession is compatiblebroaderbornregion; distinctHulmeactualBornCastleton/exactDOB/career corroboratesnativeplacecomponent. No point/countryfieldassignment or worldcitymapping; moregranularstoredstreetnotnewlyconfirmed.",
+      "source_place_observed": "Lancashire",
+      "reviewed_hemisphere_proposal": "north",
+      "geographic_basis": "DirectsubjectBorncountyLancashire is a whole northernregion; notfromnationality/work/school/hostorotherfamily. Onlycurrentgeofields/contextproposed, originalBPraw/S2unchanged.",
+      "publication_date": "2023-08-18",
+      "publication_date_precision": "date_displayed_at_page_top_not_independently_publication_vs_update_classified",
+      "caveats": [
+        "Uncreditedcompiledlocalgenealogy, FreeBMD/ElectoralRegister/Ancestry/Biographyonlineunderlyingsourcecitationsnotindependentlyacquired; conservativeS3, nocivil/S1/verifiedediting/independenceclaim.",
+        "ExactdateandcountyobservedascoupledBornfield; rawcivilbirthindexandfullbiographylinksnotacquired.",
+        "Page-top18Aug2023dateobserved, noverifiedinitialpublication/updatehistory.",
+        "PriorRS2006memoir403remainsclosed despitepositiveLancashiresearchprojection; noretry/alternatecarrierused.",
+        "SourcecountybroaderthanoriginalBankHouseaddress; originalBPgrade/URL/claim/evidence/DOB/priorfactsunchanged."
+      ],
+      "supporting_original_work": {
+        "source_url": "https://www.hulmegrammar.org/ArchiveWebPages/ww1/ww1boys.html",
+        "source_title": "WW1 Boys",
+        "source_author": null,
+        "source_kind": "actual_original_uncredited_school_history_biographical_entry",
+        "source_body_ref": "turn6900056view0",
+        "source_locator": "L2109fullAlanSterlingParkes;L2111exact10September1900/directbornCastleton;L2113reproductiveendocrinology/cryobiology/knight1968",
+        "source_quote": "born in Castleton on 10th September 1900",
+        "source_quote_word_count": 7,
+        "role": "Identity/citycomponent/careercontextonly; mainborncountyclaimbelongsTrumpingtonprofile. Hulmeactualownbornclausehascityonly, no birthcounty inferredfromschoolhost.",
+        "publication_date": null,
+        "limits": "Careerparagraphquotedfromanunnamedbiography; no sourceauthorship/independenceclaim and no transferofunderlyingunacquiredgrade."
+      },
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed actualbody, not rawHTTPbytes"
+    },
+    {
+      "record_id": "RS_PAST_NA661",
+      "native": {
+        "record_id": "RS_PAST_NA661",
+        "source_authorised_full_name": "McNeill; Sir; James McFadyen (1892 - 1964)",
+        "dob": "1892-08-19",
+        "raw_birthplace": "6 Cameron Street, Clydebank",
+        "birthplace_source_grade": "S2"
+      },
+      "source_url": "https://translate.academic.ru/a%20difficult%20subject/xx/en/",
+      "source_title": "a difficult subject — со всех языков на английский; embedded Biographical history of technology entry McNeill, Sir James McFadyen",
+      "source_author": "FMW (literalentrysignature;unexpanded)",
+      "source_kind": "actual_attributed_named_reference_work_excerpt_in_language_portal_carrier",
+      "source_grade_proposal": "S3_conditional_parent_source_class_review",
+      "source_grade_role": "geographic_support_only_ifadmitted",
+      "source_quote": "Clydebank, Scotland",
+      "source_quote_word_count": 2,
+      "source_field_format": "Actualentry b.19August1892Clydebank,Scotland; d.24July1964nearGlasgow,Scotland.",
+      "source_body_ref": "turn4553961view0",
+      "source_locator": "L67fullMcNeillSirJamesMcFadyen;L73directb19August1892ClydebankScotland;L75d24July1964;L78-85navalarchitect/Cunardliners/JohnBrown/MDcareer;L95FMW/L96Biographicalhistoryoftechnologyworktitleandcanonicalentrylink49",
+      "observed_source_full_name": "Sir James McFadyen McNeill (displayed surname-firstheading)",
+      "source_birthdate": "1892-08-19",
+      "source_birthdate_precision": "exact_day_in_actual_b_reference_field",
+      "source_lifespan": "1892-1964fromactualbirth/deathfields",
+      "source_DOB_native_compatibility": "Actual19August1892matchesunchangednativeDOB; actualdeathyear1964matchesauthority; no nativeexactdeathdateassertion.",
+      "identity_review": [
+        "AllnativeSirJamesMcFadyenMcNeillcomponentsactuallydisplayed surname-first; noinitialexpansion.",
+        "ExactunchangednativeDOB plusdistinctivenavalarchitect/JohnBrownClydebank/QueenMary-QueenElizabethlinerdesign/MD1948-1959careerdetailsbindscientist.",
+        "SourceentryFRS1948differsfromnewRSprofilediscoveryelection1949projection, retainedunadjudicatednonDOBcareerdate; do notsilentlyrepairoruseasDOB/placeconflict."
+      ],
+      "stored_place_relation_review": "Frozen6CameronStreet,Clydebank untouched; actualnewentrybirthcityClydebankexplicitlyqualifiedScotland. No newstreetconfirmation or cityprefixequivalence; samefullnative/exactDOB/coherentdistinctivecareerbindcityqualifier.",
+      "source_place_observed": "Clydebank, Scotland",
+      "reviewed_hemisphere_proposal": "north_if_current_original_reference_work_boundary_admits_actual_excerpt",
+      "geographic_basis": "ActualbfielddirectlylinksoriginalcityClydebanktoScotlandwholeNorthregion. Nationality/Glasgowschool/career notusedasborncountry.",
+      "publication_date": null,
+      "publication_date_precision": "not_observed",
+      "parent_source_class_review_required": true,
+      "caveats": [
+        "Actualnewreferenceexcerptreadthroughlanguageportalcarrier; canonicalentry/workpublisher/edition/bookeditorialprovenanceunverified. OnlyliteralBiographicalhistoryoftechnologytitleandFMWsignatureactuallyobserved; noRoutledge/authorfullname/editiondateinference.",
+        "This is not observedasWikipedia-basedchildrenrewrite; nevertheless workerdoesnotexpandcurrentoriginal-workboundary ordeclarebookprovenanceverified. Parentmayholdsourceclass.",
+        "Observedcanonicalentrylink49firstclickredirectedtool500nonretryable/inaccessible; STOPPED. Noalternativeen-academicURLdirectretry, othercarrier/rawGET. Actualearlierportalbodyseparatelyretained; canonicalbodyNOTacquired.",
+        "Actualreferencedeath1964-07-24doesnotverifyanynativedeathdaybecausecurrentauthorityonlylifespancontext; nocorrectionclaim.",
+        "MainDOB/BPraw/S2/priorfacts/masterunchanged; onlyproposalpendingroot."
+      ],
+      "canonical_route_first_attempt": {
+        "click_source_ref": "turn4553961view0",
+        "link_id": 49,
+        "failure_ref": "turn8077345view0",
+        "observed_intermediate_url": "https://biographical_history.academic.ru/867/McNeill%2C%2BSir%2BJames%2BMcFadyen",
+        "observed_redirect_url": "https://biographical_history.en-academic.com/867/McNeill,_Sir_James_McFadyen",
+        "status": "tool500redirect/inaccessible_nonretryable",
+        "canonical_body_acquired": false,
+        "retry_or_variant_attempted": false
+      },
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed actualbody, not rawHTTPbytes"
+    }
+  ],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA6313",
+      "native": {
+        "record_id": "RS_PAST_NA6313",
+        "source_authorised_full_name": "Chibnall; Albert Charles (1894 - 1988); biochemist",
+        "dob": "1894-01-28",
+        "raw_birthplace": "Hammersmith, London",
+        "birthplace_source_grade": "S2"
+      },
+      "hold_type": "new_profile_city_only_no_direct_bornregion",
+      "reason": "ActualnewSheringtonhistoryfullnative/exact1894-01-28/life1894-1988/coherentproteinbiochemistrycareer but directbornLondononly. ReturntoEnglandin1924notbirthcountry; no maternalEssex/school/institution/cityfamiliarityinference. SourceexplicitlybasedonHarperPowellBath1998, no provenanceinflation. FrozenHammersmithLondon/S2/completeobjectunchanged.",
+      "source_refs": [
+        "turn6978585view2"
+      ],
+      "prior_context_preserved": [
+        "v17ChibnallS2ODNBbirthplace",
+        "v17RSEboundentrynoobservedbirthplace"
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA6434",
+      "native": {
+        "record_id": "RS_PAST_NA6434",
+        "source_authorised_full_name": "Mills; Edmund James (1840 - 1921)",
+        "dob": "1840-12-08",
+        "raw_birthplace": "London",
+        "birthplace_source_grade": "S1"
+      },
+      "hold_type": "no_new_distinct_actual_birthregion_source",
+      "reason": "NewboundedqueriesyieldoldNatureLondonexactDOBandScienceMuseumcountryprojection/RSprofilecityonly; no newactualcountryworkacquired. PriorScienceMuseumoriginal403closednotretried; positivebornUKprojectioncannotbeused. PureWiki/Kiddle/Everythingexplainedmirrorleadsnotneworiginalworks. OriginalLondon/S1/native1840-12-08unchanged.",
+      "prior_hold_preserved": "prior_v13_holds.json",
+      "discovery_refs": [
+        "turn9006007search2",
+        "turn9006007search11",
+        "turn9006007search33",
+        "turn9006007search43",
+        "turn3425643search1",
+        "turn3425643search4"
+      ],
+      "new_actual_body_acquired": false
+    }
+  ],
+  "new_DOB_or_place_conflicts": [],
+  "unopened_distinct_original_work_leads": [
+    {
+      "record_id": "RS_PAST_NA645",
+      "url": "https://www.cambridge.org/core/journals/journal-of-biosocial-science/article/abs/alan-sterling-parkes-19001990/555BA62F1D720EEE443F764753D0D853",
+      "ref": "turn9006007search23",
+      "title": "Alan Sterling Parkes (1900–1990)",
+      "role": "DistinctJournalofBiosocialScienceoriginalmemoriallead_unopened",
+      "limit": "Actualbody/fullDOB/birthcounty/publicationdateunverified. DifferentworkfromclosedRS2006memoir; noadmissionfromsearchmetadata."
+    }
+  ],
+  "source_quote_words_by_original_work": {
+    "https://trumpingtonlocalhistorygroup.org/people/f7063.htm": 2,
+    "https://www.hulmegrammar.org/ArchiveWebPages/ww1/ww1boys.html": 7,
+    "https://translate.academic.ru/a%20difficult%20subject/xx/en/": 2
+  },
+  "raw_HTTP_status": null,
+  "raw_bytes_sha256": null,
+  "exact_request_utc": null,
+  "all_headers_refs_finalstatuses_retained": true,
+  "source_cache_files_or_images_written": false,
+  "no_repo_master_Git_mutation": true,
+  "no_source_exhaustion_or_finalfreeze_claim": true
+}

@@ -1,0 +1,26 @@
+{
+  "status": "PASS_INPUTS",
+  "geo49_all_row_and_candidate_locks_verified": true,
+  "geo49_counts": {
+    "unknown": 46,
+    "north": 3
+  },
+  "all3_accepted_geographies_in_native_DOB_window": true,
+  "all3_source_sha_verified_from_saved_original_bytes": true,
+  "semantic_reviews": [
+    {
+      "record_id": "RS_PAST_NA1126",
+      "semantic_review": "pass_same_birthplace_neighbourhood_explicitly_referred_to_as_England_not_Yorkshireman_identity"
+    },
+    {
+      "record_id": "RS_PAST_NA723",
+      "semantic_review": "pass_same_named_subject_explicit_County_Durham_birthplace"
+    },
+    {
+      "record_id": "RS_PAST_NA371",
+      "semantic_review": "pass_same_named_subject_Scottish_born_explicit_birth_region_distinct_from_ordinary_nationality_adjective"
+    }
+  ],
+  "current_lookup_replacements": 0,
+  "no_new_network_requests": true
+}
