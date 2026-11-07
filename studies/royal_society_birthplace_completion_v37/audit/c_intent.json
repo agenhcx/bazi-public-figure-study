@@ -1,0 +1,75 @@
+{
+  "written_utc": "2026-11-07T00:51:46.114052+00:00",
+  "group": "c",
+  "prequeries_read_full_native_objects_and_prior_individual_holds": true,
+  "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+  "method_application_scope_sha256": "ae080b06f8abad9ed7575783486795c977e44ce5e5024bfa2096e16816a44d94",
+  "budgets": {
+    "queries": 4,
+    "source_open_clicks": 10
+  },
+  "entries": [
+    {
+      "operation": "system2_search_query",
+      "record_id": "RS_PAST_NA2099",
+      "q": "Raymond John Heaphy Beverton site:wikipedia.org"
+    },
+    {
+      "operation": "system2_search_query",
+      "record_id": "RS_PAST_NA6938",
+      "q": "Derman Guy Christopherson site:wikipedia.org"
+    },
+    {
+      "operation": "open",
+      "record_id": "RS_PAST_NA2099",
+      "url": "https://en.wikipedia.org/wiki/Ray_Beverton",
+      "observed_from": "turn7809815search0",
+      "purpose": "Actual canonical person body full identity/exact DOB and born-place edge; no nationality inference."
+    },
+    {
+      "operation": "open",
+      "record_id": "RS_PAST_NA6938",
+      "url": "https://en.wikipedia.org/wiki/Derman_Christopherson",
+      "observed_from": "turn7809815search1",
+      "purpose": "Actual canonical person body full identity/exact DOB and any actual subject born-place edge; father birthplace/work not substituted."
+    },
+    {
+      "operation": "click",
+      "record_id": "RS_PAST_NA2099",
+      "ref_id": "turn8134244view0",
+      "link_id": 38,
+      "purpose": "Actual observed Wikidata item, inspect native full name/exact date/P19; English actual body no born locality."
+    },
+    {
+      "operation": "click",
+      "record_id": "RS_PAST_NA6938",
+      "ref_id": "turn8134244view1",
+      "link_id": 42,
+      "purpose": "Actual observed Wikidata item, inspect native full name/exact date/P19; English actual Plumstead links belong father vicar context, not subject birth."
+    },
+    {
+      "operation": "find",
+      "record_id": "RS_PAST_NA2099",
+      "ref_id": "turn9525098view0",
+      "pattern": "place of birth",
+      "purpose": "Cached acquired representation locator only; no verified global absence/all-rank claim."
+    },
+    {
+      "operation": "find",
+      "record_id": "RS_PAST_NA6938",
+      "ref_id": "turn9525098view1",
+      "pattern": "place of birth",
+      "purpose": "Cached acquired representation locator only; no verified global absence/all-rank claim."
+    },
+    {
+      "operation": "system2_search_query",
+      "record_id": "RS_PAST_NA2099",
+      "q": "\"Raymond John Heaphy Beverton\" (site:de.wikipedia.org OR site:fr.wikipedia.org OR site:es.wikipedia.org)"
+    },
+    {
+      "operation": "system2_search_query",
+      "record_id": "RS_PAST_NA6938",
+      "q": "\"Derman Guy Christopherson\" (site:de.wikipedia.org OR site:fr.wikipedia.org OR site:es.wikipedia.org)"
+    }
+  ]
+}
