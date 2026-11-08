@@ -1,0 +1,584 @@
+{
+  "schema": "UK_v47_sources_b_original_person_geography_v1",
+  "written_utc": "2026-11-08T12:13:14.636124+00:00",
+  "group": "b",
+  "scope_sha256": "75066f2d271f78cbbaaddce05db3a094a3d30d63baeb0b5c397b91a311358d5f",
+  "native_scope_sha256": "4acdcb6b3baebaa42d6e622dcba352ee1b7b0ba48159b562ef29c9b1ed94a08d",
+  "intent_file": "v47_intent_b.json",
+  "scope_record_ids": [
+    "RS_PAST_NA4680",
+    "RS_PAST_NA5003"
+  ],
+  "all9_issue_inventories_read_full_and_pins_reverified_before_web": true,
+  "inventory_file_pins": {
+    "active_source_DOB_conflicts.json": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+    "birthplace_source_conflicts.json": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+    "source_derived_age_inconsistencies.json": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+    "provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+    "lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+    "cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+    "source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+    "omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+    "source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+  },
+  "full_targetnative_and_prior_worker_AND_root_history_reviewed_before_web": true,
+  "prior_context_file_pins": {
+    "v16_sources_a.json": "f4e1f6fee5589dbfeb204a8b9460fdf27ef549b5336888113ecf4326a0f6faab",
+    "v16_root_intent.json": "74219be49bb3c28fcb2caf2b399e063c2c0f819d929d17632ebd6b1b3a797007",
+    "v17_sources_a.json": "3271bdd42b043166324e0c3881ec2cb2a33766189436d8a52dc69ce02d881cbe",
+    "v17_root_intent.json": "e9f5b43abaa535916e99e1d0dbadac6606c5ed3e931b00e05d8d5b2a34664577",
+    "v30_sources_c.json": "6ac5ade07449e88a8238b55ac16a02c6d232514970295c3eeb9453f204ea0043",
+    "v31_sources_a.json": "032af830c2101273cf1afc176ec6e82a26391c0faf77d5b6584a5f8c107caeaa",
+    "v40_sources_a.json": "0bf1f630e057b6efcdb1fff46869b660a0c7bda5574c14ba833584d68b3f8220",
+    "v43_sources_b.json": "776dcabe02f88a31bc5beec50e8ea1edc3a8b8c0bd61234809c1253cebca9889",
+    "v47_triage_b.json": "f76aea2e42894099594bf3d817613d4fe223060544c3aca3bf836ffc8af55255"
+  },
+  "inherited_admission": "V29/V35actualoriginalperson method, compatible statedbirthyear allowed; no dateless/ageinference or newnameexception; actualfullnative/career/life/frozenplace/directbornwhole-region needed.",
+  "retrieval_counts": {
+    "queries": 5,
+    "navigation_attempts": 4,
+    "source_open_operations": 3,
+    "click_operations": 1,
+    "parsed_finds": 0,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "budgets": {
+    "queries": 5,
+    "navigation_attempts": 6,
+    "parsed_finds": "separatecount"
+  },
+  "query_ledger": [
+    {
+      "entry_id": 0,
+      "written_utc": "2026-11-08T12:08:19.198215+00:00",
+      "operation": "query",
+      "record_id": "RS_PAST_NA4680",
+      "exact_request": {
+        "system2_search_query": [
+          {
+            "q": "\"Michael Augustine Raftery\" site:npg.org.uk"
+          }
+        ],
+        "response_length": "long"
+      },
+      "outcome": "Engine2 returnedemptysearchresults for boundedNPGquery; no globalprofileabsence claim.",
+      "result_ref": null,
+      "observed_result_refs": [],
+      "separate_pre_request_successful_exit0": true,
+      "validation_tool_chunk_id": "d17628"
+    },
+    {
+      "entry_id": 1,
+      "written_utc": "2026-11-08T12:08:19.198228+00:00",
+      "operation": "query",
+      "record_id": "RS_PAST_NA5003",
+      "exact_request": {
+        "system2_search_query": [
+          {
+            "q": "\"Sheldon Francis Dudley\" site:npg.org.uk"
+          }
+        ],
+        "response_length": "long"
+      },
+      "outcome": "ObservedactualNPGportraitURLs andsitterlists; projectionsfullnative/life1884-1956/professiononly, no geographyproof.",
+      "result_ref": null,
+      "observed_result_refs": [
+        "turn7797557search0",
+        "turn7797557search1",
+        "turn7797557search2",
+        "turn7797557search3",
+        "turn7797557search4",
+        "turn7797557search5",
+        "turn7797557search6",
+        "turn7797557search7",
+        "turn7797557search8",
+        "turn7797557search9",
+        "turn7797557search10",
+        "turn7797557search11"
+      ],
+      "separate_pre_request_successful_exit0": true,
+      "validation_tool_chunk_id": "d17628"
+    },
+    {
+      "entry_id": 2,
+      "written_utc": "2026-11-08T12:09:00.927860+00:00",
+      "operation": "query",
+      "record_id": "RS_PAST_NA4680",
+      "exact_request": {
+        "system1_search_query": [
+          {
+            "q": "\"Michael Raftery\" site:npg.org.uk"
+          }
+        ],
+        "response_length": "long"
+      },
+      "outcome": "Engine1shortnameNPGlocator returned offdomain/unrelatedpeople, no observedtargetNPGURI; notglobalabsence.",
+      "result_ref": null,
+      "observed_result_refs": [
+        "turn4006518search1",
+        "turn4006518search0",
+        "turn4006518search2",
+        "turn4006518search3"
+      ],
+      "separate_pre_request_successful_exit0": true,
+      "validation_tool_chunk_id": "4505af"
+    },
+    {
+      "entry_id": 5,
+      "written_utc": "2026-11-08T12:09:36.086169+00:00",
+      "operation": "query",
+      "record_id": "RS_PAST_NA4680",
+      "exact_request": {
+        "system2_search_query": [
+          {
+            "q": "\"Michael Augustine Raftery\" Caltech biography born"
+          }
+        ],
+        "response_length": "long"
+      },
+      "outcome": "Observed career-onlyCaltechcatalogues/researchindexes andoldMayo/memoir/listprojections. No promising distinctoriginalpersonalbiography discovered; no body requests/degree-to-DOB or nationality inference.",
+      "result_ref": null,
+      "observed_result_refs": [
+        "turn4283956search0",
+        "turn4283956search1",
+        "turn4283956search2",
+        "turn4283956search3",
+        "turn4283956search4",
+        "turn4283956search5",
+        "turn4283956search6",
+        "turn4283956search7",
+        "turn4283956search8",
+        "turn4283956search9",
+        "turn4283956search10",
+        "turn4283956search11",
+        "turn4283956search12",
+        "turn4283956search13",
+        "turn4283956search14",
+        "turn4283956search15",
+        "turn4283956search16",
+        "turn4283956search17",
+        "turn4283956search18"
+      ],
+      "separate_pre_request_successful_exit0": true,
+      "validation_tool_chunk_id": "4cc5c0"
+    },
+    {
+      "entry_id": 6,
+      "written_utc": "2026-11-08T12:10:27.927349+00:00",
+      "operation": "query",
+      "record_id": "RS_PAST_NA5003",
+      "exact_request": {
+        "system1_search_query": [
+          {
+            "q": "\"Sheldon Francis Dudley\" \"Oxford Dictionary\""
+          }
+        ],
+        "response_length": "long"
+      },
+      "outcome": "No targetODNBpersonalURL; unrelatedODNBtitleindexnotopened. Newlyobserveddistinct1956Lancet/BMJoriginalobituarymetadataURIs; oldRCP/2018PMC notopened.",
+      "result_ref": null,
+      "observed_result_refs": [
+        "turn8688336search0",
+        "turn8688336search1",
+        "turn8688336search2",
+        "turn8688336search3",
+        "turn8688336search4",
+        "turn8688336search5",
+        "turn8688336search6",
+        "turn8688336search7",
+        "turn8688336search8"
+      ],
+      "separate_pre_request_successful_exit0": true,
+      "validation_tool_chunk_id": "9eb67c"
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "entry_id": 3,
+      "written_utc": "2026-11-08T12:09:00.927869+00:00",
+      "operation": "open",
+      "record_id": "RS_PAST_NA5003",
+      "exact_request": {
+        "open": [
+          {
+            "ref_id": "https://www.npg.org.uk/collections/search/portrait/mw51847/Sir-Sheldon-Francis-Dudley"
+          }
+        ],
+        "response_length": "long"
+      },
+      "outcome": "ActualNPGportraitcatalogue fullnative/life1884-1956/profession andactual sitterlink40; EnglandLondonPlaceMade concernsphotographerstudio, notbirth.",
+      "result_ref": "turn2442115view0",
+      "observed_result_refs": [],
+      "separate_pre_request_successful_exit0": true,
+      "validation_tool_chunk_id": "4505af"
+    },
+    {
+      "entry_id": 4,
+      "written_utc": "2026-11-08T12:09:36.086153+00:00",
+      "operation": "click",
+      "record_id": "RS_PAST_NA5003",
+      "exact_request": {
+        "click": [
+          {
+            "ref_id": "turn2442115view0",
+            "id": 40
+          }
+        ],
+        "response_length": "long"
+      },
+      "outcome": "Firstactualsitterlinkfollow fetchfailed; no sitterpersonalbody; workclosed no URIcase/variant/retry.",
+      "result_ref": "turn7615188view0",
+      "observed_result_refs": [],
+      "separate_pre_request_successful_exit0": true,
+      "validation_tool_chunk_id": "4cc5c0"
+    },
+    {
+      "entry_id": 7,
+      "written_utc": "2026-11-08T12:11:33.803848+00:00",
+      "operation": "open",
+      "record_id": "RS_PAST_NA5003",
+      "exact_request": {
+        "open": [
+          {
+            "ref_id": "https://pubmed.ncbi.nlm.nih.gov/13320866/"
+          }
+        ],
+        "response_length": "long"
+      },
+      "outcome": "FirstPubMedmetadatarequest returned3lineCheckingYourBrowser/reCAPTCHA. No originalmetadata/body acquired; originalworkclosed acrossallcarriers, nohere/redirect/alternatefulltextretry.",
+      "result_ref": "turn2116752view0",
+      "observed_result_refs": [],
+      "separate_pre_request_successful_exit0": true,
+      "validation_tool_chunk_id": "2bc3d4"
+    },
+    {
+      "entry_id": 8,
+      "written_utc": "2026-11-08T12:11:33.803860+00:00",
+      "operation": "open",
+      "record_id": "RS_PAST_NA5003",
+      "exact_request": {
+        "open": [
+          {
+            "ref_id": "https://pubmed.ncbi.nlm.nih.gov/13316085/"
+          }
+        ],
+        "response_length": "long"
+      },
+      "outcome": "FirstPubMedmetadatarequest returned3lineCheckingYourBrowser/reCAPTCHA. No originalmetadata/body acquired; originalworkclosed acrossallcarriers, nohere/redirect/alternatefulltextretry.",
+      "result_ref": "turn3428253view0",
+      "observed_result_refs": [],
+      "separate_pre_request_successful_exit0": true,
+      "validation_tool_chunk_id": "2bc3d4"
+    }
+  ],
+  "parsed_find_ledger": [],
+  "candidates": [],
+  "holds": [
+    {
+      "status": "hold",
+      "source_grade_adopted": null,
+      "source_grade_role": "geographic_support_only",
+      "reviewed_hemisphere": "unknown",
+      "proof_mode": null,
+      "proof_chain": [],
+      "publication_date": null,
+      "source_revision_id": null,
+      "source_revision_utc": null,
+      "source_calendar_model": null,
+      "source_statement_rank": null,
+      "source_editorial_validation": null,
+      "source_informational_independence": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "source_quote": "",
+      "source_quote_word_count": 0,
+      "native_and_original_birthplace_fields_unchanged": true,
+      "qualified_new_DOB_conflict": false,
+      "qualified_new_birthplace_conflict": false,
+      "source_derived_age_inconsistency_observed": false,
+      "record_id": "RS_PAST_NA4680",
+      "native": {
+        "record_id": "RS_PAST_NA4680",
+        "native_name": "Michael Augustine",
+        "native_authority": "Raftery; Michael Augustine (1936 - 2007); biochemist",
+        "native_DOB": "1936-02-08",
+        "frozen_raw_birthplace": "Galway",
+        "frozen_birthplace_source_grade": "S3",
+        "frozen_source_url": "https://www.mayonews.ie/news/opinion/michael-augustine-raftery-7521177",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "92150016cff5cd39ce6e313bf5a6a6904145aeaa4ca9bd07b2be4516043be78b"
+      },
+      "hold_type": "bounded_new_museum_university_personal_biography_locator_unresolved",
+      "reason": "BoundedfullnativeNPGengine2query empty; strongerNPGshortnameengine1query returnedoffdomain/unrelatedpeople. Distinctuniversitylocatorquery exposedCaltechcareer/degreecatalogues and oldMayo/memoir/listprojections, no promisingnewactualpersonalbiographyURI. No newsourcebody/statedDOBprecision/lifespan/birthcountry acquired. ExistingoldmemoiractualIrish-born cannot join projectiondates ornewcareerindexes toclear itsdatelesshold; entirememoirclosedacrosscarriers. NativeGalway/S3 unchanged; no city/nationality/parentsMayo/upbringing/employment-country inference.",
+      "source_url": null,
+      "source_ref": null,
+      "new_actual_person_body_acquired": false,
+      "source_birthdate": null,
+      "source_birthdate_precision": "none_acquired_in_new_actual_person_body",
+      "source_birthplace": null,
+      "native_binding": {
+        "all_native_personal_components_acquired_in_new_actual_body": false,
+        "native_components": [
+          "Michael",
+          "Augustine",
+          "Raftery"
+        ],
+        "stated_compatible_DOB_precision_in_new_body": null,
+        "distinctive_career_acquired_in_new_body": false,
+        "compatible_lifespan_acquired_in_new_body": null,
+        "frozen_place_binding": null,
+        "direct_birth_whole_region_acquired": false,
+        "all_admission_gates_satisfied": false
+      },
+      "discovery_limits": "Boundedqueryoutcome only, no globalNPG/articleabsenceclaim orprovennoneexist. Caltechdegrees/enrollment/careeryears notDOB. Researchpaper/citationpageIrish-bornsnippet is sameclosed2025memoir, not newcomposition.",
+      "old_closed_work_context": [
+        {
+          "url": "https://www.mayonews.ie/news/opinion/michael-augustine-raftery-7521177",
+          "work": "2007MayoNewsoriginalobituary",
+          "refs": [
+            "turn86view2",
+            "rootturn97view0"
+          ],
+          "outcome": "Actualfullnative/age71/death1August2007/Galwayonly/S3; no ownDOB; parents/upbringingCoMayo notbirthcountry; frozennotnewwork.",
+          "origin": "v16_sources_a.json candidates[0],navigation_ledger[4];v16_root_intent.json already_read_unplanned_root_opens[0]"
+        },
+        {
+          "url": "https://royalsocietypublishing.org/rsbm/article/doi/10.1098/rsbm.2025.0005/363145/Michael-Augustine-Raftery8-February-1936-1-August",
+          "work": "AngelaVincent/DanielRaftery2025RSmemoir DOI10.1098/rsbm.2025.0005",
+          "refs": [
+            "turn86view1"
+          ],
+          "outcome": "V16firstpublisher403/no body, entireoriginalmemoirclosed acrosscarriers.",
+          "origin": "v16_sources_a.json navigation_ledger[3]"
+        },
+        {
+          "url": "https://www.researchgate.net/publication/398085395_Michael_Augustine_Raftery_8_February_1936_-_1_August_2007_8_February_1936_-_1_August_2007",
+          "work": "Same2025memoir carriedheading/abstract",
+          "refs": [
+            "turn6164415view0",
+            "turn3137353view1",
+            "turn3137353view2",
+            "turn9315520view0"
+          ],
+          "outcome": "V31actualfullnative/Irish-born/career but no actually statedDOB/life; URLslug/searchdates/unrelated1936find not DOB. V31DOI10.1098/rsbm.2025.0005 click403, nofurthercarrier allowed. Historical samework observations preserved, not a newroute.",
+          "origin": "v31_sources_a.json holds[0],navigation_ledger[0,4],parsed_find_ledger[0,1]"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Category:Lists_of_fellows_of_the_Royal_Society_by_year",
+          "work": "Canonicaldiscoverycategory",
+          "refs": [
+            "turn8497766view1"
+          ],
+          "outcome": "V43rewritten firstrepresentation closed asproof; actualdifferentlistlinkfollowed only.",
+          "origin": "v43_sources_b.json holds[1].discovery_only_observations[2]"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/List_of_fellows_of_the_Royal_Society_by_election_year",
+          "work": "Canonicalelectionlist",
+          "refs": [
+            "turn3918435view0"
+          ],
+          "outcome": "Actual1986plaintext only/noRafterypersonalhref; no actualpersonbody/P19. No guessedQID/personalURL.",
+          "origin": "v43_sources_b.json holds[1].discovery_only_observations[3]"
+        }
+      ]
+    },
+    {
+      "status": "hold",
+      "source_grade_adopted": null,
+      "source_grade_role": "geographic_support_only",
+      "reviewed_hemisphere": "unknown",
+      "proof_mode": null,
+      "proof_chain": [],
+      "publication_date": null,
+      "source_revision_id": null,
+      "source_revision_utc": null,
+      "source_calendar_model": null,
+      "source_statement_rank": null,
+      "source_editorial_validation": null,
+      "source_informational_independence": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "source_quote": "",
+      "source_quote_word_count": 0,
+      "native_and_original_birthplace_fields_unchanged": true,
+      "qualified_new_DOB_conflict": false,
+      "qualified_new_birthplace_conflict": false,
+      "source_derived_age_inconsistency_observed": false,
+      "record_id": "RS_PAST_NA5003",
+      "native": {
+        "record_id": "RS_PAST_NA5003",
+        "native_name": "Sheldon Francis",
+        "native_authority": "Dudley; Sir; Sheldon Francis (1884 - 1956)",
+        "native_DOB": "1884-08-16",
+        "frozen_raw_birthplace": "Lisbon",
+        "frozen_birthplace_source_grade": "S2",
+        "frozen_source_url": "https://history.rcp.ac.uk/inspiring-physicians/sir-sheldon-francis-dudley",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "ad511d442f49132e68f11696c0832787ce58667324ac986d62d0b44d42be2a8a"
+      },
+      "hold_type": "actual_NPG_portrait_person_context_no_born_region_and_new_sitter_obituary_routes_unusable",
+      "reason": "ActualnewNPGportraitcatalogue fullSheldonFrancisDudley/life1884-1956/navalmedicalprofession has no directsubjectbirthplace orwhole-region. EnglandLondon is explicitly portraitPlaceMade/photographerstudio, notpersonbirth. Actualsitterlinkfirstfollowfailed; no sitterbody/no retry. LastlocatorqueryfoundonlyunrelatedODNBtitleindex plus two distinct1956professionalobituarymetadataURIs; each firstPubMedrequest returnedbrowser-reCAPTCHA, no originalmetadata/body, worksclosedacrosscarriers. NativeLisbon/S2 unchanged. No city/navalposting/fatherlocation/nationality/Places taxonomy inference; oldRCPand2018paper untouched.",
+      "source_url": "https://www.npg.org.uk/collections/search/portrait/mw51847/Sir-Sheldon-Francis-Dudley",
+      "source_ref": "turn2442115view0",
+      "source_title": "NPG x84101; Sir Sheldon Francis Dudley - Portrait - National Portrait Gallery",
+      "source_author": null,
+      "source_kind": "original_unsigned_museum_portrait_catalogue_person_context_actual_body",
+      "source_observation_quality": "Actualcompiledmuseumcatalogue identity/year/professionalcontext only; no adoptedgrade, host-onlyS1/verifiedexpertbyline/civilconfirmation or independence claim.",
+      "source_locator": "turn2442115view0:L51/66fullnative;L68-73Bassano1943portrait/collectionNPGx84101;L76allnative1884-1956/navalmedicalprofession/sitterlink40;L82-84PlaceMadeEnglandLondonphotographerstudio;L177copyright2026.",
+      "new_actual_person_context_body_acquired": true,
+      "observed_source_full_name": "Sir Sheldon Francis Dudley",
+      "honorific_excluded_from_native_components": "Sir",
+      "source_birthdate": "1884",
+      "source_birthdate_precision": "birthyear_in_actual_sitter_lifespan1884-1956_only",
+      "exact_native_month_day_confirmed_by_this_source": false,
+      "source_lifespan": "1884-1956",
+      "source_birthplace": null,
+      "native_binding": {
+        "all_native_personal_components_actually_present": true,
+        "native_components": [
+          "Sheldon",
+          "Francis",
+          "Dudley"
+        ],
+        "stated_compatible_DOB_precision": "birthyear1884",
+        "native_DOB_year_agrees_without_native_repair": true,
+        "compatible_lifespan_actually_present": true,
+        "source_professional_context": "Surgeon/ViceAdmiral/ChiefMedicalServicesRoyalNavy, coherentnativecareercontext; sparsecatalogueprofession, no fulloriginalpersonalnarrative acquired.",
+        "direct_subject_birth_relation_observed": false,
+        "frozen_place_binding": null,
+        "direct_birth_whole_region_observed": false,
+        "all_admission_gates_satisfied": false
+      },
+      "observed_portrait_metadata_only": {
+        "artist": "Bassano Ltd",
+        "portrait_date": "1943-08-05",
+        "portrait_collection_identifier": "NPG x84101",
+        "place_made": "England, London (photographerstudio38DoverStreetLondon)",
+        "portrait_date_is_not_personDOB_or_pagepublication": true,
+        "place_made_is_not_personbirthplace": true
+      },
+      "observed_footer_only": {
+        "copyright_year": "2026",
+        "locator": "L177",
+        "not_publication_or_revision_date": true
+      },
+      "failed_sitter_follow": {
+        "from_ref": "turn2442115view0",
+        "link_id": 40,
+        "actual_target_url": "https://www.npg.org.uk/collections/search/person/mp56845/sir-sheldon-francis-dudley",
+        "result_ref": "turn7615188view0",
+        "tool_result": "Error fetching",
+        "body_acquired": false,
+        "work_closed": true,
+        "no_variants_retries_or_other_portraits_as_sittercarrier": true
+      },
+      "adaptive_original_work_attempts": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/13320866/",
+          "originalwork_identity_from_discovery_only": "1956LancetSHELDONFRANCISDUDLEY,270(6925)755; PMID13320866; PII S0140-6736(56)90793-0",
+          "discovery_ref": "turn8688336search6",
+          "result_ref": "turn2116752view0",
+          "actual_response": "3lineCheckingYourBrowser/reCAPTCHA",
+          "originalmetadata_or_body_acquired": false,
+          "work_closed_all_carriers": true,
+          "raw_HTTP_status": null
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/13316085/",
+          "originalwork_identity_from_discovery_only": "1956BritishMedicalJournalSIRSHELDONDUDLEY,1(4975)1113; PMID13316085",
+          "discovery_ref": "turn8688336search7",
+          "result_ref": "turn3428253view0",
+          "actual_response": "3lineCheckingYourBrowser/reCAPTCHA",
+          "originalmetadata_or_body_acquired": false,
+          "work_closed_all_carriers": true,
+          "raw_HTTP_status": null
+        }
+      ],
+      "adaptive_work_scope_disclosure": "Two1956publishedpersonalobituarymetadataworks were newlyobserved inlastDudleyquery, absentfromtargetedoldclosedsets; permittedadaptivefixedtargetworkstrategy. Firstmetadatarequests failedchallenge andclosed eachwork, no subsequentfulltext/publisher/PMCcarrier request. Theirbodydistinctness/claim/byline/datequality were not authenticated.",
+      "old_closed_work_context": [
+        {
+          "url": "https://history.rcp.ac.uk/inspiring-physicians/sir-sheldon-francis-dudley",
+          "work": "RichardRTrail1968MunksRollV p111 originalsignedbiography",
+          "refs": [
+            "turn103view1"
+          ],
+          "outcome": "Actualfullnative/exactDOB/life/directLisbononly/S2; already acquired, not new. SourceFRS1941header versus1951narrative inconsistency retained, not a DOBconflict or membershiprepair.",
+          "origin": "v17_sources_a.json candidates[1],original_navigation_ledger[1];currentnativebirthplace_followup_v17"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6169416/",
+          "work": "2018SirSheldonFrancisDudley, hisContributions toDiphtheria andAftermath ofSinkingHMSCuracoa byQueenMary",
+          "refs": [
+            "turn1390586view0"
+          ],
+          "outcome": "V30firstCheckingYourBrowser/reCAPTCHA3linechallenge, no articlebody; closed allpublisher/PMC/PDF/reprint carriers.",
+          "origin": "v30_sources_c.json holds[0].sources[0]"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/List_of_fellows_of_the_Royal_Society_D%2C_E%2C_F",
+          "work": "CanonicalFRSlist",
+          "refs": [
+            "turn4792973view0",
+            "turn8388859view0"
+          ],
+          "outcome": "V40explicitly rewritten list/fullname/dates/election only; no personalhref/birthplace/QID. Workclosed, no globalarticleabsence claim.",
+          "origin": "v40_sources_a.json holds[2].source_observations[0]"
+        }
+      ]
+    }
+  ],
+  "new_DOB_or_place_conflicts": [],
+  "source_derived_age_inconsistency_candidates": [],
+  "source_quality_issue_candidates": [],
+  "source_lifespan_endpoint_discrepancy_candidates": [],
+  "source_quotes": {
+    "new_quoted_English_lexical_words_per_work": {
+      "Dudley_NPG_portrait": 0,
+      "Dudley_NPG_sitter_failed": 0,
+      "Dudley_Lancet1956_unacquired": 0,
+      "Dudley_BMJ1956_unacquired": 0
+    },
+    "prior_quotations_unchanged": [
+      {
+        "work": "RafteryMayoNews",
+        "historical_quote_words": 5
+      },
+      {
+        "work": "Raftery2025memoir",
+        "historical_quote_words": 2
+      },
+      {
+        "work": "Dudley1968RCPbiography",
+        "historical_quote_words": 10
+      }
+    ],
+    "new_words_added_to_oldworks": 0,
+    "no_full_source_or_projection_cache": true
+  },
+  "unrequested_unqualified_leads": [
+    {
+      "record_id": "RS_PAST_NA4680",
+      "url": "https://campuspubs.library.caltech.edu/112/1/1983-1984.pdf",
+      "ref": "turn4283956search12",
+      "role": "Unopenedoriginaluniversityfacultycatalogueprojection fullnative/career/degree-only, no DOB/birthcountrylead; no originalbiography/bodyclaim."
+    },
+    {
+      "record_id": "RS_PAST_NA5003",
+      "url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/580040824",
+      "ref": "turn8688336search3",
+      "role": "UnrelatedDudleytitleindex, not targetpersonalbiography; notopened."
+    }
+  ],
+  "all_intents_separately_validated_exit0_before_requests": true,
+  "all_first_unusable_work_closures_clean": true,
+  "request_protocol_deviations": [],
+  "raw_HTTP_status": null,
+  "raw_bytes_sha256": null,
+  "exact_request_utc": null,
+  "no_native_master_data_code_framework_pipeline_replay_or_Git_edits": true,
+  "no_source_exhaustion_or_finalfreeze_claim": true
+}

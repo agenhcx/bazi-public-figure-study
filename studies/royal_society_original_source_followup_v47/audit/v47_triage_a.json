@@ -1,0 +1,285 @@
+{
+  "artifact_type": "local_original_biography_triage",
+  "written_utc": "2026-11-08T12:05:37.443768+00:00",
+  "stage": "local_only_before_new_external_requests",
+  "baseline_version": 46,
+  "baseline_master_canonical_sha256": "149afefd545fb9e98bd806ff5927be29057cc04db38b18c49de8fe5dde7055ed",
+  "baseline_master_gzip_sha256": "95048d6e3ef240f1f5d11a92d3314295b9eb98af7c388bead6889fa2af300b95",
+  "remaining_window_unknown": 156,
+  "remaining_window_blank": 102,
+  "remaining_compact_sha256": "4322330d9497706ce23b2c30f12bc2d2d17dea999b2cebd6bdb0303f1b6665f3",
+  "screened_case_count": 6,
+  "strongest_target_ids": [
+    "RS_PAST_NA3358",
+    "RS_PAST_NA7070",
+    "RS_PAST_NA3652"
+  ],
+  "candidates": [
+    {
+      "record_id": "RS_PAST_NA3358",
+      "native_name": "Andrew",
+      "native_authority": "McCance; Sir; Andrew (1889 - 1983)",
+      "native_DOB": "1889-03-30",
+      "frozen_raw_birthplace": "",
+      "birthplace_source_grade": "unknown",
+      "hemisphere": "unknown",
+      "native_complete_object_canonical_sha256": "c0ed6f3c6acec48fc4ee69793773880e5263c4f96015a917eafea7af98a5fada",
+      "conflict_status": {
+        "active_DOB": false,
+        "active_partial_place": false,
+        "other_issue_inventory_hits": {
+          "active_source_DOB_conflicts.json": false,
+          "birthplace_source_conflicts.json": false,
+          "source_derived_age_inconsistencies.json": false,
+          "provisional_parsed_date_discrepancies.json": false,
+          "lifespan_endpoint_discrepancies.json": false,
+          "cross_source_reported_age_contrasts.json": false,
+          "source_date_precision_holds.json": false,
+          "omitted_middle_name_admission.json": false,
+          "source_ordinal_age_wording_observations.json": false
+        },
+        "qualified_individual_date_or_place_conflict_in_retained_hold": false
+      },
+      "actually_observed_new_institutional_work_URL": null,
+      "actually_observed_new_institutional_work_title": null,
+      "new_institutional_source_ref": null,
+      "new_work_existence_verified": false,
+      "new_body_acquired": false,
+      "adoption_candidate_now": false,
+      "priority": 1,
+      "recommendation": "strongest_discovery_target",
+      "prospective_source_family": "National Portrait Gallery original person catalogue biography",
+      "why": "Short native personalnameAndrewMcCance and compatible1889-1983 life can be checked directly in a museum biography; newNPGwork is distinct in genre from the closed Strathclydearchivecreator record. No NPGsubjectentry existence or birthprose is assumed.",
+      "prior_target_context": "V18 full workerhold/ledger and rootintent/parentadjudication reviewed; no rootMcCance bodyrequest found.",
+      "complete_retained_prior_closed_work_list": [
+        {
+          "URL": "https://atom.lib.strath.ac.uk/andrew-mccance-papers",
+          "historical_ref": "turn128view0",
+          "outcome": "First collectionbody attempt tool403, stopped; no archive variants",
+          "work_identifier": "StrathclydeAndrewMcCancepapers creator biography",
+          "closed_across_variants_and_carriers": true
+        }
+      ],
+      "retained_unqualified_leads": [
+        {
+          "ref": "turn125search1",
+          "observation": "CadderDunbartonshire/year1889 appeared only in searchdiscovery; not bodyproof and not an adopted place"
+        }
+      ],
+      "unexecuted_locator_query": "\"Andrew McCance\" site:npg.org.uk/collections/search/person",
+      "cautions": [
+        "Sir is honorific, not a personalcomponent.",
+        "Do not substitute physiologistRobertAlexanderMcCance or treat Scottish industrialist/nationality wording as explicitbirth.",
+        "If NPGis found, reject any mirror/transcription of closedarchivework; a differentURLalone doesnot establishnewcomposition."
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA7070",
+      "native_name": "Charles Drummond",
+      "native_authority": "Ellis; Sir; Charles Drummond (1895 - 1980); physicist",
+      "native_DOB": "1895-08-11",
+      "frozen_raw_birthplace": "",
+      "birthplace_source_grade": "unknown",
+      "hemisphere": "unknown",
+      "native_complete_object_canonical_sha256": "bdbfc573b37569d12cf7113afabd8b35b6a5e2a4c8e9b4262d2ac44114569df2",
+      "conflict_status": {
+        "active_DOB": false,
+        "active_partial_place": false,
+        "other_issue_inventory_hits": {
+          "active_source_DOB_conflicts.json": false,
+          "birthplace_source_conflicts.json": false,
+          "source_derived_age_inconsistencies.json": false,
+          "provisional_parsed_date_discrepancies.json": false,
+          "lifespan_endpoint_discrepancies.json": false,
+          "cross_source_reported_age_contrasts.json": false,
+          "source_date_precision_holds.json": false,
+          "omitted_middle_name_admission.json": false,
+          "source_ordinal_age_wording_observations.json": false
+        },
+        "qualified_individual_date_or_place_conflict_in_retained_hold": false
+      },
+      "actually_observed_new_institutional_work_URL": null,
+      "actually_observed_new_institutional_work_title": null,
+      "new_institutional_source_ref": null,
+      "new_work_existence_verified": false,
+      "new_body_acquired": false,
+      "adoption_candidate_now": false,
+      "priority": 2,
+      "recommendation": "strongest_discovery_target",
+      "prospective_source_family": "National Portrait Gallery original person catalogue biography",
+      "why": "NativeCharlesDrummondEllis and1895-1980life give a distinctive full-name binding for a potential portraitbiography; olderattempts were originalODNB and RSmemoir, leaving an actuallydistinctNPGcomposition as a plausible discoveryroute.",
+      "prior_target_context": "V25 worker fulltargethold/navigationledger plus rootintent/rootfollowups read; neitherrootdocument adds an Ellisrequest.",
+      "complete_retained_prior_closed_work_list": [
+        {
+          "URL": "https://doi.org/10.1093%2Fref%3Aodnb%2F31070",
+          "historical_ref": "turn9644210view2",
+          "outcome": "ObservedDOI legacyredirect to https://www.oxforddnb.com/view/article/31070 tool500/inaccessible; no originalbody; entireODNBworkclosed",
+          "work_identifier": "10.1093/ref:odnb/31070",
+          "closed_across_variants_and_carriers": true
+        },
+        {
+          "URL": "https://doi.org/10.1098%2Frsbm.1981.0009",
+          "historical_ref": "turn7263761view2",
+          "outcome": "First originalRSmemoir tool403; no originalbody",
+          "work_identifier": "10.1098/rsbm.1981.0009",
+          "closed_across_variants_and_carriers": true
+        },
+        {
+          "URL": "https://en.wikipedia.org/wiki/Charles_Drummond_Ellis",
+          "historical_ref": "turn7940726view2",
+          "outcome": "Previouslyacquired reference-discovery carrier for DOIlinks; no sourceadoption/reopening proposed",
+          "work_identifier": "canonicalEnglishpersonreference",
+          "closed_across_variants_and_carriers": true
+        }
+      ],
+      "retained_unqualified_leads": [
+        {
+          "observation": "HampsteadLondonUK was Wikipedia/discovery-only, no originalbodyproof"
+        }
+      ],
+      "unexecuted_locator_query": "\"Charles Drummond Ellis\" site:npg.org.uk/collections/search/person",
+      "cautions": [
+        "Sir is anhonorific.",
+        "Do not reopen a modernODNBfrontend or differentmemoircarrier.",
+        "Museumportraitplaces tags, physicistnationality and Cambridgeemployment are not bornrelations."
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA3652",
+      "native_name": "William Wilton",
+      "native_authority": "Douglas; William Wilton (1922 - 1998)",
+      "native_DOB": "1922-08-15",
+      "frozen_raw_birthplace": "",
+      "birthplace_source_grade": "unknown",
+      "hemisphere": "unknown",
+      "native_complete_object_canonical_sha256": "bdfafc958ee95667e78ec8248cdcdb0834cf0df4d3bc3667f19a58adc9271f6d",
+      "conflict_status": {
+        "active_DOB": false,
+        "active_partial_place": false,
+        "other_issue_inventory_hits": {
+          "active_source_DOB_conflicts.json": false,
+          "birthplace_source_conflicts.json": false,
+          "source_derived_age_inconsistencies.json": false,
+          "provisional_parsed_date_discrepancies.json": false,
+          "lifespan_endpoint_discrepancies.json": false,
+          "cross_source_reported_age_contrasts.json": false,
+          "source_date_precision_holds.json": false,
+          "omitted_middle_name_admission.json": false,
+          "source_ordinal_age_wording_observations.json": false
+        },
+        "qualified_individual_date_or_place_conflict_in_retained_hold": false
+      },
+      "actually_observed_new_institutional_work_URL": null,
+      "actually_observed_new_institutional_work_title": null,
+      "new_institutional_source_ref": null,
+      "new_work_existence_verified": false,
+      "new_body_acquired": false,
+      "adoption_candidate_now": false,
+      "priority": 3,
+      "recommendation": "strongest_discovery_target",
+      "prospective_source_family": "Royal College of Physicians Inspiring Physicians authored personal biography; distinct original medicalbiography discovery",
+      "why": "FullnativeWilliamWiltonDouglas and1922-1998life can bind a substantive medicalbiography. Retained targethistory has one failedRSmemoir bodyattempt, not an attemptedRCPpersonalentry; collectionmembership/entryexistence remainunverified.",
+      "prior_target_context": "V15 originalsourceA fulltargethold/groupnavigationledger and originalrootintent/protocolreview read; rootreportednoDouglasbodyrequest.",
+      "complete_retained_prior_closed_work_list": [
+        {
+          "URL": "https://royalsocietypublishing.org/doi/epdf/10.1098/rsbm.1999.0077",
+          "historical_ref": "turn72view1",
+          "outcome": "First memoir epdf inaccessible via tool; no body; allpublisher/repositorycarriersclosed",
+          "work_identifier": "10.1098/rsbm.1999.0077",
+          "closed_across_variants_and_carriers": true
+        }
+      ],
+      "retained_original_bibliography": {
+        "title": "William Wilton Douglas.15August1922–2July1998",
+        "author": "J.M.Ritchie",
+        "publication": "Biographical Memoirs of Fellows of the Royal Society46(2000)145-164",
+        "provenance": "Utahbibliography discoveryturn69search7, not verified in inaccessiblememoirbody",
+        "work_closed": true
+      },
+      "unexecuted_locator_query": "\"William Wilton Douglas\" \"Inspiring physicians\"",
+      "cautions": [
+        "PriorHawick querywords were only a discoveryhypothesis, not an observed birthplace.",
+        "No RCPfellowship or existingRCPentry is assumed; do not synthesize URL.",
+        "V15groupledger also includes PubMed10195905 without targetmapping; preserve as a priorgrouprequest and check workidentity if encountered, not a declarednewlead.",
+        "An RCPpending-obituary placeholder would be lowyield and immediatelyclose; sourceauthorship, statedDOBprecision and birthbody still mandatory."
+      ]
+    }
+  ],
+  "excluded_V46five": [
+    "RS_PAST_NA4250",
+    "RS_CURRENT_10965",
+    "RS_PAST_NA780",
+    "RS_PAST_NA1196",
+    "RS_PAST_NA4252"
+  ],
+  "excluded_V45six": [
+    "RS_PAST_NA4193",
+    "RS_PAST_NA4301",
+    "RS_PAST_NA4155",
+    "RS_PAST_NA6868",
+    "RS_PAST_NA1998",
+    "RS_PAST_NA4490"
+  ],
+  "false_new_family_leads_excluded": [
+    {
+      "record_id": "RS_PAST_NA3830",
+      "reason": "LinsteadoriginalNPGperson catalogue alreadyreadV18 withoutbirthrelation; oldODNBlegacyalsofailed; not afreshNPGtarget."
+    },
+    {
+      "record_id": "RS_PAST_NA8048",
+      "reason": "PorterNPGpersonURL firstfailedV25; alternateNPGcarrier excluded."
+    }
+  ],
+  "root_followup_review": "V15/V18/V25/V28/V21 originalrootrequest/observations inspected. Rootlistsadd no new request for top3. MatthewsKingsfirst404 is explicitly included from latercombinedgroupparent entry, despite earlierunopenedlabel.",
+  "history_file_pins": {
+    "v15_sources_a.json": "4a7b04399e8c0c324c597e97ab5839d8a098a919d9a1aa4f13f77274aed10337",
+    "v18_sources_b.json": "da618e296992d3b6c3f3a4a18547965b33507aafc9f25675d8e24068c2265c32",
+    "v18_sources_b_mccance_collar.json": "57be1af9fb29fc8642cf690b5d81166b5985e982fb7895fd7bce62ecab64bdc4",
+    "v25_sources_b.json": "a040efead0457e13dd93600a71bbb484505eeedcfadaa9510b25425294c40340",
+    "v25_sources_c.json": "0c6eb718f8a83299b4a5d4229685a099e023cc00f71b3ce3657df8e11ebac49c",
+    "v28_sources_a.json": "099c0536807fbd0a0a4ddc902dee83d787646d98e79d673641c46ea0743f38f4",
+    "academy_repo/studies/royal_society_birthplace_completion_v15/audit/root_intent.json": "752d7d7cb02fd7970e9914e7932d3493cf65118a7f9428d1788e926426621539",
+    "academy_repo/studies/royal_society_birthplace_completion_v15/audit/protocol_and_parent_review.json": "a0925f2e0d27ec9f13cc5d168bdf89ff1df80a00bfb4a3b88bed6ad302003ef2",
+    "academy_repo/studies/royal_society_birthplace_completion_v18/audit/root_intent.json": "f2a1c8304ed8d33af6027923894a5088bc2a4876c6a46a1ab50a00e581b15a49",
+    "academy_repo/studies/royal_society_birthplace_completion_v18/audit/parent_adjudication.json": "f352859e78404f4018dfea178e321468b17a0c9b62970d9dc15ba1743cfa7906",
+    "academy_repo/studies/royal_society_birthplace_completion_v25/audit/root_intent.json": "c4efb79acd678335b5cd74adb1eb1ef3ebb13b264cb64a7bab4afb20cc962434",
+    "academy_repo/studies/royal_society_birthplace_completion_v25/audit/root_followups.json": "f6b6a2a80b9aa16be7adae3452998ba988c2e6b183e3f445ed4d5160de433627",
+    "academy_repo/studies/royal_society_birthplace_completion_v28/audit/root_intent.json": "f71fbb6a387077e4f3cac99a7d056ea22e17c59d8242f8c395ae31bf3702d688",
+    "academy_repo/studies/royal_society_birthplace_completion_v28/audit/root_followups.json": "cdc9ea4387995825042752b7b574d59dad01eb30c8ef8c8f8fb9cafaea6a9975",
+    "academy_repo/studies/royal_society_birthplace_completion_v21/audit/root_intent.json": "656e6f7c8aa2654bccd66738327296217f10ba6d47783018912837e56f8abcb1",
+    "academy_repo/studies/royal_society_birthplace_completion_v21/audit/root_followups.json": "36f4104dfab41afb160d319c035ccdd98d071fe641d9691c0da4c33e91abb5e3",
+    "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v15_holds.json": "c6aa776aaa1aa60ae8a6497532210b4fc937253694011de1f0d6f2dd9fdb4942",
+    "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v18_holds.json": "81e5432af8ad764152805fbc15311ae18ba89e1eb823a521ea6222ad14efc249",
+    "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v21_holds.json": "cf04731a4626cefb1141e640b23550bbc6a9a34fad0ad83a25ba504ff4e2b928",
+    "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v25_holds.json": "499bd2c8658e99d259484241c8bb0b69f0a30aab04c3a86b4c6fcded5bc83cf0",
+    "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v28_holds.json": "16c516cf51aa6424e29bd9bbba9d86edd079c5f366410e1fb45d3f7539b96a97"
+  },
+  "issue_inventory_pins": {
+    "active_source_DOB_conflicts.json": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+    "birthplace_source_conflicts.json": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+    "source_derived_age_inconsistencies.json": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+    "provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+    "lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+    "cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+    "source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+    "omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+    "source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+  },
+  "source_family_limit": "No exact untriedNPG/RCPURL/title is retained for these6. They are proposed originalbiography locator avenues, not knownexistingworks or bodyevidence. ActualnewURL/workidentity/name/DOBprecision/career/life/birthrelation/genre must be established prospectively. No URL synthesis; genericnationality/Places/footer/careerlocation doesnot count asbirth.",
+  "admission_boundary": "Reuse unchanged original firstbirthplace method. Source own fullnativepersonalcomponents/actuallystatedcompatibleDOBprecision/compatiblelife/distinctivecareer/directbirthrelation required; no dateless/age-inferred bypass/automaticmiddleexception/host-onlygradeupgrade.",
+  "closed_work_list_limit": "Complete retained targetedattempts and laterworker/rootfollowups reviewed; no claim of exhaustivepublicationhistory outside retainedaudit. Successfullyacquired no-birthworks are not newwork and failedworksclose acrosscarriers.",
+  "external_queries": 0,
+  "external_opens": 0,
+  "external_clicks": 0,
+  "external_finds": 0,
+  "source_quotes_added": 0,
+  "source_data_replay_code_tests_Git_mutations": false,
+  "source_exhaustion_claimed": false,
+  "not_nominated_reserve_ids": [
+    "RS_PAST_NA785",
+    "RS_PAST_NA2133",
+    "RS_PAST_NA4585"
+  ],
+  "nominated_case_count": 3,
+  "selection_note": "Parent fixedMcCance/Ellis/Douglas after6recordlocal screen; onlythese3 nominated. No externalrequestauthorized bytriage alone."
+}

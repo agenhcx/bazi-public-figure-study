@@ -1,0 +1,134 @@
+{
+  "written_utc": "2026-11-08T12:18:41.363533+00:00",
+  "scope_sha256": "75066f2d271f78cbbaaddce05db3a094a3d30d63baeb0b5c397b91a311358d5f",
+  "baseline_commit": "9ffe623ca6062b9755999021cb0447fec2410bcf",
+  "master_data_directory": "studies/royal_society_birthplace_completion_v46",
+  "source_evidence_pins": {
+    "v47_sources_a.json": "9347f39bfa31b2356a6ba8aeeb74c6494115d20bf1595b14aca37c5687413470",
+    "v47_intent_a.json": "c1c781f6819aa8b2100edd12512559aeb916ad154ba97a299d9f583baaf2ca08",
+    "v47_sources_b.json": "549607c39a51c7f681b6ff4fc4b8796b89b5bda3967917f0216bfca69afcc3fd",
+    "v47_intent_b.json": "5433c4ef0fdfe88c632bdee3669101d65260ca1a1a290083bba38bcc9dea8b89",
+    "v47_sources_c.json": "cca639f7ed549817ca0f9d91cb533ab821002275c2bb0e27de2d581bd05afe47",
+    "v47_intent_c.json": "8f590c71b6d3871072adddac28614741ac247bfdb1527541d39ed2a21bd3d54b"
+  },
+  "root_followups_sha256": "2738cf714b0034decaa6b5e351e0f6152ea4ecb88ba8f498eaf400115ce9445a",
+  "root_intent_sha256": "2bdca55a20520079a9b9139bda1607697112dcb6828329786bec27e48c0adcae",
+  "accepted_first_birthplaces": [],
+  "accepted_geography_only": [],
+  "held_records": [
+    {
+      "record_id": "RS_PAST_NA3358",
+      "decision": "hold",
+      "reason": "Actual distinctNPGperson entry supplies AndrewMcCance/fullnativecomponents and stated1889-1983 life but only genericindustrialist/scientist roles. No subjectbirthrelation or substantivecareer biography is acquired. Portraitdates, othernamedpersonEvents and museumfooter are excluded. OldStrathclyde403/allvariants remainsclosed; priorCadderDunbartonshire discovery is not promoted.",
+      "source_report": "audit/v47_sources_a.json",
+      "new_birthplace_or_geography_adopted": false,
+      "source_grade_adopted": null,
+      "native_or_prior_fields_changed": false
+    },
+    {
+      "record_id": "RS_PAST_NA7070",
+      "decision": "hold",
+      "reason": "Actual NPGpersonentry supplies fullCharlesDrummondEllis and compatible1895-1980life but only genericphysicist/scientificadministrator roles. No directsubjectborn-place biography is acquired. London is an unboundPlace taxonomy tag, not birthplace. ClosedODNB31070/RSmemoir1981.0009/Wikipediareferencecarrier stayhistorical, no currentreopen.",
+      "source_report": "audit/v47_sources_a.json",
+      "new_birthplace_or_geography_adopted": false,
+      "source_grade_adopted": null,
+      "native_or_prior_fields_changed": false
+    },
+    {
+      "record_id": "RS_PAST_NA3652",
+      "decision": "hold",
+      "reason": "BoundedRCP/Yale discovery supplied no actualinstitutionalpersonalbiography URL. Adaptivelyobserved distinctPrabook actualbody supplies fullWilliamWiltonDouglas/exact15August1922 and distinctiveAlbertEinstein/Yale/NIMRpharmacology career, but bornline gives dateonly and no birthplace. Glasgow is education, British is nationality. Compiledpresent-tensecareer has no authenticatedpublicationdate/deathendpoint and is not currentlivingconfirmation. No RCPentryabsence claim or newgrade/place/DOBadoption.",
+      "source_report": "audit/v47_sources_a.json",
+      "new_birthplace_or_geography_adopted": false,
+      "source_grade_adopted": null,
+      "native_or_prior_fields_changed": false
+    },
+    {
+      "record_id": "RS_PAST_NA4680",
+      "decision": "hold",
+      "reason": "BoundedfullnativeNPGengine2query empty; strongerNPGshortnameengine1query returnedoffdomain/unrelatedpeople. Distinctuniversitylocatorquery exposedCaltechcareer/degreecatalogues and oldMayo/memoir/listprojections, no promisingnewactualpersonalbiographyURI. No newsourcebody/statedDOBprecision/lifespan/birthcountry acquired. ExistingoldmemoiractualIrish-born cannot join projectiondates ornewcareerindexes toclear itsdatelesshold; entirememoirclosedacrosscarriers. NativeGalway/S3 unchanged; no city/nationality/parentsMayo/upbringing/employment-country inference.",
+      "source_report": "audit/v47_sources_b.json",
+      "new_birthplace_or_geography_adopted": false,
+      "source_grade_adopted": null,
+      "native_or_prior_fields_changed": false
+    },
+    {
+      "record_id": "RS_PAST_NA5003",
+      "decision": "hold",
+      "reason": "ActualnewNPGportraitcatalogue fullSheldonFrancisDudley/life1884-1956/navalmedicalprofession has no directsubjectbirthplace orwhole-region. EnglandLondon is explicitly portraitPlaceMade/photographerstudio, notpersonbirth. Actualsitterlinkfirstfollowfailed; no sitterbody/no retry. LastlocatorqueryfoundonlyunrelatedODNBtitleindex plus two distinct1956professionalobituarymetadataURIs; each firstPubMedrequest returnedbrowser-reCAPTCHA, no originalmetadata/body, worksclosedacrosscarriers. NativeLisbon/S2 unchanged. No city/navalposting/fatherlocation/nationality/Places taxonomy inference; oldRCPand2018paper untouched.",
+      "source_report": "audit/v47_sources_b.json",
+      "new_birthplace_or_geography_adopted": false,
+      "source_grade_adopted": null,
+      "native_or_prior_fields_changed": false
+    },
+    {
+      "record_id": "RS_PAST_NA8672",
+      "decision": "hold",
+      "reason": "Actual signed SIAM obituary has all native RogerFletcher components, explicit compatible1939-2016 caption and distinctive optimization career but no birthplace. Distinct Dundee2008 biography has career only and no stated birth precision/birthplace. No cross-work date transfer or work/death/Scottishness inference. Unlinked Optima99 interview citation remains unacquired.",
+      "source_report": "audit/v47_sources_c.json",
+      "new_birthplace_or_geography_adopted": false,
+      "source_grade_adopted": null,
+      "native_or_prior_fields_changed": false
+    },
+    {
+      "record_id": "RS_PAST_NA1585",
+      "decision": "hold",
+      "reason": "Exact1987 memoir DOI/epdf URI was observed in returned bibliography projection; bounded locator queries exposed no additional public original memoir carrier. First actual original epdf request was tool-inaccessible; entire memoir closed across all carriers, no retries. No source person/body/birth precision/birthplace proof adopted from bibliography, canonical/list or different RG-paper projections.",
+      "source_report": "audit/v47_sources_c.json",
+      "new_birthplace_or_geography_adopted": false,
+      "source_grade_adopted": null,
+      "native_or_prior_fields_changed": false
+    }
+  ],
+  "counts": {
+    "scope_records": 7,
+    "accepted": 0,
+    "held": 7,
+    "worker_queries": 15,
+    "root_queries": 1,
+    "all_queries": 16,
+    "worker_navigation": 11,
+    "root_navigation": 3,
+    "all_navigation": 14,
+    "all_opens": 12,
+    "all_clicks": 2,
+    "finds": 0,
+    "raw_GETs": 0
+  },
+  "auxiliary_observation": {
+    "record_id": "RS_PAST_NA8672",
+    "type": "source_only_cross_source_death_month_contrast",
+    "new_actual_source": "SIAM SvenLeyffer2016 obituary turn6032344view0:L166",
+    "new_actual_death_month": "2016-06",
+    "prior_actual_lecture_citation_memoir_title_date": "2016-07-15",
+    "prior_actual_source_ref": "turn9412493view1",
+    "native_authority_endpoint_year": "2016",
+    "both_endpoint_years_compatible": true,
+    "no_correct_date_verdict": true,
+    "no_native_DOB_or_endpointyear_issue_added": true,
+    "source_deathmonth_contrast_only_not_filled_from_searchmetadata": true,
+    "prior_actual_source_locator": "V21 actual original lecture L24-32@P3-4 cited memoir title"
+  },
+  "PubMed_closure_role_clarification": "The two actual failed1956requests were PubMedmetadata records (turn2116752view0/turn3428253view0), not acquiredBMJ/Lancetoriginalbody or publisherHTTPresponse. The worker appliedconservativecurrentstagewholeworkclosure afterthemetadata challenges; preserve thatclosure and allactualreceipts. Do notclaimtheoriginaljournalbodies were requested, thatpublisherfailed, or thatallpublicsourcesareunavailable.",
+  "new_qualified_DOB_place_age_or_endpointyear_issue_records": 0,
+  "all9_prior_issue_inventories_unchanged": true,
+  "Morris_V46_Australia_S3_south_context_and_native_DOB_unchanged": true,
+  "V44_Finlay_deviation_retained_not_cleared": true,
+  "V45_V46_all_prior_holds_and_closures_preserved": true,
+  "master_unchanged": true,
+  "master_version_retained": "V46",
+  "master_canonical_sha256": "149afefd545fb9e98bd806ff5927be29057cc04db38b18c49de8fe5dde7055ed",
+  "master_gzip_sha256": "95048d6e3ef240f1f5d11a92d3314295b9eb98af7c388bead6889fa2af300b95",
+  "complete_objects_changed": 0,
+  "pipeline_or_CSV_changes": 0,
+  "new_empty_master_wrapper_created": false,
+  "historical_imports_loaders_or_replay_CLI_runs": 0,
+  "source_stage_complete": true,
+  "birthplace_coverage_complete": false,
+  "source_exhausted": false,
+  "final_analysis_cohort_freeze": false,
+  "source_quote_conservative_lexical_words": {
+    "SIAM_Fletcher2016": 2,
+    "all_other_new_works": 0
+  }
+}
