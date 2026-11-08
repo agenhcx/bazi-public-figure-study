@@ -1,0 +1,1050 @@
+{
+  "schema": "UK_v42_independent_recovery_source_review_v1",
+  "artifact_type": "independent_recovery_source_review",
+  "phase": "recovery",
+  "written_utc": "2026-11-08T09:40:56.570819+00:00",
+  "reviewer": "/root/v42_source_qa",
+  "passed": true,
+  "status": "PASS",
+  "checks_passed": 101,
+  "new_recovery_checks_passed": 101,
+  "checks": [
+    {
+      "check": "direct_V41_canonical_pin",
+      "passed": true
+    },
+    {
+      "check": "master4983_unique_complete_records",
+      "passed": true
+    },
+    {
+      "check": "original_scope_byte_hash",
+      "passed": true
+    },
+    {
+      "check": "scope_exact_six_fixed_IDs",
+      "passed": true
+    },
+    {
+      "check": "scope_unchanged_V36_method",
+      "passed": true
+    },
+    {
+      "check": "retained_source_is_reconstructed_attestation",
+      "passed": true
+    },
+    {
+      "check": "historical171_report_status_and_hash_attested_only",
+      "passed": true
+    },
+    {
+      "check": "original_per_entry_timestamps_not_recovered",
+      "passed": true
+    },
+    {
+      "check": "attestation_exact_six_cases",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1476_all_full_native_personal_components",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1476_native_DOB_place_BP_grade",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1476_unknown_nonblank_window_scope",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1476_held_retained_refs_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1592_all_full_native_personal_components",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1592_native_DOB_place_BP_grade",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1592_unknown_nonblank_window_scope",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1592_held_retained_refs_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1994_all_full_native_personal_components",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1994_native_DOB_place_BP_grade",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1994_unknown_nonblank_window_scope",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1994_held_retained_refs_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1998_all_full_native_personal_components",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1998_native_DOB_place_BP_grade",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1998_unknown_nonblank_window_scope",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1998_held_retained_refs_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2007_all_full_native_personal_components",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2007_native_DOB_place_BP_grade",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2007_unknown_nonblank_window_scope",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2007_held_retained_refs_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2146_all_full_native_personal_components",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2146_native_DOB_place_BP_grade",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2146_unknown_nonblank_window_scope",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2146_held_retained_refs_exact",
+      "passed": true
+    },
+    {
+      "check": "active_source_DOB_conflicts.json_baseline_shape_and_count",
+      "passed": true
+    },
+    {
+      "check": "active_source_DOB_conflicts.json_current_six_not_prior_issue_subjects",
+      "passed": true
+    },
+    {
+      "check": "birthplace_source_conflicts.json_baseline_shape_and_count",
+      "passed": true
+    },
+    {
+      "check": "birthplace_source_conflicts.json_current_six_not_prior_issue_subjects",
+      "passed": true
+    },
+    {
+      "check": "source_derived_age_inconsistencies.json_baseline_shape_and_count",
+      "passed": true
+    },
+    {
+      "check": "source_derived_age_inconsistencies.json_current_six_not_prior_issue_subjects",
+      "passed": true
+    },
+    {
+      "check": "provisional_parsed_date_discrepancies.json_baseline_shape_and_count",
+      "passed": true
+    },
+    {
+      "check": "provisional_parsed_date_discrepancies.json_current_six_not_prior_issue_subjects",
+      "passed": true
+    },
+    {
+      "check": "lifespan_endpoint_discrepancies.json_baseline_shape_and_count",
+      "passed": true
+    },
+    {
+      "check": "lifespan_endpoint_discrepancies.json_current_six_not_prior_issue_subjects",
+      "passed": true
+    },
+    {
+      "check": "cross_source_reported_age_contrasts.json_baseline_shape_and_count",
+      "passed": true
+    },
+    {
+      "check": "cross_source_reported_age_contrasts.json_current_six_not_prior_issue_subjects",
+      "passed": true
+    },
+    {
+      "check": "source_date_precision_holds.json_baseline_shape_and_count",
+      "passed": true
+    },
+    {
+      "check": "source_date_precision_holds.json_current_six_not_prior_issue_subjects",
+      "passed": true
+    },
+    {
+      "check": "omitted_middle_name_admission.json_baseline_shape_and_count",
+      "passed": true
+    },
+    {
+      "check": "omitted_middle_name_admission.json_current_six_not_prior_issue_subjects",
+      "passed": true
+    },
+    {
+      "check": "source_ordinal_age_wording_observations.json_baseline_shape_and_count",
+      "passed": true
+    },
+    {
+      "check": "source_ordinal_age_wording_observations.json_current_six_not_prior_issue_subjects",
+      "passed": true
+    },
+    {
+      "check": "all13_active_DOB_remain_active",
+      "passed": true
+    },
+    {
+      "check": "separate_Ewins_Barber_excluded",
+      "passed": true
+    },
+    {
+      "check": "all_V11_to_V40_and_currentV41_hold_files_read",
+      "passed": true
+    },
+    {
+      "check": "each_current_target_has_prior_hold_context",
+      "passed": true
+    },
+    {
+      "check": "current_reviewed_native_rows_six_complete_objects_exact",
+      "passed": true
+    },
+    {
+      "check": "recovery_provenance_original_report_and_intents_unrecovered",
+      "passed": true
+    },
+    {
+      "check": "parent_decisions_zero_adoption_and_old_issue_totals",
+      "passed": true
+    },
+    {
+      "check": "source_class_zero_adoption_no_method_exception",
+      "passed": true
+    },
+    {
+      "check": "no_fabricated_original_current_workers_or_intents",
+      "passed": true
+    },
+    {
+      "check": "all_five_retained_interruption_artifacts_copied_exact",
+      "passed": true
+    },
+    {
+      "check": "current_scope_original_bytes_exact",
+      "passed": true
+    },
+    {
+      "check": "zero_current_facts_and_exact_six_holds",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1476_reconstructed_hold_native_binding",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1476_current_hold_case_fields_and_retained_refs",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1476_no_geographic_or_grade_adoption",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1476_reconstruction_label_and_missing_original_intent",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1592_reconstructed_hold_native_binding",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1592_current_hold_case_fields_and_retained_refs",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1592_no_geographic_or_grade_adoption",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1592_reconstruction_label_and_missing_original_intent",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1994_reconstructed_hold_native_binding",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1994_current_hold_case_fields_and_retained_refs",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1994_no_geographic_or_grade_adoption",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1994_reconstruction_label_and_missing_original_intent",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1998_reconstructed_hold_native_binding",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1998_current_hold_case_fields_and_retained_refs",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1998_no_geographic_or_grade_adoption",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1998_reconstruction_label_and_missing_original_intent",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2007_reconstructed_hold_native_binding",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2007_current_hold_case_fields_and_retained_refs",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2007_no_geographic_or_grade_adoption",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2007_reconstruction_label_and_missing_original_intent",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2146_reconstructed_hold_native_binding",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2146_current_hold_case_fields_and_retained_refs",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2146_no_geographic_or_grade_adoption",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2146_reconstruction_label_and_missing_original_intent",
+      "passed": true
+    },
+    {
+      "check": "active_source_DOB_conflicts.json_current_full_file_exact",
+      "passed": true
+    },
+    {
+      "check": "birthplace_source_conflicts.json_current_full_file_exact",
+      "passed": true
+    },
+    {
+      "check": "source_derived_age_inconsistencies.json_current_full_file_exact",
+      "passed": true
+    },
+    {
+      "check": "provisional_parsed_date_discrepancies.json_current_full_file_exact",
+      "passed": true
+    },
+    {
+      "check": "lifespan_endpoint_discrepancies.json_current_full_file_exact",
+      "passed": true
+    },
+    {
+      "check": "cross_source_reported_age_contrasts.json_current_full_file_exact",
+      "passed": true
+    },
+    {
+      "check": "source_date_precision_holds.json_current_full_file_exact",
+      "passed": true
+    },
+    {
+      "check": "omitted_middle_name_admission.json_current_full_file_exact",
+      "passed": true
+    },
+    {
+      "check": "source_ordinal_age_wording_observations.json_current_full_file_exact",
+      "passed": true
+    },
+    {
+      "check": "all_six_hold_raw_metadata_unknown_null",
+      "passed": true
+    },
+    {
+      "check": "all_targeted_old_context_files_preserved_exact",
+      "passed": true
+    },
+    {
+      "check": "historical_queues_and_separate_place_holds_preserved",
+      "passed": true
+    },
+    {
+      "check": "reviewer_left_V41_master_bytes_unchanged",
+      "passed": true
+    },
+    {
+      "check": "recovery_evidence_bytes_unchanged_during_review",
+      "passed": true
+    }
+  ],
+  "blocking_issues": [],
+  "reviewed_master_records": 4983,
+  "baseline_canonical_sha256": "a0c04e44631478f82e562deab64d699fc273e6fc99fa35ba23f8a61d7e1f8717",
+  "baseline_gzip_sha256": "433749a0b7ff0bfc62db8993f662cd928a4bc023418a54600259fdbea0b1537a",
+  "current_master_changes_performed_by_reviewer": 0,
+  "canonical_full_V41_gzip_read_directly": true,
+  "historical_replay_or_production_executed": false,
+  "fresh_network_source_requests": 0,
+  "Git_writes": 0,
+  "original_V42_scope_sha256": "c5c7594d271b6923725acad91612b8f53b3528383d3bf50f0658ccfa0e639796",
+  "artifact_sha256": {
+    "original_scope": "c5c7594d271b6923725acad91612b8f53b3528383d3bf50f0658ccfa0e639796",
+    "checkpoint": "4d2f5ade2a17685d2b9b864f424186a331131c136e6f331e6e5e1b3fe1242aeb",
+    "retained_source_attestation": "3697f82f24dadf709841da45d859884b47c621f81c19e939598b47f1a8e00a17",
+    "current_facts": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "current_holds": "cd861d68b55cb39a1119b60a12c6edd22a84d88ea4cbda42c63a53c358e9850d",
+    "current_scope": "c5c7594d271b6923725acad91612b8f53b3528383d3bf50f0658ccfa0e639796",
+    "current_recovery_provenance": "d0ee2495563e6b2ca870b60cd42de5415176bda3ec30330227299e686b73215c",
+    "current_parent_adjudication": "6b84ed1213f09707306b65e6f48ea3221af57d2258a4e8d6b861cd1a96678235",
+    "current_source_class": "6ed69814822c043786f0965abf9a6f9c5a4392225bd4cbe755487c291702f002",
+    "current_reviewed_native_rows": "421972d5602749d5df23d8d240e76883b0509e12803e882b17f3209120039065",
+    "current_inventory_active_source_DOB_conflicts.json": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+    "current_inventory_birthplace_source_conflicts.json": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+    "current_inventory_source_derived_age_inconsistencies.json": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+    "current_inventory_provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+    "current_inventory_lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+    "current_inventory_cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+    "current_inventory_source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+    "current_inventory_omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+    "current_inventory_source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+  },
+  "historical_source_QA_attestation": {
+    "historical_only": true,
+    "checks_passed_before_interruption": 171,
+    "original_report_sha256": "fd7a18d1df3816192812894620b352ad2ea695498c07076d20aa7f42b4443dd5",
+    "original_report_bytes_recovered": false,
+    "original_documentary_case_sha256": "9ae3576a81840e7f301143653ce8b00f485b0031ae2716a1a4c2bd3e931fab27",
+    "original_intent_bytes_recovered": false,
+    "individual_entry_UTC_recovered": false,
+    "not_a_fresh_171_check_rerun": true
+  },
+  "cases": [
+    {
+      "record_id": "RS_PAST_NA1476",
+      "native_name": "Bernard Smith",
+      "native_DOB": "1881-02-13",
+      "frozen_place": "Grantham",
+      "original_BP_grade": "S3",
+      "native_authority_string": "Smith; Bernard (1881 - 1936)",
+      "native_personal_components": [
+        "bernard",
+        "smith"
+      ],
+      "decision": "held",
+      "source_refs": [
+        "turn3826931view0",
+        "turn3990477view1",
+        "turn5962439view0"
+      ],
+      "source_locator_from_retained_attestation": null,
+      "review": "Retained acquisition review identifies explicitly rewritten person/item responses, usable only as observed URI/sitelink carriers. Separate frozen lookup item first opening failed. No original canonical person birth-region path was acquired. Prior BGS Grantham/S3, Bailey/NPG career context and failed memoir limits stay historical.",
+      "source_interpretation_from_retained_review": true,
+      "fresh_source_body_acquisition": false
+    },
+    {
+      "record_id": "RS_PAST_NA1592",
+      "native_name": "Ernest John Maskell",
+      "native_DOB": "1895-02-01",
+      "frozen_place": "Cambridge",
+      "original_BP_grade": "S2",
+      "native_authority_string": "Maskell; Ernest John (1895 - 1958)",
+      "native_personal_components": [
+        "ernest",
+        "john",
+        "maskell"
+      ],
+      "decision": "held",
+      "source_refs": [
+        "turn3990477view0"
+      ],
+      "source_locator_from_retained_attestation": null,
+      "review": "Retained bounded discovery supplied no acquired eligible canonical person body, and supplied lookup item first opening failed. No actual birth-region path. Prior Cambridge memoir abstract/S2 and closed DOI/local-history/profile attempts remain unchanged; familiar-city inference supplies no edge.",
+      "source_interpretation_from_retained_review": true,
+      "fresh_source_body_acquisition": false
+    },
+    {
+      "record_id": "RS_PAST_NA1994",
+      "native_name": "Norman Laurence Franklin",
+      "native_DOB": "1924-09-01",
+      "frozen_place": "Leeds",
+      "original_BP_grade": "S3",
+      "native_authority_string": "Franklin; Norman Laurence (1924 - 1986)",
+      "native_personal_components": [
+        "franklin",
+        "laurence",
+        "norman"
+      ],
+      "decision": "held",
+      "source_refs": [
+        "turn8750374view0",
+        "turn6928554view0",
+        "turn8623749view0"
+      ],
+      "source_locator_from_retained_attestation": null,
+      "review": "Retained actual fellow-list supplies an observed personal-link carrier; its followed link resolved to an edit/redlink target with first tool404. Supplied lookup item was unavailable. Neither supplies personal birth proof. Historical ATOM Leeds/S3 and root timeout, month-only IChemE and inaccessible JSTOR memoir remain distinct and closed.",
+      "source_interpretation_from_retained_review": true,
+      "fresh_source_body_acquisition": false
+    },
+    {
+      "record_id": "RS_PAST_NA1998",
+      "native_name": "Basil Kassanis",
+      "native_DOB": "1911-10-16",
+      "frozen_place": "Macedonian born",
+      "original_BP_grade": "S3",
+      "native_authority_string": "Kassanis; Basil (1911 - 1985)",
+      "native_personal_components": [
+        "basil",
+        "kassanis"
+      ],
+      "decision": "held",
+      "source_refs": [
+        "turn8750374view1",
+        "turn2061416view2"
+      ],
+      "source_locator_from_retained_attestation": "L47/97 full name;L118-126 DOB;L128-132 death;L134-138 virologist;L140-148 FRS1966;L162-164 NA1998;L170-174 Wikipedia0",
+      "review": "Retained normal parsed Wikidata observations support full native name, exact displayed date, compatible life and virologist/FRS career identity context. No acquired birthplace/P19/admin chain establishes a birth region. Missing displayed P19 is not universal absence or an acquired no-value snak. Historical Macedonian-born adjective has unresolved extent; no guessed modern country.",
+      "source_interpretation_from_retained_review": true,
+      "fresh_source_body_acquisition": false
+    },
+    {
+      "record_id": "RS_PAST_NA2007",
+      "native_name": "Pierre Henry John Young",
+      "native_DOB": "1926-06-12",
+      "frozen_place": "France",
+      "original_BP_grade": "S3",
+      "native_authority_string": "Young; Pierre Henry John (1926 - 1985)",
+      "native_personal_components": [
+        "henry",
+        "john",
+        "pierre",
+        "young"
+      ],
+      "decision": "held",
+      "source_refs": [
+        "turn4592580view0",
+        "turn7813429view1",
+        "turn2061416view0"
+      ],
+      "source_locator_from_retained_attestation": "L116 full name;L117 DOB;L118 unlinked France;L119 death/age59;L121 identity;L126 explicit France birth;L134-145 engine career",
+      "review": "Retained actual English body supports all native components, exact date, compatible life and distinctive Concorde career, but gives only generic unlinked France. No acquired birth-linked subregion. Item response was explicitly rewritten and remains a URI carrier. Displayed59 agrees completed59, so no age issue is inferred.",
+      "source_interpretation_from_retained_review": true,
+      "fresh_source_body_acquisition": false
+    },
+    {
+      "record_id": "RS_PAST_NA2146",
+      "native_name": "Oscar Victor Sayer Heath",
+      "native_DOB": "1903-07-26",
+      "frozen_place": "London",
+      "original_BP_grade": "S2",
+      "native_authority_string": "Heath; Oscar Victor Sayer (1903 - 1997)",
+      "native_personal_components": [
+        "heath",
+        "oscar",
+        "sayer",
+        "victor"
+      ],
+      "decision": "held",
+      "source_refs": [
+        "turn7813429view0",
+        "turn2061416view1"
+      ],
+      "source_locator_from_retained_attestation": "L47/101 full name;L148-156 DOB;L158-165 death;L173-179 plant physiologist/botanist;L195-201 FRS1960",
+      "review": "Retained normal parsed Wikidata observations support all native components, exact date, compatible life and plant-physiology/FRS career. No acquired personal birthplace/P19/admin chain. Missing displayed P19 is bounded unknown, not absence proof. Frozen London/S2 and closed historical memoir remain unchanged.",
+      "source_interpretation_from_retained_review": true,
+      "fresh_source_body_acquisition": false
+    }
+  ],
+  "case_reviews": [
+    {
+      "record_id": "RS_PAST_NA1476",
+      "native_name": "Bernard Smith",
+      "native_DOB": "1881-02-13",
+      "frozen_place": "Grantham",
+      "original_BP_grade": "S3",
+      "native_authority_string": "Smith; Bernard (1881 - 1936)",
+      "native_personal_components": [
+        "bernard",
+        "smith"
+      ],
+      "decision": "held",
+      "source_refs": [
+        "turn3826931view0",
+        "turn3990477view1",
+        "turn5962439view0"
+      ],
+      "source_locator_from_retained_attestation": null,
+      "review": "Retained acquisition review identifies explicitly rewritten person/item responses, usable only as observed URI/sitelink carriers. Separate frozen lookup item first opening failed. No original canonical person birth-region path was acquired. Prior BGS Grantham/S3, Bailey/NPG career context and failed memoir limits stay historical.",
+      "source_interpretation_from_retained_review": true,
+      "fresh_source_body_acquisition": false
+    },
+    {
+      "record_id": "RS_PAST_NA1592",
+      "native_name": "Ernest John Maskell",
+      "native_DOB": "1895-02-01",
+      "frozen_place": "Cambridge",
+      "original_BP_grade": "S2",
+      "native_authority_string": "Maskell; Ernest John (1895 - 1958)",
+      "native_personal_components": [
+        "ernest",
+        "john",
+        "maskell"
+      ],
+      "decision": "held",
+      "source_refs": [
+        "turn3990477view0"
+      ],
+      "source_locator_from_retained_attestation": null,
+      "review": "Retained bounded discovery supplied no acquired eligible canonical person body, and supplied lookup item first opening failed. No actual birth-region path. Prior Cambridge memoir abstract/S2 and closed DOI/local-history/profile attempts remain unchanged; familiar-city inference supplies no edge.",
+      "source_interpretation_from_retained_review": true,
+      "fresh_source_body_acquisition": false
+    },
+    {
+      "record_id": "RS_PAST_NA1994",
+      "native_name": "Norman Laurence Franklin",
+      "native_DOB": "1924-09-01",
+      "frozen_place": "Leeds",
+      "original_BP_grade": "S3",
+      "native_authority_string": "Franklin; Norman Laurence (1924 - 1986)",
+      "native_personal_components": [
+        "franklin",
+        "laurence",
+        "norman"
+      ],
+      "decision": "held",
+      "source_refs": [
+        "turn8750374view0",
+        "turn6928554view0",
+        "turn8623749view0"
+      ],
+      "source_locator_from_retained_attestation": null,
+      "review": "Retained actual fellow-list supplies an observed personal-link carrier; its followed link resolved to an edit/redlink target with first tool404. Supplied lookup item was unavailable. Neither supplies personal birth proof. Historical ATOM Leeds/S3 and root timeout, month-only IChemE and inaccessible JSTOR memoir remain distinct and closed.",
+      "source_interpretation_from_retained_review": true,
+      "fresh_source_body_acquisition": false
+    },
+    {
+      "record_id": "RS_PAST_NA1998",
+      "native_name": "Basil Kassanis",
+      "native_DOB": "1911-10-16",
+      "frozen_place": "Macedonian born",
+      "original_BP_grade": "S3",
+      "native_authority_string": "Kassanis; Basil (1911 - 1985)",
+      "native_personal_components": [
+        "basil",
+        "kassanis"
+      ],
+      "decision": "held",
+      "source_refs": [
+        "turn8750374view1",
+        "turn2061416view2"
+      ],
+      "source_locator_from_retained_attestation": "L47/97 full name;L118-126 DOB;L128-132 death;L134-138 virologist;L140-148 FRS1966;L162-164 NA1998;L170-174 Wikipedia0",
+      "review": "Retained normal parsed Wikidata observations support full native name, exact displayed date, compatible life and virologist/FRS career identity context. No acquired birthplace/P19/admin chain establishes a birth region. Missing displayed P19 is not universal absence or an acquired no-value snak. Historical Macedonian-born adjective has unresolved extent; no guessed modern country.",
+      "source_interpretation_from_retained_review": true,
+      "fresh_source_body_acquisition": false
+    },
+    {
+      "record_id": "RS_PAST_NA2007",
+      "native_name": "Pierre Henry John Young",
+      "native_DOB": "1926-06-12",
+      "frozen_place": "France",
+      "original_BP_grade": "S3",
+      "native_authority_string": "Young; Pierre Henry John (1926 - 1985)",
+      "native_personal_components": [
+        "henry",
+        "john",
+        "pierre",
+        "young"
+      ],
+      "decision": "held",
+      "source_refs": [
+        "turn4592580view0",
+        "turn7813429view1",
+        "turn2061416view0"
+      ],
+      "source_locator_from_retained_attestation": "L116 full name;L117 DOB;L118 unlinked France;L119 death/age59;L121 identity;L126 explicit France birth;L134-145 engine career",
+      "review": "Retained actual English body supports all native components, exact date, compatible life and distinctive Concorde career, but gives only generic unlinked France. No acquired birth-linked subregion. Item response was explicitly rewritten and remains a URI carrier. Displayed59 agrees completed59, so no age issue is inferred.",
+      "source_interpretation_from_retained_review": true,
+      "fresh_source_body_acquisition": false
+    },
+    {
+      "record_id": "RS_PAST_NA2146",
+      "native_name": "Oscar Victor Sayer Heath",
+      "native_DOB": "1903-07-26",
+      "frozen_place": "London",
+      "original_BP_grade": "S2",
+      "native_authority_string": "Heath; Oscar Victor Sayer (1903 - 1997)",
+      "native_personal_components": [
+        "heath",
+        "oscar",
+        "sayer",
+        "victor"
+      ],
+      "decision": "held",
+      "source_refs": [
+        "turn7813429view0",
+        "turn2061416view1"
+      ],
+      "source_locator_from_retained_attestation": "L47/101 full name;L148-156 DOB;L158-165 death;L173-179 plant physiologist/botanist;L195-201 FRS1960",
+      "review": "Retained normal parsed Wikidata observations support all native components, exact date, compatible life and plant-physiology/FRS career. No acquired personal birthplace/P19/admin chain. Missing displayed P19 is bounded unknown, not absence proof. Frozen London/S2 and closed historical memoir remain unchanged.",
+      "source_interpretation_from_retained_review": true,
+      "fresh_source_body_acquisition": false
+    }
+  ],
+  "accepted_geography_facts": 0,
+  "held_cases": 6,
+  "new_DOB_place_age_or_admission_issues": 0,
+  "nine_issue_inventory_sha256_at_review": {
+    "active_source_DOB_conflicts.json": {
+      "baseline_sha256": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+      "baseline_records": 13,
+      "inventory_shape": "records",
+      "current_sha256": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+      "current_records": 13,
+      "byte_identical": true
+    },
+    "birthplace_source_conflicts.json": {
+      "baseline_sha256": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+      "baseline_records": 2,
+      "inventory_shape": "records",
+      "current_sha256": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+      "current_records": 2,
+      "byte_identical": true
+    },
+    "source_derived_age_inconsistencies.json": {
+      "baseline_sha256": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+      "baseline_records": 4,
+      "inventory_shape": "records",
+      "current_sha256": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+      "current_records": 4,
+      "byte_identical": true
+    },
+    "provisional_parsed_date_discrepancies.json": {
+      "baseline_sha256": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+      "baseline_records": 1,
+      "inventory_shape": "records",
+      "current_sha256": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+      "current_records": 1,
+      "byte_identical": true
+    },
+    "lifespan_endpoint_discrepancies.json": {
+      "baseline_sha256": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+      "baseline_records": 1,
+      "inventory_shape": "records",
+      "current_sha256": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+      "current_records": 1,
+      "byte_identical": true
+    },
+    "cross_source_reported_age_contrasts.json": {
+      "baseline_sha256": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+      "baseline_records": 1,
+      "inventory_shape": "records",
+      "current_sha256": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+      "current_records": 1,
+      "byte_identical": true
+    },
+    "source_date_precision_holds.json": {
+      "baseline_sha256": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+      "baseline_records": 1,
+      "inventory_shape": "records",
+      "current_sha256": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+      "current_records": 1,
+      "byte_identical": true
+    },
+    "omitted_middle_name_admission.json": {
+      "baseline_sha256": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+      "baseline_records": null,
+      "inventory_shape": "metadata_without_records",
+      "current_sha256": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+      "current_records": null,
+      "byte_identical": true
+    },
+    "source_ordinal_age_wording_observations.json": {
+      "baseline_sha256": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d",
+      "baseline_records": 1,
+      "inventory_shape": "records",
+      "current_sha256": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d",
+      "current_records": 1,
+      "byte_identical": true
+    }
+  },
+  "targets_in_prior_issue_inventories": {
+    "active_source_DOB_conflicts.json": [],
+    "birthplace_source_conflicts.json": [],
+    "source_derived_age_inconsistencies.json": [],
+    "provisional_parsed_date_discrepancies.json": [],
+    "lifespan_endpoint_discrepancies.json": [],
+    "cross_source_reported_age_contrasts.json": [],
+    "source_date_precision_holds.json": [],
+    "omitted_middle_name_admission.json": [],
+    "source_ordinal_age_wording_observations.json": []
+  },
+  "all_prior_hold_files_read": {
+    "followup_holds.json": {
+      "sha256": "80dee4aeee68784c953d55c56b194f753e549555c53337d71743c3c6f08f5a2a",
+      "matched_record_ids": []
+    },
+    "prior_v11_holds.json": {
+      "sha256": "d945eb7e0388c9f0aa1d82076fb8d3dfe7b37e4041f5b984346671cecf4356d2",
+      "matched_record_ids": [
+        "RS_PAST_NA1592"
+      ]
+    },
+    "prior_v12_holds.json": {
+      "sha256": "00c91a7cc6982df70ee6b099b38f800530417f289352f7b3a3c9baba945fe801",
+      "matched_record_ids": []
+    },
+    "prior_v13_holds.json": {
+      "sha256": "9b54ad12c2a8aa10d3bbc6cefbbf84f8322474a6585310ce86559da2900e05ee",
+      "matched_record_ids": [
+        "RS_PAST_NA2146",
+        "RS_PAST_NA2007"
+      ]
+    },
+    "prior_v14_holds.json": {
+      "sha256": "83b624fef9d10aa0ccf5f98fddaef97659e42b2e244ce858b6a2cea722d581da",
+      "matched_record_ids": []
+    },
+    "prior_v15_holds.json": {
+      "sha256": "c6aa776aaa1aa60ae8a6497532210b4fc937253694011de1f0d6f2dd9fdb4942",
+      "matched_record_ids": []
+    },
+    "prior_v16_holds.json": {
+      "sha256": "28ba18ff1853415f5d540b09fefc7c1d244911b20a3c841352c8a8c8239e753b",
+      "matched_record_ids": []
+    },
+    "prior_v17_holds.json": {
+      "sha256": "3142cc4a347807ac06cef0a73caa4d4054fd28ab2cc1c34a8175d096a9d94407",
+      "matched_record_ids": []
+    },
+    "prior_v18_holds.json": {
+      "sha256": "81e5432af8ad764152805fbc15311ae18ba89e1eb823a521ea6222ad14efc249",
+      "matched_record_ids": []
+    },
+    "prior_v19_holds.json": {
+      "sha256": "124e4c2c9c26b31ba13761bd14903104a5cf3c724871dbb75495132b0e083200",
+      "matched_record_ids": []
+    },
+    "prior_v20_holds.json": {
+      "sha256": "0fe269f7dcf6eb2855b511b4cc41394c67dcdf9a65c4e3ef9bec7c4d3103e277",
+      "matched_record_ids": []
+    },
+    "prior_v21_holds.json": {
+      "sha256": "cf04731a4626cefb1141e640b23550bbc6a9a34fad0ad83a25ba504ff4e2b928",
+      "matched_record_ids": []
+    },
+    "prior_v22_holds.json": {
+      "sha256": "d3b4535dd510b91cf96ed77ac57ab704aa341e70654eec55065b8864d1c86d35",
+      "matched_record_ids": []
+    },
+    "prior_v23_holds.json": {
+      "sha256": "c6f2beff853e821d0b49f70270007475c86d594545356bd68d9bf5d09d038c99",
+      "matched_record_ids": []
+    },
+    "prior_v24_holds.json": {
+      "sha256": "3d113b79b06f36e726a6976caed08cb258eff32d45cb7578a24b03b6735b3331",
+      "matched_record_ids": []
+    },
+    "prior_v25_holds.json": {
+      "sha256": "499bd2c8658e99d259484241c8bb0b69f0a30aab04c3a86b4c6fcded5bc83cf0",
+      "matched_record_ids": []
+    },
+    "prior_v26_holds.json": {
+      "sha256": "510d080ca5ec90938d6953955b145805b872c72090e05551b3259d163f247c4e",
+      "matched_record_ids": []
+    },
+    "prior_v27_holds.json": {
+      "sha256": "f7ef7d491d0f8d3067209e0b02852cb5b8e8872f2d09703ad9bff7cb45fc88df",
+      "matched_record_ids": []
+    },
+    "prior_v28_holds.json": {
+      "sha256": "16c516cf51aa6424e29bd9bbba9d86edd079c5f366410e1fb45d3f7539b96a97",
+      "matched_record_ids": []
+    },
+    "prior_v29_holds.json": {
+      "sha256": "9d37929a014b452df5df44aa03c413ba9882413e6dd505572c17f0dd1fd6f4de",
+      "matched_record_ids": []
+    },
+    "prior_v30_holds.json": {
+      "sha256": "93fa0fdccf1d12e9918943e79fee7585f769ad6cbae591627870cf71abf8bc18",
+      "matched_record_ids": [
+        "RS_PAST_NA1998",
+        "RS_PAST_NA2007"
+      ]
+    },
+    "prior_v31_holds.json": {
+      "sha256": "fb132f1350a62a5298ba0c5d26d862aaf4d12ebf0a1ddaff465f78c979176d80",
+      "matched_record_ids": []
+    },
+    "prior_v32_holds.json": {
+      "sha256": "f8ac4b3bd984b5d49f0f02bb6aac6f5abe0ebcc232d4a64b9858183fa5206e53",
+      "matched_record_ids": [
+        "RS_PAST_NA1476",
+        "RS_PAST_NA1592"
+      ]
+    },
+    "prior_v33_holds.json": {
+      "sha256": "0d0e0dedd3c1f26da2a993b3f5d047bc1717a4f5882d1b4630d181d0af5af8aa",
+      "matched_record_ids": [
+        "RS_PAST_NA1994",
+        "RS_PAST_NA2146"
+      ]
+    },
+    "prior_v34_holds.json": {
+      "sha256": "c85406306d1e1f1b76ba3b8daf46c98d3652ec895388bd9fad2f6cd3e9f034e0",
+      "matched_record_ids": []
+    },
+    "prior_v35_holds.json": {
+      "sha256": "622a83a04caa3dc967ad540b5d2c41f4e6bf76bc40cdd51d2e64bd385a7281c2",
+      "matched_record_ids": []
+    },
+    "prior_v36_holds.json": {
+      "sha256": "e53da3819069a98a3e9e267a4ece93665bd7976153de983e29431eb50112bc11",
+      "matched_record_ids": []
+    },
+    "prior_v37_holds.json": {
+      "sha256": "01cc47729239dacb68c619b0cda4e6792e04f58e9657297a406f66f264e93262",
+      "matched_record_ids": []
+    },
+    "prior_v38_holds.json": {
+      "sha256": "c3dadadba08530652eb695f87053f2be342acb52b9e40b648a32117d4d4c1c7d",
+      "matched_record_ids": []
+    },
+    "prior_v39_holds.json": {
+      "sha256": "144407caf646d2b085949a22689d71c75e1316f517af443f86477ee4c8f9e28b",
+      "matched_record_ids": []
+    },
+    "prior_v40_holds.json": {
+      "sha256": "1c3dcd1ddcf3817d8f7bd0f34c764654b290d8122f08aeff425f4c8b5ceda360",
+      "matched_record_ids": []
+    }
+  },
+  "targeted_old_hold_contexts": [
+    {
+      "file": "prior_v11_holds.json",
+      "record_id": "RS_PAST_NA1592",
+      "hold_type": null,
+      "status": null,
+      "reason": "No new qualified birthplace. Search genealogy snippets do not add a qualified actual birthplace. DOI inaccessible. Death in Cambridgeshire and same-name military subject are not birth evidence.",
+      "source_url": null
+    },
+    {
+      "file": "prior_v13_holds.json",
+      "record_id": "RS_PAST_NA2146",
+      "hold_type": "no_new_region_or_unavailable",
+      "status": "hold",
+      "reason": "only_secondary_page_or_search_snippet_no_qualifier",
+      "source_url": null
+    },
+    {
+      "file": "prior_v13_holds.json",
+      "record_id": "RS_PAST_NA2007",
+      "hold_type": "no_new_region_or_unavailable",
+      "status": null,
+      "reason": null,
+      "source_url": null
+    },
+    {
+      "file": "prior_v30_holds.json",
+      "record_id": "RS_PAST_NA1998",
+      "hold_type": "historical_Macedonian_born_unresolved",
+      "status": "hold_no_new_acquired_original_birth_country_region_narrative",
+      "reason": "RGmemoircarrierprovidesfullBasilKassanis/exactnativeDOB/lifespan/authoredcoverandabstractcareeronly; downloadstampsarenotbornbody. FirstobservedPDFdownloadnavigation404stopped. Latev20acceptedfactinspectionshowedcarriercover/abstractalreadyknown; cannotclaimgenuinelynewmemoirbodycoverage. Greeknationality/Greek-Yugoslavschooling/arrivalfromMacedonia/Englandworkdonotdeterminehistoricalbirthcountry/regionextent. ExistingliteralMacedonianbornandS3claimunchanged.",
+      "source_url": "https://www.researchgate.net/publication/247606177_Basil_Kassanis_16_October_1911_-_23_March_1985"
+    },
+    {
+      "file": "prior_v30_holds.json",
+      "record_id": "RS_PAST_NA2007",
+      "hold_type": "generic_France_not_resolved",
+      "status": "hold_no_genuinely_new_original_birth_region_body",
+      "reason": "Twooriginal-workdiscoveryqueriesreturnedknownencyclopedia/mirrorandunrelatedPierreDarwinYoungpatterns,nopromisingneworiginalwork. Noneoftheclosedmirrors/unrelatedfuneralpageswasopened. Noactualbirth-linkedFrenchstate/region/metropolitancontextobtained; language/Frenchheritage/Paris-school/Herefordshireevacuationnotbirthregion. StoredFranceandcompletepriorBPcontextunchanged; noassumptionoverseasexcluded. Thisisboundednegativefollowup,notnewbodycoverage.",
+      "source_url": null
+    },
+    {
+      "file": "prior_v32_holds.json",
+      "record_id": "RS_PAST_NA1476",
+      "hold_type": "new_original_appointment_notice_no_bound_birth_context",
+      "status": "hold_no_new_qualified_geographic_support",
+      "reason": "Actual distinct Nature1935appointment notice supplies BernardSmith and coherentSurvey1906/district1920/assistant1931/directorship/Bigsby1927career, but acquired publicabstract gives no DOB/lifespan or explicit bornregion. No datelessbypass, no Grantham-to-Lincolnshire or institution/workcountry inference. CurrentGranthamS3 rawclaim and oldBGS/Bailey/NPG facts unchanged.",
+      "source_url": "https://www.nature.com/articles/136096a0"
+    },
+    {
+      "file": "prior_v32_holds.json",
+      "record_id": "RS_PAST_NA1592",
+      "hold_type": "no_new_actual_qualified_birth_country_source",
+      "status": null,
+      "reason": "Newlocalhistoryfirstopen Unicode400 and distinctRSprofilefirstopen502; no bodyaccepted. Searchprojections Cambridgeonly/unrelated1889Hadleighmilitaryperson notbirthcountry for1895botanist. ClosedpriorRS1961DOI not retried. CambridgeS2/completeobjectunchanged.",
+      "source_url": null
+    },
+    {
+      "file": "prior_v33_holds.json",
+      "record_id": "RS_PAST_NA1994",
+      "hold_type": "distinct_original_memoir_body_unavailable",
+      "status": "hold_no_new_qualified_geographic_support",
+      "reason": "Actualfirst1988JohnHillRSmemoirJSTORopen toolnotaccessible,stopped/no variants. Original1969ATOMbirthLeedsS3/monthonlyIChemEprofile remainunchanged; no newdirectborncountry/region acquired. No city/nationality/workinference.",
+      "source_url": "https://www.jstor.org/stable/770051"
+    },
+    {
+      "file": "prior_v33_holds.json",
+      "record_id": "RS_PAST_NA2146",
+      "hold_type": "first_full_memoir_route_no_subject_text",
+      "status": "hold_no_new_qualified_geographic_support",
+      "reason": "Actualfirstfull1998TerryAMansfieldRSmemoirJSTORopen returned1parsedlineL0Image only; no subjecttext/DOB/bornregion acquired. No imagepixels shown/inspected, no printedbody/civilverification or source-versionclaim. EarlierpublisherabstractLondonS2andfamilyhistorypage remainunchanged; workcountry notbirth.",
+      "source_url": "https://www.jstor.org/stable/770241"
+    }
+  ],
+  "source_interpretation_basis": "Independent recovery assessment from retained historical review plus actual restored native records and prior holds. Historical acquisition refs/locators are retained context; no original source body was reacquired.",
+  "unknown_source_metadata": {
+    "raw_HTTP_status": null,
+    "raw_bytes_sha256": null,
+    "exact_request_utc": null,
+    "source_calendar_model": null,
+    "source_statement_rank": null,
+    "source_editorial_validation": null,
+    "source_informational_independence": null
+  },
+  "limitations": [
+    "This is a newly written recovery review with its own check count and hashes, not the original171-check report or original worker/intent files.",
+    "Historical operation counts and24-entry timing/validation findings remain attestations; original individual UTC values and exact intent bytes are unavailable and were not invented.",
+    "No source originals/raw bytes/pixels were reacquired. Displayed Gregorian/footer observations do not authenticate calendar-model/rank/revision/editorial/independence metadata.",
+    "Missing acquired P19 remains unknown rather than universal absence or an acquired no-value statement; rewritten summaries remain discovery/URI carriers only.",
+    "All six remain held. Original DOB/BP/native fields and grades stay frozen, as do active13, partialplace2, age4 and six other issue files.",
+    "This review does not establish production or final replay completion."
+  ]
+}

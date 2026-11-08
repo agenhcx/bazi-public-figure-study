@@ -1,0 +1,205 @@
+{
+  "schema": "UK_v31_geography_only_source_method_review_v1",
+  "reviewer": "/root/v26_source_qa",
+  "initial_written_utc": "2026-11-06T12:35:20.625239+00:00",
+  "status": "final_documentary_geography_source_review_passed",
+  "timing": "Written before finalv31source reports/rootdecisions/facts; scope/schema/inherited-issue review only, no latercaseadoption/source-blindclaim.",
+  "materials_read": [
+    "v31_plan.json",
+    "v31_scope_a.json",
+    "v31_scope_b.json",
+    "v31_scope_c.json",
+    "actualv30native-and-storedBPobjects/nineissuefiles",
+    "v30sourceQAandpriorv29closeoutcontext"
+  ],
+  "native_and_stored_birthplace_scope": [
+    {
+      "record_id": "RS_PAST_NA4113",
+      "native_name": "Harry",
+      "authority_name": "Smith; Harry (1921 - 2011)",
+      "dob": "1921-08-07",
+      "raw_birthplace": "Northampton",
+      "birthplace_source_grade": "S1"
+    },
+    {
+      "record_id": "RS_PAST_NA4155",
+      "native_name": "Leonard George",
+      "authority_name": "Goodwin; Leonard George (1915 - 2008)",
+      "dob": "1915-07-11",
+      "raw_birthplace": "Wood Green, London",
+      "birthplace_source_grade": "S2"
+    },
+    {
+      "record_id": "RS_PAST_NA4680",
+      "native_name": "Michael Augustine",
+      "authority_name": "Raftery; Michael Augustine (1936 - 2007); biochemist",
+      "dob": "1936-02-08",
+      "raw_birthplace": "Galway",
+      "birthplace_source_grade": "S3"
+    },
+    {
+      "record_id": "RS_PAST_NA6868",
+      "native_name": "Roger Philip",
+      "authority_name": "Ekins; Roger Philip (1926 - 2016)",
+      "dob": "1926-09-22",
+      "raw_birthplace": "London",
+      "birthplace_source_grade": "S2"
+    },
+    {
+      "record_id": "RS_PAST_NA1580",
+      "native_name": "Claude Gordon",
+      "authority_name": "Douglas; Claude Gordon (1882 - 1963)",
+      "dob": "1882-02-26",
+      "raw_birthplace": "Leicester",
+      "birthplace_source_grade": "S2"
+    },
+    {
+      "record_id": "RS_PAST_NA4166",
+      "native_name": "William Reginald Stephen",
+      "authority_name": "Garton; William Reginald Stephen (1912 - 2002)",
+      "dob": "1912-03-07",
+      "raw_birthplace": "Chelsea",
+      "birthplace_source_grade": "S2"
+    },
+    {
+      "record_id": "RS_PAST_NA8736",
+      "native_name": "Anthony George",
+      "authority_name": "Cullis; Anthony George (1946 - 2021)",
+      "dob": "1946-01-16",
+      "raw_birthplace": "Worcester",
+      "birthplace_source_grade": "S1"
+    },
+    {
+      "record_id": "RS_PAST_NA8744",
+      "native_name": "Bland James",
+      "authority_name": "Finlay; Bland James (1952 - 2021); biologist",
+      "dob": "1952-03-16",
+      "raw_birthplace": "Edinburgh",
+      "birthplace_source_grade": "S1"
+    },
+    {
+      "record_id": "RS_PAST_NA4747",
+      "native_name": "Derek Harry",
+      "authority_name": "Roberts; Sir; Derek Harry (1932 - 2021); engineer",
+      "dob": "1932-03-28",
+      "raw_birthplace": "24 Polygon Avenue, Ardwick, Manchester",
+      "birthplace_source_grade": "S2"
+    },
+    {
+      "record_id": "RS_PAST_NA5065",
+      "native_name": "John Maynard",
+      "authority_name": "Smith; John Maynard (1920 - 2004)",
+      "dob": "1920-01-06",
+      "raw_birthplace": "London",
+      "birthplace_source_grade": "S1"
+    },
+    {
+      "record_id": "RS_PAST_NA5962",
+      "native_name": "Arthur Roderick",
+      "authority_name": "Collar; Arthur Roderick (1908 - 1986)",
+      "dob": "1908-02-22",
+      "raw_birthplace": "West Ealing",
+      "birthplace_source_grade": "S2"
+    },
+    {
+      "record_id": "RS_PAST_NA7080",
+      "native_name": "Alister Clavering",
+      "authority_name": "Hardy; Sir; Alister Clavering (1896 - 1985)",
+      "dob": "1896-02-10",
+      "raw_birthplace": "Nottingham",
+      "birthplace_source_grade": "S2"
+    }
+  ],
+  "scope_assessment": {
+    "fixed_geography_followups": 12,
+    "groups": 3,
+    "per_group": 4,
+    "actual_nonblank_unknown_window_pool": 68,
+    "blank_window_records": 103,
+    "new_first_birthplaces_allowed": false,
+    "Ewins_Barber_preexcluded": true
+  },
+  "inherited_sidecar_sha256": {
+    "active_source_DOB_conflicts.json": "93fc69c77bc85e2fe032b42f88f66d5dd59332d4d4bd0bca0ff36b11d3a00ad4",
+    "provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+    "birthplace_source_conflicts.json": "6ddf58a7f13b3aee13c1424a1594cec521e3d2523817db2c4ac7915652687538",
+    "source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+    "source_derived_age_inconsistencies.json": "9a299ead41add638a45fd85603a59ee3c42e1b0284af5c06c5e273a3affac18a",
+    "lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+    "cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+    "omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+    "source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+  },
+  "known_place_conflict_boundary": "EwinsNA9209Bristol-v-Blackpool(v11) andBarberNA8779Letchworth-v-Hatfield(v12) excludedbeforeselection. Gotchglobal-sidecarcase is notexhaustiveinventory; priorindividualplaceholds stillbinding. No country-onlyorall-options-samehemisphere bypass of unresolvedactualstoredplaceconflicts.",
+  "declared_six_GEO_FIELDS": [
+    "hemisphere",
+    "geo_resolution_status",
+    "geography_decision",
+    "reason",
+    "northern_birthplace_candidate",
+    "southern_birthplace_separate"
+  ],
+  "mutation_boundary": "Onlysixexistinggeographicfields+geography_followup_v31 withfullprevious/absentrollback maychange. AllnativeDOBidentity/calendar/cohort/eligibility/DOBgrades/rawBP/BPgrades/claims/sourceURLs/selectedevidence/oldhash/officialstatus/personcountryQIDscoords/priorversionedfacts immutable. Newgradesgeographic_support_only; no BP/DOBgradeupgrade/downgrade.",
+  "source_admission": "Fullactualnativecomponents/actuallystatedcompatibleDOBprecision/distinctivecareer/directsubjectborncountry-wholeregion and consistentstoredplacebinding. No nationality/family/school/work/death/footer/famouscityinference or genericUSA/Franceautomapping. Existingv24boundedmiddleomission onlyifallgatespass, no initial/nickname/component-substitutionrepair/automaticexceptioncombination or DOB-placeconflictbypass.",
+  "targeted_prior_context": "Prioracceptedcontextsandtargetedholds shouldbeinspectedbeforecalls; oldclosedroutesstayclosed, genuinelyneworiginalworksallowed. Actualgeneral/exactintent/timing/representationlimits mustbedisclosedwithoutbackdating.",
+  "inherited_issues": "SevenactiveDOBconflicts includingJardineexact12/native14; Tomesparseddayglyphprovisionalonly; Gotchplace/Maletapprox/Waterfieldintegerage/Midwinterendpoint/Colescrossage/Wagermiddleadmission/Shorttordinal distinct. Ninefiles byteidenticalunlessactualqualifiednewcaseexplicitappend witholdobjectsunchanged.",
+  "quote_budget": "Atmost25distinctEnglishquotewords peroriginalwork acrossoldBPfactsandnewgeoquotes; sourcework/role/count and sameworkreuse checked. No fullsource/projectioncache/images or unknownrawHTTPstatus/requesttime/hashclaims.",
+  "historical_blank_closeout": "Priorv29firstindividualpass103blankhistoricalcopy retained; geography-onlyscopeallnonblank so no newBP or blankcohortcompletion/finalfreeze claim.",
+  "new_method_exceptions": [],
+  "final_case_assessment_pending": false,
+  "no_fact_adoption": true,
+  "verification_limits": "DocumentaryQA only; no network/sourceacquisition/sourcechildren/code/mainoutput/Gitmutation byreviewer.",
+  "preliminary_case_review_utc": "2026-11-06T12:41:47.653531+00:00",
+  "preliminary_cases": {
+    "MaynardSmith": {
+      "record_id": "RS_PAST_NA5065",
+      "root_ref": "turn4928967view0",
+      "assessment": "ActualKyotooriginalunsignedlaureateprofile fullJohnMaynardSmith/life1920–2004/year1920only/explicitBornLondonEngland/ESS-andUCL-Sussexcareer supportsS3geographic_support_onlyNorth. StoredLondon/S1/BPclaims/nativeexactJan6 unchanged; actualsourceyearonlydoesnotconfirmnativeexactday. No middle-nameexception orfamilynameparserrepair needed. Finalreports/factsstillrequired.",
+      "new_method_exception": false
+    },
+    "Hardy": {
+      "record_id": "RS_PAST_NA7080",
+      "root_ref": "turn4928967view1",
+      "assessment": "ActualGiffordLecturesunsignedbiographicalprofile fullAlisterClaveringHardy/exact1896-02-10/directNottinghamEngland/CPR-Discovery-Regius-Linacrecareer supportsconservativeS3geographic_support_onlyNorth withstoredNottinghamS2frozen. No hostonlyS2/civilrecord/independenceclaim. Finalreports/factsstillrequired.",
+      "new_method_exception": false
+    },
+    "HarrySmith_Kiddle": {
+      "record_id": "RS_PAST_NA4113",
+      "worker_ref": "turn6164415view2",
+      "reported_actual_observation": "ActualKiddleentryfullHarrySmith/exact1921-08-07/life1921–2011/directNorthamptonEngland/anthraxPortonDowncareer; footerexplicitWikipedia-basedchildrenrewrite.",
+      "source_class_assessment": "Holdundercurrentgenuinely-new-original-workboundary. ExplicitderivativeWikipediachildrenrewrite is not aneworiginalbiographicalwork; admitting wouldbroaden sourceclass alreadyheldfordirectWikipedia/mirror routes. the v29 CFDFlow bylined professional profile with encyclopedia outlinks and possible dependence and Prabookactualcompiledprofilewithunknownunderlyingprovenance aredifferentacquiredgenres, notestablishedpureWikipediarewrite. No claimKiddlecountryassertionfalseorlessfactuallyreliable; preserveactualcountryclaim/derivationasnonadoptedobservation.",
+      "admission_decision_proposal": "hold_no_source_class_expansion",
+      "new_method_exception": false,
+      "prior_examples": "v28SykesWikipediaonlyheldpendingactualcitedODNB; v13closedmirrorloops notqualifiedoriginalcoverage."
+    }
+  },
+  "final_fact_review_utc": "2026-11-06T12:50:33.190603+00:00",
+  "accepted_fact_path": "inputs/accepted_geography.json",
+  "accepted_fact_sha256_at_review": "8f503a3ff82129d075af080a3ab4b0adcaa584ab1663c4bfa613c6d89cf7d5cd",
+  "active_DOB_conflicts_sha256_at_review": "93fc69c77bc85e2fe032b42f88f66d5dd59332d4d4bd0bca0ff36b11d3a00ad4",
+  "source_class_adjudication_sha256_at_review": "073a0b0d423c4c2e325d2e91b5fee735565cffc47b0416dbcac588e471da3ecf",
+  "blocking_issues": [],
+  "final_case_review_scope": "TwoacceptedS3geographic_support_onlyNorth, MaynardLondonS1/HardyNottinghamS2fullyfrozen; tenholds. Allnineissuefilesbyteidentical/7activeDOB unchanged;103blankwindowexcluded/historicalcloseoutcopyunchanged. ExactGEO_FIELDS+v31contextonlyallowed; runtimefullobjectimmutability/rollback/outputchecks reservedforindependentfinalQA afterproduction.",
+  "final_protocol_disclosures": {
+    "A": "Fullprioracceptedcontextsandholdsreviewedbeforequeries. OneGoodwinEnglandcachedfindselectivedisplay omittedterminalstatus; no reconstructedmatch/absence or retry. FirstoriginalbodybornnorthLondon observation hasitsownrole. ActualKiddlederived-countryclaim preservedworker-only/nonadopted.",
+    "B": "Fullprioracceptedcontext/holdsreviewed, missingGartonlarge-outputchunk rereadbeforequeries. NewDOB-only/workaddress/city-only metadata notbirthregion; actualroutefailuresstopped.",
+    "C": "NewKyoto/Giffordbody admitted; Robertsname-date-placeproofinsufficient and Collarneworiginalroutesfailed, secondaryprojectionsnotnewqualifiedDOB/namecase. Onequeryresultrefs[] unretained/notinvented.",
+    "root": "TwoobservedneworiginalURLs prelogged/verified; zeroqueries/finds/GETs. No independentparentreopen/bodyclaimforHarryKiddle. Sourceclassadjudicationholdsderivedrewrite withoutcorrectness/nativegradeorlegacyclaimsverdict."
+  },
+  "Maynard_prior_DOB_boundary": "ActualpriorBalzanbodyalreadyreportedfullnative/exactJan6; inheritedv12decisionwascountry-region-onlyhold. IMDbFeb6 is explicitexcludedunopenedsecondaryprojection, notqualifiedactualsourceDOBconflict/legacydatehold. NewKyotoyear1920 fullnative/career/directEngland compatibleprecisionisgeographicrefinement only, not dateadjudication/clearinganactualflag. This differs from Jardineexplicitlegacydatehold and newqualified12-v-14case.",
+  "quote_audit": {
+    "new_work_identifiers_old_package_hits": {
+      "MaynardKyoto": [],
+      "HardyGifford": [],
+      "HarryKiddle": []
+    },
+    "new_quoted_words": {
+      "MaynardKyoto": 4,
+      "HardyGifford": 9,
+      "HarryKiddle_held": 5,
+      "Raftery_held_abstract": 2
+    },
+    "same_inherited_BP_work_new_quote_additions": 0
+  },
+  "source_class_boundary_note": "Kiddleholdappliescurrentgenuinely-new-original-workadmission. It doesnotdowngrade/deleteinheritedWikipedia-basedBPclaims, pronouncecountryfalse, or claimCFDFlow/Prabookinformationalindependence. CFDFlowhadencyclopediaoutlinks; neitherpriorprofilewasestablishedasapureWikipediachildrenrewrite."
+}

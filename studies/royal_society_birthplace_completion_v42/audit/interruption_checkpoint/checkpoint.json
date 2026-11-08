@@ -1,0 +1,115 @@
+{
+  "schema": "UK_V42_environment_interruption_recovery_checkpoint_v1",
+  "created_utc": "2026-11-08T09:30:22.631Z",
+  "version": 42,
+  "release_state": "INCOMPLETE_FINAL_QA_EXIT_AND_TWO_CLI_REPLAY_OUTCOMES_UNOBSERVED",
+  "execution_environment_status": "unavailable",
+  "environment_failure_cause": "unknown",
+  "last_complete_release_version": 41,
+  "baseline_commit": "5556e7e981f29383187ea201beb1edb22ad04be0",
+  "baseline_tree": "f7a1e5c7592341faf13d5b7771f6aae2f152f46f",
+  "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+  "current_scope_sha256": "c5c7594d271b6923725acad91612b8f53b3528383d3bf50f0658ccfa0e639796",
+  "scope_original_bytes_recovered_and_sha256_reverified": true,
+  "reviewed_record_ids": [
+    "RS_PAST_NA1476",
+    "RS_PAST_NA1592",
+    "RS_PAST_NA1994",
+    "RS_PAST_NA1998",
+    "RS_PAST_NA2007",
+    "RS_PAST_NA2146"
+  ],
+  "reviewed": 6,
+  "adopted_record_ids": [],
+  "held": 6,
+  "master_complete_rows_unchanged": 4983,
+  "canonical_sha256": "a0c04e44631478f82e562deab64d699fc273e6fc99fa35ba23f8a61d7e1f8717",
+  "gzip_sha256": "433749a0b7ff0bfc62db8993f662cd928a4bc023418a54600259fdbea0b1537a",
+  "overall": {
+    "north": 4205,
+    "south": 187,
+    "unknown": 591
+  },
+  "native_DOB_window": {
+    "inclusive_from": "1835-01-01",
+    "inclusive_to": "1985-12-31",
+    "records": 2644,
+    "north": 2305,
+    "south": 182,
+    "unknown": 157,
+    "blank": 103,
+    "nonblank_unknown": 54
+  },
+  "production_main": {
+    "clean_exit_observed": true,
+    "invocations": 1,
+    "session_id": 22117,
+    "script_entry": "main_v42",
+    "five_output_sha256_pinned_after_clean_exit": {
+      "birthplace_rows.jsonl.gz": "433749a0b7ff0bfc62db8993f662cd928a4bc023418a54600259fdbea0b1537a",
+      "birthplaces.csv": "c4c1c00bbbb256d4e9a346f1540d053a3c701f9b3764418ac612651a3424eb12",
+      "changes.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "remaining_unknown_window.csv": "44d9bfc19a6943e8dc363d3b8f147bf2310e9ce7b636a5986dff28b82e783f67",
+      "summary.json": "d8c128a106aa04d04ed15897a36f438f9d4c4546fb7ec2d7e3223ddd88167ada"
+    },
+    "output_bytes_currently_unavailable": true
+  },
+  "source_QA": {
+    "passed": 171,
+    "blocking": 0,
+    "report_sha256": "fd7a18d1df3816192812894620b352ad2ea695498c07076d20aa7f42b4443dd5",
+    "original_report_bytes_recovered": false
+  },
+  "replay_preflight": {
+    "passed": 112,
+    "report_sha256": "e96214fa747862c4b11bb499851629b0794b0af7f9d8fc5cf42568bc75e0c2e7",
+    "original_report_bytes_recovered": false
+  },
+  "independent_final_QA": {
+    "light_preflight_clean_exit_observed": true,
+    "light_checks_passed": 48,
+    "light_report_sha256": "93003a03bef54e906a5c1db75b602077e1020723b60d9e063727f22a2c7fffff",
+    "full_QA_started_once": true,
+    "last_observed_structural_checks_passed": 56,
+    "isolated_CLI_replays_started": 2,
+    "isolated_CLI_replay_exits_observed": false,
+    "final_QA_exit_observed": false,
+    "session_id": 88045,
+    "original_final_report_observed": false,
+    "production_files_not_mutated_by_reviewers": true
+  },
+  "original_local_file_hashes": {
+    "v42_sources_a.json": "93d476cec06d2581641606592acf9cd3fb37ecb93d5260ea7d0705d40f1608e7",
+    "v42_a_intent.json": "fafb7bad4fd56961c901a454d29418588a39b8b584ddc48763bac93e9756caa2",
+    "v42_sources_b.json": "9b9b1e03a25f6340d7f5e6e35c20ea6fce4b5df5b5516857c60f60bf037a002a",
+    "v42_b_intent.json": "bf87166bbfc9ec16a39f39b5b635351b72a4abce5e0203dda587acb357594b61",
+    "v42_sources_c.json": "3401733b50d711a5f504edbeb4d73237e1134e1d170c89e69215edfc97100ec5",
+    "v42_c_intent.json": "732ba0f6230369ce4e94111316b5cd57b63c6215ae16ddcba2a851b1382da31d",
+    "v42_source_documentary_case_review.json": "9ae3576a81840e7f301143653ce8b00f485b0031ae2716a1a4c2bd3e931fab27"
+  },
+  "normal_V42_ZIP_created": false,
+  "normal_V42_study_published_to_Git": false,
+  "full_source_caches_distributed": false,
+  "resume": [
+    "If the same execution environment recovers, first poll existing fullQA session88045 and inspect actual report/log/pins; do not assume completion.",
+    "If original source/intent/report files reappear, verify against recorded hashes before use. Scope original bytes are recovered separately in this directory and reverified.",
+    "If files cannot be recovered, reconstruct from verified V41 baseline and these explicitly labelled recovery attestations; never invent original timestamps or pretend reconstructed summaries are original reports.",
+    "Re-run final QA only if actual prior outcomes cannot be recovered; consider sequential isolated CLI runs to reduce concurrent resource load. Environment failure cause remains unknown.",
+    "Do not repeat closed/failed original-source work URLs or clear old source holds. No new geography facts were accepted.",
+    "After final exit and deterministic output checks succeed, create and verify the complete normal V42 package and persist the normal study; retain this interruption checkpoint as history."
+  ],
+  "remaining_unreviewed_unblocked_record_ids": [
+    "RS_CURRENT_10965",
+    "RS_PAST_NA2154",
+    "RS_PAST_NA3474",
+    "RS_PAST_NA4166",
+    "RS_PAST_NA4680",
+    "RS_PAST_NA4747",
+    "RS_PAST_NA663",
+    "RS_PAST_NA6847",
+    "RS_PAST_NA780",
+    "RS_PAST_NA8736",
+    "RS_PAST_NA8744"
+  ],
+  "remaining_queue_limit": "Derived read-only afterproduction from currentunknownpool minus V36-V42fixedscopes and activeDOB/partialplace/Ewins/Barber exclusions; not a new prospective scope. RS_CURRENT_10965 frozen authority fullname empty, requires careful native identity gate. No external query or admission authorized by this queue alone."
+}

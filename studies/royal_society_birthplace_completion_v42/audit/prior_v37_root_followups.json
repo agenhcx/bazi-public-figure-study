@@ -1,0 +1,58 @@
+{
+  "written_utc": "2026-11-07T00:55:02.453537+00:00",
+  "intent_file": "root_intent.json",
+  "counts": {
+    "discovery_queries": 0,
+    "source_open_operations": 4,
+    "click_operations": 0,
+    "parsed_finds": 0,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "observations": [
+    {
+      "record_id": "RS_PAST_NA1580",
+      "url": "https://en.wikipedia.org/wiki/Claude_Gordon_Douglas",
+      "ref": "turn4826350view0",
+      "locator": "L108fullname/exactDOB/Leicesterlink40;L113-118career",
+      "role": "root_actual_person_body_birthlink_observed_after_worker_actual_follow",
+      "adopted_geography": true
+    },
+    {
+      "record_id": "RS_PAST_NA1580",
+      "url": "https://en.wikipedia.org/wiki/Leicester",
+      "ref": "turn4826350view1",
+      "locator": "L278cityEngland/L289CountryEngland",
+      "role": "root_actual_already_observed_birthlink_target_body",
+      "supports_primary_geofact": true
+    },
+    {
+      "record_id": "RS_PAST_NA4918",
+      "url": "https://it.wikipedia.org/wiki/Neil_Kensington_Adam",
+      "ref": "turn7227259view0",
+      "locator": "L112fullnative/exact6November1891/L114career/L119book1930",
+      "role": "root_actual_new_DOB_discrepancy_body",
+      "adopted_geography": false
+    },
+    {
+      "record_id": "RS_PAST_NA4918",
+      "url": "https://en.wikipedia.org/wiki/Neil_Kensington_Adam",
+      "ref": "turn7227259view1",
+      "locator": "L1175November1891/L118CambridgeEngland/L128full/L140career",
+      "role": "root_actual_matching_English_body_does_not_clear_Italian_discrepancy",
+      "adopted_geography": false
+    }
+  ],
+  "root_reclicked_person_edge": false,
+  "worker_actual_follow_link_result_ref": "turn6538381view0",
+  "quote_words_by_original_work": {
+    "DouglasEnglish": 1,
+    "LeicesterEnglish": 1,
+    "AdamItalian": 3,
+    "AdamEnglish": 0
+  },
+  "raw_HTTP_status": null,
+  "raw_bytes_sha256": null,
+  "exact_request_utc": null,
+  "no_source_caches_or_images_distributed": true
+}

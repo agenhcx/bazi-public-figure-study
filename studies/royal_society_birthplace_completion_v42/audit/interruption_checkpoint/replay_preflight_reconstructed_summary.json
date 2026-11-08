@@ -1,0 +1,56 @@
+{
+  "artifact_type": "reconstructed_verified_recovery_summary",
+  "original_file_bytes_recovered": false,
+  "status": "PASS",
+  "check_count": 112,
+  "elapsed_seconds": 98.014,
+  "preflight_report_sha256": "e96214fa747862c4b11bb499851629b0794b0af7f9d8fc5cf42568bc75e0c2e7",
+  "replay_script_sha256": "01b29beee4f90dc8f10f1c4322f4d345683ec26601d82c2a690730c37c8eb290",
+  "implement_script_sha256": "96442408350a82cf3463c94314bf15f2f05796d01b8543289cccb3e149a10628",
+  "preflight_script_sha256": "996911795fdedc626e8fe24d051cba3354ebfb6696850b88e602f34ae6ed28a0",
+  "historical_functions_preserved": 61,
+  "historical_assignments_preserved": 128,
+  "total_functions": 65,
+  "total_assignments": 136,
+  "full_reconstructions": [
+    "isolated_load_v41_once_pass",
+    "temporary_main_v42_CLI_once_pass"
+  ],
+  "cli_mode": "isolated_copy_of_current_decisions",
+  "cli_accepted_facts": 0,
+  "cli_held_records": 6,
+  "cli_changed_complete_rows": 0,
+  "canonical_sha256": "a0c04e44631478f82e562deab64d699fc273e6fc99fa35ba23f8a61d7e1f8717",
+  "records": 4983,
+  "overall": {
+    "north": 4205,
+    "south": 187,
+    "unknown": 591
+  },
+  "window_records": 2644,
+  "window": {
+    "north": 2305,
+    "south": 182,
+    "unknown": 157
+  },
+  "nonblank_unknown_window_pool": 54,
+  "untouched_blank_window_records": 103,
+  "untouched_all_blank_records": 525,
+  "csv_columns": 188,
+  "prior_csv_columns_preserved": 182,
+  "failures": [],
+  "source_semantics_validated_by_preflight": false,
+  "production_current_outputs_written_by_replay_agent": false,
+  "final_QA2_completion_observed": false,
+  "preservation_checks": [
+    "All61oldfunctions/128assignments literal",
+    "Historicalinputs/fiveV41carriers byte-exact",
+    "Base/V37-V42 scope hash rejection gates with minimalargs",
+    "V37-V40storedrow rollback/reapply and historicalbinding rejection",
+    "New documentary/proofchain structuralfixtures before reconstruction",
+    "All4983reconstructedV41objects equalstoredmaster",
+    "Synthetic3proofmode6GEO_FIELDS+newcontext exactrollback",
+    "TempCLI5outputs and182priorCSV meanings+6newcolumns",
+    "NoROOTsubstitution;capturedcurrentproductionfilesunchanged"
+  ]
+}

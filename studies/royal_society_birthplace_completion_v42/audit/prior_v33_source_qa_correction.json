@@ -1,0 +1,32 @@
+{
+  "schema": "UK_v33_source_QA_harness_and_documentary_correction_v1",
+  "written_utc": "2026-11-06T22:48:19.837502+00:00",
+  "initial_report_path": "v33_source_qa_initial_failed_report.json",
+  "initial_report_sha256": "93a402a7a50ddaa76cceb28b59491bf13c91263d46045e6e733ac2991d7128eb",
+  "initial_observed_result": {
+    "passed": false,
+    "checks_passed": 124,
+    "blocking_issues": [
+      {
+        "check": "b_queryledger_within8",
+        "passed": false
+      },
+      {
+        "check": "Thompson_historicalquote_no_additional_literalwords",
+        "passed": false
+      },
+      {
+        "check": "worker_24queries10opens7finds_exact",
+        "passed": false
+      }
+    ]
+  },
+  "harness_normalization_correction": "WorkerB query_ledger has2 batched entries each containing4 exactquery strings. Normalize flattened actual8 queries before budget and aggregate tests; source ledger remains bytefrozen.",
+  "quote_count_correction": "Frozen historical clause b Croydon to a doctor father 1913 has7 whitespacewords. QA initially assumed8 from currentmetadata. Scratch check now counts7; root corrected only current activecase historical_quote_location seven-word phrase and corresponding idempotent scratch input. Frozen historicalhold/sourcequote/geofact/nativeDOB unchanged.",
+  "final_result": {
+    "passed": true,
+    "checks_passed": 129,
+    "blocking_issues": []
+  },
+  "reviewer_fact_or_production_edits": false
+}

@@ -1,0 +1,61 @@
+{
+  "schema": "UK_v33_geography_method_documentary_QA_v1",
+  "reviewer": "/root/v32_source_qa",
+  "initial_written_utc": "2026-11-06T22:39:21.365198+00:00",
+  "status": "final_documentary_source_review_passed",
+  "final_case_assessment_pending": false,
+  "blocking_issues": [],
+  "preliminary_checks_report": "v33_source_qa_preflight.json",
+  "preliminary_checks_passed": 14,
+  "method": "Existing source-qualified geography refinement only. Fixed65 nonblank unknown-window pool; fixed12 reviewed subjects, including newly surfaced historicalThompsonDOBhold kept as held review-only. No citycountry inference or native DOB/BP/sourcegrade repair. Exact6GEO_FIELDS+geography_followup_v33 only with rollback.",
+  "geography_fields_mutable": [
+    "hemisphere",
+    "geo_resolution_status",
+    "geography_decision",
+    "reason",
+    "northern_birthplace_candidate",
+    "southern_birthplace_separate"
+  ],
+  "new_versioned_context": "geography_followup_v33",
+  "role": "geographic_support_only",
+  "new_method_exceptions": [],
+  "final_fact_review_scope": "One new geography-only North resolution for Edward Armand Guggenheim: attributed original academic NamedConceptsA-K compilation, conservativeS3, actualfullnative/exact1901-08-11/compatible1970endpoint/directManchesterEngland/coherentchemistryfingerprint. RawManchester/S2/nativeDOBgrade frozen. Eleven current holds. ActiveDOBinventory9: old7objectsunchanged + historicalThompsonv12qualified1913year/native1912 recovered/reverifiedforinventorycompletion + newFawcettactualPrabookheaderMarch18/bodyMay18/nativeMay18 unresolvedcontrast. Other8issue/methodsidecars byteidentical. No correctdate/typo/nativeparserverdict or sourceclassexception.",
+  "reviewer_network_acquisitions": 0,
+  "production_code_or_outputs_mutated_by_reviewer": false,
+  "final_fact_review_utc": "2026-11-06T22:48:19.837502+00:00",
+  "final_checks_passed": 129,
+  "accepted_geography_sha256_at_review": "b4cd974667892c6806b1004a23219bc18dfa493403c8e9fe27c29b5e2e8c2a78",
+  "active_DOB_conflicts_sha256_at_review": "f0ea1529f7bcb9d4ad485a3c05e46e02195bcb3ae750594070301d274467a6eb",
+  "source_class_adjudication_sha256_at_review": "5b27889aa674ab70c7e26785e019925cb58d6fcfccf69eab77b1478fd156c6fd",
+  "final_protocol_disclosures": {
+    "A": "Fullpriorcontexts readbeforequeries. HistoricalThompsonholdfound andnotifiedbeforeinitial4querybatch, butoneThompsonqueryreturnedbefore rootno-further-queryinstruction. No laterThompsonworkerrequests/adoption. AdaptiveexactintentwritefailedAttributeError beforewrite; webrequestnotgatedoncommandexit, soqueries5-8 hadno durablespecificpreintent. Actualerror/queries/time retainedwithoutbackdating; no Afactaccepted. Neworiginalopens hadseparatepriorintent.",
+    "B": "8 actualqueries representedby2 batchedledgerentriesof4;4opens1find. ActualFawcettPrabookdateheader/bodycontrast qualifiedasnewS3DOBobservationonly. Cumbrianliteralfind no-match bounded, not universalabsence; UNSWownhistoricalintro notfailedPMCcarrierbypass.",
+    "C": "8queries3opens6finds, allspecificintents beforecorrespondingcalls. NewAndraosConceptsA-K actualentry fullnative/exactDOB/lifespan/directManchesterEngland/methodreference admittedS3geographyonly. Powellfather/parentsplaces notsubjectbirthregion; WoodsKiddleunopened/notadopted.",
+    "root": "0queries5firstv33opens1cachedfind. GuggenheimactualPDFverifiedafterworker; Fawcettnewactualheaderbodycontrast verified; Thompsonoldv12work freshlyretrievedparsedbody forhistoricalinventorycompletion (notnewsourcework/conflictdiscovery). Two distinctBinniebodyattempts held/stopped. EarlierworkerThompsonno-v33-open wording is boundedbydatedrootclarification and hashboundpreservedsnapshot, not rewritten."
+  },
+  "final_source_counts": {
+    "queries": 24,
+    "worker_opens": 10,
+    "root_opens": 5,
+    "total_opens": 15,
+    "worker_finds": 7,
+    "root_finds": 1,
+    "total_finds": 8,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "source_QA_corrections": {
+    "initial_report_preserved": "v33_source_qa_initial_failed_report.json",
+    "correction_record": "v33_source_qa_correction.json",
+    "source_data_effect": "None. Groupedledgernormalized; currentquote-countmetadata7 correctedbyroot, frozenhistoricalfile/geofact/nativeDOBunchanged."
+  },
+  "limitations": [
+    "Independent documentary review only: no reviewer networksource acquisition, rawbyte/pixelinspection or production execution.",
+    "Complete-object frozen-field/rollback and deterministic output replay checks belong to final QA.",
+    "Sourcegrades ofnewgeo/issue observations do not change originalDOBorBPgrades.",
+    "Thompsonsourceyear1913 is not an alternate exactday; historicaldeathdaycontrast is a separatefield.",
+    "FawcettactualbodyMay18 matchingnative does notclear sameprofileMarch18header; repeatedBornfooter is not independentcorroboration.",
+    "Copyrightspans are notexactpublication/source-versiondates; listedbiographies were notacquired asindependent sources.",
+    "A actualspecificprequeryintentfailure and earlieroneThompsonquery retainedwithoutbackdating; no Afactaccepted."
+  ]
+}
