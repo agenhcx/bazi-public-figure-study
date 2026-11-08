@@ -1,0 +1,61 @@
+{
+  "written_utc": "2026-11-08T08:52:51.100301+00:00",
+  "intent_file": "root_intent.json",
+  "counts": {
+    "discovery_queries": 1,
+    "source_open_operations": 2,
+    "click_operations": 0,
+    "parsed_finds": 0,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "observations": [
+    {
+      "written_utc": "2026-11-08T08:47:34.664621+00:00",
+      "record_id": "RS_PAST_NA1475",
+      "operation": "source_locator_query",
+      "engine": "system1",
+      "query": "\"Edgar Hartley Kettle\" (site:de.wikipedia.org OR site:fr.wikipedia.org OR site:es.wikipedia.org)",
+      "purpose": "One permitted bounded root locator for distinct canonical language work. Actual English has matching fullname/DOB/career but unlinked London, graph is rewritten. No actual incompatible DOB/place in this target; no URLguess, failedworkretry or source shopping around conflict. Any actual contradiction holds.",
+      "ref": "turn9486267search5",
+      "adopted_geography": false,
+      "acquisition_role": "root_first_actual_canonical_body_or_locator_discovery_for_bounded_hold",
+      "outcome": "One root DE/FR/ES locator returned English and institutional projections only, no new eligible other-language person URI/body. No absence/source-exhaustion or newsource fact claim."
+    },
+    {
+      "written_utc": "2026-11-08T08:48:12.882843+00:00",
+      "record_id": "RS_PAST_NA1475",
+      "operation": "open",
+      "url": "https://en.wikipedia.org/wiki/Edgar_Hartley_Kettle",
+      "lineno": 100,
+      "purpose": "First root actual observed canonical person body verification for bounded hold: fullnative/exactDOB/life/career and whether any personal birth-place link or whole-region is actually acquired. Plain unlinked London or work/nationality not a geography chain. No failedgraph retry/variant or original DOB/sourcegrade modification.",
+      "ref": "turn3727745view0",
+      "adopted_geography": false,
+      "acquisition_role": "root_first_actual_canonical_body_or_locator_discovery_for_bounded_hold",
+      "locator": "L107 fullEdgarHartleyKettle/exact20April1882/plainunlinkedLondon/life1882-1936;L108-109pathology-silicosis-career. No actualbornlink or England birth-region.",
+      "outcome": "Normal canonical English person, date/career identity matches but geography remains held; nationality, school and work locations not used."
+    },
+    {
+      "written_utc": "2026-11-08T08:48:12.882854+00:00",
+      "record_id": "RS_PAST_NA2016",
+      "operation": "open",
+      "url": "https://en.wikipedia.org/wiki/Geoffrey_Binnie",
+      "lineno": 105,
+      "purpose": "First root actual observed canonical person body verification for bounded hold: fullnative/exactDOB/life/career and whether any personal birth-place link or whole-region is actually acquired. Plain unlinked London or work/nationality not a geography chain. No failedgraph retry/variant or original DOB/sourcegrade modification.",
+      "ref": "turn3727745view1",
+      "adopted_geography": false,
+      "acquisition_role": "root_first_actual_canonical_body_or_locator_discovery_for_bounded_hold",
+      "locator": "L107fullGeoffreyMorseBinnie/L108exact13November1908/L109death5April1989/80;L121full/date/civilengineering/dams;L122-128career. No personalbirthplace acquired.",
+      "outcome": "Normal canonical English person gives full name/date/life/career, no birthplace. Degree/work/nationality not birth; source-reported80 agrees conventional completed80, no newagecase."
+    }
+  ],
+  "root_reclicked_person_edge": false,
+  "quote_words_by_original_work": {
+    "KettleEnglish": 0,
+    "BinnieEnglish": 0
+  },
+  "raw_HTTP_status": null,
+  "raw_bytes_sha256": null,
+  "exact_request_utc": null,
+  "no_source_caches_or_images_distributed": true
+}

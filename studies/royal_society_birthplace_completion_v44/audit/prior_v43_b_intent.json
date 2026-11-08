@@ -1,0 +1,191 @@
+{
+  "written_utc": "2026-11-08T09:55:22.151514+00:00",
+  "group": "b",
+  "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+  "all9_issue_inventories_loaded_before_queries": true,
+  "full2nativeobjects/priorholdsbeforequeries": true,
+  "inventory_file_pins": {
+    "active_source_DOB_conflicts.json": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+    "birthplace_source_conflicts.json": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+    "source_derived_age_inconsistencies.json": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+    "provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+    "lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+    "cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+    "source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+    "omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+    "source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+  },
+  "prior_context_file_pins": {
+    "prior_v31_holds.json": "fb132f1350a62a5298ba0c5d26d862aaf4d12ebf0a1ddaff465f78c979176d80",
+    "prior_v31_method_qa.json": "4bbdc130cec93d80a810a478f0152bcc093e36f98df20849e530a21f46b6542b",
+    "prior_v31_continuation.md": "da83cc89ee8b52356f3fbe6dab7e9f9baa85fe2f83817dda161e8c50f9b7c487",
+    "prior_v20_continuation.md": "e141237d638b6408b976b3d5baec2761efbeaf8d5b0c00f9b30db4dc398f1db6",
+    "prior_v16_continuation.md": "69bff10f75c5569dd19227bd68cf7ba78a611aefb4c410598fb3089e294aee14",
+    "prior_v31_parent_adjudication.json": "f486108c8ccd01b3559d7352129952ed7442ebcf005ff7add151752e69c234ed",
+    "prior_v20_method_qa.json": "82f66141eef202ebf585723eb311c1f020ae045e08e6085ea8163b9a79c80b5c"
+  },
+  "budgets": {
+    "queries": 4,
+    "navigation_attempts": 10
+  },
+  "entries": [
+    {
+      "entry_id": 0,
+      "written_utc": "2026-11-08T09:55:22.151961+00:00",
+      "written_before_requests_utc": "2026-11-08T09:55:22.151961+00:00",
+      "operation": "search",
+      "engine": "system2",
+      "record_id": "RS_PAST_NA4166",
+      "exact_query": "\"William Reginald Stephen Garton\" site:wikipedia.org",
+      "purpose": "Discover actualcanonicalpersonalreference only; searchprojections discoverynotproof.",
+      "status": "completed",
+      "result_refs": [
+        "turn2616377search0",
+        "turn2616377search1",
+        "turn2616377search2"
+      ],
+      "outcome": "CanonicalFRSlistsonly; no personalarticle discovered."
+    },
+    {
+      "entry_id": 1,
+      "written_utc": "2026-11-08T09:55:22.151986+00:00",
+      "written_before_requests_utc": "2026-11-08T09:55:22.151986+00:00",
+      "operation": "search",
+      "engine": "system2",
+      "record_id": "RS_PAST_NA4680",
+      "exact_query": "\"Michael Augustine Raftery\" site:wikipedia.org",
+      "purpose": "Discover actualcanonicalpersonalreference only; searchprojections discoverynotproof.",
+      "status": "completed",
+      "result_refs": [],
+      "outcome": "NoRafterypersonalresult exposed in combinedresponse; no proof."
+    },
+    {
+      "entry_id": 2,
+      "written_utc": "2026-11-08T09:55:56.706058+00:00",
+      "written_before_requests_utc": "2026-11-08T09:55:56.706058+00:00",
+      "operation": "search",
+      "engine": "system1",
+      "record_id": "RS_PAST_NA4166",
+      "exact_query": "\"William Reginald Stephen Garton\" Wikipedia",
+      "purpose": "Fill engine2 canonicalpersonaldiscovery gap; projectionsdiscoveryonly.",
+      "status": "completed",
+      "result_refs": [
+        "turn9083272search5",
+        "turn9083272search0",
+        "turn9083272search1",
+        "turn9083272search6",
+        "turn9083272search7"
+      ],
+      "outcome": "No canonicalpersonalarticle; FRSlistdiscovery plus knownoriginalclosedworks notproof."
+    },
+    {
+      "entry_id": 3,
+      "written_utc": "2026-11-08T09:55:56.706072+00:00",
+      "written_before_requests_utc": "2026-11-08T09:55:56.706072+00:00",
+      "operation": "search",
+      "engine": "system1",
+      "record_id": "RS_PAST_NA4680",
+      "exact_query": "\"Michael Augustine Raftery\" Wikipedia",
+      "purpose": "Fill engine2 canonicalpersonaldiscovery gap; projectionsdiscoveryonly.",
+      "status": "completed",
+      "result_refs": [
+        "turn9083272search8",
+        "turn9083272search2",
+        "turn9083272search3",
+        "turn9083272search4"
+      ],
+      "outcome": "No canonicalWikipedia/Wikidataarticle oritemdiscovered; only knownMayo/RGworkand unrelatedscholarly/careerprojections. Searchdate/title notactualproof."
+    },
+    {
+      "entry_id": 4,
+      "written_utc": "2026-11-08T09:56:24.462845+00:00",
+      "written_before_requests_utc": "2026-11-08T09:56:24.462845+00:00",
+      "operation": "open",
+      "record_id": "RS_PAST_NA4166",
+      "exact_url": "https://www.wikidata.org/wiki/Q21166816",
+      "discovery_provenance": "Frozen fullscope lookup_qid Q21166816 supplied; not guessed.",
+      "purpose": "Firstcanonicalitembody attempt foractualpersonstatements/sitelinks.",
+      "status": "completed",
+      "result_ref": "turn9149364view0",
+      "outcome": "Firstcanonicalitem toolinaccessibleclosed; no retry/variant/rawGET."
+    },
+    {
+      "entry_id": 5,
+      "written_utc": "2026-11-08T09:56:24.462861+00:00",
+      "written_before_requests_utc": "2026-11-08T09:56:24.462861+00:00",
+      "operation": "open",
+      "record_id": "RS_PAST_NA4166",
+      "exact_url": "https://en.wikipedia.org/wiki/List_of_fellows_of_the_Royal_Society_elected_in_1969",
+      "discovery_provenance": "Actualdiscoveredturn2616377search1/turn9083272search6.",
+      "purpose": "Discoverycarrier only: actualGartonpersonalnamehyperlink ifpresent; no listbirthproof.",
+      "status": "completed",
+      "result_ref": "turn9149364view1",
+      "outcome": "Actualdiscoverylist observesGartonnamehyperlink57 atL122; categorybyyear138 atL181. No personalbirthproof."
+    },
+    {
+      "entry_id": 6,
+      "written_utc": "2026-11-08T09:56:45.115201+00:00",
+      "written_before_requests_utc": "2026-11-08T09:56:45.115201+00:00",
+      "operation": "click",
+      "record_id": "RS_PAST_NA4166",
+      "from_ref": "turn9149364view1",
+      "link_id": 57,
+      "observed_anchor": "William Reginald Stephen Garton",
+      "observed_locator": "L122",
+      "purpose": "FollowactualGartonpersonalnamehyperlink; no synthesized URL.",
+      "status": "completed",
+      "result_ref": "turn8497766view0",
+      "actual_target_url": "https://en.wikipedia.org/wiki/William_Reginald_Stephen_Garton?action=edit&redlink=1",
+      "outcome": "Firstactualnameclick redlink/editURLtool404; no personalbody; closed no retries/variants."
+    },
+    {
+      "entry_id": 7,
+      "written_utc": "2026-11-08T09:56:45.115218+00:00",
+      "written_before_requests_utc": "2026-11-08T09:56:45.115218+00:00",
+      "operation": "click",
+      "record_id": "RS_PAST_NA4680",
+      "from_ref": "turn9149364view1",
+      "link_id": 138,
+      "observed_anchor": "Lists of fellows of the Royal Society by year",
+      "observed_locator": "L181",
+      "purpose": "Discoverycarrieronly: seekactual1986listlink for Raftery; no synthesizedpersonalorplaceURL.",
+      "status": "completed",
+      "result_ref": "turn8497766view1",
+      "actual_target_url": "https://en.wikipedia.org/wiki/Category:Lists_of_fellows_of_the_Royal_Society_by_year",
+      "outcome": "Headerexplicitlyrewrittensummary; closed as proof/work, observedURIcarrier only. Actualdisplayedlink61 pointsdifferent listbyelectionyearwork; no samecategorypagination/variant."
+    },
+    {
+      "entry_id": 8,
+      "written_utc": "2026-11-08T09:57:16.368353+00:00",
+      "written_before_requests_utc": "2026-11-08T09:57:16.368353+00:00",
+      "operation": "click",
+      "record_id": "RS_PAST_NA4680",
+      "from_ref": "turn8497766view1",
+      "link_id": 61,
+      "observed_anchor": "List of fellows of the Royal Society by election year",
+      "observed_locator": "L117",
+      "purpose": "Differentwork actuallyobservedURIcarrier only; inspectpossibleactual1986listlink for Raftery. No categoryretry/paginationvariant or summaryproof.",
+      "status": "completed",
+      "result_ref": "turn3918435view0",
+      "actual_target_url": "https://en.wikipedia.org/wiki/List_of_fellows_of_the_Royal_Society_by_election_year",
+      "outcome": "Actualcanonicaldiscoverylist acquirednormally;1986displayedplainunlinkedL444/L706, no actualtargetURI/linkIDexposed; no synthesizedURI or personalbirthproof."
+    }
+  ],
+  "raw_GETs": 0,
+  "raw_HTTP_status": null,
+  "raw_bytes_sha256": null,
+  "exact_request_utc": null,
+  "stop_policy": "Firstfailed/header-rewritten/textless/challengeworkcloses; no retries/variants/rawGET. Rewrittenheaders only observed URI/sitelinkcarrier.",
+  "quote_policy": "<=25 distinctquotedwords peroriginalwork including inheritedobservations; no fullsource/projectioncaches.",
+  "full_prior_context_review_completed_before_queries_utc": "2026-11-08T09:55:39.260747+00:00",
+  "completed_utc": "2026-11-08T09:58:58.803428+00:00",
+  "retrieval_counts": {
+    "queries": 4,
+    "navigation_attempts": 5,
+    "source_open_operations": 2,
+    "click_operations": 3,
+    "parsed_finds": 0,
+    "screenshots": 0,
+    "raw_GETs": 0
+  }
+}

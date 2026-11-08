@@ -1,0 +1,49 @@
+{
+  "written_utc": "2026-11-07T01:06:32.360248+00:00",
+  "status": "prospectively_frozen_before_V38_external_queries",
+  "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+  "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+  "method_preregistration_origin": "V36 historical policy stays byte-exact; V37 historical application scope also byte-exact at its legacy runtime path. V38 extends application only.",
+  "baseline_commit": "7e00f06eec1f6030f974d241a826be828ce7caee",
+  "baseline_canonical_sha256": "c7fbc21d596077694148aee316baa663697fb3fd7159cd7de79c7a194b2affbe",
+  "fixed_record_ids": [
+    "RS_PAST_NA1611",
+    "RS_PAST_NA4636",
+    "RS_PAST_NA4568",
+    "RS_PAST_NA4571",
+    "RS_PAST_NA6313",
+    "RS_PAST_NA4774"
+  ],
+  "groups": {
+    "a": [
+      "RS_PAST_NA1611",
+      "RS_PAST_NA4636"
+    ],
+    "b": [
+      "RS_PAST_NA4568",
+      "RS_PAST_NA4571"
+    ],
+    "c": [
+      "RS_PAST_NA6313",
+      "RS_PAST_NA4774"
+    ]
+  },
+  "fixed_nonblank_unknown_window_pool": 60,
+  "rules_unchanged": true,
+  "method_amendment_created": false,
+  "method_reused_from_version": 36,
+  "scope_application_extension": true,
+  "no_new_admission_method_exception": true,
+  "current_audit_path": "audit/method_application_scope_v38.json",
+  "legacy_V37_scope_runtime_path_preserved": "audit/method_application_scope.json",
+  "legacy_V37_scope_sha256": "ae080b06f8abad9ed7575783486795c977e44ce5e5024bfa2096e16816a44d94",
+  "mandatory_rules": "All original V36 preregistration rules mandatory: full native personal name, exact native DOB, coherent distinctive career, compatible lifespan, frozen birthplace agreement, actual born-region or born-place hyperlink plus actual target whole-region path, S3 geographic_support_only, no shopping around actual contradictions, no mirrors. No country/QID/coordinate repairs. Missing proof held.",
+  "budgets": {
+    "per_group_queries": 4,
+    "per_group_navigation_attempts": 10,
+    "root_source_or_context_verification_opens": 18,
+    "root_adaptive_author_or_observed_original_work_locator_query": 1
+  },
+  "source_exhausted": false,
+  "final_freeze": false
+}

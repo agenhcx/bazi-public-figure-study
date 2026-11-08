@@ -1,0 +1,36 @@
+{
+  "schema": "UK_v44_isolated_CLI_receipt_v1",
+  "run": 1,
+  "started_utc": "2026-11-08T10:44:24.735732+00:00",
+  "returned_utc": "2026-11-08T10:45:21.897151+00:00",
+  "CLI_returncode": 0,
+  "sequential": true,
+  "CLI_log_path": "/workspace/scratch/262552d8c0f0/v44_isolated_cli_1.log",
+  "CLI_log_sha256": "e6ca36df04410b3b2e73df3fbf3241f55c85fd6c01e4de52a608e57ddee0cbdc",
+  "new_checks": [
+    "successful_current_preflight_required",
+    "no_repeat_recorded_replay",
+    "reviewed_production_files_unchanged",
+    "five_production_output_pins_unchanged",
+    "production_pinfile_unchanged",
+    "isolated_CLI_actual_clean_exit",
+    "isolated_CLI_all_five_outputs_match_pins",
+    "reviewed_production_files_unchanged",
+    "five_production_output_pins_unchanged",
+    "production_pinfile_unchanged"
+  ],
+  "preflight_report_sha256": "8de1be019b596ff400d2cfd04144a38b6be74520185c13cc823747bdf5b756c7",
+  "preflight_run_id": "0111a597-9760-4e3e-a3d3-6f2ed7846bfd",
+  "expectations_sha256": "3179dee5bb9b407705ccd0da16c122ec4d710ac1b56626cdff6b73919295c6cb",
+  "production_mutated": false,
+  "status": "PASS",
+  "five_output_sha256": {
+    "birthplace_rows.jsonl.gz": "433749a0b7ff0bfc62db8993f662cd928a4bc023418a54600259fdbea0b1537a",
+    "birthplaces.csv": "1bfdff7927abe23631fbd1d5a0be0e39898d835e8fe30d3ed97a72a5f08f288c",
+    "changes.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "remaining_unknown_window.csv": "046c86fd8e27671974c3fc5714f0a49a77c55237fb9110f306dee6f95e4e6df7",
+    "summary.json": "23d4021c0029f1804a4a8166728e8f1618b860f0f80cadc531fe36eb09565451"
+  },
+  "new_checks_passed": 10,
+  "completed_utc": "2026-11-08T10:45:21.929534+00:00"
+}

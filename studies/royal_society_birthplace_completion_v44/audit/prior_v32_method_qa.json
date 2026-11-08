@@ -1,0 +1,55 @@
+{
+  "schema": "UK_v32_geography_method_documentary_QA_v1",
+  "reviewer": "/root/v32_source_qa",
+  "initial_written_utc": "2026-11-06T22:25:39.701225+00:00",
+  "status": "final_documentary_source_review_passed",
+  "final_case_assessment_pending": false,
+  "blocking_issues": [],
+  "preliminary_checks_report": "v32_source_qa_preflight.json",
+  "preliminary_checks_passed": 11,
+  "method": "Existing personal-source geography refinement only. Current fixed66 nonblank unknown-window pool and 12 predeclared followups; raw birthplace, BP grades, native DOB/identity/eligibility and all prior data frozen. Full source name/date precision/career/direct born-region and explicit consistent binding required. No rawcity-to-country mapping, derivative Wikipedia-child mirror admission or new name/date exception.",
+  "geography_fields_mutable": [
+    "hemisphere",
+    "geo_resolution_status",
+    "geography_decision",
+    "reason",
+    "northern_birthplace_candidate",
+    "southern_birthplace_separate"
+  ],
+  "new_versioned_context": "geography_followup_v32",
+  "role": "geographic_support_only",
+  "initial_known_boundary": "All7 active DOB cases and known Ewins/Barber placeholds excluded; Tomes provisional separately retained. 103 blank-window objects outside current scope. Nine issue/method sidecars must remain byte-identical unless root explicitly appends a qualified new issue, preserving previous cases.",
+  "new_method_exceptions": [],
+  "final_fact_review_scope": "One new root-acquired attributed academic compiled-reference entry for William Palmer Wynne: actual fullnative/exact1861-02-13/compatibleendpoint1950/Armstrong-Wynne chemistry/directStaffordEngland qualifies North geographic support only, conservativeS3, originalStafford/S2 and nativeDOBgrade frozen. Eleven current holds, twelve initial workerholds preserved. All9issue/methodsidecars byteidenticalv31. No new DOB/place/age/endpoint/name exceptions or derivative-Wikipedia admission.",
+  "reviewer_network_acquisitions": 0,
+  "production_code_or_outputs_mutated_by_reviewer": false,
+  "final_fact_review_utc": "2026-11-06T22:31:24.707232+00:00",
+  "final_checks_passed": 116,
+  "accepted_geography_sha256_at_review": "7fcf0c2e260eaacddbd608bcb5dbc48e9395716840d7e1062d3224825b9fbe27",
+  "active_DOB_conflicts_sha256_at_review": "93fc69c77bc85e2fe032b42f88f66d5dd59332d4d4bd0bca0ff36b11d3a00ad4",
+  "source_class_adjudication_sha256_at_review": "a30f93e5a259c43c0b7d4049aa8862e8972d97251d190230b29d122d5d9794ae",
+  "final_protocol_disclosures": {
+    "A": "Full prior contexts checked before queries; 8queries/5opens; no actualnewfullbirthregion. Smith Nature1935 publicabstract acquired despite cookie error parameter; no fullarticle or borncontext claim.",
+    "B": "8queries/8opens/3finds. Two output filters omitted Guardian bodyheader/ref and Maskell errorheader/ref; unknown refs explicitly null, no retry or backfill. Edinburgh firstbody is distinct from later cachedfind502. Original unqualifiedStafford hold retained in unchanged workerreport.",
+    "C": "8queries/3opens/3finds. Initial4 exactqueries durablyprelogged; adaptive4S1 exactstrings logged after call under predeclared same goal/budget. No backdating of specific priorintent.",
+    "root": "0queries/1firstoriginalopen/1cachedfind. Worker discovered Andraos lead only; root actual acquisition verified fullentry. Root did not reopen held works. Copyright span2000-2018 is not publication/version date; cited biographies not newly acquired."
+  },
+  "final_source_counts": {
+    "queries": 24,
+    "worker_opens": 16,
+    "root_opens": 1,
+    "total_opens": 17,
+    "worker_finds": 6,
+    "root_finds": 1,
+    "total_finds": 7,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "source_QA_harness_correction": "Scratch v32_source_qa_harness_correction.json documents case-sensitive assertion correction; no source/fact/production mutation.",
+  "limitations": [
+    "Documentary review only: reviewer did not network-acquire original works, inspect pixels/raw bytes or execute production.",
+    "Complete-output/frozen-field rollback verification and deterministic production replays reserved for independent final QA.",
+    "No civil/independent-source verification or unknown rawHTTPtime/status/hash claim.",
+    "C exact-query timing limit and B missing filteredrefs retained without retroactive repair."
+  ]
+}
