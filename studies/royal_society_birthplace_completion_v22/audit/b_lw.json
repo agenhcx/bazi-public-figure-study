@@ -1,0 +1,187 @@
+{
+  "schema": "v22_b_lilly_wetherell_source_observations_v1",
+  "written_utc": "2026-11-05T23:45:21.118657+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA3621",
+    "RS_PAST_NA3635"
+  ],
+  "intent_file": "v22_b_lw_intent.json",
+  "counts": {
+    "discovery_queries": 3,
+    "web_navigation_attempts": 3,
+    "parsed_find_operations": 0,
+    "screenshots": 0,
+    "raw_HTTP_or_PDF_GETs": 0,
+    "birthplace_candidates": 1,
+    "holds": 1,
+    "unused_allocated_navigation": 1
+  },
+  "candidates": [
+    {
+      "record_id": "RS_PAST_NA3635",
+      "native": {
+        "record_id": "RS_PAST_NA3635",
+        "authority_name": "Wetherell; Alan Marmaduke (1932 - 1998)",
+        "native_dob": "1932-12-31",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "90d1ccd96d63671ca8ad6cbdf0bf9efdfee0b6872dcf9121e97033f8e876143d",
+        "authority_name_and_DOB_count_in_4983": 1
+      },
+      "status": "candidate_original_signed_memoir_body_explicit_first_birthplace",
+      "raw_birthplace": "South Shields, England",
+      "source_url": "https://cds.cern.ch/record/2848104/files/rsbm.1999.0101.pdf",
+      "source_title": "Alan Marmaduke Wetherell. 31 December 1932 — 13 September 1998",
+      "source_author": "James V. Allaby",
+      "source_kind": "original_signed_scientific_society_memoir_carried_on_institutional_repository",
+      "source_grade_proposal": "S2",
+      "source_grade_basis": "Original authored published RS biographical memoir body with subject/title, byline/CERN affiliation, journalvolume/pages/copyright and observed author-subject collaboration narrative. CERN is the original-work carrier; not host-onlyS1 or civil registration.",
+      "source_quote": "was born on 31 December 1932 in South Shields, England",
+      "source_quote_word_count": 10,
+      "source_locator": "turn9151649view0: fulltitle/exactlifespanL0-4; FRS1971 L5; byline/authorCERNaffiliationL6-7; professionalcareerL8-19; directbornclausefullnativecomponents/exactDOB/placeL21@PDFindex2(printed567); originalcopyrightL30; authorfirstpersoncollaborationL99-102.",
+      "source_webrefs": [
+        "turn9151649view0"
+      ],
+      "publication_year": "2000",
+      "publication_date_precision": "year_in_original_journal_header",
+      "publication_locator": "Biographical Memoirs of Fellows of the Royal Society46,565–576(2000)",
+      "doi": "10.1098/rsbm.1999.0101",
+      "source_birthdate": "1932-12-31",
+      "source_birthdate_precision": "exact_day_in_born_clause_and_subject_header",
+      "source_DOB_matches_native": true,
+      "source_death_date": "1998-09-13",
+      "source_lifespan_compatible_with_native": true,
+      "observed_source_full_name": "Alan Marmaduke Wetherell",
+      "identity_review": [
+        "All native full-name components Alan Marmaduke Wetherell appear in original title and direct born clause.",
+        "Exact31December1932 matches native; original13September1998 death agrees native1932–1998 lifespan.",
+        "FRS1971, CERN1959appointment, ExperimentalPhysicsDivisionLeader1981–84 and Liverpool pion research bind the subject; unique native authority-plus-DOB key in4983.",
+        "Original namedauthor CERNaffiliation and first-person collaboration narrative directly establish scientific colleague context, without relying on familiar author name."
+      ],
+      "identity_conflicts_observed": [],
+      "reviewed_hemisphere_proposal": "north",
+      "geographic_basis": "Directbornclause explicitly supplies SouthShields,England. England is a wholly northern birth-linked region; no personalcountry/entity/coordinates assignment, nationality/work/death/footer or map inference.",
+      "caveats": [
+        "Original published memoir read as web-tool parsedPDF on CERN repository, not rawPDFbytes; no source-byte hash/status/exactfetchUTC acquired.",
+        "Header downloadstamp01February2023 is not publicationdate; retain only original2000year.",
+        "No original fullPDF/HTML/images/familydetails or projectioncache redistributed; bounded10word birth excerpt only."
+      ],
+      "retrieval_representation": "web-tool parsed original published PDF text, not raw HTTP/PDF bytes",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "raw_bytes_captured": false,
+      "no_master_change": true,
+      "geography_assignment_performed": false
+    }
+  ],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA3621",
+      "native": {
+        "record_id": "RS_PAST_NA3621",
+        "authority_name": "Lilly; Malcolm Douglas (1936 - 1998)",
+        "native_dob": "1936-08-09",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "d59079268c2412aa748b63b99f7e864c3ed9bad8561f41278308bef815866d02",
+        "authority_name_and_DOB_count_in_4983": 1
+      },
+      "status": "hold_original_birthplace_body_unavailable",
+      "hold_type": "original_birthplace_body_unavailable",
+      "reason": "Original CSA archivalcatalogue PDF rejected by webtool as content too large27448980bytes; distinct JSTOR memoirbody tool-inaccessible. Both stopped without retry. No original born-place body acquired. Discovery ElthamSouthLondon is upbringing, not birthplace; no location/date/grade/geography adopted.",
+      "sources": [
+        {
+          "url": "https://centreforscientificarchives.co.uk/wp-content/uploads/2024/01/LILLY_MALCOLM_DOUGLAS_v1.pdf",
+          "ref": "turn9151649view1",
+          "source_kind": "original_archival_catalogue_PDF",
+          "tool_result": "400contentlengthtoolerror27448980bytes; not rawHTTPstatus",
+          "birthplace_relation_verified": false
+        },
+        {
+          "url": "https://www.jstor.org/stable/770403",
+          "ref": "turn8699991view0",
+          "source_kind": "original_scientific_memoir_carrier",
+          "tool_result": "URLnotaccessibleviatool",
+          "birthplace_relation_verified": false
+        }
+      ],
+      "unopened_discovery_caveats": [
+        "CSA projection says exact9August1936 and grewupElthamSouthLondon; no born-place proof, no bodyacquisition.",
+        "UCL Clarke archive catalogue search projections title9August1939–18May1998 versus native1936 are unopened discovery leads only. No original title/body verified, no birthdateconflict clearing or correct-date verdict.",
+        "Original memoir bibliography identifies PatriciaHClarke/RSvolume46/pages317–332/year2000; inaccessible body not treated as birthplace proof."
+      ],
+      "source_quote": "",
+      "source_birthdate_precision": "no_acquired_original_DOB_body",
+      "geographic_basis": "No acquired explicit birthplace; nativeunknown unchanged.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "no_master_change": true,
+      "geography_assignment_performed": false
+    }
+  ],
+  "query_ledger": [
+    {
+      "q": "\"Malcolm Douglas Lilly\" born obituary",
+      "refs": [
+        "turn1892823search0",
+        "turn1892823search1",
+        "turn1892823search2",
+        "turn1892823search6"
+      ]
+    },
+    {
+      "q": "\"Alan Marmaduke Wetherell\" born obituary",
+      "refs": [
+        "turn1892823search3",
+        "turn1892823search5"
+      ]
+    },
+    {
+      "q": "\"Malcolm Douglas Lilly\" \"born\" -site:grafiati.com",
+      "refs": [
+        "turn7280605search0",
+        "turn7280605search1",
+        "turn7280605search2",
+        "turn7280605search3",
+        "turn7280605search8"
+      ]
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "url": "https://cds.cern.ch/record/2848104/files/rsbm.1999.0101.pdf",
+      "ref": "turn9151649view0",
+      "result": "originalsignedmemoirparsedPDFbodyacquired",
+      "raw_HTTP_status": null
+    },
+    {
+      "url": "https://centreforscientificarchives.co.uk/wp-content/uploads/2024/01/LILLY_MALCOLM_DOUGLAS_v1.pdf",
+      "ref": "turn9151649view1",
+      "result": "toolcontentlengtherror400;stopped",
+      "raw_HTTP_status": null
+    },
+    {
+      "url": "https://www.jstor.org/stable/770403",
+      "ref": "turn8699991view0",
+      "result": "toolinaccessible;stopped",
+      "raw_HTTP_status": null
+    }
+  ],
+  "quote_ledger": [
+    {
+      "original_work": "Allaby2000WetherellRSmemoir10.1098/rsbm.1999.0101",
+      "quote": "was born on 31 December 1932 in South Shields, England",
+      "words": 10
+    }
+  ],
+  "protocol_deviations": [],
+  "limits": [
+    "No failedsource retry/variant/bypass/rawGET.",
+    "No sourceHTML/PDF/image/rawbytes or fullparsedcache redistributed.",
+    "No nativeDOB/calendar/identity/eligibility/grade/country/QID/coordinate changes; no master/code/Git edits.",
+    "Sourcegrades and hemispheres are parent-review proposals only.",
+    "No claim to exhaustive literature coverage, rawstatus/bytes/time, or extra informational independence."
+  ]
+}

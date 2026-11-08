@@ -1,0 +1,580 @@
+{
+  "schema": "academy_national_inventory_us_uk_v1",
+  "baseline_commit": "32653a72679c5ab17afbdaf955d1ae797f02077c",
+  "repository": "agenhcx/bazi-public-figure-study",
+  "network_calls": 0,
+  "existing_files_modified": 0,
+  "new_DOB_or_membership_decisions": 0,
+  "bazi_features_computed": 0,
+  "new_cohort_freeze": false,
+  "source_hashes": {
+    "NAS_SCIENCE_CORE_DOB_CLOSEOUT_V17.md": "d085313bcd004797e80a06f6d82853ffefa21168a16d22cc8f57f1b39177169b",
+    "NAS_SCIENCE_CORE_ANALYSIS_PREREGISTRATION_V1.md": "101fe01688a7b7c437615b288ef1f4a10531cfb1404baa20d79e1949a34e9e56",
+    "data/nas_science_core_dob_freeze_v17.json": "e15f2affad1d8a3c172d69a528522c0e6f68c8bed99feff1413a5ecc0f69ca66",
+    "data/nas_science_core_dob_freeze_v16.json": "da1b5bee23479f1edd28f8f23a7da83099f0518b488d4184a24bee7eca8ba0a4",
+    "scripts/nas_science_core_dob_crosswalk.py": "d775f41f7d687dc5b41027cd2a561e87da849de35a271498ac74395ee36899ff",
+    "scripts/nas_manual_dob_supplement_v9.py": "597ee327df034edfc3dd0eaebbb7a4b1515671a0f72695ee18a78d382cd75301",
+    "data/nas_science_core_dob_manual_supplement_v9.csv": "ccb0162823863e64758614f124be17ecf7cae650a77665ebc4223182b9300628",
+    "data/nas_viaf_independent_source_audit_v1.csv": "6fabd45da5801cc720c4cea8533cb594c09fedde3a17e054120d9e237363e329",
+    "ROYAL_SOCIETY_DOB_CLOSEOUT_V1.md": "2c19f1ee9312d13e4cacb24ab74fcf6f9d43ec307d39dc006fb8e00d456770cb",
+    "data/royal_society_dob_freeze_v1.json": "6da1a9a6e46fca8e47a597abaa8d1f0b84c918f969c6bce4332b79f64160f0ec",
+    "data/royal_society_roster_freeze_v1/manifest.json": "d7d95bea9043104b8b311dd4363b051592bd33a509055fd3acb3d339147e7454",
+    "data/royal_society_roster_freeze_v1/royal_society_fellows_roster_freeze_v1.csv": "dc770dfd48dcee5d60ce6687c81658432581a174ea073d6bd298aa213f711317",
+    "data/royal_society_roster_freeze_v1/current_past_overlap_audit_v1.csv": "4f3fb192430d1f60f5406c3463627880c9aeedb2bf200285d5e47aab9f81b144",
+    "data/royal_society_past_dob_closeout_v1/summary.json": "6f30eacc49c6467877ba564e8b0018a3670dca763cd1902c53b5b2917dfb65d0",
+    "data/royal_society_past_dob_closeout_v1/accepted_exact_dob_final_v1.csv": "1f6a0fcb52fda3230e2e3a0005b9a71aa054f6e44d0e63ea0daac2588d45f1b4",
+    "data/royal_society_past_dob_closeout_v1/nonexact_unresolved_final_v1.csv": "e4498133ad19fa7807900da76ae77a2af09c25aefca25a15b19fd8a896c58ba9",
+    "data/royal_society_past_dob_closeout_v1/persistent_http_error_queue_v1.csv": "1c7e8d15664a3ce09e6b8b6aa76beedd9f2ff5c712151022b598382373cad360",
+    "data/royal_society_past_dob_closeout_v1/conflict_adjudication_v1.csv": "d4da015ec701bdc75084f9cf56477ec840a4a96931c1ff6a55df21bd5ce71e0a",
+    "data/royal_society_dob_freeze_v1/royal_society_current_exact_dob_final_v1.csv": "8e3f3bc7607c0f0dafbfab26375136eab9e6e4692447527f65794faff2d5d662",
+    "data/royal_society_dob_freeze_v1/royal_society_current_authority_reaudit_v1.csv": "364442b73ff8337e6588379f6cfb43c54e3e0f63aeca59b3793fcbbf78c94fa3",
+    "data/royal_society_current_dob_candidate_v1/current_exact_dob_candidate_pool_v1.csv": "39ebe85be9dd9341f285980b89645ace537a2362ba823efc2941529a13c9f306",
+    "data/royal_society_current_dob_candidate_v1/authority_recovery_whitelist_v1.csv": "71d622d9b09f19251741d17d79d08758a13e9108465ac2cad8211b8f1035c03e",
+    "data/royal_society_dob_freeze_v1/missingness_by_status_v1.csv": "ee06a9fa86f2b84004040399863205164619076718e16fe11e26270276aad16a",
+    "data/royal_society_dob_freeze_v1/missingness_by_election_era_v1.csv": "72aaf88a236da1ea91342317c1416b994cb9f5af9522af86a5252ab99e44e246",
+    "scripts/royal_society_dob_freeze_v1.py": "0e420ee58ccab1c7d8c1b9ad375fa184103345e8c9d0c8abf120455adca1bd1e",
+    "data/dob_calendar_audit_closeout_v1/summary.json": "47efdfbb4c64ea594acc62fe6281c042967ebf16953cc1f97be2d96a399a2f5f",
+    "data/dob_absolute_date_adjudication_v1/canonical_gregorian_dob_registry_v1.csv": "d0379a17eca6e16cef436c16f86da1f1fb3e43c5f1f1ba5848ff4ca94d458103"
+  },
+  "NAS": {
+    "institution": "US National Academy of Sciences",
+    "current_authority": "data/nas_science_core_dob_freeze_v17.json",
+    "stage": "exact-DOB collection frozen v17; broad mining stopped",
+    "count_unit": "3051 unique frozen NAS profile_url roster rows in the specified science-core regular Member/Emeritus snapshot",
+    "scope": "regular NAS Member/Emeritus; primary sections12–16,21–29,41–44; elections through2025; international/resigned/rescinded excluded by source builder",
+    "scope_is_institution_not_nationality": true,
+    "cohort_rows": 3051,
+    "approved_exact_DOB": 2242,
+    "unresolved": 809,
+    "exact_coverage": {
+      "numerator": 2242,
+      "denominator": 3051,
+      "fraction": 0.7348410357259915,
+      "percent": 73.48410357259915
+    },
+    "unresolved_rate": {
+      "numerator": 809,
+      "denominator": 3051,
+      "fraction": 0.26515896427400854,
+      "percent": 26.515896427400854
+    },
+    "status_at_frozen_source": {
+      "deceased": {
+        "rows": 1361,
+        "exact_DOB": 1361,
+        "unresolved": 0,
+        "coverage": {
+          "numerator": 1361,
+          "denominator": 1361,
+          "fraction": 1.0,
+          "percent": 100.0
+        }
+      },
+      "living": {
+        "rows": 1690,
+        "exact_DOB": 881,
+        "unresolved": 809,
+        "coverage": {
+          "numerator": 881,
+          "denominator": 1690,
+          "fraction": 0.521301775147929,
+          "percent": 52.1301775147929
+        }
+      }
+    },
+    "verification": {
+      "row_level_csv_available_in_repo": false,
+      "row_level_csv_available_in_restored_native_Library_archive": true,
+      "Library_file_id": "libfile_f7aa87d85a0c8191ac16b89481e26650",
+      "archive_local_path": "/workspace/scratch/7e8aa4e0d4af/academy_inventory_workers/downloads/nas/nas-dob-v17-official-provenance-freeze.zip",
+      "archive_sha256": "dfbdeadd1dd0fe3ac05c8c70f233857582ef694e483f8ff3ffdba897a5e96c10",
+      "archive_matches_frozen_checkpoint_digest": true,
+      "member_sha256": {
+        "nas_science_core_dob_crosswalk/nas_science_core_dob_crosswalk_v17.csv": "a897797d59c25f0fe7f4fcfb61b417338394b577c3380a456faeb8135e0cef29",
+        "nas_science_core_dob_crosswalk/summary_v17.json": "7273ffb42f0110109e123e61489058c20461dab480b55158a80768a87afb21c3",
+        "nas_science_core_dob_crosswalk/nas_science_core_dob_manual_supplement_log_v9.csv": "41df6d085fd823053a35794a05ef32409762fbf5d32af19dba23ecbc6c6af218",
+        "nas_science_core_dob_freeze_v17.json": "de5511222c6e2b4c51a04cdaf7b4d19f1bf5b8b52f2be2bea7de5706a81f2ec7",
+        "nas_viaf_independent_source_audit_v1.csv": "6fabd45da5801cc720c4cea8533cb594c09fedde3a17e054120d9e237363e329"
+      },
+      "final_csv_sha256": "a897797d59c25f0fe7f4fcfb61b417338394b577c3380a456faeb8135e0cef29",
+      "final_csv_matches_frozen_checkpoint_digest": true,
+      "row_count_recomputed": 3051,
+      "unique_profile_urls_recomputed": 3051,
+      "approved_exact_dates_recomputed": 2242,
+      "unresolved_recomputed": 809,
+      "all_selected_final_dates_valid_ISO": true,
+      "deceased_living_splits_recomputed": true,
+      "full_row_native_status_counts_recomputed": true,
+      "full_firstparty_source_body_reaudit_performed": false,
+      "zip_read_in_memory_no_repo_or_original_bytes_changed": true,
+      "note": "This supersedes the initial manifest-only limitation: the native Library ZIP has been restored and its exact CSV bytes match the v17 freeze SHA. Source labels are the frozen native statuses, not a newly harmonized primary-source grading or new acceptance decisions."
+    },
+    "provenance_policy": "The v17 amendment adds4 strong independently auditable non-library records and treats the new VIAF/library-chain candidates as locator-only. The frozen total nevertheless retains legacy native statuses for809 Wikidata-path,27 DBpedia-path and49 mixed manual-path dates alongside1357 NAS-card dates. Do not claim that every one of2242 rows passed a new firstparty/nonlibrary provenance standard, and do not retroactively change the frozen acceptance in this inventory.",
+    "v17_added_source_classes": {
+      "official_NAS_plus_institutional_CV": 1,
+      "institutional_CV": 1,
+      "official_national_lab_document": 1,
+      "professional_society_autobiography": 1
+    },
+    "conflict_limits": "56 VIAF-versus-frozen comparable-date disagreements are a validation experiment, not a count of unresolved final NAS people. In the15-candidate followup audit,4accepted/1nonlibrary-conflict rejection/10unresolved are reported; do not generalize these to all809 pending rows.",
+    "birth_window": {
+      "full_collection_numbers_not_restricted_to_1835_1985": true,
+      "existing_common_window_exact_count_row_recomputed": 2240,
+      "out_of_window_accepted_dates": [
+        {
+          "name": "James Hall",
+          "date": "1811-09-12"
+        },
+        {
+          "name": "C. H. F. Peters",
+          "date": "1813-09-19"
+        }
+      ],
+      "full_window_roster_denominator_not_established": true,
+      "do_not_treat2240_divided_by3051_as_common_window_missingness": true,
+      "existing_calendar_closeout_reports_calendar_eligible": 2238,
+      "existing_calendar_closeout_reports_pending": 2,
+      "pending_registry_names": [
+        "Katherine Esau",
+        "Gregory Breit"
+      ],
+      "calendar_eligible_count_not_newly_adjudicated": true,
+      "no_calendar_conversions_performed": true
+    },
+    "analysis_ready_intersection": "Not newly defined here.2242 accepted raw exact dates are not the same metric as the tracked1835–1985/calendar-layer2238 count. No new cross-country common denominator is imposed.",
+    "native_DOB_status_counts_all_rows": {
+      "no_conservative_wikidata_match": 389,
+      "exact_nas_card": 237,
+      "matched_wikidata_no_unique_exact_day": 415,
+      "exact_nas_card_plus_wikidata_agree": 1087,
+      "exact_dbpedia": 27,
+      "exact_wikidata": 731,
+      "exact_nas_card_wikidata_conflict": 33,
+      "exact_wikidata_global_name": 78,
+      "exact_manual_supplement_v5_loc_provenance": 11,
+      "exact_manual_supplement_v7_ambiguous_qid_provenance": 10,
+      "exact_manual_supplement_v3": 3,
+      "wikidata_implausible_election_age_review": 2,
+      "exact_manual_supplement_v2": 10,
+      "exact_manual_supplement_v4": 2,
+      "exact_manual_supplement_v9_official_provenance": 4,
+      "exact_manual_supplement_v6_authority_provenance": 5,
+      "exact_manual_supplement_v8_official_cv": 1,
+      "exact_manual_review": 2,
+      "manual_review_unresolved_conflict": 2,
+      "wikidata_exact_conflict_review": 1,
+      "exact_provenance_upgraded_v1_official_cv": 1
+    },
+    "native_DOB_status_counts_accepted": {
+      "exact_nas_card": 237,
+      "exact_nas_card_plus_wikidata_agree": 1087,
+      "exact_dbpedia": 27,
+      "exact_wikidata": 731,
+      "exact_nas_card_wikidata_conflict": 33,
+      "exact_wikidata_global_name": 78,
+      "exact_manual_supplement_v5_loc_provenance": 11,
+      "exact_manual_supplement_v7_ambiguous_qid_provenance": 10,
+      "exact_manual_supplement_v3": 3,
+      "exact_manual_supplement_v2": 10,
+      "exact_manual_supplement_v4": 2,
+      "exact_manual_supplement_v9_official_provenance": 4,
+      "exact_manual_supplement_v6_authority_provenance": 5,
+      "exact_manual_supplement_v8_official_cv": 1,
+      "exact_manual_review": 2,
+      "exact_provenance_upgraded_v1_official_cv": 1
+    },
+    "native_DOB_status_counts_unresolved": {
+      "no_conservative_wikidata_match": 389,
+      "matched_wikidata_no_unique_exact_day": 415,
+      "wikidata_implausible_election_age_review": 2,
+      "manual_review_unresolved_conflict": 2,
+      "wikidata_exact_conflict_review": 1
+    },
+    "native_source_group_counts_accepted": {
+      "NAS_card_native_status": 1357,
+      "DBpedia_native_status": 27,
+      "Wikidata_native_status": 809,
+      "manual_native_status": 49
+    },
+    "native_source_groups_by_frozen_status": {
+      "deceased": {
+        "NAS_card_native_status": 1352,
+        "Wikidata_native_status": 5,
+        "manual_native_status": 4
+      },
+      "living": {
+        "DBpedia_native_status": 27,
+        "Wikidata_native_status": 804,
+        "manual_native_status": 45,
+        "NAS_card_native_status": 5
+      }
+    },
+    "source_grade_comparability_limit": "The881 living exact dates comprise804 Wikidata-path,27 DBpedia-path,45 manual and5 NAS-card native statuses; they are not evidence-equivalent to all99 Royal Society current dates independently corroborated outside library authorities.",
+    "native_membership_type_counts": {
+      "Member": 2716,
+      "Emeritus": 326,
+      "Member, Public Welfare Medalist": 6,
+      "Emeritus, Member": 1,
+      "Emeritus, Public Welfare Medalist": 2
+    },
+    "native_primary_section_counts": {
+      "Section 41: Medical Genetics, Hematology, and Oncology": 185,
+      "Section 12: Astronomy": 146,
+      "Section 28: Systems Neuroscience": 82,
+      "Section 42: Medical Physiology and Metabolism": 129,
+      "Section 21: Biochemistry": 281,
+      "Section 15: Geology": 155,
+      "Section 13: Physics": 362,
+      "Section 14: Chemistry": 385,
+      "Section 24: Cellular and Molecular Neuroscience": 117,
+      "Section 16: Geophysics": 163,
+      "Section 44: Microbial Biology": 133,
+      "Section 29: Biophysics and Computational Biology": 121,
+      "Section 27: Evolutionary Biology": 97,
+      "Section 23: Physiology and Pharmacology": 94,
+      "Section 43: Immunology and Inflammation": 120,
+      "Section 22: Cellular and Developmental Biology": 181,
+      "Section 26: Genetics": 184,
+      "Section 25: Plant Biology": 116
+    },
+    "election_year_range_recomputed": [
+      1863,
+      2025
+    ],
+    "accepted_birth_year_range_recomputed": [
+      1811,
+      1981
+    ],
+    "native_conflict_flags": {
+      "accepted_rows": {
+        "source_conflict": {
+          "0": 2209,
+          "1": 33
+        },
+        "wikidata_exact_conflict": {
+          "0": 2222,
+          "1": 20
+        },
+        "dbpedia_exact_conflict": {
+          "0": 2242
+        }
+      },
+      "unresolved_rows": {
+        "source_conflict": {
+          "0": 809
+        },
+        "wikidata_exact_conflict": {
+          "0": 808,
+          "1": 1
+        },
+        "dbpedia_exact_conflict": {
+          "0": 809
+        }
+      },
+      "flag_note": "33NAS-card-versus-Wikidata source_conflict rows remain accepted under the original precedence; retained raw conflict flags are not33 newly unresolved cases.20 accepted rows retain Wikidata_exact_conflict1, while only1 such row is unresolved. No flags are changed here."
+    },
+    "unresolved_with_any_raw_exact_candidate_strings": [
+      {
+        "profile_url": "https://www.nasonline.org/directory-entry/m-t-clegg-cqkgew/",
+        "name": "M. T. Clegg",
+        "native_status": "wikidata_implausible_election_age_review",
+        "wikidata_exact_values": "1876-09-01",
+        "dbpedia_exact_values": ""
+      },
+      {
+        "profile_url": "https://www.nasonline.org/directory-entry/j-c-seamus-davis-oat6hd/",
+        "name": "J. C. Séamus Davis",
+        "native_status": "matched_wikidata_no_unique_exact_day",
+        "wikidata_exact_values": "",
+        "dbpedia_exact_values": "1961-03-22"
+      },
+      {
+        "profile_url": "https://www.nasonline.org/directory-entry/david-j-glass-ccgjrx/",
+        "name": "David J. Glass",
+        "native_status": "wikidata_implausible_election_age_review",
+        "wikidata_exact_values": "1911-01-02",
+        "dbpedia_exact_values": ""
+      },
+      {
+        "profile_url": "https://www.nasonline.org/directory-entry/vassiliki-vicky-kalogera-8384g3/",
+        "name": "Vassiliki (Vicky) Kalogera",
+        "native_status": "matched_wikidata_no_unique_exact_day",
+        "wikidata_exact_values": "",
+        "dbpedia_exact_values": "1971-02-15"
+      },
+      {
+        "profile_url": "https://www.nasonline.org/directory-entry/gail-r-martin-burc6z/",
+        "name": "Gail R. Martin",
+        "native_status": "manual_review_unresolved_conflict",
+        "wikidata_exact_values": "1944-04-02",
+        "dbpedia_exact_values": ""
+      },
+      {
+        "profile_url": "https://www.nasonline.org/directory-entry/robert-h-waterston-pklh4l/",
+        "name": "Robert H. Waterston",
+        "native_status": "manual_review_unresolved_conflict",
+        "wikidata_exact_values": "1943-09-07",
+        "dbpedia_exact_values": ""
+      },
+      {
+        "profile_url": "https://www.nasonline.org/directory-entry/owen-n-witte-sgjafr/",
+        "name": "Owen N. Witte",
+        "native_status": "wikidata_exact_conflict_review",
+        "wikidata_exact_values": "1949-03-17|1949-05-17",
+        "dbpedia_exact_values": ""
+      }
+    ],
+    "recovered_native_archive_used_without_new_collection": true
+  },
+  "Royal_Society": {
+    "institution": "UK Royal Society",
+    "current_authority": "data/royal_society_dob_freeze_v1.json",
+    "stage": "primary Fellow roster and exact-DOB collection frozen v1; prior draft125-current acceptance superseded",
+    "count_unit": "unique frozen cohort_key roster rows",
+    "scope": "Fellow only; current plus past, election/admission through2025; Foreign Members/Honorary/Royal Fellows excluded; historical election years1660–2025",
+    "scope_is_institution_not_nationality": true,
+    "cohort_rows": 8669,
+    "approved_exact_DOB": 4983,
+    "unresolved": 3686,
+    "exact_coverage": {
+      "numerator": 4983,
+      "denominator": 8669,
+      "fraction": 0.574806782789249,
+      "percent": 57.480678278924906
+    },
+    "unresolved_rate": {
+      "numerator": 3686,
+      "denominator": 8669,
+      "fraction": 0.42519321721075093,
+      "percent": 42.519321721075094
+    },
+    "status_at_frozen_source": {
+      "past": {
+        "rows": 7099,
+        "exact_DOB": 4884,
+        "unresolved": 2215,
+        "coverage": {
+          "numerator": 4884,
+          "denominator": 7099,
+          "fraction": 0.6879842231300183,
+          "percent": 68.79842231300184
+        },
+        "unresolved_nonexact_table": 2211,
+        "persistent_HTTP_error_queue": 4
+      },
+      "current": {
+        "rows": 1570,
+        "exact_DOB": 99,
+        "unresolved": 1471,
+        "coverage": {
+          "numerator": 99,
+          "denominator": 1570,
+          "fraction": 0.06305732484076433,
+          "percent": 6.305732484076433
+        }
+      }
+    },
+    "verification": {
+      "row_level_sources_available_in_repo": true,
+      "unique_roster_ids": 8669,
+      "unique_past_accepted_ids": 4884,
+      "unique_current_accepted_ids": 99,
+      "accepted_ids_within_frozen_roster_checked": true,
+      "accepted_dates_valid_ISO_checked": true,
+      "reconstructed_full_crosswalk_sha256": "f6e382930d5d1ad294c78b4e6ae9132b8ad101b5e3304bc0e05b22e23ff6b698",
+      "matches_frozen_crosswalk_sha256": true,
+      "in_memory_reconstruction_only_no_cohort_files_written": true,
+      "tracked_missingness_status_table_recomputed": true
+    },
+    "provenance_native_counts": {
+      "past_official_catalogue": 4884,
+      "current_dob_status": {
+        "exact_current_independent_nonlibrary": 82,
+        "exact_current_authority_locator_independently_recovered": 17
+      },
+      "current_source_class": {
+        "regulatory_filing": 1,
+        "secondary_authority_eligible": 18,
+        "institutional_academic_eligible": 24,
+        "governmental_science_agency": 1,
+        "university_professor_catalog": 2,
+        "university_official": 2,
+        "academic_science_encyclopedia": 1,
+        "frozen_hierarchy_eligible": 6,
+        "institutional_academic_cv": 2,
+        "academy_official_cv": 1,
+        "academy_official": 6,
+        "award_official": 10,
+        "institutional_academic_biography": 4,
+        "institutional_archive": 2,
+        "university_academic_encyclopedia": 1,
+        "government_official": 1,
+        "university_official_biography": 2,
+        "laureate_autobiography": 1,
+        "government_eligible": 2,
+        "university_consortium_profile": 1,
+        "university_award_material": 1,
+        "scholarly_institute_hosted_cv": 1,
+        "research_institute_official": 1,
+        "medical_hall_of_fame_official": 1,
+        "direct_professional_interview": 2,
+        "university_hosted_cv": 1,
+        "royal_society_scholarly_profile": 1,
+        "government_official_cv": 1,
+        "institutional_archive_eligible": 1,
+        "scholarly_author_profile": 1
+      }
+    },
+    "provenance_policy": "Past accepted dates use explicit Royal Society Date-of-birth fields; current99 have independent non-library evidence. Native source labels include18secondary_authority_eligible, so do not label all99 current sources first-party.43 library-only candidates were reauditied,17recovered independently and26downgraded.",
+    "conflicts": {
+      "past_source_field_conflicts_adjudicated_accepted": 17,
+      "past_exact_DOB_native_adjudication_counts": {
+        "accepted_explicit_dob_field_no_conflict": 4867,
+        "accepted_explicit_dob_field_age_at_election_corroborated": 16,
+        "accepted_explicit_dob_field_with_external_corroboration": 1
+      },
+      "current_authority_reaudit_decisions": {
+        "downgraded_unresolved": 26,
+        "recovered_independent_nonlibrary": 17
+      },
+      "conflict_note": "The17 past conflicts are resolved by frozen precedence/adjudication, not17 additional unresolved people."
+    },
+    "identity_scope_audit": {
+      "normalized_current_past_name_overlap_pairs": 17,
+      "resolved_as_namesakes_not_duplicates": 17,
+      "unresolved_overlap_pairs": 0,
+      "missing_election_year_rows": 3,
+      "no_cross_institution_person_deduplication_performed": true
+    },
+    "birth_window": {
+      "accepted_dates_min_year": 1601,
+      "accepted_dates_max_year": 1978,
+      "in_existing_1835_1985_window": 2644,
+      "in_window_past_exact": 2545,
+      "in_window_current_exact": 99,
+      "outside_window_exact": 2339,
+      "window_count_row_recomputed": true,
+      "not_a_new_filter_or_cohort_modification": true,
+      "full_window_roster_denominator_not_established": true,
+      "do_not_divide2644_by8669_as_window_missingness": true,
+      "existing_calendar_closeout_reports_eligible2644_pending0": true,
+      "existing_absolute_date_overlay_rows": 2,
+      "new_calendar_conversions_performed": 0
+    },
+    "missingness_by_election_era": [
+      {
+        "status_at_source": "past",
+        "election_era": "pre-1900",
+        "rows": 4837,
+        "exact_dob": 2640,
+        "unresolved": 2197,
+        "exact_dob_coverage": "0.545793"
+      },
+      {
+        "status_at_source": "past",
+        "election_era": "1900-1949",
+        "rows": 864,
+        "exact_dob": 854,
+        "unresolved": 10,
+        "exact_dob_coverage": "0.988426"
+      },
+      {
+        "status_at_source": "past",
+        "election_era": "1950-1979",
+        "rows": 861,
+        "exact_dob": 856,
+        "unresolved": 5,
+        "exact_dob_coverage": "0.994193"
+      },
+      {
+        "status_at_source": "past",
+        "election_era": "1980-1999",
+        "rows": 435,
+        "exact_dob": 434,
+        "unresolved": 1,
+        "exact_dob_coverage": "0.997701"
+      },
+      {
+        "status_at_source": "past",
+        "election_era": "2000-2009",
+        "rows": 68,
+        "exact_dob": 68,
+        "unresolved": 0,
+        "exact_dob_coverage": "1.0"
+      },
+      {
+        "status_at_source": "past",
+        "election_era": "2010-2019",
+        "rows": 26,
+        "exact_dob": 26,
+        "unresolved": 0,
+        "exact_dob_coverage": "1.0"
+      },
+      {
+        "status_at_source": "past",
+        "election_era": "2020-2025",
+        "rows": 5,
+        "exact_dob": 5,
+        "unresolved": 0,
+        "exact_dob_coverage": "1.0"
+      },
+      {
+        "status_at_source": "past",
+        "election_era": "unknown",
+        "rows": 3,
+        "exact_dob": 1,
+        "unresolved": 2,
+        "exact_dob_coverage": "0.333333"
+      },
+      {
+        "status_at_source": "current",
+        "election_era": "1950-1979",
+        "rows": 35,
+        "exact_dob": 5,
+        "unresolved": 30,
+        "exact_dob_coverage": "0.142857"
+      },
+      {
+        "status_at_source": "current",
+        "election_era": "1980-1999",
+        "rows": 371,
+        "exact_dob": 44,
+        "unresolved": 327,
+        "exact_dob_coverage": "0.118598"
+      },
+      {
+        "status_at_source": "current",
+        "election_era": "2000-2009",
+        "rows": 370,
+        "exact_dob": 21,
+        "unresolved": 349,
+        "exact_dob_coverage": "0.056757"
+      },
+      {
+        "status_at_source": "current",
+        "election_era": "2010-2019",
+        "rows": 448,
+        "exact_dob": 18,
+        "unresolved": 430,
+        "exact_dob_coverage": "0.040179"
+      },
+      {
+        "status_at_source": "current",
+        "election_era": "2020-2025",
+        "rows": 346,
+        "exact_dob": 11,
+        "unresolved": 335,
+        "exact_dob_coverage": "0.031792"
+      }
+    ],
+    "analysis_ready_intersection": "4983 is accepted exactDOB across the full historical frozen roster.2644 are in the already defined1835–1985 support window; this summary does not impose additional eligibility, new source-tier thresholds, latitude or country-of-birth filters."
+  },
+  "cross_country_limits": [
+    "Institutional membership is not nationality or place of birth.",
+    "Raw historical rosters, science-core snapshots and France/Japan working candidate groups are different denominators; do not sum as independent unique scientists.",
+    "Cross-country and Nobel overlap has not been deduplicated in this audit.",
+    "No full common-window denominator or source-tier harmonization is created here.",
+    "All quantities describe frozen source snapshots, not present-day living/current status."
+  ],
+  "verification_update": "NAS row-level verification completed from native Library archive matching all frozen digests; no new collection or source-body approval."
+}

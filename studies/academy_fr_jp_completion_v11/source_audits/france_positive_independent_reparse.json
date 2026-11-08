@@ -1,0 +1,101 @@
+{
+  "audit_kind": "independent_original_body_French_positive_reparse",
+  "reviewer": "v10_audit",
+  "completed_utc": "2026-10-30T12:17:55.025969+00:00",
+  "independent_qa_passed": true,
+  "scope": "Complements the ring manual event/identity QA; no broad domain trust and no inference from nationality or absence of contrary text.",
+  "positive_count": 196,
+  "positive_count_by_lane": {
+    "france_a": 70,
+    "france_b": 67,
+    "france_c": 59
+  },
+  "worker_final_pins": {
+    "france_a": {
+      "decisions.json": "69fa05de812b71e3ccb7f8ec2fe70534e1f7e887765d74b8dbebf722e5ddebe8",
+      "MANIFEST.json": "2464dc8b6ed73cd1c887ca372aba50c8a540861b17e75344fd53da64738e0601"
+    },
+    "france_b": {
+      "decisions.json": "8798f98ac72438c3e81911fdd370f6d0435808ff13162e15e90e4c9fd9e89c68",
+      "MANIFEST.json": "4df99feaa9169da142ef25af227265706d833e413214eb3074508fd4334d2f9b"
+    },
+    "france_c": {
+      "decisions.json": "9b106d754ed5a61317ffe9141c0643a09d2239a8b45e0f5d9417ccd48d5dcfa4",
+      "MANIFEST.json": "45d921d2c4b5c5cfb8d584ccf4ce5654910e6ad5dcabf0c4a05902264251cb37"
+    }
+  },
+  "every_positive_original_capture_rehashed": true,
+  "every_positive_exact_subject_URL_binding_passed": true,
+  "every_positive_entire_coauthor_list_reparsed_from_bounded_actual_Redacteur_block": true,
+  "exact_Academy_or_Institut_writer_token_not_affiliation_or_other_academy": true,
+  "accurate_parent_vs_Academy_source_class_checked": true,
+  "every_positive_unique_Science506_row_and_literal_selected_year_reparsed": true,
+  "every_positive_actual_birth_line_independently_parsed_and_equal_preserved_DOB": true,
+  "mixed_correspondent_member_row_count": 35,
+  "mixed_row_ids": [
+    "CTHS_104600",
+    "CTHS_112037",
+    "CTHS_112074",
+    "CTHS_112119",
+    "CTHS_112260",
+    "CTHS_112727",
+    "CTHS_112841",
+    "CTHS_112879",
+    "CTHS_128385",
+    "CTHS_2088",
+    "CTHS_101973",
+    "CTHS_102355",
+    "CTHS_110941",
+    "CTHS_111518",
+    "CTHS_112032",
+    "CTHS_112040",
+    "CTHS_112085",
+    "CTHS_112276",
+    "CTHS_112451",
+    "CTHS_112496",
+    "CTHS_112594",
+    "CTHS_112729",
+    "CTHS_112838",
+    "CTHS_412",
+    "CTHS_103126",
+    "CTHS_112052",
+    "CTHS_112139",
+    "CTHS_112171",
+    "CTHS_112705",
+    "CTHS_112711",
+    "CTHS_112726",
+    "CTHS_112731",
+    "CTHS_112839",
+    "CTHS_112844",
+    "CTHS_2062"
+  ],
+  "mixed_rows_manually_read_selected_explicit_later_member_or_nonresident_start_not_aggregate_earliest_year": true,
+  "all_positive_names_and_types_reviewed_for_available_contrary_role_cues": true,
+  "available_positive_body_role_cues_did_not_establish_French_foreign_associate_role": true,
+  "irrelevant_Medicine_index_reference_and_other_academy_roles_not_transferred": true,
+  "partial_hidden_biographies_not_assumed_reviewed": true,
+  "prior_decision_foreign_associate_label_scan_on_positive_IDs_found_none": true,
+  "Casimir_exact_negative_control_file": "casimir_role_negative_control.json",
+  "Casimir_exact_negative_control_sha256": "1eb436995a5f1e738108fa5a6f6dbd40774bceaafd6fb1fa2d023184b55340bc",
+  "Casimir_not_a_positive": true,
+  "bounded_Weil_sanity_check": {
+    "candidate_group_id": "CTHS_112709",
+    "search_query_count": 2,
+    "actual_URL_open_count": 1,
+    "primary_domains_only": true,
+    "queries": [
+      "site:academie-sciences.fr \"André Weil\" \"associé étranger\"",
+      "site:academie-sciences.fr \"Weil\" \"1982\""
+    ],
+    "actual_URL": "https://www.academie-sciences.fr/les-academiciens",
+    "contrary_role_evidence_found": false,
+    "no_role_change_created": true,
+    "no_nationality_or_foreign_career_inference": true,
+    "hidden_historical_archive_not_followed": true,
+    "discovery_control_separate_from_bulk_collector_zero_queries": true
+  },
+  "source_body_redistributed": false,
+  "repository_writes": 0,
+  "network_requests_for_this_local_reparse": 0,
+  "no_birth_or_identity_changes_proposed": true
+}

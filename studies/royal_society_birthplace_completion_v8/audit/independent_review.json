@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "baseline_rows": 4983,
+  "all_preexisting_non_geography_fields_equal": true,
+  "native_DOB_calendar_identity_eligibility_source_groups_and_historical_QIDs_unchanged": true,
+  "geography_lookup_identity_layer_unchanged": true,
+  "hemisphere_counts": {
+    "north": 4153,
+    "unknown": 647,
+    "south": 183
+  },
+  "window_1835_1985_counts": {
+    "north": 2253,
+    "unknown": 213,
+    "south": 178
+  },
+  "new_unknown_to_known": 5,
+  "newly_classified_people_in_window": 5,
+  "known_to_unknown": [],
+  "dedicated_prior_geography_reviews": 0,
+  "new_fact_candidates": 6,
+  "new_fact_unique_people": 6,
+  "new_fact_people_classified": 5,
+  "new_fact_source_grades": {
+    "S2": 4,
+    "S3": 2
+  },
+  "first_active_birthplace_facts_added": 5,
+  "new_source_for_preexisting_Lindley_fact": true,
+  "all4977_untouched_rows_completely_equal": true,
+  "DNB_editable_transcription_grade_S3_no_scan_claim": true,
+  "Pickett_Heaps_month_only_source_does_not_supply_or_change_day": true,
+  "geography_resolution_grade_separate": "S3",
+  "current_lookup_state": {
+    "active": 94,
+    "quarantined": 2,
+    "identity_pending": 3
+  },
+  "all9_old_quarantined_candidates_inactive": true,
+  "Home_unknown_and_original_alternatives_retained": true,
+  "other_country_rows_exactly_unchanged": true,
+  "unknown_breakdown": {
+    "explicit_place_but_geography_unresolved": 54,
+    "no_active_explicit_birthplace_evidence": 593
+  },
+  "inputs_sha256": {
+    "studies/royal_society_birthplace_completion_v8/outputs/uk_birthplace_rows.jsonl.gz": "b13ba1336b5912e58cfc38aa79aa668772ece189623f32a23625e67eaabd4c92",
+    "studies/royal_society_birthplace_completion_v8/outputs/summary.json": "015635a55e499608dda723cc9f8fa253603cbf98fc1d1ea208365a013890dded",
+    "studies/royal_society_birthplace_completion_v8/scripts/assemble.py": "e3e30bae5d4d03537de61b25d1b1507750e0b9eb2a8a291a6067419203565326"
+  },
+  "independent_offline_replay_all_output_files_byte_identical": true,
+  "independent_replay_output_files": [
+    "all_country_birthplace_summary.csv",
+    "changed_records.csv",
+    "changes.jsonl.gz",
+    "remaining_unknown.csv",
+    "summary.json",
+    "uk_birthplace_rows.jsonl.gz",
+    "uk_birthplaces.csv"
+  ],
+  "Falkirk_source_type_context_and_southern_alternative_review_passed": true,
+  "README_CONTINUATION_numbers_source_precision_directory_scope_and_first_source_counts_consistent": true,
+  "documents_sha256": {
+    "README.md": "729a388bb2f8a4940179f19d0bb8474cf4224c5d1a9a79c5177869b065ea68fa",
+    "CONTINUATION.md": "44d7d7fdc7987c90fcb723975524743592fe809cae75455c4e759be37a1e76da"
+  }
+}

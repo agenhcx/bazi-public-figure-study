@@ -1,0 +1,502 @@
+{
+  "status": "PASS",
+  "direct_baseline": "uk_birthplace_checkout/studies/scientist_birthplace_completion_v5/outputs/birthplace_rows.jsonl.gz",
+  "sha256": "15f3d58b3334fbc5c32229b0c122ff5e693379fbf9759794e1e3ae87ac06d152",
+  "rows": 11094,
+  "unique_cohort_keys": 11094,
+  "unit": "cohort records; not cross-cohort independent people",
+  "cohort_counts": {
+    "CAS": 1230,
+    "DE_Leopoldina": 778,
+    "Fields_main": 63,
+    "France": 775,
+    "Japan": 368,
+    "NAS": 2242,
+    "Nobel_science": 655,
+    "UK_Royal_Society": 4983
+  },
+  "hemisphere_counts_by_cohort": {
+    "CAS": {
+      "unknown": 224,
+      "north": 1003,
+      "south": 3
+    },
+    "DE_Leopoldina": {
+      "north": 655,
+      "unknown": 117,
+      "south": 6
+    },
+    "Fields_main": {
+      "north": 59,
+      "south": 4
+    },
+    "France": {
+      "north": 702,
+      "unknown": 70,
+      "south": 3
+    },
+    "Japan": {
+      "north": 234,
+      "unknown": 134
+    },
+    "NAS": {
+      "unknown": 555,
+      "north": 1656,
+      "south": 31
+    },
+    "Nobel_science": {
+      "north": 634,
+      "south": 21
+    },
+    "UK_Royal_Society": {
+      "north": 4155,
+      "unknown": 645,
+      "south": 183
+    }
+  },
+  "native_observed_windows": {
+    "CAS": {
+      "native_nonblank_day_rows": 0,
+      "native_window_1835_1985_rows": 0,
+      "hemisphere_counts": {}
+    },
+    "DE_Leopoldina": {
+      "native_nonblank_day_rows": 778,
+      "native_window_1835_1985_rows": 778,
+      "hemisphere_counts": {
+        "north": 655,
+        "unknown": 117,
+        "south": 6
+      }
+    },
+    "Fields_main": {
+      "native_nonblank_day_rows": 63,
+      "native_window_1835_1985_rows": 61,
+      "hemisphere_counts": {
+        "north": 57,
+        "south": 4
+      }
+    },
+    "France": {
+      "native_nonblank_day_rows": 775,
+      "native_window_1835_1985_rows": 775,
+      "hemisphere_counts": {
+        "north": 702,
+        "unknown": 70,
+        "south": 3
+      }
+    },
+    "Japan": {
+      "native_nonblank_day_rows": 368,
+      "native_window_1835_1985_rows": 367,
+      "hemisphere_counts": {
+        "north": 234,
+        "unknown": 133
+      }
+    },
+    "NAS": {
+      "native_nonblank_day_rows": 2242,
+      "native_window_1835_1985_rows": 2240,
+      "hemisphere_counts": {
+        "unknown": 555,
+        "north": 1654,
+        "south": 31
+      }
+    },
+    "Nobel_science": {
+      "native_nonblank_day_rows": 0,
+      "native_window_1835_1985_rows": 0,
+      "hemisphere_counts": {}
+    },
+    "UK_Royal_Society": {
+      "native_nonblank_day_rows": 4983,
+      "native_window_1835_1985_rows": 2644,
+      "hemisphere_counts": {
+        "north": 2255,
+        "unknown": 211,
+        "south": 178
+      }
+    }
+  },
+  "Nobel655_native_DOB_all_blank": true,
+  "CAS1230_accepted_Gregorian_DOB_all_blank": true,
+  "Fields_main63_extension_separate": true,
+  "prior_overlay_rows": 26,
+  "prior_birthplace_evidence_objects": 27,
+  "prior_fact_evidence_count_by_version": {
+    "2": 3,
+    "3": 9,
+    "4": 9,
+    "5": 6
+  },
+  "prior_overlay_inventory": [
+    {
+      "cohort": "Fields_main",
+      "record_id": "fields-12ddab1dd74af07f",
+      "name": "Akshay Venkatesh",
+      "whole_object_canonical_sha256": "de89522d803de38f864a3ff0e9b9ad82849a1ccd47588afb3c5e34aa925f583d",
+      "versions": [
+        2
+      ],
+      "versioned_field_sha256": {
+        "v2_birthplace_fact_evidence": "e98de5dc65560fce2b6545b5e00c3c46145d9e8c66f8a7beb76ef7d795a31691",
+        "v2_geographic_review": "0aa74d4e9e69679591cb07b132ecfe9ba3a476224a79d9766a7aaacade5f3ce4",
+        "v2_geography_before_overlay": "0f18ea568d1cdebc2cd277fd9714ccacd96fba878e1d8ca9d234c156bba4465d"
+      }
+    },
+    {
+      "cohort": "Fields_main",
+      "record_id": "fields-c847084f96ea991e",
+      "name": "Manjul Bhargava",
+      "whole_object_canonical_sha256": "e5964a7e291f2f4f7c163816f160dd0d0abd82f9085b170259acf13cdbf5286d",
+      "versions": [
+        2
+      ],
+      "versioned_field_sha256": {
+        "v2_birthplace_fact_evidence": "30f3d9b473b343e60ef1d96bee819b15f0f3ae983db6adef61bd78e1fadae4c6",
+        "v2_geographic_review": "e227e0fd4900166bc3ddb8723d99f7f480c7f16c6fe86ab5a0aff002cacd3ca9",
+        "v2_geography_before_overlay": "0f18ea568d1cdebc2cd277fd9714ccacd96fba878e1d8ca9d234c156bba4465d"
+      }
+    },
+    {
+      "cohort": "Fields_main",
+      "record_id": "fields-de5a4b4e279eaf4f",
+      "name": "Stanislav Smirnov",
+      "whole_object_canonical_sha256": "eb6836d61572df349d04a687479735831339042f4a1ebfdf762cc5a2521720b1",
+      "versions": [
+        3
+      ],
+      "versioned_field_sha256": {
+        "v3_birthplace_fact_evidence": "c36ed0e8317fb130f01b2ae03bfbc438179fc5e2df0a9ebb4453fc3c062cd2bb",
+        "v3_geographic_review": "9a5f26b178cade80283dd84c5290df6cfa28a011ad6a8256e63072435f1e0af3",
+        "v3_geography_before_overlay": "0f18ea568d1cdebc2cd277fd9714ccacd96fba878e1d8ca9d234c156bba4465d"
+      }
+    },
+    {
+      "cohort": "Fields_main",
+      "record_id": "fields-ef72cb77368d48fe",
+      "name": "Hugo Duminil-Copin",
+      "whole_object_canonical_sha256": "ad4933005f593023b147a1665b017d58b1502060061305044fdd8093b9a7eae0",
+      "versions": [
+        3
+      ],
+      "versioned_field_sha256": {
+        "v3_birthplace_fact_evidence": "ab7576ddd5d2c5e5bd6be68fdd80253cc817758143c4ef97902a5a56178cf417",
+        "v3_geographic_review": "1a961e6f3529f9e54970e5ac3850de569900297ce7c7f35c985d20705f33a01f",
+        "v3_geography_before_overlay": "0f18ea568d1cdebc2cd277fd9714ccacd96fba878e1d8ca9d234c156bba4465d"
+      }
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/carl-d-anderson-qydvwd/",
+      "name": "Carl D. Anderson",
+      "whole_object_canonical_sha256": "e5da900b80f203e73bacb9b9be727f483ea0046b0e972a6e9c0200e434a79628",
+      "versions": [
+        4,
+        5
+      ],
+      "versioned_field_sha256": {
+        "v4_birthplace_fact_evidence": "a25396fa3b9d312435cf74051c7e859f6f7e29037a7c8789b64d71c8442a0378",
+        "v4_geographic_review": "4914903f8198d2761e1a165c62683392a362730e9b8c9016cc5c0e68f93bac83",
+        "v4_geography_before_overlay": "a4948be1ca1879c68d0b4de2f014e3c5d84806cf07aad05515d6e4cc7fe7a089",
+        "v5_birthplace_fact_evidence": "8932dcbfa76db4603c28041e7c8c70b05a909f8c5ff36ecd1e8da24fa1a0c8ca",
+        "v5_geographic_review": "508637c00b9b8125336be26265cee387e77324bf4e66547767b07ba57ffa05cf",
+        "v5_geography_before_overlay": "4a5c988e7ab738b3475f10f8e1205b5d1a1e14090e96d1b70fe241c6796d8163"
+      }
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/charles-g-abbot-w5o3if/",
+      "name": "Charles G. Abbot",
+      "whole_object_canonical_sha256": "6b5b693c898b731703dea67338929c8c79f80cfc8ca9bb5aa055517dc5695d4a",
+      "versions": [
+        4
+      ],
+      "versioned_field_sha256": {
+        "v4_birthplace_fact_evidence": "091082439d7b133c01f7b3957b49bbddc6de1600507c02a9e1ce29ccdceee560",
+        "v4_geographic_review": "27d0e6094b6f0c0d88d875a81a947df0dfdfb6875eaf7f80ced078dcd05b80ff",
+        "v4_geography_before_overlay": "a4948be1ca1879c68d0b4de2f014e3c5d84806cf07aad05515d6e4cc7fe7a089"
+      }
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/clinton-n-woolsey-ssgzxj/",
+      "name": "Clinton N. Woolsey",
+      "whole_object_canonical_sha256": "96afcebe5f9ff552148f838ac76e6d12d1a1e60836544f98915023a82c7f0225",
+      "versions": [
+        5
+      ],
+      "versioned_field_sha256": {
+        "v5_birthplace_fact_evidence": "ecdf8dad77a145837f65148ec4c422ee018c1d14925bbf12834aad504fe15834",
+        "v5_geographic_review": "4310d9335b39584a375ca9285f8548f86d7bd4af78d97cb532fb5a194a6e2e0b",
+        "v5_geography_before_overlay": "a4948be1ca1879c68d0b4de2f014e3c5d84806cf07aad05515d6e4cc7fe7a089"
+      }
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/donald-w-kerst-8t27xz/",
+      "name": "Donald W. Kerst",
+      "whole_object_canonical_sha256": "2e857b9303aea3fd108a84e97c6b881cec6dd6f708533d66e6b88c93ef3b5f3f",
+      "versions": [
+        3
+      ],
+      "versioned_field_sha256": {
+        "v3_birthplace_fact_evidence": "3c3b3c952081fcf78812bfb34982c6887449ddc619be80ceec884ecd23e613ef",
+        "v3_geographic_review": "510ce813c5c101fbcbba4238cbcb680b65da3133ce1e347453cdb41403e40fb8",
+        "v3_geography_before_overlay": "a4948be1ca1879c68d0b4de2f014e3c5d84806cf07aad05515d6e4cc7fe7a089"
+      }
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/frederick-keyes-57s205/",
+      "name": "Frederick Keyes",
+      "whole_object_canonical_sha256": "19232cc35381c4d5d6e9940fbc6932b89caa8224d5a6ec4e1e9c70badbb19219",
+      "versions": [
+        4
+      ],
+      "versioned_field_sha256": {
+        "v4_birthplace_fact_evidence": "88822dce75f9e2c902b9358a21132f18ca220d6be5830dcffa0d949d996f32fc",
+        "v4_geographic_review": "e53c8f982a9e4b1449c72a3fef31db6480b5176b239d7becabd203b43eb45e82",
+        "v4_geography_before_overlay": "a4948be1ca1879c68d0b4de2f014e3c5d84806cf07aad05515d6e4cc7fe7a089"
+      }
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/h-h-barschall-7kg1rw/",
+      "name": "H. H. Barschall",
+      "whole_object_canonical_sha256": "8d1185b5069fec6b34bb1657f92430cc9011802849d6df63e44f2be048641073",
+      "versions": [
+        5
+      ],
+      "versioned_field_sha256": {
+        "v5_birthplace_fact_evidence": "e90d95d8d7f73e24db450ea1ecbd6a45d336970c3e5691c9479c8a7985ce8212",
+        "v5_geographic_review": "341124bcdbee3fadb6eaa978012611ec790e68ba17073222152fc9dc2610af67",
+        "v5_geography_before_overlay": "a4948be1ca1879c68d0b4de2f014e3c5d84806cf07aad05515d6e4cc7fe7a089"
+      }
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/j-e-varner-7bfrec/",
+      "name": "J. E. Varner",
+      "whole_object_canonical_sha256": "fc6159301eb3e4f02a90c46a8961c5fea0dd0e24f05d9e2c10bfc2e58f07e3e2",
+      "versions": [
+        3
+      ],
+      "versioned_field_sha256": {
+        "v3_birthplace_fact_evidence": "2c55617fa6e6439212fc7c2caba5c811ff3cbe3229c35424be2a108a4121ca4a",
+        "v3_geographic_review": "31667168f9552b0ed23732ec591301e74bc71c816c07de5df49aa11824c46331",
+        "v3_geography_before_overlay": "a4948be1ca1879c68d0b4de2f014e3c5d84806cf07aad05515d6e4cc7fe7a089"
+      }
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/james-f-bonner-qkrrsz/",
+      "name": "James F. Bonner",
+      "whole_object_canonical_sha256": "a0aee38c552799296b07909e83838d99a3e28347da757ea3a8725a556d86de7b",
+      "versions": [
+        4
+      ],
+      "versioned_field_sha256": {
+        "v4_birthplace_fact_evidence": "fd83c741c7ab3d5ccb531b6568e184efe572a3054a4089efdcd54d72fc1c6931",
+        "v4_geographic_review": "097dbc8e11769543569942f31d14c84bc2c2891b8ed196559e75749c4af7125f",
+        "v4_geography_before_overlay": "a4948be1ca1879c68d0b4de2f014e3c5d84806cf07aad05515d6e4cc7fe7a089"
+      }
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/l-a-dubridge-krundi/",
+      "name": "L. A. DuBridge",
+      "whole_object_canonical_sha256": "9f23a0b86a223c5e511a57bb5794fe52394b3d5b9628ec0be5f4c91022e141b8",
+      "versions": [
+        3
+      ],
+      "versioned_field_sha256": {
+        "v3_birthplace_fact_evidence": "b3d7fed143feefd4fb49d589d98911e3259933e9d3414bf922f5d6d4e229fb01",
+        "v3_geographic_review": "8207cbebd43b5328bac0e513fc9d92af41fff832093144574505d3e082e44508",
+        "v3_geography_before_overlay": "a4948be1ca1879c68d0b4de2f014e3c5d84806cf07aad05515d6e4cc7fe7a089"
+      }
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/lewis-longsworth-puzzay/",
+      "name": "Lewis Longsworth",
+      "whole_object_canonical_sha256": "8db80c9db3ec19e3cd3535537818d3165a5c238934c5b45adc452455f108e386",
+      "versions": [
+        4
+      ],
+      "versioned_field_sha256": {
+        "v4_birthplace_fact_evidence": "a39d4bf7773e1cde1e2900e209a331d8d123ef239da662a1d090863d2e9f002d",
+        "v4_geographic_review": "b07132dddb29c93e443f03bca1db4321b1796f5979fd2669a735afb680b5ae7f",
+        "v4_geography_before_overlay": "a4948be1ca1879c68d0b4de2f014e3c5d84806cf07aad05515d6e4cc7fe7a089"
+      }
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/m-m-rhoades-vnjycr/",
+      "name": "M. M. Rhoades",
+      "whole_object_canonical_sha256": "f7f77e0a5d65d9ab17d733c80be2a115282910dcdf6c8db75356bdc1e1c36e06",
+      "versions": [
+        3
+      ],
+      "versioned_field_sha256": {
+        "v3_birthplace_fact_evidence": "50654919e9cbdfb5e4216f1d6d93e95f950e05bd96e98a53e8f3bc1be88fd0df",
+        "v3_geographic_review": "edd5050a3c6a6c2c6069981949387c8a327cec749a924b89a1fc717d6a740bf8",
+        "v3_geography_before_overlay": "a4948be1ca1879c68d0b4de2f014e3c5d84806cf07aad05515d6e4cc7fe7a089"
+      }
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/n-e-bradbury-l7groc/",
+      "name": "N. E. Bradbury",
+      "whole_object_canonical_sha256": "48008fb873743b7951a2a06dff6cf4b390d0f8fa4af9bdb675b9598bc6baf8a3",
+      "versions": [
+        5
+      ],
+      "versioned_field_sha256": {
+        "v5_birthplace_fact_evidence": "1ae9a0c176fef6932e751e271d5632c7811ee9ab1d5aeda8d41091545e664a7c",
+        "v5_geographic_review": "c19e2259b92690146e1a5210ded63043806972933756cf1ecc268639dc6de7cb",
+        "v5_geography_before_overlay": "a4948be1ca1879c68d0b4de2f014e3c5d84806cf07aad05515d6e4cc7fe7a089"
+      }
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/paul-j-kramer-l5rtvs/",
+      "name": "Paul J. Kramer",
+      "whole_object_canonical_sha256": "5766f7da00b75129cc2585454600a58e1bd27e8c0a81aa545db3ea938992ceca",
+      "versions": [
+        3
+      ],
+      "versioned_field_sha256": {
+        "v3_birthplace_fact_evidence": "50318559390b69bf77acedf6a6a5f2e47e1b36a8fe8b42e4a571eb1db3004b5e",
+        "v3_geographic_review": "c32ce87dcd28184e3d61d6353ae4bfb596c19cb1d108c6fdabb0d7676789af4c",
+        "v3_geography_before_overlay": "a4948be1ca1879c68d0b4de2f014e3c5d84806cf07aad05515d6e4cc7fe7a089"
+      }
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/r-b-leighton-vsp2hu/",
+      "name": "R. B. Leighton",
+      "whole_object_canonical_sha256": "e79ec7cd3682697de003e8d251e03af9f17ce651f9c9c4f4d65a941d62b635c3",
+      "versions": [
+        5
+      ],
+      "versioned_field_sha256": {
+        "v5_birthplace_fact_evidence": "d1425d8fb516f219417db027a4c9eb70944413717b17e2a7973b2fe0fcb92685",
+        "v5_geographic_review": "6960a25149c027c5e493c3f7469f8d16d74495da8f78e28b1811f0ae2ff329f0",
+        "v5_geography_before_overlay": "a4948be1ca1879c68d0b4de2f014e3c5d84806cf07aad05515d6e4cc7fe7a089"
+      }
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/r-g-herb-ovp2tw/",
+      "name": "R. G. Herb",
+      "whole_object_canonical_sha256": "e3a2202c81e96317b86a48046b841ff7873969383221b84b631d02994780972e",
+      "versions": [
+        3
+      ],
+      "versioned_field_sha256": {
+        "v3_birthplace_fact_evidence": "efcd472674274cda0130c5c0f960e48123aab6a1cd9dfb9fc7d56a88b11e90a0",
+        "v3_geographic_review": "f88947c53fe3e87f757ed74920510f17703ca5a1d0429c896a157b889ee398d7",
+        "v3_geography_before_overlay": "a4948be1ca1879c68d0b4de2f014e3c5d84806cf07aad05515d6e4cc7fe7a089"
+      }
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/richard-b-bernstein-pt9ewc/",
+      "name": "Richard B. Bernstein",
+      "whole_object_canonical_sha256": "ed51f32850eabdf6977ca13cf8a669cb9c6213ced70ac399998116372d053123",
+      "versions": [
+        5
+      ],
+      "versioned_field_sha256": {
+        "v5_birthplace_fact_evidence": "a48377c7c5ce2a55c757801160d8ec505ba2d71b047df431f057f14e2602a85f",
+        "v5_geographic_review": "1f09a5059b175e2f51224a3b37df704a76157355d0d1150fb1b90b8a0378ef65",
+        "v5_geography_before_overlay": "a4948be1ca1879c68d0b4de2f014e3c5d84806cf07aad05515d6e4cc7fe7a089"
+      }
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/rodney-l-cool-csyr51/",
+      "name": "Rodney L. Cool",
+      "whole_object_canonical_sha256": "a1731a387c113f8671ad38dd46dbf88db5caf67b2f583b05ac06fc2c3431b6c5",
+      "versions": [
+        4
+      ],
+      "versioned_field_sha256": {
+        "v4_birthplace_fact_evidence": "ef26697a6c866ce0bb453102b750921ff791db61c643012d498400ff7717a162",
+        "v4_geographic_review": "a494d680e1599fdec87b02567616d7ed33dad5165e08a741108b609e724ecb5b",
+        "v4_geography_before_overlay": "a4948be1ca1879c68d0b4de2f014e3c5d84806cf07aad05515d6e4cc7fe7a089"
+      }
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/scott-e-forbush-k9rusl/",
+      "name": "Scott E. Forbush",
+      "whole_object_canonical_sha256": "aabfdf0f6b64937487a6e1fc3fdf6a5bc0884ad3b812b5fea9fa4305b2f71bd3",
+      "versions": [
+        4
+      ],
+      "versioned_field_sha256": {
+        "v4_birthplace_fact_evidence": "0eda18ddf8c125250a6c3b0976784b481ef680087b18e54cddf03fa5a26b5ab5",
+        "v4_geographic_review": "f7a60ac46dfc8a7e375387ebcfd794138c1da713339a6aa52b9c908e2b89d1a5",
+        "v4_geography_before_overlay": "a4948be1ca1879c68d0b4de2f014e3c5d84806cf07aad05515d6e4cc7fe7a089"
+      }
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/stephen-kuffler-vpfruz/",
+      "name": "Stephen Kuffler",
+      "whole_object_canonical_sha256": "d6a04bdc58af87526ba9e3430a8cde9ea0d5345eb72f40916693976772e661e8",
+      "versions": [
+        4
+      ],
+      "versioned_field_sha256": {
+        "v4_birthplace_fact_evidence": "2114a5acc0e399877c2ce1712fc892defae595947c01ddd7d2424989ca2233d9",
+        "v4_geographic_review": "c03028eae6168eafb63055aa9f6ca33f9261d1a3eb3083e74c5f363f675cdeb2",
+        "v4_geography_before_overlay": "a4948be1ca1879c68d0b4de2f014e3c5d84806cf07aad05515d6e4cc7fe7a089"
+      }
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/w-w-morgan-5f09yz/",
+      "name": "W. W. Morgan",
+      "whole_object_canonical_sha256": "2ef8cb443c7af42c85ffe4e8950bc112bc45cf35fbf47f7ed6e3b616ef3cacc2",
+      "versions": [
+        3
+      ],
+      "versioned_field_sha256": {
+        "v3_birthplace_fact_evidence": "f9281b5c88f40abe6bdf4452b9998963a7f1ec9a375162496543ae9b5bcad675",
+        "v3_geographic_review": "23f94b6dd841fb6ac976166660bf46e1783fef5d28d91a913df607a1022e3727",
+        "v3_geography_before_overlay": "a4948be1ca1879c68d0b4de2f014e3c5d84806cf07aad05515d6e4cc7fe7a089"
+      }
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/william-young-x705ya/",
+      "name": "William Young",
+      "whole_object_canonical_sha256": "4f4929f687ce971b3823ed80c5761339d80a78afb871090a85e49dba1e7a165b",
+      "versions": [
+        4
+      ],
+      "versioned_field_sha256": {
+        "v4_birthplace_fact_evidence": "1f7dc63bcc66646d91d9975a6d57a65e13072777c241be48fdc61cc0ec49b0bb",
+        "v4_geographic_review": "86786e1267e274a534bb65ba81b23178990b3eb7c2e0ba8507495e0125abd37c",
+        "v4_geography_before_overlay": "a4948be1ca1879c68d0b4de2f014e3c5d84806cf07aad05515d6e4cc7fe7a089"
+      }
+    },
+    {
+      "cohort": "Nobel_science",
+      "record_id": "1052",
+      "name": "John M. Martinis",
+      "whole_object_canonical_sha256": "b449f4928242815a772eb92d85e7fe72a71ad1002e40c7c991da998d6110fe63",
+      "versions": [
+        2
+      ],
+      "versioned_field_sha256": {
+        "v2_birthplace_fact_evidence": "3e30461fe58865357df260a3e8b4d5bc39a2a705aaabcaa4120279dfceb0b626",
+        "v2_geographic_review": "cdb4f06938f5f669719626f5ab8a2389794c2c64b587a43edd9a791cb75ec19e",
+        "v2_geography_before_overlay": "f612a7eeb893721935872078d69ebef79a4c4407779956e78cedf2cb7e6a5631"
+      }
+    }
+  ]
+}

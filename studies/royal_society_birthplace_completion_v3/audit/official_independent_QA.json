@@ -1,0 +1,23 @@
+{
+  "reviewer": "current2_sources subagent; separate read-only review",
+  "review_type": "20 accepted vs original Crossref/capture and v2 by record_id",
+  "accepted_reviewed": 20,
+  "should_move_to_held": 0,
+  "issues": [],
+  "checks": {
+    "subject_name_lifespan_DOI_matches": true,
+    "all_raw_source_SHA_match": true,
+    "all_quotes_exact_substrings": true,
+    "all_DOB_copied_v2_by_id": true,
+    "all_conservative_S2": true
+  },
+  "attribution_spot_checks": {
+    "Masson": "Subject Sir Irvine Masson → Toorak; not grandfather Aberdeen",
+    "Goldsbrough": "First sentence subject → Sunderland; later father same name not confused",
+    "Miller": "First sentence subject → Toronto; not father Dublin",
+    "Knowles": "Subject → Canada",
+    "Hudson": "Hudson was born at Rugby; father introduced after clause",
+    "Taylor": "Opening J H Taylor followed by He → Esher; not father Milngavie or mother Spalding"
+  },
+  "minor_locator_note": "Slater Extract heading L776; birthplace quote L777"
+}

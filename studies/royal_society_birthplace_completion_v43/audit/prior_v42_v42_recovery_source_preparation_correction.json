@@ -1,0 +1,13 @@
+{
+  "artifact_type": "recovery_source_preparation_harness_correction",
+  "written_utc": "2026-11-08T09:41:13.938802+00:00",
+  "initial_preparation_report_sha256": "15c2a3371d3fe6a3159a09ec96efaac0b3d90f71c625687e872537c1d92c1b36",
+  "corrected_preparation_report_sha256": "4e07ca0a6bcde31a384270cfbb38e46dfec08c7861ab7ebcde0919466014bf46",
+  "initial_failure": "Historical hold-file completeness check used *holds.json and also counted source_date_precision_holds.json, yielding32 rather than31 historical/current hold files.",
+  "correction": "Explicitly select current followup_holds.json and prior_vNN_holds.json. Precision inventory is still separately read and checked among all9 issue files.",
+  "source_or_master_decisions_changed": false,
+  "corrected_preparation_checks_passed": 57,
+  "final_recovery_source_checks_passed": 101,
+  "final_recovery_source_report_sha256": "53e068c95705f1337e97f196d35c911787ab6b6061d640cabff90cad8692c0cd",
+  "historical171_checks_rerun": false
+}

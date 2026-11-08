@@ -1,0 +1,24 @@
+{
+  "schema": "UK_v34_source_QA_harness_correction_v1",
+  "written_utc": "2026-11-06T23:25:39.595411+00:00",
+  "initial_report_path": "v34_source_qa_initial_failed_report.json",
+  "initial_report_sha256": "5fe43a667bb48ae9dd6bc3f6785a95f42c19746c4be44f6e8cd6f4064f65ad67",
+  "initial_result": {
+    "passed": false,
+    "checks_passed": 149,
+    "blocking_issues": [
+      {
+        "check": "McNeill_sourceclass_S3_narrow_excerpt_no_general_mirror_rule",
+        "passed": false
+      }
+    ]
+  },
+  "cause": "The harness searched literal not admit a general mirror class, but actual correct source_grade_basis uses a shared negation: does not authenticate an editedbook body or admit a general mirror class.",
+  "correction": "Match the entire existing shared-negation clause. No fact, sourceclass decision, native data, holds or production was edited. Admission boundary unchanged.",
+  "final_result": {
+    "passed": true,
+    "checks_passed": 150,
+    "blocking_issues": []
+  },
+  "reviewer_fact_or_production_mutations": false
+}

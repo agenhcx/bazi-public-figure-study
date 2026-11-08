@@ -1,0 +1,369 @@
+{
+  "schema": "UK_v18_original_source_group_b_v1",
+  "worker": "/root/v18_sources_b",
+  "written_utc": "2026-11-05T00:43:50.114404+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA3358",
+    "RS_PAST_NA5962",
+    "RS_PAST_NA6938",
+    "RS_PAST_NA4005"
+  ],
+  "intent_file": "v18_b_intent.json",
+  "subtask_intent_file": "v18_sources_b_mccance_collar_intent.json",
+  "subtask_intent_snapshot": {
+    "written_utc": "2026-11-05T00:40:29.563142+00:00",
+    "subjects": [
+      "RS_PAST_NA3358",
+      "RS_PAST_NA5962"
+    ],
+    "planned_queries": [
+      "Andrew McCance born biography Glasgow",
+      "Arthur Roderick Collar born biography Bristol"
+    ],
+    "budgets": {
+      "queries": 2,
+      "original_navigation": 4
+    },
+    "purpose": "New original birthplace biography sources only; no master/grade/geo/nativeDOB writes.",
+    "planned_opens_utc": "2026-11-05T00:40:43.360849+00:00",
+    "planned_opens": [
+      "https://atom.lib.strath.ac.uk/andrew-mccance-papers",
+      "https://archives.bristol.ac.uk/GetMultimedia.ashx?db=Catalog&fname=ca%5Ccb9267-84a0-4837-9de9-26f6f6d1ecee.pdf&type=default"
+    ],
+    "followup_plan": {
+      "written_utc": "2026-11-05T00:41:16.560923+00:00",
+      "original_catalog_open": "https://archives.bristol.ac.uk/Record.aspx?id=DM1192&src=CalmView.Catalog",
+      "cached_PDF_screenshot": {
+        "ref": "turn128view1",
+        "pageno_zero_based": 2
+      },
+      "stop_note": "McCance collection403isclosed,noalternateStrathclyderequestattempted. CollarPDFhas0parsedlines; inspectalreadyacquiredPDFpageandoriginalcatalog, no rawGET."
+    }
+  },
+  "counts": {
+    "discovery_queries": 6,
+    "original_web_navigation_attempts": 6,
+    "cached_PDF_screenshot_attempts": 2,
+    "total_navigation_or_cached_image_operations": 8,
+    "parsed_text_find_operations": 0,
+    "body_verified_birthplace_candidates": 2,
+    "holds": 2,
+    "explicit_original_source_DOB_conflicts": 1,
+    "raw_HTTP_or_PDF_byte_requests": 0
+  },
+  "candidates": [
+    {
+      "record_id": "RS_PAST_NA5962",
+      "native": {
+        "record_id": "RS_PAST_NA5962",
+        "authority_name": "Collar; Arthur Roderick (1908 - 1986)",
+        "native_dob": "1908-02-22",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "full_target_object_canonical_sha256": "c1350d1c26a6394d04dbf3d9216a138836428143013934f16078d65e80e255fa"
+      },
+      "status": "candidate_first_birthplace_source_year_only_parent_review",
+      "raw_birthplace": "West Ealing",
+      "source_url": "https://archives.bristol.ac.uk/Record.aspx?id=DM1192&src=CalmView.Catalog",
+      "source_title": "Arthur Collar Papers, DM1192",
+      "source_author": null,
+      "source_author_note": "Original institutional catalogue biography uncredited individually. P Harper and TE Powell are named as compilers of the underlying printed catalogue, not asserted to author this exact web prose. Subject/creator is not narrator.",
+      "source_kind": "original_institutional_archival_biographical_description",
+      "source_grade_proposal": "S2",
+      "source_grade_role": "new_person_birthplace_support_only",
+      "source_grade_basis": "Conservative S2 original university archive narrative based on catalogued historical papers and named Royal Commission/NCUACS catalogue; not S1 by host alone.",
+      "source_quote": "Arthur Roderick Collar was born in West Ealing in 1908",
+      "source_quote_word_count": 10,
+      "source_locator": "Original Bristol Special Collections DM1192: title/ref lines12–16; subject-born clause17; distinctive career/lifespan/FRS18; finding aid/catalogue compilers28.",
+      "source_webrefs": [
+        "turn131view0"
+      ],
+      "source_birthdate": "1908",
+      "source_birthdate_precision": "year_only",
+      "source_native_DOB_compatibility": "Source states1908, compatible with native1908-02-22; native month/day not independently verified or inferred.",
+      "source_publication_date": null,
+      "source_catalogue_date_note": "Underlying NCUACS paper catalogue/deposit described as1988; no exact publication date or web narrative revision date observed.",
+      "observed_source_full_name": "Arthur Roderick Collar",
+      "identity_anchors": [
+        "Full native name Arthur Roderick Collar explicitly in original institutional description.",
+        "Source historical catalogue title explicitly lifespan1908–1986; native authority lifespan and birthyear agree.",
+        "First Sir George White Chair Aeronautical Engineering at Bristol1946, temporary Vice-Chancellor1968–1969, ARCchair1964–1968 and FRS1965 provide distinctive career anchors."
+      ],
+      "identity_conflicts_observed": [],
+      "geography_assignment_performed": false,
+      "geographic_basis_for_parent": "Only West Ealing is explicit in born clause. No country/whole-region qualifier; do not copy England from Wikipedia discovery or use Bristol/Cambridge/workplace affiliation. Can remain geography unknown.",
+      "caveats": [
+        "Original attached PDF was tool-detected as26pages but returned0readablelines.",
+        "Cached screenshot attempt yielded only a text image marker; no actual image content was exposed to this agent, so no visual-reading or exact-DOB claim.",
+        "Search-only original PDF discovery mentioned22February1908, but that exact date was not observed in acquired original PDF body or screenshot and is not adopted.",
+        "Institutional catalogue is openly tied to underlying NCUACS/Royal Commission paper catalogue; web biography is not claimed independent corroboration of the underlying catalogue."
+      ],
+      "retrieval_representation": "Tool-parsed original Bristol catalogue HTML; not raw HTTP bytes",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA6938",
+      "native": {
+        "record_id": "RS_PAST_NA6938",
+        "authority_name": "Christopherson; Sir; Derman Guy (1915 - 2000)",
+        "native_dob": "1915-09-06",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "full_target_object_canonical_sha256": "17a3a9bc40293644ccd9aa2d6d1091216b81ae36a815896ad16f9c4a6096c787"
+      },
+      "status": "candidate_original_explicit_first_birthplace",
+      "raw_birthplace": "Plumstead, south-east London",
+      "source_url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/579807932",
+      "source_title": "Christopherson, Sir Derman Guy: (1915–2000), engineer and university administrator",
+      "source_author": "R Hyam",
+      "source_kind": "original_signed_edited_ODNB_public_extract",
+      "source_grade_proposal": "S2",
+      "source_grade_role": "new_person_birthplace_support_only",
+      "source_grade_basis": "Original publisher signed edited biographical public extract; conservative S2, no institutional-host promotion to S1.",
+      "source_quote": "was born on 6 September 1915 in Plumstead, south-east London",
+      "source_locator": "Original public Extract line777; full subject title757, R Hyam761–763, DOI771, publicationdate775.",
+      "source_webrefs": [
+        "turn129view0"
+      ],
+      "doi": "10.1093/ref:odnb/74873",
+      "publication_date": "2004-09-23",
+      "source_birthdate": "1915-09-06",
+      "source_birthdate_precision": "day_in_birth_clause",
+      "source_DOB_matches_native": true,
+      "observed_source_full_name": "Sir Derman Guy Christopherson",
+      "identity_anchors": [
+        "All native full-name components explicitly present in original subject heading and born sentence.",
+        "Exact6September1915 plus lifespan1915–2000 match native authority.",
+        "Engineer/university administrator, first-classOxfordengineering1937, HarvardHenryfellowship and1940marriage provide distinctive subject anchors."
+      ],
+      "identity_conflicts_observed": [],
+      "geographic_assignment_performed": false,
+      "geographic_basis_for_parent": "Only Plumstead,south-eastLondon is explicit in born clause. The south-east qualifier describes a part of London, not an independently supplied country/whole-region qualifier. Keep geographyunknown; no parent/work/school/footer or famouscity inference.",
+      "caveats": [
+        "Paid full chapter not accessed; only public original Extract supports new birthplace.",
+        "Father is a separately identified clergyman Derman Christopherson; subject full Derman Guy name/exactdate explicitly present, no parent birthplace inference."
+      ],
+      "retrieval_representation": "tool-parsed original publisher public HTML extract; not raw HTTP bytes",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "source_quote_word_count": 10
+    }
+  ],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA3358",
+      "native": {
+        "record_id": "RS_PAST_NA3358",
+        "authority_name": "McCance; Sir; Andrew (1889 - 1983)",
+        "native_dob": "1889-03-30",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "full_target_object_canonical_sha256": "c0ed6f3c6acec48fc4ee69793773880e5263c4f96015a917eafea7af98a5fada"
+      },
+      "status": "hold_original_birthplace_body_access_blocked",
+      "source_url": "https://atom.lib.strath.ac.uk/andrew-mccance-papers",
+      "source_title": "Andrew McCance papers, University of Strathclyde Archives and Special Collections",
+      "source_webrefs": [
+        "turn125search1",
+        "turn128view0"
+      ],
+      "discovery_birthplace_lead": "Cadder, Dunbartonshire",
+      "discovery_birthdate_precision": "year_only:1889",
+      "source_author": null,
+      "source_grade_proposal": null,
+      "reason": "Search discovery gave explicitbornCadder,Dunbartonshire1889 and archival creatorSirAndrewMcCance1889–1983, but original collection open returnedtool-reported403. Stopped; no alternateStrathclydeURLretry, no body birth clause acquired, no snippet adoption.",
+      "tool_reported_HTTP_status": 403,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "no_master_change": true
+    },
+    {
+      "record_id": "RS_PAST_NA4005",
+      "native": {
+        "record_id": "RS_PAST_NA4005",
+        "authority_name": "Argyris; John (1916 - 2004)",
+        "native_dob": "1916-08-19",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "full_target_object_canonical_sha256": "1f8d2d1f99fe7a8f4ed491e2c155ae1b2d53c3d7873c1b9a2b6d471b890719b8"
+      },
+      "status": "hold_explicit_original_source_DOB_conflict",
+      "hold_type": "explicit_original_source_DOB_conflict",
+      "source_url": "https://www.nationalacademies.org/read/13160/chapter/6",
+      "source_title": "John H. Argyris1913–2004, Memorial Tributes: Volume15",
+      "source_author": [
+        "Thomas J. R. Hughes",
+        "J. Tinsely Oden",
+        "Manolis Papadrakakis"
+      ],
+      "source_author_spelling_note": "Names recorded as displayed by the original chapter, including Tinsely spelling; no source-author correction.",
+      "source_kind": "original_signed_edited_NAE_memorial_chapter_reprint",
+      "publication_year": "2011",
+      "doi": "10.17226/13160",
+      "source_grade_proposal": null,
+      "source_quote": "John was born on August 19, 1913, in the city of Volos, 300 km north of Athens, Greece",
+      "source_locator": "Clean original publisher chapter header13/69, authors74, born date/place76, printedpage25; source noteoriginal2004publication visible in samechapter.",
+      "source_webrefs": [
+        "turn136view0"
+      ],
+      "source_birthdate": "1913-08-19",
+      "source_birthdate_precision": "day_in_birth_clause",
+      "source_DOB_matches_native": false,
+      "native_birthdate_preserved": "1916-08-19",
+      "unadopted_birthplace_lead": "Volos, 300 km north of Athens, Greece",
+      "reason": "Original NAE chapter explicitly gives19August1913 and lifespan1913–2004, whereas frozen native is1916-08-19/lifespan1916–2004. Full JohnArgyris components, Imperial/Stuttgart career and finiteelement contributions support subject binding, but explicit birthyear conflict triggers hold. Do not adopt birthplace/hemisphere, repair nativeDOB or retier source.",
+      "identity_anchors": [
+        "Native JohnArgyris components directly present in originalJohnH.Argyris heading; no H expansion invented.",
+        "Same ImperialCollege/Stuttgart computationalmechanics/finiteelement career and2004death context.",
+        "Sourcebornmonth/day19August agrees day/month but year1913 conflicts with frozen1916; not a compatiblepartialdate case."
+      ],
+      "original_PDF_same_work": {
+        "url": "https://www.nae.edu/File.aspx?id=189543",
+        "web_ref": "turn127view0",
+        "PDF_pages": 8,
+        "locator": "PDFindex1/printed25 header1913–2004 and bornsentence1913; missing-letter text artifacts observed.",
+        "relationship": "SameNAEchapter representation, not independentcorroboration. CleanpublisherHTML subsequently read to confirm fulltext/authors/date.",
+        "cached_screenshot_attempt": {
+          "result_ref": "turn129view1",
+          "PDF_page_zero_based": 1,
+          "outcome": "Only text marker exposed in tool response; content array had text only. No usableimagebytes or visualverification claimed."
+        }
+      },
+      "original_publication_note": "Chapter explicitly says articlefirstpublished2004, ComputerMethods inAppliedMechanicsandEngineering193,pp3763–3766; underlyingjournalbody not separatelyread orcountedindependent.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "tool-parsed original publisher HTML and same-work PDFtext, not rawHTTPbytes",
+      "geography_assignment_performed": false,
+      "no_master_change": true,
+      "source_quote_word_count": 18
+    }
+  ],
+  "query_ledger": [
+    {
+      "engine": "system2",
+      "query": "Andrew McCance born biography Glasgow",
+      "preplanned": true,
+      "webref": "turn125search",
+      "exact_request_utc": null
+    },
+    {
+      "engine": "system2",
+      "query": "Arthur Roderick Collar born biography Bristol",
+      "preplanned": true,
+      "webref": "turn125search",
+      "exact_request_utc": null
+    },
+    {
+      "engine": "system2",
+      "query": "Derman Guy Christopherson born obituary Durham",
+      "webref": "turn124search",
+      "preplanned": true,
+      "exact_request_utc": null
+    },
+    {
+      "engine": "system2",
+      "query": "John Argyris born obituary Stuttgart",
+      "webref": "turn124search",
+      "preplanned": true,
+      "exact_request_utc": null
+    },
+    {
+      "engine": "system1",
+      "query": "\"Christopherson, Sir Derman Guy\" born obituary",
+      "webref": "turn127search",
+      "preplanned": true,
+      "exact_request_utc": null
+    },
+    {
+      "engine": "system1",
+      "query": "\"John H. Argyris\" \"Memorial Tributes\" \"Volume 15\" site:nationalacademies.org",
+      "webref": "turn134search",
+      "preplanned": true,
+      "exact_request_utc": null
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "url": "https://atom.lib.strath.ac.uk/andrew-mccance-papers",
+      "web_ref": "turn128view0",
+      "role": "original",
+      "outcome": "tool-reported403; stopped no retry",
+      "tool_reported_HTTP_status": 403,
+      "raw_HTTP_status": null,
+      "exact_request_utc": null
+    },
+    {
+      "url": "https://archives.bristol.ac.uk/GetMultimedia.ashx?db=Catalog&fname=ca%5Ccb9267-84a0-4837-9de9-26f6f6d1ecee.pdf&type=default",
+      "web_ref": "turn128view1",
+      "role": "original",
+      "outcome": "26pagePDFidentifiedbut0readablelines; no original PDFbodybirthclause acquired",
+      "tool_reported_HTTP_status": null,
+      "raw_HTTP_status": null,
+      "exact_request_utc": null
+    },
+    {
+      "url": "https://archives.bristol.ac.uk/Record.aspx?id=DM1192&src=CalmView.Catalog",
+      "web_ref": "turn131view0",
+      "role": "original",
+      "outcome": "Original institutional catalogue body read;explicitbornplace/year",
+      "tool_reported_HTTP_status": null,
+      "raw_HTTP_status": null,
+      "exact_request_utc": null
+    },
+    {
+      "url": "https://www.nae.edu/File.aspx?id=189543",
+      "web_ref": "turn127view0",
+      "role": "original",
+      "outcome": "OriginalNAEchapterPDFbodyread; explicit1913nativeyearconflict; missingletterartifacts; noadoption",
+      "raw_HTTP_status": null,
+      "exact_request_utc": null
+    },
+    {
+      "url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/579807932",
+      "web_ref": "turn129view0",
+      "role": "original",
+      "outcome": "OriginalsignedODNBpublicExtract explicitfullnativeDOBandbornplace",
+      "raw_HTTP_status": null,
+      "exact_request_utc": null
+    },
+    {
+      "url": "https://www.nationalacademies.org/read/13160/chapter/6",
+      "web_ref": "turn136view0",
+      "role": "original",
+      "outcome": "CleanoriginalNAEpublisherHTMLconfirmsfullauthor/title/born1913dateandplace; holdDOBconflict",
+      "raw_HTTP_status": null,
+      "exact_request_utc": null
+    }
+  ],
+  "cached_image_ledger": [
+    {
+      "source_ref": "turn128view1",
+      "PDF_page_zero_based": 2,
+      "result_ref": "turn131view1",
+      "outcome": "Tool result exposed textmarkerImageDisplayedonly,noImageContent/data bytes available;no visual verification claimed.",
+      "raw_HTTP_status": null,
+      "exact_request_utc": null
+    },
+    {
+      "result_ref": "turn129view1",
+      "PDF_page_zero_based": 1,
+      "outcome": "Only text marker exposed in tool response; content array had text only. No usableimagebytes or visualverification claimed."
+    }
+  ],
+  "limits": [
+    "Sixdiscoveryqueries plus6originalwebnav+2cachedscreenshotattempts exhaustgroupbudget; noretriesafter403/inaccessibility.",
+    "BothPDFscreenshotattempts exposed textmarkersonly, nousableimagecontent; neverclaimvisualinspection/exactDOBfromthem.",
+    "Collar sourcebirthyearonly1908, notindependentnative month/dayconfirmation.",
+    "Argyris original1913birth conflictsnative1916; birthplace/country/hemisphere/DOB/sourcegrade notadopted orcorrected.",
+    "Christopherson/Collar place-only candidates geographyunassigned and mayremainunknown.",
+    "No master/Git/nativeDOB/calendar/identity/eligibility/sourcegrade/QID/country/entity/coordinateschanges.",
+    "OriginalfullHTML/PDF/pageimagesnotredistributed; <=25differentEnglishquotedwords/originalsourcework. NAEHTMLandPDFareonework, repeatedsamequote notindependent.",
+    "Toolparsedtext isnotrawHTTPresponse; unknownactualstatus/exactrequesttimes/rawbytehashnull.",
+    "McCance403/searchonlybornlead remainsunadopted; no literatureexhaustionclaim."
+  ]
+}

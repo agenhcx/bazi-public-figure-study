@@ -1,0 +1,30 @@
+法国院士候选库：2026-10-29 收口推进检查点
+
+这是877个既有候选组的延续，不是全国普通院士最终名册，也没有冻结分析样本。教授采集继续搁置。
+
+本轮完成57个已有生日主张但未正式审核的候选：身份57、完整生日56、严格普通会籍46、三项齐45。另用学院官方选举公报和明确列“当年当选新成员”的学院页面，解除16个旧的通用Académicien标题会籍hold；15例仅保留选举年，Nicholas Ayache有明确2014-11-18，不把出版日或接纳仪式日当选举日。
+
+累计：身份755、完整生日744、严格会籍246、三项齐244。与第39轮的698/688/184/183相比，分别新增57/56/62/61。761个候选已有正式分维度个案记录。历史877候选中804组已有日级生日主张，这个来源覆盖数没有变化，也不等于744个接受生日或244个三项齐。
+
+57例唯一生日质量hold是Mireille Bousquet-Mélou：Carmin页面明确标示来源Wikipedia，不能作为独立原件过生日门控。Jean Weissenbach、Philippe Bousso、Jean-Philippe Bouchaud的会籍日期冲突均保留。Bousso的学院资料分别称2025年6月、2025年12月，同学讣告称2026年1月；完整生日1971-03-13可以独立通过，但2025截止资格尚不稳定。
+
+新增membership_role_supported / election_cutoff_stable / election_date_conflict为独立证据维度。1表示已获相应支持；0表示本次审查未获支持或已知不稳定；空值表示未在这次相应维度判定。它们不替代严格membership_accepted。会籍角色明确而精确当选日有冲突者可有role_supported=1、cutoff_stable=1，严格membership_accepted仍为0。既有identity/DOB标记及12个身份hold完整保留，不合并任何候选组。
+
+outputs/france_candidate_master877.csv为统一候选总表；france_accepted_all_three.csv为244组三项齐；france_remaining_gaps.csv为633组尚未三项齐的候选，并标明剩余维度。633不是633个生日缺失。原有73个没有日级主张、18个延期、9个旧捕获失败及6个获取缺口未因这次整合被清零。57条已有来源待审核队列已处理完。
+
+inputs保存第39轮总表、该轮摘要与704个旧决策的聚焦摘要，以及本轮57个新决策和16个会籍覆层。baseline_provenance.json固定完整历史个案JSON及原数据包的SHA。旧完整个案来源和先前原件链仍以该数据包为准，聚焦摘要没有替代完整旧档。
+
+source_provenance.json固定137个本轮使用或检查的公开来源URL、完整正文SHA及获取链。正文/PDF留在已有私有原件包和本次private缓存中，本可公开版本不分发第三方完整正文。直接原件捕获器本轮记录31次GET（25条固定旧精确URL、4条补充链接、2条学院当年当选页面），29次成功、2个Legifrance403；其中2014公报的成功URL出现一次重复获取。这个31不统计检索服务自身访问次数。来源可用性不是接受，日期和角色经独立逐例QA；必要PDF页均实际可视复核。
+
+离线重放（每条单行，在本目录执行）：
+python3 -I assemble_france.py --output-dir /tmp/france_877_replay
+
+diff -r outputs /tmp/france_877_replay
+
+重放先验证所有输入哈希，再检查原始候选ID、基线计数、旧维度不变、独立QA、生日完整性、冲突hold及BaZi=0；重建CSV和摘要必须逐字节相同。这是接受结果整合的重放，不是再次证明原件事实；原件核验沿source_provenance/旧包证据链。
+
+法国尚未完结：877候选不是已证实的完整国家名册；最大实质缺口仍是历史普通会籍的学院第一方正文，而非已经核定生日的人重新搜生日。保持cohort_frozen=false、bazi_computed=0，不开展揭盲或分析。
+
+PR113原有Santy与Abragam覆层已明确保留：france_external_case_exclusions.csv列Santy/CTHS110681，学院官方讣告确认去世时通讯院士，排除普通正式院士候选。该ID不在恢复的877候选中，因而不凭空加第878行；两条生日冲突仍保留。france_existing_case_corroboration.csv保留Abragam/CTHS111758的CEA佐证，877总表其生日1、会籍0照旧，不以雇主传记解除普通/外籍冲突。
+
+可发布清单：README.txt、assemble_france.py、inputs/所有JSON与CSV、outputs/所有JSON与CSV。private目录、原件PDF/HTML、完整历史15MB个案档和QA工作缓存不在可发布目录；来源正文不重复分发。

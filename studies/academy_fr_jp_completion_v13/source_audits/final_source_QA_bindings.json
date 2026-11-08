@@ -1,0 +1,216 @@
+{
+  "batch_handoffs": {
+    "france_a": {
+      "decisions_sha256": "747290287f6b4cb5ae58048c8e530ddcd7fb0f9c663d06583653573a09aeaab6",
+      "independent_qa_file": "source_audits/independent_qa_france_a.json",
+      "independent_qa_sha256": "62ec1b7f28d987056b6de1975b9a05b82e5c1589385a518b7bb98a54e88fb07f",
+      "worker_manifest_sha256": "a6cbfd46dd49837c8c64935a777d366a3f3fddc302c24caca46ed5975d183c73"
+    },
+    "france_b": {
+      "decisions_sha256": "00d8b9c3f26c5461f75a0f5e04c1b9720c408e3ce0ba72619374706a1d06d086",
+      "independent_qa_file": "source_audits/france_b_individual_case_independent_QA.json",
+      "independent_qa_sha256": "69cabbc3ae112564cab96c2b1e243291eb5a0192ed2d00f88e5368363cfda027",
+      "worker_manifest_sha256": "7b09cbe4db604dc8238a19d9198e1ab9d8aa559bf71480655ef283e26ed23ad7"
+    },
+    "france_c": {
+      "decisions_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "independent_qa_file": "source_audits/france_c_source_only_independent_QA.json",
+      "independent_qa_sha256": "153f6345b157ec452ed56aace13b13a33b6cc8fff37148ba73ffb89847ae9f8c",
+      "worker_manifest_sha256": "5a82d9d72f017d7d0ea858da6095d92927123ddd9301f91e6967a5b7b7d37eb2"
+    }
+  },
+  "membership_acceptances": {
+    "CTHS_102838": {
+      "accepted_full_member_election_date": null,
+      "accepted_full_member_election_precision": "year",
+      "accepted_full_member_election_year": 1948,
+      "candidate_group_id": "CTHS_102838",
+      "cths_archive_parent_method_contract_sha256": "20e8c721f08e8756e14cf058bdc718d9be7cec59959f2d3f2da3307708cdc7f7",
+      "cths_expanded_biography_sha256": "55590c3645f57dcb7b1d775ef808534e5df113ddec7d0637bd5abcb8cf7734d9",
+      "cths_parent_notice_sha256": "77a5e9b758c6d2bfbb09350f7bdfe90f8a11793595994cf6399260c758cab841",
+      "decisions_file": "source_batches/france_b/decisions.json",
+      "decisions_sha256": "00d8b9c3f26c5461f75a0f5e04c1b9720c408e3ce0ba72619374706a1d06d086",
+      "independent_qa_file": "source_audits/france_b_component_independent_qa.json",
+      "independent_qa_passed": true,
+      "independent_qa_sha256": "971788d1ea14fe782887d222eb72afcd382449f195695e6e1b3eecfc5c7efb72",
+      "individual_case_approval_required": true,
+      "root_approved": true,
+      "source_sha256s": [
+        "55590c3645f57dcb7b1d775ef808534e5df113ddec7d0637bd5abcb8cf7734d9",
+        "77a5e9b758c6d2bfbb09350f7bdfe90f8a11793595994cf6399260c758cab841"
+      ],
+      "worker_manifest_sha256": "7b09cbe4db604dc8238a19d9198e1ab9d8aa559bf71480655ef283e26ed23ad7"
+    },
+    "CTHS_112069": {
+      "accepted_full_member_election_date": null,
+      "accepted_full_member_election_precision": "year",
+      "accepted_full_member_election_year": 1961,
+      "candidate_group_id": "CTHS_112069",
+      "decisions_file": "source_batches/france_a/decisions.json",
+      "decisions_sha256": "747290287f6b4cb5ae58048c8e530ddcd7fb0f9c663d06583653573a09aeaab6",
+      "independent_qa_file": "source_audits/independent_qa_france_a.json",
+      "independent_qa_passed": true,
+      "independent_qa_sha256": "62ec1b7f28d987056b6de1975b9a05b82e5c1589385a518b7bb98a54e88fb07f",
+      "root_approved": true,
+      "source_sha256s": [
+        "d92bc250c608f0b6f144fa81f911f51139ed7512db871f0c741daa37b018b548"
+      ],
+      "worker_manifest_sha256": "a6cbfd46dd49837c8c64935a777d366a3f3fddc302c24caca46ed5975d183c73"
+    },
+    "PROFILE2_39000bb1e114bf0c": {
+      "accepted_full_member_election_date": null,
+      "accepted_full_member_election_precision": "year",
+      "accepted_full_member_election_year": 2017,
+      "candidate_group_id": "PROFILE2_39000bb1e114bf0c",
+      "decisions_file": "source_batches/france_b/decisions.json",
+      "decisions_sha256": "00d8b9c3f26c5461f75a0f5e04c1b9720c408e3ce0ba72619374706a1d06d086",
+      "independent_qa_file": "source_audits/france_b_individual_case_independent_QA.json",
+      "independent_qa_passed": true,
+      "independent_qa_sha256": "69cabbc3ae112564cab96c2b1e243291eb5a0192ed2d00f88e5368363cfda027",
+      "root_approved": true,
+      "source_sha256s": [
+        "ad9514aa78a93d64c594598c0fcea546ddee46eb6b5d76fe49d052495ba6fc62"
+      ],
+      "worker_manifest_sha256": "7b09cbe4db604dc8238a19d9198e1ab9d8aa559bf71480655ef283e26ed23ad7"
+    }
+  },
+  "individual_case_acceptances": {
+    "CTHS_102823": {
+      "candidate_group_id": "CTHS_102823",
+      "decisions_file": "source_batches/france_b/decisions.json",
+      "decisions_sha256": "00d8b9c3f26c5461f75a0f5e04c1b9720c408e3ce0ba72619374706a1d06d086",
+      "independent_qa_file": "source_audits/france_b_individual_case_independent_QA.json",
+      "independent_qa_passed": true,
+      "independent_qa_sha256": "69cabbc3ae112564cab96c2b1e243291eb5a0192ed2d00f88e5368363cfda027",
+      "individual_case_proposals_sha256": "f8cdb302d4ef7dc818825dabcc4385dbfd302605075a6bc6e94920b214fd90d7",
+      "membership_decisions_sha256": "00d8b9c3f26c5461f75a0f5e04c1b9720c408e3ce0ba72619374706a1d06d086",
+      "new_values": {
+        "accepted_canonical_person_name": "Julien Noël Costantin",
+        "accepted_dob_iso": "1857-08-16",
+        "dob_accepted": "1",
+        "identity_accepted": "1"
+      },
+      "previous_values": {
+        "accepted_canonical_person_name": "",
+        "accepted_dob_iso": "",
+        "dob_accepted": "0",
+        "identity_accepted": "0"
+      },
+      "root_approved": true,
+      "source_sha256s": [
+        "6e4414f9366ba916ba1cd51ee486a08b2e86c8e561a3552949d98d2d9f6b2d9c"
+      ],
+      "worker_manifest_sha256": "7b09cbe4db604dc8238a19d9198e1ab9d8aa559bf71480655ef283e26ed23ad7"
+    },
+    "CTHS_102836": {
+      "candidate_group_id": "CTHS_102836",
+      "decisions_file": "source_batches/france_b/decisions.json",
+      "decisions_sha256": "00d8b9c3f26c5461f75a0f5e04c1b9720c408e3ce0ba72619374706a1d06d086",
+      "independent_qa_file": "source_audits/france_b_individual_case_independent_QA.json",
+      "independent_qa_passed": true,
+      "independent_qa_sha256": "69cabbc3ae112564cab96c2b1e243291eb5a0192ed2d00f88e5368363cfda027",
+      "individual_case_proposals_sha256": "f8cdb302d4ef7dc818825dabcc4385dbfd302605075a6bc6e94920b214fd90d7",
+      "membership_decisions_sha256": "00d8b9c3f26c5461f75a0f5e04c1b9720c408e3ce0ba72619374706a1d06d086",
+      "new_values": {
+        "accepted_canonical_person_name": "Jean Baptiste Auguste Chevalier",
+        "accepted_dob_iso": "1873-06-23",
+        "dob_accepted": "1",
+        "identity_accepted": "1"
+      },
+      "previous_values": {
+        "accepted_canonical_person_name": "",
+        "accepted_dob_iso": "",
+        "dob_accepted": "0",
+        "identity_accepted": "0"
+      },
+      "root_approved": true,
+      "source_sha256s": [
+        "0809a4517db870df79bc808fc8f632fe87807f6da120d11d8ab57608881608f0"
+      ],
+      "worker_manifest_sha256": "7b09cbe4db604dc8238a19d9198e1ab9d8aa559bf71480655ef283e26ed23ad7"
+    },
+    "CTHS_102838": {
+      "candidate_group_id": "CTHS_102838",
+      "decisions_file": "source_batches/france_b/decisions.json",
+      "decisions_sha256": "00d8b9c3f26c5461f75a0f5e04c1b9720c408e3ce0ba72619374706a1d06d086",
+      "independent_qa_file": "source_audits/france_b_individual_case_independent_QA.json",
+      "independent_qa_passed": true,
+      "independent_qa_sha256": "69cabbc3ae112564cab96c2b1e243291eb5a0192ed2d00f88e5368363cfda027",
+      "individual_case_proposals_sha256": "f8cdb302d4ef7dc818825dabcc4385dbfd302605075a6bc6e94920b214fd90d7",
+      "membership_decisions_sha256": "00d8b9c3f26c5461f75a0f5e04c1b9720c408e3ce0ba72619374706a1d06d086",
+      "new_values": {
+        "accepted_canonical_person_name": "Raoul Pierre Émile Combes",
+        "accepted_dob_iso": "1883-01-15",
+        "dob_accepted": "1",
+        "identity_accepted": "1"
+      },
+      "previous_values": {
+        "accepted_canonical_person_name": "",
+        "accepted_dob_iso": "",
+        "dob_accepted": "0",
+        "identity_accepted": "0"
+      },
+      "root_approved": true,
+      "source_sha256s": [
+        "77a5e9b758c6d2bfbb09350f7bdfe90f8a11793595994cf6399260c758cab841"
+      ],
+      "worker_manifest_sha256": "7b09cbe4db604dc8238a19d9198e1ab9d8aa559bf71480655ef283e26ed23ad7"
+    },
+    "PROFILE2_39000bb1e114bf0c": {
+      "candidate_group_id": "PROFILE2_39000bb1e114bf0c",
+      "decisions_file": "source_batches/france_b/decisions.json",
+      "decisions_sha256": "00d8b9c3f26c5461f75a0f5e04c1b9720c408e3ce0ba72619374706a1d06d086",
+      "independent_qa_file": "source_audits/france_b_individual_case_independent_QA.json",
+      "independent_qa_passed": true,
+      "independent_qa_sha256": "69cabbc3ae112564cab96c2b1e243291eb5a0192ed2d00f88e5368363cfda027",
+      "individual_case_proposals_sha256": "f8cdb302d4ef7dc818825dabcc4385dbfd302605075a6bc6e94920b214fd90d7",
+      "membership_decisions_sha256": "00d8b9c3f26c5461f75a0f5e04c1b9720c408e3ce0ba72619374706a1d06d086",
+      "new_values": {
+        "accepted_canonical_person_name": "Christophe Salomon",
+        "accepted_dob_iso": "1953-11-23",
+        "dob_accepted": "1",
+        "identity_accepted": "1"
+      },
+      "previous_values": {
+        "accepted_canonical_person_name": "",
+        "accepted_dob_iso": "",
+        "dob_accepted": "0",
+        "identity_accepted": "0"
+      },
+      "root_approved": true,
+      "source_sha256s": [
+        "743e86997cb6606d6dad08a6ffd06285755fdf2ed7915e51e5b95edb5ee5293a"
+      ],
+      "worker_manifest_sha256": "7b09cbe4db604dc8238a19d9198e1ab9d8aa559bf71480655ef283e26ed23ad7"
+    },
+    "PROFILE2_738d6d5c74a7a874": {
+      "candidate_group_id": "PROFILE2_738d6d5c74a7a874",
+      "decisions_file": "source_batches/france_b/decisions.json",
+      "decisions_sha256": "00d8b9c3f26c5461f75a0f5e04c1b9720c408e3ce0ba72619374706a1d06d086",
+      "independent_qa_file": "source_audits/france_b_individual_case_independent_QA.json",
+      "independent_qa_passed": true,
+      "independent_qa_sha256": "69cabbc3ae112564cab96c2b1e243291eb5a0192ed2d00f88e5368363cfda027",
+      "individual_case_proposals_sha256": "f8cdb302d4ef7dc818825dabcc4385dbfd302605075a6bc6e94920b214fd90d7",
+      "membership_decisions_sha256": "00d8b9c3f26c5461f75a0f5e04c1b9720c408e3ce0ba72619374706a1d06d086",
+      "new_values": {
+        "accepted_canonical_person_name": "Michel Beaudouin-Lafon",
+        "accepted_dob_iso": "1961-07-20",
+        "dob_accepted": "1",
+        "identity_accepted": "1"
+      },
+      "previous_values": {
+        "accepted_canonical_person_name": "",
+        "accepted_dob_iso": "",
+        "dob_accepted": "0",
+        "identity_accepted": "0"
+      },
+      "root_approved": true,
+      "source_sha256s": [
+        "88454da95d22aa070792f00cdf9743b66cd296be559015c0f9b82b09627ed213"
+      ],
+      "worker_manifest_sha256": "7b09cbe4db604dc8238a19d9198e1ab9d8aa559bf71480655ef283e26ed23ad7"
+    }
+  },
+  "archived_component_method_contract_sha256": "20e8c721f08e8756e14cf058bdc718d9be7cec59959f2d3f2da3307708cdc7f7",
+  "independent_production_field_audit_sha256": "b04107d27f937b2173623d890580f2de0f12139683f54979bc13f95c75834174"
+}

@@ -1,0 +1,286 @@
+{
+  "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+  "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+  "method_application_scope_sha256": "d6ebcba7aa672c1a4877857bd4e9b4072af2ae159c04fd0dddf4d7766d2e3176",
+  "written_utc": "2026-11-08T08:44:29.438811+00:00",
+  "group": "c",
+  "phase": "canonical_community_reference_geography_method_application",
+  "intent_file": "v41_c_intent.json",
+  "current_method_application_scope_audit_path": "audit/method_application_scope_v41.json",
+  "full2nativeobjects/priorholdsbeforequeries": true,
+  "all9_issue_inventories_loaded_before_queries": true,
+  "inventory_file_pins": {
+    "active_source_DOB_conflicts.json": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+    "birthplace_source_conflicts.json": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+    "source_derived_age_inconsistencies.json": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+    "cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+    "lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+    "omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+    "provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+    "source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+    "source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+  },
+  "prior_context_review": [
+    "v41_plan.json",
+    "v41_scope_c.json complete two native objects",
+    "v36_method_preregistration.json",
+    "v41_method_application_scope.json",
+    "V40 all nine current issue inventories in full",
+    "prior_v13_holds.json Thornton",
+    "prior_v33_holds.json Thornton",
+    "prior_v32_holds.json Crisp",
+    "prior_v11_holds.json Ewins",
+    "prior_v12_holds.json Barber",
+    "v40_sources_c.json and v40_final_geography.json report schema"
+  ],
+  "inherited_issue_counts": {
+    "active_DOB": 13,
+    "partial_birthplace": 2,
+    "source_derived_age_inconsistencies": 4,
+    "other_issue_files": 6
+  },
+  "omitted_middle_inventory_is_metadata_without_records_array": true,
+  "separate_Ewins_Barber_placeholds_preserved": true,
+  "Tomes_glyph_uncertainty_preserved": true,
+  "intent_writes_validated_exit0_separately_beforeweb": true,
+  "retrieval_counts": {
+    "queries": 4,
+    "navigation_attempts": 2,
+    "source_open_operations": 2,
+    "click_operations": 0,
+    "cached_finds": 0,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "query_ledger": [
+    {
+      "kind": "search",
+      "engine": "system2",
+      "record_id": "RS_PAST_NA2044",
+      "query": "\"Dennis John Crisp\" site:wikipedia.org",
+      "result_ref": null,
+      "intent_entries": [
+        0
+      ],
+      "outcome": "Crisp no canonical person result shown",
+      "role": "discovery_only_not_person_body_or_geographic_proof"
+    },
+    {
+      "kind": "search",
+      "engine": "system2",
+      "record_id": "RS_PAST_NA2460",
+      "query": "\"Henry Gerard Thornton\" site:wikipedia.org",
+      "result_ref": "turn7047761search0",
+      "intent_entries": [
+        1
+      ],
+      "outcome": "Thornton discovery only disambiguation/lists",
+      "role": "discovery_only_not_person_body_or_geographic_proof"
+    },
+    {
+      "kind": "search",
+      "engine": "system1",
+      "record_id": "RS_PAST_NA2044",
+      "query": "Dennis Crisp Wikipedia",
+      "result_ref": "turn4574526search0",
+      "intent_entries": [
+        2
+      ],
+      "outcome": "No canonical Wikipedia person body discovered for Crisp; other work discovery not adopted",
+      "role": "discovery_only_not_person_body_or_geographic_proof"
+    },
+    {
+      "kind": "search",
+      "engine": "system1",
+      "record_id": "RS_PAST_NA2460",
+      "query": "Henry Gerard Thornton Wikipedia Wikidata",
+      "result_ref": "turn4574526search9",
+      "intent_entries": [
+        3
+      ],
+      "outcome": "Thornton disambiguation/list only; no personal canonical body discovered",
+      "role": "discovery_only_not_person_body_or_geographic_proof"
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "kind": "open",
+      "record_id": "RS_PAST_NA2044",
+      "url": "https://www.wikidata.org/wiki/Q21165926",
+      "ref": "turn5889372view0",
+      "outcome": "tool Internal Error: URL not accessible; no actual entity body acquired; work closed without repeat/variant/rawGET",
+      "intent_entry": 4,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "open",
+      "record_id": "RS_PAST_NA2460",
+      "url": "https://www.wikidata.org/wiki/Q21166847",
+      "ref": "turn5889372view1",
+      "outcome": "tool Internal Error: URL not accessible; no actual entity body acquired; work closed without repeat/variant/rawGET",
+      "intent_entry": 5,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    }
+  ],
+  "parsed_find_ledger": [],
+  "candidates": [],
+  "holds": [
+    {
+      "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+      "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+      "method_application_scope_sha256": "d6ebcba7aa672c1a4877857bd4e9b4072af2ae159c04fd0dddf4d7766d2e3176",
+      "publication_date": null,
+      "publication_date_precision": "not_observed",
+      "source_revision_id": null,
+      "source_revision_utc": null,
+      "source_calendar_model": null,
+      "source_statement_rank": null,
+      "source_editorial_validation": null,
+      "source_informational_independence": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA2044",
+      "native": {
+        "authority_name": "Crisp; Dennis John (1916 - 1990)",
+        "native_dob": "1916-04-29",
+        "raw_birthplace": "London",
+        "frozen_birthplace_source_grade": "S3",
+        "hemisphere": "unknown"
+      },
+      "status": "held_no_acquired_actual_canonical_person_birthplace_or_P19_chain",
+      "hold_type": "no_actual_person_body_discovered_and_first_canonical_entity_open_inaccessible",
+      "reason": "Four group queries discovered no actual canonical Wikipedia person-body lead for Dennis John Crisp; first canonical Wikidata entity opening from frozen lookup_qid was inaccessible. Inherited original newsletter only supplies unqualified London. No acquired current canonical person name/exactdate/career/birthplace binding or actual P19/P131 chain; preserve prior failed bibliography/memoir work closures.",
+      "proof_mode": null,
+      "proof_chain": [],
+      "source_grade_adopted": null,
+      "source_grade_role": "geographic_support_only",
+      "reviewed_hemisphere": "unknown",
+      "no_new_geographic_assignment": true,
+      "native_and_original_birthplace_fields_unchanged": true,
+      "source_quote": null,
+      "source_quote_word_count": 0,
+      "source_observations": [
+        {
+          "source_url": "https://www.wikidata.org/wiki/Q21165926",
+          "source_body_ref": "turn5889372view0",
+          "source_body_acquired": false,
+          "source_locator": "turn5889372view0: tool error text only, no original statement/body lines",
+          "observed_tool_message": "URL is not accessible via this tool; Internal Error",
+          "acquisition_role": "first_canonical_entity_open_from_frozen_lookup_identifier; unavailable_not_geographic_proof",
+          "requested_qid_provenance": "v41_scope_c.json lookup_qid; no guessed QID or native assignment",
+          "actual_P19_statement_acquired": false,
+          "actual_P131_statement_acquired": false,
+          "observed_canonical_language_sitelinks": [],
+          "source_calendar_model": null,
+          "source_statement_rank": null,
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "stopped_without_retry_variant_or_rawGET": true,
+          "source_quote": null,
+          "source_quote_word_count": 0
+        }
+      ],
+      "discovery_only_refs": [
+        "turn4574526search0"
+      ],
+      "prior_holds_preserved": [
+        "prior_v32_holds.json"
+      ],
+      "caveats": [
+        "No new personal canonical source body acquired; search results are discovery only and do not validate native name/date/career or explicit birthplace geography.",
+        "Honorific Sir is not treated as a native personal-name component; John/Gerard are never expanded from initials.",
+        "Inaccessible entity work closed at first failed opening; no alternate URLs, raw GET, repeat, challenge bypass or positive-source shopping.",
+        "No nationality, work, family, school, death-place, familiar-city, coordinate or assumed London-country inference.",
+        "Original DOB/BP grades, raw birthplace, native country/QID/coordinates/calendar/eligibility and complete native object remain unchanged."
+      ]
+    },
+    {
+      "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+      "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+      "method_application_scope_sha256": "d6ebcba7aa672c1a4877857bd4e9b4072af2ae159c04fd0dddf4d7766d2e3176",
+      "publication_date": null,
+      "publication_date_precision": "not_observed",
+      "source_revision_id": null,
+      "source_revision_utc": null,
+      "source_calendar_model": null,
+      "source_statement_rank": null,
+      "source_editorial_validation": null,
+      "source_informational_independence": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA2460",
+      "native": {
+        "authority_name": "Thornton; Sir; Henry Gerard (1892 - 1977)",
+        "native_dob": "1892-01-22",
+        "raw_birthplace": "London",
+        "frozen_birthplace_source_grade": "S2",
+        "hemisphere": "unknown"
+      },
+      "status": "held_no_acquired_actual_canonical_person_birthplace_or_P19_chain",
+      "hold_type": "no_actual_person_body_discovered_and_first_canonical_entity_open_inaccessible",
+      "reason": "Queries discovered Henry Thornton disambiguation and fellow-list entries, plus son Peter Thornton article, rather than an actual Henry Gerard Thornton person body with birth linkage. First canonical Wikidata entity opening from frozen lookup_qid was inaccessible. No actual current canonical fullnative/exactdate/career/birthplace binding or P19/P131 chain. Prior AIM25 index/no-new-country holds and frozen London/S2 remain.",
+      "proof_mode": null,
+      "proof_chain": [],
+      "source_grade_adopted": null,
+      "source_grade_role": "geographic_support_only",
+      "reviewed_hemisphere": "unknown",
+      "no_new_geographic_assignment": true,
+      "native_and_original_birthplace_fields_unchanged": true,
+      "source_quote": null,
+      "source_quote_word_count": 0,
+      "source_observations": [
+        {
+          "source_url": "https://www.wikidata.org/wiki/Q21166847",
+          "source_body_ref": "turn5889372view1",
+          "source_body_acquired": false,
+          "source_locator": "turn5889372view1: tool error text only, no original statement/body lines",
+          "observed_tool_message": "URL is not accessible via this tool; Internal Error",
+          "acquisition_role": "first_canonical_entity_open_from_frozen_lookup_identifier; unavailable_not_geographic_proof",
+          "requested_qid_provenance": "v41_scope_c.json lookup_qid; no guessed QID or native assignment",
+          "actual_P19_statement_acquired": false,
+          "actual_P131_statement_acquired": false,
+          "observed_canonical_language_sitelinks": [],
+          "source_calendar_model": null,
+          "source_statement_rank": null,
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "stopped_without_retry_variant_or_rawGET": true,
+          "source_quote": null,
+          "source_quote_word_count": 0
+        }
+      ],
+      "discovery_only_refs": [
+        "turn7047761search0",
+        "turn7047761search1",
+        "turn7047761search2",
+        "turn4574526search9",
+        "turn4574526search10"
+      ],
+      "prior_holds_preserved": [
+        "prior_v13_holds.json",
+        "prior_v33_holds.json"
+      ],
+      "caveats": [
+        "No new personal canonical source body acquired; search results are discovery only and do not validate native name/date/career or explicit birthplace geography.",
+        "Honorific Sir is not treated as a native personal-name component; John/Gerard are never expanded from initials.",
+        "Inaccessible entity work closed at first failed opening; no alternate URLs, raw GET, repeat, challenge bypass or positive-source shopping.",
+        "No nationality, work, family, school, death-place, familiar-city, coordinate or assumed London-country inference.",
+        "Original DOB/BP grades, raw birthplace, native country/QID/coordinates/calendar/eligibility and complete native object remain unchanged."
+      ]
+    }
+  ],
+  "new_source_quality_observations": [],
+  "bounded_pass_complete": true,
+  "source_exhausted": false,
+  "final_freeze": false,
+  "master_or_repo_or_git_writes": false,
+  "quote_policy": "No new literal source quotation retained; inherited frozen quotations remain in prior contexts. No full HTML/PDF/images/JSON/projection caches written."
+}

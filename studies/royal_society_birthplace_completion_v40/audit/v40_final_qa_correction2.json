@@ -1,0 +1,16 @@
+{
+  "schema": "UK_v40_final_QA_harness_correction_v1",
+  "written_utc": "2026-11-07T02:04:18.868778+00:00",
+  "attempt": "harness_sourceQA_count_shape_error_after45_checks_before_isolated_replays",
+  "error": "V40 sourceQA inventory counts add inventory_shape; metadata_without_records correctly reports null/N/A counts. Inherited V39 finalQA expected exactly two keys and treated metadata as a zero-record collection. All nine baseline/current hashes and actual record counts agreed.",
+  "correction": "Explicitly validate V40 sourceQA inventory_shape and numeric record counts for records inventories; require null counts and metadata_without_records for metadata-only inventory. Complete metadata-file byte equality remains mandatory. No production/sourceQA or admission change.",
+  "data_source_or_production_failure": false,
+  "production_output_pins_unchanged": true,
+  "failure_report": "v40_final_qa_attempt2_failure_report.json",
+  "failure_report_sha256": "35526e2189916cb20eecdca5dcefcb7d34fcc7a3a49bfb3d75d252e942e36635",
+  "preserved_attempt_log": "v40_final_qa_attempt2.log",
+  "attempt_log_sha256": "5eafc6054be230272881bd4d1bafdb21007f637a0ddfb5e248841df100a64826",
+  "pre_correction_harness_sha256": "6c03287b19e899253c1a08d4700f4803dcb55b7315cface02e63444365d4ca5b",
+  "production_mutated_by_reviewer": false,
+  "network_used": false
+}

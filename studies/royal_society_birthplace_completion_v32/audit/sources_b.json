@@ -1,0 +1,363 @@
+{
+  "written_utc": "2026-11-06T22:25:47.017961+00:00",
+  "group": "b",
+  "phase": "geography_only",
+  "intent_file": "v32_b_intent.json",
+  "prior_context_fullobjects_read_before_queries": true,
+  "retrieval_counts": {
+    "queries": 8,
+    "navigation_attempts": 8,
+    "parsed_finds": 3,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "query_ledger": [
+    {
+      "engine": "system2",
+      "query": "\"Martin Rivers Pollock\" \"born\" England",
+      "result_collection": "turn8332049",
+      "role": "discovery_only_not_originalbody"
+    },
+    {
+      "engine": "system2",
+      "query": "\"Ernest John Maskell\" \"born\" England",
+      "result_collection": "turn8332049",
+      "role": "discovery_only_not_originalbody"
+    },
+    {
+      "engine": "system2",
+      "query": "\"Miles Walker\" born Cumberland",
+      "result_collection": "turn8332049",
+      "role": "discovery_only_not_originalbody"
+    },
+    {
+      "engine": "system2",
+      "query": "\"William Palmer Wynne\" born Staffordshire",
+      "result_collection": "turn8332049",
+      "role": "discovery_only_not_originalbody"
+    },
+    {
+      "engine": "system1",
+      "query": "\"Martin Rivers Pollock\" obituary Liverpool England",
+      "result_collection": "turn2716724",
+      "role": "discovery_only_not_originalbody"
+    },
+    {
+      "engine": "system1",
+      "query": "\"Ernest John Maskell\" botanist born Cambridge",
+      "result_collection": "turn2716724",
+      "role": "discovery_only_not_originalbody"
+    },
+    {
+      "engine": "system1",
+      "query": "\"Miles Walker\" \"1868\" Carlisle England",
+      "result_collection": "turn2716724",
+      "role": "discovery_only_not_originalbody"
+    },
+    {
+      "engine": "system1",
+      "query": "\"William Palmer Wynne\" \"Stafford\" England biography",
+      "result_collection": "turn2716724",
+      "role": "discovery_only_not_originalbody"
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "record_id": "RS_PAST_NA1513",
+      "url": "https://archives.collections.ed.ac.uk/repositories/2/resources/85252",
+      "ref": "turn3516090view0",
+      "status": "actual_original_archive_body_first_open",
+      "locator": "L2title;L29biographicalsectiondescription;L31-68MRC/NIMR/Edinburghresearchcareer",
+      "observation": "Firstopen parsedbody acquired title/scope/career, not thebiographicalbirthparagraph displayedbysearch. SearchDOB notpretendedactualbody. Laterfind502closed; no retry.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA1752",
+      "url": "https://www.armstrongwynne.org/wynne.html",
+      "ref": "turn3516090view1",
+      "status": "actual_original_compiled_professional_history_profile",
+      "locator": "L2fullWilliamPalmerWynne;L3life1861-1950;L6bornyear1861/Stafford;L7-8Armstrong/naphthalene/Thorpework",
+      "observation": "Fullnative and compatibleyear/lifespan, chemistrycareer, but existingStafford remainsunqualified. No country/county from birthclause. Sourcegrade notadopted; uncreditedprofilewouldbe conservativeS3, nohostupgrade.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA1592",
+      "url": "https://trumpingtonlocalhistorygroup.org/people/f6743.htm",
+      "ref": "turn3516090view2",
+      "status": "failed_first_open_no_retry",
+      "locator": null,
+      "observation": "Tool reported (400) Unicode decoding error. Noactualbody acquired; rawHTTPstatusunknown (toolerror400 not rawHTTP responsecapture).",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA1513",
+      "url": "https://rse.org.uk/wp-content/uploads/2021/05/all_fellows.pdf",
+      "ref": "turn3516090view3",
+      "status": "actual_original_compiled_fellow_register_PDF_parsed_text",
+      "locator": "Laterfind turn9226633view0:L17118-17121@P139",
+      "observation": "FullMartinRiversPollock/exact10December1914/death21December1999/professionphysician/election1966 present, no birthplacefield in this boundedentry. No placeinferred fromhost/institution/otherperson.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA1727",
+      "url": "https://www.gracesguide.co.uk/Miles_Walker",
+      "ref": "turn7806908view0",
+      "status": "failed_first_open_no_retry",
+      "locator": null,
+      "observation": "Tool says URL is not accessible via this tool; nobody/identity/date/geoclaim acquired. Distinct firstprofessionalhistory route predeclared inadaptiveintent.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA1513",
+      "url": "https://www.theguardian.com/news/2000/feb/17/guardianobituaries.obituaries",
+      "ref": null,
+      "status": "actual_first_open_body_displayed_but_header_ref_omitted_by_output_filter",
+      "locator": "Displayed L47title/L60-72career/L76fullname/exactDOB/death",
+      "observation": "Actualoriginalobituary body displayed, no bornregion in shownbody; youthWessex and retirementDorset are not birthplace. Header/ref was omittedby displayfilter and cannotbe reconstructed. No inventedref or secondopen. Perworkreport derivedtext limited to this noqualifyingbirthregion observation.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "body_ref_unknown_due_to_filtered_display": true,
+      "publication_date_observed_in_search_only": "2000-02-17"
+    },
+    {
+      "record_id": "RS_PAST_NA1592",
+      "url": "https://makingscience.royalsociety.org/people/na1592/ernest-john-maskell",
+      "ref": null,
+      "status": "failed_first_open_no_retry",
+      "locator": null,
+      "observation": "Tool reported (502) BadGateway; sourceURL/failuretail displayed but header/ref omittedby outputfilter. Exactbodyrefunknown notinvented. No actualbodyclaim from searchprojection.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA1752",
+      "url": "https://makingscience.royalsociety.org/people/na1752/william-palmer-wynne",
+      "ref": "turn7806908view3",
+      "status": "failed_first_open_no_retry",
+      "locator": null,
+      "observation": "Tool reported (502) BadGateway; nobody; no retry.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    }
+  ],
+  "parsed_find_ledger": [
+    {
+      "source_ref": "turn3516090view3",
+      "pattern": "MARTIN RIVERS POLLOCK",
+      "result_ref": "turn9226633view0",
+      "status": "matched_originalPDFentry",
+      "locator": "L17118-17121@P139",
+      "limit": "No birthplaceline in this specificentry; no globalnegativesearchclaim."
+    },
+    {
+      "source_ref": "turn3516090view3",
+      "pattern": "MILES WALKER",
+      "result_ref": "turn9226633view1",
+      "status": "No matching text found for \"MILES WALKER\"",
+      "limit": "Onlyliteralparsedfindnotproofofabsenceofpersonfromallversions."
+    },
+    {
+      "source_ref": "turn3516090view0",
+      "pattern": "Biographical / Historical",
+      "result_ref": "turn9226633view2",
+      "status": "tool502BadGateway",
+      "limit": "Stoproute; noretry; firstbody separatelyacquired, searchbirthparagraphnotupgradedtobody."
+    }
+  ],
+  "candidates": [],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA1513",
+      "native": {
+        "record_id": "RS_PAST_NA1513",
+        "source_authorised_full_name": "Pollock; Martin Rivers (1914 - 1999)",
+        "dob": "1914-12-10",
+        "raw_birthplace": "Liverpool",
+        "birthplace_source_grade": "S2"
+      },
+      "hold_type": "no_new_direct_birth_country_or_wholeregion",
+      "reason": "NewEdinburgharchivefirstbody providescareer, laterfindfails502; RSEactualfull/exactDOB/death/profession but noplace inboundedentry; newGuardianactualbodyfull/exactDOB/death but no qualifyingbirthcountry. Wessexyouth/Dorsetretirementnotbornplace. FrozenLiverpool/S2/nativeDOBunchanged.",
+      "sources_reviewed": [
+        {
+          "record_id": "RS_PAST_NA1513",
+          "url": "https://archives.collections.ed.ac.uk/repositories/2/resources/85252",
+          "ref": "turn3516090view0",
+          "status": "actual_original_archive_body_first_open",
+          "locator": "L2title;L29biographicalsectiondescription;L31-68MRC/NIMR/Edinburghresearchcareer",
+          "observation": "Firstopen parsedbody acquired title/scope/career, not thebiographicalbirthparagraph displayedbysearch. SearchDOB notpretendedactualbody. Laterfind502closed; no retry.",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null
+        },
+        {
+          "record_id": "RS_PAST_NA1513",
+          "url": "https://rse.org.uk/wp-content/uploads/2021/05/all_fellows.pdf",
+          "ref": "turn3516090view3",
+          "status": "actual_original_compiled_fellow_register_PDF_parsed_text",
+          "locator": "Laterfind turn9226633view0:L17118-17121@P139",
+          "observation": "FullMartinRiversPollock/exact10December1914/death21December1999/professionphysician/election1966 present, no birthplacefield in this boundedentry. No placeinferred fromhost/institution/otherperson.",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null
+        },
+        {
+          "record_id": "RS_PAST_NA1513",
+          "url": "https://www.theguardian.com/news/2000/feb/17/guardianobituaries.obituaries",
+          "ref": null,
+          "status": "actual_first_open_body_displayed_but_header_ref_omitted_by_output_filter",
+          "locator": "Displayed L47title/L60-72career/L76fullname/exactDOB/death",
+          "observation": "Actualoriginalobituary body displayed, no bornregion in shownbody; youthWessex and retirementDorset are not birthplace. Header/ref was omittedby displayfilter and cannotbe reconstructed. No inventedref or secondopen. Perworkreport derivedtext limited to this noqualifyingbirthregion observation.",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "body_ref_unknown_due_to_filtered_display": true,
+          "publication_date_observed_in_search_only": "2000-02-17"
+        }
+      ],
+      "excluded_discovery_only": "ThePeerage searchprojection death22December1999 notactualbody, notnewqualifieddate/endpointconflict; oldODNBfailedentry not retried. Old v13 overflow not negativeevidence."
+    },
+    {
+      "record_id": "RS_PAST_NA1592",
+      "native": {
+        "record_id": "RS_PAST_NA1592",
+        "source_authorised_full_name": "Maskell; Ernest John (1895 - 1958)",
+        "dob": "1895-02-01",
+        "raw_birthplace": "Cambridge",
+        "birthplace_source_grade": "S2"
+      },
+      "hold_type": "no_new_actual_qualified_birth_country_source",
+      "reason": "Newlocalhistoryfirstopen Unicode400 and distinctRSprofilefirstopen502; no bodyaccepted. Searchprojections Cambridgeonly/unrelated1889Hadleighmilitaryperson notbirthcountry for1895botanist. ClosedpriorRS1961DOI not retried. CambridgeS2/completeobjectunchanged.",
+      "sources_reviewed": [
+        {
+          "record_id": "RS_PAST_NA1592",
+          "url": "https://trumpingtonlocalhistorygroup.org/people/f6743.htm",
+          "ref": "turn3516090view2",
+          "status": "failed_first_open_no_retry",
+          "locator": null,
+          "observation": "Tool reported (400) Unicode decoding error. Noactualbody acquired; rawHTTPstatusunknown (toolerror400 not rawHTTP responsecapture).",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null
+        },
+        {
+          "record_id": "RS_PAST_NA1592",
+          "url": "https://makingscience.royalsociety.org/people/na1592/ernest-john-maskell",
+          "ref": null,
+          "status": "failed_first_open_no_retry",
+          "locator": null,
+          "observation": "Tool reported (502) BadGateway; sourceURL/failuretail displayed but header/ref omittedby outputfilter. Exactbodyrefunknown notinvented. No actualbodyclaim from searchprojection.",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null
+        }
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA1727",
+      "native": {
+        "record_id": "RS_PAST_NA1727",
+        "source_authorised_full_name": "Walker; Miles (1868 - 1941)",
+        "dob": "1868-08-13",
+        "raw_birthplace": "Lowther Street, Carlisle",
+        "birthplace_source_grade": "S2"
+      },
+      "hold_type": "no_new_originalperson_birth_context",
+      "reason": "NewGraceprofessionalhistoryfirstattempt inaccessible. RSEliteralparsedfind didnotmatchMilesWalker. OldNature1941subscriptionpreview and v14officialstreet-citycandidate hold preserved; no personalreferentbinding from genericCarlisle/CumberlandCouncil. LowtherStreetCarlisle/S2/completeobjectunchanged.",
+      "sources_reviewed": [
+        {
+          "record_id": "RS_PAST_NA1727",
+          "url": "https://www.gracesguide.co.uk/Miles_Walker",
+          "ref": "turn7806908view0",
+          "status": "failed_first_open_no_retry",
+          "locator": null,
+          "observation": "Tool says URL is not accessible via this tool; nobody/identity/date/geoclaim acquired. Distinct firstprofessionalhistory route predeclared inadaptiveintent.",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null
+        }
+      ],
+      "prior_holds_preserved": [
+        "prior_v11_holds.json",
+        "prior_v14_geography_candidates.json",
+        "prior_v14_holds.json"
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA1752",
+      "native": {
+        "record_id": "RS_PAST_NA1752",
+        "source_authorised_full_name": "Wynne; William Palmer (1861 - 1950)",
+        "dob": "1861-02-13",
+        "raw_birthplace": "Stafford",
+        "birthplace_source_grade": "S2"
+      },
+      "hold_type": "new_original_profile_city_only",
+      "reason": "NewArmstrongWynneoriginalcompiledprofile actualfullname/life1861-1950/year1861 bornStafford and naphthalenechemistrycareer, but noregionqualifier. Birminghameducation not birthplace. DistinctRSnewprofile502. OldRSCpresidentsStaffordonly not retried. FrozenStafford/S2/native1861-02-13/completeobjectunchanged.",
+      "sources_reviewed": [
+        {
+          "record_id": "RS_PAST_NA1752",
+          "url": "https://www.armstrongwynne.org/wynne.html",
+          "ref": "turn3516090view1",
+          "status": "actual_original_compiled_professional_history_profile",
+          "locator": "L2fullWilliamPalmerWynne;L3life1861-1950;L6bornyear1861/Stafford;L7-8Armstrong/naphthalene/Thorpework",
+          "observation": "Fullnative and compatibleyear/lifespan, chemistrycareer, but existingStafford remainsunqualified. No country/county from birthclause. Sourcegrade notadopted; uncreditedprofilewouldbe conservativeS3, nohostupgrade.",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null
+        },
+        {
+          "record_id": "RS_PAST_NA1752",
+          "url": "https://makingscience.royalsociety.org/people/na1752/william-palmer-wynne",
+          "ref": "turn7806908view3",
+          "status": "failed_first_open_no_retry",
+          "locator": null,
+          "observation": "Tool reported (502) BadGateway; nobody; no retry.",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null
+        }
+      ],
+      "source_quote": "born in 1861 in Stafford",
+      "source_quote_word_count": 5,
+      "source_quote_url": "https://www.armstrongwynne.org/wynne.html",
+      "source_exact_native_month_day_confirmed": false
+    }
+  ],
+  "source_quote_words_by_original_work": {
+    "https://www.armstrongwynne.org/wynne.html": 5
+  },
+  "raw_HTTP_status": null,
+  "raw_bytes_sha256": null,
+  "exact_request_utc": null,
+  "protocol_limits": [
+    "Initialcombinedlocalscopeoutputtruncated; allfourfullobjectsrereadindividuallyuntruncatedbeforequeries.",
+    "One later combinedopen displayfilter omitted Guardian sourceheader/ref and Maskellerrorheader/ref. Exactrefs remainunknown ratherthaninferred; actualdisplayedURL/body/failureobservations separatelyretained.",
+    "FirstEdinburghopenbody inspectedbefore laterfindfailed502; noretry or backdatingsearchprojectionasactualbody."
+  ],
+  "no_native_or_original_BP_change": true,
+  "no_new_DOB_or_place_conflict_established": true,
+  "no_source_exhaustion_claim": true,
+  "unopened_distinct_original_work_leads": [
+    {
+      "record_id": "RS_PAST_NA1752",
+      "url": "https://www.careerchem.com/NAMED/Named-Reagents%28G-Z%29.pdf",
+      "discovery_ref": "turn8332049search47",
+      "discovery_title": "Dr. John Andraos Named-Reagents(G-Z).pdf",
+      "why_distinct": "Authored professional chemical named-reagents compendium distinct from oldRSCpresidentsPDF/RS1951memoir; searchprojection mentions WilliamPalmerWynne/ArmstrongandWynnesacids.",
+      "limit": "Unopened; no actualbody/name/date/country/sourceclass verification; search indexedpublished8monthsago notpublicationproof. Potential birthcontextunknown."
+    }
+  ]
+}

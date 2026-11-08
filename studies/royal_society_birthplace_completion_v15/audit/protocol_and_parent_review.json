@@ -1,0 +1,101 @@
+{
+  "schema": "UK_v15_scope_and_parent_adjudication_v1",
+  "written_utc": "2026-11-05T00:03:05.976659+00:00",
+  "timing": "This consolidated document was written after source work and parent reading began. It is not a source-blind preregistration. Original per-worker and root intents retain their actual timing/deviations.",
+  "fixed_bulk_scope": 169,
+  "bulk_scope_definition": "v14 UK nativeDOB1835–1985 inclusive, unknown hemisphere, blank stored raw_birthplace",
+  "fixed_source_followup_scope": [
+    "RS_PAST_NA3607",
+    "RS_PAST_NA3629",
+    "RS_PAST_NA3957",
+    "RS_PAST_NA3652",
+    "RS_PAST_NA4682",
+    "RS_PAST_NA4250",
+    "RS_PAST_NA4117",
+    "RS_PAST_NA4780"
+  ],
+  "original_biographical_followup_records": 8,
+  "offline_screen": {
+    "original_pool": "comprehensive_v7",
+    "eligible_other_cohort_exact_day_nonblank_birthplaces": 3393,
+    "strong_full_token_date_matches": 0,
+    "initial_leads": 1,
+    "transferred_birthplace_observations": 0,
+    "Boyse_adoption_basis": "independent original ODNB public extract; NAS initial lead not used as person/place or hemisphere support",
+    "replay_dependency": "Original v7 pool gzip hash locked in offline_crosswalk.json, not redistributed; main UK replay is self-contained."
+  },
+  "admission": "Unique native full-name and exact-date binding with professional/lifespan anchors; explicit born/place clause in original available body. No source grade assigned to inaccessible bodies. First birthplace may remain geographically unknown; count birthplace and hemisphere additions separately.",
+  "geography": "Only explicit country/region in born clause resolving wholly one hemisphere; no person country/point/entity assignment. Sussex explicit historic county supports Boyse. No famous-city, parent/nationality/school/work/death/footer inference.",
+  "grading": "Four S2 original institutional/edited/signed biographical sources; Dixon conservative S3 uncredited family obituary. No S1 promotions and no native DOB grade changes. Original selected evidence/hash/official-field status remain as historical evidence; current birthplace fields versioned with full rollback snapshots.",
+  "accepted_record_ids": [
+    "RS_PAST_NA3607",
+    "RS_PAST_NA3629",
+    "RS_PAST_NA3957",
+    "RS_PAST_NA4682",
+    "RS_PAST_NA4117"
+  ],
+  "held_record_ids": [
+    "RS_PAST_NA3652",
+    "RS_PAST_NA4250",
+    "RS_PAST_NA4780"
+  ],
+  "root_observation_ledger": [
+    {
+      "kind": "parsed_original_navigation_batch",
+      "count": 4,
+      "intent_file": "audit/root_intent.json",
+      "outcome": "Tool returned but combined output was truncated at context boundary; no original-text verification claimed from unread output alone.",
+      "raw_HTTP_bytes_saved": false,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "parsed_original_navigation_reinspection_batch",
+      "count": 4,
+      "urls": [
+        "https://archivecollections.uea.ac.uk/sz",
+        "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/579671003",
+        "https://journals.iucr.org/a/issues/2001/05/00/es0305/index.html",
+        "https://www.dignitymemorial.com/en-ca/obituaries/victoria-bc/gordon-dixon-7024317"
+      ],
+      "outcome": "Four original source bodies/public extract re-opened for parent review.",
+      "raw_HTTP_bytes_saved": false,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "parsed_original_navigation_reinspection",
+      "count": 1,
+      "url": "https://archivecollections.uea.ac.uk/sz",
+      "outcome": "UEA administrative-biographical source and creator-versus-author distinction read explicitly.",
+      "raw_HTTP_bytes_saved": false,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "original_public_PDF_byte_request",
+      "count": 1,
+      "capture_metadata_file": "audit/popjak_pdf_capture.json",
+      "outcome": "200, complete797469bytes; parsed and page82 visually checked; no retries. Distinct PDF request does not reverse historical catalog403."
+    }
+  ],
+  "quote_policy": "At most25 English words per original source; repeated identical excerpts are not additional distinct text. No full original HTML/PDF/page images distributed.",
+  "frozen": [
+    "nativeDOB",
+    "calendar",
+    "identity",
+    "eligibility",
+    "cohortrecordkeys",
+    "QID",
+    "nativeDOBsourcegrade",
+    "oldselectedevidence",
+    "oldofficialfieldstatus",
+    "oldsourcehashes",
+    "alluntargetedcompleteobjects"
+  ],
+  "no_other_cohort_changes": true,
+  "no_crosscohort_statistical_deduplication": true,
+  "no_BaZi_outcomes_or_final_freeze": true,
+  "limits": [
+    "169 offline screens are not169 original biographies read.",
+    "Three pilot holds and all other unexplored source bodies remain unresolved; no literature exhaustion claimed.",
+    "Existing four compound-place geography holds fromv14 remain unchanged."
+  ]
+}

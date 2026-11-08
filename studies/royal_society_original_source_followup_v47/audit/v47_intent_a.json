@@ -1,0 +1,283 @@
+{
+  "written_utc": "2026-11-08T12:08:11.932541+00:00",
+  "version": 47,
+  "group": "a",
+  "scope_file": "v47_original_scope.json",
+  "scope_sha256": "75066f2d271f78cbbaaddce05db3a094a3d30d63baeb0b5c397b91a311358d5f",
+  "native_scope_sha256": "5c816a74ce8698f0d29721ed984f86dd88d4e61d1707aa9cb897ef1c95635cc3",
+  "triage_sha256": "6a41521df23bb5a0042d85802d54c1ec17063a66f79f1e0d71b6ecfe0e4171db",
+  "all9_current_issue_inventories_read_in_full_before_web": true,
+  "inventory_file_pins": {
+    "active_source_DOB_conflicts.json": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+    "birthplace_source_conflicts.json": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+    "source_derived_age_inconsistencies.json": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+    "provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+    "lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+    "cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+    "source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+    "omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+    "source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+  },
+  "complete_native_target_and_prior_worker_AND_root_ledgers_read_before_web": true,
+  "prior_context_review_timing": "Full targeted historicalworker/rootreports read in frozenlocaltriage before thissourcephase; pins rechecked beforequeries.",
+  "history_file_pins": {
+    "v15_sources_a.json": "4a7b04399e8c0c324c597e97ab5839d8a098a919d9a1aa4f13f77274aed10337",
+    "v18_sources_b.json": "da618e296992d3b6c3f3a4a18547965b33507aafc9f25675d8e24068c2265c32",
+    "v18_sources_b_mccance_collar.json": "57be1af9fb29fc8642cf690b5d81166b5985e982fb7895fd7bce62ecab64bdc4",
+    "v25_sources_b.json": "a040efead0457e13dd93600a71bbb484505eeedcfadaa9510b25425294c40340",
+    "v25_sources_c.json": "0c6eb718f8a83299b4a5d4229685a099e023cc00f71b3ce3657df8e11ebac49c",
+    "v28_sources_a.json": "099c0536807fbd0a0a4ddc902dee83d787646d98e79d673641c46ea0743f38f4",
+    "academy_repo/studies/royal_society_birthplace_completion_v15/audit/root_intent.json": "752d7d7cb02fd7970e9914e7932d3493cf65118a7f9428d1788e926426621539",
+    "academy_repo/studies/royal_society_birthplace_completion_v15/audit/protocol_and_parent_review.json": "a0925f2e0d27ec9f13cc5d168bdf89ff1df80a00bfb4a3b88bed6ad302003ef2",
+    "academy_repo/studies/royal_society_birthplace_completion_v18/audit/root_intent.json": "f2a1c8304ed8d33af6027923894a5088bc2a4876c6a46a1ab50a00e581b15a49",
+    "academy_repo/studies/royal_society_birthplace_completion_v18/audit/parent_adjudication.json": "f352859e78404f4018dfea178e321468b17a0c9b62970d9dc15ba1743cfa7906",
+    "academy_repo/studies/royal_society_birthplace_completion_v25/audit/root_intent.json": "c4efb79acd678335b5cd74adb1eb1ef3ebb13b264cb64a7bab4afb20cc962434",
+    "academy_repo/studies/royal_society_birthplace_completion_v25/audit/root_followups.json": "f6b6a2a80b9aa16be7adae3452998ba988c2e6b183e3f445ed4d5160de433627",
+    "academy_repo/studies/royal_society_birthplace_completion_v28/audit/root_intent.json": "f71fbb6a387077e4f3cac99a7d056ea22e17c59d8242f8c395ae31bf3702d688",
+    "academy_repo/studies/royal_society_birthplace_completion_v28/audit/root_followups.json": "cdc9ea4387995825042752b7b574d59dad01eb30c8ef8c8f8fb9cafaea6a9975",
+    "academy_repo/studies/royal_society_birthplace_completion_v21/audit/root_intent.json": "656e6f7c8aa2654bccd66738327296217f10ba6d47783018912837e56f8abcb1",
+    "academy_repo/studies/royal_society_birthplace_completion_v21/audit/root_followups.json": "36f4104dfab41afb160d319c035ccdd98d071fe641d9691c0da4c33e91abb5e3",
+    "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v15_holds.json": "c6aa776aaa1aa60ae8a6497532210b4fc937253694011de1f0d6f2dd9fdb4942",
+    "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v18_holds.json": "81e5432af8ad764152805fbc15311ae18ba89e1eb823a521ea6222ad14efc249",
+    "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v21_holds.json": "cf04731a4626cefb1141e640b23550bbc6a9a34fad0ad83a25ba504ff4e2b928",
+    "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v25_holds.json": "499bd2c8658e99d259484241c8bb0b69f0a30aab04c3a86b4c6fcded5bc83cf0",
+    "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v28_holds.json": "16c516cf51aa6424e29bd9bbba9d86edd079c5f366410e1fb45d3f7539b96a97"
+  },
+  "entries": [
+    {
+      "entry_id": 1,
+      "written_utc": "2026-11-08T12:08:11.932601+00:00",
+      "operation": "system2_search_query",
+      "record_id": "RS_PAST_NA3358",
+      "q": "\"Andrew McCance\" site:npg.org.uk/collections/search/person",
+      "purpose": "First distinctinstitutionalbiography locator, actualURLonly; no searchbirthclaim adoption or guessed URL."
+    },
+    {
+      "entry_id": 2,
+      "written_utc": "2026-11-08T12:08:11.932605+00:00",
+      "operation": "system2_search_query",
+      "record_id": "RS_PAST_NA7070",
+      "q": "\"Charles Drummond Ellis\" site:npg.org.uk/collections/search/person",
+      "purpose": "First distinctinstitutionalbiography locator, actualURLonly; no searchbirthclaim adoption or guessed URL."
+    },
+    {
+      "entry_id": 3,
+      "written_utc": "2026-11-08T12:08:11.932607+00:00",
+      "operation": "system2_search_query",
+      "record_id": "RS_PAST_NA3652",
+      "q": "\"William Wilton Douglas\" site:history.rcp.ac.uk",
+      "purpose": "First distinctinstitutionalbiography locator, actualURLonly; no searchbirthclaim adoption or guessed URL."
+    },
+    {
+      "entry_id": 4,
+      "written_utc": "2026-11-08T12:08:45.468036+00:00",
+      "operation": "system1_search_query",
+      "record_id": "RS_PAST_NA3358",
+      "q": "\"Andrew McCance\"",
+      "domains": [
+        "npg.org.uk"
+      ],
+      "purpose": "Engine2 returned portraits/listcarriers but no actualpersonURL; locate observed NPGperson URI without guessing."
+    },
+    {
+      "entry_id": 5,
+      "written_utc": "2026-11-08T12:08:45.468048+00:00",
+      "operation": "system1_search_query",
+      "record_id": "RS_PAST_NA3652",
+      "q": "\"William Wilton Douglas\" biography",
+      "domains": [
+        "history.rcp.ac.uk",
+        "medicine.yale.edu"
+      ],
+      "purpose": "Engine2 RCPquery had no subjectmatch. Final distinct institutionalbiography locator; Yale originalpersonalcomposition may be adaptivelyobserved, no closedRSmemoircarrier."
+    },
+    {
+      "entry_id": 6,
+      "written_utc": "2026-11-08T12:08:45.468051+00:00",
+      "operation": "open",
+      "record_id": "RS_PAST_NA7070",
+      "ref_id": "https://www.npg.org.uk/collections/search/person/mp148154/sir-charles-drummond-ellis",
+      "observed_locator_ref": "turn4467942search0",
+      "purpose": "First actuallyobserved distinctNPGpersonbody; no oldODNB/RSmemoir/Wikipediareopen."
+    },
+    {
+      "entry_id": 7,
+      "written_utc": "2026-11-08T12:09:20.331700+00:00",
+      "operation": "open",
+      "record_id": "RS_PAST_NA3358",
+      "ref_id": "https://www.npg.org.uk/collections/search/portrait/mw243694/Sir-Andrew-McCance",
+      "observed_locator_ref": "turn4467942search8/turn7748863search0",
+      "purpose": "First actualobserved portrait carrier to follow actualsitter-personlink; portrait/date/events notbirthfacts, no guessedpersonURI."
+    },
+    {
+      "entry_id": 8,
+      "written_utc": "2026-11-08T12:09:20.331713+00:00",
+      "operation": "open",
+      "record_id": "RS_PAST_NA3652",
+      "ref_id": "https://prabook.com/web/william.douglas/1301727",
+      "observed_locator_ref": "turn7748863search5",
+      "purpose": "Adaptivelyobserved distinctoriginalcompiledpersonalprofile after no institutionalbiographyURL; actualbody required for fullname/date/career/birth relation, no searchclaim or hostgradepromotion."
+    },
+    {
+      "entry_id": 9,
+      "written_utc": "2026-11-08T12:09:38.149543+00:00",
+      "operation": "click",
+      "record_id": "RS_PAST_NA3358",
+      "ref_id": "turn3436050view0",
+      "id": 34,
+      "purpose": "Actual observed sitter-person hyperlinkL67 from acquiredportrait, first originalpersonbiographybody; not a portraitretry/guessedURI."
+    }
+  ],
+  "web_operation_batches": [
+    {
+      "entry_ids": [
+        1,
+        2,
+        3
+      ],
+      "tool_arguments": {
+        "system2_search_query": [
+          {
+            "q": "\"Andrew McCance\" site:npg.org.uk/collections/search/person"
+          },
+          {
+            "q": "\"Charles Drummond Ellis\" site:npg.org.uk/collections/search/person"
+          },
+          {
+            "q": "\"William Wilton Douglas\" site:history.rcp.ac.uk"
+          }
+        ],
+        "response_length": "long"
+      },
+      "local_validation_chunk_id": "776d18",
+      "local_validation_exit_code": 0,
+      "validation_completed_before_web": true,
+      "result_refs": [
+        "turn4467942search0",
+        "turn4467942search1",
+        "turn4467942search2",
+        "turn4467942search3",
+        "turn4467942search4",
+        "turn4467942search5",
+        "turn4467942search6",
+        "turn4467942search7",
+        "turn4467942search8",
+        "turn4467942search9",
+        "turn4467942search10",
+        "turn4467942search11",
+        "turn4467942search12",
+        "turn4467942search13",
+        "turn4467942search14",
+        "turn4467942search15",
+        "turn4467942search16",
+        "turn4467942search17",
+        "turn4467942search18",
+        "turn4467942search19",
+        "turn4467942search20",
+        "turn4467942search21",
+        "turn4467942search22",
+        "turn4467942search23"
+      ]
+    },
+    {
+      "entry_ids": [
+        4,
+        5,
+        6
+      ],
+      "tool_arguments": {
+        "system1_search_query": [
+          {
+            "q": "\"Andrew McCance\"",
+            "domains": [
+              "npg.org.uk"
+            ]
+          },
+          {
+            "q": "\"William Wilton Douglas\" biography",
+            "domains": [
+              "history.rcp.ac.uk",
+              "medicine.yale.edu"
+            ]
+          }
+        ],
+        "open": [
+          {
+            "ref_id": "https://www.npg.org.uk/collections/search/person/mp148154/sir-charles-drummond-ellis"
+          }
+        ],
+        "response_length": "long"
+      },
+      "local_validation_chunk_id": "d8d6d9",
+      "local_validation_exit_code": 0,
+      "validation_completed_before_web": true,
+      "result_refs": [
+        "turn7748863search0",
+        "turn7748863search1",
+        "turn7748863search2",
+        "turn7748863search3",
+        "turn7748863search4",
+        "turn7748863search5",
+        "turn7748863search6",
+        "turn7748863search7",
+        "turn7748863search8",
+        "turn7748863search9",
+        "turn7748863view0"
+      ]
+    },
+    {
+      "entry_ids": [
+        7,
+        8
+      ],
+      "tool_arguments": {
+        "open": [
+          {
+            "ref_id": "https://www.npg.org.uk/collections/search/portrait/mw243694/Sir-Andrew-McCance"
+          },
+          {
+            "ref_id": "https://prabook.com/web/william.douglas/1301727"
+          }
+        ],
+        "response_length": "long"
+      },
+      "local_validation_chunk_id": "cad32f",
+      "local_validation_exit_code": 0,
+      "validation_completed_before_web": true,
+      "result_refs": [
+        "turn3436050view0",
+        "turn3436050view1"
+      ]
+    },
+    {
+      "entry_ids": [
+        9
+      ],
+      "tool_arguments": {
+        "click": [
+          {
+            "ref_id": "turn3436050view0",
+            "id": 34
+          }
+        ],
+        "response_length": "long"
+      },
+      "local_validation_chunk_id": "965fd7",
+      "local_validation_exit_code": 0,
+      "validation_completed_before_web": true,
+      "result_refs": [
+        "turn7034677view0"
+      ]
+    }
+  ],
+  "actual_retrieval_counts": {
+    "queries": 5,
+    "navigation_attempts": 4,
+    "opens": 3,
+    "clicks": 1,
+    "finds": 0,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "completed_utc": "2026-11-08T12:11:48.309343+00:00"
+}

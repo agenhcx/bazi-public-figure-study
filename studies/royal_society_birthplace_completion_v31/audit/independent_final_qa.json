@@ -1,0 +1,134 @@
+{
+  "schema": "UK_v31_geography_only_independent_final_QA_v1",
+  "reviewer": "/root/v26_final_qa",
+  "written_utc": "2026-11-06T12:55:33.478821+00:00",
+  "status": "PASS",
+  "validation_categories_passed": 39,
+  "checks": [
+    "five pinned production outputs match before QA",
+    "v30 baseline and v31 current canonical exactly pinned",
+    "selfcontained v30 reconstruction all4983 completeobjects exact",
+    "legacy geography constants unchanged by newphase",
+    "legacy v20 geography and prior firstbirthplace helpers unchanged",
+    "fixed recordorder unique keys andUKcohort",
+    "68existingplacegeoqueue12fixedreviewed2facts10holds partition",
+    "geographyscope3groups4 and no firstbirthplaceinputs",
+    "only six declared geographyfields mutable",
+    "exacttwochanged MaynardHardy4981 completeobjects identical",
+    "allnative allBP evidence allpriorfacts frozen exactgeorollback",
+    "allrawbirthplaces andBPgrades remainunchanged everywhere",
+    "all103windowblank andall525blank completeobjects unchanged",
+    "all10currentholds completeobjects unchanged",
+    "MaynardLondonS1 HardyNottinghamS2 oldBP unchanged newS3geoonlyNorth",
+    "Maynardyear1920 lifespan2004 notexactJan6confirmation",
+    "Hardyexact1896Feb10 no source-deathendpointconfirmation",
+    "independentoverall and2644windowcounts",
+    "blankcountsunchanged103525 andunknownnonblank6678 recomputed",
+    "summarygeo2 BP0 roles andfrozenbaseline exact",
+    "twogeoonlychanges oldBPrawgrades exactpreserved",
+    "CSV116oldcolumns samepositions plus6newgeo=122",
+    "all4983CSVrows only2oldcurrenthemispherecells changes",
+    "remaining169unknownCSVexact masterorder",
+    "all9sidecarsbyteidentical including7qualifiedDOBobjects",
+    "allinheritedprioractiveconflictcopies byteidentical",
+    "historicalv29firstpasscloseoutbyteexact keepsv29hash same103blankIDs",
+    "allinheritedissue middlecase andpreviousRambaut completeobjects unchanged",
+    "EwinsBarberplaceholds and7activeDOBcases excludedbeforeselection preserved",
+    "HarryweakKiddleS3proposalpreserved currentclasshold noexception orcorrectnessverdict",
+    "Goodwincachedterminalstatusloss disclosedwithout reconstructedmatchorabsence",
+    "24queries16worker2root18nav5find0shotGET accounting",
+    "rootadjudicationgeo2BP0 no newconflict ormiddleendpointexception",
+    "quotesMaynard4 Hardy9 Harryheld5 andunknownrawmetadata null",
+    "no fullsourcecache image formats distributed",
+    "README CONTINUATION phase counts frozenBP historicalhash sourceandconflictlimits directlyreviewed",
+    "sourceQAfinalPASS geofact activeDOB andclassadjudicationhashbindings match",
+    "twoisolatedcleanreplays all5outputs equal originalpins",
+    "productionfiveoutputs untouched afterQA"
+  ],
+  "baseline_canonical_sha256": "4313e08b77eee084ed6ba828b1490a57deba8fab502a6fe09a4780db8ac14e8a",
+  "final_canonical_sha256": "c9c6b0d913c4ec0a8ff9a5d458ad8707da398ded149b86cd3c2794ee8f1d1932",
+  "records": 4983,
+  "changed_complete_objects": 2,
+  "unchanged_complete_objects": 4981,
+  "new_birthplaces": 0,
+  "geography_only_resolutions": 2,
+  "overall": {
+    "north": 4193,
+    "unknown": 603,
+    "south": 187
+  },
+  "window_counts": {
+    "north": 2293,
+    "unknown": 169,
+    "south": 182
+  },
+  "blank_diagnostics": {
+    "all_blank_raw_birthplace": 525,
+    "window_blank_raw_birthplace": 103,
+    "all_unknown": 603,
+    "all_unknown_with_blank_raw_birthplace": 525,
+    "all_unknown_with_nonblank_raw_birthplace": 78,
+    "window_unknown": 169,
+    "window_unknown_with_blank_raw_birthplace": 103,
+    "window_unknown_with_nonblank_raw_birthplace": 66
+  },
+  "main_pre_QA_output_pins": {
+    "birthplace_rows.jsonl.gz": "3e8c8ffde2ca19f526e73d79ed7118cab2ce97b3789eec0c227f20577afdb9b7",
+    "birthplaces.csv": "21a0b9f4dc27527e2c0c0cbebdbc3403246a3e86f0a18c4d747885f0e6a18199",
+    "changes.json": "d83e81b4025e3d1ce553cb89bc05f53625c3938a4a878a9b8828ec2d39dfe3b6",
+    "remaining_unknown_window.csv": "0a60e2abcea23ef6dd721d831a5292d014aadde7c97b529a668dc9f29341d819",
+    "summary.json": "ec77506fea6c05cd21b7a1505c45ee7ba0c4ed33cd7a8d104f4c63f28d9ad95d"
+  },
+  "isolated_replay_runs": [
+    {
+      "run": 1,
+      "clean_exit": true,
+      "five_hashes": {
+        "birthplace_rows.jsonl.gz": "3e8c8ffde2ca19f526e73d79ed7118cab2ce97b3789eec0c227f20577afdb9b7",
+        "birthplaces.csv": "21a0b9f4dc27527e2c0c0cbebdbc3403246a3e86f0a18c4d747885f0e6a18199",
+        "changes.json": "d83e81b4025e3d1ce553cb89bc05f53625c3938a4a878a9b8828ec2d39dfe3b6",
+        "remaining_unknown_window.csv": "0a60e2abcea23ef6dd721d831a5292d014aadde7c97b529a668dc9f29341d819",
+        "summary.json": "ec77506fea6c05cd21b7a1505c45ee7ba0c4ed33cd7a8d104f4c63f28d9ad95d"
+      },
+      "matched_original_pins": true
+    },
+    {
+      "run": 2,
+      "clean_exit": true,
+      "five_hashes": {
+        "birthplace_rows.jsonl.gz": "3e8c8ffde2ca19f526e73d79ed7118cab2ce97b3789eec0c227f20577afdb9b7",
+        "birthplaces.csv": "21a0b9f4dc27527e2c0c0cbebdbc3403246a3e86f0a18c4d747885f0e6a18199",
+        "changes.json": "d83e81b4025e3d1ce553cb89bc05f53625c3938a4a878a9b8828ec2d39dfe3b6",
+        "remaining_unknown_window.csv": "0a60e2abcea23ef6dd721d831a5292d014aadde7c97b529a668dc9f29341d819",
+        "summary.json": "ec77506fea6c05cd21b7a1505c45ee7ba0c4ed33cd7a8d104f4c63f28d9ad95d"
+      },
+      "matched_original_pins": true
+    }
+  ],
+  "main_outputs_rerun_or_mutated": false,
+  "new_active_DOB_conflicts": 0,
+  "active_DOB_conflict_count": 7,
+  "all7_active_DOB_conflict_objects_unchanged": true,
+  "historical_v29_closeout_hash_preserved": true,
+  "quote_words": {
+    "Maynard_Kyoto": 4,
+    "Hardy_Gifford": 9,
+    "Harry_Kiddle_held": 5
+  },
+  "documentation_checks": {
+    "files": [
+      "README.md",
+      "CONTINUATION.md"
+    ],
+    "counts_scope_limits_consistent": true,
+    "review_method": "Direct geography-only review: LondonS1/NottinghamS2 andallBPfacts frozen; newS3Kyoto/Gifford countrycontext only; Maynardactualyear1920/lifespan2004 notexactJan6, Hardyactualexactbirth1896Feb10 notdeathconfirmation; Kiddleweakproposal preserved/derivativeclasshold currentonly/no correctnessverdict ornewexception/retroactivedowngrade; knownEwinsBarberplaceholds excluded; Goodwinterminalfindstatusnotreconstructed; all9sidecars unchanged/historicalv29closeouthash preserved."
+  },
+  "limitations": [
+    "Independent local data/structural/replay verification only; no network, original-source acquisition or rawHTTP-byte inspection by this reviewer.",
+    "Source semantic/genre/source-newness reviewed separately in independent_source_qa.json; source locators are not a new acquisition claim by this reviewer.",
+    "Maynard/Hardy newS3 grades support geography only; originalLondonS1/NottinghamS2/BPURLs/claims/DOBgrades remain unchanged. Maynard1920only doesnotconfirmJan6; Hardyactualexactbirthdaydoesnotconfirm1985death or undatedarticlepublicationtime.",
+    "HarryKiddleactualcountryassertion andweakS3workerproposal are retainedunadoptedunderoriginal-workboundary. No factcorrectness/independence verdict,newadmissionexception or legacyS3downgrade.",
+    "All7qualifiedDOBconflictobjects andeightotherissuefiles unchanged; Tomesprovisional distinct. v29firstpasscloseoutremainshistoricalwithv29hash andall103blankobjects untouched.",
+    "No production inputs, facts, code, master outputs or Git operations changed; this audit and scratch harness only."
+  ]
+}

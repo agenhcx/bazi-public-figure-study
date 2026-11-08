@@ -1,0 +1,194 @@
+{
+  "schema": "v22_groupA_own_sources_v1",
+  "written_utc": "2026-11-05T23:45:12.163837+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA3931",
+    "RS_PAST_NA4220"
+  ],
+  "intent_file": "v22_a_intent.json",
+  "counts": {
+    "discovery_queries": 3,
+    "web_navigation_attempts": 4,
+    "parsed_find_operations": 0,
+    "screenshots": 0,
+    "raw_HTTP_or_PDF_GETs": 0,
+    "birthplace_candidates": 0,
+    "holds": 2
+  },
+  "candidates": [],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA3931",
+      "native": {
+        "record_id": "RS_PAST_NA3931",
+        "authority_name": "Barnard; Eric Albert (1927 - 2018)",
+        "native_dob": "1927-07-02",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "a407777f77e8afc52495287666185120cc9d6a860ad1dcd2b810592287cf92a4"
+      },
+      "status": "hold_no_explicit_birthplace_in_acquired_original_body_and_memoir_unavailable",
+      "hold_type": "original_birthplace_body_unavailable",
+      "reason": "Original authored UCL-repository obituary states fullEricAlbertBarnard/exactnative2July1927 anddeath23May2018, but no birthplace. SouthLondon describes an orphanage upbringing; Cambridge wartime evacuation, school/work/death are not birth. NewRSmemoirDOIroute inaccessible andstopped.",
+      "sources": [
+        {
+          "url": "https://discovery.ucl.ac.uk/10055685/3/Stephenson_EAB%20August%2029%202018.pdf",
+          "ref": "turn7436821view0",
+          "source_title": "Eric A Barnard FRS (1927 -2018)",
+          "source_authors": [
+            "J. Oliver Dolly",
+            "Jeremy M Henley",
+            "F. Anne Stephenson"
+          ],
+          "source_kind": "original_authored_neuroscience_obituary_manuscript_on_UCL_repository",
+          "source_birthdate": "1927-07-02",
+          "source_birthdate_precision": "exact_day_in_born_sentence",
+          "source_death_date": "2018-05-23",
+          "source_publication_date": null,
+          "source_publication_date_precision": "notexplicitinacquiredmanuscript;filenameisnotpublicationdate",
+          "source_locator": "PDFindex0: authors2-7, fullsubject/death8, exactbirth12, upbringing/evacuation14-15, FRS1981 at31-32; fivepageparsedtext inspected.",
+          "birthplace_relation_verified": false,
+          "source_quote": "",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null
+        },
+        {
+          "url": "https://doi.org/10.1098/rsbm.2020.0017",
+          "ref": "turn4886707view1",
+          "source_kind": "original_Royal_Society_memoir_DOI_route_bodyunavailable",
+          "birthplace_relation_verified": false,
+          "result": "toolinaccessible;stoppednoretry"
+        }
+      ],
+      "identity_review": [
+        "Allnativefullnamecomponents EricAlbertBarnard directlypresent atL8; exactnativeDOBatL12 andcompatible2018death atL8.",
+        "Molecularneurobiology, FRS1981, ImperialRankprofessorship andMRCunit1985careerbindtarget.",
+        "No birthplace assertion acquired; upbringingnotreused."
+      ],
+      "source_grade_proposal": null,
+      "geography_decision": "unchanged_unknown",
+      "no_master_change": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA4220",
+      "native": {
+        "record_id": "RS_PAST_NA4220",
+        "authority_name": "Hewitt; Geoffrey Frederick (1934 - 2019)",
+        "native_dob": "1934-01-03",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "69de7d911e1f0ceeca3d57c1d283918462dfc1d6db8aec95d14931fda97871c1"
+      },
+      "status": "hold_original_birthplace_body_unavailable",
+      "hold_type": "original_birthplace_body_unavailable",
+      "reason": "NewfulloriginalRSmemoirreturnedtool403; originalGlobalEnergyawardobituaryreturnedtool502. Bothstopped. WarringtonEngland/year1934 is search-only explicitbornlead andnotadopted. IChemEoriginalsignedcareerobituarydiscoverycontainsnoclearbornplace andwasnotopened.",
+      "sources": [
+        {
+          "url": "https://royalsocietypublishing.org/rsbm/article/doi/10.1098/rsbm.2025.0002/234058/Geoffrey-Frederick-Hewitt3-January-1934-18-January",
+          "ref": "turn4886707view0",
+          "source_kind": "original_Royal_Society_memoir_bodyunavailable",
+          "result": "toolreported403Forbidden;stoppednoretry",
+          "birthplace_relation_verified": false
+        },
+        {
+          "url": "https://globalenergyprize.org/en/2019/01/18/in-memory-of-the-outstanding-scientist-the-2007-global-energy-prize-laureate-geoffrey-hewitt/",
+          "ref": "turn4886707view2",
+          "source_kind": "original_award_organization_obituary_bodyunavailable",
+          "result": "toolreported502BadGateway;stoppednoretry",
+          "birthplace_relation_verified": false,
+          "discovery_only_born_lead": {
+            "place": "Warrington, England",
+            "year": "1934",
+            "source_name_in_discovery": "Geoffrey Hewitt",
+            "precision": "year_only",
+            "fullnativeFrederickcomponent_in_discovery": false,
+            "no_identity_expansion_or_adoption": true
+          }
+        }
+      ],
+      "source_birthdate_precision": "nooriginalbodyDOBacquired",
+      "source_grade_proposal": null,
+      "geography_decision": "unchanged_unknown",
+      "no_master_change": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    }
+  ],
+  "query_ledger": [
+    {
+      "q": "\"Geoffrey Frederick Hewitt\" \"born\" obituary",
+      "refs": [
+        "turn8916467search0",
+        "turn8916467search4",
+        "turn8916467search5",
+        "turn8916467search6"
+      ],
+      "result": "Neworiginalmemoir/IChemEleads; noadopteddiscoveryprojection."
+    },
+    {
+      "q": "\"Eric Albert Barnard\" \"born\" obituary",
+      "refs": [
+        "turn8916467search7",
+        "turn8916467search2",
+        "turn8916467search8"
+      ],
+      "result": "OriginalUCLauthoredPDFandRSmemoirDOIleads; differenthostingdiscoverynotbodyverification."
+    },
+    {
+      "q": "\"Geoffrey Hewitt\" obituary \"born\"",
+      "refs": [
+        "turn7436821search0",
+        "turn7436821search1",
+        "turn7436821search2"
+      ],
+      "result": "NewawardbodybornWarringtonEngland/year1934lead; IChemEsignedcareerobituarylead; no projectionadopted."
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "url": "https://discovery.ucl.ac.uk/10055685/3/Stephenson_EAB%20August%2029%202018.pdf",
+      "ref": "turn7436821view0",
+      "result": "acquiredoriginalauthored5pagePDFparsedtext155lines;exactDOB/fullidentity/career,nobirthplace",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "url": "https://royalsocietypublishing.org/rsbm/article/doi/10.1098/rsbm.2025.0002/234058/Geoffrey-Frederick-Hewitt3-January-1934-18-January",
+      "ref": "turn4886707view0",
+      "result": "toolreported403Forbidden;stoppednoretry",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "url": "https://doi.org/10.1098/rsbm.2020.0017",
+      "ref": "turn4886707view1",
+      "result": "toolinaccessible;stoppednoretry",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "url": "https://globalenergyprize.org/en/2019/01/18/in-memory-of-the-outstanding-scientist-the-2007-global-energy-prize-laureate-geoffrey-hewitt/",
+      "ref": "turn4886707view2",
+      "result": "toolreported502BadGateway;stoppednoretry",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    }
+  ],
+  "quote_ledger": {},
+  "protocol_deviations": [],
+  "limits": [
+    "Allrequests hadpriorintents. No failedrouteretry orrawGET.",
+    "ToolparsedPDFtext isnotrawbytes; rawstatus/hash/exactrequesttimeunknownnull.",
+    "Onlyminimalstructuredfacts/locators, nooriginalPDF/HTML/images/sourceprojectioncache distributed.",
+    "NoDOB/calendar/identity/eligibility/grade/country/QID/coordinate/master/Git/BaZi/outcome/finalfreeze mutation."
+  ]
+}

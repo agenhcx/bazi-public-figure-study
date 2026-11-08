@@ -1,0 +1,344 @@
+{
+  "schema": "v26_sources_c_v1",
+  "worker": "/root/v26_sources_c",
+  "written_utc": "2026-11-06T10:43:10.553840+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA6572",
+    "RS_PAST_NA732",
+    "RS_PAST_NA780",
+    "RS_PAST_NA788"
+  ],
+  "intent_file": "v26_c_intent.json",
+  "counts": {
+    "discovery_queries": 8,
+    "web_navigation_attempts": 10,
+    "parsed_find_operations": 0,
+    "screenshots": 0,
+    "raw_HTTP_or_PDF_GETs": 0,
+    "body_verified_birthplace_candidates": 1,
+    "holds": 3
+  },
+  "candidates": [
+    {
+      "record_id": "RS_PAST_NA780",
+      "native": {
+        "record_id": "RS_PAST_NA780",
+        "authority_name": "Evans; John William (1857 - 1930)",
+        "native_dob": "1857-07-27",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "94bf33a810a8e0ff0b1b11f0697686be056286342529ff442e71de4d2ed01cca"
+      },
+      "status": "candidate_original_family_historical_compiled_entry_S3_parent_review",
+      "raw_birthplace": "Barbican, London (2 Beech Street, Barbican, London)",
+      "source_url": "https://www.turle.name/the_doctors/indiI25.html",
+      "source_title": "John William EVANS 1857-1930",
+      "source_author": null,
+      "source_attribution": "Birth row cites Dictionary of Welsh Biography and Research of Frances Hartman; site copyright P D Leggat 2005-2010. No verified claim-specific editorial/expert status or acquired civil record.",
+      "source_kind": "original personal family-historical compiled entry, distinct from search projection or Wikipedia mirror",
+      "publication_year": null,
+      "publication_date_precision": "No explicit publication date acquired. Record last changed9May2009 metadata is not relabeled original publicationdate.",
+      "source_grade_proposal": "S3",
+      "source_grade_basis": "Conservative compiled genealogical-history assertion, without acquired civil record or verified expert editing. Named research attribution/copyright does not establish S2. Parent may decline under existing quality gates; worker does not modify master.",
+      "source_grade_role": "person_birthplace_support_only",
+      "source_quote": "Born in Barbican, London (2 Beech Street, Barbican, London).",
+      "source_quote_word_count": 9,
+      "source_locator": "turn3105208view1:L9-17 exact full name/lifespan/native DOB/direct birthplace;L37-47 stategeologist/GeologicalSocietypresident/death career anchors;L80-100 sources/research/copyright/lastchangedmetadata.",
+      "source_body_ref": "turn3105208view1",
+      "source_birthdate": "1857-07-27",
+      "source_birthdate_precision": "exact_day_in_original_life_history_birthrow_and_header",
+      "source_deathdate": "1930-11-16",
+      "source_DOB_native_compatibility": "Original full date27Jul1857 agrees unchanged native1857-07-27; lifespan1857-1930 agrees nativeauthority. Separate baptism16Sep1857 explicitly labeled baptism, not adopted as birth.",
+      "observed_source_full_name": "John William Evans",
+      "identity_review": [
+        "Actual John William EVANS FRS CBE fullcomponents all match native; no omitted-name amendment needed.",
+        "Exactbirthdate/native match and compatiblelifespan1857-1930.",
+        "Coherent geologist career: Kathiawar/Mysore, ImperialCollege geology, GeologicalSociety presidency1924-1926, published geologicalworks. These are source-only identitycontext, not independent nativecorroboration.",
+        "Unreliable-looking combined honours/occupation timeline label under1901 is not treated as verified fellowship date or used as birthproof. No career/date repair performed.",
+        "No observed competingidentity/sourceDOB or actualplaceconflict acquired; secondarysearchprojections not counted as original corroboration."
+      ],
+      "reviewed_hemisphere_proposal": "unknown",
+      "geographic_basis": "Birth-linked location is city/streetaddress only. England occurs only in a latercensusresidence row, not birth; nationality, school, work, death and address familiarity do not supply birthplace-country/hemisphere. No country/QID/coords assigned.",
+      "caveats": [
+        "Personal compiled familyhistory, not a civilbirthcertificate, expertverifiedbiography, or independentcrosscheck.",
+        "References to DWB/FrancesHartman in birthrow do not prove those underlyingworks independently support every place/address detail; no cited source was acquired as birthplaceproof.",
+        "Cambridge original1931 obituary landingpage acquired title/author/issue metadata but exposed no actual subjectbody; not corroboration or evidenceofbirthplaceabsence. Online2009date is distinct from actual1931publication.",
+        "No fullsourceHTML/PDF/images/caches distributed."
+      ],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original text or exact tool result, not raw HTTP bytes",
+      "no_master_change": true
+    }
+  ],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA6572",
+      "native": {
+        "record_id": "RS_PAST_NA6572",
+        "authority_name": "Creak; Ettrick William (1835 - 1920); Captain; superintendent of Compasses, Admiralty",
+        "native_dob": "1835-05-28",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "794bafa53e6f47bee82c1ec44a9f089168a6c3e0ab9be3f08461cfc57349b6f6"
+      },
+      "status": "hold_no_explicit_birthplace_in_acquired_bodies_and_official_body_timeout",
+      "hold_type": "no_explicit_subject_birthplace_acquired",
+      "reason": "Original Nature obituary preview fullEttrickWilliamCreak identifies naval/compasscareer and FRS1885 but contains no subjectbirthplace; Norfolk modifies father, not subjectbirth. Original ScienceMuseumpersonentry gives1835-1920/fullname/career but no explicitbirthplace. OfficialRoyalSocietyoriginalbody timedout and stopped; searchprojection exactDOB28May1835 is discoveryonly, not actualbody verification. No exhaustivefullmemoirabsence claim.",
+      "sources": [
+        {
+          "url": "https://www.nature.com/articles/105300b0.pdf",
+          "body_ref": "turn6835531view1",
+          "locator": "L14-32",
+          "source_publication_date": "1920-06-05",
+          "actual_byline": "T. H. T.",
+          "byline_not_expanded": true,
+          "retrieval_limit": "RequestedPDF redirected to articleHTML with cookies_not_supported query; actualoriginalabstract/preview parsed, fullsubscriptionbody not acquired."
+        },
+        {
+          "url": "https://collection.sciencemuseumgroup.org.uk/people/cp44946",
+          "body_ref": "turn3105208view2",
+          "locator": "L33-41",
+          "no_explicit_birthplace_in_inspected_body": true
+        },
+        {
+          "url": "https://makingscience.royalsociety.org/people/na6572/ettrick-william-creak",
+          "body_ref": "turn3697569view0",
+          "exact_tool_error": "Failed to fetch https://makingscience.royalsociety.org/people/na6572/ettrick-william-creak: TimeoutError",
+          "stopped_without_retry": true
+        }
+      ],
+      "quotes_used": [],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original text or exact tool result, not raw HTTP bytes",
+      "no_master_change": true
+    },
+    {
+      "record_id": "RS_PAST_NA732",
+      "native": {
+        "record_id": "RS_PAST_NA732",
+        "authority_name": "Hawkins; Herbert Leader (1887 - 1968)",
+        "native_dob": "1887-06-01",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "ad3120f790ac795722e326754623a4019ff5a3c0c7e849aabac62bb94048be80"
+      },
+      "status": "hold_original_birthplace_memoir_body_unavailable",
+      "hold_type": "original_birthplace_body_unavailable",
+      "reason": "Reading original authoredcollectionsessay acquired fullHerbertLeaderHawkins/Readinggeologycareer and an Allen1970memoirreference, but no explicitbornplace or actualsubjectDOBassertion in inspectedessay. Linkedarchive navigatedto generalcollectionslanding, not archivebiography. BHL originalobituary403 and observedJSTORmemoirfetcherror stopped without retries. No geographicalinference from Readingwork/fieldtrips/librarylocation.",
+      "sources": [
+        {
+          "url": "https://collections.reading.ac.uk/special-collections/news-and-views/adventurous-of-mind-young-at-heart-herbert-leader-hawkins/",
+          "body_ref": "turn6835531view0",
+          "locator": "L39-68",
+          "actual_byline": "Written by Louise Cowan, Trainee Liaison Librarian",
+          "displayed_author_metadata": "micheledrisse",
+          "publication_date": "2016-11-17",
+          "no_explicit_birthplace_in_inspected_body": true
+        },
+        {
+          "url": "https://www.biodiversitylibrary.org/part/407512",
+          "body_ref": "turn3105208view0",
+          "exact_tool_error": "Failed to fetch https://www.biodiversitylibrary.org/part/407512: (403) Forbidden",
+          "stopped_without_retry": true,
+          "search_projection_only_metadata": "N. E. Butcher obituary in Journal of Conchology26(6),418-419,1971-07. Originalbody not acquired; no assertion/grade adopted."
+        },
+        {
+          "url": "https://www.reading.ac.uk/special-collections/collections/sc-hawkins-papers.aspx",
+          "body_ref": "turn5489168view2",
+          "actual_redirect_url": "https://collections.reading.ac.uk/special-collections/",
+          "retrieval_limit": "Generalcollectionslanding, no originalarchivebio acquired."
+        },
+        {
+          "url": "http://www.jstor.org/stable/769592",
+          "body_ref": "turn3697569view1",
+          "exact_tool_error": "Failed to fetch https://www.jstor.org/stable/769592: Error fetching https://www.jstor.org/stable/769592",
+          "stopped_without_retry": true
+        }
+      ],
+      "quotes_used": [],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original text or exact tool result, not raw HTTP bytes",
+      "no_master_change": true
+    },
+    {
+      "record_id": "RS_PAST_NA788",
+      "native": {
+        "record_id": "RS_PAST_NA788",
+        "authority_name": "Carter; Frederick William (1870 - 1952)",
+        "native_dob": "1870-12-16",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "2af4d7f2106c8763cb2fb12f458a25acafca5eef72e0864d242448031144d579"
+      },
+      "status": "hold_no_original_birthplace_body_acquired",
+      "hold_type": "original_birthplace_body_unavailable",
+      "reason": "Targeteddiscovery returned RoyalSocietypersonmetadata with compatibleexactDOB16Dec1870/fullname/lifespan1870-1952 but actualpersonbody502 stopped. NPGportraitsearchmetadata only supplies name/career, no qualifyingbirthplace. Numeroushomonymousfamilysearchresults have differentlifespans/DOBs; not evidenceofnativeconflict or candidatebirthplace. No initials/namealias/birthdate repair.",
+      "sources": [
+        {
+          "url": "https://makingscience.royalsociety.org/people/na788/frederick-william-carter",
+          "body_ref": "turn5489168view0",
+          "exact_tool_error": "Failed to fetch https://makingscience.royalsociety.org/people/na788/frederick-william-carter: (502) Bad Gateway",
+          "stopped_without_retry": true,
+          "search_projection_ref": "turn6835531search5",
+          "search_projection_not_originalbody": true
+        }
+      ],
+      "quotes_used": [],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original text or exact tool result, not raw HTTP bytes",
+      "no_master_change": true
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "ordinal": 1,
+      "ref": "turn6835531view0",
+      "outcome": "ReadingHawkinsoriginalessaybody acquired; no birthplace"
+    },
+    {
+      "ordinal": 2,
+      "ref": "turn6835531view1",
+      "outcome": "CreakNature originalpreviewHTML acquired after PDFredirect; no birthplace"
+    },
+    {
+      "ordinal": 3,
+      "ref": "turn3105208view0",
+      "outcome": "HawkinsBHL403 stopped"
+    },
+    {
+      "ordinal": 4,
+      "ref": "turn3105208view1",
+      "outcome": "Evansoriginalfamilycompiledentry directbirthplace candidate S3"
+    },
+    {
+      "ordinal": 5,
+      "ref": "turn3105208view2",
+      "outcome": "CreakScienceMuseumoriginalpersonbody no birthplace"
+    },
+    {
+      "ordinal": 6,
+      "ref": "turn5489168view0",
+      "outcome": "CarterRoyalSociety502 stopped"
+    },
+    {
+      "ordinal": 7,
+      "ref": "turn5489168view1",
+      "outcome": "EvansCambridgeoriginalobituarylanding metadata only, no actualobituarybody"
+    },
+    {
+      "ordinal": 8,
+      "ref": "turn5489168view2",
+      "outcome": "HawkinslinkedReadingarchive redirects to generalcollectionslanding"
+    },
+    {
+      "ordinal": 9,
+      "ref": "turn3697569view0",
+      "outcome": "CreakRoyalSocietytimeout stopped"
+    },
+    {
+      "ordinal": 10,
+      "ref": "turn3697569view1",
+      "outcome": "HawkinsJSTORfetcherror stopped"
+    }
+  ],
+  "limits": "No exhaustiveclaim, rawHTTPstatus/time/hash null even where toolerror itself reports403/502. No failedendpointretry/variant/bypass. No sourcechildren, sourcecaches, main/sourcecode/Git mutations. Candidate only pendingparentadmission.",
+  "query_ledger": [
+    {
+      "ordinal": 1,
+      "engine": "system2",
+      "query": "\"Ettrick William Creak\" born",
+      "response_source_refs": [
+        "turn1290194search0",
+        "turn1290194search3",
+        "turn1290194search4"
+      ],
+      "scope_note": "Observed source references relevant to Creak, not exhaustive result list."
+    },
+    {
+      "ordinal": 2,
+      "engine": "system2",
+      "query": "\"Herbert Leader Hawkins\" born",
+      "response_source_refs": [
+        "turn1290194search19",
+        "turn1290194search29",
+        "turn1290194search38"
+      ],
+      "scope_note": "Observed source references relevant to Hawkins, not exhaustive result list."
+    },
+    {
+      "ordinal": 3,
+      "engine": "system2",
+      "query": "\"John William Evans\" geologist born",
+      "response_source_refs": [
+        "turn1290194search1",
+        "turn1290194search8",
+        "turn1290194search23",
+        "turn1290194search26"
+      ],
+      "scope_note": "Observed source references relevant to Evans, not exhaustive result list."
+    },
+    {
+      "ordinal": 4,
+      "engine": "system2",
+      "query": "\"Frederick William Carter\" born",
+      "response_source_refs": [
+        "turn1290194search27",
+        "turn1290194search31"
+      ],
+      "scope_note": "Observed source references relevant to Carter, not exhaustive result list."
+    },
+    {
+      "ordinal": 5,
+      "engine": "system1",
+      "query": "\"Ettrick William Creak\" \"born\" \"1835\" biography",
+      "response_source_refs": [
+        "turn6835531search0",
+        "turn6835531search1"
+      ],
+      "scope_note": "Observed source references relevant to Creak, not exhaustive result list."
+    },
+    {
+      "ordinal": 6,
+      "engine": "system1",
+      "query": "\"Herbert Leader Hawkins\" \"born\" \"1887\" obituary",
+      "response_source_refs": [
+        "turn6835531search2",
+        "turn6835531search3"
+      ],
+      "scope_note": "Observed source references relevant to Hawkins, not exhaustive result list."
+    },
+    {
+      "ordinal": 7,
+      "engine": "system1",
+      "query": "\"John William Evans\" \"born\" \"1857\" biography memoir",
+      "response_source_refs": [
+        "turn6835531search4",
+        "turn6835531search7",
+        "turn6835531search8",
+        "turn6835531search9"
+      ],
+      "scope_note": "Observed relevant Evans source references, including search9 different1855-1943subject excluded; not exhaustive result list."
+    },
+    {
+      "ordinal": 8,
+      "engine": "system1",
+      "query": "\"Frederick William Carter\" \"1870\" obituary born",
+      "response_source_refs": [
+        "turn6835531search5",
+        "turn6835531search6"
+      ],
+      "scope_note": "Observed source references relevant to Carter, not exhaustive result list."
+    }
+  ],
+  "query_ledger_representation": "Exact queries copied from actual observed calls. Each four-query batch produced a combined source-result block; refs above are observed subject-relevant results, not a tool-guaranteed per-query provenance mapping. No absent query-level result IDs reconstructed.",
+  "protocol_deviations": [],
+  "protocol_deviation_review": "No known protocol deviation observed: all query/navigation intents written before actual calls; budgets8queries/10navigation reached; failed endpoints stopped; no new network in documentary QA update. Initial report quote_word_count10 was a manual counting error corrected to actual9 before completion; quoted text never changed."
+}

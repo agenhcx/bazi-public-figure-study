@@ -1,0 +1,110 @@
+{
+  "audit_time_utc": "2026-11-01T09:11:35.899583+00:00",
+  "independent_production_field_audit_passed": true,
+  "reviewer": "v15_review",
+  "baseline_commit": "2ba3d1161a6151a1f18dccda25e5073411c06f2c",
+  "script_sha256": "6bbc372b2442f61c8ca5c8a3d356c9301310639299d9af924dfa7f2b50c2f641",
+  "summary_sha256": "01f2186a25c8bbbc5b9e4f10b5dbe4bccf14be101daf9bf1ded2bd7cf0fef239",
+  "France_baseline_rows": 877,
+  "France_final_rows": 877,
+  "old_field_changes": {
+    "CTHS_128379": [
+      "membership_accepted",
+      "accepted_full_member_election_date",
+      "accepted_full_member_election_year",
+      "membership_role_supported",
+      "election_cutoff_stable",
+      "completion_status",
+      "completion_remaining_dimensions",
+      "source_evidence_review_version",
+      "accepted_election_precision",
+      "role_cutoff_and_dob_supported"
+    ],
+    "PROFILE2_08407b6d0479b1d0": [
+      "membership_role_supported",
+      "election_cutoff_stable",
+      "source_evidence_review_version",
+      "role_cutoff_and_dob_supported"
+    ]
+  },
+  "only_fixed_A2_old_membership_scope_changed": true,
+  "all_identity_DOB_raw_warning_origin_fields_preserved": true,
+  "all_other875_rows_old_fields_preserved": true,
+  "all642_old_membership_dates_and_flags_preserved": true,
+  "old25_formal_conflict_IDs_literal_unchanged": [
+    "CTHS_101472",
+    "CTHS_102263",
+    "CTHS_102846",
+    "CTHS_107107",
+    "CTHS_111515",
+    "CTHS_111774",
+    "CTHS_111796",
+    "CTHS_112086",
+    "CTHS_112456",
+    "CTHS_112593",
+    "CTHS_128652",
+    "CTHS_130792",
+    "PROFILE2_05ba5ad44ca92a28",
+    "PROFILE2_15377afa6201a9c5",
+    "PROFILE2_6284935315689920",
+    "PROFILE2_99fb5086e0887c9b",
+    "PROFILE2_a29b6a24738c76fa",
+    "PROFILE2_a73ee9a12b737868",
+    "PROFILE2_b7ddae2f9fce26c6",
+    "PROFILE2_bc01a976d90aefc5",
+    "PROFILE2_d644548a37ab83f2",
+    "PROFILE2_ddffb380986fa5d5",
+    "PROFILE2_ed8377d533c8b3c2",
+    "PROFILE2_ee3becf839e3a034",
+    "PROFILE2_fe6e383fc8d42613"
+  ],
+  "new_Nicole_structured_hold": {
+    "candidate_group_id": "PROFILE2_08407b6d0479b1d0",
+    "legacy_formal_value": "",
+    "status": "unresolved_actual_same_subject_election_year_conflict",
+    "observed_years": [
+      1982,
+      2006
+    ],
+    "future_positive_validator_blocks": true
+  },
+  "old4_exact_DOB_conflicts_unchanged": [
+    "CTHS_100995",
+    "CTHS_112039",
+    "CTHS_112065",
+    "PROFILE2_cfdab4ecce22ae00"
+  ],
+  "father_son_Dassault_all_old_fields_unchanged": true,
+  "mother_control_IDs_unchanged": [
+    "CTHS_111838"
+  ],
+  "six_alias_pairs_all_old_fields_preserved_via875row_compare": true,
+  "membership_history_old483_prefix_preserved_new2_frozen_blank_flags": true,
+  "case_history32_byte_identical": true,
+  "japan_three_CSVs_byte_identical_sha256": {
+    "japan_master.csv": "f901f568d0a5c85e8ace5ae928d5a3473b9e7691131941075b9cd19d1c7a3021",
+    "japan_birth_claims.csv": "c0a7820ea8149829d3b58caae18fefbb7b15fbc68f3ca1cb1f86582f793aff4c",
+    "japan_next_action_queue.csv": "b36bf64ab5b28f8bd08e795fa4817e0ce85a669a075ebdedbb2cf1786b8d9022"
+  },
+  "current_counts": {
+    "identity_accepted": 787,
+    "membership_accepted": 643,
+    "dob_accepted": 775
+  },
+  "all_three": 640,
+  "remaining_gaps": 237,
+  "output_sha256": {
+    "france_accepted_all_three.csv": "379cb99121504a2963d49ebde7036199cffbcf2b24b36fff4e4c07b111e6b5d3",
+    "france_case_adjudications.csv": "24e073787758ac40d6acc400a9690c20567f3e3614fe3fad5c47dd1e14e6f0be",
+    "france_master877.csv": "dd2dd779b648691bd76bdbcf12dcc6b11b9228cc057cd1d19585ace3b3161930",
+    "france_membership_decisions.csv": "62e7d80df65c5ebdc4e5bfee2fa63c78ae7927425b0b3072c9bfd18233895828",
+    "france_remaining_gaps.csv": "244cb4cb3706b00fb1e26746cdca69701e57def7c40145059cbb48bb63b0da66",
+    "japan_birth_claims.csv": "c0a7820ea8149829d3b58caae18fefbb7b15fbc68f3ca1cb1f86582f793aff4c",
+    "japan_master.csv": "f901f568d0a5c85e8ace5ae928d5a3473b9e7691131941075b9cd19d1c7a3021",
+    "japan_next_action_queue.csv": "b36bf64ab5b28f8bd08e795fa4817e0ce85a669a075ebdedbb2cf1786b8d9022",
+    "summary.json": "01f2186a25c8bbbc5b9e4f10b5dbe4bccf14be101daf9bf1ded2bd7cf0fef239"
+  },
+  "local_or_hosted_CI_run_not_claimed": true,
+  "all_old_field_preservation_checks_passed": true,
+  "new_Nicole_retained_flag_1_consistent_with_unresolved_status": true
+}

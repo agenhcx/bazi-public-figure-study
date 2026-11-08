@@ -1,0 +1,334 @@
+{
+  "artifact_type": "V46_original_source_group_review",
+  "written_utc": "2026-11-08T11:37:29.913469+00:00",
+  "group": "a",
+  "strategy_id": "distinct_original_biography_and_bibliography_discovery_after_v45_v1",
+  "scope_file": "v46_original_scope.json",
+  "scope_sha256": "6051c4a3f9887bbba4556595f9dfbbfd8c5bb6ab552d586e9cf67f217597c7bc",
+  "native_scope_file": "v46_scope_a.json",
+  "native_scope_sha256": "8a76b1abba6b227af1d0395738b6891f047790645250976de439bfe83d6059b8",
+  "intent_file": "v46_intent_a.json",
+  "intent_sha256": "12cae6251d43e38f086cc78b61676050b7c003b438fd7a2b98b6087198997924",
+  "fixed_record_ids": [
+    "RS_PAST_NA4250"
+  ],
+  "admission_authority": {
+    "path": "studies/royal_society_birthplace_completion_v29/audit/plan.json",
+    "sha256": "1e3dbd1ba94b012425803df5426e269adf42bdb5e17a9a5294fbaa4e3714bb42",
+    "admission": "Fullnativecomponents+actuallystatedcompatibleDOBprecision+distinctivecareercontext+directsubjectbirthrelation. Existingv24omitted-middle rule allowedonlywithobservedcompletefirstsurname/exactunchangedDOB/compatiblelifespan/coherentdistinctivefingerprint/unique fixedcohortmatch/noobservedcompetingidentityorname/date/placecontradiction; no initial/aliasexpansion,sourceactualshortname/unconfirmedmiddles explicit,nativeidentityunchanged. Allsourcequality/geo/rollbackgates stillrequired. Birthdate/place/identityconflicts held,norepair/datelessbypass; approximateyear no inventedtolerance.",
+    "grades": "S2originalauthorededitedbiography/signedmemoir/verifiedexpert; S3uncreditedcompiledmetadata/journalistconservative. No host-onlyS1. Earlierworkeroriginalbodymaystandiflaterrootaccessfailswithrole/ref/limits andno independentbody/bytes/HTTP200/versionclaim.",
+    "geography_role": null
+  },
+  "all9_issue_inventories_read_in_full_before_web": true,
+  "inventory_file_pins": {
+    "active_source_DOB_conflicts.json": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+    "birthplace_source_conflicts.json": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+    "source_derived_age_inconsistencies.json": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+    "provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+    "lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+    "cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+    "source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+    "omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+    "source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+  },
+  "full_target_native_worker_and_root_request_context_read_before_web": true,
+  "history_file_pins": {
+    "v46_triage_a.json": "0cc77246f1f974dd4dcd38d80bf654bed277a393a6fd888817304c17b97e6812",
+    "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v15_holds.json": "c6aa776aaa1aa60ae8a6497532210b4fc937253694011de1f0d6f2dd9fdb4942",
+    "academy_repo/studies/royal_society_birthplace_completion_v15/audit/sources_b.json": "357e84c5de12d6f4c629cb3a889415090f114d160d7136f6e51f6717d5aeaf3a",
+    "academy_repo/studies/royal_society_birthplace_completion_v15/audit/root_intent.json": "752d7d7cb02fd7970e9914e7932d3493cf65118a7f9428d1788e926426621539",
+    "academy_repo/studies/royal_society_birthplace_completion_v15/audit/protocol_and_parent_review.json": "a0925f2e0d27ec9f13cc5d168bdf89ff1df80a00bfb4a3b88bed6ad302003ef2"
+  },
+  "historical_root_review_outcome": "V15rootintent/protocol actualrootnavigation lists no Morris request; worker3Oxford403 routes stayclosed acrossvariants/republications.",
+  "closed_work_route_list_preserved": [
+    {
+      "url": "https://www.nds.ox.ac.uk/news/obituary-professor-sir-peter-j-morris-frs",
+      "historical_ref": "turn70view0",
+      "historical_tool_reported_status": 403,
+      "raw_HTTP_status": null,
+      "work_identity": "Oxford institutional obituary/profile route; the two similarly titled obituary URLs may be republications, so no independent-work claim",
+      "outcome": "First attempt tool-reported403, no original body acquired; all same-work variants/carriers remainclosed",
+      "historical_provenance": "academy_repo/studies/royal_society_birthplace_completion_v15/audit/sources_b.json:holds[0].source_attempts"
+    },
+    {
+      "url": "https://www.medsci.ox.ac.uk/news/obituary-professor-sir-peter-j-morris-frs",
+      "historical_ref": "turn73view1",
+      "historical_tool_reported_status": 403,
+      "raw_HTTP_status": null,
+      "work_identity": "Oxford institutional obituary/profile route; the two similarly titled obituary URLs may be republications, so no independent-work claim",
+      "outcome": "First attempt tool-reported403, no original body acquired; all same-work variants/carriers remainclosed",
+      "historical_provenance": "academy_repo/studies/royal_society_birthplace_completion_v15/audit/sources_b.json:holds[0].source_attempts"
+    },
+    {
+      "url": "https://www.ndph.ox.ac.uk/team/pmorris",
+      "historical_ref": "turn76view0",
+      "historical_tool_reported_status": 403,
+      "raw_HTTP_status": null,
+      "work_identity": "Oxford institutional obituary/profile route; the two similarly titled obituary URLs may be republications, so no independent-work claim",
+      "outcome": "First attempt tool-reported403, no original body acquired; all same-work variants/carriers remainclosed",
+      "historical_provenance": "academy_repo/studies/royal_society_birthplace_completion_v15/audit/sources_b.json:holds[0].source_attempts"
+    }
+  ],
+  "retrieval_counts": {
+    "queries": 2,
+    "navigation_attempts": 2,
+    "opens": 2,
+    "clicks": 0,
+    "finds": 0,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "query_ledger": [
+    {
+      "entry_id": 1,
+      "operation": "system2_search_query",
+      "q": "\"Peter John Morris\" \"Plarr\" biography",
+      "result_refs": [
+        "turn2696229search0",
+        "turn2696229search1",
+        "turn2696229search2",
+        "turn2696229search3"
+      ],
+      "outcome": "Only unrelatedcollection/author-list material; no subjectURL; no bodyclaims adopted."
+    },
+    {
+      "entry_id": 2,
+      "operation": "system1_search_query",
+      "q": "\"Peter\" \"Morris\" \"1934\"",
+      "domains": [
+        "rcseng.ac.uk"
+      ],
+      "result_refs": [
+        "turn4994983search0",
+        "turn4994983search1",
+        "turn4994983search2",
+        "turn4994983search3",
+        "turn4994983search4",
+        "turn4994983search5",
+        "turn4994983search6"
+      ],
+      "outcome": "Engine2coveragegap search observed actualRCSandNPGpersonURLs. Otherresultdomains also returned despite requesteddomainfilter; no domain-only coverageclaim. Searchclaims discoveryonly."
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "entry_id": 3,
+      "operation": "open",
+      "record_id": "RS_PAST_NA4250",
+      "url": "https://rcseng.ac.uk/news-and-events/news/archive/obituary-of-professor-sir-peter-morris-ac-frs-frcs/",
+      "ref": "turn4714401view0",
+      "outcome": "OriginalRCSbody actualcareer/exactdates; no birthplace/noJohn; contextonly."
+    },
+    {
+      "entry_id": 4,
+      "operation": "open",
+      "record_id": "RS_PAST_NA4250",
+      "url": "https://www.npg.org.uk/collections/search/person/mp15431/sir-peter-john-morris",
+      "ref": "turn4714401view1",
+      "outcome": "Actual originalNPGbody fullPeterJohnMorris/compatible1934-2022/directAustralian-born/distinctivecareer; conservativeS3firstplacecandidate."
+    }
+  ],
+  "find_ledger": [],
+  "candidates": [
+    {
+      "record_id": "RS_PAST_NA4250",
+      "native": {
+        "record_id": "RS_PAST_NA4250",
+        "native_name": "Peter John",
+        "authority_name": "Morris; Sir; Peter John (1934 - 2022)",
+        "native_DOB": "1934-04-17",
+        "raw_birthplace": "",
+        "birthplace_source_grade": "unknown",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "fc998df690476d58c405ebb7deb0dfcd37ba2d8319ede191d722ab039682bd31"
+      },
+      "decision": "adoption_candidate_pending_independent_original_source_adjudication",
+      "status": "candidate_first_birthplace_direct_Australia_from_actual_NPG_person_body",
+      "raw_birthplace": "Australia",
+      "source_url": "https://www.npg.org.uk/collections/search/person/mp15431/sir-peter-john-morris",
+      "source_ref": "turn4714401view1",
+      "source_title": "Sir Peter John Morris - Person - National Portrait Gallery",
+      "source_kind": "original_unattributed_institutional_museum_person_catalogue_biography",
+      "source_grade_proposal": "S3",
+      "source_grade_role": "person_birthplace_support_only",
+      "source_birthdate": "1934",
+      "source_birthdate_precision": "stated_birthyear_in_lifespan_header",
+      "source_exact_DOB": null,
+      "source_DOB_matches_native_at_stated_precision": true,
+      "source_full_native_name_observed": true,
+      "source_lifespan_compatible": true,
+      "distinctive_career_observed": true,
+      "direct_subject_birthplace_relation_observed": true,
+      "source_quote": "Australian-born scientist and surgeon.",
+      "source_quote_word_count": 4,
+      "source_locator": "turn4714401view1:L59fullnative/L61stated1934-2022/L64directAustralian-born-and-distinctiveNuffield/Balliol/transplantcareer/1996knighthood",
+      "reviewed_hemisphere_proposal": "South",
+      "geography_proposal_limit": "CountryAustralia is explicitbirth-linked; parent must apply unchanged whole-region classifier to this country. No source latitude/longitude/countryQID/state/city inferred or assigned byworker.",
+      "new_method_exception_required": false,
+      "omitted_middle_exception_applied": false,
+      "no_dateless_or_inferred_DOB_bypass": true,
+      "primary_evidence": {
+        "publication_date": null,
+        "source_revision_id": null,
+        "source_revision_utc": null,
+        "source_calendar_model": null,
+        "source_statement_rank": null,
+        "source_editorial_validation": null,
+        "source_informational_independence": null,
+        "raw_HTTP_status": null,
+        "raw_bytes_sha256": null,
+        "exact_request_utc": null,
+        "source_url": "https://www.npg.org.uk/collections/search/person/mp15431/sir-peter-john-morris",
+        "source_ref": "turn4714401view1",
+        "source_title": "Sir Peter John Morris - Person - National Portrait Gallery",
+        "source_author": null,
+        "source_kind": "original_unattributed_institutional_museum_person_catalogue_biography",
+        "actual_original_body_acquired": true,
+        "tool_header_rewritten_summary": false,
+        "work_identity": "New NPG person catalogue composition, discovered atturn4994983search2; not any of three closedOxford workroutes, not RCStribute republication. Informational dependence unknown.",
+        "source_full_name": "Sir Peter John Morris",
+        "personal_components_observed": [
+          "Peter",
+          "John",
+          "Morris"
+        ],
+        "honorific": "Sir",
+        "all_native_personal_components_observed": true,
+        "source_name_locator": "L59 (alsoL50/L71)",
+        "source_birthdate": "1934",
+        "source_birthdate_precision": "stated_birthyear_in_lifespan_header",
+        "source_exact_DOB": null,
+        "source_DOB_locator": "L61 actual1934-2022",
+        "source_DOB_agreement": "Year1934 agrees unchangednative1934-04-17; exactmonth/day not stated in thissource. Literal compatibleprecision only, not calendar/civilDOBvalidation or gradeupgrade.",
+        "source_deathyear": "2022",
+        "source_lifespan_compatible_with_native_authority": true,
+        "distinctive_career_locator": "L64 1974NuffieldChairSurgery/BalliolOxford, academic surgery department and transplantation clinical/research programme,1996knighthood",
+        "birthplace_relation_locator": "L64 directAustralian-born description of the namedsubject",
+        "source_quote": "Australian-born scientist and surgeon.",
+        "source_quote_word_count": 4,
+        "raw_birthplace_candidate": "Australia",
+        "source_place_precision": "country_only_direct_birth_relation; no state/city or point supplied",
+        "birthplace_relation_is_nationality_inference": false,
+        "places_taxonomy_not_used": "L90-95 Australia/London/Oxfordshire/UnitedStates are non-birth-specificPlaces; candidate is based only on directL64Australian-born prose.",
+        "source_grade_proposal": "S3",
+        "source_grade_basis": "Actual original compiled museum biography binds full native identity/compatible statedbirthyear/lifespan/distinctive career and directbirthcountry. No personal author, claim-specific editing or expertise authenticated; conservativeS3, no host-onlyS1/S2.",
+        "source_grade_role": "person_birthplace_support_only",
+        "observed_copyright_footer": "2026 atL160; not sourcepublication/update/revisiondate",
+        "source_quote_budget_including_inherited_observations": {
+          "previous_target_work_quotes_found": 0,
+          "new_quote_words": 4,
+          "maximum_distinct_quoted_English_words_per_work": 25,
+          "new_quote_English_lexical_words": 5
+        },
+        "source_informational_independence_limit": "No assertion of independence from RCS/Oxford/otherreferences; no sourcefullcache/rawbytes authenticated.",
+        "source_quote_whitespace_token_count": 4,
+        "source_quote_English_lexical_word_count": 5,
+        "quote_budget_conservative_count": 5
+      },
+      "separate_context_observation": {
+        "publication_date": "2022-11-01",
+        "source_revision_id": null,
+        "source_revision_utc": null,
+        "source_calendar_model": null,
+        "source_statement_rank": null,
+        "source_editorial_validation": null,
+        "source_informational_independence": null,
+        "raw_HTTP_status": null,
+        "raw_bytes_sha256": null,
+        "exact_request_utc": null,
+        "source_url": "https://rcseng.ac.uk/news-and-events/news/archive/obituary-of-professor-sir-peter-morris-ac-frs-frcs/",
+        "source_ref": "turn4714401view0",
+        "source_title": "Tributes pour in for former RCS England President, Professor Sir Peter Morris",
+        "source_author": null,
+        "source_kind": "original_institutional_tribute_with_attributed_colleague_statements",
+        "actual_original_body_acquired": true,
+        "tool_header_rewritten_summary": false,
+        "work_identity": "Actual RCSinstitutional composition, observedturn4994983search0; no knownoldOxfordbodyacquisition or wordidentity comparison, so no claim of informationalindependence.",
+        "source_publication_locator": "L155 actual01Nov2022",
+        "observed_source_name": "Peter Morris",
+        "native_component_not_observed": "John",
+        "source_birthdate": "1934-04-17",
+        "source_death_date": "2022-10-29",
+        "source_date_locator": "L166 literalborn17April1934/death29October2022/age88",
+        "reported_age": 88,
+        "completed_age_from_same_source_dates": 88,
+        "source_career_locator": "L160-165 transplant surgery,RCSpresidency2001-2004,researchscheme,FRS1994/Medawar2006",
+        "direct_subject_birthplace_relation_observed": false,
+        "all_native_name_components_observed": false,
+        "not_adopted_as_first_birthplace_source": true,
+        "no_omitted_middle_exception_applied": true,
+        "role": "Separate actual source context only; exactdates and unprintedJohn not transferred to NPG, which qualifies on its own allnative/yearprecision/career/birthrelation gates.",
+        "source_quote": null,
+        "source_quote_word_count": 0,
+        "source_grade_adopted": null,
+        "no_new_date_or_age_conflict_observed": true,
+        "unopened_distinct_original_work_carriers": [
+          {
+            "source_ref": "turn4714401view0",
+            "link_id": 62,
+            "label": "The Times",
+            "observed_host": "www.thetimes.co.uk",
+            "actual_full_URL": null,
+            "locator": "L167 states fullobituary canberead; body/title/author/place unacquired"
+          },
+          {
+            "source_ref": "turn4714401view0",
+            "link_id": 63,
+            "label": "BBC Radio4 DesertIslandDiscs appearance2002",
+            "observed_host": "www.bbc.co.uk",
+            "actual_full_URL": null,
+            "locator": "L167; programmebody/audio unacquired"
+          }
+        ]
+      },
+      "qualified_new_DOB_conflict": false,
+      "qualified_new_birthplace_conflict": false,
+      "qualified_new_age_issue": false,
+      "no_source_or_native_correction_verdict": true,
+      "native_and_original_DOB_grade_and_prior_facts_unchanged": true,
+      "data_adoption_performed_by_worker": false,
+      "source_quote_whitespace_token_count": 4,
+      "source_quote_English_lexical_word_count": 5,
+      "quote_budget_conservative_count": 5
+    }
+  ],
+  "holds": [],
+  "qualified_new_issue_candidates": [],
+  "new_DOB_or_place_conflicts": [],
+  "new_age_issue_candidates": [],
+  "source_quote_words_by_original_work": {
+    "https://www.npg.org.uk/collections/search/person/mp15431/sir-peter-john-morris": 4,
+    "https://rcseng.ac.uk/news-and-events/news/archive/obituary-of-professor-sir-peter-morris-ac-frs-frcs/": 0
+  },
+  "quote_accounting": "One exactNPGbirthphrase quoted,4whitespace tokens/5Englishlexicalwords when Australian-born is split; conservativebudgetcount5<=25 including0priorworkquotes. RCS0. Repeated candidate/primary excerpt is identical, not additive distincttext. No fullsource/projectioncache.",
+  "adaptive_discovery_disclosure": "Initial frozenavenue namedRCSPlarrs, not NPG. Second exactquery returned observed distinctmuseum-personURI. NPG firstopen exactintent written/validated before request; root informed beforeopen. No claim NPGwas a retainedURL at initialscopefreeze or independentlyedited. Same fixedMorrisrecord/admissionmethod and groupbudget; no closedOxfordworkopened.",
+  "intent_guard": {
+    "real_per_entry_written_utc": true,
+    "separate_successful_local_exit0_before_each_web_call": true,
+    "first_unusable_work_closes_across_carriers_variants": true,
+    "no_failedwork_retries_or_rawGETs": true
+  },
+  "budget": {
+    "queries_max": 3,
+    "navigation_max": 5,
+    "queries_used": 2,
+    "navigation_used": 2
+  },
+  "method_exception_created": false,
+  "source_or_native_data_master_replay_outputs_Git_mutations": false,
+  "source_caches_written": false,
+  "raw_HTTP_status": null,
+  "raw_bytes_sha256": null,
+  "exact_request_utc": null,
+  "source_exhaustion_claimed": false,
+  "source_quote_conservative_English_word_budget_by_work": {
+    "https://www.npg.org.uk/collections/search/person/mp15431/sir-peter-john-morris": 5,
+    "https://rcseng.ac.uk/news-and-events/news/archive/obituary-of-professor-sir-peter-morris-ac-frs-frcs/": 0
+  },
+  "parent_independent_verification_communicated": {
+    "ref": "turn1031603view0",
+    "locator": "Parent reportedL61fullnative/L63year1934-2022/L66Australian-bornandcareer",
+    "role": "Parent independent actualNPGacquisition communicated toworker; not a worker reopen or independentinformation-lineage claim",
+    "parent_confirmed_existing_Australia_wholly_South_precedent": "V16 acceptedNA5416; final classifier/adoption ownedbyroot"
+  }
+}

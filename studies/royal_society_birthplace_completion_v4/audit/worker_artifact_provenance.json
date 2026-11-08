@@ -1,0 +1,11 @@
+{
+  "upstream_artifacts": {
+    "geo45/row_results.jsonl": "0f8b3f93bc538d3daa0911c3ce459aaa589bd61b606baf618947db78861a1689",
+    "memoir_batch/accepted.jsonl": "b0e231672a01066220dfad55628acf3643bb53473857e8c0754cea5eaad6b841",
+    "wiki_remaining/accepted_birthplace_candidates.jsonl": "c43a24a07fd2db4b7cc5dce5a1ffdf778b2ba5d8489405b6534e44e4bdfc8757",
+    "new_facts_geo/new_fact_geography.jsonl": "cff97c1c3c617e189b0517c9350521e03c939810659089ccdf19634bdd63d69b",
+    "correct_current_links/positive_replacements.jsonl": "c4bd74d286e0928bd6788ded0d96363b409075d53f6f8fb8fae35dbd796a0831",
+    "fact_qa/final_facts_qa.jsonl": "d0b1f293242e46078a2e337c5544c959e043cb099bb9f6229918ec4254ac1cac"
+  },
+  "transformation": "Normalize field names into v4 replay inputs; deterministic gzip. Preserve original source grades, quotes, native DOB and evidence. Do not deliver whole biography HTML or memoir abstracts."
+}

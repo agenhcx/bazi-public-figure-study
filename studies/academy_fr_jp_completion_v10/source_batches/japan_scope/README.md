@@ -1,0 +1,11 @@
+# Japan scope-route audit v10 — 2026-10-30
+
+The fixed47 unresolved people received local prior-route and source-structure triage. Five people received actual individual scope queries (nine queries); three additional discovery queries concern source families/history. Selection is not a search count. No birthday search or birthday-body review was performed.
+
+The important fresh route is a complete-page re-capture of the officially digitized1906 Imperial Academy directory. The earlier885-row evidence file contains short matched-name strips for a different target universe, not complete page OCR. Original NDLmanifest and original cover/member pages were actually captured and visually reviewed. The directory's cover explicitly reads Meiji39(1906), while genericcatalogmetadata gives a1906–1912range/endyear; these are kept distinct.
+
+Ten proposals bind currently unresolved identities to literal SecondSection in the same printed member column: nine on canvas11/printed16–17 and Terao on canvas12/printed18. The standard old/new-character pairs Sakura櫻→桜 and Terao壽→寿 are explicit. Every proposal points to originalimageSHA, exactmembercolumn, manifest and actual1906cover. The degree text is corroborating metadata only; it does not supply the section. All ten observations share one underlying official directory, not ten independent historical sources.
+
+Only broad SectionII as attested in1906 is proposed. No subsection is inferred or mapped to today's numbering, no earlier TokyoAcademy election is reclassified, and the previously frozen199-person degree rule is not extended. ItoKeisuke, who died1901, is not assigned a1906section. The36 older website/publication gaps remain unchanged in this batch. An official2007journal TOC names FukudaKanichi and NakagawaKeiichiro but does not supply a division; neither is promoted.
+
+`section_proposals.json` is pending exactrootapproval and independent sourceQA. This collector applies zero section changes and creates zeroDOBclaims. Every existing identity, knownsection, birthday expression, calendarhold and cohort restriction is retained. All private raw captures remain outside the publicbundle; metadata contains only hashes, locators, names and short excerpts. No outreach, BaZi or outcome analysis.

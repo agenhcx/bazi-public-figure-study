@@ -1,0 +1,103 @@
+{
+  "written_utc": "2026-11-06T23:35:08.893667+00:00",
+  "scope": "v35_scope_b.json",
+  "scope_sha256": "ab78a9b3e72833344f10b19a1c1ad500e7d75c6e96d5be9adaaef7c527eeeead",
+  "all2_fullobjects_read_before_queries": true,
+  "prior_audit_read_sha256": {
+    "prior_v13_holds.json": "9b54ad12c2a8aa10d3bbc6cefbbf84f8322474a6585310ce86559da2900e05ee"
+  },
+  "scope_read_limit": "Initialcombinedoutputtruncated; bothfullobjects reread individuallyuntruncatedbeforequeries.",
+  "targets": [
+    {
+      "record_id": "RS_PAST_NA813",
+      "authority_name": "Ryde; John Walter (1898 - 1961)",
+      "DOB": "1898-04-15",
+      "frozen_rawplace": "Brighton",
+      "original_BP_grade": "S2",
+      "prior_BP_urls": [
+        "https://doi.org/10.1098/rsbm.1962.0008"
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA872",
+      "authority_name": "Farren; Sir; William Scott (1892 - 1970)",
+      "DOB": "1892-04-03",
+      "frozen_rawplace": "Cambridge",
+      "original_BP_grade": "S2",
+      "prior_BP_urls": [
+        "https://doi.org/10.1098/rsbm.1971.0009"
+      ]
+    }
+  ],
+  "closed_routes": [
+    {
+      "record_id": "RS_PAST_NA813",
+      "url": "https://worldradiohistory.com/UK/Wireless-World/60s/Wireless-World-1961-07-S-OCR.pdf",
+      "state": "Priorroot403originalmagazinebodyunacquired; no variants/retry; oldsearchnearby1899notassignedtoRyde."
+    },
+    {
+      "record_id": "RS_PAST_NA872",
+      "url": "https://www.perse.co.uk/community/old-perseans/inspiring-old-perseans/",
+      "state": "Prioropeninaccessible; searchschooling/life1892-1970notbirth; no retry/variant."
+    },
+    {
+      "record_id": "RS_PAST_NA872",
+      "url": "https://archives.trin.cam.ac.uk/index.php/actor/browse?languages=en&page=215&sf_culture=es&sort=identifier&sortDir=asc",
+      "state": "Priorbrowse shiftedothernames; no individualbiography/bornclause; notqualifiedbirthplace; no queryloopreuse."
+    }
+  ],
+  "calls": [
+    {
+      "kind": "system2_search_query",
+      "queries": [
+        "\"John Walter Ryde\" born England biography",
+        "\"William Scott Farren\" born England biography"
+      ],
+      "purpose": "Discovergenuinelyneworiginalpersonalreference/memoir/compiledprofileborncountrywholecounty; no oldfailedworkvariantsorrawcitymapping."
+    },
+    {
+      "written_utc": "2026-11-06T23:35:18.914918+00:00",
+      "kind": "system1_search_query",
+      "queries": [
+        "\"John Walter Ryde\" \"born\" Brighton Sussex",
+        "\"William Scott Farren\" \"born\" Cambridge England"
+      ],
+      "purpose": "Strongeroriginal-referencecoveragegaps afterS2 gave mostlyoldmemoirs/indexes. ClosedWirelessWorld1961Julywork not retried via newlyindexednonOCRvariant."
+    },
+    {
+      "written_utc": "2026-11-06T23:35:49.023981+00:00",
+      "kind": "open",
+      "urls": [
+        "https://hooke.org.uk/index.php/farren-history",
+        "https://hooke.org.uk/index.php/farren-history/william-farren-background-early-years"
+      ],
+      "purpose": "Newactualself-publishedfamilyhistorybiography/earlyyears, distinguishsubjectfromsame-namedfather. Requirefullnative/compatibleDOBprecision/career/directsubjectbirthregion. Nocountryfromfamilyaddress/school/work/authorresidence. Sameoriginalprojectquote<=25acrosstwoURLs."
+    },
+    {
+      "written_utc": "2026-11-06T23:36:02.008300+00:00",
+      "kind": "click",
+      "source_ref": "turn8348568view0",
+      "link_id": 86,
+      "purpose": "ObservednewfamilybiographyOverviewlinkmaycontainactualsubjectbirthcountry/date/career. Backgroundhasfullsubjectbutnobornregion; do notmapCambridgeshirephoto/school/family tobirthplace."
+    },
+    {
+      "written_utc": "2026-11-06T23:37:46.180208+00:00",
+      "kind": "open",
+      "urls": [
+        "https://doi.org/10.1098/rsbm.1962.0008"
+      ],
+      "purpose": "Prospectivelyclarifiedbyroot: firstoriginalRydeRS1962fullbodyinspection ONLY. Existingv6Crossrefabstractsuccess is existingwork, notnewindependentwork. Fulloriginalsubjecttextwouldbenewlyinspectedmaterialfor directbirthplacegeography. Availableearlierv1-v34targetedaudits show no recordedfailedfulltextrouteforRS1962work; oldv6acceptedfact explicitlyfullmemoirnotfetched. ClosedWirelessWorld1961Jul403 remainsclosed. OnefirstpublisherDOIattempt; stopanyfailure/challenge/size/textless, no sameworkvariant/accessbypass/rawGET. Old7quotedwords samework retained; <=25total, preferstructurednewfacts."
+    }
+  ],
+  "budget": {
+    "queries": 4,
+    "navigation_attempts": 6
+  },
+  "gates": "Fullnative/actualcompatibleDOBprecision/coherentdistinctivecareer/directborncountrywholecounty+storedplacebinding. FrozenallDOB/BP/priorfacts. NarrowS3actualattributedcompiledreferenceentryallowedwithlimitsasv34McNeill, noauthenticatedbook/hostS1/generalmirroradmission. <=25quotedwords/workincludingprior. Rawstatus/hash/requesttimeunknownnull; stopfailedwork/noalternates/rawGET.",
+  "prospective_scope_clarification": {
+    "root_authorization": "Message received beforethiscall: firstRydefull-bodyinspectionpermittedonlyifpriorhistorynofailedRS1962fullroute; existingabstractnotnewwork, fullbodynewlyinspectedmaterial; preservetotal25words; nofailedvariants.",
+    "prior_history_check": "Scannedtargetednon-priorauditrecordobjects andsameDOIURLobjects acrossavailablev1-v34studies, deduplicated; onlyv13WirelessWorldclosed403hold, no recordedRS1962fulltextroutefailure; originalv6scopefactexplicitfullmemoirnotfetched. Thischeckdoesnotclaimunrecordedhistoryexhaustive.",
+    "old_same_work_quote": "Born on 15 April 1898 at Brighton",
+    "old_same_work_quote_words": 7
+  }
+}

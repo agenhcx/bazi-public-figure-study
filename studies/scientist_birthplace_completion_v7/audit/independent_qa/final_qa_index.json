@@ -1,0 +1,100 @@
+{
+  "schema": "scientist_birthplace_completion_v7_independent_QA_index",
+  "status": "PASS",
+  "frozen_at_utc": "2026-11-04T01:22:04.388061+00:00",
+  "baseline_sha256": "8e880fcf4a659a1c8753a5a0ad4c06552ddd9d0d545334b0e81a2459907d7356",
+  "main_table_sha256": "dabb1fd38354953eb9ef4b3a6b23f98e3c5520d55f8430b04287252d5c91e158",
+  "documents": {
+    "studies/scientist_birthplace_completion_v7/README.md": "a0228eec6c89e6423b6b3a1e38df8b4d3106d53676b387358cf95890a935dc42",
+    "studies/scientist_birthplace_completion_v7/CONTINUATION.md": "7e27c5b3317f1e2130fa74cf5ba31faa5607e4a4cb474cb546fdfb6358f60a87"
+  },
+  "result": {
+    "cohort_records": 11094,
+    "source_observations": 30,
+    "source_observation_grades": {
+      "S1": 26,
+      "S2": 4
+    },
+    "unique_changed_NAS_rows": 29,
+    "primary_source_grades": {
+      "S1": 26,
+      "S2": 3
+    },
+    "new_north": 29,
+    "unchanged_complete_objects": 11065,
+    "Hershey_only_overlap_one_row_both_original_supports_retained": true,
+    "all38_prior_whole_overlay_rows_and39_evidence_objects_equal": true,
+    "all4983_UK_whole_objects_equal": true,
+    "all_native_fields_frozen_Nobel655_DOB_and_CAS_acceptance_blank": true,
+    "new_country_birthpoint_unique_place_person_QID_assignments": 0,
+    "all_CSV_cells_native_windows_summary_counts_checked": true,
+    "seven_outputs_byte_identical_private_offline_replay": true,
+    "strict_API_matching_recomputed_all543_unknowns_all2242NAS_all665_raw_APIobjects": true,
+    "source_audit_files_byte_compared": 87,
+    "logical_source_actions": 12,
+    "actual_original_HTTP_captures": 10,
+    "search_query_actions": 2,
+    "cached_physics_refreshes": 0,
+    "new_geography_queries": 0,
+    "source_retries": 0,
+    "QA_HTTP_requests": 0
+  },
+  "reports": {
+    "baseline_inventory.json": {
+      "sha256": "382003885b1c150127c8ac5fc09ef2945adb06e5a0d5bd9295b613c01aea80f6",
+      "bytes": 28202
+    },
+    "memoir_source_review.json": {
+      "sha256": "1eb20083e3a0e5d5a40c4f1034313dd44145cf54caf8b9913b51fe741b1ecd66",
+      "bytes": 4167
+    },
+    "api_source_review.json": {
+      "sha256": "61ab5addce73242b5eb7d46da32730c08fe377190c4ab52860e8535d43f2eb86",
+      "bytes": 18420
+    },
+    "source_review.json": {
+      "sha256": "8188e456f926516faa36be7c30d416de9e20281fa861ee9ec1ea7005a72ec352",
+      "bytes": 2626
+    },
+    "geography_review.json": {
+      "sha256": "d307ef56e2fe73b3a4faebcffb04c47762eb3a2cf9b0fda610034a279fb48b12",
+      "bytes": 1146
+    },
+    "output_review.json": {
+      "sha256": "d9d9ffacc7558eed9f8a17f5126b7cf298fef6b6d474bfd12413d2d7b9485736",
+      "bytes": 5556
+    },
+    "distribution_review.json": {
+      "sha256": "61d1874a41d5f206554d48518b9543151a9f2c668f1bcb0e0d0a03939b5b7e99",
+      "bytes": 13824
+    },
+    "prose_review.json": {
+      "sha256": "c3b4df0e3a428f534ebb525f16532b2ca30b74e7dae50319fc94be6ff5e4bb8a",
+      "bytes": 2093
+    }
+  },
+  "local_QA_scripts": {
+    "source_helpers.py": "3c8754b7783a272c9f0252c8e0d00449d052e74145dfb84b26854b7f45faaf31",
+    "memoir_source_review.py": "5bbc58f67a55885a8b428685d9771147fb0bc7b1538e4ece3c805597a4521a82",
+    "api_source_review.py": "97024f481866438321835f8a995f649442b9a9d717df0bc5b7acf08d09b7f95f",
+    "geography_review.py": "d91d2c8970055e1ae991076c7795b186bcb6f8c7f14448fdfd4c055a2f6d8171",
+    "verify_v7_independent.py": "770f4a3b6535d16d027b12641397be09f3e0732be8ec50e4ee98590189c6c926",
+    "distribution_review.py": "29988967f816f16023e6ba5182c0ebfd467d68f5170cd8286cec50e8138b6f03"
+  },
+  "output_sha256": {
+    "all_country_birthplace_summary.csv": "29999953fa403c043214ffdf996f49299de2316ef33497102dcb5c0e8c4009ef",
+    "birthplace_rows.jsonl.gz": "dabb1fd38354953eb9ef4b3a6b23f98e3c5520d55f8430b04287252d5c91e158",
+    "birthplaces.csv": "f5505ebc9b0a084e1989de4e28f62d8c86aa2f83cbee72a48a48e697afe5237a",
+    "changed_records.csv": "25fcfad0859ce19d8c1b3aafad017fe52a1d5cd4819f6f328b1536121876fb81",
+    "changes.jsonl.gz": "bb9045c97f0feaf15acdad9e64f91b0f2e3e3b40c04cfd3367d5111c98ceb3b8",
+    "remaining_unknown.csv": "73680bed1e7ee55fed7e622f002a471ff8554604edaffdf6aba57ffad0def90c",
+    "summary.json": "91ab0f9b8947e12a327272ee5aed7fbdd9d4f3e5bae8176d1754ef4fdb0f4eb5"
+  },
+  "resolved_findings": [
+    "Chemmed metadata now retains complete relevant per-award English prize context from unchanged original bodies.",
+    "Taylor prose uses observed API Joseph H. Taylor Jr.; H. does not prove Herbert."
+  ],
+  "ZIP_handoff": "Root copies final top-level QA files, generates authoritative root MANIFEST and ZIP, then verifies CRC and every member hash before Git/ref updates. ZIP itself is outside this pre-package QA index.",
+  "work_scope": "Independent local source/visual/API full-name-DOB uniqueness/merged-support/geography/all-row/native-field/CSV/summary/seven-output replay/distribution/prose review; writes only academy_v7_workers/qa; no source/repository/Git edits or HTTP requests",
+  "script_note": "Source/geography QA scripts depend on retained worker captures and cached originals. Main study assemble.py and verify.py are offline seven-output replay entrypoints."
+}

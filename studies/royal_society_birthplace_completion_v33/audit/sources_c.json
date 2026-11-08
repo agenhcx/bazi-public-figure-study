@@ -1,0 +1,381 @@
+{
+  "written_utc": "2026-11-06T22:39:41.264943+00:00",
+  "scope": [
+    "RS_PAST_NA3578",
+    "RS_PAST_NA3609",
+    "RS_PAST_NA3620",
+    "RS_PAST_NA5124"
+  ],
+  "intent_file": "v33_c_intent.json",
+  "prior_context_review": "All4FULLmasterobjects and targetedpriorholds/requestledgers readbeforeanyquery. No unresolvedpriorplace/DOBholdbypassed.",
+  "candidates": [
+    {
+      "record_id": "RS_PAST_NA5124",
+      "native": {
+        "record_id": "RS_PAST_NA5124",
+        "authority_name": "Guggenheim; Edward Armand (1901 - 1970)",
+        "native_dob": "1901-08-11",
+        "prior_raw_birthplace": "Manchester",
+        "prior_birthplace_source_grade": "S2"
+      },
+      "native_dob": "1901-08-11",
+      "authority_name": "Guggenheim; Edward Armand (1901 - 1970)",
+      "frozen_raw_birthplace": "Manchester",
+      "source_url": "https://careerchem.com/NAMED/Named-Concepts%28A-K%29.pdf",
+      "source_title": "Named Concepts in Chemistry (A–K)",
+      "source_author": "Dr. John Andraos",
+      "source_kind": "Attributed academic chemistry compilation on author careerchem site; independent editing/peerreview unverified",
+      "source_grade_proposal": "S3",
+      "source_grade_basis": "Conservative S3 attributed original academic reference compilation, with actualcoverauthor/department and subject-specific method/biographical references; no acquired independent editing/peerreview/civilverification or host-onlyS1.",
+      "source_grade_role": "geographic_support_only",
+      "source_quote": "b. Manchester, England",
+      "source_quote_word_count": 3,
+      "source_body_ref": "turn5020780view0",
+      "source_locator": "turn5020780view0:L1-6@P0actualauthor/title/copyright/department;turn1340334view0:L847-850@P31(printed32)fullnative/exactDOB/death/directbirthcountry/method;turn6781916view0:L847-855@P31completeentry/methodcitation/biographicalreferences.",
+      "observed_source_full_name": "Edward Armand Guggenheim",
+      "source_birthdate": "1901-08-11",
+      "source_birthdate_precision": "exact_day_in_structured_biographical_lifespan",
+      "source_death_date": "1970-08-09",
+      "source_lifespan": "1901-08-11–1970-08-09",
+      "source_DOB_native_compatibility": "Actualsource11August1901 agreesnative1901-08-11; nativecalendar/DOBgrade/acceptanceunchanged.",
+      "identity_review": [
+        "AllnativefullcomponentsEdwardArmandGuggenheim appear in actualentry, notinitials expanded.",
+        "ExactDOB1901-08-11 and lifeyears1901–1970 agree native; sourceactualdeathday1970-08-09 retained as observation, no nativeendpointedit.",
+        "Subject-specificGuggenheimmethod and E.A.Guggenheim1926PhilMagcitation plus 1971Tompkins/GoodeveRoyalSocietymemoirreference supply a coherent distinctive chemistryfingerprint. These are actualsame-entryanchors, not claimedindependentnativecareer corroboration or acquisitionofcitedworks."
+      ],
+      "stored_place_relation_review": "OriginalstoredManchester unchanged. Newactualstructured b. field explicitlybindsManchesterEngland to samefullnative/exactDOB/lifespanentry; consistent countryqualificationofexistingrawcity, notsubstitutedcity/parent/workplace.",
+      "source_place_observed": "Manchester, England",
+      "reviewed_hemisphere_proposal": "north",
+      "geographic_basis": "Explicitbirth-linkedEngland is whollyNorthernundercurrentcountry-extentrule. Manchesteralonewasunknown; no cityfamiliarity/nationality/workaddress inference. No point/country/QID assignments.",
+      "publication_date": null,
+      "publication_date_precision": "unknown",
+      "observed_copyright_range": "2000–2021",
+      "caveats": [
+        "Covercopyright2000–2021 observed, notexactpublication/updateyear. SearchfreshnessandPDFuploadtimestampsnotpublicationdate.",
+        "YorkUniversitydepartmentstatement is actualcoverattribution, notproofinstitutionpublishedorindependentlyedited thework.",
+        "NamedConceptsA-K is genuinelydifferentworkfromv32NamedReagentsG-ZWynnecarrier; no failedODNB/NPGGuggenheimrouteretry.",
+        "Referenced1968WhoWho/1971memoirnotindependentlyacquired; no authorship/grade/sourceindependencetransfer.",
+        "OriginalManchesterS2BPsourceclaim/URLs/hash and DOBsourcegrade remainfrozen; proposedgeographic-supportS3only."
+      ],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "Web-tool parsed original PDF text, not rawHTTPbytes"
+    }
+  ],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA3578",
+      "native": {
+        "record_id": "RS_PAST_NA3578",
+        "authority_name": "Hinton; Martin Alister Campbell (1883 - 1961)",
+        "native_dob": "1883-06-29",
+        "prior_raw_birthplace": "London",
+        "prior_birthplace_source_grade": "S2"
+      },
+      "status": "hold_geography_unresolved",
+      "hold_type": "no_new_admissible_birth_region",
+      "reason": "Newqueries returned oldLindaHallbirthdate/career, originalcatalogueidentity, BGSbibliography and derivedWiki/familyindexresults; no new acquired originalbirthcountrybody. England inresearchmuseum/Piltdown contexts is notbirthplace. OriginalLondonS2retained; no oldsource reopened.",
+      "observation_locators": [
+        "turn1005888search2/4/18/25",
+        "turn6662043search0-1"
+      ],
+      "source_quote": null,
+      "source_quote_word_count": 0,
+      "master_object_unchanged": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA3609",
+      "native": {
+        "record_id": "RS_PAST_NA3609",
+        "authority_name": "Woods; Donald Devereux (1912 - 1964)",
+        "native_dob": "1912-02-16",
+        "prior_raw_birthplace": "Ipswich",
+        "prior_birthplace_source_grade": "S2"
+      },
+      "status": "hold_geography_unresolved",
+      "hold_type": "no_new_admissible_birth_region",
+      "reason": "Newqueries returned inheritedCSACcatalogueIpswichonly, RoyalSocietyidentitymetadata and Kiddlederivedstatement. PureKiddlesourceclass remainsoutsideadmission; notopened/adopted. No neworiginalbirthcountrybody; oldinaccessiblememoirnotretried.",
+      "observation_locators": [
+        "turn1005888search46/47/22",
+        "turn6662043search2/7"
+      ],
+      "source_quote": null,
+      "source_quote_word_count": 0,
+      "master_object_unchanged": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA3620",
+      "native": {
+        "record_id": "RS_PAST_NA3620",
+        "authority_name": "Powell; Herbert Marcus (1906 - 1991)",
+        "native_dob": "1906-08-07",
+        "prior_raw_birthplace": "Coventry",
+        "prior_birthplace_source_grade": "S2"
+      },
+      "status": "hold_geography_unresolved",
+      "hold_type": "no_new_admissible_birth_region",
+      "reason": "NewactualKeithMcLauchlancollegememorialgivesfullnative/lifeyears1906–91/directCoventryonly; fatherKidderminster andparentsCalneWiltshire/UpperStokeresidencecannotqualifytargetbirth. Englandmatchesotherarticles; Warwickshirecachedfindexplicitno-match. DistinctoriginalNCUACS58/1/96cataloguefirstopeninaccessible, stopped. No native/BP/geographychange.",
+      "observation_locators": [
+        "turn5020780view1:L10-11",
+        "turn1340334view1:L870/884-901",
+        "turn1340334view2",
+        "turn6781916view1-2",
+        "turn5020780view2:notaccessible"
+      ],
+      "source_quote": null,
+      "source_quote_word_count": 0,
+      "master_object_unchanged": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    }
+  ],
+  "request_ledger": [
+    {
+      "kind": "search",
+      "record_id": "RS_PAST_NA3578",
+      "engine": "system2",
+      "q": "\"Martin Alister Campbell Hinton\" \"London\" \"England\" biography",
+      "batch": 1,
+      "actual_result_ref_prefix": "turn1005888search",
+      "merged_batch_results_not_individually_attributed": true,
+      "specific_durable_intent_before_call": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "search",
+      "record_id": "RS_PAST_NA3609",
+      "engine": "system2",
+      "q": "\"Donald Devereux Woods\" biography birthplace England",
+      "batch": 1,
+      "actual_result_ref_prefix": "turn1005888search",
+      "merged_batch_results_not_individually_attributed": true,
+      "specific_durable_intent_before_call": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "search",
+      "record_id": "RS_PAST_NA3620",
+      "engine": "system2",
+      "q": "\"Herbert Marcus Powell\" biography \"England\"",
+      "batch": 1,
+      "actual_result_ref_prefix": "turn1005888search",
+      "merged_batch_results_not_individually_attributed": true,
+      "specific_durable_intent_before_call": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "search",
+      "record_id": "RS_PAST_NA5124",
+      "engine": "system2",
+      "q": "\"Edward Armand Guggenheim\" biography born Lancashire",
+      "batch": 1,
+      "actual_result_ref_prefix": "turn1005888search",
+      "merged_batch_results_not_individually_attributed": true,
+      "specific_durable_intent_before_call": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "search",
+      "record_id": "RS_PAST_NA3578",
+      "engine": "system1",
+      "q": "\"Martin Alister Campbell Hinton\" biography birth -site:en.wikipedia.org -site:newikis.com",
+      "batch": 2,
+      "actual_result_ref_prefix": "turn6662043search",
+      "merged_batch_results_not_individually_attributed": true,
+      "specific_durable_intent_before_call": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "search",
+      "record_id": "RS_PAST_NA3609",
+      "engine": "system1",
+      "q": "\"Donald Devereux Woods\" \"Suffolk\" -site:en.wikipedia.org -site:kids.kiddle.co",
+      "batch": 2,
+      "actual_result_ref_prefix": "turn6662043search",
+      "merged_batch_results_not_individually_attributed": true,
+      "specific_durable_intent_before_call": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "search",
+      "record_id": "RS_PAST_NA3620",
+      "engine": "system1",
+      "q": "\"Herbert Marcus Powell\" \"born\" \"Coventry\" -site:en.wikipedia.org",
+      "batch": 2,
+      "actual_result_ref_prefix": "turn6662043search",
+      "merged_batch_results_not_individually_attributed": true,
+      "specific_durable_intent_before_call": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "search",
+      "record_id": "RS_PAST_NA5124",
+      "engine": "system1",
+      "q": "\"Edward Armand Guggenheim\" \"born\" \"England\" -site:en.wikipedia.org -site:handwiki.org -site:newikis.com",
+      "batch": 2,
+      "actual_result_ref_prefix": "turn6662043search",
+      "merged_batch_results_not_individually_attributed": true,
+      "specific_durable_intent_before_call": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "open",
+      "record_id": "RS_PAST_NA5124",
+      "url": "https://careerchem.com/NAMED/Named-Concepts%28A-K%29.pdf",
+      "actual_final_url": "https://careerchem.com/NAMED/Named-Concepts(A-K).pdf",
+      "ref": "turn5020780view0",
+      "outcome": "Parsedoriginal44pagePDF/1205lines. AuthorDrJohnAndraos andcopyright2000-2021/chemistrydepartmentYorkoncoverL1-6; subjectbirthentryacquiredbysubsequentcachedfinds.",
+      "specific_durable_intent_before_call": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "open",
+      "record_id": "RS_PAST_NA3620",
+      "url": "https://www.hertford.ox.ac.uk/wp-content/uploads/2021/11/1997-1998-No.83-The-Hertford-College-Magazine.pdf",
+      "ref": "turn5020780view1",
+      "outcome": "Parsedoriginal144pagecollegemagazine/5676lines. Powellfullnative/lifeyears andKeithMcLauchlanauthoractualcontentsL10-11; newactualbodyCoventryonly, noqualifiedbirthregionacquired.",
+      "specific_durable_intent_before_call": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "open",
+      "record_id": "RS_PAST_NA3620",
+      "url": "https://centreforscientificarchives.co.uk/wp-content/uploads/2024/01/POWELL_HERBERT_MARCUS.pdf",
+      "ref": "turn5020780view2",
+      "outcome": "ToolInternalError:notaccessible. No originalbody/statusacquired; routeclosedwithoutretry/variant.",
+      "specific_durable_intent_before_call": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "find",
+      "ref": "turn5020780view0",
+      "pattern": "Edward Armand Guggenheim",
+      "output_ref": "turn1340334view0",
+      "outcome": "ActualfullnativeL847/exactDOB/deathL848/directbirthManchesterEnglandL849/GuggenheimmethodL850.",
+      "specific_durable_intent_before_call": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "find",
+      "ref": "turn5020780view1",
+      "pattern": "He was born in Coventry",
+      "output_ref": "turn1340334view1",
+      "outcome": "ActualsubjectCoventryL884-885, KidderminsterL886father, CalneWiltshireL892parentsmarriage, notsubjectborncountry.",
+      "specific_durable_intent_before_call": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "find",
+      "ref": "turn5020780view1",
+      "pattern": "England",
+      "output_ref": "turn1340334view2",
+      "outcome": "ReturnedEnglandcontextsareotherarticles/persons/booktitles; noneaPowellbirthclause. No globalnegativeclaim beyondinspectedcontexts.",
+      "specific_durable_intent_before_call": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "find",
+      "ref": "turn5020780view0",
+      "pattern": "Tompkins, F.C.",
+      "output_ref": "turn6781916view0",
+      "outcome": "ActualcompleteGuggenheimentryL847-855 inclGuggenheim1926PhilMagmethodcitationand1968Debus/1971TompkinsGoodevememoirreferences. Citedworksnotnewlyacquired.",
+      "specific_durable_intent_before_call": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "find",
+      "ref": "turn5020780view1",
+      "pattern": "Warwickshire",
+      "output_ref": "turn6781916view1",
+      "outcome": "ToolexplicitlyNo matching text found for Warwickshire.",
+      "specific_durable_intent_before_call": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "find",
+      "ref": "turn5020780view1",
+      "pattern": "Herbert Marcus Powell",
+      "output_ref": "turn6781916view2",
+      "outcome": "ActualfullnativeheadingL869/lifeyears1906-91L870; directCoventryonlyL884-891; parentalUpperStokeresidenceL935-943 notbirthcounty.",
+      "specific_durable_intent_before_call": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    }
+  ],
+  "counts": {
+    "queries": 8,
+    "navigation_attempts": 3,
+    "parsed_finds": 6,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "budget": {
+    "queries_limit": 8,
+    "original_navigation_limit": 10
+  },
+  "protocol_disclosure": "Everyexactinitial/adaptivequery/open/findlisted indurableintentbeforecorrespondingcall; failedNCUACSworkstoppedwithoutvariants/retry/rawGET; no priorfailedODNB/NPG/Woodsmemoirrouteretry. Parsedtextnotrawbytes; toolnotaccessibleisnotrawHTTPstatus.",
+  "quote_budget": {
+    "newQuotedEnglishWordsByOriginalWork": {
+      "Named Concepts in Chemistry A-K": 3,
+      "HertfordCollegePowellmemorial": 0
+    },
+    "prior_quotes_unchanged": true
+  },
+  "unopened_new_original_work_leads": [
+    {
+      "record_id": "RS_PAST_NA5124",
+      "discovery_ref": "turn1005888search51",
+      "url": "https://www.e-periodica.ch/cntmng?pid=swo-001%3A1970%3A0%3A%3A1299",
+      "status": "UnopenednewSwissperiodicalpersonnamelead; exacttitle/authorship/birthregion/bodyunverified. Notadopted."
+    },
+    {
+      "record_id": "RS_PAST_NA3578",
+      "discovery_ref": "turn1005888search4",
+      "url": "https://earthwise.bgs.ac.uk/index.php/Geologists%3A_biographies_and_obituaries%2C_a_bibliography_%E2%80%94_H",
+      "status": "UnopenedBGSbibliographymentionsHintonobituaryProceedingsGeologicalSocietypart1602/1962; originalobitURL/author/birthregionnotacquired. Notadopted."
+    }
+  ],
+  "no_analysis_or_final_freeze": true,
+  "repo_or_master_modified": false
+}

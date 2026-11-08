@@ -1,0 +1,149 @@
+{
+  "schema": "UK_v35_geography_only_independent_final_QA_v1",
+  "reviewer": "/root/v35_final_qa",
+  "written_utc": "2026-11-06T23:59:55.490082+00:00",
+  "status": "PASS",
+  "validation_categories_passed": 56,
+  "checks": [
+    "root final canonical and adopted IDs supplied before QA",
+    "five completed production output pins match before QA",
+    "v34 baseline and v35 current canonical match root pins",
+    "self-contained v34 reconstruction all4983 complete objects exact",
+    "all prior loaders and geography and birthplace helpers verbatim",
+    "all prior geography constants unchanged",
+    "fixed record order unique keys and UK cohort",
+    "62 stored-place unknown queue and6 fixed complete disjoint outcomes",
+    "three groups two each match predeclared scope and no first birthplace inputs",
+    "narrow geography first-pass queue independently partitions62 as54 priorfollowups2knownholds6remaining",
+    "six current records reviewed leaves zero outside prior geography follows and known holds",
+    "only six existing geography fields mutable",
+    "complete changed object set exactly accepted geography IDs",
+    "all native and BP fields and prior evidence frozen with exact six-field rollback",
+    "all103 window blank and all525 blank complete objects unchanged",
+    "all current holds preserve complete objects",
+    "all raw birthplace and source grades unchanged",
+    "adopted documentary facts carry geography-only grade roles identity place and parsed-source limits",
+    "independent overall and2644 window counts",
+    "unchanged blank counts and resolved nonblank unknown diagnostics recomputed",
+    "summary zero newBP and geography counts grade roles exact",
+    "changes contain only current geography refinements originalBP unchanged",
+    "CSV140 old columns retain positions plus6 newgeo=146",
+    "all4983 CSV rows preserve old meanings except adopted current hemisphere cells",
+    "remaining unknown CSV equals master native-window order",
+    "seven other issue files byte exact and ten prior active DOB objects unchanged",
+    "twelve active DOB cases append only Franklin and Wolfson with Tomes provisional separate",
+    "prior v34 active conflict file retained byte exact",
+    "partial birthplace inventory appends only Grove Hills preserving old Gotch object",
+    "Franklin historical credited reproduction wrapper observation separate from underlying RCP text",
+    "Wolfson actual numeric literal conflict retains both common alternatives without chosen normalized date",
+    "Grove Hills prior London claim and new High Head Castle conflict preserve distinct source roles",
+    "inherited Thompson v12 case and v33 root reverification roles remain unchanged",
+    "inherited Fawcett v33 March header and May born-body contrast remains unresolved",
+    "both prior inventory cases preserve native and BP grade roles with unknown raw metadata",
+    "all inherited historical audit files remain byte exact",
+    "historical v29 first-pass closeout retains v29 hash and same103 blank IDs",
+    "untargeted prior issue geography and source-class complete objects unchanged",
+    "known place holds and prior active DOB cases excluded from currentselection",
+    "sourceQA passed with exact current facts activeDOB and source-class hash bindings",
+    "sourceQA also binds changed birthplace inventory and scoped geography closeout",
+    "no full-source caches PDFs or images distributed",
+    "README continuation final canonical and v35 labels updated",
+    "parent adjudication describes current baseline geography-only phase",
+    "actual source request accounting equals root final declared counts",
+    "dated stale intent-label clarification preserves original bytes and current six-record scope",
+    "worker reports preserved byte exact",
+    "all prior active DOB conflict subjects excluded and all twelve current conflict objects unchanged",
+    "new DOB and birthplace issue subjects remain current holds without geography adoption",
+    "inherited Thompson historical context and provenance note byte exact",
+    "current source class decision no new exception prior v34 review byte exact",
+    "geography first-pass closeout exact IDs baseline hash input pins and zero remaining",
+    "initial birth-window geography queue equals frozen69 IDs and seven previous resolutions",
+    "geography first-pass is record coverage only and Franklin reviewed without fresh worker search",
+    "two isolated clean replays all5 outputs equal original pins",
+    "production five outputs untouched after QA"
+  ],
+  "baseline_canonical_sha256": "271a32070f8dae8c54933f1ebaacc5ae141427a3448f8f1562000f8842a0c632",
+  "final_canonical_sha256": "271a32070f8dae8c54933f1ebaacc5ae141427a3448f8f1562000f8842a0c632",
+  "records": 4983,
+  "changed_complete_objects": 0,
+  "unchanged_complete_objects": 4983,
+  "new_birthplaces": 0,
+  "geography_only_resolutions": 0,
+  "accepted_record_ids": [],
+  "overall": {
+    "north": 4197,
+    "unknown": 599,
+    "south": 187
+  },
+  "window_counts": {
+    "north": 2297,
+    "unknown": 165,
+    "south": 182
+  },
+  "blank_diagnostics": {
+    "all_blank_raw_birthplace": 525,
+    "window_blank_raw_birthplace": 103,
+    "all_unknown": 599,
+    "all_unknown_with_blank_raw_birthplace": 525,
+    "all_unknown_with_nonblank_raw_birthplace": 74,
+    "window_unknown": 165,
+    "window_unknown_with_blank_raw_birthplace": 103,
+    "window_unknown_with_nonblank_raw_birthplace": 62
+  },
+  "main_pre_QA_output_pins": {
+    "birthplace_rows.jsonl.gz": "27ae04633241a049a77f2916243aa516e945f3dc923236e3196dfa62af097a58",
+    "birthplaces.csv": "286f08055ae1f0d39be3f0643e4d1501d9acd01c23718d30f1863d13c9e238e5",
+    "changes.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "remaining_unknown_window.csv": "a58d774a772c0e440d19d33e24f744979b95b5819455c0afe907dee15488bbc7",
+    "summary.json": "30e65ecbfdd28b1f245c62dfcdea53e03ff92c4aa2d3ee7e69d11e3ef8e4131f"
+  },
+  "isolated_replay_runs": [
+    {
+      "run": 1,
+      "clean_exit": true,
+      "five_hashes": {
+        "birthplace_rows.jsonl.gz": "27ae04633241a049a77f2916243aa516e945f3dc923236e3196dfa62af097a58",
+        "birthplaces.csv": "286f08055ae1f0d39be3f0643e4d1501d9acd01c23718d30f1863d13c9e238e5",
+        "changes.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "remaining_unknown_window.csv": "a58d774a772c0e440d19d33e24f744979b95b5819455c0afe907dee15488bbc7",
+        "summary.json": "30e65ecbfdd28b1f245c62dfcdea53e03ff92c4aa2d3ee7e69d11e3ef8e4131f"
+      },
+      "matched_original_pins": true
+    },
+    {
+      "run": 2,
+      "clean_exit": true,
+      "five_hashes": {
+        "birthplace_rows.jsonl.gz": "27ae04633241a049a77f2916243aa516e945f3dc923236e3196dfa62af097a58",
+        "birthplaces.csv": "286f08055ae1f0d39be3f0643e4d1501d9acd01c23718d30f1863d13c9e238e5",
+        "changes.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "remaining_unknown_window.csv": "a58d774a772c0e440d19d33e24f744979b95b5819455c0afe907dee15488bbc7",
+        "summary.json": "30e65ecbfdd28b1f245c62dfcdea53e03ff92c4aa2d3ee7e69d11e3ef8e4131f"
+      },
+      "matched_original_pins": true
+    }
+  ],
+  "main_outputs_rerun_or_mutated": false,
+  "new_active_DOB_conflict_inventory_entries": 2,
+  "active_DOB_conflict_count": 12,
+  "all10_prior_active_DOB_conflict_objects_unchanged": true,
+  "historical_v29_closeout_hash_preserved": true,
+  "geography_first_pass_closeout_scope": "Original69 existing-place unresolved-geography record IDs within nativeDOB1835-1985 inclusive only; not entire4983 cohort/nonwindow unknowns, source exhaustion or complete geography",
+  "geography_first_pass_queue_closeout_sha256": "56fd3053935afc42fe2f9cf301bb66bc2bc6839fa9483467cd03e602fb61be3b",
+  "quote_words": {},
+  "documentation_checks": {
+    "files": [
+      "README.md",
+      "CONTINUATION.md"
+    ],
+    "counts_scope_limits_consistent": true,
+    "review_method": "Direct final documentary review plus complete structural equality and rollback, documentary source semantics separately reviewed by sourceQA. All originalBP/DOBtiers and previous facts retained; only six geographic fields and versioned context may change."
+  },
+  "limitations": [
+    "Independent local data/structural/replay verification only; no network or original-source acquisition/rawHTTP inspection by this reviewer.",
+    "Source semantic/genre/source-newness reviewed separately in independent_source_qa.json; recorded parsed source locators are not new acquisition claims by this reviewer.",
+    "New source grades are geographic_support_only and do not upgrade original birthplaces or DOB grades.",
+    "Ten prior qualified DOB conflict objects and seven other issue files remain unchanged; two DOB observations and one place-conflict observation extend their partial inventories without native correction. Older Thompson, Fawcett and Church cases are not newly recounted; Tomes provisional distinct. v29 first-pass closeout stays historical with its v29hash and all103blank objects unchanged.",
+    "No production facts, inputs, code, main outputs or Git changed; this audit and scratch harness only."
+  ]
+}

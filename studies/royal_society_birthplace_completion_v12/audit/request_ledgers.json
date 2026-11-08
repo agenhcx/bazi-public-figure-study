@@ -1,0 +1,585 @@
+[
+  {
+    "lane": "a",
+    "worker": "v12_sources_a",
+    "audit_written_utc": "2026-11-04T23:12:47.447503+00:00",
+    "source_capture_kind": "web-toolparsedtextonly; no rawHTTPbytes/hash claimed",
+    "request_ledger": {
+      "initial_durable_plan_file": "v12_a_intent.json",
+      "initial4searchqueries_preplanned_durably": true,
+      "followup2query_exact_plan_written_after_call": true,
+      "followup_plan_not_claimed_pre_request": true,
+      "original4opens_exact_plan_written_after_call": true,
+      "final_publisher_and_Copenhagen_exact_intents_pre_request": true,
+      "exact_request_timestamps": null,
+      "http_statuses_from_tool_inaccessible_not_known": true,
+      "actual_search_queries": 6,
+      "actual_search_calls": 2,
+      "original_open_items": 8,
+      "parsed_text_find_operations": 3,
+      "retries": 0,
+      "searches": [
+        {
+          "engine": "system2",
+          "queries": [
+            "Harry Smith microbiologist born Northampton 1921 biography",
+            "John Maynard Smith born London 1920 England biography",
+            "James Barber born Hatfield 1940 Hertfordshire biography",
+            "Bland Finlay born Edinburgh 1952 Scotland obituary"
+          ],
+          "refs": [
+            "turn17search0",
+            "turn17search1",
+            "turn17search3",
+            "turn17search14"
+          ]
+        },
+        {
+          "engine": "system1",
+          "queries": [
+            "\"Bland James Finlay\" obituary born",
+            "\"James Barber\" \"Letchworth\""
+          ],
+          "refs": [
+            "turn18search0",
+            "turn18search1",
+            "turn18search2"
+          ]
+        }
+      ],
+      "opens": [
+        {
+          "url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/582686323",
+          "ref": "turn18view0"
+        },
+        {
+          "url": "https://www.balzan.org/en/prizewinners/john-maynard-smith/bio-bibliography",
+          "ref": "turn18view3"
+        },
+        {
+          "url": "https://www.researchgate.net/publication/356371831_James_Barber_1940-2020_A_very_remarkable_biochemist_of_our_time",
+          "ref": "turn20view1"
+        },
+        {
+          "url": "https://researchprofiles.ku.dk/en/publications/bland-james-finlay-march-16-1952-december-24-2021/",
+          "ref": "turn23view0"
+        },
+        {
+          "url": "https://microbiologysociety.org/who-we-are/our-history/past-presidents.html",
+          "ref": "turn18view1"
+        },
+        {
+          "url": "https://link.springer.com/article/10.1007/s11120-022-00919-6",
+          "ref": "turn18view2"
+        },
+        {
+          "url": "https://doi.org/10.1016/j.protis.2022.125906",
+          "ref": "turn20view0"
+        },
+        {
+          "url": "https://doi.org/10.32615/ps.2021.058",
+          "ref": "turn21view0"
+        }
+      ],
+      "finds": [
+        {
+          "ref": "turn18view2",
+          "pattern": "born",
+          "result": "earlyyearsparagraph"
+        },
+        {
+          "ref": "turn18view2",
+          "pattern": "Hatfield",
+          "result": "nomatchingtext"
+        },
+        {
+          "ref": "turn18view2",
+          "pattern": "Hertfordshire",
+          "result": "nomatchingtext"
+        }
+      ]
+    },
+    "root_timing_caution": "Client-side tool call clocks are not original server response times. Null timings/statuses stay unknown. Durable plans apply only where the saved artifact genuinely preceded the call."
+  },
+  {
+    "lane": "b",
+    "created_utc": "2026-11-04T23:13:08.959Z",
+    "intent_file": "v12_b_intent.json",
+    "request_ledger": [
+      {
+        "id": "search_1",
+        "type": "search",
+        "request": "\"Henry Capel Lofft Holden\" born Gloucestershire",
+        "web_refs": [
+          "turn19search0",
+          "turn19search3",
+          "turn19search8"
+        ],
+        "http_status": null,
+        "request_started_utc": null,
+        "request_completed_utc": null,
+        "timing_note": "Exact per-request clock not captured; null retained.",
+        "raw_http_sha256": null,
+        "text_projection_sha256": null,
+        "outcome": "OUP ODNB hit with explicit Gloucestershire; opened separately."
+      },
+      {
+        "id": "search_2",
+        "type": "search",
+        "request": "\"Arthur Alcock Rambaut\" born Waterford Ireland",
+        "web_refs": [
+          "turn19search1",
+          "turn19search4",
+          "turn19search6",
+          "turn19search9"
+        ],
+        "http_status": null,
+        "request_started_utc": null,
+        "request_completed_utc": null,
+        "timing_note": "Exact per-request clock not captured; null retained.",
+        "raw_http_sha256": null,
+        "text_projection_sha256": null,
+        "outcome": "Original Nature and RAS found; DIB index says Waterford city but no explicit region in available person's birth wording."
+      },
+      {
+        "id": "search_3",
+        "type": "search",
+        "request": "\"Edward Fawcett\" born Blencowe Cumberland",
+        "web_refs": [
+          "turn19search21",
+          "turn19search50"
+        ],
+        "http_status": null,
+        "request_started_utc": null,
+        "request_completed_utc": null,
+        "timing_note": "Exact per-request clock not captured; null retained.",
+        "raw_http_sha256": null,
+        "text_projection_sha256": null,
+        "outcome": "Original PMC obituary found; tertiary Wikipedia result excluded."
+      },
+      {
+        "id": "search_4",
+        "type": "search",
+        "request": "\"John Barker\" \"1901\" \"born\" Finchley",
+        "web_refs": [
+          "turn19search27",
+          "turn19search29"
+        ],
+        "http_status": null,
+        "request_started_utc": null,
+        "request_completed_utc": null,
+        "timing_note": "Exact per-request clock not captured; null retained.",
+        "raw_http_sha256": null,
+        "text_projection_sha256": null,
+        "outcome": "No qualifying institutional or authored original birth-region evidence."
+      },
+      {
+        "id": "search_5",
+        "type": "search",
+        "request": "\"John Barker\" \"1901\" \"Finchley\" \"Middlesex\"",
+        "web_refs": [
+          "turn24search2",
+          "turn24search5",
+          "turn24search6"
+        ],
+        "http_status": null,
+        "request_started_utc": "2026-11-04T23:11:43.532Z",
+        "request_completed_utc": "2026-11-04T23:11:44.287Z",
+        "timing_note": "Client-side wall clock around tool call; not remote server timing.",
+        "raw_http_sha256": null,
+        "text_projection_sha256": null,
+        "outcome": "Results about unrelated people or family data excluded."
+      },
+      {
+        "id": "search_6",
+        "type": "search",
+        "request": "\"Edward Fawcett\" \"born\" \"Cumberland\" -site:en.wikipedia.org -site:newikis.com -site:everything.explained.today",
+        "web_refs": [
+          "turn24search1",
+          "turn24search12",
+          "turn24search16"
+        ],
+        "http_status": null,
+        "request_started_utc": "2026-11-04T23:11:43.532Z",
+        "request_completed_utc": "2026-11-04T23:11:44.287Z",
+        "timing_note": "Client-side wall clock around tool call; not remote server timing.",
+        "raw_http_sha256": null,
+        "text_projection_sha256": null,
+        "outcome": "Tertiary mirror and unrelated results excluded; no qualifying added birth-region evidence."
+      },
+      {
+        "id": "navigation_1",
+        "type": "original_navigation",
+        "request": "open turn19search0",
+        "web_refs": [
+          "turn22view0"
+        ],
+        "http_status": null,
+        "request_started_utc": null,
+        "request_completed_utc": null,
+        "timing_note": "Exact per-request clock not captured; null retained.",
+        "raw_http_sha256": null,
+        "text_projection_sha256": null,
+        "outcome": "OUP ODNB original extract accessible; author, publication date, full name/lifespan and explicit birthplace/dob verified."
+      },
+      {
+        "id": "navigation_2",
+        "type": "original_navigation",
+        "request": "open turn19search21",
+        "web_refs": [
+          "turn22view1"
+        ],
+        "http_status": null,
+        "request_started_utc": null,
+        "request_completed_utc": null,
+        "timing_note": "Exact per-request clock not captured; null retained.",
+        "raw_http_sha256": null,
+        "text_projection_sha256": null,
+        "outcome": "PMC returned checking-your-browser reCAPTCHA text; no original article read."
+      },
+      {
+        "id": "navigation_3",
+        "type": "original_navigation",
+        "request": "open turn19search6",
+        "web_refs": [
+          "turn22view2"
+        ],
+        "http_status": null,
+        "request_started_utc": null,
+        "request_completed_utc": null,
+        "timing_note": "Exact per-request clock not captured; null retained.",
+        "raw_http_sha256": null,
+        "text_projection_sha256": null,
+        "outcome": "RAS institutional obituary index gave full name, DOB, death date, and original obituary link; no birth place."
+      },
+      {
+        "id": "navigation_4",
+        "type": "original_navigation",
+        "request": "open turn19search9",
+        "web_refs": [
+          "turn22view3"
+        ],
+        "http_status": 403,
+        "request_started_utc": null,
+        "request_completed_utc": null,
+        "timing_note": "Exact per-request clock not captured; null retained.",
+        "raw_http_sha256": null,
+        "text_projection_sha256": null,
+        "outcome": "DIB Waterford taxonomy source failed with tool-reported 403."
+      },
+      {
+        "id": "navigation_5",
+        "type": "original_navigation",
+        "request": "open https://royalsocietypublishing.org/doi/10.1098/rsbm.1972.0003",
+        "web_refs": [
+          "turn25view0"
+        ],
+        "http_status": 403,
+        "request_started_utc": "2026-11-04T23:11:56.625Z",
+        "request_completed_utc": "2026-11-04T23:11:57.575Z",
+        "timing_note": "Client-side wall clock around tool call; not remote server timing.",
+        "raw_http_sha256": null,
+        "text_projection_sha256": null,
+        "outcome": "Barker original memoir URL tool-reported 403; no new original text read."
+      },
+      {
+        "id": "navigation_6",
+        "type": "original_navigation",
+        "request": "open https://www.dib.ie/biography/rambaut-arthur-alcock-a7573",
+        "web_refs": [
+          "turn25view1"
+        ],
+        "http_status": null,
+        "request_started_utc": "2026-11-04T23:11:56.625Z",
+        "request_completed_utc": "2026-11-04T23:11:57.575Z",
+        "timing_note": "Client-side wall clock around tool call; not remote server timing.",
+        "raw_http_sha256": null,
+        "text_projection_sha256": null,
+        "outcome": "Unverified candidate URL not accessible; no identity or birth claim relied on it. URL suffix was a mistaken speculative navigation and is explicitly excluded."
+      },
+      {
+        "id": "navigation_7",
+        "type": "original_navigation",
+        "request": "click turn22view2 link 60 (RAS original obituary)",
+        "web_refs": [
+          "turn25view2"
+        ],
+        "http_status": null,
+        "request_started_utc": "2026-11-04T23:11:56.625Z",
+        "request_completed_utc": "2026-11-04T23:11:57.575Z",
+        "timing_note": "Client-side wall clock around tool call; not remote server timing.",
+        "raw_http_sha256": null,
+        "text_projection_sha256": null,
+        "outcome": "ADS legacy link redirected to SciX Scan Explorer rather than article text."
+      },
+      {
+        "id": "navigation_8",
+        "type": "original_navigation",
+        "request": "open https://articles.adsabs.harvard.edu/full/1924MNRAS..84..220.",
+        "web_refs": [
+          "turn27view0"
+        ],
+        "http_status": null,
+        "request_started_utc": "2026-11-04T23:12:03.001Z",
+        "request_completed_utc": "2026-11-04T23:12:03.311Z",
+        "timing_note": "Client-side wall clock around tool call; not remote server timing.",
+        "raw_http_sha256": null,
+        "text_projection_sha256": null,
+        "outcome": "Original ADS page wrapper had zero readable lines; no original birth-region text verified."
+      }
+    ],
+    "budget": {
+      "search_queries_used": 6,
+      "search_queries_limit": 6,
+      "original_navigations_used": 8,
+      "original_navigations_limit": 8
+    },
+    "root_timing_caution": "Client-side tool call clocks are not original server response times. Null timings/statuses stay unknown. Durable plans apply only where the saved artifact genuinely preceded the call."
+  },
+  {
+    "lane": "c",
+    "created_utc": "2026-11-04T23:13:38.413Z",
+    "intent_file": "v12_c_intent.json",
+    "request_ledger": [
+      {
+        "request_kind": "discovery_query",
+        "query_index": 1,
+        "query": "\"Claude Gordon Douglas\" born Leicester England",
+        "request_started_utc": "2026-11-04T23:11:57.942Z",
+        "tool_finished_utc": "2026-11-04T23:11:58.580Z",
+        "http_status": null,
+        "http_response_time_ms": null,
+        "raw_http_sha256": null,
+        "relevant_returned_webrefs": [
+          "turn26search0",
+          "turn26search2",
+          "turn26search4",
+          "turn26search8",
+          "turn26search16"
+        ]
+      },
+      {
+        "request_kind": "discovery_query",
+        "query_index": 2,
+        "query": "\"Robert Henry Stewart Thompson\" born Croydon Surrey",
+        "request_started_utc": "2026-11-04T23:11:57.942Z",
+        "tool_finished_utc": "2026-11-04T23:11:58.580Z",
+        "http_status": null,
+        "http_response_time_ms": null,
+        "raw_http_sha256": null,
+        "relevant_returned_webrefs": [
+          "turn26search1",
+          "turn26search3",
+          "turn26search25",
+          "turn26search50"
+        ]
+      },
+      {
+        "request_kind": "discovery_query",
+        "query_index": 3,
+        "query": "\"Edward Armand Guggenheim\" born Manchester England",
+        "request_started_utc": "2026-11-04T23:11:57.942Z",
+        "tool_finished_utc": "2026-11-04T23:11:58.580Z",
+        "http_status": null,
+        "http_response_time_ms": null,
+        "raw_http_sha256": null,
+        "relevant_returned_webrefs": [
+          "turn26search7",
+          "turn26search17",
+          "turn26search47",
+          "turn26search51",
+          "turn26search53"
+        ]
+      },
+      {
+        "request_kind": "discovery_query",
+        "query_index": 4,
+        "query": "\"Donald Devereux Woods\" born Ipswich Suffolk",
+        "request_started_utc": "2026-11-04T23:11:57.942Z",
+        "tool_finished_utc": "2026-11-04T23:11:58.580Z",
+        "http_status": null,
+        "http_response_time_ms": null,
+        "raw_http_sha256": null,
+        "relevant_returned_webrefs": [
+          "turn26search9",
+          "turn26search14",
+          "turn26search40",
+          "turn26search48",
+          "turn26search49"
+        ]
+      },
+      {
+        "request_kind": "discovery_query",
+        "query_index": 5,
+        "query": "\"Robert Henry Stewart Thompson\" (born OR birthplace) (Surrey OR England OR Croydon) -site:en.wikipedia.org -site:grafiati.com",
+        "request_started_utc": "2026-11-04T23:12:06.162Z",
+        "tool_finished_utc": "2026-11-04T23:12:08.634Z",
+        "http_status": null,
+        "http_response_time_ms": null,
+        "raw_http_sha256": null,
+        "relevant_returned_webrefs": [
+          "turn28search0",
+          "turn28search1",
+          "turn28search2",
+          "turn28search3",
+          "turn28search4",
+          "turn28search9"
+        ]
+      },
+      {
+        "request_kind": "discovery_query",
+        "query_index": 6,
+        "query": "\"Edward Armand Guggenheim\" (born OR birthplace) (England OR Lancashire) -site:en.wikipedia.org -site:handwiki.org -site:wiki.*",
+        "request_started_utc": "2026-11-04T23:12:06.162Z",
+        "tool_finished_utc": "2026-11-04T23:12:08.634Z",
+        "http_status": null,
+        "http_response_time_ms": null,
+        "raw_http_sha256": null,
+        "relevant_returned_webrefs": [
+          "turn28search5",
+          "turn28search6",
+          "turn28search7",
+          "turn28search8"
+        ]
+      },
+      {
+        "request_kind": "original_navigation",
+        "navigation_index": 1,
+        "input_ref": "turn26search9",
+        "request_started_utc": "2026-11-04T23:12:15.305Z",
+        "tool_finished_utc": "2026-11-04T23:12:16.072Z",
+        "http_status": null,
+        "http_response_time_ms": null,
+        "raw_http_sha256": null,
+        "output_ref": "turn29view0",
+        "url": "https://centreforscientificarchives.co.uk/catalogues/woods_donald_compressed-pdf/",
+        "outcome": "parsed_original_archive_catalogue",
+        "locator": "lines31,37-40; Summary of career",
+        "note": "Subject full name and1912–1964 lifespan; career summary gives Ipswich only, without county/state/country qualifier."
+      },
+      {
+        "request_kind": "original_navigation",
+        "navigation_index": 2,
+        "input_ref": "turn26search8",
+        "request_started_utc": "2026-11-04T23:12:15.305Z",
+        "tool_finished_utc": "2026-11-04T23:12:16.072Z",
+        "http_status": null,
+        "http_response_time_ms": null,
+        "raw_http_sha256": null,
+        "output_ref": "turn29view1",
+        "url": "https://centreforscientificarchives.co.uk/catalogues/douglas-claude-gordon-v2/",
+        "outcome": "parsed_original_archive_catalogue",
+        "locator": "lines31,33,39-42; Summary of career, printed p5",
+        "note": "Full name and1882–1963 lifespan; born1882 Leicester only, no geographic qualifier."
+      },
+      {
+        "request_kind": "original_navigation",
+        "navigation_index": 3,
+        "input_ref": "turn26search53",
+        "request_started_utc": "2026-11-04T23:12:15.305Z",
+        "tool_finished_utc": "2026-11-04T23:12:16.072Z",
+        "http_status": null,
+        "http_response_time_ms": null,
+        "raw_http_sha256": null,
+        "output_ref": "turn29view2",
+        "url": "https://web.stanford.edu/group/swain/history/hutchinson/sections/faculty_39-48.pdf",
+        "outcome": "parsed_institutional_PDF_excerpt",
+        "locator": "lines117-118; THE FACULTY printed p41",
+        "note": "Full-name entry for Guggenheim and1932 Stanford visit. Oxford, England refers to degree/institution, not birth. No birthplace statement."
+      },
+      {
+        "request_kind": "original_navigation",
+        "navigation_index": 4,
+        "input_ref": "turn28search8",
+        "request_started_utc": "2026-11-04T23:12:15.305Z",
+        "tool_finished_utc": "2026-11-04T23:12:16.072Z",
+        "http_status": null,
+        "http_response_time_ms": null,
+        "raw_http_sha256": null,
+        "output_ref": "turn29view3",
+        "url": "https://doi.org/10.1093/ref%3Aodnb/33598",
+        "redirect_url": "https://www.oxforddnb.com/view/article/33598",
+        "outcome": "tool_fetch_failure_nonretryable",
+        "tool_error_status": 500,
+        "locator": null,
+        "note": "No article body acquired; author F. C. Tompkins and1901–1970 title only in discovery snippet."
+      },
+      {
+        "request_kind": "original_navigation",
+        "navigation_index": 5,
+        "input_ref": "turn26search7",
+        "request_started_utc": "2026-11-04T23:12:27.845Z",
+        "tool_finished_utc": "2026-11-04T23:12:28.396Z",
+        "http_status": null,
+        "http_response_time_ms": null,
+        "raw_http_sha256": null,
+        "output_ref": "turn30view0",
+        "url": "https://www.npg.org.uk/collections/search/person/mp134089/edward-armand-guggenheim",
+        "outcome": "tool_fetch_failure",
+        "locator": null,
+        "note": "Discovery snippet's Greater Manchester association was not a verified birthplace field and was not used."
+      },
+      {
+        "request_kind": "original_navigation",
+        "navigation_index": 6,
+        "input_ref": "turn26search16",
+        "request_started_utc": "2026-11-04T23:12:27.845Z",
+        "tool_finished_utc": "2026-11-04T23:12:28.396Z",
+        "http_status": null,
+        "http_response_time_ms": null,
+        "raw_http_sha256": null,
+        "output_ref": "turn30view1",
+        "url": "https://www.npg.org.uk/collections/search/person/mp131669/claude-gordon-douglas",
+        "outcome": "parsed_institutional_person_page",
+        "locator": "lines61-65",
+        "note": "Full name and1882–1963 lifespan; no birthplace provided. London footer is excluded."
+      },
+      {
+        "request_kind": "original_navigation",
+        "navigation_index": 7,
+        "input_ref": "turn28search2",
+        "request_started_utc": "2026-11-04T23:12:27.845Z",
+        "tool_finished_utc": "2026-11-04T23:12:28.396Z",
+        "http_status": null,
+        "http_response_time_ms": null,
+        "raw_http_sha256": null,
+        "output_ref": "turn30view2",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1113094/",
+        "source_doi": "10.1136/bmj.316.7141.1392",
+        "outcome": "parsed_publisher_supplied_original_signed_obituary",
+        "locator": "lines83-89; subsection Robert Henry Stewart Thompson",
+        "note": "Signed by Peter Williams. Croydon only, no qualifier; birth year1913 conflicts with frozen1912."
+      },
+      {
+        "request_kind": "original_navigation",
+        "navigation_index": 8,
+        "input_ref": "https://doi.org/10.1098/rsbm.1965.0014",
+        "request_started_utc": "2026-11-04T23:12:27.845Z",
+        "tool_finished_utc": "2026-11-04T23:12:28.396Z",
+        "http_status": null,
+        "http_response_time_ms": null,
+        "raw_http_sha256": null,
+        "output_ref": "turn30view3",
+        "url": "https://doi.org/10.1098/rsbm.1965.0014",
+        "outcome": "tool_fetch_failure",
+        "locator": null,
+        "note": "Original Royal Society publisher DOI inaccessible; this was not a retry of closed Crossref abstract route."
+      }
+    ],
+    "summary": {
+      "qualified_candidates": 0,
+      "held_records": 4,
+      "new_conflict_records": [
+        "RS_PAST_NA2153"
+      ],
+      "reason": "No new acquired source explicitly connected target birth city to county/state/region/country. Query/navigation ceilings reached."
+    },
+    "budget": {
+      "discovery_queries_limit": 6,
+      "discovery_queries_used": 6,
+      "original_navigation_limit": 8,
+      "original_navigation_used": 8
+    },
+    "root_timing_caution": "Client-side tool call clocks are not original server response times. Null timings/statuses stay unknown. Durable plans apply only where the saved artifact genuinely preceded the call."
+  }
+]

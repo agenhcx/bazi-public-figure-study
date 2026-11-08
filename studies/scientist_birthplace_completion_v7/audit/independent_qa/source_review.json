@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "baseline_sha256": "8e880fcf4a659a1c8753a5a0ad4c06552ddd9d0d545334b0e81a2459907d7356",
+  "source_fact_files": [
+    "academy_v7_workers/vol79/retained_facts.jsonl",
+    "academy_v7_workers/vol80/retained_facts.jsonl",
+    "academy_v7_workers/nobel_physics/retained_facts.jsonl",
+    "academy_v7_workers/nobel_chem_med/retained_facts.jsonl"
+  ],
+  "source_fact_file_sha256": {
+    "academy_v7_workers/vol79/retained_facts.jsonl": "a3412d01b5784170b8a75b88231457856c26ff5b0c582ba7a3b222705487e17e",
+    "academy_v7_workers/vol80/retained_facts.jsonl": "4d986b89ec58599bc26984fc3b72f2729e352c91c42750afb59823469fcc2f1b",
+    "academy_v7_workers/nobel_physics/retained_facts.jsonl": "413147916a58547bbcb848ed45ae1475e19937264265371a59ca73f3f72eb144",
+    "academy_v7_workers/nobel_chem_med/retained_facts.jsonl": "1d2597cc930987ee2e8a755755531209771aa3d2606ee1e41dcf4a12d8071b47"
+  },
+  "source_observations": 30,
+  "source_observation_grades": {
+    "S1": 26,
+    "S2": 4
+  },
+  "unique_NAS_target_keys": 29,
+  "primary_source_grade_counts_if_S1_priority": {
+    "S1": 26,
+    "S2": 3
+  },
+  "overlap_merge_required": {
+    "cohort": "NAS",
+    "record_id": "https://www.nasonline.org/directory-entry/alfred-d-hershey-8eamd9/",
+    "name": "Alfred D. Hershey",
+    "sources": [
+      "S1 official medicine API",
+      "S2 Vol80 signed memoir"
+    ],
+    "one_statistical_NAS_row": true,
+    "both_original_observations_to_be_retained_verbatim": true
+  },
+  "memoir_held_rows": 1,
+  "API_identity_exclusions": 2,
+  "API_665_raw_objects_all543_unknowns_crossmatch_and_bidirectional_uniqueness_verified": true,
+  "Bruce_Merrifield_root_authorized_explicit_preferred_name_exception_verified": true,
+  "chem_med_prize_context_metadata_finding_resolved_offline_same_original_bytes": true,
+  "memoir_capture_clocks_seconds": {
+    "79": 54.972381,
+    "80": 146.242563
+  },
+  "source_quality_S1_S2_independent_of_native_DOB_groups": true,
+  "no_native_Nobel_DOB_adoption_statistical_cross_cohort_deduplication_or_QID_assignment": true,
+  "original_memoir_HTML_images_fulltext_excluded_from_distribution": true,
+  "memoir_report": "memoir_source_review.json",
+  "API_report": "api_source_review.json",
+  "QA_HTTP_requests": 0,
+  "source_effort_this_round": {
+    "memoir_discovery_queries": 2,
+    "memoir_index_requests": 2,
+    "memoir_HTML_bodies": 5,
+    "memoir_GIF_bodies": 1,
+    "fresh_chemistry_medicine_original_API_bodies": 2,
+    "cached_physics_original_API_refresh": 0,
+    "total_logical_requests": 12,
+    "retries": 0,
+    "actual_original_HTTP_captures": 10,
+    "search_query_actions": 2
+  }
+}

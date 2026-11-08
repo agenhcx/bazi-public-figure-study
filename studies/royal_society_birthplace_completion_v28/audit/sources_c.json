@@ -1,0 +1,300 @@
+{
+  "schema": "v28_sources_c_v1",
+  "worker": "/root/v26_sources_c assignedv28groupc",
+  "written_utc": "2026-11-06T11:21:10.419998+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA3918",
+    "RS_PAST_NA3961",
+    "RS_PAST_NA4091",
+    "RS_PAST_NA4189"
+  ],
+  "intent_file": "v28_c_intent.json",
+  "counts": {
+    "discovery_queries": 8,
+    "web_navigation_attempts": 4,
+    "parsed_find_operations": 0,
+    "screenshots": 0,
+    "raw_HTTP_or_PDF_GETs": 0,
+    "body_verified_birthplace_candidates": 1,
+    "holds": 3
+  },
+  "candidates": [
+    {
+      "record_id": "RS_PAST_NA4189",
+      "native": {
+        "record_id": "RS_PAST_NA4189",
+        "authority_name": "Ganellin; Charon Robin (1934 - 2026); medicinal chemist",
+        "native_dob": "1934-01-25",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "ec62bfb2212899ec956aa1c41799ea7248392e88b058d79aceabc9b01c96a16d"
+      },
+      "status": "candidate_direct_original_NIHF_compiledbiography_S3_north_parentreview",
+      "raw_birthplace": "London, England",
+      "source_url": "https://www.invent.org/inductees/charon-robin-ganellin",
+      "source_title": "National Inventors Hall of Fame Inductee Charon Ganellin and Tagamet",
+      "source_author": null,
+      "source_kind": "original NIHFuncreditedcompiledinducteebiography",
+      "publication_year": null,
+      "publication_date_precision": "No explicitpublicationdate acquired; inductionyear1990 is not articlepublicationyear; crawl/currenttense not publicationdate.",
+      "source_grade_proposal": "S3",
+      "source_grade_basis": "Actualoriginaluncreditedcompiledinstitutionalbiography, no acquirednamededitor/claimspecificcivilrecord/verifiedexpertbyline. ConservativeS3, no hostonlyS1orautomaticS2.",
+      "source_grade_role": "person_birthplace_support_only",
+      "source_quote": "Ganellin was born in London, England",
+      "source_quote_word_count": 6,
+      "source_locator": "turn2992260view0:L80fullnativeCharonRobinGanellin;L88exact25Jan1934;L89cimetidinerecovery/JamesBlack;L91directLondonEnglandbirth and QueenMary/MIT/UCLmedicinalchemistrycareer.",
+      "source_body_ref": "turn2992260view0",
+      "observed_source_full_name": "Charon Robin Ganellin",
+      "source_birthdate": "1934-01-25",
+      "source_birthdate_precision": "exactday",
+      "source_deathdate": null,
+      "source_DOB_native_compatibility": "Actualexact25Jan1934 agrees unchangednative1934-01-25; allactualsourcefullcomponents matchCharonRobinGanellin. No Charlesalias/substitution/expansion needed. Actualsource supplies no deathdate; undatedpresenttense occupationalprose is not assigned endpoint evidence or native2026correction.",
+      "identity_review": [
+        "Allnativefullcomponents Charon Robin Ganellin actuallystated atL80; surnameandbothfirst/middlecomponents match nativeexactly.",
+        "Exactbirthdate matches native. Nativeidentity/calendar/authorityendpoint1934-2026 unchanged.",
+        "Distinctivecimetidine/Tagamet histamineblockerwork alongsideGrahamDurant/JohnEmmett/JamesBlack, QueenMary/MITchemistrytraining and SmithKlineFrench/UCLmedicinalchemistry formcoherent actualsourcecareerfingerprint.",
+        "No actualsourceDOB/name/placecontradiction acquired. No presenttensealive/deathdayverdict or v20endpoint exception invoked."
+      ],
+      "reviewed_hemisphere_proposal": "north",
+      "geographic_basis": "Actualsamebirthclause explicitlyLondon,England. Englandwholecountryextent is northern; this is birthlinkedcountrycontext, not nationality, unrelatedschool/work/death/footer or cityfamiliarity. Personalcountry/QID/coordinates remainfrozen/unassigned.",
+      "geographic_support_grade_proposal": "S3",
+      "geographic_support_grade_role": "birthplace_country_context_only_separate_from_native_DOB_grades",
+      "caveats": [
+        "UncreditedcompiledNIHForiginalbiographyonly; no actualcivilbirthcertificate/independentcorroboration/peerreview claim.",
+        "Originalbody uses current-professor wording but articlepublicationdate is unknown; no deathendpointconflict or alivein2026claim created.",
+        "Induction1990 and USpatentnos are careercontext, not birthplace/sourcepublicationyear proof.",
+        "No fullsourceHTML/PDF/images/searchprojectioncache redistributed."
+      ],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsedoriginaltext or exact toolresult, not rawHTTPbytes",
+      "no_master_change": true
+    }
+  ],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA3918",
+      "native": {
+        "record_id": "RS_PAST_NA3918",
+        "authority_name": "Bateman; Leslie Clifford (1915 - 2005)",
+        "native_dob": "1915-03-21",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "2247f1de41726d764cf97b011e64034679ad5e0719fa94d6923d7c07af9182ae"
+      },
+      "status": "hold_no_qualifying_original_birthplace_body",
+      "hold_type": "original_birthplace_body_unavailable",
+      "reason": "ActualWikipedia acquiredsolelyasoriginalobituarylinkcarrier; it states12March1915versusnative21March1915 and26October2005death. Itsbibliography namesTheresaManavalanNewSundayTimes6Nov2005F5 but exposes no directoriginalarticleURL. No qualifyingoriginalbirthplaceorDOBbody acquired, so no adoptedbirthplace/nativecorrection and no newlyconfirmedoriginalDOBconflict. Uxbridge modifiesschool, not birth. OtherWikipedia-listprojectionnativecompatible21March is not used to clearsecondarydiscrepancy.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Leslie_Clifford_Bateman",
+          "body_ref": "turn2750873view0",
+          "locator": "L101-113",
+          "role": "secondarylinkcarrieronly_not_birthplaceproof",
+          "observed_secondary_birthdate": "1915-03-12",
+          "native_birthdate": "1915-03-21",
+          "secondary_discrepancy_not_qualified_original_conflict": true,
+          "unacquired_original_citation": "TheresaManavalan,Batemanbetonrubberandwon,NewSundayTimes6November2005pF5",
+          "no_original_obituary_body_acquired": true
+        }
+      ],
+      "quotes_used": [],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsedoriginaltext or exact toolresult, not rawHTTPbytes",
+      "no_master_change": true
+    },
+    {
+      "record_id": "RS_PAST_NA3961",
+      "native": {
+        "record_id": "RS_PAST_NA3961",
+        "authority_name": "Wilkinson; William Lionel (1931 - 2026); chemical engineer",
+        "native_dob": "1931-02-16",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "2fcc99358e723c7413b7ae908c366a86bce7745c031e357c963f64f081cde8a6"
+      },
+      "status": "hold_no_original_birthplace_body_acquired",
+      "hold_type": "original_birthplace_body_unavailable",
+      "reason": "ExactnativefullnamediscoveryyieldsCompaniesHouse-derivedappointmentaggregator with birthmonthFebruary1931/BNFLrole, but correspondenceaddressKnutsfordCheshire is not subjectbirthplace. Aggregatorbody notopened asbirthproof. FirstnativeRSseed navigationtoolnotaccessible andstopped; no actualoriginaldate/place/lifespanbody, no2026endpoint verdict orv20exception.",
+      "sources": [
+        {
+          "url": "https://catalogues.royalsociety.org/calmview/Record.aspx?src=CalmView.Persons&id=NA3961",
+          "body_ref": "turn2750873view1",
+          "exact_tool_error": "URL https://catalogues.royalsociety.org/calmview/Record.aspx?id=NA3961&src=CalmView.Persons is not accessible via this tool.",
+          "stopped_without_retry": true
+        },
+        {
+          "url": "https://www.companiesintheuk.co.uk/people/WILLIAM-LIONEL-WILKINSON/52000340",
+          "discovery_ref": "turn2992260search2",
+          "role": "searchprojectiononly_not_originalbirthplaceproof",
+          "discovery_precision": "monthonlyFebruary1931",
+          "address_not_birthplace": true
+        }
+      ],
+      "quotes_used": [],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsedoriginaltext or exact toolresult, not rawHTTPbytes",
+      "no_master_change": true
+    },
+    {
+      "record_id": "RS_PAST_NA4091",
+      "native": {
+        "record_id": "RS_PAST_NA4091",
+        "authority_name": "Treisman; Richard Henry (1954 - 2018)",
+        "native_dob": "1954-10-07",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "a1f807f6938f80ea7f7b47c11ec1975892a443ff9a6328c63d5499d7a0b2e0b1"
+      },
+      "status": "hold_no_directbirthplace_and_insufficientnativebindingprecision",
+      "hold_type": "no_explicit_birthplace_in_original_biography_and_fullname_precision_not_met",
+      "reason": "ActualJeantetprizebiography gives RichardTreisman/born1954yearonly andcancerresearchcareer; no middleHenry/exactday/month or explicitbirthplace. Britishcitizenship is not birthcountry, CambridgeGrandeBretagne is educationcontext and Londonwork notbirth. Itsnoticeexplicitlyreferstoprizeawardingtime2002; it doesnot provideactualdeathdate contradictingnative2018, and presenttensehistoricalawardproseisnot alivein2026evidence. v20endpoint andv24omittedmiddle exceptions not invoked; no exactDOB/allnativecomponents/directbirthplace evidence tosupportthem.",
+      "sources": [
+        {
+          "url": "https://www.jeantet.ch/en/laureat/doctor-richard-treisman/",
+          "body_ref": "turn2750873view2",
+          "locator": "L68-85",
+          "source_title": "Doctor Richard TREISMAN",
+          "actual_source_full_name": "Richard Treisman",
+          "unconfirmed_native_component": "Henry",
+          "actual_birthdate_precision": "yearonly1954",
+          "actual_deathdate": null,
+          "original_award_context": "2002LouisJeantetPrize; introductoryscopeinfoatdateofprize",
+          "birthplace_relation_verified": false,
+          "no_exhaustive_claim_beyond_inspected_original_page": true
+        }
+      ],
+      "quotes_used": [],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsedoriginaltext or exact toolresult, not rawHTTPbytes",
+      "no_master_change": true
+    }
+  ],
+  "query_ledger": [
+    {
+      "ordinal": 1,
+      "engine": "system2",
+      "query": "\"Leslie Clifford Bateman\" born",
+      "observed_subject_relevant_response_refs": [
+        "turn8818428search49",
+        "turn8818428search55"
+      ]
+    },
+    {
+      "ordinal": 2,
+      "engine": "system2",
+      "query": "\"William Lionel Wilkinson\" born",
+      "observed_subject_relevant_response_refs": [
+        "turn8818428search12",
+        "turn8818428search33",
+        "turn8818428search39"
+      ]
+    },
+    {
+      "ordinal": 3,
+      "engine": "system2",
+      "query": "\"Richard Henry Treisman\" born",
+      "observed_subject_relevant_response_refs": [
+        "turn8818428search48",
+        "turn8818428search3",
+        "turn8818428search11"
+      ]
+    },
+    {
+      "ordinal": 4,
+      "engine": "system2",
+      "query": "\"Charon Robin Ganellin\" born",
+      "observed_subject_relevant_response_refs": [
+        "turn8818428search0",
+        "turn8818428search13",
+        "turn8818428search47"
+      ]
+    },
+    {
+      "ordinal": 5,
+      "engine": "system1",
+      "query": "\"Leslie Clifford Bateman\" obituary born",
+      "observed_subject_relevant_response_refs": [
+        "turn2992260search5"
+      ]
+    },
+    {
+      "ordinal": 6,
+      "engine": "system1",
+      "query": "\"William Lionel Wilkinson\" \"1931\" biography",
+      "observed_subject_relevant_response_refs": [
+        "turn2992260search2"
+      ]
+    },
+    {
+      "ordinal": 7,
+      "engine": "system1",
+      "query": "\"Richard Treisman\" \"born\" \"Oxford\" Jeantet",
+      "observed_subject_relevant_response_refs": [
+        "turn2992260search1",
+        "turn2992260search6",
+        "turn2992260search7"
+      ]
+    },
+    {
+      "ordinal": 8,
+      "engine": "system1",
+      "query": "\"Charon Robin Ganellin\" biography birth",
+      "observed_subject_relevant_response_refs": [
+        "turn2992260search0",
+        "turn2992260search3",
+        "turn2992260search4"
+      ]
+    }
+  ],
+  "query_ledger_representation": "Exactqueries copiedfromactualcalls; eachfour-querybatch combinedresults, so refsare observedsubjectrelevantresults, not a guaranteedperquerymapping. Oxfordwas a targetedqueryhypothesis, notsource-observedbirthplace; no Oxfordfact adopted. No missingrefsreconstructed.",
+  "navigation_ledger": [
+    {
+      "ordinal": 1,
+      "ref": "turn2992260view0",
+      "url": "https://www.invent.org/inductees/charon-robin-ganellin",
+      "outcome": "Actualoriginalfullnative/exactDOB/directLondonEnglandbirth candidateS3north",
+      "exact_navigation_intent_persisted_before_call": true
+    },
+    {
+      "ordinal": 2,
+      "ref": "turn2750873view0",
+      "url": "https://en.wikipedia.org/wiki/Leslie_Clifford_Bateman",
+      "outcome": "Secondaryonlyoriginalcitationcarrier, no originalobituaryURL/body; no qualifiedDOBconflict",
+      "exact_navigation_intent_persisted_before_call": false
+    },
+    {
+      "ordinal": 3,
+      "ref": "turn2750873view1",
+      "url": "https://catalogues.royalsociety.org/calmview/Record.aspx?src=CalmView.Persons&id=NA3961",
+      "outcome": "toolnotaccessible stopped",
+      "exact_navigation_intent_persisted_before_call": false
+    },
+    {
+      "ordinal": 4,
+      "ref": "turn2750873view2",
+      "url": "https://www.jeantet.ch/en/laureat/doctor-richard-treisman/",
+      "outcome": "Actualoriginalprizebiography/yearonly1954/noHenry/noexplicitbirthplace/historical2002scope",
+      "exact_navigation_intent_persisted_before_call": false
+    }
+  ],
+  "protocol_deviations": [
+    {
+      "kind": "failed_exact_intent_append_followed_by_navigation",
+      "affected_refs": [
+        "turn2750873view0",
+        "turn2750873view1",
+        "turn2750873view2"
+      ],
+      "detail": "PythonSyntaxError prevented attempted3navigationintentappend. Samefunctionscell subsequentlyexecutednetworkwithoutcheckingfailedcommandexit. Initialgeneraldicovery/adaptivepurposeexistedbeforework, but exact3navintentsnotpersistedbeforecalls. Honestpostobservationnoteappendedafterwards, explicitlynotbackdated. No dataadoptionfromaffected3calls; primaryGanellincandidatepriorintentwasprospective."
+    }
+  ],
+  "limits": "No newqualifiedoriginalDOB/place/deathendpointconflicts; Batemansecondarydateobservationkeptdistinct. No sourcechildren/maincode/study/Git/mastermutations, fullsourcecaches or HTTP/PDFrawGETs. FailedWilkinsonroute stoppedno retry/variant. All9inheritedissue/methodfilesuntouched. CandidateS3/northonlypendingparentadmission; originalDOBtiers/country/coords/QIDs/calendar/authority/lifespans unchanged."
+}

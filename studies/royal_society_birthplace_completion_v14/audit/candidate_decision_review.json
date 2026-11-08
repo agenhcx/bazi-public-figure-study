@@ -1,0 +1,237 @@
+{
+  "schema": "UK_v14_independent_candidate_decision_review_v1",
+  "review_written_utc": "2026-11-04T23:43:24.338825+00:00",
+  "reviewer": "v14_method_review",
+  "review_scope": "Read-only assessment of retained collector evidence under the seven pre-recorded method gates; no fresh queries, no original-source re-acquisition, no master mutation.",
+  "input_sha256": {
+    "v14_geo_a.json": "a6a41fe8c194a2d39dc5772506b3eaf03826adbb175691fb43f906348b7bfa24",
+    "v14_geo_b.json": "d98646f4fbeaf2a31719c1a59d9094d53da0213e8a5c8622c97d114443dc51b7",
+    "method_review.json": "042d421458d2bcefd9e0a1d68c6f27d77599ecb2683d2050eb472d680ef6ba0e"
+  },
+  "overall_status": "NO_CANDIDATE_PASSES_ALL_MAIN_TABLE_GATES",
+  "recommended_main_table_adoptions": 0,
+  "recommended_dispositions": {
+    "candidate_support_only": 3,
+    "unsupported_alias_hold": 1
+  },
+  "main_table_hemisphere_assignments_proposed": [],
+  "baseline_counts_from_parent_context_not_recounted_in_this_method_review": {
+    "all_unknown": 641,
+    "native_DOB_window_unknown": 207
+  },
+  "global_reasoning": [
+    "Positive official or historical geography evidence establishes real possible compound-name referents. It is valuable support and must not be discarded as a failed search.",
+    "The retained sources do not independently bridge the accepted historical birth phrase to that particular referent sufficiently to overcome the recorded material candidate-coverage gaps. This does not prove the positive candidates are wrong.",
+    "No adopted compatible opposing-hemisphere candidate is observed. That absence alone cannot satisfy the method: the collector explicitly reports incomplete candidate/type/proximity or global-query coverage.",
+    "The Canadian NRCan leads, where country is suggested by unverified snippets, are not established opposing-hemisphere alternatives and must not be presented as such. Their source failures are coverage limits, not geographic exclusions or positive counterexamples.",
+    "This decision does not demand mathematical proof that no matching name exists anywhere in the world. It applies the protocol requirement for a strong positive referent identification with sufficient discriminating coverage; the present evidence remains below that threshold."
+  ],
+  "record_reviews": [
+    {
+      "record_id": "RS_PAST_NA1727",
+      "frozen_literal": "Lowther Street, Carlisle",
+      "decision": "candidate_support_only",
+      "main_hemisphere_proposal": null,
+      "positive_support_source_ids": [
+        "v14_geo_a:S1",
+        "v14_geo_a:S2"
+      ],
+      "gates": [
+        {
+          "gate": 1,
+          "status": "pass_for_existing_literal",
+          "reason": "Existing accepted compound birthfield is retained; no person, native date, identity or grade change is proposed."
+        },
+        {
+          "gate": 2,
+          "status": "pass_for_positive_candidate",
+          "reason": "Cumberland Council and Historic England directly link the street and Carlisle; the records provide the United Kingdom address or Cumberland authority context. This is a real compound candidate."
+        },
+        {
+          "gate": 3,
+          "status": "partial",
+          "reason": "No spelling repair is needed. Historic building dates provide relevant temporal context, but the material is not a complete historical street-name continuity or personal birth-address identification; no building is claimed as Walker's house."
+        },
+        {
+          "gate": 4,
+          "status": "partial",
+          "reason": "Council and statutory-list entries are separate administrative records, although underlying address-data lineage is not fully proven. They corroborate one region-specific candidate rather than independently discriminating worldwide same-named combinations."
+        },
+        {
+          "gate": 5,
+          "status": "not_passed",
+          "reason": "Exact-compound countersearches were attempted, but global street-level candidates were not inspected and official alternate Carlisle/type routes failed. No-hit results and failures cannot establish adequate negative coverage."
+        },
+        {
+          "gate": 6,
+          "status": "not_passed",
+          "reason": "The collector marks materialcoveragegap=true. The evidence does not resolve the remaining referent/coverage uncertainty under the protocol despite strong positive candidate support."
+        },
+        {
+          "gate": 7,
+          "status": "not_applicable_until_eligible",
+          "reason": "Save the geographic candidate separately and preserve unknown; no primary hemisphere update or tier/coordinate/entity assignment."
+        }
+      ],
+      "binding_conclusion": "Retain a supported possible Lowther Street/Carlisle referent in the audit only; do not turn official-record existence into a birthplace resolution."
+    },
+    {
+      "record_id": "RS_PAST_NA6847",
+      "frozen_literal": "Carleton, a small village near Carlisle",
+      "decision": "candidate_support_only",
+      "main_hemisphere_proposal": null,
+      "positive_support_source_ids": [
+        "v14_geo_a:S3",
+        "v14_geo_a:S4",
+        "v14_geo_a:S5"
+      ],
+      "gates": [
+        {
+          "gate": 1,
+          "status": "pass_for_existing_literal",
+          "reason": "The existing village and near-Carlisle wording is retained. Family farming background is not used as birth geography."
+        },
+        {
+          "gate": 2,
+          "status": "pass_for_positive_candidate",
+          "reason": "The council-commissioned appraisal directly gives a hamlet/township relation and distance to Carlisle; the attributed Lewis extract gives an older parish/county/proximity relation. Hamlet versus village is not by itself a material contradiction in these retained descriptions."
+        },
+        {
+          "gate": 3,
+          "status": "partial_supported_history",
+          "reason": "No place-spelling change is adopted. The 1848 attributed transcript supplies historical context, but its original scan is uninspected and modern catalogue map images were not opened. Modern county or map metadata is not treated as an exact historical personal birthplace."
+        },
+        {
+          "gate": 4,
+          "status": "partial",
+          "reason": "The appraisal and Lewis publication are plausibly distinct witnesses, but full source independence is not demonstrated. The university overview plus its Lewis extract is one witness; multiple map citations in one catalogue are not multiple inspected originals."
+        },
+        {
+          "gate": 5,
+          "status": "not_passed",
+          "reason": "Other Carleton and Carlisle names were retained; the official Canadian co-occurrence/type original could not be checked, and there is no sufficiently inspected global village/proximity candidate pool. An arbitrary distance or country-first filter cannot fill that gap."
+        },
+        {
+          "gate": 6,
+          "status": "not_passed",
+          "reason": "The positive historical candidate is strong but collector materialcoveragegap=true remains substantive. No compatible southern compound has been established; neither has the present coverage sufficiently resolved the birth-source referent."
+        },
+        {
+          "gate": 7,
+          "status": "not_applicable_until_eligible",
+          "reason": "Keep candidate support and all alternatives in audit, with unknown unchanged. No personal point, unique entity, national field or DOB/source-tier change."
+        }
+      ],
+      "binding_conclusion": "Useful compound village/parish/proximity support does not yet pass the complete main-table geographic decision."
+    },
+    {
+      "record_id": "RS_PAST_NA663",
+      "frozen_literal": "Church End, Finchley",
+      "decision": "candidate_support_only",
+      "main_hemisphere_proposal": null,
+      "positive_support_source_ids": [
+        "v14_geo_b:finchley_historical_directory",
+        "v14_geo_b:finchley_parish_guide_2025",
+        "v14_geo_b:finchley_geonames_entity"
+      ],
+      "gates": [
+        {
+          "gate": 1,
+          "status": "pass_for_existing_literal",
+          "reason": "The exact two names are retained; no birth-source reinterpretation or native-field amendment."
+        },
+        {
+          "gate": 2,
+          "status": "positive_candidate_with_authority_limits",
+          "reason": "The digitized historical directory and society guide explicitly connect Church End, Finchley and Middlesex. However, the directory volume author/title/year were not recovered, and a society-authored guide is not a government register. This supports the compound candidate without upgrading source authority."
+        },
+        {
+          "gate": 3,
+          "status": "partial",
+          "reason": "No spelling correction is needed. Historical parish context is present, but directory date and exact historical boundary proof are unverified. The guide URL also has different observed edition dates; treat each observation as version-specific."
+        },
+        {
+          "gate": 4,
+          "status": "partial",
+          "reason": "The directory and modern guide are separate publications, but dependence on the same historical material is unknown. The single GeoNames entity provides one hierarchy/type witness, not an independently complete candidate pool; underlying OS lineage is not verified."
+        },
+        {
+          "gate": 5,
+          "status": "not_passed",
+          "reason": "A bounded broad compound query was attempted but search recall/filters were not exhaustive. The GeoNames global search was inaccessible; a single opened entity cannot substitute for candidate coverage."
+        },
+        {
+          "gate": 6,
+          "status": "not_passed",
+          "reason": "There is no observed compatible opposing-hemisphere original, but incomplete global/alternative coverage plus unresolved version/lineage metadata prevents a complete main-table inference under the recorded protocol."
+        },
+        {
+          "gate": 7,
+          "status": "not_applicable_until_eligible",
+          "reason": "Preserve candidate support and version notes, leave master unknown, and assign no unique entity or personal coordinates."
+        }
+      ],
+      "binding_conclusion": "Two joint-name witnesses and one entity are meaningful positive support; they do not suffice to promote the existing unknown under the present coverage limitations."
+    },
+    {
+      "record_id": "RS_PAST_NA331",
+      "frozen_literal": "Little Blencoe, near Penrith",
+      "decision": "unsupported_alias_hold",
+      "main_hemisphere_proposal": null,
+      "positive_support_source_ids": [
+        "v14_geo_b:little_blencow_lewis1848"
+      ],
+      "gates": [
+        {
+          "gate": 1,
+          "status": "pass_for_existing_literal_only",
+          "reason": "Keep the already accepted literal Little Blencoe; do not modify the birthfield or personal identity."
+        },
+        {
+          "gate": 2,
+          "status": "not_passed_for_frozen_literal",
+          "reason": "The observed Lewis extract binds Little Blencow to Penrith/Cumberland, but it does not explicitly bind the differently spelled frozen compound Little Blencoe."
+        },
+        {
+          "gate": 3,
+          "status": "not_passed_critical_alias_gap",
+          "reason": "No original source explicitly equates the geographic names Blencoe and Blencow/Blencowe. A habitational surname page is not geographic alias evidence. Fuzzy similarity or a presumed typographical error is not permitted."
+        },
+        {
+          "gate": 4,
+          "status": "insufficient_for_required_alias",
+          "reason": "Additional candidate/type leads concern Little Blencow and do not supply the missing geographic-equivalence bridge."
+        },
+        {
+          "gate": 5,
+          "status": "partial_attempt_not_decisive",
+          "reason": "Alias and alternative searches were attempted, but no admissible alias appeared. Unrelated component-name leads are not a geographic resolution of the complete frozen compound."
+        },
+        {
+          "gate": 6,
+          "status": "not_passed",
+          "reason": "The critical name-identity bridge fails regardless of whether inspected candidate regions would share a hemisphere."
+        },
+        {
+          "gate": 7,
+          "status": "not_applicable_until_eligible",
+          "reason": "Retain unknown and preserve differently spelled candidate evidence without modifying the frozen spelling, grade, country, entity or coordinates."
+        }
+      ],
+      "binding_conclusion": "This is a supported geographic candidate with a different spelling, not an accepted historical alias of the frozen birthfield."
+    }
+  ],
+  "finchley_source_version_note": {
+    "url": "https://lwmfhs.org/downloads/parish/Finchley.pdf",
+    "worker_observation": "v14_geo_b:finchley_parish_guide_2025 records April2025 as observed in its parsed source.",
+    "later_root_observation_reported_by_parent": "Parent reports that a later direct open of the same URL returned header July2026.",
+    "independent_reacquisition_by_this_reviewer": false,
+    "interpretation": "The same URL does not establish byte-identical edition identity. The difference could reflect a changed resource or differing parsed/cached versions; no cause is adjudicated.",
+    "retention_rule": "Preserve both observations with their own provenance. Do not overwrite the earlier worker observation, retroactively assign a new date to it, invent a raw response hash, or claim the two captures are the same edition.",
+    "main_table_use": "None; version difference remains an additional candidate-support limitation."
+  },
+  "final_recommendation": "Retain all four existing master records unchanged: three candidate_support_only and one unsupported_alias_hold. Keep 641 total unknown and 207 window unknown unless another independently approved batch changes them. No result here is a negative proof that the candidate geographic places or biographies do not exist.",
+  "no_new_queries": true,
+  "master_modified": false,
+  "personal_or_statistical_fields_assigned": false
+}

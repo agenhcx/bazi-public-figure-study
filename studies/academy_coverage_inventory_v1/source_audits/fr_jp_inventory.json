@@ -1,0 +1,326 @@
+{
+  "schema": "readonly_national_academy_inventory_france_japan",
+  "baseline_commit": "32653a72679c5ab17afbdaf955d1ae797f02077c",
+  "created_utc": "2026-11-01T10:46:55.893244+00:00",
+  "canonical_version": 15,
+  "later_versions_16_to_18_are_source_audits_only": true,
+  "source_pins": {
+    "studies/academy_fr_jp_completion_v15/outputs/france_master877.csv": "dd2dd779b648691bd76bdbcf12dcc6b11b9228cc057cd1d19585ace3b3161930",
+    "studies/academy_fr_jp_completion_v15/outputs/france_accepted_all_three.csv": "379cb99121504a2963d49ebde7036199cffbcf2b24b36fff4e4c07b111e6b5d3",
+    "studies/academy_fr_jp_completion_v15/outputs/france_remaining_gaps.csv": "244cb4cb3706b00fb1e26746cdca69701e57def7c40145059cbb48bb63b0da66",
+    "studies/academy_fr_jp_completion_v15/outputs/france_membership_decisions.csv": "62e7d80df65c5ebdc4e5bfee2fa63c78ae7927425b0b3072c9bfd18233895828",
+    "studies/academy_fr_jp_completion_v15/outputs/france_case_adjudications.csv": "24e073787758ac40d6acc400a9690c20567f3e3614fe3fad5c47dd1e14e6f0be",
+    "studies/academy_fr_jp_completion_v15/outputs/japan_master.csv": "f901f568d0a5c85e8ace5ae928d5a3473b9e7691131941075b9cd19d1c7a3021",
+    "studies/academy_fr_jp_completion_v15/outputs/japan_birth_claims.csv": "c0a7820ea8149829d3b58caae18fefbb7b15fbc68f3ca1cb1f86582f793aff4c",
+    "studies/academy_fr_jp_completion_v15/outputs/japan_next_action_queue.csv": "b36bf64ab5b28f8bd08e795fa4817e0ce85a669a075ebdedbb2cf1786b8d9022",
+    "studies/academy_fr_jp_completion_v15/outputs/summary.json": "01f2186a25c8bbbc5b9e4f10b5dbe4bccf14be101daf9bf1ded2bd7cf0fef239",
+    "studies/academy_fr_jp_completion_v15/MANIFEST.json": "823f59ca90138478e350eb10ae4d08010e94d6c70a6067118440e04f110f9e79",
+    "studies/academy_fr_jp_completion_v12/source_audits/v12_final_read_only_audit.json": "e52e3eaa8ae230e20597685a1deff0b3fcd565461682ae6f8d5a8dd376790e9c"
+  },
+  "france": {
+    "institution": "Académie des sciences",
+    "unit": "preserved candidate_group_id group; not deduplicated national person count",
+    "working_rows": 877,
+    "scope": "all877 existing primary-window candidates/source birth-years in1835–1985; ordinary-member evidence still reviewed separately",
+    "source_birth_window_flags": {
+      "1": 877
+    },
+    "identity_approved": 787,
+    "DOB_approved": 775,
+    "strict_ordinary_membership_approved": 643,
+    "all_three_approved": 640,
+    "remaining_multidimensional_gap_groups": 237,
+    "gap_dimensions": {
+      "identity|membership|dob": 90,
+      "membership": 135,
+      "membership|dob": 9,
+      "dob": 3
+    },
+    "DOB_unapproved": 102,
+    "DOB_unapproved_categories": {
+      "no_raw_day_claim": 73,
+      "exact_DOB_conflict": 4,
+      "held_singleton_date": 25
+    },
+    "raw_day_claim_groups": 804,
+    "rates": {
+      "approved_DOB_over877_working_groups": {
+        "numerator": 775,
+        "denominator": 877,
+        "percent": 88.369441,
+        "display_1dp": "88.4%"
+      },
+      "unapproved_DOB_over877_working_groups": {
+        "numerator": 102,
+        "denominator": 877,
+        "percent": 11.630559,
+        "display_1dp": "11.6%"
+      },
+      "all_three_over877_working_groups": {
+        "numerator": 640,
+        "denominator": 877,
+        "percent": 72.976055,
+        "display_1dp": "73.0%"
+      },
+      "strict_membership_over877_working_groups": {
+        "numerator": 643,
+        "denominator": 877,
+        "percent": 73.31813,
+        "display_1dp": "73.3%"
+      },
+      "raw_day_claim_coverage_over877_working_groups": {
+        "numerator": 804,
+        "denominator": 877,
+        "percent": 91.676169,
+        "display_1dp": "91.7%"
+      }
+    },
+    "source_quality": {
+      "DOB_gate": "Exact accepted DOB in preserved identity group; v2+ individual review permits attributed edited secondary when own name/date/career and uniqueness/control checks pass. Not all775 are Academy-first-party dates.",
+      "membership_gate": "Strict ordinary/full/free/nonresident event from actual Academy or parent-Institut authored/issued original, own-subject typed role and directly observed election/start; independent QA and root hash approval.",
+      "uniform_per_person_DOB_source_tier_available": false,
+      "raw_firstparty_day_claim_flag_not_quality_rank": {
+        "all_groups_flag1": 163,
+        "DOB_approved_with_flag1": 155,
+        "DOB_approved_with_flag0": 620,
+        "limit": "Historical raw-source-origin flags stay unchanged through adjudication; do not call620flag0 dates unsupported or155flag1 dates newly body-verified primary."
+      }
+    },
+    "controls": {
+      "formal_election_chronology_hold_rows": 25,
+      "additional_actual_same_subject_election_source_conflict_rows": 1,
+      "exact_DOB_conflict_rows": 4,
+      "father_birthyear_control": "unresolved_source_birthyear_conflict_no_date_selected",
+      "six_alias_pairs_still_held": true,
+      "cohort_not_frozen": true
+    },
+    "history_rows": {
+      "membership": 485,
+      "identity_DOB_cases": 32
+    },
+    "status": "Low-yield tail parked pending distinct accessible attributable original; no national completion claim.",
+    "accepted_DOB_years_outside1835_1985": 0,
+    "inherited_role_cutoff_flags_within640": {
+      "membership_role_supported": {
+        "1": 640
+      },
+      "election_cutoff_stable": {
+        "1": 640
+      },
+      "election_date_conflict": {
+        "0": 456,
+        "": 184
+      },
+      "accepted_election_precision": {
+        "day": 313,
+        "year": 327
+      }
+    }
+  },
+  "japan": {
+    "institution": "Japan Academy / 日本学士院",
+    "unit": "stable member_key identity",
+    "working_rows": 482,
+    "roster_scope": "restored482 working identities; original435 +47 restored historical rows, not a newly frozen national science roster",
+    "broad_Section_II_supported": 438,
+    "Section_I_excluded": 10,
+    "scope_unresolved": 34,
+    "nonexcluded_candidates": 472,
+    "structured_birth_claim_rows": 528,
+    "people_with_body_birth_claims": 433,
+    "claims_precision_counts": {
+      "day": 476,
+      "month": 16,
+      "year": 36
+    },
+    "day_no_known_conflict_people": 368,
+    "day_status_with_Section_II": 360,
+    "day_status_scope_unresolved": 8,
+    "all482_non_day_status_people": 114,
+    "nonexcluded_DOB_pending": 104,
+    "combined_action_queue": 112,
+    "DOB_status_counts": {
+      "body_day_no_known_conflict": 368,
+      "bounded_search_no_body_birth_claim": 13,
+      "source_calendar_hold": 29,
+      "source_caveat_hold": 2,
+      "body_year_only": 14,
+      "source_date_conflict_hold": 14,
+      "body_month_only": 5,
+      "source_quality_hold": 1,
+      "not_body_source_processed": 36
+    },
+    "day_evidence_tier_counts": {
+      "edited_reference_only": 150,
+      "institution_or_university_supported": 215,
+      "other_attributed_secondary_only": 3
+    },
+    "section_evidence_status_counts": {
+      "restored_official_detail_or_current_section_ii": 139,
+      "pre1906_single_science_degree_original_section_unrecovered": 1,
+      "v10_direct_official_academy_directory_section_ii": 10,
+      "restored_imperial_official_section_ii": 88,
+      "restored_imperial_official_section_ii_historical_conflict_retained": 1,
+      "restored_frozen_broad_degree_rule_section_ii": 199,
+      "restored_remaining36_section_unresolved": 33,
+      "restored_tier_b_direct_section_ii": 1,
+      "v11_direct_official_academy_directory_section_i": 3,
+      "restored_tier_b_direct_section_i_exclusion": 3,
+      "restored_imperial_official_section_i_exclusion": 4
+    },
+    "existing_degree_rule_Section_II_rows": 199,
+    "existing_degree_rule_Section_II_and_day_rows": 181,
+    "rates": {
+      "day_status_over482_working_ids": {
+        "numerator": 368,
+        "denominator": 482,
+        "percent": 76.348548,
+        "display_1dp": "76.3%"
+      },
+      "day_status_over472_nonexcluded_candidates": {
+        "numerator": 368,
+        "denominator": 472,
+        "percent": 77.966102,
+        "display_1dp": "78.0%"
+      },
+      "day_status_over438_broad_SectionII": {
+        "numerator": 360,
+        "denominator": 438,
+        "percent": 82.191781,
+        "display_1dp": "82.2%"
+      },
+      "nonexcluded_DOB_pending_over472": {
+        "numerator": 104,
+        "denominator": 472,
+        "percent": 22.033898,
+        "display_1dp": "22.0%"
+      },
+      "combined_pending_over472": {
+        "numerator": 112,
+        "denominator": 472,
+        "percent": 23.728814,
+        "display_1dp": "23.7%"
+      },
+      "II_and_day_over472_nonexcluded": {
+        "numerator": 360,
+        "denominator": 472,
+        "percent": 76.271186,
+        "display_1dp": "76.3%"
+      },
+      "institution_university_organization_supported_over368_day_statuses": {
+        "numerator": 215,
+        "denominator": 368,
+        "percent": 58.423913,
+        "display_1dp": "58.4%"
+      },
+      "edited_reference_only_over368_day_statuses": {
+        "numerator": 150,
+        "denominator": 368,
+        "percent": 40.76087,
+        "display_1dp": "40.8%"
+      },
+      "other_attributed_secondary_over368_day_statuses": {
+        "numerator": 3,
+        "denominator": 368,
+        "percent": 0.815217,
+        "display_1dp": "0.8%"
+      }
+    },
+    "birth_window_note": {
+      "not_uniformly1835_1985_filtered": true,
+      "observed_day_year_range": [
+        1803,
+        1964
+      ],
+      "day_status_rows_outside1835_1985": [
+        {
+          "member_key": "jpa-unlinked-dcd0cace2d070ff8",
+          "name_jp": "伊藤 圭介",
+          "source_date_components_iso": "1803-02-18",
+          "broad_section_supported": ""
+        }
+      ],
+      "II_and_day_rows_outside1835_1985": 0,
+      "no_new_birth_window_filter_applied": true
+    },
+    "source_quality_notes": [
+      "368 is current pipeline body_day_no_known_conflict status, not a new root-approved final DOB flag or final analysis-cohort acceptance.",
+      "215 institutional/university/organization-supported,150 edited-reference-only and3 other-attributed-secondary are inherited pipeline evidence tiers, not a universal firstparty/secondary scale shared by other countries.",
+      "438 broad SectionII includes199 prior degree-rule rows; it is not438 pure direct official original section attestations. Full section-evidence categories are retained, including one historical conflict.",
+      "528 claims include multiple claims per person; do not add claims as people or infer independence from rawsource count.",
+      "Original source date components and calendar labels remain; no new conversion, defaultday or conflict vote is applied.",
+      "Within360II+day, inherited through_2025_eligible flags are354one/2zero/4blank. The twozero rows have blank electiondate/year, so do not infer post2025election or silently call360 a final cutoff-approved cohort. No new cutoff filtering is applied."
+    ],
+    "controls": {
+      "DOB_hold_status_rows": 46,
+      "prior_exact_calendar_outcomes_preserved": 4,
+      "final_cohort_accepted_true_rows": 0,
+      "claim_final_cohort_accepted_true_rows": 0,
+      "source_date_components_not_silently_converted": true
+    },
+    "status": "Low-yield tail parked;34 unresolvedscope and104nonexcludedDOB pending; no national completion claim.",
+    "day_evidence_tier_counts_within360_II_day_intersection": {
+      "edited_reference_only": 150,
+      "institution_or_university_supported": 207,
+      "other_attributed_secondary_only": 3
+    },
+    "nonexcluded104_pending_DOB_status_counts": {
+      "bounded_search_no_body_birth_claim": 13,
+      "source_calendar_hold": 29,
+      "source_caveat_hold": 2,
+      "body_year_only": 14,
+      "source_date_conflict_hold": 14,
+      "body_month_only": 5,
+      "source_quality_hold": 1,
+      "not_body_source_processed": 26
+    },
+    "combined112_queue_decomposition": {
+      "nonexcluded_DOB_pending": 104,
+      "already_day_status_but_scope_unresolved": 8
+    },
+    "prior_calendar_outcome_recheck": {
+      "jpa-unlinked-a9d1e2cde713ae0e": "1865-06-08",
+      "jpa-unlinked-d4cbc74833986120": "1870-04-10",
+      "jpa-unlinked-7ecae30c03b86d5f": "1865-08-01",
+      "jpa-unlinked-eabfb6c33df81d73": "1855-11-04"
+    },
+    "inherited_through2025_flag_counts": {
+      "0": 2,
+      "1": 433,
+      "": 47
+    },
+    "inherited_through2025_flags_within360_II_day": {
+      "0": 2,
+      "1": 354,
+      "": 4
+    },
+    "through2025_flag0_with_blank_election_fields": [
+      {
+        "member_key": "jpa:yamasaki_kazuo",
+        "name_jp": "山崎 一雄",
+        "first_election_date": "",
+        "election_year": "",
+        "through_2025_eligible": "0"
+      },
+      {
+        "member_key": "jpa:sasazuki_takehiko",
+        "name_jp": "笹月 健彦",
+        "first_election_date": "",
+        "election_year": "",
+        "through_2025_eligible": "0"
+      }
+    ]
+  },
+  "cross_country_comparison_limits": [
+    "French877 groups and Japanese482 IDs have different scope/duplication units.",
+    "French775 DOB-approved and Japanese368 body-day-statuses have different adjudication/quality frameworks; do not use them as one harmonized common-quality rate.",
+    "French640allthree requires strict ordinary membership; Japanese360II+day uses broadII including inherited degree-rule support, so it is a distinct working intersection.",
+    "Japanese482 is not uniformly restricted to France1835–1985source-year window; one day-statusrow is1803andstill scopeunknown.",
+    "Do not sum national tables into unique scientists without cross-academy identity linkage, foreign-membership scope and Nobel overlap review.",
+    "No new filtering, deduplication, hold release, source adjudication, national freeze or BaZi analysis is performed."
+  ],
+  "recomputation_assertions_passed": true,
+  "new_data_changes": 0,
+  "new_queries": 0,
+  "new_GETs": 0
+}

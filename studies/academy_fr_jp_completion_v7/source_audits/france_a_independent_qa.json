@@ -1,0 +1,186 @@
+{
+  "reviewer": "France B independent reviewer",
+  "review_target": "France A v7 final fixed decisions",
+  "reviewed_utc": "2026-10-29T23:58:01.814064+00:00",
+  "final_decisions_path": "/workspace/scratch/7e8aa4e0d4af/academy_v7_workers/france_a/decisions.json",
+  "final_decisions_sha256": "e7f41c7983eec4a07cac44cabc0de39bc2f55654d1364e00b6fb43224152684e",
+  "final_manifest_sha256": "db7e9de6a0223b5e41f8f59341f86916ab2c4b27e0f96e0eb52d8ff16aff63a7",
+  "scope": "all four strict claims, all original PDF SHA-256 values, all ten cited key pages freshly rendered from originals and actually visually inspected",
+  "strict_claims_reviewed": 4,
+  "pdf_pages_visually_reviewed": 10,
+  "strict_checks": [
+    {
+      "candidate_group_id": "CTHS_112504",
+      "name": "JANET Paul André Marie",
+      "source_id": "janet",
+      "source_sha256": "fae4ad46332c5646fc3e15228c1926bb1071b4f115ce18b212f66199d9261e38",
+      "source_hash_matches_final_evidence": true,
+      "actual_pdf_pages_visually_read": [
+        1,
+        2
+      ],
+      "fresh_renders_used": true,
+      "render_sha256": {
+        "1": "f2ae190c130126fd87696a0392fdd301ddc3babc551db058114b9fe129b6dabd",
+        "2": "4bc101e7d8e410ebdfac90e517eca4d0afddd44c4804ae8a44e900cc74ba7638"
+      },
+      "subject_identity_bridge_pass": true,
+      "ordinary_full_role_pass": true,
+      "literal_event_date_or_year_pass": true,
+      "source_attribution_pass": true,
+      "event_date": null,
+      "event_year": 1919,
+      "event_precision": "year",
+      "membership_subtype": "ordinary_free_full_member",
+      "disposition": "pass"
+    },
+    {
+      "candidate_group_id": "CTHS_112835",
+      "name": "REY Jean",
+      "source_id": "rey",
+      "source_sha256": "fd1148df3c8cb0a1de73c5b11515f3b213ecd43dfdef5a024a12a3d87eb467a0",
+      "source_hash_matches_final_evidence": true,
+      "actual_pdf_pages_visually_read": [
+        1,
+        2,
+        3,
+        7
+      ],
+      "fresh_renders_used": true,
+      "render_sha256": {
+        "1": "ed5ea7bae7c0e97597279eb6ba6a321591ca22373860825db6a7d32c810975ba",
+        "2": "c3fd021d21fb18fd60adc346ee1003cd1fe3ab97c3ce57802378eb18b41d7d5c",
+        "3": "a1b2f00a6318f4d6df0fe7537381086f2c30291ab0fb3b4995602fb46c783891",
+        "7": "3e0b1e2d92b832facbd70c1b2cdbb22a0622eef386632468d914748ba7b3c8af"
+      },
+      "subject_identity_bridge_pass": true,
+      "ordinary_full_role_pass": true,
+      "literal_event_date_or_year_pass": true,
+      "source_attribution_pass": true,
+      "event_date": "1930-06-16",
+      "event_year": 1930,
+      "event_precision": "day",
+      "membership_subtype": "applications_science_industry_historical",
+      "disposition": "pass"
+    },
+    {
+      "candidate_group_id": "CTHS_112730",
+      "name": "MOUSSU Gustave",
+      "source_id": "moussu",
+      "source_sha256": "b21d4cac5971a5aa55e7b51776839da11220d055ae37c5b31fe08f2d52f95bba",
+      "source_hash_matches_final_evidence": true,
+      "actual_pdf_pages_visually_read": [
+        1,
+        4
+      ],
+      "fresh_renders_used": true,
+      "render_sha256": {
+        "1": "754a9dbf9cc1523c7b3b6bb6954419a6c7efef9cbe29ef3a64c45a552efeac34",
+        "4": "08961e0430912d41832da8b65e9acba0c8a29e918f7c799aba610d934d848a78"
+      },
+      "subject_identity_bridge_pass": true,
+      "ordinary_full_role_pass": true,
+      "literal_event_date_or_year_pass": true,
+      "source_attribution_pass": true,
+      "event_date": null,
+      "event_year": 1934,
+      "event_precision": "year",
+      "membership_subtype": "ordinary_full_member",
+      "disposition": "pass"
+    },
+    {
+      "candidate_group_id": "CTHS_2146",
+      "name": "COCHON de LAPPARENT Albert",
+      "source_id": "lapparent",
+      "source_sha256": "8c0fc8755ba86a3a533aab5e32f71315006a75402ff06fdd9bebf9cae79681c1",
+      "source_hash_matches_final_evidence": true,
+      "actual_pdf_pages_visually_read": [
+        2,
+        34
+      ],
+      "fresh_renders_used": true,
+      "render_sha256": {
+        "2": "1451052386a0541ffcb80e9104b20c78cf61dcb8e391f5f69ef4d3f0c42ea6cf",
+        "34": "fdcf8aff0443e7f2caad2d04366fb8a73698326228af4729ff8d6541596e02b3"
+      },
+      "subject_identity_bridge_pass": true,
+      "ordinary_full_role_pass": true,
+      "literal_event_date_or_year_pass": true,
+      "source_attribution_pass": true,
+      "event_date": null,
+      "event_year": 1896,
+      "event_precision": "year",
+      "membership_subtype": "ordinary_full_member",
+      "disposition": "pass"
+    }
+  ],
+  "manifest_file_checks": [
+    {
+      "path": "README.md",
+      "sha256": "d267dcf5bda6f5213151e30b82c4f09ad91d9883915e24ea41c4ec44e2d50ede",
+      "matches_manifest": true
+    },
+    {
+      "path": "body_review_log.json",
+      "sha256": "c678f749bd75bf05acf9f8db397196f0a14292ee3d615bb9c5ebfa39c960aa99",
+      "matches_manifest": true
+    },
+    {
+      "path": "decisions.json",
+      "sha256": "e7f41c7983eec4a07cac44cabc0de39bc2f55654d1364e00b6fb43224152684e",
+      "matches_manifest": true
+    },
+    {
+      "path": "log.json",
+      "sha256": "65e5f29515e91adec6be78a9ed14b35588f68ec0d9a928f00581fb1cf53397ea",
+      "matches_manifest": true
+    },
+    {
+      "path": "prior_route_audit.json",
+      "sha256": "b5dbf85e93cfacac37ae920268959251674d625923eb67679ce640acb605b481",
+      "matches_manifest": true
+    },
+    {
+      "path": "processed.csv",
+      "sha256": "322e3200bc66b2960edfd96094515d54d3c683a9b3e5ee1f64918e6ab78deeab",
+      "matches_manifest": true
+    },
+    {
+      "path": "requests.json",
+      "sha256": "f92d69a6ad4ea7796c87e63d7187fc687d2181c0adccf1ba357a099ce52b3902",
+      "matches_manifest": true
+    },
+    {
+      "path": "search_queries.json",
+      "sha256": "871b2531b91e8c1a684349af2c0e001ce57f00b7f506a21809556206b23d3dd2",
+      "matches_manifest": true
+    },
+    {
+      "path": "source_manifest.json",
+      "sha256": "39044514f04fd92c4057a91326067775ce94e5fd54c2a45fb80b630d55c8852f",
+      "matches_manifest": true
+    },
+    {
+      "path": "summary.json",
+      "sha256": "e9e2910baef0675df1661445dc80d4188c4ff35a094cd071fc1e799d3f695cce",
+      "matches_manifest": true
+    },
+    {
+      "path": "visual_review.json",
+      "sha256": "6f076283ed2dbf12560226d496d055bbc9e0acf109cf44e1109bfbeb9c35ce8c",
+      "matches_manifest": true
+    }
+  ],
+  "findings": [],
+  "blocking_issue_count": 0,
+  "overall_status": "pass",
+  "cross_source_addendum_present": false,
+  "no_network_used_for_QA": true,
+  "source_excerpt_repeated": false,
+  "notes": [
+    "Janet free-member subject heading and literal start1919 verified.",
+    "Rey subject industrial-science division and direct16June1930 start independently agree with explicit1930 election paragraph.",
+    "Moussu1934 ordinary Rural Economy section election is distinct from first candidature1917; literal January1 birth is identity bridge only.",
+    "Lapparent1896 admission replacing Des Cloizeaux is distinct from later secretary appointment and from notice author Lacroix."
+  ]
+}

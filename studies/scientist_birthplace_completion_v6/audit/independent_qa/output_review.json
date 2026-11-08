@@ -1,0 +1,154 @@
+{
+  "status": "PASS",
+  "baseline_sha256": "15f3d58b3334fbc5c32229b0c122ff5e693379fbf9759794e1e3ae87ac06d152",
+  "cohort_records": 11094,
+  "changed_rows": 12,
+  "unchanged_rows": 11082,
+  "changed_keys": [
+    [
+      "NAS",
+      "https://www.nasonline.org/directory-entry/a-m-pappenheimer-jr-umskfb/"
+    ],
+    [
+      "NAS",
+      "https://www.nasonline.org/directory-entry/carl-w-gottschalk-9bumwr/"
+    ],
+    [
+      "NAS",
+      "https://www.nasonline.org/directory-entry/e-m-purcell-m0zpve/"
+    ],
+    [
+      "NAS",
+      "https://www.nasonline.org/directory-entry/edward-c-franklin-he145d/"
+    ],
+    [
+      "NAS",
+      "https://www.nasonline.org/directory-entry/gertrude-s-goldhaber-rpnyr2/"
+    ],
+    [
+      "NAS",
+      "https://www.nasonline.org/directory-entry/glenn-t-seaborg-p6eie5/"
+    ],
+    [
+      "NAS",
+      "https://www.nasonline.org/directory-entry/i-m-kolthoff-pcxmpw/"
+    ],
+    [
+      "NAS",
+      "https://www.nasonline.org/directory-entry/john-kirkwood-3at1kf/"
+    ],
+    [
+      "NAS",
+      "https://www.nasonline.org/directory-entry/robert-w-briggs-6fmsv1/"
+    ],
+    [
+      "NAS",
+      "https://www.nasonline.org/directory-entry/t-l-cairns-4ua4rx/"
+    ],
+    [
+      "NAS",
+      "https://www.nasonline.org/directory-entry/willem-j-luyten-rowkyf/"
+    ],
+    [
+      "NAS",
+      "https://www.nasonline.org/directory-entry/william-d-phillips-6k1wdb/"
+    ]
+  ],
+  "before_counts": {
+    "CAS": {
+      "unknown": 224,
+      "north": 1003,
+      "south": 3
+    },
+    "DE_Leopoldina": {
+      "north": 655,
+      "unknown": 117,
+      "south": 6
+    },
+    "Fields_main": {
+      "north": 59,
+      "south": 4
+    },
+    "France": {
+      "north": 702,
+      "unknown": 70,
+      "south": 3
+    },
+    "Japan": {
+      "north": 234,
+      "unknown": 134
+    },
+    "NAS": {
+      "unknown": 555,
+      "north": 1656,
+      "south": 31
+    },
+    "Nobel_science": {
+      "north": 634,
+      "south": 21
+    },
+    "UK_Royal_Society": {
+      "north": 4155,
+      "unknown": 645,
+      "south": 183
+    }
+  },
+  "after_counts": {
+    "CAS": {
+      "unknown": 224,
+      "north": 1003,
+      "south": 3
+    },
+    "DE_Leopoldina": {
+      "north": 655,
+      "unknown": 117,
+      "south": 6
+    },
+    "Fields_main": {
+      "north": 59,
+      "south": 4
+    },
+    "France": {
+      "north": 702,
+      "unknown": 70,
+      "south": 3
+    },
+    "Japan": {
+      "north": 234,
+      "unknown": 134
+    },
+    "NAS": {
+      "unknown": 543,
+      "north": 1667,
+      "south": 32
+    },
+    "Nobel_science": {
+      "north": 634,
+      "south": 21
+    },
+    "UK_Royal_Society": {
+      "north": 4155,
+      "unknown": 645,
+      "south": 183
+    }
+  },
+  "all_existing_native_fields_equal": true,
+  "all_27_prior_birthplace_evidence_objects_and_versioned_fields_equal": true,
+  "all_26_prior_overlay_whole_rows_equal": true,
+  "all_4983_UK_objects_equal": true,
+  "Nobel_all_native_DOB_blank": true,
+  "CAS_all_accepted_Gregorian_DOB_blank": true,
+  "country_and_point_assignments": 0,
+  "all_CSV_cells_equal_to_source_rows": true,
+  "summary_counts_and_native_windows_recomputed": true,
+  "seven_output_byte_replay": true,
+  "output_sha256": {
+    "all_country_birthplace_summary.csv": "486b24b02b8cf518ad3095402ed31006a44c799e1aec922778a39521099c04ab",
+    "birthplace_rows.jsonl.gz": "8e880fcf4a659a1c8753a5a0ad4c06552ddd9d0d545334b0e81a2459907d7356",
+    "birthplaces.csv": "b7381eb9a0889bb0203edfb54311587e8eb84228c44a4cf25966a6c4dd9d0e1b",
+    "changed_records.csv": "6b01de2907da36d2d420ecf0ca54ef6c391b35f20d0bae98993e63d5846dcfb2",
+    "changes.jsonl.gz": "450ea07cafefb022300ca3f0108c021d6f471075af6aa58676d56d6566cb27dc",
+    "remaining_unknown.csv": "9b8ac1c534d179dde13c566d3af012c0e02ae4b6bffd62c88667166ac8668b3a",
+    "summary.json": "51e566c717a1579647edc0744ea1ecf3fa2a1000a5453c90acbebdb50e8e6c7d"
+  }
+}

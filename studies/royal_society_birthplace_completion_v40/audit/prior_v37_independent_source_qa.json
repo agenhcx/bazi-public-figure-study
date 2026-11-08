@@ -1,0 +1,633 @@
+{
+  "schema": "UK_v37_independent_geography_source_documentary_QA_v1",
+  "reviewer": "/root/v37_source_qa",
+  "written_utc": "2026-11-07T00:56:53.920743+00:00",
+  "phase": "final",
+  "passed": true,
+  "checks_passed": 128,
+  "checks": [
+    {
+      "check": "actual_v36_baseline_canonical_pin",
+      "passed": true
+    },
+    {
+      "check": "fixed4983_unique_native_records",
+      "passed": true
+    },
+    {
+      "check": "actual61_nonblankunknown_window_pool",
+      "passed": true
+    },
+    {
+      "check": "fixed6_scope_threegroups2",
+      "passed": true
+    },
+    {
+      "check": "scope_within_actual_nonblankunknown_pool",
+      "passed": true
+    },
+    {
+      "check": "complete_target_scope_objects_exactbaseline",
+      "passed": true
+    },
+    {
+      "check": "103blank_window_outside_scope",
+      "passed": true
+    },
+    {
+      "check": "zero_firstbirthplace_groups",
+      "passed": true
+    },
+    {
+      "check": "all12_activeDOBcases_excluded",
+      "passed": true
+    },
+    {
+      "check": "Ewins_Barber_separate_placeholds_excluded",
+      "passed": true
+    },
+    {
+      "check": "both_partialplacecases_excluded",
+      "passed": true
+    },
+    {
+      "check": "Tomes_provisional_separate_not13thactive",
+      "passed": true
+    },
+    {
+      "check": "historical_V36_preregistration_exact_SHA",
+      "passed": true
+    },
+    {
+      "check": "historical_V36_fixedscope_preserved_distinct_newscope",
+      "passed": true
+    },
+    {
+      "check": "current_application_scope_exact_SHA",
+      "passed": true
+    },
+    {
+      "check": "current_application_scope_exactgroups_ids",
+      "passed": true
+    },
+    {
+      "check": "unchanged_method_id",
+      "passed": true
+    },
+    {
+      "check": "V37_reuse_explicit_no_new_amendment",
+      "passed": true
+    },
+    {
+      "check": "exact_original_sourceclasses",
+      "passed": true
+    },
+    {
+      "check": "exact_three_original_proofmodes",
+      "passed": true
+    },
+    {
+      "check": "fullnative_exactDOB_actualedges_mandatory",
+      "passed": true
+    },
+    {
+      "check": "generic_UK_and_centroid_not_enough",
+      "passed": true
+    },
+    {
+      "check": "S3_geography_only_no_DOB_BP_upgrade",
+      "passed": true
+    },
+    {
+      "check": "Kiddle_not_retroapproved",
+      "passed": true
+    },
+    {
+      "check": "61_target_ids_equal_actual_pool",
+      "passed": true
+    },
+    {
+      "check": "fixed6_followups_reviewed",
+      "passed": true
+    },
+    {
+      "check": "complete_disjoint_accepted_held_partition",
+      "passed": true
+    },
+    {
+      "check": "runtime_exact_six_GEO_FIELDS",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1580_native_DOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1580_native_key_unique",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1580_full_native_personal_components_in_observed_name",
+      "passed": true,
+      "detail": {
+        "native_components": [
+          "douglas",
+          "claude",
+          "gordon"
+        ],
+        "observed": "Claude Gordon Douglas"
+      }
+    },
+    {
+      "check": "RS_PAST_NA1580_exact_source_native_DOB",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1580_source_lifespan_compatible_authority_years",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1580_exactday_confirmation_not_overstated",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1580_frozen_rawBP_grade",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1580_S3_geo_only_NorthSouth",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1580_DOB_BP_grades_explicitly_unchanged",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1580_method_base_current_application_hashes",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1580_canonical_original_sourcekind",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1580_identity_career_lifespan_place_roles_documented",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1580_source_quote_count_under25",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1580_unknown_raw_metadata_null",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1580_no_frozen_country_QID_coords_BP_replacementkeys",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1580_no_pending_proposal_fields",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1580_proof_mode_allowed_chain_nonempty",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1580_edges_required_semantic_fields_present",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1580_all_nonterminal_edges_actual_entity_URIs",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1580_exact_edge_continuity",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1580_person_start_node_actual_source",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1580_whole_UK_constituent_terminal_literal",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1580_linked_birthplace_atleast_two_edges",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1580_worker_actual_follow_ref_or_explicit_acquisition_role",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1580_target_city_geographic_not_employer",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2099_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2099_held_frozen_rawBP_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4113_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4113_held_frozen_rawBP_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4918_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4918_held_frozen_rawBP_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6231_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6231_held_frozen_rawBP_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6938_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6938_held_frozen_rawBP_exact",
+      "passed": true
+    },
+    {
+      "check": "inherited_provisional_parsed_date_discrepancies.json_exactbytes",
+      "passed": true
+    },
+    {
+      "check": "inherited_source_date_precision_holds.json_exactbytes",
+      "passed": true
+    },
+    {
+      "check": "inherited_source_derived_age_inconsistencies.json_exactbytes",
+      "passed": true
+    },
+    {
+      "check": "inherited_lifespan_endpoint_discrepancies.json_exactbytes",
+      "passed": true
+    },
+    {
+      "check": "inherited_cross_source_reported_age_contrasts.json_exactbytes",
+      "passed": true
+    },
+    {
+      "check": "inherited_omitted_middle_name_admission.json_exactbytes",
+      "passed": true
+    },
+    {
+      "check": "inherited_source_ordinal_age_wording_observations.json_exactbytes",
+      "passed": true
+    },
+    {
+      "check": "inherited_birthplace_source_conflicts.json_exactbytes",
+      "passed": true
+    },
+    {
+      "check": "active13_exact_old12_prefix_Adam_only_append",
+      "passed": true
+    },
+    {
+      "check": "prior_V36_activeDOB_snapshot_exactbytes",
+      "passed": true
+    },
+    {
+      "check": "Adam_not_adopted_despite_matching_English_geography",
+      "passed": true
+    },
+    {
+      "check": "Adam_newcase_explicit_Italian_native_day_disagreement",
+      "passed": true
+    },
+    {
+      "check": "Adam_newcase_root_and_worker_actual_body_roles",
+      "passed": true
+    },
+    {
+      "check": "Adam_held_full_name_exact_conflictingdate_no_geo",
+      "passed": true
+    },
+    {
+      "check": "prior_v11_holds.json_exacthistoricalbytes",
+      "passed": true
+    },
+    {
+      "check": "prior_v12_holds.json_exacthistoricalbytes",
+      "passed": true
+    },
+    {
+      "check": "prior_v29_first_pass_queue_closeout.json_exacthistoricalbytes",
+      "passed": true
+    },
+    {
+      "check": "prior_v35_geography_first_pass_queue_closeout.json_exacthistoricalbytes",
+      "passed": true
+    },
+    {
+      "check": "historical_V35_queue_pin_no_current_relabel",
+      "passed": true
+    },
+    {
+      "check": "historical_V36_class_admission_preserved",
+      "passed": true
+    },
+    {
+      "check": "historical_base_prereg_bytes_preserved",
+      "passed": true
+    },
+    {
+      "check": "current_application_scope_bytes_exact",
+      "passed": true
+    },
+    {
+      "check": "a_report_exact_scratch",
+      "passed": true
+    },
+    {
+      "check": "a_queries_atmost4",
+      "passed": true
+    },
+    {
+      "check": "a_source_navigation_atmost10",
+      "passed": true
+    },
+    {
+      "check": "a_exact_worker_scope_partition",
+      "passed": true
+    },
+    {
+      "check": "a_intent_exact_scratch",
+      "passed": true
+    },
+    {
+      "check": "a_scope_application_predates_worker_initial_intent",
+      "passed": true
+    },
+    {
+      "check": "b_report_exact_scratch",
+      "passed": true
+    },
+    {
+      "check": "b_queries_atmost4",
+      "passed": true
+    },
+    {
+      "check": "b_source_navigation_atmost10",
+      "passed": true
+    },
+    {
+      "check": "b_exact_worker_scope_partition",
+      "passed": true
+    },
+    {
+      "check": "b_intent_exact_scratch",
+      "passed": true
+    },
+    {
+      "check": "b_scope_application_predates_worker_initial_intent",
+      "passed": true
+    },
+    {
+      "check": "c_report_exact_scratch",
+      "passed": true
+    },
+    {
+      "check": "c_queries_atmost4",
+      "passed": true
+    },
+    {
+      "check": "c_source_navigation_atmost10",
+      "passed": true
+    },
+    {
+      "check": "c_exact_worker_scope_partition",
+      "passed": true
+    },
+    {
+      "check": "c_intent_exact_scratch",
+      "passed": true
+    },
+    {
+      "check": "c_scope_application_predates_worker_initial_intent",
+      "passed": true
+    },
+    {
+      "check": "parent_same_method_current_scope_hash",
+      "passed": true
+    },
+    {
+      "check": "thisversion_no_new_admission_amendment",
+      "passed": true
+    },
+    {
+      "check": "class_current_method_scope_hash",
+      "passed": true
+    },
+    {
+      "check": "class_adopted_ids_grades_modes_actual",
+      "passed": true
+    },
+    {
+      "check": "class_native_BP_fields_unchanged",
+      "passed": true
+    },
+    {
+      "check": "one_Douglas_adopted_five_held",
+      "passed": true
+    },
+    {
+      "check": "Douglas_fullname_displayed26February1882_S2place_S3geoNorth",
+      "passed": true
+    },
+    {
+      "check": "Douglas_actual_Leicester_entity_then_England_literal",
+      "passed": true
+    },
+    {
+      "check": "Douglas_root_body_refs_and_worker_actual_link41_separate",
+      "passed": true
+    },
+    {
+      "check": "Douglas_unknown_calendar_rank_editorial_independence_and_revision_null",
+      "passed": true
+    },
+    {
+      "check": "Douglas_minimal_person_target_quotes_1word_each",
+      "passed": true
+    },
+    {
+      "check": "root_intents_after_scope_before_adjudication",
+      "passed": true
+    },
+    {
+      "check": "root_atmost18opens1query",
+      "passed": true
+    },
+    {
+      "check": "worker_totals12queries10nav2finds",
+      "passed": true
+    },
+    {
+      "check": "parent_operation_counts_exact_ledgers",
+      "passed": true
+    },
+    {
+      "check": "root4_observedURLopens0query0click0find",
+      "passed": true
+    },
+    {
+      "check": "root_quotes_minimal_distinctworks1_1_3_0",
+      "passed": true
+    },
+    {
+      "check": "all_five_holds_no_current_geography",
+      "passed": true
+    },
+    {
+      "check": "Beverton_exactDOB_identity_no_born_place",
+      "passed": true
+    },
+    {
+      "check": "Christopherson_father_work_family_links_not_subject_birth",
+      "passed": true
+    },
+    {
+      "check": "parent_decision_counts_match_actual_facts_holds",
+      "passed": true
+    },
+    {
+      "check": "zero_firstbirthplaces_one_new_DOB_case_no_place_or_other_exceptions",
+      "passed": true
+    },
+    {
+      "check": "schema_no_relaxation_and_runtime_semantic_boundary",
+      "passed": true
+    },
+    {
+      "check": "schema_current_application_scope_documented",
+      "passed": true
+    },
+    {
+      "check": "no_source_caches_or_images",
+      "passed": true
+    }
+  ],
+  "blocking_issues": [],
+  "declared_six_GEO_FIELDS": [
+    "geo_resolution_status",
+    "geography_decision",
+    "hemisphere",
+    "northern_birthplace_candidate",
+    "reason",
+    "southern_birthplace_separate"
+  ],
+  "no_new_admission_method_exception": true,
+  "explicit_prospective_admission_method_amendment": false,
+  "historical_V36_method_amendment_preserved": true,
+  "scope_application_extension": true,
+  "review_scope": "Documentary source/native binding/scope/protocol review only. Workers and root acquired source observations. Reviewer did not fetch network originals, inspect raw bytes/pixels or execute production. Final QA independently checks full-object rollback and deterministic output replays.",
+  "no_network_source_code_mainoutputs_audits_or_Git_mutation_by_reviewer": true,
+  "accepted_fact_path": "inputs/accepted_geography.json",
+  "accepted_fact_sha256_at_review": "0d3c630d295776aa9a1e7cca3c52d9635b3a1e3d4ee117d3259346b79d32f831",
+  "accepted_geography_sha256_at_review": "0d3c630d295776aa9a1e7cca3c52d9635b3a1e3d4ee117d3259346b79d32f831",
+  "active_DOB_conflicts_sha256_at_review": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+  "birthplace_source_conflicts_sha256_at_review": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+  "source_class_adjudication_sha256_at_review": "97ff6c2c1cdb40fd226e4307c585daaf1f449ea5d883c6febb27d25f238b46f8",
+  "historical_v35_geography_first_pass_queue_closeout_sha256_at_review": "56fd3053935afc42fe2f9cf301bb66bc2bc6839fa9483467cd03e602fb61be3b",
+  "method_preregistration_sha256_at_review": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+  "method_application_scope_sha256_at_review": "ae080b06f8abad9ed7575783486795c977e44ce5e5024bfa2096e16816a44d94",
+  "method_schema_sha256_at_review": "b00f07b2d1e53176033efd0a36a03657ca3b56f02a286116a4588ac5b8003e45",
+  "accepted_geographic_bindings": [
+    {
+      "record_id": "RS_PAST_NA1580",
+      "native_DOB": "1882-02-26",
+      "native_authority": "Douglas; Claude Gordon (1882 - 1963)",
+      "observed_source_full_name": "Claude Gordon Douglas",
+      "source_birthdate": "1882-02-26",
+      "source_birthdate_as_displayed": "26 February 1882",
+      "frozen_raw_birthplace": "Leicester",
+      "frozen_BP_source_grade": "S2",
+      "source_birthplace_context": "Leicester actual personal birth hyperlink; England literal Country in actual target place body",
+      "new_geographic_grade": "S3",
+      "new_hemisphere": "north",
+      "proof_mode": "explicit_person_born_place_hyperlink_then_actual_target_place_region",
+      "proof_chain": [
+        {
+          "source_url": "https://en.wikipedia.org/wiki/Claude_Gordon_Douglas",
+          "source_node_label": "Claude Gordon Douglas",
+          "edge_property": "explicit_subject_birthplace_hyperlink",
+          "tool_ref": "turn4826350view0",
+          "locator": "L108 actual full Claude Gordon Douglas/exact26February1882/bornLeicesterlink40/death1963; L113-118 coherent respiratoryphysiology/Haldane/Oxfordcareer.",
+          "acquisition_role": "root_actual_canonical_person_birth_link_observed_after_worker_actual_link41_follow",
+          "target_kind": "entity",
+          "target_label": "Leicester",
+          "target_uri": "https://en.wikipedia.org/wiki/Leicester",
+          "source_qid": null,
+          "target_qid": null,
+          "worker_tool_ref": "turn6058347view1",
+          "worker_follow_link_result_ref": "turn6538381view0",
+          "root_reclicked_person_link": false
+        },
+        {
+          "source_url": "https://en.wikipedia.org/wiki/Leicester",
+          "source_node_label": "Leicester",
+          "edge_property": "Country",
+          "tool_ref": "turn4826350view1",
+          "locator": "L278 actual city in England;L279Leicester/L289CountryEngland. Literal England value without observed terminal value URI.",
+          "acquisition_role": "root_actual_already_observed_person_born_link_target_body_after_worker_actual_click",
+          "target_kind": "literal",
+          "target_label": "England",
+          "target_uri": null,
+          "source_qid": null,
+          "target_qid": null,
+          "target_uri_limit": "Actual literal England value; no terminal-region URI or QID guessed.",
+          "source_node_type": "geographic_city",
+          "source_quote": "England",
+          "source_quote_word_count": 1,
+          "worker_tool_ref": "turn6538381view0"
+        }
+      ]
+    }
+  ],
+  "inherited_seven_other_issue_sidecars_byte_identical": [
+    "provisional_parsed_date_discrepancies.json",
+    "source_date_precision_holds.json",
+    "source_derived_age_inconsistencies.json",
+    "lifespan_endpoint_discrepancies.json",
+    "cross_source_reported_age_contrasts.json",
+    "omitted_middle_name_admission.json",
+    "source_ordinal_age_wording_observations.json"
+  ],
+  "worker_counts_from_actual_ledgers": {
+    "a": {
+      "queries": 4,
+      "navigation_operations": 3,
+      "parsed_finds": 0
+    },
+    "b": {
+      "queries": 4,
+      "navigation_operations": 3,
+      "parsed_finds": 0
+    },
+    "c": {
+      "queries": 4,
+      "navigation_operations": 4,
+      "parsed_finds": 2
+    }
+  }
+}

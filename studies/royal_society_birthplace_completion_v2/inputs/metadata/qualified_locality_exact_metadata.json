@@ -1,0 +1,7 @@
+{
+  "url": "https://query.wikidata.org/sparql?query=SELECT+%3FcityLabel+%3FregionLabel+%3Fplace+%3Fregion+%3Flatitude+%3Flongitude+%3Fprecision+%3Frank+%3Fcountry+WHERE+%7B%0A+VALUES+%28%3FcityLabel+%3FregionLabel%29+%7B%28%22Austin%22%40en+%22Texas%22%40en%29+%28%22Shaftesbury%22%40en+%22Dorset%22%40en%29+%28%22Folkestone%22%40en+%22Kent%22%40en%29%7D%0A+%3Fplace+%28rdfs%3Alabel%7Cskos%3AaltLabel%29+%3FcityLabel%3B+wdt%3AP131%2A+%3Fregion.%0A+%3Fregion+%28rdfs%3Alabel%7Cskos%3AaltLabel%29+%3FregionLabel.%0A+%3Fplace+p%3AP625+%3Fstatement.%0A+%3Fstatement+wikibase%3Arank+%3Frank%3B+psv%3AP625+%3Fcoordinate.%0A+FILTER%28%3Frank+%21%3D+wikibase%3ADeprecatedRank%29%0A+%3Fcoordinate+wikibase%3AgeoGlobe+wd%3AQ2%3B+wikibase%3AgeoLatitude+%3Flatitude%3B+wikibase%3AgeoLongitude+%3Flongitude%3B+wikibase%3AgeoPrecision+%3Fprecision.%0A+OPTIONAL+%7B%3Fplace+wdt%3AP17+%3Fcountry.%7D%0A%7D&format=json",
+  "retrieved_utc": "2026-11-02T00:26:36.632728+00:00",
+  "bytes": 10324,
+  "sha256": "28883edbbb4cda002330c408b1f08f6c21c360fd16e71fe576e7cd2eee034dfb",
+  "kind": "S3 geography-only exact city+region and P131 relation query; no persons queried"
+}

@@ -1,0 +1,86 @@
+{
+  "schema": "UK_v46_independent_original_source_documentary_QA_v1",
+  "reviewer": "/root/v42_source_qa",
+  "written_utc": "2026-11-08T11:49:17.352702+00:00",
+  "status": "PASS",
+  "passed": true,
+  "phase": "final_source_adjudication_before_data_execution",
+  "scope_sha256": "6051c4a3f9887bbba4556595f9dfbbfd8c5bb6ab552d586e9cf67f217597c7bc",
+  "source_review_complete": true,
+  "data_execution_observed": false,
+  "data_QA_in_this_artifact": false,
+  "blocking_issues": [],
+  "accepted_record_ids": [
+    "RS_PAST_NA4250"
+  ],
+  "accepted_geography_only_record_ids": [],
+  "accepted_birthplaces_sha256": "18df8fc0b12973c4599a23b2ca261eff197239e4679fd885f90b316701d4471b",
+  "parent_adjudication_sha256": "867de97edb8397f14df85a0498634e60f63cd2a946c6cc1bdb8a4dd0801e6d13",
+  "worker_evidence_pins": {
+    "a": {
+      "report_sha256": "796bfd982155c3290f9f3bc577366c07ac555e2b93525388e869a63476a28cfe",
+      "intent_sha256": "12cae6251d43e38f086cc78b61676050b7c003b438fd7a2b98b6087198997924"
+    },
+    "b": {
+      "report_sha256": "41b16f8e17a71534aa242229581d058a4816475e2b5ecfa09713cc261f8c538b",
+      "intent_sha256": "7c08aae9e7c6ea2b7b5641cff2f91d22e60315b76caf06468271ac47bec6c7d2"
+    },
+    "c": {
+      "report_sha256": "2212ece5f284c52668e48c6c5bf283c9c34e5dffdbb7022525f3d8218f96ce9e",
+      "intent_sha256": "e8a2ec302e879f451312c332e8529dbf3a40351d054296663b22230c6699fb84"
+    }
+  },
+  "root_followups_sha256": "a6d02897805d86aa23fec71e5058e5c260f1579e408812de8151564b8d1dc505",
+  "root_intent_sha256": "e204b1c33a751ce601fc20fbcc272fcbccd06c748b80fcc609d38709205244ce",
+  "admission_authority": "Unchanged V29 original-first-birthplace and V35 original-person geography. Ordinary actually stated compatible precision; no new method/name/date exception. Exact-day rule for the separate canonical method is not imported.",
+  "accepted_source_review": {
+    "record_id": "RS_PAST_NA4250",
+    "decision": "accept_first_birthplace",
+    "raw_birthplace": "Australia",
+    "source_grade": "S3",
+    "hemisphere": "south",
+    "worker_ref": "turn4714401view1",
+    "root_ref": "turn1031603view0",
+    "review": "NPG alone states Peter John Morris and1934-2022, compatible with unchanged native1934-04-17/2022; coherent Nuffield/Balliol/transplant/knighthood career; direct Australian-born predicate. Sir is an honorific. Full components and stated year precision satisfy ordinary V29 rules. No exact month/day confirmation, omitted-middle exception or RCS-date transfer. Conservative S3 for unattributed compiled museum biography, not host-only S1/S2. Australia South reuses actual V16 NA5416 whole-region precedent; no city/state/country-field/QID/coordinate inference. Places taxonomy, portrait1999 and footer2026 ignored. Unknown author/date/raw/revision/editorial/independence metadata stays null.",
+    "adaptive_discovery": "NPG was actually observed in RCS locator results, not an initially frozen URL. Exact NPG preintent/local exit0 preceded its first open within the fixed Morris/budget strategy. Catalogue composition is distinct from closed Oxford and RCS works; informational dependence unknown."
+  },
+  "holds": [
+    {
+      "record_id": "RS_CURRENT_10965",
+      "reason": "AAS Jerry Adams/career present, but no stated birth precision or birthplace. Empty authority/nonempty native name preserved; no McKee expansion. Directory/root WEHI query yields no qualifying target body; no global absence."
+    },
+    {
+      "record_id": "RS_PAST_NA780",
+      "reason": "Distinct MM1933 original first404 and previously unacquired BGS bibliography first500 closed; PGA1931 URI unlocated. No original birth-region body; projection evidence not promoted."
+    },
+    {
+      "record_id": "RS_PAST_NA1196",
+      "reason": "No distinct original obituary URI/body found. Literal native George1/Walker2 retained; no deduplication, guessed URI, name repair or assumed exception."
+    },
+    {
+      "record_id": "RS_PAST_NA4252",
+      "reason": "Actual distinct Essex news/profile use Brian Ridley, omit Kidd and provide no stated birth precision or birthplace. No old-memoir date transfer or workplace/footer inference."
+    }
+  ],
+  "source_operations": {
+    "queries": 13,
+    "opens": 8,
+    "clicks": 1,
+    "finds": 0,
+    "raw_GETs": 0,
+    "exact_durable_intent_entries": 22
+  },
+  "current_V46_work_closures_clean": true,
+  "historical_V44_work_closures_clean": false,
+  "V45_closures_preserved": true,
+  "all9_issue_inventories_preserved": true,
+  "new_qualified_issues": 0,
+  "quote_budget": "NPG same excerpt counted once:4 whitespace tokens/5 conservative lexical words<=25; other new quotes0. Inherited budgets unextended.",
+  "limits": [
+    "Documentary review of retained actual worker/root observations; no reviewer source reacquisition/raw-byte authentication. Separate root/worker acquisition roles do not prove publication independence.",
+    "All22 exact intent entries have real UTC and retained separate local exit0-before-web evidence. Exact root validation UTC was not saved and is not invented; raw HTTP timing remains unknown.",
+    "This immutable source PASS precedes data execution. It does not claim any V46 output, CLI exit or data-QA result. Separate data QA must verify only Morris changes within old7birthplace+6geography fields/new rollback context; all other fields/records frozen."
+  ],
+  "reviewer_external_requests": 0,
+  "reviewer_loader_or_replay_CLI_runs": 0
+}

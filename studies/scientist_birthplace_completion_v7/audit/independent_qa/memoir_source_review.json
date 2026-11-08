@@ -1,0 +1,117 @@
+{
+  "status": "PASS",
+  "source_fact_files": [
+    "academy_v7_workers/vol79/retained_facts.jsonl",
+    "academy_v7_workers/vol80/retained_facts.jsonl"
+  ],
+  "accepted_memoir_observations": 4,
+  "source_grade_counts": {
+    "S2": 4
+  },
+  "held_source_rows": 1,
+  "Wilson_original_GIF_directly_viewed_header1915_conflicts_with_body_native1914": true,
+  "Wilson_lowercase_frontier_not_invented_town_and_no_fact": true,
+  "Tarbell_farm_historical_qualifier_and_Clemence_near_grain_preserved": true,
+  "all543_unknowns_covered_in_both_TOC_routes": true,
+  "all_original_hashes_preintents_and_actual_TOC_image_URLs_verified": true,
+  "reviews": [
+    {
+      "volume": 79,
+      "name": "D. Stanley Tarbell",
+      "record_id": "https://www.nasonline.org/directory-entry/d-stanley-tarbell-xd75sf/",
+      "native_dob": "1913-10-19",
+      "source_heading": "DEAN STANLEY TARBELL",
+      "raw_birthplace": "Hancock, New Hampshire, on a farm that had been in the family since the settlement of the village",
+      "source_grade": "S2",
+      "source_sha256": "60391496bebcd9b252243c5e4612a867161b21533554bdd39b134d48906c60a9",
+      "exact_quote_and_target_subject_verified": true,
+      "quote_word_count": 24,
+      "heading_and_born_clause_day_match_native": true,
+      "NAS_context_and_authorship_confirmed": true,
+      "unique_name_plus_native_DOB_among_all2242": true
+    },
+    {
+      "volume": 79,
+      "name": "Gerald Clemence",
+      "record_id": "https://www.nasonline.org/directory-entry/gerald-clemence-fmrpf8/",
+      "native_dob": "1908-08-16",
+      "source_heading": "GERALD MAURICE CLEMENCE",
+      "raw_birthplace": "near Greenville, Rhode Island",
+      "source_grade": "S2",
+      "source_sha256": "219686cdb1b2613a6d7591643155fd1e0e8a86c6b75cb4e4ed5d64d64da6d900",
+      "exact_quote_and_target_subject_verified": true,
+      "quote_word_count": 13,
+      "heading_and_born_clause_day_match_native": true,
+      "NAS_context_and_authorship_confirmed": true,
+      "unique_name_plus_native_DOB_among_all2242": true
+    },
+    {
+      "volume": 79,
+      "name": "Oliver R. Wulf",
+      "record_id": "https://www.nasonline.org/directory-entry/oliver-r-wulf-tcdfbv/",
+      "native_dob": "1897-04-22",
+      "source_heading": "OLIVER REYNOLDS WULF",
+      "raw_birthplace": "Norwich, Connecticut",
+      "source_grade": "S2",
+      "source_sha256": "eb1e099c02f73b41ccfe766e12c748446b1b8ec8092a050200caaef45d279356",
+      "exact_quote_and_target_subject_verified": true,
+      "quote_word_count": 11,
+      "heading_and_born_clause_day_match_native": true,
+      "NAS_context_and_authorship_confirmed": true,
+      "unique_name_plus_native_DOB_among_all2242": true
+    },
+    {
+      "volume": 80,
+      "name": "Alfred D. Hershey",
+      "record_id": "https://www.nasonline.org/directory-entry/alfred-d-hershey-8eamd9/",
+      "native_dob": "1908-12-04",
+      "source_heading": "Alfred Day Hershey",
+      "raw_birthplace": "Owosso, Michigan",
+      "source_grade": "S2",
+      "source_sha256": "fcbd8560268f6a19a18c7a45449e1a7f32ab92ce2d52f0f7c92b18805238717a",
+      "exact_quote_and_target_subject_verified": true,
+      "quote_word_count": 11,
+      "heading_and_born_clause_day_match_native": true,
+      "NAS_context_and_authorship_confirmed": true,
+      "unique_name_plus_native_DOB_among_all2242": true
+    }
+  ],
+  "lanes": {
+    "79": {
+      "queries": 1,
+      "indices": 1,
+      "HTML_bodies": 3,
+      "GIF_bodies": 0,
+      "body_requests": 3,
+      "body_cap": 8,
+      "capture_clock_seconds": 54.972381,
+      "facts": 3,
+      "held": 0,
+      "retries": 0,
+      "all_HTTP200": true
+    },
+    "80": {
+      "queries": 1,
+      "indices": 1,
+      "HTML_bodies": 2,
+      "GIF_bodies": 1,
+      "body_requests": 3,
+      "body_cap": 8,
+      "capture_clock_seconds": 146.242563,
+      "facts": 1,
+      "held": 1,
+      "retries": 0,
+      "all_HTTP200": true
+    }
+  },
+  "native_fields_QIDs_and_DOB_groups_unchanged": true,
+  "QA_HTTP_requests": 0,
+  "source_effort_counts": {
+    "queries": 2,
+    "indices": 2,
+    "HTML_bodies": 5,
+    "GIF_bodies": 1,
+    "logical_requests": 10,
+    "original_HTTP_captures": 8
+  }
+}

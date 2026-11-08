@@ -1,0 +1,80 @@
+{
+  "written_utc": "2026-11-07T00:50:47.170383+00:00",
+  "baseline_commit": "ec2f83b0430f1aa701bca0a86a8158d60d1786b4",
+  "baseline_canonical_sha256": "56d5117eed499c0116eb088362874c8273bcee79ef7bb74da3e807f27ce0a020",
+  "phase": "canonical_community_person_place_geography_pilot",
+  "fixed_nonblank_unknown_window_pool": 61,
+  "geography_followup_groups": {
+    "a": [
+      "RS_PAST_NA4113",
+      "RS_PAST_NA1580"
+    ],
+    "b": [
+      "RS_PAST_NA6231",
+      "RS_PAST_NA4918"
+    ],
+    "c": [
+      "RS_PAST_NA2099",
+      "RS_PAST_NA6938"
+    ]
+  },
+  "first_birthplace_followup_groups": {},
+  "source_strategy": "Apply unchanged V36 canonical community reference method to six newly fixed stored-place unknown records. Read full prior contexts and all individual holds before queries. No first birthplace, date repair, mirror retroapproval, statistical analysis, or final freeze.",
+  "budgets": {
+    "per_group_queries": 4,
+    "per_group_navigation_attempts": 10,
+    "root_source_or_context_verification_opens": 18,
+    "root_adaptive_author_or_observed_original_work_locator_query": 1
+  },
+  "admission": "Actualallnativepersonalcomponents(fullname/observedfullalias, honorificnotpersonalcomponent), exactunchangednativeDOBasstated and coherentdistinctivecareer; actually observedcompatiblelifespanwhereprovided. OriginalacceptedpersonidentityandBP evidence remainsseparatelyfrozen. No inventedfullnames, dates, calendars or guessedQIDs. SourceP19/bornplace must matchliteralexistinglocalitycomponent or be an explicitlyconsistentbroaderqualifier in existingrawplace (e.g.WoodGreen,London->London). No different-cityequivalence, substitutedplace or unobservedalias. Preservegranularstreetuncertainty. Any actualincompatibleplace orDOB meanshold, notchooseotherpositivesource. Everyedge mustactuallyappear in acquiredtext/structuredstatement: personbornplace/P19->specifictargetURI/QID, then actualtargetcountry/adminP131path. RecordeachnodeURI,label,edgeproperty,toolref,locator and acquisitionrole. No guessedlinks fromfamiliarcitynames, nationality/work or genericcoordinates. No personalcountry/QID/latlon fields assigned.",
+  "geography_role": "Newgeography_followup_v37 includes method_id/proof_mode/proofchain asS3geographic_support_only; oldDOB/BPtiers andnativefields preserved. ExactlysixGEO_FIELDS+newcontext/rollback only.",
+  "known_holds": "All12activeDOBcases, allpartialplacecases andEwins/Barber excluded; do not retroactivelyadmitKiddleorclear anypriorhold. Priorv35firstpasscloseout stayshistorical, notcurrentmasteraudit.",
+  "grades": "S3 geographic_support_only; canonicalcommunitydata is notcivil/peerreview/independenteditingproof and notupgrading originalDOBorBPgrade. Informationaldependenceonpriorreferencesunknown.",
+  "quote_policy": "<=25distinctEnglishquotedwords/originalwork acrosspackage, accountfor priorcurrentfrozenobservations; no fullsourceHTML/PDF/images/projectioncaches.",
+  "retrieval": "Intentbeforequeries/opens; stop403/429/timeouts/size/challenges/no repeatsvariantsbypassrawGET; rawstatus/requesttime/bytehashunknownnull, parsedtextnotrawbytes.",
+  "frozen": [
+    "nativeDOB",
+    "calendar",
+    "authorityidentity",
+    "cohort",
+    "eligibility",
+    "DOBtiers",
+    "rawbirthplace",
+    "BPsourcegrade",
+    "BPsourceURLs/claims/evidence",
+    "QIDs",
+    "country",
+    "coords",
+    "officialstatus",
+    "oldsourcehash",
+    "allpriorversionedfacts",
+    "untargetedcompleteobjects"
+  ],
+  "inherited_issues": "All12activeDOBobjects/2partialplaceobjects and7otherissuefiles byteexact unlessqualifiedexplicitnewappend preservingalloldobjects. No clearedhold. Historicalv35firstpassaudit pin unchanged; sourceclassifiednewmethodexplicitnotretroactive.",
+  "blank_queue_boundary": "103blankwindowcompleteobjects remainuntouched. v29firstpasscloseout stayshistoricalprior withv29hash; currentgeoonlyscope doesnotreopenblankqueue.",
+  "no_analysis_or_final_freeze": true,
+  "preselection_conflict_exclusions": [
+    {
+      "record_id": "RS_PAST_NA9209",
+      "prior_hold": "prior_v11_holds.json",
+      "frozen_raw_birthplace": "Blackpool",
+      "prior_observed_city": "Bristol",
+      "decision": "Unresolvedplaceholdpreserved,notselectedforgeo-onlyshortcut."
+    },
+    {
+      "record_id": "RS_PAST_NA8779",
+      "prior_hold": "prior_v12_holds.json",
+      "frozen_raw_birthplace": "Hatfield",
+      "prior_observed_city": "Letchworth",
+      "decision": "Unresolvedplaceholdpreserved,notselectedforgeo-onlyshortcut."
+    }
+  ],
+  "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+  "method_preregistration_file": "v36_method_preregistration.json",
+  "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+  "method_application_scope_file": "v37_method_application_scope.json",
+  "method_application_scope_sha256": "ae080b06f8abad9ed7575783486795c977e44ce5e5024bfa2096e16816a44d94",
+  "method_amendment_created": false,
+  "scope_application_extension": true,
+  "no_new_admission_method_exception": true
+}

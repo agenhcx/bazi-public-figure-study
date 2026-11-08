@@ -1,0 +1,51 @@
+{
+  "article_qid": "Q2833160",
+  "auxiliary_input_file": "dublin_fr_geographic_auxiliary_input.jsonl",
+  "auxiliary_input_sha256": "46017f4715f3ac153600a05ca5a1526b33fcab764ea0f3d236c83581e619c504",
+  "birthplace_anchor_links": [
+    {
+      "label": "Dublin",
+      "url": "https://fr.wikipedia.org/wiki/Dublin"
+    },
+    {
+      "label": "Irlande",
+      "url": "https://fr.wikipedia.org/wiki/Irlande_(%C3%AEle)"
+    }
+  ],
+  "birthpoint_coordinates_assigned": false,
+  "caption_death_year": 1919,
+  "caption_first_life_year": 1844,
+  "country_assigned": false,
+  "existing_S1_birthplace_candidate_id": "aeed1561245f3a99dd27",
+  "existing_S1_raw_birthplace_unchanged": "Dublin",
+  "geographic_auxiliary_not_appended_as_new_birthplace_evidence": true,
+  "geographic_resolution_source_grade": "S3",
+  "geographical_extent_source": {
+    "observation": "Introduction gives island of Ireland latitudes 51.5 to 55.5 degrees north.",
+    "publisher": "Government of Ireland national report to Convention on Biological Diversity",
+    "retrieved_utc_date": "2026-11-02",
+    "snapshot_hash_scope": "Hash of the saved relevant brief excerpt capture, NOT a complete web-tool result or raw HTTP response bytes",
+    "snapshot_relative_path": "web_snapshots/extent_find1.json",
+    "snapshot_sha256": "bdfa693538d41cba6d89cff99bf06a62fb7b809cc3838aa69714e99e2fdbc7e7",
+    "source_id": "ireland_extent",
+    "source_url": "https://www.cbd.int/doc/world/ie/ie-nr-01-en.pdf#page=1",
+    "web_reference": "turn2032view1"
+  },
+  "independent_date_identity_support": {
+    "date_support_only_not_new_DOB_acceptance": true,
+    "datetime": "1844-04-09",
+    "death_comparator_field": "Décès time",
+    "death_datetime": "1919-09-02",
+    "source_field": "Naissance time; no place in this field",
+    "source_locator": "/html/body/div/div[1]/table[1]/tbody/tr[1]/td/div/span/time"
+  },
+  "native_DOB_or_identity_acceptance_modified": false,
+  "native_DOB_year_association": "1844-04-09 native birthday has year 1844, matching the FIRST caption life year adjoining Dublin en Irlande; death endpoint has no attached place",
+  "no_new_birthplace_fact": true,
+  "source_date_precision": "year",
+  "source_is_not_an_explicit_new_born_clause": true,
+  "source_locator": "parse.text first subject paragraph life-date caption; Dublin and Irlande_(île) hyperlinks inside first-life-year item",
+  "source_quote": "Alexander Macalister (1844 à Dublin en Irlande - 1919)",
+  "source_sha256": "5668f8180c6f96ad723100d3e373b6fa6413b7ac72245116ff752ac49ea18c27",
+  "source_url": "https://fr.wikipedia.org/wiki/Alexander_Macalister"
+}

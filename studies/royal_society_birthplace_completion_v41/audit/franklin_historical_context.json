@@ -1,0 +1,344 @@
+{
+  "written_utc": "2026-11-06T23:36:00.851957+00:00",
+  "record_id": "RS_PAST_NA907",
+  "scope_note": "HistoricalV13actualreprintheaderdiscrepancy evidence preserved, notnewwebdiscovery; different1923astronomernotused. Rootqualifiescurrentinventory. No native/DOB/sourcegrade/placeedits orconflictresolution.",
+  "original_v13_hold": [
+    {
+      "record_id": "RS_PAST_NA907",
+      "source_authorised_full_name": "Franklin; Kenneth James (1897 - 1966)",
+      "frozen_name": "Kenneth James",
+      "native_dob": "1897-11-25",
+      "prior_raw_birthplace": "London",
+      "status": "hold",
+      "reason": "unqualified_london_and_cross_source_dob_conflict_retained",
+      "source_ids": [
+        "franklin_rcp",
+        "franklin_kidney"
+      ],
+      "identity_binding": {
+        "basis": "Frozen authorised full name compared to source name and compatible date/lifespan; no candidate in this bounded set was substituted for a different person.",
+        "identity_verified": true,
+        "thornton_scope_note": null
+      },
+      "native_dob_source_grade": null,
+      "native_dob_source_grade_note": "Not supplied in queue top-level fields; unchanged, separate from new birthplace source grading.",
+      "DOB_or_native_acceptance_modified": false,
+      "country_or_coordinates_assigned": false,
+      "final_analysis_eligibility_assigned": false,
+      "hold_type": "no_new_region_with_reprint_date_discrepancy",
+      "root_decision": "Retain complete frozen v12 row unchanged; no birthday or birthplace correction or grade upgrade."
+    }
+  ],
+  "original_v13_source_observations": [
+    {
+      "source_id": "franklin_rcp",
+      "url": "https://history.rcp.ac.uk/inspiring-physicians/kenneth-james-franklin",
+      "webref": "turn44view0",
+      "title": "Kenneth James Franklin",
+      "author": null,
+      "birthplace_source_grade_suggestion": "S2",
+      "grade_basis": "Original historical biography reproduced by Royal College of Physicians; author not present in returned excerpt.",
+      "locator": "L10–29 title/lifespan/native-matching birth date; L34 original publication; L35 birth clause",
+      "evidence_quote": "K.J. Franklin was born in London",
+      "explicit_subject_birthplace_verified": true,
+      "explicit_county_state_region_country_qualifier": false,
+      "http_status": null,
+      "http_bytes": null,
+      "parsed_text_is_not_raw_http": true,
+      "source_publication_year": 1982,
+      "identity_anchor": {
+        "title_name": "Kenneth James Franklin",
+        "lifespan": "1897-1966",
+        "birth_date": "25 November 1897",
+        "death_date": "8 May 1966"
+      },
+      "geographic_note": "Birth clause has no qualifying region.",
+      "root_author_observed": "D Whitteridge; original RCP line46, directly read by root"
+    },
+    {
+      "source_id": "franklin_kidney",
+      "url": "https://www.ukkidney.org/about-us/history/obituaries/kenneth-james-franklin",
+      "webref": "turn39view2",
+      "title": "Kenneth James Franklin",
+      "author": "DW",
+      "birthplace_source_grade_suggestion": "S2",
+      "grade_basis": "Institution-hosted reproduction explicitly credits RCP historical biography; date conflict retained.",
+      "locator": "L0 conflicting date range; L5 birth clause; L16–24 author and RCP Munk’s Roll VI p184 credit",
+      "evidence_quote": "11 January 1897 - 4 August 1966",
+      "explicit_subject_birthplace_verified": true,
+      "explicit_county_state_region_country_qualifier": false,
+      "http_status": null,
+      "http_bytes": null,
+      "parsed_text_is_not_raw_http": true,
+      "identity_anchor": {
+        "page_title": "Kenneth James Franklin",
+        "body_initials": "K.J. Franklin",
+        "stated_birth_date": "11 January 1897",
+        "stated_death_date": "4 August 1966"
+      },
+      "birth_date_conflicts_with_frozen_native": true,
+      "birth_date_conflict_not_adjudicated": true,
+      "geographic_note": "Body supplies only London; page header conflicts with frozen birth date and differs from RCP original page."
+    }
+  ],
+  "complete_original_v13_lane_a_acquisition_ledger": [
+    {
+      "lane": "a",
+      "worker": "v13_sources_a",
+      "created_utc": "2026-11-04T23:22:28.878033+00:00",
+      "scope": [
+        "RS_PAST_NA1475",
+        "RS_PAST_NA2111",
+        "RS_PAST_NA2146",
+        "RS_PAST_NA2460",
+        "RS_PAST_NA6231",
+        "RS_PAST_NA907"
+      ],
+      "budget": {
+        "queries_used": 8,
+        "queries_limit": 8,
+        "original_navigation_items_used": 10,
+        "original_navigation_limit": 10,
+        "open_items": 7,
+        "find_items": 3
+      },
+      "request_ledger": [
+        {
+          "entry": 1,
+          "kind": "search",
+          "engine": "system2",
+          "query": "\"Edgar Hartley Kettle\" born London England biography",
+          "request_started_utc": null,
+          "request_completed_utc": null,
+          "http_status": null,
+          "http_bytes": null,
+          "tool_outcome": "returned search results",
+          "note": null
+        },
+        {
+          "entry": 2,
+          "kind": "search",
+          "engine": "system2",
+          "query": "\"Claude Rimington\" born London England biography",
+          "request_started_utc": null,
+          "request_completed_utc": null,
+          "http_status": null,
+          "http_bytes": null,
+          "tool_outcome": "returned search results",
+          "note": null
+        },
+        {
+          "entry": 3,
+          "kind": "search",
+          "engine": "system2",
+          "query": "\"Oscar Victor Sayer Heath\" born London England",
+          "request_started_utc": null,
+          "request_completed_utc": null,
+          "http_status": null,
+          "http_bytes": null,
+          "tool_outcome": "returned search results",
+          "note": null
+        },
+        {
+          "entry": 4,
+          "kind": "search",
+          "engine": "system2",
+          "query": "\"Henry Gerard Thornton\" born London Middlesex",
+          "request_started_utc": null,
+          "request_completed_utc": null,
+          "http_status": null,
+          "http_bytes": null,
+          "tool_outcome": "returned search results",
+          "note": null
+        },
+        {
+          "entry": 5,
+          "kind": "search",
+          "engine": "system2",
+          "query": "\"Richard Whiddington\" born London Middlesex",
+          "request_started_utc": null,
+          "request_completed_utc": null,
+          "http_status": null,
+          "http_bytes": null,
+          "tool_outcome": "returned search results",
+          "note": null
+        },
+        {
+          "entry": 6,
+          "kind": "search",
+          "engine": "system2",
+          "query": "\"Kenneth James Franklin\" born London England",
+          "request_started_utc": null,
+          "request_completed_utc": null,
+          "http_status": null,
+          "http_bytes": null,
+          "tool_outcome": "returned search results",
+          "note": null
+        },
+        {
+          "entry": 7,
+          "kind": "search",
+          "engine": "system1",
+          "query": "site:academic.oup.com \"Kettle\" \"1882\" \"born\"",
+          "request_started_utc": null,
+          "request_completed_utc": null,
+          "http_status": null,
+          "http_bytes": null,
+          "tool_outcome": "returned search results",
+          "note": "Queries 7 and 8 returned unrelated subjects rather than an exact-subject ODNB result."
+        },
+        {
+          "entry": 8,
+          "kind": "search",
+          "engine": "system1",
+          "query": "site:academic.oup.com \"Rimington\" \"1902\"",
+          "request_started_utc": null,
+          "request_completed_utc": null,
+          "http_status": null,
+          "http_bytes": null,
+          "tool_outcome": "returned search results",
+          "note": "Queries 7 and 8 returned unrelated subjects rather than an exact-subject ODNB result."
+        },
+        {
+          "navigation_item": 1,
+          "kind": "open",
+          "target": "https://history.rcp.ac.uk/inspiring-physicians/edgar-hartley-kettle",
+          "webref": "turn39view0",
+          "request_started_utc": null,
+          "request_completed_utc": null,
+          "http_status": null,
+          "http_bytes": null,
+          "tool_outcome": "parsed text returned",
+          "parse_is_http_response_bytes": false
+        },
+        {
+          "navigation_item": 2,
+          "kind": "open",
+          "target": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/583054003",
+          "webref": "turn39view1",
+          "request_started_utc": null,
+          "request_completed_utc": null,
+          "http_status": null,
+          "http_bytes": null,
+          "tool_outcome": "parsed text returned",
+          "parse_is_http_response_bytes": false
+        },
+        {
+          "navigation_item": 3,
+          "kind": "open",
+          "target": "https://www.ukkidney.org/about-us/history/obituaries/kenneth-james-franklin",
+          "webref": "turn39view2",
+          "request_started_utc": null,
+          "request_completed_utc": null,
+          "http_status": null,
+          "http_bytes": null,
+          "tool_outcome": "parsed text returned",
+          "parse_is_http_response_bytes": false
+        },
+        {
+          "navigation_item": 4,
+          "kind": "open",
+          "target": "https://history.rcp.ac.uk/inspiring-physicians/kenneth-james-franklin",
+          "webref": "turn44view0",
+          "request_started_utc": null,
+          "request_completed_utc": null,
+          "http_status": null,
+          "http_bytes": null,
+          "tool_outcome": "parsed text returned",
+          "parse_is_http_response_bytes": false
+        },
+        {
+          "navigation_item": 5,
+          "kind": "open",
+          "target": "https://www.jjhc.info/heathoscarpetervictorsayer1997",
+          "webref": "turn44view1",
+          "request_started_utc": null,
+          "request_completed_utc": null,
+          "http_status": null,
+          "http_bytes": null,
+          "tool_outcome": "parsed text returned",
+          "parse_is_http_response_bytes": false
+        },
+        {
+          "navigation_item": 6,
+          "kind": "open",
+          "target": "https://www.independent.co.uk/news/people/obituary-professor-claude-rimington-1460840.html",
+          "webref": "turn44view2",
+          "request_started_utc": null,
+          "request_completed_utc": null,
+          "http_status": null,
+          "http_bytes": null,
+          "tool_outcome": "parsed text returned",
+          "parse_is_http_response_bytes": false
+        },
+        {
+          "navigation_item": 7,
+          "kind": "open",
+          "target": "https://atom.aim25.com/index.php/travel?listLimit=50&onlyDirect=1&page=4&sf_culture=en&sort=date&sortDir=asc",
+          "webref": "turn44view3",
+          "request_started_utc": null,
+          "request_completed_utc": null,
+          "http_status": null,
+          "http_bytes": null,
+          "tool_outcome": "parsed text returned",
+          "parse_is_http_response_bytes": false
+        },
+        {
+          "navigation_item": 8,
+          "kind": "find",
+          "target": "turn39view1: Extract",
+          "webref": "turn44view4",
+          "request_started_utc": null,
+          "request_completed_utc": null,
+          "http_status": null,
+          "http_bytes": null,
+          "tool_outcome": "parsed text returned",
+          "parse_is_http_response_bytes": false
+        },
+        {
+          "navigation_item": 9,
+          "kind": "find",
+          "target": "turn44view3: Thornton",
+          "webref": "turn46view0",
+          "request_started_utc": null,
+          "request_completed_utc": null,
+          "http_status": null,
+          "http_bytes": null,
+          "tool_outcome": "parsed text returned",
+          "parse_is_http_response_bytes": false
+        },
+        {
+          "navigation_item": 10,
+          "kind": "find",
+          "target": "turn44view2: Claude Rimington, biochemist",
+          "webref": "turn46view1",
+          "request_started_utc": null,
+          "request_completed_utc": null,
+          "http_status": null,
+          "http_bytes": null,
+          "tool_outcome": "parsed text returned",
+          "parse_is_http_response_bytes": false
+        }
+      ],
+      "limitations": [
+        "No new explicit region-qualified birthplace found within the bounded source review.",
+        "Exact network request times, HTTP status, and raw HTTP byte lengths were not exposed; recorded as null.",
+        "Native names and dates are frozen; no hemisphere adjudication or master/Git changes performed."
+      ],
+      "new_routes_not_exhausted": [
+        "Thornton AIM25 collection record behind link105 not opened; collection summary lacks a birth clause.",
+        "Heath original obituary source not reached; only family-history page and snippet inspected."
+      ],
+      "target_completion_recorded_after_initial_searches": true,
+      "intent_file": "/workspace/scratch/262552d8c0f0/v13_a_intent.json"
+    }
+  ],
+  "original_v13_root_Franklin_discrepancy": "Root read originalRCP header25November1897 vs UKKidney reprint header11January1897; RCP matches frozen DOB. Reprint also differs in death date. Original source authorDWhitteridge observed. This is not a nativeDOB correction or a claim of independent support. Both birth bodies remain onlyLondon.",
+  "source_file_sha256": {
+    "source_observations_a.json": "abca7fd220a945d3f3a111527850b627d55f42f8786ce0befdf599109f483fea",
+    "holds.json": "9b54ad12c2a8aa10d3bbc6cefbbf84f8322474a6585310ce86559da2900e05ee",
+    "request_ledgers.json": "7127074f63dce3739c424664742aacf1f67dde59981fecc0106d20c840aa1004",
+    "root_review.json": "4d858b6a3d69142154213c5c2608f9c39fa7a4482bce3f3aa728a3823d4107f3"
+  },
+  "qualification_limit": "Priorrootreportsactualread RCP25Nov1897vsUKKidney11Jan1897 headers; sourceobservationrecordsactualfullnative/career and London. RawHTTPbytes/responseversion notavailable; no typo/correction/independenceverdict."
+}

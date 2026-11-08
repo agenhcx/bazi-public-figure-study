@@ -1,0 +1,47 @@
+{
+  "dataset": "japan-academy-imperial-section-adjudication-v1",
+  "source_snapshot_date": "2026-10-14",
+  "candidate_rows": 332,
+  "accepted_section2_evidence_rows": 89,
+  "accepted_section2_route_counts": {
+    "exact_consensus_official_member_columns": 85,
+    "manual_historical_section_conflict": 1,
+    "manual_image_exact_canonical_name": 2,
+    "manual_image_historical_name_variant": 1
+  },
+  "excluded_section1_evidence_rows": 4,
+  "unresolved_other_official_source_required_rows": 239,
+  "manual_image_adjudication_rows": 6,
+  "manual_image_decision_counts": {
+    "accept_section2": 3,
+    "accept_section2_with_historical_conflict": 1,
+    "section_unresolved_other_official_source_required": 2
+  },
+  "historical_name_variant_rows": 1,
+  "historical_section_conflict_rows": 1,
+  "manual_absence_reviews_routed_to_other_source": 2,
+  "partition_complete": 1,
+  "decision_guardrails": [
+    "Absence from a dated roster page is not treated as Section I, Section II, or non-membership evidence.",
+    "The 1918 松村任三 First Division entry is preserved as a real official-source conflict, not overwritten as OCR error.",
+    "Historical printed name forms are preserved alongside the canonical Japan Academy index name.",
+    "This layer freezes section evidence only; it does not write the final Japan Academy roster."
+  ],
+  "images_reviewed": 10,
+  "local_ocr_performed": 0,
+  "final_roster_rows_written": 0,
+  "dob_collection_started": 0,
+  "bazi_variables_computed": 0,
+  "input_sha256": {
+    "evidence_summary": "7b2a297e0a118e2923858a602d73a6f270a01eec1379799adc55d67358a2b0a8",
+    "candidate_evidence_summary": "7e7491e3633c4ccaab1d439c6d70ed11ee6ae971578b754cabf40a6b4131fa2c",
+    "direct_section2": "9f1cbbae3562debd36d6ed9d7b403c69d37e5c1bf7a94985ad9f3fbd8fa530df",
+    "direct_section1": "e0f624a7fabad70a29c1a982b542af5e1a7480ddd74fdf466d717359f188d985",
+    "repeated_one_edit": "3c35b34c587aeb721493e23f910596da3ad435a3de92bb6faa1194b2c7961627",
+    "section_conflict": "dc5dcbe53fa44f3428f2789853dd5dff709fea577694d00f5a269bb795376b8d",
+    "prior_other_source": "f54a87363bbe9c633412d5392e95bb81694b14f09d6d7c34f2b129fc68bff004",
+    "image_summary": "d3e94fbffc2808f4feb61b9755c8bdd23d3f98716bfa075931172b9f0297419d",
+    "image_inventory": "4e17e690dfb7239cb2f2c3512a659198b3ade9a3579866fcbe82f98008863eef",
+    "manual_template": "2625b7686fd9e06763888b4d41cae56c91e2c836678dd5fe35ecf886963dd8c3"
+  }
+}

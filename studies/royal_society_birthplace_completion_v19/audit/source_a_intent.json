@@ -1,0 +1,55 @@
+{
+  "written_utc": "2026-11-05T14:03:39.089283+00:00",
+  "scope_ids": [
+    "RS_PAST_NA3979",
+    "RS_PAST_NA4485",
+    "RS_PAST_NA4601",
+    "RS_PAST_NA4667"
+  ],
+  "planned_queries": [
+    "William Fleming Hoggan Jarrett born Glasgow obituary",
+    "William Graeme Laver born biography ANU",
+    "Nicholas Avrion Mitchison born obituary",
+    "Ernest John Christopher Polge born obituary Cambridge"
+  ],
+  "budgets": {
+    "queries": 6,
+    "original_navigations": 8
+  },
+  "rules": "New original body only, no closed directory/index sweeps, no failed-URL retries; fields/grade/hemisphere unchanged; quotes <=25 words/source.",
+  "adaptive_queries": {
+    "written_utc": "2026-11-05T14:04:23.051841+00:00",
+    "queries": [
+      "\"William Fleming Hoggan Jarrett\" born site:gla.ac.uk",
+      "\"Ernest John Christopher Polge\" \"born\" embryo"
+    ]
+  },
+  "planned_opens": {
+    "written_utc": "2026-11-05T14:04:23.051862+00:00",
+    "urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC4954463/",
+      "https://oa.anu.edu.au/obituary/laver-william-graeme-graeme-18708",
+      "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/eji.202350565",
+      "https://www.immunology.org/news/professor-avrion-mitchison-1928-2022"
+    ]
+  },
+  "additional_original_opens": {
+    "written_utc": "2026-11-05T14:04:56.921306+00:00",
+    "urls": [
+      "https://embryo.asu.edu/pages/ernest-john-christopher-polge-1926-2006",
+      "https://universitystory.gla.ac.uk/people/WH2594",
+      "https://onlinelibrary.wiley.com/doi/full/10.1002/eji.202350565"
+    ],
+    "planned_parsed_find": [
+      {
+        "ref": "turn3182247view1",
+        "pattern": "Birth"
+      }
+    ]
+  },
+  "last_original_open": {
+    "written_utc": "2026-11-05T14:05:32.306963+00:00",
+    "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/sji.13259",
+    "reason": "Distinct original signed Mitchison obituary, previously discovered; EJI full route inaccessible, not retrying it."
+  }
+}

@@ -1,0 +1,345 @@
+{
+  "written_utc": "2026-11-07T00:17:24.348906+00:00",
+  "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+  "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+  "scope": [
+    "RS_PAST_NA813",
+    "RS_PAST_NA872"
+  ],
+  "intent_file": "v36_c_intent.json",
+  "prior_context_review": "Bothfullmastercontextsandtargetv13/v35holds readbeforequeries; initialtruncatedcombinedreadrecoveredbyseparateRydeandcompleteFarrenminifiedreads. OldQIDsarediscoveryleadsonly/oldsupplementabsence notcurrentgraphproof. No actualpriorDOB/placeconflictfound.",
+  "candidates": [],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA813",
+      "native": {
+        "record_id": "RS_PAST_NA813",
+        "authority_name": "Ryde; John Walter (1898 - 1961)",
+        "native_dob": "1898-04-15",
+        "prior_raw_birthplace": "Brighton",
+        "prior_birthplace_source_grade": "S2"
+      },
+      "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+      "status": "hold_no_completed_birthplace_proof",
+      "proof_mode": null,
+      "proof_chain": [],
+      "reason": "HistoricalQ18917430leadfirstcanonicalgraphbodytoolnotaccessible, so no currentP19absence/value or graphidentityclaim. ActualcanonicalWikipediaFRSlistrowhasfullnative/exactDOB/lifespan/electiononly; no acquiredcoherentprofessionalbiography/bornregion/bornplacehyperlink. No personarticleURLguessed fromname, no globalWikipediaabsenceclaim. OldBrightonS2/RS1962andWirelessWorldclosedfailedworksunchanged.",
+      "source_observations": [
+        {
+          "source_url": "https://www.wikidata.org/wiki/Q18917430",
+          "tool_ref": "turn6559578view0",
+          "role": "failedcanonicalperson_graphlead_only",
+          "actual_person_graph_acquired": false,
+          "current_P19_status": "unknown",
+          "observed_claim_rank": null,
+          "observed_calendar_model": null
+        },
+        {
+          "source_url": "https://en.wikipedia.org/wiki/List_of_fellows_of_the_Royal_Society_P%2C_Q%2C_R",
+          "tool_ref": "turn2844715view0",
+          "locator": "L1056",
+          "role": "actualcanonicalcommunitylistrow_not_complete_person_birth_proof",
+          "observed_source_full_name": "John Walter Ryde",
+          "source_birthdate": "1898-04-15",
+          "source_birthdate_precision": "exactday_in_lifespan_row",
+          "source_lifespan": "1898-04-15–1961-05-15",
+          "source_election_date": "1948-03-18",
+          "source_DOB_native_compatibility": "Exactliteral15April1898agreesnativeonly; no nativeDOBgradeupgrade.",
+          "source_place_observed": null,
+          "observed_person_link_uri": null,
+          "source_quote": null,
+          "source_quote_word_count": 0,
+          "observed_footer_revision_id": "1383123031",
+          "observed_footer_last_edit_utc": "2026-11-01T02:42:00Z",
+          "footer_locator": "turn2844715view0:L1170/L1182",
+          "verified_raw_response_revision": null
+        }
+      ],
+      "source_grade_adopted": null,
+      "master_object_unchanged": true
+    },
+    {
+      "record_id": "RS_PAST_NA872",
+      "native": {
+        "record_id": "RS_PAST_NA872",
+        "authority_name": "Farren; Sir; William Scott (1892 - 1970)",
+        "native_dob": "1892-04-03",
+        "prior_raw_birthplace": "Cambridge",
+        "prior_birthplace_source_grade": "S2"
+      },
+      "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+      "status": "hold_person_binding_passes_but_no_birthplace_edge",
+      "proof_mode": null,
+      "proof_chain": [],
+      "reason": "ActualcanonicalFarrenpersonbiographyallnative/exact1892-04-03/coherentRAE/Avro/flyingboatcareer passesbinding, but actualBornfieldhasdateonly/no city. Cambridgehyperlinkinschool/workcontextisnotbornedge; residenceNorfolknotbirth. HistoricalQ18954649leadfirstgraphbodytoolnotaccessible meanscurrentP19unknown; no chain/centroid/cityassumption or graphvariantretry. BoundedfollowupinspectedEnglisharticleDeutsch/languagesareas; no actualinterlanguagepersonURIobserved, so no differentlanguagebodyorbornregionchainfollowed; no globalabsenceassertion.",
+      "source_observations": [
+        {
+          "source_url": "https://www.wikidata.org/wiki/Q18954649",
+          "tool_ref": "turn6559578view1",
+          "role": "failedcanonicalperson_graphlead_only",
+          "actual_person_graph_acquired": false,
+          "current_P19_status": "unknown",
+          "observed_claim_rank": null,
+          "observed_calendar_model": null
+        },
+        {
+          "source_url": "https://en.wikipedia.org/wiki/William_Scott_Farren",
+          "tool_ref": "turn6559578view2",
+          "locator": "L60/L114fullnative;L125-127exactDOB/death/lead;L140CE1flight;L150RAE;L160Avro/Vulcan;L132Cambridgeschool;L170residence. Secondaryparsedfindturn2844715view1:L114/126-128/133/141/151/161/171.",
+          "role": "actualcanonicalcommunityperson_body_newprospectivelyadmittedclass_but_nogeographyproof",
+          "observed_source_full_name": "Sir William Scott Farren",
+          "source_birthdate": "1892-04-03",
+          "source_birthdate_precision": "exactday_in_Born_field_and_lead",
+          "source_death_date": "1970-07-03",
+          "source_lifespan": "1892-04-03–1970-07-03",
+          "source_DOB_native_compatibility": "Actual3April1892agreesnative1892-04-03; honorificSirnotpersonalcomponent, no nativeedit/gradeupgrade.",
+          "identity_review": [
+            "AllnativeWilliamScottFarrenactuallypresent; no initials/nicknameexpansion.",
+            "ExactDOBagreesnative; displayedlifeyears1892–1970compatiblewithnativeauthority.",
+            "ActualRAE1941/Avro1947-61/CE1flyingboat/Vulcancareerformscoherentdistinctiveaviationfingerprint."
+          ],
+          "source_place_observed": null,
+          "observed_birth_place_link_uri": null,
+          "non_birth_hyperlink_not_used": {
+            "display_label": "Cambridge",
+            "role": "schoolattendance",
+            "locator": "turn6559578view2:L132;turn2844715view1:L133",
+            "followed_for_geography": false
+          },
+          "source_quote": null,
+          "source_quote_word_count": 0,
+          "source_grade_candidate": "S3_geographic_support_only_ifproofcomplete_notadoptedhere",
+          "source_grade_basis": "Canonicalcommunitybiographynewclassdeclaredprospectively; no civil/independentediting/informationalindependenceproof.",
+          "observed_footer_revision_id": "1352124623",
+          "observed_footer_last_edit_utc": "2026-05-02T05:25:00Z",
+          "footer_locator": "turn6559578view2:L207/L227;turn2844715view1:L186/L206",
+          "verified_raw_response_revision": null,
+          "observed_claim_rank": null,
+          "observed_calendar_model": null
+        }
+      ],
+      "source_grade_adopted": null,
+      "master_object_unchanged": true
+    }
+  ],
+  "source_endpoint_observations": [
+    {
+      "record_id": "RS_PAST_NA872",
+      "observation_type": "cross_source_reported_death_month_contrast_not_alternate_DOB",
+      "native_authority_endpoint": "1970_year_only",
+      "prior_actual_source": {
+        "source_url": "https://hooke.org.uk/index.php/farren-history/william-farren-director-of-farnborough",
+        "ref": "turn7614630view0",
+        "locator": "L12",
+        "reported_death": "August1970",
+        "observation_origin": "historicalv35actualfamilyoverviewnotreopenedv36"
+      },
+      "new_actual_source": {
+        "source_url": "https://en.wikipedia.org/wiki/William_Scott_Farren",
+        "ref": "turn6559578view2",
+        "locator": "L126-127",
+        "reported_death": "1970-07-03"
+      },
+      "interpretation": "Bothsourceendpointswithinunchangednativeauthority1970 but actualreportedmonthsdiffer. No nativeexactdeathdateassumed, no correctdate/typo/clearingornewDOBcaseverdict. Geographyheldindependentlyfornobirthplaceedge.",
+      "parent_adjudication_required": true
+    }
+  ],
+  "request_ledger": [
+    {
+      "kind": "search",
+      "record_id": "RS_PAST_NA813",
+      "engine": "system2",
+      "q": "site:en.wikipedia.org \"John Walter Ryde\"",
+      "batch": 1,
+      "result_ref_prefix": "turn2239076search",
+      "merged_results_not_individually_attributed": true,
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "search",
+      "record_id": "RS_PAST_NA872",
+      "engine": "system2",
+      "q": "site:en.wikipedia.org \"William Scott Farren\"",
+      "batch": 1,
+      "result_ref_prefix": "turn2239076search",
+      "merged_results_not_individually_attributed": true,
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "search",
+      "record_id": "RS_PAST_NA813",
+      "engine": "system1",
+      "q": "site:wikipedia.org \"John Walter Ryde\"",
+      "batch": 2,
+      "result_ref_prefix": "turn1900885search",
+      "merged_results_not_individually_attributed": true,
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "search",
+      "record_id": "RS_PAST_NA813",
+      "engine": "system1",
+      "q": "site:wikipedia.org \"John Ryde\" \"1898\"",
+      "batch": 2,
+      "result_ref_prefix": "turn1900885search",
+      "merged_results_not_individually_attributed": true,
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "open",
+      "record_id": "RS_PAST_NA813",
+      "url": "https://www.wikidata.org/wiki/Q18917430",
+      "ref": "turn6559578view0",
+      "outcome": "Toolnotaccessiblefirstcanonicalgraphbody; stoppednoAPI/entityJSON/URLvariant/retry. No actualP19/name/DOB/rank/calendar/personidentitygraphacquired.",
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "open",
+      "record_id": "RS_PAST_NA872",
+      "url": "https://www.wikidata.org/wiki/Q18954649",
+      "ref": "turn6559578view1",
+      "outcome": "Toolnotaccessiblefirstcanonicalgraphbody; stoppednoAPI/entityJSON/URLvariant/retry. No actualP19/name/DOB/rank/calendar/personidentitygraphacquired.",
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "open",
+      "record_id": "RS_PAST_NA872",
+      "url": "https://en.wikipedia.org/wiki/William_Scott_Farren",
+      "ref": "turn6559578view2",
+      "outcome": "Actualcanonicalcommunitypersonbodyparsed252lines, fullnative/exactDOB/career coherent; BornfielddateonlyandDiednext. Cambridge linkseducation/work/residence, notbirth. No personalbirthplaceedge/countryproof.",
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "open",
+      "record_id": "RS_PAST_NA813",
+      "url": "https://en.wikipedia.org/wiki/List_of_fellows_of_the_Royal_Society_P%2C_Q%2C_R",
+      "ref": "turn4905697view0",
+      "outcome": "Actualcanonicalcommunitylistbodyparsed1204lines; selectivefirstdisplaykepttitle/ref/header/finaltool_isErrorfalse, Ryderownotinthevisibleinitialexcerpt. Followedwithpredeclaredparsedfind, notinferredrow/absencefromfirstexcerpt.",
+      "actual_final_url": "https://en.wikipedia.org/wiki/List_of_fellows_of_the_Royal_Society_P,_Q,_R",
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "find",
+      "ref": "turn4905697view0",
+      "pattern": "John Walter Ryde",
+      "output_ref": "turn2844715view0",
+      "outcome": "ActualRydeL1056 fullJohnWalter/exact15Apr1898/death15May1961/election18Mar1948; no career/birthplace/personhyperlinkobservedonrow. Returned1206linesversusinitial1204; parsedrepresentationchanged, fixedbyte/revisionconsistencynotassumed.",
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "find",
+      "ref": "turn6559578view2",
+      "pattern": "Born",
+      "output_ref": "turn2844715view1",
+      "outcome": "ActualFarrenfullnativeL114, Born3Apr1892L126/Died3Jul1970L127; samepersonleadL128/aviationcareerL140-166; CambridgeL133schoolnotbirth. Returned230linesversusinitial252; parsedrepresentationchanged, fixedbyte/revisionconsistencynotassumed.",
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "find",
+      "ref": "turn6559578view2",
+      "pattern": "Deutsch",
+      "output_ref": "turn3613561view0",
+      "outcome": "ToolactualNo matching text found for Deutsch inreturned230lineEnglishcanonicalpersonrepresentation; notproofglobalabsenceofGerman/otherlanguagebiography.",
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "find",
+      "ref": "turn6559578view2",
+      "pattern": "languages",
+      "output_ref": "turn3613561view1",
+      "outcome": "ActualreturnedlanguageareaL62-71title/Addlanguages/AddlinksWikidata/English andL228-229Addlanguages/Addtopic; no actualinterlanguagepersonURIobserved. OtherprojectsWikisourceL108isnotanobservedinterlanguagepersonbiographylinkandwasnotfollowed. FailedWikidataentityremainsclosed, EnglishCambridgeschool/worklinksunused.",
+      "specific_durable_intent_before_call": true,
+      "separate_call_exit0_validation_before_web": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    }
+  ],
+  "counts": {
+    "queries": 4,
+    "navigation_attempts": 4,
+    "parsed_finds": 4,
+    "screenshots": 0,
+    "raw_GETs": 0,
+    "adoptable_geography_proofs": 0,
+    "held": 2
+  },
+  "budget": {
+    "queries_limit": 4,
+    "navigation_limit": 10
+  },
+  "protocol_disclosure": "Everyexactinitial/adaptivequery/open/findsavedandJSONvalidatedwithdisplayedexit0inSEPARATEcallbeforewebcall. BothWikidatafirstfailuresclosedwithoutvariants/API/rawGET. OriginalfailedRS/WirelessWorld/Perseworksnotretried. Parsedfindrepresentationsvaryinlines/format; oldid/editfooterareactualobservationsonly, notrawbytehashorcurrentliveversionverification. No sourcecaches/filesdistributed. Boundedfollowuppass1reportpreservedbyteidenticallyand2exactexistingarticlefindintentsvalidatedexit0inseparatecallbeforecall; no furtherqueries/navigation/graphretry. Cumulative4queries/4opens/4parsedfinds.",
+  "unknown_source_metadata": {
+    "raw_HTTP_status": null,
+    "raw_bytes_sha256": null,
+    "exact_request_utc": null,
+    "unobserved_revision_metadata": null,
+    "claim_rank": null,
+    "calendar_model": null,
+    "independent_editorial_verification": null,
+    "informational_independence": null
+  },
+  "quote_policy": "0newquotedEnglishwords; minimalstructuredfacts/locators. No fullHTML/JSON/PDF/image/projectioncachecreated. Inheritedquotesunchanged.",
+  "unopened_distinct_original_work_leads": [],
+  "no_analysis_or_final_freeze": true,
+  "repo_or_master_modified": false,
+  "bounded_interlanguage_followup": {
+    "written_utc": "2026-11-07T00:17:24.348889+00:00",
+    "pass1_report": "v36_sources_c_pass1.json",
+    "pass1_report_sha256": "f028bf0ef15ee4e73facb5a549dfc50c04e2f94bffa5c439551b0dbc7de9e1c7",
+    "new_queries": 0,
+    "new_navigation_attempts": 0,
+    "new_parsed_finds": 2,
+    "observed_interlanguage_person_links": [],
+    "followed_other_language_person_bodies": 0,
+    "conclusion": "No actualpersoninterlanguagelinkobservedinboundedexistingEnglisharticlefinds; stopretainingbothholds. No sourcefindglobalabsenceclaim, guessedURI, graphretry or unrelatedCambridgelink.",
+    "actual_refs": [
+      "turn3613561view0",
+      "turn3613561view1"
+    ]
+  }
+}

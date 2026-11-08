@@ -1,0 +1,433 @@
+{
+  "schema": "v21-source-group-a-v1",
+  "written_utc": "2026-11-05T23:32:59.800000+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA4076",
+    "RS_PAST_NA4585",
+    "RS_PAST_NA4651",
+    "RS_PAST_NA4834"
+  ],
+  "intent_files": [
+    "v21_a_intent.json",
+    "v21_a_own_intent.json",
+    "v21_a_perkins_matthews_intent.json"
+  ],
+  "delegated_report_file": "v21_a_perkins_matthews.json",
+  "own_report_file": "v21_a_own_sources.json",
+  "counts": {
+    "discovery_queries": 6,
+    "original_source_navigation_attempts": 8,
+    "parsed_text_find_operations": 1,
+    "screenshots": 0,
+    "raw_GETs": 0,
+    "body_verified_birthplace_candidates": 3,
+    "holds": 1
+  },
+  "budgets": {
+    "discovery_queries": 6,
+    "original_source_navigation_attempts": 8
+  },
+  "candidates": [
+    {
+      "record_id": "RS_PAST_NA4651",
+      "native": {
+        "record_id": "RS_PAST_NA4651",
+        "authority_name": "Perkins; Donald Hill (1925 - 2022); physicist",
+        "native_dob": "1925-10-15",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "e1d0024f72489f1f0b99d987e4e20c76bc1a7f5f56b65aed4dd8d8d1e8dbfb44"
+      },
+      "status": "candidate_original_signed_edited_obituary_full_identity_exact_DOB_explicit_birthplace",
+      "raw_birthplace": "Hull, east Yorkshire",
+      "source_url": "https://www.theguardian.com/science/2022/nov/22/donald-perkins-obituary",
+      "source_title": "Donald Perkins obituary",
+      "source_author": "Frank Close",
+      "publication_date": "2022-11-22",
+      "this_version_date": "2022-11-24",
+      "source_kind": "original_signed_edited_newspaper_obituary",
+      "source_grade_proposal": "S2",
+      "source_grade_basis": "Original signed edited obituary; proposed conservativeS2 under existing v20 signed-expert-newspaper source-genre interpretation, not host-onlyS1 or claim of scholarlypeerreview. Author expertise not separately researched in this allocated subset. Parent final source-genre adjudication required.",
+      "source_grade_role": "new_person_birthplace_support_only",
+      "source_quote": "Born in Hull, east Yorkshire",
+      "source_quote_word_count": 5,
+      "source_locator": "turn7608655view0: bylineL61; publication/versionL63; explicitbirthplaceL90; fullDonaldHillPerkins/exactDOB/deathL96; Oxfordparticlephysics1965L78; FRS1966L92.",
+      "source_webrefs": [
+        "turn7608655view0"
+      ],
+      "source_birthdate": "1925-10-15",
+      "source_birthdate_precision": "day_in_subject_vital_dates",
+      "source_DOB_matches_native": true,
+      "source_death_date": "2022-10-30",
+      "source_lifespan_compatible_with_native": true,
+      "observed_source_full_name": "Donald Hill Perkins",
+      "identity_review": [
+        "All native name components Donald Hill Perkins explicitly appear in the original article vital lineL96.",
+        "Exact15October1925 and1925–2022 lifespan agree unchanged native DOB/authority label.",
+        "Particle physicist, Oxfordprofessor1965, CERN/Gargamellework and FRS1966 give distinctive professional anchors; no initialsnickname expansion."
+      ],
+      "identity_conflicts_observed": [],
+      "reviewed_hemisphere_proposal": "north",
+      "geographic_basis": "Direct born clause includes Hull and east Yorkshire. Explicit Yorkshire whole-region context is wholly north under existing region rule; no personal country/QID/coordinates assignment, nationality or familiar-city inference.",
+      "caveats": [
+        "Samebody confirms exactnativeDOB andbirthplace; no endpoint-only exception needed.",
+        "Newspaper genreS2 proposed under recorded v20method; notS1 fromhost.",
+        "No originalHTML/rawbytes/status/hash/preciserequesttime retained."
+      ],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original HTML/PDF text, not raw HTTP bytes",
+      "raw_bytes_captured": false,
+      "no_master_change": true,
+      "geography_assignment_performed": false
+    },
+    {
+      "record_id": "RS_PAST_NA4834",
+      "native": {
+        "record_id": "RS_PAST_NA4834",
+        "authority_name": "Waterfield; Michael Derek (1941 - 2023)",
+        "native_dob": "1941-05-14",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "31051e4c9bd3166b9d2f20555cccee7b00623bb9503e42704290d9702a4e9aff"
+      },
+      "status": "candidate_explicit_original_born_region_with_reported_age_inconsistency_parent_review",
+      "raw_birthplace": "Hampshire, United Kingdom",
+      "source_url": "https://www.asbmb.org/asbmb-today/people/050624/in-memoriam-michael-waterfield",
+      "source_title": "In memoriam: Michael Waterfield",
+      "source_author": "Swarnali Roy",
+      "source_kind": "original_signed_edited_scientific_society_member_magazine_obituary",
+      "publication_date": "2024-05-06",
+      "publication_date_precision": "day",
+      "source_grade_proposal": "S2",
+      "source_grade_basis": "Original signed edited society-magazine biographical narrative, not civil record or peer-reviewed memoir. Named author is a scientist and volunteer contributor; conservativeS2 based on attribution and genre, not host alone.",
+      "source_quote": "Born in Hampshire, United Kingdom on May 14, 1941",
+      "source_quote_word_count": 9,
+      "source_locator": "turn9776687view0: title156, byline160, publication162; fullMichaelDerekWaterfield/deathdate/reportedage164; exactbornplace/date169; ICRF1972/Ludwig-UCL1986 career170/173; RoyalSociety/Buchanan2002 at175; authorrole188.",
+      "source_webrefs": [
+        "turn9776687view0"
+      ],
+      "source_birthdate": "1941-05-14",
+      "source_birthdate_precision": "day_in_born_clause",
+      "source_DOB_matches_native": true,
+      "source_death_date": "2023-05-11",
+      "source_reported_age_at_death": 82,
+      "identity_review": [
+        "All native name components Michael Derek Waterfield in originalopening; exact14May1941 in bornclause matches native.",
+        "Actual source lifespan years1941–2023 agree nativeauthority1941–2023; source deathdate11May2023 separately retained.",
+        "Cancer biochemistry, ICRF1972, LudwigInstitute/UCL1986, FRS and BuchananMedal2002 are distinctive original professional anchors."
+      ],
+      "reported_age_inconsistency": {
+        "observed_source_birthdate": "1941-05-14",
+        "observed_source_death_date": "2023-05-11",
+        "observed_reported_age": 82,
+        "arithmetic_age_from_observed_dates": 81,
+        "status": "unresolved_reported_age_inconsistency_not_an_explicit_disagreeing_birthdate",
+        "no_source_or_native_DOB_repair": true,
+        "parent_adjudication_required": true
+      },
+      "reviewed_hemisphere_proposal": "north",
+      "geographic_basis": "Hampshire, UnitedKingdom is directly birth-linked. ExplicitUK whole-region lies north. No nationality/work/footer inference or personalcountry/QID/coordinates assignment.",
+      "caveats": [
+        "Reported age82 disagrees with arithmetic81 implied by stated dates. Do not repair age or infer a different DOB; parent/sourceQA adjudication required.",
+        "Search-only Prabook projection has March/May discrepancy; never opened/adopted and not a sourcebodyDOBverdict.",
+        "No original fulltext/contact/familydetails/images redistributed; nine-word excerpt only."
+      ],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original HTML text, not raw HTTP bytes",
+      "raw_bytes_captured": false,
+      "no_master_change": true,
+      "geography_assignment_performed": false
+    },
+    {
+      "record_id": "RS_PAST_NA4076",
+      "native": {
+        "record_id": "RS_PAST_NA4076",
+        "authority_name": "Townsend; Albert Alan (1917 - 2010)",
+        "native_dob": "1917-01-22",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "3a569cb75fafd07b8dc435b8c2d938ca993ec4102ac5b3842b50add59771276d"
+      },
+      "status": "candidate_original_authored_publisher_public_summary_explicit_born_place",
+      "raw_birthplace": "Melbourne Australia",
+      "source_url": "https://www.cambridge.org/core/books/voyage-through-turbulence/aa-townsend/33EBAD36028186677507F3177B624121",
+      "source_final_carrier_url_observed": "https://www.cambridge.org/core/books/abs/voyage-through-turbulence/aa-townsend/33EBAD36028186677507F3177B624121",
+      "source_title": "9 - A.A. Townsend",
+      "source_author": [
+        "Ivan Marusic",
+        "Timothy B. Nickels"
+      ],
+      "source_editors": [
+        "Peter A. Davidson",
+        "Yukio Kaneda",
+        "Keith Moffatt",
+        "Katepalli R. Sreenivasan"
+      ],
+      "source_kind": "original_authored_edited_book_chapter_public_publisher_summary",
+      "publication_date": "2011-10-07",
+      "publication_date_precision": "day_online",
+      "print_publication_year": "2011",
+      "publication_locator": "A Voyage Through Turbulence, chapter9, pp305–328",
+      "doi": "10.1017/CBO9781139018241.010",
+      "source_grade_proposal": "S2",
+      "source_grade_basis": "Original public publisherSummary of attributed edited scholarly biographychapter, not searchsnippet or host-onlyS1. Fullpaidchapter/PDFnot acquired.",
+      "source_quote": "Albert Alan Townsend was born on the 22nd of January 1917 in Melbourne Australia",
+      "source_quote_word_count": 14,
+      "source_locator": "turn5834722view0: chapter424/publication426; namedauthors430-432/editors436-442; originalSummary501-507 fullsubject/exactDOB/bornplace504; MelbourneBSc1936/MSc1937 at506-507; pages517/DOI519/publisher521/printyear523.",
+      "source_webrefs": [
+        "turn5834722view0"
+      ],
+      "source_birthdate": "1917-01-22",
+      "source_birthdate_precision": "day_in_born_clause",
+      "source_DOB_matches_native": true,
+      "source_lifespan_endpoint_observed": false,
+      "identity_review": [
+        "All native full components Albert Alan Townsend and exact22January1917 directly appear in originalbornclause.",
+        "OriginalSummary MelbourneBSc1936/MSc1937 plus fluidturbulencechapter/referencecontext bind the subject.",
+        "Separate original PhysicsinAustraliato1945 entry has samefullname/exactDOB, MelbourneBSc1936/MSc1937, CambridgePhD1947/Cavendish/experimentalfluidmechanics/FRS1960. It contains no birthplace and no informationalindependence is claimed."
+      ],
+      "supporting_identity_only_original_observation": {
+        "url": "https://www.asap.unimelb.edu.au/bsparcs/physics/P001827p.htm",
+        "ref": "turn9776687view1",
+        "title": "Physics in Australia to 1945 - TOWNSEND, Albert Alan",
+        "attribution": "R.W.Home identified as contact atL2; WWWedition TimSherrat/VictoriaYoung June1995 atL3. No namedchapterbyline supplied.",
+        "locator": "L6fullname;L8exactDOB/education/career/FRS; noBP.",
+        "publication_date": "1995-06",
+        "publication_date_precision": "month_of_WWWedition",
+        "birthplace_relation_verified": false
+      },
+      "identity_conflicts_observed": [],
+      "reviewed_hemisphere_proposal": "south",
+      "geographic_basis": "Original born clause explicitly joins Melbourne Australia; Australia is a wholly southern birth-linked region. No nationality/education/work/family/map inference or personalcountry/QID/coordinates assignment.",
+      "caveats": [
+        "Public originalchapterSummary only; fullbookchapter/PDF not acquired.",
+        "Melbourneeducation used only for identity, explicitCUPbornclause supplies birthplace.",
+        "AlanR.Townsend/ThisOrdinaryStardust discoverynoise is a different scientist; never opened/adopted.",
+        "No source deathdate/endpoint supplied by acceptedpassage; no deathdate correction/adjudication."
+      ],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original HTML text, not raw HTTP bytes",
+      "raw_bytes_captured": false,
+      "no_master_change": true,
+      "geography_assignment_performed": false
+    }
+  ],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA4585",
+      "native": {
+        "record_id": "RS_PAST_NA4585",
+        "authority_name": "Matthews; Peter Bryan Conrad (1928 - 2020)",
+        "native_dob": "1928-12-23",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "414509320dfd5399c088a3b0282f6be9155b4b99c4f18cb0fba5b7831171a996"
+      },
+      "status": "hold_no_explicit_birthplace_in_acquired_original_body_and_other_routes_unavailable",
+      "hold_type": "original_birthplace_body_unavailable",
+      "reason": "OriginalPhysoc fullidentity/exactDOB but no explicitBP. OxfordDPAG and distinctOxfordMedicine403 stopped. DistinctKingsCollegeannualreport was then first-opened under finalsharedA nav and returned tool404; stopped. Cambridgebirth remains search-only, notadopted.",
+      "sources": [
+        {
+          "url": "https://www.dpag.ox.ac.uk/news/peter-b-c-matthews-frs-obituary",
+          "ref": "turn7608655view1",
+          "outcome": "tool_reported403Forbidden_no_body",
+          "raw_HTTP_status": null,
+          "birthplace_relation_verified": false
+        },
+        {
+          "url": "https://www.medsci.ox.ac.uk/files/alumni/oxford-medicine-june-2020.pdf",
+          "ref": "turn8821294view0",
+          "outcome": "tool_reported403Forbidden_no_body",
+          "raw_HTTP_status": null,
+          "birthplace_relation_verified": false
+        },
+        {
+          "url": "https://www.physoc.org/magazine-articles/obituary-peter-bryan-conrad-matthews-1928-2020/",
+          "ref": "turn8821294view1",
+          "initial_ref": "turn7608655view2",
+          "title": "Obituary: Peter Bryan Conrad Matthews1928–2020",
+          "author": "Bob Banks (Durham University)",
+          "source_kind": "original_signed_scientific_society_obituary",
+          "publication_issue": "Spring(May)2020,issue118",
+          "doi": "10.36866/pn.118.49",
+          "locator": "L524issue;L527fullsubjectheading;L534byline;L539exactDOB;L554death2020-03-02/age91.",
+          "source_birthdate": "1928-12-23",
+          "source_birthdate_precision": "day",
+          "source_DOB_matches_native": true,
+          "source_death_date": "2020-03-02",
+          "birthplace_relation_verified": false,
+          "body_summary": "Original gives exactbirthdate but no birthplace. Cambridge explicitly attaches to school attendance; notusedasbirth.",
+          "source_quote": "",
+          "source_grade_proposal": null
+        },
+        {
+          "url": "https://www.kings.cam.ac.uk/sites/default/files/documents/kings-annual-report-2020-web18082021-1-1.pdf",
+          "ref": "turn8477048view0",
+          "outcome": "tool_reported404NotFound_stopped_no_retry",
+          "raw_HTTP_status": null,
+          "record_id": "RS_PAST_NA4585",
+          "purpose": "Finalsharedgroupnav on new originalcollegepublication lead after childbudgetexhausted"
+        }
+      ],
+      "unopened_original_lead": {
+        "url": "https://www.kings.cam.ac.uk/sites/default/files/documents/kings-annual-report-2020-web18082021-1-1.pdf",
+        "search_ref": "turn1414685search3",
+        "source_body_verified": false,
+        "purpose": "Originalcollegeannualreport source projection includes fullsubjectheading and explicitCambridgebirth. Parent may inspect if overallgroupnavbudget remains. Not birthplace proof in this subset.",
+        "later_group_parent_open_ref": "turn8477048view0",
+        "later_group_parent_open_result": "tool404_no_body; no longer unopened in combinedgroup report"
+      },
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original HTML/PDF text, not raw HTTP bytes",
+      "raw_bytes_captured": false,
+      "no_master_change": true,
+      "geography_assignment_performed": false
+    }
+  ],
+  "query_ledger": [
+    {
+      "q": "\"Donald Hill Perkins\" obituary born Oxford",
+      "ref": "turn7052920search0–2",
+      "target": "RS_PAST_NA4651"
+    },
+    {
+      "q": "\"Peter Bryan Conrad Matthews\" born obituary",
+      "ref": "turn7052920search3–4/8",
+      "target": "RS_PAST_NA4585"
+    },
+    {
+      "q": "\"Peter Bryan Conrad Matthews\" \"born\" Cambridge -site:dpag.ox.ac.uk -site:medsci.ox.ac.uk",
+      "ref": "turn1414685search0–5",
+      "target": "RS_PAST_NA4585"
+    },
+    {
+      "q": "\"Albert Alan Townsend\" \"born\"",
+      "result_refs": [
+        "turn7863915search0",
+        "turn7863915search1",
+        "turn7863915search6"
+      ],
+      "purpose": "OriginalTownsendsource discovery; enwikiunadopted"
+    },
+    {
+      "q": "\"Michael Derek Waterfield\" \"born\"",
+      "result_refs": [
+        "turn7863915search2",
+        "turn7863915search3"
+      ],
+      "purpose": "OriginalASBMBselected; Prabookprojectionunadopted"
+    },
+    {
+      "q": "\"Alan Townsend\" \"born\" \"Melbourne\" memoir",
+      "result_refs": [
+        "turn1934463search6"
+      ],
+      "purpose": "OriginalCUPselected; unrelatedAlanRnoiseexcluded"
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "url": "https://www.theguardian.com/science/2022/nov/22/donald-perkins-obituary",
+      "ref": "turn7608655view0",
+      "outcome": "originalparsedbodyread"
+    },
+    {
+      "url": "https://www.dpag.ox.ac.uk/news/peter-b-c-matthews-frs-obituary",
+      "ref": "turn7608655view1",
+      "outcome": "tool403stopped"
+    },
+    {
+      "url": "https://www.physoc.org/magazine-articles/obituary-peter-bryan-conrad-matthews-1928-2020/",
+      "ref": "turn7608655view2",
+      "outcome": "originalparsedbodyacquired_thenlocatedbycachedfind"
+    },
+    {
+      "url": "https://www.medsci.ox.ac.uk/files/alumni/oxford-medicine-june-2020.pdf",
+      "ref": "turn8821294view0",
+      "outcome": "tool403stopped"
+    },
+    {
+      "url": "https://www.asbmb.org/asbmb-today/people/050624/in-memoriam-michael-waterfield",
+      "ref": "turn9776687view0",
+      "outcome": "originalparsedHTMLbodyread",
+      "raw_HTTP_status": null
+    },
+    {
+      "url": "https://www.asap.unimelb.edu.au/bsparcs/physics/P001827p.htm",
+      "ref": "turn9776687view1",
+      "outcome": "originalparsedentry_exactDOB_noBP",
+      "raw_HTTP_status": null
+    },
+    {
+      "url": "https://www.cambridge.org/core/books/voyage-through-turbulence/aa-townsend/33EBAD36028186677507F3177B624121",
+      "ref": "turn5834722view0",
+      "outcome": "originalpublisherpublicSummary_explicitbornplace",
+      "raw_HTTP_status": null
+    },
+    {
+      "url": "https://www.kings.cam.ac.uk/sites/default/files/documents/kings-annual-report-2020-web18082021-1-1.pdf",
+      "ref": "turn8477048view0",
+      "outcome": "tool_reported404NotFound_stopped_no_retry",
+      "raw_HTTP_status": null,
+      "record_id": "RS_PAST_NA4585",
+      "purpose": "Finalsharedgroupnav on new originalcollegepublication lead after childbudgetexhausted"
+    }
+  ],
+  "parsed_find_ledger": [
+    {
+      "ref": "turn7608655view2",
+      "pattern": "Peter Matthews was born",
+      "result_ref": "turn8821294view1",
+      "outcome": "fulltitle/byline/exactbirthdate/noexplicitbirthplaceverified"
+    }
+  ],
+  "quote_ledger": [
+    {
+      "original_work": "https://www.theguardian.com/science/2022/nov/22/donald-perkins-obituary",
+      "quote": "Born in Hull, east Yorkshire",
+      "word_count": 5
+    },
+    {
+      "original_work": "https://www.physoc.org/magazine-articles/obituary-peter-bryan-conrad-matthews-1928-2020/",
+      "quote": "",
+      "word_count": 0
+    },
+    {
+      "original_work": "https://www.asbmb.org/asbmb-today/people/050624/in-memoriam-michael-waterfield",
+      "quote": "Born in Hampshire, United Kingdom on May 14, 1941",
+      "word_count": 9
+    },
+    {
+      "original_work": "https://www.cambridge.org/core/books/voyage-through-turbulence/aa-townsend/33EBAD36028186677507F3177B624121",
+      "quote": "Albert Alan Townsend was born on the 22nd of January 1917 in Melbourne Australia",
+      "word_count": 14
+    }
+  ],
+  "source_derived_age_inconsistencies": [
+    {
+      "record_id": "RS_PAST_NA4834",
+      "source_url": "https://www.asbmb.org/asbmb-today/people/050624/in-memoriam-michael-waterfield",
+      "observed_source_birthdate": "1941-05-14",
+      "observed_source_death_date": "2023-05-11",
+      "observed_reported_age": 82,
+      "arithmetic_age_from_observed_dates": 81,
+      "status": "unresolved_reported_age_inconsistency_not_an_explicit_disagreeing_birthdate",
+      "no_source_or_native_DOB_repair": true,
+      "parent_adjudication_required": true
+    }
+  ],
+  "protocol_deviations": [],
+  "limits": [
+    "Workerproposals only; parentfinalbody/sourceQAadjudicationpending.",
+    "All requests recorded, no sourcecache/images/PDF/rawGET/statushashclaim.",
+    "No nativeDOB/calendar/grade/identity/eligibility/country/QID/coordinates/master/Git changes."
+  ]
+}

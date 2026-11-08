@@ -1,0 +1,9 @@
+SELECT DISTINCT ?needle ?place ?label ?description ?type ?typeLabel ?country ?coordStatement ?latitude ?longitude ?precision ?rank ?globe WHERE {
+ VALUES ?needle { "Falkirk"@en }
+ ?place (rdfs:label|skos:altLabel) ?needle .
+ OPTIONAL { ?place rdfs:label ?label FILTER(LANG(?label)="en") }
+ OPTIONAL { ?place schema:description ?description FILTER(LANG(?description)="en") }
+ OPTIONAL { ?place wdt:P31 ?type . OPTIONAL { ?type rdfs:label ?typeLabel FILTER(LANG(?typeLabel)="en") } }
+ OPTIONAL { ?place wdt:P17 ?country }
+ OPTIONAL { ?place p:P625 ?coordStatement . ?coordStatement psv:P625 ?cv; wikibase:rank ?rank . ?cv wikibase:geoLatitude ?latitude; wikibase:geoLongitude ?longitude; wikibase:geoPrecision ?precision; wikibase:geoGlobe ?globe . }
+}

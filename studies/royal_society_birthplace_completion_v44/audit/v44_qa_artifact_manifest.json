@@ -1,0 +1,136 @@
+{
+  "schema": "UK_v44_independent_QA_artifact_completion_manifest_v1",
+  "written_utc": "2026-11-08T10:47:00.449691+00:00",
+  "status": "PASS_with_disclosed_contained_source_request_protocol_deviation",
+  "actual_source_documentary_checks_passed": 189,
+  "actual_source_report_shape_checks_passed": 41,
+  "actual_closeout_checks_passed": 43,
+  "actual_final_preflight_checks_passed": 71,
+  "actual_final_finish_checks_passed": 6,
+  "actual_mode_exit_codes": {
+    "first_full_source_final": 0,
+    "final_preflight": 0,
+    "isolated_CLI_1": 0,
+    "isolated_CLI_2": 0,
+    "finish": 0
+  },
+  "observed_sequential_CLI_receipts": [
+    {
+      "run": 1,
+      "started_utc": "2026-11-08T10:44:24.735732+00:00",
+      "returned_utc": "2026-11-08T10:45:21.897151+00:00",
+      "completed_utc": "2026-11-08T10:45:21.929534+00:00",
+      "CLI_returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "run": 2,
+      "started_utc": "2026-11-08T10:45:27.433504+00:00",
+      "returned_utc": "2026-11-08T10:46:25.538379+00:00",
+      "completed_utc": "2026-11-08T10:46:25.570406+00:00",
+      "CLI_returncode": 0,
+      "status": "PASS"
+    }
+  ],
+  "complete_objects": 4983,
+  "changed_complete_objects": 0,
+  "accepted_record_ids": [],
+  "held_record_ids": [
+    "RS_CURRENT_10965",
+    "RS_PAST_NA6847",
+    "RS_PAST_NA780",
+    "RS_PAST_NA8736",
+    "RS_PAST_NA8744"
+  ],
+  "all_nine_issue_inventories_byte_identical": true,
+  "all_collection_work_closures_clean": false,
+  "source_protocol_deviations": [
+    {
+      "group": "c",
+      "record_id": "RS_PAST_NA8744",
+      "classification": "same_work_request_protocol_deviation",
+      "entity": "Q4924984",
+      "ordered_result_refs": [
+        "turn1385032view0",
+        "turn4375175view0"
+      ],
+      "same_underlying_work": true,
+      "claims_or_absence_adopted": false,
+      "geographic_admission": false,
+      "further_request_after_canonical_failure": false
+    }
+  ],
+  "source_counts": {
+    "worker_queries": 7,
+    "root_queries": 0,
+    "total_queries": 7,
+    "worker_navigation_attempts": 16,
+    "worker_source_open_operations": 8,
+    "worker_click_operations": 8,
+    "root_source_opens": 4,
+    "root_click_operations": 0,
+    "total_navigation_attempts": 20,
+    "total_source_open_operations": 12,
+    "total_click_operations": 8,
+    "worker_parsed_finds": 2,
+    "root_parsed_finds": 0,
+    "total_parsed_finds": 2,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "first_pass_coverage_counts": {
+    "initial": 62,
+    "reviewed": 53,
+    "unreviewed": 9,
+    "currently_blocked": 10,
+    "currently_nonblocked": 52,
+    "reviewed_blocked": 1,
+    "unreviewed_blocked": 9,
+    "notblocked_and_unreviewed": 0,
+    "remaining_unknown_within_initial": 54,
+    "reviewed_remaining_unknown": 45,
+    "resolved_within_initial": 8,
+    "resolved_before_V44": 8,
+    "newly_resolved_in_V44": 0,
+    "current_master_all_unknown": 591,
+    "current_master_window_unknown": 157,
+    "current_master_window_nonblank_unknown": 54,
+    "window_blank_outside_scope": 103,
+    "overall_blank_outside_scope": 525
+  },
+  "coverage_is_not_birthplace_completeness_or_source_exhaustion": true,
+  "final_canonical_sha256": "a0c04e44631478f82e562deab64d699fc273e6fc99fa35ba23f8a61d7e1f8717",
+  "main_output_pins": {
+    "birthplace_rows.jsonl.gz": "433749a0b7ff0bfc62db8993f662cd928a4bc023418a54600259fdbea0b1537a",
+    "birthplaces.csv": "1bfdff7927abe23631fbd1d5a0be0e39898d835e8fe30d3ed97a72a5f08f288c",
+    "changes.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "remaining_unknown_window.csv": "046c86fd8e27671974c3fc5714f0a49a77c55237fb9110f306dee6f95e4e6df7",
+    "summary.json": "23d4021c0029f1804a4a8166728e8f1618b860f0f80cadc531fe36eb09565451"
+  },
+  "light_checker_correction": "Initial actual-shape light check lacked normalization for A declared system1_search_query/system2_search_query intents. Failed light report retained, explicit operation+engine normalization corrected, then light41 passed before the first full source final. Full source189 and all final QA modes then exited0 without a final-checker failure. No source or production artifact changed.",
+  "historical_V42_and_original_V43_checks_are_not_new_V44_checks": true,
+  "production_or_Git_mutated_by_reviewer": false,
+  "artifact_sha256": {
+    "qa_v44_source.py": "f7dd8eeca6450698d2c6ac426d64f39a0eb9a8a4ea152930b8f86b5ed54a4ea1",
+    "v44_source_qa_report.json": "47fe650ee452804b3259576166c6a14f2eebf97ebfa1f912940e3db615112373",
+    "v44_method_qa.json": "56ab073979b41a1a5ceb542b15a2783f11ac78000d473e6e9fc3940495996bee",
+    "v44_source_documentary_case_review.json": "3be86788de82c8045acc4739007500e59c768090a634f2ceccafd425aefb9c0c",
+    "v44_source_qa_quote_prefinal.json": "869c854f43216aaaeafa5ce5817cd603d2141fa650613832ee9fd5aced12a998",
+    "v44_source_qa_worker_operation_prefinal.json": "b4cb399b95510c259b150c77313090f11b16353a0e89d236b3bd5246563281be",
+    "v44_source_qa_initial_light_failed_report.json": "5aa975f8b39f1972f65b2104930c847c09562be2a85185775ddfe4b422790707",
+    "preflight_v44_source_reports.py": "546d0528a79c8c44faabbe2b1f9f49acf6e87e74dddfc7fce0722ec5a54dbc59",
+    "prepare_v44_source_quote_review.py": "0dc67f64a8120fc325fde6b143c366017b3c0c7382bf47021c0194fa9738fb38",
+    "finalize_v44_source_documentary_review.py": "c938937b1c1aa78dc74c10090e6249480b383f2e4b30adf110f176e1ea3ba408",
+    "finalize_v44_method_qa.py": "466fa983e1f6ab691da14d0c8c39856999c3ea10906df37ddf36363432164d4e",
+    "qa_v44_final.py": "31766532e91f53b1188cd8cc6c47a50e0128511808f8ca422eee01280ef090a8",
+    "v44_final_qa_expectations.json": "3179dee5bb9b407705ccd0da16c122ec4d710ac1b56626cdff6b73919295c6cb",
+    "v44_final_qa_preflight.json": "8de1be019b596ff400d2cfd04144a38b6be74520185c13cc823747bdf5b756c7",
+    "v44_final_qa_replay_1.json": "fdaba1fd4856b3e498de16de79ead45d1e67039b616f381f1e0be4d19c08c8f9",
+    "v44_final_qa_replay_2.json": "213f58568632080097ea0d043f02d8fbd6678717984d2ca634c6eed45086df05",
+    "v44_isolated_cli_1.log": "e6ca36df04410b3b2e73df3fbf3241f55c85fd6c01e4de52a608e57ddee0cbdc",
+    "v44_isolated_cli_2.log": "e6ca36df04410b3b2e73df3fbf3241f55c85fd6c01e4de52a608e57ddee0cbdc",
+    "v44_final_qa_report.json": "fa71249a6c8140c4b7bcc56f47d3ad39445e65957f88383faf3aa1cd386cd215",
+    "v44_canonical_method_first_pass_queue_closeout.json": "0de92e24abfb268abc195d54b748308a418fa3f615f4e01804a5b74bb1569c94",
+    "check_v44_method_first_pass_closeout.py": "6516874ddad229b4fb7b341211eeef564aefdcd7db8cf141cfead227e3ee5042"
+  }
+}

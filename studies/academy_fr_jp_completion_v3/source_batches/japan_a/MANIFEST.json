@@ -1,0 +1,25 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "claims.json": "e111e3c292e59b8be13cd5f32416c6dd8058d2ed7514483cfb489fe12827d652",
+    "secondary_claims.json": "0c9351dbe1d972df9e3404e66b268ccf55a6b468e64249b65088c891da959e6b",
+    "bulk_gsj_claims.json": "3de036f26c61f9cdb59b23a15d4a1c420f0ecc7919bdff8e7177e834662f5528",
+    "bulk_gsj_inventory.json": "87019a6e17e1649840df8b8eab4b4052961eb8c7dd5037004c04795197100030",
+    "bulk_gsj_summary.json": "51054e0fbe4ca14c4a0f9a242595c25df526124e52d4d136f799c9ef4e44fa31",
+    "holds.json": "2471ffb462e5c13cbdcc9a7940847f77e833a18afd5caae777a4a38b64b75d33",
+    "processed.csv": "3159e946466aea478ba1099fb0ee3571a5e3d64b4be734fdd86fa717595b4054",
+    "summary.json": "a74668448bce93c56387830baf6ea77954c40666163f85c37c02e21d5148ebfc",
+    "request_log.json": "c6501f361a7e43cf1fefef6101795a01f0afbee7563a02ce15feba588bd45ec8",
+    "source_capture_log.json": "66876762dedebd97803574eb857cb89c0582de6b512f31d7a7f11b1d375d6293",
+    "README.md": "74657c2ae061543f00cc3fc8d69cfa9aad6d79d7619b5549c0dec8e791f085dd"
+  },
+  "excludes": [
+    "private/",
+    "capture_sources.py",
+    "capture_extra.py",
+    "build_records.py",
+    "build_gsj.py"
+  ],
+  "claim_rows": 52,
+  "unique_claimed_people": 44
+}

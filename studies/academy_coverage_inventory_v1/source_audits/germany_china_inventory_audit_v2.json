@@ -1,0 +1,630 @@
+{
+  "schema": "academy_national_inventory_germany_china_recovered_v2",
+  "baseline_git_commit": "32653a72679c5ab17afbdaf955d1ae797f02077c",
+  "created_utc": "2026-11-01T10:48:07.867123+00:00",
+  "repo_modified": false,
+  "network_requests": 0,
+  "Germany_Leopoldina": {
+    "canonical_stage": "existing 2026-10-14 manual DOB closeout + descriptive coverage/missingness freeze; no new freeze",
+    "scope": "Official Class I–III members admitted/elected through2025, historical and active; ClassIV and2026 excluded; no honorary/nonordinary headings encountered",
+    "count_unit": "unique official member_slug",
+    "institution_label_is_not_nationality": true,
+    "international_membership_not_filtered_to_German_nationals": true,
+    "roster_denominator": 2888,
+    "unique_roster_member_slugs": 2888,
+    "class_counts": {
+      "Class I: Mathematics, Natural Sciences and Engineering": 1131,
+      "Class II: Life Sciences": 946,
+      "Class III: Medicine": 811
+    },
+    "deceased_marker": 1527,
+    "absence_of_deceased_marker_not_confirmed_alive": true,
+    "post2025_rows_excluded": 40,
+    "raw_day_candidate_layer": {
+      "snapshot": "data/leopoldina_dob_local_v1",
+      "unique_day_P569_candidates_all_years": 2497,
+      "status_counts_recomputed": {
+        "candidate_unique_day_p569": 2497,
+        "review_multiple_day_dates": 35,
+        "no_p10299_match": 105,
+        "no_day_precision_p569": 246,
+        "review_implausible_age": 5
+      },
+      "numerator": 2497,
+      "denominator": 2888,
+      "rate": 0.864612188365651,
+      "not_final_evidence_accepted": true
+    },
+    "primary_birthyear_window": [
+      1835,
+      1985
+    ],
+    "in_window_exact_day_candidate_universe": 2407,
+    "accepted_candidate_records": 724,
+    "official_only_accepted_records": 54,
+    "official_only_overlap_with_invalid_candidate_universe": 2,
+    "accepted_exact_DOB_primary_window": 778,
+    "accepted_unique_member_slugs": 778,
+    "unresolved_candidate_records": 1681,
+    "invalid_identity_crosswalk_candidate_exclusions": 2,
+    "accepted_primary_inclusion_rate_full_roster": {
+      "numerator": 778,
+      "denominator": 2888,
+      "rate": 0.2693905817174515,
+      "percent": 26.939058171745152,
+      "interpretation": "accepted1835–1985 inclusion; NOT all-years DOB availability"
+    },
+    "candidate_acceptance_rate": {
+      "numerator": 724,
+      "denominator": 2407,
+      "rate": 0.3007893643539676,
+      "percent": 30.07893643539676,
+      "interpretation": "conditional on in-window exact-day P569 candidate universe"
+    },
+    "nonincluded_full_roster_count": 2110,
+    "nonincluded_is_not_missing_DOB_count": true,
+    "member_missingness_states_recomputed": {
+      "no_primary_candidate_or_official_acceptance": 429,
+      "unresolved_primary_candidate": 1681,
+      "accepted_candidate_primary": 724,
+      "accepted_official_only_primary": 52,
+      "accepted_official_after_candidate_exclusion": 2
+    },
+    "candidate_final_evidence_status_counts_recomputed": {
+      "tier_a_positive": 606,
+      "no_machine_positive": 520,
+      "no_trusted_source_record": 778,
+      "one_tier_b_positive": 379,
+      "two_plus_tier_b_positive": 118,
+      "not_attempted": 4,
+      "excluded_invalid_identity_or_crosswalk": 2
+    },
+    "accepted_source_strength": {
+      "Tier_A_accepted_candidates": 606,
+      "Tier_A_official_only_records": 54,
+      "Tier_A_total": 660,
+      "two_plus_independent_Tier_B": 118,
+      "Tier_A_share": 0.8483290488431876,
+      "two_plus_B_share": 0.15167095115681234,
+      "basis": "frozen Leopoldina evidence policy; not newly remapped global tiers"
+    },
+    "acceptance_rule": "one verified TierA independence group OR >=2 verified independent TierB groups; any unadjudicated trusted exact-date conflict blocks; copied/Wikipedia/locator-only text excluded",
+    "accepted_routes_recomputed": {
+      "machine_tier_a": 398,
+      "machine_two_plus_tier_b": 115,
+      "round1_manual_policy_extension": 40,
+      "manual_conflict_corrected_overlay": 1,
+      "targeted_manual_followup": 9,
+      "manual_conflict_resolved": 3,
+      "official_new_member_profile_same_date": 155,
+      "official_new_member_profile_only": 52,
+      "manual_official_mismatch_corrected_overlay": 2,
+      "official_profile_resolved_crosswalk": 1,
+      "official_profile_resolved_identity_collision": 1,
+      "manual_official_mismatch_resolved": 1
+    },
+    "accepted_candidate_conflict_states": {
+      "none": 717,
+      "resolved_retain_candidate": 4,
+      "resolved_replace_candidate": 3
+    },
+    "unresolved_candidate_conflict_states": {
+      "none": 1681
+    },
+    "official_candidate_mismatch_holds_remaining": 0,
+    "versioned_date_corrections": 3,
+    "documented_archive_exception_rows": 1,
+    "archive_exception_is_not_claimed_local_raw": true,
+    "accepted_records_with_verified_qid": 724,
+    "accepted_records_without_verified_qid": 54,
+    "limits": [
+      "Leopoldina is an international institution-selected academy, not a German-nationality sample.",
+      "778/2888 is frozen primary-window inclusion, not full-history exactDOB missingness.",
+      "724/2407 conditions on candidate eligibility and cannot be compared to an all-roster denominator.",
+      "The two invalid candidate records retain rejected QIDs; official replacements do not borrow those QIDs.",
+      "No cross-academy person deduplication is applied."
+    ]
+  },
+  "China_CAS_CAE": {
+    "schema": "china_CAS_recovered_v19_inventory_audit_v1",
+    "created_utc": "2026-11-01T10:54:17.171103+00:00",
+    "Library_file_id": "libfile_100e6bf993a48191986284d673a648cd",
+    "source_zip": "china_cas_collection_v19_20261028.zip",
+    "source_zip_sha256": "5d4c4a49c2f4d71c953d8a890fd2473b595c38d274d6fb6d1ac9d56c62e3cfb9",
+    "package_version": "v19",
+    "current_entrypoint": "v19/summary.json; v19/data/; root summary and v03–v18 are historical",
+    "source_archive_integrity": {
+      "zip_path": "/workspace/scratch/7e8aa4e0d4af/academy_inventory_workers/downloads/china/china_cas_collection_v19_20261028.zip",
+      "zip_sha256": "5d4c4a49c2f4d71c953d8a890fd2473b595c38d274d6fb6d1ac9d56c62e3cfb9",
+      "zip_bytes": 66873706,
+      "manifest_path_in_archive": "china_cas_collection_v19/manifest.json",
+      "manifest_sha256": "e6ef646191fa0432e754ed720629437f9e10dbbd1f64e5caa6cd0063ff91788a",
+      "archive_members": 10696,
+      "manifest_entries": 10695,
+      "all_manifest_entries_byteexact": true,
+      "exact_member_set_match": true,
+      "path_safety_no_traversal_duplicates_or_symlinks_checked": true,
+      "zip_read_CRC_checks_passed": true,
+      "archive_not_executed": true,
+      "materialization_scope": "25 required metadata/CSV files only; raw body archives not extracted or newly person-reviewed",
+      "created_utc": "2026-11-01T10:52:51.195152+00:00"
+    },
+    "archive_executed": false,
+    "new_network_requests": 0,
+    "original_source_person_reviews_in_this_inventory": 0,
+    "CAS": {
+      "stage": "source-claim collection, not formal identity/DOB/membership or Gregorian-calendar acceptance",
+      "count_unit": "original official profile-URL-keyed record_id; not deduplicated accepted people",
+      "roster_rows": 1629,
+      "unique_record_ids": 1629,
+      "unique_profile_URLs": 1629,
+      "unique_name_strings": 1626,
+      "name_collision_pairs": 3,
+      "name_collision_labels": [
+        "李林",
+        "张旭",
+        "郭雷"
+      ],
+      "same_name_records_not_merged": true,
+      "roster_states": {
+        "living": 883,
+        "deceased": 746
+      },
+      "scope": "CAS domestic current six science-division directory + deceased directory; foreign directory not included; not established all ever-elected historical ordinary members",
+      "captured_profiles": 1626,
+      "captured_HTTP200_profiles": 1626,
+      "uncaptured_disabled_profiles": 3,
+      "uncaptured_names": [
+        "江涌",
+        "辛万青",
+        "祝学军"
+      ],
+      "captured_fraction": {
+        "numerator": 1626,
+        "denominator": 1629,
+        "percent": 99.8158379373849
+      },
+      "highest_visible_body_supported_precision_all_sources": {
+        "day": 1230,
+        "month": 394,
+        "year": 2
+      },
+      "day_claim_availability_full_directory": {
+        "numerator": 1230,
+        "denominator": 1629,
+        "percent": 75.50644567219153,
+        "not_formally_accepted_DOB": true
+      },
+      "day_claim_profiles_without_recorded_component_or_explicit_calendar_marker_differences": 1205,
+      "day_claim_profiles_with_recorded_differences": 25,
+      "these_are_reconciliation_diagnostics_not_adjudicated_DOB_conflicts": true,
+      "without_visible_day_claims_captured_profiles": 396,
+      "without_visible_day_claims_including_uncaptured": 399,
+      "without_unconflicted_day_including_uncaptured": 424,
+      "no_day_claim_rate": {
+        "numerator": 399,
+        "denominator": 1629,
+        "percent": 24.49355432780847
+      },
+      "individual_followup_remaining_never_searched": 0,
+      "official_CAS_only_highest_precision": {
+        "month": 723,
+        "year": 16,
+        "day": 884,
+        "no_birth_claim": 3
+      },
+      "CAS_plus_external_marked_primary_body_highest_precision": {
+        "month": 572,
+        "day": 1049,
+        "year": 5
+      },
+      "day_claim_profiles_with_official_or_marked_primary_support": 1049,
+      "day_claim_profiles_secondary_only": 181,
+      "primary_day_claim_rate_full_directory": {
+        "numerator": 1049,
+        "denominator": 1629,
+        "percent": 64.39533456108042
+      },
+      "source_strength_is_collection_authorship_label_not_global_TierA_acceptance": true,
+      "claim_occurrences_all_body_supported": 2571,
+      "claim_occurrences_official_or_marked_primary_body": 2212,
+      "external_claim_support_counts": {
+        "original_body_archived": 7,
+        "opened_source": 936,
+        "search_snippet_only": 76
+      },
+      "external_body_supported_claim_occurrences": 943,
+      "external_snippet_only_claim_occurrences_excluded_from_precision": 76,
+      "day_profile_calendar_labels": {
+        "not_stated": 1225,
+        "explicit_lunar": 6,
+        "explicit_gregorian": 2
+      },
+      "calendar_profile_categories_overlap": true,
+      "not_stated_is_not_confirmed_Gregorian": true,
+      "calendar_statistics_scope": "current aggregated claim table only; historical diagnostics not fully imported; not complete package-wide evidence census",
+      "explicit_dual_calendar_profiles": 1,
+      "cross_explicit_calendar_component_difference_profiles_pending": 1,
+      "explicit_identical_numbers_opposite_marker_diagnostic": 0,
+      "all_printed_component_difference_profiles": 42,
+      "calendar_unstated_component_difference_profiles_pending": 3,
+      "same_calendar_label_component_difference_profiles": 39,
+      "no_calendar_conversion_or_component_imputation": true,
+      "accepted_Gregorian_DOB": 0,
+      "identity_I_total": 0,
+      "DOB_D_total": 0,
+      "membership_M_total": 0,
+      "BaZi_total": 0,
+      "all_accepted_Gregorian_fields_blank_recomputed": true,
+      "not_adjudicated_is_not_zero_collected_data": true,
+      "formal_birthwindow_adjudication_complete": false,
+      "formal_electioncutoff_adjudication_complete": false,
+      "intended_birthwindow": [
+        1835,
+        1985
+      ],
+      "intended_election_cutoff": 2025,
+      "provisional_official_CAS_birthwindow_claim_screen_counts": {
+        "claim_within_window": 1623,
+        "no_birth_claim": 3
+      },
+      "historical_completeness_established": false,
+      "known_scope_gaps": [
+        "1955 philosophy/social-sciences division61 absent current6science directory",
+        "Revoked/removed/other former ordinary members not reconciled election by election"
+      ],
+      "current_batch_preexisting_acquisition_closeout": true,
+      "no_new_data_adjudications_or_global_cohort_freeze_in_this_inventory": true
+    },
+    "CAE": {
+      "counts": null,
+      "stage": "no CAE snapshot in this CAS-only package",
+      "not_zero_or_never_collected_claim": true,
+      "not_combined_with_CAS": true
+    },
+    "verification": {
+      "roster_keys_unique": true,
+      "all_profile_precision_recomputed_from_CAS_claims_and_body-supported_external_claims": true,
+      "all_source_support_filters_and_summary_counts_match": true,
+      "flags_and_accepted_fields_recomputed": true,
+      "archive_manifest_entry_count": 10695,
+      "archive_member_count": 10696,
+      "all_archive_manifest_hashes_bytes_and_read_CRC_checked": true,
+      "source_file_sha256": {
+        "README.md": "aecbb0b5a4dc4bcab21076858a5ad338d6ddc1df90049d4edbf6ad68026e24a6",
+        "manifest.json": "e6ef646191fa0432e754ed720629437f9e10dbbd1f64e5caa6cd0063ff91788a",
+        "data/roster_inventory.csv": "7a6c55e36f4ac2690a4ed9ea886154c1b15346ced13bf78347621b5ef8b69b84",
+        "data/roster_controls.json": "c083c31766031d8b1ed60c3f7577c0d0a7a9f881216fd98db62b80b3053ab14f",
+        "data/collection_protocol.json": "7b1c07dd606d85fbe4b7b99698982b1d029c3f4501c56ccee124d758a2f502bd",
+        "docs/DATA_DICTIONARY.md": "eb7bad9ae0db44640b79cb823c79fc24a03fa0ab894b9664f5bd2bb373dfc027",
+        "v19/summary.json": "35c5ef39149b81683c5355efa7ecb0e8cf9b4522799a81f79377d12bbeb931bb",
+        "v19/data/all_source_profile_status.csv": "a239d73983405fcdee737d8e67b79c610fc87a3f3ed63d25efb6965fdf126b02",
+        "v19/data/current_cas_birth_claims.csv": "5b802d9652a47b7ef4d61e7256c60f42a773acf00df32e6ae0cabdf6584dd6ce",
+        "v19/data/cumulative_external_source_claims.csv": "8e9a54e73db07b44057f3e98e4448fb5b6d83a1bef8356e02028de4c0c15ce0f",
+        "v19/data/missing_day_followup_queue.csv": "090aa601a2fc24d36bace8762514dd4e6c02e28dce2565257a0a3323b9aecba5",
+        "v19/data/conflict_followup_queue.csv": "25d5dd4d8b5d090fffea74e6434b317e13ba6208d61072592943eafaa7a53241",
+        "v19/data/current_profile_queue.csv": "d150905cbbdfcfbefb3e348e80bc53d2daa22d8f09cae3c0b191a4f3468bb71b"
+      }
+    },
+    "crosscountry_guardrails": [
+      "1230/1629 is visible day-claim availability, not formally approved exactDOB coverage.",
+      "1205 no-recorded-difference day claims are not formally reconciled Gregorian birthdays.",
+      "1049 primary/official-backed day claims use the Chinese package authorship labels, not a cross-country remapping to accepted TierA.",
+      "CAS current1629directory denominator is not an all-history frozen roster and cannot be blindly pooled with NAS/RS/Leopoldina.",
+      "CAS and CAE remain separate."
+    ]
+  },
+  "verification": {
+    "closeout_manifest_files_checked": 18,
+    "coverage_manifest_output_files_checked": 17,
+    "manifest_members_byte_exact": 30,
+    "manifest_members_newline_only": 5,
+    "all_CSV_data_files_raw_byte_hashes_match": true,
+    "nonidentical_text_metadata_are_explicit_LF_vs_CRLF_only": true,
+    "old_manifests_not_rewritten": true,
+    "recomputed_unique_ids_partitions_dates_passed": true,
+    "new_inferential_tests_or_BaZi_computation": 0,
+    "source_hashes": {
+      "ACADEMY_COHORT_SCOPE_FREEZE_V1.md": "1eda96c666d604533ce7acf03e5966ab876d646b8dac3b1bdeb142ade5d49d6b",
+      "data/leopoldina_roster_freeze_v1.json": "c47b8354bfc1969df9158610def3b0236e9781c0ec4c715099cc6dd68afb3c82",
+      "data/leopoldina_roster_freeze_v1/leopoldina_science_core_roster_freeze_v1.csv": "c17e9297c6c3c7945381034bb48ca4e86582ff9c896fcd69ec3d31add354402a",
+      "data/leopoldina_dob_local_v1/summary.json": "ecaba8e572fdce0793d02e17a6507343e33a48b089f15f6e64082308c693dbee",
+      "data/leopoldina_dob_local_v1/leopoldina_dob_candidate_crosswalk_v1.csv": "2bfe12123124096627dc03ad9ead2dc8f3458a4c3c1ebe58104a5902af5331d0",
+      "data/leopoldina_manual_adjudication_closeout_v1/final/summary.json": "468c7ac3eb55e12b828bf0c481598d65c894cbdba2a1adebd6242474b2a52f12",
+      "data/leopoldina_manual_adjudication_closeout_v1/final/manifest.json": "070a8b5d68450464796942f50c6567e3d7b39e8c909d1d798c4a2dbcbbd2fc5d",
+      "data/leopoldina_manual_adjudication_closeout_v1/final/candidate_final_dob_adjudication_v1_1.csv": "21f1a60744ea7dac52cba781108e61b148ef27db0a2f7794222189aebcd5c937",
+      "data/leopoldina_manual_adjudication_closeout_v1/final/accepted_exact_dob_combined_primary_v1_1.csv": "d54d35c808d744b6fa39995ea5cd75724fa0aceea5af72126ebc750fbe51519e",
+      "data/leopoldina_manual_adjudication_closeout_v1/final/final_dob_adjudication_rules_v1_1.json": "b37e5ab39ed08ee43bb7a3fbdbc40ee5bde0196e12e45540e6addacdd194b548",
+      "data/leopoldina_manual_adjudication_closeout_v1/final/manual_source_policy_categories_v1.csv": "628a8f7212af7e42abd20522e21c92042542cf7f236c1ed887bc2649a9222927",
+      "data/leopoldina_coverage_missingness_freeze_v1/summary.json": "fd7c4a043243eab0ab140b173cb8672a897187370f4335f2b9f2e895a5f576b2",
+      "data/leopoldina_coverage_missingness_freeze_v1/manifest.json": "661c687d8edacd88aed1bba1eeb64344157527764e9742caa14767eb4e69667a",
+      "data/leopoldina_coverage_missingness_freeze_v1/member_level_primary_window_coverage_v1.csv": "9b6e086402982ab79bf1a06a86426a417bd7d8fa2b0841e78ac17e7a4fc83b82"
+    },
+    "manifest_member_checks": [
+      {
+        "path": "data/leopoldina_manual_adjudication_closeout_v1/final/accepted_candidate_dobs_v1_1.csv",
+        "actual_sha256": "1b618c393c12e71ac01c23680a5cead92ca32038b99914623b2eaadad3d71822",
+        "actual_bytes": 186895,
+        "frozen_manifest_sha256": "1b618c393c12e71ac01c23680a5cead92ca32038b99914623b2eaadad3d71822",
+        "frozen_manifest_bytes": 186895,
+        "status": "byte_exact"
+      },
+      {
+        "path": "data/leopoldina_manual_adjudication_closeout_v1/final/accepted_exact_dob_combined_primary_v1_1.csv",
+        "actual_sha256": "d54d35c808d744b6fa39995ea5cd75724fa0aceea5af72126ebc750fbe51519e",
+        "actual_bytes": 151954,
+        "frozen_manifest_sha256": "d54d35c808d744b6fa39995ea5cd75724fa0aceea5af72126ebc750fbe51519e",
+        "frozen_manifest_bytes": 151954,
+        "status": "byte_exact"
+      },
+      {
+        "path": "data/leopoldina_manual_adjudication_closeout_v1/final/archive_exceptions_v1.csv",
+        "actual_sha256": "44adb37054a088ca279eb0bfe4d4c7c02b57fe85fcdfa07deef5ec5ed1e33b58",
+        "actual_bytes": 673,
+        "frozen_manifest_sha256": "44adb37054a088ca279eb0bfe4d4c7c02b57fe85fcdfa07deef5ec5ed1e33b58",
+        "frozen_manifest_bytes": 673,
+        "status": "byte_exact"
+      },
+      {
+        "path": "data/leopoldina_manual_adjudication_closeout_v1/final/candidate_dob_correction_overlay_v1_1.csv",
+        "actual_sha256": "6ee80187e4fc75219d90e3c32d3367e9940a06e13e120956f3dc08271fca9f7d",
+        "actual_bytes": 664,
+        "frozen_manifest_sha256": "6ee80187e4fc75219d90e3c32d3367e9940a06e13e120956f3dc08271fca9f7d",
+        "frozen_manifest_bytes": 664,
+        "status": "byte_exact"
+      },
+      {
+        "path": "data/leopoldina_manual_adjudication_closeout_v1/final/candidate_final_dob_adjudication_v1_1.csv",
+        "actual_sha256": "21f1a60744ea7dac52cba781108e61b148ef27db0a2f7794222189aebcd5c937",
+        "actual_bytes": 625246,
+        "frozen_manifest_sha256": "21f1a60744ea7dac52cba781108e61b148ef27db0a2f7794222189aebcd5c937",
+        "frozen_manifest_bytes": 625246,
+        "status": "byte_exact"
+      },
+      {
+        "path": "data/leopoldina_manual_adjudication_closeout_v1/final/conflict_adjudications_v1.csv",
+        "actual_sha256": "a119f78004922f51bdd0606081abfe5d1129e5f064d32549614ddbe410627c1f",
+        "actual_bytes": 1267,
+        "frozen_manifest_sha256": "a119f78004922f51bdd0606081abfe5d1129e5f064d32549614ddbe410627c1f",
+        "frozen_manifest_bytes": 1267,
+        "status": "byte_exact"
+      },
+      {
+        "path": "data/leopoldina_manual_adjudication_closeout_v1/final/excluded_invalid_candidate_records_v1.csv",
+        "actual_sha256": "bc0c2e65afe8eecb3fec36a10f5a8e363952e25e7d09865a1a03a106e62348f8",
+        "actual_bytes": 754,
+        "frozen_manifest_sha256": "bc0c2e65afe8eecb3fec36a10f5a8e363952e25e7d09865a1a03a106e62348f8",
+        "frozen_manifest_bytes": 754,
+        "status": "byte_exact"
+      },
+      {
+        "path": "data/leopoldina_manual_adjudication_closeout_v1/final/final_dob_adjudication_rules_v1_1.json",
+        "actual_sha256": "b37e5ab39ed08ee43bb7a3fbdbc40ee5bde0196e12e45540e6addacdd194b548",
+        "actual_bytes": 2059,
+        "frozen_manifest_sha256": "ac76d7df9460623b5946790930258c1c549cbdb067db02e612a5673616c827ef",
+        "frozen_manifest_bytes": 2084,
+        "status": "LF_repository_text_matches_frozen_CRLF_bytes_after_explicit_newline_conversion"
+      },
+      {
+        "path": "data/leopoldina_manual_adjudication_closeout_v1/final/manual_followup_missingness_freeze_v1_1.json",
+        "actual_sha256": "a519fb09af3b857ed203f2bd2ccaffcd741c45f1abe0242cc70561ac58ea3a2d",
+        "actual_bytes": 1185,
+        "frozen_manifest_sha256": "ee37307ac582ffe3404a42414fd5fdabdd0c4f50b4ce1b638d78f7346f7ce6a8",
+        "frozen_manifest_bytes": 1206,
+        "status": "LF_repository_text_matches_frozen_CRLF_bytes_after_explicit_newline_conversion"
+      },
+      {
+        "path": "data/leopoldina_manual_adjudication_closeout_v1/final/manual_source_domain_registry_addendum_v1.csv",
+        "actual_sha256": "9aa3cdc081165b50b4afdd9b6cc0531b65103e687f9b0687deb940cbd1fe0acc",
+        "actual_bytes": 444,
+        "frozen_manifest_sha256": "9aa3cdc081165b50b4afdd9b6cc0531b65103e687f9b0687deb940cbd1fe0acc",
+        "frozen_manifest_bytes": 444,
+        "status": "byte_exact"
+      },
+      {
+        "path": "data/leopoldina_manual_adjudication_closeout_v1/final/manual_source_domain_registry_v1_1.csv",
+        "actual_sha256": "28ceb6c06df0a8909832854a327e8766ad36fa12f45ec16209cbc44b95e9114a",
+        "actual_bytes": 5632,
+        "frozen_manifest_sha256": "28ceb6c06df0a8909832854a327e8766ad36fa12f45ec16209cbc44b95e9114a",
+        "frozen_manifest_bytes": 5632,
+        "status": "byte_exact"
+      },
+      {
+        "path": "data/leopoldina_manual_adjudication_closeout_v1/final/manual_source_evidence_ledger_v1.csv",
+        "actual_sha256": "e5ff8fc36ccdf09905105040f61eb7d21c9be579306059488d6996566d0ae809",
+        "actual_bytes": 35076,
+        "frozen_manifest_sha256": "e5ff8fc36ccdf09905105040f61eb7d21c9be579306059488d6996566d0ae809",
+        "frozen_manifest_bytes": 35076,
+        "status": "byte_exact"
+      },
+      {
+        "path": "data/leopoldina_manual_adjudication_closeout_v1/final/manual_source_policy_categories_v1.csv",
+        "actual_sha256": "628a8f7212af7e42abd20522e21c92042542cf7f236c1ed887bc2649a9222927",
+        "actual_bytes": 2792,
+        "frozen_manifest_sha256": "628a8f7212af7e42abd20522e21c92042542cf7f236c1ed887bc2649a9222927",
+        "frozen_manifest_bytes": 2792,
+        "status": "byte_exact"
+      },
+      {
+        "path": "data/leopoldina_manual_adjudication_closeout_v1/final/official_master_candidate_mismatch_review_v1_1.csv",
+        "actual_sha256": "47b505a53dd0ed209e4806a730904a7009a35a0a9b76c932cb374a341a17827b",
+        "actual_bytes": 2342,
+        "frozen_manifest_sha256": "47b505a53dd0ed209e4806a730904a7009a35a0a9b76c932cb374a341a17827b",
+        "frozen_manifest_bytes": 2342,
+        "status": "byte_exact"
+      },
+      {
+        "path": "data/leopoldina_manual_adjudication_closeout_v1/final/official_master_mismatch_adjudications_v1.csv",
+        "actual_sha256": "e4982a1a97dcca86a0af3c033a6313faec40e00215118711bf7730ded4afa379",
+        "actual_bytes": 4448,
+        "frozen_manifest_sha256": "e4982a1a97dcca86a0af3c033a6313faec40e00215118711bf7730ded4afa379",
+        "frozen_manifest_bytes": 4448,
+        "status": "byte_exact"
+      },
+      {
+        "path": "data/leopoldina_manual_adjudication_closeout_v1/final/official_only_accepted_dobs_v1_1.csv",
+        "actual_sha256": "0a879cc2cf0a7fdf2f39ca0fbb4f0d514152f93d339c8c2eeb944fd51d3972aa",
+        "actual_bytes": 21978,
+        "frozen_manifest_sha256": "0a879cc2cf0a7fdf2f39ca0fbb4f0d514152f93d339c8c2eeb944fd51d3972aa",
+        "frozen_manifest_bytes": 21978,
+        "status": "byte_exact"
+      },
+      {
+        "path": "data/leopoldina_manual_adjudication_closeout_v1/final/summary.json",
+        "actual_sha256": "468c7ac3eb55e12b828bf0c481598d65c894cbdba2a1adebd6242474b2a52f12",
+        "actual_bytes": 3639,
+        "frozen_manifest_sha256": "ab64051b8d3fc90d1aa407ce55b43971070f9e12a6fb09004e091629b27c3685",
+        "frozen_manifest_bytes": 3713,
+        "status": "LF_repository_text_matches_frozen_CRLF_bytes_after_explicit_newline_conversion"
+      },
+      {
+        "path": "data/leopoldina_manual_adjudication_closeout_v1/final/unresolved_candidate_dobs_v1_1.csv",
+        "actual_sha256": "2ffd2ea29669e7f4567368dd55806726b949e104677792f79dbb401211bb6084",
+        "actual_bytes": 438239,
+        "frozen_manifest_sha256": "2ffd2ea29669e7f4567368dd55806726b949e104677792f79dbb401211bb6084",
+        "frozen_manifest_bytes": 438239,
+        "status": "byte_exact"
+      },
+      {
+        "path": "data/leopoldina_coverage_missingness_freeze_v1/member_level_primary_window_coverage_v1.csv",
+        "actual_sha256": "9b6e086402982ab79bf1a06a86426a417bd7d8fa2b0841e78ac17e7a4fc83b82",
+        "actual_bytes": 1074077,
+        "frozen_manifest_sha256": "9b6e086402982ab79bf1a06a86426a417bd7d8fa2b0841e78ac17e7a4fc83b82",
+        "frozen_manifest_bytes": 1074077,
+        "status": "byte_exact"
+      },
+      {
+        "path": "data/leopoldina_coverage_missingness_freeze_v1/coverage_overall_v1.csv",
+        "actual_sha256": "257a419153f435faa472925c674f1bf65a4e9f17cf99d79b8f8f3bf4eb58f86e",
+        "actual_bytes": 628,
+        "frozen_manifest_sha256": "257a419153f435faa472925c674f1bf65a4e9f17cf99d79b8f8f3bf4eb58f86e",
+        "frozen_manifest_bytes": 628,
+        "status": "byte_exact"
+      },
+      {
+        "path": "data/leopoldina_coverage_missingness_freeze_v1/coverage_by_class_v1.csv",
+        "actual_sha256": "406c54f31cfba415b0e75d1d479f44c7303974931ab6fa58c1e91101abfc2c9b",
+        "actual_bytes": 911,
+        "frozen_manifest_sha256": "406c54f31cfba415b0e75d1d479f44c7303974931ab6fa58c1e91101abfc2c9b",
+        "frozen_manifest_bytes": 911,
+        "status": "byte_exact"
+      },
+      {
+        "path": "data/leopoldina_coverage_missingness_freeze_v1/coverage_by_section_v1.csv",
+        "actual_sha256": "b217b9f8477e83202ff6c919c66fa19aadb4721ed363bd7a04d0269d40fb3267",
+        "actual_bytes": 3062,
+        "frozen_manifest_sha256": "b217b9f8477e83202ff6c919c66fa19aadb4721ed363bd7a04d0269d40fb3267",
+        "frozen_manifest_bytes": 3062,
+        "status": "byte_exact"
+      },
+      {
+        "path": "data/leopoldina_coverage_missingness_freeze_v1/coverage_by_deceased_status_v1.csv",
+        "actual_sha256": "35ec539d936c5467e3c19c6c2df6a90cdd45dbc6c2d124170e59f9e817724f9a",
+        "actual_bytes": 741,
+        "frozen_manifest_sha256": "35ec539d936c5467e3c19c6c2df6a90cdd45dbc6c2d124170e59f9e817724f9a",
+        "frozen_manifest_bytes": 741,
+        "status": "byte_exact"
+      },
+      {
+        "path": "data/leopoldina_coverage_missingness_freeze_v1/coverage_by_election_era_v1.csv",
+        "actual_sha256": "fb69f446d0eb25a1a828ae7afbeca9f0f449d1d5d496de7acbbe94e86618c031",
+        "actual_bytes": 965,
+        "frozen_manifest_sha256": "fb69f446d0eb25a1a828ae7afbeca9f0f449d1d5d496de7acbbe94e86618c031",
+        "frozen_manifest_bytes": 965,
+        "status": "byte_exact"
+      },
+      {
+        "path": "data/leopoldina_coverage_missingness_freeze_v1/coverage_by_election_decade_v1.csv",
+        "actual_sha256": "b2f21707c50067e6d02e39155284f716313f3d926b8dae3d96e0490e8d3c4cd0",
+        "actual_bytes": 2424,
+        "frozen_manifest_sha256": "b2f21707c50067e6d02e39155284f716313f3d926b8dae3d96e0490e8d3c4cd0",
+        "frozen_manifest_bytes": 2424,
+        "status": "byte_exact"
+      },
+      {
+        "path": "data/leopoldina_coverage_missingness_freeze_v1/coverage_by_class_election_era_v1.csv",
+        "actual_sha256": "b946cb7992af63e54d2bb8552a1256109a8f1cafc6a5220e3141f27991567710",
+        "actual_bytes": 2838,
+        "frozen_manifest_sha256": "b946cb7992af63e54d2bb8552a1256109a8f1cafc6a5220e3141f27991567710",
+        "frozen_manifest_bytes": 2838,
+        "status": "byte_exact"
+      },
+      {
+        "path": "data/leopoldina_coverage_missingness_freeze_v1/candidate_acceptance_by_birth_year_v1.csv",
+        "actual_sha256": "6205b2bf1f8bb1e63c07b2201e06620698bdab59b94fbcc89961ae23b035dec9",
+        "actual_bytes": 7743,
+        "frozen_manifest_sha256": "6205b2bf1f8bb1e63c07b2201e06620698bdab59b94fbcc89961ae23b035dec9",
+        "frozen_manifest_bytes": 7743,
+        "status": "byte_exact"
+      },
+      {
+        "path": "data/leopoldina_coverage_missingness_freeze_v1/candidate_acceptance_by_birth_decade_v1.csv",
+        "actual_sha256": "fe53a22a9dd1ec2a1728b12ede120024be9cb5dab65e9fbb364a57c367ba4a7f",
+        "actual_bytes": 1103,
+        "frozen_manifest_sha256": "fe53a22a9dd1ec2a1728b12ede120024be9cb5dab65e9fbb364a57c367ba4a7f",
+        "frozen_manifest_bytes": 1103,
+        "status": "byte_exact"
+      },
+      {
+        "path": "data/leopoldina_coverage_missingness_freeze_v1/accepted_primary_by_birth_year_v1.csv",
+        "actual_sha256": "c8a95cd030dd967b42de047c2f2279fdf48943d76b87a8e8c85d3ecebeff4c49",
+        "actual_bytes": 2784,
+        "frozen_manifest_sha256": "c8a95cd030dd967b42de047c2f2279fdf48943d76b87a8e8c85d3ecebeff4c49",
+        "frozen_manifest_bytes": 2784,
+        "status": "byte_exact"
+      },
+      {
+        "path": "data/leopoldina_coverage_missingness_freeze_v1/accepted_primary_by_birth_decade_v1.csv",
+        "actual_sha256": "2fc95abf209891b350643734e63263bf2597beb3e27dcb60dc9587f411633faa",
+        "actual_bytes": 487,
+        "frozen_manifest_sha256": "2fc95abf209891b350643734e63263bf2597beb3e27dcb60dc9587f411633faa",
+        "frozen_manifest_bytes": 487,
+        "status": "byte_exact"
+      },
+      {
+        "path": "data/leopoldina_coverage_missingness_freeze_v1/accepted_route_counts_v1.csv",
+        "actual_sha256": "d8b5b60b8df40990045fb8642ba412cc87af932224eb649aa1d1f496f9211b41",
+        "actual_bytes": 691,
+        "frozen_manifest_sha256": "d8b5b60b8df40990045fb8642ba412cc87af932224eb649aa1d1f496f9211b41",
+        "frozen_manifest_bytes": 691,
+        "status": "byte_exact"
+      },
+      {
+        "path": "data/leopoldina_coverage_missingness_freeze_v1/candidate_evidence_status_counts_v1.csv",
+        "actual_sha256": "2bba6014af2f29155e7212e5edd348dda879c5e6ba35dfde1224121941f06b04",
+        "actual_bytes": 381,
+        "frozen_manifest_sha256": "2bba6014af2f29155e7212e5edd348dda879c5e6ba35dfde1224121941f06b04",
+        "frozen_manifest_bytes": 381,
+        "status": "byte_exact"
+      },
+      {
+        "path": "data/leopoldina_coverage_missingness_freeze_v1/edge_case_audit_v1.csv",
+        "actual_sha256": "d3b63458916c8dff0044b4bad3f35cca616f99cc5a7c38ce360c6cf8b61e9e9b",
+        "actual_bytes": 1183,
+        "frozen_manifest_sha256": "d3b63458916c8dff0044b4bad3f35cca616f99cc5a7c38ce360c6cf8b61e9e9b",
+        "frozen_manifest_bytes": 1183,
+        "status": "byte_exact"
+      },
+      {
+        "path": "data/leopoldina_coverage_missingness_freeze_v1/summary.json",
+        "actual_sha256": "fd7c4a043243eab0ab140b173cb8672a897187370f4335f2b9f2e895a5f576b2",
+        "actual_bytes": 4291,
+        "frozen_manifest_sha256": "9fbd513d909f4cbf94f82c19968d04fcafa6bf11c9cceacc687086db811b1542",
+        "frozen_manifest_bytes": 4375,
+        "status": "LF_repository_text_matches_frozen_CRLF_bytes_after_explicit_newline_conversion"
+      },
+      {
+        "path": "data/leopoldina_coverage_missingness_freeze_v1/README.md",
+        "actual_sha256": "216ba21ca6497ab09dcbf62c0085ae06e4c3431063be820c659d5cbca5c4fa7f",
+        "actual_bytes": 2351,
+        "frozen_manifest_sha256": "466392723b7020012d86e9a8bf8e12ad024d2519787e1bc385dfb7a50de38cab",
+        "frozen_manifest_bytes": 2411,
+        "status": "LF_repository_text_matches_frozen_CRLF_bytes_after_explicit_newline_conversion"
+      }
+    ]
+  },
+  "supersedes_snapshot_absence_for_CAS_only": true,
+  "previous_report_sha256": "2e2d0ecf1cd7343a65515187f1b7f86593820b2ffdb19e32e915839dcfc06471",
+  "Germany_block_preserved_exact": true,
+  "current_created_utc": "2026-11-01T10:54:17.181596+00:00"
+}

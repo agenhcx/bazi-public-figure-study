@@ -1,0 +1,388 @@
+{
+  "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+  "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+  "method_application_scope_sha256": "b25ef3f4bbf1f3e5dddd48531812a60e40d1383b897a0d3d044b0604e62db212",
+  "written_utc": "2026-11-08T09:59:43.585164+00:00",
+  "group": "a",
+  "phase": "canonical_community_reference_geography_method_application",
+  "intent_file": "v43_a_intent.json",
+  "current_method_application_scope_audit_path": "audit/method_application_scope_v43.json",
+  "full2nativeobjects/priorholdsbeforequeries": true,
+  "all9_issue_inventories_loaded_before_queries": true,
+  "inventory_file_pins": {
+    "active_source_DOB_conflicts.json": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+    "birthplace_source_conflicts.json": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+    "source_derived_age_inconsistencies.json": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+    "provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+    "lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+    "cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+    "source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+    "omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+    "source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+  },
+  "prior_context_review": [
+    "v43_plan.json",
+    "v36_method_preregistration.json",
+    "v43_method_application_scope.json",
+    "v43_scope_a.json bothcompleteobjects",
+    "V42 all9 current inventories in full",
+    "prior_v11_holds.json Woods completeentry",
+    "prior_v33_holds.json Woods completeentry",
+    "prior_v34_holds.json Coles completeentry",
+    "prior_v33_source_qa_initial_failed_report.json targetedchecks andcontextmetadata",
+    "prior_v34_source_qa_initial_failed_report.json targetedchecks andcontextmetadata",
+    "prior_v40_root_intent.json complete bounded oldinventory/control context",
+    "prior_v35_geography_first_pass_queue_closeout.json targetedID historicalmemberships"
+  ],
+  "inherited_issue_counts": {
+    "active_DOB": 13,
+    "partial_birthplace": 2,
+    "source_derived_age_inconsistencies": 4,
+    "other_issue_files": 6
+  },
+  "separate_Ewins_Barber_placeholds_preserved": true,
+  "Tomes_precision_omittedmiddle_and_other_issue_files_preserved": true,
+  "Coles_cross_source_age_contrast_preserved_not_alternate_DOB": true,
+  "intent_writes_validated_exit0_separately_beforeweb": true,
+  "per_entry_written_utc_before_request": true,
+  "retrieval_counts": {
+    "queries": 4,
+    "navigation_attempts": 5,
+    "source_open_operations": 4,
+    "click_operations": 1,
+    "parsed_finds": 1,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "query_ledger": [
+    {
+      "kind": "search",
+      "engine": "system2",
+      "record_id": "RS_PAST_NA2154",
+      "query": "\"Stephen Esslemont Woods\" site:wikipedia.org",
+      "result_refs": [],
+      "intent_entry": 0,
+      "outcome": "Empty search results"
+    },
+    {
+      "kind": "search",
+      "engine": "system2",
+      "record_id": "RS_PAST_NA3474",
+      "query": "\"Bryan Randell Coles\" site:wikipedia.org",
+      "result_refs": [],
+      "intent_entry": 1,
+      "outcome": "Empty search results"
+    },
+    {
+      "kind": "search",
+      "engine": "system1",
+      "record_id": "RS_PAST_NA2154",
+      "query": "\"Stephen Esslemont Woods\" Wikipedia",
+      "domains": [
+        "wikipedia.org"
+      ],
+      "result_refs": [
+        "turn7683452search9",
+        "turn7683452search0",
+        "turn7683452search1",
+        "turn7683452search11",
+        "turn7683452search4"
+      ],
+      "intent_entry": 2,
+      "result_limit": "Canonical list locator plus external oldmemoir/roster/mirror/aggregator projections. Only canonical list opened. Projections not actual source evidence; old failed fullmemoir staysclosed."
+    },
+    {
+      "kind": "search",
+      "engine": "system1",
+      "record_id": "RS_PAST_NA3474",
+      "query": "\"Bryan Randell Coles\" Wikipedia",
+      "domains": [
+        "wikipedia.org"
+      ],
+      "result_refs": [
+        "turn7683452search2",
+        "turn7683452search3",
+        "turn7683452search10",
+        "turn7683452search5",
+        "turn7683452search12",
+        "turn7683452search6",
+        "turn7683452search7",
+        "turn7683452search8"
+      ],
+      "intent_entry": 3,
+      "result_limit": "Canonical1991list locator plus external priorobituary/tribute/memoir/research/archive projections. Only canonical list opened; no old failed memoir variant or positive-source override."
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "kind": "open",
+      "record_id": "RS_PAST_NA2154",
+      "url": "https://www.wikidata.org/wiki/Q21166050",
+      "ref": "turn6017621view0",
+      "outcome": "inaccessible_firstworkclosed_no_retry",
+      "intent_entry": 4
+    },
+    {
+      "kind": "open",
+      "record_id": "RS_PAST_NA3474",
+      "url": "https://www.wikidata.org/wiki/Q21165448",
+      "ref": "turn6017621view1",
+      "outcome": "inaccessible_firstworkclosed_no_retry",
+      "intent_entry": 5
+    },
+    {
+      "kind": "open",
+      "record_id": "RS_PAST_NA2154",
+      "url": "https://en.wikipedia.org/wiki/List_of_fellows_of_the_Royal_Society_W%2C_X%2C_Y%2C_Z",
+      "ref": "turn4084245view0",
+      "actual_result_url": "https://en.wikipedia.org/wiki/List_of_fellows_of_the_Royal_Society_W,_X,_Y,_Z",
+      "outcome": "explicitrewrittenlist_not_originalperson_or_DOBproof; inspectedonlyfor_observedURIcarrier",
+      "intent_entry": 6
+    },
+    {
+      "kind": "open",
+      "record_id": "RS_PAST_NA3474",
+      "url": "https://en.wikipedia.org/wiki/List_of_fellows_of_the_Royal_Society_elected_in_1991",
+      "ref": "turn4084245view1",
+      "outcome": "actual_normalcanonical_fellowlist_observed_name_link50_only_not_personbirthproof",
+      "intent_entry": 7
+    },
+    {
+      "kind": "click",
+      "record_id": "RS_PAST_NA3474",
+      "ref_id": "turn4084245view1",
+      "link_id": 50,
+      "observed_anchor": "Bryan Randell Coles",
+      "ref": "turn1208987view0",
+      "observed_requested_target_url": "https://en.wikipedia.org/wiki/Bryan_Randell_Coles?action=edit&redlink=1",
+      "outcome": "firstredlink404_no_personbody_closed_no_retry",
+      "intent_entry": 9
+    }
+  ],
+  "parsed_find_ledger": [
+    {
+      "kind": "find",
+      "record_id": "RS_PAST_NA2154",
+      "ref_id": "turn4084245view0",
+      "pattern": "Stephen Esslemont Woods",
+      "ref": "turn1208987view1",
+      "outcome": "cached_explicitrewrittenlist_L621_plainname_date_row_no_observed_subjecttargetURI_in_returnedfragment",
+      "intent_entry": 8
+    }
+  ],
+  "candidates": [],
+  "holds": [
+    {
+      "publication_date": null,
+      "source_revision_id": null,
+      "source_revision_utc": null,
+      "source_calendar_model": null,
+      "source_statement_rank": null,
+      "source_editorial_validation": null,
+      "source_informational_independence": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+      "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+      "method_application_scope_sha256": "b25ef3f4bbf1f3e5dddd48531812a60e40d1383b897a0d3d044b0604e62db212",
+      "publication_date_precision": "not_observed",
+      "record_id": "RS_PAST_NA2154",
+      "native": {
+        "record_id": "RS_PAST_NA2154",
+        "authority_name": "Woods; Stephen Esslemont (1912 - 1994)",
+        "native_dob": "1912-01-12",
+        "raw_birthplace": "Cardiff",
+        "frozen_birthplace_source_grade": "S2",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "21f0ac6c651940beeee014e8cb76068640619aff39f778634d98f4a5fa7c9daa"
+      },
+      "status": "held_no_actual_canonical_person_body_or_actual_P19_chain",
+      "hold_type": "frozen_canonical_item_inaccessible_and_list_representation_unqualified_no_personbody",
+      "reason": "No actual current canonical person body or actual P19 chain was acquired. Frozen Q21166050 firstopen inaccessible and closed. Observed WXYZ fellowship list and its cached-find response expressly rewritten; displayed subject row is not original DOB/birthplace proof and returned fragment supplies no observed subject target URI. Existing Cardiff/S2 remains unknown; no city-familiarity or Scottish-parent inference.",
+      "proof_mode": null,
+      "proof_chain": [],
+      "source_grade_adopted": null,
+      "source_grade_role": "geographic_support_only",
+      "reviewed_hemisphere": "unknown",
+      "no_new_geographic_assignment": true,
+      "native_and_original_birthplace_fields_unchanged": true,
+      "source_observations": [
+        {
+          "source_url": "https://www.wikidata.org/wiki/Q21166050",
+          "source_ref": "turn6017621view0",
+          "source_locator": "Tool Internal Error: URL not accessible; no body or actual statement acquired.",
+          "acquisition_role": "worker_first_current_canonical_item_open_from_frozen_lookup_qid",
+          "observed_identifier_provenance": "v43_scope_a.json lookup_qid; no guessedQID or nativeQID assignment",
+          "body_acquired": false,
+          "tool_error": "URL not accessible via this tool",
+          "source_quote": null,
+          "source_quote_word_count": 0,
+          "stopped_without_retry_variant_or_rawGET": true
+        },
+        {
+          "requested_source_url": "https://en.wikipedia.org/wiki/List_of_fellows_of_the_Royal_Society_W%2C_X%2C_Y%2C_Z",
+          "observed_result_url": "https://en.wikipedia.org/wiki/List_of_fellows_of_the_Royal_Society_W,_X,_Y,_Z",
+          "source_title": "List of fellows of the Royal Society W, X, Y, Z – Wikipedia",
+          "source_ref": "turn4084245view0",
+          "cached_find_ref": "turn1208987view1",
+          "cached_find_pattern": "Stephen Esslemont Woods",
+          "source_locator": "Open header and cached-find header expressly rewritten summary. Cached find L621 contains plain named-subject row with displayed dates, without an observed subject target URI/link ID in returned fragment.",
+          "tool_header_rewritten_summary": true,
+          "source_original_body_authenticated": false,
+          "source_original_person_body_acquired": false,
+          "DOB_or_geographical_claim_adopted": false,
+          "acquisition_role": "worker_first_observed_canonical_list_open_plus_cachedparsedfind; rewrittenrepresentation_used_only_for_possible_URIcarrier_discovery",
+          "subject_target_URI_actually_observed": false,
+          "scope_limit": "Bounded returned carrier representation only; no global article-absence or source-exhaustion claim. Displayed date row is not original personal DOB proof.",
+          "source_quote": null,
+          "source_quote_word_count": 0,
+          "stopped_without_retry_variant_or_rawGET": true
+        }
+      ],
+      "prior_holds_preserved": [
+        "V4 RoyalSociety publisher-deposited abstract accepts exactnativeDOB and Cardiff/S2; original birth/source fields unchanged.",
+        "V11 first fullmemoirDOI10.1098/rsbm.1998.0029 inaccessible, remainsclosed; V33 bounded oldabstract/aggregators/roster review supplied no new actual subject birthregion.",
+        "No new quote or inferred birthplacecountry from parents, wife, school, work or familiar Cardiff."
+      ],
+      "qualified_new_DOB_conflict": false,
+      "qualified_new_birthplace_conflict": false,
+      "source_derived_age_inconsistency_observed": false,
+      "retrieval_representation": "Web-tool parsed normal list body, explicit rewritten list representation, or tool errors; no actual current original personal body/P19 statements or raw bytes."
+    },
+    {
+      "publication_date": null,
+      "source_revision_id": null,
+      "source_revision_utc": null,
+      "source_calendar_model": null,
+      "source_statement_rank": null,
+      "source_editorial_validation": null,
+      "source_informational_independence": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+      "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+      "method_application_scope_sha256": "b25ef3f4bbf1f3e5dddd48531812a60e40d1383b897a0d3d044b0604e62db212",
+      "publication_date_precision": "not_observed",
+      "record_id": "RS_PAST_NA3474",
+      "native": {
+        "record_id": "RS_PAST_NA3474",
+        "authority_name": "Coles; Bryan Randell (1926 - 1997)",
+        "native_dob": "1926-06-09",
+        "raw_birthplace": "Cardiff",
+        "frozen_birthplace_source_grade": "S3",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "082319491b8378e276409811734f4adf0d0d2d416d46a9b95f21e2ae54f121b2"
+      },
+      "status": "held_no_actual_canonical_person_body_or_actual_P19_chain",
+      "hold_type": "frozen_canonical_item_inaccessible_and_observed_person_name_link_is_redlink",
+      "reason": "Frozen Q21165448 firstopen inaccessible and closed. Actual normal1991 fellowshiplist supplies nativefullname/lifeyears and an observed personlink, but no exactDOB/distinctivecareer/birthplace. First actual name-link follow returns redlink404 and closed. No actual personbody/P19 chain or birthwhole-region proof; existing Cardiff/S3 remains unknown. Existing cross-source71/70 age contrast remains separate and is not an alternateDOB hold.",
+      "proof_mode": null,
+      "proof_chain": [],
+      "source_grade_adopted": null,
+      "source_grade_role": "geographic_support_only",
+      "reviewed_hemisphere": "unknown",
+      "no_new_geographic_assignment": true,
+      "native_and_original_birthplace_fields_unchanged": true,
+      "source_observations": [
+        {
+          "source_url": "https://www.wikidata.org/wiki/Q21165448",
+          "source_ref": "turn6017621view1",
+          "source_locator": "Tool Internal Error: URL not accessible; no body or actual statement acquired.",
+          "acquisition_role": "worker_first_current_canonical_item_open_from_frozen_lookup_qid",
+          "observed_identifier_provenance": "v43_scope_a.json lookup_qid; no guessedQID or nativeQID assignment",
+          "body_acquired": false,
+          "tool_error": "URL not accessible via this tool",
+          "source_quote": null,
+          "source_quote_word_count": 0,
+          "stopped_without_retry_variant_or_rawGET": true
+        },
+        {
+          "source_url": "https://en.wikipedia.org/wiki/List_of_fellows_of_the_Royal_Society_elected_in_1991",
+          "source_ref": "turn4084245view1",
+          "source_title": "List of fellows of the Royal Society elected in 1991 – Wikipedia",
+          "source_locator": "L107 list purpose; L119 full Bryan Randell Coles/life1926–1997/observed personlink50. No exact DOB, distinctive physics career or birthplace in this subject row.",
+          "tool_header_rewritten_summary": false,
+          "source_original_list_body_acquired": true,
+          "source_original_person_body_acquired": false,
+          "observed_source_full_name": "Bryan Randell Coles",
+          "source_lifespan": "1926-1997",
+          "source_birthdate": null,
+          "source_birthdate_precision": "only_lifespan_years_in_list_row",
+          "exact_native_DOB_actually_stated_in_acquired_current_person_body": false,
+          "distinctive_person_career_gate_verified": false,
+          "birthplace_relation_verified": false,
+          "acquisition_role": "worker_actual_normal_canonical_fellowship_list_body_only_as_observed_person_URIcarrier",
+          "DOB_or_geographical_claim_adopted": false,
+          "source_quote": null,
+          "source_quote_word_count": 0,
+          "observed_displayed_footer_metadata": {
+            "oldid": "1337134486",
+            "last_edited_literal": "7 February 2026, at 18:07 (UTC)",
+            "locator": "L170/L182",
+            "limits": "Actually displayed footer only; authenticated source revision/publication fields remain null."
+          }
+        },
+        {
+          "requested_click_ref": "turn4084245view1",
+          "requested_click_id": 50,
+          "observed_anchor": "Bryan Randell Coles",
+          "source_ref": "turn1208987view0",
+          "observed_requested_target_url": "https://en.wikipedia.org/wiki/Bryan_Randell_Coles?action=edit&redlink=1",
+          "source_locator": "Tool failed to fetch observed name-link redlink: (404) Not Found. No person body acquired.",
+          "tool_error": "(404) Not Found",
+          "raw_HTTP_status": null,
+          "body_acquired": false,
+          "acquisition_role": "worker_first_actual_follow_of_observed_person_name_link; failedredlink_closed",
+          "source_quote": null,
+          "source_quote_word_count": 0,
+          "stopped_without_retry_variant_or_rawGET": true
+        }
+      ],
+      "prior_holds_preserved": [
+        "V23 DavidEdwards Independent actual exactnativeDOB/Cardiff/S3 and distinctiveImperialsolidstatecareer accepted history unchanged; DavidEdwards expertise notestablished and failedauthorlink staysclosed.",
+        "JeremyClarke Felix reported71 versus conventional70 from Independent exactdates remains a cross-source reported-age contrast; Felix onlybirthyear/relativeMondaydeath. No alternateDOB inferred or age/dateclearance.",
+        "V34 firstdistinct DavidCaplin1999memoir JSTOR770263 toolnotaccessible remainsclosed without publisher/mirror variants; no current memoir retry."
+      ],
+      "qualified_new_DOB_conflict": false,
+      "qualified_new_birthplace_conflict": false,
+      "source_derived_age_inconsistency_observed": false,
+      "retrieval_representation": "Web-tool parsed normal list body, explicit rewritten list representation, or tool errors; no actual current original personal body/P19 statements or raw bytes."
+    }
+  ],
+  "new_DOB_or_place_conflicts": [],
+  "source_derived_age_inconsistency_candidates": [],
+  "qualified_new_issue_candidates": [],
+  "unqualified_quality_leads": [],
+  "unopened_distinct_original_work_leads": [],
+  "source_quote_words_by_original_work": {
+    "https://www.wikidata.org/wiki/Q21166050": 0,
+    "https://www.wikidata.org/wiki/Q21165448": 0,
+    "https://en.wikipedia.org/wiki/List_of_fellows_of_the_Royal_Society_W,_X,_Y,_Z": 0,
+    "https://en.wikipedia.org/wiki/List_of_fellows_of_the_Royal_Society_elected_in_1991": 0,
+    "https://en.wikipedia.org/wiki/Bryan_Randell_Coles?action=edit&redlink=1": 0
+  },
+  "prior_quote_accounting": "No new literal quotes from any current work, old memoir, obituary, tribute or searchprojection. Woods frozen memoir bornclause11 words and Coles frozen Independent vital-line5 words remain at unchanged native context locations only, not repeated here. No prior actual canonicalperson quotes found in targeted contexts. No fullsource/projectioncache written.",
+  "protocol_limits": {
+    "per_group_queries": 4,
+    "per_group_navigation_attempts": 10,
+    "used_queries": 4,
+    "used_navigation_attempts": 5,
+    "cached_finds_counted_separately": true,
+    "unused_navigation_budget_not_required_to_spend": true,
+    "first_failed_or_unusable_work_not_retried": true,
+    "no_rawGET_auth_bypass_or_failedwork_variants": true,
+    "original_source_caches_distributed": false,
+    "source_exhaustion_claimed": false
+  },
+  "method_amendment_created": false,
+  "method_reused_from_version": 36,
+  "scope_application_extension": true,
+  "no_new_admission_method_exception": true,
+  "raw_HTTP_status": null,
+  "raw_bytes_sha256": null,
+  "exact_request_utc": null,
+  "no_repo_master_Git_edit": true,
+  "no_source_exhaustion_finalfreeze_or_DOB_BPtierupgrade": true
+}

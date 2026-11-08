@@ -1,0 +1,9 @@
+# France B v14 — two birthday/identity cases
+
+Two fixed existing-source GETs returned200, with zero redirects, queries or retries. The Academy-issued2011PDF is captured from its existing institutional mirror; its actual page4 was rendered and visually read. It directly names Hélène Bouchiat, gives8May1958, and supplies the CNRS/LPS/Paris-Sud career. The actual tracked CTHS parent names Hélène, her parents Claude and Marie-Anne and the same nanophysics career; it has noDOBfield and supports identity only. The prior wrong-profile/mother and French-election warnings remain unchanged, and the accepted mother record is neither merged nor transferred.
+
+The actual PAS own-subject card names Nicole Marthe C.LeDouarin and directly prints20August1930, with a substantive developmental-biology/neural-crest research summary and Collège de France/CNRS context. PAS nomination and generic academy memberships supply no French election event.
+
+Both proposed birthdays equal unchanged singleton raw dates. These are exact individual identity/DOB proposals pending separate root and independent actual-byte QA, with source hashes and unique-person checks. The membership decision array is empty. Every old membership value, election/header/body warning, rawdate, source-origin/firstparty flag and identifier remains intact. Chédotal, Danchin, Bousquet, father/son, alias and other protected controls remain outside this batch.
+
+Archived CTHS response status and original capture time are genuinely unknown and remain null, with actual tar/member/index/URLmapping proof and local reopening separately retained. Fresh source statuses/times/bytes/hashes are observed. Raw originals and page images remain private; the public handoff contains bounded metadata only. No accepted data is edited, no BaZi is computed and no cohort is frozen.

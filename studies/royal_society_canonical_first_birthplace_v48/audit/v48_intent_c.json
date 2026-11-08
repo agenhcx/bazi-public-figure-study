@@ -1,0 +1,252 @@
+{
+  "schema": "UK_v48_c_exact_canonical_recheck_intent_v1",
+  "group": "c",
+  "method_id": "uk-first-birthplace-canonical-community-reference-pilot-v1",
+  "method_file": "v48_method_preregistration.json",
+  "method_sha256": "98e9efbe9c97049e64954b4f3e4ec1b6d92c21a104107ccad3bb5c14bf0850af",
+  "scope_file": "v48_original_scope.json",
+  "scope_sha256": "5619bae49af23c1e9646d98d49d41f189ea797f0767216f835124c38a3706290",
+  "native_scope_file": "v48_scope_c.json",
+  "native_scope_sha256": "7e73ce1cc33c06eef99b34f3d35572fc0bd9658dc79c34b1ae8d142b35506ed8",
+  "triage_file": "v48_triage_c.json",
+  "triage_sha256": "8239f607283f5f424644f61249a55fce9ee5e7a0736bce2d92e7aa6260144b57",
+  "historical_access_state": "Early V10 enwiki300+66+9 target membership/outcomes unknown; no first-ever/new-work/independence claim. This current one-body access recheck is explicitly authorized by prospective V48 retrieval amendment. All identified historical original failures and Finlay deviation retained, not retroactively cleared.",
+  "prerequest_context_review": {
+    "full_frozen_scope_method_and_three_native_objects_read": true,
+    "all9_actual_V48_snapshot_JSON_read_and_byte_pins_verified_against_previously_fully_read_inventory_contents": true,
+    "full_targeted_worker_AND_root_historical_contexts_reviewed": true,
+    "target_native_names": [
+      "Clive Cuthbertson",
+      "Siegfried Ruhemann",
+      "Paul O'Brien"
+    ],
+    "target_DOBs": [
+      "1863-11-29",
+      "1859-01-04",
+      "1954-01-22"
+    ],
+    "all9_target_issue_matches": [],
+    "historical_closed_original_works_preserved": [
+      [
+        {
+          "work": "E.C.C.Baly1944 CliveCuthbertson1863-1943 original memoir",
+          "url": "https://www.jstor.org/stable/768853",
+          "ref": "turn8845463view0",
+          "outcome": "One GoogleTagManager line only; no personal body, closed across carriers."
+        },
+        {
+          "work": "1944 RS issue metadata",
+          "url": "https://www.jstor.org/stable/i231367",
+          "refs": [
+            "turn3172888view0",
+            "turn9565257view0"
+          ],
+          "outcome": "Issue title/author and actual memoir URL observed; not personal birth body and not canonical personal work."
+        }
+      ],
+      [
+        {
+          "work": "1944 JournalChemicalSociety obituary external original-work carrier",
+          "url": "https://electronicsandbooks.com/edt/manual/Magazine/J/Journal%20of%20the%20Chemical%20Society%20%28Resumed%29%20UK/1944/JR9440000040.pdf",
+          "ref": "turn123view2",
+          "outcome": "Timed out; no original body."
+        },
+        {
+          "work": "Same1944 obituary original RSC publisher landing",
+          "url": "https://pubs.rsc.org/en/content/articlelanding/1944/jr/jr9440000040",
+          "ref": "turn130view2",
+          "outcome": "Tool403; no original body. Both historical actual routes preserved; entire original work remains closed, no cleanup/retry claim."
+        }
+      ],
+      [
+        {
+          "work": "LearnedSocietyWales2019 AGM paper collection",
+          "url": "https://www.learnedsociety.wales/wp-content/uploads/2019/05/AGM-2019-All-papers.pdf",
+          "ref": "turn8498563view1",
+          "outcome": "Tool400 contentlength15362389; closed original collection work."
+        },
+        {
+          "work": "RichardCatlow original PaulOBrien obituary carried in PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6364596/",
+          "ref": "turn5142654view0",
+          "outcome": "Three-line browser-check/reCAPTCHA shell; no original obituary body. Samework closed across publisher/PMC/repository carriers."
+        }
+      ]
+    ],
+    "strict_exactDOB_fullnative_life_career_birth_gate": true,
+    "no_new_date_name_or_inference_exception": true
+  },
+  "inventory_file_pins": {
+    "active_source_DOB_conflicts.json": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+    "birthplace_source_conflicts.json": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+    "source_derived_age_inconsistencies.json": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+    "provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+    "lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+    "cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+    "source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+    "omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+    "source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+  },
+  "context_file_pins": {
+    "v25_sources_a.json": "1fb9d95f59120d19493146240e78d708cd08e7ec3927d6b5aeeafe9888553506",
+    "v25_a_intent.json": "b74cd324fcc4d0cf26405deb2417abe2af995cd1e54ed1989b67e45459c28249",
+    "v25_root_intent.json": "c4efb79acd678335b5cd74adb1eb1ef3ebb13b264cb64a7bab4afb20cc962434",
+    "v18_sources_a.json": "f43e9935d4ab54aaf222a7af057ba9f77b1972088052b3d2fc70baa0e495e0ae",
+    "v18_a_intent.json": "2799abd3e600f5708c115a13856796fad5afad519dbeab04dbcc3f5a0f2af4c7",
+    "v18_root_intent.json": "f2a1c8304ed8d33af6027923894a5088bc2a4876c6a46a1ab50a00e581b15a49",
+    "v21_sources_b.json": "df480b7f21fb4f964c154738bc351ae6b40b693e80d3ebf7110680ce2a82be1c",
+    "v21_b_intent.json": "45e99692ccca06188dc125ffab14f7ae27739327024142e74b37c7a2f4b2b994",
+    "v21_root_intent.json": "656e6f7c8aa2654bccd66738327296217f10ba6d47783018912837e56f8abcb1",
+    "v48_triage_c.json": "8239f607283f5f424644f61249a55fce9ee5e7a0736bce2d92e7aa6260144b57"
+  },
+  "budgets": {
+    "queries": 4,
+    "person_body_opens": 3,
+    "current_EN_body_per_person": 1
+  },
+  "worker_place_page_opens_allowed": false,
+  "place_registry_owner": "root",
+  "no_WD_language_person_fallback": true,
+  "entries": [
+    {
+      "index": 0,
+      "kind": "query",
+      "record_id": "RS_PAST_NA1177",
+      "engine": "system2",
+      "query": "\"Clive Cuthbertson\" site:en.wikipedia.org",
+      "purpose": "Locate actual observed canonical English person URI for this fixed record only. Projection dates/places/identity are not body proof. One current exact EN body recheck, not a first-ever acquisition claim; no guessed URI/QID or old original-work retry.",
+      "written_utc": "2026-11-08T12:43:47.295682+00:00",
+      "status": "executed",
+      "result_ref_family": "turn7018481search",
+      "topic_relevant_canonical_EN_refs": [],
+      "outcome": "No actual English person URI for this target observed in aggregate initial result set. Non-English/other-person results are not permitted fallbacks or source proof.",
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "index": 1,
+      "kind": "query",
+      "record_id": "RS_PAST_NA8089",
+      "engine": "system2",
+      "query": "\"Siegfried Ruhemann\" site:en.wikipedia.org",
+      "purpose": "Locate actual observed canonical English person URI for this fixed record only. Projection dates/places/identity are not body proof. One current exact EN body recheck, not a first-ever acquisition claim; no guessed URI/QID or old original-work retry.",
+      "written_utc": "2026-11-08T12:43:47.295694+00:00",
+      "status": "executed",
+      "result_ref_family": "turn7018481search",
+      "topic_relevant_canonical_EN_refs": [],
+      "outcome": "No actual English person URI for this target observed in aggregate initial result set. Non-English/other-person results are not permitted fallbacks or source proof.",
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "index": 2,
+      "kind": "query",
+      "record_id": "RS_PAST_NA9858",
+      "engine": "system2",
+      "query": "\"Paul O'Brien\" \"1954\" site:en.wikipedia.org",
+      "purpose": "Locate actual observed canonical English person URI for this fixed record only. Projection dates/places/identity are not body proof. One current exact EN body recheck, not a first-ever acquisition claim; no guessed URI/QID or old original-work retry.",
+      "written_utc": "2026-11-08T12:43:47.295697+00:00",
+      "status": "executed",
+      "topic_relevant_canonical_EN_refs": [
+        "turn7018481search0"
+      ],
+      "observed_person_URI": "https://en.wikipedia.org/wiki/Paul_O%27Brien_%28chemist%29",
+      "outcome": "Observed exact English chemist personal URI; disambiguation/non-English results ignored. Projection birth/date/career remain locators only.",
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "index": 3,
+      "kind": "query",
+      "record_ids": [
+        "RS_PAST_NA1177",
+        "RS_PAST_NA8089"
+      ],
+      "engine": "system1",
+      "query": "site:en.wikipedia.org (\"Clive Cuthbertson\" OR \"Siegfried Ruhemann\")",
+      "purpose": "Final shared engine1 coverage locator for the two fixed English person works not observed in engine2 aggregate. Single query within4 total, no guessedURI/QID or language/WD fallback. Projections not body proof.",
+      "written_utc": "2026-11-08T12:44:50.828376+00:00",
+      "status": "executed",
+      "result_ref": "turn3709976search0",
+      "topic_relevant_locator_refs": [
+        "turn3709976search0"
+      ],
+      "outcome": "Final shared English locator exposes1914election list only; no actual fixed CliveCuthbertson/SiegfriedRuhemann EN personal URI observed. Other-language/wrong-person results ignored; no list-body/redlink/absence claim.",
+      "exact_backend_per_query_result_assignment_exposed": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "index": 4,
+      "kind": "open",
+      "record_id": "RS_PAST_NA9858",
+      "exact_url": "https://en.wikipedia.org/wiki/Paul_O%27Brien_%28chemist%29",
+      "from_ref": "turn7018481search0",
+      "URL_provenance": "Actual observed canonical English chemist personal URI, encoded exactly as returned.",
+      "purpose": "The ONE authorized current exact canonical English person-body access recheck for NA9858. Inspect actual full nativePaulOBrien components/document actual apostrophe style, exact1954-01-22, coherentcareer/compatiblelife/directborn. Record any actualbirthplacehref/linkID for root registry; workers do not openplace. Firstcurrentunusable work closes, no aliases/retry/WD/language/rawGET/auth fallback. Historical V10 membership unknown, not first-ever/new-work claim.",
+      "written_utc": "2026-11-08T12:44:50.828389+00:00",
+      "status": "executed",
+      "result_ref": "turn3709976view0",
+      "observed_canonical_URI": "https://en.wikipedia.org/wiki/Paul_O'Brien_(chemist)",
+      "representation": "explicit_rewritten_summary_of_same_underlying_canonical_person_work",
+      "outcome": "First current person access recheck returned explicitly rewritten summary, not admissible original body. Observed decoded canonical URI is same work; no second current canonical/alias/mobile request. No name/date/career/birthplace/absence/footer fact adopted from rewritten text.",
+      "source_body_acquired": false,
+      "stopped_on_first_current_unusable_work": true,
+      "no_same_work_canonical_followthrough": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    }
+  ],
+  "validation_before_web_batches": [
+    {
+      "intent_entries": [
+        0,
+        1,
+        2
+      ],
+      "validation_exit_code": 0,
+      "validation_utc": "2026-11-08T12:43:58.100083+00:00",
+      "separate_local_validation_before_web": true
+    },
+    {
+      "intent_entries": [
+        3,
+        4
+      ],
+      "validation_exit_code": 0,
+      "validation_utc": "2026-11-08T12:45:00.784098+00:00",
+      "separate_local_validation_before_web": true
+    }
+  ],
+  "retrieval_counts": {
+    "queries": 4,
+    "navigation_attempts": 1,
+    "person_body_open_attempts": 1,
+    "source_open_operations": 1,
+    "click_operations": 0,
+    "parsed_finds": 0,
+    "place_page_opens": 0,
+    "WD_person_opens": 0,
+    "other_language_person_opens": 0,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "current_person_request_counts": {
+    "RS_PAST_NA1177": 0,
+    "RS_PAST_NA8089": 0,
+    "RS_PAST_NA9858": 1
+  },
+  "bounded_pass_complete": true,
+  "all_current_work_closures_clean": true,
+  "protocol_deviations": [],
+  "source_exhausted": false,
+  "final_freeze": false
+}

@@ -1,0 +1,29 @@
+{
+  "scope": "membership only; fixed France B 65, with separate nonclaim incidental leads for remaining 131 fixed French rows",
+  "search_cap": 45,
+  "url_attempt_cap": 30,
+  "actual_queries": 45,
+  "actual_new_url_attempts": 20,
+  "stopped_before_url_cap": true,
+  "network_stopped": true,
+  "anubis_archive_route_retried": false,
+  "initial_private_cache_inventory": "No existing PDF/HTML original bodies found anywhere in workspace at start; original-byte/source inventories retained only as public metadata.",
+  "old_metadata_refetch": "memoriam current official URL is present in v4 public capture metadata; this is a fresh byte reacquisition, not a new URL discovery or old-byte reuse.",
+  "query_log": "search_queries.json",
+  "request_log": "requests.json",
+  "source_log": "source_manifest.json",
+  "body_matching": "batch_name_matches.json: proximity leads, not assertions. Matching screened all 196 current French fixed-queue rows against all 20 captured bodies.",
+  "pdf_skill_used": "e1/pdf read-only render-and-verify workflow",
+  "no_repository_writes": true,
+  "no_contacts_sent": true,
+  "body_and_images_private": true,
+  "holds_notes": [
+    "Halpern typed full role but no literal election year in captured obituary.",
+    "Binet relative 29-year duration explicitly not converted arithmetically.",
+    "Author titles never reassigned to subject; all strict named headings checked."
+  ],
+  "warnings": [
+    "No source exhaustiveness or frozen cohort claim.",
+    "No identity or DOB field changed."
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "request": {
+    "time_utc": "2026-11-04T00:01:49.355072+00:00",
+    "ordinal": 1,
+    "cohort": "NAS",
+    "operation": "combined_exact_English_label_or_alias_place_SPARQL",
+    "endpoint": "https://query.wikidata.org/sparql",
+    "exact_labels": [
+      "New York City",
+      "Colorado Springs"
+    ],
+    "query_file": "/workspace/scratch/7e8aa4e0d4af/academy_v4_workers/geography/exact_place_query.rq",
+    "query_sha256": "bf4f8de1a9cbb0a0bfdd3e187ecd66de170df94b97246c7e542fc79b6015287d",
+    "person_queries": 0,
+    "limit_used": false,
+    "retry_authorized": false,
+    "all_homonyms_retained": true,
+    "coordinate_rank_filter": false,
+    "globe_filter": false,
+    "P31_or_P17_filter": false
+  },
+  "request_url": "https://query.wikidata.org/sparql?query=PREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX+skos%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0APREFIX+schema%3A+%3Chttp%3A%2F%2Fschema.org%2F%3E%0APREFIX+p%3A+%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2F%3E%0APREFIX+ps%3A+%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fstatement%2F%3E%0APREFIX+psv%3A+%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fstatement%2Fvalue%2F%3E%0APREFIX+wikibase%3A+%3Chttp%3A%2F%2Fwikiba.se%2Fontology%23%3E%0ASELECT+%3FrequestedName+%3FmatchPredicate+%3Fplace+%3FenglishLabel+%3FenglishDescription%0A+++++++%3FcoordinateStatement+%3FcoordinateWkt+%3FcoordinateRank+%3FcoordinateValue%0A+++++++%3Flatitude+%3Flongitude+%3Fglobe+%3Fprecision%0A+++++++%3FinstanceStatement+%3FinstanceOf+%3FinstanceRank+%3FinstanceOfLabel%0A+++++++%3FcountryStatement+%3Fcountry+%3FcountryRank+%3FcountryLabel%0AWHERE+%7B%0A++VALUES+%3FrequestedName+%7B+%22New+York+City%22%40en+%22Colorado+Springs%22%40en+%7D%0A++VALUES+%3FmatchPredicate+%7B+rdfs%3Alabel+skos%3AaltLabel+%7D%0A++%3Fplace+%3FmatchPredicate+%3FrequestedName+.%0A++OPTIONAL+%7B+%3Fplace+rdfs%3Alabel+%3FenglishLabel+.+FILTER%28LANG%28%3FenglishLabel%29+%3D+%22en%22%29+%7D%0A++OPTIONAL+%7B+%3Fplace+schema%3Adescription+%3FenglishDescription+.+FILTER%28LANG%28%3FenglishDescription%29+%3D+%22en%22%29+%7D%0A++OPTIONAL+%7B%0A++++%3Fplace+p%3AP625+%3FcoordinateStatement+.%0A++++OPTIONAL+%7B+%3FcoordinateStatement+ps%3AP625+%3FcoordinateWkt+.+%7D%0A++++OPTIONAL+%7B+%3FcoordinateStatement+wikibase%3Arank+%3FcoordinateRank+.+%7D%0A++++OPTIONAL+%7B%0A++++++%3FcoordinateStatement+psv%3AP625+%3FcoordinateValue+.%0A++++++OPTIONAL+%7B+%3FcoordinateValue+wikibase%3AgeoLatitude+%3Flatitude+.+%7D%0A++++++OPTIONAL+%7B+%3FcoordinateValue+wikibase%3AgeoLongitude+%3Flongitude+.+%7D%0A++++++OPTIONAL+%7B+%3FcoordinateValue+wikibase%3AgeoGlobe+%3Fglobe+.+%7D%0A++++++OPTIONAL+%7B+%3FcoordinateValue+wikibase%3AgeoPrecision+%3Fprecision+.+%7D%0A++++%7D%0A++%7D%0A++OPTIONAL+%7B%0A++++%3Fplace+p%3AP31+%3FinstanceStatement+.%0A++++OPTIONAL+%7B%0A++++++%3FinstanceStatement+ps%3AP31+%3FinstanceOf+.%0A++++++OPTIONAL+%7B+%3FinstanceOf+rdfs%3Alabel+%3FinstanceOfLabel+.+FILTER%28LANG%28%3FinstanceOfLabel%29+%3D+%22en%22%29+%7D%0A++++%7D%0A++++OPTIONAL+%7B+%3FinstanceStatement+wikibase%3Arank+%3FinstanceRank+.+%7D%0A++%7D%0A++OPTIONAL+%7B%0A++++%3Fplace+p%3AP17+%3FcountryStatement+.%0A++++OPTIONAL+%7B%0A++++++%3FcountryStatement+ps%3AP17+%3Fcountry+.%0A++++++OPTIONAL+%7B+%3Fcountry+rdfs%3Alabel+%3FcountryLabel+.+FILTER%28LANG%28%3FcountryLabel%29+%3D+%22en%22%29+%7D%0A++++%7D%0A++++OPTIONAL+%7B+%3FcountryStatement+wikibase%3Arank+%3FcountryRank+.+%7D%0A++%7D%0A%7D%0AORDER+BY+%3FrequestedName+%3Fplace+%3FcoordinateStatement+%3FinstanceStatement+%3FcountryStatement+%3FmatchPredicate%0A&format=json",
+  "request_headers": {
+    "Accept": "application/sparql-results+json",
+    "User-Agent": "scientist-birthplace-geography-review/4 (research; one exact-name query)"
+  },
+  "capture_kind": "original_HTTP_response_bytes",
+  "captured_at_utc": "2026-11-04T00:01:55.012408+00:00",
+  "query_attempts": 1,
+  "retry_performed": false,
+  "status": 200,
+  "final_url": "https://query.wikidata.org/sparql?query=PREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX+skos%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0APREFIX+schema%3A+%3Chttp%3A%2F%2Fschema.org%2F%3E%0APREFIX+p%3A+%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2F%3E%0APREFIX+ps%3A+%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fstatement%2F%3E%0APREFIX+psv%3A+%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fstatement%2Fvalue%2F%3E%0APREFIX+wikibase%3A+%3Chttp%3A%2F%2Fwikiba.se%2Fontology%23%3E%0ASELECT+%3FrequestedName+%3FmatchPredicate+%3Fplace+%3FenglishLabel+%3FenglishDescription%0A+++++++%3FcoordinateStatement+%3FcoordinateWkt+%3FcoordinateRank+%3FcoordinateValue%0A+++++++%3Flatitude+%3Flongitude+%3Fglobe+%3Fprecision%0A+++++++%3FinstanceStatement+%3FinstanceOf+%3FinstanceRank+%3FinstanceOfLabel%0A+++++++%3FcountryStatement+%3Fcountry+%3FcountryRank+%3FcountryLabel%0AWHERE+%7B%0A++VALUES+%3FrequestedName+%7B+%22New+York+City%22%40en+%22Colorado+Springs%22%40en+%7D%0A++VALUES+%3FmatchPredicate+%7B+rdfs%3Alabel+skos%3AaltLabel+%7D%0A++%3Fplace+%3FmatchPredicate+%3FrequestedName+.%0A++OPTIONAL+%7B+%3Fplace+rdfs%3Alabel+%3FenglishLabel+.+FILTER%28LANG%28%3FenglishLabel%29+%3D+%22en%22%29+%7D%0A++OPTIONAL+%7B+%3Fplace+schema%3Adescription+%3FenglishDescription+.+FILTER%28LANG%28%3FenglishDescription%29+%3D+%22en%22%29+%7D%0A++OPTIONAL+%7B%0A++++%3Fplace+p%3AP625+%3FcoordinateStatement+.%0A++++OPTIONAL+%7B+%3FcoordinateStatement+ps%3AP625+%3FcoordinateWkt+.+%7D%0A++++OPTIONAL+%7B+%3FcoordinateStatement+wikibase%3Arank+%3FcoordinateRank+.+%7D%0A++++OPTIONAL+%7B%0A++++++%3FcoordinateStatement+psv%3AP625+%3FcoordinateValue+.%0A++++++OPTIONAL+%7B+%3FcoordinateValue+wikibase%3AgeoLatitude+%3Flatitude+.+%7D%0A++++++OPTIONAL+%7B+%3FcoordinateValue+wikibase%3AgeoLongitude+%3Flongitude+.+%7D%0A++++++OPTIONAL+%7B+%3FcoordinateValue+wikibase%3AgeoGlobe+%3Fglobe+.+%7D%0A++++++OPTIONAL+%7B+%3FcoordinateValue+wikibase%3AgeoPrecision+%3Fprecision+.+%7D%0A++++%7D%0A++%7D%0A++OPTIONAL+%7B%0A++++%3Fplace+p%3AP31+%3FinstanceStatement+.%0A++++OPTIONAL+%7B%0A++++++%3FinstanceStatement+ps%3AP31+%3FinstanceOf+.%0A++++++OPTIONAL+%7B+%3FinstanceOf+rdfs%3Alabel+%3FinstanceOfLabel+.+FILTER%28LANG%28%3FinstanceOfLabel%29+%3D+%22en%22%29+%7D%0A++++%7D%0A++++OPTIONAL+%7B+%3FinstanceStatement+wikibase%3Arank+%3FinstanceRank+.+%7D%0A++%7D%0A++OPTIONAL+%7B%0A++++%3Fplace+p%3AP17+%3FcountryStatement+.%0A++++OPTIONAL+%7B%0A++++++%3FcountryStatement+ps%3AP17+%3Fcountry+.%0A++++++OPTIONAL+%7B+%3Fcountry+rdfs%3Alabel+%3FcountryLabel+.+FILTER%28LANG%28%3FcountryLabel%29+%3D+%22en%22%29+%7D%0A++++%7D%0A++++OPTIONAL+%7B+%3FcountryStatement+wikibase%3Arank+%3FcountryRank+.+%7D%0A++%7D%0A%7D%0AORDER+BY+%3FrequestedName+%3Fplace+%3FcoordinateStatement+%3FinstanceStatement+%3FcountryStatement+%3FmatchPredicate%0A&format=json",
+  "response_headers": {
+    "server": "envoy",
+    "date": "Wed, 04 Nov 2026 00:01:54 GMT",
+    "content-type": "application/sparql-results+json;charset=utf-8",
+    "x-first-solution-millis": "12",
+    "x-served-by": "wdqs2008",
+    "access-control-allow-origin": "*",
+    "access-control-allow-headers": "accept, content-type, content-length, user-agent, api-user-agent",
+    "cache-control": "public, max-age=300",
+    "age": "0",
+    "accept-ranges": "bytes",
+    "vary": "Accept, Accept-Encoding",
+    "x-cache": "cp2053 miss, cp2053 pass",
+    "x-cache-status": "pass",
+    "strict-transport-security": "max-age=106384710; includeSubDomains; preload",
+    "report-to": "{ \"group\": \"wm_nel\", \"max_age\": 604800, \"endpoints\": [{ \"url\": \"https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0\" }] }",
+    "nel": "{ \"report_to\": \"wm_nel\", \"max_age\": 604800, \"failure_fraction\": 0.05, \"success_fraction\": 0.0}",
+    "x-request-id": "afc5bbb9-4295-46a3-b7f2-59643d2ed8dd",
+    "server-timing": "cache;desc=\"pass\", host;desc=\"cp2053\",co_id;desc=\"2885106350\"",
+    "x-envoy-upstream-service-time": "328",
+    "connection": "close",
+    "transfer-encoding": "chunked"
+  },
+  "response_file": "/workspace/scratch/7e8aa4e0d4af/academy_v4_workers/geography/exact_place_query_response.bin",
+  "response_bytes": 133332,
+  "response_sha256": "4153c960cb3710ad452d5dcbd74b3e8a2236898bb6b3658e7ae3da6b6837c38a",
+  "parse_status": "valid_SPARQL_JSON",
+  "binding_count": 94,
+  "response_representation": "original_HTTP_SPARQL_JSON_response_bytes",
+  "distribution_metadata_note": {
+    "removed_header_fields": [
+      "/request/authorization",
+      "/response_headers/x-client-ip",
+      "/response_headers/set-cookie"
+    ],
+    "original_metadata_sha256": "685771d8a2f0a9ef9b88732e24cdb3676b728a5ff5c430a8060cd29081fd60ab",
+    "source_body_and_query_response_bytes_unchanged": true
+  }
+}

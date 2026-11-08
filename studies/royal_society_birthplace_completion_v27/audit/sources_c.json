@@ -1,0 +1,308 @@
+{
+  "schema": "v27_sources_c_v1",
+  "worker": "/root/v26_sources_c continuing assignedv27groupc",
+  "written_utc": "2026-11-06T10:57:40.408164+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA2025",
+    "RS_PAST_NA2030",
+    "RS_PAST_NA2033",
+    "RS_PAST_NA2049"
+  ],
+  "intent_file": "v27_c_intent.json",
+  "counts": {
+    "discovery_queries": 8,
+    "web_navigation_attempts": 7,
+    "parsed_find_operations": 0,
+    "screenshots": 0,
+    "raw_HTTP_or_PDF_GETs": 0,
+    "body_verified_birthplace_candidates": 0,
+    "holds": 4
+  },
+  "candidates": [],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA2025",
+      "native": {
+        "record_id": "RS_PAST_NA2025",
+        "authority_name": "Reason; Richard Edmund (1903 - 1987)",
+        "native_dob": "1903-12-21",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "04fc3da07ed9120fff5e92d1dac64e2af123ad0421303c9d3bfca65bbdcf972e"
+      },
+      "status": "hold_no_explicit_birthplace_acquired_in_qualifying_originalbody",
+      "hold_type": "original_birthplace_assertion_not_acquired",
+      "reason": "AlanPoulton originalBrio2023 article actually supplies fullRichardEdmundReason/exact21December1903 and matchingmetrology/optics/FRS1971career. Devon/BudleighSalterton clause refers to parentalresidence, followed by twochildren birthdates; it is not an explicitsubjectbirthplace. JSTORoriginalmemoir route exposedtitle/oneparsedline only, no qualifyingbirthplacebody retained. Historicaldictionarycarrier searchprojection gives ExeterDevonEngland but actualopenedpage contains1990dictionarynavigation and no Reasonentry; searchprojection notadopted. No birthplace/country/hemisphere inferred from familyresidence or school/work/death.",
+      "sources": [
+        {
+          "url": "https://iaml-uk-irl.org/media/Brio_60_2_2023.pdf",
+          "body_ref": "turn6956638view0",
+          "locator": "L1336Whitehousememoirreference;L1355-1358parentalresidence/actualsubjectDOB;L1436-1445optics/metrology/FRS1971/death1987",
+          "source_author": "Alan Poulton",
+          "source_article_title": "A Life’s Work In Two Suitcases",
+          "publication_year": "2023",
+          "source_quote": "",
+          "quote_word_count": 0,
+          "actual_subject_birthdate": "1903-12-21",
+          "actual_subject_birthdate_precision": "exactday",
+          "birthplace_relation_verified": false,
+          "no_exhaustivefullworkabsence_claim": true
+        },
+        {
+          "url": "https://www.jstor.org/stable/770095",
+          "body_ref": "turn1843900view0",
+          "observed_title": "Richard Edmund Reason. 21 December 1903-20 March 1987",
+          "retrieval_limit": "Title/oneparsedline returned; displayfilter omitted actualsinglelinecontent, which was not retained/used. No underlyingbirthplacebody/error/contentverdict claimed and no retry.",
+          "original_work_author_from_discovery_only": "David J. Whitehouse",
+          "original_work_year_from_discovery_only": "1990"
+        },
+        {
+          "url": "https://translate.academic.ru/1990/en/en/3/",
+          "body_ref": "turn7874757view0",
+          "locator": "L30-58 generic1990dictionaryindex",
+          "retrieval_limit": "Actualopenedrepresentation no Reasonentry. ExeterDevonEngland exists onlyin turn6956638search1 projection, not acquiredoriginalassertion; no sourceversionchange explanation claimed."
+        }
+      ],
+      "quotes_used": [],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed text and exact toolresults, not rawHTTPbytes",
+      "no_master_change": true
+    },
+    {
+      "record_id": "RS_PAST_NA2030",
+      "native": {
+        "record_id": "RS_PAST_NA2030",
+        "authority_name": "Cook; Arthur Herbert (1911 - 1988)",
+        "native_dob": "1911-07-10",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "817621dbef6a183a97fa7d8a2b6943b8b65cfd306914e3d2ff56eb7aa15a19b5"
+      },
+      "status": "hold_original_birthplace_body_unavailable",
+      "hold_type": "original_birthplace_body_unavailable",
+      "reason": "Discovery identifies authoredJ.A.Elvidge1991memoirtitle with fullnative/exact10July1911/26July1988, but first originalDOI navigation toolnotaccessible and stopped. NPGportraitprojection fullArthurHerbertCook/life1911-1988/BrewingIndustryResearchFoundationdirector supplies no qualifyingbirthplace. Different1874familyCook results excluded as otheridentity, not nativeDOBconflict.",
+      "sources": [
+        {
+          "url": "https://doi.org/10.1098/rsbm.1991.0005",
+          "body_ref": "turn1843900view1",
+          "exact_tool_error": "URL https://doi.org/10.1098/rsbm.1991.0005 is not accessible via this tool.",
+          "stopped_without_retry": true,
+          "discovery_ref": "turn6956638search6",
+          "discovery_only_title": "Arthur Herbert Cook. 10 July 1911 - 26 July 1988",
+          "discovery_only_author": "J. A. Elvidge",
+          "discovery_only_original_publication": "Biographical Memoirs of Fellows of the Royal Society37:86-102(1991)",
+          "no_original_body_acquired": true
+        }
+      ],
+      "quotes_used": [],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed text and exact toolresults, not rawHTTPbytes",
+      "no_master_change": true
+    },
+    {
+      "record_id": "RS_PAST_NA2033",
+      "native": {
+        "record_id": "RS_PAST_NA2033",
+        "authority_name": "Dyson; James (1914 - 1990)",
+        "native_dob": "1914-12-10",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "00ec8d206de94a7159b6974cce0e98cd9728cad441ce915b994be0a599d2552e"
+      },
+      "status": "hold_original_birthplace_body_unavailable",
+      "hold_type": "original_birthplace_body_unavailable",
+      "reason": "Wikipediaactualbody used solely as linkcarrier for T.E.Allibone1991originalmemoir, not as birthplaceproof. Sourcecarrier has JamesDyson/exact10December1914/22January1990/opticscareer but RugbyWarwickshire is1939residence, not birth. First observedDOIclick returned403 and stopped; no originalmemoirbody/birthplace acquired. JamesDyson1947inventor and otherhomonyms excluded without nativechange.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/James_Dyson_(physicist)",
+          "body_ref": "turn1843900view3",
+          "locator": "L113-119",
+          "role": "linkcarrier_only_not_birthplace_evidence",
+          "original_work_discovery_only": "Allibone,T.E.(1991),James Dyson10December1914-22January1990, Biographical Memoirs of Fellows of the Royal Society37",
+          "original_link_id": 48
+        },
+        {
+          "url": "https://doi.org/10.1098%2Frsbm.1991.0008",
+          "body_ref": "turn7874757view1",
+          "exact_tool_error": "Failed to fetch https://doi.org/10.1098%2Frsbm.1991.0008: (403) Forbidden",
+          "stopped_without_retry": true,
+          "requested_via_observed_link": true,
+          "no_manual_variant_or_retry": true,
+          "no_original_body_acquired": true
+        }
+      ],
+      "quotes_used": [],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed text and exact toolresults, not rawHTTPbytes",
+      "no_master_change": true
+    },
+    {
+      "record_id": "RS_PAST_NA2049",
+      "native": {
+        "record_id": "RS_PAST_NA2049",
+        "authority_name": "Rainey; Reginald Charles (1913 - 1990)",
+        "native_dob": "1913-06-18",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "ba5e1b8780d7f0f092d234035d41c4df70eda2c8ed1f6a888b769c4ad8dd5c93"
+      },
+      "status": "hold_original_birthplace_body_unavailable",
+      "hold_type": "original_birthplace_body_unavailable",
+      "reason": "DiscoveryonlyfullReginaldCharlesRainey/exact18June1913/18January1990 entomologist and authoredR.J.V.Joyce1992memoirreference, but first originalDOI navigation toolnotaccessible and stopped. Wikipedia/searchmirrors do not supply acquiredoriginalbirthplacebody; no birthcountry from Britishnationality or locustresearch/work.",
+      "sources": [
+        {
+          "url": "https://doi.org/10.1098/rsbm.1992.0015",
+          "body_ref": "turn1843900view2",
+          "exact_tool_error": "URL https://doi.org/10.1098/rsbm.1992.0015 is not accessible via this tool.",
+          "stopped_without_retry": true,
+          "discovery_ref": "turn6956638search7",
+          "discovery_only_title": "Reginald Charles Rainey. 18 June 1913-18 January 1990",
+          "discovery_only_author": "R. J. V. Joyce",
+          "discovery_only_original_publication": "Biographical Memoirs of Fellows of the Royal Society38:289-303(1992)",
+          "no_original_body_acquired": true
+        }
+      ],
+      "quotes_used": [],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed text and exact toolresults, not rawHTTPbytes",
+      "no_master_change": true
+    }
+  ],
+  "query_ledger": [
+    {
+      "ordinal": 1,
+      "engine": "system2",
+      "query": "\"Richard Edmund Reason\" born",
+      "observed_subject_relevant_response_refs": [
+        "turn2253063search48",
+        "turn2253063search49"
+      ]
+    },
+    {
+      "ordinal": 2,
+      "engine": "system2",
+      "query": "\"Arthur Herbert Cook\" born",
+      "observed_subject_relevant_response_refs": [
+        "turn2253063search3",
+        "turn2253063search4",
+        "turn2253063search5"
+      ]
+    },
+    {
+      "ordinal": 3,
+      "engine": "system2",
+      "query": "\"James Dyson\" \"1914\" born",
+      "observed_subject_relevant_response_refs": [
+        "turn2253063search0",
+        "turn2253063search51"
+      ]
+    },
+    {
+      "ordinal": 4,
+      "engine": "system2",
+      "query": "\"Reginald Charles Rainey\" born",
+      "observed_subject_relevant_response_refs": [
+        "turn2253063search50",
+        "turn2253063search35"
+      ]
+    },
+    {
+      "ordinal": 5,
+      "engine": "system1",
+      "query": "\"Richard Edmund Reason\" biography memoir born",
+      "observed_subject_relevant_response_refs": [
+        "turn6956638search0",
+        "turn6956638search1",
+        "turn6956638search5"
+      ]
+    },
+    {
+      "ordinal": 6,
+      "engine": "system1",
+      "query": "\"Arthur Herbert Cook\" \"1911\" biography memoir",
+      "observed_subject_relevant_response_refs": [
+        "turn6956638search2",
+        "turn6956638search6"
+      ]
+    },
+    {
+      "ordinal": 7,
+      "engine": "system1",
+      "query": "\"James Dyson\" \"1914\" memoir optics born",
+      "observed_subject_relevant_response_refs": [
+        "turn6956638search3",
+        "turn6956638search4"
+      ]
+    },
+    {
+      "ordinal": 8,
+      "engine": "system1",
+      "query": "\"Reginald Charles Rainey\" memoir born",
+      "observed_subject_relevant_response_refs": [
+        "turn6956638search7",
+        "turn6956638search8"
+      ]
+    }
+  ],
+  "query_ledger_representation": "Exact queries from actualcalls. Each fourquerybatch combinedresults; refs are observed subjectrelevant responses, not a guaranteedtoolperqueryprovenancemapping. No missingIDs reconstructed.",
+  "navigation_ledger": [
+    {
+      "ordinal": 1,
+      "ref": "turn6956638view0",
+      "url": "https://iaml-uk-irl.org/media/Brio_60_2_2023.pdf",
+      "outcome": "OriginalBrioReasonfamilyarticlebody; parentalresidence not subjectbirthplace"
+    },
+    {
+      "ordinal": 2,
+      "ref": "turn1843900view0",
+      "url": "https://www.jstor.org/stable/770095",
+      "outcome": "Title/oneparsedline, no qualifyingbody retained; displayfilter limitexplicit"
+    },
+    {
+      "ordinal": 3,
+      "ref": "turn1843900view1",
+      "url": "https://doi.org/10.1098/rsbm.1991.0005",
+      "outcome": "toolnotaccessible stopped"
+    },
+    {
+      "ordinal": 4,
+      "ref": "turn1843900view2",
+      "url": "https://doi.org/10.1098/rsbm.1992.0015",
+      "outcome": "toolnotaccessible stopped"
+    },
+    {
+      "ordinal": 5,
+      "ref": "turn1843900view3",
+      "url": "https://en.wikipedia.org/wiki/James_Dyson_(physicist)",
+      "outcome": "Dysonoriginalmemoirlinkcarrieronly, notbirthplaceproof"
+    },
+    {
+      "ordinal": 6,
+      "ref": "turn7874757view0",
+      "url": "https://translate.academic.ru/1990/en/en/3/",
+      "outcome": "Genericdictionaryindexactualbody; no Reasonentry; searchprojection notadopted"
+    },
+    {
+      "ordinal": 7,
+      "ref": "turn7874757view1",
+      "url": "https://doi.org/10.1098%2Frsbm.1991.0008",
+      "outcome": "403stopped, no originalmemoirbody"
+    }
+  ],
+  "protocol_deviations": [
+    {
+      "kind": "display_filter_omitted_unretained_singleline",
+      "ref": "turn1843900view0",
+      "detail": "Initialrelevantlinefilter retained title/total1line but omitted underlyingL0. Exactsinglelinecontent not retained and no originalbody/status/error claim derived. No retry made."
+    }
+  ],
+  "limits": "Queries/navintentbeforecalls including explicitgeneralfollowuppurpose. No failedendpointretries/variants/accessbypass/rawGET; no originalDOB/identity/calendar/cohorteligibility/QID/country/coordinates/sourcegradechanges. No fullsources/PDF/images/projectioncaches distributed; no sourcechildren or code/study/Git/mastermutations. No newactualDOB/placeconflicts identified; title/projectioncompatibility does not become actualbodyverification."
+}

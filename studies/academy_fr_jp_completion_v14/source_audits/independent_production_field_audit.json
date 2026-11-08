@@ -1,0 +1,108 @@
+{
+  "audit_kind": "independent_read_only_v14_production_country_field_audit",
+  "reviewer": "v14_audit",
+  "completed_utc": "2026-11-01T08:37:07.207803+00:00",
+  "independent_qa_passed": true,
+  "baseline_commit": "85697a4dea8792ee3170061dd14cef071b339d4d",
+  "audited_CSV_sha256s": {
+    "france_accepted_all_three.csv": "ca0a418e4bb00fdd92bf407815c8254c5b96544f041e1569aa40e92615e03d8a",
+    "france_case_adjudications.csv": "24e073787758ac40d6acc400a9690c20567f3e3614fe3fad5c47dd1e14e6f0be",
+    "france_master877.csv": "2720109cba3dcacf4ddcb569366f53bdcbac9f48f6a53445cd3df329a2c5f576",
+    "france_membership_decisions.csv": "a7d3bd83e5322b0f1ae95500f923aa5be4ec23ef239491ccf3d453f77db9f690",
+    "france_remaining_gaps.csv": "60eb691607929ed7cba880bf2d94741263e0e75c14fb9e639416d630c70e5e5d",
+    "japan_birth_claims.csv": "c0a7820ea8149829d3b58caae18fefbb7b15fbc68f3ca1cb1f86582f793aff4c",
+    "japan_master.csv": "f901f568d0a5c85e8ace5ae928d5a3473b9e7691131941075b9cd19d1c7a3021",
+    "japan_next_action_queue.csv": "b36bf64ab5b28f8bd08e795fa4817e0ce85a669a075ebdedbb2cf1786b8d9022"
+  },
+  "result": {
+    "changed_old_fields_by_candidate": {
+      "CTHS_102836": [
+        "source_evidence_review_version"
+      ],
+      "CTHS_128379": [
+        "identity_accepted",
+        "dob_accepted",
+        "accepted_canonical_person_name",
+        "accepted_dob_iso",
+        "completion_status",
+        "completion_remaining_dimensions"
+      ],
+      "PROFILE2_08407b6d0479b1d0": [
+        "identity_accepted",
+        "dob_accepted",
+        "accepted_canonical_person_name",
+        "accepted_dob_iso",
+        "completion_status",
+        "completion_remaining_dimensions"
+      ],
+      "PROFILE2_738d6d5c74a7a874": [
+        "membership_accepted",
+        "accepted_full_member_election_year",
+        "membership_role_supported",
+        "election_cutoff_stable",
+        "completion_status",
+        "completion_remaining_dimensions",
+        "source_evidence_review_version",
+        "accepted_election_precision",
+        "role_cutoff_and_dob_supported"
+      ]
+    },
+    "caseids": [
+      "CTHS_128379",
+      "PROFILE2_08407b6d0479b1d0"
+    ],
+    "membership_positiveids": [
+      "PROFILE2_738d6d5c74a7a874"
+    ],
+    "France_current": {
+      "identity_accepted": 787,
+      "dob_accepted": 775,
+      "membership_accepted": 642
+    },
+    "all_three": 639,
+    "remaining": 238,
+    "casehistory": 32,
+    "membershiphistory": 483,
+    "all_untouched_old_fields_preserved": true,
+    "protectedrows_every_oldfield_preserved": true,
+    "Japan3CSVbytes_identical": true
+  },
+  "all877_original_raw_claims_source_origin_firstparty_flags_identifiers_displaynames_and_groups_preserved": true,
+  "all785_old_approved_identity_values_and773_old_approved_DOB_values_preserved": true,
+  "all641_old_strict_membership_rows_every_old_field_preserved": true,
+  "only2_exact_B2_oldzero_identity_DOB_cases_promoted": true,
+  "both_B2_source_proofs_and_singleton_dates_bound_to_final_exact_QA": true,
+  "both_B2_membership_fields_roles_dates_chronology_review_flags_and_source_warnings_literally_unchanged": true,
+  "Bouchiat_own1958_DOB_not_mother1934_date_or_name_transfer": true,
+  "mother_CTHS111838_every_old_field_preserved": true,
+  "Nicole_PAS1999_nomination_not_French_event": true,
+  "only_new_strict_membership": {
+    "candidate_group_id": "PROFILE2_738d6d5c74a7a874",
+    "name": "Michel Beaudouin-Lafon",
+    "election_year": 2024,
+    "precision": "year",
+    "election_day": null
+  },
+  "Chevalier_membership_hold_and_old_ID_DOB_values_retained": true,
+  "government_source_class_not_added_or_approved": true,
+  "old481_membership_ledger_rows_and30_case_ledger_rows_every_old_CSV_field_preserved": true,
+  "all25_chronology_hold_rows_every_old_field_preserved": true,
+  "all4_exact_DOB_conflict_rows_every_old_field_preserved": true,
+  "Dassault13_vs18January1882_neither_selected_and_membership_preserved": true,
+  "all12_six_aliaspair_rows_every_old_field_preserved": true,
+  "father102829_all_three_zero_and5_machine1862_vs1867_control_fields_preserved": true,
+  "son112057_every_old_field_preserved": true,
+  "Chédotal_Danchin_Bousquet_historical_holds_and_all_old_fields_preserved": true,
+  "Casimir_Chagas_Bronk_and_other_foreign_role_controls_preserved": true,
+  "France73_missing_raw_day_rows_unchanged": true,
+  "Japan_master528claims_and112queue_CSV_bytes_identical": true,
+  "Japan46_holds_four_calendar_outcomes_and_all_v10_v11_scope_gains_preserved": true,
+  "France_fixed4_and_actual4_source_dispositions_Japan0": true,
+  "no_C_source_processing_or_raw_DOB_additions": true,
+  "new_B2_case_QA_sha256": "ec1835973e87a98a1d4b807f08d57425f2ce7e4303b455b26fbe4813b44522ed",
+  "new_raw_birthday_claims": 0,
+  "auditor_network_requests": 0,
+  "auditor_repository_writes": 0,
+  "no_analysis_BaZi_freeze_or_outreach": true,
+  "scope_note": "Independent country-field audit. Final production tests, README, inventory and byte replay are separate packaging checks still pending when this audit was written."
+}

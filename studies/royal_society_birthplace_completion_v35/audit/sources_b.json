@@ -1,0 +1,232 @@
+{
+  "written_utc": "2026-11-06T23:38:08.424737+00:00",
+  "group": "b",
+  "phase": "geography_only_v35",
+  "intent_file": "v35_b_intent.json",
+  "all2_full_objects_and_priorholds_read_before_queries": true,
+  "all_intent_writes_exit0_separate_before_web": true,
+  "retrieval_counts": {
+    "queries": 4,
+    "navigation_attempts": 4,
+    "source_open_operations": 3,
+    "click_operations": 1,
+    "parsed_finds": 0,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "query_ledger": [
+    {
+      "engine": "system2",
+      "queries": [
+        "\"John Walter Ryde\" born England biography",
+        "\"William Scott Farren\" born England biography"
+      ],
+      "result_collection": "turn3425035",
+      "role": "discoveryonlynotoriginalbody"
+    },
+    {
+      "engine": "system1",
+      "queries": [
+        "\"John Walter Ryde\" \"born\" Brighton Sussex",
+        "\"William Scott Farren\" \"born\" Cambridge England"
+      ],
+      "result_collection": "turn2732162",
+      "role": "discoveryonlynotoriginalbody"
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "record_id": "RS_PAST_NA872",
+      "url": "https://hooke.org.uk/index.php/farren-history",
+      "ref": "turn8348568view0",
+      "status": "actual_new_original_selfpublished_family_biographical_essay_body",
+      "locator": "L134heading/L138fullSirWilliamScottFarren;L139-142familynarrator/Mildred/death1970;L153aviation/flyingboat/Vulcancareer;L159-173subpageoriginalessaylinks",
+      "finding": "Actualfullnative/distinctiveaviationcareer/nativecompatibledeathyear1970; no actualDOB/bornregion in inspectedintro. Same-namedfather/grandfather notsubject, familyKingstonCambridgeresidence notbirth. Narratorfamilyclaimretained asselfpublished notindependentverifiedexpertorhostS1.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed actualoriginalbody, notrawHTTPbytes"
+    },
+    {
+      "record_id": "RS_PAST_NA872",
+      "url": "https://hooke.org.uk/index.php/farren-history/william-farren-background-early-years",
+      "ref": "turn8348568view1",
+      "status": "actual_new_original_selfpublished_family_background_body",
+      "locator": "L135title;L138Cambridgeshirefensphotocaption;L144-160same-namedfather/grandfather/greatgrandfather;L150explicitfullWilliamScottFarrenhimself;L163-170schools/admissionrecord/Pelican",
+      "finding": "Actualnativefullcomponents in samefamilyproject, distinctivefamily/school/historycontext, no subjectborncountry/wholecounty. Cambridgeshirefensphotograph,26GuestRoadschooladdress/Cambridgefamilyshopsnotdirectbornregion. Sourceimage/schoolrecordnotacquired; imagesnotused.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed actualoriginalbody, notrawHTTPbytes"
+    },
+    {
+      "record_id": "RS_PAST_NA872",
+      "click_source_ref": "turn8348568view0",
+      "link_id": 86,
+      "url": "https://hooke.org.uk/index.php/farren-history/william-farren-director-of-farnborough",
+      "ref": "turn7614630view0",
+      "status": "actual_observed_Overview_link_new_family_original_body",
+      "locator": "L3title;L8actualwriting2015context;L11-15familynarrative/Mildred/RS1971memoirlink;L16actualbornyear1892;L24-34flyingboat/RAEcareer",
+      "finding": "Actualbornyear1892 compatible unchangednativeexact1892-04-03, but no exactmonthday or bornplace/country. Fullnativebelongssamefamilyprojectintro and earlyyearspage. OriginaloverviewL12deathAugust1970 observedyearcompatiblewithnativeauthority1970; no alternativeDOBclaim, no nativedeathdaycomparison or cross-sourceendpointconflictfromWiki/search. L15memoirlink is existingRS1971work, not falselynewdistinctreference.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed actualoriginalbody, notrawHTTPbytes"
+    },
+    {
+      "record_id": "RS_PAST_NA813",
+      "url": "https://doi.org/10.1098/rsbm.1962.0008",
+      "ref": "turn2188565view0",
+      "status": "first_original_work_fullbody_attempt_tool_notaccessible_STOPPED",
+      "finding": "ProspectiveboundedrootclarificationpermittedfirstfulloriginalRS1962bodybecauseavailablepriorrecordedhistoryshowednoRS1962failedfullroute. ExistingCrossrefabstractsuccessnotnewindependentwork. FirstpublisherDOIopen toolnotaccessible; noactualnewbodyacquired. Stopped,noJSTOR/otherURLvariant/retry/rawGET.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "toolerror, notrawHTTPresponsebytes"
+    }
+  ],
+  "parsed_find_ledger": [],
+  "candidates": [],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA813",
+      "native": {
+        "record_id": "RS_PAST_NA813",
+        "source_authorised_full_name": "Ryde; John Walter (1898 - 1961)",
+        "dob": "1898-04-15",
+        "raw_birthplace": "Brighton",
+        "birthplace_source_grade": "S2"
+      },
+      "hold_type": "bounded_search_no_new_distinct_original_bornregion_work",
+      "reason": "Fourqueries(twoRyde)mainlyrecoveralreadyacceptedRS1962memoir/indexes/officialcorrespondence. No genuinelynewactualpersonalborncountry/wholecounty body acquired. WorkWembleyEngland/correspondenceBerkshireEngland notbirth. OldBrightonS2unchanged; oldfullmemoirnotrelabellednewdistinctwork. WirelessWorldJuly1961closedfirst403 preserved, newlyindexednonOCRURLvariantnotopened. No negativenamematch/sourceexhaustionclaim. Afterprospectiverootclarificationandpriorhistorycheck, firstoriginalRS1962DOIfullbodyattempt returnedtoolnotaccessible(turn2188565view0), stoppedwithoutvariant/retry; no newgeography.",
+      "prior_holds_preserved": [
+        "prior_v13_holds.json"
+      ],
+      "discovery_refs": [
+        "turn3425035search0",
+        "turn3425035search6",
+        "turn3425035search14",
+        "turn3425035search27",
+        "turn2732162search0",
+        "turn2732162search1",
+        "turn2732162search3"
+      ],
+      "excluded_failed_work_variant": {
+        "old_closed_url": "https://worldradiohistory.com/UK/Wireless-World/60s/Wireless-World-1961-07-S-OCR.pdf",
+        "new_discovery_only_variant_url": "https://worldradiohistory.com/UK/Wireless-World/60s/Wireless-World-1961-07.pdf",
+        "new_variant_ref": "turn3425035search27",
+        "attempted": false
+      },
+      "new_actual_body_acquired": false,
+      "sources_reviewed": [
+        {
+          "record_id": "RS_PAST_NA813",
+          "url": "https://doi.org/10.1098/rsbm.1962.0008",
+          "ref": "turn2188565view0",
+          "status": "first_original_work_fullbody_attempt_tool_notaccessible_STOPPED",
+          "finding": "ProspectiveboundedrootclarificationpermittedfirstfulloriginalRS1962bodybecauseavailablepriorrecordedhistoryshowednoRS1962failedfullroute. ExistingCrossrefabstractsuccessnotnewindependentwork. FirstpublisherDOIopen toolnotaccessible; noactualnewbodyacquired. Stopped,noJSTOR/otherURLvariant/retry/rawGET.",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "retrieval_representation": "toolerror, notrawHTTPresponsebytes"
+        }
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA872",
+      "native": {
+        "record_id": "RS_PAST_NA872",
+        "source_authorised_full_name": "Farren; Sir; William Scott (1892 - 1970)",
+        "dob": "1892-04-03",
+        "raw_birthplace": "Cambridge",
+        "birthplace_source_grade": "S2"
+      },
+      "hold_type": "new_original_family_biography_no_direct_bornregion",
+      "reason": "NewactualHookefamilyessay/earlyyears/overview combinefullnative,actualbornyear1892 anddistinctiveaviation/RAE/flyingboat/Vulcancareer, but no directsubjectbirthplace/country/wholecounty. NativeexactApril3notnewlyconfirmed. Cambridgeshirephotograph/school/father/grandfatheraddressesnotbirth; no father-subjectequivalence. OldPersefailedroute not retried; oldarchivebrowseunboundnotnewbirthsource. Cambridge/S2/completeobjectunchanged.",
+      "sources_reviewed": [
+        {
+          "record_id": "RS_PAST_NA872",
+          "url": "https://hooke.org.uk/index.php/farren-history",
+          "ref": "turn8348568view0",
+          "status": "actual_new_original_selfpublished_family_biographical_essay_body",
+          "locator": "L134heading/L138fullSirWilliamScottFarren;L139-142familynarrator/Mildred/death1970;L153aviation/flyingboat/Vulcancareer;L159-173subpageoriginalessaylinks",
+          "finding": "Actualfullnative/distinctiveaviationcareer/nativecompatibledeathyear1970; no actualDOB/bornregion in inspectedintro. Same-namedfather/grandfather notsubject, familyKingstonCambridgeresidence notbirth. Narratorfamilyclaimretained asselfpublished notindependentverifiedexpertorhostS1.",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "retrieval_representation": "web-tool parsed actualoriginalbody, notrawHTTPbytes"
+        },
+        {
+          "record_id": "RS_PAST_NA872",
+          "url": "https://hooke.org.uk/index.php/farren-history/william-farren-background-early-years",
+          "ref": "turn8348568view1",
+          "status": "actual_new_original_selfpublished_family_background_body",
+          "locator": "L135title;L138Cambridgeshirefensphotocaption;L144-160same-namedfather/grandfather/greatgrandfather;L150explicitfullWilliamScottFarrenhimself;L163-170schools/admissionrecord/Pelican",
+          "finding": "Actualnativefullcomponents in samefamilyproject, distinctivefamily/school/historycontext, no subjectborncountry/wholecounty. Cambridgeshirefensphotograph,26GuestRoadschooladdress/Cambridgefamilyshopsnotdirectbornregion. Sourceimage/schoolrecordnotacquired; imagesnotused.",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "retrieval_representation": "web-tool parsed actualoriginalbody, notrawHTTPbytes"
+        },
+        {
+          "record_id": "RS_PAST_NA872",
+          "click_source_ref": "turn8348568view0",
+          "link_id": 86,
+          "url": "https://hooke.org.uk/index.php/farren-history/william-farren-director-of-farnborough",
+          "ref": "turn7614630view0",
+          "status": "actual_observed_Overview_link_new_family_original_body",
+          "locator": "L3title;L8actualwriting2015context;L11-15familynarrative/Mildred/RS1971memoirlink;L16actualbornyear1892;L24-34flyingboat/RAEcareer",
+          "finding": "Actualbornyear1892 compatible unchangednativeexact1892-04-03, but no exactmonthday or bornplace/country. Fullnativebelongssamefamilyprojectintro and earlyyearspage. OriginaloverviewL12deathAugust1970 observedyearcompatiblewithnativeauthority1970; no alternativeDOBclaim, no nativedeathdaycomparison or cross-sourceendpointconflictfromWiki/search. L15memoirlink is existingRS1971work, not falselynewdistinctreference.",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "retrieval_representation": "web-tool parsed actualoriginalbody, notrawHTTPbytes"
+        }
+      ],
+      "source_grade_adopted": null,
+      "source_class_observation": "Selfpublishedfamilyhistoricalbiographicalessay; atmostconservativeS3ifqualifyingclaim, no acquiredexpertediting/civil/hostS1 or independentverificationclaim.",
+      "prior_holds_preserved": [
+        "prior_v13_holds.json"
+      ],
+      "new_birthplace_or_DOB_claim_adopted": false
+    }
+  ],
+  "new_DOB_or_place_conflicts": [],
+  "unopened_distinct_original_work_leads": [
+    {
+      "record_id": "RS_PAST_NA872",
+      "url": "https://www.fadingimages.uk/cccmemb.pdf",
+      "ref": "turn3425035search25;turn2732162search8",
+      "title": "Membership Cambridge and District Photographic Society",
+      "role": "Distinctoriginallocalphotographichistorycompiledregister_unopened",
+      "limit": "SearchprojectionfullWilliamScottFarren/bCambridge1892/sonofSecretary only; actualbody/personcareer/bornregionunverified. Sourcecityonlyprojectionnotgeographyclaim. Notnecessaryforadoption."
+    }
+  ],
+  "source_quote_words_by_original_work": {
+    "HookeFarrenfamilyhistoryproject_across3pages": 0,
+    "RydeRS1962_existingmemoir_inheritedquote": 7
+  },
+  "protocol_limits": [
+    "Initialcombinedscopeoutputtruncated; bothfullobjects rereadindividuallyuntruncatedbeforequeries.",
+    "No newactualRydeborncountrywork acquired; querybudgetsbounded, sourceexhaustionnotclaimed.",
+    "Familyoverview1892bornyearonlydoesnotconfirmnativeApril3; sourceAugust1970deathmonthisnotdifferentDOBandnativeauthoritydeathonly1970year.",
+    "No rawsourcecaches/PDF/images distributed; parsedsourceheaders/refs/finalstatuses retained; rawmetadataunknownnull.",
+    "Rydefirstfullbodyattemptwasprospectivelyauthorizedscopeclarification, not retrospectivefailedrouteexception; noactualbodyornewindependentworkclaim. CurrenttoolnotaccessiblenowclosesRS1962fullroute,noalternates."
+  ],
+  "raw_HTTP_status": null,
+  "raw_bytes_sha256": null,
+  "exact_request_utc": null,
+  "no_repo_master_Git_mutation": true,
+  "no_finalfreeze_or_source_exhaustion_claim": true,
+  "prospective_scope_clarification": {
+    "intent_file": "v35_b_intent.json",
+    "root_message_beforecall": true,
+    "old_abstract_remains_existing_work_not_new_independent_work": true,
+    "newly_inspected_material_attempt": "firstoriginalsubjectfullbodyforbirthgeography",
+    "available_prior_recorded_history_no_RS1962_fullroute_failure": true,
+    "new_first_fullroute_result": "notaccessible;stopped",
+    "old_same_work_quote_words": 7,
+    "new_same_work_quote_words": 0,
+    "same_work_total_quoted_words": 7
+  }
+}

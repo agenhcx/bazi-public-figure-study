@@ -1,0 +1,34 @@
+{
+  "reviewer": "/root (independent web text-body review supplied to integrator)",
+  "independent_of_collector": true,
+  "scope": [
+    {
+      "source_batch": "japan_c",
+      "files": [
+        "japan_c/claims.json"
+      ],
+      "checked_rows": 1
+    }
+  ],
+  "findings": [
+    {
+      "path": "source_batches/japan_c/claims.json",
+      "key": "jpa:suzuki_atsuto",
+      "evidence": "Root independently opened the exact Iwate Prefectural University PDF via web; turn1715view0 P0L0–4 supplies Suzuki Atsuto, elementary-particle physics, birth1946-10-03, with matching later career. Original PDF request and screenshot still403.",
+      "expected_action": "Allow text-body-verified institutional day evidence through the explicit403 exception. Keep source_sha256 null; extracted_body_sha256 is derived text only. No PDF visual verification.",
+      "status": "passed"
+    }
+  ],
+  "remaining_holds": [],
+  "source_url": "https://www.iwate-pu.ac.jp/whatsnew/folder30/鈴木学長略歴.pdf",
+  "root_web_body_ref": "turn1715view0",
+  "root_screenshot_failure_ref": "turn1716view0",
+  "original_capture_http_status": 403,
+  "source_sha256": null,
+  "derived_extracted_body_sha256": "8f7d6cdd80f1a3bdae1a850a6f4dac09fe07aa45f58d6800590a03c7baba07ab",
+  "original_bytes_captured": false,
+  "pdf_visual_verification_available": false,
+  "body_verified_via_web": true,
+  "analysis_cohort_frozen": false,
+  "bazi_variables_computed": 0
+}

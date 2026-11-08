@@ -1,0 +1,128 @@
+{
+  "schema": "UK_v24_independent_local_final_QA_v1",
+  "reviewer": "/root/v24_final_qa",
+  "written_utc": "2026-11-06T00:35:29.278135+00:00",
+  "status": "PASS",
+  "validation_categories_passed": 32,
+  "checks": [
+    "five pinned production outputs match before QA",
+    "actual v23 and v24 canonical hashes",
+    "self-contained v23 reconstruction exact all4983 objects",
+    "fixed cohort order/unique keys",
+    "scope130queue/12reviewed/5facts+7holds disjoint partition",
+    "exact5changed and4978completeidentical objects",
+    "every changed object frozen fields/prior facts and previous+absent rollback",
+    "new grade/hemisphere support separate from native DOB grades",
+    "overall and2644window independent counts",
+    "blank/nonblank diagnostics independently match",
+    "summary deltas/no geography-only adoption",
+    "CSV74old meanings/positions plus6v24 columns",
+    "CSV rows/current updates and old contexts exact",
+    "remaining unknown CSV185 matches master order",
+    "old4 activeDOBconflictobjects unchanged and McClelland fifthappend",
+    "McClelland exactbirth/baptism precision distinct without verdict",
+    "three inherited age/death sidecars byteidentical",
+    "all conflict/age/death/Adam/Gotch/Malet completeobjects unchanged",
+    "Gotch place conflict separated from DOB and unadopted",
+    "Malet circa precision remains ordinaryhold not exactDOB verdict",
+    "Wager nativeidentity/DOB/eligibility remainexact while actualshortsource explicit",
+    "Wager generic amendment preserves workerhold and non-global sourceonlylimits",
+    "Church workerproof/root403 and yearonlyprecision explicit",
+    "Groves yearonly/directimage vs rootOCR roles explicit",
+    "Hills namedchild directexactDOB conservativecompiledS3",
+    "actualacceptedquotes11/4/8/6/10 and heldRTI22/DIB6 within25",
+    "request accounting24queries/26worker+12root/4find1screenshot0GET",
+    "worker4candidate plus parent1 explicitamendment accounting",
+    "no fullsource/cache/image formats distributed",
+    "docs count/scope/amendment/precision/access limits consistent",
+    "two isolated cleanreplays all5outputs equal originalpins",
+    "production5outputs untouched after QA"
+  ],
+  "baseline_canonical_sha256": "9547b9e958d6526acf578a20f3b42e63e5a95de3aeca91a3c244d9620ee7ab01",
+  "final_canonical_sha256": "77d03a85ab2c959d1fc34732907535c2fa465b36fa6b1ab176bb4e66de6c5d0d",
+  "records": 4983,
+  "changed_complete_objects": 5,
+  "unchanged_complete_objects": 4978,
+  "overall": {
+    "north": 4177,
+    "unknown": 619,
+    "south": 187
+  },
+  "window_counts": {
+    "north": 2277,
+    "unknown": 185,
+    "south": 182
+  },
+  "blank_diagnostics": {
+    "all_blank_raw_birthplace": 547,
+    "window_blank_raw_birthplace": 125,
+    "all_unknown": 619,
+    "all_unknown_with_blank_raw_birthplace": 547,
+    "all_unknown_with_nonblank_raw_birthplace": 72,
+    "window_unknown": 185,
+    "window_unknown_with_blank_raw_birthplace": 125,
+    "window_unknown_with_nonblank_raw_birthplace": 60
+  },
+  "main_pre_QA_output_pins": {
+    "birthplace_rows.jsonl.gz": "09e1e6c9f97ef1110353792bc4b2272104687fe3b6beea9558df30dfbb17de57",
+    "birthplaces.csv": "73b1c2201efb2accc5a667e3f8b826ee40f968d9e149f90eaf278e4bd7b95636",
+    "changes.json": "b69bd59a3079a822f8e88c162f02803c1a02db827ae7590f052bafdc9482a37e",
+    "remaining_unknown_window.csv": "e4d4dc2e3b9cb0feb2a5070e553d7fafe4ce0654fe38c84457bdca5f7d34b545",
+    "summary.json": "6ef10950d1d03c63a457f971a6364567bda2f6195610085a452b557b5af00ec8"
+  },
+  "isolated_replay_runs": [
+    {
+      "run": 1,
+      "clean_exit": true,
+      "five_hashes": {
+        "birthplace_rows.jsonl.gz": "09e1e6c9f97ef1110353792bc4b2272104687fe3b6beea9558df30dfbb17de57",
+        "birthplaces.csv": "73b1c2201efb2accc5a667e3f8b826ee40f968d9e149f90eaf278e4bd7b95636",
+        "changes.json": "b69bd59a3079a822f8e88c162f02803c1a02db827ae7590f052bafdc9482a37e",
+        "remaining_unknown_window.csv": "e4d4dc2e3b9cb0feb2a5070e553d7fafe4ce0654fe38c84457bdca5f7d34b545",
+        "summary.json": "6ef10950d1d03c63a457f971a6364567bda2f6195610085a452b557b5af00ec8"
+      },
+      "matched_original_pins": true
+    },
+    {
+      "run": 2,
+      "clean_exit": true,
+      "five_hashes": {
+        "birthplace_rows.jsonl.gz": "09e1e6c9f97ef1110353792bc4b2272104687fe3b6beea9558df30dfbb17de57",
+        "birthplaces.csv": "73b1c2201efb2accc5a667e3f8b826ee40f968d9e149f90eaf278e4bd7b95636",
+        "changes.json": "b69bd59a3079a822f8e88c162f02803c1a02db827ae7590f052bafdc9482a37e",
+        "remaining_unknown_window.csv": "e4d4dc2e3b9cb0feb2a5070e553d7fafe4ce0654fe38c84457bdca5f7d34b545",
+        "summary.json": "6ef10950d1d03c63a457f971a6364567bda2f6195610085a452b557b5af00ec8"
+      },
+      "matched_original_pins": true
+    }
+  ],
+  "main_outputs_rerun_or_mutated": false,
+  "harness_correction": {
+    "issue": "Initial scratch harness expected literal word post in timing prose; actual audit explicitly said After observing and before final fact write.",
+    "correction": "Changed only scratch timing assertion to those semantic phrases. No production data/code/facts changed. The first harness failed before isolated replays began; complete corrected validation then ran once including both replays."
+  },
+  "quote_words_by_record": {
+    "RS_PAST_NA2863": 11,
+    "RS_PAST_NA5494": 4,
+    "RS_PAST_NA6655": 8,
+    "RS_PAST_NA6941": 6,
+    "RS_PAST_NA8294": 10
+  },
+  "held_McClelland_RTI_quote_words": 22,
+  "held_McClelland_DIB_quote_words": 6,
+  "documentation_checks": {
+    "files": [
+      "README.md",
+      "CONTINUATION.md"
+    ],
+    "counts_scope_limits_consistent": true,
+    "amendment_precision_and_source_access_limits_checked": true
+  },
+  "limitations": [
+    "Independent local structural/data/replay verification only; no network, new original-source acquisition or raw HTTP-byte inspection.",
+    "Source semantic/genre quality is reviewed separately in independent_source_qa.json; Wager middle-name omission is explicitly amended and unconfirmed components are not manufactured. Career anchors are source-only, not independent native-field corroboration.",
+    "Church earlier worker body versus root403 and Groves worker image versus parentOCR roles are checked as documentary facts, not independently acquired source/image evidence.",
+    "McClelland baptism/birth correspondence is not a parser-error/provenance/correct-date verdict. Gotch placeconflict and Malet approximate-date hold remain distinct.",
+    "No production inputs, code, master outputs or Git operations changed; this audit and scratch harness only."
+  ]
+}

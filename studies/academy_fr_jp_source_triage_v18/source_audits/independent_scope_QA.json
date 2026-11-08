@@ -1,0 +1,151 @@
+{
+  "schema": "independent_v18_scope_source_QA",
+  "reviewer": "v18_preservation_review",
+  "reviewed_utc": "2026-11-01T10:35:02.282528+00:00",
+  "baseline_commit": "a392edba4c34be218670261083d3b1efaf1bd6a5",
+  "independent_scope_QA_passed": true,
+  "reviewer_network_requests": 0,
+  "unchanged_prior_studies": {
+    "15": {
+      "manifest_sha256": "823f59ca90138478e350eb10ae4d08010e94d6c70a6067118440e04f110f9e79",
+      "pinned_files": 56,
+      "files_including_manifest": 57,
+      "all_declared_files_match": true
+    },
+    "16": {
+      "manifest_sha256": "61212302cd9f2c0bb0e5f10de2a918d7e4670cfbad55221e8fd4d88ef780dc56",
+      "pinned_files": 23,
+      "files_including_manifest": 24,
+      "all_declared_files_match": true
+    },
+    "17": {
+      "manifest_sha256": "2b50e25f11d6696275296e5afa745c12af1ca73e9cc868a6b7db132e0e8af8b7",
+      "pinned_files": 8,
+      "files_including_manifest": 9,
+      "all_declared_files_match": true
+    }
+  },
+  "unchanged_prior_files_total_including_manifests": 90,
+  "frozen_handoffs": {
+    "France": {
+      "manifest_sha256": "b09d5003f83d0bb89a6affc527523bc3768e71a8627a389546501184bfd283cb",
+      "files": {
+        "bhl_item_receipt.json": "6cd8d0b51f29e6583bf8d9979e1f5a20a9d998759c7d4456550bc4be01eaff62",
+        "six_unapplied_original_scan_leads.json": "6cdc6bccfe307ba5f1ecb1344aae73505bb22fdd7c3dfa4524822e3ec4af8617",
+        "new_original_route_report.json": "dd0721209bb8af29537341b3a7aa2f91e351472bdc9ce7b0aa84437032b0b595"
+      },
+      "all_pins_match": true
+    },
+    "Japan": {
+      "manifest_sha256": "19f67da0af10ea9bd96fd0152dad0f78d9c031252f438d3f266bee07242955eb",
+      "files": {
+        "body_readings.json": "8ce73c82cdd60b3ceea7eaecae9cb400c96979eb49a1cd4f29e72b47650161a9",
+        "new_route_screening.json": "a285310048e82f173bc4104edd9c4dc59648176b07dac3ab731fec3ca43f128b",
+        "request_receipts.json": "ac9dbc39141160501a391500a52043b4ed27b4a6630c00a0a996a3468426052c"
+      },
+      "all_pins_match": true
+    }
+  },
+  "actual_responses_independently_rehashed_and_read": [
+    {
+      "source_URL": "https://www.biodiversitylibrary.org/item/31144",
+      "HTTP_status": 403,
+      "bytes": 5991,
+      "sha256": "03d7544fe6bd451d8feac05818654ceed72037102cd054689423661d06eb93c0",
+      "actual_body": "JavaScript/cookie challenge only",
+      "substantive_source_body_recovered": false,
+      "original_election_page962_read": false,
+      "scan_map_or_next_URL_declared": false
+    },
+    {
+      "source_URL": "https://www.digital.archives.go.jp/fonds/4672505",
+      "HTTP_status": 403,
+      "bytes": 919,
+      "sha256": "223c94fb88c2b6dfb087f9b0b3833cac8d2690f4abb17e0323bc6185702a7db5",
+      "actual_body": "CloudFront Request blocked only",
+      "catalogue_body_recovered": false,
+      "member_card_access_conditions_verified": false,
+      "person_division_DOB_evidence": false
+    }
+  ],
+  "France_archival_bridge": {
+    "actual_tar_sha256": "065c1810470588f5f12ed7c420b5117c5878ca21fa2f49799041d29df800e322",
+    "actual_parent_html_sha256": "254a0f290f2d2bd360391f0ca59171e6944bb33873fdd55fb251827d60a30ef8",
+    "actual_TOC_html_sha256": "d5708785ef51b560c486195f58db988ab7abc32d80429f5a19c10d9442b09178",
+    "literal_1921_tome173_to_item31144_href_verified": true,
+    "TOC_is_transcription_not_original_scan": true,
+    "Marcel_own_election_TOC_and_Leon_author_TOC_kept_distinct": true,
+    "no_publication_year_page_number_or_candidate_nomination_selected_as_event": true,
+    "six_existing_metadata_leads_exact_CSV_rows_and_hashes_verified": true,
+    "six_original_election_scan_pages_read": 0,
+    "six_leads_unapplied": true
+  },
+  "activity_checked": {
+    "search_queries_France": 2,
+    "search_queries_Japan": 2,
+    "total_search_queries": 4,
+    "direct_GETs_France": 1,
+    "direct_GETs_Japan": 1,
+    "total_direct_GETs": 2,
+    "normal_redirects": 0,
+    "retries": 0,
+    "new_own_subject_original_reviews": 0,
+    "new_DOB_claims": 0,
+    "new_approvals": 0
+  },
+  "France_canonical_counts": {
+    "groups": 877,
+    "identity": 787,
+    "DOB": 775,
+    "membership": 643,
+    "all_three": 640,
+    "gaps": 237
+  },
+  "hold_checks": {
+    "25_formal_election_holds_retained": true,
+    "4_exact_DOB_conflicts_retained": true,
+    "father_birthyear_hold_and_all_three_zero_retained": true,
+    "Nicole_legacy_blank_new_1982_2006_status_and_retained1_held": true,
+    "prior_alias_and_all_other_raw_fields_byte_preserved": true,
+    "Japan_all_fields_DOB_calendar_and34scope_holds_byte_preserved": true,
+    "v16_six_birthday_gated_membership_leads_remain_unapplied": true
+  },
+  "gate_review": {
+    "offsite_original_Institut_or_Academy_scan_can_use_existing_academy_authored_independent_host_class": true,
+    "must_actually_read_institutional_original_attribution_and_own_ordinary_role_plus_direct_election_start": true,
+    "cannot_accept_search_snippet_TOC_transcription_publication_year_or_catalogue_title_as_person_event": true,
+    "existing_identity_DOB_prerequisite_and_conflict_guards_not_relaxed": true
+  },
+  "scope_limits": [
+    "403 records a failed request, not proof that the original contains no evidence or is paper-only.",
+    "The six old transcription candidates are unused leads, not six new successful person reviews.",
+    "No all-public-sources-exhausted, lifetime nonmembership or national-completion claim is supported.",
+    "No archive contact, alternate backend probe, challenge workaround or retry was attempted."
+  ],
+  "recommendation": "Preserve canonical v15 and park this bounded screen. A concise closing record is sufficient; no country-table duplicate, successor reducer or new unit-test suite is needed for zero data change.",
+  "CI_or_final_root_report_not_claimed_reviewed": true,
+  "distinct_unapplied_lead_sets": {
+    "v16_DOB_gate_held_source_file": "studies/academy_fr_jp_source_triage_v16/france_inventory/unapplied_membership_evidence_DOB_gate_held.json",
+    "v16_source_sha256": "a80126233e1e5f1d1491a1dfce21dd7a11a4af6ec877e540b558b37e8fe27dc0",
+    "v16_DOB_gate_held_ids": [
+      "CTHS_111949",
+      "CTHS_112115",
+      "CTHS_112843",
+      "CTHS_112935",
+      "CTHS_1156",
+      "CTHS_2092"
+    ],
+    "v18_preexisting_TOC_metadata_source_sha256": "6cdc6bccfe307ba5f1ecb1344aae73505bb22fdd7c3dfa4524822e3ec4af8617",
+    "v18_TOC_original_scan_unread_ids": [
+      "CTHS_100856",
+      "CTHS_106059",
+      "CTHS_111847",
+      "CTHS_112595",
+      "CTHS_112602",
+      "CTHS_112866"
+    ],
+    "sets_disjoint": true,
+    "six_plus_six_not_merged_or_counted_as_new_approvals": true,
+    "newness_limit": "The v18 set is an existing transcribed-metadata shortlist newly screened in this pass, not six newly discovered originals or six newly verified member events."
+  }
+}

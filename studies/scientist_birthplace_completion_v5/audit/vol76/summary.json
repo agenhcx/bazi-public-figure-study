@@ -1,0 +1,50 @@
+{
+  "lane": "NAS official NAP Biographical Memoirs Volume76 only",
+  "baseline_sha256": "abbce4e99ad51252dd5e127a0609bc6c4950c121afa2dd126bfc2187b39cd4e8",
+  "baseline_counts": {
+    "all_records": 11094,
+    "NAS": 2242,
+    "NAS_north": 1652,
+    "NAS_south": 31,
+    "NAS_unknown": 559
+  },
+  "official_observed_TOC_url": "https://www.nationalacademies.org/read/6477",
+  "unknowns_compared_to_all20_TOC_headings": 559,
+  "strong_TOC_routes": 4,
+  "source_requests": {
+    "web_discovery_query": 1,
+    "index_navigation": 1,
+    "chapter_body": 2
+  },
+  "chapter_HTML_bodies_read": 1,
+  "source_page_images_read": 1,
+  "total_original_body_requests_including_image": 2,
+  "body_retries": 0,
+  "original_capture_HTTP_statuses": [
+    200,
+    200,
+    200
+  ],
+  "facts": 1,
+  "holds": 0,
+  "pending_unread_TOC_routes": 3,
+  "facts_names": [
+    "Clinton N. Woolsey"
+  ],
+  "pending_names": [
+    "Robert W. Briggs",
+    "T. L. Cairns",
+    "Willem J. Luyten"
+  ],
+  "frozen_at_utc": "2026-11-04T00:27:59.552911+00:00",
+  "no_more_source_requests": true,
+  "clock_start_utc": "2026-11-04T00:24:21.392447+00:00",
+  "stop_rules": "stop on any429 or two equivalent403/503; none encountered",
+  "coverage": "all559 current unknowns compared to20actual official TOC headings using canonical fullname and surname/first-initial tokens; source lifespan not independently matched because baseline has no death/lifespan fields",
+  "transport_limitation": "Volume76 chapterHTML contains page-image wrappers and loading-problem messages, no memoir prose; observed data-original page361 GIF fetched once and visually read",
+  "scope_limit": "parent directed Woolsey image follow-up only then freeze; remaining3routes retained pending/unread, not claimed read",
+  "no_geography_assignment": true,
+  "source_grade": "S2 signed edited memoir; official host alone does not make S1",
+  "raw_fullpage_images_distribution": "excluded from retained deliverable; original hashes and exact page visual verification retained",
+  "secret_cookie_or_client_IP_headers_distribution": "none; response metadata uses public header allowlist only"
+}

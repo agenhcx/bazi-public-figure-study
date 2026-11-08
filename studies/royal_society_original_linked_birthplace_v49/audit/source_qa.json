@@ -1,0 +1,67 @@
+{
+ "schema": "UK_v49_independent_source_review_v1",
+ "status": "PASS",
+ "passed": true,
+ "phase": "final_source_only_review",
+ "written_utc": "2026-11-08T13:13:32.962Z",
+ "source_review_complete": true,
+ "scope_sha256": "14bfed5eec4c3814809bd3158aaab2ea51afa65cfaef6791d9388b9fb768c9c6",
+ "method_sha256": "3c38a8075bdf36fb429990839c1df65d3dc62d9e621677bd29dd22d3da0919c3",
+ "accepted_record_ids": [],
+ "held_ids": [
+  "RS_PAST_NA3088"
+ ],
+ "pins": {
+  "audit/parent_adjudication.json": "3fa679026f76c6ac9c6e9b33a7d7d7e87957b5ee2071217f3deb9ce2b65d7e2e",
+  "audit/root_followups.json": "264c495d864208a4a2d859144d03e4780e2ba9e0609281a5d449f739afffaba8",
+  "audit/v49_root_intent.json": "6da698cda80b1cbad4764ab384f3b8bbcba0f53ed595e23c0604af6aa1941b74",
+  "canonical_source_report": "c512830bc81b1776250c6010547f9cbaa38f7ca8104c1d6cfedd92cd1cdc6778",
+  "actual_reference_context": "61c5f545be19bc19b633055efff2dbb26f8491942dfb4df2ecb073a9828edd7a"
+ },
+ "case_review": {
+  "record_id": "RS_PAST_NA3088",
+  "native_authority": "Davison; Alan (1936 - 2015)",
+  "native_DOB": "1936-03-24",
+  "decision": "held",
+  "canonical_identity_support": "Actual turn9163963view1 supplies full name/exact native DOB/compatible life/distinctive MIT/Cardiolite career. Reference6 L168/link102 directly links the specific MIT biography; canonical DOB remains separate from provider observations.",
+  "source_ref": "turn5338515view0",
+  "source_URL": "https://news.mit.edu/2015/chemistry-professor-emeritus-alan-davison-dies-1117",
+  "actual_body": "Normal original 205-line body. Full Alan Davison L107, compatible death/age79 context L107 and distinctive Harvard/MIT1964/Cardiolite career L108–113. Liz McGrath/Chemistry department L80, displayed publication2015-11-17 L82.",
+  "provider_birthdate": null,
+  "provider_birthyear": null,
+  "provider_birthplace": null,
+  "review": "Acquired personal body L107–127 states neither DOB/birthyear nor direct birthplace. Family residence L124 and institutional address L194 are not birth evidence. No age-derived reconstruction, canonical-date transfer or native tier validation. No actual same-person date/place conflict established.",
+  "path_A": "FAIL: original provider lacks stated compatible birthdate precision and direct birthplace.",
+  "path_B_NEW": "FAIL: preregistered composite identity/citation/original career binding passes, but provider direct-birth gate fails. This new path is not unchanged V29 or per-provider DOB confirmation.",
+  "grade_adopted": null
+ },
+ "operations": {
+  "queries": 0,
+  "clicks": 1,
+  "other_navigation": 0,
+  "current_original_work_requests": 1,
+  "cached_continuations": 0,
+  "place_reads": 0,
+  "finds": 0,
+  "raw_GETs": 0,
+  "entry_utc": "2026-11-08T12:56:25.303371+00:00",
+  "exact_request": {
+   "click": [
+    {
+     "ref_id": "turn9163963view1",
+     "id": 102
+    }
+   ],
+   "response_length": "long"
+  },
+  "local_validation": "Separate chunk3b10f8 exit0 observed before click; exact validationUTC not recorded/null. Intent follows freeze and matches actual ledger."
+ },
+ "work_history": "Explicit prospective same-work original-host access recheck; old RSSing400/timeout and other old closed routes preserved. No first-ever/new-work/independence claim or Finlay-deviation clearance; no additional current request.",
+ "quote_accounting": {
+  "new_source_prose_words": 0,
+  "retained_bibliographic_title_words": 8,
+  "per_work_limit": 25
+ },
+ "preservation": "No facts/issues/grades adopted. All9 inventories/native fields/DOB tiers/strict and expanded groups/Morris/prior facts preserved. Master remains V46; no new data wrapper, pipeline/CSV change or replay CLI. Separate baseline integrity e56916d2da5fadb9e6b2ca6cdf13807469758d195215a8cdb5271c8fc793f8d4 verifies all74 V46 release files.",
+ "limitations": "Retained root observations/locators reviewed, no reviewer source reacquisition or data execution. Raw HTTP status/bytes/exact request time/revision/calendar/rank/editorial validation/informational independence unknown/null. No source exhaustion/final-freeze claim."
+}

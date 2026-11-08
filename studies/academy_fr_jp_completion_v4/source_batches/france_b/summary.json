@@ -1,0 +1,619 @@
+{
+  "task": "France historical B v4 bounded firstparty membership completion",
+  "baseline_git": "f5058c523402f1ed6df19df815400969a9c0a4de",
+  "queue_count": 60,
+  "decision_count": 18,
+  "strict_membership_new": 13,
+  "all_three_new": 13,
+  "role_and_cutoff_but_actual_election_missing_hold": 4,
+  "role_supported_existing_conflict_hold": 1,
+  "remaining_queue_no_qualifying_source_this_pass": 42,
+  "new_url_attempts": 30,
+  "new_http200": 19,
+  "new404": 11,
+  "http200_challenge_rejected": 1,
+  "new_real_content_bodies": 18,
+  "pdf_documents_visually_reviewed": 9,
+  "pdf_pages_visually_reviewed": 17,
+  "old_cths_bodies_hash_verified_reused_for_leads": 59,
+  "search_requests": 17,
+  "unique_targeted_queries": 13,
+  "new_date_conflicts": 0,
+  "inherited_date_conflicts_retained": [
+    "CTHS_111774",
+    "CTHS_111796"
+  ],
+  "identity_or_dob_changes": 0,
+  "bazi_computed": 0,
+  "analysis_cohort_frozen": false,
+  "lifetime_exclusions": 0,
+  "accepted": [
+    {
+      "candidate_group_id": "CTHS_111767",
+      "name": "AUBOUIN Jean",
+      "date": "1981-11-16",
+      "year": 1981
+    },
+    {
+      "candidate_group_id": "CTHS_111769",
+      "name": "BACH Jean-François",
+      "date": "1985-05-20",
+      "year": 1985
+    },
+    {
+      "candidate_group_id": "CTHS_111846",
+      "name": "BREZIS Haïm",
+      "date": "1988-06-13",
+      "year": 1988
+    },
+    {
+      "candidate_group_id": "CTHS_112033",
+      "name": "COPPENS Yves",
+      "date": "1985-06-24",
+      "year": 1985
+    },
+    {
+      "candidate_group_id": "CTHS_111934",
+      "name": "CARTAN Henri",
+      "date": "1974-01-28",
+      "year": 1974
+    },
+    {
+      "candidate_group_id": "CTHS_111950",
+      "name": "Jean-Pierre Changeux",
+      "date": "1988-06-06",
+      "year": 1988
+    },
+    {
+      "candidate_group_id": "CTHS_111976",
+      "name": "CHARPAK Georges",
+      "date": null,
+      "year": 1985
+    },
+    {
+      "candidate_group_id": "CTHS_112054",
+      "name": "CURIE Pierre",
+      "date": "1905-07-03",
+      "year": 1905
+    },
+    {
+      "candidate_group_id": "CTHS_112061",
+      "name": "DARBOUX Gaston",
+      "date": null,
+      "year": 1884
+    },
+    {
+      "candidate_group_id": "CTHS_111926",
+      "name": "CABANNES Jean",
+      "date": null,
+      "year": 1946
+    },
+    {
+      "candidate_group_id": "CTHS_111977",
+      "name": "CHARPY Georges",
+      "date": null,
+      "year": 1918
+    },
+    {
+      "candidate_group_id": "CTHS_112025",
+      "name": "CHEVENARD Pierre",
+      "date": null,
+      "year": 1946
+    },
+    {
+      "candidate_group_id": "CTHS_111839",
+      "name": "BOURCART Jacques",
+      "date": "1960-03-28",
+      "year": 1960
+    }
+  ],
+  "holds": [
+    {
+      "candidate_group_id": "CTHS_111835",
+      "name": "BLARINGHEM Louis",
+      "reason": "Ordinary full section role and1958 cutoff established by original dated speech. Body says entry at age50 and30years service, but gives no explicit election year; arithmetic is not promoted to true1928 election."
+    },
+    {
+      "candidate_group_id": "CTHS_111930",
+      "name": "CAQUOT Albert",
+      "reason": "Original dated ceremony speech provides ordinary full member role by20July1947. It provides no actual election date/year, so strict membership remains held."
+    },
+    {
+      "candidate_group_id": "CTHS_111776",
+      "name": "BARTHÉLÉMY René",
+      "reason": "Original notice deposited16June1947 attests named electrician-author as full member by1947.1947 is source-attestation bound, not his true election year."
+    },
+    {
+      "candidate_group_id": "CTHS_111932",
+      "name": "CARTAN Elie",
+      "reason": "Original1933ceremony sequence has typed named Élie Cartan speaking on behalf of Academy. This establishes full role by1933 only; it does not substantiate secondary1931 election as actual election year."
+    },
+    {
+      "candidate_group_id": "CTHS_111796",
+      "name": "BERNARD Jean",
+      "reason": "Institut typed full-member title supports role but gives no election date. Previously recorded1972/1973 conflict remains unresolved; contemporary retrospective title alone supplies no fresh pre2026 election event."
+    }
+  ],
+  "queue_status": [
+    {
+      "candidate_group_id": "CTHS_111767",
+      "name": "AUBOUIN Jean",
+      "decision_present": true,
+      "membership_accepted": 1,
+      "status": "decision_complete_bounded_pass",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111769",
+      "name": "BACH Jean-François",
+      "decision_present": true,
+      "membership_accepted": 1,
+      "status": "decision_complete_bounded_pass",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111773",
+      "name": "BARBIER Reynold",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111774",
+      "name": "BARGETON Daniel",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": true
+    },
+    {
+      "candidate_group_id": "CTHS_111775",
+      "name": "BARRILLON Émile",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111776",
+      "name": "BARTHÉLÉMY René",
+      "decision_present": true,
+      "membership_accepted": 0,
+      "status": "decision_complete_bounded_pass",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111779",
+      "name": "BASTIEN Paul",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111781",
+      "name": "BAZY Louis",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111790",
+      "name": "BAZY Pierre",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111791",
+      "name": "BÉHAL Auguste",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111792",
+      "name": "BÉNARD Henri",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111793",
+      "name": "BENOIT Jacques",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111796",
+      "name": "BERNARD Jean",
+      "decision_present": true,
+      "membership_accepted": 0,
+      "status": "decision_complete_bounded_pass",
+      "inherited_date_conflict": true
+    },
+    {
+      "candidate_group_id": "CTHS_111797",
+      "name": "LEWY Erwin",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111799",
+      "name": "BERTHELOT Daniel",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111800",
+      "name": "BERTRAND Léon",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111801",
+      "name": "BESSIS Marcel",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111834",
+      "name": "BLANC-LAPIERRE André",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111835",
+      "name": "BLARINGHEM Louis",
+      "decision_present": true,
+      "membership_accepted": 0,
+      "status": "decision_complete_bounded_pass",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111839",
+      "name": "BOURCART Jacques",
+      "decision_present": true,
+      "membership_accepted": 1,
+      "status": "decision_complete_bounded_pass",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111840",
+      "name": "BOUSSINESQ Joseph",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111841",
+      "name": "BOUTY Edmond",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111842",
+      "name": "BRARD Roger",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111843",
+      "name": "BRESSOU Clément",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111844",
+      "name": "BRETON Jules-Louis",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111846",
+      "name": "BREZIS Haïm",
+      "decision_present": true,
+      "membership_accepted": 1,
+      "status": "decision_complete_bounded_pass",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111847",
+      "name": "BRILLOUIN Marcel",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111885",
+      "name": "BROSSEL Jean",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111886",
+      "name": "BRUN Edmond",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111925",
+      "name": "BUVAT Roger",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111926",
+      "name": "CABANNES Jean",
+      "decision_present": true,
+      "membership_accepted": 1,
+      "status": "decision_complete_bounded_pass",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111928",
+      "name": "CAMICHEL Charles",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111930",
+      "name": "CAQUOT Albert",
+      "decision_present": true,
+      "membership_accepted": 0,
+      "status": "decision_complete_bounded_pass",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111931",
+      "name": "CARPENTIER Jules",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111932",
+      "name": "CARTAN Elie",
+      "decision_present": true,
+      "membership_accepted": 0,
+      "status": "decision_complete_bounded_pass",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111934",
+      "name": "CARTAN Henri",
+      "decision_present": true,
+      "membership_accepted": 1,
+      "status": "decision_complete_bounded_pass",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111937",
+      "name": "CASTAING Raymond Bernard René",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111948",
+      "name": "CHAMPETIER Georges",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111950",
+      "name": "Jean-Pierre Changeux",
+      "decision_present": true,
+      "membership_accepted": 1,
+      "status": "decision_complete_bounded_pass",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111975",
+      "name": "CHARLOT Gaston",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111976",
+      "name": "CHARPAK Georges",
+      "decision_present": true,
+      "membership_accepted": 1,
+      "status": "decision_complete_bounded_pass",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111977",
+      "name": "CHARPY Georges",
+      "decision_present": true,
+      "membership_accepted": 1,
+      "status": "decision_complete_bounded_pass",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_111978",
+      "name": "CHAUDRON Georges",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_112025",
+      "name": "CHEVENARD Pierre",
+      "decision_present": true,
+      "membership_accepted": 1,
+      "status": "decision_complete_bounded_pass",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_112026",
+      "name": "CHOQUET Gustave",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_112030",
+      "name": "COLIN Henri",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_112032",
+      "name": "CONTENSOU Pierre",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_112033",
+      "name": "COPPENS Yves",
+      "decision_present": true,
+      "membership_accepted": 1,
+      "status": "decision_complete_bounded_pass",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_112034",
+      "name": "CORDIER Gaston",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_112035",
+      "name": "CORRIU Robert",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_112037",
+      "name": "COSSERAT Eugène",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_112038",
+      "name": "COT Donatien",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_112040",
+      "name": "COTTON Émile",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_112052",
+      "name": "COUTEAUX René",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_112053",
+      "name": "THOM René",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_112054",
+      "name": "CURIE Pierre",
+      "decision_present": true,
+      "membership_accepted": 1,
+      "status": "decision_complete_bounded_pass",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_112057",
+      "name": "DANGEARD Pierre",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_112061",
+      "name": "DARBOUX Gaston",
+      "decision_present": true,
+      "membership_accepted": 1,
+      "status": "decision_complete_bounded_pass",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_112063",
+      "name": "DARMOIS Eugène",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    },
+    {
+      "candidate_group_id": "CTHS_112065",
+      "name": "DASSAULT Paul, général",
+      "decision_present": false,
+      "membership_accepted": 0,
+      "status": "no_qualifying_firstparty_in_bounded_pass_not_exhausted",
+      "inherited_date_conflict": false
+    }
+  ]
+}

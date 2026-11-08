@@ -1,0 +1,96 @@
+[
+  {
+    "candidate_group_id": "CTHS_128379",
+    "source_assignment_disposition": {
+      "status": "current_profile_maternal_body_quarantined_pdf_own_subject_event_accepted",
+      "observed_source_sha256s": [
+        "510bc84765d6ba08840cf84035c01201c95a5e12bf54a11c81f59ce76397b7e3",
+        "7a290a6f3483b5120a0477ce39b10f8f3d9fb8607b09f2d840e7a655285c9f23"
+      ],
+      "observed_election_years": [
+        1988,
+        2010
+      ],
+      "reason": "Current Hélène title/card/birth-year1958 and November2010 header coexist with a1986/1988 electoral line and an explicitly Marie-Anne-named biography. Those mixed current-profile components are quarantined from daughter membership inference. The actual independent Academy-issued PDF names the daughter with own DOB/career and directly dates her ordinary election2010-11-30. No maternal date is inferred or transferred.",
+      "current_profile_quarantined": true
+    },
+    "own_subject_event_positive_source_id": "bouchiat_2011_v14_reused",
+    "own_subject_event_positive_source_sha256": "7a290a6f3483b5120a0477ce39b10f8f3d9fb8607b09f2d840e7a655285c9f23",
+    "accepted_event_proposed": "2010-11-30",
+    "sole_positive_membership_source": true,
+    "current_profile_source_id": "fr15_a_1",
+    "current_profile_source_sha256": "510bc84765d6ba08840cf84035c01201c95a5e12bf54a11c81f59ce76397b7e3",
+    "current_profile_observed_components": {
+      "h1_and_member_card_subject": "Hélène Bouchiat",
+      "birth_year": 1958,
+      "generic_election_header_year": 2010,
+      "generic_election_header_month": 11,
+      "electoral_correspondent_date": "1986-10-06",
+      "electoral_member_date": "1988-06-20",
+      "biography_named_subject": "Marie-Anne Bouchiat",
+      "biography_career": "honorary CNRS research director"
+    },
+    "current_profile_locators": {
+      "header": "h1, memberCard-title, NodeMember-iconList-dates and NodeMember-iconList-elected/time",
+      "quarantined_electoral_line": "div.Node-header-chapo p; repeated association also occurs in meta[name=description]",
+      "quarantined_biography": "Node-top h2 Biographie followed by div.Node-chapo p"
+    },
+    "bounded_biography_quote": "Marie-Anne Bouchiat est directrice de recherche honoraire au CNRS.",
+    "current_profile_not_used_as_accepted_day_source": true,
+    "current_profile_raw_expressions_all_preserved": true,
+    "no_maternal_election_or_DOB_claim_created": true,
+    "mother_control_candidate_group_id": "CTHS_111838",
+    "mother_baseline_record_sha256": "92f24469801efb49408a6728fbb43c6a28730ed7ce1ec20e2a6fbfaafe3a15bb",
+    "mother_all_fields_must_remain_unchanged": true,
+    "old_bad_response_url": "https://www.academie-sciences.fr/en/node/2084",
+    "old_bad_response_original_bytes_available": false,
+    "old_bad_response_not_claimed_re_read": true,
+    "old_bad_response_metadata_repo_path": "data/france_academy_cths_nine_source_adjudication_v1_2/source_claim_evidence_ledger_v1_2.csv",
+    "old_bad_response_metadata_sha256": "e1ccfecae3c41c88ef33af549776f168a0df48102f82979f9e8b82534a8774c1",
+    "fresh_current_response_not_claimed_identical_to_old_response": true,
+    "source_assignment_exclusion_not_source_count_voting": true,
+    "baseline_review_flags_preserved_exact": "baseline_individual_review;ACADEMY_FIRST_PARTY_DOB_CORROBORATED|baseline_source_claim_not_new_fetch|biography_subject_name_conflict;header_body_election_year_conflict|missing_birth_field|prior_source_review_role_override",
+    "baseline_formal_election_date_conflict_preserved_exact": "",
+    "previous_conflict_explicitly_resolved": false
+  },
+  {
+    "candidate_group_id": "PROFILE2_08407b6d0479b1d0",
+    "source_assignment_disposition": {
+      "status": "unresolved_actual_same_subject_election_year_conflict",
+      "observed_source_sha256s": [
+        "c92bca31e34d52f7d518647add883ffe49168afd327d611eb1f0d37746def58c"
+      ],
+      "observed_election_years": [
+        1982,
+        2006
+      ],
+      "reason": "The current Academy header dates election to January2006, while the subject-specific electoral text gives member15February1982 after correspondence4February1980. Title, birth-year1930 and Collège-de-France biography consistently name Nicole Le Douarin, so this is a genuine same-subject election-year contradiction and remains held. No date is chosen.",
+      "current_profile_quarantined": false
+    },
+    "current_profile_source_id": "fr15_a_2",
+    "current_profile_source_sha256": "c92bca31e34d52f7d518647add883ffe49168afd327d611eb1f0d37746def58c",
+    "current_profile_observed_components": {
+      "h1_member_card_and_biography_subject": "Nicole Le Douarin",
+      "birth_year": 1930,
+      "generic_election_header_year": 2006,
+      "generic_election_header_month": 1,
+      "electoral_correspondent_date": "1980-02-04",
+      "electoral_member_date": "1982-02-15",
+      "biography_career": "honorary professor at Collège de France"
+    },
+    "current_profile_locators": {
+      "header": "NodeMember-iconList-elected/time datetime2006-01-01T12:00:00Z; rendered January2006 is month precision, not day1",
+      "electoral_line": "div.Node-header-chapo p; ordinary1982member separated from1980correspondence",
+      "biography": "Node-top h2 Biographie followed by div.Node-chapo p explicitly names Nicole"
+    },
+    "no_accepted_election_date_or_year_selected": true,
+    "old_profile_original_bytes_available": false,
+    "old_profile_warning_not_claimed_re_read": true,
+    "PAS_only_identity_and_birth_support": true,
+    "PAS_nomination1999_not_French_election": true,
+    "baseline_review_flags_preserved_exact": "bounded_birth_followup;source_claim_not_accepted_dob;v2_identity_groups_preserved|header_body_election_year_conflict|secondary_authority_not_firstparty;upstream_independence_not_established;national_library_authority_secondary",
+    "baseline_formal_election_date_conflict_preserved_exact": "",
+    "new_machine_readable_same_subject_conflict_status_required": true,
+    "previous_conflict_explicitly_resolved": false
+  }
+]

@@ -1,0 +1,11 @@
+# v15 France A — two French-membership cases
+
+One conditional ordinary-membership proposal uses the retained independent Academy-issued PDF for Hélène Bouchiat:2010-11-30 at day precision. Nicole Le Douarin remains held for an actual same-subject election-year conflict. Root approval and independent final-hash QA are required; accepted data are not edited.
+
+Two known Academy profile URLs each received exactly one successful200 GET, without redirects, retries or queries. Hélène's current header names the daughter with birth-year1958 and November2010, but its electoral line gives1986/1988 and its biography explicitly names Marie-Anne. The mixed profile supplies no accepted day source. Its exact component assignment is quarantined while preserving every observed expression and old warning. The old /en/node/2084 response remains unavailable; the fresh current response is not claimed to recover or re-read those old bytes. No maternal election or birthday is inferred or transferred, and the mother's entire accepted record remains unchanged.
+
+Physical page4 of the actual retained2011 PDF was rehashed and visually reread. Its governing ordinary-Member election heading and Hélène's own name/DOB/CNRS-LPS career directly support2010-11-30. This is one authorial document on a university mirror, with actual Academy issuing credit. No source-count vote is used.
+
+Nicole's current header gives January2006, while the same subject's electoral text gives member15February1982 after correspondence4February1980. The name, birth-year1930 and Collège-de-France biography consistently identify Nicole. Both years and source hash are retained in a new machine-readable unresolved-conflict status; no election date/year is selected. Old blank formal election_date_conflict and old review_flags remain literal. PAS nomination and general academy listings provide no French election event.
+
+Public files include source/decision tables, exact hashes, actual capture metadata, and the separately bound source-assignment disposition. Raw originals/full text and page images remain private. All25 older formal chronology holds, exact birthday conflicts, father birth-year hold and foreign-role controls remain; no new birthday hunt, analysis cohort or BaZi computation.

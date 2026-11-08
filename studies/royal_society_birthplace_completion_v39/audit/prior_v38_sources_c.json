@@ -1,0 +1,320 @@
+{
+  "written_utc": "2026-11-07T01:10:22.932760+00:00",
+  "group": "c",
+  "phase": "canonical_community_reference_geography_method_application",
+  "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+  "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+  "method_application_scope_sha256": "bd7540715a6b4649ffe79371e38ee2b650bd0176013fbb5418efa02b8995fad0",
+  "intent_file": "v38_c_intent.json",
+  "full2nativeobjects/priorholdsbeforequeries": true,
+  "all9_issue_inventories_loaded_before_queries": true,
+  "inventory_file_pins": {
+    "active_source_DOB_conflicts.json": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+    "birthplace_source_conflicts.json": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+    "provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+    "source_derived_age_inconsistencies.json": "9a299ead41add638a45fd85603a59ee3c42e1b0284af5c06c5e273a3affac18a",
+    "lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+    "cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+    "source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+    "omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+    "source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+  },
+  "prior_context_review": [
+    "v38_scope_c.json all native objects",
+    "prior_v30_holds.json Ross canonical linkcarrier and original ORA failure/CERN exactname-date precision hold",
+    "prior_v34_holds.json Chibnall original city-only hold"
+  ],
+  "intent_writes_validated_exit0_separately_beforeweb": true,
+  "retrieval_counts": {
+    "queries": 2,
+    "navigation_attempts": 4,
+    "source_open_operations": 3,
+    "click_operations": 1,
+    "parsed_finds": 0,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "query_ledger": [
+    {
+      "kind": "search",
+      "engine": "system2",
+      "record_id": "RS_PAST_NA6313",
+      "query": "\"Albert Charles Chibnall\" site:wikipedia.org",
+      "result_ref": "turn8609069search0",
+      "intent_entries": [
+        0
+      ]
+    },
+    {
+      "kind": "search",
+      "engine": "system2",
+      "record_id": "RS_PAST_NA4774",
+      "query": "\"Graham Garland Ross\" site:wikipedia.org",
+      "result_refs": [
+        "turn8609069search4",
+        "turn8609069search5"
+      ],
+      "intent_entries": [
+        1
+      ]
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "kind": "open",
+      "record_id": "RS_PAST_NA6313",
+      "url": "https://en.wikipedia.org/wiki/Albert_Chibnall",
+      "ref": "turn7079468view0",
+      "outcome": "actual_canonical_person_parsed_body",
+      "intent_entry": 2
+    },
+    {
+      "kind": "open",
+      "record_id": "RS_PAST_NA4774",
+      "url": "https://en.wikipedia.org/wiki/Graham_Ross_%28physicist%29",
+      "ref": "turn7079468view1",
+      "redirected_url": "https://en.wikipedia.org/wiki/Graham_Ross_(physicist)",
+      "outcome": "parsed_canonical_person_tool_representation_labelled_rewritten_summary;yearonly",
+      "intent_entry": 3
+    },
+    {
+      "kind": "open",
+      "record_id": "RS_PAST_NA4774",
+      "url": "https://ru.wikipedia.org/wiki/%D0%A0%D0%BE%D1%81%D1%81%2C_%D0%93%D1%80%D1%8D%D0%BC",
+      "ref": "turn7079468view2",
+      "redirected_url": "https://ru.wikipedia.org/wiki/%D0%A0%D0%BE%D1%81%D1%81,_%D0%93%D1%80%D1%8D%D0%BC",
+      "outcome": "parsed_canonical_person_tool_representation_labelled_rewritten_summary;Oxfordplacecontrast_notqualified",
+      "intent_entry": 4
+    },
+    {
+      "kind": "click",
+      "record_id": "RS_PAST_NA6313",
+      "ref_id": "turn7079468view0",
+      "link_id": 39,
+      "observed_anchor": "Hammersmith",
+      "ref": "turn4523945view0",
+      "actual_target_url": "https://en.wikipedia.org/wiki/Hammersmith",
+      "outcome": "actual_geographicdistrict_body_CountryEngland",
+      "intent_entry": 5
+    }
+  ],
+  "parsed_find_ledger": [],
+  "candidates": [
+    {
+      "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+      "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+      "method_application_scope_sha256": "bd7540715a6b4649ffe79371e38ee2b650bd0176013fbb5418efa02b8995fad0",
+      "proof_mode": "explicit_person_born_place_hyperlink_then_actual_target_place_region",
+      "source_url": "https://en.wikipedia.org/wiki/Albert_Chibnall",
+      "source_title": "Albert Chibnall – Wikipedia",
+      "source_author": null,
+      "source_kind": "canonical_Wikipedia_original_community_person_reference_body",
+      "source_quote": "Hammersmith",
+      "source_quote_word_count": 1,
+      "observed_source_full_name": "Albert Charles Chibnall",
+      "source_birthdate": "1894-01-28",
+      "source_birthdate_as_displayed": "28 January 1894",
+      "source_birthdate_precision": "exact_day_actually_displayed_in_Born_field_and_explicit_subject_born_prose",
+      "source_lifespan": "1894-1988; actual displayed death10January1988",
+      "source_DOB_native_compatibility": "Actual 28January1894 normalizes unchangednative1894-01-28; actual life1894-1988 agrees authority. Agreement as stated is identity binding only, not civil/calendar validation or originalDOB grade upgrade.",
+      "identity_review": [
+        "All native Albert Charles Chibnall components actually in bodyL110/L130/L135, no omittedmiddle or initials expansion.",
+        "Exact displayed DOB28January1894 and compatible lifespan1894-1988.",
+        "Distinctive plant nitrogen/protein biochemistry, ImperialCollegechair1929, CambridgeSirWilliamDunnchair1943 and FredSanger lab connection L138-141 coherently bind subject.",
+        "No incompatible date/place/identity observed in this bounded canonical Chibnall body acquisition. PriorODNB/Sherington sources stay frozen; no informationalindependence claim."
+      ],
+      "geographic_basis": "Actual personalbornHammersmith hyperlink39 followed to actual geographicdistrict page, whoseCountryfieldL170 statesEngland and leadL184 statesdistrictWestLondonEngland. England wholeNorthregion under existinggate. No nationality/work/death/family/coordinate or familiarcity inference.",
+      "publication_date": null,
+      "publication_date_precision": "not_observed",
+      "source_revision_id": null,
+      "source_revision_utc": null,
+      "source_calendar_model": null,
+      "source_statement_rank": null,
+      "source_editorial_validation": null,
+      "source_informational_independence": null,
+      "record_id": "RS_PAST_NA6313",
+      "native_dob": "1894-01-28",
+      "authority_name": "Chibnall; Albert Charles (1894 - 1988); biochemist",
+      "frozen_raw_birthplace": "Hammersmith, London",
+      "frozen_birthplace_source_grade": "S2",
+      "source_grade": "S3",
+      "source_grade_role": "geographic_support_only",
+      "reviewed_hemisphere": "north",
+      "proof_chain": [
+        {
+          "source_url": "https://en.wikipedia.org/wiki/Albert_Chibnall",
+          "source_node_label": "Albert Charles Chibnall",
+          "edge_property": "explicit_subject_birthplace_hyperlink",
+          "tool_ref": "turn7079468view0",
+          "locator": "L110 fullnative/L112exact28January1894/L114 BornHammersmithlink39;L135fullnative/directborn28January1894inHammersmithlink39.",
+          "acquisition_role": "worker_actual_canonical_person_body_and_actual_born_link39_click",
+          "target_kind": "entity",
+          "target_label": "Hammersmith",
+          "target_uri": "https://en.wikipedia.org/wiki/Hammersmith",
+          "source_qid": null,
+          "target_qid": null,
+          "worker_tool_ref": "turn7079468view0",
+          "worker_follow_link_result_ref": "turn4523945view0"
+        },
+        {
+          "source_url": "https://en.wikipedia.org/wiki/Hammersmith",
+          "source_node_label": "Hammersmith",
+          "edge_property": "Country",
+          "tool_ref": "turn4523945view0",
+          "locator": "L157Hammersmithtitle/L156districtLondon/L170CountryEngland/L184geographicdistrictWestLondonEngland.",
+          "acquisition_role": "worker_actual_person_born_place_link39_target_body",
+          "target_kind": "literal",
+          "target_label": "England",
+          "target_uri": null,
+          "source_qid": null,
+          "target_qid": null,
+          "target_uri_limit": "England anchor text103 observed but terminal anchor hrefURI was not acquired/followed; no guessed regionURI/QID. Literal England field sufficient.",
+          "source_node_type": "geographic_district",
+          "source_quote": "England",
+          "source_quote_word_count": 1
+        }
+      ],
+      "source_body_ref": "turn7079468view0",
+      "worker_source_body_ref": "turn7079468view0",
+      "source_locator": "Actualcanonicalperson turn7079468view0:L110/112/114/130/135 fullnative/exactDOB/bornHammersmithlink39/lifespan;L138-141 distinctivebiochemistrycareer. Actual click39 target turn4523945view0:L170CountryEngland/L184districtWestLondonEngland.",
+      "source_body_acquisition_role": "worker_actual_canonical_person_body_and_actual_explicit_born_link_target_body; parent verification pending",
+      "worker_actual_edge_follow_ref": "turn4523945view0",
+      "source_grade_basis": "UnchangedV36 canonical original community reference method applied under prospectively fixedV38scope. S3 geographic support only: fullnative/exactDOB/career/personalbornHammersmithlink and actual targetEngland. Communityeditorialaccuracy/informationalindependence/civilbirth/calendar/ranks/revision unverified. OriginalHammersmithLondonS2 and DOBtiers unchanged.",
+      "source_birthplace_context": "Hammersmith (explicit personal Born field and born-prose hyperlink); England (actual target district Country field and geographic lead)",
+      "place_binding_review": "Literal frozen Hammersmith locality component matches actual personbornlink39; infobox also saysLondon asfrozen. No differentcity/alias/street assumption. Targetdistrict identity actually acquired, no coordinates used; current modern page proves whole-region only, no historicalstreet boundary claim.",
+      "source_exact_native_month_day_confirmed": true,
+      "native_death_endpoint_confirmed_by_source": true,
+      "native_DOB_source_grade_unchanged": true,
+      "original_birthplace_fields_and_source_grades_unchanged": true,
+      "retrieval_representation": "web-tool parsed actual canonical community person and place HTML text, not raw HTTPbytes or independently inspectedpixels",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "caveats": [
+        "V36method is reused unchanged; V38 application scope distinct from frozen V37scope. Not retroactive prior mirror admission or DOB/BP grade repair.",
+        "Worker actually followed personBornlink39, not a guessed Hammersmith URI. Root acquisition/verification not yet performed by this worker.",
+        "Actual target CountryvalueEngland has an anchor label but its hrefURI was not acquired; terminalURI/QID remain null. Coordinates not used or assigned.",
+        "No revision/footer date, civilbirth, calendar model, statement rank, independentediting or informationalindependence authenticated. Unknownmetadata null.",
+        "PriorS2ODNB and V34Sherington city-only holds remain history. New fact proposes geography only through separately admitted canonical community link method."
+      ]
+    }
+  ],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA4774",
+      "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+      "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+      "method_application_scope_sha256": "bd7540715a6b4649ffe79371e38ee2b650bd0176013fbb5418efa02b8995fad0",
+      "native": {
+        "authority_name": "Ross; Graham Garland (1944 - 2021); theoretical physicist",
+        "native_dob": "1944-09-13",
+        "raw_birthplace": "Aberdeen",
+        "frozen_birthplace_source_grade": "S2",
+        "hemisphere": "unknown"
+      },
+      "status": "held_no_exact_native_DOB_and_tool_rewritten_place_contrast_not_adopted",
+      "hold_type": "canonical_year_only_and_unqualified_tool_representation_place_contrast",
+      "reason": "English canonical toolrepresentation gives full GrahamGarlandRoss and explicitBornAberdeenScotland but onlyyear1944, so exactnativeDOBgatefails. Russian canonical toolrepresentation saysBirthplaceOxfordEnglandUK against frozenAberdeen, alsoyearonly. Both Ross open headers explicitly label rewrittensummary; not promoted to authenticatedoriginal-bodyplaceconflict or definitivecanonicalclaim. Preserve provisionalcontrast and acquiredtoollimitations; no positiveEnglishgeography chosen, no further source-shopping.",
+      "proof_mode": null,
+      "proof_chain": [],
+      "source_grade_adopted": null,
+      "reviewed_hemisphere": "unknown",
+      "no_new_geographic_assignment": true,
+      "native_and_original_birthplace_fields_unchanged": true,
+      "source_observations": [
+        {
+          "source_url": "https://en.wikipedia.org/wiki/Graham_Ross_(physicist)",
+          "requested_url": "https://en.wikipedia.org/wiki/Graham_Ross_%28physicist%29",
+          "source_body_ref": "turn7079468view1",
+          "source_locator": "L110 Born1944/L111AberdeenScotland;L131fullGrahamGarlandRoss/lifespan1944-2021;L135-137gluons/QCD/supersymmetry;L148FRS1991/Dirac2012.",
+          "observed_source_full_name": "Graham Garland Ross",
+          "source_birthdate": "1944",
+          "source_birthdate_precision": "year_only_no_month_day",
+          "native_exact_month_day_confirmed": false,
+          "source_lifespan": "1944-2021",
+          "observed_birthplace": "Aberdeen, Scotland",
+          "acquisition_role": "worker_parsed_canonical_person_tool_representation_explicitly_labelled_rewritten_summary",
+          "tool_header_rewritten_summary": true,
+          "source_quote": null,
+          "source_quote_word_count": 0,
+          "source_original_body_authenticated": false,
+          "source_revision_id": null,
+          "source_revision_utc": null
+        },
+        {
+          "source_url": "https://ru.wikipedia.org/wiki/%D0%A0%D0%BE%D1%81%D1%81,_%D0%93%D1%80%D1%8D%D0%BC",
+          "requested_url": "https://ru.wikipedia.org/wiki/%D0%A0%D0%BE%D1%81%D1%81%2C_%D0%93%D1%80%D1%8D%D0%BC",
+          "source_body_ref": "turn7079468view2",
+          "source_locator": "L124-125actualLatinfullGrahamGarlandRoss;L126year1944/L127-128BirthplaceOxfordEnglandUK;L129death31Oct2021;L131-145theoreticalphysicist/Oxford/CERN/AlanMartin/gluon;L158-162gluons/QCD/supersymmetry.",
+          "observed_source_full_name": "Graham Garland Ross",
+          "source_birthdate": "1944",
+          "source_birthdate_precision": "year_only_no_month_day",
+          "native_exact_month_day_confirmed": false,
+          "source_lifespan": "1944-2021",
+          "observed_birthplace_literal": "Оксфорд, Англия, Великобритания",
+          "observed_birthplace_translation": "Oxford, England, United Kingdom",
+          "translation_role": "worker_translation_of_observed_Russian_place_labels_not_source_English_quote",
+          "source_quote": "Оксфорд",
+          "source_quote_word_count": 1,
+          "acquisition_role": "worker_parsed_canonical_person_tool_representation_explicitly_labelled_rewritten_summary",
+          "tool_header_rewritten_summary": true,
+          "source_original_body_authenticated": false,
+          "source_revision_id": null,
+          "source_revision_utc": null
+        }
+      ],
+      "prior_holds_preserved": [
+        "V30 failed ORA work closed, not retried or switchedcarrier.",
+        "V30 actualCERNobituary yearonly1944/omittedGarland/cityAberdeen withoutbornScotland remains unadopted; no transfer offullDOB/names from otherworks.",
+        "V16 frozenWadham signedobituary fullnative/yearonly/bornAberdeenS2 remains unchanged."
+      ],
+      "qualified_new_DOB_conflict": false,
+      "qualified_new_birthplace_conflict": false,
+      "provisional_place_contrast_pending_root_source_assessment": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "Parsed web-tool canonical person representations with explicit rewritten-summary headers for bothRossworks; not rawHTML/sourceauthentication."
+    }
+  ],
+  "new_DOB_or_place_conflicts": [],
+  "provisional_tool_representation_place_contrasts": [
+    {
+      "record_id": "RS_PAST_NA4774",
+      "frozen_birthplace": "Aberdeen",
+      "tool_representation_alternate_birthplace": "Oxford, England, United Kingdom",
+      "ref": "turn7079468view2",
+      "status": "unqualified_tool_rewritten_summary_not_promoted_to_active_birthplace_conflict_inventory",
+      "native_DOB_month_day_confirmed": false,
+      "root_source_assessment_pending": true
+    }
+  ],
+  "unopened_distinct_original_work_leads": [],
+  "source_quote_words_by_original_work": {
+    "https://en.wikipedia.org/wiki/Albert_Chibnall": 1,
+    "https://en.wikipedia.org/wiki/Hammersmith": 1,
+    "https://en.wikipedia.org/wiki/Graham_Ross_(physicist)": 0,
+    "https://ru.wikipedia.org/wiki/%D0%A0%D0%BE%D1%81%D1%81,_%D0%93%D1%80%D1%8D%D0%BC": 1
+  },
+  "protocol_limits": {
+    "per_group_queries": 4,
+    "per_group_navigation_attempts": 10,
+    "used_queries": 2,
+    "used_navigation_attempts": 4,
+    "cached_finds_counted_separately": true,
+    "unused_budget_not_required_to_spend": true,
+    "first_failed_or_unusable_work_not_retried": true,
+    "no_rawGET_auth_bypass_or_failedwork_variants": true,
+    "original_source_caches_distributed": false,
+    "source_exhaustion_claimed": false
+  },
+  "method_amendment_created": false,
+  "method_reused_from_version": 36,
+  "scope_application_extension": true,
+  "no_new_admission_method_exception": true,
+  "raw_HTTP_status": null,
+  "raw_bytes_sha256": null,
+  "exact_request_utc": null,
+  "no_repo_master_Git_edit": true,
+  "no_source_exhaustion_finalfreeze_or_DOB_BPtierupgrade": true
+}

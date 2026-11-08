@@ -1,0 +1,49 @@
+{
+  "schema": "royal_society_birthplace_completion_v12",
+  "baseline_v11_source_commit": "6a34d2d003507c47e8dd27f67b889b70f6fdfad4",
+  "baseline_v11_canonical_jsonl_sha256": "577515b90cff05d61288222a4daf595aaaed76a1baa16ab96391720b02c32da6",
+  "underlying_v10_gzip_sha256": "e44f6dc02cc0cafece9b792164f016da0f08de5736ac62442d176d45b19a5799",
+  "records": 4983,
+  "counting_unit": "fixed UK cohort records",
+  "reviewed_records": 12,
+  "newly_classified": 1,
+  "new_explicit_region_context_observations": 1,
+  "new_first_birthplace_records": 0,
+  "new_context_source_grades": {
+    "S2": 1
+  },
+  "new_hemisphere_counts": {
+    "north": 1
+  },
+  "overall": {
+    "north": 4159,
+    "unknown": 641,
+    "south": 183
+  },
+  "native_dob_window": "1835-1985 inclusive",
+  "native_dob_window_records": 2644,
+  "native_dob_window_counts": {
+    "north": 2259,
+    "unknown": 207,
+    "south": 178
+  },
+  "newly_classified_in_native_dob_window": 1,
+  "unchanged_complete_rows": 4982,
+  "held_records": 11,
+  "holds": {
+    "no_new_region_or_unavailable": 9,
+    "birthplace_conflict": 1,
+    "birth_year_conflict": 1
+  },
+  "native_fields_and_prior_evidence_preserved": true,
+  "all_v11_evidence_objects_preserved": true,
+  "original_birthplace_and_DOB_source_grades_preserved": true,
+  "other_cohorts_modified": false,
+  "country_or_personal_coordinates_assigned": false,
+  "DOB_calendar_identity_eligibility_modified": false,
+  "cross_cohort_deduplication": false,
+  "BaZi_or_outcomes": false,
+  "final_cohort_freeze": false,
+  "gzip_note": "Output uses GzipFile with empty filename and zero mtime; v11 identity uses canonical objects, not cross-Python gzip header equality.",
+  "recovery_note": "Self-contained UK v10 carrier plus frozen v11 contexts; no comprehensive v8 NAS/DE increment reconstruction."
+}

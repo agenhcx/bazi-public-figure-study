@@ -1,0 +1,275 @@
+{
+  "written_utc": "2026-11-06T23:12:15.368919+00:00",
+  "scope": [
+    "RS_PAST_NA663",
+    "RS_PAST_NA6655",
+    "RS_PAST_NA669",
+    "RS_PAST_NA6847"
+  ],
+  "intent_file": "v34_c_intent.json",
+  "prior_context_review": "Full4targetmasterobjects read beforequeries in two untruncatedchunks; targetv12/v13/v14individualholds/candidates andv24Grovesreport/query/nav/quoteledgers reviewed. OldBarker/Toddcompound-placecandidates notpromoted. NativeReidlegacyrequestafterstopdisclosure preserved withoutrepair.",
+  "candidates": [],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA663",
+      "native": {
+        "record_id": "RS_PAST_NA663",
+        "authority_name": "Barker; John (1901 - 1970)",
+        "native_dob": "1901-04-24",
+        "prior_raw_birthplace": "Church End, Finchley",
+        "prior_birthplace_source_grade": "S2"
+      },
+      "status": "hold_geography_unresolved",
+      "hold_type": "no_new_admissible_birth_region",
+      "reason": "No newactualcountry-qualifiedoriginalpersonbirthbody. Newlocalhistorycompiledprofilediscovery givesexactDOB/plantphysiology butLondononly and firstactualopenfetchfailed, stopped. Searchfamily/censusotherJohnBarkersnotnative; no alternateDOB/placeconflictassigned. OldRS403andv14compoundgeocandidateholdsremainbinding.",
+      "observation_locators": [
+        "turn3575832search0-5",
+        "turn9170687search0/7/8",
+        "turn5868740view1"
+      ],
+      "source_quote": null,
+      "source_quote_word_count": 0,
+      "master_object_unchanged": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA6655",
+      "native": {
+        "record_id": "RS_PAST_NA6655",
+        "authority_name": "Groves; Charles Edward (1841 - 1920)",
+        "native_dob": "1841-03-04",
+        "prior_raw_birthplace": "Highgate",
+        "prior_birthplace_source_grade": "S2"
+      },
+      "status": "hold_geography_unresolved",
+      "hold_type": "no_new_admissible_birth_region",
+      "reason": "NeworiginalJSCI1920volume39obituaryleadfullnative/year1841/Highgateonly; actualPDFfirstopenfailedtoolcontentsizelimit44407350bytes. No partialbodyverification or alternateIAcarrierretry. OtherCharlesEdwardGroves1882/1898militarypeopleexcluded asdifferentidentity; no nativeDOB/placecontradiction. OldAlpineJournalHighgateyear1841S2contextunchanged.",
+      "observation_locators": [
+        "turn3575832search49",
+        "turn9170687search3-5",
+        "turn5868740view0"
+      ],
+      "source_quote": null,
+      "source_quote_word_count": 0,
+      "master_object_unchanged": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA669",
+      "native": {
+        "record_id": "RS_PAST_NA669",
+        "authority_name": "Reid; Edward Waymouth (1862 - 1948)",
+        "native_dob": "1862-10-11",
+        "prior_raw_birthplace": "Canterbury",
+        "prior_birthplace_source_grade": "S2"
+      },
+      "status": "hold_geography_unresolved",
+      "hold_type": "no_new_admissible_birth_region",
+      "reason": "Newqueries returned inherited1948memoirCanterburyonly/RoyalSocietyidentity andderivedWikibio; no genuinelyneworiginalbirthcountrybody. Didnotretry1976BellParsonsPMCscanned/PDFchallengeoruseDundeeprofessionalappointment asbirthregion. NativeCanterburyS2unchanged; no matchingnewcountryclaim.",
+      "observation_locators": [
+        "turn9170687search1/6/9",
+        "prior_v13_holds.json"
+      ],
+      "source_quote": null,
+      "source_quote_word_count": 0,
+      "master_object_unchanged": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "record_id": "RS_PAST_NA6847",
+      "native": {
+        "record_id": "RS_PAST_NA6847",
+        "authority_name": "Todd; Charles (1869 - 1957)",
+        "native_dob": "1869-09-17",
+        "prior_raw_birthplace": "Carleton, a small village near Carlisle",
+        "prior_birthplace_source_grade": "S2"
+      },
+      "status": "hold_geography_unresolved",
+      "hold_type": "no_new_admissible_birth_region",
+      "reason": "Newqueries returned identitymetadata andunrelatedCharlesTodd1826astronomer/PercySydneyTodd1869fishmonger/familyrecords. No native-qualifiedoriginalcountrybirthbody. ExistingNatureCumberlandancestrynotbirth andv14CarletonCarlislegeocandidate-onlyholdsremainbinding. MakingScienceexcerptsdeath22or23September1957notbirthdate; discovery-only/no newnativeDOBconflict.",
+      "observation_locators": [
+        "turn3575832search16/19",
+        "turn9170687search2",
+        "prior_v13_holds.json",
+        "prior_v14_holds.json"
+      ],
+      "source_quote": null,
+      "source_quote_word_count": 0,
+      "master_object_unchanged": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    }
+  ],
+  "request_ledger": [
+    {
+      "kind": "search",
+      "record_id": "RS_PAST_NA663",
+      "engine": "system2",
+      "q": "\"John Barker\" \"1901\" \"born\" plant biochemist England",
+      "batch": 1,
+      "result_ref_prefix": "turn3575832search",
+      "merged_results_not_per_query_mapping": true,
+      "specific_durable_intent_before_call": true,
+      "intent_write_exit0_verified": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "search",
+      "record_id": "RS_PAST_NA6655",
+      "engine": "system2",
+      "q": "\"Charles Edward Groves\" \"Highgate\" Middlesex",
+      "batch": 1,
+      "result_ref_prefix": "turn3575832search",
+      "merged_results_not_per_query_mapping": true,
+      "specific_durable_intent_before_call": true,
+      "intent_write_exit0_verified": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "search",
+      "record_id": "RS_PAST_NA669",
+      "engine": "system2",
+      "q": "\"Edward Waymouth Reid\" \"Canterbury\" \"Kent\" biography",
+      "batch": 1,
+      "result_ref_prefix": "turn3575832search",
+      "merged_results_not_per_query_mapping": true,
+      "specific_durable_intent_before_call": true,
+      "intent_write_exit0_verified": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "search",
+      "record_id": "RS_PAST_NA6847",
+      "engine": "system2",
+      "q": "\"Charles Todd\" \"1869\" \"Carleton\" \"Cumberland\"",
+      "batch": 1,
+      "result_ref_prefix": "turn3575832search",
+      "merged_results_not_per_query_mapping": true,
+      "specific_durable_intent_before_call": true,
+      "intent_write_exit0_verified": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "search",
+      "record_id": "RS_PAST_NA663",
+      "engine": "system1",
+      "q": "\"John Barker\" \"1901\" biography Finchley -site:en.wikipedia.org -site:openalex.org -site:researchgate.net",
+      "batch": 2,
+      "result_ref_prefix": "turn9170687search",
+      "merged_results_not_per_query_mapping": true,
+      "specific_durable_intent_before_call": true,
+      "intent_write_exit0_verified": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "search",
+      "record_id": "RS_PAST_NA6655",
+      "engine": "system1",
+      "q": "\"Charles Edward Groves\" \"born\" \"England\" -site:en.wikipedia.org",
+      "batch": 2,
+      "result_ref_prefix": "turn9170687search",
+      "merged_results_not_per_query_mapping": true,
+      "specific_durable_intent_before_call": true,
+      "intent_write_exit0_verified": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "search",
+      "record_id": "RS_PAST_NA669",
+      "engine": "system1",
+      "q": "\"Edward Waymouth Reid\" \"biographical\" Canterbury",
+      "batch": 2,
+      "result_ref_prefix": "turn9170687search",
+      "merged_results_not_per_query_mapping": true,
+      "specific_durable_intent_before_call": true,
+      "intent_write_exit0_verified": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "search",
+      "record_id": "RS_PAST_NA6847",
+      "engine": "system1",
+      "q": "\"Charles Todd\" \"1869\" biography -site:en.wikipedia.org -site:newikis.com",
+      "batch": 2,
+      "result_ref_prefix": "turn9170687search",
+      "merged_results_not_per_query_mapping": true,
+      "specific_durable_intent_before_call": true,
+      "intent_write_exit0_verified": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "kind": "open",
+      "record_id": "RS_PAST_NA6655",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Journal_%28IA_journalchem39soci%29.pdf",
+      "ref": "turn5868740view0",
+      "outcome": "Toolreported400 Content length is too large:44407350. No originalbodyacquired; stoppedwithoutIAalternatecarrier/variants/retry/rawGET.",
+      "tool_reported_error_code": 400,
+      "tool_reported_size_limit_bytes": 44407350,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "specific_durable_intent_before_call": true,
+      "intent_write_exit0_verified": true
+    },
+    {
+      "kind": "open",
+      "record_id": "RS_PAST_NA663",
+      "url": "https://slatters.org.uk/Trumpington/f3785.htm",
+      "ref": "turn5868740view1",
+      "outcome": "ToolInternalError/Errorfetching. No originalbodyacquired; stoppedwithoutvariants/retry/rawGET.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "specific_durable_intent_before_call": true,
+      "intent_write_exit0_verified": true
+    }
+  ],
+  "counts": {
+    "queries": 8,
+    "navigation_attempts": 2,
+    "parsed_finds": 0,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "budget": {
+    "queries_limit": 8,
+    "original_navigation_limit": 10
+  },
+  "protocol_disclosure": "All exact initial/adaptivequeries and bothopens durablywritten/JSONrereadvalidated; exec exit0inspectedbeforeeachwebcall. Bothnewroutesfailedfirstopen, stoppedwithnoretry/variants/bypass/rawGET. No originalscreenshot/projectioncache orfullsourcefilescreated.",
+  "quote_policy": "No newsourcequotespersisted, inheritedquotesunchanged.",
+  "hidden_prior_DOB_or_place_holds_found": [],
+  "qualified_new_DOB_or_place_conflicts_observed": [],
+  "unopened_new_original_work_leads": [
+    {
+      "record_id": "RS_PAST_NA6655",
+      "discovery_ref": "turn3575832search6",
+      "url": "https://www.academia.edu/119946963/PAPER_PRESENTATION",
+      "status": "Unopenedpresentationlead withGrovesexact4March1841/Highgate; actualworktitle/author/body/provenanceandbirthcountry unverified. Differentcarrierisnotassumedneworiginalwork; notadopted."
+    }
+  ],
+  "no_analysis_or_final_freeze": true,
+  "repo_or_master_modified": false
+}

@@ -1,0 +1,452 @@
+{
+  "artifact_type": "V48_canonical_first_birthplace_group_review",
+  "written_utc": "2026-11-08T12:45:08.170678+00:00",
+  "group": "a",
+  "method_id": "uk-first-birthplace-canonical-community-reference-pilot-v1",
+  "method_sha256": "98e9efbe9c97049e64954b4f3e4ec1b6d92c21a104107ccad3bb5c14bf0850af",
+  "scope_sha256": "5619bae49af23c1e9646d98d49d41f189ea797f0767216f835124c38a3706290",
+  "native_scope_sha256": "ab084b72e150e134ef0841d361471a72ad55730a17a66cb94a3acb68c4d85a34",
+  "triage_sha256": "82c20408bef2cf1f5ed91cb2b5f2a8e90f9483e6f92c2e5e6592efcacd5138a4",
+  "intent_file": "v48_intent_a.json",
+  "intent_sha256": "258592a7169f2238a5c1a39ccd3e753a9a8505e941e5129e16a18a1cf73989fc",
+  "fixed_record_ids": [
+    "RS_PAST_NA8672",
+    "RS_PAST_NA3088",
+    "RS_PAST_NA1176"
+  ],
+  "source_scope_extension": true,
+  "bounded_current_access_recheck_not_firstever_or_independence": true,
+  "historical_closures_and_Finlay_deviation_preserved": true,
+  "all9_current_issue_inventories_read_in_full_before_queries": true,
+  "inventory_file_pins": {
+    "active_source_DOB_conflicts.json": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+    "birthplace_source_conflicts.json": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+    "source_derived_age_inconsistencies.json": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+    "provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+    "lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+    "cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+    "source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+    "omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+    "source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+  },
+  "full_native_and_prior_worker_AND_root_ledgers_read_before_queries": true,
+  "targeted_history_file_pins": {
+    "v16_sources_a.json": "f4e1f6fee5589dbfeb204a8b9460fdf27ef549b5336888113ecf4326a0f6faab",
+    "v19_sources_b.json": "c6e79d917e673d13fc8f2d0fd3bb1590ced1ba65f5d3900ae80dba75cc871709",
+    "v19_sources_c.json": "e323c53a0773c90fb3d469a6403b29a534d6f2f41a9956864244e6dfaea82a75",
+    "v25_sources_a.json": "1fb9d95f59120d19493146240e78d708cd08e7ec3927d6b5aeeafe9888553506",
+    "v25_sources_c.json": "0c6eb718f8a83299b4a5d4229685a099e023cc00f71b3ce3657df8e11ebac49c",
+    "v28_sources_a.json": "099c0536807fbd0a0a4ddc902dee83d787646d98e79d673641c46ea0743f38f4",
+    "v47_sources_c.json": "cca639f7ed549817ca0f9d91cb533ab821002275c2bb0e27de2d581bd05afe47",
+    "v47_root_intent.json": "2bdca55a20520079a9b9139bda1607697112dcb6828329786bec27e48c0adcae",
+    "academy_repo/studies/royal_society_original_source_followup_v47/audit/root_followups.json": "2738cf714b0034decaa6b5e351e0f6152ea4ecb88ba8f498eaf400115ce9445a",
+    "academy_repo/studies/royal_society_birthplace_completion_v16/audit/root_intent.json": "74219be49bb3c28fcb2caf2b399e063c2c0f819d929d17632ebd6b1b3a797007",
+    "academy_repo/studies/royal_society_birthplace_completion_v16/audit/parent_adjudication.json": "e9b48bddacfd2a981c0cf0b27ca4a6e27aa449b2d8f4bd3b04564b63ba0d85ef",
+    "academy_repo/studies/royal_society_birthplace_completion_v19/audit/root_intent.json": "7ef0afa443229246ace1666d713d63b76d6848ac287521caacb2efaf11ae131e",
+    "academy_repo/studies/royal_society_birthplace_completion_v19/audit/root_followups.json": "b2d61b017ea1218ceb047e931e821daa9d40cf575c966f29bda5a4451d9b0995",
+    "academy_repo/studies/royal_society_birthplace_completion_v19/audit/parent_adjudication.json": "f57bc456f4997b9d94eed4230e1260c5d469754f698f312bc742bec227f7977d",
+    "academy_repo/studies/royal_society_birthplace_completion_v21/audit/root_intent.json": "656e6f7c8aa2654bccd66738327296217f10ba6d47783018912837e56f8abcb1",
+    "academy_repo/studies/royal_society_birthplace_completion_v21/audit/root_followups.json": "36f4104dfab41afb160d319c035ccdd98d071fe641d9691c0da4c33e91abb5e3",
+    "academy_repo/studies/royal_society_birthplace_completion_v25/audit/root_intent.json": "c4efb79acd678335b5cd74adb1eb1ef3ebb13b264cb64a7bab4afb20cc962434",
+    "academy_repo/studies/royal_society_birthplace_completion_v25/audit/root_followups.json": "f6b6a2a80b9aa16be7adae3452998ba988c2e6b183e3f445ed4d5160de433627",
+    "academy_repo/studies/royal_society_birthplace_completion_v28/audit/root_intent.json": "f71fbb6a387077e4f3cac99a7d056ea22e17c59d8242f8c395ae31bf3702d688",
+    "academy_repo/studies/royal_society_birthplace_completion_v28/audit/root_followups.json": "cdc9ea4387995825042752b7b574d59dad01eb30c8ef8c8f8fb9cafaea6a9975",
+    "academy_repo/studies/royal_society_birthplace_completion_v10/CONTINUATION.md": "cfd73eb195dad587fd4368e9314aa6c90f0644342b90d65ed875010f70f15a08"
+  },
+  "historical_context_review_timing": "Fulltargetworker/rootledgers includingV47rootinterviews read during prefreezeV48localtriage, pins rechecked beforequeries.",
+  "retrieval_counts": {
+    "queries": 4,
+    "person_body_open_attempts": 2,
+    "navigation_attempts": 2,
+    "opens": 2,
+    "clicks": 0,
+    "finds": 0,
+    "place_page_opens": 0,
+    "Wikidata_person_opens": 0,
+    "other_language_person_opens": 0,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "current_person_open_attempts_by_record": {
+    "RS_PAST_NA8672": 1,
+    "RS_PAST_NA3088": 1,
+    "RS_PAST_NA1176": 0
+  },
+  "query_ledger": [
+    {
+      "entry_id": 1,
+      "operation": "system2_search_query",
+      "record_id": "RS_PAST_NA8672",
+      "q": "\"Roger Fletcher\" mathematician site:en.wikipedia.org",
+      "purpose": "BoundedcanonicalENpersonURI locator for authorizedcurrentaccessrecheck; actualURIonly, no searchclaims or guessedURL.",
+      "combined_batch_result_refs": [
+        "turn4844070search0",
+        "turn4844070search1",
+        "turn4844070search2",
+        "turn4844070search3",
+        "turn4844070search4",
+        "turn4844070search5"
+      ],
+      "exact_backend_per_query_assignment_exposed": false,
+      "outcome": "ActualENsubjectURI observed foronerecheck, no sourceclaimadoptionfromsearch"
+    },
+    {
+      "entry_id": 2,
+      "operation": "system2_search_query",
+      "record_id": "RS_PAST_NA3088",
+      "q": "\"Alan Davison\" chemist site:en.wikipedia.org",
+      "purpose": "BoundedcanonicalENpersonURI locator for authorizedcurrentaccessrecheck; actualURIonly, no searchclaims or guessedURL.",
+      "combined_batch_result_refs": [
+        "turn4844070search0",
+        "turn4844070search1",
+        "turn4844070search2",
+        "turn4844070search3",
+        "turn4844070search4",
+        "turn4844070search5"
+      ],
+      "exact_backend_per_query_assignment_exposed": false,
+      "outcome": "ActualENsubjectURI observed foronerecheck, no sourceclaimadoptionfromsearch"
+    },
+    {
+      "entry_id": 3,
+      "operation": "system2_search_query",
+      "record_id": "RS_PAST_NA1176",
+      "q": "\"Richard Assheton\" embryologist site:en.wikipedia.org",
+      "purpose": "BoundedcanonicalENpersonURI locator for authorizedcurrentaccessrecheck; actualURIonly, no searchclaims or guessedURL.",
+      "combined_batch_result_refs": [
+        "turn4844070search0",
+        "turn4844070search1",
+        "turn4844070search2",
+        "turn4844070search3",
+        "turn4844070search4",
+        "turn4844070search5"
+      ],
+      "exact_backend_per_query_assignment_exposed": false,
+      "outcome": "No nativeembryologistEnglishpersonURIidentified; lists/family/namesakesdiscoveryonly."
+    },
+    {
+      "entry_id": 4,
+      "operation": "system1_search_query",
+      "record_id": "RS_PAST_NA1176",
+      "q": "\"Richard Assheton\" \"1863\" Wikipedia",
+      "purpose": "Finalquery for engine2subjectURI coveragegap; Englishpersononly, no listclaim admission/guessedURI/languageWDfallback.",
+      "domains": [
+        "en.wikipedia.org"
+      ],
+      "combined_batch_result_refs": [
+        "turn9163963search0",
+        "turn9163963search1",
+        "turn9163963search2",
+        "turn9163963search3",
+        "turn9163963search4",
+        "turn9163963view0",
+        "turn9163963view1"
+      ],
+      "exact_backend_per_query_assignment_exposed": false,
+      "outcome": "No nativeembryologistEnglishpersonURIidentified; lists/family/namesakesdiscoveryonly."
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "entry_id": 5,
+      "operation": "open",
+      "record_id": "RS_PAST_NA8672",
+      "requested_URL": "https://en.wikipedia.org/wiki/Roger_Fletcher_%28mathematician%29",
+      "observed_result_URL": "https://en.wikipedia.org/wiki/Roger_Fletcher_(mathematician)",
+      "ref": "turn9163963view0",
+      "outcome": "Explicitrewrittensummary; currentpersonworkclosed/noadmissibleoriginalclaims/no retry."
+    },
+    {
+      "entry_id": 6,
+      "operation": "open",
+      "record_id": "RS_PAST_NA3088",
+      "requested_URL": "https://en.wikipedia.org/wiki/Alan_Davison",
+      "ref": "turn9163963view1",
+      "outcome": "ActualnormalENperson fullnative/exactDOB/life/career butBornfielddateonly/no birthplace."
+    }
+  ],
+  "find_ledger": [],
+  "candidates": [],
+  "holds": [
+    {
+      "publication_date": null,
+      "source_revision_id": null,
+      "source_revision_utc": null,
+      "source_calendar_model": null,
+      "source_statement_rank": null,
+      "source_editorial_validation": null,
+      "source_informational_independence": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA8672",
+      "native": {
+        "record_id": "RS_PAST_NA8672",
+        "native_name": "Roger",
+        "authority_name": "Fletcher; Roger (1939 - 2016); mathematician",
+        "native_DOB": "1939-01-29",
+        "raw_birthplace": "",
+        "birthplace_source_grade": "unknown",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "6fdb3662a1572983fc902b57447162a4938111c7544f8fd99a0ef23bf860d5c6"
+      },
+      "decision": "hold",
+      "method_id": "uk-first-birthplace-canonical-community-reference-pilot-v1",
+      "new_birthplace_grade_adopted": null,
+      "new_first_birthplace": null,
+      "new_hemisphere": null,
+      "current_person_open_attempt_count": 1,
+      "historical_early_canonical_access_state": "Unknownperrecordmembershipin enwiki300+66+9; boundedV48currentaccessrecheck doesnotclearhistoricalclosures or provefirstever/newwork/independence.",
+      "source_quote": null,
+      "source_quote_English_lexical_word_count": 0,
+      "qualified_new_DOB_conflict": false,
+      "qualified_new_birthplace_conflict": false,
+      "qualified_new_age_issue": false,
+      "native_fields_DOBtiers_and_allpriorfacts_unchanged": true,
+      "prior_noncanonical_closed_works_preserved": [
+        {
+          "URL": "https://numericalanalysisconference.org.uk/conferences/2025/slides/16",
+          "historical_ref": "turn9412493view1",
+          "status": "Actualoriginallecture/memoircitation exactnativeDOB/life/career, no birthplace",
+          "not_to_reopen_as_new_distinct_original_work": true
+        },
+        {
+          "URL": "https://doi.org/10.1098/rsbm.2024.0037",
+          "historical_ref": "turn9642229view0",
+          "status": "OriginalRSmemoir first403; allcarriersclosed",
+          "not_to_reopen_as_new_distinct_original_work": true
+        },
+        {
+          "URL": "https://www.siam.org/publications/siam-news/articles/obituary-roger-fletcher/",
+          "historical_ref": "turn6032344view0",
+          "status": "ActualSvenLeyffer2016obituary body, no birthplace; explicitJune2016deathmonth differs oldcitedmemoirJuly15, sourceonlyauxiliarycontrast",
+          "not_to_reopen_as_new_distinct_original_work": true
+        },
+        {
+          "URL": "https://app.dundee.ac.uk/pressreleases/2008/praug08/goldmedals.html",
+          "historical_ref": "turn6982399view1",
+          "status": "ActualDundee2008careerbiography, no statedDOB/birthplace",
+          "not_to_reopen_as_new_distinct_original_work": true
+        },
+        {
+          "URL": "https://lsec.cc.ac.cn/~dyh/file/An_Interview_with_Roger_Fletcher.pdf",
+          "historical_ref": "turn6622067view0",
+          "status": "V47ROOT actualYuHongDaiinterview, no statedDOB/birthplace; no unresolvedunopenedlabel",
+          "not_to_reopen_as_new_distinct_original_work": true
+        },
+        {
+          "URL": "https://mathopt.zib.de/Optima-Issues/optima99.pdf",
+          "historical_ref": "turn1784182view0 / turn5000209view0",
+          "status": "V47ROOT actual2015SvenLeyfferOptima99 completeinterviewread including successfulcachedcontinuation, no statedDOB/birthplace; earlierunopenedcitation superseded",
+          "not_to_reopen_as_new_distinct_original_work": true
+        }
+      ],
+      "status": "held_first_current_person_result_explicitly_rewritten",
+      "hold_type": "current_underlying_person_work_closed_after_unusable_rewritten_representation",
+      "reason": "One currentexactobservedENperson open returned an explicitlyrewritten-summary representation. No originalpersonidentity/date/career/birthplaceclaims are promoted from it. Currentunderlyingpersonwork isclosed acrossencoded/unencodedURI, furthercarrier/language/WD/personretries. ExistingFletcherSIAMJune2016-versus-oldmemoircitedJuly15 auxiliarydeathmonthcontrast remainshistorical; thisrewrittenresult is not a newverifieddate/endpointobservation.",
+      "requested_source_URL": "https://en.wikipedia.org/wiki/Roger_Fletcher_%28mathematician%29",
+      "observed_result_URL": "https://en.wikipedia.org/wiki/Roger_Fletcher_(mathematician)",
+      "source_ref": "turn9163963view0",
+      "source_locator": "Resultheader explicitlyrewritten summary of unencodedcanonicalURI; parsed representation179lines. Noadmissibleoriginalbody or birthplaceedge acquired.",
+      "tool_header_rewritten_summary": true,
+      "actual_original_person_body_usable": false,
+      "current_underlying_work_closed": true,
+      "no_retry_variants_or_fallbacks": true,
+      "source_exact_DOB_admissibly_observed": false,
+      "direct_birthplace_admissibly_observed": false,
+      "birthplace_link_request": null
+    },
+    {
+      "publication_date": null,
+      "source_revision_id": null,
+      "source_revision_utc": null,
+      "source_calendar_model": null,
+      "source_statement_rank": null,
+      "source_editorial_validation": null,
+      "source_informational_independence": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA3088",
+      "native": {
+        "record_id": "RS_PAST_NA3088",
+        "native_name": "Alan",
+        "authority_name": "Davison; Alan (1936 - 2015)",
+        "native_DOB": "1936-03-24",
+        "raw_birthplace": "",
+        "birthplace_source_grade": "unknown",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "46c8b2f41cac8c35f4e1e7034ea987a45b68c541a8b6bff596f27dc069b9dbdf"
+      },
+      "decision": "hold",
+      "method_id": "uk-first-birthplace-canonical-community-reference-pilot-v1",
+      "new_birthplace_grade_adopted": null,
+      "new_first_birthplace": null,
+      "new_hemisphere": null,
+      "current_person_open_attempt_count": 1,
+      "historical_early_canonical_access_state": "Unknownperrecordmembershipin enwiki300+66+9; boundedV48currentaccessrecheck doesnotclearhistoricalclosures or provefirstever/newwork/independence.",
+      "source_quote": null,
+      "source_quote_English_lexical_word_count": 0,
+      "qualified_new_DOB_conflict": false,
+      "qualified_new_birthplace_conflict": false,
+      "qualified_new_age_issue": false,
+      "native_fields_DOBtiers_and_allpriorfacts_unchanged": true,
+      "prior_noncanonical_closed_works_preserved": [
+        {
+          "URL": "https://pubmed.ncbi.nlm.nih.gov/26833907/",
+          "historical_ref": "turn82view1",
+          "status": "HHSfooter/textlesscitation only, no articlebody; closed",
+          "not_to_reopen_as_new_distinct_original_work": true
+        },
+        {
+          "URL": "https://obituaries83.rssing.com/chan-7437767/all_p11.html",
+          "historical_ref": "turn86view3",
+          "status": "MITNewsRSSmirror first400timeout; sameworkcarriers notnew; originalMITURL was notretained",
+          "not_to_reopen_as_new_distinct_original_work": true
+        },
+        {
+          "URL": "https://web.mit.edu/retireesassoc/obit/mem-2015.html",
+          "historical_ref": "turn92view0",
+          "status": "ActualMITretireeindex namesChemistryDavison but no DOB/BP/subjectobituarylink; not newbody",
+          "not_to_reopen_as_new_distinct_original_work": true
+        }
+      ],
+      "status": "held_actual_person_body_date_career_but_no_birthplace",
+      "hold_type": "actual_canonical_person_has_no_acquired_subject_birthplace_relation",
+      "reason": "ActualnormalEnglishpersonbody supplies allnativeAlanDavison/exact1936-03-24/compatible1936-2015life and distinctiveMITtransitionmetal/Cardiolitecareer, but Bornfield gives dateonly and no personalbirthplace in acquiredprose. No nationality, Swansea/Imperialeducation/MITwork or deathplace inference. Zero birthplacelinks to submit to rootregistry.",
+      "source_URL": "https://en.wikipedia.org/wiki/Alan_Davison",
+      "source_ref": "turn9163963view1",
+      "source_title": "Alan Davison - Wikipedia",
+      "tool_header_rewritten_summary": false,
+      "actual_original_person_body_usable": true,
+      "source_full_name": "Alan Davison",
+      "all_native_personal_components_observed": true,
+      "source_name_locator": "L112/L124",
+      "source_birthdate": "1936-03-24",
+      "source_birthdate_precision": "exact_day_in_actual_Born_field_and_lead",
+      "source_DOB_locator": "L114/L124",
+      "source_deathdate": "2015-11-14",
+      "source_lifespan_compatible_with_native_authority": true,
+      "source_lifespan_locator": "L115/L124/L153",
+      "source_reported_age": 79,
+      "computed_completed_age_from_same_source_dates": 79,
+      "distinctive_career_observed": true,
+      "career_locator": "L124transitionmetalchemistry/MIT;L135CardioliteTechnetium99mTc-sestamibi;L144FRS2000",
+      "direct_subject_birthplace_observed": false,
+      "Born_field_birthplace_value": null,
+      "birthplace_hyperlink_observed": false,
+      "birthplace_link_request": null,
+      "source_observation_quality": "Actualcanonicaloriginalcommunitypersonreference; S3sourceclass onlyifbirthgatesqualified. No BPgrade adopted.",
+      "source_exact_DOB_is_native_validation_or_tier_upgrade": false,
+      "actual_displayed_footer_metadata": {
+        "oldid": "1372302577",
+        "oldid_locator": "L174 displayedpermanentlink",
+        "last_edit_literal": "31 August 2026, at 05:02 (UTC)",
+        "last_edit_locator": "L193",
+        "limit": "Renderedfooterobservations only; rawrevision/history/byteidentitynotauthenticated."
+      },
+      "source_citations_not_separately_acquired_or_independent": true
+    },
+    {
+      "publication_date": null,
+      "source_revision_id": null,
+      "source_revision_utc": null,
+      "source_calendar_model": null,
+      "source_statement_rank": null,
+      "source_editorial_validation": null,
+      "source_informational_independence": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA1176",
+      "native": {
+        "record_id": "RS_PAST_NA1176",
+        "native_name": "Richard",
+        "authority_name": "Assheton; Richard (1863 - 1915)",
+        "native_DOB": "1863-12-23",
+        "raw_birthplace": "",
+        "birthplace_source_grade": "unknown",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "5795548aef363a4d60aeade0781697a37b1801f3a4a77809d147e978225991e1"
+      },
+      "decision": "hold",
+      "method_id": "uk-first-birthplace-canonical-community-reference-pilot-v1",
+      "new_birthplace_grade_adopted": null,
+      "new_first_birthplace": null,
+      "new_hemisphere": null,
+      "current_person_open_attempt_count": 0,
+      "historical_early_canonical_access_state": "Unknownperrecordmembershipin enwiki300+66+9; boundedV48currentaccessrecheck doesnotclearhistoricalclosures or provefirstever/newwork/independence.",
+      "source_quote": null,
+      "source_quote_English_lexical_word_count": 0,
+      "qualified_new_DOB_conflict": false,
+      "qualified_new_birthplace_conflict": false,
+      "qualified_new_age_issue": false,
+      "native_fields_DOBtiers_and_allpriorfacts_unchanged": true,
+      "prior_noncanonical_closed_works_preserved": [
+        {
+          "URL": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Anatomischer_Anzeiger_%28IA_anatomischeranze49anat%29.pdf",
+          "historical_ref": "turn3172888view1",
+          "status": "Originalanatomicaljournal onWikimediaCommonscarrier firstsizeerror44656308bytes; entirejournalworkclosed. This is not a canonicalpersonarticle request merelybecausehostnamecontainsWikipedia.",
+          "not_to_reopen_as_new_distinct_original_work": true
+        }
+      ],
+      "status": "held_no_observed_English_person_URI_for_native_embryologist",
+      "hold_type": "bounded_locator_failed_to_identify_target_person_work_no_body_request",
+      "reason": "Initialengine2 gives a fellowshiplistrow only. Finalengine1 returns a clearlydifferent16th-centuryRichardAssheton and otherAsshetonfamily/namesakes; no actualEnglishsubjectURI for native1863-1915embryologist observedwithin4querybudget. KnownwrongpersonURL isnotopened; lists/fatherpages/projections notsubstituted forsubjectbody, no guessedURI or Wikidata/languagefallback. Thisdoesnotclaimglobalarticleabsence.",
+      "source_URL": null,
+      "source_ref": null,
+      "actual_original_person_body_usable": false,
+      "source_exact_DOB_admissibly_observed": false,
+      "direct_birthplace_admissibly_observed": false,
+      "birthplace_link_request": null,
+      "discovery_only_observations": [
+        {
+          "ref": "turn4844070search3",
+          "URL": "https://en.wikipedia.org/wiki/List_of_fellows_of_the_Royal_Society_A%2C_B%2C_C",
+          "role": "Fellowshiplistprojection targetrow only, notopened/admitted."
+        },
+        {
+          "ref": "turn9163963search0",
+          "URL": "https://en.wikipedia.org/wiki/Richard_Assheton",
+          "role": "Discoveryexplicitly16thcenturypolitician by1529-1579, knownnotnativeembryologist; notopened, notqualifiedsamepersonDOBconflict."
+        },
+        {
+          "ref": "turn9163963search1",
+          "URL": "https://en.wikipedia.org/wiki/Ralph_Assheton_%281830%E2%80%931907%29",
+          "role": "Otherperson/familyarticleprojection mentions1863-1915child; notopened andno subjectURIclaimed."
+        }
+      ],
+      "current_subject_work_request_made": false
+    }
+  ],
+  "birthplace_place_registry_requests": [],
+  "worker_place_page_opens": 0,
+  "qualified_new_issue_candidates": [],
+  "new_DOB_or_place_conflicts": [],
+  "new_age_issue_candidates": [],
+  "source_quote_English_lexical_words_by_work": {
+    "https://en.wikipedia.org/wiki/Roger_Fletcher_(mathematician)": 0,
+    "https://en.wikipedia.org/wiki/Alan_Davison": 0
+  },
+  "quote_accounting": "Zero newliteralquotes/sourceprose; onlyminimalstructuredfacts andlocators. Earlycanonicalquoteledger unavailable, no assertedhistoricaltotal. No source/projectioncache distributed; no oldquote passages repeated.",
+  "intent_guard": {
+    "real_per_entry_written_utc": true,
+    "separate_local_exit0_before_each_web_call": true,
+    "no_current_person_retry_after_unusable": true,
+    "no_WD_or_other_language_fallback_or_rawGET": true
+  },
+  "budgets": {
+    "queries_max": 4,
+    "queries_used": 4,
+    "person_opens_max": 3,
+    "person_opens_used": 2,
+    "per_record_person_open_cap": 1
+  },
+  "grade_and_sensitivity_boundary": "AllnewcanonicalfirstBP ifqualified wouldbeS3onlyexpandedS1+S2+S3; nonequalified inA. StrictS1+S2 andallnativeDOBtiers unchanged.",
+  "no_new_identity_date_middle_or_calendar_exception": true,
+  "source_data_master_pipeline_code_replay_outputs_Git_mutations": false,
+  "raw_HTTP_status": null,
+  "raw_bytes_sha256": null,
+  "exact_request_utc": null,
+  "source_exhaustion_claimed": false
+}

@@ -1,0 +1,518 @@
+{
+  "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+  "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+  "method_application_scope_sha256": "3575db7b377008a55d4c6876c23ce6b6f67fc8b50dce40b7dddc01fcf8523e65",
+  "written_utc": "2026-11-08T10:32:31.718834+00:00",
+  "group": "a",
+  "phase": "canonical_community_reference_geography_method_application",
+  "intent_file": "v44_a_intent.json",
+  "current_method_application_scope_audit_path": "audit/method_application_scope_v44.json",
+  "full2nativeobjects/priorholdsbeforequeries": true,
+  "all9_issue_inventories_loaded_before_queries": true,
+  "inventory_file_pins": {
+    "active_source_DOB_conflicts.json": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+    "birthplace_source_conflicts.json": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+    "source_derived_age_inconsistencies.json": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+    "provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+    "lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+    "cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+    "source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+    "omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+    "source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+  },
+  "native_scope_file_sha256": "1f34247e5da66cd5c7f539e36547131a1d0494a5dd51b5e30c8962f62d841f76",
+  "native_identity_bindings": {
+    "RS_CURRENT_10965": {
+      "native_personal_name": "Jerry Adams",
+      "native_authority_field": "",
+      "frozen_full_aliases": [
+        "J. M. Adams",
+        "Jerry M Adams",
+        "Jerry M. Adams",
+        "Jerry McKee Adams",
+        "Jerry McKee Adams"
+      ],
+      "basis": "CURRENT row has native name Jerry Adams and frozen supported full-alias lookup context, while source_authorised_full_name is empty. Apply existing full-native-components/observed-full-alias rule to actually displayed source name; preserve empty authority string and all native fields. No initials expansion, invented McKee or native-name repair. Actual source fullalias must be observed and exact DOB/distinctive career/lifespan/frozen birthplace/whole-region proof remain mandatory.",
+      "new_admission_exception": false
+    }
+  },
+  "prior_context_review": [
+    {
+      "file": "academy_repo/studies/royal_society_birthplace_completion_v43/audit/prior_v12_holds.json",
+      "sha256": "00c91a7cc6982df70ee6b099b38f800530417f289352f7b3a3c9baba945fe801",
+      "review_role": "Full target individual entries/contexts inspected before web where present; other-row contexts not evidence for target."
+    },
+    {
+      "file": "academy_repo/studies/royal_society_birthplace_completion_v43/audit/prior_v26_holds.json",
+      "sha256": "510d080ca5ec90938d6953955b145805b872c72090e05551b3259d163f247c4e",
+      "review_role": "Full target individual entries/contexts inspected before web where present; other-row contexts not evidence for target."
+    },
+    {
+      "file": "academy_repo/studies/royal_society_birthplace_completion_v43/audit/prior_v13_holds.json",
+      "sha256": "9b54ad12c2a8aa10d3bbc6cefbbf84f8322474a6585310ce86559da2900e05ee",
+      "review_role": "Full target individual entries/contexts inspected before web where present; other-row contexts not evidence for target."
+    },
+    {
+      "file": "academy_repo/studies/royal_society_birthplace_completion_v43/audit/prior_v14_holds.json",
+      "sha256": "83b624fef9d10aa0ccf5f98fddaef97659e42b2e244ce858b6a2cea722d581da",
+      "review_role": "Full target individual entries/contexts inspected before web where present; other-row contexts not evidence for target."
+    },
+    {
+      "file": "academy_repo/studies/royal_society_birthplace_completion_v43/audit/prior_v30_holds.json",
+      "sha256": "93fa0fdccf1d12e9918943e79fee7585f769ad6cbae591627870cf71abf8bc18",
+      "review_role": "Full target individual entries/contexts inspected before web where present; other-row contexts not evidence for target."
+    },
+    {
+      "file": "academy_repo/studies/royal_society_birthplace_completion_v43/audit/prior_v34_holds.json",
+      "sha256": "c85406306d1e1f1b76ba3b8daf46c98d3652ec895388bd9fad2f6cd3e9f034e0",
+      "review_role": "Full target individual entries/contexts inspected before web where present; other-row contexts not evidence for target."
+    },
+    {
+      "file": "academy_repo/studies/royal_society_birthplace_completion_v43/audit/prior_v14_geography_candidates.json",
+      "sha256": "f164bc93f6a16aa30c6ddeea1a61fb1ba0bcbce75383dfb1593f3fcebe6158cf",
+      "review_role": "Full target individual entries/contexts inspected before web where present; other-row contexts not evidence for target."
+    },
+    {
+      "file": "academy_repo/studies/royal_society_birthplace_completion_v43/audit/prior_v30_method_qa.json",
+      "sha256": "9d652594148227eb41c2ad3edb30c62e75f3cde923b8814232a40990874d8ece",
+      "review_role": "Full target individual entries/contexts inspected before web where present; other-row contexts not evidence for target."
+    },
+    {
+      "file": "academy_repo/studies/royal_society_birthplace_completion_v43/audit/prior_v12_continuation.md",
+      "sha256": "cd530c61601f1322b23bf719690e2a37417116abc908cecb5827a86d57ee1082",
+      "review_role": "Full target individual entries/contexts inspected before web where present; other-row contexts not evidence for target."
+    },
+    {
+      "file": "academy_repo/studies/royal_society_birthplace_completion_v43/audit/prior_v26_continuation.md",
+      "sha256": "3232af9237aaac64ef79340d63f91c2f07f8dcebc17ce7a4e160055cbfc140d8",
+      "review_role": "Full target individual entries/contexts inspected before web where present; other-row contexts not evidence for target."
+    },
+    {
+      "file": "academy_repo/studies/royal_society_birthplace_completion_v43/audit/prior_v26_parent_adjudication.json",
+      "sha256": "ae9b7e43ac0d8da61dc5c5b44431d6bfd6afbb7f08dd704ff70529a028054783",
+      "review_role": "Full target individual entries/contexts inspected before web where present; other-row contexts not evidence for target."
+    },
+    {
+      "file": "academy_repo/studies/royal_society_birthplace_completion_v43/audit/prior_v14_continuation.md",
+      "sha256": "350815c8f2d94a511614749ea271bb792d52b05c80f5a9f8a16172111f86b698",
+      "review_role": "Full target individual entries/contexts inspected before web where present; other-row contexts not evidence for target."
+    },
+    {
+      "file": "academy_repo/studies/royal_society_birthplace_completion_v43/audit/prior_v34_method_qa.json",
+      "sha256": "b74c3defdc2bfe648a625831e3f0ecc5adc5e74f1b09460d0765329a4c117010",
+      "review_role": "Full target individual entries/contexts inspected before web where present; other-row contexts not evidence for target."
+    },
+    {
+      "file": "academy_repo/studies/royal_society_birthplace_completion_v43/audit/prior_v35_geography_first_pass_queue_closeout.json",
+      "sha256": "56fd3053935afc42fe2f9cf301bb66bc2bc6839fa9483467cd03e602fb61be3b",
+      "review_role": "Full target individual entries/contexts inspected before web where present; other-row contexts not evidence for target."
+    },
+    {
+      "file": "academy_repo/studies/royal_society_birthplace_completion_v43/audit/prior_v42_interruption_checkpoint/checkpoint.json",
+      "sha256": "4d2f5ade2a17685d2b9b864f424186a331131c136e6f331e6e5e1b3fe1242aeb",
+      "review_role": "Full target individual entries/contexts inspected before web where present; other-row contexts not evidence for target."
+    },
+    {
+      "file": "academy_repo/studies/royal_society_birthplace_completion_v43/audit/prior_v30_parent_adjudication.json",
+      "sha256": "1200653790e3654e9328a7133ef99f7c5948f0f3113ec6a6d95f3ef25763aaac",
+      "review_role": "Full target individual entries/contexts inspected before web where present; other-row contexts not evidence for target."
+    },
+    {
+      "file": "academy_repo/studies/royal_society_birthplace_completion_v43/audit/release.json",
+      "sha256": "eaa889b585000da86e3eed8b45b23daae2af6a7f2400cdebb698775aa2f3c7b8",
+      "review_role": "Full target individual entries/contexts inspected before web where present; other-row contexts not evidence for target."
+    }
+  ],
+  "inherited_issue_counts": {
+    "active_DOB": 13,
+    "partial_birthplace": 2,
+    "source_derived_age_inconsistencies": 4,
+    "other_issue_files": 6
+  },
+  "separate_Ewins_Barber_placeholds_preserved": true,
+  "Tomes_precision_omittedmiddle_and_other_issue_files_preserved": true,
+  "Coles_cross_source_age_contrast_preserved_not_alternate_DOB": true,
+  "intent_writes_validated_exit0_separately_beforeweb": true,
+  "per_entry_written_utc_before_request": true,
+  "retrieval_counts": {
+    "queries": 4,
+    "navigation_attempts": 6,
+    "source_open_operations": 4,
+    "click_operations": 2,
+    "parsed_finds": 2,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "query_ledger": [
+    {
+      "kind": "query",
+      "engine": "system2",
+      "record_id": "RS_CURRENT_10965",
+      "query": "\"Jerry McKee Adams\" site:wikipedia.org",
+      "result_refs": [
+        "turn8722266search0"
+      ],
+      "intent_entry": 1,
+      "outcome": "Observed enwiki Jerry_Adams person URI; search claims discovery-only."
+    },
+    {
+      "kind": "query",
+      "engine": "system2",
+      "record_id": "RS_PAST_NA6847",
+      "query": "\"Charles Todd\" bacteriologist site:wikipedia.org",
+      "result_refs": [
+        "turn8722266search1",
+        "turn8722266search2",
+        "turn8722266search3",
+        "turn8722266search4",
+        "turn8722266search5"
+      ],
+      "intent_entry": 2,
+      "outcome": "Disambiguation and incompatible namesakes, no observed 1869 subject person URI; not native conflicts."
+    },
+    {
+      "kind": "query",
+      "engine": "system1",
+      "record_id": "RS_PAST_NA6847",
+      "query": "\"Charles Todd\" \"1869\" Wikipedia",
+      "domains": [
+        "wikipedia.org"
+      ],
+      "result_refs": [
+        "turn6562347search0",
+        "turn6562347search1",
+        "turn6562347search2",
+        "turn6562347search3",
+        "turn6562347search4",
+        "turn6562347search5",
+        "turn6562347search6"
+      ],
+      "intent_entry": 6,
+      "outcome": "Engine2 coverage-gap followup found canonical fellows-list URI; RS/Wellcome metadata discovery-only, Nature old failed work not reopened."
+    },
+    {
+      "kind": "query",
+      "engine": "system1",
+      "record_id": "RS_PAST_NA6847",
+      "query": "\"Charles Todd\" immunologiste site:wikipedia.org",
+      "domains": [
+        "wikipedia.org"
+      ],
+      "result_refs": [
+        "turn7433502search0",
+        "turn7433502search1",
+        "turn7433502search2",
+        "turn7433502search3",
+        "turn7433502search4",
+        "turn7433502search5",
+        "turn7433502search6",
+        "turn7433502search7",
+        "turn7433502search8"
+      ],
+      "intent_entry": 12,
+      "outcome": "Final bounded alternate-language locator returned list/disambiguation/external metadata and other-person career leads; no qualified canonical 1869 person URI or birthplace body."
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "kind": "open",
+      "record_id": "RS_CURRENT_10965",
+      "url": "https://en.wikipedia.org/wiki/Jerry_Adams",
+      "ref": "turn9796027view0",
+      "intent_entry": 3,
+      "outcome": "Actual original canonical community person body acquired; full observed alias/exactDOB/distinctivecareer, no birthplace."
+    },
+    {
+      "kind": "open",
+      "record_id": "RS_CURRENT_10965",
+      "url": "https://www.wikidata.org/wiki/Q6183179",
+      "ref": "turn9796027view1",
+      "intent_entry": 4,
+      "outcome": "Actual person graph acquired from frozen supported lookup QID; no actual P19 edge observed in acquired material/cachedfind; not a graph-completeness or novalue-statement claim."
+    },
+    {
+      "kind": "open",
+      "record_id": "RS_PAST_NA6847",
+      "url": "https://www.wikidata.org/wiki/Q21165635",
+      "ref": "turn9796027view2",
+      "intent_entry": 5,
+      "outcome": "Tool inaccessible firstattempt; closed, no body/P19/sitelink acquired."
+    },
+    {
+      "kind": "click",
+      "record_id": "RS_CURRENT_10965",
+      "from_ref": "turn9796027view0",
+      "link_id": 25,
+      "url": "https://fr.wikipedia.org/wiki/Jerry_Adams",
+      "ref": "turn6562347view0",
+      "intent_entry": 7,
+      "outcome": "Header/total301lines only, no body lines exposed; unusable first representation closed with no find/reopen/variant."
+    },
+    {
+      "kind": "click",
+      "record_id": "RS_CURRENT_10965",
+      "from_ref": "turn9796027view0",
+      "link_id": 24,
+      "url": "https://ar.wikipedia.org/wiki/%D8%AC%D9%8A%D8%B1%D9%8A_%D8%A2%D8%AF%D8%A7%D9%85%D8%B2_%28%D8%B9%D8%A7%D9%84%D9%85_%D8%A3%D8%AD%D9%8A%D8%A7%D8%A1_%D8%AC%D8%B2%D9%8A%D8%A6%D9%8A%D8%A9%29",
+      "observed_result_url": "https://ar.wikipedia.org/wiki/%D8%AC%D9%8A%D8%B1%D9%8A_%D8%A2%D8%AF%D8%A7%D9%85%D8%B2_(%D8%B9%D8%A7%D9%84%D9%85_%D8%A3%D8%AD%D9%8A%D8%A7%D8%A1_%D8%AC%D8%B2%D9%8A%D8%A6%D9%8A%D8%A9)",
+      "ref": "turn4698637view1",
+      "intent_entry": 9,
+      "outcome": "Explicit rewritten-summary header/total225lines only; no original person body claims admitted; closed without retry."
+    },
+    {
+      "kind": "open",
+      "record_id": "RS_PAST_NA6847",
+      "url": "https://en.wikipedia.org/wiki/List_of_fellows_of_the_Royal_Society_S%2C_T%2C_U%2C_V",
+      "observed_result_url": "https://en.wikipedia.org/wiki/List_of_fellows_of_the_Royal_Society_S,_T,_U,_V",
+      "ref": "turn4698637view0",
+      "intent_entry": 10,
+      "outcome": "Explicit rewritten summary of list; used only as possible person URI carrier; no list claims adopted."
+    }
+  ],
+  "parsed_find_ledger": [
+    {
+      "kind": "find",
+      "record_id": "RS_CURRENT_10965",
+      "ref_id": "turn9796027view1",
+      "pattern": "place of birth",
+      "ref": "turn6562347view1",
+      "intent_entry": 8,
+      "outcome": "Cached acquired person graph representation returned no P19 birthplace edge in exposed text; no claim of exhaustive graph absence, actual novalue statement, rank or calendar."
+    },
+    {
+      "kind": "find",
+      "record_id": "RS_PAST_NA6847",
+      "ref_id": "turn4698637view0",
+      "pattern": "Charles Todd",
+      "ref": "turn7433502view0",
+      "intent_entry": 11,
+      "outcome": "Rewritten carrier fragment L1088 showed plain target name row, no observed subject hyperlink/linkID or person targetURI; no claims promoted. Adjacent1826Todd row distinct."
+    }
+  ],
+  "candidates": [],
+  "holds": [
+    {
+      "publication_date": null,
+      "source_revision_id": null,
+      "source_revision_utc": null,
+      "source_calendar_model": null,
+      "source_statement_rank": null,
+      "source_editorial_validation": null,
+      "source_informational_independence": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+      "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+      "method_application_scope_sha256": "3575db7b377008a55d4c6876c23ce6b6f67fc8b50dce40b7dddc01fcf8523e65",
+      "publication_date_precision": "not_observed",
+      "record_id": "RS_CURRENT_10965",
+      "native": {
+        "record_id": "RS_CURRENT_10965",
+        "name": "Jerry Adams",
+        "authority_name": "",
+        "native_dob": "1940-06-17",
+        "raw_birthplace": "United States of America",
+        "frozen_birthplace_source_grade": "S2",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "8108acff3211b5597274df60828ac05d5f2d41e27c679cf5dde7438f89710443"
+      },
+      "status": "held_no_actual_birthplace_to_whole_region_proof",
+      "hold_type": "person_identity_qualified_but_no_birthplace_edge",
+      "reason": "Actual English body supplies observed Jerry McKee Adams, exact unchanged DOB1940-06-17 and distinctive molecular biology/WEHI gene-cloning career. Its Born field and lead supply only date, no birthplace. Actual frozen person graph supplies no acquired P19 edge; citizenship/work/schools cannot supply birthcountry or state. French header-only and Arabic rewritten/header-only representations are unusable original person evidence and closed. Generic frozen United States of America remains geographically unresolved; no observed birth-linked state/region or literal country binding obtained. Empty native authority is preserved, not a reason for automatic exclusion or a new exception.",
+      "native_identity_binding": {
+        "native_personal_name": "Jerry Adams",
+        "native_authority_field": "",
+        "frozen_full_aliases": [
+          "J. M. Adams",
+          "Jerry M Adams",
+          "Jerry M. Adams",
+          "Jerry McKee Adams",
+          "Jerry McKee Adams"
+        ],
+        "basis": "CURRENT row has native name Jerry Adams and frozen supported full-alias lookup context, while source_authorised_full_name is empty. Apply existing full-native-components/observed-full-alias rule to actually displayed source name; preserve empty authority string and all native fields. No initials expansion, invented McKee or native-name repair. Actual source fullalias must be observed and exact DOB/distinctive career/lifespan/frozen birthplace/whole-region proof remain mandatory.",
+        "new_admission_exception": false
+      },
+      "actually_observed_source_full_alias": "Jerry McKee Adams",
+      "source_name_locator": "turn9796027view0:L127; all native Jerry/Adams present, McKee explicitly printed, not expanded from M.",
+      "source_exact_DOB": "1940-06-17",
+      "source_exact_DOB_locator": "turn9796027view0:L113,L127",
+      "source_distinctive_career_locator": "turn9796027view0:L119,L127-137 genecloning/WEHI/antibody-cancer/bcl2 research;L142FRS1992",
+      "compatible_lifespan_review": "Actual body presents living subject born1940; no incompatible endpoint observed. Native authority empty and no native endpoint supplied; living categoryL175 is source observation only.",
+      "proof_mode": null,
+      "proof_chain": [],
+      "source_grade_adopted": null,
+      "source_grade_role": "geographic_support_only",
+      "reviewed_hemisphere": "unknown",
+      "no_new_geographic_assignment": true,
+      "native_and_original_birthplace_fields_unchanged": true,
+      "source_observations": [
+        {
+          "source_url": "https://en.wikipedia.org/wiki/Jerry_Adams",
+          "source_ref": "turn9796027view0",
+          "source_locator": "L113 actual Born dateonly;L127 fullalias/exactdate/distinctive molecularbiology genecloning;L128-137WEHI career;L142FRS1992; no actual subject birthplace acquired.",
+          "source_quote": null,
+          "source_quote_word_count": 0,
+          "body_acquired": true,
+          "source_original_person_body_acquired": true,
+          "tool_header_rewritten_summary": false,
+          "observed_displayed_oldid": "1372148306",
+          "observed_displayed_oldid_locator": "L171 displayed permanentlink only; raw revision/history not authenticated"
+        },
+        {
+          "source_url": "https://www.wikidata.org/wiki/Q6183179",
+          "source_ref": "turn9796027view1",
+          "source_locator": "L92-96/L113-117 observed fullaliases;L162-177 exactDOB/reference;L195-217 molecularbiology/WEHI. Cachedfindturn6562347view1 gives L91-108aliases/L153-168DOB/L186-204career; no acquired P19 edge.",
+          "source_quote": null,
+          "source_quote_word_count": 0,
+          "body_acquired": true,
+          "cached_find_ref": "turn6562347view1",
+          "source_rank_calendar_and_graph_completeness_unknown": true,
+          "citizenship_not_birthplace": true,
+          "source_informational_independence": null
+        },
+        {
+          "source_url": "https://fr.wikipedia.org/wiki/Jerry_Adams",
+          "source_ref": "turn6562347view0",
+          "source_locator": "Firstclick exposed only title/URL/contenttype/total301lines, no bodylines.",
+          "source_quote": null,
+          "source_quote_word_count": 0,
+          "body_acquired": false,
+          "source_original_person_body_acquired": false,
+          "stopped_without_retry_variant_or_rawGET": true
+        },
+        {
+          "source_url": "https://ar.wikipedia.org/wiki/%D8%AC%D9%8A%D8%B1%D9%8A_%D8%A2%D8%AF%D8%A7%D9%85%D8%B2_%28%D8%B9%D8%A7%D9%84%D9%85_%D8%A3%D8%AD%D9%8A%D8%A7%D8%A1_%D8%AC%D8%B2%D9%8A%D8%A6%D9%8A%D8%A9%29",
+          "source_ref": "turn4698637view1",
+          "source_locator": "Firstclick expressly rewritten-summary header and total225lines only; observed actual Arabic person URI carrier is not original claim evidence.",
+          "source_quote": null,
+          "source_quote_word_count": 0,
+          "body_acquired": false,
+          "source_original_person_body_acquired": false,
+          "tool_header_rewritten_summary": true,
+          "observed_result_url": "https://ar.wikipedia.org/wiki/%D8%AC%D9%8A%D8%B1%D9%8A_%D8%A2%D8%AF%D8%A7%D9%85%D8%B2_(%D8%B9%D8%A7%D9%84%D9%85_%D8%A3%D8%AD%D9%8A%D8%A7%D8%A1_%D8%AC%D8%B2%D9%8A%D8%A6%D9%8A%D8%A9)",
+          "stopped_without_retry_variant_or_rawGET": true
+        }
+      ],
+      "prior_holds_preserved": [
+        "Frozen EOAS1940-06-17/UnitedStatesofAmerica S2 body unchanged. GenericUSA extent crosses classifier boundaries; no automatic North.",
+        "V30 GenomeLegacy oralhistoryspeaker first502 remainsclosed. V30 CovingtonKentucky querywords were unverified discoveryseed only, not an observed birthplace or location fact.",
+        "Frozen alias context permits only actually observed names; extra McKee source-only, no McKinley or initial/nickname expansion, no native authority repair.",
+        "V12/V26 holds and continuation files inspected: neither contains this target individual entry; no invented earlier acquisition. V30 current-name methodological note read."
+      ],
+      "qualified_new_DOB_conflict": false,
+      "qualified_new_birthplace_conflict": false,
+      "source_derived_age_inconsistency_observed": false,
+      "retrieval_representation": "Actual parsed canonical English person body and actual person graph; unusable header-only French/explicit rewritten Arabic; no rawbytes."
+    },
+    {
+      "publication_date": null,
+      "source_revision_id": null,
+      "source_revision_utc": null,
+      "source_calendar_model": null,
+      "source_statement_rank": null,
+      "source_editorial_validation": null,
+      "source_informational_independence": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+      "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+      "method_application_scope_sha256": "3575db7b377008a55d4c6876c23ce6b6f67fc8b50dce40b7dddc01fcf8523e65",
+      "publication_date_precision": "not_observed",
+      "record_id": "RS_PAST_NA6847",
+      "native": {
+        "record_id": "RS_PAST_NA6847",
+        "name": "Charles",
+        "authority_name": "Todd; Charles (1869 - 1957)",
+        "native_dob": "1869-09-17",
+        "raw_birthplace": "Carleton, a small village near Carlisle",
+        "frozen_birthplace_source_grade": "S2",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "bf1592ef27f59bfc3fd74c82b7425c52bb339e0d81f4ca8e7f38f7a139047f05"
+      },
+      "status": "held_no_actual_canonical_person_body_or_actual_P19_chain",
+      "hold_type": "frozen_item_inaccessible_no_actual_person_URI_from_rewritten_carrier",
+      "reason": "Frozen actual person item Q21165635 first open inaccessible and closed. Bounded queries identify fellows-list/disambiguation/namesakes but no acquired canonical1869person body. Rewritten-list cachedfragment exposes no target person hyperlink/URI. No actual fullnative/exactDOB/distinctivecareer/birthplace-to-region chain obtained. Existing Carleton small village near Carlisle/S2 remains unresolved; no geography from Cumberland ancestry, familiarCarlisle, old candidate-only map support or1826telegraphTodd.",
+      "proof_mode": null,
+      "proof_chain": [],
+      "source_grade_adopted": null,
+      "source_grade_role": "geographic_support_only",
+      "reviewed_hemisphere": "unknown",
+      "no_new_geographic_assignment": true,
+      "native_and_original_birthplace_fields_unchanged": true,
+      "source_observations": [
+        {
+          "source_url": "https://www.wikidata.org/wiki/Q21165635",
+          "source_ref": "turn9796027view2",
+          "source_locator": "Tool Internal Error: URL not accessible via tool; no original body/actualP19/sitelink acquired.",
+          "source_quote": null,
+          "source_quote_word_count": 0,
+          "body_acquired": false,
+          "tool_error": "URL not accessible via this tool",
+          "observed_identifier_provenance": "v44_scope_a.json lookup_qid; not guessed and not nativeQID assignment",
+          "stopped_without_retry_variant_or_rawGET": true
+        },
+        {
+          "source_url": "https://en.wikipedia.org/wiki/List_of_fellows_of_the_Royal_Society_S%2C_T%2C_U%2C_V",
+          "source_ref": "turn4698637view0",
+          "source_locator": "Header expressly rewritten summary. Cachedfindturn7433502view0:L1088 plain target name row; no person targetURI/linkID exposed. Only URI-carrier discovery permitted; no original date/career/geography claims adopted.",
+          "source_quote": null,
+          "source_quote_word_count": 0,
+          "cached_find_ref": "turn7433502view0",
+          "tool_header_rewritten_summary": true,
+          "source_original_person_body_acquired": false,
+          "DOB_or_geographical_claim_adopted": false,
+          "subject_target_URI_actually_observed": false,
+          "observed_result_url": "https://en.wikipedia.org/wiki/List_of_fellows_of_the_Royal_Society_S,_T,_U,_V"
+        }
+      ],
+      "prior_holds_preserved": [
+        "V6 publisher-deposited memoir abstract exact1869-09-17/Carleton nearCarlisleS2 unchanged; original fullmemoir not newly acquired.",
+        "V13 Nature10.1038/1801024a0 firstPDF redirect tosign-inwall/bodyunacquired remainsclosed. Cumberland describes farming ancestry, not subject birthplace. CumbrianLivesTindex no target originalbirthbody.",
+        "V14 Carleton/StCuthbertWithout/Carlisle geographic candidate support-only, referent/alternative coverage insufficient, no personal region assigned; failed critical routes remainclosed.",
+        "V34 identities/searchmetadata and1826telegraphTodd/PercySydneyTodd namesakes remain discovery-only; RS MakingScience death22or23September1957 projection is not alternateDOB or current originalperson acquisition."
+      ],
+      "qualified_new_DOB_conflict": false,
+      "qualified_new_birthplace_conflict": false,
+      "source_derived_age_inconsistency_observed": false,
+      "retrieval_representation": "Inaccessible frozen Wikidata item, explicit rewritten-list carrier fragment and search discovery; no actual canonical person birthplace proof/rawbytes."
+    }
+  ],
+  "new_DOB_or_place_conflicts": [],
+  "source_derived_age_inconsistency_candidates": [],
+  "qualified_new_issue_candidates": [],
+  "unqualified_quality_leads": [],
+  "unopened_distinct_original_work_leads": [],
+  "source_quote_words_by_original_work": {
+    "https://en.wikipedia.org/wiki/Jerry_Adams": 0,
+    "https://www.wikidata.org/wiki/Q6183179": 0,
+    "https://www.wikidata.org/wiki/Q21165635": 0,
+    "https://fr.wikipedia.org/wiki/Jerry_Adams": 0,
+    "https://ar.wikipedia.org/wiki/%D8%AC%D9%8A%D8%B1%D9%8A_%D8%A2%D8%AF%D8%A7%D9%85%D8%B2_%28%D8%B9%D8%A7%D9%84%D9%85_%D8%A3%D8%AD%D9%8A%D8%A7%D8%A1_%D8%AC%D8%B2%D9%8A%D8%A6%D9%8A%D8%A9%29": 0,
+    "https://en.wikipedia.org/wiki/List_of_fellows_of_the_Royal_Society_S%2C_T%2C_U%2C_V": 0
+  },
+  "prior_quote_accounting": "Zero new literal quotes from current or inherited works/searchprojections. Existing EOAS8wordbornclause and Toddv6memoir14wordbornclause remain only at native context locations; Naturev13 inherited11wordancestryclause not repeated. No fullsource/projection caches written. Source names/dates and minimal structured facts are locators/identity data, not copied prose.",
+  "protocol_limits": {
+    "per_group_queries": 4,
+    "per_group_navigation_attempts": 10,
+    "used_queries": 4,
+    "used_navigation_attempts": 6,
+    "cached_finds_counted_separately": true,
+    "unused_navigation_budget_not_required_to_spend": true,
+    "first_failed_or_unusable_work_not_retried": true,
+    "no_rawGET_auth_bypass_or_failedwork_variants": true,
+    "original_source_caches_distributed": false,
+    "source_exhaustion_claimed": false
+  },
+  "method_amendment_created": false,
+  "method_reused_from_version": 36,
+  "scope_application_extension": true,
+  "no_new_admission_method_exception": true,
+  "raw_HTTP_status": null,
+  "raw_bytes_sha256": null,
+  "exact_request_utc": null,
+  "no_repo_master_Git_edit": true,
+  "no_source_exhaustion_finalfreeze_or_DOB_BPtierupgrade": true,
+  "intent_file_sha256": "d63f8bd1d9eb63cb4a86daac8636469997ede117248100f8afd201286f099fc7"
+}

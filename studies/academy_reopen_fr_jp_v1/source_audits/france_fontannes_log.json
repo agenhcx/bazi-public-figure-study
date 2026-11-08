@@ -1,0 +1,65 @@
+{
+  "case": "france_fontannes",
+  "checked_utc": "2026-10-29T00:59:02.351271+00:00",
+  "read_existing_evidence": [
+    "person_evidence_triage_v1_2.csv: CTHS 107677 row",
+    "FRANCE_ACADEMY_CTHS_BIRTHFIELD_RECOVERY_V1_1.md: François Fontannes section"
+  ],
+  "searches": [
+    {
+      "query": "site:archives-lyon.fr Fontannes 1839 naissance",
+      "purpose": "Seek an official original-birth-register lead for exact target identity",
+      "accepted_primary_evidence_found": false
+    },
+    {
+      "query": "site:archives-lyon.fr état civil 1839 naissances registres Lyon",
+      "purpose": "Find the official civil-register access route",
+      "accepted_primary_evidence_found": false
+    }
+  ],
+  "official_requests": [
+    {
+      "sequence": 1,
+      "method": "public web open",
+      "url": "https://www.archives-lyon.fr/",
+      "http_status": "not exposed by retrieval tool",
+      "outcome": "Official homepage body retrieved; current genealogy outage notice read."
+    },
+    {
+      "sequence": 2,
+      "method": "public web open",
+      "url": "https://www.fondsenligne.archives-lyon.fr/v2/ac69/mariage.html",
+      "http_status": 502,
+      "outcome": "Bad Gateway; no register body or image."
+    },
+    {
+      "sequence": 3,
+      "method": "follow public genealogy link on official homepage",
+      "url": "https://recherches.archives-lyon.fr/page/-rechercher-ses-ancetres",
+      "http_status": 403,
+      "outcome": "Forbidden; no ancestor search/register body or image; stopped."
+    }
+  ],
+  "not_used": [
+    "No personal biography was treated as a birth registration.",
+    "No search snippet was accepted as primary evidence.",
+    "No other person’s date or similar name was adopted.",
+    "No membership adjudication was reopened.",
+    "No login, challenge, VPN, or access-control bypass.",
+    "No further requests after the linked official endpoint returned 403."
+  ],
+  "private_audit_files": [
+    {
+      "file": "lyon_home_and_old_register_entry.webtool.json",
+      "bytes": 6646,
+      "sha256": "1b618fde9a0aa5266c4bfb80e273771026a6454120739f91a3d0db908918abf7",
+      "format": "Serialized retrieval-tool response, not raw source HTTP body or primary image."
+    },
+    {
+      "file": "lyon_linked_genealogy_entry.webtool.json",
+      "bytes": 304,
+      "sha256": "17140d2c3486408b22529e210e7267fe128e09157f8959959291cf160ce3e3f6",
+      "format": "Serialized retrieval-tool response, not raw source HTTP body or primary image."
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "schema": "royal_society_birthplace_v13_independent_qa",
+  "status": "PASS",
+  "reviewed_utc": "2026-11-04T23:28:24.762592+00:00",
+  "review_scope": "Frozen local baseline, source observations/holds, exact output objects, isolated replay and final prose. No new source requests; no main data writes.",
+  "checks": {
+    "baseline_v12_canonical_sha256": "1b6318ed3e7056886949b47ff08f65eaa518a355cede9de67be934088eadf108",
+    "rows": 4983,
+    "unique_record_ids": 4983,
+    "all_4983_complete_objects_identical_to_v12": true,
+    "newly_classified": 0,
+    "changed_keys": [],
+    "all_existing_native_and_prior_evidence_fields_preserved": true,
+    "v11_and_v12_contexts_preserved": true,
+    "master_gzip_byte_identical_to_v12": true,
+    "reviewed_hold_keys": 17,
+    "Jerry_Adams_excluded": true,
+    "disjoint_from_v11_v12_reviewed_keys": true,
+    "cumulative_distinct_historical_targets": 41,
+    "all_held_rows_remain_unknown": true,
+    "all_4983_ISO_day_dates_valid": true,
+    "date_window_independently_recomputed_with_date_objects": true,
+    "overall_counts": {
+      "north": 4159,
+      "unknown": 641,
+      "south": 183
+    },
+    "window_records": 2644,
+    "window_counts": {
+      "north": 2259,
+      "unknown": 207,
+      "south": 178
+    },
+    "full_csv_rows": 4983,
+    "unknown_window_csv_rows": 207,
+    "empty_change_list": true,
+    "hold_categories": {
+      "no_new_region_or_unavailable": 16,
+      "no_new_region_with_reprint_date_discrepancy": 1
+    },
+    "prior_v11_v12_holds_and_continuations_retained_exactly": true,
+    "prior_v10_closed_route_notes_retained_exactly": true,
+    "A_source_id_references_resolve": true,
+    "all_five_outputs_byte_identical_in_isolated_replay": {
+      "birthplace_rows.jsonl.gz": true,
+      "birthplaces.csv": true,
+      "changes.json": true,
+      "remaining_unknown_window.csv": true,
+      "summary.json": true
+    },
+    "independent_stored_field_completeness_counts": {
+      "all_unknown": 641,
+      "all_nonblank_raw_birthplace": 50,
+      "all_blank_raw_birthplace": 591,
+      "window_unknown": 207,
+      "window_nonblank_raw_birthplace": 38,
+      "window_blank_raw_birthplace": 169
+    }
+  },
+  "source_review": {
+    "accepted_source_facts": 0,
+    "hold_all_17_supported_as_bounded_non_adoption": true,
+    "Franklin": "RCP original agrees frozen native25November1897; attributed reprint header11January1897 differs. Both observations retained without date correction; only London birth context.",
+    "Cullis": "New2026 original memoir Worcester birth wording and exactDOB; Worcestershire is later-work context, not birth qualifier.",
+    "Todd": "Cumberland modifies farming ancestry; not promoted to subject birthplace region.",
+    "Pollock_Powell": "Initial discovery overflow/unreadable, not claimed fully screened or a negative person match.",
+    "Young": "Discovery-only; no new original body claimed.",
+    "Ryde": "Root new original WirelessWorld route failed403; body not acquired or retried; neighboring snippet date not adopted."
+  },
+  "prose_review": {
+    "README_and_CONTINUATION_read": true,
+    "counts_and_no_yield_claim_match_outputs": true,
+    "hold16_plus1_match": true,
+    "cumulative41_scope_claim_verified": true,
+    "query_navigation_find_counts_checked_against_worker_ledgers": {
+      "queries": 24,
+      "original_navigation_attempts": 24,
+      "parsed_text_finds": 6
+    },
+    "navigation_not_falsely_claimed_full_body_coverage": true,
+    "no_famous_city_or_nationality_work_parent_inference": true,
+    "no_original_DOB_or_tier_readjudication_claim": true,
+    "self_contained_reconstruction_claim_matches_inputs_and_code": true,
+    "material_findings": [],
+    "latest_triage_counts_match_stored_fields": true,
+    "blank_field_not_claimed_literature_absence": true,
+    "final_text_read_after_root_triage_update": true
+  },
+  "output_sha256": {
+    "birthplace_rows.jsonl.gz": "76cde0037b8fe2eea1a413d96e71a1220ecc1c6e4daa82908c04152106f16412",
+    "birthplaces.csv": "09e1345187ebc5c13d767f0f9ba344cf113376b031c44f93a25eac6776a9cb4f",
+    "changes.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "remaining_unknown_window.csv": "ff4d2439833816d63bf6b425136130b31ac326b5b33ed30516bd6a84206c2fca",
+    "summary.json": "9985d82b10e80c5a5f170d190111db5bc5e139a4013345ab6ede2661a34113d9"
+  },
+  "material_open_issues": []
+}

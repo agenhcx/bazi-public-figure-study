@@ -1,0 +1,40 @@
+{
+  "schema": "UK_v6_source_crosswalk_birthplace_only",
+  "frozen_utc": "2026-11-02T23:19:04.260235+00:00",
+  "existing_other_cohort_DOB_collision_pairs": 3,
+  "existing_other_cohort_accepted": 0,
+  "nobel_api_requests": 2,
+  "original_one_request_limit_expanded_by_parent_for_observed_28_record_overflow": true,
+  "nobel_api_HTTP200": 2,
+  "nobel_api_distinct_IDs_observed": 1028,
+  "nobel_api_total_reported": 1028,
+  "nobel_DOB_collision_rejections": 9,
+  "accepted": 1,
+  "accepted_record_ids": [
+    "RS_PAST_NA8169"
+  ],
+  "accepted_source_grade_counts": {
+    "S1": 1
+  },
+  "hemisphere_counts": {
+    "north": 1
+  },
+  "native_DOB_calendar_identity_flags_modified": false,
+  "cohort_rows_deduplicated_or_changed": false,
+  "Crossref_requests": 0,
+  "geography_requests": 0,
+  "full_raw_Nobel_API_worker_only": true,
+  "no_prize_or_outcome_fields_projected": true,
+  "inputs_sha256": {
+    "studies/royal_society_birthplace_completion_v5/outputs/uk_birthplace_rows.jsonl.gz": "0b3e0c92d04ea680511f78eea39f4c36e08b3dd81850a42b5cd6dde46f805e03",
+    "studies/academy_birthplace_screen_v1/outputs/birthplace_rows.jsonl.gz": "2ad00462255629a603bc4a95aa64158141b5a9b105359baece528a163aa93d92",
+    "studies/royal_society_birthplace_completion_v2/geography/existing_place_lookup.json.gz": "3d8521d1d30d5eee4483967e743e2fac55506fdf9ca6f19d81fe6ab5a1f6efad",
+    "nobel_all_raw.json": "76649ef3171e269feb9e8274dbb38c8b7dc2acdbd8a01a0ecab3c1b606d524d5",
+    "nobel_overflow_raw.json": "a76f1d54be231dcdc643f88a1f7719df7e65a75a5fde7aa8a838ee41dc222503"
+  },
+  "outputs_sha256": {
+    "accepted.jsonl": "c2b2d8a0d4177da4a49c4fe02cd438e151a66609eb1a4a50d4d55b2ea9b6b8f5",
+    "held.jsonl": "86d3878df98969ca94f7e32c617a2ed7b93ee299a81daa052af450eb7dd033a7",
+    "nobel_churchill_birth_projection.json": "76d8ace690be86730a94cd83f34b66931bf7b0d7b00026c34eb005cf2065624b"
+  }
+}

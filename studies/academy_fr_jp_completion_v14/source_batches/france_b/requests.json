@@ -1,0 +1,70 @@
+[
+  {
+    "source_id": "bouchiat_2011",
+    "candidate_group_id": "CTHS_128379",
+    "source_url": "https://verimag.univ-grenoble-alpes.fr/IMG/pdf/CP_12NvxMembres_Elus15mars2011.pdf",
+    "root_authorized_fixed_source_request": true,
+    "person_search_queries": 0,
+    "retry_performed": false,
+    "redirect_policy": "Follow observed normal redirects only, each URL at most once; all underlying GETs logged; stop on HTTP error/challenge/loop",
+    "hops": [
+      {
+        "url": "https://verimag.univ-grenoble-alpes.fr/IMG/pdf/CP_12NvxMembres_Elus15mars2011.pdf",
+        "method": "GET",
+        "request_started_utc": "2026-11-01T08:27:50.374181+00:00",
+        "attempt_for_this_URL": 1,
+        "http_status": 200,
+        "response_url": "https://verimag.univ-grenoble-alpes.fr/IMG/pdf/CP_12NvxMembres_Elus15mars2011.pdf",
+        "content_type": "application/pdf",
+        "capture_completed_utc": "2026-11-01T08:27:58.783432+00:00",
+        "source_sha256": "7a290a6f3483b5120a0477ce39b10f8f3d9fb8607b09f2d840e7a655285c9f23",
+        "bytes": 114714
+      }
+    ],
+    "result": "captured_response",
+    "final_url": "https://verimag.univ-grenoble-alpes.fr/IMG/pdf/CP_12NvxMembres_Elus15mars2011.pdf",
+    "http_status": 200,
+    "retrieved_utc": "2026-11-01T08:27:58.783432+00:00",
+    "retrieval_timestamp_basis": "response_body_completed_utc",
+    "source_sha256": "7a290a6f3483b5120a0477ce39b10f8f3d9fb8607b09f2d840e7a655285c9f23",
+    "bytes": 114714,
+    "content_type": "application/pdf",
+    "PDF_magic": true,
+    "actual_HTTP_GETs": 1,
+    "redirect_count": 0
+  },
+  {
+    "source_id": "le_douarin_pas",
+    "candidate_group_id": "PROFILE2_08407b6d0479b1d0",
+    "source_url": "https://www.pas.va/en/academicians/ordinary/le_douarin.html",
+    "root_authorized_fixed_source_request": true,
+    "person_search_queries": 0,
+    "retry_performed": false,
+    "redirect_policy": "Follow observed normal redirects only, each URL at most once; all underlying GETs logged; stop on HTTP error/challenge/loop",
+    "hops": [
+      {
+        "url": "https://www.pas.va/en/academicians/ordinary/le_douarin.html",
+        "method": "GET",
+        "request_started_utc": "2026-11-01T08:27:50.375325+00:00",
+        "attempt_for_this_URL": 1,
+        "http_status": 200,
+        "response_url": "https://www.pas.va/en/academicians/ordinary/le_douarin.html",
+        "content_type": "text/html; charset=UTF-8",
+        "capture_completed_utc": "2026-11-01T08:28:01.188129+00:00",
+        "source_sha256": "100f475558746df381f38e55cd54f780801973912966acb1cd09c6cd6cc94309",
+        "bytes": 43831
+      }
+    ],
+    "result": "captured_response",
+    "final_url": "https://www.pas.va/en/academicians/ordinary/le_douarin.html",
+    "http_status": 200,
+    "retrieved_utc": "2026-11-01T08:28:01.188129+00:00",
+    "retrieval_timestamp_basis": "response_body_completed_utc",
+    "source_sha256": "100f475558746df381f38e55cd54f780801973912966acb1cd09c6cd6cc94309",
+    "bytes": 43831,
+    "content_type": "text/html; charset=UTF-8",
+    "PDF_magic": false,
+    "actual_HTTP_GETs": 1,
+    "redirect_count": 0
+  }
+]

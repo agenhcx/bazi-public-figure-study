@@ -1,0 +1,27 @@
+{
+  "stage": "independent_QA_before_final_4884_assembly",
+  "created_utc": "2026-11-02T00:38:57.739501+00:00",
+  "confirmed_count_affecting_bugs": [],
+  "confirmed_source_misreadings": [],
+  "code_sha256": {
+    "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_checkout/studies/royal_society_birthplace_completion_v2/scripts/assemble.py": "b9cbfc8718f0347201dbb265e9087e9b235fda6e937743ad27d7e67c1f34159e",
+    "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v2_workers/geography/v3/classify_birthplace.py": "8b8b894ee85deef97047691d9612f1b2cf21f1687d29e12fcc205468ce421a54",
+    "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v2_workers/geography/wikidata_place_extent_adapter.py": "4add553fbd61795669272024509b28d1660e29a7b35c719c154fdce10473e212",
+    "/workspace/scratch/7e8aa4e0d4af/uk_birthplace_v2_workers/strict_links/join_strict_links.py": "cf037db96e58c65356a0acbddce2ee7af3518dd4a0a01538177aa2893514db49"
+  },
+  "passes": {
+    "official_parser": "3345 cached raw HTML independently reparsed with same-tr direct td rule, no extraction, SHA, byte count, or URL differences; 50 sample and 5 adversarial fixtures passed",
+    "current99": "99 unique rows; all 74 newly selected body quotes verified in cached response text and original HTML/PDF byte SHA and source URL; 12 existing metadata explicitly not reopened; 13 no explicit place remained unknown in this table",
+    "multi_person_PDF": "Peto PDF page104 and Plumb PDF page15 rendered and visually checked: target heading and birthplace sentence match",
+    "strict_join": "846 seeds reconstructed against raw 9777-member universe; complete reported value tuples including deprecated, exact normalized fullname+unchanged complete Gregorian day; one-to-one raw matching and baseline-QID collision gates independently checked; deterministic20 manual link review passed",
+    "source_selector": "S1 > S2 > existing verified body metadata > S3; same-tier hemisphere conflicts hold; 5 supplied selector tests passed. Base full dictionary preserved before geography updates; baseline final eligibility flag false for all4983",
+    "geography": "11 classifier tests +9 P19 adapter tests passed; prior raw P19 reclassification yielded429 unknown->N and6 unknown->S, no prior known->unknown/opposite transitions"
+  },
+  "coverage_limitations": [
+    "Strict membership SPARQL requires ps:P569 and psv:P569; response lacks somevalue/novalue DOB statements. Uniqueness claim must be limited to reported value tuples; no observed seed impact.",
+    "Source publisher has not yet been emitted by official collector at QA snapshot. Royal Society is publisher; Source tablefield is separate underlying reference.",
+    "Official collection and strict-place outputs were growing; final count, 4983 preservation, immutable-v1 SHA and per-field DOB/calendar/identity/eligibility differences still need final assembly audit.",
+    "27 official S1 fields unresolved by geography rules fall back to known lower-tier geography in current growing snapshot; all source candidates remain preserved. No observed incorrect hemispheres from these cases."
+  ],
+  "recommended_final_check": "Rerun quality/official_parser/audit_official.py and quality/audit_current_and_strict.py after final snapshots, then audit assembled 4983 rows and Benson/Clark candidates against v1."
+}

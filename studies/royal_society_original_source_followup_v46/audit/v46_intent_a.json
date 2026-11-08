@@ -1,0 +1,154 @@
+{
+  "written_utc": "2026-11-08T11:34:38.597508+00:00",
+  "version": 46,
+  "group": "a",
+  "scope_file": "v46_original_scope.json",
+  "scope_sha256": "6051c4a3f9887bbba4556595f9dfbbfd8c5bb6ab552d586e9cf67f217597c7bc",
+  "native_scope_sha256": "8a76b1abba6b227af1d0395738b6891f047790645250976de439bfe83d6059b8",
+  "all9_issue_inventories_read_in_full_before_web": true,
+  "inventory_file_pins": {
+    "active_source_DOB_conflicts.json": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+    "birthplace_source_conflicts.json": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+    "source_derived_age_inconsistencies.json": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+    "provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+    "lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+    "cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+    "source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+    "omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+    "source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+  },
+  "native_target_worker_and_root_context_read_before_web": true,
+  "history_file_pins": {
+    "v46_triage_a.json": "0cc77246f1f974dd4dcd38d80bf654bed277a393a6fd888817304c17b97e6812",
+    "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v15_holds.json": "c6aa776aaa1aa60ae8a6497532210b4fc937253694011de1f0d6f2dd9fdb4942",
+    "academy_repo/studies/royal_society_birthplace_completion_v15/audit/sources_b.json": "357e84c5de12d6f4c629cb3a889415090f114d160d7136f6e51f6717d5aeaf3a",
+    "academy_repo/studies/royal_society_birthplace_completion_v15/audit/root_intent.json": "752d7d7cb02fd7970e9914e7932d3493cf65118a7f9428d1788e926426621539",
+    "academy_repo/studies/royal_society_birthplace_completion_v15/audit/protocol_and_parent_review.json": "a0925f2e0d27ec9f13cc5d168bdf89ff1df80a00bfb4a3b88bed6ad302003ef2"
+  },
+  "closed_work_rule": "All three priorOxfordobituary/profile routes/republicationsclosed; no guessedURL. Firstunusableworkcloses acrosscarriers/variants.",
+  "entries": [
+    {
+      "entry_id": 1,
+      "written_utc": "2026-11-08T11:34:38.597619+00:00",
+      "operation": "system2_search_query",
+      "record_id": "RS_PAST_NA4250",
+      "q": "\"Peter John Morris\" \"Plarr\" biography",
+      "purpose": "First prospective locator for distinct RCS original personalbiography; no originalURL assumed or synthesized."
+    },
+    {
+      "entry_id": 2,
+      "written_utc": "2026-11-08T11:34:57.233324+00:00",
+      "operation": "system1_search_query",
+      "record_id": "RS_PAST_NA4250",
+      "q": "\"Peter\" \"Morris\" \"1934\"",
+      "domains": [
+        "rcseng.ac.uk"
+      ],
+      "purpose": "Engine2 coveragegap gave unrelatedrecords; verify officialRCS discovery with birthyear, observedURLonly."
+    },
+    {
+      "entry_id": 3,
+      "written_utc": "2026-11-08T11:35:40.343700+00:00",
+      "operation": "open",
+      "record_id": "RS_PAST_NA4250",
+      "ref_id": "https://rcseng.ac.uk/news-and-events/news/archive/obituary-of-professor-sir-peter-morris-ac-frs-frcs/",
+      "observed_locator_ref": "turn4994983search0",
+      "purpose": "Observed originalRCS institutional tribute composition; inspect body/name/DOB/career/birth and any credited distinctwork links, not Oxfordclosedrepublication assumed."
+    },
+    {
+      "entry_id": 4,
+      "written_utc": "2026-11-08T11:35:40.343719+00:00",
+      "operation": "open",
+      "record_id": "RS_PAST_NA4250",
+      "ref_id": "https://www.npg.org.uk/collections/search/person/mp15431/sir-peter-john-morris",
+      "observed_locator_ref": "turn4994983search2",
+      "purpose": "Observed distinct museum personalcatalogue composition, fullnative/year/Australian-born discovery; actualbody needed, no searchclaim adoption or hostgradeupgrade."
+    }
+  ],
+  "web_operation_batches": [
+    {
+      "entry_ids": [
+        1
+      ],
+      "tool_arguments": {
+        "system2_search_query": [
+          {
+            "q": "\"Peter John Morris\" \"Plarr\" biography"
+          }
+        ],
+        "response_length": "long"
+      },
+      "local_validation_chunk_id": "ef275f",
+      "local_validation_exit_code": 0,
+      "validation_completed_before_web": true,
+      "result_refs": [
+        "turn2696229search0",
+        "turn2696229search1",
+        "turn2696229search2",
+        "turn2696229search3"
+      ]
+    },
+    {
+      "entry_ids": [
+        2
+      ],
+      "tool_arguments": {
+        "system1_search_query": [
+          {
+            "q": "\"Peter\" \"Morris\" \"1934\"",
+            "domains": [
+              "rcseng.ac.uk"
+            ]
+          }
+        ],
+        "response_length": "long"
+      },
+      "local_validation_chunk_id": "ac98f5",
+      "local_validation_exit_code": 0,
+      "validation_completed_before_web": true,
+      "result_refs": [
+        "turn4994983search0",
+        "turn4994983search1",
+        "turn4994983search2",
+        "turn4994983search3",
+        "turn4994983search4",
+        "turn4994983search5",
+        "turn4994983search6"
+      ]
+    },
+    {
+      "entry_ids": [
+        3,
+        4
+      ],
+      "tool_arguments": {
+        "open": [
+          {
+            "ref_id": "https://rcseng.ac.uk/news-and-events/news/archive/obituary-of-professor-sir-peter-morris-ac-frs-frcs/"
+          },
+          {
+            "ref_id": "https://www.npg.org.uk/collections/search/person/mp15431/sir-peter-john-morris"
+          }
+        ],
+        "response_length": "long"
+      },
+      "local_validation_chunk_id": "aecd00",
+      "local_validation_exit_code": 0,
+      "validation_completed_before_web": true,
+      "result_refs": [
+        "turn4714401view0",
+        "turn4714401view1"
+      ]
+    }
+  ],
+  "actual_retrieval_counts": {
+    "queries": 2,
+    "navigation_attempts": 2,
+    "opens": 2,
+    "clicks": 0,
+    "finds": 0,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "completed_utc": "2026-11-08T11:37:29.913009+00:00"
+}

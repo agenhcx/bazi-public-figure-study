@@ -1,0 +1,78 @@
+{
+  "source_family_initial_limits": {
+    "Vol76_pending": {
+      "discovery_queries": 0,
+      "index_navigations": 0,
+      "body_requests_including_images": 9
+    },
+    "Vol77": {
+      "discovery_queries": 2,
+      "index_navigations": 3,
+      "body_requests_including_images": 8
+    },
+    "Vol78": {
+      "discovery_queries": 2,
+      "index_navigations": 3,
+      "body_requests_including_images": 8
+    }
+  },
+  "body_budget_transfers": [
+    {
+      "from": "Vol77",
+      "to": "Vol76",
+      "requests": 2,
+      "reason": "Vol77 finished all6 plaintext chapters;2unusedslots released"
+    },
+    {
+      "from": "Vol78",
+      "released_requests": 3,
+      "to_Vol76": 1,
+      "unassigned": 2,
+      "reason": "Vol78 finished4plaintextchapters;finalcap5"
+    }
+  ],
+  "final_assigned_body_caps": {
+    "Vol76": 12,
+    "Vol77": 6,
+    "Vol78": 5
+  },
+  "unused_unassigned_body_allowance": 2,
+  "original_family_body_allowance": 25,
+  "actual": {
+    "Vol76": {
+      "discovery_queries": 0,
+      "index_navigations": 0,
+      "chapter_HTML": 3,
+      "observed_page_images": 6,
+      "body_requests": 9,
+      "retries": 0
+    },
+    "Vol77": {
+      "discovery_queries": 1,
+      "index_navigations": 1,
+      "chapter_HTML": 6,
+      "observed_page_images": 0,
+      "body_requests": 6,
+      "retries": 0
+    },
+    "Vol78": {
+      "discovery_queries": 1,
+      "index_navigations": 1,
+      "chapter_HTML": 4,
+      "observed_page_images": 0,
+      "body_requests": 4,
+      "retries": 0
+    }
+  },
+  "source_capture_deadline": "eachabout8minutes; actualcaptureandfreezetimessavedinlanesummary",
+  "source_requests_have_durable_preintent": true,
+  "all_original_source_HTTP_statuses": 200,
+  "stop_rules": "no retries;429=>stop;twoequivalent403503=>stop;noneencountered",
+  "geography": {
+    "new_exact_place_queries_authorized_max": 1,
+    "prior_NYC_Colorado_Berlin_Detroit_queries_not_repeated": true,
+    "new_queries_actual": 0,
+    "retries": 0,
+    "extent_reviews_only": true
+  }
+}

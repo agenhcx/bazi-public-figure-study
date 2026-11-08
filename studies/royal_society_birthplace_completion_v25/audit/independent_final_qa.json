@@ -1,0 +1,120 @@
+{
+  "schema": "UK_v25_independent_local_final_QA_v1",
+  "reviewer": "/root/v25_final_qa",
+  "written_utc": "2026-11-06T01:08:29.340862+00:00",
+  "status": "PASS",
+  "validation_categories_passed": 31,
+  "checks": [
+    "five pinned production outputs match before QA",
+    "actual v24 and v25 canonical hashes",
+    "self-contained v24 reconstruction exact all4983 objects",
+    "fixed cohort order and unique keys",
+    "scope125queue12reviewed2facts10holds disjoint partition",
+    "exact2changed and4981 completeidentical objects",
+    "all frozen fields prior facts and previous plus absent rollback exact",
+    "new S3 birthplaces both geographyunknown and original DOB roles preserved",
+    "independent overall and2644window counts",
+    "blank and nonblank diagnostics recomputed",
+    "summary deltas and no geographyonly adoption",
+    "CSV80old positions meaning plus6v25 fields",
+    "CSV rows current updates and historical columns exact",
+    "remaining185unknown CSV matches master order",
+    "old5 DOBobjects unchanged appendBisat sixth only",
+    "Bisat HTMLheader yearonly conflict no exactborn day claim",
+    "six inherited issue and method sidecars byteidentical",
+    "all issue records Wager Adam and currentholds completeobjects unchanged",
+    "Tomes provisional parsed8 native6 remains separate",
+    "Tomes screenshot representation limits not creationfailure",
+    "Smith exactnativeDOB uncreditedS3 and sourcegrade roles",
+    "Spath actualconference byline yearonly nativeDOB not invented",
+    "new cases no middle exception or unconfirmedsource expansion",
+    "actualaccepted8and4 plus safeTomes4 and Bisat6 quotes",
+    "request accounting24queries29worker6root35total5find1screenshot0GET",
+    "optionalDOI recorded unverified no false sourceupgrade",
+    "no fullsource cache or image formats distributed",
+    "docs count scope and qualification limits consistent by directreview",
+    "independent sourceQA finalized without blockingissues and facthash same",
+    "two isolated cleanreplays all5outputs equal originalpins",
+    "production5outputs untouched after QA"
+  ],
+  "baseline_canonical_sha256": "77d03a85ab2c959d1fc34732907535c2fa465b36fa6b1ab176bb4e66de6c5d0d",
+  "final_canonical_sha256": "b36383e9ac72642059c2f9b5ff6c57187c8b04477bb5830ebf85b61a12cda730",
+  "records": 4983,
+  "changed_complete_objects": 2,
+  "unchanged_complete_objects": 4981,
+  "overall": {
+    "north": 4177,
+    "unknown": 619,
+    "south": 187
+  },
+  "window_counts": {
+    "north": 2277,
+    "unknown": 185,
+    "south": 182
+  },
+  "blank_diagnostics": {
+    "all_blank_raw_birthplace": 545,
+    "window_blank_raw_birthplace": 123,
+    "all_unknown": 619,
+    "all_unknown_with_blank_raw_birthplace": 545,
+    "all_unknown_with_nonblank_raw_birthplace": 74,
+    "window_unknown": 185,
+    "window_unknown_with_blank_raw_birthplace": 123,
+    "window_unknown_with_nonblank_raw_birthplace": 62
+  },
+  "main_pre_QA_output_pins": {
+    "birthplace_rows.jsonl.gz": "28dd8d3a25ca2785fdec233614a9236db12af131dcd1a4f245d7b3decbd14248",
+    "birthplaces.csv": "d93b45b8d7da6722027504ed51412f6275a4ff8c029b91e1674eb2fde4b3e0b7",
+    "changes.json": "ddd8a6d95cb372933331849073155e8b4b8cc3f27c71efd4f89ad10edda7e0a1",
+    "remaining_unknown_window.csv": "c894222fa53c22813c426e004c1afad6df15901c335db9ddee3f000fcf555a59",
+    "summary.json": "fd198c570a7fdda6251852aedc40233150d9a2d76af82fc9f7f81d1e22e9fe44"
+  },
+  "isolated_replay_runs": [
+    {
+      "run": 1,
+      "clean_exit": true,
+      "five_hashes": {
+        "birthplace_rows.jsonl.gz": "28dd8d3a25ca2785fdec233614a9236db12af131dcd1a4f245d7b3decbd14248",
+        "birthplaces.csv": "d93b45b8d7da6722027504ed51412f6275a4ff8c029b91e1674eb2fde4b3e0b7",
+        "changes.json": "ddd8a6d95cb372933331849073155e8b4b8cc3f27c71efd4f89ad10edda7e0a1",
+        "remaining_unknown_window.csv": "c894222fa53c22813c426e004c1afad6df15901c335db9ddee3f000fcf555a59",
+        "summary.json": "fd198c570a7fdda6251852aedc40233150d9a2d76af82fc9f7f81d1e22e9fe44"
+      },
+      "matched_original_pins": true
+    },
+    {
+      "run": 2,
+      "clean_exit": true,
+      "five_hashes": {
+        "birthplace_rows.jsonl.gz": "28dd8d3a25ca2785fdec233614a9236db12af131dcd1a4f245d7b3decbd14248",
+        "birthplaces.csv": "d93b45b8d7da6722027504ed51412f6275a4ff8c029b91e1674eb2fde4b3e0b7",
+        "changes.json": "ddd8a6d95cb372933331849073155e8b4b8cc3f27c71efd4f89ad10edda7e0a1",
+        "remaining_unknown_window.csv": "c894222fa53c22813c426e004c1afad6df15901c335db9ddee3f000fcf555a59",
+        "summary.json": "fd198c570a7fdda6251852aedc40233150d9a2d76af82fc9f7f81d1e22e9fe44"
+      },
+      "matched_original_pins": true
+    }
+  ],
+  "main_outputs_rerun_or_mutated": false,
+  "quote_words_by_record": {
+    "RS_PAST_NA1476": 8,
+    "RS_PAST_NA1611": 4
+  },
+  "Tomes_safe_quote_words": 4,
+  "Bisat_header_quote_words": 6,
+  "documentation_checks": {
+    "files": [
+      "README.md",
+      "CONTINUATION.md"
+    ],
+    "counts_scope_limits_consistent": true,
+    "review_method": "Direct documentary review of actual Smith/Spath source roles and partial dates, Bisat qualifiedheader conflict versus Tomes provisional glyph distinction, inherited issue scope and optionalDOI unretained-status limitation. No exact prose-token requirement."
+  },
+  "limitations": [
+    "Independent local structural/data/replay verification only; no network, new original-source acquisition or raw HTTP-byte inspection.",
+    "Source semantic/genre quality reviewed separately in independent_source_qa.json; no original-image or printed-glyph verification by this reviewer.",
+    "Tomes parsed date versus native date is provisional; text-only screenshot/zeroImageContent is not a screenshot-creation-failure or confirmed seventh sourceDOB conflict.",
+    "Spath actual2022Kennedy abstract is distinguished from repository cover metadata and exactnativeOctober20 is not inferred from its year-only heading. Smith linked histories/optionalunretainedDOI do not upgradeS3.",
+    "No production inputs, facts, code, master outputs or Git operations changed; this audit and scratch harness only."
+  ]
+}

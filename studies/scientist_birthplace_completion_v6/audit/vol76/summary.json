@@ -1,0 +1,56 @@
+{
+  "lane": "v6 Vol76 finish three v5 pending UNREAD routes only",
+  "baseline_sha256": "15f3d58b3334fbc5c32229b0c122ff5e693379fbf9759794e1e3ae87ac06d152",
+  "baseline_counts": {
+    "all_records": 11094,
+    "NAS": 2242,
+    "NAS_north": 1656,
+    "NAS_south": 31,
+    "NAS_unknown": 555
+  },
+  "target_route_count": 3,
+  "facts": 3,
+  "holds": 0,
+  "pending_routes": 0,
+  "facts_names": [
+    "Robert W. Briggs",
+    "T. L. Cairns",
+    "Willem J. Luyten"
+  ],
+  "source_requests": {
+    "new_discovery_queries": 0,
+    "new_TOC_index_requests": 0,
+    "chapter_HTML": 3,
+    "observed_page_images": 6,
+    "total_original_body_requests": 9,
+    "retries": 0
+  },
+  "final_authorized_body_cap": 12,
+  "budget_transfer_history": "9initial ->11 (2unusedVol77slots) ->12 (1unusedVol78slot); actual9, 3unused",
+  "HTTP_statuses": [
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200
+  ],
+  "source_clock_start_utc": "2026-11-04T00:44:21.635034+00:00",
+  "last_capture_time_utc": "2026-11-04T00:48:12.036458+00:00",
+  "capture_clock_seconds": 230.401424,
+  "frozen_at_utc": "2026-11-04T00:50:25.769966+00:00",
+  "no_more_source_requests": true,
+  "stop_rule": "stopany429 or twoequivalent403/503; none encountered",
+  "original_routes_provenance": "actual v5 official Vol76 TOC links, no guessed endpoint and no prior-read body repeated",
+  "image_endpoint_provenance": "every GIF URL read from corresponding fresh chapter HTML img data-original; 6pages visually inspected with view_image",
+  "native_fields_frozen": true,
+  "source_lifespan_independently_matched": false,
+  "source_grade": "S2 signed edited memoir on official NAS/NAP host",
+  "geography_assignments": 0,
+  "headers": "public allowlist content-type/content-length/date/etag/last-modified only; no auth/client-IP/cookie headers retained",
+  "distribution": "retained audit artifacts only; original HTML/GIF/PNG/full OCR remain transient and excluded",
+  "collection_context": "cached v5 official catalog projection, no new request"
+}

@@ -1,0 +1,405 @@
+{
+  "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+  "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+  "method_application_scope_sha256": "b25ef3f4bbf1f3e5dddd48531812a60e40d1383b897a0d3d044b0604e62db212",
+  "written_utc": "2026-11-08T09:58:58.803894+00:00",
+  "group": "b",
+  "phase": "canonical_community_reference_geography_method_application",
+  "intent_file": "v43_b_intent.json",
+  "full2nativeobjects/priorholdsbeforequeries": true,
+  "all9_issue_inventories_loaded_before_queries": true,
+  "inventory_file_pins": {
+    "active_source_DOB_conflicts.json": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+    "birthplace_source_conflicts.json": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+    "source_derived_age_inconsistencies.json": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+    "provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+    "lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+    "cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+    "source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+    "omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+    "source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+  },
+  "prior_context_file_pins": {
+    "prior_v31_holds.json": "fb132f1350a62a5298ba0c5d26d862aaf4d12ebf0a1ddaff465f78c979176d80",
+    "prior_v31_method_qa.json": "4bbdc130cec93d80a810a478f0152bcc093e36f98df20849e530a21f46b6542b",
+    "prior_v31_continuation.md": "da83cc89ee8b52356f3fbe6dab7e9f9baa85fe2f83817dda161e8c50f9b7c487",
+    "prior_v20_continuation.md": "e141237d638b6408b976b3d5baec2761efbeaf8d5b0c00f9b30db4dc398f1db6",
+    "prior_v16_continuation.md": "69bff10f75c5569dd19227bd68cf7ba78a611aefb4c410598fb3089e294aee14",
+    "prior_v31_parent_adjudication.json": "f486108c8ccd01b3559d7352129952ed7442ebcf005ff7add151752e69c234ed",
+    "prior_v20_method_qa.json": "82f66141eef202ebf585723eb311c1f020ae045e08e6085ea8163b9a79c80b5c"
+  },
+  "prior_context_review": [
+    "v43_plan.json",
+    "v36_method_preregistration.json fullunchanged",
+    "v43_method_application_scope.json",
+    "v43_scope_b.json completetwoobjects withfullV20Garton/V16Rafterycontexts",
+    "V42 all9currentissueinventories readinfullbeforequeries",
+    "V42prior_v31_holds.json bothtargetfullindividualholds",
+    "V42prior_v31_method_qa.json targetednativecontexts",
+    "V42prior_v31_parent_adjudication.json full",
+    "V42prior_v31_continuation.md full",
+    "V42prior_v20_continuation.md full and prior_v20_method_qa.json targetedGartonassessment",
+    "V42prior_v16_continuation.md full",
+    "V42recoveryboundary inherited; no originalV42workerreport/intentbyte-recoveryor rerunclaim"
+  ],
+  "inherited_issue_counts": {
+    "active_DOB": 13,
+    "partial_birthplace": 2,
+    "source_derived_age_inconsistencies": 4,
+    "other_issue_files": 6
+  },
+  "separate_Ewins_Barber_placeholds_preserved": true,
+  "Tomes_provisional_glyph_and_all_independent_holds_preserved": true,
+  "omitted_middle_inventory_is_metadata_without_records_array": true,
+  "Coles_cross_source_age_contrast_preserved": true,
+  "intent_writes_validated_exit0_separately_beforeweb": true,
+  "retrieval_counts": {
+    "queries": 4,
+    "navigation_attempts": 5,
+    "source_open_operations": 2,
+    "click_operations": 3,
+    "parsed_finds": 0,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "query_ledger": [
+    {
+      "kind": "search",
+      "engine": "system2",
+      "record_id": "RS_PAST_NA4166",
+      "query": "\"William Reginald Stephen Garton\" site:wikipedia.org",
+      "result_refs": [
+        "turn2616377search0",
+        "turn2616377search1",
+        "turn2616377search2"
+      ],
+      "intent_entries": [
+        0
+      ],
+      "outcome": "CanonicalFRSlistsonly; no personalarticle discovered."
+    },
+    {
+      "kind": "search",
+      "engine": "system2",
+      "record_id": "RS_PAST_NA4680",
+      "query": "\"Michael Augustine Raftery\" site:wikipedia.org",
+      "result_refs": [],
+      "intent_entries": [
+        1
+      ],
+      "outcome": "NoRafterypersonalresult exposed in combinedresponse; no proof."
+    },
+    {
+      "kind": "search",
+      "engine": "system1",
+      "record_id": "RS_PAST_NA4166",
+      "query": "\"William Reginald Stephen Garton\" Wikipedia",
+      "result_refs": [
+        "turn9083272search5",
+        "turn9083272search0",
+        "turn9083272search1",
+        "turn9083272search6",
+        "turn9083272search7"
+      ],
+      "intent_entries": [
+        2
+      ],
+      "outcome": "No canonicalpersonalarticle; FRSlistdiscovery plus knownoriginalclosedworks notproof."
+    },
+    {
+      "kind": "search",
+      "engine": "system1",
+      "record_id": "RS_PAST_NA4680",
+      "query": "\"Michael Augustine Raftery\" Wikipedia",
+      "result_refs": [
+        "turn9083272search8",
+        "turn9083272search2",
+        "turn9083272search3",
+        "turn9083272search4"
+      ],
+      "intent_entries": [
+        3
+      ],
+      "outcome": "No canonicalWikipedia/Wikidataarticle oritemdiscovered; only knownMayo/RGworkand unrelatedscholarly/careerprojections. Searchdate/title notactualproof."
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "kind": "open",
+      "record_id": "RS_PAST_NA4166",
+      "ref": "turn9149364view0",
+      "outcome": "Firstcanonicalitem toolinaccessibleclosed; no retry/variant/rawGET.",
+      "intent_entry": 4,
+      "url": "https://www.wikidata.org/wiki/Q21166816"
+    },
+    {
+      "kind": "open",
+      "record_id": "RS_PAST_NA4166",
+      "ref": "turn9149364view1",
+      "outcome": "Actualdiscoverylist observesGartonnamehyperlink57 atL122; categorybyyear138 atL181. No personalbirthproof.",
+      "intent_entry": 5,
+      "url": "https://en.wikipedia.org/wiki/List_of_fellows_of_the_Royal_Society_elected_in_1969"
+    },
+    {
+      "kind": "click",
+      "record_id": "RS_PAST_NA4166",
+      "ref": "turn8497766view0",
+      "outcome": "Firstactualnameclick redlink/editURLtool404; no personalbody; closed no retries/variants.",
+      "intent_entry": 6,
+      "ref_id": "turn9149364view1",
+      "link_id": 57,
+      "observed_anchor": "William Reginald Stephen Garton",
+      "actual_target_url": "https://en.wikipedia.org/wiki/William_Reginald_Stephen_Garton?action=edit&redlink=1"
+    },
+    {
+      "kind": "click",
+      "record_id": "RS_PAST_NA4680",
+      "ref": "turn8497766view1",
+      "outcome": "Headerexplicitlyrewrittensummary; closed as proof/work, observedURIcarrier only. Actualdisplayedlink61 pointsdifferent listbyelectionyearwork; no samecategorypagination/variant.",
+      "intent_entry": 7,
+      "ref_id": "turn9149364view1",
+      "link_id": 138,
+      "observed_anchor": "Lists of fellows of the Royal Society by year",
+      "actual_target_url": "https://en.wikipedia.org/wiki/Category:Lists_of_fellows_of_the_Royal_Society_by_year"
+    },
+    {
+      "kind": "click",
+      "record_id": "RS_PAST_NA4680",
+      "ref": "turn3918435view0",
+      "outcome": "Actualcanonicaldiscoverylist acquirednormally;1986displayedplainunlinkedL444/L706, no actualtargetURI/linkIDexposed; no synthesizedURI or personalbirthproof.",
+      "intent_entry": 8,
+      "ref_id": "turn8497766view1",
+      "link_id": 61,
+      "observed_anchor": "List of fellows of the Royal Society by election year",
+      "actual_target_url": "https://en.wikipedia.org/wiki/List_of_fellows_of_the_Royal_Society_by_election_year"
+    }
+  ],
+  "parsed_find_ledger": [],
+  "candidates": [],
+  "holds": [
+    {
+      "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+      "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+      "method_application_scope_sha256": "b25ef3f4bbf1f3e5dddd48531812a60e40d1383b897a0d3d044b0604e62db212",
+      "publication_date": null,
+      "publication_date_precision": "not_observed",
+      "source_revision_id": null,
+      "source_revision_utc": null,
+      "source_calendar_model": null,
+      "source_statement_rank": null,
+      "source_editorial_validation": null,
+      "source_informational_independence": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "proof_mode": null,
+      "proof_chain": [],
+      "source_grade_adopted": null,
+      "source_grade_role": "geographic_support_only",
+      "reviewed_hemisphere": "unknown",
+      "no_new_geographic_assignment": true,
+      "native_and_original_birthplace_fields_unchanged": true,
+      "qualified_new_DOB_conflict": false,
+      "qualified_new_birthplace_conflict": false,
+      "source_derived_age_inconsistency_observed": false,
+      "all_native_personal_components_in_actual_admissible_person_body": false,
+      "exact_native_DOB_in_actual_admissible_person_body": false,
+      "distinctive_career_in_actual_admissible_person_body": false,
+      "compatible_lifespan_in_actual_admissible_person_body": null,
+      "actual_person_birthplace_to_region_proof_acquired": false,
+      "record_id": "RS_PAST_NA4166",
+      "native": {
+        "authority_name": "Garton; William Reginald Stephen (1912 - 2002)",
+        "native_dob": "1912-03-07",
+        "raw_birthplace": "Chelsea",
+        "frozen_birthplace_source_grade": "S2",
+        "hemisphere": "unknown"
+      },
+      "status": "held_no_actual_canonical_person_birthplace_to_region_proof",
+      "hold_type": "frozen_lookup_item_first_open_unavailable_and_actual_list_person_link_is_redlink",
+      "reason": "Fourboundedgroupqueries foundcanonicalFRSlists but no originalcanonicalpersonalarticle. FrozenprovidedlookupQ21166816 firstopen was toolinaccessibleandclosed. Actual1969FRSlistL122 supplies allWilliamReginaldStephenGartoncomponents asobservednamehyperlink57; itsfirstactualclick returnededit/redlinktarget/tool404 andclosed. No actualadmissiblecanonicalpersonalbody/exactDOB/distinctivecareer/compatiblelife/bornChelsea/P19 evidence acquired. FrozenChelsea remainsunqualified; no nationality/Imperialwork/upbringing/cityfamiliarity inference.",
+      "source_url": "https://www.wikidata.org/wiki/Q21166816",
+      "source_ref": "turn9149364view0",
+      "source_observations": [
+        {
+          "source_url": "https://www.wikidata.org/wiki/Q21166816",
+          "source_body_ref": "turn9149364view0",
+          "source_locator": null,
+          "status": "first_open_tool_not_accessible",
+          "tool_reported_error": "URL https://www.wikidata.org/wiki/Q21166816 is not accessible via this tool.",
+          "actual_original_person_body_acquired": false,
+          "lookup_identifier_from_frozen_scope": "Q21166816",
+          "identifier_role": "Existingprovidedlookup only; no guessedQID/nativeQIDassignment/actualstatementproof.",
+          "acquisition_role": "worker_firstcanonicalitemopenfailed",
+          "source_quote": null,
+          "source_quote_word_count": 0,
+          "stopped_without_retry_variant_or_rawGET": true,
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null
+        },
+        {
+          "source_url": "https://en.wikipedia.org/wiki/William_Reginald_Stephen_Garton?action=edit&redlink=1",
+          "source_body_ref": "turn8497766view0",
+          "source_locator": null,
+          "requested_click_ref": "turn9149364view1",
+          "requested_click_id": 57,
+          "observed_anchor": "William Reginald Stephen Garton",
+          "status": "first_observed_personlink_redlink_target_tool404",
+          "tool_reported_error": "Failed to fetch https://en.wikipedia.org/wiki/William_Reginald_Stephen_Garton?action=edit&redlink=1: (404) Not Found",
+          "actual_original_person_body_acquired": false,
+          "acquisition_role": "worker_actualobservedlist_personlink_firstclickfailed",
+          "source_quote": null,
+          "source_quote_word_count": 0,
+          "stopped_without_retry_variant_or_rawGET": true,
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null
+        }
+      ],
+      "discovery_only_observations": [
+        {
+          "ref": "turn2616377search0",
+          "url": "https://en.wikipedia.org/wiki/List_of_fellows_of_the_Royal_Society_G%2C_H%2C_I",
+          "role": "UnopenedFRSlistprojection fullnative/exactDOB/life only; no originalpersonalbirthproof.",
+          "source_quote": null,
+          "source_quote_word_count": 0
+        },
+        {
+          "ref": "turn9149364view1",
+          "url": "https://en.wikipedia.org/wiki/List_of_fellows_of_the_Royal_Society_elected_in_1969",
+          "locator": "L122 allnativepersonalcomponents/hyperlink57;L181categorybyyearlink138",
+          "role": "Actualcanonicaldiscoverylist only, not personalreference/birthplace source. Actualnameclickfollowedandfailed.",
+          "tool_header_rewritten_summary": false,
+          "source_quote": null,
+          "source_quote_word_count": 0
+        }
+      ],
+      "prior_holds_preserved": [
+        "FrozenV20JeanPatrickConnerade2009authoredRSmemoir originaltext throughRGcarrier supplies fullnative/exact7March1912/compatible2002/directChelsea/S2 unchanged; Londonerinspirit/upbringing and authorImperialLondonSW7UK address are notbornregion. No newquote or independentinformation claim.",
+        "V20ImperialbiographyHTMLfirstbody403 remainsclosed; sameworksearchprojectionturn9083272search0 not reopened/requalified.",
+        "V31distinctImperialarchiveinventoryPDFfirstopen403 remainsclosed; sameworksearchprojectionturn9083272search5 not retried/variant/carrier/rawGET.",
+        "Memoirpublicationyear2009 retained; oldcarrierDecember2009 versus reprint1January2009 publicationprecisioncaveat unchanged."
+      ],
+      "retrieval_representation": "ActualcanonicaldiscoverylistparsedHTML, firstitemtoolerror and actualredlinkclickerror; no admissiblepersonalcanonicalbody/rawbytes/fullcache."
+    },
+    {
+      "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+      "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+      "method_application_scope_sha256": "b25ef3f4bbf1f3e5dddd48531812a60e40d1383b897a0d3d044b0604e62db212",
+      "publication_date": null,
+      "publication_date_precision": "not_observed",
+      "source_revision_id": null,
+      "source_revision_utc": null,
+      "source_calendar_model": null,
+      "source_statement_rank": null,
+      "source_editorial_validation": null,
+      "source_informational_independence": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "proof_mode": null,
+      "proof_chain": [],
+      "source_grade_adopted": null,
+      "source_grade_role": "geographic_support_only",
+      "reviewed_hemisphere": "unknown",
+      "no_new_geographic_assignment": true,
+      "native_and_original_birthplace_fields_unchanged": true,
+      "qualified_new_DOB_conflict": false,
+      "qualified_new_birthplace_conflict": false,
+      "source_derived_age_inconsistency_observed": false,
+      "all_native_personal_components_in_actual_admissible_person_body": false,
+      "exact_native_DOB_in_actual_admissible_person_body": false,
+      "distinctive_career_in_actual_admissible_person_body": false,
+      "compatible_lifespan_in_actual_admissible_person_body": null,
+      "actual_person_birthplace_to_region_proof_acquired": false,
+      "record_id": "RS_PAST_NA4680",
+      "native": {
+        "authority_name": "Raftery; Michael Augustine (1936 - 2007); biochemist",
+        "native_dob": "1936-02-08",
+        "raw_birthplace": "Galway",
+        "frozen_birthplace_source_grade": "S3",
+        "hemisphere": "unknown"
+      },
+      "status": "held_no_actual_canonical_person_birthplace_to_region_proof",
+      "hold_type": "canonical_person_discovery_unresolved_and_no_frozen_lookup_item",
+      "reason": "Engine2thenengine1 fixedfullnamequeries discoveredno canonicalWikipedia personalarticle or Wikidataitem. Frozenlookup_qid is empty; noQID guessed. Actualdiscoverycategorycarrier washeaderexplicitlyrewrittensummary andclosedasproof; actualobservedlink61 wasfollowedtoadifferentnormalcanonicalby-election-yearlist. Thatactualbody displays1986 asplainunlinkedtextL444/L706, withnoactualtargetURI/linkIDexposed; no personal/list/placeURI synthesized. No actualcanonical allnativepersonalcomponents/exact8February1936/career/compatiblelife/bornGalway/P19-to-wholeregion acquired. Galway remainsunqualified; no cityfamiliarity/Irishnationality/Mayo parents-upbringing/workregion inference.",
+      "source_url": null,
+      "source_ref": null,
+      "source_observations": [],
+      "discovery_only_observations": [
+        {
+          "ref": "turn9083272search2",
+          "url": "https://www.mayonews.ie/news/opinion/michael-augustine-raftery-7521177",
+          "role": "OldfrozenoriginalMayoobituarysearchprojection; no actualnewcanonicalbody or newqualifieddate/placeconflict.",
+          "source_quote": null,
+          "source_quote_word_count": 0
+        },
+        {
+          "ref": "turn9083272search3",
+          "url": "https://www.researchgate.net/publication/398085395_Michael_Augustine_Raftery_8_February_1936_-_1_August_2007_8_February_1936_-_1_August_2007",
+          "role": "OldV31memoircarrier searchprojection hasdates; no originalcurrentbody acquisition or retrospectivedatequalification. Closedpublisher403 notretried.",
+          "source_quote": null,
+          "source_quote_word_count": 0
+        },
+        {
+          "ref": "turn8497766view1",
+          "url": "https://en.wikipedia.org/wiki/Category:Lists_of_fellows_of_the_Royal_Society_by_year",
+          "locator": "Toolheaderexplicitlyrewrittensummary;L117observedlink61 to distinctlistbyelectionyear",
+          "tool_header_rewritten_summary": true,
+          "role": "ObservedURIcarrieronly; not canonicalsourceproof. Closedwork; no categorypagination/variant/retry. Actualdifferentworklink61followed.",
+          "source_quote": null,
+          "source_quote_word_count": 0
+        },
+        {
+          "ref": "turn3918435view0",
+          "url": "https://en.wikipedia.org/wiki/List_of_fellows_of_the_Royal_Society_by_election_year",
+          "locator": "Actualnormalheader;L444/L7061986plainunlinked; noURI/linkID for1986 orRafterypersonalentryexposed",
+          "tool_header_rewritten_summary": false,
+          "role": "Actualcanonicaldiscoverylist only; notpersonalreference/birthproof; no unobservedlinktargetinvented.",
+          "source_quote": null,
+          "source_quote_word_count": 0
+        }
+      ],
+      "prior_holds_preserved": [
+        "FrozenV16originalMayoNewsinstitutionalbyline/fullMichaelAugustineRaftery/age71/death1August2007/directGalway/S3 unchanged. No ownDOB stated; priorage/lifecompatibility doesnotmanufacture exactnativeDOB neededforV36 newcanonicaladmission. CoMayo parents/upbringingnotbirthregion.",
+        "V31actualauthoredAngelaVincent/DanielRaftery2025memoirRGheading/abstract fullnative/Irish-born/acetylcholinereceptor/FRS1986 lackedactualDOB/lifespan. URLslug/searchdates and unrelatedcached1936 match are notoriginalbirthdateproof.",
+        "V31publisherDOI10.1098/rsbm.2025.0005 firstobservedclick403 remainsclosed; no positivecountry/datebypass/retry/variant/rawGET. OldIrish-born2wordobservation preserved, not newcanonicalproof."
+      ],
+      "retrieval_representation": "Searchprojectionsdiscoveryonly; oneexplicitrewrittencategoryURIcarrier then distinctnormalcanonicaldiscoverylist; no actualcanonicalpersonalbody/rawbytes/fullcache."
+    }
+  ],
+  "new_DOB_or_place_conflicts": [],
+  "source_derived_age_inconsistency_candidates": [],
+  "source_quality_issue_candidates": [],
+  "unopened_distinct_original_work_leads": [],
+  "source_quote_words_by_original_work": {
+    "https://www.wikidata.org/wiki/Q21166816": 0,
+    "https://en.wikipedia.org/wiki/List_of_fellows_of_the_Royal_Society_elected_in_1969": 0,
+    "https://en.wikipedia.org/wiki/William_Reginald_Stephen_Garton?action=edit&redlink=1": 0,
+    "https://en.wikipedia.org/wiki/Category:Lists_of_fellows_of_the_Royal_Society_by_year": 0,
+    "https://en.wikipedia.org/wiki/List_of_fellows_of_the_Royal_Society_by_election_year": 0
+  },
+  "prior_quote_accounting": "No newliteralquotes. ExistingGartonRSmemoir8wordChelseaquote, RafteryMayo5wordGalwayquote and oldRaftery2025memoirIrish-born2wordquote remaininheritedobservations only. No originalclosedworknewquote or completecache. Allnewworks0quotedwords; minimalstructuredfacts/URLs/locators only.",
+  "protocol_limits": {
+    "per_group_queries": 4,
+    "per_group_navigation_attempts": 10,
+    "used_queries": 4,
+    "used_navigation_attempts": 5,
+    "cached_finds_counted_separately": true,
+    "unused_navigation_budget_not_required_to_spend": true,
+    "first_failed_or_unusable_work_not_retried": true,
+    "no_rawGET_auth_bypass_or_failedwork_variants": true,
+    "original_source_caches_distributed": false,
+    "source_exhaustion_claimed": false
+  },
+  "method_amendment_created": false,
+  "method_reused_from_version": 36,
+  "scope_application_extension": true,
+  "no_new_admission_method_exception": true,
+  "raw_HTTP_status": null,
+  "raw_bytes_sha256": null,
+  "exact_request_utc": null,
+  "no_repo_master_Git_edit": true,
+  "no_source_exhaustion_finalfreeze_or_DOB_BPtierupgrade": true
+}

@@ -1,0 +1,83 @@
+{
+  "schema": "royal_society_birthplace_completion_v26",
+  "method": "twelve fixed first-birthplace original-source followups; no new geography-only pilot",
+  "baseline_v25_source_commit": "65494e28c0b3ad9bd28538bd45daca5df8232b07",
+  "baseline_v25_canonical_jsonl_sha256": "b36383e9ac72642059c2f9b5ff6c57187c8b04477bb5830ebf85b61a12cda730",
+  "reconstructed_v11_canonical_jsonl_sha256": "577515b90cff05d61288222a4daf595aaaed76a1baa16ab96391720b02c32da6",
+  "underlying_v10_gzip_sha256": "e44f6dc02cc0cafece9b792164f016da0f08de5736ac62442d176d45b19a5799",
+  "records": 4983,
+  "counting_unit": "fixed UK cohort records, not cross-cohort independent persons",
+  "frozen_blank_birthplace_target_pool": 123,
+  "fixed_individual_source_followups": 12,
+  "fixed_existing_place_geography_pilots": 0,
+  "actual_unique_reviewed_records": 12,
+  "reviewed_records_outside_blank_birthplace_pool": 0,
+  "new_bulk_source_screening_performed": false,
+  "scope_count_note": "The 123-record blank-place pool is an eligibility queue, not 123 biographies read. Twelve fixed individual followups; no geography-only source collection/adoption in this batch.",
+  "new_offline_crosscohort_screening_performed": false,
+  "new_birthplaces": 5,
+  "new_first_birthplace_records": 5,
+  "new_primary_person_birthplace_observations": 5,
+  "new_geographic_resolutions": 2,
+  "newly_classified": 2,
+  "new_geographic_resolutions_from_new_birthplaces": 2,
+  "new_geography_only_resolutions": 0,
+  "new_birthplaces_with_unresolved_geography": 3,
+  "new_birthplace_source_grade_counts": {
+    "S2": 3,
+    "S3": 2
+  },
+  "new_geographic_support_grade_counts": {},
+  "birthplace_source_grade_role": "person_birthplace_support_only; original DOB tiers unchanged",
+  "geographic_support_grade_role": "no new geography-only facts; all prior support roles unchanged",
+  "new_hemisphere_counts": {
+    "north": 2
+  },
+  "overall": {
+    "north": 4179,
+    "unknown": 617,
+    "south": 187
+  },
+  "native_dob_window": "1835-1985 inclusive",
+  "native_dob_window_records": 2644,
+  "native_dob_window_counts": {
+    "north": 2279,
+    "unknown": 183,
+    "south": 182
+  },
+  "newly_classified_in_native_dob_window": 2,
+  "unchanged_complete_rows": 4978,
+  "followup_held_records": 7,
+  "followup_holds": {
+    "source_access_and_birthplace_evidence_gap": 2,
+    "no_explicit_birthplace_in_acquired_body": 1,
+    "no_acquired_original_birthplace_body": 1,
+    "no_explicit_subject_birthplace_acquired": 1,
+    "original_birthplace_body_unavailable": 2
+  },
+  "target_pool_remaining_without_adopted_birthplace": 118,
+  "remaining_blank_current_fields": {
+    "all_blank_raw_birthplace": 540,
+    "window_blank_raw_birthplace": 118,
+    "all_unknown": 617,
+    "all_unknown_with_blank_raw_birthplace": 540,
+    "all_unknown_with_nonblank_raw_birthplace": 77,
+    "window_unknown": 183,
+    "window_unknown_with_blank_raw_birthplace": 118,
+    "window_unknown_with_nonblank_raw_birthplace": 65
+  },
+  "native_fields_and_prior_evidence_preserved": true,
+  "all_v11_v12_v13_v14_v15_v16_v17_v18_v19_v20_v21_v22_v23_v24_v25_evidence_objects_preserved": true,
+  "original_DOB_source_grades_preserved": true,
+  "prior_geography_only_original_birthplace_fields_and_grades_preserved": true,
+  "new_birthplace_fields_versioned_with_rollback_snapshots": true,
+  "prior_selected_evidence_official_field_status_and_source_hashes_kept_as_history": true,
+  "other_cohorts_modified": false,
+  "country_or_personal_coordinates_assigned": false,
+  "DOB_calendar_identity_eligibility_modified": false,
+  "cross_cohort_statistical_deduplication": false,
+  "BaZi_or_outcomes": false,
+  "final_cohort_freeze": false,
+  "gzip_note": "GzipFile uses empty filename/zero mtime; baseline identity checked with canonical objects.",
+  "recovery_note": "Self-contained UK v10 carrier plus frozen v11-v25 inputs; no comprehensive v8 NAS/DE increment reconstruction."
+}

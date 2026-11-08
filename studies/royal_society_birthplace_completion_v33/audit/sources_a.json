@@ -1,0 +1,388 @@
+{
+  "schema": "UK_v33_geography_only_source_followup_lane_a_v1",
+  "worker": "/root/v32_sources_a",
+  "written_utc": "2026-11-06T22:39:23.998727+00:00",
+  "intent_file": "v33_a_intent.json",
+  "scope": [
+    "RS_PAST_NA1994",
+    "RS_PAST_NA2016",
+    "RS_PAST_NA2146",
+    "RS_PAST_NA2153"
+  ],
+  "baseline_commit": "a9c824bfb374035912eb6c36a8e631ccbb4177e1",
+  "phase": "geography_only_original_person_birth_context_followup",
+  "usage": {
+    "discovery_queries": 8,
+    "query_limit": 8,
+    "navigation_attempts": 3,
+    "navigation_limit": 10,
+    "parsed_finds": 0,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "prior_context_review": {
+    "full_scope_records_read": true,
+    "firstoutputtruncated": true,
+    "truncatedBinnieHeath recoveredbeforequeries": true,
+    "targeted_holds_read": "v32auditprior_v12Thompson/prior_v13Heath/prior_v27methodQA; originalv12requestledger/v13Heathobservation/v27sourceBfinalread",
+    "original_BP_sources": {
+      "RS_PAST_NA1994": [
+        "https://www.chilton-computing.org.uk/ChiltonCatalog/UKAEA-atom/19690200-UkaeaAtom-148.pdf"
+      ],
+      "RS_PAST_NA2016": [
+        "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/579603141"
+      ],
+      "RS_PAST_NA2146": [
+        "https://doi.org/10.1098/rsbm.1998.0015"
+      ],
+      "RS_PAST_NA2153": [
+        "https://doi.org/10.1098/rsbm.1998.0027"
+      ]
+    },
+    "closed_or_previously_inspected_works": [
+      "Franklin1969ATOMUKAEApressrelease sourceworkeractual/rootTimeout400; no retry/variant",
+      "FranklinIChemEunsignedpresidentprofile originalmonth1924-09/Leedsonly alreadyacquired; notnew",
+      "BinnieAlanMuirWoodODNB2004originalpublicextract full/exact1908-11-13/Kensingtononly alreadyacquired; no reopening",
+      "Heathjjhcfamilypage acquiredname/lifespanonly and searchprojectionbornLondon; no regionverified; notnew",
+      "ThompsonPeterWilliamsBMJ1998originalPMC1113094 actualyear1913 vs native1912 qualifiedDOBhold; preserve, no country/yearonlynewsourcebypass"
+    ],
+    "Thompson_DOB_hold_not_in_global7": "Parentnotifiedbeforequeries. Oldqualifiedoriginalconflict remainsbinding, geographyadoptionblocked evenifnewcompatiblecountrywork."
+  },
+  "prequery_discovery_and_instruction_sequence": {
+    "inheritedThompsonhold_discovered_before_queries": true,
+    "parent_notified_before_queries": true,
+    "firstbatchfour_queries_intented_and_completed_before_parent_noquery_instruction_received": true,
+    "no_Thompson_originalbody_opened_or_geography_unlocked": true,
+    "further_Thompson_queries_or_opens": false,
+    "historical_context_file": "v33_thompson_historical_context.json"
+  },
+  "candidates": [],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA1994",
+      "native": {
+        "record_id": "RS_PAST_NA1994",
+        "authority_name": "Franklin; Norman Laurence (1924 - 1986)",
+        "native_dob": "1924-09-01",
+        "raw_birthplace": "Leeds",
+        "birthplace_source_grade": "S3",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "94e7adae31ba80c29f12a3ac68525bb062399400b1a6ff88974cce9dbc1f0a00"
+      },
+      "status": "hold_no_new_qualified_geographic_support",
+      "hold_type": "distinct_original_memoir_body_unavailable",
+      "reason": "Actualfirst1988JohnHillRSmemoirJSTORopen toolnotaccessible,stopped/no variants. Original1969ATOMbirthLeedsS3/monthonlyIChemEprofile remainunchanged; no newdirectborncountry/region acquired. No city/nationality/workinference.",
+      "source_url": "https://www.jstor.org/stable/770051",
+      "source_ref": "turn1868590view0",
+      "source_grade_adopted": null,
+      "source_quote": "",
+      "source_quote_word_count": 0,
+      "native_and_original_birthplace_fields_unchanged": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed text or tool-reported error, not raw HTTP/PDF bytes",
+      "no_master_change": true
+    },
+    {
+      "record_id": "RS_PAST_NA2016",
+      "native": {
+        "record_id": "RS_PAST_NA2016",
+        "authority_name": "Binnie; Geoffrey Morse (1908 - 1989)",
+        "native_dob": "1908-11-13",
+        "raw_birthplace": "Kensington",
+        "birthplace_source_grade": "S2",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "ee0df9154b8c865ee77309f96727807eb240274852f9da4364530a62ee7a81f1"
+      },
+      "status": "hold_no_new_qualified_geographic_support",
+      "hold_type": "distinct_original_obituary_body_unavailable",
+      "reason": "Actualfirst1989AsianAffairsAndreSinger/RALongmireobituaryDOIopen toolnotaccessible,stopped/no variants. EarlierAlanMuirWoodODNBfullnative/exactDOB/Kensingtoncityonly remainsunchanged; no newdirectborncountry/regionbody acquired. OldWilliamBinnieWiki1901projection notqualifiedoriginalDOBconflict.",
+      "source_url": "https://doi.org/10.1080/03068378908730362",
+      "source_ref": "turn1868590view1",
+      "source_grade_adopted": null,
+      "source_quote": "",
+      "source_quote_word_count": 0,
+      "native_and_original_birthplace_fields_unchanged": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed text or tool-reported error, not raw HTTP/PDF bytes",
+      "no_master_change": true
+    },
+    {
+      "record_id": "RS_PAST_NA2146",
+      "native": {
+        "record_id": "RS_PAST_NA2146",
+        "authority_name": "Heath; Oscar Victor Sayer (1903 - 1997)",
+        "native_dob": "1903-07-26",
+        "raw_birthplace": "London",
+        "birthplace_source_grade": "S2",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "fc72867ee16052108445a15472e39c4f1e77347e379573884d7334d2e6c55feb"
+      },
+      "status": "hold_no_new_qualified_geographic_support",
+      "hold_type": "first_full_memoir_route_no_subject_text",
+      "reason": "Actualfirstfull1998TerryAMansfieldRSmemoirJSTORopen returned1parsedlineL0Image only; no subjecttext/DOB/bornregion acquired. No imagepixels shown/inspected, no printedbody/civilverification or source-versionclaim. EarlierpublisherabstractLondonS2andfamilyhistorypage remainunchanged; workcountry notbirth.",
+      "source_url": "https://www.jstor.org/stable/770241",
+      "source_ref": "turn1868590view2",
+      "source_grade_adopted": null,
+      "source_quote": "",
+      "source_quote_word_count": 0,
+      "native_and_original_birthplace_fields_unchanged": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed text or tool-reported error, not raw HTTP/PDF bytes",
+      "no_master_change": true
+    },
+    {
+      "record_id": "RS_PAST_NA2153",
+      "native": {
+        "record_id": "RS_PAST_NA2153",
+        "authority_name": "Thompson; Robert Henry Stewart (1912 - 1998)",
+        "native_dob": "1912-02-02",
+        "raw_birthplace": "Croydon",
+        "birthplace_source_grade": "S2",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "40be643b5bb9e3894eabf2f180ae9da003ddef60d6d69caf9aa21dd08b0fc8e4"
+      },
+      "status": "hold_inherited_qualified_original_DOB_conflict",
+      "hold_type": "historical_original_source_birthyear_conflict",
+      "reason": "Beforequeryreview foundv12actualPeterWilliamsBMJ1998originalsignedsubsection fullRobertHenryStewartThompson/year1913 vsfrozennative1912, plusendpointJanuary15vsmemoirJanuary16. Oldindividualhold is bindingdespiteglobal7inventorynotexhaustive. No compatiblecountry/yearonly/datelessnewsourcebypass; wholemasterobject unchanged. OneinitialThompsondiscoveryquery hadcompletedbeforeparentnofurtherqueryinstructionarrived; noneworiginalThompsonbody/open/fact, nofurtherqueries. Rootreviewofhistoricalinventoryseparatefromnewacquisition.",
+      "historical_context_file": "v33_thompson_historical_context.json",
+      "prior_source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1113094/",
+      "prior_source_ref": "turn30view2",
+      "prior_source_acquisition_role": "v12actualpublishersuppliedoriginalsignedobituaryacquiredthen;notreopenedv33",
+      "new_source_acquisition": false,
+      "source_grade_adopted": null,
+      "source_quote": "",
+      "source_quote_word_count": 0,
+      "native_and_original_birthplace_fields_unchanged": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed text or tool-reported error, not raw HTTP/PDF bytes",
+      "no_master_change": true
+    }
+  ],
+  "query_ledger": [
+    {
+      "operation_number": 1,
+      "record_id": "RS_PAST_NA1994",
+      "engine": "system2",
+      "query": "\"Norman Laurence Franklin\" \"Leeds\" \"Yorkshire\"",
+      "result_group_ref_prefix": "turn8889147search",
+      "role": "discoveryonly; no factadoptedfromsearchprojections",
+      "individual_query_result_ref_mapping": "Combinedquerybatch; exactbackendperqueryassignmentnotexposed",
+      "durable_pre_request_intent_exists": true,
+      "intent_timing": "exactinitialquerysavedbeforecall",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "operation_number": 2,
+      "record_id": "RS_PAST_NA2016",
+      "engine": "system2",
+      "query": "\"Geoffrey Morse Binnie\" \"born\" \"England\"",
+      "result_group_ref_prefix": "turn8889147search",
+      "role": "discoveryonly; no factadoptedfromsearchprojections",
+      "individual_query_result_ref_mapping": "Combinedquerybatch; exactbackendperqueryassignmentnotexposed",
+      "durable_pre_request_intent_exists": true,
+      "intent_timing": "exactinitialquerysavedbeforecall",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "operation_number": 3,
+      "record_id": "RS_PAST_NA2146",
+      "engine": "system2",
+      "query": "\"Oscar Victor Sayer Heath\" \"born\" \"England\"",
+      "result_group_ref_prefix": "turn8889147search",
+      "role": "discoveryonly; no factadoptedfromsearchprojections",
+      "individual_query_result_ref_mapping": "Combinedquerybatch; exactbackendperqueryassignmentnotexposed",
+      "durable_pre_request_intent_exists": true,
+      "intent_timing": "exactinitialquerysavedbeforecall",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "operation_number": 4,
+      "record_id": "RS_PAST_NA2153",
+      "engine": "system2",
+      "query": "\"Robert Henry Stewart Thompson\" obituary biography Croydon -site:pmc.ncbi.nlm.nih.gov -site:bmj.com",
+      "result_group_ref_prefix": "turn8889147search",
+      "role": "discoveryonly; no factadoptedfromsearchprojections",
+      "individual_query_result_ref_mapping": "Combinedquerybatch; exactbackendperqueryassignmentnotexposed",
+      "durable_pre_request_intent_exists": true,
+      "intent_timing": "exactinitialquerysavedbeforecall",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "operation_number": 5,
+      "record_id": "RS_PAST_NA1994",
+      "engine": "system1",
+      "query": "\"Norman Laurence Franklin\" obituary biography",
+      "result_group_ref_prefix": "turn7723779search",
+      "role": "discoveryonly; no factadoptedfromsearchprojections",
+      "individual_query_result_ref_mapping": "Combinedquerybatch; exactbackendperqueryassignmentnotexposed",
+      "durable_pre_request_intent_exists": false,
+      "intent_timing": "NOdurableprequeryintent;localwritefailedandwebcallnotgated;deviationrecordedafteractualcallnotbackdated",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "operation_number": 6,
+      "record_id": "RS_PAST_NA2016",
+      "engine": "system1",
+      "query": "\"Geoffrey Morse Binnie\" biography Kensington",
+      "result_group_ref_prefix": "turn7723779search",
+      "role": "discoveryonly; no factadoptedfromsearchprojections",
+      "individual_query_result_ref_mapping": "Combinedquerybatch; exactbackendperqueryassignmentnotexposed",
+      "durable_pre_request_intent_exists": false,
+      "intent_timing": "NOdurableprequeryintent;localwritefailedandwebcallnotgated;deviationrecordedafteractualcallnotbackdated",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "operation_number": 7,
+      "record_id": "RS_PAST_NA2146",
+      "engine": "system1",
+      "query": "\"Oscar Victor Sayer Heath\" obituary biography",
+      "result_group_ref_prefix": "turn7723779search",
+      "role": "discoveryonly; no factadoptedfromsearchprojections",
+      "individual_query_result_ref_mapping": "Combinedquerybatch; exactbackendperqueryassignmentnotexposed",
+      "durable_pre_request_intent_exists": false,
+      "intent_timing": "NOdurableprequeryintent;localwritefailedandwebcallnotgated;deviationrecordedafteractualcallnotbackdated",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "operation_number": 8,
+      "record_id": "RS_PAST_NA1994",
+      "engine": "system1",
+      "query": "\"Norman Laurence Franklin\" \"born\" -site:icheme.org -site:chilton-computing.org.uk",
+      "result_group_ref_prefix": "turn7723779search",
+      "role": "discoveryonly; no factadoptedfromsearchprojections",
+      "individual_query_result_ref_mapping": "Combinedquerybatch; exactbackendperqueryassignmentnotexposed",
+      "durable_pre_request_intent_exists": false,
+      "intent_timing": "NOdurableprequeryintent;localwritefailedandwebcallnotgated;deviationrecordedafteractualcallnotbackdated",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "operation_number": 1,
+      "record_id": "RS_PAST_NA1994",
+      "input": "https://www.jstor.org/stable/770051",
+      "result_ref": "turn1868590view0",
+      "outcome": "URLnotaccessibleviathistool;stopped/no actualbody",
+      "prior_intent_file": "v33_a_intent.json",
+      "actual_preintent_saved_and_exit0_verified": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed text or tool-reported error, not raw HTTP/PDF bytes",
+      "no_master_change": true
+    },
+    {
+      "operation_number": 2,
+      "record_id": "RS_PAST_NA2016",
+      "input": "https://doi.org/10.1080/03068378908730362",
+      "result_ref": "turn1868590view1",
+      "outcome": "URLnotaccessibleviathistool;stopped/no actualbody",
+      "prior_intent_file": "v33_a_intent.json",
+      "actual_preintent_saved_and_exit0_verified": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed text or tool-reported error, not raw HTTP/PDF bytes",
+      "no_master_change": true
+    },
+    {
+      "operation_number": 3,
+      "record_id": "RS_PAST_NA2146",
+      "input": "https://www.jstor.org/stable/770241",
+      "result_ref": "turn1868590view2",
+      "outcome": "Only1parsedlineL0Image; no acquiredsubjecttext/imagepixels; stopped/no variants",
+      "prior_intent_file": "v33_a_intent.json",
+      "actual_preintent_saved_and_exit0_verified": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed text or tool-reported error, not raw HTTP/PDF bytes",
+      "no_master_change": true
+    }
+  ],
+  "parsed_find_ledger": [],
+  "quote_ledger": [],
+  "unopened_distinct_original_leads": [
+    {
+      "record_id": "RS_PAST_NA2016",
+      "url": "https://doi.org/10.1680/dare.2008.18.3.121",
+      "observed_ref": "turn7723779search8",
+      "title": "The Binnie heritage in dam engineering",
+      "source_author_lead": "Bill Carlyle",
+      "publication_year_lead": "2008",
+      "role": "GenuinelydistinctoriginalengineeringhistorybibliographyleadfromWikiresultonly; NOTacquiredbody/sourcegrade or verifiedbornregion",
+      "not_opened_reason": "Rootrequestedfinalization; parentmayfirstinspectunderverifiedintent. No knownpriorfailedrouteforTHISwork; differentfromAsianAffairs1989failedwork andODNB2004alreadyacquired. No inferredcountryfromdamproject/work."
+    },
+    {
+      "record_id": "RS_PAST_NA2016",
+      "url": "https://www.jstor.org/stable/770079",
+      "observed_ref": "turn7723779search6",
+      "title": "Geoffrey Morse Binnie.13November1908-5April1989",
+      "source_author_lead": "Alan Muir Wood",
+      "publication_year_lead": "1990",
+      "role": "DistinctoriginalRSmemoirbibliographicTOClead; NOTacquiredsubjectbody/sourcegrade/directbornregion",
+      "not_opened_reason": "Rootrequestedfinalization; no knownpriorfailedbodyrouteforTHISwork inreviewedtargetcontexts. DifferentworkfromAlanMuirWoodODNB2004alreadyacquired andAsianAffairs1989DOIfailure. Ifparentchecks, no region/dayinferencefromTOC."
+    }
+  ],
+  "protocol_deviations": [
+    {
+      "recorded_utc": "2026-11-06T22:38:14.862526+00:00",
+      "affected_requests": "S1queries5-8returnedturn7723779search*",
+      "actual_cause": "Adaptiveintent localPython failed with AttributeError(str object has no attribute get) beforewriting; webrequestnotgatedonexitand4queriesstill submitted. Parentnotifiedimmediatelyafterobservingerror.",
+      "pre_request_durable_intent_exists": false,
+      "no_backdating_or_retrospective_intent_claim": true,
+      "queries_actual": [
+        {
+          "record_id": "RS_PAST_NA1994",
+          "q": "\"Norman Laurence Franklin\" obituary biography"
+        },
+        {
+          "record_id": "RS_PAST_NA2016",
+          "q": "\"Geoffrey Morse Binnie\" biography Kensington"
+        },
+        {
+          "record_id": "RS_PAST_NA2146",
+          "q": "\"Oscar Victor Sayer Heath\" obituary biography"
+        },
+        {
+          "record_id": "RS_PAST_NA1994",
+          "q": "\"Norman Laurence Franklin\" \"born\" -site:icheme.org -site:chilton-computing.org.uk"
+        }
+      ],
+      "neworiginalbody_or_adoptedfact_from_queries_beforefurtherintent": false
+    }
+  ],
+  "representation_limits": [
+    "Originalfullscopefirstdisplaytruncated; Binnie/Heathfullrecordsrecoveredselectivelybeforefirstqueries,fullFranklin/Thompsonrecordsandtargetedv12/v13/v27holdsreadbeforequeries. Additionaloldv27navigationlogsreadlater; no laterfindinginvalidatesnewworkdistinctness.",
+    "No originalThompsonbody reacquiredorcorrected. HistoricalqualifiedDOBhold discoveredbeforequeries, parentnotified; roothistoricalglobalinventoryreconciliationisnotnewsource/conflict.",
+    "Queries5-8lackdurableprequeryintentbecausefailedlocalwritewasnotgatedbeforewebrequest. Error/actualsequence recordedafterrequest, neverbackdated. All3subsequentoriginalopens hadsavedpreintentandverifiedexit0 gate.",
+    "Sourcebody/hash/rawHTTPstatus/exactrequesttime unknownnull;parsedtextnotrawbytes. JSTORHeathL0Image markernotdependableimageobservation.",
+    "No fullsourcecaches/images/familydetails distributed, no newsourcegrades/country/QID/coords/nativeDOB/BP/sourcefact/eligibility/outcome/dedup/cohortfreezechanges.",
+    "Allfirstfailedworksclosed; no rawGET/alternatecarrier/retries/auth/paywallbypass. Boundedpassnotsourceexhaustion."
+  ],
+  "no_native_or_master_changes": true
+}

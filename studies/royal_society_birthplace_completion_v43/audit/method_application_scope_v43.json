@@ -1,0 +1,56 @@
+{
+  "written_utc": "2026-11-08T09:54:13.551551+00:00",
+  "status": "prospectively_frozen_before_V43_external_queries",
+  "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+  "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+  "method_preregistration_origin": "Unchanged original V36 policy and all six historical application scopes retained byte-exact. V43 changes fixed application only.",
+  "baseline_commit": "ad014a89fad3f6fe257f7f5c3f6c50c7c5b74caf",
+  "baseline_canonical_sha256": "a0c04e44631478f82e562deab64d699fc273e6fc99fa35ba23f8a61d7e1f8717",
+  "fixed_record_ids": [
+    "RS_PAST_NA2154",
+    "RS_PAST_NA3474",
+    "RS_PAST_NA4166",
+    "RS_PAST_NA4680",
+    "RS_PAST_NA4747",
+    "RS_PAST_NA663"
+  ],
+  "groups": {
+    "a": [
+      "RS_PAST_NA2154",
+      "RS_PAST_NA3474"
+    ],
+    "b": [
+      "RS_PAST_NA4166",
+      "RS_PAST_NA4680"
+    ],
+    "c": [
+      "RS_PAST_NA4747",
+      "RS_PAST_NA663"
+    ]
+  },
+  "fixed_nonblank_unknown_window_pool": 54,
+  "rules_unchanged": true,
+  "method_amendment_created": false,
+  "method_reused_from_version": 36,
+  "scope_application_extension": true,
+  "no_new_admission_method_exception": true,
+  "current_audit_path": "audit/method_application_scope_v43.json",
+  "legacy_application_scope_file_sha256": {
+    "method_application_scope.json": "ae080b06f8abad9ed7575783486795c977e44ce5e5024bfa2096e16816a44d94",
+    "method_application_scope_v38.json": "bd7540715a6b4649ffe79371e38ee2b650bd0176013fbb5418efa02b8995fad0",
+    "method_application_scope_v39.json": "cc12b3159a035064dbde6a35e0778642fdb25d988e9e399617b216062127b17e",
+    "method_application_scope_v40.json": "b44c66bc0d7883aeef9650578d0b339a65b563942da3fe72976b05c0094cc1fc",
+    "method_application_scope_v41.json": "d6ebcba7aa672c1a4877857bd4e9b4072af2ae159c04fd0dddf4d7766d2e3176",
+    "method_application_scope_v42.json": "c5c7594d271b6923725acad91612b8f53b3528383d3bf50f0658ccfa0e639796"
+  },
+  "per_entry_intent_UTC_required": true,
+  "mandatory_rules": "Actual full native personal components or observed full alias, exact displayed native DOB, coherent distinctive career and compatible observed lifespan; literal frozen-place agreement; actually acquired direct birth whole-region, personal birth-place hyperlink actually followed to acquired target region, or actualP19/P131 chain. S3 geographic_support_only. Hold actual date/place conflicts. No guessed city/QID, nationality/work/death/centroid, mirror, rewritten primary body or omission exception. Native DOB/calendar/authority/eligibility/sourcegrades/rawplace/claims/URLs/countryQIDcoordinates/priorfacts frozen. Only sixGEO_FIELDS+versioncontext exactrollback may change for qualified IDs. Unknown metadata staysnull.",
+  "budgets": {
+    "per_group_queries": 4,
+    "per_group_navigation_attempts": 10,
+    "root_source_or_context_verification_opens": 18,
+    "root_adaptive_author_or_observed_original_work_locator_query": 1
+  },
+  "source_exhausted": false,
+  "final_freeze": false
+}

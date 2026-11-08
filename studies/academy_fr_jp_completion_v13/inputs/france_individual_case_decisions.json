@@ -1,0 +1,491 @@
+[
+  {
+    "candidate_group_id": "CTHS_102823",
+    "name": "COSTANTIN Julien",
+    "decision_type": "accept_individual_identity_dob",
+    "previous_values": {
+      "identity_accepted": "0",
+      "dob_accepted": "0",
+      "accepted_canonical_person_name": "",
+      "accepted_dob_iso": ""
+    },
+    "new_values": {
+      "identity_accepted": "1",
+      "dob_accepted": "1",
+      "accepted_canonical_person_name": "Julien Noël Costantin",
+      "accepted_dob_iso": "1857-08-16"
+    },
+    "prior_exact_dob_claims": "1857-08-16",
+    "identity_bridge": "Julien Noël Costantin; explicit 1857-08-16 matches the unchanged singleton prior raw birthday. Julien Costantin: botanist and mycologist, Institut member, Muséum professor; ENS agrégation1880, doctorate1883, Bordeaux1883, Muséum1884.",
+    "identity_checks": {
+      "unique_preserved_group_match": true,
+      "no_unresolved_alias_or_profile_collision": true,
+      "same_subject_name_dob_career_verified": true
+    },
+    "dob_matches_singleton_prior_raw_claim": true,
+    "source_evidence": [
+      {
+        "source_id": "cths_102823",
+        "source_url": "https://cths.fr/an/savant.php?id=102823",
+        "source_sha256": "6e4414f9366ba916ba1cd51ee486a08b2e86c8e561a3552949d98d2d9f6b2d9c",
+        "source_capture_bytes": 22233,
+        "http_status": null,
+        "retrieved_utc": null,
+        "capture_origin": "existing_archived_original",
+        "archived_capture_timestamp_unknown": true,
+        "original_http_status_unknown": true,
+        "archived_harvest_reported_fetch_result": "HTTP_200",
+        "original_HTTP_envelope_status_not_independently_recoverable": true,
+        "local_reopened_utc": "2026-11-01T07:53:34.358966+00:00",
+        "archive_path": "data/france_academy_cths_profile_dob_harvest_v1/cths_profile_source_html_sha256_bundle_v1.tar.gz",
+        "archive_member": "source_html/6e4414f9366ba916ba1cd51ee486a08b2e86c8e561a3552949d98d2d9f6b2d9c.html",
+        "archive_member_sha256": "6e4414f9366ba916ba1cd51ee486a08b2e86c8e561a3552949d98d2d9f6b2d9c",
+        "archive_sha256": "6258a366f69e120395450420fee8ae2587d586cb5db153937d1ef45267468811",
+        "archive_url_mapping_verified": true,
+        "retrieval_time_status": "unknown_original_capture_time; actual archive/member and local reopening retained",
+        "source_role": "parent_institution_firstparty",
+        "source_author_credit": "Institut de France",
+        "credited_authors": [
+          "Martine François",
+          "Institut de France",
+          "Jean-François Hibon de Frohen"
+        ],
+        "source_author_credit_verified": true,
+        "source_author_credit_scope": "explicit_credited_writer_or_cowriter",
+        "academy_authored_or_issued_original": false,
+        "parent_institution_authored_or_issued_original": true,
+        "actual_PDF": false,
+        "body_verified": true,
+        "source_locator": "Actual archived parent named heading, dedicated Naissance and coherent career biography; exact writer credit separately classified",
+        "observed_subject_name": "Julien Noël Costantin",
+        "observed_dob_iso": "1857-08-16",
+        "identity_body_supported": true,
+        "identity_support": "Julien Noël Costantin; explicit 1857-08-16 matches the unchanged singleton prior raw birthday. Julien Costantin: botanist and mycologist, Institut member, Muséum professor; ENS agrégation1880, doctorate1883, Bordeaux1883, Muséum1884.",
+        "source_independence_group": "6e4414f9366ba916ba1cd51ee486a08b2e86c8e561a3552949d98d2d9f6b2d9c",
+        "PDF_visual_review_performed": false,
+        "pdf_pages_visually_verified": []
+      }
+    ],
+    "reason": "Individual v2/v12 actual-source name/DOB/career adjudication only. Preserve identifiers, source-origin/firstparty flags, raw birthday sets and all prior holds. Exact root and independent-QA approval still required.",
+    "root_approved": true,
+    "independent_qa_passed": true,
+    "preserved_publication_chronology_anomaly": {
+      "candidate_group_id": "CTHS_102823",
+      "source_sha256": "6e4414f9366ba916ba1cd51ee486a08b2e86c8e561a3552949d98d2d9f6b2d9c",
+      "source_locator": "parent biography doctorate1883 and bibliography doctoral-thesis publication1833",
+      "observed_publication_year": 1833,
+      "observed_career_doctorate_year": 1883,
+      "observed_DOB_iso": "1857-08-16",
+      "classification": "publication_chronology_anomaly_not_second_DOB_assertion",
+      "root_method_judgment": "Retain uncorrected publication anomaly. Actual dedicated DOB1857-08-16/name/career is unambiguous; anomaly alone does not create DOBhold. Do not call1833 a typo or change it.",
+      "raw_claims_changed": false,
+      "source_dates_corrected": false,
+      "not_a_new_birthyear_vote": true
+    },
+    "root_approval_record": {
+      "candidate_group_id": "CTHS_102823",
+      "root_approved": true,
+      "independent_qa_passed": true,
+      "previous_values": {
+        "identity_accepted": "0",
+        "dob_accepted": "0",
+        "accepted_canonical_person_name": "",
+        "accepted_dob_iso": ""
+      },
+      "new_values": {
+        "identity_accepted": "1",
+        "dob_accepted": "1",
+        "accepted_canonical_person_name": "Julien Noël Costantin",
+        "accepted_dob_iso": "1857-08-16"
+      },
+      "source_sha256s": [
+        "6e4414f9366ba916ba1cd51ee486a08b2e86c8e561a3552949d98d2d9f6b2d9c"
+      ],
+      "individual_case_proposals_sha256": "f8cdb302d4ef7dc818825dabcc4385dbfd302605075a6bc6e94920b214fd90d7",
+      "decisions_file": "source_batches/france_b/decisions.json",
+      "decisions_sha256": "00d8b9c3f26c5461f75a0f5e04c1b9720c408e3ce0ba72619374706a1d06d086",
+      "membership_decisions_sha256": "00d8b9c3f26c5461f75a0f5e04c1b9720c408e3ce0ba72619374706a1d06d086",
+      "worker_manifest_sha256": "7b09cbe4db604dc8238a19d9198e1ab9d8aa559bf71480655ef283e26ed23ad7",
+      "independent_qa_file": "source_audits/france_b_individual_case_independent_QA.json",
+      "independent_qa_sha256": "69cabbc3ae112564cab96c2b1e243291eb5a0192ed2d00f88e5368363cfda027"
+    },
+    "source_batch_version": "v13"
+  },
+  {
+    "candidate_group_id": "CTHS_102836",
+    "name": "CHEVALIER Auguste",
+    "decision_type": "accept_individual_identity_dob",
+    "previous_values": {
+      "identity_accepted": "0",
+      "dob_accepted": "0",
+      "accepted_canonical_person_name": "",
+      "accepted_dob_iso": ""
+    },
+    "new_values": {
+      "identity_accepted": "1",
+      "dob_accepted": "1",
+      "accepted_canonical_person_name": "Jean Baptiste Auguste Chevalier",
+      "accepted_dob_iso": "1873-06-23"
+    },
+    "prior_exact_dob_claims": "1873-06-23",
+    "identity_bridge": "Jean Baptiste Auguste Chevalier; explicit 1873-06-23 matches the unchanged singleton prior raw birthday. Auguste Chevalier: agronomist and botany professor; parents Auguste-André Chevalier and Eléonore-Joséphine Piquet; military service1893–94 and Indochina career.",
+    "identity_checks": {
+      "unique_preserved_group_match": true,
+      "no_unresolved_alias_or_profile_collision": true,
+      "same_subject_name_dob_career_verified": true
+    },
+    "dob_matches_singleton_prior_raw_claim": true,
+    "source_evidence": [
+      {
+        "source_id": "cths_102836",
+        "source_url": "https://cths.fr/an/savant.php?id=102836",
+        "source_sha256": "0809a4517db870df79bc808fc8f632fe87807f6da120d11d8ab57608881608f0",
+        "source_capture_bytes": 23835,
+        "http_status": null,
+        "retrieved_utc": null,
+        "capture_origin": "existing_archived_original",
+        "archived_capture_timestamp_unknown": true,
+        "original_http_status_unknown": true,
+        "archived_harvest_reported_fetch_result": "HTTP_200",
+        "original_HTTP_envelope_status_not_independently_recoverable": true,
+        "local_reopened_utc": "2026-11-01T07:53:34.372696+00:00",
+        "archive_path": "data/france_academy_cths_profile_dob_harvest_v1/cths_profile_source_html_sha256_bundle_v1.tar.gz",
+        "archive_member": "source_html/0809a4517db870df79bc808fc8f632fe87807f6da120d11d8ab57608881608f0.html",
+        "archive_member_sha256": "0809a4517db870df79bc808fc8f632fe87807f6da120d11d8ab57608881608f0",
+        "archive_sha256": "6258a366f69e120395450420fee8ae2587d586cb5db153937d1ef45267468811",
+        "archive_url_mapping_verified": true,
+        "retrieval_time_status": "unknown_original_capture_time; actual archive/member and local reopening retained",
+        "source_role": "edited_attributed_biographical_notice",
+        "source_author_credit": null,
+        "credited_authors": [
+          "Martine François",
+          "Gérard Joly",
+          "Michel Capot",
+          "Jean-François Hibon de Frohen"
+        ],
+        "source_author_credit_verified": false,
+        "source_author_credit_scope": null,
+        "academy_authored_or_issued_original": false,
+        "parent_institution_authored_or_issued_original": false,
+        "actual_PDF": false,
+        "body_verified": true,
+        "source_locator": "Actual archived parent named heading, dedicated Naissance and coherent career biography; exact writer credit separately classified",
+        "observed_subject_name": "Jean Baptiste Auguste Chevalier",
+        "observed_dob_iso": "1873-06-23",
+        "identity_body_supported": true,
+        "identity_support": "Jean Baptiste Auguste Chevalier; explicit 1873-06-23 matches the unchanged singleton prior raw birthday. Auguste Chevalier: agronomist and botany professor; parents Auguste-André Chevalier and Eléonore-Joséphine Piquet; military service1893–94 and Indochina career.",
+        "source_independence_group": "0809a4517db870df79bc808fc8f632fe87807f6da120d11d8ab57608881608f0",
+        "PDF_visual_review_performed": false,
+        "pdf_pages_visually_verified": []
+      }
+    ],
+    "reason": "Individual v2/v12 actual-source name/DOB/career adjudication only. Preserve identifiers, source-origin/firstparty flags, raw birthday sets and all prior holds. Exact root and independent-QA approval still required.",
+    "root_approved": true,
+    "independent_qa_passed": true,
+    "root_approval_record": {
+      "candidate_group_id": "CTHS_102836",
+      "root_approved": true,
+      "independent_qa_passed": true,
+      "previous_values": {
+        "identity_accepted": "0",
+        "dob_accepted": "0",
+        "accepted_canonical_person_name": "",
+        "accepted_dob_iso": ""
+      },
+      "new_values": {
+        "identity_accepted": "1",
+        "dob_accepted": "1",
+        "accepted_canonical_person_name": "Jean Baptiste Auguste Chevalier",
+        "accepted_dob_iso": "1873-06-23"
+      },
+      "source_sha256s": [
+        "0809a4517db870df79bc808fc8f632fe87807f6da120d11d8ab57608881608f0"
+      ],
+      "individual_case_proposals_sha256": "f8cdb302d4ef7dc818825dabcc4385dbfd302605075a6bc6e94920b214fd90d7",
+      "decisions_file": "source_batches/france_b/decisions.json",
+      "decisions_sha256": "00d8b9c3f26c5461f75a0f5e04c1b9720c408e3ce0ba72619374706a1d06d086",
+      "membership_decisions_sha256": "00d8b9c3f26c5461f75a0f5e04c1b9720c408e3ce0ba72619374706a1d06d086",
+      "worker_manifest_sha256": "7b09cbe4db604dc8238a19d9198e1ab9d8aa559bf71480655ef283e26ed23ad7",
+      "independent_qa_file": "source_audits/france_b_individual_case_independent_QA.json",
+      "independent_qa_sha256": "69cabbc3ae112564cab96c2b1e243291eb5a0192ed2d00f88e5368363cfda027"
+    },
+    "source_batch_version": "v13"
+  },
+  {
+    "candidate_group_id": "CTHS_102838",
+    "name": "COMBES Raoul",
+    "decision_type": "accept_individual_identity_dob",
+    "previous_values": {
+      "identity_accepted": "0",
+      "dob_accepted": "0",
+      "accepted_canonical_person_name": "",
+      "accepted_dob_iso": ""
+    },
+    "new_values": {
+      "identity_accepted": "1",
+      "dob_accepted": "1",
+      "accepted_canonical_person_name": "Raoul Pierre Émile Combes",
+      "accepted_dob_iso": "1883-01-15"
+    },
+    "prior_exact_dob_claims": "1883-01-15",
+    "identity_bridge": "Raoul Pierre Émile Combes; explicit 1883-01-15 matches the unchanged singleton prior raw birthday. Raoul Combes: botanist, professor and botany-laboratory director; Paris science faculty preparer1907, licence1908, doctorate1910; Sorbonne and Institut national agronomie coloniale1912.",
+    "identity_checks": {
+      "unique_preserved_group_match": true,
+      "no_unresolved_alias_or_profile_collision": true,
+      "same_subject_name_dob_career_verified": true
+    },
+    "dob_matches_singleton_prior_raw_claim": true,
+    "source_evidence": [
+      {
+        "source_id": "cths_102838",
+        "source_url": "https://cths.fr/an/savant.php?id=102838",
+        "source_sha256": "77a5e9b758c6d2bfbb09350f7bdfe90f8a11793595994cf6399260c758cab841",
+        "source_capture_bytes": 21862,
+        "http_status": null,
+        "retrieved_utc": null,
+        "capture_origin": "existing_archived_original",
+        "archived_capture_timestamp_unknown": true,
+        "original_http_status_unknown": true,
+        "archived_harvest_reported_fetch_result": "HTTP_200",
+        "original_HTTP_envelope_status_not_independently_recoverable": true,
+        "local_reopened_utc": "2026-11-01T07:53:34.384096+00:00",
+        "archive_path": "data/france_academy_cths_profile_dob_harvest_v1/cths_profile_source_html_sha256_bundle_v1.tar.gz",
+        "archive_member": "source_html/77a5e9b758c6d2bfbb09350f7bdfe90f8a11793595994cf6399260c758cab841.html",
+        "archive_member_sha256": "77a5e9b758c6d2bfbb09350f7bdfe90f8a11793595994cf6399260c758cab841",
+        "archive_sha256": "6258a366f69e120395450420fee8ae2587d586cb5db153937d1ef45267468811",
+        "archive_url_mapping_verified": true,
+        "retrieval_time_status": "unknown_original_capture_time; actual archive/member and local reopening retained",
+        "source_role": "parent_institution_firstparty",
+        "source_author_credit": "Institut de France",
+        "credited_authors": [
+          "Martine François",
+          "Institut de France",
+          "Bruno Delmas"
+        ],
+        "source_author_credit_verified": true,
+        "source_author_credit_scope": "explicit_credited_writer_or_cowriter",
+        "academy_authored_or_issued_original": false,
+        "parent_institution_authored_or_issued_original": true,
+        "actual_PDF": false,
+        "body_verified": true,
+        "source_locator": "Actual archived parent named heading, dedicated Naissance and coherent career biography; exact writer credit separately classified",
+        "observed_subject_name": "Raoul Pierre Émile Combes",
+        "observed_dob_iso": "1883-01-15",
+        "identity_body_supported": true,
+        "identity_support": "Raoul Pierre Émile Combes; explicit 1883-01-15 matches the unchanged singleton prior raw birthday. Raoul Combes: botanist, professor and botany-laboratory director; Paris science faculty preparer1907, licence1908, doctorate1910; Sorbonne and Institut national agronomie coloniale1912.",
+        "source_independence_group": "77a5e9b758c6d2bfbb09350f7bdfe90f8a11793595994cf6399260c758cab841",
+        "PDF_visual_review_performed": false,
+        "pdf_pages_visually_verified": []
+      }
+    ],
+    "reason": "Individual v2/v12 actual-source name/DOB/career adjudication only. Preserve identifiers, source-origin/firstparty flags, raw birthday sets and all prior holds. Exact root and independent-QA approval still required.",
+    "root_approved": true,
+    "independent_qa_passed": true,
+    "root_approval_record": {
+      "candidate_group_id": "CTHS_102838",
+      "root_approved": true,
+      "independent_qa_passed": true,
+      "previous_values": {
+        "identity_accepted": "0",
+        "dob_accepted": "0",
+        "accepted_canonical_person_name": "",
+        "accepted_dob_iso": ""
+      },
+      "new_values": {
+        "identity_accepted": "1",
+        "dob_accepted": "1",
+        "accepted_canonical_person_name": "Raoul Pierre Émile Combes",
+        "accepted_dob_iso": "1883-01-15"
+      },
+      "source_sha256s": [
+        "77a5e9b758c6d2bfbb09350f7bdfe90f8a11793595994cf6399260c758cab841"
+      ],
+      "individual_case_proposals_sha256": "f8cdb302d4ef7dc818825dabcc4385dbfd302605075a6bc6e94920b214fd90d7",
+      "decisions_file": "source_batches/france_b/decisions.json",
+      "decisions_sha256": "00d8b9c3f26c5461f75a0f5e04c1b9720c408e3ce0ba72619374706a1d06d086",
+      "membership_decisions_sha256": "00d8b9c3f26c5461f75a0f5e04c1b9720c408e3ce0ba72619374706a1d06d086",
+      "worker_manifest_sha256": "7b09cbe4db604dc8238a19d9198e1ab9d8aa559bf71480655ef283e26ed23ad7",
+      "independent_qa_file": "source_audits/france_b_individual_case_independent_QA.json",
+      "independent_qa_sha256": "69cabbc3ae112564cab96c2b1e243291eb5a0192ed2d00f88e5368363cfda027"
+    },
+    "source_batch_version": "v13"
+  },
+  {
+    "candidate_group_id": "PROFILE2_39000bb1e114bf0c",
+    "name": "Christophe Salomon",
+    "decision_type": "accept_individual_identity_dob",
+    "previous_values": {
+      "identity_accepted": "0",
+      "dob_accepted": "0",
+      "accepted_canonical_person_name": "",
+      "accepted_dob_iso": ""
+    },
+    "new_values": {
+      "identity_accepted": "1",
+      "dob_accepted": "1",
+      "accepted_canonical_person_name": "Christophe Salomon",
+      "accepted_dob_iso": "1953-11-23"
+    },
+    "prior_exact_dob_claims": "1953-11-23",
+    "identity_bridge": "Christophe Salomon; explicit 1953-11-23 matches the unchanged singleton prior raw birthday. Christophe Salomon, CNRS research director at Laboratoire Kastler Brossel/ENS, cold Fermi gases and cold atom clocks; ACES/PHARAO lead.",
+    "identity_checks": {
+      "unique_preserved_group_match": true,
+      "no_unresolved_alias_or_profile_collision": true,
+      "same_subject_name_dob_career_verified": true
+    },
+    "dob_matches_singleton_prior_raw_claim": true,
+    "source_evidence": [
+      {
+        "source_id": "salomon_cv",
+        "source_url": "https://www.phys.ens.psl.eu/~salomon/images/CV_salomon_e.pdf",
+        "source_sha256": "743e86997cb6606d6dad08a6ffd06285755fdf2ed7915e51e5b95edb5ee5293a",
+        "source_capture_bytes": 31297,
+        "http_status": 200,
+        "retrieved_utc": "2026-11-01T07:57:02.989135+00:00",
+        "request_started_utc": "2026-11-01T07:56:56.821904+00:00",
+        "retrieval_timestamp_basis": "response_body_completed_utc",
+        "capture_origin": "fresh_v13_original_GET",
+        "source_role": "author_attributed_academic_CV_on_institutional_host",
+        "academy_authored_or_issued_original": false,
+        "parent_institution_authored_or_issued_original": false,
+        "actual_PDF": true,
+        "body_verified": true,
+        "new_B_GET": true,
+        "response_content_type": "application/pdf",
+        "source_locator": "Actual PDFpage1 named heading, explicit Born expression and CNRS/LKB/ENS cold-atom career; both pages rendered and read",
+        "observed_subject_name": "Christophe Salomon",
+        "observed_dob_iso": "1953-11-23",
+        "identity_body_supported": true,
+        "identity_support": "Christophe Salomon; explicit 1953-11-23 matches the unchanged singleton prior raw birthday. Christophe Salomon, CNRS research director at Laboratoire Kastler Brossel/ENS, cold Fermi gases and cold atom clocks; ACES/PHARAO lead.",
+        "source_independence_group": "743e86997cb6606d6dad08a6ffd06285755fdf2ed7915e51e5b95edb5ee5293a",
+        "PDF_visual_review_performed": true,
+        "pdf_pages_visually_verified": [
+          1,
+          2
+        ]
+      }
+    ],
+    "reason": "Individual v2/v12 actual-source name/DOB/career adjudication only. Preserve identifiers, source-origin/firstparty flags, raw birthday sets and all prior holds. Exact root and independent-QA approval still required.",
+    "root_approved": true,
+    "independent_qa_passed": true,
+    "root_approval_record": {
+      "candidate_group_id": "PROFILE2_39000bb1e114bf0c",
+      "root_approved": true,
+      "independent_qa_passed": true,
+      "previous_values": {
+        "identity_accepted": "0",
+        "dob_accepted": "0",
+        "accepted_canonical_person_name": "",
+        "accepted_dob_iso": ""
+      },
+      "new_values": {
+        "identity_accepted": "1",
+        "dob_accepted": "1",
+        "accepted_canonical_person_name": "Christophe Salomon",
+        "accepted_dob_iso": "1953-11-23"
+      },
+      "source_sha256s": [
+        "743e86997cb6606d6dad08a6ffd06285755fdf2ed7915e51e5b95edb5ee5293a"
+      ],
+      "individual_case_proposals_sha256": "f8cdb302d4ef7dc818825dabcc4385dbfd302605075a6bc6e94920b214fd90d7",
+      "decisions_file": "source_batches/france_b/decisions.json",
+      "decisions_sha256": "00d8b9c3f26c5461f75a0f5e04c1b9720c408e3ce0ba72619374706a1d06d086",
+      "membership_decisions_sha256": "00d8b9c3f26c5461f75a0f5e04c1b9720c408e3ce0ba72619374706a1d06d086",
+      "worker_manifest_sha256": "7b09cbe4db604dc8238a19d9198e1ab9d8aa559bf71480655ef283e26ed23ad7",
+      "independent_qa_file": "source_audits/france_b_individual_case_independent_QA.json",
+      "independent_qa_sha256": "69cabbc3ae112564cab96c2b1e243291eb5a0192ed2d00f88e5368363cfda027"
+    },
+    "source_batch_version": "v13"
+  },
+  {
+    "candidate_group_id": "PROFILE2_738d6d5c74a7a874",
+    "name": "Michel Beaudouin-Lafon",
+    "decision_type": "accept_individual_identity_dob",
+    "previous_values": {
+      "identity_accepted": "0",
+      "dob_accepted": "0",
+      "accepted_canonical_person_name": "",
+      "accepted_dob_iso": ""
+    },
+    "new_values": {
+      "identity_accepted": "1",
+      "dob_accepted": "1",
+      "accepted_canonical_person_name": "Michel Beaudouin-Lafon",
+      "accepted_dob_iso": "1961-07-20"
+    },
+    "prior_exact_dob_claims": "1961-07-20",
+    "identity_bridge": "Michel Beaudouin-Lafon; explicit 1961-07-20 matches the unchanged singleton prior raw birthday. Michel Beaudouin-Lafon, LISN/Université Paris-Saclay computer-science professor, LRI director2002–2009, human-computer interaction and HCC/ExSitu career.",
+    "identity_checks": {
+      "unique_preserved_group_match": true,
+      "no_unresolved_alias_or_profile_collision": true,
+      "same_subject_name_dob_career_verified": true
+    },
+    "dob_matches_singleton_prior_raw_claim": true,
+    "source_evidence": [
+      {
+        "source_id": "mbl_cv_relocated",
+        "source_url": "https://perso.lisn.upsaclay.fr/mbl/mbl-CV-court-jan2025.pdf",
+        "source_sha256": "88454da95d22aa070792f00cdf9743b66cd296be559015c0f9b82b09627ed213",
+        "source_capture_bytes": 198203,
+        "http_status": 200,
+        "retrieved_utc": "2026-11-01T07:59:48.964894+00:00",
+        "request_started_utc": "2026-11-01T07:59:40.606111+00:00",
+        "retrieval_timestamp_basis": "response_body_completed_utc",
+        "capture_origin": "fresh_v13_original_GET",
+        "source_role": "author_attributed_academic_CV_on_institutional_host",
+        "academy_authored_or_issued_original": false,
+        "parent_institution_authored_or_issued_original": false,
+        "actual_PDF": true,
+        "body_verified": true,
+        "new_B_GET": true,
+        "response_content_type": "application/pdf",
+        "observed_relocation_from_source_id": "mbl_cv",
+        "observed_relocation_from_url": "https://www.lri.fr/~mbl/mbl-CV-court-jan2025.pdf",
+        "observed_relocation_response_status": 302,
+        "relocation_chain_truthfully_recorded": true,
+        "source_locator": "Actual PDFpage1 named heading, explicit birth and LISN/Paris-Saclay career; both pages rendered and read",
+        "observed_subject_name": "Michel Beaudouin-Lafon",
+        "observed_dob_iso": "1961-07-20",
+        "identity_body_supported": true,
+        "identity_support": "Michel Beaudouin-Lafon; explicit 1961-07-20 matches the unchanged singleton prior raw birthday. Michel Beaudouin-Lafon, LISN/Université Paris-Saclay computer-science professor, LRI director2002–2009, human-computer interaction and HCC/ExSitu career.",
+        "source_independence_group": "88454da95d22aa070792f00cdf9743b66cd296be559015c0f9b82b09627ed213",
+        "PDF_visual_review_performed": true,
+        "pdf_pages_visually_verified": [
+          1,
+          2
+        ]
+      }
+    ],
+    "reason": "Individual v2/v12 actual-source name/DOB/career adjudication only. Preserve identifiers, source-origin/firstparty flags, raw birthday sets and all prior holds. Exact root and independent-QA approval still required.",
+    "root_approved": true,
+    "independent_qa_passed": true,
+    "root_approval_record": {
+      "candidate_group_id": "PROFILE2_738d6d5c74a7a874",
+      "root_approved": true,
+      "independent_qa_passed": true,
+      "previous_values": {
+        "identity_accepted": "0",
+        "dob_accepted": "0",
+        "accepted_canonical_person_name": "",
+        "accepted_dob_iso": ""
+      },
+      "new_values": {
+        "identity_accepted": "1",
+        "dob_accepted": "1",
+        "accepted_canonical_person_name": "Michel Beaudouin-Lafon",
+        "accepted_dob_iso": "1961-07-20"
+      },
+      "source_sha256s": [
+        "88454da95d22aa070792f00cdf9743b66cd296be559015c0f9b82b09627ed213"
+      ],
+      "individual_case_proposals_sha256": "f8cdb302d4ef7dc818825dabcc4385dbfd302605075a6bc6e94920b214fd90d7",
+      "decisions_file": "source_batches/france_b/decisions.json",
+      "decisions_sha256": "00d8b9c3f26c5461f75a0f5e04c1b9720c408e3ce0ba72619374706a1d06d086",
+      "membership_decisions_sha256": "00d8b9c3f26c5461f75a0f5e04c1b9720c408e3ce0ba72619374706a1d06d086",
+      "worker_manifest_sha256": "7b09cbe4db604dc8238a19d9198e1ab9d8aa559bf71480655ef283e26ed23ad7",
+      "independent_qa_file": "source_audits/france_b_individual_case_independent_QA.json",
+      "independent_qa_sha256": "69cabbc3ae112564cab96c2b1e243291eb5a0192ed2d00f88e5368363cfda027"
+    },
+    "source_batch_version": "v13"
+  }
+]

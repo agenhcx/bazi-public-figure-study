@@ -1,0 +1,73 @@
+{
+  "written_utc": "2026-11-04T23:19:35.478092+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA6434",
+    "RS_PAST_NA3578",
+    "RS_PAST_NA8736",
+    "RS_PAST_NA2007",
+    "RS_PAST_NA6868"
+  ],
+  "budget": {
+    "search_queries": 8,
+    "original_navigation": 10
+  },
+  "planned_search_queries": [
+    "\"Edmund James Mills\" born London biography",
+    "\"Martin Alister Campbell Hinton\" born biography",
+    "\"Anthony George Cullis\" born Worcester",
+    "\"Pierre Henry John Young\" born France",
+    "\"Roger Philip Ekins\" born London"
+  ],
+  "policy": "Only explicit subject birth context with regional qualifier; no geography assignment; preserve native fields and hold conflicts.",
+  "followup_plan": {
+    "written_before_requests_utc": "2026-11-04T23:20:03.654830+00:00",
+    "queries": [
+      "\"Roger Philip Ekins\" \"born\"",
+      "\"Pierre Young\" \"n\u00e9\" Concorde",
+      "\"Martin Alister Campbell Hinton\" \"born\" England"
+    ],
+    "original_opens": [
+      "https://collection.sciencemuseumgroup.org.uk/people/cp107942/edmund-james-mills",
+      "https://www.lindahall.org/about/news/scientist-of-the-day/martin-alister-hinton/",
+      "https://eprints.whiterose.ac.uk/id/eprint/243596/"
+    ]
+  },
+  "final_search_plan": {
+    "written_before_requests_utc": "2026-11-04T23:20:23.975453+00:00",
+    "queries": [
+      "\"Pierre Young\" obituary 1985 born"
+    ],
+    "planned_navigations": [
+      {
+        "click_ref": "turn38view2",
+        "link_id": 6
+      },
+      {
+        "url": "https://royalsocietypublishing.org/rsbm/article-pdf/75/1/93/1448322/rsbm.2023.0020.pdf"
+      },
+      {
+        "url": "https://www.nature.com/articles/107432a0.pdf"
+      }
+    ]
+  },
+  "parsed_text_review_plan": {
+    "written_before_calls_utc": "2026-11-04T23:20:48.155062+00:00",
+    "finds": [
+      {
+        "ref": "turn41view2",
+        "pattern": "Worcester"
+      },
+      {
+        "ref": "turn41view2",
+        "pattern": "England"
+      }
+    ],
+    "purpose": "Check whether original memoir directly qualifies birth city; career/school/affiliation context cannot supply birth country."
+  },
+  "bounded_last_original_plan": {
+    "written_before_request_utc": "2026-11-04T23:21:19.868642+00:00",
+    "url": "https://www.historylinksarchive.org.uk/pictures/document/11892.pdf?r=1736742",
+    "observed_in": "turn35search54",
+    "purpose": "Read newly observed local-history document for a direct Hinton birthplace qualifier; no blind original-memoir retry."
+  }
+}

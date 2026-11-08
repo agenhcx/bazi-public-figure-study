@@ -1,0 +1,50 @@
+{
+  "written_utc": "2026-11-06T10:55:04.847415+00:00",
+  "scope_file": "v27_scope_c.json",
+  "purpose": "First original-source explicit subjectbirthplace discovery for four fixed nativefrozen identities; no nativeDOB/identity/eligibility changes.",
+  "planned_queries": [
+    "\"Richard Edmund Reason\" born",
+    "\"Arthur Herbert Cook\" born",
+    "\"James Dyson\" \"1914\" born",
+    "\"Reginald Charles Rainey\" born"
+  ],
+  "general_adaptive_query_purpose_before_work": "Reserve one followup query per subject if useful to locate original memoir/body, authored institutional history or explicit birthplace/date precision. Any exact adaptive query and navigation purpose will be added before actual calls. No failedsource retry/variant/bypass.",
+  "budgets": {
+    "queries": 8,
+    "navigation_attempts": 10
+  },
+  "source_rules": "Actual original bodies, all nativefullcomponents or strict existingv24omittedmiddle exception, compatible actual dateprecision, distinctivecareercontext, explicit subjectbirth relation; unresolvedactualDOB/place/identityconflicts held. S2genre/verifiedexpert requirements, otherwise conservativeS3. No hostS1. City/address aloneunknowngeo; directbirthlinkedcountry/wholecountyregion may supporthemisphere. <=25quote words per originalwork. No fullsourcecache/distribution. UnknownrawHTTPtime/status/hashnull.",
+  "adaptive_intents": [
+    {
+      "written_utc": "2026-11-06T10:55:14.463971+00:00",
+      "purpose": "Find actual authored memoirs or institutional bodies for four nativefull identities and stated compatible birthdates; avoid wrong1947Dyson or1874Cook identities.",
+      "queries": [
+        "\"Richard Edmund Reason\" biography memoir born",
+        "\"Arthur Herbert Cook\" \"1911\" biography memoir",
+        "\"James Dyson\" \"1914\" memoir optics born",
+        "\"Reginald Charles Rainey\" memoir born"
+      ],
+      "opens": [
+        "turn2253063search48 actualBrio2023Poultonarticle to inspect explicitbirth relation and cited originalmemoirlinks"
+      ]
+    },
+    {
+      "written_utc": "2026-11-06T10:55:33.361372+00:00",
+      "purpose": "First originalmemoir navigation via observed precise references; DysonWikipedia inspected solely as a linkcarrier for originalmemoir DOI, not sourcebirthplaceproof. ReasonPoultonessay parentalDevonresidence not birth.",
+      "navigations": [
+        "https://www.jstor.org/stable/770095 observedReasonmemoirURL in turn6956638search0",
+        "https://doi.org/10.1098/rsbm.1991.0005 observedCookmemoirDOI in turn6956638search6",
+        "https://doi.org/10.1098/rsbm.1992.0015 observedRaineymemoirDOI in turn6956638search7",
+        "turn2253063search51 DysonWikipedialinkcarrier only"
+      ]
+    },
+    {
+      "written_utc": "2026-11-06T10:56:11.626647+00:00",
+      "purpose": "Dyson first originalDOI attempt via actualWikipedia link; Reason inspect observed historicaldictionary excerptcarrier for actualbyline/genre/directborn after originalJSTOR produced no qualifyingbody. No failedDOIretry or invented sourceevidence.",
+      "navigations": [
+        "turn1843900view3 link48 https://doi.org/10.1098/rsbm.1991.0008",
+        "turn6956638search1 observed translate.academic.ru/1990/en/en/3/ originaldictionaryexcerptcarrier (not independentoriginalpublisher)"
+      ]
+    }
+  ]
+}

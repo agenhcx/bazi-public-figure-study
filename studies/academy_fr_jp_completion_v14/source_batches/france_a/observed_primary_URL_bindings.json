@@ -1,0 +1,55 @@
+{
+  "root_freeze": "v14_A2",
+  "fixed_selection_repo_path": "studies/academy_fr_jp_completion_v14/selection_queues/france_a.csv",
+  "fixed_selection_sha256": "d461ec950c1a18e98d6c8dda71e08a9e982294c066ddcd9c38cc00e1887ce893",
+  "fixed_people": [
+    "CTHS_102836",
+    "PROFILE2_738d6d5c74a7a874"
+  ],
+  "URL_sources": [
+    {
+      "candidate_group_id": "CTHS_102836",
+      "display_name": "Jean Baptiste Auguste Chevalier",
+      "exact_observed_url": "http://www.academie-sciences.fr/activite/archive/dossiers/eloges/chevalier_notice.pdf",
+      "URL_origin": "Literal external Ressources href in actual archived CTHS parent",
+      "URL_origin_repo_path": "data/france_academy_cths_profile_dob_harvest_v1/cths_profile_source_html_sha256_bundle_v1.tar.gz",
+      "URL_origin_archive_member": "source_html/0809a4517db870df79bc808fc8f632fe87807f6da120d11d8ab57608881608f0.html",
+      "URL_origin_sha256": "0809a4517db870df79bc808fc8f632fe87807f6da120d11d8ab57608881608f0",
+      "origin_raw_bytes_available": true,
+      "target_raw_bytes_available": false,
+      "proposed_source_role": "academy_owned_or_authored_firstparty_if_actual_original",
+      "prior_exact_source_body_capture_found_v2_v13": false,
+      "reason": "New actual primary PDF route after v13 secondary-notice membership hold; title/URL alone do not establish body or event."
+    },
+    {
+      "candidate_group_id": "PROFILE2_738d6d5c74a7a874",
+      "display_name": "Michel Beaudouin-Lafon",
+      "exact_observed_url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000051452889",
+      "URL_origin": "Exact v13 baseline source_urls plus historical government-election roster",
+      "URL_origin_repo_path": "data/france_academy_official_elected_2024_2025_v1/official_member_election_approval_roster_v1.csv",
+      "URL_origin_sha256": "66b034e5a8a7c0528f0acaf2baa47e85c617edfe0cb456234cac88da09cb68fb",
+      "origin_raw_bytes_available": false,
+      "origin_metadata_available": true,
+      "target_raw_bytes_available": false,
+      "proposed_source_role": "government_issued_approval_or_election_legal_original_if_actual_body",
+      "academy_authorship_must_be_false": true,
+      "prior_exact_source_body_capture_found_v2_v13": false,
+      "reason": "Government-issued JORF source must retain its own origin class; direct legal approval date is distinct from election/start. Old metadata has membre_titulaire_explicit_on_decree=0; no strict role conclusion from roster alone."
+    },
+    {
+      "candidate_group_id": "PROFILE2_738d6d5c74a7a874",
+      "display_name": "Michel Beaudouin-Lafon",
+      "exact_observed_url": "https://www.academie-sciences.fr/ceremonie-de-reception-des-nouveaux-membres-elus-en-2024",
+      "URL_origin": "Exact academy_election_year_page field in historical government-election roster",
+      "URL_origin_repo_path": "data/france_academy_official_elected_2024_2025_v1/official_member_election_approval_roster_v1.csv",
+      "URL_origin_sha256": "66b034e5a8a7c0528f0acaf2baa47e85c617edfe0cb456234cac88da09cb68fb",
+      "origin_raw_bytes_available": false,
+      "origin_metadata_available": true,
+      "target_raw_bytes_available": false,
+      "proposed_source_role": "academy_owned_or_authored_firstparty_if_actual_body",
+      "prior_exact_source_body_capture_found_v2_v13": false,
+      "reason": "Potential explicit ordinary-member2024 heading/list and same-person science/career bridge. Ceremony/reception date cannot become election day or year."
+    }
+  ],
+  "no_guessed_filenames_or_variants_requested": true
+}

@@ -1,0 +1,106 @@
+{
+  "written_utc": "2026-11-08T08:40:44.306665+00:00",
+  "purpose": "First root verification for SIX fixed V41 records under unchanged V36 policy and prospective V41 scope.",
+  "budgets": {
+    "per_group_queries": 4,
+    "per_group_navigation_attempts": 10,
+    "root_source_or_context_verification_opens": 18,
+    "root_adaptive_author_or_observed_original_work_locator_query": 1
+  },
+  "entries": [
+    {
+      "written_utc": "2026-11-08T08:47:34.664621+00:00",
+      "record_id": "RS_PAST_NA1475",
+      "operation": "source_locator_query",
+      "engine": "system1",
+      "query": "\"Edgar Hartley Kettle\" (site:de.wikipedia.org OR site:fr.wikipedia.org OR site:es.wikipedia.org)",
+      "purpose": "One permitted bounded root locator for distinct canonical language work. Actual English has matching fullname/DOB/career but unlinked London, graph is rewritten. No actual incompatible DOB/place in this target; no URLguess, failedworkretry or source shopping around conflict. Any actual contradiction holds."
+    },
+    {
+      "written_utc": "2026-11-08T08:48:12.882843+00:00",
+      "record_id": "RS_PAST_NA1475",
+      "operation": "open",
+      "url": "https://en.wikipedia.org/wiki/Edgar_Hartley_Kettle",
+      "lineno": 100,
+      "purpose": "First root actual observed canonical person body verification for bounded hold: fullnative/exactDOB/life/career and whether any personal birth-place link or whole-region is actually acquired. Plain unlinked London or work/nationality not a geography chain. No failedgraph retry/variant or original DOB/sourcegrade modification."
+    },
+    {
+      "written_utc": "2026-11-08T08:48:12.882854+00:00",
+      "record_id": "RS_PAST_NA2016",
+      "operation": "open",
+      "url": "https://en.wikipedia.org/wiki/Geoffrey_Binnie",
+      "lineno": 105,
+      "purpose": "First root actual observed canonical person body verification for bounded hold: fullnative/exactDOB/life/career and whether any personal birth-place link or whole-region is actually acquired. Plain unlinked London or work/nationality not a geography chain. No failedgraph retry/variant or original DOB/sourcegrade modification."
+    }
+  ],
+  "root_prior_inventory_review": {
+    "written_utc": "2026-11-08T08:40:44.306665+00:00",
+    "baseline_version": 40,
+    "all9_read_before_root_web": true,
+    "file_sha256": {
+      "active_source_DOB_conflicts.json": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+      "birthplace_source_conflicts.json": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+      "source_derived_age_inconsistencies.json": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+      "provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+      "lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+      "cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+      "source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+      "omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+      "source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+    },
+    "summary": [
+      {
+        "file": "active_source_DOB_conflicts.json",
+        "shape": "dict",
+        "record_array_count": 13
+      },
+      {
+        "file": "birthplace_source_conflicts.json",
+        "shape": "dict",
+        "record_array_count": 2
+      },
+      {
+        "file": "source_derived_age_inconsistencies.json",
+        "shape": "list",
+        "record_array_count": 4
+      },
+      {
+        "file": "provisional_parsed_date_discrepancies.json",
+        "shape": "dict",
+        "record_array_count": 1
+      },
+      {
+        "file": "lifespan_endpoint_discrepancies.json",
+        "shape": "list",
+        "record_array_count": 1
+      },
+      {
+        "file": "cross_source_reported_age_contrasts.json",
+        "shape": "list",
+        "record_array_count": 1
+      },
+      {
+        "file": "source_date_precision_holds.json",
+        "shape": "list",
+        "record_array_count": 1
+      },
+      {
+        "file": "omitted_middle_name_admission.json",
+        "shape": "dict",
+        "record_array_count": null
+      },
+      {
+        "file": "source_ordinal_age_wording_observations.json",
+        "shape": "dict",
+        "record_array_count": 1
+      }
+    ],
+    "role": "Full current JSON parsed and hashed for exclusion/type/history controls before root web; old original source bodies not reacquired. Target prior contexts and inherited adjudications separately retained."
+  },
+  "raw_gets": 0,
+  "raw_HTTP_status": null,
+  "raw_bytes_sha256": null,
+  "exact_request_utc": null,
+  "stop_policy": "Exact durable intent and separate exit0 validation before each web call. First failed/textless/challenge work closes; no variants/retries/rawGET. Rewritten-summary primary body not promoted.",
+  "quote_policy": "<=25 quoted words/work including old observations; no complete source caches."
+}

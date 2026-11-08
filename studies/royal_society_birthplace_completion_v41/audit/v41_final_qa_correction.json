@@ -1,0 +1,21 @@
+{
+  "schema": "UK_v41_final_QA_harness_correction_v1",
+  "written_utc": "2026-11-08T09:00:52.968604+00:00",
+  "error_kind": "invalid_documentary_display_name_to_archive_authority_string_equality",
+  "initial_failure_report": "v41_final_qa_initial_failed_report.json",
+  "initial_failed_run_log": "v41_final_qa_initial_failed_run.log",
+  "failed_check": "sourceQA exact six documentary cases retain native identity DOB and frozen place",
+  "cause": "Documentary native_name is the full personal display name; source_authorised_full_name preserves archive formatting with surname first plus dates, occupation and possible Sir. Equality between these distinct retained representations is not a valid identity invariant.",
+  "correction": "Compare documentary native_name exactly to existing frozen name(given names) plus the surname segment already in source_authorised_full_name. All six current names, dates and places verified from frozen preselected complete objects. Master authority raw string equality remains protected by all4983 full-object equality.",
+  "harness_sha256_before": "65234ba511d9f6b0ba8a560f79500b5aa20d4e4468800c9f12d9a0968bc8ff6e",
+  "harness_sha256_after": "c4e58eb4e282f99d8a41427710d182a77eeb266a46d36491eb5eb0030d5e53c3",
+  "lightweight_correction_checks": [
+    "sourceQA_embedded_cases_equal_original_documentary_cases",
+    "all_six_documentary_names_equal_frozen_given_name_plus_authority_surname_and_DOB_place_exact",
+    "all_five_production_output_pins_unchanged"
+  ],
+  "prior_checks_passed": 47,
+  "prior_master_all4983_complete_objects_exact": true,
+  "production_facts_code_inputs_audits_docs_or_outputs_mutated": false,
+  "network_or_Git_used": false
+}

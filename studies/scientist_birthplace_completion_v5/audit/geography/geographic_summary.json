@@ -1,0 +1,69 @@
+{
+  "Nobel_native_DOBs_left_untouched": true,
+  "capture_representation": "original_HTTP_JSON_bytes for both new authorized captures, not web projection",
+  "explicit_birth_place_state_extent_count": 3,
+  "fact_count": 6,
+  "frozen": true,
+  "geographic_lookup_grade": "S3, separate from birthplace S1 or S2 source evidence",
+  "held": [
+    {
+      "name": "H. H. Barschall",
+      "raw_birthplace": "Berlin",
+      "reason": "cross-hemisphere exact-name candidates include Berlin South Africa Q4892343; four geographic candidates lack coordinates, so no famous-capital choice"
+    },
+    {
+      "name": "Richard B. Bernstein",
+      "raw_birthplace": "New York City",
+      "reason": "unqualified target-born New York City; prior exact-name hotel Q39319400 has no coordinate and only United States P17; parents and schooling do not qualify birthplace"
+    }
+  ],
+  "hemisphere_counts": {
+    "north": 4,
+    "unknown": 2
+  },
+  "inputs_sha256": {
+    "academy_v5_workers/geography/anderson_geographic_qualification_fact.jsonl": "3bcece56d27a1f4c7628ab2405009833253b40673ff16632a805109b246145c4",
+    "academy_v5_workers/vol75/retained_facts.jsonl": "f3c2b77bb67003ef3a30daccda2be5e85abce72d5708dd432b3989edfb55ca37",
+    "academy_v5_workers/vol76/retained/facts.jsonl": "fec338dc9ed339c0f002b7dda80588eef3885fa71a40891d56a3973200696b8c",
+    "uk_birthplace_checkout/studies/scientist_birthplace_completion_v4/outputs/birthplace_rows.jsonl.gz": "abbce4e99ad51252dd5e127a0609bc6c4950c121afa2dd126bfc2187b39cd4e8"
+  },
+  "metadata_sanitization": "safe response header allowlist only; no full headers, cookies, IP addresses or credentials",
+  "native_DOB_calendar_identity_eligibility_flags_QID_changes": 0,
+  "new_birthpoint_coordinate_assignments": 0,
+  "new_country_assignments": 0,
+  "new_geography_query_count": 1,
+  "new_geography_query_exact_names": [
+    "Berlin",
+    "Detroit"
+  ],
+  "new_geography_query_retries": 0,
+  "new_official_source_capture_retries": 0,
+  "new_official_source_corroboration_capture_count": 1,
+  "new_query_bindings": 314,
+  "new_query_coordinate_rank_counts": {
+    "http://wikiba.se/ontology#NormalRank": 49,
+    "http://wikiba.se/ontology#PreferredRank": 1
+  },
+  "new_query_coordinate_statements": 50,
+  "new_query_homonym_entities": 151,
+  "new_query_physical_place_candidates": 53,
+  "new_query_response_sha256": "611bdc51b7df79b38a08eac47c2b5dfb81f0c58f09cee077ad35c3a6014420b5",
+  "new_query_sha256": "be3fcc52c3e453cd706aba6591c7501d4c88c83b45d3bb1bd2658d8adcd63cf3",
+  "new_unique_place_entity_assignments": 0,
+  "person_queries": 0,
+  "prior_NYC_Colorado_query_rerun": false,
+  "prior_query_reused_offline_for": [
+    "New York City"
+  ],
+  "prior_v4_Anderson_S2_overlay_and_hotel_hold_preserved": true,
+  "schema": "scientist_birthplace_completion_v5_NAS_geographic_review",
+  "source_grade_counts": {
+    "S1": 1,
+    "S2": 5
+  },
+  "statistical_cross_cohort_deduplication": false,
+  "status_counts": {
+    "held_unknown": 2,
+    "hemisphere_only_accepted": 4
+  }
+}

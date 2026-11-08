@@ -1,0 +1,97 @@
+{
+  "schema": "UK_v43_independent_QA_artifact_completion_manifest_v1",
+  "written_utc": "2026-11-08T10:13:17.587261+00:00",
+  "status": "PASS",
+  "actual_source_documentary_checks_passed": 188,
+  "actual_source_report_shape_checks_passed": 36,
+  "actual_final_preflight_checks_passed": 61,
+  "actual_final_finish_checks_passed": 6,
+  "actual_mode_exit_codes": {
+    "corrected_source_final": 0,
+    "final_preflight": 0,
+    "isolated_CLI_1": 0,
+    "isolated_CLI_2": 0,
+    "finish": 0
+  },
+  "observed_sequential_CLI_receipts": [
+    {
+      "run": 1,
+      "started_utc": "2026-11-08T10:11:01.099757+00:00",
+      "returned_utc": "2026-11-08T10:11:51.644666+00:00",
+      "completed_utc": "2026-11-08T10:11:51.668634+00:00",
+      "CLI_returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "run": 2,
+      "started_utc": "2026-11-08T10:11:54.452810+00:00",
+      "returned_utc": "2026-11-08T10:12:46.835835+00:00",
+      "completed_utc": "2026-11-08T10:12:46.859525+00:00",
+      "CLI_returncode": 0,
+      "status": "PASS"
+    }
+  ],
+  "complete_objects": 4983,
+  "changed_complete_objects": 0,
+  "accepted_record_ids": [],
+  "held_record_ids": [
+    "RS_PAST_NA2154",
+    "RS_PAST_NA3474",
+    "RS_PAST_NA4166",
+    "RS_PAST_NA4680",
+    "RS_PAST_NA4747",
+    "RS_PAST_NA663"
+  ],
+  "all_nine_issue_inventories_byte_identical": true,
+  "source_counts": {
+    "worker_queries": 11,
+    "root_queries": 0,
+    "total_queries": 11,
+    "worker_navigation_attempts": 14,
+    "worker_source_open_operations": 9,
+    "worker_click_operations": 5,
+    "root_source_opens": 1,
+    "root_click_operations": 0,
+    "total_navigation_attempts": 15,
+    "total_source_open_operations": 10,
+    "total_click_operations": 5,
+    "worker_parsed_finds": 1,
+    "root_parsed_finds": 0,
+    "total_parsed_finds": 1,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "final_canonical_sha256": "a0c04e44631478f82e562deab64d699fc273e6fc99fa35ba23f8a61d7e1f8717",
+  "main_output_pins": {
+    "birthplace_rows.jsonl.gz": "433749a0b7ff0bfc62db8993f662cd928a4bc023418a54600259fdbea0b1537a",
+    "birthplaces.csv": "dee6a06292cc992da20c0d9f283d6b7d6252492a965a86d8e8749bdcff188575",
+    "changes.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "remaining_unknown_window.csv": "94fe209c5594fe44a6319f568f9c786760127a70c11d4ba1ac01b714290fc901",
+    "summary.json": "5a0aba97fe7f8ac7db94b5ec287928b1cbde11a30222ab1518ddf1f19187b289"
+  },
+  "source_checker_correction": "Initial final source invocation failed one stale V41 parent-field assertion, with187 other checks passing. Initial failed report preserved; checker corrected to actual V43 method flags, lightweight shape precheck updated, then corrected source final exited0 with188 checks. Bound production files were not changed.",
+  "historical_V42_attestations_are_not_new_checks": true,
+  "production_or_Git_mutated_by_reviewer": false,
+  "artifact_sha256": {
+    "qa_v43_source.py": "52d92118673290c724f5fda33759192759c4a58217f8cc3a918d0792bb4587c9",
+    "v43_source_qa_preflight.json": "c481dce062d0546128cc086fa3e38d62504c0d0048348b205e582f7688ff8ceb",
+    "v43_source_qa_report.json": "8d4ccb36c461fa34b920893e9484b3b7de3bd011860063a3ce48c93d67b839d8",
+    "v43_method_qa.json": "7a1bc2228a41d7b54e60265e6b3e02226db28633def9a76bcd3a28bc106e6f58",
+    "v43_source_documentary_case_review.json": "27f89adf4a8d7baf91fe3b1dba2a5f465e422c3817605a6ca31298b3a928092a",
+    "v43_source_qa_quote_prefinal.json": "74a9ea0bfd2611119c180995ccfcb49462e02ef3fc52ab94905b7271ffd5937c",
+    "v43_source_qa_worker_operation_prefinal.json": "db0e340ebe147c0b416ce03464fd7b9801dd669fc887cce3a5682a27fe27992c",
+    "v43_source_qa_initial_final_failed_report.json": "f245bf30333980615d36bf3276a7db74b312fec7d53b0ca69196d8ecc70047b4",
+    "preflight_v43_source_reports.py": "0e0c2d1d37b8ce816290c8976c5b4f6ea9adeac7602052dcbbee6421d570f4ef",
+    "prepare_v43_source_quote_review.py": "23fcb9798a58c87230600c7e1627fc5805a83a08f365806444d5b25bd7745370",
+    "finalize_v43_source_documentary_review.py": "e2e4013494ef417228318c8aa4af0fe81933fd1208aaffab84b9c10be35b824a",
+    "finalize_v43_method_qa.py": "1526000bde8057de561bfb99f418f6df965265415e69c5633c2403a6d24abaf0",
+    "qa_v43_final.py": "01cbbefbe445c2e84366a88c2106143ca092995cc08fb45c69618e332d7c50af",
+    "v43_final_qa_expectations.json": "44bf17151e193af8cfae1f9d915a394eff8c079d63cd14076fa5df683a04112d",
+    "v43_final_qa_preflight.json": "0cfc9698f0b09b62859fe9fc53faf20ee66cdd0944420a13cac08e730a74e03a",
+    "v43_final_qa_replay_1.json": "5c22788787717cedb5911be72b85e404182068df8d68da326b184b8e706b6b3f",
+    "v43_final_qa_replay_2.json": "1ab5f7fcb278a99261f42d388baf2d864cac5c50017da659ae39f6da42ae1022",
+    "v43_isolated_cli_1.log": "963a4f5e745a7fc164151fad199bdc655875ef1cc9214fd049fac648e51b6ca0",
+    "v43_isolated_cli_2.log": "963a4f5e745a7fc164151fad199bdc655875ef1cc9214fd049fac648e51b6ca0",
+    "v43_final_qa_report.json": "a5b637b8c50057e50b9995d8dd3972c97efd0c45f81225eaa05f28d08eabb939"
+  }
+}

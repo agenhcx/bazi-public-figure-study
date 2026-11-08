@@ -1,0 +1,1551 @@
+{
+  "scope": "Read-only v3-v5 source_batches audit; no new searches or requests. Exact names + stable IDs. Prior route summaries are not new source evidence.",
+  "members": [
+    {
+      "member_key": "jpa:fujiyoshi_yoshinori",
+      "name_jp": "藤吉 好則",
+      "baseline_dob_status": "body_month_only",
+      "source_date_components_iso": "1948-06",
+      "prior_processed": [
+        {
+          "file": "studies/academy_fr_jp_completion_v4/source_batches/japan_b/processed.csv",
+          "disposition": {
+            "member_key": "jpa:fujiyoshi_yoshinori",
+            "name_jp": "藤吉 好則",
+            "round_status": "body_month_only",
+            "body_claim_rows": "1",
+            "selected_date_written": "False",
+            "note": "Source precision/hold stated in canonical claims and holds.json.",
+            "reviewed_no_birth_url": "",
+            "reviewed_no_birth_ref": ""
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_b/processed.csv",
+          "disposition": {
+            "member_key": "jpa:fujiyoshi_yoshinori",
+            "name_jp": "藤吉 好則",
+            "baseline_dob_status": "body_month_only",
+            "round_status": "parked_no_qualified_new_body",
+            "new_claim_rows": "0",
+            "source_urls": "",
+            "note": "New non-dictionary query and English born query only found1948year/other awardees DOB; existing1948-06 month retained, no retry of prior Kotobank.",
+            "final_cohort_accepted": "False",
+            "bazi_variables_computed": "0"
+          }
+        }
+      ],
+      "prior_birth_claims": [
+        {
+          "file": "studies/academy_fr_jp_completion_v4/source_batches/japan_b/secondary_dictionary_claims.json",
+          "claim": {
+            "member_key": "jpa:fujiyoshi_yoshinori",
+            "name_jp": "藤吉 好則",
+            "year": 1948,
+            "month": 6,
+            "day": null,
+            "precision": "month",
+            "calendar": "not_stated",
+            "calendar_comparable": true,
+            "body_verified": true,
+            "identity_body_supported": true,
+            "source_url": "https://kotobank.jp/word/%E8%97%A4%E5%90%89%E5%A5%BD%E5%89%87-1105678",
+            "source_tier": "published_named_dictionary_secondary",
+            "raw_birth_statement": "昭和23年6月生まれ",
+            "identity_support": "Kyoto/RIKEN biophysics, cryo-electron microscopy and membrane-protein structure, Academy award2008.",
+            "source_sha256": "8ceb6c50e201e9631bdb53c16861a6f353b7a0247a10152da0bf65b3234cd182",
+            "retrieved_utc": "2026-10-29T13:25:25.557897+00:00",
+            "source_location": "Full Kotobank entry: デジタル版 日本人名大辞典+Plus",
+            "calendar_note": "Literal source precision retained. Era year arithmetic where applicable; no padded month/day and no lunar/Gregorian conversion.",
+            "web_ref": "turn1639view2",
+            "source_publisher": "講談社",
+            "source_publication_title": "デジタル版 日本人名大辞典+Plus",
+            "final_cohort_accepted": false,
+            "bazi_variables_computed": 0
+          }
+        }
+      ],
+      "prior_request_matches": [
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_b/request_log.json",
+          "record": {
+            "engine": "system2",
+            "q": "\"藤吉好則\" \"生年月日\" -site:japan-acad.go.jp -site:kotobank.jp"
+          }
+        }
+      ]
+    },
+    {
+      "member_key": "jpa:hasegawa_akira",
+      "name_jp": "長谷川 昭",
+      "baseline_dob_status": "body_year_only",
+      "source_date_components_iso": "1945",
+      "prior_processed": [
+        {
+          "file": "studies/academy_fr_jp_completion_v3/source_batches/japan_b/processed.csv",
+          "disposition": {
+            "member_key": "jpa:hasegawa_akira",
+            "name_jp": "長谷川 昭",
+            "round_status": "not_individually_processed",
+            "claim_files": "",
+            "claim_rows": "0",
+            "note": ""
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v4/source_batches/japan_b/processed.csv",
+          "disposition": {
+            "member_key": "jpa:hasegawa_akira",
+            "name_jp": "長谷川 昭",
+            "round_status": "body_year_only",
+            "body_claim_rows": "1",
+            "selected_date_written": "False",
+            "note": "Source precision/hold stated in canonical claims and holds.json.",
+            "reviewed_no_birth_url": "",
+            "reviewed_no_birth_ref": ""
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_a/processed.csv",
+          "disposition": {
+            "queue_index": "1",
+            "member_key": "jpa:hasegawa_akira",
+            "name_jp": "長谷川 昭",
+            "previous_dob_status": "body_year_only",
+            "status": "bounded_park_no_new_qualified_birth_body",
+            "claim_rows": "0",
+            "new_day_claim": "False",
+            "claim_ids": "[]",
+            "source_urls": "[]",
+            "note": "New Tohoku retirement CV gives1945-03-30 in search lead, but HTTP503 and web-open fetch failed. No body claim/no error-page hash; park.",
+            "final_cohort_accepted": "False",
+            "bazi_variables_computed": "0"
+          }
+        }
+      ],
+      "prior_birth_claims": [
+        {
+          "file": "studies/academy_fr_jp_completion_v4/source_batches/japan_b/claims.json",
+          "claim": {
+            "member_key": "jpa:hasegawa_akira",
+            "name_jp": "長谷川 昭",
+            "year": 1945,
+            "month": null,
+            "day": null,
+            "precision": "year",
+            "calendar": "not_stated",
+            "calendar_comparable": true,
+            "body_verified": true,
+            "identity_body_supported": true,
+            "source_url": "https://www.japan-acad.go.jp/japanese/news/2017/031301.html",
+            "source_tier": "academy_official_award_biography",
+            "raw_birth_statement": "昭和20年（71歳）",
+            "identity_support": "Tohoku emeritus, seismology/subduction tectonics; correct geophysicist. Award biography does not itself prove membership.",
+            "source_sha256": "e71698c1046a96cfb29f1ef5de3cc8d9f6906f7375845fe8d41b1d2f60d6d86a",
+            "retrieved_utc": "2026-10-29T13:25:25.615507+00:00",
+            "source_location": "First award table, 生年（年齢） row",
+            "calendar_note": "Literal source precision retained. Era year arithmetic where applicable; no padded month/day and no lunar/Gregorian conversion.",
+            "web_ref": "turn1601view3",
+            "source_publisher": "日本学士院",
+            "source_publication_title": "日本学士院賞授賞の決定について（2017）",
+            "final_cohort_accepted": false,
+            "bazi_variables_computed": 0
+          }
+        }
+      ],
+      "prior_request_matches": [
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_a/source_capture_log.json",
+          "record": {
+            "id": "hasegawa",
+            "name": "長谷川昭",
+            "url": "https://tohoku.repo.nii.ac.jp/record/100595/files/gyoseki-001061.pdf",
+            "retrieved_utc": "2026-10-29T13:59:27.646623+00:00",
+            "method": "GET",
+            "status": 503,
+            "error": "HTTP Error 503: Service Unavailable",
+            "valid_body": false,
+            "sha256": null
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_a/request_log.json",
+          "record": {
+            "kind": "discovery_query",
+            "sequence": 2,
+            "query": "\"長谷川昭\" \"生年月日\" -site:japan-acad.go.jp",
+            "engine": "system1_search_query",
+            "result_ref_family": "turn1659search",
+            "timestamp_note": "Issued in this v5 run before body captures; exact query-call timestamp not separately persisted.",
+            "evidence_policy": "Query terms and returned snippets are discovery only, including speculative date anchors; no claim without actual qualified body."
+          }
+        }
+      ]
+    },
+    {
+      "member_key": "jpa:iritani_akira",
+      "name_jp": "入谷 明",
+      "baseline_dob_status": "body_year_only",
+      "source_date_components_iso": "1928",
+      "prior_processed": [
+        {
+          "file": "studies/academy_fr_jp_completion_v4/source_batches/japan_b/processed.csv",
+          "disposition": {
+            "member_key": "jpa:iritani_akira",
+            "name_jp": "入谷 明",
+            "round_status": "body_year_only",
+            "body_claim_rows": "1",
+            "selected_date_written": "False",
+            "note": "Source precision/hold stated in canonical claims and holds.json.",
+            "reviewed_no_birth_url": "",
+            "reviewed_no_birth_ref": ""
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_c/processed.csv",
+          "disposition": {
+            "queue_index": "1",
+            "member_key": "jpa:iritani_akira",
+            "name_jp": "入谷 明",
+            "baseline_dob_status": "body_year_only",
+            "screened": "True",
+            "new_query_count": "1",
+            "status": "parked_no_new_eligible_birth_body",
+            "new_claim_rows": "0",
+            "claim_ids": "[]",
+            "source_urls": "[]",
+            "note": "New query returned1928-only foundation/source lead already consistent with baseline. No full-date edited/official candidate; parked.",
+            "final_cohort_accepted": "False",
+            "bazi_variables_computed": "0"
+          }
+        }
+      ],
+      "prior_birth_claims": [
+        {
+          "file": "studies/academy_fr_jp_completion_v4/source_batches/japan_b/secondary_dictionary_claims.json",
+          "claim": {
+            "member_key": "jpa:iritani_akira",
+            "name_jp": "入谷 明",
+            "year": 1928,
+            "month": null,
+            "day": null,
+            "precision": "year",
+            "calendar": "not_stated",
+            "calendar_comparable": true,
+            "body_verified": true,
+            "identity_body_supported": true,
+            "source_url": "https://shokabo.co.jp/mybooks/ISBN978-4-7853-5836-5.htm",
+            "source_tier": "publisher_official_author_biography_secondary",
+            "raw_birth_statement": "1928年 兵庫県に生まれる。",
+            "identity_support": "Kyoto emeritus/Kindai professor, animal reproduction and embryonic engineering; same agronomist.",
+            "source_sha256": "ca031ae636b3a93b1d87f68367e77d8be3d289ae50c3010d07ec251d02a74c6e",
+            "retrieved_utc": "2026-10-29T13:25:25.609751+00:00",
+            "source_location": "Publisher book page, 著作者紹介",
+            "calendar_note": "Literal source precision retained. Era year arithmetic where applicable; no padded month/day and no lunar/Gregorian conversion.",
+            "web_ref": "turn1621view1",
+            "source_publisher": "裳華房",
+            "source_publication_title": "最新 発生工学総論（2001）著作者紹介",
+            "final_cohort_accepted": false,
+            "bazi_variables_computed": 0
+          }
+        }
+      ],
+      "prior_request_matches": [
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_c/holds.json",
+          "record": {
+            "member_key": "jpa:iritani_akira",
+            "name_jp": "入谷 明",
+            "hold_type": "bounded_new_route_park",
+            "hold_scope": "search_outcome",
+            "global_member_hold": false,
+            "note": "New query returned1928-only foundation/source lead already consistent with baseline. No full-date edited/official candidate; parked."
+          }
+        }
+      ]
+    },
+    {
+      "member_key": "jpa:okada_tsuneo",
+      "name_jp": "岡田 恒男",
+      "baseline_dob_status": "body_year_only",
+      "source_date_components_iso": "1936",
+      "prior_processed": [
+        {
+          "file": "studies/academy_fr_jp_completion_v3/source_batches/japan_c/processed.csv",
+          "disposition": {
+            "member_key": "jpa:okada_tsuneo",
+            "name_jp": "岡田 恒男",
+            "status": "bounded_search_no_institution_body_birth",
+            "claims": "0",
+            "source_urls": "",
+            "note": "One bounded screen; search-result-only dates not accepted."
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v4/source_batches/japan_d/processed.csv",
+          "disposition": {
+            "member_key": "jpa:okada_tsuneo",
+            "name_jp": "岡田 恒男",
+            "specialty_jp": "建築学・耐震工学",
+            "selected_this_round": "False",
+            "new_route_status": "not_selected_this_round",
+            "new_claim_count": "0",
+            "new_day_claim_count": "0",
+            "source_urls": "",
+            "note": "No v4 D query or request."
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_b/processed.csv",
+          "disposition": {
+            "member_key": "jpa:okada_tsuneo",
+            "name_jp": "岡田 恒男",
+            "baseline_dob_status": "bounded_search_no_body_birth_claim",
+            "round_status": "body_year_only",
+            "new_claim_rows": "1",
+            "source_urls": "https://www.japan-acad.go.jp/japanese/news/2020/040601.html",
+            "note": "Source components and professional identity in claim JSON; no roster eligibility change.",
+            "final_cohort_accepted": "False",
+            "bazi_variables_computed": "0"
+          }
+        }
+      ],
+      "prior_birth_claims": [
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_b/claims.json",
+          "claim": {
+            "member_key": "jpa:okada_tsuneo",
+            "name_jp": "岡田 恒男",
+            "year": 1936,
+            "month": null,
+            "day": null,
+            "precision": "year",
+            "calendar": "not_stated",
+            "calendar_comparable": true,
+            "body_verified": true,
+            "identity_body_supported": true,
+            "source_url": "https://www.japan-acad.go.jp/japanese/news/2020/040601.html",
+            "source_tier": "academy_official_award_biography",
+            "raw_birth_statement": "昭和11年（84歳）",
+            "identity_support": "Tokyo emeritus and Japan Building Disaster Prevention Association adviser; earthquake-resistant building assessment. Award does not establish membership.",
+            "source_publisher": "日本学士院",
+            "source_publication_title": "日本学士院賞授賞の決定について（2020-04-06）",
+            "source_sha256": "bf150e3fbcff59a8b4892eff66af756c59fb2082290a0ab8b856b69959545e6f",
+            "retrieved_utc": "2026-10-29T14:02:16.364538+00:00",
+            "source_location": "Award6 生年（年齢） row",
+            "calendar_note": "Literal source components; post1872era year arithmetic only. No missing component padded and no lunar/Gregorian conversion.",
+            "web_ref": "turn1703search1",
+            "final_cohort_accepted": false,
+            "bazi_variables_computed": 0
+          }
+        }
+      ],
+      "prior_request_matches": [
+        {
+          "file": "studies/academy_fr_jp_completion_v3/source_batches/japan_c/request_log.json",
+          "record": {
+            "engine": "system2",
+            "q": "\"岡田恒男\" \"生年月日\""
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_b/request_log.json",
+          "record": {
+            "engine": "system2",
+            "q": "\"岡田恒男\" site:kotobank.jp"
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_b/request_log.json",
+          "record": {
+            "engine": "system1",
+            "q": "\"岡田恒男\" \"生年\""
+          }
+        }
+      ]
+    },
+    {
+      "member_key": "jpa:suda_tatsuo",
+      "name_jp": "須田 立雄",
+      "baseline_dob_status": "body_year_only",
+      "source_date_components_iso": "1935",
+      "prior_processed": [
+        {
+          "file": "studies/academy_fr_jp_completion_v4/source_batches/japan_b/processed.csv",
+          "disposition": {
+            "member_key": "jpa:suda_tatsuo",
+            "name_jp": "須田 立雄",
+            "round_status": "bounded_no_usable_birth_body",
+            "body_claim_rows": "0",
+            "selected_date_written": "False",
+            "note": "University honorary-professorship body has professional/Academy identity but no DOB; no date inferred from graduation.",
+            "reviewed_no_birth_url": "https://www.isct.ac.jp/ja/news/lzhdx9g83mb5",
+            "reviewed_no_birth_ref": "turn1637view2"
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_b/processed.csv",
+          "disposition": {
+            "member_key": "jpa:suda_tatsuo",
+            "name_jp": "須田 立雄",
+            "baseline_dob_status": "bounded_search_no_body_birth_claim",
+            "round_status": "body_year_only",
+            "new_claim_rows": "1",
+            "source_urls": "https://www.ishiyaku.co.jp/search/detail/456090",
+            "note": "Source components and professional identity in claim JSON; no roster eligibility change.",
+            "final_cohort_accepted": "False",
+            "bazi_variables_computed": "0"
+          }
+        }
+      ],
+      "prior_birth_claims": [
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_b/secondary_dictionary_claims.json",
+          "claim": {
+            "member_key": "jpa:suda_tatsuo",
+            "name_jp": "須田 立雄",
+            "year": 1935,
+            "month": null,
+            "day": null,
+            "precision": "year",
+            "calendar": "not_stated",
+            "calendar_comparable": true,
+            "body_verified": true,
+            "identity_body_supported": true,
+            "source_url": "https://www.ishiyaku.co.jp/search/detail/456090",
+            "source_tier": "publisher_official_author_biography_secondary",
+            "raw_birth_statement": "1935年 東京に生まれる",
+            "identity_support": "Tokyo Medical-Dental/Showa dentistry, vitaminD/bone biochemistry and Academy award2001.",
+            "source_publisher": "医歯薬出版",
+            "source_publication_title": "新 骨の科学（編著者略歴）",
+            "source_sha256": "1f817d21843f1eb9f2944b0acc971917bf48ab0965734ec2f4d7353941adfb89",
+            "retrieved_utc": "2026-10-29T14:02:17.866210+00:00",
+            "source_location": "著者所属/略歴, 須田立雄 opening birth row",
+            "calendar_note": "Literal source components; post1872era year arithmetic only. No missing component padded and no lunar/Gregorian conversion.",
+            "web_ref": "turn1703search2",
+            "final_cohort_accepted": false,
+            "bazi_variables_computed": 0
+          }
+        }
+      ],
+      "prior_request_matches": [
+        {
+          "file": "studies/academy_fr_jp_completion_v4/source_batches/japan_b/request_log.json",
+          "record": {
+            "name_jp": "須田立雄",
+            "source_url": "https://www.isct.ac.jp/ja/news/lzhdx9g83mb5",
+            "web_ref": "turn1637view2",
+            "result": "University honorary-professorship body has professional/Academy identity but no DOB; no date inferred from graduation."
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_b/request_log.json",
+          "record": {
+            "engine": "system2",
+            "q": "\"須田立雄\" site:kotobank.jp"
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_b/request_log.json",
+          "record": {
+            "engine": "system1",
+            "q": "\"須田立雄\" \"誕生\""
+          }
+        }
+      ]
+    },
+    {
+      "member_key": "jpa:tanaka_yasuo",
+      "name_jp": "田中 靖郎",
+      "baseline_dob_status": "body_year_only",
+      "source_date_components_iso": "1931",
+      "prior_processed": [
+        {
+          "file": "studies/academy_fr_jp_completion_v3/source_batches/japan_b/processed.csv",
+          "disposition": {
+            "member_key": "jpa:tanaka_yasuo",
+            "name_jp": "田中 靖郎",
+            "round_status": "searched_no_usable_full_day_body",
+            "claim_files": "",
+            "claim_rows": "0",
+            "note": "Official query leads year1931 only; society obituary lead not read."
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v4/source_batches/japan_d/processed.csv",
+          "disposition": {
+            "member_key": "jpa:tanaka_yasuo",
+            "name_jp": "田中 靖郎",
+            "specialty_jp": "天文学",
+            "selected_this_round": "True",
+            "new_route_status": "bounded_new_dictionary_query_no_named_body",
+            "new_claim_count": "0",
+            "new_day_claim_count": "0",
+            "source_urls": "",
+            "note": "One bounded new-route query only; no claim from snippets."
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_a/processed.csv",
+          "disposition": {
+            "queue_index": "28",
+            "member_key": "jpa:tanaka_yasuo",
+            "name_jp": "田中 靖郎",
+            "previous_dob_status": "bounded_search_no_body_birth_claim",
+            "status": "body_partial_only",
+            "claim_rows": "1",
+            "new_day_claim": "False",
+            "claim_ids": "[\"4c76893fe9eaa76ea999\"]",
+            "source_urls": "[\"https://www.jsps-club.de/ja/about-us/honorary-memberships\"]",
+            "note": "",
+            "final_cohort_accepted": "False",
+            "bazi_variables_computed": "0"
+          }
+        }
+      ],
+      "prior_birth_claims": [
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_a/claims.json",
+          "claim": {
+            "member_key": "jpa:tanaka_yasuo",
+            "name_jp": "田中 靖郎",
+            "year": 1931,
+            "month": null,
+            "day": null,
+            "precision": "year",
+            "calendar": "not_stated",
+            "calendar_comparable": true,
+            "body_verified": true,
+            "identity_body_supported": true,
+            "source_url": "https://www.jsps-club.de/ja/about-us/honorary-memberships",
+            "source_tier": "institutional_scientific_alumni_association_obituary",
+            "source_publisher": "ドイツ日本学術振興会奨学生協会（JSPS-Club）",
+            "source_publication": "名誉会員 田中靖郎; Joachim Trümper obituary 2018-01-30",
+            "raw_birth_statement": "田中靖郎は1931年、大阪近郊",
+            "identity_support": "Full honorary-member obituary explicitly identifies MPE high-energy/X-ray astrophysicist, Osaka/Tokyo/Nagoya/ISAS career, and death2018-01-18 matching preserved astronomer.",
+            "source_sha256": "b33fc6c9e1411dd5b089d85a9511509148ebd7a77a1ca4435c1da718df6f1eea",
+            "retrieved_utc": "2026-10-29T13:59:35.119606+00:00",
+            "source_location": "HTML 田中靖郎 生誕1931年 section, birth paragraph",
+            "calendar_note": "Only era-year labelling transcribed if needed; no lunar/Gregorian conversion and no missing-component padding.",
+            "previous_dob_status": "bounded_search_no_body_birth_claim",
+            "final_cohort_accepted": false,
+            "bazi_variables_computed": 0,
+            "source_quality_note": "Year only in actual body; no inference from seventieth-birthday photo or Wiki/snippet date.",
+            "claim_id": "4c76893fe9eaa76ea999"
+          }
+        }
+      ],
+      "prior_request_matches": [
+        {
+          "file": "studies/academy_fr_jp_completion_v3/source_batches/japan_b/request_log.json",
+          "record": {
+            "member_key": "jpa:tanaka_yasuo",
+            "name_jp": "田中 靖郎",
+            "activity": "name_DOB_discovery",
+            "exact_query_not_retained": true,
+            "result": "no_usable_full_day_body_claim",
+            "note": "Official query leads year1931 only; society obituary lead not read."
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v4/source_batches/japan_d/log.json",
+          "record": {
+            "sequence": 19,
+            "name_jp": "田中 靖郎",
+            "member_key": "jpa:tanaka_yasuo",
+            "engine": "system1_search_query",
+            "query": "site:kotobank.jp \"田中靖郎\"",
+            "result": "no named article body discovered in bounded query"
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v4/source_batches/japan_d/holds.json",
+          "record": {
+            "member_key": "jpa:tanaka_yasuo",
+            "name_jp": "田中 靖郎",
+            "reason": "No named attributed body discovered in the one allowed new-route search; no DOB claim made."
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_a/source_capture_log.json",
+          "record": {
+            "id": "tanaka",
+            "name": "田中靖郎",
+            "url": "https://www.jsps-club.de/ja/about-us/honorary-memberships",
+            "retrieved_utc": "2026-10-29T13:59:35.119606+00:00",
+            "method": "GET",
+            "status": 200,
+            "final_url": "https://www.jsps-club.de/ja/about-us/honorary-memberships",
+            "content_type": "text/html; charset=utf-8",
+            "bytes": 37565,
+            "valid_body": true,
+            "sha256": "b33fc6c9e1411dd5b089d85a9511509148ebd7a77a1ca4435c1da718df6f1eea",
+            "local_path": "/workspace/scratch/7e8aa4e0d4af/academy_v5_workers/japan_a/private/tanaka.html"
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_a/request_log.json",
+          "record": {
+            "kind": "discovery_query",
+            "sequence": 29,
+            "query": "\"田中靖郎\" 追悼 生まれ",
+            "engine": "system1_search_query",
+            "result_ref_family": "turn1673search",
+            "timestamp_note": "Issued in this v5 run before body captures; exact query-call timestamp not separately persisted.",
+            "evidence_policy": "Query terms and returned snippets are discovery only, including speculative date anchors; no claim without actual qualified body."
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_a/request_log.json",
+          "record": {
+            "kind": "discovery_query",
+            "sequence": 35,
+            "query": "\"田中靖郎\" \"1931\" \"18\" site:mpe.mpg.de",
+            "engine": "system1_search_query",
+            "result_ref_family": "turn1677search",
+            "timestamp_note": "Issued in this v5 run before body captures; exact query-call timestamp not separately persisted.",
+            "evidence_policy": "Query terms and returned snippets are discovery only, including speculative date anchors; no claim without actual qualified body."
+          }
+        }
+      ]
+    },
+    {
+      "member_key": "jpa:yanagida_toshio",
+      "name_jp": "柳田 敏雄",
+      "baseline_dob_status": "body_year_only",
+      "source_date_components_iso": "1946",
+      "prior_processed": [
+        {
+          "file": "studies/academy_fr_jp_completion_v3/source_batches/japan_b/processed.csv",
+          "disposition": {
+            "member_key": "jpa:yanagida_toshio",
+            "name_jp": "柳田 敏雄",
+            "round_status": "not_individually_processed",
+            "claim_files": "",
+            "claim_rows": "0",
+            "note": ""
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v4/source_batches/japan_c/processed.csv",
+          "disposition": {
+            "member_key": "jpa:yanagida_toshio",
+            "name_jp": "柳田 敏雄",
+            "specialty_jp": "生物物理学",
+            "baseline_dob_status": "not_body_source_processed",
+            "query": "\"柳田敏雄\" 生年月日",
+            "query_engine": "system2",
+            "query_count": "1",
+            "screened": "True",
+            "outcome": "body_year_institution",
+            "new_claim_count": "1",
+            "claim_ids": "[\"942ab25742237c40001d\"]",
+            "body_source_urls": "[\"https://www.med.osaka-u.ac.jp/pub/phys1/aboutus/yanagida01.html\"]",
+            "note": "",
+            "cohort_accepted": "False",
+            "bazi_variables_computed": "False"
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_a/processed.csv",
+          "disposition": {
+            "queue_index": "3",
+            "member_key": "jpa:yanagida_toshio",
+            "name_jp": "柳田 敏雄",
+            "previous_dob_status": "body_year_only",
+            "status": "bounded_park_no_new_qualified_birth_body",
+            "claim_rows": "0",
+            "new_day_claim": "False",
+            "claim_ids": "[]",
+            "source_urls": "[]",
+            "note": "Additional query routes yield1946year and research profiles only; existing year preserved.",
+            "final_cohort_accepted": "False",
+            "bazi_variables_computed": "0"
+          }
+        }
+      ],
+      "prior_birth_claims": [
+        {
+          "file": "studies/academy_fr_jp_completion_v4/source_batches/japan_c/claims.json",
+          "claim": {
+            "member_key": "jpa:yanagida_toshio",
+            "name_jp": "柳田 敏雄",
+            "year": 1946,
+            "month": null,
+            "day": null,
+            "precision": "year",
+            "calendar": "not_stated",
+            "calendar_comparable": true,
+            "body_verified": true,
+            "identity_body_supported": true,
+            "source_url": "https://www.med.osaka-u.ac.jp/pub/phys1/aboutus/yanagida01.html",
+            "source_tier": "institution_or_university",
+            "source_subtier": "official_institution_body",
+            "publisher": "大阪大学",
+            "book": "柳田敏雄 biography",
+            "raw_birth_statement": "1946年 兵庫県生まれ",
+            "identity_support": "大阪大学生命機能研究科、生体分子一分子計測の生物物理学者。1969年大阪大学電気工学卒、1976年工学博士の履歴一致。",
+            "source_sha256": "6631ad314a60cad44e41be49d40463be2957973af647240f30c05996833b5a89",
+            "retrieved_utc": "2026-10-29T13:23:07.815589+00:00",
+            "source_location": "biography opening",
+            "calendar_note": "",
+            "body_verification_route": "turn1612view0",
+            "cohort_accepted": false,
+            "bazi_variables_computed": false,
+            "evidence_status": "body_birth_claim",
+            "selected": false,
+            "selection_note": "Candidate evidence only; no final cohort or DOB freeze.",
+            "source_body_redistributed": false,
+            "claim_id": "942ab25742237c40001d"
+          }
+        }
+      ],
+      "prior_request_matches": [
+        {
+          "file": "studies/academy_fr_jp_completion_v4/source_batches/japan_c/evidence_verification.json",
+          "record": {
+            "member_key": "jpa:yanagida_toshio",
+            "name_jp": "柳田 敏雄",
+            "original_hash_matches": true,
+            "raw_normalized_text_match": true,
+            "body_verified": true,
+            "note": ""
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v4/source_batches/japan_c/request_log.json",
+          "record": {
+            "member_key": "jpa:yanagida_toshio",
+            "name_jp": "柳田 敏雄",
+            "engine": "system2",
+            "query": "\"柳田敏雄\" 生年月日"
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_a/request_log.json",
+          "record": {
+            "kind": "discovery_query",
+            "sequence": 4,
+            "query": "\"柳田敏雄\" \"生年月日\" -site:med.osaka-u.ac.jp",
+            "engine": "system1_search_query",
+            "result_ref_family": "turn1659search",
+            "timestamp_note": "Issued in this v5 run before body captures; exact query-call timestamp not separately persisted.",
+            "evidence_policy": "Query terms and returned snippets are discovery only, including speculative date anchors; no claim without actual qualified body."
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_a/request_log.json",
+          "record": {
+            "kind": "discovery_query",
+            "sequence": 36,
+            "query": "\"柳田敏雄\" \"1946\" \"3月10日\" -site:wikipedia.org",
+            "engine": "system1_search_query",
+            "result_ref_family": "turn1677search",
+            "timestamp_note": "Issued in this v5 run before body captures; exact query-call timestamp not separately persisted.",
+            "evidence_policy": "Query terms and returned snippets are discovery only, including speculative date anchors; no claim without actual qualified body."
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_a/request_log.json",
+          "record": {
+            "kind": "discovery_query",
+            "sequence": 37,
+            "query": "\"柳田敏雄\" site:kotobank.jp",
+            "engine": "system1_search_query",
+            "result_ref_family": "turn1679search",
+            "timestamp_note": "Issued in this v5 run before body captures; exact query-call timestamp not separately persisted.",
+            "evidence_policy": "Query terms and returned snippets are discovery only, including speculative date anchors; no claim without actual qualified body."
+          }
+        }
+      ]
+    },
+    {
+      "member_key": "jpa-unlinked-1da6b5d6c2d71731",
+      "name_jp": "中山 秀三郎",
+      "baseline_dob_status": "bounded_search_no_body_birth_claim",
+      "source_date_components_iso": "",
+      "prior_processed": [
+        {
+          "file": "studies/academy_fr_jp_completion_v3/source_batches/japan_b/processed.csv",
+          "disposition": {
+            "member_key": "jpa-unlinked-1da6b5d6c2d71731",
+            "name_jp": "中山 秀三郎",
+            "round_status": "not_individually_processed",
+            "claim_files": "",
+            "claim_rows": "0",
+            "note": ""
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v4/source_batches/japan_b/processed.csv",
+          "disposition": {
+            "member_key": "jpa-unlinked-1da6b5d6c2d71731",
+            "name_jp": "中山 秀三郎",
+            "round_status": "bounded_no_usable_birth_body",
+            "body_claim_rows": "0",
+            "selected_date_written": "False",
+            "note": "JSCE biography supports Tokyo civil engineering/Academy1934 but gives no DOB. Modern wrapper only index; old full body checked.",
+            "reviewed_no_birth_url": "https://www.jsce.or.jp/chair/chairman.shtml",
+            "reviewed_no_birth_ref": "turn1625view5"
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_c/processed.csv",
+          "disposition": {
+            "queue_index": "4",
+            "member_key": "jpa-unlinked-1da6b5d6c2d71731",
+            "name_jp": "中山 秀三郎",
+            "baseline_dob_status": "bounded_search_no_body_birth_claim",
+            "screened": "True",
+            "new_query_count": "2",
+            "status": "parked_no_new_eligible_birth_body",
+            "new_claim_rows": "0",
+            "claim_ids": "[]",
+            "source_urls": "[]",
+            "note": "New historical biographical/Jinji route found no eligible birth body. Prior JSCE same-body route not repeated.",
+            "final_cohort_accepted": "False",
+            "bazi_variables_computed": "0"
+          }
+        }
+      ],
+      "prior_birth_claims": [],
+      "prior_request_matches": [
+        {
+          "file": "studies/academy_fr_jp_completion_v4/source_batches/japan_b/request_log.json",
+          "record": {
+            "name_jp": "中山秀三郎",
+            "source_url": "https://www.jsce.or.jp/chair/chairman.shtml",
+            "web_ref": "turn1625view5",
+            "result": "JSCE biography supports Tokyo civil engineering/Academy1934 but gives no DOB. Modern wrapper only index; old full body checked."
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_c/holds.json",
+          "record": {
+            "member_key": "jpa-unlinked-1da6b5d6c2d71731",
+            "name_jp": "中山 秀三郎",
+            "hold_type": "bounded_new_route_park",
+            "hold_scope": "search_outcome",
+            "global_member_hold": false,
+            "note": "New historical biographical/Jinji route found no eligible birth body. Prior JSCE same-body route not repeated."
+          }
+        }
+      ]
+    },
+    {
+      "member_key": "jpa-unlinked-4c4a9edea3548a16",
+      "name_jp": "秋本 俊一",
+      "baseline_dob_status": "bounded_search_no_body_birth_claim",
+      "source_date_components_iso": "",
+      "prior_processed": [
+        {
+          "file": "studies/academy_fr_jp_completion_v3/source_batches/japan_b/processed.csv",
+          "disposition": {
+            "member_key": "jpa-unlinked-4c4a9edea3548a16",
+            "name_jp": "秋本 俊一",
+            "round_status": "searched_no_usable_full_day_body",
+            "claim_files": "",
+            "claim_rows": "0",
+            "note": "Society obituary index lead found, no full-day body verified."
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v4/source_batches/japan_d/processed.csv",
+          "disposition": {
+            "member_key": "jpa-unlinked-4c4a9edea3548a16",
+            "name_jp": "秋本 俊一",
+            "specialty_jp": "地球物理学",
+            "selected_this_round": "True",
+            "new_route_status": "bounded_new_dictionary_query_no_named_body",
+            "new_claim_count": "0",
+            "new_day_claim_count": "0",
+            "source_urls": "",
+            "note": "One bounded new-route query only; no claim from snippets."
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_a/processed.csv",
+          "disposition": {
+            "queue_index": "8",
+            "member_key": "jpa-unlinked-4c4a9edea3548a16",
+            "name_jp": "秋本 俊一",
+            "previous_dob_status": "bounded_search_no_body_birth_claim",
+            "status": "bounded_park_no_new_qualified_birth_body",
+            "claim_rows": "0",
+            "new_day_claim": "False",
+            "claim_ids": "[]",
+            "source_urls": "[]",
+            "note": "New SGEPSS kaihou184 pp26–28 read; no birth date in Akimoto section. Nearby1921-03-30 belongs to Rikitake, not Akimoto; no age-to-birth inference.",
+            "final_cohort_accepted": "False",
+            "bazi_variables_computed": "0"
+          }
+        }
+      ],
+      "prior_birth_claims": [],
+      "prior_request_matches": [
+        {
+          "file": "studies/academy_fr_jp_completion_v3/source_batches/japan_b/request_log.json",
+          "record": {
+            "member_key": "jpa-unlinked-4c4a9edea3548a16",
+            "name_jp": "秋本 俊一",
+            "activity": "name_DOB_discovery",
+            "exact_query_not_retained": true,
+            "result": "no_usable_full_day_body_claim",
+            "note": "Society obituary index lead found, no full-day body verified."
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v4/source_batches/japan_d/log.json",
+          "record": {
+            "sequence": 12,
+            "name_jp": "秋本 俊一",
+            "member_key": "jpa-unlinked-4c4a9edea3548a16",
+            "engine": "system1_search_query",
+            "query": "site:kotobank.jp \"秋本俊一\"",
+            "result": "no named article body discovered in bounded query"
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v4/source_batches/japan_d/holds.json",
+          "record": {
+            "member_key": "jpa-unlinked-4c4a9edea3548a16",
+            "name_jp": "秋本 俊一",
+            "reason": "No named attributed body discovered in the one allowed new-route search; no DOB claim made."
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_a/source_capture_log.json",
+          "record": {
+            "id": "akimoto",
+            "name": "秋本俊一",
+            "url": "https://www.sgepss.org/publications/kaihou/kaihou184.pdf",
+            "retrieved_utc": "2026-10-29T13:59:27.692232+00:00",
+            "method": "GET",
+            "status": 200,
+            "final_url": "https://www.sgepss.org/publications/kaihou/kaihou184.pdf",
+            "content_type": "application/pdf",
+            "bytes": 345566,
+            "valid_body": true,
+            "sha256": "6cfaa91a1cf92f719fb08cda0dd8e744fd010f4c9d127b598a7c809b3ecb60da",
+            "local_path": "/workspace/scratch/7e8aa4e0d4af/academy_v5_workers/japan_a/private/akimoto.pdf"
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_a/request_log.json",
+          "record": {
+            "kind": "discovery_query",
+            "sequence": 9,
+            "query": "\"秋本俊一\" 追悼 生まれ",
+            "engine": "system1_search_query",
+            "result_ref_family": "turn1661search",
+            "timestamp_note": "Issued in this v5 run before body captures; exact query-call timestamp not separately persisted.",
+            "evidence_policy": "Query terms and returned snippets are discovery only, including speculative date anchors; no claim without actual qualified body."
+          }
+        }
+      ]
+    },
+    {
+      "member_key": "jpa-unlinked-8042991ce47eac0c",
+      "name_jp": "平井 金三郎",
+      "baseline_dob_status": "bounded_search_no_body_birth_claim",
+      "source_date_components_iso": "",
+      "prior_processed": [
+        {
+          "file": "studies/academy_fr_jp_completion_v4/source_batches/japan_c/processed.csv",
+          "disposition": {
+            "member_key": "jpa-unlinked-8042991ce47eac0c",
+            "name_jp": "平井 金三郎",
+            "specialty_jp": "小児科学",
+            "baseline_dob_status": "not_body_source_processed",
+            "query": "\"平井金三郎\" 生年月日",
+            "query_engine": "system2",
+            "query_count": "1",
+            "screened": "True",
+            "outcome": "body_capture_failed",
+            "new_claim_count": "0",
+            "claim_ids": "[]",
+            "body_source_urls": "[]",
+            "note": "Nagasaki institutional commemorative PDF lead not accepted: web file-size limit, direct HTTP redirect loop. No snippet-based birth claim.",
+            "cohort_accepted": "False",
+            "bazi_variables_computed": "False"
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_a/processed.csv",
+          "disposition": {
+            "queue_index": "11",
+            "member_key": "jpa-unlinked-8042991ce47eac0c",
+            "name_jp": "平井 金三郎",
+            "previous_dob_status": "bounded_search_no_body_birth_claim",
+            "status": "bounded_park_no_new_qualified_birth_body",
+            "claim_rows": "0",
+            "new_day_claim": "False",
+            "claim_ids": "[]",
+            "source_urls": "[]",
+            "note": "Prior Nagasaki commemorative PDF capture failed; no new qualified route, no repeated old GET.",
+            "final_cohort_accepted": "False",
+            "bazi_variables_computed": "0"
+          }
+        }
+      ],
+      "prior_birth_claims": [],
+      "prior_request_matches": [
+        {
+          "file": "studies/academy_fr_jp_completion_v4/source_batches/japan_c/holds.json",
+          "record": {
+            "member_key": "jpa-unlinked-8042991ce47eac0c",
+            "name_jp": "平井 金三郎",
+            "hold_type": "body_capture_failed",
+            "hold_scope": "search_outcome",
+            "global_member_hold": false,
+            "note": "Nagasaki institutional commemorative PDF lead not accepted: web file-size limit, direct HTTP redirect loop. No snippet-based birth claim."
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v4/source_batches/japan_c/request_log.json",
+          "record": {
+            "member_key": "jpa-unlinked-8042991ce47eac0c",
+            "name_jp": "平井 金三郎",
+            "engine": "system2",
+            "query": "\"平井金三郎\" 生年月日"
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_a/request_log.json",
+          "record": {
+            "kind": "discovery_query",
+            "sequence": 12,
+            "query": "\"平井金三郎\" \"生年\"",
+            "engine": "system1_search_query",
+            "result_ref_family": "turn1661search",
+            "timestamp_note": "Issued in this v5 run before body captures; exact query-call timestamp not separately persisted.",
+            "evidence_policy": "Query terms and returned snippets are discovery only, including speculative date anchors; no claim without actual qualified body."
+          }
+        }
+      ]
+    },
+    {
+      "member_key": "jpa-unlinked-b329fc81d428f02f",
+      "name_jp": "田中 豊",
+      "baseline_dob_status": "bounded_search_no_body_birth_claim",
+      "source_date_components_iso": "",
+      "prior_processed": [
+        {
+          "file": "studies/academy_fr_jp_completion_v3/source_batches/japan_c/processed.csv",
+          "disposition": {
+            "member_key": "jpa-unlinked-b329fc81d428f02f",
+            "name_jp": "田中 豊",
+            "status": "bounded_search_no_institution_body_birth",
+            "claims": "0",
+            "source_urls": "",
+            "note": "One bounded screen; search-result-only dates not accepted."
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v4/source_batches/japan_d/processed.csv",
+          "disposition": {
+            "member_key": "jpa-unlinked-b329fc81d428f02f",
+            "name_jp": "田中 豊",
+            "specialty_jp": "土木工学",
+            "selected_this_round": "False",
+            "new_route_status": "not_selected_this_round",
+            "new_claim_count": "0",
+            "new_day_claim_count": "0",
+            "source_urls": "",
+            "note": "No v4 D query or request."
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_c/processed.csv",
+          "disposition": {
+            "queue_index": "12",
+            "member_key": "jpa-unlinked-b329fc81d428f02f",
+            "name_jp": "田中 豊",
+            "baseline_dob_status": "bounded_search_no_body_birth_claim",
+            "screened": "True",
+            "new_query_count": "1",
+            "status": "parked_no_new_eligible_birth_body",
+            "new_claim_rows": "0",
+            "claim_ids": "[]",
+            "source_urls": "[]",
+            "note": "New dictionary route returned award-history and unrelated young civil engineer, no birth body; death1964-08-27 not mistaken for birth.",
+            "final_cohort_accepted": "False",
+            "bazi_variables_computed": "0"
+          }
+        }
+      ],
+      "prior_birth_claims": [],
+      "prior_request_matches": [
+        {
+          "file": "studies/academy_fr_jp_completion_v3/source_batches/japan_b/bulk_jps_inventory.json",
+          "record": {
+            "source_name": "田中豊一",
+            "pdf_index": 83,
+            "printed_page": "136",
+            "birth_components": "1946",
+            "birth_precision": "year",
+            "death_components": null,
+            "member_key": null,
+            "matched_preserved482": false
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v3/source_batches/japan_c/request_log.json",
+          "record": {
+            "engine": "system1",
+            "q": "\"田中豊\" \"生\" \"土木\" 誕生"
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_c/holds.json",
+          "record": {
+            "member_key": "jpa-unlinked-b329fc81d428f02f",
+            "name_jp": "田中 豊",
+            "hold_type": "bounded_new_route_park",
+            "hold_scope": "search_outcome",
+            "global_member_hold": false,
+            "note": "New dictionary route returned award-history and unrelated young civil engineer, no birth body; death1964-08-27 not mistaken for birth."
+          }
+        }
+      ]
+    },
+    {
+      "member_key": "jpa-unlinked-ca95995d8a57fe70",
+      "name_jp": "長尾 正人",
+      "baseline_dob_status": "bounded_search_no_body_birth_claim",
+      "source_date_components_iso": "",
+      "prior_processed": [
+        {
+          "file": "studies/academy_fr_jp_completion_v3/source_batches/japan_a/processed.csv",
+          "disposition": {
+            "member_key": "jpa-unlinked-ca95995d8a57fe70",
+            "name_jp": "長尾 正人",
+            "status": "bounded_search_no_usable_body_birth_claim",
+            "previous_dob_status": "not_institutionally_processed",
+            "source_urls": "",
+            "note": "One bounded search normally; Kozai had two different attempted query routes. Complete attributed dictionary bodies are retained as secondary, not first-party institutional dates."
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v4/source_batches/japan_d/processed.csv",
+          "disposition": {
+            "member_key": "jpa-unlinked-ca95995d8a57fe70",
+            "name_jp": "長尾 正人",
+            "specialty_jp": "作物育種学",
+            "selected_this_round": "True",
+            "new_route_status": "bounded_new_dictionary_query_no_named_body",
+            "new_claim_count": "0",
+            "new_day_claim_count": "0",
+            "source_urls": "",
+            "note": "One bounded new-route query only; no claim from snippets."
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_b/processed.csv",
+          "disposition": {
+            "member_key": "jpa-unlinked-ca95995d8a57fe70",
+            "name_jp": "長尾 正人",
+            "baseline_dob_status": "bounded_search_no_body_birth_claim",
+            "round_status": "parked_no_qualified_new_body",
+            "new_claim_rows": "0",
+            "source_urls": "",
+            "note": "Two bounded new queries (birth with breeding,1897disambiguator) returned unrelated organic farmer1971 and no eligible body; previous dictionary route already exhausted.",
+            "final_cohort_accepted": "False",
+            "bazi_variables_computed": "0"
+          }
+        }
+      ],
+      "prior_birth_claims": [],
+      "prior_request_matches": [
+        {
+          "file": "studies/academy_fr_jp_completion_v4/source_batches/japan_d/log.json",
+          "record": {
+            "sequence": 7,
+            "name_jp": "長尾 正人",
+            "member_key": "jpa-unlinked-ca95995d8a57fe70",
+            "engine": "system2_search_query",
+            "query": "site:kotobank.jp \"長尾正人\" \"生年\"",
+            "result": "no named article body discovered in bounded query"
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v4/source_batches/japan_d/holds.json",
+          "record": {
+            "member_key": "jpa-unlinked-ca95995d8a57fe70",
+            "name_jp": "長尾 正人",
+            "reason": "No named attributed body discovered in the one allowed new-route search; no DOB claim made."
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_b/request_log.json",
+          "record": {
+            "engine": "system2",
+            "q": "\"長尾正人\" \"生まれ\" 育種"
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_b/request_log.json",
+          "record": {
+            "engine": "system1",
+            "q": "\"長尾正人\" \"1897\" 生まれ"
+          }
+        }
+      ]
+    },
+    {
+      "member_key": "jpa-unlinked-de01b2d523597cc7",
+      "name_jp": "曽田 範宗",
+      "baseline_dob_status": "bounded_search_no_body_birth_claim",
+      "source_date_components_iso": "",
+      "prior_processed": [
+        {
+          "file": "studies/academy_fr_jp_completion_v3/source_batches/japan_c/processed.csv",
+          "disposition": {
+            "member_key": "jpa-unlinked-de01b2d523597cc7",
+            "name_jp": "曽田 範宗",
+            "status": "bounded_search_no_institution_body_birth",
+            "claims": "0",
+            "source_urls": "",
+            "note": "One bounded screen; search-result-only dates not accepted."
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v4/source_batches/japan_d/processed.csv",
+          "disposition": {
+            "member_key": "jpa-unlinked-de01b2d523597cc7",
+            "name_jp": "曽田 範宗",
+            "specialty_jp": "機械工学",
+            "selected_this_round": "False",
+            "new_route_status": "not_selected_this_round",
+            "new_claim_count": "0",
+            "new_day_claim_count": "0",
+            "source_urls": "",
+            "note": "No v4 D query or request."
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_b/processed.csv",
+          "disposition": {
+            "member_key": "jpa-unlinked-de01b2d523597cc7",
+            "name_jp": "曽田 範宗",
+            "baseline_dob_status": "bounded_search_no_body_birth_claim",
+            "round_status": "parked_no_qualified_new_body",
+            "new_claim_rows": "0",
+            "source_urls": "",
+            "note": "New spelling and biography routes found unedited birthday sites and signed noninstitutional essay lead; no new qualified source accepted.",
+            "final_cohort_accepted": "False",
+            "bazi_variables_computed": "0"
+          }
+        }
+      ],
+      "prior_birth_claims": [],
+      "prior_request_matches": [
+        {
+          "file": "studies/academy_fr_jp_completion_v3/source_batches/japan_c/request_log.json",
+          "record": {
+            "engine": "system1",
+            "q": "\"曽田範宗\" 生 誕生"
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_b/request_log.json",
+          "record": {
+            "engine": "system2",
+            "q": "\"曽田範宗\" site:kotobank.jp"
+          }
+        }
+      ]
+    },
+    {
+      "member_key": "jpa:ito_hidesatoi",
+      "name_jp": "伊藤 英覺",
+      "baseline_dob_status": "bounded_search_no_body_birth_claim",
+      "source_date_components_iso": "",
+      "prior_processed": [
+        {
+          "file": "studies/academy_fr_jp_completion_v3/source_batches/japan_c/processed.csv",
+          "disposition": {
+            "member_key": "jpa:ito_hidesatoi",
+            "name_jp": "伊藤 英覺",
+            "status": "bounded_search_no_institution_body_birth",
+            "claims": "0",
+            "source_urls": "",
+            "note": "One bounded screen; search-result-only dates not accepted."
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v4/source_batches/japan_d/processed.csv",
+          "disposition": {
+            "member_key": "jpa:ito_hidesatoi",
+            "name_jp": "伊藤 英覺",
+            "specialty_jp": "機械工学・流体工学",
+            "selected_this_round": "False",
+            "new_route_status": "not_selected_this_round",
+            "new_claim_count": "0",
+            "new_day_claim_count": "0",
+            "source_urls": "",
+            "note": "No v4 D query or request."
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_b/processed.csv",
+          "disposition": {
+            "member_key": "jpa:ito_hidesatoi",
+            "name_jp": "伊藤 英覺",
+            "baseline_dob_status": "bounded_search_no_body_birth_claim",
+            "round_status": "parked_no_qualified_new_body",
+            "new_claim_rows": "0",
+            "source_urls": "",
+            "note": "New dictionary and birth-year queries found no qualified body; previous bounded search retained.",
+            "final_cohort_accepted": "False",
+            "bazi_variables_computed": "0"
+          }
+        }
+      ],
+      "prior_birth_claims": [],
+      "prior_request_matches": [
+        {
+          "file": "studies/academy_fr_jp_completion_v3/source_batches/japan_c/request_log.json",
+          "record": {
+            "engine": "system1",
+            "q": "\"伊藤英覺\" 生まれ 略歴"
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_b/request_log.json",
+          "record": {
+            "engine": "system2",
+            "q": "\"伊藤英覺\" site:kotobank.jp"
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_b/request_log.json",
+          "record": {
+            "engine": "system1",
+            "q": "\"伊藤英覺\" \"生年\""
+          }
+        }
+      ]
+    },
+    {
+      "member_key": "jpa:matsuoka_makoto",
+      "name_jp": "松岡 信",
+      "baseline_dob_status": "bounded_search_no_body_birth_claim",
+      "source_date_components_iso": "",
+      "prior_processed": [
+        {
+          "file": "studies/academy_fr_jp_completion_v4/source_batches/japan_c/processed.csv",
+          "disposition": {
+            "member_key": "jpa:matsuoka_makoto",
+            "name_jp": "松岡 信",
+            "specialty_jp": "植物育種学",
+            "baseline_dob_status": "not_body_source_processed",
+            "query": "\"松岡信\" 生年月日",
+            "query_engine": "system2",
+            "query_count": "1",
+            "screened": "True",
+            "outcome": "bounded_no_acceptable_body_candidate",
+            "new_claim_count": "0",
+            "claim_ids": "[]",
+            "body_source_urls": "[]",
+            "note": "Exact-name one-query results principally unrelated mechanical engineer 松岡信 (d2011 aged87), not the plant-breeding academy member. No false identity match.",
+            "cohort_accepted": "False",
+            "bazi_variables_computed": "False"
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_b/processed.csv",
+          "disposition": {
+            "member_key": "jpa:matsuoka_makoto",
+            "name_jp": "松岡 信",
+            "baseline_dob_status": "bounded_search_no_body_birth_claim",
+            "round_status": "parked_no_qualified_new_body",
+            "new_claim_rows": "0",
+            "source_urls": "",
+            "note": "New plant-breeding birth query again distinguishes1924mechanical-engineer namesake; no qualified finer DOB.",
+            "final_cohort_accepted": "False",
+            "bazi_variables_computed": "0"
+          }
+        }
+      ],
+      "prior_birth_claims": [],
+      "prior_request_matches": [
+        {
+          "file": "studies/academy_fr_jp_completion_v4/source_batches/japan_c/holds.json",
+          "record": {
+            "member_key": "jpa:matsuoka_makoto",
+            "name_jp": "松岡 信",
+            "hold_type": "bounded_no_acceptable_body_candidate",
+            "hold_scope": "search_outcome",
+            "global_member_hold": false,
+            "note": "Exact-name one-query results principally unrelated mechanical engineer 松岡信 (d2011 aged87), not the plant-breeding academy member. No false identity match."
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v4/source_batches/japan_c/request_log.json",
+          "record": {
+            "member_key": "jpa:matsuoka_makoto",
+            "name_jp": "松岡 信",
+            "engine": "system2",
+            "query": "\"松岡信\" 生年月日"
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_b/request_log.json",
+          "record": {
+            "engine": "system2",
+            "q": "\"松岡信\" 植物 \"生まれ\""
+          }
+        }
+      ]
+    },
+    {
+      "member_key": "jpa:otsuka_masanori",
+      "name_jp": "大塚 正徳",
+      "baseline_dob_status": "bounded_search_no_body_birth_claim",
+      "source_date_components_iso": "",
+      "prior_processed": [
+        {
+          "file": "studies/academy_fr_jp_completion_v4/source_batches/japan_a/processed.csv",
+          "disposition": {
+            "queue_index": "35",
+            "member_key": "jpa:otsuka_masanori",
+            "name_jp": "大塚 正徳",
+            "previous_dob_status": "not_body_source_processed",
+            "status": "bounded_search_no_qualified_body_birth_claim",
+            "body_claim_rows": "0",
+            "has_institutional_day_claim": "False",
+            "has_edited_reference_day_claim": "False",
+            "has_other_secondary_day_claim": "False",
+            "hold_type": "",
+            "claim_ids": "[]",
+            "source_urls": "[]",
+            "bounded_note": "One targeted query; best qualified candidate body read where available. No padding, no unbounded rescue.",
+            "final_cohort_accepted": "False",
+            "bazi_variables_computed": "0"
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_c/processed.csv",
+          "disposition": {
+            "queue_index": "24",
+            "member_key": "jpa:otsuka_masanori",
+            "name_jp": "大塚 正徳",
+            "baseline_dob_status": "bounded_search_no_body_birth_claim",
+            "screened": "True",
+            "new_query_count": "2",
+            "status": "parked_no_new_eligible_birth_body",
+            "new_claim_rows": "0",
+            "claim_ids": "[]",
+            "source_urls": "[]",
+            "note": "English route found Prabook birthday lead but no named edited-dictionary/official body. Japanese source gave only academic record; parked.",
+            "final_cohort_accepted": "False",
+            "bazi_variables_computed": "0"
+          }
+        }
+      ],
+      "prior_birth_claims": [],
+      "prior_request_matches": [
+        {
+          "file": "studies/academy_fr_jp_completion_v4/source_batches/japan_a/request_log.json",
+          "record": {
+            "queue_index": 35,
+            "member_key": "jpa:otsuka_masanori",
+            "query": "\"大塚正徳\" \"生年月日\"",
+            "engine": "system1_search_query",
+            "purpose": "bounded DOB/identity source discovery",
+            "search_performed": true,
+            "result_claim_body_verified": false,
+            "timestamp_note": "Query was issued in this run before source captures; exact query timestamp not separately persisted."
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_c/holds.json",
+          "record": {
+            "member_key": "jpa:otsuka_masanori",
+            "name_jp": "大塚 正徳",
+            "hold_type": "bounded_new_route_park",
+            "hold_scope": "search_outcome",
+            "global_member_hold": false,
+            "note": "English route found Prabook birthday lead but no named edited-dictionary/official body. Japanese source gave only academic record; parked."
+          }
+        }
+      ]
+    },
+    {
+      "member_key": "jpa:tatsumi_kazuyuki",
+      "name_jp": "巽 和行",
+      "baseline_dob_status": "bounded_search_no_body_birth_claim",
+      "source_date_components_iso": "",
+      "prior_processed": [
+        {
+          "file": "studies/academy_fr_jp_completion_v3/source_batches/japan_b/processed.csv",
+          "disposition": {
+            "member_key": "jpa:tatsumi_kazuyuki",
+            "name_jp": "巽 和行",
+            "round_status": "searched_no_usable_full_day_body",
+            "claim_files": "",
+            "claim_rows": "0",
+            "note": "Academy official query returned year1949; Wikidata date not accepted."
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v4/source_batches/japan_d/processed.csv",
+          "disposition": {
+            "member_key": "jpa:tatsumi_kazuyuki",
+            "name_jp": "巽 和行",
+            "specialty_jp": "無機化学",
+            "selected_this_round": "False",
+            "new_route_status": "not_selected_this_round",
+            "new_claim_count": "0",
+            "new_day_claim_count": "0",
+            "source_urls": "",
+            "note": "No v4 D query or request."
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_b/processed.csv",
+          "disposition": {
+            "member_key": "jpa:tatsumi_kazuyuki",
+            "name_jp": "巽 和行",
+            "baseline_dob_status": "bounded_search_no_body_birth_claim",
+            "round_status": "parked_no_qualified_new_body",
+            "new_claim_rows": "0",
+            "source_urls": "",
+            "note": "New dictionary and birth-year queries found Academy2013year1949 and unedited date; no finer DOB accepted.",
+            "final_cohort_accepted": "False",
+            "bazi_variables_computed": "0"
+          }
+        }
+      ],
+      "prior_birth_claims": [],
+      "prior_request_matches": [
+        {
+          "file": "studies/academy_fr_jp_completion_v3/source_batches/japan_b/request_log.json",
+          "record": {
+            "member_key": "jpa:tatsumi_kazuyuki",
+            "name_jp": "巽 和行",
+            "activity": "name_DOB_discovery",
+            "exact_query_not_retained": true,
+            "result": "no_usable_full_day_body_claim",
+            "note": "Academy official query returned year1949; Wikidata date not accepted."
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_b/request_log.json",
+          "record": {
+            "engine": "system2",
+            "q": "\"巽和行\" site:kotobank.jp"
+          }
+        },
+        {
+          "file": "studies/academy_fr_jp_completion_v5/source_batches/japan_b/request_log.json",
+          "record": {
+            "engine": "system1",
+            "q": "\"巽和行\" \"生年\""
+          }
+        }
+      ]
+    }
+  ]
+}

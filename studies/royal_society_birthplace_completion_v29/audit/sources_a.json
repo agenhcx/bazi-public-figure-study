@@ -1,0 +1,475 @@
+{
+  "schema": "UK_v29_sources_a_v1",
+  "worker": "/root/v26_sources_a continuedasassignedv29sourceA",
+  "written_utc": "2026-11-06T11:38:26.102133+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA4208",
+    "RS_PAST_NA4384",
+    "RS_PAST_NA448",
+    "RS_PAST_NA4535",
+    "RS_PAST_NA4681",
+    "RS_PAST_NA504"
+  ],
+  "intent_file": "v29_a_intent.json",
+  "counts": {
+    "discovery_queries": 12,
+    "web_open_or_click_navigation_attempts": 8,
+    "screenshots": 1,
+    "navigation_attempts_including_screenshot": 9,
+    "parsed_find_operations": 4,
+    "parsed_find_failures": 1,
+    "raw_HTTP_or_PDF_GETs": 0,
+    "body_verified_birthplace_candidates": 3,
+    "holds": 3,
+    "new_active_DOB_conflicts": 0,
+    "unused_navigation_budget_including_screenshot": 5
+  },
+  "budgets": {
+    "discovery_queries": 12,
+    "navigation_attempts": 14
+  },
+  "candidates": [
+    {
+      "source_grade_role": "person_birthplace_support_only",
+      "no_master_change": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA504",
+      "native": {
+        "record_id": "RS_PAST_NA504",
+        "authority_name": "Pickavance; Thomas Gerald (1915 - 1991)",
+        "native_dob": "1915-10-19",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "f72414bb062fcf786af4157cc2de3d1caa5d5d534b207db224bbfd784bdf972d"
+      },
+      "status": "candidate_original_signedscientificmemoir_parsed_birthrelation_bom_glyph_not_visually_verified",
+      "raw_birthplace": "St Helens in Lancashire",
+      "source_url": "https://www.chilton-computing.org.uk/harwell/pdfs/holt-1997-thomas-gerald-pickavance-19-october-1915-12-november-1991.pdf",
+      "source_title": "Thomas Gerald Pickavance, 19 October 1915—12 November 1991",
+      "source_author": "J. R. Holt, F.R.S. (initials not expanded)",
+      "source_kind": "original_signed_RoyalSociety_scientific_biographicalmemoir_on_observed_publichistoricalcarrier",
+      "source_grade_proposal": "S2",
+      "source_grade_basis": "Originalscientificmemoirwithactualfullsubject/exactDOB/lifespan/signedJ.R.HoltF.R.S./detailedparticleacceleratorcareer. Carrierisnotindependentsourceorgradebasis. Parentmustreviewparsedbirthverbambiguity; noglyphverificationclaim.",
+      "source_quote": "at St Helens in Lancashire",
+      "source_quote_word_count": 5,
+      "source_locator": "turn9800198view0:L0–6@P0/P2 fullThomasGeraldPickavance/lifespanexact1915-10-19–1991-11-12/FRS1976/J.R.HoltF.R.S.;L18–19@P2 parsedwasbom/exact19October1915/atStHelensinLancashire;L7–15@P2 accelerator/Rutherford/SRC/CERNcareer;L37@P2 copyright1993. Cachedfindturn7901923view0 showsbylineL6.",
+      "source_body_ref": "turn9800198view0",
+      "source_birthdate": "1915-10-19",
+      "source_birthdate_precision": "exact_day_in_originalmemoir_header_and_parsed_birthnarrative",
+      "source_death_date": "1991-11-12",
+      "source_DOB_matches_native": true,
+      "observed_source_full_name": "Thomas Gerald Pickavance",
+      "source_lifespan_native_compatibility": "Allnativefullnamecomponentsdirectlyinmemoirheader/subjectlead; exact1915-10-19and1991lifespancompatible. In-bodysubjectcalledGerald/Gerrybutfullsubjectbindingcomesfromsameoriginalwork,notunobservednicknameexpansion.",
+      "identity_review": [
+        "FullnativeThomasGeraldPickavanceoccursactualheaderandopeningparagraph; nofirstname/middles/initialexpansionneeded.",
+        "ExactnativeDOB1915-10-19statedheaderanddateportionofearlylifesentence; death1991-11-12compatible.",
+        "Distinctivecoherentfingerprint: physicistparticleacceleratordesigner; RutherfordLaboratoryDirector; SRCNuclearPhysicsDirector; supportCERN300GeVprotonsynchrotron; FRS1976. Sourceanchorsnotclaimedallindependentlypresentinnativerow."
+      ],
+      "reviewed_hemisphere_proposal": "north_pending_existing_wholecounty_rule",
+      "geographic_basis": "Lancashireexplicitlybirth-linkedinparsedearlylifesentence,awhollynorthernnamedcounty. Do notinfercountryfromStHelensfamiliarcity/institution. Parentappliesexistingwhole-regionrule; nativecountry/coordsunchanged.",
+      "publication_date": null,
+      "copyright_year_observed": "1993",
+      "publication_metadata_limit": "Actualcopyright1993printedP2; filenamecontains1997anddownloadstamp2024-01-10,neitherusedaspublicationdate. Formalpublicationday/yearnotindependentlybibliographicallyverified.",
+      "caveats": [
+        "Parserliteralbirthverbisbom; no silentliteralbornquote/correction. RetainedquoteonlyactualatStHelensinLancashirewords.",
+        "ScreenshotP2returnedMCPtextmarkeronly(refturn2398891view0),noImageContentorpixelsexposed,sonovisualglyphverificationclaim. Thisisnotscreenshotcreationfailureverdict.",
+        "SeparateMarch1992BulletinPDFopenreturned8pages/TotalLines0,notactualbornbodyproof; onlysearchprojectionhadLancashireOct1915,notadoptedascorroboration.",
+        "Carrierfilenameyearanddownloadstampnotoriginalpublicationmetadata. No rawbytes/HTTP200/versionchangeclaim."
+      ],
+      "supporting_original_observations": [
+        {
+          "url": "https://www.chilton-computing.org.uk/ChiltonCatalog/rutherford-laboratory-bulletin/19920300.rutherford-laboratory-bulletin.pdf",
+          "source_ref": "turn3668199view0",
+          "body_text_acquired": false,
+          "observed_representation": "8pagePDFmetadatawithTotalLines0",
+          "unverified_search_projection_ref": "turn9111173search38",
+          "birthplace_body_confirmation_claimed": false
+        }
+      ],
+      "retrieval_representation": "parsed original21pagePDFtext; screenshotmetadata/textmarkeronly"
+    },
+    {
+      "source_grade_role": "person_birthplace_support_only",
+      "no_master_change": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA4208",
+      "native": {
+        "record_id": "RS_PAST_NA4208",
+        "authority_name": "Grosveld; Franklin Gerardus (1948 - 2026); molecular biologist",
+        "native_dob": "1948-08-18",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "978c2aa7d76d8d7a0970e5d64dffad80cfae1f99b47b7dd662e33dd026b07099"
+      },
+      "status": "candidate_original_uncredited_compiledprofile_explicit_first_birthplace_pending_quality_review",
+      "raw_birthplace": "Willemstad, Netherlands Antilles",
+      "source_url": "https://prabook.com/web/frank.grosveld/609766",
+      "source_title": "Frank Grosveld — World Biographical Encyclopedia",
+      "source_author": null,
+      "source_kind": "original_uncredited_Prabook_compiled_biographicalprofile",
+      "source_grade_proposal": "S3",
+      "source_grade_basis": "ActualuncreditedcompiledprofilebodycontainsfullnativeFranklinGerardusGrosveldplusquotedFrank/exact1948-08-18/directWillemstadNetherlandsAntilles/coherentmolecularbiologycareer. ConservativeS3only; notMarquisWhosWhoprimarycitationverification/civilregistry/experteditedS2/hostS1. Badinstitution/acronymexpansionsretainedasqualitylimits.",
+      "source_quote": "was born on August 18, 1948 in Willemstad, Netherlands Antilles",
+      "source_quote_word_count": 10,
+      "source_locator": "turn9800198view1:L111 fullFranklinGerarduswithquotedFrank;L115 directborn/date/place;L117–126 molecularbiology/PhD/4C/awards;L129MarquisWhosWhoclaimnotacquiredindependently;L163–167 Bornmetadata. Cachedfindturn7901923view2:L111/115/120–127; differentlinecounts191vs197notbyte/versionchangeproof.",
+      "source_body_ref": "turn9800198view1",
+      "source_birthdate": "1948-08-18",
+      "source_birthdate_precision": "exact_day_in_original_compiledprofile_born_clause",
+      "source_DOB_matches_native": true,
+      "observed_source_full_name": "Franklin Gerardus \"Frank\" Grosveld",
+      "source_lifespan_native_compatibility": "Exactnativebirthday/allpersonalnamecomponentsinactualsameprofile. Sourcehasnoactualdeathdate; itdoesnotassertacompetingsourcedeathyear. Nativeauthority1948–2026unchanged; noproofof2026deathclaimedfromthissource.",
+      "identity_review": [
+        "AllfullnativeFranklinGerardusGrosveldcomponentsdirectlyoccurinprofilelead. ThetextitselfquotesFrankbetweenGerardusandGrosveld,sobornparagraphsubjectbindingisexplicitwithinthesamework; notexpansionofunseenfirstname/middlesorchangeofnativeidentity.",
+        "Exact1948-08-18matchesnative.",
+        "Coherentmolecularbiologyfingerprint: Erasmuscellbiology; transcription/erythroiddifferentiation; McGillPhD; CharlesWeissmann/RichardFlavellpostdocs; NIMRMillHill; LouisJeantet1991/Spinoza1995. Thesearesourceobservations,notallindependentlycorroboratednativefields."
+      ],
+      "reviewed_hemisphere_proposal": "north_pending_existing_historical_wholeregion_rule",
+      "geographic_basis": "NetherlandsAntillesexplicitlybirth-linkedashistoricalcountry/territoryqualifier. Parentmustapplyalreadypermittedwholeregionrule; notinferfromDutch nationality/currentNetherlands/Willemstadcityalone. No personalcoordinates/nativecountrychange.",
+      "publication_date": null,
+      "publication_date_precision": "unknown;version/footer2021notpublicationdate",
+      "caveats": [
+        "ProfilehasliteralFederalReserveSystemandErasmusMilitaryCrossbadexpansions; no silentcorrectionorupgrade. ThesequalitydefectsrequireparentreviewofS3admission.",
+        "MarquisWhosWholistclaimdoesnotmeanthatprimaryworkreadorindependentprovenanceverified.",
+        "OriginalprofilebirthclauseusesFrank; fullnativepersonnameandquotedFrankexplicitlyobservedlead,notinferredalias.",
+        "No claimindependentbirthprooforverifieddeathyear; no nativeendpointrepair.",
+        "No rawHTTPbytes/hash/time/status acquired; sourcebodytextrepresentationonly."
+      ],
+      "retrieval_representation": "originalcompiledHTMLprofileparsedtext"
+    },
+    {
+      "source_grade_role": "person_birthplace_support_only",
+      "no_master_change": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA4384",
+      "native": {
+        "record_id": "RS_PAST_NA4384",
+        "authority_name": "Jameson; Guy Antony (1934 - 2026); aerospace engineer",
+        "native_dob": "1934-11-20",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "d320f90169e665af6428e3d9695c5603b5774453c445d59c0e4282face825fb7"
+      },
+      "status": "candidate_original_bylined_professionalprofile_conservative_S3_explicit_first_birthplace",
+      "raw_birthplace": "Gillingham, Kent",
+      "source_url": "https://cfdflow.com/article/professor-antony-jameson",
+      "source_title": "Professor Antony Jameson",
+      "source_author": "Lamine Kalla",
+      "source_kind": "original_bylined_CFDFlow_professionalprofile_with_compiled_encyclopedia_linked_biographicalparagraph",
+      "source_grade_proposal": "S3",
+      "source_grade_basis": "Originalactuallybylined2024profileexplicitlystatesfullGuyAntonyJameson/exactDOB/GillinghamKent/coherentCFDcareer. Authorrelevantscientificcredentials/personalcolleaguerolewerenotacquired; namedbylinealoneisnotS2. BirthparagraphcontainsWikipediaoutlinksandmayrelyoncompiledmaterials; noinformationalindependenceclaimed.",
+      "source_quote": "born 20 November 1934, Gillingham, Kent",
+      "source_quote_word_count": 6,
+      "source_locator": "turn9800198view2:L16 bylineLamineKalla/publication20January2024;L39 fullGuyAntonyJameson/directbornparentheticalexactdate/GillinghamKent;L21/23 Cambridge/Grumman;L40–45 CFD/Euler/NavierStokes/FLO/SYN/NAE;L67 FRS1995. Cachedfindturn7901923view3sameL39.",
+      "source_body_ref": "turn9800198view2",
+      "source_birthdate": "1934-11-20",
+      "source_birthdate_precision": "exact_day_in_original_bylinedprofile_born_parenthesis",
+      "source_DOB_matches_native": true,
+      "observed_source_full_name": "Guy Antony Jameson",
+      "source_lifespan_native_compatibility": "AllnativeGuyAntonyJamesoncomponents/exact1934-11-20observed. Originalprofilepublished2024beforethenative2026endpoint; noactualcontrarydeathyearobserved. Native1934–2026remainsunchanged; not2026deathverificationfromthiswork.",
+      "identity_review": [
+        "FullnativeGuyAntonyJamesonobservedatactualbornparenthesis; noomittedfirst/initialexpansionrequired.",
+        "Exact1934-11-20matchesnative.",
+        "CoherentdistinctiveCFDfingerprint: Cambridgeengineering/PhDmagnetohydrodynamics; Grumman; Euler/NavierStokesschemes; FLO/SYNcodes; Princeton/Stanford/TexasAM; NAE1997/FRS1995. Thesearesourceanchorsnotallindependentlynativeverified."
+      ],
+      "reviewed_hemisphere_proposal": "north_pending_existing_wholecounty_rule",
+      "geographic_basis": "Kentexplicitlybirth-linkedinactualfullsubjectparenthesis,a namedwhollynortherncounty. Do notinferfromfamiliarGillingham/workplaces/nationality; no country/coordsfilled.",
+      "publication_date": "2024-01-20",
+      "publication_date_precision": "exact_date_in_original_byline_metadata",
+      "caveats": [
+        "Namedauthornotautomaticallyverifiedexpert; conservativeS3proposal.",
+        "BiographicalparagraphoutlinksWikipedia, notindependentoriginalarchiveorindependentbirthcorroboration.",
+        "Currentprofessorrolesvarybetweensectionsofthecompiledprofile; notusedtoinferdeath/lifespanrepair/birthplace.",
+        "SourceparenthesisliterallygivesGillinghamKent; noexpansiontoEngland/UnitedKingdomfromunopenedEAE/Wikipediaprojections.",
+        "No rawHTTPbytes/status/hash/timeacquired."
+      ],
+      "retrieval_representation": "parsed originalbylinedHTMLprofile"
+    }
+  ],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA448",
+      "native": {
+        "record_id": "RS_PAST_NA448",
+        "authority_name": "Marsham; Thomas Nelson (1923 - 1989)",
+        "native_dob": "1923-11-10",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "d388b31ee2c3906a5c0d75c4587d0a76b5b89f5085ba9221569afeaaa7b1b964"
+      },
+      "status": "hold_originalmemoir_access_gap",
+      "hold_type": "no_acquired_original_bornplace_body",
+      "reason": "DiscoverybibliographicprojectionsidentifyfullThomasNelsonMarsham/exact10November1923–12October1989/authoredL.E.J.Roberts1992memoirDOI10.1098/rsbm.1992.0012. OriginalDOItoolinaccessible; stopped; nooriginalbiographicalbornplacebodyacquired. Titles/metadata/WhosWhostyleastrologydirectorynotusedasbirthplaceevidence.",
+      "source_url": "https://doi.org/10.1098/rsbm.1992.0012",
+      "source_ref": "turn9800198view3",
+      "held_raw_birthplace": null,
+      "source_grade_adopted": null,
+      "native_unchanged": true
+    },
+    {
+      "record_id": "RS_PAST_NA4535",
+      "native": {
+        "record_id": "RS_PAST_NA4535",
+        "authority_name": "Morley; Leslie Sydney Dennis (1924 - 2011)",
+        "native_dob": "1924-05-23",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "0cff93b0185e1cf0b034996c4c6f84119833db404b98c28af63b9ad549a6bedd"
+      },
+      "status": "hold_originalmemoir_access_gap",
+      "hold_type": "no_acquired_original_bornplace_body",
+      "reason": "DiscoverybibliographicprojectionsidentifyfullLeslieSydneyDennisMorley/exact23May1924–16June2011/A.J.Morris2016memoirDOI10.1098/rsbm.2015.0029. OriginalDOItoolinaccessible; stopped. Noactualbiographicalbornplacebody; Brunel/Londonprofessionalaffiliationsnotbirthplace.",
+      "source_url": "https://doi.org/10.1098/rsbm.2015.0029",
+      "source_ref": "turn9800198view4",
+      "held_raw_birthplace": null,
+      "source_grade_adopted": null,
+      "native_unchanged": true
+    },
+    {
+      "record_id": "RS_PAST_NA4681",
+      "native": {
+        "record_id": "RS_PAST_NA4681",
+        "authority_name": "Rainger; Peter (1924-2021); engineer",
+        "native_dob": "1924-05-17",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "98170fa81f2fadbc1d97218ee64041e84b76ecb805bfa8761da69b8420b5d1ac"
+      },
+      "status": "hold_no_explicit_birthplace_or_DOB_in_acquired_careerprofile",
+      "hold_type": "birthplace_and_datebinding_gap",
+      "reason": "RoyalSocietyoriginalprofileopen403stopped. SeparateoriginalBBCSpring1984retirementprofilefirstopenacquiredPeterRaingername/engineeringcareer/retired17Maybutnoactualbirthplace/DOBobserved. Do notderive17May1924fromretirementdate/assumedageoruseBBC/Londonworkasbirthplace. Latercachedfindoperationunexpectedlyreturned403; priorfirst-openobservationretainedasitsownrole,noretry/versionchangeclaim.",
+      "source_url": "https://www.worldradiohistory.com/UK/BBC/BBC-Eng-Inf/BBC-Eng-Inf-16.pdf",
+      "source_ref": "turn3668199view1",
+      "source_locator": "L0–6@P0Spring1984/PeterRaingerCBEFRSFEng/DDEretired17May;L21–40@P0 BBCjoined/career. Laterfindturn7901923view1failed403anddidnotyieldnewbody.",
+      "observed_source_full_name": "Peter Rainger",
+      "source_birthdate": null,
+      "held_raw_birthplace": null,
+      "source_grade_adopted": null,
+      "native_unchanged": true
+    }
+  ],
+  "new_active_DOB_conflicts": [],
+  "query_ledger": [
+    {
+      "query_index": 1,
+      "engine": "system2",
+      "query": "\"Franklin Gerardus Grosveld\" born",
+      "response_ref_prefix": "turn1405699search",
+      "intent_note": "Initialsixwordingsprewritten; adaptive7–12generalpurposeprewrittenbutexactwordingschosenafterobservedinitialresults. ExactrequestUTCunknown/notbackdated."
+    },
+    {
+      "query_index": 2,
+      "engine": "system2",
+      "query": "\"Guy Antony Jameson\" born",
+      "response_ref_prefix": "turn1405699search",
+      "intent_note": "Initialsixwordingsprewritten; adaptive7–12generalpurposeprewrittenbutexactwordingschosenafterobservedinitialresults. ExactrequestUTCunknown/notbackdated."
+    },
+    {
+      "query_index": 3,
+      "engine": "system2",
+      "query": "\"Thomas Nelson Marsham\" born",
+      "response_ref_prefix": "turn1405699search",
+      "intent_note": "Initialsixwordingsprewritten; adaptive7–12generalpurposeprewrittenbutexactwordingschosenafterobservedinitialresults. ExactrequestUTCunknown/notbackdated."
+    },
+    {
+      "query_index": 4,
+      "engine": "system2",
+      "query": "\"Leslie Sydney Dennis Morley\" born",
+      "response_ref_prefix": "turn9111173search",
+      "intent_note": "Initialsixwordingsprewritten; adaptive7–12generalpurposeprewrittenbutexactwordingschosenafterobservedinitialresults. ExactrequestUTCunknown/notbackdated."
+    },
+    {
+      "query_index": 5,
+      "engine": "system2",
+      "query": "\"Peter Rainger\" born",
+      "response_ref_prefix": "turn9111173search",
+      "intent_note": "Initialsixwordingsprewritten; adaptive7–12generalpurposeprewrittenbutexactwordingschosenafterobservedinitialresults. ExactrequestUTCunknown/notbackdated."
+    },
+    {
+      "query_index": 6,
+      "engine": "system2",
+      "query": "\"Thomas Gerald Pickavance\" born",
+      "response_ref_prefix": "turn9111173search",
+      "intent_note": "Initialsixwordingsprewritten; adaptive7–12generalpurposeprewrittenbutexactwordingschosenafterobservedinitialresults. ExactrequestUTCunknown/notbackdated."
+    },
+    {
+      "query_index": 7,
+      "engine": "system1",
+      "query": "\"Franklin Gerardus Grosveld\" \"born\" \"Willemstad\"",
+      "response_ref_prefix": "turn6290227search",
+      "intent_note": "Initialsixwordingsprewritten; adaptive7–12generalpurposeprewrittenbutexactwordingschosenafterobservedinitialresults. ExactrequestUTCunknown/notbackdated."
+    },
+    {
+      "query_index": 8,
+      "engine": "system1",
+      "query": "\"Guy Antony Jameson\" \"born\" biography",
+      "response_ref_prefix": "turn6290227search",
+      "intent_note": "Initialsixwordingsprewritten; adaptive7–12generalpurposeprewrittenbutexactwordingschosenafterobservedinitialresults. ExactrequestUTCunknown/notbackdated."
+    },
+    {
+      "query_index": 9,
+      "engine": "system1",
+      "query": "\"Thomas Nelson Marsham\" \"born\" \"1923\"",
+      "response_ref_prefix": "turn6290227search",
+      "intent_note": "Initialsixwordingsprewritten; adaptive7–12generalpurposeprewrittenbutexactwordingschosenafterobservedinitialresults. ExactrequestUTCunknown/notbackdated."
+    },
+    {
+      "query_index": 10,
+      "engine": "system1",
+      "query": "\"Leslie Sydney Dennis Morley\" \"born\" \"1924\"",
+      "response_ref_prefix": "turn9793117search",
+      "intent_note": "Initialsixwordingsprewritten; adaptive7–12generalpurposeprewrittenbutexactwordingschosenafterobservedinitialresults. ExactrequestUTCunknown/notbackdated."
+    },
+    {
+      "query_index": 11,
+      "engine": "system1",
+      "query": "\"Peter Rainger\" \"1924\" born",
+      "response_ref_prefix": "turn9793117search",
+      "intent_note": "Initialsixwordingsprewritten; adaptive7–12generalpurposeprewrittenbutexactwordingschosenafterobservedinitialresults. ExactrequestUTCunknown/notbackdated."
+    },
+    {
+      "query_index": 12,
+      "engine": "system1",
+      "query": "\"Thomas Gerald Pickavance\" born memoir",
+      "response_ref_prefix": "turn9793117search",
+      "intent_note": "Initialsixwordingsprewritten; adaptive7–12generalpurposeprewrittenbutexactwordingschosenafterobservedinitialresults. ExactrequestUTCunknown/notbackdated."
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "attempt": 1,
+      "subject": "RS_PAST_NA504",
+      "url": "https://www.chilton-computing.org.uk/harwell/pdfs/holt-1997-thomas-gerald-pickavance-19-october-1915-12-november-1991.pdf",
+      "ref": "turn9800198view0",
+      "outcome": "Original21pagePDFparsedtextacquired; birthverbparsedbomnotvisuallyconfirmed"
+    },
+    {
+      "attempt": 2,
+      "subject": "RS_PAST_NA4208",
+      "url": "https://prabook.com/web/frank.grosveld/609766",
+      "ref": "turn9800198view1",
+      "outcome": "Originaluncreditedcompiledprofilebodyacquired"
+    },
+    {
+      "attempt": 3,
+      "subject": "RS_PAST_NA4384",
+      "url": "https://cfdflow.com/article/professor-antony-jameson",
+      "ref": "turn9800198view2",
+      "outcome": "Originalbylinedprofessionalprofilebodyacquired"
+    },
+    {
+      "attempt": 4,
+      "subject": "RS_PAST_NA448",
+      "url": "https://doi.org/10.1098/rsbm.1992.0012",
+      "ref": "turn9800198view3",
+      "outcome": "URLisnotaccessibleviathistool; stoppednoretry/variant"
+    },
+    {
+      "attempt": 5,
+      "subject": "RS_PAST_NA4535",
+      "url": "https://doi.org/10.1098/rsbm.2015.0029",
+      "ref": "turn9800198view4",
+      "outcome": "URLisnotaccessibleviathistool; stoppednoretry/variant"
+    },
+    {
+      "attempt": 6,
+      "subject": "RS_PAST_NA4681",
+      "url": "https://royalsociety.org/people/peter-rainger-12137/",
+      "ref": "turn9800198view5",
+      "outcome": "Failedtofetch:(403)Forbidden; stoppednoretry/variant"
+    },
+    {
+      "attempt": 7,
+      "subject": "RS_PAST_NA504",
+      "url": "https://www.chilton-computing.org.uk/ChiltonCatalog/rutherford-laboratory-bulletin/19920300.rutherford-laboratory-bulletin.pdf",
+      "ref": "turn3668199view0",
+      "outcome": "OriginalPDFmetadata8pagesacquired,butTotalLines0; nooriginalbornbodytextorpixelsobserved"
+    },
+    {
+      "attempt": 8,
+      "subject": "RS_PAST_NA4681",
+      "url": "https://www.worldradiohistory.com/UK/BBC/BBC-Eng-Inf/BBC-Eng-Inf-16.pdf",
+      "ref": "turn3668199view1",
+      "outcome": "Original8pageSpring1984BBCengineeringjournalparsedtextacquired,subjectretirement/careerbutnobirthplaceorDOBobserved"
+    }
+  ],
+  "screenshot_ledger": [
+    {
+      "subject": "RS_PAST_NA504",
+      "input_ref": "turn9800198view0",
+      "page_index": 2,
+      "result_ref": "turn2398891view0",
+      "result_representation": "MCPtextmarkerImageDisplayedonly; noImageContent/pixelsexposedtothisworker",
+      "visual_glyph_verification_claimed": false,
+      "image_file_retained_or_distributed": false
+    }
+  ],
+  "parsed_find_ledger": [
+    {
+      "input_ref": "turn9800198view0",
+      "pattern": "B y",
+      "result_ref": "turn7901923view0",
+      "outcome": "OriginalparsedbylineJ.R.HoltFRS/header/exactDOB/placeclauseavailable; noimages"
+    },
+    {
+      "input_ref": "turn3668199view1",
+      "pattern": "Peter Rainger joined",
+      "result_ref": "turn7901923view1",
+      "outcome": "Unexpected(403)Forbiddenonfindafterfirstoriginalbodyopen; stoppednoretry; first-openrolepreserved"
+    },
+    {
+      "input_ref": "turn9800198view1",
+      "pattern": "Franklin Gerardus",
+      "result_ref": "turn7901923view2",
+      "outcome": "Originalcompiledfullnativelead/exactbornclauseavailable; linecount191vs197notrawversionchangeproof"
+    },
+    {
+      "input_ref": "turn9800198view2",
+      "pattern": "Guy Antony Jameson",
+      "result_ref": "turn7901923view3",
+      "outcome": "Originalbylinedprofilefullnativebornparenthesisavailable"
+    }
+  ],
+  "quote_ledger": [
+    {
+      "work": "https://www.chilton-computing.org.uk/harwell/pdfs/holt-1997-thomas-gerald-pickavance-19-october-1915-12-november-1991.pdf",
+      "quote": "at St Helens in Lancashire",
+      "words": 5
+    },
+    {
+      "work": "https://prabook.com/web/frank.grosveld/609766",
+      "quote": "was born on August 18, 1948 in Willemstad, Netherlands Antilles",
+      "words": 10
+    },
+    {
+      "work": "https://cfdflow.com/article/professor-antony-jameson",
+      "quote": "born 20 November 1934, Gillingham, Kent",
+      "words": 6
+    }
+  ],
+  "protocol_deviations": [],
+  "limits": [
+    "12queries8opens1screenshot4finds; onefindreturned403afterinitialsuccess. Countsincludeactualfailedattempts,notjustsuccessfulretrievals.",
+    "Pickavanceparentmustreviewparsedbomrelationshipwithsafequoteexcludingglyph; attemptedshotdidnotexposepixels. No screenshotfailure/verbatimbornglyphverificationclaim.",
+    "TwoS3candidatequalitylimits(Grosveldbadexpansions/uncreditedcompilation;Jamesonunverifiedauthorrole/encyclopedialinks)explicitsubmittedforparentdecision,notclaimedS2orcivilbirthproof.",
+    "Grosveld/Jamesonoriginalprofilesdonotverifythenative2026deathendpoints; noobservedactualcontrarydeathdateandnonativeendpointrepair.",
+    "Nineinheritedissue/methodfilesuntouched. No nativeDOB/cohort/country/coords/eligibility/code/main/Gitchanges.",
+    "No fullsourceHTML/PDF/images/searchprojectioncachesretainedordistributed; minimalstructuredfacts/shortquotes/locatorsonly.",
+    "Wholecounty/historicalcountryNorthproposalsrequireexistinggeorules; nofamiliarcityinference.",
+    "Completingthisassignedsixfirstpassdoesnotmeanallremainingblankplacecasesresolvedorwholecohortfinished."
+  ],
+  "no_master_or_native_changes": true,
+  "unopened_distinct_original_leads": [
+    {
+      "record_id": "RS_PAST_NA4384",
+      "url": "https://eae.edu.eu/members/AerospaceandTransportationEngineering/AntonyJameson.html",
+      "ref": "turn1405699search0",
+      "limit": "Searchprojectiononly; issuerinstitutionidentitynotverified; neitheroriginalbodyreadnorusedforcountryqualifier/independence/gradeupgrade."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "written_utc": "2026-11-07T01:15:25.530324+00:00",
+  "initial_failed_report": "v38_source_qa_initial_final_failed_report.json",
+  "initial_failed_report_sha256": "b7e48cf5cc3f454a112e706bd087c8c365378d4f79723661c7c496b4068791ae",
+  "initial_checks_passed": 184,
+  "initial_failed_check": "RS_PAST_NA4568_direct_region_one_actual_person_born_edge",
+  "issue": "Scratch QA searched edge-property text for literal birth only, but actual direct actual-Born-region fact uses explicit_subject_born_region_literal. Its source date/name/BornEngland semantics and one literal edge already passed all documentary checks.",
+  "correction": "Allow birth OR born marker for a one-edge direct actual personal born-region statement. No fact, source, schema, runtime or scope changed.",
+  "source_fact_code_schema_changed": false,
+  "production_main_or_outputs_changed": false,
+  "effects": "Scratch QA assertion only; not an admission-method relaxation or new factual proof."
+}

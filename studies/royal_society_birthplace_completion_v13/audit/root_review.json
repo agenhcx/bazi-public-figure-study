@@ -1,0 +1,49 @@
+{
+  "audit_written_utc": "2026-11-04T23:25:13.141701+00:00",
+  "reviewed_records": 17,
+  "accepted_keys": [],
+  "held_keys": [
+    "RS_PAST_NA1475",
+    "RS_PAST_NA2111",
+    "RS_PAST_NA2146",
+    "RS_PAST_NA2460",
+    "RS_PAST_NA6231",
+    "RS_PAST_NA907",
+    "RS_PAST_NA1513",
+    "RS_PAST_NA3620",
+    "RS_PAST_NA669",
+    "RS_PAST_NA6847",
+    "RS_PAST_NA813",
+    "RS_PAST_NA872",
+    "RS_PAST_NA6434",
+    "RS_PAST_NA3578",
+    "RS_PAST_NA8736",
+    "RS_PAST_NA2007",
+    "RS_PAST_NA6868"
+  ],
+  "excluded_closed_current_pilot": [
+    "RS_CURRENT_10965"
+  ],
+  "exclusion_reason": "JerryAdams was already covered by closed current-profile and EOAS pilot; no new route supplied; not counted as a new v13 target.",
+  "root_source_opens": [
+    "https://history.rcp.ac.uk/inspiring-physicians/kenneth-james-franklin",
+    "https://www.ukkidney.org/about-us/history/obituaries/kenneth-james-franklin",
+    "https://worldradiohistory.com/UK/Wireless-World/60s/Wireless-World-1961-07-S-OCR.pdf"
+  ],
+  "Franklin_discrepancy": "Root read originalRCP header25November1897 vs UKKidney reprint header11January1897; RCP matches frozen DOB. Reprint also differs in death date. Original source authorDWhitteridge observed. This is not a nativeDOB correction or a claim of independent support. Both birth bodies remain onlyLondon.",
+  "Ryde_new_route": "New observed magazineURL attempted once by root, tool403, no body read. Nearby1899 search-snippet not used as birth evidence.",
+  "partial_coverage_limits": "Pollock/Powell initial discovery outputs overflow unreadable; no claim their search results were fully screened or absent. Young discovery-only without new original body. Navigations count attempts, not acquired complete works.",
+  "regional_context_pass": "v11/v12/v13 contain41 distinct historical held-place targets attempted; this is a bounded source pass, not exhaustive literature search.",
+  "raw_fullbody_distribution": false,
+  "raw_HTTP_hashes_not_available_for_parsed_web_text": true,
+  "other_cohorts_modified": false,
+  "unchanged_master_gzip_byte_identical_to_v12": true,
+  "unknown_diagnostics": {
+    "all_unknown": 641,
+    "all_unknown_with_nonblank_raw_birthplace": 50,
+    "window_unknown": 207,
+    "window_unknown_with_nonblank_raw_birthplace": 38,
+    "window_unknown_with_blank_raw_birthplace": 169,
+    "note": "Stored top-level field completeness, not proof that no birthplace exists in literature."
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "scope": "New v24 followup original-body place conflict, not exhaustive global conflict inventory.",
+  "records": [
+    {
+      "record_id": "RS_PAST_NA6228",
+      "native": {
+        "record_id": "RS_PAST_NA6228",
+        "authority_name": "Gotch; Francis (1853 - 1913)",
+        "native_dob": "1853-07-13",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "545f63aca1a3ff43f1898b30f43799dc1765610de82add1ab5f238e67b8e2d0a"
+      },
+      "status": "hold_two_acquired_original_born_place_claims_disagree",
+      "hold_type": "unresolved_original_birthplace_source_conflict",
+      "reason": "AttributedNPG biography directly bornLiverpool/exactnativeDOB; distinct signedPhysiologyNews archivecolumn directly bornBristol/matchingyearlifespan and samecareer. Do not silently choose/mergecities, infer country or repair native. Parentbirthplaceadjudication required.",
+      "held_birthplace_observations": [
+        {
+          "source_url": "https://www.npg.org.uk/collections/search/personExtended/mp06204/francis-gotch?tab=biography",
+          "source_ref": "turn6310052view0",
+          "source_title": "Francis Gotch - Later Victorian Portraits Catalogue biography",
+          "source_author": "Dr Jan Marsh",
+          "source_kind": "original_attributed_edited_museum_catalogue_biography",
+          "source_grade_if_no_place_conflict": "S2 conservative original authorededitedcatalogue biography, not host-onlyS1/civilrecord",
+          "source_quote": "born 13 July 1853, in Liverpool",
+          "source_locator": "L55fullname/lifespan;L60exactDOB/directLiverpool;L61FRS1892/Oxfordphysiology1895/death1913;L63DrJanMarshbyline;references66-78.",
+          "source_birthdate": "1853-07-13",
+          "source_birthdate_precision": "exact_day_in_born_clause",
+          "source_death_date": "1913-07-15",
+          "raw_birthplace": "Liverpool",
+          "identity_review": [
+            "FullFrancisGotch/exactnativeDOB1853-07-13/lifespan1853-1913.",
+            "FRS1892, HoltPhysiologyLiverpool1891 and WaynfleteOxford1895 bind subject."
+          ],
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "retrieval_representation": "web-tool parsed original HTML/PDF text, not raw HTTP/PDF bytes",
+          "source_quote_word_count": 6
+        },
+        {
+          "source_url": "https://static.physoc.org/app/uploads/2019/03/22194732/79-a.pdf",
+          "source_ref": "turn3910330view1",
+          "initial_open_ref": "turn4667889view0",
+          "source_title": "From the archives: The delay of the electrical response of nerve to a second stimulus",
+          "source_author": "Austin Elliott",
+          "source_kind": "original_signed_scientific_society_archive_column",
+          "publication_date": "2010-summer",
+          "publication_date_precision": "season_and_year_from_original_magazine",
+          "publication_locator": "Physiology News79,Summer2010,printedpage35/PDFindex36",
+          "source_quote": "He was born in Bristol",
+          "source_locator": "L4749-4752heading;L4766fullFrancisGotch1853-1913/L4767-4772researchandBurdonSanderson;L4867-4872explicitbornBristol;L4880-4890physiologycareer;L4917AustinElliottsignature.",
+          "source_birthdate": "1853",
+          "source_birthdate_precision": "year_only_in_subject_lifespan_context",
+          "source_deathyear": "1913",
+          "raw_birthplace": "Bristol",
+          "identity_review": [
+            "FullFrancisGotch1853-1913 atL4766 and electrophysiology/BurdonSanderson/OxfordWaynfletecareer bind native subject.",
+            "No exactbirthmonth/day supplied in inspected column; native year/lifespan compatible.",
+            "NamedAustinElliott archivecolumn is the acquired source; it is not Gotch1910researchpaper itself."
+          ],
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "retrieval_representation": "web-tool parsed original HTML/PDF text, not raw HTTP/PDF bytes",
+          "source_quote_word_count": 5
+        }
+      ],
+      "source_DOB_conflict_observed": false,
+      "geography_decision": "unchanged_unknown_pending_birthplace_source_adjudication",
+      "source_grade_adopted": null,
+      "no_master_change": true
+    }
+  ]
+}

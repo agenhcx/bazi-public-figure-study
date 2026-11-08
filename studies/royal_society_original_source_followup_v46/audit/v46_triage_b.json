@@ -1,0 +1,343 @@
+{
+  "written_utc": "2026-11-08T11:33:30.808988+00:00",
+  "status": "local_triage_only_no_web",
+  "baseline_study": "academy_repo/studies/royal_society_birthplace_completion_v44",
+  "stored_place_unknown_pool": 54,
+  "all54_full_native_objects_loaded": true,
+  "all9_current_issue_inventories_read_in_full": true,
+  "inventory_file_pins": {
+    "active_source_DOB_conflicts.json": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+    "birthplace_source_conflicts.json": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+    "source_derived_age_inconsistencies.json": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+    "provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+    "lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+    "cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+    "source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+    "omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+    "source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+  },
+  "separate_Ewins_Barber_Tomes_holds_preserved": true,
+  "v45_selected_sources_excluded": [
+    "RS_PAST_NA4193",
+    "RS_PAST_NA4301",
+    "RS_PAST_NA4155",
+    "RS_PAST_NA6868",
+    "RS_PAST_NA1998",
+    "RS_PAST_NA4490"
+  ],
+  "proposed_group_b_freeze_ids": [
+    "RS_CURRENT_10965",
+    "RS_PAST_NA780"
+  ],
+  "priorities": [
+    {
+      "record_id": "RS_CURRENT_10965",
+      "native_name": "Jerry Adams",
+      "native_authority": "",
+      "native_DOB": "1940-06-17",
+      "frozen_raw_birthplace": "United States of America",
+      "frozen_birthplace_source_grade": "S2",
+      "frozen_source_url": "https://www.eoas.info/biogs/P003088b.htm",
+      "hemisphere": "unknown",
+      "full_native_object_canonical_sha256": "8108acff3211b5597274df60828ac05d5f2d41e27c679cf5dde7438f89710443",
+      "rank": 1,
+      "proposed_group_b": true,
+      "priority_reason": "Best unlocated original institutional-composition avenue: seek explicit US state/whole-region in a genuinely new WEHI/Australian Academy autobiographical biography or interview; native two personal components straightforward. No location observed yet.",
+      "avenue_type": "unlocated_original_institutional_personal_composition",
+      "original_work_URL": null,
+      "original_work_citation": null,
+      "institutions_to_locate": [
+        "WEHI",
+        "Australian Academy of Science"
+      ],
+      "work_identity_gate": "Locate actual URL/title/author/date; verify composition distinct from already acquired EOAS and closed GenomeLegacy oralhistory. A syndicated transcript/rehost or same catalogue frontend is not new. No direct open synthesized.",
+      "actual_observed_full_alias": "Jerry McKee Adams",
+      "alias_role": "Actually printed source-only alias; empty native authority/name kept unchanged. No initial expansion or McKinley substitution.",
+      "retained_origins": [
+        {
+          "file": "v44_sources_a.json",
+          "field": "holds[0].source_name_locator",
+          "ref": "turn9796027view0:L127",
+          "observation": "ActualfullJerryMcKeeAdams."
+        },
+        {
+          "file": "v44_sources_a.json",
+          "field": "holds[0].source_distinctive_career_locator",
+          "ref": "turn9796027view0:L119,L127-137,L142",
+          "observation": "Actual molecularbiology/WEHI/genecloning/bcl2/FRS1992 anchors support targeted institutional discovery only."
+        },
+        {
+          "file": "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v30_holds.json",
+          "field": "[0]",
+          "ref": "turn7799518view1",
+          "observation": "Originalspeaker502; CovingtonKentucky were only unverified querywords, not sourceplace."
+        }
+      ],
+      "old_closed_or_already_reviewed_works": [
+        {
+          "url": "https://www.eoas.info/biogs/P003088b.htm",
+          "work": "EOAS personalbiography",
+          "retained_outcome": "Frozen successful source exactDOB1940-06-17/genericUSA only; not a new composition.",
+          "ref": null,
+          "reopen_allowed": false
+        },
+        {
+          "url": "https://genomelegacy.org/oralhistory/speaker/jerry-adams/",
+          "work": "GenomeLegacy oralhistoryspeaker originalwork",
+          "retained_outcome": "V30 first502; same oralhistory anycarrierclosed.",
+          "ref": "turn7799518view1",
+          "reopen_allowed": false
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Jerry_Adams",
+          "work": "Englishcanonicalperson",
+          "retained_outcome": "V44 actualfullalias/date/career; no birthplace.",
+          "ref": "turn9796027view0",
+          "reopen_allowed": false
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q6183179",
+          "work": "Canonicalpersonitem",
+          "retained_outcome": "V44 no acquiredP19proof; no authenticatedabsence.",
+          "ref": "turn9796027view1",
+          "reopen_allowed": false
+        },
+        {
+          "url": "https://fr.wikipedia.org/wiki/Jerry_Adams",
+          "work": "Frenchcanonicalperson",
+          "retained_outcome": "V44 header-only no body; workclosed.",
+          "ref": "turn6562347view0",
+          "reopen_allowed": false
+        },
+        {
+          "url": "https://ar.wikipedia.org/wiki/%D8%AC%D9%8A%D8%B1%D9%8A_%D8%A2%D8%AF%D8%A7%D9%85%D8%B2_%28%D8%B9%D8%A7%D9%84%D9%85_%D8%A3%D8%AD%D9%8A%D8%A7%D8%A1_%D8%AC%D8%B2%D9%8A%D8%A6%D9%8A%D8%A9%29",
+          "work": "Arabiccanonicalperson",
+          "retained_outcome": "V44 rewritten/header-only; workclosed.",
+          "ref": "turn4698637view1",
+          "reopen_allowed": false
+        }
+      ],
+      "future_locator_queries_suggested": [
+        "\"Jerry Adams\" WEHI biography born",
+        "\"Jerry McKee Adams\" \"Australian Academy of Science\" interview"
+      ],
+      "readiness": "Discovery-only; no exact new body URL/title retained, no birthstate observed."
+    },
+    {
+      "record_id": "RS_PAST_NA780",
+      "native_name": "John William",
+      "native_authority": "Evans; John William (1857 - 1930)",
+      "native_DOB": "1857-07-27",
+      "frozen_raw_birthplace": "Barbican, London (2 Beech Street, Barbican, London)",
+      "frozen_birthplace_source_grade": "S3",
+      "frozen_source_url": "https://www.turle.name/the_doctors/indiI25.html",
+      "hemisphere": "unknown",
+      "full_native_object_canonical_sha256": "10a2ff7720b14950986300ed8605200daf36e29117b9edab82b6991deefcc12d",
+      "rank": 2,
+      "proposed_group_b": true,
+      "priority_reason": "Two retained distinct scholarly obituary citations offer more concrete original biography discovery than another generic person catalogue. Full subject must be the1857geologist.",
+      "avenue_type": "retained_distinct_original_obituary_bibliography_locator",
+      "original_work_URL": null,
+      "retained_bibliographic_index_URL": "https://earthwise.bgs.ac.uk/index.php/Geologists%3A_biographies_and_obituaries%2C_a_bibliography_%E2%80%94_E",
+      "bibliography_body_acquired": false,
+      "retained_original_citations": [
+        {
+          "journal": "Mineralogical Magazine",
+          "volume": "23",
+          "issue": "141",
+          "year": "1933",
+          "pages": "349-350",
+          "exact_article_title": null,
+          "author": null,
+          "original_URL": null
+        },
+        {
+          "journal": "Proceedings of the Geologists Association",
+          "volume": "42",
+          "issue": "1",
+          "year": "1931",
+          "pages": "69-70",
+          "exact_article_title": null,
+          "author": null,
+          "original_URL": null
+        }
+      ],
+      "retained_origins": [
+        {
+          "file": "v35_sources_a.json",
+          "field": "other_bibliographic_leads[0]",
+          "ref": "turn6940641search4",
+          "observation": "Unopened BGS bibliographic-index projection, cites two distinct obituaries; originalworkURLs/body not acquired."
+        }
+      ],
+      "work_identity_gate": "Verify actual title/subject/issue/pages and observed original URL before first open. These citations are different from closed CambridgeGeologicalMagazine68(1931)47-48; no Cambridge samework variant or substituted differentEvans. Old DWB/Turle citations do not establish these bodies or birthplace.",
+      "old_closed_or_already_reviewed_works": [
+        {
+          "url": "https://www.turle.name/the_doctors/indiI25.html",
+          "work": "OriginalTurle personalfamilyhistory",
+          "retained_outcome": "V26 successfulS3 fullnative/exactDOB/life/directBarbicanLondon2BeechStreet; latercensusEngland notbirth. Nine historicalquote words, no newquote.",
+          "ref": "turn3105208view1;rootturn2020789view0",
+          "reopen_allowed": false
+        },
+        {
+          "url": null,
+          "work": "Geological Magazine68(1931)47-48 original Cambridge obituary",
+          "retained_outcome": "V26 landing metadata only/no actualsubjectbody; textlessbodyroute closed; exactURL not preserved in examined context.",
+          "ref": "turn5489168view1",
+          "reopen_allowed": false
+        },
+        {
+          "url": "https://biography.wales/article/s-EVAN-WIL-1734.html?lang%5B%5D=cy&lang%5B%5D=en&order=asc&page=122&query=William+Llewelyn+Davies&rows=12&sort=sort_name",
+          "work": "DWB1959 familyentry nameddescendantparagraph",
+          "retained_outcome": "V35 actualfullnative/exactDOB/career but date-only, Londondeath notbirth.",
+          "ref": "turn3817480view1",
+          "reopen_allowed": false
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/John_William_Evans_(geologist)",
+          "work": "Englishcanonicalperson",
+          "retained_outcome": "V44 rewritten firstresponse; closed as proof/work.",
+          "ref": "turn3891619view0",
+          "reopen_allowed": false
+        },
+        {
+          "url": "https://fr.wikipedia.org/wiki/John_William_Evans",
+          "work": "Frenchcanonicalperson",
+          "retained_outcome": "V44 actualfull/date/career; ambiguousunlinkedLondres/no region.",
+          "ref": "turn9626439view0",
+          "reopen_allowed": false
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q6264151",
+          "work": "Canonicalpersonitem",
+          "retained_outcome": "V44 rewritten firstresponse; no actualP19/P131proof; closed.",
+          "ref": "turn9626439view1",
+          "reopen_allowed": false
+        }
+      ],
+      "closure_crosscheck": "Targeted V26/V35/V44 original and canonical histories plus inherited rootfollowups reviewed. No observed priorfirstopen/failure for citedMineralogicalMagazine1933 or PGA1931 works found; BGSindexitself onlysearchprojection, not acquired body. This is a retained-history assessment, not universalneverrequested claim.",
+      "future_locator_queries_suggested": [
+        "\"John William Evans\" \"Mineralogical Magazine\" \"1933\"",
+        "\"John William Evans\" \"Proceedings of the Geologists\" \"1931\""
+      ],
+      "readiness": "Two concrete originalwork citations need actualURL discovery; no bornwhole-region assertion acquired.",
+      "frozen_street_granularity": "Preserve2BeechStreet/Barbican/London raw; actualLondon broaderbirth qualifier may be consistent but cannot implyEngland or resolve streetidentity without source."
+    },
+    {
+      "record_id": "RS_PAST_NA8736",
+      "native_name": "Anthony George",
+      "native_authority": "Cullis; Anthony George (1946 - 2021)",
+      "native_DOB": "1946-01-16",
+      "frozen_raw_birthplace": "Worcester",
+      "frozen_birthplace_source_grade": "S1",
+      "frozen_source_url": "https://catalogues.royalsociety.org/calmview/Record.aspx?src=CalmView.Persons&id=NA8736",
+      "hemisphere": "unknown",
+      "full_native_object_canonical_sha256": "1c125804109b68d9692ec5516894b52a6d335a994230dad2b8b06dca5faa8f54",
+      "rank": 3,
+      "proposed_group_b": false,
+      "reserve_only": true,
+      "priority_reason": "ActualEnglishpersonarticle citesSheffield/Times biographicalreferences; possible originalcomposition, but neither exacttitle norURL retained. Rootproposedfreeze selectsJerry/Evansonly.",
+      "avenue_type": "unlocated_original_citation_locator_reserve",
+      "original_work_URL": null,
+      "original_work_citation": "Sheffield institutional obituary/profile and Times biographicalreference; exacttitles notretained.",
+      "retained_origins": [
+        {
+          "file": "v44_sources_b.json",
+          "field": "holds[1].source_observations[0].source_locator and information_dependency_limit",
+          "ref": "turn3891619view1:L119-121",
+          "observation": "ActualEnglisharticle references Sheffield/Times; underlyingworks not independentlyacquired."
+        }
+      ],
+      "work_identity_gate": "Only genuinelydistinct originalSheffield/Times composition; reject reprint of Walther2025ODNB or Walther/Hutchison/Poate2026memoir. No guessedURL; must fullAnthonyGeorgeCullis/actuallystatedcompatibleDOB/career/life/directbirthregion.",
+      "old_closed_or_already_reviewed_works": [
+        {
+          "url": "https://catalogues.royalsociety.org/calmview/Record.aspx?src=CalmView.Persons&id=NA8736",
+          "work": "Official personcatalogue",
+          "retained_outcome": "FrozenWorcesterS1; no whole-region.",
+          "ref": null,
+          "reopen_allowed": false
+        },
+        {
+          "url": null,
+          "work": "2026Walther/Hutchison/PoateRSmemoir DOI10.1098/rsbm.2026.0002",
+          "retained_outcome": "V13 WhiteRose243596metadata+PDF successful; fullnative/exactDOB/Worcesteronly, notnewwork.",
+          "ref": "turn38view2;turn41view2",
+          "reopen_allowed": false
+        },
+        {
+          "url": null,
+          "work": "ThomasWalther2025ODNB579357223",
+          "retained_outcome": "V31 actualpublicExtract fullnative/exactDOB/48HallowRoadWorcesteronly.",
+          "ref": "turn7388868view2",
+          "reopen_allowed": false
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Anthony_Cullis",
+          "work": "Englishcanonicalperson",
+          "retained_outcome": "V44 fullnative/date/career/directWorcesterlink; regiontargetunusable.",
+          "ref": "turn3891619view1",
+          "reopen_allowed": false
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Worcester,_England",
+          "work": "Actually followed birthplace target",
+          "retained_outcome": "V44 rewritten firstresponse; closed, title/URI no regionproof.",
+          "ref": "turn9626439view2",
+          "reopen_allowed": false
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q4772341",
+          "work": "Canonicalpersonitem",
+          "retained_outcome": "V44 rewritten firstresponse; closed.",
+          "ref": "turn1910927view0",
+          "reopen_allowed": false
+        },
+        {
+          "url": "https://mg.wikipedia.org/wiki/Anthony_Cullis",
+          "work": "Malagasycanonicalperson",
+          "retained_outcome": "V44 actualshortAnthonyCullis/noGeorge/noDOBbounddistinctivecareer/noBP.",
+          "ref": "turn1910927view1",
+          "reopen_allowed": false
+        }
+      ],
+      "readiness": "Unlocated citation reserve only, not retainedunopenedURL or confirmeddistinctwork."
+    }
+  ],
+  "false_unopened_leads_excluded": [
+    {
+      "record_id": "RS_PAST_NA2016",
+      "old_worker_unopened_label": "v33_sources_a.json/unopened_distinct_original_leads",
+      "superseded_by": "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v33_root_followups.json/observations[3:5];v33_root_intent.json;v33_root_decisions.json",
+      "closed_works": [
+        {
+          "url": "https://doi.org/10.1680/dare.2008.18.3.121",
+          "work": "BillCarlyle2008TheBinnieheritageindamengineering",
+          "retained_outcome": "RootV33 subsequentlynotaccessible; closed.",
+          "ref": "turn7294640view1",
+          "reopen_allowed": false
+        },
+        {
+          "url": "https://www.jstor.org/stable/770079",
+          "work": "AlanMuirWood1990GeoffreyMorseBinnieRSmemoir",
+          "retained_outcome": "RootV33 subsequentlyoneTagManagerline/no subjectbody; closed.",
+          "ref": "turn7294640view2",
+          "reopen_allowed": false
+        }
+      ],
+      "retained_retraction": "Initialintermediateworkerlead suggestion corrected before triagewrite; rootfollowup controls closure."
+    }
+  ],
+  "admission_boundary": "UnchangedV35 original-persongeography: actualfullnativecomponents/actuallystatedcompatibleDOBprecision/coherentdistinctivecareer/compatiblelife/frozenplaceagreement/directsubjectbirthwhole-region required. No inferredcountryfromcity/nationality/work/family/death; no unknown gate admission. GenericUSAneedsactualbirthstate/whole-region. Sourcequality from actualwork, no hostS1. NativeDOB/BPraw/grades/sourcefacts frozen.",
+  "retrieval_boundary": "No requests authorized bythistriage. Wait forprospectivelyfrozenV46scope; then exactobservedURL/queryintent withrealperentryUTC andseparateexit0validation beforeeachweboperation. Firstunusableworkclosed/no variants/carriers/retries/rawGET. DifferentURLnotnewwork.",
+  "triage_counts": {
+    "web_queries": 0,
+    "web_navigation_attempts": 0,
+    "finds": 0,
+    "screenshots": 0,
+    "raw_GETs": 0,
+    "pipeline_or_replay_CLI_runs": 0,
+    "data_or_schema_or_Git_mutations": 0
+  },
+  "new_source_quotes": 0,
+  "no_source_exhaustion_claim": true
+}

@@ -1,0 +1,49 @@
+[
+  {
+    "record_id": "RS_PAST_NA8744",
+    "work_url": "https://www.wikidata.org/wiki/Q4924984",
+    "kind": "same_work_request_protocol_deviation",
+    "ordered_source_refs": [
+      "turn1385032view0",
+      "turn4375175view0"
+    ],
+    "first_request": "Actualarticlelink36 followed to Special%3AEntityPage/Q4924984, explicitly rewritten summary of canonicalQ4924984.",
+    "second_request": "Opened observed canonicalQ4924984 URI, sameunderlyingentitywork, then toolinaccessible.",
+    "assessment": "Same-work canonical follow-through after unusable rewritten representation, contrary to first-unusable-work closure/no-variant retrieval protocol. This is not a distinct originalwork or a retroactive policy exception.",
+    "containment": "Exactrequests/realentryUTCs remain in originalintent/report, graphstatements/P19/absence/grade notadopted; Finlayheld; no further request, no actualmasterchange.",
+    "worker_disclosure": {
+      "same_underlying_work": true,
+      "entity": "Q4924984",
+      "ordered_operations": [
+        {
+          "intent_index": 2,
+          "operation": {
+            "click": {
+              "ref_id": "turn4027123view0",
+              "id": 36
+            }
+          },
+          "result_ref": "turn1385032view0",
+          "returned_header_uri": "https://www.wikidata.org/wiki/Special%3AEntityPage/Q4924984",
+          "explicit_rewritten_summary_of": "https://www.wikidata.org/wiki/Q4924984",
+          "observed_redirect_canonical_uri": "https://www.wikidata.org/wiki/Q4924984",
+          "original_body_proof_adopted": false
+        },
+        {
+          "intent_index": 3,
+          "operation": {
+            "open": {
+              "ref_id": "https://www.wikidata.org/wiki/Q4924984"
+            }
+          },
+          "result_ref": "turn4375175view0",
+          "tool_result": "not accessible via this tool",
+          "original_body_proof_adopted": false
+        }
+      ],
+      "protocol_status": "same_work_request_protocol_deviation_independently_classified_by_source_QA",
+      "disclosure": "Both requests concern the same underlying Q4924984 entity/work, not distinct sources. Canonical follow-through was attempted using the observed URI carrier. If the first rewritten response closes this work, the subsequent canonical open is a protocol deviation; no clean/no-variants compliance assertion is made for this pair. Original statements were not adopted, the canonical request failed, and no further request occurred. All original entry UTCs and exact operations are preserved.",
+      "independent_source_QA_classification": "Source QA independently reviewed full report and intent, classified the rewritten SpecialEntityPage then canonical Q4924984 pair as a same-work request-protocol deviation under frozen closure rule. No original statements/absence adopted; Finlay remains held."
+    }
+  }
+]

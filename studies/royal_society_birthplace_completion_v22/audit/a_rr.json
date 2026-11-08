@@ -1,0 +1,209 @@
+{
+  "schema": "v22_groupA_Ridley_Roberts_source_observations_v1",
+  "worker": "/root/v22_sources_a/ridley_roberts",
+  "written_utc": "2026-11-05T23:45:20.836886+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA4252",
+    "RS_PAST_NA4747"
+  ],
+  "intent_file": "v22_a_rr_intent.json",
+  "counts": {
+    "discovery_queries": 3,
+    "web_navigation_attempts": 4,
+    "parsed_text_find_operations": 1,
+    "raw_GETs": 0,
+    "screenshots": 0,
+    "body_verified_birthplace_candidates": 1,
+    "holds": 1
+  },
+  "candidates": [
+    {
+      "record_id": "RS_PAST_NA4747",
+      "native": {
+        "record_id": "RS_PAST_NA4747",
+        "authority_name": "Roberts; Sir; Derek Harry (1932 - 2021); engineer",
+        "native_dob": "1932-03-28",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "a3b80af117bf135a494003f3a04930007232a32efc6d0a724b06f72bcd7c82dd"
+      },
+      "status": "candidate_original_signed_edited_ODNB_public_extract_explicit_first_birthplace",
+      "raw_birthplace": "24 Polygon Avenue, Ardwick, Manchester",
+      "source_url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/579392614",
+      "source_title": "Roberts, Sir Derek Harry: (1932–2021), engineer and university administrator",
+      "source_author": "Michael Pepper",
+      "publication_date": "2025-06-12",
+      "publication_date_precision": "day",
+      "doi": "10.1093/odnb/9780198614128.013.90000382920",
+      "source_kind": "original_signed_edited_ODNB_public_extract",
+      "source_grade_proposal": "S2",
+      "source_grade_basis": "Original publisher attributed edited biographical public Extract supplies the subject birth relation. Conservative S2, not civil registration, host-only S1 or acquisition of the paid full chapter.",
+      "source_grade_role": "person_birthplace_support_only",
+      "source_quote": "was born on 28 March 1932 at 24 Polygon Avenue, Ardwick, Manchester",
+      "source_quote_word_count": 12,
+      "source_locator": "turn6357506view1: fullnativecomponents/lifespan/rolesL757; namedauthorL761–763; DOI771; publication775; explicit born place/exactDOB777; schoolingcontext779–780.",
+      "source_webrefs": [
+        "turn3221280view1",
+        "turn6357506view1"
+      ],
+      "source_birthdate": "1932-03-28",
+      "source_birthdate_precision": "exact_day_in_born_clause",
+      "source_DOB_matches_native": true,
+      "source_deathyear_in_subject_header": "2021",
+      "source_deathdate_in_birthplace_source": null,
+      "identity_review": [
+        "All native name components Derek Harry Roberts and honorific Sir directly appear in original subject heading and born clause.",
+        "Exact28March1932 and header1932–2021 match unchanged native DOB/authority lifespan.",
+        "Engineer/university-administrator roles in original header plus separate original UCL fullDerekHarry/industrialsemiconductor/GEC/twoProvostterms anchors bind the subject. No initial or nickname expansion."
+      ],
+      "supporting_identity_only_original_observation": {
+        "url": "https://www.ucl.ac.uk/news/2021/mar/tributes-paid-ucl-visionary-and-moderniser-sir-derek-roberts",
+        "source_ref": "turn1772059view0",
+        "title": "Tributes paid to UCL visionary and moderniser Sir Derek Roberts",
+        "publication_date": "2021-03-02",
+        "source_kind": "original_institutional_tribute_with_attributed_colleague_statements",
+        "locator": "Title81; twiceProvost83/88; GEC/earlysemiconductors89; fullDerekHarry/exactdeathdate114.",
+        "observed_source_death_date": "2021-02-17",
+        "birthplace_relation_verified": false,
+        "source_quote": "",
+        "informational_independence_claimed": false
+      },
+      "identity_conflicts_observed": [],
+      "reviewed_hemisphere_proposal": "unknown",
+      "geographic_basis": "Only the address, Ardwick and Manchester are birth-linked. No explicit birth-country/whole-region qualifier is acquired. Keep geography unknown; UCL workplace/footer and father travel to France/England are not birth geography.",
+      "caveats": [
+        "Public original Extract only; paid full chapter/PDF not acquired.",
+        "ODNB heading gives deathyear2021 only; separate UCL body supplies exact17February2021 as identity context, not first-place corroboration.",
+        "No native dates, identity, eligibility, source grades, country/QID/coordinates or master fields changed."
+      ],
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "retrieval_representation": "web-tool parsed original HTML text, not raw HTTP bytes",
+      "no_master_change": true,
+      "geography_assignment_performed": false
+    }
+  ],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA4252",
+      "native": {
+        "record_id": "RS_PAST_NA4252",
+        "authority_name": "Ridley; Brian Kidd (1931 - 2024); solid state physicist",
+        "native_dob": "1931-03-02",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "6ca23222a6d11fdcf5730b3920d03c481e6b3c30d95aaa586da343b369ea85d9"
+      },
+      "status": "hold_original_birthplace_body_unavailable",
+      "hold_type": "original_published_memoir_attachment_too_large",
+      "reason": "Original Newcastle repository metadata confirms fullBrianKidd/exactnativeDOB/lifespan and original authored RS memoir identity but abstract has no birthplace. Published-version attachment was tool-rejected as contentlength16299998 and stopped. No retries/direct attachment variant/publisher bypass/rawGET.",
+      "source_url": "https://eprints.ncl.ac.uk/309086",
+      "source_title": "Brian Kidd Ridley. 2 March 1931 – 22 May 2024",
+      "source_authors_as_repository_metadata": [
+        "Dyson A",
+        "Vaughan MP"
+      ],
+      "source_publication_year": "2025",
+      "source_online_publication_date": "2025-11-26",
+      "source_deposit_date": "2025-12-17",
+      "source_deposit_date_is_publication_date": false,
+      "doi": "10.1098/rsbm.2025.0019",
+      "source_ref": "turn3221280view0",
+      "source_locator": "Fulltitle29; originalmemoirauthors51/journal57/publication63/deposit67/DOI75-77; abstract45–47noBP.",
+      "source_birthdate": "1931-03-02",
+      "source_birthdate_precision": "exact_day_in_original_memoir_title_metadata_only",
+      "source_deathdate": "2024-05-22",
+      "birthplace_relation_verified": false,
+      "source_grade_proposal": null,
+      "failed_attachment": {
+        "url": "https://eprints.ncl.ac.uk/fulltext.aspx?pub_id=309086&ts=639295190249352333&url=309086%2F6BF3C945-A45B-4C07-B219-0972730522D6.pdf",
+        "ref": "turn6357506view0",
+        "tool_error": "(400) Content length is too large:16299998",
+        "raw_HTTP_status": null,
+        "raw_bytes_sha256": null,
+        "exact_request_utc": null
+      },
+      "unopened_non_evidence_leads": [
+        "Closed enwiki discovery projection NewcastleUponTyneEngland not adopted.",
+        "Distinct Essex profile/conference discovery has career only, not opened; no birthplace proof.",
+        "Other BrianRidley legacy1947 and Cambridge1929 results are different-person discovery noise, not native DOB conflicts."
+      ],
+      "identity_conflicts_observed": [],
+      "geography_decision": "unchanged_unknown",
+      "no_master_change": true
+    }
+  ],
+  "query_ledger": [
+    {
+      "query": "\"Brian Kidd Ridley\" \"born\"",
+      "ref": "turn5256705search0"
+    },
+    {
+      "query": "\"Derek Harry Roberts\" \"born\"",
+      "ref": "turn5256705search1"
+    },
+    {
+      "query": "\"Brian Ridley\" \"born\" Essex obituary",
+      "refs": [
+        "turn5365142search0",
+        "turn5365142search1",
+        "turn5365142search5"
+      ],
+      "purpose": "Distinctoriginalsource discovery after attachment sizefailure; no enwiki reuse."
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "url": "https://eprints.ncl.ac.uk/309086",
+      "ref": "turn3221280view0",
+      "outcome": "original_repository_metadata_body_read_noBP"
+    },
+    {
+      "url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/579392614",
+      "ref": "turn3221280view1",
+      "outcome": "original_public_extract_HTML_body_available_then_cachedfind"
+    },
+    {
+      "ref": "turn6357506view0",
+      "via": "turn3221280view0 link8",
+      "url": "https://eprints.ncl.ac.uk/fulltext.aspx?pub_id=309086&ts=639295190249352333&url=309086%2F6BF3C945-A45B-4C07-B219-0972730522D6.pdf",
+      "outcome": "tool_content_length_too_large16299998_stopped_no_retry"
+    },
+    {
+      "url": "https://www.ucl.ac.uk/news/2021/mar/tributes-paid-ucl-visionary-and-moderniser-sir-derek-roberts",
+      "ref": "turn1772059view0",
+      "outcome": "original_UCL_identity_career_body_read_noBP"
+    }
+  ],
+  "parsed_find_ledger": [
+    {
+      "ref": "turn3221280view1",
+      "pattern": "was born",
+      "result_ref": "turn6357506view1",
+      "outcome": "originalODNBbodybirthclauseL777read"
+    }
+  ],
+  "quote_ledger": {
+    "ODNB_Roberts": {
+      "quote": "was born on 28 March 1932 at 24 Polygon Avenue, Ardwick, Manchester",
+      "word_count": 12
+    },
+    "UCL_Roberts_identity_only": {
+      "quote": "",
+      "word_count": 0
+    },
+    "Newcastle_Ridley_metadata": {
+      "quote": "",
+      "word_count": 0
+    }
+  },
+  "protocol_deviations": [],
+  "limits": [
+    "No source fulltext/PDF/images/contact/familydetails cached or redistributed.",
+    "Parsed tool text is not raw HTTP bytes; unknown status/time/hash retainednull.",
+    "No full paid ODNB chapter or Ridley originalmemoir PDF acquired; negativecoverage limited to actuallyreadmetadata/abstract.",
+    "No original DOB/source grade/country/coords/eligibility/identity/master/Git changes.",
+    "No analysis/outcomes/statisticaldedup/finalfreeze."
+  ]
+}

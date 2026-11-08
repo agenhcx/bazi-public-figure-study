@@ -1,0 +1,13 @@
+Japan v6 B bounded evidence batch
+
+Fixed17-person queue;16received new source-discovery queries and Hasegawa is honestly not_searched_prior_route_audited.28exact queries;12unique body URLs attempted;10original captures (5success,5failure), plus web-only body attempts. Hirai med150 old failed route was inadvertently retried once before prior audit returned; logged and not retried again. No NDL-authority/year-only retries or other parked routes were repeated.
+
+claims.json contains6actual birth-body claims for5fixed-queue identities: Tatsumi two institutional1949-01-26claims (JSPS PDF visually checked), Tanaka Yutaka1888-01-29JSCE lifespan, Matsuoka1955year, Nakayama unconverted1864-12-24historical calendar hold, and Yanagida1946-10-10actual web CV body with original404/nullhash root-approved exact-source text-only exception. Yanagida has no visual verification; original hash remainsnull/status404. Root read and rehashed the private actual-web-body transcript fromturn1742view0 and independently compared complete official-URL indexed CV text atturn1783search0. Root did not refetch the original PDF body. The private derived transcript hash is separate from original bytes.
+
+The captured JSCE loaded biography source was then screened once against all482stable IDs without another GET. bulk_jsce_claims.json adds5root-approved existing identities outside the17queue: Yoshida, Aoki, Okamoto and Horikawa repeat existing modern days while upgrading edited-only evidence; Furuichi retains an explicit pre1873leap-month expression as calendarfalse. Its claim-scoped hold does not invalidate NDLsource-supplied1854-09-04and is not a comparable-date conflict. No new member IDs.
+
+Source URL sp.txt is actual biography HTML loaded by index.html script; both original hashes are recorded. Each dt heading has presidency term, while separate dd starts lifespan. Birth/death/appointment dates are not conflated. All professional identity bridges are explicit in claims.
+
+holds.json distinguishes Nakayama global member calendarhold from Furuichi claim-only calendarhold(global_member_hold=false). Claims retain literal source precision and source-supplied modern-year/era expressions separately. Both JSCE pre1873era expressions have calendar=not_stated/calendar_comparable=false; explicit era/leap-month wording is in source_expression_note, without guessing a calendar name. No historical calendar conversion or date padding. Existing holds remain in force.
+
+Private full HTML/PDF/text/images are excluded from public delivery. MANIFEST lists top-level metadata only; no helpers. All final_cohort_accepted=false; BaZi counts0; section changes0; no analysis or freeze. JapanAindependent QA is delivered separately at workers root.

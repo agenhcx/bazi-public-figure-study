@@ -1,0 +1,9 @@
+# Royal Society V49: single linked original-source stage
+
+V49 followed the actual Alan Davison citation from the acquired canonical person body to one MIT News personal obituary. The single click returned a normal original body; no locator query, direct open, continuation, place request or other source navigation occurred. The record remains held with zero adopted facts, source grades or qualified issues.
+
+The original body displays the full native name, compatible life context and distinctive Harvard/MIT/Cardiolite career, but states neither DOB/birthyear nor a direct subject birthplace. Ordinary Path A therefore fails both date and birth gates. The separately preregistered NEW composite identity-link Path B binds the canonical exact-DOB person through the actual specific citation and matching original name/career, but still fails the direct-birth gate. The provider DOB stays null; publication year and reported age 79 do not supply it. Family residence and the institutional address do not count as birthplace.
+
+This was an explicitly bounded original-host access recheck of a likely same work whose old RSS mirror failed. The old failure, all other historical closures and the Finlay deviation remain preserved. No novelty, independence or original-provider DOB confirmation is claimed. Any qualifying adoption would have been S3 for the expanded S1+S2+S3 group only; none occurred, so both groups and native DOB tiers remain unchanged.
+
+Exact root intent, sparse source observations, separate canonical/provider roles, frozen context and all nine issue snapshots are retained under `audit/`. The parent and summary bind their hashes and the zero-adoption decision. The master remains V46 with 156 unknowns in the native DOB window: 102 blank-place and 54 stored-place. No new master wrapper, CSV change or replay CLI was created. This closes the single-source stage without claiming source exhaustion, complete coverage or a final cohort freeze.

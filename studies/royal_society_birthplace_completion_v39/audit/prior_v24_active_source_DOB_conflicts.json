@@ -1,0 +1,77 @@
+{
+  "scope": "Explicit observed conflicts retained without native DOB repair or final correct-date verdict; this sidecar does not mutate cohort eligibility or identity.",
+  "records": [
+    {
+      "record_id": "RS_PAST_NA4005",
+      "native_dob": "1916-08-19",
+      "source_birthdate": "1913-08-19",
+      "source_precision": "exact_day_in_original_born_clause",
+      "source_url": "https://www.nationalacademies.org/read/13160/chapter/6",
+      "origin_version": "v18",
+      "active": true,
+      "policy": "Require a separate DOB adjudication before clearing this conflict; a source omitting birthdate must not silently bypass the hold. No DOB/calendar/eligibility/identity correction authorized in this birthplace workflow."
+    },
+    {
+      "record_id": "RS_PAST_NA4485",
+      "native_dob": "1929-06-03",
+      "source_header_birthyear": "1925",
+      "source_precision": "birthyear_in_profile_lifespan_header_only",
+      "source_url": "https://oa.anu.edu.au/obituary/laver-william-graeme-graeme-18708",
+      "origin_version": "v19",
+      "active": true,
+      "compatible_other_observation": "Webster original heading1929–2008 and ANU body age79; no exact native day proved and no source-header adjudication.",
+      "policy": "Keep hold pending separate date/source-header adjudication; do not bypass with dateless place material or silently dismiss the contrary heading."
+    },
+    {
+      "record_id": "RS_PAST_NA8700",
+      "native_dob": "1936-06-19",
+      "source_birthdate": "1936-05-19",
+      "source_precision": "exact_day_in_original_born_clause",
+      "source_url": "https://bir.org.uk/media-centre/news/2017/may/professor-peter-wells-1936-2017.aspx",
+      "source_locator": "turn2850554view2:L96 fullsubject born sentence; BIRpresidency/BJReditor95/ultrasound100",
+      "source_quote": "Peter Neil Temple Wells was born in Bristol, England, on 19 May 1936",
+      "origin_version": "v21",
+      "active": true,
+      "conflict_kind": "same_day_year_but_May_versus_June",
+      "policy": "Separate DOB adjudication required. No birthday/calendar/identity/eligibility correction or dateless birthplace bypass; held birth-linked England cannot resolve geography. Death-endpoint exception does not apply."
+    },
+    {
+      "record_id": "RS_PAST_NA4591",
+      "native_dob": "1921-08-22",
+      "source_birthdate": "1921-08-02",
+      "source_precision": "exact_day_in_original_born_vital_line",
+      "source_url": "https://www.independent.co.uk/news/obituaries/sir-james-menter-6232398.html",
+      "source_locator": "turn1299305view1:L52; earlierworkerturn9323730view0:L184",
+      "source_quote": "born Teynham, Kent 2 August 1921",
+      "origin_version": "v23",
+      "active": true,
+      "conflict_kind": "same_month_year_but_day2_versus22",
+      "policy": "SeparateDOBadjudicationrequired. Originalborn2August conflictsnative22August. No nativeDOB/calendar/identity/eligibilityrepair or BP/geoadoption. No datelessbypass or death-onlyexception. Unopened compatiblememoirtitlelead does not clear acquired contrary bornline."
+    },
+    {
+      "record_id": "RS_PAST_NA5506",
+      "native_dob": "1870-12-01",
+      "source_birthdate": "1870-11-18",
+      "source_precision": "exact_day_in_original_RTI_born_clause",
+      "source_url": "https://www.rti.org/sites/default/files/resources/bk-0003-1109-chapter04.pdf",
+      "source_locator": "turn2837194view1:L106-107@P4",
+      "source_quote": "Born at Macosquin, near Coleraine in the north of Ireland on November 18, 1870, John Alexander McClelland was baptized on December 1",
+      "source_baptism_month_day_in_RTI": "12-01",
+      "RTI_baptism_year_repeated_in_clause": false,
+      "supporting_DIB_url": "https://www.dib.ie/index.php/biography/mcclelland-john-alexander-a5597",
+      "DIB_source_birth_precision": "year_only1870",
+      "DIB_explicit_baptism_date": "1870-12-01",
+      "DIB_source_ref": "turn2837194view2:L8",
+      "DIB_source_quote": "was baptised on 1 December 1870",
+      "native_date_matches_observed_DIB_baptism_date": true,
+      "origin_version": "v24",
+      "active": true,
+      "conflict_kind": "explicit_born_date_disagrees_with_native_date_corresponding_to_observed_baptism",
+      "held_place_wordings": {
+        "RTI": "Macosquin, near Coleraine in the north of Ireland",
+        "DIB": "Dunalis in the parish of Dunboe, near Coleraine, Co. Londonderry"
+      },
+      "policy": "SeparateDOBadjudicationrequired. Baptism is not relabelled birth; DIB is not independent exactNovember18confirmation. Matching native to observedbaptism is correspondence, not native-provenance/parser-error/correct-date verdict. No nativeDOB/calendar/identity/eligibilityrepair or BP/geographyadoption/datelessbypass. Placewordings retained without equivalence/conflict adjudication."
+    }
+  ]
+}

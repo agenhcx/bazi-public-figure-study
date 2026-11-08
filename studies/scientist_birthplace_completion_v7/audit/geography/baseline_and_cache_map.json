@@ -1,0 +1,127 @@
+{
+  "baseline": {
+    "NAS_hemisphere_counts": {
+      "north": 1667,
+      "south": 32,
+      "unknown": 543
+    },
+    "NAS_records": 2242,
+    "cohort_records": 11094,
+    "path": "uk_birthplace_checkout/studies/scientist_birthplace_completion_v6/outputs/birthplace_rows.jsonl.gz",
+    "sha256": "8e880fcf4a659a1c8753a5a0ad4c06552ddd9d0d545334b0e81a2459907d7356"
+  },
+  "new_exact_name_query_allowance_at_most": 1,
+  "new_queries_or_source_captures": 0,
+  "no_native_or_country_point_entity_QID_assignments": true,
+  "official_API_cache": {
+    "allowed_geographic_scope": "attached birth.place fields only; explicit region extents first, otherwise birth.place.cityNow coordinate evidence may be reviewed without assigning a birthpoint",
+    "bytes": 914378,
+    "capture_representation": "original_HTTP_JSON_bytes captured in v5, reused offline; no fresh API request",
+    "excluded_geographic_scope": [
+      "death.place",
+      "nobelPrizes.affiliations",
+      "birth.place.countryNow centroid",
+      "prior Nobel cohort output-row latitude/longitude"
+    ],
+    "laureate_objects": 230,
+    "path": "uk_birthplace_checkout/studies/scientist_birthplace_completion_v5/audit/geography/nobel_physics_corroboration_response.bin",
+    "sha256": "633002ff83120f9408d630209b24ebab7d1f3f1e999cf5bb51638ebb8976075e",
+    "unique_official_ids": 230
+  },
+  "old_v2_v6_overlays_frozen": true,
+  "place_query_cache": [
+    {
+      "binding_count": 3,
+      "cached_hemisphere_only_outcome": "north",
+      "cached_missing_coordinate_entities": [],
+      "candidate_review_file": "uk_birthplace_checkout/studies/scientist_birthplace_completion_v4/audit/geography/candidate_reviews.jsonl.gz",
+      "candidate_review_file_sha256": "f8bf58e734f49d603325f3513492750c114b081fc92345e966d4e8bd7c260288",
+      "country_or_birthpoint_assigned": false,
+      "exact_English_label_or_alias": "Colorado Springs",
+      "homonym_entity_count": 2,
+      "original_uncompressed_JSON_body_sha256": "4153c960cb3710ad452d5dcbd74b3e8a2236898bb6b3658e7ae3da6b6837c38a",
+      "physical_geographic_candidate_count": 1,
+      "physical_geographic_hemisphere_counts": {
+        "north": 1
+      },
+      "raw_response_file": "uk_birthplace_checkout/studies/scientist_birthplace_completion_v4/audit/geography/exact_place_query_response.json.gz",
+      "raw_response_file_sha256": "e71ea490bef41db466a03ac907a441b4bc483cff5d352ac971d1b54156e772db",
+      "reuse_frozen_response_only_no_retry": true,
+      "unique_entity_assigned": false,
+      "version": "v4"
+    },
+    {
+      "binding_count": 91,
+      "cached_hemisphere_only_outcome": "unknown",
+      "cached_missing_coordinate_entities": [
+        "http://www.wikidata.org/entity/Q39319400"
+      ],
+      "candidate_review_file": "uk_birthplace_checkout/studies/scientist_birthplace_completion_v4/audit/geography/candidate_reviews.jsonl.gz",
+      "candidate_review_file_sha256": "f8bf58e734f49d603325f3513492750c114b081fc92345e966d4e8bd7c260288",
+      "country_or_birthpoint_assigned": false,
+      "exact_English_label_or_alias": "New York City",
+      "homonym_entity_count": 78,
+      "original_uncompressed_JSON_body_sha256": "4153c960cb3710ad452d5dcbd74b3e8a2236898bb6b3658e7ae3da6b6837c38a",
+      "physical_geographic_candidate_count": 3,
+      "physical_geographic_hemisphere_counts": {
+        "north": 2,
+        "unknown": 1
+      },
+      "raw_response_file": "uk_birthplace_checkout/studies/scientist_birthplace_completion_v4/audit/geography/exact_place_query_response.json.gz",
+      "raw_response_file_sha256": "e71ea490bef41db466a03ac907a441b4bc483cff5d352ac971d1b54156e772db",
+      "reuse_frozen_response_only_no_retry": true,
+      "unique_entity_assigned": false,
+      "version": "v4"
+    },
+    {
+      "binding_count": 276,
+      "cached_hemisphere_only_outcome": "unknown",
+      "cached_missing_coordinate_entities": [
+        "http://www.wikidata.org/entity/Q131325110",
+        "http://www.wikidata.org/entity/Q133270230",
+        "http://www.wikidata.org/entity/Q2214975",
+        "http://www.wikidata.org/entity/Q4892345"
+      ],
+      "candidate_review_file": "uk_birthplace_checkout/studies/scientist_birthplace_completion_v5/audit/geography/candidate_reviews.jsonl",
+      "candidate_review_file_sha256": "b61e94079a93908c9d12e21e7ea28789b7f5d545b7dfd45de0d6c3d54b23bdee",
+      "country_or_birthpoint_assigned": false,
+      "exact_English_label_or_alias": "Berlin",
+      "homonym_entity_count": 119,
+      "original_uncompressed_JSON_body_sha256": "611bdc51b7df79b38a08eac47c2b5dfb81f0c58f09cee077ad35c3a6014420b5",
+      "physical_geographic_candidate_count": 45,
+      "physical_geographic_hemisphere_counts": {
+        "north": 40,
+        "south": 1,
+        "unknown": 4
+      },
+      "raw_response_file": "uk_birthplace_checkout/studies/scientist_birthplace_completion_v5/audit/geography/new_names_query_response.bin",
+      "raw_response_file_sha256": "611bdc51b7df79b38a08eac47c2b5dfb81f0c58f09cee077ad35c3a6014420b5",
+      "reuse_frozen_response_only_no_retry": true,
+      "unique_entity_assigned": false,
+      "version": "v5"
+    },
+    {
+      "binding_count": 38,
+      "cached_hemisphere_only_outcome": "north",
+      "cached_missing_coordinate_entities": [],
+      "candidate_review_file": "uk_birthplace_checkout/studies/scientist_birthplace_completion_v5/audit/geography/candidate_reviews.jsonl",
+      "candidate_review_file_sha256": "b61e94079a93908c9d12e21e7ea28789b7f5d545b7dfd45de0d6c3d54b23bdee",
+      "country_or_birthpoint_assigned": false,
+      "exact_English_label_or_alias": "Detroit",
+      "homonym_entity_count": 32,
+      "original_uncompressed_JSON_body_sha256": "611bdc51b7df79b38a08eac47c2b5dfb81f0c58f09cee077ad35c3a6014420b5",
+      "physical_geographic_candidate_count": 8,
+      "physical_geographic_hemisphere_counts": {
+        "north": 8
+      },
+      "raw_response_file": "uk_birthplace_checkout/studies/scientist_birthplace_completion_v5/audit/geography/new_names_query_response.bin",
+      "raw_response_file_sha256": "611bdc51b7df79b38a08eac47c2b5dfb81f0c58f09cee077ad35c3a6014420b5",
+      "reuse_frozen_response_only_no_retry": true,
+      "unique_entity_assigned": false,
+      "version": "v5"
+    }
+  ],
+  "retries_allowed": 0,
+  "stage": "v7_offline_preparation_before_source_lane_freeze",
+  "v7_source_factfiles_read": false
+}

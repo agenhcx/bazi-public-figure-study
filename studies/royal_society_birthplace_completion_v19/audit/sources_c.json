@@ -1,0 +1,384 @@
+{
+  "schema": "UK_v19_original_birthplace_sources_c_v1",
+  "worker": "/root/v19_sources_c",
+  "written_utc": "2026-11-05T14:08:29.941433+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA4636",
+    "RS_PAST_NA4124",
+    "RS_CURRENT_11792",
+    "RS_CURRENT_37377"
+  ],
+  "intent_file": "v19_c_intent.json",
+  "counts": {
+    "discovery_queries": 6,
+    "original_navigation_attempts": 8,
+    "parsed_text_find_operations": 0,
+    "raw_HTTP_or_PDF_byte_requests": 0,
+    "body_verified_birthplace_candidates": 1,
+    "holds": 3
+  },
+  "candidates": [
+    {
+      "record_id": "RS_PAST_NA4636",
+      "native": {
+        "record_id": "RS_PAST_NA4636",
+        "authority_name": "Pagel; Bernard Ephraim Julius (1930 - 2007)",
+        "native_full_name": "Bernard Ephraim Julius",
+        "native_display_identity": "Pagel; Bernard Ephraim Julius (1930 - 2007)",
+        "native_dob": "1930-01-04",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "f3de89a18c02ea4255ee93c837f7a9e413105d9e6c6d54744aad709efc773378",
+        "native_identity_key_and_DOB_count_in_all_UK": 1
+      },
+      "status": "candidate_original_explicit_first_birthplace",
+      "raw_birthplace": "Berlin",
+      "source_url": "https://assets.cambridge.org/97805218/40309/frontmatter/9780521840309_frontmatter.pdf",
+      "source_title": "Nucleosynthesis and Chemical Evolution of Galaxies, Second Edition: frontmatter author biography",
+      "book_author": "Bernard E. J. Pagel",
+      "source_author": null,
+      "source_author_note": "Uncredited third-person biographical note in original publisher frontmatter; book subject/author and copyright holder are not asserted to have authored this posthumous note.",
+      "source_kind": "original_edited_publisher_frontmatter_biographical_note",
+      "source_grade_proposal": "S2",
+      "source_grade_basis": "Original edited academic-book author biography, with full subject name and direct exact-date born clause; conservative S2, not civil registration or S1 merely because CUP hosts it.",
+      "source_grade_role": "new_person_birthplace_support_only",
+      "source_quote": "Bernard Ephraim Julius Pagel was born in Berlin on 4 January 1930",
+      "source_quote_word_count": 12,
+      "source_locator": "PDF page4 (zero-based3), parsed line70 gives full name/exactDOB/born Berlin; PDFpage5 (zero-based4), line102 gives death14July2007; PDFpage3 (zero-based2), lines51/57 copyright/secondedition2009.",
+      "source_webrefs": [
+        "turn4878966view0"
+      ],
+      "source_birthdate": "1930-01-04",
+      "source_birthdate_precision": "day_in_birth_clause",
+      "source_DOB_matches_native": true,
+      "publication_year": "2009",
+      "publication_date_precision": "year",
+      "ISBN": "978-0-521-84030-9",
+      "identity_review": [
+        "Full Bernard Ephraim Julius Pagel exactly supplies all native given/surname components.",
+        "Direct born clause gives4January1930, matching native; death14July2007/lifespan1930–2007 compatible.",
+        "RGO Herstmonceux1956, Sussex astronomy, NORDITA Copenhagen1990 and chemical-abundance research form distinctive career anchors."
+      ],
+      "identity_conflicts_observed": [],
+      "geography_assignment_performed": false,
+      "geographic_basis_for_parent": "Only Berlin is explicit in the born clause. Family migration to Britain1933, persecution context, employers and publisher footer do not supply a birth-country/region qualifier. First birthplace may be adopted with hemisphere unknown.",
+      "retrieval_representation": "tool-parsed original CUP PDF text; no raw original PDF bytes obtained",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "no_master_change": true
+    }
+  ],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA4124",
+      "native": {
+        "record_id": "RS_PAST_NA4124",
+        "authority_name": "Finney; David John (1917 - 2018)",
+        "native_full_name": "David John",
+        "native_display_identity": "Finney; David John (1917 - 2018)",
+        "native_dob": "1917-01-03",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "a6110cc079610e5d84fe8b71f5e80e69c7c76f238b8105b2f0fbcdfe1008dfa2",
+        "native_identity_key_and_DOB_count_in_all_UK": 1
+      },
+      "status": "hold_original_birthplace_body_not_acquired",
+      "source_url": "https://imstat.org/2020/03/31/obituary-david-john-finney-1917-2018/",
+      "source_title": "Obituary: David John Finney,1917–2018",
+      "source_author": "Richard Cormack",
+      "source_kind_lead": "original_scientific_society_signed_obituary_reproduced_with_permission",
+      "publication_date_lead": "2020-03-31",
+      "source_grade_proposal": null,
+      "reason": "Original IMS HTML returned tool-reported502. Its discovery projection gives a strong full-name/exactdate born-place lead, but failed original open means no body-verified birthplace adoption. Earlier RCPE oral-history page body identifies full name/career but contains no birthday or birthplace; no inference from Edinburgh employer.",
+      "unadopted_discovery_birthplace": "Warrington, UK",
+      "unadopted_discovery_birthdate": "1917-01-03",
+      "discovery_ref": "turn3834354search1",
+      "discovery_source_note": "Search-only text attributes the obituary to Richard Cormack and says condensed/reproduced with permission from JRSS SeriesA June2019 182(3):1097–1099, DOI10.1111/rssa.12450. Underlying journal body not read or claimed independent.",
+      "original_attempts": [
+        {
+          "url": "https://www.rcpe.ac.uk/heritage/oral-history-interviews/david-john-finney",
+          "web_ref": "turn4878966view3",
+          "outcome": "originalinstitutional biography/oral-historymetadata read; career only, no born-place field",
+          "tool_reported_status": null,
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "raw_bytes_saved": false
+        },
+        {
+          "url": "https://imstat.org/2020/03/31/obituary-david-john-finney-1917-2018/",
+          "web_ref": "turn5061406view0",
+          "outcome": "toolreported502; stopped without retry",
+          "tool_reported_status": 502,
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "raw_bytes_saved": false
+        }
+      ],
+      "new_unopened_original_body_lead": {
+        "url": "https://imstat.org/wp-content/uploads/2020/04/Bulletin49_3.pdf",
+        "web_ref": "turn3834354search10",
+        "role": "Original IMS Bulletin49(3) PDF, same-work representation, unopen because navigation budget exhausted. Not an independent source or adopted body."
+      },
+      "no_master_change": true
+    },
+    {
+      "record_id": "RS_CURRENT_11792",
+      "native": {
+        "record_id": "RS_CURRENT_11792",
+        "authority_name": "",
+        "native_full_name": "Steffen Lauritzen",
+        "native_display_identity": "Steffen Lauritzen",
+        "native_dob": "1947-04-22",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "2c44218c197589cecddb51494016e7590f8f9b586a5b86a9db1b395d8004cf26",
+        "native_identity_key_and_DOB_count_in_all_UK": 1
+      },
+      "status": "hold_no_new_explicit_birthplace_body",
+      "source_grade_proposal": null,
+      "reason": "Original KU CV fetch timed out and was not retried. Academia Europaea original member page identifies stored full name, FRS2011 and career, but Denmark is labelled current main country of residence, not birthplace. AE CV wrapper provides only an additional CV link, not a birthplace body. Source-search CV excerpts show native exactDOB, but no acquired original birthplace.",
+      "original_attempts": [
+        {
+          "url": "https://web.math.ku.dk/~lauritzen/cv.html",
+          "web_ref": "turn4878966view1",
+          "outcome": "TimeoutError; stopped no retry",
+          "tool_reported_status": null,
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "raw_bytes_saved": false
+        },
+        {
+          "url": "https://www.ae-info.org/ae/User/Lauritzen_Steffen",
+          "web_ref": "turn3834354view0",
+          "outcome": "Redirected to Member/Lauritzen_Steffen; original member career profile, no birthplace",
+          "tool_reported_status": null,
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "raw_bytes_saved": false
+        },
+        {
+          "url": "https://www.ae-info.org/ae/User/Lauritzen_Steffen/CV",
+          "web_ref": "turn5061406view2",
+          "outcome": "Observed CV wrapper via original member link130; no birthplace body",
+          "tool_reported_status": null,
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "raw_bytes_saved": false
+        }
+      ],
+      "date_precision_observed_in_opened_original_body": "none",
+      "unadopted_search_date": "1947-04-22",
+      "unopened_original_CV_attachment_lead": {
+        "source_ref": "turn5061406view2",
+        "link_id": 129,
+        "label": "CV",
+        "locator": "line164",
+        "role": "Visible original attachment link not followed within8-navigation budget; attachment destination/body not claimed read."
+      },
+      "identity_anchors": [
+        "Stored full Steffen Lauritzen directly appears on AE member page.",
+        "Aalborg1981–2004/Oxford2004–2014/Copenhagen2014 and FRS2011 support member identity; residence/nationality are not birth context."
+      ],
+      "no_master_change": true
+    },
+    {
+      "record_id": "RS_CURRENT_37377",
+      "native": {
+        "record_id": "RS_CURRENT_37377",
+        "authority_name": "",
+        "native_full_name": "Xiaodong Chen",
+        "native_display_identity": "Xiaodong Chen",
+        "native_dob": "1975-12-13",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "63a7ef5298f3fd92107937eb77fe42e0eac361de8946efd0a14e7d3336097b5a",
+        "native_identity_key_and_DOB_count_in_all_UK": 1
+      },
+      "status": "hold_no_explicit_birthplace_in_acquired_original_bodies",
+      "source_grade_proposal": null,
+      "reason": "Original Wiley author profile explicitly gives native full English name and exact1975-12-13 plus distinctive NTU/Fuzhou/Muenster career, but contains no birthplace. Original NTU PI page likewise gives career only. Chinese discovery query produced a university-visit report, not a born-place claim; no hometown, nationality, education or employer inference.",
+      "original_attempts": [
+        {
+          "url": "https://onlinelibrary.wiley.com/doi/10.1002/anie.201811655",
+          "web_ref": "turn4878966view2",
+          "outcome": "Original free authorprofile, exact DOB and fullidentity/career, no birthplacestatement",
+          "tool_reported_status": null,
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "raw_bytes_saved": false
+        },
+        {
+          "url": "https://www3.ntu.edu.sg/home/CHENXD/PI.html",
+          "web_ref": "turn5061406view1",
+          "outcome": "Original PI biography/career read, no DOB/placebirth field",
+          "tool_reported_status": null,
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "raw_bytes_saved": false
+        }
+      ],
+      "source_birthdate_observed": "1975-12-13",
+      "source_birthdate_precision": "exact_day_in_author_profile_date_of_birth_field; no place field",
+      "source_DOB_matches_native": true,
+      "source_author_profile_metadata": {
+        "title": "Xiaodong Chen",
+        "publication_first_online": "2018-10-19",
+        "issue_publication_date": "2019-03-18",
+        "doi": "10.1002/anie.201811655",
+        "source_location": "Full name20/53, Date of birth61–63, NTUposition66, Fuzhou1999/CAS2002/Muenster2006/Northwesternpostdoc78.",
+        "individual_narrator_note": "Author Profile includes first-person answers; no separate individual profile writer assumed."
+      },
+      "identity_anchors": [
+        "Full stored English name Xiaodong Chen appears explicitly in both original sources.",
+        "Wiley exact13December1975 matches frozen native date, not retiered.",
+        "FuzhouBS1999/CASMS2002/MuensterPhD2006/Northwesternpostdoc/NTU2009 plus materials/interfaces research uniquely bind subject."
+      ],
+      "no_QID_ORCID_transfer": "Displayed ORCID not copied into native UK identity fields.",
+      "no_master_change": true
+    }
+  ],
+  "query_ledger": [
+    {
+      "engine": "system2",
+      "query": "Bernard Ephraim Julius Pagel born obituary astronomy",
+      "webref": "turn8354091search",
+      "preplanned": true,
+      "exact_request_utc": null
+    },
+    {
+      "engine": "system2",
+      "query": "David John Finney born obituary Edinburgh",
+      "webref": "turn8354091search",
+      "preplanned": true,
+      "exact_request_utc": null
+    },
+    {
+      "engine": "system2",
+      "query": "Steffen Lauritzen curriculum vitae born Oxford",
+      "webref": "turn8354091search",
+      "preplanned": true,
+      "exact_request_utc": null
+    },
+    {
+      "engine": "system2",
+      "query": "Xiaodong Chen born NTU materials scientist",
+      "webref": "turn8354091search",
+      "preplanned": true,
+      "exact_request_utc": null
+    },
+    {
+      "engine": "system1",
+      "query": "\"David John Finney\" born obituary Royal Society Edinburgh",
+      "webref": "turn3834354search",
+      "preplanned": true,
+      "exact_request_utc": null
+    },
+    {
+      "engine": "system1",
+      "query": "陈晓东 \"出生\" 南洋理工",
+      "webref": "turn3834354search",
+      "preplanned": true,
+      "exact_request_utc": null
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "url": "https://assets.cambridge.org/97805218/40309/frontmatter/9780521840309_frontmatter.pdf",
+      "web_ref": "turn4878966view0",
+      "outcome": "Original edited CUPfrontmatter PDFtext body read, explicit born Berlin/exactdate/fullname",
+      "tool_reported_status": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "raw_bytes_saved": false
+    },
+    {
+      "url": "https://web.math.ku.dk/~lauritzen/cv.html",
+      "web_ref": "turn4878966view1",
+      "outcome": "TimeoutError; stopped no retry",
+      "tool_reported_status": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "raw_bytes_saved": false
+    },
+    {
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/anie.201811655",
+      "web_ref": "turn4878966view2",
+      "outcome": "Original free authorprofile, exact DOB and fullidentity/career, no birthplacestatement",
+      "tool_reported_status": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "raw_bytes_saved": false
+    },
+    {
+      "url": "https://www.rcpe.ac.uk/heritage/oral-history-interviews/david-john-finney",
+      "web_ref": "turn4878966view3",
+      "outcome": "originalinstitutional biography/oral-historymetadata read; career only, no born-place field",
+      "tool_reported_status": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "raw_bytes_saved": false
+    },
+    {
+      "url": "https://www.ae-info.org/ae/User/Lauritzen_Steffen",
+      "web_ref": "turn3834354view0",
+      "outcome": "Redirected to Member/Lauritzen_Steffen; original member career profile, no birthplace",
+      "tool_reported_status": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "raw_bytes_saved": false
+    },
+    {
+      "url": "https://imstat.org/2020/03/31/obituary-david-john-finney-1917-2018/",
+      "web_ref": "turn5061406view0",
+      "outcome": "toolreported502; stopped without retry",
+      "tool_reported_status": 502,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "raw_bytes_saved": false
+    },
+    {
+      "url": "https://www3.ntu.edu.sg/home/CHENXD/PI.html",
+      "web_ref": "turn5061406view1",
+      "outcome": "Original PI biography/career read, no DOB/placebirth field",
+      "tool_reported_status": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "raw_bytes_saved": false
+    },
+    {
+      "url": "https://www.ae-info.org/ae/User/Lauritzen_Steffen/CV",
+      "web_ref": "turn5061406view2",
+      "outcome": "Observed CV wrapper via original member link130; no birthplace body",
+      "tool_reported_status": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "raw_bytes_saved": false
+    }
+  ],
+  "limits": [
+    "Eight-navigation/six-query budgets exhausted; no failed-endpoint retries.",
+    "No native DOB/calendar/identity/eligibility/grade/master/Git/QID/country/coordinates or hemisphere changes.",
+    "Full original PDF/HTML/images not downloaded or redistributed; single12-word quote from CUP work, other observations structured/paraphrased.",
+    "Tool-parsed original text is not raw HTTP bytes; actual status/time/hash unknown null. Tool-reported502 and timeout separately labelled.",
+    "Discovery-only IMS bornWarringtonUK is not adopted despite long search projection; parent may inspect unopened same-work original BulletinPDF via new body route.",
+    "Lauritzen residence Denmark and Chen educationChina/Muenster are not birthplace.",
+    "Current identity binds stored name rather than blank authority string; no source middle initial expansion or native identity rewrite.",
+    "No source absence/literature exhaustion or independent-source corroboration claimed."
+  ]
+}

@@ -1,0 +1,437 @@
+{
+  "schema": "UK_v46_c_exact_prior_intent_v1",
+  "group": "c",
+  "strategy_id": "distinct_original_biography_and_bibliography_discovery_after_v45_v1",
+  "scope_file": "v46_original_scope.json",
+  "scope_sha256": "6051c4a3f9887bbba4556595f9dfbbfd8c5bb6ab552d586e9cf67f217597c7bc",
+  "native_scope_file": "v46_scope_c.json",
+  "native_scope_sha256": "9467b946dfba8452ee3acf75cda6cb59d1e6d1cd7aa19e6e4d9d93a95e17d566",
+  "prerequest_triage": {
+    "path": "v46_triage_c.json",
+    "sha256": "407b750bfe1f5783bca8c7b2d0d0c4c5bc1f3713c0ec8010f160997f20943b89",
+    "written_utc": "2026-11-08T11:33:48.784328+00:00",
+    "available_at_scope_freeze": false,
+    "completion_after_scope_freeze_disclosed": true,
+    "actual_completed_triage_pinned_before_any_source_request": true,
+    "frozen_original_scope_not_modified": true
+  },
+  "prerequest_context_review": {
+    "all9_actual_V46_snapshot_files_fully_parsed_and_pins_match_previously_fully_read_inventory_content": true,
+    "full_two_native_scope_objects_read": true,
+    "full_targeted_prior_worker_holds_sources_and_request_intents_read": true,
+    "full_relevant_prior_root_intents_read": true,
+    "root_prior_target_requests_in_V22_and_V26": 0,
+    "Walker_component_multiplicity": [
+      "George",
+      "Walker",
+      "Walker"
+    ],
+    "Walker_name_dedup_or_omitted_middle_exception_assumed": false,
+    "prior_closed_works_preserved": true,
+    "prior_hold_and_source_context": [
+      {
+        "record_id": "RS_PAST_NA1196",
+        "native_authority_name": "Walker; George Walker (1874 - 1921); physicist",
+        "native_name_field": "George Walker",
+        "native_DOB": "1874-02-24",
+        "native_lifespan": "1874-1921",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "birthplace_source_grade": "unknown",
+        "native_personal_components_with_multiplicity": [
+          "George",
+          "Walker",
+          "Walker"
+        ],
+        "native_component_counts": {
+          "George": 1,
+          "Walker": 2
+        },
+        "native_complete_object_canonical_sha256": "0cbfd3f09c27a8fe0271a592d88a097f90818e2a04a28bc95da586934885a7b8",
+        "all9_inventory_target_matches": [],
+        "prospective_status": "reserved_candidate_only_no_source_requests_authorized_or_executed_by_this_triage",
+        "original_body_or_birthplace_proof_acquired_by_this_triage": false,
+        "source_grade_proposed": null,
+        "no_native_name_or_DOB_repair": true,
+        "identity_caution": "The actual authority surname is Walker and given-name field is George Walker. Preserve George + Walker + Walker multiplicity. It is not a demonstrated native error. No silent deduplication to George Walker, initial expansion, invented alias or assumed omitted-middle exception. Any future actual source failing the fixed component gate stays held.",
+        "prior_actual_operations": [
+          {
+            "phase": "V26 discovery",
+            "queries": [
+              "George Walker physicist 1874 born obituary",
+              "\"George Walker Walker\" born"
+            ],
+            "engines": [
+              "system2",
+              "system1"
+            ],
+            "refs": [
+              "turn1754186search*",
+              "turn5260535search*"
+            ],
+            "role": "Search projections only; no original birth body."
+          },
+          {
+            "operation": "open",
+            "url": "https://catalogues.royalsociety.org/CalmView/Record.aspx/Record.aspx?id=NA1196&src=CalmView.Persons",
+            "ref": "turn7635789view3",
+            "outcome": "tool-reported403 Forbidden; stopped"
+          },
+          {
+            "operation": "open",
+            "url": "https://makingscience.royalsociety.org/people/na1196/george-walker-walker",
+            "ref": "turn9989368view1",
+            "outcome": "tool-reported502 Bad Gateway; stopped"
+          }
+        ],
+        "closed_work_set": [
+          {
+            "work": "Royal Society NA1196 catalogue person record, including CalmView/MakingScience representations",
+            "reason": "Previously failed403/502; no alternate frontend, case/path variant, carrier, raw GET or retry."
+          }
+        ],
+        "retained_distinct_original_lead": {
+          "citation_as_retained": "ProcRoySocSeriesA1922–1923vol102ppxxii–xxvi signedC.V.B./C.C./H.H.T.",
+          "source_family": "Proceedings of the Royal Society Series A obituary material",
+          "article_title": null,
+          "article_url": null,
+          "retained_locator": "v26_sources_a.json holds[0].unopened_distinct_original_leads[0]; current prior_v26_holds.json same record",
+          "previously_acquired_body": false,
+          "observed_article_URL": false,
+          "work_identity_limit": "Citation only from catalogue search projection. No evidence that a direct article-body request occurred in the reviewed available ledgers. A journal obituary is a different proposed work from catalogue metadata, but actual title/subject/work identity must be observed before requesting it. Initial signatures not expanded or assigned to a particular subsection."
+        },
+        "candidate_locator_queries": [
+          {
+            "engine_preference": "system2",
+            "query": "\"George Walker Walker\" \"xxii\" \"xxvi\"",
+            "purpose": "Locate exact retained obituary citation as an actually observed original work URL; different from old broad born queries."
+          },
+          {
+            "engine_preference": "system2_then_system1_if_needed_with_frozen_budget",
+            "query": "\"George Walker Walker\" \"102\" \"1922\"",
+            "purpose": "Optional bounded citation locator if prospectively selected; not an open or a new-work identity assumption."
+          }
+        ],
+        "future_admission_gates": [
+          "Actual original personal body and source-specific quality; no host-onlyS1 or automatic journalist/unsignedS2.",
+          "All native personal components including multiplicity; actually stated compatible DOB precision, coherent distinctive career, compatible lifespan as observed. No dateless or age-inferred DOB.",
+          "Direct subject birthplace relation for first birthplace; explicit whole-region birth context needed for hemisphere. City/address alone may qualify a birthplace with unknown hemisphere.",
+          "Actual contradictory DOB/lifespan/place held and preserved without positive-source shopping or native repair.",
+          "Prospective exact durable per-operation intent with real entryUTC and separate successful local exit0 validation; first unusable whole work closes."
+        ]
+      },
+      {
+        "record_id": "RS_PAST_NA4252",
+        "native_authority_name": "Ridley; Brian Kidd (1931 - 2024); solid state physicist",
+        "native_name_field": "Brian Kidd",
+        "native_DOB": "1931-03-02",
+        "native_lifespan": "1931-2024",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "birthplace_source_grade": "unknown",
+        "native_personal_components_with_multiplicity": [
+          "Brian",
+          "Kidd",
+          "Ridley"
+        ],
+        "native_component_counts": {
+          "Brian": 1,
+          "Kidd": 1,
+          "Ridley": 1
+        },
+        "native_complete_object_canonical_sha256": "6ca23222a6d11fdcf5730b3920d03c481e6b3c30d95aaa586da343b369ea85d9",
+        "all9_inventory_target_matches": [],
+        "prospective_status": "reserved_candidate_only_no_source_requests_authorized_or_executed_by_this_triage",
+        "original_body_or_birthplace_proof_acquired_by_this_triage": false,
+        "source_grade_proposed": null,
+        "no_native_name_or_DOB_repair": true,
+        "identity_caution": "All Brian/Kidd/Ridley components required as actually observed under ordinary full-name gate. No B.K. expansion, first/surname-only repair or transfer of exact dates from memoir metadata into a different profile. Other Brian Ridley1947/Cambridge1929 search results are different-person noise, not native date conflicts.",
+        "prior_actual_operations": [
+          {
+            "phase": "V22 discovery",
+            "queries": [
+              "\"Brian Kidd Ridley\" \"born\"",
+              "\"Brian Ridley\" \"born\" Essex obituary"
+            ],
+            "refs": [
+              "turn5256705search0",
+              "turn5365142search0",
+              "turn5365142search1",
+              "turn5365142search5"
+            ],
+            "role": "Essex profile/conference career-only discovery; no retained actual URL or body."
+          },
+          {
+            "operation": "open",
+            "url": "https://eprints.ncl.ac.uk/309086",
+            "ref": "turn3221280view0",
+            "outcome": "Original repository metadata/abstract acquired. Full native name/exactDOB1931-03-02/death2024-05-22 and memoir identity observed; abstract has no birthplace. Metadata is not memoir body."
+          },
+          {
+            "operation": "click_actual_link8",
+            "from_ref": "turn3221280view0",
+            "url": "https://eprints.ncl.ac.uk/fulltext.aspx?pub_id=309086&ts=639295190249352333&url=309086%2F6BF3C945-A45B-4C07-B219-0972730522D6.pdf",
+            "ref": "turn6357506view0",
+            "outcome": "Tool-reported400 Content length too large:16299998; stopped"
+          }
+        ],
+        "closed_work_set": [
+          {
+            "work": "Brian Kidd Ridley. 2 March1931–22May2024, Dyson A/Vaughan MP, DOI10.1098/rsbm.2025.0019",
+            "reason": "Published memoir attachment failed size limit. No publisher/DOI/directPDF, cache, smaller-carrier or URL variant; repository title/abstract is not independent full-body evidence."
+          },
+          {
+            "work": "Historical enwiki discovery work",
+            "reason": "Retained V22 hold calls it closed; no original body or date/place adopted. Canonical/mirror material is outside proposed original-only source strategy."
+          }
+        ],
+        "retained_distinct_original_lead": {
+          "description_as_retained": "Distinct Essex profile/conference discovery has career only, not opened; no birthplace proof.",
+          "institution": "University of Essex",
+          "article_title": null,
+          "article_url": null,
+          "retained_locator": "v22_sources_a.json holds[2].unopened_non_evidence_leads[1]; prior_v22_holds.json same record; query refs turn5365142search0/search1/search5",
+          "previously_acquired_body": false,
+          "observed_article_URL": false,
+          "work_identity_limit": "No exact profile/conference title or URL retained. A future result must demonstrate a genuinely distinct institutional personal body; a reprint/attachment/version of the closed2025 memoir remains the same closed work. Work/death place and career-only profiles are not birthplace evidence."
+        },
+        "candidate_locator_queries": [
+          {
+            "engine_preference": "system2",
+            "query": "\"Brian Kidd Ridley\" site:essex.ac.uk",
+            "purpose": "Bounded locator for the retained institutional profile or original conference personal body; inspect only an actually observed distinct-work URL."
+          },
+          {
+            "engine_preference": "system2_then_system1_if_needed_with_frozen_budget",
+            "query": "\"Brian Ridley\" site:essex.ac.uk conference",
+            "purpose": "Optional narrowly targeted conference locator if prospectively selected. Query short name is a locator only, never an admitted alias or full-name proof."
+          }
+        ],
+        "future_admission_gates": [
+          "Actual original personal body and source-specific quality; no host-onlyS1 or automatic journalist/unsignedS2.",
+          "All native personal components including multiplicity; actually stated compatible DOB precision, coherent distinctive career, compatible lifespan as observed. No dateless or age-inferred DOB.",
+          "Direct subject birthplace relation for first birthplace; explicit whole-region birth context needed for hemisphere. City/address alone may qualify a birthplace with unknown hemisphere.",
+          "Actual contradictory DOB/lifespan/place held and preserved without positive-source shopping or native repair.",
+          "Prospective exact durable per-operation intent with real entryUTC and separate successful local exit0 validation; first unusable whole work closes."
+        ]
+      }
+    ],
+    "known_issues_unchanged": {
+      "active_DOB": 13,
+      "partial_birthplace": 2,
+      "same_source_age": 4,
+      "other_issue_files": 6
+    },
+    "no_target_matches_in_all9_issue_inventory": true
+  },
+  "inventory_file_pins": {
+    "active_source_DOB_conflicts.json": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+    "birthplace_source_conflicts.json": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+    "source_derived_age_inconsistencies.json": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+    "provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+    "lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+    "cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+    "source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+    "omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+    "source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+  },
+  "context_file_pins": {
+    "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v22_holds.json": "d3b4535dd510b91cf96ed77ac57ab704aa341e70654eec55065b8864d1c86d35",
+    "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v26_holds.json": "510d080ca5ec90938d6953955b145805b872c72090e05551b3259d163f247c4e",
+    "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v26_method_qa.json": "710d06c34aad2e1afc6570c7040b3191ecf37633218995233eb964691d11e209",
+    "v22_sources_a.json": "d7385fac4e95071fb0601f696b8b14f5332049fa47c4c41d275d45b36193e12c",
+    "v22_a_rr_intent.json": "9231fd514082b110f8262cc2418e8f0e2949d7ce1fa28975038a96e66f43efe7",
+    "v22_a_intent.json": "a2fbaa719fd3e4421f9a31bbc0a1446fe2416c4efece319ce98be513daba0659",
+    "v26_sources_a.json": "975ded068547fdeb1aab9ef6407ebf21eaa48ab0bf8ad0346349937eb49dca3d",
+    "v26_a_intent.json": "314422929a19323ab27418b13445f4eec3d2ef044ee50f819951047b5f43dfa2",
+    "v22_root_intent.json": "c5fb54fa2f5fbbbe0475fcd7c714b82cb2745c1871dfeff7341465a3324e7c3d",
+    "v26_root_intent.json": "69522bdda59d2b4d0fba2200425a61d8ee38c7484dfd0f65d8a2b1c2522b14b6",
+    "v46_triage_c.json": "407b750bfe1f5783bca8c7b2d0d0c4c5bc1f3713c0ec8010f160997f20943b89",
+    "academy_repo/studies/royal_society_original_source_followup_v46/audit/baseline_active_source_DOB_conflicts.json": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+    "academy_repo/studies/royal_society_original_source_followup_v46/audit/baseline_birthplace_source_conflicts.json": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+    "academy_repo/studies/royal_society_original_source_followup_v46/audit/baseline_source_derived_age_inconsistencies.json": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+    "academy_repo/studies/royal_society_original_source_followup_v46/audit/baseline_provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+    "academy_repo/studies/royal_society_original_source_followup_v46/audit/baseline_lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+    "academy_repo/studies/royal_society_original_source_followup_v46/audit/baseline_cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+    "academy_repo/studies/royal_society_original_source_followup_v46/audit/baseline_source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+    "academy_repo/studies/royal_society_original_source_followup_v46/audit/baseline_omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+    "academy_repo/studies/royal_society_original_source_followup_v46/audit/baseline_source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+  },
+  "budgets": {
+    "queries": 5,
+    "navigation_attempts": 6
+  },
+  "entries": [
+    {
+      "index": 0,
+      "kind": "query",
+      "record_id": "RS_PAST_NA1196",
+      "engine": "system2",
+      "query": "\"George Walker Walker\" \"xxii\" \"xxvi\"",
+      "purpose": "Locate actual distinct original Proceedings Royal Society SeriesA1021922-23 obituary citation URL only. Preserve George1/Walker2 native multiplicity; no catalogue/frontend reopening, invented article URL, signature expansion or source proof from projection.",
+      "written_utc": "2026-11-08T11:35:35.005771+00:00",
+      "status": "executed",
+      "result_ref": "turn7007013search0",
+      "topic_relevant_observed_refs": [
+        "turn7007013search0"
+      ],
+      "outcome": "Aggregate engine2 results expose only already closed catalogue work as relevant Walker locator; no distinct obituary URI observed. Projection citation not original proof and closed catalogue not reopened.",
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "index": 1,
+      "kind": "query",
+      "record_id": "RS_PAST_NA4252",
+      "engine": "system2",
+      "query": "\"Brian Kidd Ridley\" site:essex.ac.uk",
+      "purpose": "Locate actual distinct University of Essex institutional personal profile/conference biography URL only. Closed2025memoir/Newcastle attachment cannot be retried or rehosted; reject same-work carriers and projection proof.",
+      "written_utc": "2026-11-08T11:35:35.005782+00:00",
+      "status": "executed",
+      "result_ref_family": "turn7007013search",
+      "topic_relevant_observed_refs": [],
+      "outcome": "No topic-relevant Essex personal-work locator observed in aggregate returned engine2 result set; no original absence/completeness claim. Per-query backend result allocation not exposed.",
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "index": 2,
+      "kind": "query",
+      "record_id": "RS_PAST_NA1196",
+      "engine": "system1",
+      "query": "\"George Walker Walker\" obituary \"102\"",
+      "purpose": "Engine1 coverage fallback for actual distinct Proceedings102 obituary URI after engine2 only closed catalogue projection. No catalogue reopening or guessed DOI/URL. Preserve literal name multiplicity.",
+      "written_utc": "2026-11-08T11:36:17.187010+00:00",
+      "status": "executed",
+      "result_ref": "turn6239965search1",
+      "topic_relevant_observed_refs": [
+        "turn6239965search1"
+      ],
+      "outcome": "Only closed catalogue relevant to Walker in aggregate results; no distinct obituary URI observed. Unrelated people ignored without source-conflict claims.",
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "index": 3,
+      "kind": "query",
+      "record_id": "RS_PAST_NA4252",
+      "engine": "system1",
+      "query": "\"Brian Ridley\" site:essex.ac.uk conference",
+      "purpose": "Engine1 bounded fallback for retained Essex original conference/profile lead after no relevant engine2 locator. Short search name is locator only; actual full Brian/Kidd/Ridley remains mandatory, no exception assumed. Exclude closed2025memoir across carriers.",
+      "written_utc": "2026-11-08T11:36:17.187025+00:00",
+      "status": "executed",
+      "topic_relevant_observed_refs": [
+        "turn6239965search3",
+        "turn6239965search4"
+      ],
+      "outcome": "Actual Essex conference-news and staff-profile original URLs observed. Different institutional compositions from closed2025 memoir; projection career/date omissions are not original proof. Source bodies not yet acquired.",
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "index": 4,
+      "kind": "query",
+      "record_id": "RS_PAST_NA1196",
+      "engine": "system1",
+      "query": "\"Walker\" \"102\" \"xxii\" \"obituary\"",
+      "purpose": "Final citation-specific locator query for the retained Proceedings102 work. Surname-only query is bibliographic locator, not native name repair; actual George1/Walker2 multiplicity remains required. No reopening catalogue or guessing article URL/DOI.",
+      "written_utc": "2026-11-08T11:37:02.843589+00:00",
+      "status": "executed",
+      "result_ref_family": "turn5058728search",
+      "topic_relevant_observed_refs": [],
+      "outcome": "Final citation locator returned unrelated modern Walker obituaries only; no actual distinct Proceedings102 obituary URI observed. No candidate opened or name repaired.",
+      "exact_backend_per_query_result_assignment_exposed": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "index": 5,
+      "kind": "open",
+      "record_id": "RS_PAST_NA4252",
+      "exact_url": "https://www1.essex.ac.uk/news/event.aspx?e_id=531",
+      "from_ref": "turn6239965search3",
+      "URL_provenance": "Actual engine1 observed original institutional URL turn6239965search3",
+      "distinct_work_identity_basis": "Conference to honour physicists, original Essex16March2009 news composition; the observed search representation identifies a conference news article or staff profile, not RS2025.0019 memoir reprint/attachment.",
+      "purpose": "First actual original conference-news body inspection. Confirm literal source names, any stated compatible birth precision/direct birthplace and source quality; separate Ridley from Loudon, work/school/conference location from birth. No inferred middle name or transferred memoir dates. Stop whole work at first unusable/header/textless/challenge/size response; no variants/carriers/rawGET.",
+      "written_utc": "2026-11-08T11:37:02.843602+00:00",
+      "status": "executed",
+      "result_ref": "turn5058728view0",
+      "outcome": "Actual original Essex2009 conference-news body acquired. Literal Brian Ridley; distinctive semiconductor/FRS/DiracMedal career, but no Kidd component, stated birthdate, birthplace or subject life dates. Work/conference locations and footer UK are not birth evidence.",
+      "source_body_acquired": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "index": 6,
+      "kind": "open",
+      "record_id": "RS_PAST_NA4252",
+      "exact_url": "https://www.essex.ac.uk/people/RIDLE23106/Brian-Ridley",
+      "from_ref": "turn6239965search4",
+      "URL_provenance": "Actual engine1 observed original institutional URL turn6239965search4",
+      "distinct_work_identity_basis": "Brian Ridley University of Essex institutional staff profile; the observed search representation identifies a conference news article or staff profile, not RS2025.0019 memoir reprint/attachment.",
+      "purpose": "First actual original staff-profile body inspection. Confirm literal all-name/date/career/birthplace evidence only if actually stated; contact/research campus does not establish birthplace. No projection-proof transfer or automatic institutionalS1. Stop whole work at first unusable/header/textless/challenge/size response; no variants/carriers/rawGET.",
+      "written_utc": "2026-11-08T11:37:02.843606+00:00",
+      "status": "executed",
+      "result_ref": "turn5058728view1",
+      "outcome": "Actual original Essex staff-profile body acquired. Literal Professor Brian Ridley, CSEE/research fields and campus only; no Kidd component, birthdate, birthplace or life dates. Present-tense role/copyright footer does not establish life endpoint or birth geography.",
+      "source_body_acquired": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    }
+  ],
+  "validation_before_web_batches": [
+    {
+      "intent_entries": [
+        0,
+        1
+      ],
+      "validation_exit_code": 0,
+      "validation_utc": "2026-11-08T11:35:44.811892+00:00",
+      "separate_local_validation_before_web": true
+    },
+    {
+      "intent_entries": [
+        2,
+        3
+      ],
+      "validation_exit_code": 0,
+      "validation_utc": "2026-11-08T11:36:25.489053+00:00",
+      "separate_local_validation_before_web": true
+    },
+    {
+      "intent_entries": [
+        4,
+        5,
+        6
+      ],
+      "validation_exit_code": 0,
+      "validation_utc": "2026-11-08T11:37:13.591148+00:00",
+      "separate_local_validation_before_web": true
+    }
+  ],
+  "retrieval_counts": {
+    "queries": 5,
+    "navigation_attempts": 2,
+    "source_open_operations": 2,
+    "click_operations": 0,
+    "parsed_finds": 0,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "bounded_pass_complete": true,
+  "all_collection_work_closures_clean": true,
+  "protocol_deviations": [],
+  "source_exhausted": false,
+  "final_freeze": false
+}

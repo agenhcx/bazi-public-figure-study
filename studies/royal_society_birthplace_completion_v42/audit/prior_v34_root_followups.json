@@ -1,0 +1,60 @@
+{
+  "written_utc": "2026-11-06T23:20:06.977292+00:00",
+  "intent_file": "root_intent.json",
+  "counts": {
+    "discovery_queries": 0,
+    "source_open_operations": 4,
+    "click_operations": 0,
+    "parsed_finds": 1,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "observations": [
+    {
+      "record_id": "RS_PAST_NA5494",
+      "url": "https://www.botanicalartandartists.com/about-arthur-harry-church.html",
+      "ref": "turn5681340view0",
+      "locator": "L233full/life;L242explicit1865-03-24;L243-249career;L271death1937",
+      "role": "new_actual_HTML_S3_DOB_conflict_observation_only",
+      "adopted_geography": false,
+      "adopted_DOB_inventory": true
+    },
+    {
+      "record_id": "RS_PAST_NA645",
+      "url": "https://trumpingtonlocalhistorygroup.org/people/f7063.htm",
+      "ref": "turn8115559view0",
+      "locator": "L18Husbandfull/L25DOB/bornLancashire/L27profession/L28death1990/L57quartercitation/L58DOBindexnote",
+      "role": "new_original_local_history_compiled_profile_primary_geo_source",
+      "adopted_geography": true
+    },
+    {
+      "record_id": "RS_PAST_NA645",
+      "url": "https://www.hulmegrammar.org/ArchiveWebPages/ww1/ww1boys.html",
+      "ref": "turn8115559view1",
+      "cached_find_ref": "turn9042344view0",
+      "locator": "L2109full/L2111DOB/bornCastleton/L2113career/L2114deathage89",
+      "role": "new_school_history_identity_city_career_support_only",
+      "adopted_geography": false,
+      "supports_primary_geofact": true
+    },
+    {
+      "record_id": "RS_PAST_NA661",
+      "url": "https://translate.academic.ru/a%20difficult%20subject/xx/en/",
+      "input_worker_body_ref": "turn4553961view0",
+      "ref": "turn5568938view0",
+      "locator": "L67full/L73DOB/bornClydebankScotland/L75death/L78-85career/L95FMW/L96namedreference",
+      "role": "actual_third_party_attributed_named_reference_excerpt_not_authenticated_original_publisher_body",
+      "adopted_geography": true
+    }
+  ],
+  "quote_words_by_original_work": {
+    "Trumpington_Parkes": 2,
+    "Hulme_Parkes_support": 7,
+    "Academic_McNeill": 2,
+    "Church_new_DOB_observation": 4
+  },
+  "raw_HTTP_status": null,
+  "raw_bytes_sha256": null,
+  "exact_request_utc": null,
+  "no_original_caches_or_images_distributed": true
+}

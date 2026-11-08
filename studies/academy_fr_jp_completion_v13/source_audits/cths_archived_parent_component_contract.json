@@ -1,0 +1,51 @@
+{
+  "contract_id": "v13_exact_combes_archived_parent_component",
+  "root_method_authorized": true,
+  "acceptance_requires_separate_exact_root_and_independent_source_QA": true,
+  "scope": "CTHS_102838 only; supplements the unchanged v12 two-response component contract. No blanket CTHS or archive authority.",
+  "candidate_group_id": "CTHS_102838",
+  "parent_notice_url": "https://cths.fr/an/savant.php?id=102838",
+  "parent_notice_sha256": "77a5e9b758c6d2bfbb09350f7bdfe90f8a11793595994cf6399260c758cab841",
+  "expanded_biography_url": "https://cths.fr/library/getdata.php?q=proso_bio_detail&id=102838&dep=y",
+  "expanded_biography_sha256": "55590c3645f57dcb7b1d775ef808534e5df113ddec7d0637bd5abcb8cf7734d9",
+  "archive_path": "data/france_academy_cths_profile_dob_harvest_v1/cths_profile_source_html_sha256_bundle_v1.tar.gz",
+  "archive_sha256": "6258a366f69e120395450420fee8ae2587d586cb5db153937d1ef45267468811",
+  "archive_member": "source_html/77a5e9b758c6d2bfbb09350f7bdfe90f8a11793595994cf6399260c758cab841.html",
+  "archive_index_path": "data/france_academy_cths_profile_dob_harvest_v1/cths_dob_claims_all_targets_candidate_only_v1.csv",
+  "archive_index_sha256": "7308ff06f2a021dfd59970e307fb8190e6b17e6e05a3e83422375687f8b763a8",
+  "required_original_parent_http_status": null,
+  "required_original_parent_retrieved_utc": null,
+  "original_response_envelope_not_available": true,
+  "historical_harvest_status_is_separate_metadata": true,
+  "required_parent_provenance_keys": [
+    "capture_origin",
+    "archive_path",
+    "archive_sha256",
+    "archive_member",
+    "archive_member_sha256",
+    "parent_notice_url",
+    "archive_url_mapping_verified",
+    "original_retrieved_utc",
+    "original_http_status",
+    "retrieval_time_status",
+    "local_reopened_utc",
+    "archived_parent_subject_name_DOB_credit_verified"
+  ],
+  "required_evidence_fields": {
+    "cths_archive_parent_provenance_branch": true,
+    "cths_evidence_spans_multiple_http_responses": true,
+    "cths_same_body_authorship_role_start_verified": false,
+    "cths_parent_notice_http_status": null,
+    "cths_parent_notice_retrieved_utc": null,
+    "cths_expanded_biography_http_status": 200
+  },
+  "rules": [
+    "Rehash the actual tracked tar, exact raw member and source-index mapping; source hash, URL and selected person must agree.",
+    "Retain genuine unknown original retrieval time and HTTP status as null. Historical harvest HTTP_200 is disclosed separately; local reopening is not retrieval.",
+    "Read archived parent subject name, DOB, writer token and observed expansion handler; match exact fresh fragment ID, preview/career and closing handler.",
+    "Fresh fragment keeps its actual HTTP200, original bytes/hash and retrieval UTC. Both source_capture_components remain explicit and form one notice, not independent votes.",
+    "All ordinary-role, direct-start, subject identity, source credit, alias, birthyear and chronology controls remain unchanged.",
+    "The static branch allowlist covers only this exact Combes source pair. Final decisions and worker-manifest hashes must match root and independent QA bindings."
+  ],
+  "raw_bodies_redistributed": false
+}

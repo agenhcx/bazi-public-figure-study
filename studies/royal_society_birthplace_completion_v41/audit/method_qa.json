@@ -1,0 +1,507 @@
+{
+  "schema": "UK_v41_canonical_community_person_place_method_QA_v1",
+  "reviewer": "/root/v41_source_qa",
+  "initial_written_utc": "2026-11-08T08:49:11.193848+00:00",
+  "status": "final_documentary_source_and_unchanged_method_application_review_passed",
+  "final_case_assessment_pending": false,
+  "blocking_issues": [],
+  "preliminary_checks_report": "v41_source_qa_preflight.json",
+  "preliminary_checks_passed": 32,
+  "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+  "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+  "method_application_scope_sha256": "d6ebcba7aa672c1a4877857bd4e9b4072af2ae159c04fd0dddf4d7766d2e3176",
+  "method_application_scope_path": "audit/method_application_scope_v41.json",
+  "explicit_prospective_admission_method_amendment": false,
+  "no_new_admission_method_exception": true,
+  "historical_V36_method_amendment_preserved": true,
+  "scope_application_extension": true,
+  "method_reused_from_version": 36,
+  "new_method_exceptions": [],
+  "geography_fields_mutable": [
+    "geo_resolution_status",
+    "geography_decision",
+    "hemisphere",
+    "northern_birthplace_candidate",
+    "reason",
+    "southern_birthplace_separate"
+  ],
+  "new_versioned_context": "geography_followup_v41",
+  "reviewer_network_acquisitions": 0,
+  "production_code_or_outputs_mutated_by_reviewer": false,
+  "legacy_application_scopes": {
+    "audit/method_application_scope.json": "ae080b06f8abad9ed7575783486795c977e44ce5e5024bfa2096e16816a44d94",
+    "audit/method_application_scope_v38.json": "bd7540715a6b4649ffe79371e38ee2b650bd0176013fbb5418efa02b8995fad0",
+    "audit/method_application_scope_v39.json": "cc12b3159a035064dbde6a35e0778642fdb25d988e9e399617b216062127b17e",
+    "audit/method_application_scope_v40.json": "b44c66bc0d7883aeef9650578d0b339a65b563942da3fe72976b05c0094cc1fc"
+  },
+  "conceptual_assessment": "V41 applies the unchanged V36 admission method to six prospectively fixed records within the actual 54-record nonblank unknown pool. Every native personal-name component, exact displayed native DOB, coherent distinctive career, compatible acquired lifespan and frozen-place agreement remain mandatory. Only actual direct subject-born whole-region, actually followed person-born-place hyperlink plus acquired target-region, or actual P19/P131 path qualifies. Other whole regions require the existing single-hemisphere extent rule; historical colonial extent or nationality supplies no birth-region proof. Original native/DOB/BP grades and fields remain frozen. Nine issue inventories default to whole-file byte identity; a qualified current append requires all prior objects and a byte-exact prior_v40 snapshot. A metadata-only inventory cannot be treated as a records array. No fact decision is inferred from the preceding version.",
+  "limitations": [
+    "Documentary reviewer only: zero network acquisitions, no raw-source/pixel inspection, no production execution and no source/fact/audit/runtime/schema/production/Git changes. Checker and report writes are scratch only.",
+    "V41 reuses byte-exact V36 policy with a prospectively frozen audit/method_application_scope_v41.json. V37 unversioned and V38/V39/V40 versioned scopes remain byteexact at their old runtime paths. No admission exception or old-gate relaxation.",
+    "Actually displayed exact-DOB agreement binds source identity only; it is not civil/calendar validation or a native DOB/BP grade upgrade. Unknown rank/calendar/editorial validation/informational independence/raw status/raw bytes/exact request time remain null.",
+    "Each accepted geographic edge is observed in acquired body/statement text and each nonterminal URI identifies the actual followed place node. Birth/death parenthetical relations are described as such rather than recast as a literal Born field. Worker actual-link following and root body verification are separate acquisition roles; neither implies informational independence.",
+    "Held cases receive no current geography. Missing acquired P19 or born-place proof is not verified universal absence. Rewritten summary/list/graph representations remain limited to discovery or observed link carriers; mirror projections and familiar city/nationality/work/death/centroid assumptions supply no accepted path.",
+    "Age-quality appends, if any, preserve same-source exact birth/death/reported age observations and conventional completed-year arithmetic without calendar/civil verification, alternate DOB, date/age repair, omitted-name exception or automatic new geographic adoption. All four prior age-quality objects remain unchanged.",
+    "Active13 DOB cases, two partial-place cases, separate Ewins/Barber holds, Tomes provisional-date record, metadata-only omitted-middle file and all other inherited issue objects/holds remain historical. Default inventory policy is whole-file byte identity; only qualified appended observations change an inventory.",
+    "Historical V35 and V29 queue audits retain their old bytes and as-of meaning. All 103 blank-window records remain outside the current geography-only scope.",
+    "Each worker reports per-operation exact durable intent separately validated with exit0 before web use; all recorded operations match those intents and budgets. A/B have file UTC but lack per-entry UTC, so real-time chronology of each appended entry cannot be independently reconstructed solely from exported JSON; C and root retain true per-operation UTC. No timestamps were retrospectively invented. First unusable/failed/challenged work closes without retry/variant/raw GET. Documentary QA validates retained ledgers and disclosures; it does not independently reconstruct HTTP timing or source authenticity.",
+    "Per-original-work quote accounting includes inherited observations and stays at most25 words. No full-source HTML/JSON/PDF/image/projection caches are distributed."
+  ],
+  "final_fact_review_utc": "2026-11-08T08:55:11.166384+00:00",
+  "final_checks_passed": 168,
+  "source_qa_report_sha256": "9e61cdadc8715fb4c6ef52efd27500f317072b8bb69c7d1587af4d401594e516",
+  "final_fact_review_scope": "Unchanged V36 method applied to fixed V41 six-record scope: 0 S3 geography-only accepted observations, 6 holds. Reviewed whether actual acquired sources supplied full native personal-name components, exact displayed native DOB, compatible lifespan, distinctive career, frozen-place relation and an actual birth-edge/target whole-region path; missing proof remains held. Original DOB/BP/native fields remain frozen. All nine issue inventories checked by complete bytes/object history; qualified appends require a byte-exact prior_v40 snapshot. Historical V35/V29 queue files and V37/V38/V39/V40 runtime scope files remain byte-exact.",
+  "final_accepted_cases": [],
+  "final_held_cases": [
+    {
+      "record_id": "RS_PAST_NA1324",
+      "status": "held_no_actual_canonical_person_body_or_actual_P19_chain",
+      "hold_type": "canonical_item_unavailable_and_observed_person_article_link_is_redlink",
+      "reason": "No canonical original person body acquired. Frozen lookup Q21165617 first open was inaccessible and closed. Canonical list response explicitly labels itself rewritten summary; its displayed date is unqualified metadata, not actual personal body or original-list DOB proof. Name-link follow returned redlink404 and closed. No actual personal birthplace edge binds frozen Manchester to a whole region.",
+      "no_new_geographic_assignment": true
+    },
+    {
+      "record_id": "RS_PAST_NA1475",
+      "status": "held_person_birth_locality_present_without_actual_region_link_or_P19_chain",
+      "hold_type": "actual_canonical_person_birth_parenthetical_London_is_plain_unlinked_text",
+      "reason": "Actual canonical English person body supplies complete native name, exact stated native date, compatible lifespan and coherent pathology career. Birth half of lifespan parenthetical names London as plain text without a hyperlink or whole-region qualifier. Actual item click yields explicitly rewritten summary, not actual P19/P131 proof; only the already acquired English article is shown as a language sitelink. No admissible edge reaches a whole region.",
+      "no_new_geographic_assignment": true
+    },
+    {
+      "record_id": "RS_PAST_NA1727",
+      "status": "held_no_actual_canonical_person_birthplace_to_region_proof",
+      "hold_type": "canonical_person_discovery_unresolved_and_supplied_lookup_item_first_open_unavailable",
+      "reason": "Four bounded groupqueries found no canonical article for the native1868 electrical engineer. Search found a different1940 Miles RawstronWalker politician, excluded before opening. Native frozenlookupQ21166789 was supplied in fullscope, not guessed; its first canonical item open was toolinaccessible and closed. No actual original canonical allnative/exactDOB/career/compatiblelife/bornplace/P19 evidence acquired. LowtherStreetCarlisle remains unqualified; no generic Carlisle or street administrative candidate can substitute personal birth binding.",
+      "no_new_geographic_assignment": true
+    },
+    {
+      "record_id": "RS_PAST_NA2016",
+      "status": "held_no_actual_person_born_place_region_or_P19_chain",
+      "hold_type": "actual_canonical_person_body_without_birthplace_and_rewritten_Wikidata_representation_not_actual_statement_proof",
+      "reason": "Actual English canonicalpersonbody supplies allGeoffreyMorseBinnie components/exact13November1908/coherentdistinctivecivilengineering-damscareer/compatible5April1989. It contains no subjectbornplace or birthregion. British nationality, UKwork and schooling cannot bind frozenKensington to any region. ActualWikidataitemclick is explicitly labelledrewritten summary; no actualP19proof or authenticatedabsence/completeness. Its displayed sitelinkcarrier lists only already acquiredEnglisharticle; no other canonical languageoriginallead observed. FrozenKensington remainsunqualified.",
+      "no_new_geographic_assignment": true
+    },
+    {
+      "record_id": "RS_PAST_NA2044",
+      "status": "held_no_acquired_actual_canonical_person_birthplace_or_P19_chain",
+      "hold_type": "no_actual_person_body_discovered_and_first_canonical_entity_open_inaccessible",
+      "reason": "Four group queries discovered no actual canonical Wikipedia person-body lead for Dennis John Crisp; first canonical Wikidata entity opening from frozen lookup_qid was inaccessible. Inherited original newsletter only supplies unqualified London. No acquired current canonical person name/exactdate/career/birthplace binding or actual P19/P131 chain; preserve prior failed bibliography/memoir work closures.",
+      "no_new_geographic_assignment": true
+    },
+    {
+      "record_id": "RS_PAST_NA2460",
+      "status": "held_no_acquired_actual_canonical_person_birthplace_or_P19_chain",
+      "hold_type": "no_actual_person_body_discovered_and_first_canonical_entity_open_inaccessible",
+      "reason": "Queries discovered Henry Thornton disambiguation and fellow-list entries, plus son Peter Thornton article, rather than an actual Henry Gerard Thornton person body with birth linkage. First canonical Wikidata entity opening from frozen lookup_qid was inaccessible. No actual current canonical fullnative/exactdate/career/birthplace binding or P19/P131 chain. Prior AIM25 index/no-new-country holds and frozen London/S2 remain.",
+      "no_new_geographic_assignment": true
+    }
+  ],
+  "final_source_counts": {
+    "worker_queries": 11,
+    "root_queries": 1,
+    "total_queries": 12,
+    "worker_navigation_attempts": 10,
+    "worker_source_open_operations": 7,
+    "worker_click_operations": 3,
+    "root_source_opens": 2,
+    "root_click_operations": 0,
+    "total_navigation_attempts": 12,
+    "total_source_open_operations": 9,
+    "total_click_operations": 3,
+    "worker_parsed_finds": 0,
+    "root_parsed_finds": 0,
+    "total_parsed_finds": 0,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "final_protocol_disclosure": "Workers actual11queries/7opens3clicks/0find (Ccached_finds synonym0); root1boundedlocatorquery/2firstopens/0click/find, combined12queries/9opens3clicks/0find. All9inventories/full targeted oldcontexts read beforeworkerqueries; rootcontrolpins beforefirstrootquery. Exactdurable intents and separateexit0-beforeweb are declared. Exported a/b intent files contain initialfileUTC but no entry-levelUTC; C entries haveUTC. Exactrequests match preservedledgers, but documentaryreview cannot independently reconstruct eacha/b appendedentryreal-time chronology solely from exportedJSON. No retrospectivetimestamps invented. Firstfailed/textlesswork closed; no retryvariant/rawGET. Counters describe tooloperations, not independentworks/rawHTTPrequests.",
+  "root_acquisition_observations": [
+    {
+      "written_utc": "2026-11-08T08:47:34.664621+00:00",
+      "record_id": "RS_PAST_NA1475",
+      "operation": "source_locator_query",
+      "engine": "system1",
+      "query": "\"Edgar Hartley Kettle\" (site:de.wikipedia.org OR site:fr.wikipedia.org OR site:es.wikipedia.org)",
+      "purpose": "One permitted bounded root locator for distinct canonical language work. Actual English has matching fullname/DOB/career but unlinked London, graph is rewritten. No actual incompatible DOB/place in this target; no URLguess, failedworkretry or source shopping around conflict. Any actual contradiction holds.",
+      "ref": "turn9486267search5",
+      "adopted_geography": false,
+      "acquisition_role": "root_first_actual_canonical_body_or_locator_discovery_for_bounded_hold",
+      "outcome": "One root DE/FR/ES locator returned English and institutional projections only, no new eligible other-language person URI/body. No absence/source-exhaustion or newsource fact claim."
+    },
+    {
+      "written_utc": "2026-11-08T08:48:12.882843+00:00",
+      "record_id": "RS_PAST_NA1475",
+      "operation": "open",
+      "url": "https://en.wikipedia.org/wiki/Edgar_Hartley_Kettle",
+      "lineno": 100,
+      "purpose": "First root actual observed canonical person body verification for bounded hold: fullnative/exactDOB/life/career and whether any personal birth-place link or whole-region is actually acquired. Plain unlinked London or work/nationality not a geography chain. No failedgraph retry/variant or original DOB/sourcegrade modification.",
+      "ref": "turn3727745view0",
+      "adopted_geography": false,
+      "acquisition_role": "root_first_actual_canonical_body_or_locator_discovery_for_bounded_hold",
+      "locator": "L107 fullEdgarHartleyKettle/exact20April1882/plainunlinkedLondon/life1882-1936;L108-109pathology-silicosis-career. No actualbornlink or England birth-region.",
+      "outcome": "Normal canonical English person, date/career identity matches but geography remains held; nationality, school and work locations not used."
+    },
+    {
+      "written_utc": "2026-11-08T08:48:12.882854+00:00",
+      "record_id": "RS_PAST_NA2016",
+      "operation": "open",
+      "url": "https://en.wikipedia.org/wiki/Geoffrey_Binnie",
+      "lineno": 105,
+      "purpose": "First root actual observed canonical person body verification for bounded hold: fullnative/exactDOB/life/career and whether any personal birth-place link or whole-region is actually acquired. Plain unlinked London or work/nationality not a geography chain. No failedgraph retry/variant or original DOB/sourcegrade modification.",
+      "ref": "turn3727745view1",
+      "adopted_geography": false,
+      "acquisition_role": "root_first_actual_canonical_body_or_locator_discovery_for_bounded_hold",
+      "locator": "L107fullGeoffreyMorseBinnie/L108exact13November1908/L109death5April1989/80;L121full/date/civilengineering/dams;L122-128career. No personalbirthplace acquired.",
+      "outcome": "Normal canonical English person gives full name/date/life/career, no birthplace. Degree/work/nationality not birth; source-reported80 agrees conventional completed80, no newagecase."
+    }
+  ],
+  "warnings": [
+    {
+      "warning": "a_intent_entry_timing_not_independently_reconstructed",
+      "detail": "8 exact entries have no per-entry time; file time and separately validated-before-web disclosure are retained. No retrospective timestamps invented."
+    },
+    {
+      "warning": "b_intent_entry_timing_not_independently_reconstructed",
+      "detail": "7 exact entries have no per-entry time; file time and separately validated-before-web disclosure are retained. No retrospective timestamps invented."
+    },
+    {
+      "warning": "documentary_acquisition_and_timing_limits",
+      "detail": "Reviewer made no network requests and did not inspect raw originals/pixels or execute production. A/B per-entry timing is not independently reconstructable from exported JSON; exact intent matching and preserved separate validation disclosures are documentary evidence."
+    },
+    {
+      "warning": "rewritten_representation_and_missing_P19_limits",
+      "detail": "Kettle/Binnie graph and Gibson list responses are explicitly rewritten representations; no source dates/P19/complete absence are promoted from them. Inaccessible item errors and redlink404 do not authenticate raw HTTP status or universal absence."
+    },
+    {
+      "warning": "primary_body_metadata_and_information_dependence_unknown",
+      "detail": "Actual English name/date/career/life observations are identity context only. Displayed footer metadata is preserved separately from null authenticated revision/raw/time/calendar/rank/editorial/independence fields. No maintenance or representation caveat is cleared."
+    },
+    {
+      "warning": "historical_issues_and_no_new_admission",
+      "detail": "All six remain held; no new geography, DOB/place/age issue append, omitted-middle exception or grade upgrade. Active13, partialplace2, age4, metadata-only omitted-middle, separate Ewins/Barber, Tomes and historical V35/V29 queues retain their as-of meaning."
+    }
+  ],
+  "documentary_semantic_case_review_sha256_at_review": "fc91fc148a4aa0c4c17b45d1206f05f0a64fd93e0b0684bf57fef865895d966f",
+  "documentary_semantic_case_reviews": [
+    {
+      "record_id": "RS_PAST_NA1324",
+      "decision": "held",
+      "reason_reviewed": true,
+      "missing_proof_not_universal_absence": true,
+      "native_name": "Charles Stanley Gibson",
+      "native_DOB": "1884-02-08",
+      "frozen_place": "Manchester",
+      "review": "No actual canonical person body acquired. Supplied frozen lookup item Q21165617 first open was unavailable. Explicitly rewritten fellow-list representation carried an observed subject link, whose actual follow produced a redlink404. The representation date9February is neither an authenticated original-list/source date nor a qualified conflict with native8February. No observed person-birth-to-region proof; all failed works stayed closed. No name, DOB, place or grade upgrade.",
+      "acquisition_refs": [
+        "turn1083271view0",
+        "turn8642354view0",
+        "turn1333399view0"
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA1475",
+      "decision": "held",
+      "reason_reviewed": true,
+      "missing_proof_not_universal_absence": true,
+      "native_name": "Edgar Hartley Kettle",
+      "native_DOB": "1882-04-20",
+      "frozen_place": "London",
+      "review": "Worker and root actual canonical English bodies show all Edgar/Hartley/Kettle components, exact20April1882, compatible1882-1936 life and distinctive pathology/silicosis career. London is plain unlinked text in the birth half of a lifespan parenthetical; it is a valid observed birth association, not a literal was-born clause and not a followed birthplace edge or explicit whole-region birth qualifier. Actual item click is explicitly rewritten and cannot prove actual P19/P131 or absence. Root distinct-language locator found no acquired eligible person URI/body. London familiarity, Cardiff/Hammersmith work, nationality and schooling do not complete the path.",
+      "native_person_components_observed": [
+        "Edgar",
+        "Hartley",
+        "Kettle"
+      ],
+      "observed_source_DOB": "1882-04-20",
+      "observed_lifespan": "1882-1936",
+      "observed_career": "pathologist; silicosis/tuberculosis/gas-gangrene work",
+      "birth_syntax": "unlinked London in birth/death parenthetical",
+      "acquisition_refs": [
+        "turn5973262view0",
+        "turn1083271view1",
+        "turn9486267search5",
+        "turn3727745view0"
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA1727",
+      "decision": "held",
+      "reason_reviewed": true,
+      "missing_proof_not_universal_absence": true,
+      "native_name": "Miles Walker",
+      "native_DOB": "1868-08-13",
+      "frozen_place": "Lowther Street, Carlisle",
+      "review": "No acquired actual canonical person body for the native1868 electrical engineer. The1940 Miles Rawstron Walker politician was excluded as another person before opening and supplies no native DOB conflict. Supplied frozen lookup item Q21166789 first open was unavailable and closed. Generic Carlisle/admin/street candidate knowledge cannot replace a personal birth association. Street identity and all original compound-place fields remain frozen.",
+      "acquisition_refs": [
+        "turn9958938search4",
+        "turn4817569search4",
+        "turn8898224search9",
+        "turn4873912view0"
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA2016",
+      "decision": "held",
+      "reason_reviewed": true,
+      "missing_proof_not_universal_absence": true,
+      "native_name": "Geoffrey Morse Binnie",
+      "native_DOB": "1908-11-13",
+      "frozen_place": "Kensington",
+      "review": "Worker and root actual canonical person bodies show Geoffrey/Morse/Binnie, exact13November1908, compatible1908-1989 life with actual5April1989 death, and distinctive civil-engineering/dam career. Short Geoffrey Binnie title does not imply omission because actual body includes Morse. No acquired personal birthplace association reaches frozen Kensington or any whole region. The actual item-click representation is explicitly rewritten; displayed lack of P19 is not authenticated P19 absence/completeness. Root age80 agrees conventional completed80 and creates no age-quality discrepancy.",
+      "native_person_components_observed": [
+        "Geoffrey",
+        "Morse",
+        "Binnie"
+      ],
+      "observed_source_DOB": "1908-11-13",
+      "observed_lifespan": "1908-1989",
+      "observed_career": "civil engineer; dams/reservoirs, Binnie and Partners, Dukan/Mangla/Bennett projects",
+      "birth_syntax": "exact birthdate displayed; no acquired birthplace relation",
+      "omitted_middle_name_exception_created": false,
+      "acquisition_refs": [
+        "turn4817569view0",
+        "turn8898224view0",
+        "turn3727745view1"
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA2044",
+      "decision": "held",
+      "reason_reviewed": true,
+      "missing_proof_not_universal_absence": true,
+      "native_name": "Dennis John Crisp",
+      "native_DOB": "1916-04-29",
+      "frozen_place": "London",
+      "review": "Bounded discovery supplied no acquired actual canonical person body; supplied frozen lookup Q21165926 first opening was unavailable and closed. Tool error is not an original entity statement or a P19 absence proof. Inherited newsletter London stays unqualified and original S3; no city familiarity, nationality, work, family or coordinates supply geography.",
+      "acquisition_refs": [
+        "turn5889372view0"
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA2460",
+      "decision": "held",
+      "reason_reviewed": true,
+      "missing_proof_not_universal_absence": true,
+      "native_name": "Henry Gerard Thornton",
+      "native_DOB": "1892-01-22",
+      "frozen_place": "London",
+      "review": "Disambiguation/fellow-list and son Peter Thornton discovery material is not an acquired Henry Gerard Thornton person body with exact date/career/birth association. Supplied frozen lookup Q21166847 first opening was unavailable and closed. Honorific Sir is not a personal-name component; Gerard is not expanded from initials. Original London/S2 and AIM25/prior hold limitations remain. No acquired P19/P131 or universal absence verdict.",
+      "acquisition_refs": [
+        "turn5889372view1",
+        "turn7047761search0",
+        "turn4574526search9"
+      ]
+    }
+  ],
+  "documentary_protocol_review": {
+    "schema": "UK_v41_manual_documentary_case_review_v1",
+    "reviewer": "/root/v41_source_qa",
+    "written_utc": "2026-11-08T08:55:10.316681+00:00",
+    "documentary_review_complete": true,
+    "cumulative_per_original_work_quote_accounting_reviewed": true,
+    "all_original_works_atmost25_distinct_English_quoted_words": true,
+    "quote_review": "Retained exact quote fields in six native full objects and worker reports were deduplicated by actual original work. KettleEnglish4 and BinnieEnglish3 are the only new literal-source quotations; root retains0 additional quoted words for each. Historical targeted works retain8/11/11/11/9/7 distinct whitespace words as recorded in quote prefinal. Frozen historical inventories/contexts/queues are checked by byte history in final sourceQA. No complete source or projection cache is added.",
+    "quote_prefinal_report_path": "v41_source_qa_quote_prefinal.json",
+    "quote_prefinal_report_sha256": "14d7c2533c2b4310af0ddf86e1989b43d73badb4d70785efde0bd70f40439d23",
+    "worker_operation_prefinal_report_path": "v41_source_qa_worker_operation_prefinal.json",
+    "worker_operation_prefinal_report_sha256": "7d60fc81c3b3b019c583af59fa04e0a9e8f728e9b04c1d45b62cb4b34c3e180f",
+    "new_canonical_work_cumulative_quoted_words": {
+      "https://en.wikipedia.org/wiki/Edgar_Hartley_Kettle": 4,
+      "https://en.wikipedia.org/wiki/Geoffrey_Binnie": 3
+    },
+    "exact_durable_preintent_protocol_reviewed": true,
+    "first_failed_work_closures_reviewed": true,
+    "operation_review": "All21 worker operations match21 exact retained intent entries:11queries/7opens/3clicks/0find. Root actual1source_locator_query and2opens match exact root entries, each inside its operation kind and budget. C cached_finds0 is parsed_finds0; absent C protocol_limits are assessed from explicit bounded completion and each failed source observation stop flag. All9 inventory control pins precede acquisition. Exported A/B fileUTC plus declared separate exit0-before-web validations do not independently reconstruct every appended entry real-time sequence; no retrospective timestamps invented. First failed item/redlink works are not retried by workers or root, and root opens only the two actually acquired successful English person works.",
+    "retained_warnings": [
+      {
+        "warning": "documentary_acquisition_and_timing_limits",
+        "detail": "Reviewer made no network requests and did not inspect raw originals/pixels or execute production. A/B per-entry timing is not independently reconstructable from exported JSON; exact intent matching and preserved separate validation disclosures are documentary evidence."
+      },
+      {
+        "warning": "rewritten_representation_and_missing_P19_limits",
+        "detail": "Kettle/Binnie graph and Gibson list responses are explicitly rewritten representations; no source dates/P19/complete absence are promoted from them. Inaccessible item errors and redlink404 do not authenticate raw HTTP status or universal absence."
+      },
+      {
+        "warning": "primary_body_metadata_and_information_dependence_unknown",
+        "detail": "Actual English name/date/career/life observations are identity context only. Displayed footer metadata is preserved separately from null authenticated revision/raw/time/calendar/rank/editorial/independence fields. No maintenance or representation caveat is cleared."
+      },
+      {
+        "warning": "historical_issues_and_no_new_admission",
+        "detail": "All six remain held; no new geography, DOB/place/age issue append, omitted-middle exception or grade upgrade. Active13, partialplace2, age4, metadata-only omitted-middle, separate Ewins/Barber, Tomes and historical V35/V29 queues retain their as-of meaning."
+      }
+    ]
+  },
+  "followup_holds_sha256_at_review": "80dee4aeee68784c953d55c56b194f753e549555c53337d71743c3c6f08f5a2a",
+  "parent_adjudication_sha256_at_review": "4625c97e09abb66d661e4247926d3e00611b3efcb87e4cabdc01f01d47b5f023",
+  "root_followups_sha256_at_review": "3801add5acac40b49c9303b63c4781a40c31ab1ba4a950cafda508158d3897dd",
+  "root_intent_sha256_at_review": "6b4cac68c2c0ed8a981fbab6aeab28b7eab1f123228c442da502822a2922075e",
+  "worker_source_report_sha256_at_review": {
+    "a": "288dd647c9e141d15df1977c56d7f3fba0bb30199a6dc9a06448f271c298b1de",
+    "b": "37fa98573d97718f35629adb5b24db289c55339306a784692c38683468e973ec",
+    "c": "d30809a6cd3829c827913684bdcc1f4105c017eba691107b0d48b8c11bbdeed0"
+  },
+  "worker_intent_sha256_at_review": {
+    "a": "2589699c9a164bc50209d2e1b7be257c709990799dc94dca00ad4fada0fda79b",
+    "b": "fac854f6b7be9de40be6d3b518365baa1ab8117a441bbd3c87ebeefbce90d213",
+    "c": "e6257cf1797a66e940a5b24df9e07ddc17e206c27dc1b337629f542939696c9c"
+  },
+  "accepted_fact_sha256_at_review": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+  "accepted_geography_sha256_at_review": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+  "active_DOB_conflicts_sha256_at_review": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+  "source_derived_age_inconsistencies_sha256_at_review": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+  "prior_v40_source_derived_age_inconsistencies_sha256_at_review": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+  "birthplace_source_conflicts_sha256_at_review": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+  "source_class_adjudication_sha256_at_review": "1ca10c65e78c4e754d0ab64b99836c82be8d030805d0246e13a54d1890e8b626",
+  "historical_v35_geography_first_pass_queue_closeout_sha256_at_review": "56fd3053935afc42fe2f9cf301bb66bc2bc6839fa9483467cd03e602fb61be3b",
+  "historical_v29_first_pass_queue_closeout_sha256_at_review": "29d5a08c382fc5d1587c99e09a43a3c6c4559f9c971ef4efd5b8fb3f05407503",
+  "method_preregistration_sha256_at_review": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+  "method_application_scope_sha256_at_review": "d6ebcba7aa672c1a4877857bd4e9b4072af2ae159c04fd0dddf4d7766d2e3176",
+  "legacy_V37_method_application_scope_sha256_at_review": "ae080b06f8abad9ed7575783486795c977e44ce5e5024bfa2096e16816a44d94",
+  "legacy_V38_method_application_scope_sha256_at_review": "bd7540715a6b4649ffe79371e38ee2b650bd0176013fbb5418efa02b8995fad0",
+  "legacy_V39_method_application_scope_sha256_at_review": "cc12b3159a035064dbde6a35e0778642fdb25d988e9e399617b216062127b17e",
+  "legacy_V40_method_application_scope_sha256_at_review": "b44c66bc0d7883aeef9650578d0b339a65b563942da3fe72976b05c0094cc1fc",
+  "method_schema_sha256_at_review": "046cbce4821c17ef6861a26e02e46ebac3c4507e1a7f6222092e3870edd1b48e",
+  "accepted_geographic_bindings": [],
+  "new_source_quality_observations": [],
+  "nine_issue_inventory_sha256_at_review": {
+    "provisional_parsed_date_discrepancies.json": {
+      "baseline_sha256": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+      "current_sha256": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd"
+    },
+    "source_date_precision_holds.json": {
+      "baseline_sha256": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+      "current_sha256": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c"
+    },
+    "source_derived_age_inconsistencies.json": {
+      "baseline_sha256": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+      "current_sha256": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6"
+    },
+    "lifespan_endpoint_discrepancies.json": {
+      "baseline_sha256": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+      "current_sha256": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363"
+    },
+    "cross_source_reported_age_contrasts.json": {
+      "baseline_sha256": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+      "current_sha256": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0"
+    },
+    "omitted_middle_name_admission.json": {
+      "baseline_sha256": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+      "current_sha256": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5"
+    },
+    "source_ordinal_age_wording_observations.json": {
+      "baseline_sha256": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d",
+      "current_sha256": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+    },
+    "birthplace_source_conflicts.json": {
+      "baseline_sha256": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+      "current_sha256": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1"
+    },
+    "active_source_DOB_conflicts.json": {
+      "baseline_sha256": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+      "current_sha256": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c"
+    }
+  },
+  "nine_issue_inventory_counts_at_review": {
+    "provisional_parsed_date_discrepancies.json": {
+      "baseline_records": 1,
+      "current_records": 1,
+      "inventory_shape": "records"
+    },
+    "source_date_precision_holds.json": {
+      "baseline_records": 1,
+      "current_records": 1,
+      "inventory_shape": "records"
+    },
+    "source_derived_age_inconsistencies.json": {
+      "baseline_records": 4,
+      "current_records": 4,
+      "inventory_shape": "records"
+    },
+    "lifespan_endpoint_discrepancies.json": {
+      "baseline_records": 1,
+      "current_records": 1,
+      "inventory_shape": "records"
+    },
+    "cross_source_reported_age_contrasts.json": {
+      "baseline_records": 1,
+      "current_records": 1,
+      "inventory_shape": "records"
+    },
+    "omitted_middle_name_admission.json": {
+      "baseline_records": null,
+      "current_records": null,
+      "inventory_shape": "metadata_without_records"
+    },
+    "source_ordinal_age_wording_observations.json": {
+      "baseline_records": 1,
+      "current_records": 1,
+      "inventory_shape": "records"
+    },
+    "birthplace_source_conflicts.json": {
+      "baseline_records": 2,
+      "current_records": 2,
+      "inventory_shape": "records"
+    },
+    "active_source_DOB_conflicts.json": {
+      "baseline_records": 13,
+      "current_records": 13,
+      "inventory_shape": "records"
+    }
+  },
+  "nine_issue_inventory_changes": {
+    "provisional_parsed_date_discrepancies.json": {
+      "byte_identical": true,
+      "appended_record_ids": []
+    },
+    "source_date_precision_holds.json": {
+      "byte_identical": true,
+      "appended_record_ids": []
+    },
+    "source_derived_age_inconsistencies.json": {
+      "byte_identical": true,
+      "appended_record_ids": []
+    },
+    "lifespan_endpoint_discrepancies.json": {
+      "byte_identical": true,
+      "appended_record_ids": []
+    },
+    "cross_source_reported_age_contrasts.json": {
+      "byte_identical": true,
+      "appended_record_ids": []
+    },
+    "omitted_middle_name_admission.json": {
+      "byte_identical": true,
+      "appended_record_ids": []
+    },
+    "source_ordinal_age_wording_observations.json": {
+      "byte_identical": true,
+      "appended_record_ids": []
+    },
+    "birthplace_source_conflicts.json": {
+      "byte_identical": true,
+      "appended_record_ids": []
+    },
+    "active_source_DOB_conflicts.json": {
+      "byte_identical": true,
+      "appended_record_ids": []
+    }
+  },
+  "all_four_inherited_age_records_unchanged": true,
+  "worker_counts_from_actual_ledgers": {
+    "a": {
+      "queries": 3,
+      "navigation_operations": 5,
+      "parsed_finds": 0
+    },
+    "b": {
+      "queries": 4,
+      "navigation_operations": 3,
+      "parsed_finds": 0
+    },
+    "c": {
+      "queries": 4,
+      "navigation_operations": 2,
+      "parsed_finds": 0
+    }
+  }
+}

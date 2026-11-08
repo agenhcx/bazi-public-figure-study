@@ -1,0 +1,51 @@
+{
+  "status": "PASS_FROZEN_ZERO",
+  "route": "EOAS Y/Z",
+  "documented_navigation_attempts": 2,
+  "durable_intents_count": 2,
+  "intent_fields_equal_completed_ledger": true,
+  "script_flush_fsync_intent_precedes_network_open": true,
+  "durable_intent_order_evidence": "route.py writes flush+os.fsync before urllib opener.open; recorded start fields identical in intent and result.",
+  "requests_sequential": true,
+  "request_urls_unique_and_only_Y_Z": true,
+  "status_counts": {
+    "200": 1,
+    "503": 1
+  },
+  "actual_successful_index_letters": [
+    "Y"
+  ],
+  "failed_letters": [
+    "Z"
+  ],
+  "failed_index_not_coverage": true,
+  "Y_biography_link_rows": 23,
+  "Y_unique_biography_URLs": 23,
+  "biography_bodies_requested_at_checkpoint": 0,
+  "raw_response_checks": [
+    {
+      "url": "https://www.eoas.info/browsey_people.htm",
+      "status": 200,
+      "original_bytes_sha256": "2e61aaa598bd575072fff82a63f5029273c159191c70164946aa93c99360a98c",
+      "byte_count": 12541
+    },
+    {
+      "url": "https://www.eoas.info/browsez_people.htm",
+      "status": 503,
+      "original_bytes_sha256": "33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909",
+      "byte_count": 98
+    }
+  ],
+  "source_original_bytes_vs_projection_hashes_distinct": true,
+  "network_requests_by_QA": 0,
+  "accepted_facts": 0,
+  "strong_candidates": 0,
+  "biography_bodies_requested": 0,
+  "network_frozen": true,
+  "coverage_rows_verified": 645,
+  "window_rows_verified": 211,
+  "independent_canonical_fullname_birthyear_matches": [],
+  "projection_scope_note": "Only 23 actual Y links. Comparing all645targets to Y does not imply their own surname index/body was covered. Z503 is unavailable, never negative absence evidence.",
+  "accepted_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary_sha256": "71120dc549951a2e82cbb51cdeb4c4164bb06e9015c70bc0a4f6952ed614b4d1"
+}

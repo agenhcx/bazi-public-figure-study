@@ -1,0 +1,51 @@
+{
+  "DOB_or_native_acceptance_modified": false,
+  "by_route": {
+    "australian_directory": {
+      "north": 2,
+      "south": 2
+    },
+    "historical_dnb": {
+      "unknown": 2
+    }
+  },
+  "candidate_count": 6,
+  "country_or_birthpoint_assigned": false,
+  "created_utc": "2026-11-03T00:33:29.146187+00:00",
+  "distinct_people": 6,
+  "held": [
+    {
+      "basis": "bounded_exact_geographic_inventory_unresolved_or_cross_hemispheres",
+      "raw_birthplace": "Lindley",
+      "record_id": "RS_PAST_NA1510",
+      "source_url": "https://en.wikisource.org/wiki/Dictionary_of_National_Biography,_1912_supplement/Broadbent,_William_Henry"
+    },
+    {
+      "basis": "bounded_exact_geographic_inventory_unresolved_or_cross_hemispheres",
+      "raw_birthplace": "Falkirk",
+      "record_id": "RS_PAST_NA3559",
+      "source_url": "https://en.wikisource.org/wiki/Dictionary_of_National_Biography,_1912_supplement/Hamilton,_David_James"
+    }
+  ],
+  "hemisphere_counts": {
+    "north": 2,
+    "south": 2,
+    "unknown": 2
+  },
+  "input_sha256": {
+    "australian_directory": "2d02fab936c2b76763f2fc8bbc168ccad4d9f1ca4fdf63f4677b8090b1813159",
+    "historical_dnb": "128d5c22b7dda218d01191cbb272c9282e3ae8f5ec134e58800fc4da49961143"
+  },
+  "network_bound": "at most one new exact-label query, one new place-pageprops query, and one at-most-50-QID entity request; no retries; no prior exact term requeried",
+  "network_requests_executed": {
+    "exact_name_geographic": 1,
+    "place_entity_api": 0,
+    "place_pageprops": 0
+  },
+  "no_person_queries": true,
+  "output_sha256": "7eca2912b1ba654cbfb87f537e30936ad70d38216bd27c9385e02cfdb8e9e1fb",
+  "people_with_supported_hemisphere": 4,
+  "qualified_historical_city_entity_resolutions": 0,
+  "script_sha256": "a4ab68a5d0ef5e00207efe2ae2b2f6b6d00f931a80cf27bee9d7e771b59e98cd",
+  "source_place_name_timing_discrepancy_count": 0
+}

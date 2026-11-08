@@ -1,0 +1,344 @@
+{
+  "schema": "UK_v47_c_exact_prior_intent_v1",
+  "group": "c",
+  "strategy_id": "distinct_institutional_biographies_and_unopened_original_memoir_v47",
+  "scope_file": "v47_original_scope.json",
+  "scope_sha256": "75066f2d271f78cbbaaddce05db3a094a3d30d63baeb0b5c397b91a311358d5f",
+  "native_scope_file": "v47_scope_c.json",
+  "native_scope_sha256": "892f591788ccd32d671a86b591871182739e3578850ea9d36dd57f22e398973d",
+  "triage_file": "v47_triage_c.json",
+  "triage_sha256": "af80471d0cd60d9c2804e07bd263a25fedbb7ccf046f2ad7494278c086fb90fe",
+  "triage_available_before_scope_freeze": true,
+  "prerequest_context_review": {
+    "all9_actual_V47_snapshot_JSON_read_and_byte_pins_match_previously_fully_read_contents": true,
+    "full_target_native_scope_objects_read": true,
+    "full_target_worker_and_root_request_contexts_read": true,
+    "root_V21_V27_target_source_opens": 0,
+    "targeted_prior_histories": [
+      {
+        "record_id": "RS_PAST_NA8672",
+        "native": {
+          "record_id": "RS_PAST_NA8672",
+          "name": "Roger",
+          "source_authorised_full_name": "Fletcher; Roger (1939 - 2016); mathematician",
+          "dob": "1939-01-29",
+          "raw_birthplace": "",
+          "birthplace_source_grade": "unknown"
+        },
+        "native_personal_components": [
+          "Roger",
+          "Fletcher"
+        ],
+        "rank": 1,
+        "recommended_avenue": "Genuinely distinct Dundee/Institute of Mathematics and its Applications/London Mathematical Society original personal biography or interview",
+        "observed_new_original_URL": null,
+        "lead_status": "New prospective locator avenue; no retained specific original title/URL or original body acquisition claim. Clean two-component native identity reduces omitted-name risk.",
+        "prospective_locator_queries": [
+          "\"Roger Fletcher\" site:dundee.ac.uk biography",
+          "\"Roger Fletcher\" site:ima.org.uk obituary",
+          "\"Roger Fletcher\" site:lms.ac.uk biography"
+        ],
+        "prior_closed_works": [
+          {
+            "work": "Roger Fletcher.29January1939–15July2016, Gould N.I.M./Hall J.A.J., DOI10.1098/rsbm.2024.0037",
+            "actual_attempt": "https://doi.org/10.1098/rsbm.2024.0037",
+            "ref": "turn9642229view0",
+            "outcome": "First tool403; closed across publisher/PDF/institutional carriers. A new institutional page merely reprinting/hosting this memoir is not a distinct work."
+          }
+        ],
+        "prior_successful_nonbirth_work": {
+          "url": "https://numericalanalysisconference.org.uk/conferences/2025/slides/16",
+          "ref": "turn9412493view1",
+          "description": "Jacek Gondzio June2025 conference lecture. Actual RogerFletcher/exact date1939-01-29 and1939-2016/optimization identity from cited memoir title; inspected biography section has no birthplace. Not an unopened biography and not new memoir body.",
+          "locator": "v21_sources_b.json Fletcher hold sources[0]; v21_b_fw_intent.json operations; current prior_v21_holds.json"
+        },
+        "root_history_crosscheck": "v21_root_intent.json contains no Fletcher/LMS/IMA/Dundee source request; targeted worker/current inherited hold scans show no earlier LMS/IMA/Dundee personal body request.",
+        "reason_to_prioritize": "A compact new professional/institutional personal composition may state explicit birthyear/place while satisfying the two-component native name. No date/place availability promised and career/death-only notices will not qualify."
+      },
+      {
+        "record_id": "RS_PAST_NA1585",
+        "native": {
+          "record_id": "RS_PAST_NA1585",
+          "name": "William",
+          "source_authorised_full_name": "Watt; William (1912 - 1985)",
+          "dob": "1912-04-14",
+          "raw_birthplace": "",
+          "birthplace_source_grade": "unknown"
+        },
+        "native_personal_components": [
+          "William",
+          "Watt"
+        ],
+        "rank": 2,
+        "recommended_avenue": "Retained genuinely unopened Royal Society original personal scientific memoir; prioritize this concrete older-work citation over a speculative generic source search",
+        "observed_new_original_URL": null,
+        "retained_original_citation_literal": "MairW.N./MansfieldE.H.1987RoyalSocietymemoir33pp642–667",
+        "retained_citation_locator": "v27_sources_a.json unopened_distinct_original_leads[0] (lines275-279), recordRS_PAST_NA1585",
+        "lead_status": "Citation only; actual DOI/article title/URL not observed. No memoir body request found in available matched worker/root ledgers. Initials remain initials.",
+        "prospective_locator_queries": [
+          "\"William Watt\" \"Mair\" \"Mansfield\" \"1987\"",
+          "\"William Watt\" \"642\" \"667\" \"1987\""
+        ],
+        "prior_closed_works": [
+          {
+            "work": "University of Delaware CCM Excellence scientific-award PDF",
+            "actual_attempt": "https://www.ccm.udel.edu/wp-content/uploads/2016/05/CCM_Excellence_Final-1.pdf",
+            "ref": "turn1001451view0",
+            "outcome": "First tool502; no body. Closed across variants/carriers. Distinct from the retained1987 personal memoir."
+          }
+        ],
+        "prior_discovery_not_body_proof": {
+          "ref": "turn3331581search0",
+          "description": "British Newspaper Archive projection credited JimLove and called DrWilliamWatt Edinburgh-born with RAE/Surrey career. Actual article/body/date/nativeDOB/lifespan not acquired; no Edinburgh adoption, Watts alias or work-city inference."
+        },
+        "root_history_crosscheck": "v27_root_intent.json contains no Watt or retained Mair/Mansfield memoir request; prior_v27_holds.json retains award failure, while the top-level scratch source report retains the unopened memoir citation.",
+        "reason_to_prioritize": "Specific learned-society personal memoir with retained author initials/year/volume/pages and simple two-component name. This is an original biography target, not a large general bibliography. The actual body must supply explicit compatible birth precision and direct birthplace."
+      }
+    ],
+    "source_work_closure_summary": [
+      "Fletcher RS memoir10.1098/rsbm.2024.0037 first403 closed across all carriers. Prior acquired2025 lecture is not a new biography.",
+      "Watt Delaware scientific-award PDF first502 closed across all carriers. Retained1987 personal memoir citation was not previously attempted; article URL/DOI not observed."
+    ],
+    "no_target_hits_in_all9_issue_inventory": true,
+    "inherited_issue_counts": {
+      "active_DOB": 13,
+      "partial_place": 2,
+      "same_source_age": 4,
+      "other_files": 6
+    },
+    "Morris_V46_fact_and_source_year_precision_preserved": true
+  },
+  "inventory_file_pins": {
+    "active_source_DOB_conflicts.json": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+    "birthplace_source_conflicts.json": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+    "source_derived_age_inconsistencies.json": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+    "provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+    "lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+    "cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+    "source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+    "omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+    "source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+  },
+  "context_file_pins": {
+    "v47_triage_c.json": "af80471d0cd60d9c2804e07bd263a25fedbb7ccf046f2ad7494278c086fb90fe",
+    "v21_sources_b.json": "df480b7f21fb4f964c154738bc351ae6b40b693e80d3ebf7110680ce2a82be1c",
+    "v21_b_fw_intent.json": "95898447790e8fb2b986395f3860f7f1206d0168925d452b1c754707c0b5ab7a",
+    "v21_root_intent.json": "656e6f7c8aa2654bccd66738327296217f10ba6d47783018912837e56f8abcb1",
+    "v27_sources_a.json": "88e6be32092fd6b4ff3e669d0ab10f372f913bc86780b1a8da8a0b81e69aefad",
+    "v27_a_intent.json": "bdf2c311cf2379a14a986f333834af6e82718ef7bf6084f258d58449555a35a2",
+    "v27_root_intent.json": "7762d09359fb37f51e7a6315f21b1da9562f05c81f238bc297aaaf637ce99e37",
+    "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v21_holds.json": "cf04731a4626cefb1141e640b23550bbc6a9a34fad0ad83a25ba504ff4e2b928",
+    "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v27_holds.json": "f7ef7d491d0f8d3067209e0b02852cb5b8e8872f2d09703ad9bff7cb45fc88df"
+  },
+  "budgets": {
+    "queries": 5,
+    "navigation_attempts": 6
+  },
+  "entries": [
+    {
+      "index": 0,
+      "kind": "query",
+      "record_id": "RS_PAST_NA8672",
+      "engine": "system2",
+      "query": "\"Roger Fletcher\" site:dundee.ac.uk biography",
+      "purpose": "Locate actually observed distinct Dundee original personal biography URL. Not a carrier/reprint of closedRS2024.0037 memoir; projections are locator only. All nativeRogerFletcher/date/career/life/directbirth gates remain required.",
+      "written_utc": "2026-11-08T12:08:53.466731+00:00",
+      "status": "executed",
+      "topic_relevant_observed_refs": [
+        "turn4871254search1",
+        "turn4871254search2",
+        "turn4871254search3"
+      ],
+      "outcome": "Aggregate engine2 results expose distinct Dundee honours/award press-release URLs; only discovery career projections, not original DOB/BP/absence proof.",
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "index": 1,
+      "kind": "query",
+      "record_id": "RS_PAST_NA1585",
+      "engine": "system2",
+      "query": "\"William Watt\" \"Mair\" \"Mansfield\" \"1987\"",
+      "purpose": "Locate actual original/public original carrier URL for retained unopened1987 RS personal memoir33pp642-667. Do not synthesize DOI/URL, expand author initials or choose oldfailedDelaware work. Select first actually observed original carrier; first unusable work then closes across all carriers.",
+      "written_utc": "2026-11-08T12:08:53.466775+00:00",
+      "status": "executed",
+      "topic_relevant_observed_refs": [
+        "turn4871254search24",
+        "turn4871254search25",
+        "turn4871254search26",
+        "turn4871254search0"
+      ],
+      "observed_original_URI_carrier": "https://royalsocietypublishing.org/doi/epdf/10.1098/rsbm.1987.0023",
+      "outcome": "Bibliography projection exposes exact memoir DOI/epdf URI and title; URI is observed, not guessed. Other RG work cites memoir but is not memoir carrier. No original body acquired or identity/date adopted; next bounded locator seeks actual public original carrier before choosing first work-body request.",
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "index": 2,
+      "kind": "query",
+      "record_id": "RS_PAST_NA8672",
+      "engine": "system1",
+      "query": "\"Roger Fletcher\" site:ima.org.uk obituary",
+      "purpose": "Engine1 targeted primary professional-society personal-composition locator after Dundee discovery returned career honours releases. Exclude closedRS2024.0037 memoir/reprints. Actual body/gates required.",
+      "written_utc": "2026-11-08T12:09:36.109932+00:00",
+      "status": "executed",
+      "topic_relevant_observed_refs": [
+        "turn4738088search0"
+      ],
+      "outcome": "Aggregate engine1 result adaptively exposes actual distinct SIAM2016 authored personal obituary and cited2015Optima interview. SIAM source is within frozen same-person adaptive-original-composition rule; no search birth/date/death-month facts adopted.",
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "index": 3,
+      "kind": "query",
+      "record_id": "RS_PAST_NA1585",
+      "engine": "system1",
+      "query": "\"10.1098/rsbm.1987.0023\"",
+      "purpose": "Engine1 exact observed DOI locator for actual publicly readable original memoir carrier before first body request. DOI was actually exposed by turn4871254search24; no URI synthesis, publisher/repository body retry or source fact adoption from projections.",
+      "written_utc": "2026-11-08T12:09:36.109951+00:00",
+      "status": "executed",
+      "topic_relevant_observed_refs": [
+        "turn4738088search7"
+      ],
+      "outcome": "Aggregate engine1 set shows same bibliography URI carrier only for exact Watt DOI; no public original memoir body acquired. No repeated original work body request has yet occurred.",
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "index": 4,
+      "kind": "open",
+      "record_id": "RS_PAST_NA8672",
+      "exact_url": "https://www.siam.org/publications/siam-news/articles/obituary-roger-fletcher/",
+      "from_ref": "turn4738088search0",
+      "URL_provenance": "Actual observed original SIAM personal obituary URL, not guessed.",
+      "distinct_work_identity_basis": "SIAMNews49issue10/December2016 obituary by SvenLeyffer, different composition/date from closed2024.0037Gould/Hall memoir; actual body needed to verify.",
+      "purpose": "First actual original professional-society obituary body inspection; inspect all native name/stated compatible birth precision/life/career/birthplace and actual2015interview hyperlink if present. Adaptive new original within same fixed Fletcher target disclosed. No search-projection proof transfer. Firstunusable work closes allcarriers.",
+      "written_utc": "2026-11-08T12:10:31.863722+00:00",
+      "status": "executed",
+      "result_ref": "turn6032344view0",
+      "outcome": "Actual original signed SIAM obituary acquired; literal fullRogerFletcher/caption1939-2016/career, no direct birthplace. Actual June2016 death month differs old lecture cited memoir titleJuly15; preserve as auxiliary month contrast only, native2016 endpoint compatible. Plain unlinked Optima99/2015 interview citation retained, no actual interview URI observed.",
+      "source_body_acquired": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "index": 5,
+      "kind": "query",
+      "record_id": "RS_PAST_NA1585",
+      "engine": "system1",
+      "query": "\"William Watt\" \"14 April 1912\" \"11 August 1985\"",
+      "purpose": "Final bounded exact-observed-title locator for actual publicly readable original1987 memoir carrier before first body request. Dates are observed citation text, not actual memoir birth proof or native repair. Open only an actually observed original carrier; no guessed DOI/URL or retries after first unusable work.",
+      "written_utc": "2026-11-08T12:10:31.863738+00:00",
+      "status": "executed",
+      "result_ref_family": "turn6032344search",
+      "topic_relevant_observed_refs": [
+        "turn6032344search4",
+        "turn6032344search1"
+      ],
+      "outcome": "Exact-title query returns observed publisher epdf URI via bibliography and a different RG paper citing the memoir. No actual memoir RG/public alternative URI exposed. Canonical/list projections ignored for source facts. Select observed publisher epdf as first memoir body request; no earlier body attempt.",
+      "exact_backend_per_query_result_assignment_exposed": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "index": 6,
+      "kind": "open",
+      "record_id": "RS_PAST_NA1585",
+      "exact_url": "https://royalsocietypublishing.org/doi/epdf/10.1098/rsbm.1987.0023",
+      "from_ref": "turn4871254search24",
+      "URL_provenance": "Exact epdf original URI actually printed in returned bibliography projection turn4871254search24 and repeatedturn6032344search4; no URL/DOI synthesis.",
+      "distinct_work_identity_basis": "Retained unopened Mair/Mansfield1987 personal memoir33pp641/642-667 matches observed titleWilliamWatt14April1912-11August1985. Different work from old failedDelaware awardPDF.",
+      "purpose": "First actual original1987 memoir body request, using only observed original publisher carrier after bounded public-carrier locator searches. Inspect WilliamWatt fullnative/stated compatible birth precision/career/life/directbirth. First unusable/header/textless/challenge/size response closes entire memoir across all carriers; no later publisher/repository/DOI/rawGET retry.",
+      "written_utc": "2026-11-08T12:12:31.373704+00:00",
+      "status": "executed",
+      "result_ref": "turn6982399view0",
+      "source_body_acquired": false,
+      "outcome": "First actual original1987 memoir body request returned tool not accessible. Entire work now closed across all publisher/DOI/PDF/repository/carrier variants; no retry/rawGET.",
+      "stopped_no_retry": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "index": 7,
+      "kind": "open",
+      "record_id": "RS_PAST_NA8672",
+      "exact_url": "https://app.dundee.ac.uk/pressreleases/2008/praug08/goldmedals.html",
+      "from_ref": "turn4871254search3",
+      "URL_provenance": "Actual engine2 observed Dundee original release URL turn4871254search3.",
+      "distinct_work_identity_basis": "Dundee8August2008 RoyalGoldMedals release includes explicit further biographical detail; distinct earlier institutional composition, not closed2024RS memoir or SIAM2016obituary reprint.",
+      "purpose": "First actual original Dundee release/body inspection for its person-specific biographical section and any explicitly stated compatible birth precision/directborn. Keep RogerFletcher separate from DavidLane/RichardHolloway. Award/school/work/footer country not birth. No oldmemoir-date transfer or inferredDOB. Firstunusableworkcloses across variants.",
+      "written_utc": "2026-11-08T12:12:31.373719+00:00",
+      "status": "executed",
+      "result_ref": "turn6982399view1",
+      "source_body_acquired": true,
+      "outcome": "Actual original Dundee2008 award-release/further-biography body acquired. FullRogerFletcher and coherent optimization/FRS career, no birthdate/year, direct birthplace or life dates. Work/award Scotland and other honorees not birth evidence.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    }
+  ],
+  "validation_before_web_batches": [
+    {
+      "intent_entries": [
+        0,
+        1
+      ],
+      "validation_exit_code": 0,
+      "validation_utc": "2026-11-08T12:09:02.758624+00:00",
+      "separate_local_validation_before_web": true
+    },
+    {
+      "intent_entries": [
+        2,
+        3
+      ],
+      "validation_exit_code": 0,
+      "validation_utc": "2026-11-08T12:09:44.124628+00:00",
+      "separate_local_validation_before_web": true
+    },
+    {
+      "intent_entries": [
+        4,
+        5
+      ],
+      "validation_exit_code": 0,
+      "validation_utc": "2026-11-08T12:10:40.807112+00:00",
+      "separate_local_validation_before_web": true
+    },
+    {
+      "intent_entries": [
+        6,
+        7
+      ],
+      "validation_exit_code": 0,
+      "validation_utc": "2026-11-08T12:12:40.939817+00:00",
+      "separate_local_validation_before_web": true
+    }
+  ],
+  "retrieval_counts": {
+    "queries": 5,
+    "navigation_attempts": 3,
+    "source_open_operations": 3,
+    "click_operations": 0,
+    "parsed_finds": 0,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "bounded_pass_complete": true,
+  "all_collection_work_closures_clean": true,
+  "protocol_deviations": [],
+  "source_exhausted": false,
+  "final_freeze": false
+}

@@ -1,0 +1,174 @@
+{
+  "artifact_type": "reconstructed_verified_recovery_summary",
+  "original_file_bytes_recovered": false,
+  "source_qa": {
+    "status": "PASS",
+    "checks_passed": 171,
+    "blocking_issues": [],
+    "final_source_qa_runs": 1,
+    "report_sha256": "fd7a18d1df3816192812894620b352ad2ea695498c07076d20aa7f42b4443dd5",
+    "documentary_case_sha256": "9ae3576a81840e7f301143653ce8b00f485b0031ae2716a1a4c2bd3e931fab27",
+    "documentary_case_checksum_provenance": "Root independently printed actual copied-file checksum before environment loss.",
+    "method_status": "final_documentary_source_and_unchanged_method_application_review_passed",
+    "initial_scope_preflight_checks": 34,
+    "actual_report_shape_precheck_checks": 36
+  },
+  "cases": [
+    {
+      "record_id": "RS_PAST_NA1476",
+      "native_name": "Bernard Smith",
+      "native_DOB": "1881-02-13",
+      "frozen_place": "Grantham",
+      "original_BP_grade": "S3",
+      "decision": "held",
+      "source_refs": [
+        "turn3826931view0",
+        "turn3990477view1",
+        "turn5962439view0"
+      ],
+      "review": "Person and clicked-item responses explicitly rewritten; URI/sitelink carriers only. Article L101 link38; item L128-134 only existing English sitelink. Distinct frozen lookup Q21165403 first opening unavailable and closed. No actual qualifying birth-region path."
+    },
+    {
+      "record_id": "RS_PAST_NA1592",
+      "native_name": "Ernest John Maskell",
+      "native_DOB": "1895-02-01",
+      "frozen_place": "Cambridge",
+      "original_BP_grade": "S2",
+      "decision": "held",
+      "source_refs": [
+        "turn3990477view0"
+      ],
+      "review": "No acquired eligible canonical person body. Supplied lookup Q21166232 first opening unavailable and closed; no actual birth-region path."
+    },
+    {
+      "record_id": "RS_PAST_NA1994",
+      "native_name": "Norman Laurence Franklin",
+      "native_DOB": "1924-09-01",
+      "frozen_place": "Leeds",
+      "original_BP_grade": "S3",
+      "decision": "held",
+      "source_refs": [
+        "turn8750374view0",
+        "turn6928554view0",
+        "turn8623749view0"
+      ],
+      "review": "Lookup Q21165004 unavailable and closed. Actual1981fellow-list L110 observed full name/lifespan and link41; followed target was edit/redlink with first tool404, then closed. No personal birth proof."
+    },
+    {
+      "record_id": "RS_PAST_NA1998",
+      "native_name": "Basil Kassanis",
+      "native_DOB": "1911-10-16",
+      "frozen_place": "Macedonian born",
+      "original_BP_grade": "S3",
+      "decision": "held",
+      "source_url": "https://www.wikidata.org/wiki/Q21165341",
+      "source_refs": [
+        "turn8750374view1",
+        "turn2061416view2"
+      ],
+      "root_locator": "L47/97 full name;L118-126 DOB;L128-132 death;L134-138 virologist;L140-148 FRS1966;L162-164 NA1998;L170-174 Wikipedia0",
+      "review": "Actual normal parsed item binds native name/date/life/career. No acquired birthplace/P19 chain. Historical adjective does not establish a precise birthplace extent."
+    },
+    {
+      "record_id": "RS_PAST_NA2007",
+      "native_name": "Pierre Henry John Young",
+      "native_DOB": "1926-06-12",
+      "frozen_place": "France",
+      "original_BP_grade": "S3",
+      "decision": "held",
+      "source_url": "https://en.wikipedia.org/wiki/Pierre_Young",
+      "source_refs": [
+        "turn4592580view0",
+        "turn7813429view1",
+        "turn2061416view0"
+      ],
+      "root_locator": "L116 full name;L117 DOB;L118 unlinked France;L119 death/age59;L121 identity;L126 explicit France birth;L134-145 engine career",
+      "review": "Actual person body supplies generic unlinked France only, with no birth-linked subregion. Item response explicitly rewritten. Displayed age59 agrees completed59."
+    },
+    {
+      "record_id": "RS_PAST_NA2146",
+      "native_name": "Oscar Victor Sayer Heath",
+      "native_DOB": "1903-07-26",
+      "frozen_place": "London",
+      "original_BP_grade": "S2",
+      "decision": "held",
+      "source_url": "https://www.wikidata.org/wiki/Q21165026",
+      "source_refs": [
+        "turn7813429view0",
+        "turn2061416view1"
+      ],
+      "root_locator": "L47/101 full name;L148-156 DOB;L158-165 death;L173-179 plant physiologist/botanist;L195-201 FRS1960",
+      "review": "Actual normal parsed item binds native name/date/life/career, with no acquired birthplace/P19/admin chain."
+    }
+  ],
+  "preservation": {
+    "accepted_geography_facts": 0,
+    "held_cases": 6,
+    "new_DOB_conflicts": 0,
+    "new_place_conflicts": 0,
+    "new_age_quality_cases": 0,
+    "new_admission_exceptions": 0,
+    "all_nine_issue_files_byte_identical_to_V41": true,
+    "retained_active_DOB_cases": 13,
+    "retained_partial_place_cases": 2,
+    "retained_age_quality_cases": 4,
+    "other_issue_files": 6,
+    "original_DOB_and_birthplace_grades_frozen": true,
+    "all_five_legacy_application_scopes_preserved": true
+  },
+  "operations": {
+    "group_a": {
+      "queries": 3,
+      "opens": 3,
+      "clicks": 1
+    },
+    "group_b": {
+      "queries": 4,
+      "opens": 3,
+      "clicks": 1
+    },
+    "group_c": {
+      "queries": 3,
+      "opens": 2,
+      "clicks": 1
+    },
+    "workers": {
+      "queries": 10,
+      "opens": 8,
+      "clicks": 3,
+      "navigation": 11
+    },
+    "root": {
+      "queries": 0,
+      "opens": 3,
+      "clicks": 0
+    },
+    "total": {
+      "queries": 10,
+      "opens": 11,
+      "clicks": 3,
+      "navigation": 14,
+      "finds": 0,
+      "raw_GETs": 0,
+      "screenshots": 0
+    },
+    "exact_one_to_one_intent_matches": 24,
+    "all_24_entries_had_UTC_after_scope_before_parent_adjudication": true,
+    "per_entry_UTC_values_recovered": false
+  },
+  "quote_review": {
+    "new_worker_and_root_quoted_words": 0,
+    "targeted_original_work_keys_reviewed": 16,
+    "inherited_nonzero_works": 7,
+    "maximum_targeted_cumulative_quoted_words_per_work": 11,
+    "quote_limit": 25
+  },
+  "limitations": [
+    "Reconstructed summary from retained tool results; not original report bytes.",
+    "Documentary reviewer did not acquire network originals/raw bytes/pixels.",
+    "Entry UTC and separately declared exit0-before-web validations are documentary evidence; exact HTTP timing unknown. Individual intent bytes/timestamps not recovered.",
+    "Missing displayed P19 is not universal absence or an acquired no-value statement.",
+    "Displayed Gregorian/footer observations remain separate from null authenticated calendar/rank/revision/raw/editorial/independence metadata.",
+    "Final full QA and its two CLI replay completions remain unverified."
+  ]
+}

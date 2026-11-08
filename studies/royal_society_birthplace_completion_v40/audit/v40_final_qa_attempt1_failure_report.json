@@ -1,0 +1,33 @@
+{
+  "schema": "UK_v40_independent_final_QA_failure_v1",
+  "status": "FAIL",
+  "written_utc": "2026-11-07T02:02:00.013966+00:00",
+  "checks_passed_before_failure": [
+    "only explicit root-authorized issue append inventories allowed; omitted-middle metadata always exact",
+    "root final canonical adopted IDs and source-count expectations supplied before QA",
+    "five completed production output pins match before QA",
+    "V39 baseline and V40 current canonical match root pins",
+    "self-contained V39 reconstruction all4983 complete objects exact",
+    "all inherited source inputs byte exact with prior current inputs versioned V39",
+    "all old functions including historical write_csv and main remain verbatim",
+    "all old assignments hashes scopes and constants remain verbatim",
+    "new current CLI entrypoint invokes main_v40 without historical main",
+    "record order unique keys and UK cohort remain fixed",
+    "production plan preserves complete prospective V40 plan bytes and fixed groups",
+    "56 stored-place unknown targets and6 fixed complete disjoint outcomes",
+    "three groups two each match prospective plan with no first-place inputs",
+    "exact six mutable geography fields and current context declared",
+    "changed complete object set exactly equals accepted IDs",
+    "all native BP identity tier prior-context objects frozen with exact rollback",
+    "all103 window blank and525 overall blank complete objects unchanged",
+    "all current holds preserve complete master objects",
+    "all original raw birthplaces and grades remain exact",
+    "base method and all4 application scopes match independent fixed hashes",
+    "current scope reuses rules with exact prospective IDs and baseline"
+  ],
+  "error_type": "AssertionError",
+  "error": "",
+  "traceback": "Traceback (most recent call last):\n  File \"/workspace/scratch/262552d8c0f0/qa_v40_final.py\", line 408, in <module>\n    main()\n  File \"/workspace/scratch/262552d8c0f0/qa_v40_final.py\", line 165, in main\n    assert len(chain) >= 2 and chain[0]['edge_property'] == 'explicit_subject_birthplace_hyperlink'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "production_mutated_by_reviewer": false,
+  "no_network": true
+}

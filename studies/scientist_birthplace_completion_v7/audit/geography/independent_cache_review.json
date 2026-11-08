@@ -1,0 +1,39 @@
+{
+  "NAS_counts": {
+    "north": 1667,
+    "south": 32,
+    "unknown": 543
+  },
+  "Nobel_physics_original_body": {
+    "bytes": 914378,
+    "coordinate_pairs_with_latitude_within_one_degree_of_equator": 0,
+    "historical_birth_city_vs_cityNow_label_differences": 8,
+    "missing_cityNow_coordinate_ids": [
+      "1052",
+      "8",
+      "19",
+      "999",
+      "16",
+      "137"
+    ],
+    "objects": 230,
+    "precision_globe_rank_fields_supplied": false,
+    "sha256": "633002ff83120f9408d630209b24ebab7d1f3f1e999cf5bb51638ebb8976075e",
+    "valid_finite_in_range_birth_place_cityNow_pairs": 224,
+    "zero_coordinate_pairs": 0
+  },
+  "authorized_cityNow_source_geography_rules": [
+    "Bind source object to accepted NAS target using independently checked identity before geography.",
+    "Use exact attached birth.place.cityNow pair only; reject countryNow centroids, affiliation, death and prior Nobel-row points.",
+    "Retain original birth-place/locationString wording and separately record source cityNow mapping if labels differ.",
+    "Validate pair completeness, numeric finiteness and latitude/longitude ranges; longitude zero is valid.",
+    "Record absent source precision rather than invent spatial accuracy from decimal digits.",
+    "Use for hemisphere evidence only; do not assign country, exact birthpoint, unique place entity or native fields."
+  ],
+  "baseline_cohort_records": 11094,
+  "baseline_v6_sha256": "8e880fcf4a659a1c8753a5a0ad4c06552ddd9d0d545334b0e81a2459907d7356",
+  "mode": "offline baseline/cache/schema inspection only; no v7 source fact reads, requests, or mutations",
+  "old_place_query_bodies_and_candidate_review_hashes_unchanged": true,
+  "passed": true,
+  "reviewer": "independent child agent /root/v4_geo/query_review"
+}

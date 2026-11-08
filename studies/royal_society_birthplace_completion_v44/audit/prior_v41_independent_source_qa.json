@@ -1,0 +1,1086 @@
+{
+  "schema": "UK_v41_independent_geography_source_documentary_QA_v1",
+  "reviewer": "/root/v41_source_qa",
+  "written_utc": "2026-11-08T08:55:11.067238+00:00",
+  "phase": "final",
+  "passed": true,
+  "checks_passed": 168,
+  "checks": [
+    {
+      "check": "actual_v40_baseline_canonical_pin",
+      "passed": true
+    },
+    {
+      "check": "fixed4983_unique_native_records",
+      "passed": true
+    },
+    {
+      "check": "actual54_nonblankunknown_window_pool",
+      "passed": true
+    },
+    {
+      "check": "fixed6_scope_threegroups2",
+      "passed": true
+    },
+    {
+      "check": "scope_within_actual_nonblankunknown_pool",
+      "passed": true
+    },
+    {
+      "check": "complete_target_scope_objects_exactbaseline",
+      "passed": true
+    },
+    {
+      "check": "103blank_window_outside_scope",
+      "passed": true
+    },
+    {
+      "check": "zero_firstbirthplace_groups",
+      "passed": true
+    },
+    {
+      "check": "all13_activeDOBcases_excluded",
+      "passed": true
+    },
+    {
+      "check": "Ewins_Barber_separate_placeholds_excluded",
+      "passed": true
+    },
+    {
+      "check": "both_partialplacecases_excluded",
+      "passed": true
+    },
+    {
+      "check": "Tomes_provisional_separate_not14thactive",
+      "passed": true
+    },
+    {
+      "check": "four_inherited_agequality_cases_retained",
+      "passed": true
+    },
+    {
+      "check": "omitted_middle_metadata_has_no_records_array",
+      "passed": true
+    },
+    {
+      "check": "historical_V36_preregistration_exact_SHA",
+      "passed": true
+    },
+    {
+      "check": "historical_V36_policy_fixedscope_preserved",
+      "passed": true
+    },
+    {
+      "check": "historical_V37_application_scope_preserved_distinct_newscope",
+      "passed": true
+    },
+    {
+      "check": "historical_V38_application_scope_preserved_distinct_newscope",
+      "passed": true
+    },
+    {
+      "check": "historical_V39_application_scope_preserved_distinct_newscope",
+      "passed": true
+    },
+    {
+      "check": "historical_V40_application_scope_preserved_distinct_newscope",
+      "passed": true
+    },
+    {
+      "check": "all_four_legacy_scope_paths_pinned_in_current_application",
+      "passed": true
+    },
+    {
+      "check": "current_application_scope_exact_SHA",
+      "passed": true
+    },
+    {
+      "check": "current_application_scope_exactgroups_ids",
+      "passed": true
+    },
+    {
+      "check": "bounded_application_not_source_exhaustion_or_finalfreeze",
+      "passed": true
+    },
+    {
+      "check": "unchanged_method_id",
+      "passed": true
+    },
+    {
+      "check": "V41_reuse_explicit_no_new_amendment",
+      "passed": true
+    },
+    {
+      "check": "exact_original_sourceclasses",
+      "passed": true
+    },
+    {
+      "check": "exact_three_original_proofmodes",
+      "passed": true
+    },
+    {
+      "check": "fullnative_exactDOB_actualedges_mandatory",
+      "passed": true
+    },
+    {
+      "check": "generic_UK_and_centroid_not_enough",
+      "passed": true
+    },
+    {
+      "check": "S3_geography_only_no_DOB_BP_upgrade",
+      "passed": true
+    },
+    {
+      "check": "Kiddle_not_retroapproved",
+      "passed": true
+    },
+    {
+      "check": "54_target_ids_equal_actual_pool",
+      "passed": true
+    },
+    {
+      "check": "fixed6_followups_reviewed",
+      "passed": true
+    },
+    {
+      "check": "complete_disjoint_accepted_held_partition",
+      "passed": true
+    },
+    {
+      "check": "runtime_exact_six_GEO_FIELDS",
+      "passed": true
+    },
+    {
+      "check": "runtime_additive_main_v41_and_historical_functions_literal",
+      "passed": true
+    },
+    {
+      "check": "runtime_main_entrypoint_uses_main_v41",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1324_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1324_held_frozen_rawBP_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1475_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1475_held_frozen_rawBP_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1727_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1727_held_frozen_rawBP_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2016_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2016_held_frozen_rawBP_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2044_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2044_held_frozen_rawBP_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2460_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA2460_held_frozen_rawBP_exact",
+      "passed": true
+    },
+    {
+      "check": "inventory_provisional_parsed_date_discrepancies.json_old_objects_preserved",
+      "passed": true
+    },
+    {
+      "check": "inventory_provisional_parsed_date_discrepancies.json_byteexact_default",
+      "passed": true
+    },
+    {
+      "check": "inventory_source_date_precision_holds.json_old_objects_preserved",
+      "passed": true
+    },
+    {
+      "check": "inventory_source_date_precision_holds.json_byteexact_default",
+      "passed": true
+    },
+    {
+      "check": "inventory_source_derived_age_inconsistencies.json_old_objects_preserved",
+      "passed": true
+    },
+    {
+      "check": "inventory_source_derived_age_inconsistencies.json_byteexact_default",
+      "passed": true
+    },
+    {
+      "check": "inventory_lifespan_endpoint_discrepancies.json_old_objects_preserved",
+      "passed": true
+    },
+    {
+      "check": "inventory_lifespan_endpoint_discrepancies.json_byteexact_default",
+      "passed": true
+    },
+    {
+      "check": "inventory_cross_source_reported_age_contrasts.json_old_objects_preserved",
+      "passed": true
+    },
+    {
+      "check": "inventory_cross_source_reported_age_contrasts.json_byteexact_default",
+      "passed": true
+    },
+    {
+      "check": "inventory_omitted_middle_name_admission.json_old_objects_preserved",
+      "passed": true
+    },
+    {
+      "check": "inventory_omitted_middle_name_admission.json_byteexact_default",
+      "passed": true
+    },
+    {
+      "check": "inventory_source_ordinal_age_wording_observations.json_old_objects_preserved",
+      "passed": true
+    },
+    {
+      "check": "inventory_source_ordinal_age_wording_observations.json_byteexact_default",
+      "passed": true
+    },
+    {
+      "check": "inventory_birthplace_source_conflicts.json_old_objects_preserved",
+      "passed": true
+    },
+    {
+      "check": "inventory_birthplace_source_conflicts.json_byteexact_default",
+      "passed": true
+    },
+    {
+      "check": "inventory_active_source_DOB_conflicts.json_old_objects_preserved",
+      "passed": true
+    },
+    {
+      "check": "inventory_active_source_DOB_conflicts.json_byteexact_default",
+      "passed": true
+    },
+    {
+      "check": "all13_prior_activeDOB_objects_prefix_unchanged",
+      "passed": true
+    },
+    {
+      "check": "new_activeDOB_cases_not_adopted",
+      "passed": true
+    },
+    {
+      "check": "Adam_historical_conflict_still_active_unchanged",
+      "passed": true
+    },
+    {
+      "check": "all_four_inherited_age_objects_preserved",
+      "passed": true
+    },
+    {
+      "check": "prior_v11_holds.json_exacthistoricalbytes",
+      "passed": true
+    },
+    {
+      "check": "prior_v12_holds.json_exacthistoricalbytes",
+      "passed": true
+    },
+    {
+      "check": "prior_v29_first_pass_queue_closeout.json_exacthistoricalbytes",
+      "passed": true
+    },
+    {
+      "check": "prior_v35_geography_first_pass_queue_closeout.json_exacthistoricalbytes",
+      "passed": true
+    },
+    {
+      "check": "all_inherited_historical_prior_audit_files_byteexact",
+      "passed": true,
+      "detail": {
+        "historical_prior_files": 146
+      }
+    },
+    {
+      "check": "historical_V35_queue_pin_no_current_relabel",
+      "passed": true
+    },
+    {
+      "check": "historical_V36_class_admission_preserved",
+      "passed": true
+    },
+    {
+      "check": "historical_base_prereg_bytes_preserved",
+      "passed": true
+    },
+    {
+      "check": "current_application_scope_bytes_exact",
+      "passed": true
+    },
+    {
+      "check": "legacy_V37_runtime_scope_byteexact",
+      "passed": true
+    },
+    {
+      "check": "legacy_V39_runtime_scope_byteexact",
+      "passed": true
+    },
+    {
+      "check": "legacy_V38_runtime_scope_byteexact",
+      "passed": true
+    },
+    {
+      "check": "legacy_V40_runtime_scope_byteexact",
+      "passed": true
+    },
+    {
+      "check": "a_report_exact_scratch",
+      "passed": true
+    },
+    {
+      "check": "a_queries_atmost4",
+      "passed": true
+    },
+    {
+      "check": "a_ledger_operation_kinds_consistent",
+      "passed": true
+    },
+    {
+      "check": "a_source_navigation_atmost10",
+      "passed": true
+    },
+    {
+      "check": "a_exact_worker_scope_partition",
+      "passed": true
+    },
+    {
+      "check": "a_intent_exact_scratch",
+      "passed": true
+    },
+    {
+      "check": "a_scope_application_predates_worker_initial_intent",
+      "passed": true
+    },
+    {
+      "check": "a_worker_report_current_method_scope",
+      "passed": true
+    },
+    {
+      "check": "a_nine_prior_inventory_pins_in_durable_intent",
+      "passed": true
+    },
+    {
+      "check": "a_all_requests_have_exact_durable_intent",
+      "passed": true,
+      "detail": {
+        "actual_operations": 8,
+        "intent_entries": 8
+      }
+    },
+    {
+      "check": "a_available_intent_entry_timestamps_after_scope",
+      "passed": true,
+      "detail": {
+        "without_per_entry_timestamp": 8,
+        "file_timestamp": "2026-11-08T08:42:23.339197+00:00"
+      }
+    },
+    {
+      "check": "a_durable_intents_separately_validated_beforeweb",
+      "passed": true
+    },
+    {
+      "check": "a_first_failure_closes_without_retry_or_variants",
+      "passed": true
+    },
+    {
+      "check": "a_reported_counts_equal_actual_ledgers",
+      "passed": true
+    },
+    {
+      "check": "a_no_raw_GET_screenshot_operations",
+      "passed": true
+    },
+    {
+      "check": "a_declared_perwork_quote_counts_under25",
+      "passed": true
+    },
+    {
+      "check": "b_report_exact_scratch",
+      "passed": true
+    },
+    {
+      "check": "b_queries_atmost4",
+      "passed": true
+    },
+    {
+      "check": "b_ledger_operation_kinds_consistent",
+      "passed": true
+    },
+    {
+      "check": "b_source_navigation_atmost10",
+      "passed": true
+    },
+    {
+      "check": "b_exact_worker_scope_partition",
+      "passed": true
+    },
+    {
+      "check": "b_intent_exact_scratch",
+      "passed": true
+    },
+    {
+      "check": "b_scope_application_predates_worker_initial_intent",
+      "passed": true
+    },
+    {
+      "check": "b_worker_report_current_method_scope",
+      "passed": true
+    },
+    {
+      "check": "b_nine_prior_inventory_pins_in_durable_intent",
+      "passed": true
+    },
+    {
+      "check": "b_all_requests_have_exact_durable_intent",
+      "passed": true,
+      "detail": {
+        "actual_operations": 7,
+        "intent_entries": 7
+      }
+    },
+    {
+      "check": "b_available_intent_entry_timestamps_after_scope",
+      "passed": true,
+      "detail": {
+        "without_per_entry_timestamp": 7,
+        "file_timestamp": "2026-11-08T08:42:27.284361+00:00"
+      }
+    },
+    {
+      "check": "b_durable_intents_separately_validated_beforeweb",
+      "passed": true
+    },
+    {
+      "check": "b_first_failure_closes_without_retry_or_variants",
+      "passed": true
+    },
+    {
+      "check": "b_reported_counts_equal_actual_ledgers",
+      "passed": true
+    },
+    {
+      "check": "b_no_raw_GET_screenshot_operations",
+      "passed": true
+    },
+    {
+      "check": "b_declared_perwork_quote_counts_under25",
+      "passed": true
+    },
+    {
+      "check": "c_report_exact_scratch",
+      "passed": true
+    },
+    {
+      "check": "c_queries_atmost4",
+      "passed": true
+    },
+    {
+      "check": "c_ledger_operation_kinds_consistent",
+      "passed": true
+    },
+    {
+      "check": "c_source_navigation_atmost10",
+      "passed": true
+    },
+    {
+      "check": "c_exact_worker_scope_partition",
+      "passed": true
+    },
+    {
+      "check": "c_intent_exact_scratch",
+      "passed": true
+    },
+    {
+      "check": "c_scope_application_predates_worker_initial_intent",
+      "passed": true
+    },
+    {
+      "check": "c_worker_report_current_method_scope",
+      "passed": true
+    },
+    {
+      "check": "c_nine_prior_inventory_pins_in_durable_intent",
+      "passed": true
+    },
+    {
+      "check": "c_all_requests_have_exact_durable_intent",
+      "passed": true,
+      "detail": {
+        "actual_operations": 6,
+        "intent_entries": 6
+      }
+    },
+    {
+      "check": "c_available_intent_entry_timestamps_after_scope",
+      "passed": true,
+      "detail": {
+        "without_per_entry_timestamp": 0,
+        "file_timestamp": null
+      }
+    },
+    {
+      "check": "c_durable_intents_separately_validated_beforeweb",
+      "passed": true
+    },
+    {
+      "check": "c_first_failure_closes_without_retry_or_variants",
+      "passed": true
+    },
+    {
+      "check": "c_reported_counts_equal_actual_ledgers",
+      "passed": true
+    },
+    {
+      "check": "c_no_raw_GET_screenshot_operations",
+      "passed": true
+    },
+    {
+      "check": "c_declared_perwork_quote_counts_under25",
+      "passed": true
+    },
+    {
+      "check": "parent_same_method_current_scope_hash",
+      "passed": true
+    },
+    {
+      "check": "thisversion_no_new_admission_amendment",
+      "passed": true
+    },
+    {
+      "check": "class_current_method_scope_hash",
+      "passed": true
+    },
+    {
+      "check": "class_adopted_ids_grades_modes_actual",
+      "passed": true
+    },
+    {
+      "check": "class_native_BP_fields_unchanged",
+      "passed": true
+    },
+    {
+      "check": "adopted_count_matches_partition",
+      "passed": true
+    },
+    {
+      "check": "current_accepted_root_adjudication_completed",
+      "passed": true
+    },
+    {
+      "check": "root_intents_after_scope_before_adjudication",
+      "passed": true
+    },
+    {
+      "check": "root_operations_explicit_and_known",
+      "passed": true
+    },
+    {
+      "check": "root_nine_inventory_pins_in_durable_preintent",
+      "passed": true
+    },
+    {
+      "check": "root_observed_acquisitions_exact_durable_intents",
+      "passed": true
+    },
+    {
+      "check": "new_age_quality_source_refs_observed_and_no_grade_upgrade",
+      "passed": true
+    },
+    {
+      "check": "accepted_source_and_edge_refs_actually_in_acquisition_ledgers",
+      "passed": true
+    },
+    {
+      "check": "root_counts_from_actual_operation_kinds",
+      "passed": true
+    },
+    {
+      "check": "root_atmost18opens1query",
+      "passed": true
+    },
+    {
+      "check": "root_no_raw_GET_screenshot_operations",
+      "passed": true
+    },
+    {
+      "check": "parent_worker_counts_exact_ledgers",
+      "passed": true
+    },
+    {
+      "check": "parent_open_click_counts_from_actual_ledgers",
+      "passed": true
+    },
+    {
+      "check": "parent_age_counts_from_actual_inventory",
+      "passed": true
+    },
+    {
+      "check": "root_counts_match_intent_entries",
+      "passed": true
+    },
+    {
+      "check": "parent_totals_match_worker_plus_root",
+      "passed": true
+    },
+    {
+      "check": "all_root_quoteworkcounts_atmost25",
+      "passed": true
+    },
+    {
+      "check": "independent_manual_semantic_review_covers_exact_six",
+      "passed": true
+    },
+    {
+      "check": "independent_semantic_review_binds_actual_current_artifacts",
+      "passed": true
+    },
+    {
+      "check": "accepted_actual_person_birth_relation_and_path_semantically_reviewed",
+      "passed": true
+    },
+    {
+      "check": "held_cases_semantically_reviewed_without_absence_overclaim",
+      "passed": true
+    },
+    {
+      "check": "perwork_cumulative_historical_and_current_quotes_semantically_reviewed",
+      "passed": true
+    },
+    {
+      "check": "durable_preintent_first_failure_stops_semantically_reviewed",
+      "passed": true
+    },
+    {
+      "check": "held_no_current_geography",
+      "passed": true
+    },
+    {
+      "check": "parent_decision_counts_match_actual_facts_holds",
+      "passed": true
+    },
+    {
+      "check": "zero_firstbirthplaces_DOB_inventory_count_no_place_or_other_exceptions",
+      "passed": true
+    },
+    {
+      "check": "schema_prior_source_method_requirements_preserved",
+      "passed": true
+    },
+    {
+      "check": "schema_current_scope_path_and_frozen_hash_documented",
+      "passed": true
+    },
+    {
+      "check": "schema_current_application_scope_documented",
+      "passed": true
+    },
+    {
+      "check": "no_source_caches_or_images",
+      "passed": true
+    }
+  ],
+  "blocking_issues": [],
+  "warnings": [
+    {
+      "warning": "a_intent_entry_timing_not_independently_reconstructed",
+      "detail": "8 exact entries have no per-entry time; file time and separately validated-before-web disclosure are retained. No retrospective timestamps invented."
+    },
+    {
+      "warning": "b_intent_entry_timing_not_independently_reconstructed",
+      "detail": "7 exact entries have no per-entry time; file time and separately validated-before-web disclosure are retained. No retrospective timestamps invented."
+    },
+    {
+      "warning": "documentary_acquisition_and_timing_limits",
+      "detail": "Reviewer made no network requests and did not inspect raw originals/pixels or execute production. A/B per-entry timing is not independently reconstructable from exported JSON; exact intent matching and preserved separate validation disclosures are documentary evidence."
+    },
+    {
+      "warning": "rewritten_representation_and_missing_P19_limits",
+      "detail": "Kettle/Binnie graph and Gibson list responses are explicitly rewritten representations; no source dates/P19/complete absence are promoted from them. Inaccessible item errors and redlink404 do not authenticate raw HTTP status or universal absence."
+    },
+    {
+      "warning": "primary_body_metadata_and_information_dependence_unknown",
+      "detail": "Actual English name/date/career/life observations are identity context only. Displayed footer metadata is preserved separately from null authenticated revision/raw/time/calendar/rank/editorial/independence fields. No maintenance or representation caveat is cleared."
+    },
+    {
+      "warning": "historical_issues_and_no_new_admission",
+      "detail": "All six remain held; no new geography, DOB/place/age issue append, omitted-middle exception or grade upgrade. Active13, partialplace2, age4, metadata-only omitted-middle, separate Ewins/Barber, Tomes and historical V35/V29 queues retain their as-of meaning."
+    }
+  ],
+  "declared_six_GEO_FIELDS": [
+    "geo_resolution_status",
+    "geography_decision",
+    "hemisphere",
+    "northern_birthplace_candidate",
+    "reason",
+    "southern_birthplace_separate"
+  ],
+  "no_new_admission_method_exception": true,
+  "explicit_prospective_admission_method_amendment": false,
+  "historical_V36_method_amendment_preserved": true,
+  "scope_application_extension": true,
+  "review_scope": "Documentary source/native binding/scope/protocol review only. Workers and root acquired source observations. Reviewer did not fetch network originals, inspect raw bytes/pixels or execute production. Final QA independently checks full-object rollback and deterministic output replays.",
+  "no_network_source_code_mainoutputs_audits_or_Git_mutation_by_reviewer": true,
+  "documentary_semantic_case_review_sha256_at_review": "fc91fc148a4aa0c4c17b45d1206f05f0a64fd93e0b0684bf57fef865895d966f",
+  "documentary_semantic_case_reviews": [
+    {
+      "record_id": "RS_PAST_NA1324",
+      "decision": "held",
+      "reason_reviewed": true,
+      "missing_proof_not_universal_absence": true,
+      "native_name": "Charles Stanley Gibson",
+      "native_DOB": "1884-02-08",
+      "frozen_place": "Manchester",
+      "review": "No actual canonical person body acquired. Supplied frozen lookup item Q21165617 first open was unavailable. Explicitly rewritten fellow-list representation carried an observed subject link, whose actual follow produced a redlink404. The representation date9February is neither an authenticated original-list/source date nor a qualified conflict with native8February. No observed person-birth-to-region proof; all failed works stayed closed. No name, DOB, place or grade upgrade.",
+      "acquisition_refs": [
+        "turn1083271view0",
+        "turn8642354view0",
+        "turn1333399view0"
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA1475",
+      "decision": "held",
+      "reason_reviewed": true,
+      "missing_proof_not_universal_absence": true,
+      "native_name": "Edgar Hartley Kettle",
+      "native_DOB": "1882-04-20",
+      "frozen_place": "London",
+      "review": "Worker and root actual canonical English bodies show all Edgar/Hartley/Kettle components, exact20April1882, compatible1882-1936 life and distinctive pathology/silicosis career. London is plain unlinked text in the birth half of a lifespan parenthetical; it is a valid observed birth association, not a literal was-born clause and not a followed birthplace edge or explicit whole-region birth qualifier. Actual item click is explicitly rewritten and cannot prove actual P19/P131 or absence. Root distinct-language locator found no acquired eligible person URI/body. London familiarity, Cardiff/Hammersmith work, nationality and schooling do not complete the path.",
+      "native_person_components_observed": [
+        "Edgar",
+        "Hartley",
+        "Kettle"
+      ],
+      "observed_source_DOB": "1882-04-20",
+      "observed_lifespan": "1882-1936",
+      "observed_career": "pathologist; silicosis/tuberculosis/gas-gangrene work",
+      "birth_syntax": "unlinked London in birth/death parenthetical",
+      "acquisition_refs": [
+        "turn5973262view0",
+        "turn1083271view1",
+        "turn9486267search5",
+        "turn3727745view0"
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA1727",
+      "decision": "held",
+      "reason_reviewed": true,
+      "missing_proof_not_universal_absence": true,
+      "native_name": "Miles Walker",
+      "native_DOB": "1868-08-13",
+      "frozen_place": "Lowther Street, Carlisle",
+      "review": "No acquired actual canonical person body for the native1868 electrical engineer. The1940 Miles Rawstron Walker politician was excluded as another person before opening and supplies no native DOB conflict. Supplied frozen lookup item Q21166789 first open was unavailable and closed. Generic Carlisle/admin/street candidate knowledge cannot replace a personal birth association. Street identity and all original compound-place fields remain frozen.",
+      "acquisition_refs": [
+        "turn9958938search4",
+        "turn4817569search4",
+        "turn8898224search9",
+        "turn4873912view0"
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA2016",
+      "decision": "held",
+      "reason_reviewed": true,
+      "missing_proof_not_universal_absence": true,
+      "native_name": "Geoffrey Morse Binnie",
+      "native_DOB": "1908-11-13",
+      "frozen_place": "Kensington",
+      "review": "Worker and root actual canonical person bodies show Geoffrey/Morse/Binnie, exact13November1908, compatible1908-1989 life with actual5April1989 death, and distinctive civil-engineering/dam career. Short Geoffrey Binnie title does not imply omission because actual body includes Morse. No acquired personal birthplace association reaches frozen Kensington or any whole region. The actual item-click representation is explicitly rewritten; displayed lack of P19 is not authenticated P19 absence/completeness. Root age80 agrees conventional completed80 and creates no age-quality discrepancy.",
+      "native_person_components_observed": [
+        "Geoffrey",
+        "Morse",
+        "Binnie"
+      ],
+      "observed_source_DOB": "1908-11-13",
+      "observed_lifespan": "1908-1989",
+      "observed_career": "civil engineer; dams/reservoirs, Binnie and Partners, Dukan/Mangla/Bennett projects",
+      "birth_syntax": "exact birthdate displayed; no acquired birthplace relation",
+      "omitted_middle_name_exception_created": false,
+      "acquisition_refs": [
+        "turn4817569view0",
+        "turn8898224view0",
+        "turn3727745view1"
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA2044",
+      "decision": "held",
+      "reason_reviewed": true,
+      "missing_proof_not_universal_absence": true,
+      "native_name": "Dennis John Crisp",
+      "native_DOB": "1916-04-29",
+      "frozen_place": "London",
+      "review": "Bounded discovery supplied no acquired actual canonical person body; supplied frozen lookup Q21165926 first opening was unavailable and closed. Tool error is not an original entity statement or a P19 absence proof. Inherited newsletter London stays unqualified and original S3; no city familiarity, nationality, work, family or coordinates supply geography.",
+      "acquisition_refs": [
+        "turn5889372view0"
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA2460",
+      "decision": "held",
+      "reason_reviewed": true,
+      "missing_proof_not_universal_absence": true,
+      "native_name": "Henry Gerard Thornton",
+      "native_DOB": "1892-01-22",
+      "frozen_place": "London",
+      "review": "Disambiguation/fellow-list and son Peter Thornton discovery material is not an acquired Henry Gerard Thornton person body with exact date/career/birth association. Supplied frozen lookup Q21166847 first opening was unavailable and closed. Honorific Sir is not a personal-name component; Gerard is not expanded from initials. Original London/S2 and AIM25/prior hold limitations remain. No acquired P19/P131 or universal absence verdict.",
+      "acquisition_refs": [
+        "turn5889372view1",
+        "turn7047761search0",
+        "turn4574526search9"
+      ]
+    }
+  ],
+  "documentary_protocol_review": {
+    "schema": "UK_v41_manual_documentary_case_review_v1",
+    "reviewer": "/root/v41_source_qa",
+    "written_utc": "2026-11-08T08:55:10.316681+00:00",
+    "documentary_review_complete": true,
+    "cumulative_per_original_work_quote_accounting_reviewed": true,
+    "all_original_works_atmost25_distinct_English_quoted_words": true,
+    "quote_review": "Retained exact quote fields in six native full objects and worker reports were deduplicated by actual original work. KettleEnglish4 and BinnieEnglish3 are the only new literal-source quotations; root retains0 additional quoted words for each. Historical targeted works retain8/11/11/11/9/7 distinct whitespace words as recorded in quote prefinal. Frozen historical inventories/contexts/queues are checked by byte history in final sourceQA. No complete source or projection cache is added.",
+    "quote_prefinal_report_path": "v41_source_qa_quote_prefinal.json",
+    "quote_prefinal_report_sha256": "14d7c2533c2b4310af0ddf86e1989b43d73badb4d70785efde0bd70f40439d23",
+    "worker_operation_prefinal_report_path": "v41_source_qa_worker_operation_prefinal.json",
+    "worker_operation_prefinal_report_sha256": "7d60fc81c3b3b019c583af59fa04e0a9e8f728e9b04c1d45b62cb4b34c3e180f",
+    "new_canonical_work_cumulative_quoted_words": {
+      "https://en.wikipedia.org/wiki/Edgar_Hartley_Kettle": 4,
+      "https://en.wikipedia.org/wiki/Geoffrey_Binnie": 3
+    },
+    "exact_durable_preintent_protocol_reviewed": true,
+    "first_failed_work_closures_reviewed": true,
+    "operation_review": "All21 worker operations match21 exact retained intent entries:11queries/7opens/3clicks/0find. Root actual1source_locator_query and2opens match exact root entries, each inside its operation kind and budget. C cached_finds0 is parsed_finds0; absent C protocol_limits are assessed from explicit bounded completion and each failed source observation stop flag. All9 inventory control pins precede acquisition. Exported A/B fileUTC plus declared separate exit0-before-web validations do not independently reconstruct every appended entry real-time sequence; no retrospective timestamps invented. First failed item/redlink works are not retried by workers or root, and root opens only the two actually acquired successful English person works.",
+    "retained_warnings": [
+      {
+        "warning": "documentary_acquisition_and_timing_limits",
+        "detail": "Reviewer made no network requests and did not inspect raw originals/pixels or execute production. A/B per-entry timing is not independently reconstructable from exported JSON; exact intent matching and preserved separate validation disclosures are documentary evidence."
+      },
+      {
+        "warning": "rewritten_representation_and_missing_P19_limits",
+        "detail": "Kettle/Binnie graph and Gibson list responses are explicitly rewritten representations; no source dates/P19/complete absence are promoted from them. Inaccessible item errors and redlink404 do not authenticate raw HTTP status or universal absence."
+      },
+      {
+        "warning": "primary_body_metadata_and_information_dependence_unknown",
+        "detail": "Actual English name/date/career/life observations are identity context only. Displayed footer metadata is preserved separately from null authenticated revision/raw/time/calendar/rank/editorial/independence fields. No maintenance or representation caveat is cleared."
+      },
+      {
+        "warning": "historical_issues_and_no_new_admission",
+        "detail": "All six remain held; no new geography, DOB/place/age issue append, omitted-middle exception or grade upgrade. Active13, partialplace2, age4, metadata-only omitted-middle, separate Ewins/Barber, Tomes and historical V35/V29 queues retain their as-of meaning."
+      }
+    ]
+  },
+  "accepted_fact_path": "inputs/accepted_geography.json",
+  "followup_holds_sha256_at_review": "80dee4aeee68784c953d55c56b194f753e549555c53337d71743c3c6f08f5a2a",
+  "parent_adjudication_sha256_at_review": "4625c97e09abb66d661e4247926d3e00611b3efcb87e4cabdc01f01d47b5f023",
+  "root_followups_sha256_at_review": "3801add5acac40b49c9303b63c4781a40c31ab1ba4a950cafda508158d3897dd",
+  "root_intent_sha256_at_review": "6b4cac68c2c0ed8a981fbab6aeab28b7eab1f123228c442da502822a2922075e",
+  "worker_source_report_sha256_at_review": {
+    "a": "288dd647c9e141d15df1977c56d7f3fba0bb30199a6dc9a06448f271c298b1de",
+    "b": "37fa98573d97718f35629adb5b24db289c55339306a784692c38683468e973ec",
+    "c": "d30809a6cd3829c827913684bdcc1f4105c017eba691107b0d48b8c11bbdeed0"
+  },
+  "worker_intent_sha256_at_review": {
+    "a": "2589699c9a164bc50209d2e1b7be257c709990799dc94dca00ad4fada0fda79b",
+    "b": "fac854f6b7be9de40be6d3b518365baa1ab8117a441bbd3c87ebeefbce90d213",
+    "c": "e6257cf1797a66e940a5b24df9e07ddc17e206c27dc1b337629f542939696c9c"
+  },
+  "accepted_fact_sha256_at_review": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+  "accepted_geography_sha256_at_review": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+  "active_DOB_conflicts_sha256_at_review": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+  "source_derived_age_inconsistencies_sha256_at_review": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+  "prior_v40_source_derived_age_inconsistencies_sha256_at_review": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+  "birthplace_source_conflicts_sha256_at_review": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+  "source_class_adjudication_sha256_at_review": "1ca10c65e78c4e754d0ab64b99836c82be8d030805d0246e13a54d1890e8b626",
+  "historical_v35_geography_first_pass_queue_closeout_sha256_at_review": "56fd3053935afc42fe2f9cf301bb66bc2bc6839fa9483467cd03e602fb61be3b",
+  "historical_v29_first_pass_queue_closeout_sha256_at_review": "29d5a08c382fc5d1587c99e09a43a3c6c4559f9c971ef4efd5b8fb3f05407503",
+  "method_preregistration_sha256_at_review": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+  "method_application_scope_sha256_at_review": "d6ebcba7aa672c1a4877857bd4e9b4072af2ae159c04fd0dddf4d7766d2e3176",
+  "method_application_scope_path": "audit/method_application_scope_v41.json",
+  "legacy_V37_method_application_scope_sha256_at_review": "ae080b06f8abad9ed7575783486795c977e44ce5e5024bfa2096e16816a44d94",
+  "legacy_V38_method_application_scope_sha256_at_review": "bd7540715a6b4649ffe79371e38ee2b650bd0176013fbb5418efa02b8995fad0",
+  "legacy_V39_method_application_scope_sha256_at_review": "cc12b3159a035064dbde6a35e0778642fdb25d988e9e399617b216062127b17e",
+  "legacy_V40_method_application_scope_sha256_at_review": "b44c66bc0d7883aeef9650578d0b339a65b563942da3fe72976b05c0094cc1fc",
+  "method_schema_sha256_at_review": "046cbce4821c17ef6861a26e02e46ebac3c4507e1a7f6222092e3870edd1b48e",
+  "accepted_geographic_bindings": [],
+  "new_source_quality_observations": [],
+  "nine_issue_inventory_sha256_at_review": {
+    "provisional_parsed_date_discrepancies.json": {
+      "baseline_sha256": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+      "current_sha256": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd"
+    },
+    "source_date_precision_holds.json": {
+      "baseline_sha256": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+      "current_sha256": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c"
+    },
+    "source_derived_age_inconsistencies.json": {
+      "baseline_sha256": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+      "current_sha256": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6"
+    },
+    "lifespan_endpoint_discrepancies.json": {
+      "baseline_sha256": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+      "current_sha256": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363"
+    },
+    "cross_source_reported_age_contrasts.json": {
+      "baseline_sha256": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+      "current_sha256": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0"
+    },
+    "omitted_middle_name_admission.json": {
+      "baseline_sha256": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+      "current_sha256": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5"
+    },
+    "source_ordinal_age_wording_observations.json": {
+      "baseline_sha256": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d",
+      "current_sha256": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+    },
+    "birthplace_source_conflicts.json": {
+      "baseline_sha256": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+      "current_sha256": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1"
+    },
+    "active_source_DOB_conflicts.json": {
+      "baseline_sha256": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+      "current_sha256": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c"
+    }
+  },
+  "nine_issue_inventory_counts_at_review": {
+    "provisional_parsed_date_discrepancies.json": {
+      "baseline_records": 1,
+      "current_records": 1,
+      "inventory_shape": "records"
+    },
+    "source_date_precision_holds.json": {
+      "baseline_records": 1,
+      "current_records": 1,
+      "inventory_shape": "records"
+    },
+    "source_derived_age_inconsistencies.json": {
+      "baseline_records": 4,
+      "current_records": 4,
+      "inventory_shape": "records"
+    },
+    "lifespan_endpoint_discrepancies.json": {
+      "baseline_records": 1,
+      "current_records": 1,
+      "inventory_shape": "records"
+    },
+    "cross_source_reported_age_contrasts.json": {
+      "baseline_records": 1,
+      "current_records": 1,
+      "inventory_shape": "records"
+    },
+    "omitted_middle_name_admission.json": {
+      "baseline_records": null,
+      "current_records": null,
+      "inventory_shape": "metadata_without_records"
+    },
+    "source_ordinal_age_wording_observations.json": {
+      "baseline_records": 1,
+      "current_records": 1,
+      "inventory_shape": "records"
+    },
+    "birthplace_source_conflicts.json": {
+      "baseline_records": 2,
+      "current_records": 2,
+      "inventory_shape": "records"
+    },
+    "active_source_DOB_conflicts.json": {
+      "baseline_records": 13,
+      "current_records": 13,
+      "inventory_shape": "records"
+    }
+  },
+  "nine_issue_inventory_changes": {
+    "provisional_parsed_date_discrepancies.json": {
+      "byte_identical": true,
+      "appended_record_ids": []
+    },
+    "source_date_precision_holds.json": {
+      "byte_identical": true,
+      "appended_record_ids": []
+    },
+    "source_derived_age_inconsistencies.json": {
+      "byte_identical": true,
+      "appended_record_ids": []
+    },
+    "lifespan_endpoint_discrepancies.json": {
+      "byte_identical": true,
+      "appended_record_ids": []
+    },
+    "cross_source_reported_age_contrasts.json": {
+      "byte_identical": true,
+      "appended_record_ids": []
+    },
+    "omitted_middle_name_admission.json": {
+      "byte_identical": true,
+      "appended_record_ids": []
+    },
+    "source_ordinal_age_wording_observations.json": {
+      "byte_identical": true,
+      "appended_record_ids": []
+    },
+    "birthplace_source_conflicts.json": {
+      "byte_identical": true,
+      "appended_record_ids": []
+    },
+    "active_source_DOB_conflicts.json": {
+      "byte_identical": true,
+      "appended_record_ids": []
+    }
+  },
+  "inherited_issue_sidecars_byte_identical": [
+    "provisional_parsed_date_discrepancies.json",
+    "source_date_precision_holds.json",
+    "source_derived_age_inconsistencies.json",
+    "lifespan_endpoint_discrepancies.json",
+    "cross_source_reported_age_contrasts.json",
+    "omitted_middle_name_admission.json",
+    "source_ordinal_age_wording_observations.json",
+    "birthplace_source_conflicts.json",
+    "active_source_DOB_conflicts.json"
+  ],
+  "all_four_inherited_age_records_unchanged": true,
+  "worker_counts_from_actual_ledgers": {
+    "a": {
+      "queries": 3,
+      "navigation_operations": 5,
+      "parsed_finds": 0
+    },
+    "b": {
+      "queries": 4,
+      "navigation_operations": 3,
+      "parsed_finds": 0
+    },
+    "c": {
+      "queries": 4,
+      "navigation_operations": 2,
+      "parsed_finds": 0
+    }
+  }
+}

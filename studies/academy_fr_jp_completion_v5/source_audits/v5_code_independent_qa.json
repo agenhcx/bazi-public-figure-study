@@ -1,0 +1,61 @@
+{
+  "review": "v5 continuation code independent QA",
+  "reviewer": "/root/japan_dob_next_a",
+  "reviewed_utc": "2026-10-29T14:12:13.504199+00:00",
+  "reviewed_files": [
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/academy_completion_checkout/studies/academy_fr_jp_completion_v5/scripts/continue.py",
+      "sha256": "2be0ef18e5144dd6214809dc627670563f905d33a1a21e45aea40faa118c5bd4"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/academy_completion_checkout/studies/academy_fr_jp_completion_v5/tests/test_continuation.py",
+      "sha256": "406af7fcf6b2bb7ac18066162de245f55a0dcb47bd98b0218f2ee836d87ad102"
+    },
+    {
+      "path": "/workspace/scratch/7e8aa4e0d4af/academy_completion_checkout/studies/academy_fr_jp_completion_v5/inputs/batch_selection.json",
+      "sha256": "46a1fc9d7170e9aece97275181ccc35d2bf8e7e7e97b4d4828b395a18cf61ee0"
+    }
+  ],
+  "read_only_repo": true,
+  "network_requests": 0,
+  "repository_files_modified": 0,
+  "tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python -B -m unittest discover -s studies/academy_fr_jp_completion_v5/tests -v",
+    "tests_run": 8,
+    "passed": 8,
+    "failed": 0
+  },
+  "actual_japan_replay": {
+    "delta_claim_rows": 63,
+    "fixed_processed_people": 89,
+    "baseline_day": 310,
+    "approved_day": 359,
+    "net_day_gain": 49,
+    "institution_supported_day": 204,
+    "edited_reference_only_day": 154,
+    "other_secondary_only_day": 1
+  },
+  "checks_passed": [
+    "Empty Japan delta preserves inherited claim ledger, holds, statuses and prior tier totals.",
+    "Actual63delta preserves cumulative evidence and retained holds; no actual source-tier promotion or day-count error found.",
+    "Institutional partial source cannot lift a secondary full-day to institutional day: actual Nakata remains edited-reference-only.",
+    "Actual Tanaka1931/Suda1935 remain year-only with no institutional day flag.",
+    "Hirayama1867month9 versus1868year remains source_calendar_hold; Amemiya11/15 versus11/5 remains source_date_conflict_hold.",
+    "Null original hash occurs only for Suzuki1946-10-03. Allowlist binds exact member_key/source_url/extracted_body_sha256 to independently reviewed root ref;403/web-body requirements remain.",
+    "Updated tests accept actual Suzuki exception and reject changed URL/member/hash.",
+    "No qualification/section changes, cohort acceptance or BaZi computation introduced."
+  ],
+  "material_errors_unresolved": 0,
+  "notes": [
+    {
+      "type": "tier_semantics_future_review",
+      "detail": "Inherited secondary classifier does not generically classify every _secondary suffix as a secondary source. A library reference-answer reproduction and publisher-author biography are boundary cases. Under reviewed current definition and actual63rows, library answer is already primary-correlated and held; publisher author biography is year-only. No actual359/204/154/1 totals change. Reported to root; no blanket ancestor classification change requested."
+    },
+    {
+      "type": "finding_resolved_during_review",
+      "detail": "Generic403 null-hash path was reported and integrator narrowed it to the unique approved Suzuki allowlist; final code and8tests rechecked."
+    }
+  ],
+  "final_cohort_accepted": 0,
+  "bazi_variables_computed": 0
+}

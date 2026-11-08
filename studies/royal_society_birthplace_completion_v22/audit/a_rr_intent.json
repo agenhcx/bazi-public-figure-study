@@ -1,0 +1,57 @@
+{
+  "written_utc": "2026-11-05T23:43:32.228361+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA4252",
+    "RS_PAST_NA4747"
+  ],
+  "budget": {
+    "queries": 3,
+    "navigation": 4
+  },
+  "planned_queries": [
+    {
+      "query": "\"Brian Kidd Ridley\" \"born\"",
+      "purpose": "Find new original biographical body with actual compatible DOB and birth relation."
+    },
+    {
+      "query": "\"Derek Harry Roberts\" \"born\"",
+      "purpose": "Find new original biographical body with actual compatible DOB and birth relation."
+    },
+    {
+      "written_utc": "2026-11-05T23:44:09.511886+00:00",
+      "query": "\"Brian Ridley\" \"born\" Essex obituary",
+      "purpose": "Find a genuinely distinct original biographical narrative after institutional memoir attachment toolsizeerror; no retry/variant of failedattachment."
+    }
+  ],
+  "rule": "Full native name components and actually stated compatible DOBprecision plus distinctivecareeranchors. Explicit subject birth relation only; report source actual lifespan precision, no missing endpoint fabricated. Birthdate conflict holds/no datelessbypass. Existing v20 death-only exception only if exactDOB/identity/eligibility gates pass and discrepancy separate. v21 expert-authored S2 genre may use acquired same-field credentials without a claimed personalcolleague relationship; journalist lacking credentials conservativeS3. All genres documented, not host-onlyS1.",
+  "pending_open_intents": [
+    {
+      "written_utc": "2026-11-05T23:43:44.047012+00:00",
+      "url": "https://eprints.ncl.ac.uk/309086",
+      "purpose": "Inspect original university repository metadata and observed published memoir attachment pointer for Ridley."
+    },
+    {
+      "written_utc": "2026-11-05T23:43:44.047025+00:00",
+      "url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/579392614",
+      "purpose": "Inspect original signed ODNB publicextract for Roberts explicitbirth/fullidentity/date."
+    },
+    {
+      "written_utc": "2026-11-05T23:43:54.555753+00:00",
+      "ref": "turn3221280view0",
+      "link_id": 8,
+      "purpose": "Read actual original publishedRidley memoir body from institutionalattachment, notmetadataonly."
+    },
+    {
+      "written_utc": "2026-11-05T23:43:54.555767+00:00",
+      "ref": "turn3221280view1",
+      "find": "was born",
+      "purpose": "Inspect cached originalODNB extract birthclause/fullsubject because initialview beganinlargeheader."
+    },
+    {
+      "written_utc": "2026-11-05T23:44:22.272224+00:00",
+      "url": "https://www.ucl.ac.uk/news/2021/mar/tributes-paid-ucl-visionary-and-moderniser-sir-derek-roberts",
+      "purpose": "Originalinstitutional identity-only careerbindingforfullDerekHarry/engineeradministrator; no alternate birthplace claim or countryinference."
+    }
+  ],
+  "no_raw_GET_no_failed_route_retry": true
+}

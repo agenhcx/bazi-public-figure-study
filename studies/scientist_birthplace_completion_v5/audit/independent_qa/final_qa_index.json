@@ -1,0 +1,78 @@
+{
+  "schema": "scientist_birthplace_completion_v5_independent_QA_index",
+  "status": "PASS",
+  "frozen_at_utc": "2026-11-04T00:38:36.350018+00:00",
+  "baseline_sha256": "abbce4e99ad51252dd5e127a0609bc6c4950c121afa2dd126bfc2187b39cd4e8",
+  "main_table_sha256": "15f3d58b3334fbc5c32229b0c122ff5e693379fbf9759794e1e3ae87ac06d152",
+  "documents": {
+    "studies/scientist_birthplace_completion_v5/README.md": "d90088fe4a529840724d057173aba65985303d7c9b4c18b1b5004dcd18694f9a",
+    "studies/scientist_birthplace_completion_v5/CONTINUATION.md": "5b832c3d4427bbdb7324fb7ab5b4905968011884e0388479f4f7634db8c6e367"
+  },
+  "result": {
+    "cohort_records": 11094,
+    "five_new_memoir_facts_S2": 5,
+    "one_prior_birthplace_qualification_S1": 1,
+    "changed_geography_rows": 6,
+    "new_north": 4,
+    "source_places_accepted_hemisphere_held": 2,
+    "unchanged_complete_objects": 11088,
+    "all21_prior_versioned_overlay_objects_equal": true,
+    "20_prior_overlay_whole_rows_equal_Anderson_geography_exception": true,
+    "all4983_UK_whole_objects_equal": true,
+    "all_native_fields_frozen": true,
+    "all655_Nobel_native_DOB_blank_and_Nobel_id43_row_unchanged": true,
+    "CAS_accepted_Gregorian_DOB_blank": true,
+    "new_country_or_birthpoint_person_QID_assignments": 0,
+    "all_CSV_cells_summary_native_windows_checked": true,
+    "seven_outputs_byte_identical_private_offline_replay": true,
+    "source_audit_distribution_files_compared": 60,
+    "QA_network_requests": 0
+  },
+  "reports": {
+    "baseline_inventory.json": {
+      "sha256": "b271eef3af46d0afab802afbdd34ff7a192097bca35f3aaa42d244d194c613a7",
+      "bytes": 9072
+    },
+    "source_review.json": {
+      "sha256": "e64f88575edfcd7e0f8d7a8f075974bbc89f03c208ddd392f219d99547737b44",
+      "bytes": 6305
+    },
+    "anderson_corroboration_review.json": {
+      "sha256": "2b7ed68771c500abd256ecf3c94d957ec66160b5faabe5fe98cbe63376e1663f",
+      "bytes": 1636
+    },
+    "geography_review.json": {
+      "sha256": "ecefd41ca411741c39fcfca1a8d5dc11a1e88f5d2a31d09e69fb1e091e30ed91",
+      "bytes": 1155
+    },
+    "output_review.json": {
+      "sha256": "ea5829f7a39a0eddb4ef920fe38cca976282e97261f743a1bb5e9d2c6517b5bd",
+      "bytes": 3289
+    },
+    "distribution_review.json": {
+      "sha256": "f43625e4b2892438314fff568c146d6cb06dfb3ba32de2e709bca503b1b53690",
+      "bytes": 1013
+    },
+    "prose_review.json": {
+      "sha256": "5332a09d64c8d0aaaeecc63838a899a4d5af8afd770710130cf0b5c26787eb88",
+      "bytes": 1967
+    }
+  },
+  "local_QA_scripts": {
+    "source_review.py": "477cb1c4d9fccaf1979199ad34d227a518c46286001bac5dff84250d5f96389a",
+    "geography_review.py": "9f13d7894490e39b9380b139672f090a45e392218fffe437ee7ac03a4d04562b",
+    "verify_v5_independent.py": "6f55c582fde4402268b16ef9c90979c7c179699f242c94fa253cbd37902c788c"
+  },
+  "output_sha256": {
+    "all_country_birthplace_summary.csv": "976ccb6586100461f8031119edace7ed347ce15e8398ab4f92e131a13a7ee828",
+    "birthplace_rows.jsonl.gz": "15f3d58b3334fbc5c32229b0c122ff5e693379fbf9759794e1e3ae87ac06d152",
+    "birthplaces.csv": "206ce8cca91fa14c346fd214c0e29bbe0f12668965b94113ff63b2174e8f955f",
+    "changed_records.csv": "069b9ef64b4e7bb2ca0f7e1dec1c941e2264e15d68c83616967c295d4598c8bd",
+    "changes.jsonl.gz": "55cda5054c6c4a1f515bc85d63f9ff824a9ebf71af39a71f2be33e765bc8ed1c",
+    "remaining_unknown.csv": "d3e176a5d634451859d98c0e6dcd14c6e98e71b455db01fb73555d02ae0bf328",
+    "summary.json": "1d444b3fa5a46ffac1e9f1a349fbbc60760893bad732ee69d36dfb2ea4afc60c"
+  },
+  "ZIP_handoff": "After this QA freeze root copies final reports, generates authoritative root MANIFEST and ZIP, then checks CRC and all member hashes before Git/ref update. ZIP itself is outside this pre-package QA index.",
+  "work_scope": "Independent local source, visual image, Anderson API identity corroboration, geography raw bindings, full-row/native-field, CSV, summary, seven-output byte replay, distribution metadata and prose review; writes only academy_v5_workers/qa; no source/repository/Git edits or network requests",
+  "script_note": "Source/geography QA scripts depend on transient worker captures. Main study assemble.py and verify.py are offline seven-output replay entrypoints."
+}

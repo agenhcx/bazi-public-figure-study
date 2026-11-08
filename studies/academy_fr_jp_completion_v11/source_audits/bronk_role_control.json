@@ -1,0 +1,84 @@
+{
+  "control_id": "v11_bronk_bounded_primary_role_control",
+  "candidate_group_id": "CTHS_118954",
+  "canonical_person_name_preserved": "Detlev Wulf Bronk",
+  "completed_utc": "2026-10-30T12:18:11.199411+00:00",
+  "control_outcome": "inconclusive_within_bounded_budget",
+  "foreign_French_Academy_class_primary_source_verified": false,
+  "ordinary_full_membership_start_verified": false,
+  "recommended_disposition": "retain_existing_Bronk_hold",
+  "no_membership_approval_added": true,
+  "membership_positive_set_modified": false,
+  "DOB_or_identity_modified": false,
+  "search_query_count": 2,
+  "original_URL_capture_attempt_count": 2,
+  "search_queries": [
+    {
+      "query": "site:academie-sciences.fr Bronk \"étranger\"",
+      "purpose": "Exact FrenchAcademy foreign-role primarysource control"
+    },
+    {
+      "query": "Detlev Bronk French Academy foreign associate 1974 Rockefeller biographical memoir",
+      "purpose": "Primary NAS/Rockefeller memoir control discovery"
+    }
+  ],
+  "actual_capture_attempts": [
+    {
+      "source_id": "nas_bronk_memoir",
+      "requested_url": "https://www.nasonline.org/publications/biographical-memoirs/memoir-pdfs/bronk-detlev-w.pdf",
+      "requested_utc": "2026-10-30T12:16:00.054960+00:00",
+      "discovery_route": "Literal NAS PDF link in actual already captured CTHS118954 HTML; HTTPS transport.",
+      "http_status": 404,
+      "bytes": 109313,
+      "sha256": "f85f9dab702cbbe5263dffee0cd4beb38ce704e68be254856eb377cf9fcda815",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "source_id": "nas_bronk_chapter",
+      "requested_url": "https://www.nationalacademies.org/read/573/chapter/3",
+      "requested_utc": "2026-10-30T12:16:29.723214+00:00",
+      "discovery_route": "Actual official NAS memoir chapter URL returned by bounded searchquery2.",
+      "http_status": 200,
+      "final_url": "https://www.nationalacademies.org/read/573/chapter/3",
+      "bytes": 748177,
+      "sha256": "c0c41ecf11667f265ceb976b702abd02fc4e0e7eee509eafc2661bd80e1567bd",
+      "content_type": "text/html; charset=UTF-8"
+    }
+  ],
+  "actual_existing_CTHS_body_rechecked": {
+    "source_url": "https://cths.fr/an/savant.php?id=118954",
+    "source_sha256": "58570e53e1c76fb01e08bd14076b3e41477c355eda2c637373f30e1104a46aca",
+    "credited_writer": "Institut de France",
+    "target_society_id": "506",
+    "correspondence_period_observed": [
+      1953,
+      1974
+    ],
+    "later_source_label_observed": "académicien libre",
+    "later_period_observed": [
+      1974,
+      1975
+    ],
+    "literal_labels_preserved_without_role_reclassification": true,
+    "new_GET_for_CTHS_performed": false
+  },
+  "findings": [
+    "The literal NAS PDF link in the previously captured CTHS record returned404. The response was retained and hashed, but no original memoir PDF was captured.",
+    "The official NAS chapter URL returned200 and identifies the Detlev Wulf Bronk memoir. Its captured HTML contains scanned-page image wrappers; the actual memoir page-image bytes and any French-role statement were not captured.",
+    "Neither the404 response, search-result descriptions, nor the chapter wrapper proves Bronk foreign membership or settles the CTHS free-member label.",
+    "No foreign class is inferred from nationality; no lifetime ordinary-membership exclusion is inferred."
+  ],
+  "budget_stop_observed": true,
+  "additional_network_requests_planned": false,
+  "no_source_body_redistributed": true,
+  "private_capture_audit_files": [
+    "capture1.json",
+    "capture2.json"
+  ],
+  "existing_C_batch_pins_unchanged": {
+    "decisions_sha256": "9b106d754ed5a61317ffe9141c0643a09d2239a8b45e0f5d9417ccd48d5dcfa4",
+    "worker_manifest_sha256": "45d921d2c4b5c5cfb8d584ccf4ce5654910e6ad5dcabf0c4a05902264251cb37"
+  },
+  "bazi_computed": 0,
+  "analysis_cohort_frozen": false
+}

@@ -1,0 +1,10 @@
+{
+  "as_run_sha256": "418ea942caa5534a77a515b3564d4d5bf3b2ff8d8244d20552f14ec15081ed87",
+  "patched_not_run_sha256": "dd69dec954ff69565a3b32cd865b013e656b78d138790fe2466970bfa8d01e7a",
+  "changes": [
+    "shared stop marker checked at global gate entry",
+    "shared stop marker rechecked immediately before start after interval wait",
+    "HTTP429 writes shared stop marker for peer collectors"
+  ],
+  "no_network_execution_after_patch": true
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "UK_v43_isolated_CLI_receipt_v1",
+  "run": 1,
+  "started_utc": "2026-11-08T10:11:01.099757+00:00",
+  "returned_utc": "2026-11-08T10:11:51.644666+00:00",
+  "CLI_returncode": 0,
+  "sequential": true,
+  "CLI_log_path": "/workspace/scratch/262552d8c0f0/v43_isolated_cli_1.log",
+  "CLI_log_sha256": "963a4f5e745a7fc164151fad199bdc655875ef1cc9214fd049fac648e51b6ca0",
+  "new_checks": [
+    "successful_current_preflight_required",
+    "no_repeat_recorded_replay",
+    "reviewed_production_files_unchanged",
+    "five_production_output_pins_unchanged",
+    "production_pinfile_unchanged",
+    "isolated_CLI_actual_clean_exit",
+    "isolated_CLI_all_five_outputs_match_pins",
+    "reviewed_production_files_unchanged",
+    "five_production_output_pins_unchanged",
+    "production_pinfile_unchanged"
+  ],
+  "preflight_report_sha256": "0cfc9698f0b09b62859fe9fc53faf20ee66cdd0944420a13cac08e730a74e03a",
+  "preflight_run_id": "cafdf50d-92f5-409a-8bb1-ab809b08a264",
+  "expectations_sha256": "44bf17151e193af8cfae1f9d915a394eff8c079d63cd14076fa5df683a04112d",
+  "production_mutated": false,
+  "status": "PASS",
+  "five_output_sha256": {
+    "birthplace_rows.jsonl.gz": "433749a0b7ff0bfc62db8993f662cd928a4bc023418a54600259fdbea0b1537a",
+    "birthplaces.csv": "dee6a06292cc992da20c0d9f283d6b7d6252492a965a86d8e8749bdcff188575",
+    "changes.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "remaining_unknown_window.csv": "94fe209c5594fe44a6319f568f9c786760127a70c11d4ba1ac01b714290fc901",
+    "summary.json": "5a0aba97fe7f8ac7db94b5ec287928b1cbde11a30222ab1518ddf1f19187b289"
+  },
+  "new_checks_passed": 10,
+  "completed_utc": "2026-11-08T10:11:51.668634+00:00"
+}

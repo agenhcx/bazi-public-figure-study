@@ -1,0 +1,181 @@
+{
+  "status": "PASS",
+  "accepted_facts": 9,
+  "source_grade_counts": {
+    "S1": 2,
+    "S2": 7
+  },
+  "held_not_accepted": {
+    "record_id": "https://www.nasonline.org/directory-entry/s-chandrasekhar-cn8kda/",
+    "native_dob": "1910-10-19",
+    "source_heading_dob": "1910-10-13",
+    "adopted": false
+  },
+  "fields": {
+    "status": "PASS",
+    "accepted_facts": 2,
+    "S1": 2,
+    "discovery_queries": 2,
+    "body_requests": 4,
+    "retries": 0,
+    "all_five_capture_hashes_match": true,
+    "native_DOB_groups_and_precision_unchanged": true,
+    "Hugo_birth_row": "Standalone asterisk date/place heading immediately beneath exact name; not a footnote or death row.",
+    "Smirnov_precision": "Source year 1970 compatible with native year only; month/day not corroborated by this source.",
+    "source_grade_basis": "Original official ICM prize biography and official HLF laureate profile; grade independent of DOB evidence tier.",
+    "capture_semantics": "Normalized web-tool JSON only; no original publisher bytes or visual verification claimed.",
+    "country_and_coordinates_assigned": false,
+    "geographic_scope_note": "No France-wide hemisphere inference; geographic review separate.",
+    "facts": [
+      {
+        "cohort": "Fields_main",
+        "record_id": "fields-de5a4b4e279eaf4f",
+        "source_sha256": "5f0a5ada12f2d8f4ac4170c99dd846e0330d18cbbc2fdc38a4b928290974ea17",
+        "source_grade": "S1",
+        "evidence_kind": "explicit_born_statement"
+      },
+      {
+        "cohort": "Fields_main",
+        "record_id": "fields-ef72cb77368d48fe",
+        "source_sha256": "f941752a001da2b8e5015afc4e134e7b5814e062027b0dbb99fdbcc957057880",
+        "source_grade": "S1",
+        "evidence_kind": "structured_birth_row"
+      }
+    ]
+  },
+  "nas": {
+    "status": "PASS",
+    "accepted_S2_facts": 7,
+    "held_candidates": 1,
+    "held_candidate": {
+      "record_id": "https://www.nasonline.org/directory-entry/s-chandrasekhar-cn8kda/",
+      "native_dob": "1910-10-19",
+      "source_heading_dob": "1910-10-13",
+      "adopted": false
+    },
+    "full_name_initials_expansion_plus_exact_DOB_and_NAS_context_verified": true,
+    "name_and_exact_DOB_match_unique_within_all_2242_native_NAS_rows": true,
+    "all_authors_and_literal_target_birth_clauses_verified": true,
+    "birth_clause_precision_separate_from_heading_DOB": true,
+    "source_quality_basis": "S2 signed edited memoirs, independently of unchanged native DOB groups.",
+    "request_counts": {
+      "discovery_queries": 3,
+      "index_navigation_requests": 5,
+      "approved_full_chapter_requests": 8,
+      "total_logical_attempts": 16,
+      "chapter_HTTP200": 8,
+      "retries": 0
+    },
+    "coverage_limit": "574 unknown names were compared with observed index metadata offline; only eight approved chapter bodies were read, seven accepted and one held.",
+    "all_574_selection_objects_equal_direct_baseline": true,
+    "capture_semantics": "Memoir facts hash complete observed original HTTP HTML bodies; query/early-navigation projections use separate projection hashes. These are not PDF-byte or visual checks.",
+    "index_script_note": "One observed embedded script endpoint was fetched within the five index requests; no downstream runtime/data expansion followed.",
+    "old_six_member_profiles_reread": false,
+    "geography_country_or_point_assignment": false,
+    "facts": [
+      {
+        "cohort": "NAS",
+        "record_id": "https://www.nasonline.org/directory-entry/l-a-dubridge-krundi/",
+        "source_sha256": "2b81b794cc041784cf273bb040b4803692f1e793e591284625f4f3ef548a96b4",
+        "source_grade": "S2"
+      },
+      {
+        "cohort": "NAS",
+        "record_id": "https://www.nasonline.org/directory-entry/r-g-herb-ovp2tw/",
+        "source_sha256": "739838733d7b7b186215982c42c9efdb30a7f0cd5489ce9e33b6abfbc2e5c0fa",
+        "source_grade": "S2"
+      },
+      {
+        "cohort": "NAS",
+        "record_id": "https://www.nasonline.org/directory-entry/donald-w-kerst-8t27xz/",
+        "source_sha256": "f9cfd0854ec616178cb7cbf997573b531ab0a1fc4e2d3767ab6f731c5c82c5e9",
+        "source_grade": "S2"
+      },
+      {
+        "cohort": "NAS",
+        "record_id": "https://www.nasonline.org/directory-entry/paul-j-kramer-l5rtvs/",
+        "source_sha256": "67e3189f5758b865336398f96ad49c2fbfdcf7334fb8b15cee43e297cd801033",
+        "source_grade": "S2"
+      },
+      {
+        "cohort": "NAS",
+        "record_id": "https://www.nasonline.org/directory-entry/w-w-morgan-5f09yz/",
+        "source_sha256": "7c20204e630ffb1113c1b707668bf8fa85405d441acccdfe5f127c2db366270e",
+        "source_grade": "S2"
+      },
+      {
+        "cohort": "NAS",
+        "record_id": "https://www.nasonline.org/directory-entry/m-m-rhoades-vnjycr/",
+        "source_sha256": "2d8a87f93deebcd9aeef456d5340df87de38f224d4734021c3e73e68f2f245d1",
+        "source_grade": "S2"
+      },
+      {
+        "cohort": "NAS",
+        "record_id": "https://www.nasonline.org/directory-entry/j-e-varner-7bfrec/",
+        "source_sha256": "e15d258c704852ab25061977b979dcea182743c857cdc8f39c94b8440d90fbc6",
+        "source_grade": "S2"
+      }
+    ]
+  },
+  "new_QA_network_requests": 0,
+  "facts": [
+    {
+      "cohort": "Fields_main",
+      "record_id": "fields-de5a4b4e279eaf4f",
+      "source_grade": "S1",
+      "source_sha256": "5f0a5ada12f2d8f4ac4170c99dd846e0330d18cbbc2fdc38a4b928290974ea17"
+    },
+    {
+      "cohort": "Fields_main",
+      "record_id": "fields-ef72cb77368d48fe",
+      "source_grade": "S1",
+      "source_sha256": "f941752a001da2b8e5015afc4e134e7b5814e062027b0dbb99fdbcc957057880"
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/l-a-dubridge-krundi/",
+      "source_grade": "S2",
+      "source_sha256": "2b81b794cc041784cf273bb040b4803692f1e793e591284625f4f3ef548a96b4"
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/r-g-herb-ovp2tw/",
+      "source_grade": "S2",
+      "source_sha256": "739838733d7b7b186215982c42c9efdb30a7f0cd5489ce9e33b6abfbc2e5c0fa"
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/donald-w-kerst-8t27xz/",
+      "source_grade": "S2",
+      "source_sha256": "f9cfd0854ec616178cb7cbf997573b531ab0a1fc4e2d3767ab6f731c5c82c5e9"
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/paul-j-kramer-l5rtvs/",
+      "source_grade": "S2",
+      "source_sha256": "67e3189f5758b865336398f96ad49c2fbfdcf7334fb8b15cee43e297cd801033"
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/w-w-morgan-5f09yz/",
+      "source_grade": "S2",
+      "source_sha256": "7c20204e630ffb1113c1b707668bf8fa85405d441acccdfe5f127c2db366270e"
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/m-m-rhoades-vnjycr/",
+      "source_grade": "S2",
+      "source_sha256": "2d8a87f93deebcd9aeef456d5340df87de38f224d4734021c3e73e68f2f245d1"
+    },
+    {
+      "cohort": "NAS",
+      "record_id": "https://www.nasonline.org/directory-entry/j-e-varner-7bfrec/",
+      "source_grade": "S2",
+      "source_sha256": "e15d258c704852ab25061977b979dcea182743c857cdc8f39c94b8440d90fbc6"
+    }
+  ],
+  "report_sha256": {
+    "fields_source_qa_report.json": "e8448a77d6d3e052570b42e505bcec21e6fa983af2167ee4153ca2cbf424ac2c",
+    "nas_source_qa_report.json": "1556dd01d4a360a3e3ff5539063c2cb9c17ce7a0e65b0f33dfa0dabcab9d306d"
+  }
+}

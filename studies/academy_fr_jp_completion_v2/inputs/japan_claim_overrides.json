@@ -1,0 +1,26 @@
+{
+  "invalid_body_hashes": [
+    "5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7"
+  ],
+  "invalid_body_hash_note": "Independent QA found the hash belongs to a 195-byte Site Unavailable page. Original snapshot is preserved; normalized source hash is cleared. Kyoto city supplies separate corroboration.",
+  "source_supplied_pair_warning_overrides": [
+    "jpa-unlinked-366ff2fa431b1cd6"
+  ],
+  "source_supplied_pair_warning_note": "Mathematical Society chronology itself gives 1861-10-12 (文久元年九月九日). Calendar remains not_stated; no collector conversion. Independently checked against captured body.",
+  "independently_crosschecked_identity_keys": [
+    "jpa-unlinked-3a793d0d8e9d64db",
+    "jpa-unlinked-5966755c4ba2e705",
+    "jpa-unlinked-c10277ddddcdd816"
+  ],
+  "identity_crosscheck_note": "Independent QA source references and career bridges are in source_audits/japan_independent_qa.json. Tamaru identity is supported but DOB conflict remains.",
+  "person_holds": {
+    "jpa-unlinked-c10277ddddcdd816": {
+      "status": "source_date_conflict_hold",
+      "reason": "Kyoto archive1882/10 versus Morioka municipal biography1872-09-29; raw claims and internal timeline caveat retained, no silent correction."
+    },
+    "jpa-unlinked-fd82ee2d316768a3": {
+      "status": "source_date_conflict_hold",
+      "reason": "Ueda memorial gives 文久3年2月23日 with source-supplied western1863-04-10; UTokyo pathology gives 文久3年2月22日. Competing original-calendar days remain unresolved; no collector conversion."
+    }
+  }
+}

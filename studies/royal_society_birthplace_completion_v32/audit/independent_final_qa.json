@@ -1,0 +1,135 @@
+{
+  "schema": "UK_v32_geography_only_independent_final_QA_v1",
+  "reviewer": "/root/v32_final_qa",
+  "written_utc": "2026-11-06T22:33:54.212905+00:00",
+  "status": "PASS",
+  "validation_categories_passed": 40,
+  "checks": [
+    "root final canonical and adopted IDs supplied before QA",
+    "five completed production output pins match before QA",
+    "v31 baseline and v32 current canonical match root pins",
+    "self-contained v31 reconstruction all4983 complete objects exact",
+    "all prior loaders and geography and birthplace helpers verbatim",
+    "all prior geography constants unchanged",
+    "fixed record order unique keys and UK cohort",
+    "66 stored-place unknown queue and12 fixed complete disjoint outcomes",
+    "three groups four each match predeclared scope and no first birthplace inputs",
+    "only six existing geography fields mutable",
+    "complete changed object set exactly accepted geography IDs",
+    "all native and BP fields and prior evidence frozen with exact six-field rollback",
+    "all103 window blank and all525 blank complete objects unchanged",
+    "all current holds preserve complete objects",
+    "all raw birthplace and source grades unchanged",
+    "adopted documentary facts carry geography-only grade roles identity place and parsed-source limits",
+    "Wynne original StaffordS2 frozen while new AndraosS3 resolves North",
+    "Wynne fullnative exactDOB compatible lifespan and chemistry binding",
+    "Wynne root first-body worker-discovery roles and copyright not publication",
+    "independent overall and2644 window counts",
+    "unchanged blank counts and resolved nonblank unknown diagnostics recomputed",
+    "summary zero newBP and geography counts grade roles exact",
+    "changes contain only current geography refinements originalBP unchanged",
+    "CSV122 old columns retain positions plus6 newgeo=128",
+    "all4983 CSV rows preserve old meanings except adopted current hemisphere cells",
+    "remaining unknown CSV equals master native-window order",
+    "all9 issue and method sidecars byte identical including7 activeDOB",
+    "all inherited historical audit files remain byte exact",
+    "historical v29 first-pass closeout retains v29 hash and same103 blank IDs",
+    "all inherited issue and recent geography and source-class hold complete objects unchanged",
+    "known place holds and active DOB cases excluded from currentselection",
+    "sourceQA passed with exact current facts activeDOB and source-class hash bindings",
+    "no full-source caches PDFs or images distributed",
+    "README continuation final canonical and v32 labels updated",
+    "parent adjudication describes current baseline geography-only phase",
+    "24workerqueries16workeropens1rootopen7finds accounting",
+    "worker reports preserved byte exact and superseded Wynne cityonly hold retained historically",
+    "current source-class decision no new exception prior Kiddle review byte exact",
+    "two isolated clean replays all5 outputs equal original pins",
+    "production five outputs untouched after QA"
+  ],
+  "baseline_canonical_sha256": "c9c6b0d913c4ec0a8ff9a5d458ad8707da398ded149b86cd3c2794ee8f1d1932",
+  "final_canonical_sha256": "73ee2d8621c03ecdb1a4fa15c558215f40c0868aab0344a790cfccb6e264bbaa",
+  "records": 4983,
+  "changed_complete_objects": 1,
+  "unchanged_complete_objects": 4982,
+  "new_birthplaces": 0,
+  "geography_only_resolutions": 1,
+  "accepted_record_ids": [
+    "RS_PAST_NA1752"
+  ],
+  "overall": {
+    "north": 4194,
+    "unknown": 602,
+    "south": 187
+  },
+  "window_counts": {
+    "north": 2294,
+    "unknown": 168,
+    "south": 182
+  },
+  "blank_diagnostics": {
+    "all_blank_raw_birthplace": 525,
+    "window_blank_raw_birthplace": 103,
+    "all_unknown": 602,
+    "all_unknown_with_blank_raw_birthplace": 525,
+    "all_unknown_with_nonblank_raw_birthplace": 77,
+    "window_unknown": 168,
+    "window_unknown_with_blank_raw_birthplace": 103,
+    "window_unknown_with_nonblank_raw_birthplace": 65
+  },
+  "main_pre_QA_output_pins": {
+    "birthplace_rows.jsonl.gz": "aaa75eb07b6de7c7e4ab1aa40583af24b7a57e5e4f2959650fa112d6c6609bce",
+    "birthplaces.csv": "10ba838b934d02596c97c432ae86ae01cd7200fd30ea395c9632df24d0feae61",
+    "changes.json": "7937df9bdb1d8128414efad5cda27acbdd1a6b334a8bb50ca5126b44d47437fe",
+    "remaining_unknown_window.csv": "2ce75c22bc0c02f43c36f6d7ab29d75de61845b1aeab7ca1af2e5e815b4239ad",
+    "summary.json": "97d0b1870c100b57812075495f8d7a6c680376d4d18a8927ac93b54028823312"
+  },
+  "isolated_replay_runs": [
+    {
+      "run": 1,
+      "clean_exit": true,
+      "five_hashes": {
+        "birthplace_rows.jsonl.gz": "aaa75eb07b6de7c7e4ab1aa40583af24b7a57e5e4f2959650fa112d6c6609bce",
+        "birthplaces.csv": "10ba838b934d02596c97c432ae86ae01cd7200fd30ea395c9632df24d0feae61",
+        "changes.json": "7937df9bdb1d8128414efad5cda27acbdd1a6b334a8bb50ca5126b44d47437fe",
+        "remaining_unknown_window.csv": "2ce75c22bc0c02f43c36f6d7ab29d75de61845b1aeab7ca1af2e5e815b4239ad",
+        "summary.json": "97d0b1870c100b57812075495f8d7a6c680376d4d18a8927ac93b54028823312"
+      },
+      "matched_original_pins": true
+    },
+    {
+      "run": 2,
+      "clean_exit": true,
+      "five_hashes": {
+        "birthplace_rows.jsonl.gz": "aaa75eb07b6de7c7e4ab1aa40583af24b7a57e5e4f2959650fa112d6c6609bce",
+        "birthplaces.csv": "10ba838b934d02596c97c432ae86ae01cd7200fd30ea395c9632df24d0feae61",
+        "changes.json": "7937df9bdb1d8128414efad5cda27acbdd1a6b334a8bb50ca5126b44d47437fe",
+        "remaining_unknown_window.csv": "2ce75c22bc0c02f43c36f6d7ab29d75de61845b1aeab7ca1af2e5e815b4239ad",
+        "summary.json": "97d0b1870c100b57812075495f8d7a6c680376d4d18a8927ac93b54028823312"
+      },
+      "matched_original_pins": true
+    }
+  ],
+  "main_outputs_rerun_or_mutated": false,
+  "new_active_DOB_conflicts": 0,
+  "active_DOB_conflict_count": 7,
+  "all7_active_DOB_conflict_objects_unchanged": true,
+  "historical_v29_closeout_hash_preserved": true,
+  "quote_words": {
+    "RS_PAST_NA1752": 3
+  },
+  "documentation_checks": {
+    "files": [
+      "README.md",
+      "CONTINUATION.md"
+    ],
+    "counts_scope_limits_consistent": true,
+    "review_method": "Direct final documentary review plus complete structural equality and rollback, documentary source semantics separately reviewed by sourceQA. All originalBP/DOBtiers and previous facts retained; only six geographic fields and versioned context may change."
+  },
+  "limitations": [
+    "Independent local data/structural/replay verification only; no network or original-source acquisition/rawHTTP inspection by this reviewer.",
+    "Source semantic/genre/source-newness reviewed separately in independent_source_qa.json; recorded parsed source locators are not new acquisition claims by this reviewer.",
+    "New source grades are geographic_support_only and do not upgrade original birthplaces or DOB grades.",
+    "All7 qualified DOB conflicts and eight other issue/method sidecars unchanged; Tomes provisional distinct. v29 first-pass closeout stays historical with its v29hash and all103blank objects unchanged.",
+    "No production facts, inputs, code, main outputs or Git changed; this audit and scratch harness only."
+  ]
+}

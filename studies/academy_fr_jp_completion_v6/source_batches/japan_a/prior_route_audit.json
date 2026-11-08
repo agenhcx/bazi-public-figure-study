@@ -1,0 +1,680 @@
+{
+  "baseline_commit": "fe72fe259ee6aaf90f55c469ba7778a69588044d",
+  "reviewed_readme": "studies/academy_fr_jp_completion_v5/README.md",
+  "reviewed_script": "studies/academy_fr_jp_completion_v5/scripts/continue.py",
+  "reviewed_schema_files": [
+    "source_batches/japan_a/claims.json",
+    "source_batches/japan_a/secondary_claims.json",
+    "source_batches/japan_a/holds.json",
+    "source_batches/japan_b/claims.json",
+    "source_batches/japan_c/claims.json"
+  ],
+  "processed_history": [
+    {
+      "round": 3,
+      "path": "studies/academy_fr_jp_completion_v3/source_batches/japan_a/processed.csv",
+      "record": {
+        "member_key": "jpa-unlinked-7cc1c92cdee98a86",
+        "name_jp": "岸上 鎌吉",
+        "status": "bounded_search_no_usable_body_birth_claim",
+        "previous_dob_status": "not_institutionally_processed",
+        "source_urls": "",
+        "note": "One bounded search normally; Kozai had two different attempted query routes. Complete attributed dictionary bodies are retained as secondary, not first-party institutional dates."
+      }
+    },
+    {
+      "round": 3,
+      "path": "studies/academy_fr_jp_completion_v3/source_batches/japan_a/processed.csv",
+      "record": {
+        "member_key": "jpa-unlinked-d4075aa3dc4bb9ab",
+        "name_jp": "竹脇 潔",
+        "status": "bounded_search_no_usable_body_birth_claim",
+        "previous_dob_status": "not_institutionally_processed",
+        "source_urls": "",
+        "note": "One bounded search normally; Kozai had two different attempted query routes. Complete attributed dictionary bodies are retained as secondary, not first-party institutional dates."
+      }
+    },
+    {
+      "round": 3,
+      "path": "studies/academy_fr_jp_completion_v3/source_batches/japan_b/processed.csv",
+      "record": {
+        "member_key": "jpa:wada_eitaro",
+        "name_jp": "和田 英太郎",
+        "round_status": "not_individually_processed",
+        "claim_files": "",
+        "claim_rows": "0",
+        "note": ""
+      }
+    },
+    {
+      "round": 3,
+      "path": "studies/academy_fr_jp_completion_v3/source_batches/japan_b/processed.csv",
+      "record": {
+        "member_key": "jpa:kawai_maki",
+        "name_jp": "川合 眞紀",
+        "round_status": "searched_no_usable_full_day_body",
+        "claim_files": "",
+        "claim_rows": "0",
+        "note": "RIKEN2010 PDF opened, no day verified."
+      }
+    },
+    {
+      "round": 3,
+      "path": "studies/academy_fr_jp_completion_v3/source_batches/japan_c/processed.csv",
+      "record": {
+        "member_key": "jpa-unlinked-47a14bee29ad45d2",
+        "name_jp": "野田 稲吉",
+        "status": "bounded_search_no_institution_body_birth",
+        "claims": "0",
+        "source_urls": "",
+        "note": "One bounded screen; search-result-only dates not accepted."
+      }
+    },
+    {
+      "round": 3,
+      "path": "studies/academy_fr_jp_completion_v3/source_batches/japan_c/processed.csv",
+      "record": {
+        "member_key": "jpa-unlinked-f0e12183de79ae82",
+        "name_jp": "辻 廣",
+        "status": "bounded_search_no_institution_body_birth",
+        "claims": "0",
+        "source_urls": "",
+        "note": "One bounded screen; search-result-only dates not accepted."
+      }
+    },
+    {
+      "round": 3,
+      "path": "studies/academy_fr_jp_completion_v3/source_batches/japan_c/processed.csv",
+      "record": {
+        "member_key": "jpa:inui_takao",
+        "name_jp": "乾 崇夫",
+        "status": "bounded_search_no_institution_body_birth",
+        "claims": "0",
+        "source_urls": "",
+        "note": "One bounded screen; search-result-only dates not accepted."
+      }
+    },
+    {
+      "round": 4,
+      "path": "studies/academy_fr_jp_completion_v4/source_batches/japan_d/processed.csv",
+      "record": {
+        "member_key": "jpa-unlinked-7cc1c92cdee98a86",
+        "name_jp": "岸上 鎌吉",
+        "specialty_jp": "動物学",
+        "selected_this_round": "False",
+        "new_route_status": "not_selected_this_round",
+        "new_claim_count": "0",
+        "new_day_claim_count": "0",
+        "source_urls": "",
+        "note": "No v4 D query or request."
+      }
+    },
+    {
+      "round": 4,
+      "path": "studies/academy_fr_jp_completion_v4/source_batches/japan_d/processed.csv",
+      "record": {
+        "member_key": "jpa-unlinked-d4075aa3dc4bb9ab",
+        "name_jp": "竹脇 潔",
+        "specialty_jp": "内分泌学",
+        "selected_this_round": "True",
+        "new_route_status": "bounded_new_dictionary_query_no_named_body",
+        "new_claim_count": "0",
+        "new_day_claim_count": "0",
+        "source_urls": "",
+        "note": "One bounded new-route query only; no claim from snippets."
+      }
+    },
+    {
+      "round": 4,
+      "path": "studies/academy_fr_jp_completion_v4/source_batches/japan_d/processed.csv",
+      "record": {
+        "member_key": "jpa:kawai_maki",
+        "name_jp": "川合 眞紀",
+        "specialty_jp": "物理化学",
+        "selected_this_round": "False",
+        "new_route_status": "not_selected_this_round",
+        "new_claim_count": "0",
+        "new_day_claim_count": "0",
+        "source_urls": "",
+        "note": "No v4 D query or request."
+      }
+    },
+    {
+      "round": 4,
+      "path": "studies/academy_fr_jp_completion_v4/source_batches/japan_d/processed.csv",
+      "record": {
+        "member_key": "jpa-unlinked-47a14bee29ad45d2",
+        "name_jp": "野田 稲吉",
+        "specialty_jp": "応用化学",
+        "selected_this_round": "False",
+        "new_route_status": "not_selected_this_round",
+        "new_claim_count": "0",
+        "new_day_claim_count": "0",
+        "source_urls": "",
+        "note": "No v4 D query or request."
+      }
+    },
+    {
+      "round": 4,
+      "path": "studies/academy_fr_jp_completion_v4/source_batches/japan_d/processed.csv",
+      "record": {
+        "member_key": "jpa-unlinked-f0e12183de79ae82",
+        "name_jp": "辻 廣",
+        "specialty_jp": "航空宇宙工学・燃焼学",
+        "selected_this_round": "False",
+        "new_route_status": "not_selected_this_round",
+        "new_claim_count": "0",
+        "new_day_claim_count": "0",
+        "source_urls": "",
+        "note": "No v4 D query or request."
+      }
+    },
+    {
+      "round": 4,
+      "path": "studies/academy_fr_jp_completion_v4/source_batches/japan_d/processed.csv",
+      "record": {
+        "member_key": "jpa:inui_takao",
+        "name_jp": "乾 崇夫",
+        "specialty_jp": "造船学(船型学)",
+        "selected_this_round": "False",
+        "new_route_status": "not_selected_this_round",
+        "new_claim_count": "0",
+        "new_day_claim_count": "0",
+        "source_urls": "",
+        "note": "No v4 D query or request."
+      }
+    },
+    {
+      "round": 4,
+      "path": "studies/academy_fr_jp_completion_v4/source_batches/japan_d/processed.csv",
+      "record": {
+        "member_key": "jpa:sasazuki_takehiko",
+        "name_jp": "笹月 健彦",
+        "specialty_jp": "免疫遺伝学・人類遺伝学",
+        "selected_this_round": "True",
+        "new_route_status": "bounded_new_dictionary_query_no_named_body",
+        "new_claim_count": "0",
+        "new_day_claim_count": "0",
+        "source_urls": "",
+        "note": "One bounded new-route query only; no claim from snippets."
+      }
+    },
+    {
+      "round": 4,
+      "path": "studies/academy_fr_jp_completion_v4/source_batches/japan_a/processed.csv",
+      "record": {
+        "queue_index": "18",
+        "member_key": "jpa:namba_shigetou",
+        "name_jp": "難波 成任",
+        "previous_dob_status": "not_body_source_processed",
+        "status": "bounded_search_no_qualified_body_birth_claim",
+        "body_claim_rows": "0",
+        "has_institutional_day_claim": "False",
+        "has_edited_reference_day_claim": "False",
+        "has_other_secondary_day_claim": "False",
+        "hold_type": "",
+        "claim_ids": "[]",
+        "source_urls": "[]",
+        "bounded_note": "One targeted query; best qualified candidate body read where available. No padding, no unbounded rescue.",
+        "final_cohort_accepted": "False",
+        "bazi_variables_computed": "0"
+      }
+    },
+    {
+      "round": 4,
+      "path": "studies/academy_fr_jp_completion_v4/source_batches/japan_b/processed.csv",
+      "record": {
+        "member_key": "jpa:wada_eitaro",
+        "name_jp": "和田 英太郎",
+        "round_status": "bounded_no_usable_birth_body",
+        "body_claim_rows": "0",
+        "selected_date_written": "False",
+        "note": "JpGU body has career but no birth date; existing1939-09 retained; wrong1976 entertainer rejected.",
+        "reviewed_no_birth_url": "https://www.jpgu.org/jpgufellow/jpgufellow-901/",
+        "reviewed_no_birth_ref": "turn1606view3"
+      }
+    },
+    {
+      "round": 4,
+      "path": "studies/academy_fr_jp_completion_v4/source_batches/japan_b/processed.csv",
+      "record": {
+        "member_key": "jpa-unlinked-bea1cbfdfdb99055",
+        "name_jp": "高橋 萬右衛門",
+        "round_status": "bounded_no_usable_birth_body",
+        "body_claim_rows": "0",
+        "selected_date_written": "False",
+        "note": "Single discovery query returned unedited birthday page and NDL name authority only; no eligible full birth-date body.",
+        "reviewed_no_birth_url": "",
+        "reviewed_no_birth_ref": ""
+      }
+    },
+    {
+      "round": 4,
+      "path": "studies/academy_fr_jp_completion_v4/source_batches/japan_b/processed.csv",
+      "record": {
+        "member_key": "jpa:tamura_saburo",
+        "name_jp": "田村 三郎",
+        "round_status": "bounded_no_usable_birth_body",
+        "body_claim_rows": "0",
+        "selected_date_written": "False",
+        "note": "Society obituary lead appears to contain date, but full body403. No date claim from snippet; stopped.",
+        "reviewed_no_birth_url": "https://katosei.jsbba.or.jp/view_html.php?aid=550",
+        "reviewed_no_birth_ref": "turn1621view0"
+      }
+    },
+    {
+      "round": 4,
+      "path": "studies/academy_fr_jp_completion_v4/source_batches/japan_b/processed.csv",
+      "record": {
+        "member_key": "jpa:shimizu_sakayu",
+        "name_jp": "清水 昌",
+        "round_status": "body_year_only",
+        "body_claim_rows": "1",
+        "selected_date_written": "False",
+        "note": "Source precision/hold stated in canonical claims and holds.json.",
+        "reviewed_no_birth_url": "",
+        "reviewed_no_birth_ref": ""
+      }
+    },
+    {
+      "round": 4,
+      "path": "studies/academy_fr_jp_completion_v4/source_batches/japan_b/processed.csv",
+      "record": {
+        "member_key": "jpa-unlinked-0b282a35315cdffd",
+        "name_jp": "田村 憲造",
+        "round_status": "bounded_no_usable_birth_body",
+        "body_claim_rows": "0",
+        "selected_date_written": "False",
+        "note": "Single query returned unedited birthday database and Academy membership/award index; no eligible full DOB body.",
+        "reviewed_no_birth_url": "",
+        "reviewed_no_birth_ref": ""
+      }
+    },
+    {
+      "round": 4,
+      "path": "studies/academy_fr_jp_completion_v4/source_batches/japan_b/processed.csv",
+      "record": {
+        "member_key": "jpa-unlinked-a04294722ed5375b",
+        "name_jp": "冨田 雅次",
+        "round_status": "bounded_no_usable_birth_body",
+        "body_claim_rows": "0",
+        "selected_date_written": "False",
+        "note": "Single query returned Academy award index and book catalogues; no eligible DOB body.",
+        "reviewed_no_birth_url": "",
+        "reviewed_no_birth_ref": ""
+      }
+    },
+    {
+      "round": 4,
+      "path": "studies/academy_fr_jp_completion_v4/source_batches/japan_b/processed.csv",
+      "record": {
+        "member_key": "jpa:imura_hiroo",
+        "name_jp": "井村 裕夫",
+        "round_status": "bounded_no_usable_birth_body",
+        "body_claim_rows": "0",
+        "selected_date_written": "False",
+        "note": "JST/Nikkei-authorized interview professional profile has no DOB; existing1931 year retained.",
+        "reviewed_no_birth_url": "https://scienceportal.jst.go.jp/stories/20070904_01-2/",
+        "reviewed_no_birth_ref": "turn1637view3"
+      }
+    },
+    {
+      "round": 4,
+      "path": "studies/academy_fr_jp_completion_v4/source_batches/japan_b/processed.csv",
+      "record": {
+        "member_key": "jpa:hama_kiyoshi",
+        "name_jp": "濱 清",
+        "round_status": "body_year_only",
+        "body_claim_rows": "1",
+        "selected_date_written": "False",
+        "note": "Source precision/hold stated in canonical claims and holds.json.",
+        "reviewed_no_birth_url": "",
+        "reviewed_no_birth_ref": ""
+      }
+    },
+    {
+      "round": 4,
+      "path": "studies/academy_fr_jp_completion_v4/source_batches/japan_c/processed.csv",
+      "record": {
+        "member_key": "jpa:nishizawa_naoko",
+        "name_jp": "西澤 直子",
+        "specialty_jp": "植物栄養学",
+        "baseline_dob_status": "not_body_source_processed",
+        "query": "\"西澤直子\" 生年月日",
+        "query_engine": "system2",
+        "query_count": "1",
+        "screened": "True",
+        "outcome": "body_month_institution",
+        "new_claim_count": "1",
+        "claim_ids": "[\"0f299d72127c522af4a5\"]",
+        "body_source_urls": "[\"https://www.japan-acad.go.jp/pdf/youshi/104/mori_nishizawa.pdf\"]",
+        "note": "Month only, no day imputation.",
+        "cohort_accepted": "False",
+        "bazi_variables_computed": "False"
+      }
+    },
+    {
+      "round": 5,
+      "path": "studies/academy_fr_jp_completion_v5/source_batches/japan_a/processed.csv",
+      "record": {
+        "queue_index": "2",
+        "member_key": "jpa:nishizawa_naoko",
+        "name_jp": "西澤 直子",
+        "previous_dob_status": "body_month_only",
+        "status": "bounded_park_no_new_qualified_birth_body",
+        "claim_rows": "0",
+        "new_day_claim": "False",
+        "claim_ids": "[]",
+        "source_urls": "[]",
+        "note": "Only Wiki-derived day lead and university1945year; prior1945-08month preserved. No new body needed.",
+        "final_cohort_accepted": "False",
+        "bazi_variables_computed": "0"
+      }
+    },
+    {
+      "round": 5,
+      "path": "studies/academy_fr_jp_completion_v5/source_batches/japan_a/processed.csv",
+      "record": {
+        "queue_index": "14",
+        "member_key": "jpa-unlinked-bea1cbfdfdb99055",
+        "name_jp": "高橋 萬右衛門",
+        "previous_dob_status": "bounded_search_no_body_birth_claim",
+        "status": "bounded_park_no_new_qualified_birth_body",
+        "claim_rows": "0",
+        "new_day_claim": "False",
+        "claim_ids": "[]",
+        "source_urls": "[]",
+        "note": "Alternate spelling萬右衞門 yielded author/book metadata only; no professional DOB body.",
+        "final_cohort_accepted": "False",
+        "bazi_variables_computed": "0"
+      }
+    },
+    {
+      "round": 5,
+      "path": "studies/academy_fr_jp_completion_v5/source_batches/japan_a/processed.csv",
+      "record": {
+        "queue_index": "20",
+        "member_key": "jpa:inui_takao",
+        "name_jp": "乾 崇夫",
+        "previous_dob_status": "bounded_search_no_body_birth_claim",
+        "status": "bounded_park_no_new_qualified_birth_body",
+        "claim_rows": "0",
+        "new_day_claim": "False",
+        "claim_ids": "[]",
+        "source_urls": "[]",
+        "note": "Unedited/Wiki derivative day leads only; no eligible body.",
+        "final_cohort_accepted": "False",
+        "bazi_variables_computed": "0"
+      }
+    },
+    {
+      "round": 5,
+      "path": "studies/academy_fr_jp_completion_v5/source_batches/japan_a/processed.csv",
+      "record": {
+        "queue_index": "21",
+        "member_key": "jpa:kawai_maki",
+        "name_jp": "川合 眞紀",
+        "previous_dob_status": "bounded_search_no_body_birth_claim",
+        "status": "bounded_park_no_new_qualified_birth_body",
+        "claim_rows": "0",
+        "new_day_claim": "False",
+        "claim_ids": "[]",
+        "source_urls": "[]",
+        "note": "New JSPS2025 CV read, no birth date; no school-year inference.",
+        "final_cohort_accepted": "False",
+        "bazi_variables_computed": "0"
+      }
+    },
+    {
+      "round": 5,
+      "path": "studies/academy_fr_jp_completion_v5/source_batches/japan_a/processed.csv",
+      "record": {
+        "queue_index": "24",
+        "member_key": "jpa:namba_shigetou",
+        "name_jp": "難波 成任",
+        "previous_dob_status": "bounded_search_no_body_birth_claim",
+        "status": "bounded_park_no_new_qualified_birth_body",
+        "claim_rows": "0",
+        "new_day_claim": "False",
+        "claim_ids": "[]",
+        "source_urls": "[]",
+        "note": "New AtHome interview URL returned maintenance notice; invalid body/no hash. Year snippet not claimed.",
+        "final_cohort_accepted": "False",
+        "bazi_variables_computed": "0"
+      }
+    },
+    {
+      "round": 5,
+      "path": "studies/academy_fr_jp_completion_v5/source_batches/japan_a/processed.csv",
+      "record": {
+        "queue_index": "25",
+        "member_key": "jpa:sasazuki_takehiko",
+        "name_jp": "笹月 健彦",
+        "previous_dob_status": "bounded_search_no_body_birth_claim",
+        "status": "bounded_park_no_new_qualified_birth_body",
+        "claim_rows": "0",
+        "new_day_claim": "False",
+        "claim_ids": "[]",
+        "source_urls": "[]",
+        "note": "New Allergy72(4)401–403 obituary/CV fully read; no birth statement. No graduation-to-birth inference.",
+        "final_cohort_accepted": "False",
+        "bazi_variables_computed": "0"
+      }
+    },
+    {
+      "round": 5,
+      "path": "studies/academy_fr_jp_completion_v5/source_batches/japan_b/processed.csv",
+      "record": {
+        "member_key": "jpa:imura_hiroo",
+        "name_jp": "井村 裕夫",
+        "baseline_dob_status": "body_year_only",
+        "round_status": "parked_no_qualified_new_body",
+        "new_claim_rows": "0",
+        "source_urls": "",
+        "note": "New birthday/English query finds JSPS biography1931year only; existing1931 retained. Unedited web dates vary and not used.",
+        "final_cohort_accepted": "False",
+        "bazi_variables_computed": "0"
+      }
+    },
+    {
+      "round": 5,
+      "path": "studies/academy_fr_jp_completion_v5/source_batches/japan_b/processed.csv",
+      "record": {
+        "member_key": "jpa:shimizu_sakayu",
+        "name_jp": "清水 昌",
+        "baseline_dob_status": "body_year_only",
+        "round_status": "parked_no_qualified_new_body",
+        "new_claim_rows": "0",
+        "source_urls": "",
+        "note": "New birth-focused query found interviews/research and unrelated coauthor births, no finer DOB. Prior2024award year1945 not fetched again.",
+        "final_cohort_accepted": "False",
+        "bazi_variables_computed": "0"
+      }
+    },
+    {
+      "round": 5,
+      "path": "studies/academy_fr_jp_completion_v5/source_batches/japan_c/processed.csv",
+      "record": {
+        "queue_index": "0",
+        "member_key": "jpa:hama_kiyoshi",
+        "name_jp": "濱 清",
+        "baseline_dob_status": "body_year_only",
+        "screened": "True",
+        "new_query_count": "2",
+        "status": "parked_no_new_eligible_birth_body",
+        "new_claim_rows": "0",
+        "claim_ids": "[]",
+        "source_urls": "[]",
+        "note": "English and new Japanese obituary route screened. New society obituary lead gives1923 only, already held in baseline; no repeat GET or new claim.",
+        "final_cohort_accepted": "False",
+        "bazi_variables_computed": "0"
+      }
+    },
+    {
+      "round": 5,
+      "path": "studies/academy_fr_jp_completion_v5/source_batches/japan_c/processed.csv",
+      "record": {
+        "queue_index": "2",
+        "member_key": "jpa:wada_eitaro",
+        "name_jp": "和田 英太郎",
+        "baseline_dob_status": "body_month_only",
+        "screened": "True",
+        "new_query_count": "1",
+        "status": "parked_no_new_eligible_birth_body",
+        "new_claim_rows": "0",
+        "claim_ids": "[]",
+        "source_urls": "[]",
+        "note": "New JT museum interview body read, year1939 only; less precise than existing1939-09, no additional claim. Prior JpGU URL not fetched again.",
+        "final_cohort_accepted": "False",
+        "bazi_variables_computed": "0"
+      }
+    },
+    {
+      "round": 5,
+      "path": "studies/academy_fr_jp_completion_v5/source_batches/japan_c/processed.csv",
+      "record": {
+        "queue_index": "3",
+        "member_key": "jpa-unlinked-0b282a35315cdffd",
+        "name_jp": "田村 憲造",
+        "baseline_dob_status": "bounded_search_no_body_birth_claim",
+        "screened": "True",
+        "new_query_count": "2",
+        "status": "parked_no_new_eligible_birth_body",
+        "new_claim_rows": "0",
+        "claim_ids": "[]",
+        "source_urls": "[]",
+        "note": "New hometown/Komaya route yielded year1889 lead, no full body birthday accepted; no birthday database or Wiki mirror date used.",
+        "final_cohort_accepted": "False",
+        "bazi_variables_computed": "0"
+      }
+    },
+    {
+      "round": 5,
+      "path": "studies/academy_fr_jp_completion_v5/source_batches/japan_c/processed.csv",
+      "record": {
+        "queue_index": "7",
+        "member_key": "jpa-unlinked-47a14bee29ad45d2",
+        "name_jp": "野田 稲吉",
+        "baseline_dob_status": "bounded_search_no_body_birth_claim",
+        "screened": "True",
+        "new_query_count": "2",
+        "status": "parked_no_new_eligible_birth_body",
+        "new_claim_rows": "0",
+        "claim_ids": "[]",
+        "source_urls": "[]",
+        "note": "New publisher dictionary route had no named entry; library catalog and research article dates are not births. Parked.",
+        "final_cohort_accepted": "False",
+        "bazi_variables_computed": "0"
+      }
+    },
+    {
+      "round": 5,
+      "path": "studies/academy_fr_jp_completion_v5/source_batches/japan_c/processed.csv",
+      "record": {
+        "queue_index": "10",
+        "member_key": "jpa-unlinked-7cc1c92cdee98a86",
+        "name_jp": "岸上 鎌吉",
+        "baseline_dob_status": "bounded_search_no_body_birth_claim",
+        "screened": "True",
+        "new_query_count": "2",
+        "status": "parked_no_new_eligible_birth_body",
+        "new_claim_rows": "0",
+        "claim_ids": "[]",
+        "source_urls": "[]",
+        "note": "New dictionary route led only to a headword index, no same-person birth body; no Wikipedia-derived1867 date accepted.",
+        "final_cohort_accepted": "False",
+        "bazi_variables_computed": "0"
+      }
+    },
+    {
+      "round": 5,
+      "path": "studies/academy_fr_jp_completion_v5/source_batches/japan_c/processed.csv",
+      "record": {
+        "queue_index": "11",
+        "member_key": "jpa-unlinked-a04294722ed5375b",
+        "name_jp": "冨田 雅次",
+        "baseline_dob_status": "bounded_search_no_body_birth_claim",
+        "screened": "True",
+        "new_query_count": "1",
+        "status": "parked_no_new_eligible_birth_body",
+        "new_claim_rows": "0",
+        "claim_ids": "[]",
+        "source_urls": "[]",
+        "note": "New 富田/冨田 variant route identified university history leads but no birth body. Prior failed Nagasaki PDF URL not fetched.",
+        "final_cohort_accepted": "False",
+        "bazi_variables_computed": "0"
+      }
+    },
+    {
+      "round": 5,
+      "path": "studies/academy_fr_jp_completion_v5/source_batches/japan_c/processed.csv",
+      "record": {
+        "queue_index": "14",
+        "member_key": "jpa-unlinked-d4075aa3dc4bb9ab",
+        "name_jp": "竹脇 潔",
+        "baseline_dob_status": "bounded_search_no_body_birth_claim",
+        "screened": "True",
+        "new_query_count": "1",
+        "status": "parked_no_new_eligible_birth_body",
+        "new_claim_rows": "0",
+        "claim_ids": "[]",
+        "source_urls": "[]",
+        "note": "New English memorial route found journal metadata for1905–1988, no accessible full DOB text; NDL not repeated.",
+        "final_cohort_accepted": "False",
+        "bazi_variables_computed": "0"
+      }
+    },
+    {
+      "round": 5,
+      "path": "studies/academy_fr_jp_completion_v5/source_batches/japan_c/processed.csv",
+      "record": {
+        "queue_index": "16",
+        "member_key": "jpa-unlinked-f0e12183de79ae82",
+        "name_jp": "辻 廣",
+        "baseline_dob_status": "bounded_search_no_body_birth_claim",
+        "screened": "True",
+        "new_query_count": "3",
+        "status": "new_body_month_institution_or_university",
+        "new_claim_rows": "1",
+        "claim_ids": "[\"b27d5e88e020e7b05a13\"]",
+        "source_urls": "[\"https://combustionsociety.jp/etc/Hiroshi_Tsuji.pdf\"]",
+        "note": "New source body and occupational identity bridge read; source precision retained. No cohort decision.",
+        "final_cohort_accepted": "False",
+        "bazi_variables_computed": "0"
+      }
+    },
+    {
+      "round": 5,
+      "path": "studies/academy_fr_jp_completion_v5/source_batches/japan_c/processed.csv",
+      "record": {
+        "queue_index": "27",
+        "member_key": "jpa:tamura_saburo",
+        "name_jp": "田村 三郎",
+        "baseline_dob_status": "bounded_search_no_body_birth_claim",
+        "screened": "True",
+        "new_query_count": "2",
+        "status": "new_body_year_institution_or_university",
+        "new_claim_rows": "1",
+        "claim_ids": "[\"93d1a1744ca88e2c4673\"]",
+        "source_urls": "[\"https://jcst.in.coocan.jp/Kaishi/156.pdf\"]",
+        "note": "New source body and occupational identity bridge read; source precision retained. No cohort decision.",
+        "final_cohort_accepted": "False",
+        "bazi_variables_computed": "0"
+      }
+    }
+  ],
+  "reviewed_request_files": "v3-v5 source_batches request/capture logs recursively inspected for this fixed queue; exact matching prior rows reviewed before search.",
+  "parked_routes_not_repeated": [
+    "NDL name/year-only authorities",
+    "Nobel Facts/API403",
+    "Wada Academy098 month-only PDF",
+    "Hasegawa Tohoku CV503",
+    "Namba AtHome maintenance page",
+    "JpGU Wada no-birth profile",
+    "Nagasaki med150kinensi.pdf",
+    "Tamura Saburo view_html.php?aid=550 full text403",
+    "Sasazuki Allergy72(4)401 obituary no birth",
+    "Kawai JSPS2025 CV no birth"
+  ],
+  "tamura_saburo_new_route_note": "Public index.php?aid=550 abstract is a genuinely newly accessed route with literal birth and identity body; the failed fuller view_html endpoint was never retried."
+}

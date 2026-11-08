@@ -1,0 +1,106 @@
+{
+  "written_utc": "2026-11-07T00:12:04.553835+00:00",
+  "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+  "preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+  "scope": "v36_scope_b.json",
+  "full2objects_and_targeted_prior_holds_read_beforequeries": true,
+  "prior_audits_read_sha256": {
+    "prior_v33_source_qa_initial_failed_report.json": "93a402a7a50ddaa76cceb28b59491bf13c91263d46045e6e733ac2991d7128eb",
+    "prior_v12_holds.json": "00c91a7cc6982df70ee6b099b38f800530417f289352f7b3a3c9baba945fe801",
+    "prior_v13_holds.json": "9b54ad12c2a8aa10d3bbc6cefbbf84f8322474a6585310ce86559da2900e05ee",
+    "geography_first_pass_queue_closeout.json": "56fd3053935afc42fe2f9cf301bb66bc2bc6839fa9483467cd03e602fb61be3b",
+    "prior_v33_holds.json": "0d0e0dedd3c1f26da2a993b3f5d047bc1717a4f5882d1b4630d181d0af5af8aa"
+  },
+  "targets": [
+    {
+      "record_id": "RS_PAST_NA3578",
+      "fullauthority": "Hinton; Martin Alister Campbell (1883 - 1961)",
+      "DOB": "1883-06-29",
+      "frozenrawplace": "London",
+      "originalBPgrade": "S2",
+      "priorBPurls": [
+        "https://doi.org/10.1098/rsbm.1963.0008"
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA3609",
+      "fullauthority": "Woods; Donald Devereux (1912 - 1964)",
+      "DOB": "1912-02-16",
+      "frozenrawplace": "Ipswich",
+      "originalBPgrade": "S2",
+      "priorBPurls": [
+        "https://doi.org/10.1098/rsbm.1965.0014"
+      ]
+    }
+  ],
+  "prior_holds": [
+    {
+      "record_id": "RS_PAST_NA3578",
+      "state": "OldLindaHallfullnative/exactDOBbutnobirthplace; Shindlerevolvework/residenceonly; v33queriesnoneworiginalcountry. OldLondonS2frozen."
+    },
+    {
+      "record_id": "RS_PAST_NA3609",
+      "state": "OldCSACcatalogueb1912Ipswichonly; oldRS1965DOIbodyunavailableclosednoretry. Kiddlederivedsourceunopened/notadmitted, currentpilotdoesnotretroactivelyadmitmirror. IpswichS2frozen."
+    }
+  ],
+  "calls": [
+    {
+      "kind": "system2_search_query",
+      "queries": [
+        "site:en.wikipedia.org \"Martin Alister Campbell Hinton\"",
+        "site:en.wikipedia.org \"Donald Devereux Woods\""
+      ],
+      "purpose": "DiscoverfirstcanonicalpersonarticleURIs, then actualfullnative/exactDOB/career anddirectbirthregionorlinkchain; searchprojectionnotproof."
+    },
+    {
+      "written_utc": "2026-11-07T00:12:25.216607+00:00",
+      "kind": "open",
+      "urls": [
+        "https://en.wikipedia.org/wiki/Martin_Hinton",
+        "https://en.wikipedia.org/wiki/Donald_Devereux_Woods",
+        "https://de.wikipedia.org/wiki/Martin_Hinton"
+      ],
+      "purpose": "Actualcanonicalpersonfullnative/exactDOB/career; WoodsbornIpswichhyperlinkedge; GermanHintonsearchalreadyshowsdirectbornLondon andmaybindexplicitbirthlink. Differentcanonicalcommunitylanguagearticlefirstbody, notfailedroutevariant; informationaldependenceunknown. No observedconflicttobeignored; ifanydate/placeconflictstopadoption."
+    },
+    {
+      "written_utc": "2026-11-07T00:12:45.448285+00:00",
+      "kind": "click",
+      "requests": [
+        {
+          "ref_id": "turn4987569view2",
+          "id": 50
+        },
+        {
+          "ref_id": "turn4987569view1",
+          "id": 34
+        }
+      ],
+      "purpose": "HintonactualGermanbornLondonlink50 ->actualtargetwholeEnglandregion. WoodsactualEnglishbornIpswichhasNOobservedhyperlink, sonotmaptexttolocality; observedWikidataitemlink34 ->actualpersonP19/P569/careeronly, no guessedQID. Stopanyfailure, recordeveryedge."
+    },
+    {
+      "written_utc": "2026-11-07T00:16:37.427316+00:00",
+      "kind": "system2_search_query",
+      "queries": [
+        "site:fr.wikipedia.org \"Donald Devereux Woods\"",
+        "site:de.wikipedia.org \"Donald Devereux Woods\""
+      ],
+      "purpose": "BoundeddiscoveryONEothercanonicalcommunitylanguagebiographyifactualarticleexists; exactsitequeriesnotguessedURI/QID. Requireactualallnative/exactDOB/career+birthplaceedge; holdanyobservedconflict. FailedQ5294244entityremainsclosed."
+    }
+  ],
+  "budget": {
+    "queries": 4,
+    "navigation": 10
+  },
+  "proof_gate": "Actualallnativecomponents+EXACTnativeDOB+distinctivecareer, anyobservedcontradictionheld. Directcanonicalbornregionoractualbornhyperlink->actualtargetEngland/Scotland/Wales/NI oractualP19/P131chainwithURI/QID/property/ref/locatoratedge. GenericUKP17/famouscity/nationality/work/family/coordinatesinsufficient. S3geoonly no nativeQID/country/coords/BP/DOB/priorfactsedit. No failedroutes/variants/rawGET/authbypass; <=25quotedwords/work includingprior; unknown raw/revision/calendar/editorial/independence null.",
+  "bounded_second_pass_authorized_before_calls": {
+    "written_utc": "2026-11-07T00:16:37.427167+00:00",
+    "reason": "RootrequestsONEothercanonicalcommunity-languageWoodspersonbiographyifdiscoverable. EnglishplainIpswichabsenceoflinknotconflict; failedtextlessWikidataitemworkstaysclosed. DifferentcanonicalFrench/Germanarticlefirstworkallowednotfailedentityvariant.",
+    "pass1_file": "v36_sources_b_pass1.json",
+    "pass1_sha256": "8e5d6c70125d983aa3d479ea70a9390a2b27782db9840eaf080fdb68be509407",
+    "remaining_budget": {
+      "queries": 2,
+      "navigation": 5
+    },
+    "no_Wikidata_retry": true
+  }
+}

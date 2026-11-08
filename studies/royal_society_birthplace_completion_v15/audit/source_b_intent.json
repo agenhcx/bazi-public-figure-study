@@ -1,0 +1,59 @@
+{
+  "created_before_requests_utc": "2026-11-04T23:53:01.589996+00:00",
+  "scope": [
+    "RS_PAST_NA4682",
+    "RS_PAST_NA4250",
+    "RS_PAST_NA4117",
+    "RS_PAST_NA4780"
+  ],
+  "planned_queries": [
+    "G N Ramachandran born 8 October 1922 Ernakulam site:ac.in",
+    "Peter John Morris born 17 April 1934 site:ox.ac.uk",
+    "Gordon Henry Dixon born Belleville 1930 obituary",
+    "Milton Robert James Salton born 29 April 1921 obituary"
+  ],
+  "query_budget": 6,
+  "original_navigation_budget": 8,
+  "selected_rows_loaded": true,
+  "next_routes": {
+    "planned_utc": "2026-11-04T23:53:24.192242+00:00",
+    "original_opens": [
+      "https://www.nds.ox.ac.uk/news/obituary-professor-sir-peter-j-morris-frs",
+      "https://www.dignitymemorial.com/en-ca/obituaries/victoria-bc/gordon-dixon-7024317"
+    ],
+    "remaining_discovery_queries": [
+      "\"Milton Salton\" born Auckland obituary",
+      "\"Gopalasamudram Narayana Ramachandran\" \"born\" Ernakulam"
+    ]
+  },
+  "followup_originals": {
+    "planned_utc": "2026-11-04T23:53:48.336191+00:00",
+    "urls": [
+      "https://journals.iucr.org/a/issues/2001/05/00/es0305/index.html",
+      "https://www.medsci.ox.ac.uk/news/obituary-professor-sir-peter-j-morris-frs",
+      "https://insa.ndl.gov.in/items/01bd8716-64ce-4eb6-9b9d-a8840c45c781/full",
+      "https://www.wikidata.org/wiki/Q21166792"
+    ],
+    "note": "Original IUCr signed obituary; observed Oxford publisher mirror once; INSA metadata to inspect any original full memoir links; Salton Wikidata only as an identity/source lead, not primary adoption."
+  },
+  "route_updates": [
+    {
+      "recorded_at_utc": "2026-11-04T23:55:36.642560+00:00",
+      "before_requests": true,
+      "purpose": "Final two permitted original-source navigations: Oxford NDPH Morris profile and Wellcome Salton concept lead",
+      "routes": [
+        {
+          "url": "https://www.ndph.ox.ac.uk/team/pmorris",
+          "action": "open",
+          "reason": "Original institutional profile may include explicit birthplace and birth date"
+        },
+        {
+          "ref_id": "turn73view3",
+          "link_id": 91,
+          "action": "click",
+          "reason": "Observed Wellcome concept authority link may expose original institutional biographical metadata"
+        }
+      ]
+    }
+  ]
+}

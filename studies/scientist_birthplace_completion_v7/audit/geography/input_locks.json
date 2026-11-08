@@ -1,0 +1,113 @@
+{
+  "API_original_bodies": {
+    "633002ff83120f9408d630209b24ebab7d1f3f1e999cf5bb51638ebb8976075e": "uk_birthplace_checkout/studies/scientist_birthplace_completion_v5/audit/geography/nobel_physics_corroboration_response.bin",
+    "8fd0d5b3e4c6528b13c5993c13c14453e7d739a9fe7a57c7d2d6486d1c7040c8": "academy_v7_workers/nobel_chem_med/original_chemistry_response.bin",
+    "dc4bd5e0d8f301273e8d5e4cb9955eff3c1ed316cb1f29fd468dec5b76b562d3": "academy_v7_workers/nobel_chem_med/original_medicine_response.bin"
+  },
+  "all_four_source_lanes_explicitly_frozen_before_final_geography": true,
+  "all_source_raw_place_precision_and_parentheticals_preserved": true,
+  "baseline_sha256": "8e880fcf4a659a1c8753a5a0ad4c06552ddd9d0d545334b0e81a2459907d7356",
+  "files": [
+    {
+      "bytes": 790882,
+      "path": "academy_v7_workers/nobel_chem_med/original_chemistry_response.bin",
+      "sha256": "8fd0d5b3e4c6528b13c5993c13c14453e7d739a9fe7a57c7d2d6486d1c7040c8"
+    },
+    {
+      "bytes": 955773,
+      "path": "academy_v7_workers/nobel_chem_med/original_medicine_response.bin",
+      "sha256": "dc4bd5e0d8f301273e8d5e4cb9955eff3c1ed316cb1f29fd468dec5b76b562d3"
+    },
+    {
+      "bytes": 167541,
+      "path": "academy_v7_workers/nobel_chem_med/retained_facts.jsonl",
+      "sha256": "1d2597cc930987ee2e8a755755531209771aa3d2606ee1e41dcf4a12d8071b47"
+    },
+    {
+      "bytes": 67808,
+      "path": "academy_v7_workers/nobel_physics/retained_facts.jsonl",
+      "sha256": "413147916a58547bbcb848ed45ae1475e19937264265371a59ca73f3f72eb144"
+    },
+    {
+      "bytes": 489434,
+      "path": "academy_v7_workers/vol79/raw/chapter_06.html",
+      "sha256": "219686cdb1b2613a6d7591643155fd1e0e8a86c6b75cb4e4ed5d64d64da6d900"
+    },
+    {
+      "bytes": 554569,
+      "path": "academy_v7_workers/vol79/raw/chapter_19.html",
+      "sha256": "60391496bebcd9b252243c5e4612a867161b21533554bdd39b134d48906c60a9"
+    },
+    {
+      "bytes": 509354,
+      "path": "academy_v7_workers/vol79/raw/chapter_22.html",
+      "sha256": "eb1e099c02f73b41ccfe766e12c748446b1b8ec8092a050200caaef45d279356"
+    },
+    {
+      "bytes": 18211,
+      "path": "academy_v7_workers/vol79/retained_facts.jsonl",
+      "sha256": "a3412d01b5784170b8a75b88231457856c26ff5b0c582ba7a3b222705487e17e"
+    },
+    {
+      "bytes": 527045,
+      "path": "academy_v7_workers/vol80/raw_transient/chapter_09.html",
+      "sha256": "fcbd8560268f6a19a18c7a45449e1a7f32ab92ce2d52f0f7c92b18805238717a"
+    },
+    {
+      "bytes": 4506,
+      "path": "academy_v7_workers/vol80/retained_facts.jsonl",
+      "sha256": "4d986b89ec58599bc26984fc3b72f2729e352c91c42750afb59823469fcc2f1b"
+    },
+    {
+      "bytes": 6899,
+      "path": "uk_birthplace_checkout/studies/scientist_birthplace_completion_v4/audit/geography/candidate_reviews.jsonl.gz",
+      "sha256": "f8bf58e734f49d603325f3513492750c114b081fc92345e966d4e8bd7c260288"
+    },
+    {
+      "bytes": 6335,
+      "path": "uk_birthplace_checkout/studies/scientist_birthplace_completion_v4/audit/geography/exact_place_query_response.json.gz",
+      "sha256": "e71ea490bef41db466a03ac907a441b4bc483cff5d352ac971d1b54156e772db"
+    },
+    {
+      "bytes": 228223,
+      "path": "uk_birthplace_checkout/studies/scientist_birthplace_completion_v5/audit/geography/candidate_reviews.jsonl",
+      "sha256": "b61e94079a93908c9d12e21e7ea28789b7f5d545b7dfd45de0d6c3d54b23bdee"
+    },
+    {
+      "bytes": 713237,
+      "path": "uk_birthplace_checkout/studies/scientist_birthplace_completion_v5/audit/geography/new_names_query_response.bin",
+      "sha256": "611bdc51b7df79b38a08eac47c2b5dfb81f0c58f09cee077ad35c3a6014420b5"
+    },
+    {
+      "bytes": 914378,
+      "path": "uk_birthplace_checkout/studies/scientist_birthplace_completion_v5/audit/geography/nobel_physics_corroboration_response.bin",
+      "sha256": "633002ff83120f9408d630209b24ebab7d1f3f1e999cf5bb51638ebb8976075e"
+    },
+    {
+      "bytes": 4404205,
+      "path": "uk_birthplace_checkout/studies/scientist_birthplace_completion_v6/outputs/birthplace_rows.jsonl.gz",
+      "sha256": "8e880fcf4a659a1c8753a5a0ad4c06552ddd9d0d545334b0e81a2459907d7356"
+    }
+  ],
+  "source_files_and_baseline_not_modified": true,
+  "source_lanes": {
+    "nobel_chem_med": {
+      "path": "academy_v7_workers/nobel_chem_med/retained_facts.jsonl",
+      "sha256": "1d2597cc930987ee2e8a755755531209771aa3d2606ee1e41dcf4a12d8071b47"
+    },
+    "nobel_physics": {
+      "path": "academy_v7_workers/nobel_physics/retained_facts.jsonl",
+      "sha256": "413147916a58547bbcb848ed45ae1475e19937264265371a59ca73f3f72eb144"
+    },
+    "vol79": {
+      "path": "academy_v7_workers/vol79/retained_facts.jsonl",
+      "sha256": "a3412d01b5784170b8a75b88231457856c26ff5b0c582ba7a3b222705487e17e"
+    },
+    "vol80": {
+      "path": "academy_v7_workers/vol80/retained_facts.jsonl",
+      "sha256": "4d986b89ec58599bc26984fc3b72f2729e352c91c42750afb59823469fcc2f1b"
+    }
+  },
+  "source_observation_count": 30,
+  "unique_reviewed_NAS_keys": 29
+}

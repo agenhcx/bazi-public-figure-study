@@ -1,0 +1,154 @@
+{
+  "schema": "UK_v41_independent_geography_source_documentary_QA_v1",
+  "reviewer": "/root/v41_source_qa",
+  "written_utc": "2026-11-08T08:49:25.118398+00:00",
+  "phase": "preflight",
+  "passed": true,
+  "checks_passed": 32,
+  "checks": [
+    {
+      "check": "actual_v40_baseline_canonical_pin",
+      "passed": true
+    },
+    {
+      "check": "fixed4983_unique_native_records",
+      "passed": true
+    },
+    {
+      "check": "actual54_nonblankunknown_window_pool",
+      "passed": true
+    },
+    {
+      "check": "fixed6_scope_threegroups2",
+      "passed": true
+    },
+    {
+      "check": "scope_within_actual_nonblankunknown_pool",
+      "passed": true
+    },
+    {
+      "check": "complete_target_scope_objects_exactbaseline",
+      "passed": true
+    },
+    {
+      "check": "103blank_window_outside_scope",
+      "passed": true
+    },
+    {
+      "check": "zero_firstbirthplace_groups",
+      "passed": true
+    },
+    {
+      "check": "all13_activeDOBcases_excluded",
+      "passed": true
+    },
+    {
+      "check": "Ewins_Barber_separate_placeholds_excluded",
+      "passed": true
+    },
+    {
+      "check": "both_partialplacecases_excluded",
+      "passed": true
+    },
+    {
+      "check": "Tomes_provisional_separate_not14thactive",
+      "passed": true
+    },
+    {
+      "check": "four_inherited_agequality_cases_retained",
+      "passed": true
+    },
+    {
+      "check": "omitted_middle_metadata_has_no_records_array",
+      "passed": true
+    },
+    {
+      "check": "historical_V36_preregistration_exact_SHA",
+      "passed": true
+    },
+    {
+      "check": "historical_V36_policy_fixedscope_preserved",
+      "passed": true
+    },
+    {
+      "check": "historical_V37_application_scope_preserved_distinct_newscope",
+      "passed": true
+    },
+    {
+      "check": "historical_V38_application_scope_preserved_distinct_newscope",
+      "passed": true
+    },
+    {
+      "check": "historical_V39_application_scope_preserved_distinct_newscope",
+      "passed": true
+    },
+    {
+      "check": "historical_V40_application_scope_preserved_distinct_newscope",
+      "passed": true
+    },
+    {
+      "check": "all_four_legacy_scope_paths_pinned_in_current_application",
+      "passed": true
+    },
+    {
+      "check": "current_application_scope_exact_SHA",
+      "passed": true
+    },
+    {
+      "check": "current_application_scope_exactgroups_ids",
+      "passed": true
+    },
+    {
+      "check": "bounded_application_not_source_exhaustion_or_finalfreeze",
+      "passed": true
+    },
+    {
+      "check": "unchanged_method_id",
+      "passed": true
+    },
+    {
+      "check": "V41_reuse_explicit_no_new_amendment",
+      "passed": true
+    },
+    {
+      "check": "exact_original_sourceclasses",
+      "passed": true
+    },
+    {
+      "check": "exact_three_original_proofmodes",
+      "passed": true
+    },
+    {
+      "check": "fullnative_exactDOB_actualedges_mandatory",
+      "passed": true
+    },
+    {
+      "check": "generic_UK_and_centroid_not_enough",
+      "passed": true
+    },
+    {
+      "check": "S3_geography_only_no_DOB_BP_upgrade",
+      "passed": true
+    },
+    {
+      "check": "Kiddle_not_retroapproved",
+      "passed": true
+    }
+  ],
+  "blocking_issues": [],
+  "warnings": [],
+  "declared_six_GEO_FIELDS": [
+    "geo_resolution_status",
+    "geography_decision",
+    "hemisphere",
+    "northern_birthplace_candidate",
+    "reason",
+    "southern_birthplace_separate"
+  ],
+  "no_new_admission_method_exception": true,
+  "explicit_prospective_admission_method_amendment": false,
+  "historical_V36_method_amendment_preserved": true,
+  "scope_application_extension": true,
+  "review_scope": "Documentary source/native binding/scope/protocol review only. Workers and root acquired source observations. Reviewer did not fetch network originals, inspect raw bytes/pixels or execute production. Final QA independently checks full-object rollback and deterministic output replays.",
+  "no_network_source_code_mainoutputs_audits_or_Git_mutation_by_reviewer": true
+}

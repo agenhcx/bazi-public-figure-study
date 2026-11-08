@@ -1,0 +1,171 @@
+{
+  "written_utc": "2026-11-08T12:10:25.954044+00:00",
+  "status": "PASS",
+  "phase": "read_only_V47_baseline_snapshot_before_source_adjudication",
+  "check_count": 31,
+  "checks": [
+    "V47_frozen_scope_hash",
+    "scope_pointer_select_positive_V46_commit_and_master",
+    "scope_pointer_exact_V46_canonical_and_gzip",
+    "source_only_boundary_and_unchanged_method",
+    "original_V46_receipt_records_72_Git_74_distributed_files",
+    "recorded_release_local_remote_blob_inventories_match",
+    "royal_society_birthplace_completion_v46_manifest_release_pin",
+    "royal_society_birthplace_completion_v46_exact_manifest_fileset_and_all_hashes",
+    "royal_society_original_source_followup_v46_manifest_release_pin",
+    "royal_society_original_source_followup_v46_exact_manifest_fileset_and_all_hashes",
+    "74_distributed_files_exact_72_text_inventory_plus_2_gzips",
+    "all_72_text_files_exact_release_size_SHA256_Gitblob",
+    "all_nine_V47_issue_snapshots_exact_V46_and_scope_pins",
+    "issue_13_DOB_2_place_4_age_and_omitted_middle_metadata",
+    "V29_admission_plan_original_and_snapshot_pinned",
+    "V35_admission_plan_original_and_snapshot_pinned",
+    "seven_unique_fixed_ids_groups_3_2_2_not_blocked",
+    "V46_streamed_canonical_and_gzip_pinned",
+    "positive_V46_counts_4983_4205N188S590U_window2644_2305N183S156U",
+    "all_seven_current_native_objects_window_unknown",
+    "five_blank_two_storedplace_scope_partition",
+    "exact_complete_native_objects_group_a",
+    "exact_complete_native_objects_group_b",
+    "exact_complete_native_objects_group_c",
+    "Morris_fact_Australia_S3_south_year_only_native_DOB_preserved",
+    "Morris_exact_rollback_matches_stored_complete_V44_native_object",
+    "V46_replay_original_hash_and_exact_five_outputs",
+    "birthplaces.csv_201_columns_expected_rows_context_header",
+    "CSV_Morris_positive_context_exact",
+    "remaining_unknown_window.csv_201_columns_expected_rows_context_header",
+    "no_V47_master_or_pipeline_artifact_at_snapshot"
+  ],
+  "scope_sha256": "75066f2d271f78cbbaaddce05db3a094a3d30d63baeb0b5c397b91a311358d5f",
+  "baseline_commit_from_frozen_scope_and_prior_release_receipt": "9ffe623ca6062b9755999021cb0447fec2410bcf",
+  "baseline_tree_from_prior_release_receipt": "63564b8d6a460c6a1f16bd08df4430685f0621bc",
+  "baseline_pointer_sha256": "a60f4dfd30ef8969d114a9d361b6dc224a9f47a14e687465b60ce41a639ae115",
+  "V46_release_manifests": {
+    "royal_society_birthplace_completion_v46": {
+      "sha256": "07dde319397ff0be5c9cc65c7d97fdc44cfb51c0f77e63e2ee9d6e2696203f45",
+      "data_files": 37
+    },
+    "royal_society_original_source_followup_v46": {
+      "sha256": "ebd3c80cd481010b65cfb90beccd516ed02f1169c1ebe1de24cad762e7348eb8",
+      "data_files": 35
+    }
+  },
+  "V46_distributed_files_verified": 74,
+  "V46_recorded_Git_text_files_verified": 72,
+  "release_inventory_sha256": "8688966c2459fb8ca68151b57f8c034c8c170b2394ffab5461cf9ff5e47d8394",
+  "prior_release_receipt_sha256": "3b2e1b35fb19a5ee42c75b47625a448f4e8f82379344ce69c808278def0b9d6a",
+  "master_canonical_sha256": "149afefd545fb9e98bd806ff5927be29057cc04db38b18c49de8fe5dde7055ed",
+  "baseline_pipeline_sha256": {
+    "scripts/replay.py": "16cc7bcf0394857ba5350cce3a8166be7c6644b18433f048eda3329c1750cecf",
+    "outputs/birthplace_rows.jsonl.gz": "95048d6e3ef240f1f5d11a92d3314295b9eb98af7c388bead6889fa2af300b95",
+    "outputs/birthplaces.csv": "175f19dfe95e965bf480cc12b7e745b53955c0631a9672152a33b79f33e724fa",
+    "outputs/remaining_unknown_window.csv": "812650e327483e447b5fa849ac1dbf9093e83f399676360613e0425b4cc07ee3",
+    "outputs/summary.json": "43596f7341a0bf0868ca612df4ad8d8cf58ea31eae03fbde1b5cd7aa5e6b9e3e",
+    "outputs/changes.json": "72ec8f5bfccc6e88bbea3051980870e63a801b1e75b1446c296a8b54e9ba431d"
+  },
+  "counts": {
+    "records": 4983,
+    "overall": {
+      "north": 4205,
+      "unknown": 590,
+      "south": 188
+    },
+    "window_records": 2644,
+    "window": {
+      "north": 2305,
+      "unknown": 156,
+      "south": 183
+    },
+    "blank_all": 524,
+    "blank_window": 102,
+    "storedplace_unknown_window": 54
+  },
+  "Morris_Australia_S3_south_fact_and_exact_rollback_preserved": true,
+  "CSV_shapes": {
+    "birthplaces.csv": {
+      "columns": 201,
+      "rows": 4983
+    },
+    "remaining_unknown_window.csv": {
+      "columns": 201,
+      "rows": 156
+    }
+  },
+  "issue_snapshots": {
+    "active_source_DOB_conflicts.json": {
+      "sha256": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+      "records": 13
+    },
+    "birthplace_source_conflicts.json": {
+      "sha256": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+      "records": 2
+    },
+    "source_derived_age_inconsistencies.json": {
+      "sha256": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+      "records": 4
+    },
+    "provisional_parsed_date_discrepancies.json": {
+      "sha256": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+      "records": 1
+    },
+    "lifespan_endpoint_discrepancies.json": {
+      "sha256": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+      "records": 1
+    },
+    "cross_source_reported_age_contrasts.json": {
+      "sha256": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+      "records": 1
+    },
+    "source_date_precision_holds.json": {
+      "sha256": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+      "records": 1
+    },
+    "omitted_middle_name_admission.json": {
+      "sha256": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+      "records": null
+    },
+    "source_ordinal_age_wording_observations.json": {
+      "sha256": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d",
+      "records": 1
+    }
+  },
+  "native_scope_snapshots": {
+    "a": {
+      "sha256": "5c816a74ce8698f0d29721ed984f86dd88d4e61d1707aa9cb897ef1c95635cc3",
+      "record_ids": [
+        "RS_PAST_NA3358",
+        "RS_PAST_NA7070",
+        "RS_PAST_NA3652"
+      ]
+    },
+    "b": {
+      "sha256": "4acdcb6b3baebaa42d6e622dcba352ee1b7b0ba48159b562ef29c9b1ed94a08d",
+      "record_ids": [
+        "RS_PAST_NA4680",
+        "RS_PAST_NA5003"
+      ]
+    },
+    "c": {
+      "sha256": "892f591788ccd32d671a86b591871182739e3578850ea9d36dd57f22e398973d",
+      "record_ids": [
+        "RS_PAST_NA8672",
+        "RS_PAST_NA1585"
+      ]
+    }
+  },
+  "method_plan_sha256": {
+    "29": "1e3dbd1ba94b012425803df5426e269adf42bdb5e17a9a5294fbaa4e3714bb42",
+    "35": "6d4e45c648b787999b4ba82fcb1d025ef7bb36382ef9d21a3328e83cbf3b28f0"
+  },
+  "historical_imports": 0,
+  "historical_loader_runs": 0,
+  "replay_CLI_runs": 0,
+  "production_outputs_written": 0,
+  "web_or_Git_operations": 0,
+  "limits": [
+    "Actual local hashes, stored master canonicalization and complete native objects were checked; V47 source evidence, work identity, grades, retrieval chronology and adoption decisions were not adjudicated.",
+    "All 74 distributed V46 files match frozen release manifests; 72 Git text files also match prior root release inventory SHA256, size and Git blob SHA1. The two gzip carriers are authenticated by the pinned manifest.",
+    "Commit/tree identity is checked against frozen scope and prior verified release receipts; current remote HEAD/reachability was not re-queried.",
+    "No historical code import, loader, replay CLI, new pipeline wrapper, or baseline mutation was performed. This snapshot does not preclude later qualified positive V47 facts."
+  ]
+}

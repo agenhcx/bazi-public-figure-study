@@ -1,0 +1,182 @@
+{
+  "written_utc": "2026-11-08T12:04:10.181866+00:00",
+  "status": "V47localtriageonly_noweb",
+  "current_storedplace_unknown_pool": 54,
+  "native_source": "academy_repo/studies/royal_society_birthplace_completion_v46/outputs/birthplace_rows.jsonl.gz",
+  "targeted_full_native_objects_read": true,
+  "prior_targeted_worker_AND_root_context_reviewed": true,
+  "prior_context_file_pins": {
+    "v16_sources_a.json": "f4e1f6fee5589dbfeb204a8b9460fdf27ef549b5336888113ecf4326a0f6faab",
+    "v16_root_intent.json": "74219be49bb3c28fcb2caf2b399e063c2c0f819d929d17632ebd6b1b3a797007",
+    "v17_sources_a.json": "3271bdd42b043166324e0c3881ec2cb2a33766189436d8a52dc69ce02d881cbe",
+    "v17_root_intent.json": "e9f5b43abaa535916e99e1d0dbadac6606c5ed3e931b00e05d8d5b2a34664577",
+    "v30_sources_c.json": "6ac5ade07449e88a8238b55ac16a02c6d232514970295c3eeb9453f204ea0043",
+    "v31_sources_a.json": "032af830c2101273cf1afc176ec6e82a26391c0faf77d5b6584a5f8c107caeaa",
+    "v40_sources_a.json": "0bf1f630e057b6efcdb1fff46869b660a0c7bda5574c14ba833584d68b3f8220",
+    "v43_sources_b.json": "776dcabe02f88a31bc5beec50e8ea1edc3a8b8c0bd61234809c1253cebca9889"
+  },
+  "issue_inventory_pins": {
+    "active_source_DOB_conflicts.json": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+    "birthplace_source_conflicts.json": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+    "source_derived_age_inconsistencies.json": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+    "provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+    "lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+    "cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+    "source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+    "omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+    "source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+  },
+  "excluded_V45six": [
+    "RS_PAST_NA1998",
+    "RS_PAST_NA4155",
+    "RS_PAST_NA4193",
+    "RS_PAST_NA4301",
+    "RS_PAST_NA4490",
+    "RS_PAST_NA6868"
+  ],
+  "excluded_V46five": [
+    "RS_CURRENT_10965",
+    "RS_PAST_NA1196",
+    "RS_PAST_NA4250",
+    "RS_PAST_NA4252",
+    "RS_PAST_NA780"
+  ],
+  "active_DOB_partialplace_separateEwinsBarber_and_otherblockinghold_intersection_with_shortlist": [],
+  "priorities": [
+    {
+      "record_id": "RS_PAST_NA4680",
+      "native_name": "Michael Augustine",
+      "native_authority": "Raftery; Michael Augustine (1936 - 2007); biochemist",
+      "native_DOB": "1936-02-08",
+      "raw_birthplace": "Galway",
+      "birthplace_source_grade": "S3",
+      "birthplace_source_url": "https://www.mayonews.ie/news/opinion/michael-augustine-raftery-7521177",
+      "hemisphere": "unknown",
+      "full_native_object_canonical_sha256": "92150016cff5cd39ce6e313bf5a6a6904145aeaa4ca9bd07b2be4516043be78b",
+      "rank": 1,
+      "new_avenue": "National Portrait Gallery original sitter biography/catalogue; distinct Caltech or University of Minnesota original personal memorial reserve only if not Mayo/RS reprint.",
+      "actual_new_URL": null,
+      "retained_new_title_or_citation": null,
+      "readiness": "Unlocated museum/institutional discovery avenue; no NPG record existence or biography/body/claim asserted.",
+      "future_locator_query": "\"Michael Augustine Raftery\" site:npg.org.uk",
+      "identity_and_place_goal": "Actual fullMichaelAugustineRaftery plus stated compatible1936 birthyear or exactDOB, compatiblelife1936-2007, Caltech/Minnesota/acetylcholinereceptor/FRS1986 fingerprint, and explicit subjectbornIreland/Irish-born or whole-region. GenericIrish nationality is insufficient. ActualfrozenGalwaybinding must be reviewed, not supplied by cityfamiliarity or parentsMayo.",
+      "why_promising": "Museum-style originalpersonmetadata may combine fullnative/lifeyears with a directbirthcountry qualifier; currently only the closed2025memoir actually supplied Irish-born but lacked statedDOB/life, so its country assertion cannot be joined to another source date or reopened. This is expectedyield judgement only.",
+      "old_closed_or_already_reviewed_works": [
+        {
+          "url": "https://www.mayonews.ie/news/opinion/michael-augustine-raftery-7521177",
+          "work": "2007MayoNewsoriginalobituary",
+          "refs": [
+            "turn86view2",
+            "rootturn97view0"
+          ],
+          "outcome": "Actualfullnative/age71/death1August2007/Galwayonly/S3; no ownDOB; parents/upbringingCoMayo notbirthcountry; frozennotnewwork.",
+          "origin": "v16_sources_a.json candidates[0],navigation_ledger[4];v16_root_intent.json already_read_unplanned_root_opens[0]"
+        },
+        {
+          "url": "https://royalsocietypublishing.org/rsbm/article/doi/10.1098/rsbm.2025.0005/363145/Michael-Augustine-Raftery8-February-1936-1-August",
+          "work": "AngelaVincent/DanielRaftery2025RSmemoir DOI10.1098/rsbm.2025.0005",
+          "refs": [
+            "turn86view1"
+          ],
+          "outcome": "V16firstpublisher403/no body, entireoriginalmemoirclosed acrosscarriers.",
+          "origin": "v16_sources_a.json navigation_ledger[3]"
+        },
+        {
+          "url": "https://www.researchgate.net/publication/398085395_Michael_Augustine_Raftery_8_February_1936_-_1_August_2007_8_February_1936_-_1_August_2007",
+          "work": "Same2025memoir carriedheading/abstract",
+          "refs": [
+            "turn6164415view0",
+            "turn3137353view1",
+            "turn3137353view2",
+            "turn9315520view0"
+          ],
+          "outcome": "V31actualfullnative/Irish-born/career but no actually statedDOB/life; URLslug/searchdates/unrelated1936find not DOB. V31DOI10.1098/rsbm.2025.0005 click403, nofurthercarrier allowed. Historical samework observations preserved, not a newroute.",
+          "origin": "v31_sources_a.json holds[0],navigation_ledger[0,4],parsed_find_ledger[0,1]"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Category:Lists_of_fellows_of_the_Royal_Society_by_year",
+          "work": "Canonicaldiscoverycategory",
+          "refs": [
+            "turn8497766view1"
+          ],
+          "outcome": "V43rewritten firstrepresentation closed asproof; actualdifferentlistlinkfollowed only.",
+          "origin": "v43_sources_b.json holds[1].discovery_only_observations[2]"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/List_of_fellows_of_the_Royal_Society_by_election_year",
+          "work": "Canonicalelectionlist",
+          "refs": [
+            "turn3918435view0"
+          ],
+          "outcome": "Actual1986plaintext only/noRafterypersonalhref; no actualpersonbody/P19. No guessedQID/personalURL.",
+          "origin": "v43_sources_b.json holds[1].discovery_only_observations[3]"
+        }
+      ],
+      "NPG_prior_attempt_in_targeted_history_found": false,
+      "same_work_guard": "Any newmuseum/institutionURL must be originalpersoncomposition, not the2025memoir or2007Mayoobituary mirrored/syndicated. DifferentURL/sourcecountrypreview not newwork/proof."
+    },
+    {
+      "record_id": "RS_PAST_NA5003",
+      "native_name": "Sheldon Francis",
+      "native_authority": "Dudley; Sir; Sheldon Francis (1884 - 1956)",
+      "native_DOB": "1884-08-16",
+      "raw_birthplace": "Lisbon",
+      "birthplace_source_grade": "S2",
+      "birthplace_source_url": "https://history.rcp.ac.uk/inspiring-physicians/sir-sheldon-francis-dudley",
+      "hemisphere": "unknown",
+      "full_native_object_canonical_sha256": "ad511d442f49132e68f11696c0832787ce58667324ac986d62d0b44d42be2a8a",
+      "rank": 2,
+      "new_avenue": "National Portrait Gallery original sitter biography/catalogue for SirSheldonFrancisDudley; independently authored naval-medical museum history only if distinct from the closed2018paper and oldRCP biography.",
+      "actual_new_URL": null,
+      "retained_new_title_or_citation": null,
+      "readiness": "Unlocated museum biography avenue; NPG personrecord not assumed to exist. RCP is already acquired and excluded as new.",
+      "future_locator_query": "\"Sheldon Francis Dudley\" site:npg.org.uk",
+      "identity_and_place_goal": "AllSheldonFrancisDudley components, statedcompatible1884birthyear or exact16August1884, compatible1884-1956 life/navalmedicaldirector-general/diphtheria fingerprint, directsubjectbornPortugal/Portuguese-born or actualwhole-region qualifier matching frozenLisbon. Sir is honorary, not personalcomponent. No Lisbonfamiliarity/nationality/navalposting/fatherlocation or colonialextent inference.",
+      "why_promising": "A distinct original museum personbiography may explicitly qualify foreignbirth while displaying life years/fullname; currently only Lisbon is birth-linked. No actual newcountrywording observed.",
+      "old_closed_or_already_reviewed_works": [
+        {
+          "url": "https://history.rcp.ac.uk/inspiring-physicians/sir-sheldon-francis-dudley",
+          "work": "RichardRTrail1968MunksRollV p111 originalsignedbiography",
+          "refs": [
+            "turn103view1"
+          ],
+          "outcome": "Actualfullnative/exactDOB/life/directLisbononly/S2; already acquired, not new. SourceFRS1941header versus1951narrative inconsistency retained, not a DOBconflict or membershiprepair.",
+          "origin": "v17_sources_a.json candidates[1],original_navigation_ledger[1];currentnativebirthplace_followup_v17"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6169416/",
+          "work": "2018SirSheldonFrancisDudley, hisContributions toDiphtheria andAftermath ofSinkingHMSCuracoa byQueenMary",
+          "refs": [
+            "turn1390586view0"
+          ],
+          "outcome": "V30firstCheckingYourBrowser/reCAPTCHA3linechallenge, no articlebody; closed allpublisher/PMC/PDF/reprint carriers.",
+          "origin": "v30_sources_c.json holds[0].sources[0]"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/List_of_fellows_of_the_Royal_Society_D%2C_E%2C_F",
+          "work": "CanonicalFRSlist",
+          "refs": [
+            "turn4792973view0",
+            "turn8388859view0"
+          ],
+          "outcome": "V40explicitly rewritten list/fullname/dates/election only; no personalhref/birthplace/QID. Workclosed, no globalarticleabsence claim.",
+          "origin": "v40_sources_a.json holds[2].source_observations[0]"
+        }
+      ],
+      "NPG_prior_attempt_in_targeted_history_found": false,
+      "same_work_guard": "NewNPG ornavalmuseum composition must be distinct from the oldRCP and challenged2018paper; RCPalternatefrontend/publicationwrapper does not create newwork."
+    }
+  ],
+  "admission_boundary": "Unchangedoriginalperson geography method exemplified by oldmuseumadmission: actualfullnative/actuallystatedcompatiblebirthyear-or-day/coherentcareer/compatiblelife/directsubjectbirthcountry-or-whole-region/frozenplacebinding; Irish-born orPortuguese-born directbirthqualifier maycount ifactuallyobserved; nationalityalone notbirth. No datelessorage-derivedDOB bypass/positive-shopping/host-onlyS1 or newnameexception. OriginalnativeDOB/rawBP/sourcegrade frozen.",
+  "closure_review_limit": "Targetednative/individualworker/rootledgers examined; no expensiveall347JSONscan. NPGunattempted assessment means no suchattempt found in examinedtargetedhistory, not proofthatworkexists or universalneverrequested claim. Repeat exactworkidentity check after locating actualURL beforeany futureopen.",
+  "triage_counts": {
+    "web_queries": 0,
+    "web_navigations": 0,
+    "finds": 0,
+    "rawGET": 0,
+    "pipeline_or_replay_CLI": 0,
+    "data_schema_or_Git_changes": 0
+  },
+  "new_source_quotes": 0,
+  "no_source_exhaustion_claim": true
+}

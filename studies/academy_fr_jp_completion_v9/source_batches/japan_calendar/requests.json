@@ -1,0 +1,103 @@
+[
+  {
+    "operation": "discovery_query",
+    "member_key": "jpa-unlinked-4ed3afac92825ad9",
+    "query": "\"小藤文次郎\" \"新暦\"",
+    "engine": "system2",
+    "web_call_ref": "turn1884",
+    "used_as_birth_body": false
+  },
+  {
+    "operation": "discovery_query",
+    "member_key": "jpa-unlinked-eabfb6c33df81d73",
+    "query": "\"寺尾寿\" \"新暦\"",
+    "engine": "system2",
+    "web_call_ref": "turn1884",
+    "used_as_birth_body": false
+  },
+  {
+    "operation": "discovery_query",
+    "member_key": "jpa-unlinked-4ed3afac92825ad9",
+    "query": "\"小藤文次郎\" \"3月4日\"",
+    "engine": "system2",
+    "web_call_ref": "turn1884",
+    "used_as_birth_body": false
+  },
+  {
+    "operation": "discovery_query",
+    "member_key": "jpa-unlinked-eabfb6c33df81d73",
+    "query": "\"寺尾寿\" \"11月\" \"1855\"",
+    "engine": "system2",
+    "web_call_ref": "turn1884",
+    "used_as_birth_body": false
+  },
+  {
+    "operation": "discovery_query",
+    "member_key": "jpa-unlinked-4ed3afac92825ad9",
+    "query": "\"小藤文次郎\" \"4月8日\" -site:ja.wikipedia.org -site:unionpedia.org -site:fuseji.longseller.org",
+    "engine": "system1",
+    "web_call_ref": "turn1889",
+    "used_as_birth_body": false
+  },
+  {
+    "operation": "discovery_query",
+    "member_key": "jpa-unlinked-eabfb6c33df81d73",
+    "query": "\"寺尾寿\" \"11月4日\" 天文台 -site:ja.wikipedia.org -site:koolearn.com -site:jimbutsu.jitenon.jp",
+    "engine": "system1",
+    "web_call_ref": "turn1889",
+    "used_as_birth_body": false
+  },
+  {
+    "operation": "publisher_context_query",
+    "member_key": null,
+    "query": "\"ARENA2013\" \"第七高等学校造士館の村上春太郎先生\"",
+    "engine": "system2",
+    "web_call_ref": "turn1897",
+    "used_as_birth_body": false
+  },
+  {
+    "operation": "publisher_context_query",
+    "member_key": null,
+    "query": "\"ARENA\" \"15\" \"福井崇時\" 中部大学",
+    "engine": "system2",
+    "web_call_ref": "turn1897",
+    "used_as_birth_body": false
+  },
+  {
+    "operation": "publisher_context_query",
+    "member_key": null,
+    "query": "site:viva-ars.com \"ARENA\" \"中部大学\"",
+    "engine": "system2",
+    "web_call_ref": "turn1897",
+    "used_as_birth_body": false
+  },
+  {
+    "operation": "url_route",
+    "source_url": "https://viva-ars.com/wp-content/uploads/2013/01/fukui131126.pdf",
+    "web_ref": "turn1889view0",
+    "web_outcome": "actual full PDF body read",
+    "original_capture_http_status": 200,
+    "source_sha256": "113c81ca35acd299111e4b5872f7abd433d881cbb7e50f2e8f315b5bb5d799af",
+    "birth_claim_created": true
+  },
+  {
+    "operation": "url_route",
+    "source_url": "https://www.jstage.jst.go.jp/article/agcjchikyukagaku/61/2/61_KJ00004573306/_pdf",
+    "web_ref": "turn1889view1",
+    "web_outcome": "web open timeout; one original GET succeeded",
+    "original_capture_http_status": 200,
+    "source_sha256": "3a8c6e09102a649e33526e1d11fb746060c3d3e2018bbf6a1b5eb00357f1f895",
+    "birth_claim_created": false,
+    "note": "ActualPDFp1 gives1856(Ansei3)March4, no source-supplied modern pair; repeats inherited noncomparable expression."
+  },
+  {
+    "operation": "url_route",
+    "source_url": "https://www.chubu.ac.jp/about/chubu-library/publication/arena/backnumber/2013-15/",
+    "web_ref": "turn1904view0; turn1914view1",
+    "web_outcome": "actual university issue page observed issuer/author/title; no official PDF link",
+    "original_capture_http_status": 200,
+    "source_sha256": "2747b2f8b38c4cdaa4d483c360300951ce68fe951979c56fb8c145ea82e6e408",
+    "birth_claim_created": false,
+    "used_as_publisher_context_only": true
+  }
+]

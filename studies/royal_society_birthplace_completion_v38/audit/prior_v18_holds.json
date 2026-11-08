@@ -1,0 +1,62 @@
+[
+  {
+    "record_id": "RS_PAST_NA1376",
+    "native_dob": "1869-04-09",
+    "authority_name": "Masterman; Arthur Thomas (1869 - 1941)",
+    "hold_type": "bound_compact_index_entry_no_birthplace_in_observed_segment",
+    "reason": "The compact original list binds the target full name and exactDOB, but observed entry supplies no birthplace field; no new birthplace fact or inference adopted. This is an additional source inspection, not a claim that all literature lacks birthplace.",
+    "source_audit_file": "audit/bulk_rse_lead.json",
+    "no_master_change": true
+  },
+  {
+    "record_id": "RS_PAST_NA1744",
+    "native_dob": "1871-02-09",
+    "authority_name": "Baly; Edward Charles Cyril (1871 - 1948)",
+    "hold_type": "hold_no_original_birthplace_body",
+    "reason": "Discovery queries returned frozen RoyalSociety roster metadata and unrelated genericODNB results; no new original body/public extract with subject-born/place clause recovered. Closed RoyalSociety directory not reopened.",
+    "source_audit_file": "audit/sources_a.json",
+    "no_master_change": true
+  },
+  {
+    "record_id": "RS_PAST_NA3358",
+    "native_dob": "1889-03-30",
+    "authority_name": "McCance; Sir; Andrew (1889 - 1983)",
+    "hold_type": "hold_original_birthplace_body_access_blocked",
+    "reason": "Search discovery gave explicitbornCadder,Dunbartonshire1889 and archival creatorSirAndrewMcCance1889–1983, but original collection open returnedtool-reported403. Stopped; no alternateStrathclydeURLretry, no body birth clause acquired, no snippet adoption.",
+    "source_audit_file": "audit/sources_b.json",
+    "no_master_change": true
+  },
+  {
+    "record_id": "RS_PAST_NA3830",
+    "native_dob": "1902-08-28",
+    "authority_name": "Linstead; Sir; Reginald Patrick (1902 - 1966)",
+    "hold_type": "hold_original_ODNB_legacy_redirect_inaccessible",
+    "reason": "Original NPG person catalogue gives lifespan/chemistry identity and a generic PlaceLondon tag, but no explicit birth relation. Followed observed DOI link to originalODNB; legacy destination inaccessible via tool, nonretryable. No public born clause acquired. Generic NPG PlaceLondon is not birthplace evidence.",
+    "source_audit_file": "audit/sources_a.json",
+    "no_master_change": true
+  },
+  {
+    "record_id": "RS_PAST_NA4005",
+    "native_dob": "1916-08-19",
+    "authority_name": "Argyris; John (1916 - 2004)",
+    "hold_type": "explicit_original_source_DOB_conflict",
+    "reason": "Original NAE chapter explicitly gives19August1913 and lifespan1913–2004, whereas frozen native is1916-08-19/lifespan1916–2004. Full JohnArgyris components, Imperial/Stuttgart career and finiteelement contributions support subject binding, but explicit birthyear conflict triggers hold. Do not adopt birthplace/hemisphere, repair nativeDOB or retier source.",
+    "source_audit_file": "audit/sources_b.json",
+    "no_master_change": true,
+    "source_birthdate": "1913-08-19",
+    "source_locator": "Clean original publisher chapter header13/69, authors74, born date/place76, printedpage25; source noteoriginal2004publication visible in samechapter.",
+    "source_url": "https://www.nationalacademies.org/read/13160/chapter/6",
+    "unadopted_birthplace_lead": "Volos, 300 km north of Athens, Greece",
+    "source_DOB_conflict_active": true,
+    "conflict_policy": "Require a separate DOB adjudication before clearing this conflict; a source omitting birthdate must not silently bypass the hold. No DOB/calendar/eligibility/identity correction authorized in this birthplace workflow."
+  },
+  {
+    "record_id": "RS_PAST_NA8089",
+    "native_dob": "1859-01-04",
+    "authority_name": "Ruhemann; Siegfried (1859 - 1942)",
+    "hold_type": "hold_original_birth_clause_body_unavailable",
+    "reason": "External carrier of original1944 JournalChemicalSociety obituaryPDF timed out; originalRSCpublisher landing returned403. Stopped both, no retries or full body. Search-only birthplace lead cannot be adopted.",
+    "source_audit_file": "audit/sources_a.json",
+    "no_master_change": true
+  }
+]

@@ -1,0 +1,56 @@
+{
+  "written_utc": "2026-11-05T15:14:36.119977+00:00",
+  "baseline_commit": "25b6b8f40d148d2e6c61235675446bbbfbdb4928",
+  "scope": {
+    "individual_first_BP": 8,
+    "existing_place_geography": 1,
+    "reviewed": 9,
+    "blank_pool": 141,
+    "blank_pool_is_not_read_count": true
+  },
+  "source_counts": {
+    "discovery_queries": 14,
+    "worker_navigation_attempts": 18,
+    "root_parsed_opens": 8,
+    "total_navigation_and_context_open_operations": 26,
+    "parsed_finds": 1,
+    "cached_screenshot_attempts": 1,
+    "usable_screenshot_image_blocks": 0,
+    "raw_GETs": 0
+  },
+  "decisions": {
+    "accepted_first_birthplaces": 4,
+    "S2": 2,
+    "S3": 2,
+    "new_North": 1,
+    "new_unknown": 3,
+    "accepted_geography_only": 0,
+    "holds": 5
+  },
+  "post_observation_amendments": {
+    "timing": "After worker observations and method review, before final facts and main adoption. Not source-blind preregistration; initial strict worker holds retained in raw reports.",
+    "lifespan_endpoint_exception": "A death/lifespan-end-only discrepancy may be retained while admitting a birthplace when original full native name and exact native DOB, multiple distinctive career anchors, additional institutional identity context, unique native key/no competing identity and no death-dependent eligibility/selection effect all pass. No birthdate/name/identity exception; no native facts repaired. General gates in method_qa.json.",
+    "signed_expert_newspaper": "Original edited obituary by named professional colleague may receive conservative S2; disclose genre and shared authorship, never host-only S1 or inferred peer review.",
+    "conventional_biographical_header": "Original section and neighboring layout can establish the explicit structured birth-side place without literal born wording. Disclose convention/absence of legend; S3 does not waive relationship gate."
+  },
+  "Midwinter_exception_gates": {
+    "full_name": true,
+    "exact_DOB": true,
+    "multiple_distinctive_career_anchors": true,
+    "additional_original_UCL_identity_context": true,
+    "unique_native_authority_and_DOB": true,
+    "no_acquired_competing_person": true,
+    "birthdate_conflict": false,
+    "death_endpoint_only": true,
+    "death_date_selection_or_outcome_effect": false,
+    "native_fields_preserved": true,
+    "informational_independence_claimed": false
+  },
+  "Kassanis_rule": "Literal Macedonian born retained as raw wording; separate annotated Macedonia interpretation only; no modern country or hemisphere inference.",
+  "Crisp_rule": "Original BIOGRAPHIES section/neighboring paired birth-date-place and death-date-place layout inspected; direct interpretation explicitly recorded, London only/unknown.",
+  "Adam_rule": "No acquired semantic person/place body or edge; hold. Existing Cambridge and all BP evidence/grades unchanged.",
+  "active_DOB_conflicts": "Argyris and Laver remain active in copied sidecar; death-endpoint exception does not apply.",
+  "protocol_deviations": "Group A logged two adaptive query intents after requests, honestly retained. All original-source planned opens had prior intent; no failed-route retry.",
+  "frozen": "Native DOB/calendar/identity/cohort/eligibility/country/QIDs/coordinates/DOB tiers/old evidence/official-field status/hashes/prior facts and untargeted complete objects.",
+  "no_analysis_or_final_freeze": true
+}

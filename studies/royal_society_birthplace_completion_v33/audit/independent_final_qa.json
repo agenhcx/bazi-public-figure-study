@@ -1,0 +1,142 @@
+{
+  "schema": "UK_v33_geography_only_independent_final_QA_v1",
+  "reviewer": "/root/v33_final_qa",
+  "written_utc": "2026-11-06T22:51:20.820972+00:00",
+  "status": "PASS",
+  "validation_categories_passed": 47,
+  "checks": [
+    "root final canonical and adopted IDs supplied before QA",
+    "five completed production output pins match before QA",
+    "v32 baseline and v33 current canonical match root pins",
+    "self-contained v32 reconstruction all4983 complete objects exact",
+    "all prior loaders and geography and birthplace helpers verbatim",
+    "all prior geography constants unchanged",
+    "fixed record order unique keys and UK cohort",
+    "65 stored-place unknown queue and12 fixed complete disjoint outcomes",
+    "three groups four each match predeclared scope and no first birthplace inputs",
+    "only six existing geography fields mutable",
+    "complete changed object set exactly accepted geography IDs",
+    "all native and BP fields and prior evidence frozen with exact six-field rollback",
+    "all103 window blank and all525 blank complete objects unchanged",
+    "all current holds preserve complete objects",
+    "all raw birthplace and source grades unchanged",
+    "adopted documentary facts carry geography-only grade roles identity place and parsed-source limits",
+    "Guggenheim ManchesterS2 frozen while new named-concepts S3 resolves North",
+    "Guggenheim actual fullnative exactDOB and lifespan remain compatible",
+    "Guggenheim distinct named-concepts original work parsed worker and root roles and copyright not publication",
+    "independent overall and2644 window counts",
+    "unchanged blank counts and resolved nonblank unknown diagnostics recomputed",
+    "summary zero newBP and geography counts grade roles exact",
+    "changes contain only current geography refinements originalBP unchanged",
+    "CSV128 old columns retain positions plus6 newgeo=134",
+    "all4983 CSV rows preserve old meanings except adopted current hemisphere cells",
+    "remaining unknown CSV equals master native-window order",
+    "eight other inherited issue files byte identical and seven prior DOB conflict objects unchanged",
+    "nine active DOB cases include Thompson historical inventory and Fawcett new original with Tomes separate",
+    "prior v32 active conflict file retained byte exact",
+    "Thompson historical v12 case newly inventoried with actual root body reverification not new work discovery",
+    "Fawcett actual March header and May born-body remain an unresolved source-internal contrast",
+    "both newly inventoried cases preserve native and BP grade roles with unknown raw metadata",
+    "all inherited historical audit files remain byte exact",
+    "historical v29 first-pass closeout retains v29 hash and same103 blank IDs",
+    "all inherited issue and recent geography and source-class hold complete objects unchanged",
+    "known place holds and active DOB cases excluded from currentselection",
+    "sourceQA passed with exact current facts activeDOB and source-class hash bindings",
+    "no full-source caches PDFs or images distributed",
+    "README continuation final canonical and v33 labels updated",
+    "parent adjudication describes current baseline geography-only phase",
+    "actual source request accounting equals root final declared counts",
+    "worker reports preserved byte exact",
+    "new DOB conflict subjects remain complete-object holds",
+    "current Thompson hold clarifies earlier worker-only no-open wording with later root retrieval",
+    "current source class decision no new exception prior v32 review byte exact",
+    "two isolated clean replays all5 outputs equal original pins",
+    "production five outputs untouched after QA"
+  ],
+  "baseline_canonical_sha256": "73ee2d8621c03ecdb1a4fa15c558215f40c0868aab0344a790cfccb6e264bbaa",
+  "final_canonical_sha256": "773cd149b4ee77d77233d81ac37fefa1e861a98c375b3d1c285ae36a32aa9847",
+  "records": 4983,
+  "changed_complete_objects": 1,
+  "unchanged_complete_objects": 4982,
+  "new_birthplaces": 0,
+  "geography_only_resolutions": 1,
+  "accepted_record_ids": [
+    "RS_PAST_NA5124"
+  ],
+  "overall": {
+    "north": 4195,
+    "unknown": 601,
+    "south": 187
+  },
+  "window_counts": {
+    "north": 2295,
+    "unknown": 167,
+    "south": 182
+  },
+  "blank_diagnostics": {
+    "all_blank_raw_birthplace": 525,
+    "window_blank_raw_birthplace": 103,
+    "all_unknown": 601,
+    "all_unknown_with_blank_raw_birthplace": 525,
+    "all_unknown_with_nonblank_raw_birthplace": 76,
+    "window_unknown": 167,
+    "window_unknown_with_blank_raw_birthplace": 103,
+    "window_unknown_with_nonblank_raw_birthplace": 64
+  },
+  "main_pre_QA_output_pins": {
+    "birthplace_rows.jsonl.gz": "abc5f1dd129424c79c78f669d6faa22536b25fca72d2db7ef5872e7ddee885a7",
+    "birthplaces.csv": "87d75b1ab9f233fe4688b2b001b81dd95123b8d3a201330166ad314943735edf",
+    "changes.json": "7bd18d0be65f9a162697966962ddb359ae13585fa05bbc7ccede1980484b8a7b",
+    "remaining_unknown_window.csv": "cd95ceb898c0e52087f9b1fe541fb4c3d2135f7f7615ef242497215f3381c18c",
+    "summary.json": "f998296264a2e5cd667cb325b17c0acf9d7fa3f43ae6de12b47c712068f029b0"
+  },
+  "isolated_replay_runs": [
+    {
+      "run": 1,
+      "clean_exit": true,
+      "five_hashes": {
+        "birthplace_rows.jsonl.gz": "abc5f1dd129424c79c78f669d6faa22536b25fca72d2db7ef5872e7ddee885a7",
+        "birthplaces.csv": "87d75b1ab9f233fe4688b2b001b81dd95123b8d3a201330166ad314943735edf",
+        "changes.json": "7bd18d0be65f9a162697966962ddb359ae13585fa05bbc7ccede1980484b8a7b",
+        "remaining_unknown_window.csv": "cd95ceb898c0e52087f9b1fe541fb4c3d2135f7f7615ef242497215f3381c18c",
+        "summary.json": "f998296264a2e5cd667cb325b17c0acf9d7fa3f43ae6de12b47c712068f029b0"
+      },
+      "matched_original_pins": true
+    },
+    {
+      "run": 2,
+      "clean_exit": true,
+      "five_hashes": {
+        "birthplace_rows.jsonl.gz": "abc5f1dd129424c79c78f669d6faa22536b25fca72d2db7ef5872e7ddee885a7",
+        "birthplaces.csv": "87d75b1ab9f233fe4688b2b001b81dd95123b8d3a201330166ad314943735edf",
+        "changes.json": "7bd18d0be65f9a162697966962ddb359ae13585fa05bbc7ccede1980484b8a7b",
+        "remaining_unknown_window.csv": "cd95ceb898c0e52087f9b1fe541fb4c3d2135f7f7615ef242497215f3381c18c",
+        "summary.json": "f998296264a2e5cd667cb325b17c0acf9d7fa3f43ae6de12b47c712068f029b0"
+      },
+      "matched_original_pins": true
+    }
+  ],
+  "main_outputs_rerun_or_mutated": false,
+  "new_active_DOB_conflict_inventory_entries": 2,
+  "active_DOB_conflict_count": 9,
+  "all7_prior_active_DOB_conflict_objects_unchanged": true,
+  "historical_v29_closeout_hash_preserved": true,
+  "quote_words": {
+    "RS_PAST_NA5124": 3
+  },
+  "documentation_checks": {
+    "files": [
+      "README.md",
+      "CONTINUATION.md"
+    ],
+    "counts_scope_limits_consistent": true,
+    "review_method": "Direct final documentary review plus complete structural equality and rollback, documentary source semantics separately reviewed by sourceQA. All originalBP/DOBtiers and previous facts retained; only six geographic fields and versioned context may change."
+  },
+  "limitations": [
+    "Independent local data/structural/replay verification only; no network or original-source acquisition/rawHTTP inspection by this reviewer.",
+    "Source semantic/genre/source-newness reviewed separately in independent_source_qa.json; recorded parsed source locators are not new acquisition claims by this reviewer.",
+    "New source grades are geographic_support_only and do not upgrade original birthplaces or DOB grades.",
+    "Seven prior qualified DOB conflict objects and eight other issue/method sidecars unchanged; two qualified inventory entries added. Thompson is a recovered historical v12 case with fresh root original-body reverification in v33, Fawcett a newly acquired source-work observation; Tomes provisional distinct. v29 first-pass closeout stays historical with its v29hash and all103blank objects unchanged.",
+    "No production facts, inputs, code, main outputs or Git changed; this audit and scratch harness only."
+  ]
+}

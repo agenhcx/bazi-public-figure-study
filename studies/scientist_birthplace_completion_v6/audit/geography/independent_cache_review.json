@@ -1,0 +1,57 @@
+{
+  "NAS_unknown": 555,
+  "baseline_rows": 11094,
+  "baseline_v5_SHA256": "15f3d58b3334fbc5c32229b0c122ff5e693379fbf9759794e1e3ae87ac06d152",
+  "checks": [
+    "candidate indices cover every original binding exactly once",
+    "candidate identity/label/description/P625/P31/P17 fields agree with raw responses",
+    "capture body hashes, byte lengths and binding counts agree",
+    "no cache mismatch"
+  ],
+  "exact_name_counts": {
+    "Berlin": {
+      "bindings": 276,
+      "entities": 119,
+      "hemisphere_counts": {
+        "north": 40,
+        "south": 1,
+        "unknown": 4
+      },
+      "physical_places": 45,
+      "result": "unknown"
+    },
+    "Colorado Springs": {
+      "bindings": 3,
+      "entities": 2,
+      "hemisphere_counts": {
+        "north": 1
+      },
+      "physical_places": 1,
+      "result": "north"
+    },
+    "Detroit": {
+      "bindings": 38,
+      "entities": 32,
+      "hemisphere_counts": {
+        "north": 8
+      },
+      "physical_places": 8,
+      "result": "north"
+    },
+    "New York City": {
+      "bindings": 91,
+      "entities": 78,
+      "hemisphere_counts": {
+        "north": 2,
+        "unknown": 1
+      },
+      "physical_places": 3,
+      "result": "unknown"
+    }
+  },
+  "mode": "offline saved baseline/cache inspection only; no requests, mutations, or v6 source-lane reads",
+  "passed": true,
+  "reviewer": "independent child agent /root/v4_geo/query_review",
+  "v4_query_original_uncompressed_body_SHA256": "4153c960cb3710ad452d5dcbd74b3e8a2236898bb6b3658e7ae3da6b6837c38a",
+  "v5_query_original_body_SHA256": "611bdc51b7df79b38a08eac47c2b5dfb81f0c58f09cee077ad35c3a6014420b5"
+}

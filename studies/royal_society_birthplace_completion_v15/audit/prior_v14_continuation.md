@@ -1,0 +1,21 @@
+# Continue UK birthplace after v14
+
+Zero principal-geography changes. UK4983=4159N/183S/641U; nativeDOB1835–1985 window2644=2259N/178S/207U. All4983completev13objects unchanged. Directbaseline Git09568feae7af46e5c4ca312e512cf60df3bf8904; canonicalSHA1b6318ed3e7056886949b47ff08f65eaa518a355cede9de67be934088eadf108. Fullv10carrier plus frozenv11/v12/v13contexts reconstruct exactbaseline.
+
+Methodpilot fixedfour compoundbirthplaces:NA1727 LowtherStreet,Carlisle;NA331 LittleBlencoe,nearPenrith;NA663 ChurchEnd,Finchley;NA6847 Carleton,smallvillagenearCarlisle. Sourcecollectors16queries/20originalnavigationattempts; root3originalopens and2parsedtextfinds. No newpersonDOB or birthplace assertion sought or adopted. Externalgeography support would have separategeographic_support_only role, never an upgrade to originalDOB/birthplace grades. accepted_geography=[] is intentional.
+
+Independentmethodreview and finalcandidate review apply7gates: frozenbirthbridge; completecompound positiveidentification; historicalname/timecompatibility; independentdiscriminatingsupport; boundedalternativescoverage; residualambiguity; geography-onlyversionedapplication. Protocol was written before newgeographyrequests; gate-adoptioninterpretation occurred after collectors started and progressmessages were known but before anymasterdecision. Keep bothtimestamps; do not claim source-blindpreregistration.
+
+Threecandidate_support_only records:LowtherStreet positiveCumberlandCouncil andHistoricEngland1217895; Carleton positiveLUC/NickHaynes2017 councilcommissioned appraisal plusLewis1848 attributedNewcastletranscription; ChurchEnd/Finchley positivehistoricaldirectory,parishguide andGeoNamesentity2649441. These establish possible matchingplaces, not a sufficiently discriminatedbirth-source referent. Criticalglobalstreet/proximity/parentcandidatecoverage incomplete; no absent-search or failedresponse used as exclusion. All3principalhemispheres remainunknown. Newbornobservations0/newgeographicresolutions0.
+
+LittleBlencoe is unsupported_historical_alias hold:Lewis1848 supportsLittleBlencow nearPenrith/Cumberland but no observed original equatesBlencoe withBlencow/Blencowe. Surnamehabitationalorigin snippets are not geographic aliases. Do not silently repairspelling or choose an ad-hoc near-radius.
+
+NRCanCanadian co-occurrence remains an unread candidate lead, not a verifiedsoutherncounterexample or a type-excludedrecord. Barnet403/globalGeoNamesinaccessible/NRCanfailures are gaps, not negativecoverage. ModernUK-only sources and repeatedmaplineages do not establishglobaluniqueness. Referencegeographic coordinates in sourceaudits are not personalbirthpoints; no newpersoncountry/QID/coordinate assigned.
+
+MutableFinchley.pdf URL:collector April2025 description androot July2026 header observed separately. No rawbytecomparison, so neither claim provenversionchange nor overwriteoldobservation. RootHistoricEnglandfind showedbuilding1868/1881 andplans8Dec1868/17Jun1881; not Walkerbirthhouse or proof of personalbirthlocation13Aug1868. Maprecord existence is distinct from referent identification.
+
+Preserve priorv11/v12/v13holds andv10closedroutes underaudit, includingbirthday/placeconflicts. MainCSV adds separate geographycolumns, all blank for this batch. Dataobjects/gzip unchanged; emptyacceptedinput must not be replaced by candidate_support records. Review audit/geography_candidates.json andcandidate_decision_review.json before any future geographypromotion.
+
+Future work needs genuinely new discriminating evidence: an actualhistoricalalias bridge, independently identifying birthplacecontext, or broader accessible candidatecoverage sufficient to remove materialambiguity. Do not rerun these four maplookups or relabelcandidatesupport as mainresults. Window207unknown still38nonblankstoredraw_birthplace/169blank; blanks do not mean literatureabsence. Existing blockedbiographical routes remain closed unless access demonstrablyrestored or source genuinelydifferent.
+
+Continue existing draft branch codex/academy-fr-jp-reopen-20261029/PR113 withoutmerge. No originalDOB/calendar/identity/eligibility/QID readjudication; no othercohort modifications or replacement of still-unrestored comprehensivev8 NAS/DE increments; no crosscohortstatisticaldedup, noBaZi/outcomes/finalfreeze. Window is descriptive.

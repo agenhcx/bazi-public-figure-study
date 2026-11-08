@@ -1,0 +1,65 @@
+{
+  "scope": "existing saved evidence only; source/DOB/membership/calendar holds unchanged",
+  "NAS": {
+    "baseline": 2242,
+    "hemisphere_counts": {
+      "unknown": 2241,
+      "north": 1
+    },
+    "safe_existing_qid_seeds": 2030,
+    "shared_qid_identity_hold_rows": 2,
+    "no_accepted_qid_rows": 210
+  },
+  "CAS": {
+    "baseline": 1230,
+    "hemisphere_counts": {
+      "north": 1003,
+      "unknown": 224,
+      "south": 3
+    },
+    "accepted_gregorian_dob_count": 0,
+    "southern_people": [
+      {
+        "name": "陈宗基",
+        "record_id": "cas_9a6bec6fd26c23565f0957f2",
+        "raw_birthplace": "印度尼西亚爪哇岛"
+      },
+      {
+        "name": "俞昌旋",
+        "record_id": "cas_d686b1cba1f436bd4818758d",
+        "raw_birthplace": "印度尼西亚爪哇岛安褥埠"
+      },
+      {
+        "name": "钟惠澜",
+        "record_id": "cas_cf3dacfafe3365e20873c8b0",
+        "raw_birthplace": "葡属东帝汶的叻利岛"
+      }
+    ],
+    "explicit_unresolved_people": [
+      {
+        "name": "王善源",
+        "raw_birthplace": "印度尼西亚"
+      }
+    ]
+  },
+  "outputs": [
+    {
+      "file": "cas_birthplace_firstpass.jsonl",
+      "rows": 1230,
+      "sha256": "d776563bd504d5fa3285362be1422cd4c633e0acc744176e425e4798dc8c3a94"
+    },
+    {
+      "file": "nas_birthplace_firstpass.jsonl",
+      "rows": 2242,
+      "sha256": "72cb9914aef78e037f2ffa9cf066542a3604768569a0322e909e99c16950973a"
+    }
+  ],
+  "method_script_sha256": "186ab73a3ce77c4aae72989cebe14f6aa8a0b0b9d5f168dc4c9728728778721f",
+  "limitations": [
+    "No country/nationality/membership/affiliation proxy for birthplace.",
+    "Literal locations only; no invented city coordinates.",
+    "Some external source grades remain unknown, independently of DOB evidence grades.",
+    "CAS day claims are not formally adjudicated Gregorian dates.",
+    "NAS legacy birthplace coverage is sparse; separate safe QID seed list supplied for batch follow-up."
+  ]
+}

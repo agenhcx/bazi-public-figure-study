@@ -1,0 +1,101 @@
+{
+  "written_utc": "2026-11-08T11:11:45.347808+00:00",
+  "group": "b",
+  "phase": "original_person_geography_followup",
+  "scope_file": "v45_original_scope.json",
+  "scope_sha256": "9a3226a121555bb4a7586e01a2ccd394f9f46071a1e4a839e87a408b388d278b",
+  "native_scope_file": "v45_scope_b.json",
+  "native_scope_sha256": "1495099a3212412e2a15e234e87a52a5d16f999b4fc40f755f88f9776707d623",
+  "inherited_admission_file": "academy_repo/studies/royal_society_birthplace_completion_v35/audit/plan.json",
+  "inherited_admission_sha256": "6d4e45c648b787999b4ba82fcb1d025ef7bb36382ef9d21a3328e83cbf3b28f0",
+  "all9_issue_inventories_read_before_any_web": true,
+  "inventory_file_pins": {
+    "active_source_DOB_conflicts.json": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+    "birthplace_source_conflicts.json": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+    "source_derived_age_inconsistencies.json": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+    "provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+    "lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+    "cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+    "source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+    "omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+    "source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+  },
+  "targeted_full_native_and_historical_holds_reviewed_before_any_web": true,
+  "prior_context_file_pins": {
+    "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v13_holds.json": "9b54ad12c2a8aa10d3bbc6cefbbf84f8322474a6585310ce86559da2900e05ee",
+    "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v31_holds.json": "fb132f1350a62a5298ba0c5d26d862aaf4d12ebf0a1ddaff465f78c979176d80",
+    "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v36_holds.json": "e53da3819069a98a3e9e267a4ece93665bd7976153de983e29431eb50112bc11",
+    "v31_sources_a.json": "032af830c2101273cf1afc176ec6e82a26391c0faf77d5b6584a5f8c107caeaa"
+  },
+  "entries": [
+    {
+      "entry_id": 0,
+      "written_utc": "2026-11-08T11:11:45.347796+00:00",
+      "written_before_requests_utc": "2026-11-08T11:11:45.347796+00:00",
+      "operation": "open",
+      "record_id": "RS_PAST_NA4155",
+      "exact_request": {
+        "open": [
+          {
+            "ref_id": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/580496700"
+          }
+        ],
+        "response_length": "long"
+      },
+      "url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/580496700",
+      "purpose": "First original personal-body open of exact retained previously unopened lead; all native components/compatible stated DOB/career/life/direct birth whole-region and frozenplace agreement review; no source inference from projection.",
+      "status": "completed",
+      "result_ref": "turn1705466view0",
+      "outcome": "Actual attributed ODNB public Extract acquired; full native name/exact DOB/compatible life/early pharmacy-physiology career, direct street/WoodGreen/London only. No acquired birth whole-region.",
+      "pre_request_local_validation": {
+        "exit_code": 0,
+        "tool_chunk_id": "6c826b",
+        "separate_call_before_request": true
+      }
+    },
+    {
+      "entry_id": 1,
+      "written_utc": "2026-11-08T11:11:45.347805+00:00",
+      "written_before_requests_utc": "2026-11-08T11:11:45.347805+00:00",
+      "operation": "open",
+      "record_id": "RS_PAST_NA6868",
+      "exact_request": {
+        "open": [
+          {
+            "ref_id": "https://royalsociety.org/people/roger-ekins-11386/"
+          }
+        ],
+        "response_length": "long"
+      },
+      "url": "https://royalsociety.org/people/roger-ekins-11386/",
+      "purpose": "First original personal-body open of exact retained previously unopened lead; all native components/compatible stated DOB/career/life/direct birth whole-region and frozenplace agreement review; no source inference from projection.",
+      "status": "completed",
+      "result_ref": "turn9432100view0",
+      "outcome": "Actual unsigned institutional personal profile acquired; Roger Ekins only, no Philip/no stated DOB/no birthplace. Distinctive biophysics/radioimmunoassay/ligand-binding/UCL career; actual death27July2016 auxiliary observation only.",
+      "pre_request_local_validation": {
+        "exit_code": 0,
+        "tool_chunk_id": "6c826b",
+        "separate_call_before_request": true
+      }
+    }
+  ],
+  "budgets": {
+    "queries": 4,
+    "navigation_attempts": 8
+  },
+  "closed_work_policy": "First failed/header/textless/challenge closes original work; no retries, variants, alternate carriers or rawGET. Old RCP/Goodwin2021memoir and Ekins2023.0020memoir/canonical works remain closed. Only exact retained two leads authorized.",
+  "quote_policy": "<=25 distinct quoted English words per original work including historical; zero new literal quotes planned; sparse paraphrase and locators only.",
+  "raw_HTTP_status": null,
+  "raw_bytes_sha256": null,
+  "exact_request_utc": null,
+  "completed_utc": "2026-11-08T11:13:40.729258+00:00",
+  "retrieval_counts": {
+    "queries": 0,
+    "navigation_attempts": 2,
+    "source_open_operations": 2,
+    "click_operations": 0,
+    "parsed_finds": 0,
+    "screenshots": 0,
+    "raw_GETs": 0
+  }
+}

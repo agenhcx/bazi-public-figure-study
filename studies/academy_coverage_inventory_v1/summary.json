@@ -1,0 +1,340 @@
+{
+  "schema": "cross_institution_coverage_inventory_v1",
+  "date": "2026-11-01",
+  "repository_snapshot_commit": "32653a72679c5ab17afbdaf955d1ae797f02077c",
+  "purpose": "Inventory existing counts, native source-quality policies and missingness; no new collection or acceptance decisions.",
+  "metrics": [
+    {
+      "dataset": "nas",
+      "label": "美国NAS science-core",
+      "numerator": 2242,
+      "denominator": 3051,
+      "percentage": 73.484104,
+      "metric_kind": "native_accepted_exact_DOB",
+      "count_unit": "unique_profile_url",
+      "scope": "science-core regular Member/Emeritus snapshot; all birth years",
+      "stage": "native DOB collection closeout",
+      "remaining_count": 809,
+      "remaining_definition": "unresolved exact DOB",
+      "source_quality_native": "1357 NAS-card paths;809 Wikidata paths;27 DBpedia;49 mixed manual cases",
+      "verification": "row_recomputed"
+    },
+    {
+      "dataset": "royal_society",
+      "label": "英国Royal Society",
+      "numerator": 4983,
+      "denominator": 8669,
+      "percentage": 57.480678,
+      "metric_kind": "native_accepted_exact_DOB",
+      "count_unit": "unique_fellow_id",
+      "scope": "Fellow roster1660–2025; Foreign/Honorary/Royal excluded; all birth years",
+      "stage": "roster/DOB closeout",
+      "remaining_count": 3686,
+      "remaining_definition": "2215 past +1471 current exact-DOB unresolved",
+      "source_quality_native": "4884 official catalogue;99 current independent non-library recovery, including secondary-authority native categories",
+      "verification": "row_recomputed"
+    },
+    {
+      "dataset": "leopoldina",
+      "label": "德国Leopoldina",
+      "numerator": 778,
+      "denominator": 2888,
+      "percentage": 26.939058,
+      "metric_kind": "birth_window_verified_sample_inclusion_rate_NOT_all_roster_DOB_coverage",
+      "count_unit": "unique_member_slug",
+      "scope": "international ClassI–III roster through2025; numerator birth1835–1985",
+      "stage": "strict source-evidence closeout",
+      "remaining_count": 1681,
+      "remaining_definition": "unresolved within2407 in-window raw-date candidates; not2888-778 missing birthdays",
+      "source_quality_native": "native TierA660;at least2 independentTierB118",
+      "verification": "row_recomputed"
+    },
+    {
+      "dataset": "cas",
+      "label": "中国科学院CAS",
+      "numerator": 1230,
+      "denominator": 1629,
+      "percentage": 75.506446,
+      "metric_kind": "body_supported_day_claim_coverage_NOT_accepted_Gregorian_DOB",
+      "count_unit": "unique_record_id_or_profile_URL",
+      "scope": "current six divisions +deceased URL directory; historical/window/cutoff reconciliation pending",
+      "stage": "source-claim acquisition; all formal acceptance flags0",
+      "remaining_count": 399,
+      "remaining_definition": "394month +2year +3uncaptured;25day discrepancy diagnostics separate",
+      "source_quality_native": "884 CAS-only day claims;1049 including labelled original-body support;181 secondary-only day fills",
+      "verification": "row_recomputed"
+    },
+    {
+      "dataset": "cae",
+      "label": "中国工程院CAE",
+      "numerator": null,
+      "denominator": null,
+      "percentage": null,
+      "metric_kind": "authoritative_snapshot_not_located",
+      "count_unit": "unknown",
+      "scope": "no standalone CAE result recovered",
+      "stage": "unverified snapshot availability",
+      "remaining_count": null,
+      "remaining_definition": "unknown, not zero",
+      "source_quality_native": "unknown",
+      "verification": "not_available"
+    },
+    {
+      "dataset": "france",
+      "label": "法国科学院",
+      "numerator": 775,
+      "denominator": 877,
+      "percentage": 88.369441,
+      "metric_kind": "approved_exact_DOB_working_group_coverage",
+      "count_unit": "candidate_group",
+      "scope": "existing1835–1985 source-year window; alias risks retained",
+      "stage": "low-yield tail parked",
+      "remaining_count": 102,
+      "remaining_definition": "73raw missingday +4exact conflicts +25held singletons",
+      "source_quality_native": "no uniform final per-person DOB-tier field; rawfirstparty flags are not adjudicated source tiers",
+      "verification": "row_recomputed"
+    },
+    {
+      "dataset": "japan",
+      "label": "日本学士院",
+      "numerator": 368,
+      "denominator": 482,
+      "percentage": 76.348548,
+      "metric_kind": "body_day_no_known_conflict_working_status_coverage",
+      "count_unit": "stable_member_key",
+      "scope": "working roster not uniformly restricted to1835–1985;10SectionI exclusions separate",
+      "stage": "low-yield tail parked",
+      "remaining_count": 104,
+      "remaining_definition": "DOB pending among472nonexcluded; combined DOB/scope queue112",
+      "source_quality_native": "215institution/org;150edited reference;3other attributed secondary",
+      "verification": "row_recomputed"
+    },
+    {
+      "dataset": "nobel_science",
+      "label": "诺奖科学",
+      "numerator": 655,
+      "denominator": 658,
+      "percentage": 99.544073,
+      "metric_kind": "existing_enrichment_exact_DOB_people_coverage",
+      "count_unit": "unique_person",
+      "scope": "1901–2025 science awards;662award rows; existing1835–1985 window",
+      "stage": "prior enrichment/calendar closeout",
+      "remaining_count": 3,
+      "remaining_definition": "Houghtonyearonly;Patapoutian exact-date conflict;Jumperyearonly",
+      "source_quality_native": "645officialAPI;10external additions native confidence6high/4medium;7externalURLsWikidata",
+      "verification": "script_and_later_summary_crosschecked_actual_CSV_not_in_snapshot"
+    },
+    {
+      "dataset": "fields_main",
+      "label": "菲尔兹奖主表",
+      "numerator": 63,
+      "denominator": 64,
+      "percentage": 98.4375,
+      "metric_kind": "body_supported_day_source_status_coverage",
+      "count_unit": "unique_person",
+      "scope": "branch main1936–2022 through2025;includesPerelmdeclined1;not common birth-window filtered",
+      "stage": "followup closeout",
+      "remaining_count": 1,
+      "remaining_definition": "Birkar monthonly",
+      "source_quality_native": "50people withMacTutor body;59single-host date evidence;not independent-source verification",
+      "verification": "row_recomputed"
+    },
+    {
+      "dataset": "fields_branch_extension_2026",
+      "label": "分支记录的2026扩展组",
+      "numerator": 1,
+      "denominator": 4,
+      "percentage": 25.0,
+      "metric_kind": "branch_extension_day_source_status_NOT_new_award_status_verification",
+      "count_unit": "unique_person",
+      "scope": "separate branch-recorded extension;not merged withmain",
+      "stage": "separate extension pending",
+      "remaining_count": 3,
+      "remaining_definition": "2month +1year",
+      "source_quality_native": "not harmonized withmain or national samples",
+      "verification": "row_recomputed"
+    }
+  ],
+  "birth_window_notes": [
+    {
+      "dataset": "nas",
+      "window": "1835-1985",
+      "exact_DOB_count": 2240,
+      "additional_existing_subset": "calendar-eligible2238;Esau/Breit2calendarholds",
+      "window_roster_denominator": null
+    },
+    {
+      "dataset": "royal_society",
+      "window": "1835-1985",
+      "exact_DOB_count": 2644,
+      "additional_existing_subset": "2545past +99current",
+      "window_roster_denominator": null
+    },
+    {
+      "dataset": "leopoldina",
+      "window": "1835-1985",
+      "exact_DOB_count": 778,
+      "additional_existing_subset": "724candidate-approved +54official-only;2407candidate denominator is conditional",
+      "window_roster_denominator": null
+    },
+    {
+      "dataset": "cas",
+      "window": "not formally adjudicated",
+      "exact_DOB_count": null,
+      "additional_existing_subset": "accepted GregorianDOB0 reflects not_adjudicated;dayclaims1230 not window-approved",
+      "window_roster_denominator": null
+    },
+    {
+      "dataset": "france",
+      "window": "existing1835-1985 source-year flag",
+      "exact_DOB_count": 775,
+      "additional_existing_subset": "640strict identity/DOB/membership;313day election precision +327year",
+      "window_roster_denominator": 877
+    },
+    {
+      "dataset": "japan",
+      "window": "descriptive observed dates1835-1985;not newcohort",
+      "exact_DOB_count": 367,
+      "additional_existing_subset": "1day rowItoKeisuke1803 outside;360broadII+day all observed window-in;cutoffflags354/2/4",
+      "window_roster_denominator": null
+    },
+    {
+      "dataset": "nobel_science",
+      "window": "existing1835-1985",
+      "exact_DOB_count": 655,
+      "additional_existing_subset": "existingcalendar summary reports655eligible;actualNobelCSVnotrecovered",
+      "window_roster_denominator": 658
+    },
+    {
+      "dataset": "fields_main",
+      "window": "descriptive1835-1985;not newcohort",
+      "exact_DOB_count": 61,
+      "additional_existing_subset": "62people withinwindow;2born1987;onewindowpersonmonthonly;calendarfieldsnot_stated",
+      "window_roster_denominator": 62
+    }
+  ],
+  "working_intersections": {
+    "France_strict_all_three": 640,
+    "France_gaps": 237,
+    "France_gap_dimensions": {
+      "membership_only": 135,
+      "identity_membership_DOB": 90,
+      "membership_DOB": 9,
+      "DOB_only": 3
+    },
+    "Japan_broad_II_plus_day": 360,
+    "Japan_broad_II": 438,
+    "Japan_SectionI_exclusions": 10,
+    "Japan_scope_unknown": 34,
+    "Japan_combined_pending": 112,
+    "Japan_scope_degree_rule_rows": 199,
+    "Japan_II_day_degree_rule_rows": 181,
+    "Japan_II_day_through2025_raw_flags": {
+      "1": 354,
+      "0": 2,
+      "blank": 4
+    },
+    "Japan_final_cohort_accepted_true_rows": 0
+  },
+  "source_quality_diagnostics": {
+    "NAS_accepted_paths": {
+      "NAS_card": 1357,
+      "Wikidata": 809,
+      "DBpedia": 27,
+      "mixed_manual": 49
+    },
+    "UK_past_official_catalogue": 4884,
+    "UK_current_independent_nonlibrary": 99,
+    "DE_native_policy_TierA": 660,
+    "DE_native_policy_two_or_more_B": 118,
+    "CAS_primary_labelled_day": 1049,
+    "CAS_secondary_only_day": 181,
+    "CAS_formally_accepted_Gregorian_DOB": 0,
+    "CAS_day_without_recorded_discrepancy": 1205,
+    "CAS_day_with_diagnostic_difference": 25,
+    "CAS_calendar_diagnostics_overlapping": {
+      "not_stated_day": 1225,
+      "explicit_lunar_day": 6,
+      "explicit_gregorian_day": 2
+    },
+    "Japan_all_day_source_tiers": {
+      "institution_org": 215,
+      "edited_reference": 150,
+      "other_secondary": 3
+    },
+    "Japan_II_day_source_tiers": {
+      "institution_org": 207,
+      "edited_reference": 150,
+      "other_secondary": 3
+    },
+    "Fields_main_MacTutor_presence_people": 50,
+    "Fields_main_singlehost_date_people": 59,
+    "Fields_main_calendar_not_stated_people": 64,
+    "Nobel_actual_CSV_recovered": false
+  },
+  "missingness_diagnostics": {
+    "NAS_deceased_exact": [
+      1361,
+      1361
+    ],
+    "NAS_living_exact": [
+      881,
+      1690
+    ],
+    "NAS_living_accepted_paths": {
+      "NAS_card": 5,
+      "Wikidata": 804,
+      "DBpedia": 27,
+      "mixed_manual": 45
+    },
+    "UK_past_exact": [
+      4884,
+      7099
+    ],
+    "UK_current_exact": [
+      99,
+      1570
+    ]
+  },
+  "verification": {
+    "NAS_actual_ZIP_CSV_recovered_and_SHA_matched": true,
+    "UK_complete_crosswalk_reconstructed_to_freeze_SHA": true,
+    "DE_actual_CSV_recomputed": true,
+    "DE_manifest_verification": {
+      "raw_byte_exact": 30,
+      "newline_only_CRLF_LF_equivalent": 5,
+      "old_files_modified": false
+    },
+    "CAS_actual_v19_ZIP_manifest_members_verified": 10695,
+    "CAS_actual_v19_ZIP_total_members": 10696,
+    "CAS_actual_v19_tables_recomputed": true,
+    "FR_JP_actual_CSV_recomputed": true,
+    "Fields_separate_branch_commit": "85bc28ca9bb55d52495dfd3f2eaf716226ab8a03",
+    "Fields_v3_v4_pins_checked": 29,
+    "Nobel_counts_crosschecked_from_script_and_later_calendar_summary_only": true
+  },
+  "guardrails": {
+    "institutions_not_nationality_cohorts": true,
+    "do_not_sum_as_unique_scientists": true,
+    "cross_membership_and_award_overlap_not_deduplicated": true,
+    "native_rates_not_quality_rankings": true,
+    "common_birth_window_not_fully_harmonized": true,
+    "CAE_missing_snapshot_not_zero": true,
+    "CAS_claims_not_accepted_dates": true,
+    "Japan_broad_II_not_all_direct_official_section_proof": true,
+    "Germany_inclusion_rate_not_all_roster_DOB_missingness": true,
+    "no_old_acceptance_or_source_policy_changed": true,
+    "no_new_unified_cohort_freeze": true
+  },
+  "collection_tail_status": "France/Japanlowyieldtailsparked;professorspaused;Fieldsfollowupclosedwithmainandextensionseparate",
+  "new_data_approvals": 0,
+  "new_birth_claims": 0,
+  "new_source_collection_requests": 0,
+  "bazi_or_outcome_analysis_performed": false,
+  "recommended_next_stage": [
+    "Agree one birth/election scope and regular/foreign/scientific membership policy.",
+    "Map native evidence categories while retaining source-specific provenance and holds.",
+    "Resolve cross-membership/award overlaps and report missingness within each intended comparison.",
+    "Only then review a common analysis cohort; preserve all earlier project freezes."
+  ]
+}

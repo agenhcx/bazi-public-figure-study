@@ -1,0 +1,42 @@
+{
+  "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+  "written_utc": "2026-11-07T00:10:49.798796+00:00",
+  "status": "prospectively_declared_before_new_source_queries",
+  "baseline_commit": "462860b8b9a7937c7fbe436790a64db863ee0a39",
+  "baseline_canonical_sha256": "271a32070f8dae8c54933f1ebaacc5ae141427a3448f8f1562000f8842a0c632",
+  "fixed_record_ids": [
+    "RS_PAST_NA4155",
+    "RS_PAST_NA6868",
+    "RS_PAST_NA3578",
+    "RS_PAST_NA3609",
+    "RS_PAST_NA813",
+    "RS_PAST_NA872"
+  ],
+  "reason": "Directoriginal-personcountryfollowupfirstpassclosed with62windowrecords stillunresolved. Pilot introduces separatelyversionedS3canonicalcommunityreference and explicitbirth-placeentity/adminchain evidence, without changing frozenDOB/BP tiers or any prioradmission. No outcomes/BaZi/statisticalmodels used.",
+  "new_source_classes": [
+    "canonical_Wikipedia_original_community_person_reference_body",
+    "canonical_Wikidata_actual_person_and_place_statements"
+  ],
+  "not_admitted": [
+    "searchprojections_withoutactualbody",
+    "thirdparty_Wikipedia_child_rewrites_or_unattributed_mirrors",
+    "rawcityname_to_famouscountry_assumption",
+    "nationality_family_school_work_death_location_as_birthcountry",
+    "conflictingDOB_place_identity_or_unverifiedinitials_expansion"
+  ],
+  "proof_modes": [
+    "direct_born_region_in_actual_canonical_person_body",
+    "explicit_person_born_place_hyperlink_then_actual_target_place_region",
+    "actual_person_P19_entity_then_actual_P131_admin_chain_to_whole_region"
+  ],
+  "mandatory_person_binding": "Actualallnativepersonalcomponents(fullname/observedfullalias, honorificnotpersonalcomponent), exactunchangednativeDOBasstated and coherentdistinctivecareer; actually observedcompatiblelifespanwhereprovided. OriginalacceptedpersonidentityandBP evidence remainsseparatelyfrozen. No inventedfullnames, dates, calendars or guessedQIDs.",
+  "place_binding": "SourceP19/bornplace must matchliteralexistinglocalitycomponent or be an explicitlyconsistentbroaderqualifier in existingrawplace (e.g.WoodGreen,London->London). No different-cityequivalence, substitutedplace or unobservedalias. Preservegranularstreetuncertainty. Any actualincompatibleplace orDOB meanshold, notchooseotherpositivesource.",
+  "entity_chain": "Everyedge mustactuallyappear in acquiredtext/structuredstatement: personbornplace/P19->specifictargetURI/QID, then actualtargetcountry/adminP131path. RecordeachnodeURI,label,edgeproperty,toolref,locator and acquisitionrole. No guessedlinks fromfamiliarcitynames, nationality/work or genericcoordinates. No personalcountry/QID/latlon fields assigned.",
+  "region_gate": "Terminalregionmustwhollylieinonehemisphere under existingextent rules. For thisUKpilot preferactualEngland/Scotland/Wales/NorthernIreland endpoint. GenericUSA/France remainunresolved; genericUKP17alone cannotreplace a demonstratedconstituent-region chain for ambiguousoverseasterritory associations. No point-centroid substitution forwhole-region proof.",
+  "date_rules": "ExactdisplayedDOB mustmatchnative; any observednondeprecatedincompatibleDOB/competingperson/place held, neverignoretofindpositivesource. Record observedclaimrank/calendarprecision ifavailable; unknownmetadata null, no unverifiedcompleteness/preferred-rank or calendarmodel claim. Literalformatteddateagreement usedonlyidentity, notnativeDOBvalidation/gradeupgrade.",
+  "source_grade_role": "S3 geographic_support_only; canonicalcommunitydata is notcivil/peerreview/independenteditingproof and notupgrading originalDOBorBPgrade. Informationaldependenceonpriorreferencesunknown.",
+  "frozen": "All4983recordIDs/order/cohort/nativeDOB/calendar/authority/eligibility/DOBgrades/BPraw/grades/URLs/claim/evidence/officialstatus/sourcehash/nativecountryQIDcoordinates/priorfacts unchanged. OnlysixGEO_FIELDS plusgeography_followup_v36(withrollback) maychangeforqualifiedfixedIDs. EntityIDs/pathliveonlyinside newcontext.",
+  "prior_holds": "All12activeDOBcases, allpartialplacecases andEwins/Barber excluded; do not retroactivelyadmitKiddleorclear anypriorhold. Priorv35firstpasscloseout stayshistorical, notcurrentmasteraudit.",
+  "retrieval": "Pre-requestexactintents/validatedexit0; firstcanonicalbodyopensonly, no failedworkvariants/retries/rawGET/authbypass. ExistingP19-no-value notedforRyde/Farren is absenceofvalue, notanactualcontradiction; canonicalWikipediaarticle is adifferentwork iffirstgraphstillhasnobirthplace. Allactualconflictsheld.",
+  "copyright": "Minimalstructuredfacts/URLs/locators;<=25quotedwordsperwork includinginheritedquotes. No fullHTML/JSON/PDF/image/projection cachesdistributed; rawstatus/bytes/requesttimeunknownnull."
+}

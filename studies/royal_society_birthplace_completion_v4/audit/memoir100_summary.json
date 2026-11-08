@@ -1,0 +1,50 @@
+{
+  "schema": "Royal_Society_v4_bounded_Crossref_memoir_abstract_birthplaces",
+  "frozen_utc": "2026-11-02T12:57:38.886281+00:00",
+  "baseline_rows": 4983,
+  "baseline_unknown": 722,
+  "selected": 100,
+  "attempted": 100,
+  "HTTP_status_counts": {
+    "200": 100
+  },
+  "accepted_explicit_birthplace": 26,
+  "held": 74,
+  "accepted_source_grade_counts": {
+    "S2": 26
+  },
+  "selection": "First 100 lexicographic record IDs among v3 past fellows without active explicit birthplace evidence, native DOB year1835–1985 inclusive, official deathyear1955–2021 inclusive, excluding prior Crossref cohort40",
+  "held_reason_counts": {
+    "matched_memoir_abstract_without_explicit_subject_birthplace": 58,
+    "title_omits_William_but_Kenneth_Hutchison_lifespan_matches_no_explicit_birthplace": 1,
+    "born_clause_about_younger_brother_Christopher_not_subject_Malcolm": 1,
+    "no_fullname_and_lifespan_matching_memoir_in_top3": 13,
+    "similar_named_subject_but_title_birthyear_conflict_hold_1913_vs_native_1916": 1
+  },
+  "new_geography_or_birth_country_assigned": false,
+  "native_DOB_identity_calendar_acceptance_flags_modified": false,
+  "metadata_carrier": "Crossref HTTP API, Royal Society journal ISSN1748-8494; publisher-deposited edited memoir abstracts. Original journal full text not fetched or represented as read.",
+  "network_policy": {
+    "max_requests": 100,
+    "max_in_flight": 1,
+    "minimum_request_start_interval_seconds": 3.1471086710002965,
+    "required_minimum_interval_seconds": 1.1,
+    "retries": 0,
+    "stop_on_429": true
+  },
+  "title_date_discrepancies_recorded": 2,
+  "exact_quote_native_DOB_source_SHA_QA": "PASS",
+  "input_sha256": {
+    "v3_uk_birthplace_rows.jsonl.gz": "550faaf8314b3597a7000ae093fe296c9fefe7795a125c811ae2db65916470e2",
+    "cohort100.json": "0292907d91efb3fcc7109116059bc82925807d67d002c82b741d453da196e8d6",
+    "excluded_v3_cohort40.json": "d347cea3e15d1ee1d5dc94e40c0021def76a120d2753fc98c0004e2169e1d74f"
+  },
+  "output_sha256": {
+    "accepted.jsonl": "b0e231672a01066220dfad55628acf3643bb53473857e8c0754cea5eaad6b841",
+    "held.jsonl": "a2a65e9e6e227bc8ba6239d230ebce0d2cb4be9a74626c78bbfd8e9b1de60de6",
+    "coverage.jsonl": "845073c26cca7f9233dd7455ff432e7535d5c3e5d05c8c75cc76b5547ef27613",
+    "raw_source_manifest.jsonl": "83b137396c67244c388dc81acb6fdaae4fe7b1592fc104617bc60e7b030af322",
+    "title_date_discrepancies.jsonl": "4decf0bc0108308f30550b2c274c7f9ef546d674ac775cf82590045e3b8ba71e"
+  },
+  "raw_caches_note": "Full Crossref metadata JSON remains in worker scratch for audit. Delivery should preserve only short facts/quotes and metadata coverage/provenance, not full abstract texts."
+}

@@ -1,0 +1,360 @@
+{
+  "schema": "v16_new_original_birthplace_sources_c_v1",
+  "worker": "/root/v16_sources_c",
+  "completed_utc": "2026-11-05T00:11:04.215304+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA4050",
+    "RS_PAST_NA4863",
+    "RS_PAST_NA6870",
+    "RS_PAST_NA6897"
+  ],
+  "counts": {
+    "queries": 6,
+    "original_navigations": 8,
+    "parsed_text_find_operations": 1,
+    "body_verified_candidates": 1,
+    "holds": 3,
+    "raw_PDF_requests": 0
+  },
+  "candidates": [
+    {
+      "record_id": "RS_PAST_NA6897",
+      "native": {
+        "record_id": "RS_PAST_NA6897",
+        "source_authorised_full_name": "Evans; Anthony Glyn (1942 - 2009)",
+        "native_dob": "1942-12-04",
+        "prior_raw_birthplace": "",
+        "full_queue_object_canonical_sha256": "affc0c1767865cfe5321af0511679f151ca9d92a0af3eb862dcb91da65686dc6"
+      },
+      "status": "candidate_original_explicit_birthplace_parent_review_required",
+      "raw_birthplace": "Porthcawl, Wales",
+      "source_grade_suggested": "S2",
+      "source_grade_basis": "Original signed scholarly biographical memoir by John W. Hutchinson, published by the National Academy of Sciences; conservative S2, not upgraded by host alone.",
+      "source_url": "https://www.nasonline.org/wp-content/uploads/2024/10/Evans_Anthony.pdf",
+      "source_title": "Anthony G. Evans / ANTHONY GLYN EVANS",
+      "source_author": "John W. Hutchinson",
+      "source_publication_year": "2023",
+      "source_date_basis": "Copyright2023 on PDFp1; do not infer publication month/day.",
+      "source_quote": "Anthony G. Evans was born and raised in Porthcawl, Wales.",
+      "source_quote_word_count": 10,
+      "source_locator": "PDFpage2 (index1): full name/body L9; born clause L30; full capitalized name and exact dates L37–40. Source author/copyright PDFpage1 L0–2.",
+      "source_webref": "turn91view2",
+      "source_birthdate_precision": "exact_day_in_same_memoir_subject_header_not_in_born_clause",
+      "source_DOB": "1942-12-04",
+      "source_DOB_matches_native": true,
+      "observed_full_name": "Anthony Glyn Evans",
+      "identity_anchors": [
+        "Full name Anthony Glyn Evans in original body and subject header matches native authority; no expansion invented from initials.",
+        "Exact subject-header birthdate December4,1942 agrees native day; death September9,2009 and lifespan1942–2009 agree native authority.",
+        "Materials scientist/engineer, Imperial College metallurgy and UCSB founding chair match distinctive subject.",
+        "Berkeley/Harvard/Princeton/UCSB career sequence and Royal Society membership provide further anchors."
+      ],
+      "identity_conflicts_observed": [],
+      "explicit_place_scope": "Porthcawl and Wales occur together in the subject-born-and-raised clause. No inference from parent names, schooling, employer, nationality or death place.",
+      "no_geography_assignment_by_worker": true,
+      "supplementary_sources": [
+        {
+          "url": "https://www.nationalacademies.org/read/18959/chapter/14",
+          "title": "ANTHONY G. EVANS, Memorial Tributes: Volume18",
+          "author": "Robert M. McMeeking",
+          "publication_year": "2014",
+          "doi": "10.17226/18959",
+          "quote": "Tony was born in Porthcawl, Wales, on December 4, 1942",
+          "quote_word_count": 10,
+          "locator": "Chapter printedpage69, parsedL75 author, L79 explicitborn/date; professional and FRS anchors L76,92–148.",
+          "webref": "turn87view0",
+          "role": "Separate signed original NAE memorial confirms same date/place; distinct author/publication alone does not prove informational independence."
+        },
+        {
+          "url": "https://groups.seas.harvard.edu/hutchinson/papers/Evanstribute2011.pdf",
+          "title": "A Tribute to Anthony G. Evans: Materials Scientist and Engineer",
+          "author": "John W. Hutchinson",
+          "publication_date": "2011-01-04",
+          "doi": "10.1111/j.1551-2916.2011.04592.x",
+          "quote": "was born and raised in Porthcawl, Wales",
+          "quote_word_count": 7,
+          "locator": "PDFpage1 L0–3 title/author/date; L20 born-and-raised clause; L73–74 journal/DOI.",
+          "webref": "turn87view1",
+          "role": "Same author as NAS memoir, not independent corroboration."
+        }
+      ],
+      "source_body_observed": true,
+      "raw_HTTP_response_saved": false,
+      "raw_HTTP_status": null,
+      "exact_request_utc": null
+    }
+  ],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA4050",
+      "native": {
+        "record_id": "RS_PAST_NA4050",
+        "source_authorised_full_name": "Crawford; Lionel Vivian (1932 - 2024); virologist and cancer expert",
+        "native_dob": "1932-04-30",
+        "prior_raw_birthplace": "",
+        "full_queue_object_canonical_sha256": "e393df7582a7bc77c1333b47dc53e1d23d5c23b043baf0d0a47c9c4ed8ac3499"
+      },
+      "status": "hold_no_explicit_birthplace_in_new_original_biographical_notes",
+      "source_url": "https://iiif.wellcomecollection.org/file/b16893281_Vol.%2038.pdf",
+      "source_title": "History of Cervical Cancer and the Role of the Human Papillomavirus,1960–2000",
+      "source_editors": [
+        "L. A. Reynolds",
+        "E. M. Tansey"
+      ],
+      "source_publication_year": "2009",
+      "source_kind": "original_edited_Wellcome_Witness_Seminar_volume",
+      "source_locator": "PDFpage154(index153), printedpage130, biographical note Dr Lionel Crawford, parsedL4908–4930.",
+      "body_date_precision": "year_only: b.1932",
+      "body_dob_compatible_with_native": true,
+      "identity_anchors": [
+        "Lionel Crawford,FRSE/FRS and1932birthyear.",
+        "EmmanuelCollege1952–58; Rockefeller fellowship Berkeley/Caltech and Glasgowvirology.",
+        "ICRFtumourvirusCambridgegroup1988 and GaborMedal2005."
+      ],
+      "reason": "Read biographical note records birthyear/career but no place of birth. Transcript portions observed describe scientific work, not birth. No employer/school location used as birthplace. This is not a claim of exhaustive reading of all192pages.",
+      "raw_birthplace_candidate": null,
+      "source_grade_suggested": null,
+      "webrefs": [
+        "turn91view3",
+        "turn94view2"
+      ],
+      "no_master_fields_modified": true,
+      "no_geography_assignment_by_worker": true
+    },
+    {
+      "record_id": "RS_PAST_NA4863",
+      "native": {
+        "record_id": "RS_PAST_NA4863",
+        "source_authorised_full_name": "Greenland; Dennis James (1930 - 2012)",
+        "native_dob": "1930-06-13",
+        "prior_raw_birthplace": "",
+        "full_queue_object_canonical_sha256": "7a673fe9ab1996821069680f99a077efe6374bfc6430336182f1b0c83b94413a"
+      },
+      "status": "hold_original_birth_clause_body_unavailable",
+      "discovery_place_lead": "Portsmouth, England",
+      "discovery_date_lead": "1930-06-13",
+      "discovery_quote": "Dennis Greenland was born on 13 June, 1930, in Portsmouth, England.",
+      "discovery_quote_word_count": 11,
+      "discovery_webref": "turn88search7",
+      "source_url": "https://taa-international.org/wp-content/uploads/2018/07/Ag4Dev18_web_upload.pdf",
+      "source_title": "Agriculture for Development18(2013), Dennis Greenland obituary lead",
+      "source_author": null,
+      "source_author_status": "Not verified because originalPDF returned429.",
+      "source_attempts": [
+        {
+          "url": "https://taa-international.org/wp-content/uploads/2018/07/Ag4Dev18_web_upload.pdf",
+          "webref": "turn91view1",
+          "outcome": "tool_reported_429; stopped without retry",
+          "tool_reported_HTTP_status": 429,
+          "raw_HTTP_status": null,
+          "exact_request_utc": null,
+          "raw_byte_sha256": null,
+          "retrieval_representation": "web-tool parsed content or tool-reported fetch error; not raw HTTP bytes"
+        },
+        {
+          "url": "https://royalsocietypublishing.org/doi/10.1098/rsbm.2018.0030",
+          "webref": "turn94view1",
+          "outcome": "tool_reported_403; stopped without retry",
+          "tool_reported_HTTP_status": 403,
+          "raw_HTTP_status": null,
+          "exact_request_utc": null,
+          "raw_byte_sha256": null,
+          "retrieval_representation": "web-tool parsed content or tool-reported fetch error; not raw HTTP bytes"
+        }
+      ],
+      "reason": "Original TAA PDF returned429; stopped. Original RS memoir page returned403; stopped. No body verified born clause, so discovery sentence is not admitted. The oldQID or searchresult birthdates are not a substitute for original evidence.",
+      "raw_birthplace_candidate": null,
+      "source_grade_suggested": null,
+      "additional_unadopted_discovery_note": "Wikidata search result displayed two incompatibleDOBs (1937-01-13 and1930-06-13); page not opened, no frozen nativeDOB/QID change or original-source conflict adjudication.",
+      "no_master_fields_modified": true,
+      "no_geography_assignment_by_worker": true
+    },
+    {
+      "record_id": "RS_PAST_NA6870",
+      "native": {
+        "record_id": "RS_PAST_NA6870",
+        "source_authorised_full_name": "Elderfield; Henry (1943 - 2016)",
+        "native_dob": "1943-04-25",
+        "prior_raw_birthplace": "",
+        "full_queue_object_canonical_sha256": "df8f20cbfe98a510e6f5ab6c432427b2b338573096ce736627eb7f3b2a654e36"
+      },
+      "status": "hold_original_born_clause_only_in_discovery_excerpt",
+      "discovery_place_lead": "North Yorkshire, UK",
+      "discovery_birthdate_precision": "year_only:1943",
+      "discovery_webref": "turn88search1",
+      "source_url": "https://www.nature.com/articles/533322a",
+      "source_title": "Harry Elderfield(1943–2016)",
+      "source_author": "Rosalind E. M. Rickaby",
+      "source_publication_date": "2016-05-18",
+      "doi": "10.1038/533322a",
+      "original_preview_locators": "Title/authorL25–31; subscriptionpreviewL49–53; author relationshipL83–86.",
+      "observed_original_body_birth_clause": false,
+      "reason": "Search discovery text contained born NorthYorkshire,UK1943, but actual original publisher preview did not expose that clause. ResearchGate original-memoir lead fetch also failed. No birthplace/date inferred from query/search excerpt, university affiliation or source-footer.",
+      "source_attempts": [
+        {
+          "url": "https://www.nature.com/articles/533322a",
+          "webref": "turn91view0",
+          "outcome": "original_publisher_subscription_preview; title/author but no born clause in observed body",
+          "tool_reported_HTTP_status": null,
+          "raw_HTTP_status": null,
+          "exact_request_utc": null,
+          "raw_byte_sha256": null,
+          "retrieval_representation": "web-tool parsed content or tool-reported fetch error; not raw HTTP bytes"
+        },
+        {
+          "url": "https://www.researchgate.net/publication/379545268_Henry_Elderfield_25_April_1943-19_April_2016",
+          "webref": "turn94view0",
+          "outcome": "tool_fetch_error; no original full body acquired",
+          "tool_reported_HTTP_status": null,
+          "raw_HTTP_status": null,
+          "exact_request_utc": null,
+          "raw_byte_sha256": null,
+          "retrieval_representation": "web-tool parsed content or tool-reported fetch error; not raw HTTP bytes"
+        }
+      ],
+      "raw_birthplace_candidate": null,
+      "source_grade_suggested": null,
+      "identity_lead_anchors": [
+        "Original title HarryElderfield1943–2016 compatible; author states Elderfield was her PhDsupervisor atCambridge1995–1999.",
+        "Separate RS memoir discovery title gives native exact25April1943–19April2016 but body unavailable."
+      ],
+      "no_master_fields_modified": true,
+      "no_geography_assignment_by_worker": true
+    }
+  ],
+  "queries": [
+    {
+      "engine": "system2",
+      "query": "Lionel Vivian Crawford obituary born Cambridge",
+      "batch": "turn84search"
+    },
+    {
+      "engine": "system2",
+      "query": "Dennis James Greenland obituary born Rothamsted",
+      "batch": "turn84search"
+    },
+    {
+      "engine": "system2",
+      "query": "Henry Elderfield obituary born Cambridge",
+      "batch": "turn84search"
+    },
+    {
+      "engine": "system2",
+      "query": "Anthony Glyn Evans obituary born Harvard UCSB",
+      "batch": "turn84search"
+    },
+    {
+      "engine": "system1",
+      "query": "\"Lionel Crawford\" obituary Emmanuel",
+      "batch": "turn88search"
+    },
+    {
+      "engine": "system1",
+      "query": "\"Harry Elderfield\" \"born\" OR \"Dennis Greenland\" \"born\"",
+      "batch": "turn88search"
+    }
+  ],
+  "original_navigation_ledger": [
+    {
+      "url": "https://www.nationalacademies.org/read/18959/chapter/14",
+      "webref": "turn87view0",
+      "outcome": "original_signed_NAE_memorial_body_read; explicit birthplace and exact DOB",
+      "tool_reported_HTTP_status": null,
+      "raw_HTTP_status": null,
+      "exact_request_utc": null,
+      "raw_byte_sha256": null,
+      "retrieval_representation": "web-tool parsed content or tool-reported fetch error; not raw HTTP bytes"
+    },
+    {
+      "url": "https://groups.seas.harvard.edu/hutchinson/papers/Evanstribute2011.pdf",
+      "webref": "turn87view1",
+      "outcome": "original_signed_journal_tribute_PDF_tool_parsed_body_read; explicit birthplace, exactDOBheader",
+      "tool_reported_HTTP_status": null,
+      "raw_HTTP_status": null,
+      "exact_request_utc": null,
+      "raw_byte_sha256": null,
+      "retrieval_representation": "web-tool parsed content or tool-reported fetch error; not raw HTTP bytes"
+    },
+    {
+      "url": "https://www.nature.com/articles/533322a",
+      "webref": "turn91view0",
+      "outcome": "original_publisher_subscription_preview; title/author but no born clause in observed body",
+      "tool_reported_HTTP_status": null,
+      "raw_HTTP_status": null,
+      "exact_request_utc": null,
+      "raw_byte_sha256": null,
+      "retrieval_representation": "web-tool parsed content or tool-reported fetch error; not raw HTTP bytes"
+    },
+    {
+      "url": "https://taa-international.org/wp-content/uploads/2018/07/Ag4Dev18_web_upload.pdf",
+      "webref": "turn91view1",
+      "outcome": "tool_reported_429; stopped without retry",
+      "tool_reported_HTTP_status": 429,
+      "raw_HTTP_status": null,
+      "exact_request_utc": null,
+      "raw_byte_sha256": null,
+      "retrieval_representation": "web-tool parsed content or tool-reported fetch error; not raw HTTP bytes"
+    },
+    {
+      "url": "https://www.nasonline.org/wp-content/uploads/2024/10/Evans_Anthony.pdf",
+      "webref": "turn91view2",
+      "outcome": "original_signed_NAS_memoir_PDF_tool_parsed_body_read; full name, DOB and explicit birthplace",
+      "tool_reported_HTTP_status": null,
+      "raw_HTTP_status": null,
+      "exact_request_utc": null,
+      "raw_byte_sha256": null,
+      "retrieval_representation": "web-tool parsed content or tool-reported fetch error; not raw HTTP bytes"
+    },
+    {
+      "url": "https://iiif.wellcomecollection.org/file/b16893281_Vol.%2038.pdf",
+      "webref": "turn91view3",
+      "outcome": "original_edited_Wellcome_Witness_volume; Crawford biographical notes read and no birthplace there",
+      "tool_reported_HTTP_status": null,
+      "raw_HTTP_status": null,
+      "exact_request_utc": null,
+      "raw_byte_sha256": null,
+      "retrieval_representation": "web-tool parsed content or tool-reported fetch error; not raw HTTP bytes"
+    },
+    {
+      "url": "https://www.researchgate.net/publication/379545268_Henry_Elderfield_25_April_1943-19_April_2016",
+      "webref": "turn94view0",
+      "outcome": "tool_fetch_error; no original full body acquired",
+      "tool_reported_HTTP_status": null,
+      "raw_HTTP_status": null,
+      "exact_request_utc": null,
+      "raw_byte_sha256": null,
+      "retrieval_representation": "web-tool parsed content or tool-reported fetch error; not raw HTTP bytes"
+    },
+    {
+      "url": "https://royalsocietypublishing.org/doi/10.1098/rsbm.2018.0030",
+      "webref": "turn94view1",
+      "outcome": "tool_reported_403; stopped without retry",
+      "tool_reported_HTTP_status": 403,
+      "raw_HTTP_status": null,
+      "exact_request_utc": null,
+      "raw_byte_sha256": null,
+      "retrieval_representation": "web-tool parsed content or tool-reported fetch error; not raw HTTP bytes"
+    }
+  ],
+  "parsed_text_find_ledger": [
+    {
+      "ref": "turn91view3",
+      "pattern": "Dr Lionel Crawford",
+      "result_ref": "turn94view2",
+      "outcome": "Crawford biographical notes located PDFp154/printed130; no birthplace there"
+    }
+  ],
+  "intent_file": "v16_c_intent.json",
+  "capture_notes": [
+    "All observations are web-tool search results, original parsed content or tool-reported errors; not raw HTTP response bytes.",
+    "Source-body snippets unavailable in original body not promoted; no source fields/master/Git changed.",
+    "Exact request times and actual raw HTTP statuses/hashes unknown; tool-reported403/429 separately labelled.",
+    "No retries after403/429.",
+    "No full HTML/PDF/page images saved or redistributed by this worker.",
+    "Separate authors/publications are not assumed independent without provenance analysis.",
+    "Different original Evans sources are one person-birthplace observation, not three independent persons."
+  ],
+  "native_fields_modified": false,
+  "geography_assignment_performed": false,
+  "Git_operations": false
+}

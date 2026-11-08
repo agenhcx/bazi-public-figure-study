@@ -1,0 +1,113 @@
+{
+  "schema": "UK_v22_independent_local_final_QA_v1",
+  "reviewer": "/root/v22_final_qa",
+  "written_utc": "2026-11-05T23:53:32.528518+00:00",
+  "status": "PASS",
+  "validation_categories_passed": 22,
+  "checks": [
+    "five pinned production outputs match before QA",
+    "actual v21 and v22 canonical hashes",
+    "self-contained v21 reconstruction exact all4983 objects",
+    "fixed cohort order and unique keys",
+    "scope133queue/8reviewed/2facts+6holds disjoint partition",
+    "exact2changed and4981completeidentical objects",
+    "every changed object frozen fields/prior facts and full previous+absent rollback",
+    "new grade/hemisphere support separate from native DOB grades",
+    "overall and2644window independent counts",
+    "blank/nonblank diagnostics independently match",
+    "summary deltas and no geography-only collection/adoption",
+    "CSV62old meanings/positions plus6v22 columns",
+    "CSV rows/current updates and prior contexts exact",
+    "remaining unknown CSV186 matches masterorder",
+    "all3 activeDOBconflicts and separateage/deathsidecars byteidentical",
+    "all conflict/age/death/Adam completeobjects unchanged",
+    "actual quotes12/10 <=25 and recorded lengths exact",
+    "worker PDFproof/rootchallenge and RobertsoriginalExtract roles separated",
+    "no fulloriginal/cache/image formats distributed",
+    "docs scope/counts/sourceaccess limits present",
+    "two isolated cleanreplays all5outputs equal originalpins",
+    "production5outputs untouched after QA"
+  ],
+  "baseline_canonical_sha256": "91b14b75fa13811abed8122644ed4b10f739fef5695ee72ed62ad5fd296bcac2",
+  "final_canonical_sha256": "728502a5f0a71570a262a894dc800a9073ff19bbba68e2c7a7dd7027a5f8f2b9",
+  "records": 4983,
+  "changed_complete_objects": 2,
+  "unchanged_complete_objects": 4981,
+  "overall": {
+    "north": 4176,
+    "unknown": 620,
+    "south": 187
+  },
+  "window_counts": {
+    "north": 2276,
+    "unknown": 186,
+    "south": 182
+  },
+  "blank_diagnostics": {
+    "all_blank_raw_birthplace": 553,
+    "window_blank_raw_birthplace": 131,
+    "all_unknown": 620,
+    "all_unknown_with_blank_raw_birthplace": 553,
+    "all_unknown_with_nonblank_raw_birthplace": 67,
+    "window_unknown": 186,
+    "window_unknown_with_blank_raw_birthplace": 131,
+    "window_unknown_with_nonblank_raw_birthplace": 55
+  },
+  "main_pre_QA_output_pins": {
+    "birthplace_rows.jsonl.gz": "e29c20b18020f491ef61368e814a89d8eabb6d469be9e54b6a970ab3091302b9",
+    "birthplaces.csv": "3ba15c0be56f15dcf8f02a8bfc8fcc006e85c912c9eb8ee3887cc29b1e8845e2",
+    "changes.json": "3c47edd59adf8abca3e3ce651bcdf352f7dd0a61c41eaef054665d7867842847",
+    "remaining_unknown_window.csv": "0efb090a9bab142d2e59203a1e79b3386d862cf2531b7ad67c5e330ffdb71a89",
+    "summary.json": "7a705a977877ae7a42f6bf2968b13e2d20102b8dda1221fa48a76cbbe1770253"
+  },
+  "isolated_replay_runs": [
+    {
+      "run": 1,
+      "clean_exit": true,
+      "five_hashes": {
+        "birthplace_rows.jsonl.gz": "e29c20b18020f491ef61368e814a89d8eabb6d469be9e54b6a970ab3091302b9",
+        "birthplaces.csv": "3ba15c0be56f15dcf8f02a8bfc8fcc006e85c912c9eb8ee3887cc29b1e8845e2",
+        "changes.json": "3c47edd59adf8abca3e3ce651bcdf352f7dd0a61c41eaef054665d7867842847",
+        "remaining_unknown_window.csv": "0efb090a9bab142d2e59203a1e79b3386d862cf2531b7ad67c5e330ffdb71a89",
+        "summary.json": "7a705a977877ae7a42f6bf2968b13e2d20102b8dda1221fa48a76cbbe1770253"
+      },
+      "matched_original_pins": true
+    },
+    {
+      "run": 2,
+      "clean_exit": true,
+      "five_hashes": {
+        "birthplace_rows.jsonl.gz": "e29c20b18020f491ef61368e814a89d8eabb6d469be9e54b6a970ab3091302b9",
+        "birthplaces.csv": "3ba15c0be56f15dcf8f02a8bfc8fcc006e85c912c9eb8ee3887cc29b1e8845e2",
+        "changes.json": "3c47edd59adf8abca3e3ce651bcdf352f7dd0a61c41eaef054665d7867842847",
+        "remaining_unknown_window.csv": "0efb090a9bab142d2e59203a1e79b3386d862cf2531b7ad67c5e330ffdb71a89",
+        "summary.json": "7a705a977877ae7a42f6bf2968b13e2d20102b8dda1221fa48a76cbbe1770253"
+      },
+      "matched_original_pins": true
+    }
+  ],
+  "main_outputs_rerun_or_mutated": false,
+  "quote_words_by_record": {
+    "RS_PAST_NA3635": 10,
+    "RS_PAST_NA4747": 12
+  },
+  "documentation_checks": {
+    "files": [
+      "README.md",
+      "CONTINUATION.md"
+    ],
+    "counts_scope_limits_consistent": true,
+    "helper_read_only_review_pending": false,
+    "independent_read_only_helper": {
+      "reviewer": "/root/v22_final_qa/doc_check",
+      "result": "PASS",
+      "checks": "Counts/scope/qualifications, workerPDF/rootchallenge separation, shortquotes12/10 and no fullsource/cache/image formats/signatures.",
+      "limitations": "Documentary/local file review only; no network, new original acquisition, replay or structural/data mutation."
+    }
+  },
+  "limitations": [
+    "Independent local structural/data/replay verification only; no network, new original-source acquisition or raw HTTP-byte inspection.",
+    "Source quality/semantic checks are reviewed separately in independent_source_qa.json. Worker original-PDF observation is distinguished from later root Anubis challenge, without independent parent/source acquisition claim.",
+    "No production inputs, code, master outputs or Git operations changed; this audit and scratch helper script only."
+  ]
+}

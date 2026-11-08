@@ -1,0 +1,43 @@
+{
+  "restored_packages": [
+    {
+      "filename": "japan_academy_official_roster_sources_v1_outputs_v1_2.zip",
+      "bytes": 358374,
+      "sha256": "e144a8b2b4b0b5cd155509395a6333b427fdb8b4e0b24b35368dcfae97e8ed9a"
+    },
+    {
+      "filename": "japan_academy_roster_discovery_review_v1_package.zip",
+      "bytes": 166434,
+      "sha256": "6df8e52b334b6f96ebd7ae9eca0b94dedb93886f33376c6a519779e2ba2822fa"
+    },
+    {
+      "filename": "japan_academy_roster_discovery_v1_outputs.zip",
+      "bytes": 1309116,
+      "sha256": "afbcd15794eaec63d46b2f781ec1d6330d935d71af29e825dbb3509bfe14a97e"
+    }
+  ],
+  "relationship_to_frozen_subset": {
+    "accepted199_count": 199,
+    "accepted199_present_in_restored_deceased745": 199,
+    "restored_deceased_count": 745,
+    "accepted199_present_in_restored_science_candidates435": 199,
+    "ambiguous239_present_in_deceased745": 239,
+    "ambiguous239_count": 239
+  },
+  "dob_table_found": false,
+  "scope_note": "Historical roster-discovery snapshots, not final cohort/DOB freeze. All package CSV schemas inspected; no explicit DOB column. Cached raw pages retained privately in ZIP, not newly redistributed.",
+  "roster_input": {
+    "zip_filename": "japan_academy_roster_discovery_v1_outputs.zip",
+    "entry": "japan_academy_roster_discovery_v1\\science_core_roster_candidates_v1.csv",
+    "sha256": "2142e9c2403279ea68511efb0cd2d79d95093b31ab84c6b9709d31f5d44d991b",
+    "candidate_records": 435
+  },
+  "restored_roster_counts": {
+    "current_section2": 69,
+    "deceased_all_sections": 745,
+    "science_candidates": 435,
+    "official_section2_review_hotfix_count": 139,
+    "original_discovery_summary_official_count": 137,
+    "note": "Two source versions report different official-section diagnostics; do not replace row-level eligibility from summary counts. Neither count is a frozen DOB cohort."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "accepted_facts_checked": 22,
+  "by_route": {
+    "pending53": 21,
+    "crosswalk": 1
+  },
+  "identity_or_birthplace_hold_count_among_accepted": 0,
+  "source_hash_and_excerpt_checks": true,
+  "native_DOB_and_acceptance_unchanged": true,
+  "base_sha256": "0b3e0c92d04ea680511f78eea39f4c36e08b3dd81850a42b5cd6dde46f805e03",
+  "accepted_input_sha256": {
+    "pending53": "117cdef8f4be5dfad983dd282f1ff3a9caeae762fac33c31e14d19b3a134bea5",
+    "crosswalk": "c2b2d8a0d4177da4a49c4fe02cd438e151a66609eb1a4a50d4d55b2ea9b6b8f5"
+  },
+  "geographical_auxiliary_checks": {
+    "reviewed": 3,
+    "status": "PASS",
+    "input_sha256": "60c5ce9bd82ce58e10ccd769009ed8237bef26ead23fed9d1301f172c9483b83",
+    "record_ids": [
+      "RS_PAST_NA1126",
+      "RS_PAST_NA371",
+      "RS_PAST_NA723"
+    ]
+  },
+  "notes": "QA made no network requests and modified no repo or native fields. All memoir excerpts match normalized original publisher-deposited abstracts and contain at most25words. The official Churchill structured birth object was checked separately from death and prize objects. Source-DOB only supports identity and never upgrades native DOB source grading."
+}

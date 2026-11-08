@@ -1,0 +1,217 @@
+{
+  "audit_kind": "independent_v13_france_b_Combes_component_and_CTHS_membership_holds_source_QA",
+  "reviewer": "v13_source_qa",
+  "completed_utc": "2026-11-01T08:03:40.602768+00:00",
+  "independent_qa_passed": true,
+  "decisions_sha256": "00d8b9c3f26c5461f75a0f5e04c1b9720c408e3ce0ba72619374706a1d06d086",
+  "worker_manifest_sha256": "7b09cbe4db604dc8238a19d9198e1ab9d8aa559bf71480655ef283e26ed23ad7",
+  "public_manifest_pins_passed": 12,
+  "decision_checks": [
+    {
+      "candidate_group_id": "CTHS_102838",
+      "cths_parent_notice_sha256": "77a5e9b758c6d2bfbb09350f7bdfe90f8a11793595994cf6399260c758cab841",
+      "cths_expanded_biography_sha256": "55590c3645f57dcb7b1d775ef808534e5df113ddec7d0637bd5abcb8cf7734d9",
+      "parent_notice": {
+        "path": "/workspace/scratch/7e8aa4e0d4af/academy_v13_workers/france_b/102838.html",
+        "bytes": 21862,
+        "sha256": "77a5e9b758c6d2bfbb09350f7bdfe90f8a11793595994cf6399260c758cab841",
+        "archive_path": "data/france_academy_cths_profile_dob_harvest_v1/cths_profile_source_html_sha256_bundle_v1.tar.gz",
+        "archive_sha256": "6258a366f69e120395450420fee8ae2587d586cb5db153937d1ef45267468811",
+        "archive_member": "source_html/77a5e9b758c6d2bfbb09350f7bdfe90f8a11793595994cf6399260c758cab841.html",
+        "archive_member_sha256": "77a5e9b758c6d2bfbb09350f7bdfe90f8a11793595994cf6399260c758cab841",
+        "actual_retained_parent_byte_equal_tracked_archive_member": true,
+        "archive_index_path": "data/france_academy_cths_profile_dob_harvest_v1/cths_dob_claims_all_targets_candidate_only_v1.csv",
+        "archive_index_sha256": "7308ff06f2a021dfd59970e307fb8190e6b17e6e05a3e83422375687f8b763a8",
+        "archive_index_row_number_including_header": 121,
+        "archive_index_selected_person_ID": "102838",
+        "archive_index_source_URL": "https://cths.fr/an/savant.php?id=102838",
+        "archive_index_source_hash_mapping_verified": true,
+        "historical_harvest_reported_result": "HTTP_200",
+        "actual_historical_HTTP_response_envelope_available": false,
+        "historical_HTTP_status_independently_known": false
+      },
+      "expanded_biography": {
+        "path": "/workspace/scratch/7e8aa4e0d4af/academy_v13_workers/france_b/raw_sources/cths_102838_expanded.html",
+        "bytes": 4145,
+        "sha256": "55590c3645f57dcb7b1d775ef808534e5df113ddec7d0637bd5abcb8cf7734d9",
+        "http_status": 200,
+        "retrieved_utc": "2026-11-01T07:57:06.798452+00:00",
+        "source_url": "https://cths.fr/library/getdata.php?q=proso_bio_detail&id=102838&dep=y"
+      },
+      "both_actual_original_components_rehashed_and_read": true,
+      "independent_parser": "stdlib HTMLParser node tree; scripts/styles excluded from substantive text",
+      "parent_exact_institutional_notice_credit_verified": "Institut de France",
+      "independently_parsed_parent_credited_authors": [
+        "Martine François",
+        "Institut de France",
+        "Bruno Delmas"
+      ],
+      "actual_observed_handler_exact_person_ID_verified": true,
+      "observed_handler": {
+        "target_element_id": "proso_bio_detail",
+        "literal_onclick_or_query": "javascript:ajax_data('proso_bio_detail', 'q=proso_bio_detail&id=102838&dep=y')",
+        "literal_query": "q=proso_bio_detail&id=102838&dep=y",
+        "routing_path_literal_from_actual_parent_JS": "../library/getdata.php?",
+        "resolved_url": "https://cths.fr/library/getdata.php?q=proso_bio_detail&id=102838&dep=y"
+      },
+      "parent_preview_career_and_fragment_close_ID_continuity_verified": true,
+      "normalized_preview_characters_compared": 452,
+      "fragment_has_own_heading_DOB_or_writer_block": false,
+      "identity_DOB_unchanged": true,
+      "source_independence_group_count": 1,
+      "same_HTTP_body_claimed": false,
+      "parent_historical_retrieved_utc": null,
+      "parent_historical_http_status": null,
+      "historical_capture_metadata_not_invented": true,
+      "independent_component_bundle_passed": true,
+      "ordinary_role_direct_start_passed": true,
+      "accepted_membership_start_year_verified": 1948,
+      "accepted_membership_start_date_verified": null,
+      "accepted_precision_verified": "year",
+      "independent_human_source_finding": "Named botanist subject has direct Paris science member event in 1948, separately from agriculture 1949 and overseas-sciences 1952. Parent interval agrees. Presidency and cited bibliography are not substituted.",
+      "production_component_eligibility": "Exact root-authorized source-pair supplemental contract verified; final acceptance still needs root and separate individual case approval",
+      "source_sha256s": [
+        "55590c3645f57dcb7b1d775ef808534e5df113ddec7d0637bd5abcb8cf7734d9",
+        "77a5e9b758c6d2bfbb09350f7bdfe90f8a11793595994cf6399260c758cab841"
+      ],
+      "archived_parent_provenance_passed": true,
+      "archive_sha256": "6258a366f69e120395450420fee8ae2587d586cb5db153937d1ef45267468811",
+      "archive_member": "source_html/77a5e9b758c6d2bfbb09350f7bdfe90f8a11793595994cf6399260c758cab841.html",
+      "archive_member_sha256": "77a5e9b758c6d2bfbb09350f7bdfe90f8a11793595994cf6399260c758cab841",
+      "archive_index_source_hash_mapping_verified": true,
+      "unknown_original_time_and_status_preserved": true,
+      "cths_archive_parent_method_contract_sha256": "20e8c721f08e8756e14cf058bdc718d9be7cec59959f2d3f2da3307708cdc7f7"
+    },
+    {
+      "candidate_group_id": "CTHS_102823",
+      "cths_parent_notice_sha256": "6e4414f9366ba916ba1cd51ee486a08b2e86c8e561a3552949d98d2d9f6b2d9c",
+      "cths_expanded_biography_sha256": "4da0bc1c0e836d7c953c83e8cdf7feb07e2d22fc1ece6ba4deff2cd08c52c2b5",
+      "parent_notice": {
+        "path": "/workspace/scratch/7e8aa4e0d4af/academy_v13_workers/france_b/102823.html",
+        "bytes": 22233,
+        "sha256": "6e4414f9366ba916ba1cd51ee486a08b2e86c8e561a3552949d98d2d9f6b2d9c",
+        "archive_path": "data/france_academy_cths_profile_dob_harvest_v1/cths_profile_source_html_sha256_bundle_v1.tar.gz",
+        "archive_sha256": "6258a366f69e120395450420fee8ae2587d586cb5db153937d1ef45267468811",
+        "archive_member": "source_html/6e4414f9366ba916ba1cd51ee486a08b2e86c8e561a3552949d98d2d9f6b2d9c.html",
+        "archive_member_sha256": "6e4414f9366ba916ba1cd51ee486a08b2e86c8e561a3552949d98d2d9f6b2d9c",
+        "actual_retained_parent_byte_equal_tracked_archive_member": true,
+        "archive_index_path": "data/france_academy_cths_profile_dob_harvest_v1/cths_dob_claims_all_targets_candidate_only_v1.csv",
+        "archive_index_sha256": "7308ff06f2a021dfd59970e307fb8190e6b17e6e05a3e83422375687f8b763a8",
+        "archive_index_row_number_including_header": 117,
+        "archive_index_selected_person_ID": "102823",
+        "archive_index_source_URL": "https://cths.fr/an/savant.php?id=102823",
+        "archive_index_source_hash_mapping_verified": true,
+        "historical_harvest_reported_result": "HTTP_200",
+        "actual_historical_HTTP_response_envelope_available": false,
+        "historical_HTTP_status_independently_known": false
+      },
+      "expanded_biography": {
+        "path": "/workspace/scratch/7e8aa4e0d4af/academy_v13_workers/france_b/raw_sources/cths_102823_expanded.html",
+        "bytes": 3230,
+        "sha256": "4da0bc1c0e836d7c953c83e8cdf7feb07e2d22fc1ece6ba4deff2cd08c52c2b5",
+        "http_status": 200,
+        "retrieved_utc": "2026-11-01T07:57:06.796817+00:00",
+        "source_url": "https://cths.fr/library/getdata.php?q=proso_bio_detail&id=102823&dep=y"
+      },
+      "both_actual_original_components_rehashed_and_read": true,
+      "independent_parser": "stdlib HTMLParser node tree; scripts/styles excluded from substantive text",
+      "parent_exact_institutional_notice_credit_verified": "Institut de France",
+      "independently_parsed_parent_credited_authors": [
+        "Martine François",
+        "Institut de France",
+        "Jean-François Hibon de Frohen"
+      ],
+      "actual_observed_handler_exact_person_ID_verified": true,
+      "observed_handler": {
+        "target_element_id": "proso_bio_detail",
+        "literal_onclick_or_query": "javascript:ajax_data('proso_bio_detail', 'q=proso_bio_detail&id=102823&dep=y')",
+        "literal_query": "q=proso_bio_detail&id=102823&dep=y",
+        "routing_path_literal_from_actual_parent_JS": "../library/getdata.php?",
+        "resolved_url": "https://cths.fr/library/getdata.php?q=proso_bio_detail&id=102823&dep=y"
+      },
+      "parent_preview_career_and_fragment_close_ID_continuity_verified": true,
+      "normalized_preview_characters_compared": 453,
+      "fragment_has_own_heading_DOB_or_writer_block": false,
+      "identity_DOB_unchanged": true,
+      "source_independence_group_count": 1,
+      "same_HTTP_body_claimed": false,
+      "parent_historical_retrieved_utc": null,
+      "parent_historical_http_status": null,
+      "historical_capture_metadata_not_invented": true,
+      "independent_component_bundle_passed": true,
+      "ordinary_role_direct_start_passed": false,
+      "membership_hold_endorsed": true,
+      "independent_human_source_finding": "Generic Institut affiliation and agriculture or Réunion roles do not type a Paris science member start; parent 1912 interval stays untyped.",
+      "career_publication_anomaly_preserved": "Parent doctoral career 1883 versus bibliographic thesis 1833 is recorded without correcting either. It is not a second DOB assertion against 1857-08-16.",
+      "source_sha256s": [
+        "4da0bc1c0e836d7c953c83e8cdf7feb07e2d22fc1ece6ba4deff2cd08c52c2b5",
+        "6e4414f9366ba916ba1cd51ee486a08b2e86c8e561a3552949d98d2d9f6b2d9c"
+      ]
+    },
+    {
+      "candidate_group_id": "CTHS_102836",
+      "source_sha256": "0809a4517db870df79bc808fc8f632fe87807f6da120d11d8ab57608881608f0",
+      "original_source": {
+        "path": "/workspace/scratch/7e8aa4e0d4af/academy_v13_workers/france_b/102836.html",
+        "bytes": 23835,
+        "sha256": "0809a4517db870df79bc808fc8f632fe87807f6da120d11d8ab57608881608f0",
+        "archive_path": "data/france_academy_cths_profile_dob_harvest_v1/cths_profile_source_html_sha256_bundle_v1.tar.gz",
+        "archive_sha256": "6258a366f69e120395450420fee8ae2587d586cb5db153937d1ef45267468811",
+        "archive_member": "source_html/0809a4517db870df79bc808fc8f632fe87807f6da120d11d8ab57608881608f0.html",
+        "archive_member_sha256": "0809a4517db870df79bc808fc8f632fe87807f6da120d11d8ab57608881608f0",
+        "actual_retained_parent_byte_equal_tracked_archive_member": true,
+        "archive_index_path": "data/france_academy_cths_profile_dob_harvest_v1/cths_dob_claims_all_targets_candidate_only_v1.csv",
+        "archive_index_sha256": "7308ff06f2a021dfd59970e307fb8190e6b17e6e05a3e83422375687f8b763a8",
+        "archive_index_row_number_including_header": 120,
+        "archive_index_selected_person_ID": "102836",
+        "archive_index_source_URL": "https://cths.fr/an/savant.php?id=102836",
+        "archive_index_source_hash_mapping_verified": true,
+        "historical_harvest_reported_result": "HTTP_200",
+        "actual_historical_HTTP_response_envelope_available": false,
+        "historical_HTTP_status_independently_known": false
+      },
+      "actual_body_rehashed_and_read": true,
+      "exact_institutional_notice_credit_present": false,
+      "independently_parsed_credited_authors": [
+        "Martine François",
+        "Gérard Joly",
+        "Michel Capot",
+        "Jean-François Hibon de Frohen"
+      ],
+      "membership_hold_endorsed": true,
+      "reason": "Own-member 1937 row cannot satisfy institutional-source-origin requirement because actual notice writer block credits only personal writers.",
+      "source_sha256s": [
+        "0809a4517db870df79bc808fc8f632fe87807f6da120d11d8ab57608881608f0"
+      ],
+      "ordinary_role_direct_start_passed": false,
+      "identity_DOB_unchanged": true
+    }
+  ],
+  "component_method_contract_sha256": "d6ba179064775003e9a556b3579c1570f7c4a64333bd0092d0895b21c95eef13",
+  "cths_archive_parent_method_contract_sha256": "20e8c721f08e8756e14cf058bdc718d9be7cec59959f2d3f2da3307708cdc7f7",
+  "reviewed_membership_positive_ids": [
+    "CTHS_102838"
+  ],
+  "reviewed_membership_hold_ids": [
+    "CTHS_102823",
+    "CTHS_102836"
+  ],
+  "separate_auditor_scope": {
+    "individual_identity_DOB_case_proposals": "v13_audit",
+    "PROFILE2_39000bb1e114bf0c_membership_RA1718_source_QA": "v13_audit",
+    "PROFILE2_738d6d5c74a7a874_CV_and_membership_hold": "v13_audit"
+  },
+  "strict_positive_component_source_checks_passed": 1,
+  "held_CTHS_memberships_reviewed": 2,
+  "actual_CTHS_original_source_hashes_checked": 5,
+  "parent_archived_and_fragment_fresh_provenance_disclosed": true,
+  "separate_HTTP_originals_one_human_notice_not_two_independent_sources": true,
+  "same_HTTP_body_flag_preserved_false": true,
+  "Costantin_1833_1883_anomaly_retained_without_typo_adjudication": true,
+  "root_approval_required_separately": true,
+  "new_requests_for_this_independent_QA": 0,
+  "data_edits_performed": 0,
+  "raw_bodies_redistributed": false,
+  "analysis_cohort_frozen": false,
+  "bazi_variables_computed": 0
+}

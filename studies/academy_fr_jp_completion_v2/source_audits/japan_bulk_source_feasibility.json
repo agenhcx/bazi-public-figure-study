@@ -1,0 +1,90 @@
+{
+  "checked_utc": "2026-10-29T12:07:43.100255+00:00",
+  "bounded_search_count": 3,
+  "search_limit": 3,
+  "individual_searches": 0,
+  "searches": [
+    {
+      "q": "日本学士院 会員 要覧 年報 生年月日 filetype:pdf",
+      "goal": "Public downloadable official academy roster/annual/yearbook with a DOB table"
+    },
+    {
+      "q": "東京大学 歴代 教授 履歴 生年月日 データベース",
+      "goal": "Public historical professor DOB source that can be matched only to remaining academy candidates"
+    },
+    {
+      "q": "東北大学 歴代 教授 生年月日 履歴 データベース",
+      "goal": "Public historical professor DOB bulk database"
+    }
+  ],
+  "verdict": "ONE_SMALL_INSTITUTIONAL_BULK_PAGE_FOUND_NO_NATIONAL_OR_WHOLE_UNIVERSITY_DOB_DATASET_VERIFIED",
+  "findings": [
+    {
+      "type": "confirmed_small_bulk_page",
+      "organization": "University of Tokyo Department of Pathology",
+      "url": "https://www.pathology.m.u-tokyo.ac.jp/chronology/professor/",
+      "title": "歴代教授",
+      "access": "Public HTML, one GET; no login or per-person retrieval required",
+      "format": "13 h5 professor sections followed by career tables; birth row explicitly states に生れ",
+      "source_sha256": "012b633dcc8399d93e12586a7cbc35aa90aba26070b534f5a93da616855e31a2",
+      "candidate_intersection_count": 6,
+      "interface": {
+        "method": "GET",
+        "url": "https://www.pathology.m.u-tokyo.ac.jp/chronology/professor/",
+        "parsing": "Split h5 professor headings; take the era plus four-digit-year date from the table row explicitly attached to に生れ; exact full Japanese name+pathology career links to existing academy member_key. Do not collect unmatched professor rows."
+      },
+      "two_required_verified_examples": [
+        {
+          "member_key": "jpa-unlinked-6ad6ce7b6bca883b",
+          "name_jp": "緒方 知三郎",
+          "raw_birth_statement": "明治16(1883)年1月31日",
+          "source_locator": "緒方 知三郎教授 / first table row explicitly ending に生れ",
+          "body_verified": true
+        },
+        {
+          "member_key": "jpa-unlinked-eb26c422cf5b4a6c",
+          "name_jp": "三田村 篤志郎",
+          "raw_birth_statement": "明治20(1887)年2月26日",
+          "source_locator": "三田村 篤志郎教授 / first table row explicitly ending に生れ",
+          "body_verified": true
+        }
+      ],
+      "completed_integration_inputs": "academy_completion_workers/japan_utokyo_pathology/{claims.json,processed.csv,summary.json}",
+      "calendar_caveat": "Two pre1873 rows remain old-era calendar holds; four later rows retain exact source day components without date padding. Yamagiwa raw day conflict retained."
+    },
+    {
+      "type": "bibliographic_lead_only_not_bulk_ready",
+      "organization": "Japan Academy / CiNii Books",
+      "url": "https://ci.nii.ac.jp/ncid/BB06030912",
+      "title": "日本学士院会員名簿",
+      "evidence": "Public bibliographic record lists Japan Academy printed membership directories since1952, with library holdings in later years. It does not display a DOB table or public full-text download.",
+      "birth_fields_verified": false,
+      "public_fulltext_verified": false,
+      "action": "Park this route; no request to libraries or further scans made."
+    },
+    {
+      "type": "restricted_archival_series_not_bulk_ready",
+      "organization": "University of Tokyo Archives",
+      "url": "https://da.dl.itc.u-tokyo.ac.jp/portal/assets/68b4e05c-5d52-4703-b5d3-644e53f8e7e5",
+      "title": "〔教員個人履歴カード〕（教授・助教授：追加作成分）",
+      "evidence": "Public catalog says578 individual cards and digital data exist, but usage condition explicitly 要審査. Metadata export is not the card-level birth data.",
+      "public_dob_table_verified": false,
+      "action": "Park; did not request review, access restricted data, or treat metadata as DOB records."
+    },
+    {
+      "type": "catalog_only_no_histprof_DOB_schema_verified",
+      "organization": "Tohoku University",
+      "url": "https://www.tohoku.ac.jp/japanese/disclosure/database/",
+      "title": "公開データベース",
+      "evidence": "Official page links research profiles, repository and digital archive collections; no whole-university historical professor birth-date table or downloadable birth-date dataset was verified in this bounded round.",
+      "public_dob_table_verified": false,
+      "action": "Stop after bounded broad search; no per-person expansion."
+    }
+  ],
+  "negative_scope": "No claim that an unlocated national roster or all other public institution sources do not exist. This is the result of exactly3 bounded broad searches and body checks. Already-completed Kyoto/NDL paths were not repeated.",
+  "professor_control_collection_resumed": false,
+  "national_dob_roster_completed": false,
+  "new_final_cohort_accepted": 0,
+  "bazi_computed": 0,
+  "next_action": "Integrate the six already-created academy-only UTokyo pathology claims, retaining known old-calendar/raw-source holds; stop this round of source acquisition."
+}

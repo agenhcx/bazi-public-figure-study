@@ -1,0 +1,116 @@
+{
+  "NAS_record": {
+    "canonical_row_sha256": "c56772c02fa3e3c230678a79bcdf8a19eb01fc242e3a3c3719d4e7d6717b56fe",
+    "cohort": "NAS",
+    "hemisphere_before": "unknown",
+    "hemisphere_recommendation": "unknown",
+    "name": "Carl D. Anderson",
+    "native_dob": "1905-09-03",
+    "raw_birthplace": "New York City",
+    "record_id": "https://www.nasonline.org/directory-entry/carl-d-anderson-qydvwd/",
+    "source_grade": "S2",
+    "source_identity_anchors": {
+      "Nobel_anchor_from_same_saved_memoir": {
+        "short_locator": "paragraph beginning In 1936, when he was awarded the Nobel Prize",
+        "source_text_file": "academy_v4_workers/vol73/raw/chapter_03.txt",
+        "source_text_file_sha256": "5b99ae1b95f2f256d49699673b846254c15e7a7756c883aca6ae0906716a28e9",
+        "year": 1936
+      },
+      "expanded_source_heading": "Carl David Anderson",
+      "individual_NAS_election": 1938,
+      "signed_memoir_author": "William H. Pickering",
+      "source_heading_exact_DOB": "1905-09-03"
+    },
+    "source_sha256": "7f653c8fe333a5e04e557510fd75a45cc4ae23f9d7ca07e3ff9e722841a69f44",
+    "source_url": "https://www.nationalacademies.org/read/9650/chapter/3 | https://www.nationalacademies.org/read/9650"
+  },
+  "Nobel_candidate_record": {
+    "available_independent_anchors": [
+      "exact compatible abbreviated name Carl D. Anderson",
+      "official frozen laureate ID 43",
+      "physics-category scope in official API source URL"
+    ],
+    "canonical_row_sha256": "d82a138a5ac560ed6460fb4d0cf1e2a4e5acaa6ae581b7a9cc74a782a647af9b",
+    "cited_original_source_sha256": "633002ff83120f9408d630209b24ebab7d1f3f1e999cf5bb51638ebb8976075e",
+    "cohort": "Nobel_science",
+    "existing_country_and_coordinates_not_adopted": true,
+    "existing_hemisphere": "north",
+    "missing_independent_identity_anchors": [
+      "full-name expansion from the Nobel source",
+      "prize year and motivation in the retained Nobel row",
+      "source birth date usable solely as an identity consistency check"
+    ],
+    "name": "Carl D. Anderson",
+    "native_dob": "",
+    "native_fields_retained": {
+      "baseline_identification_status": "reconstructed_1901_2025_science_award_ID_scope_minus_three_frozen_pending_IDS; original_final_row_ID_set_not_hash_verified",
+      "dob": "",
+      "dob_note": "canonical_final_DOB_table_not_recovered; current_API_date_not_adopted",
+      "dob_or_native_acceptance_modified": false,
+      "dob_or_original_acceptance_modified": false,
+      "final_analysis_eligibility_assigned": false
+    },
+    "original_Nobel_API_response_available_in_current_checked_materials": false,
+    "original_source_search_scope": [
+      "visible current checkout files",
+      "visible workspace named Nobel/API/laureate/source files"
+    ],
+    "raw_birthplace": "New York, NY, USA",
+    "record_id": "43",
+    "same_exact_display_name_among_frozen_Nobel_records": 1,
+    "source_grade": "S1",
+    "source_locator": "laureates[id=43].birth.place",
+    "source_url": "https://api.nobelprize.org/2.1/laureates?nobelPrizeCategory=phy&limit=1000&offset=0&sort=asc&format=json"
+  },
+  "changes_performed": {
+    "DOB_calendar_eligibility_flags": 0,
+    "birthpoint_coordinate_assignments": 0,
+    "country_assignments": 0,
+    "master_file_modified": false,
+    "native_fields": 0,
+    "person_QIDs": 0,
+    "statistical_cross_cohort_deduplication": false,
+    "unique_place_entity_assignments": 0
+  },
+  "decision": "hold_NAS_hemisphere_unknown_pending_independent_same_person_source_anchors; retained Nobel S1 qualified birthplace is a source-corroboration candidate only",
+  "frozen": true,
+  "master_input": {
+    "cohort_record_count": 11094,
+    "path": "uk_birthplace_checkout/studies/scientist_birthplace_completion_v4/outputs/birthplace_rows.jsonl.gz",
+    "sha256": "abbce4e99ad51252dd5e127a0609bc6c4950c121afa2dd126bfc2187b39cd4e8"
+  },
+  "new_queries": 0,
+  "offline_only": true,
+  "preserved_v4_query_uncertainty": {
+    "hotel_cached_P17": "United States only; no all-northern region qualifier",
+    "physical_homonyms": [
+      "Q60 city northern coordinate",
+      "Q127430833 mint northern coordinate",
+      "Q39319400 hotel coordinate missing"
+    ],
+    "prior_query_result_still_held": true,
+    "query_not_retried": true,
+    "query_original_JSON_sha256": "4153c960cb3710ad452d5dcbd74b3e8a2236898bb6b3658e7ae3da6b6837c38a",
+    "query_response_file": "uk_birthplace_checkout/studies/scientist_birthplace_completion_v4/audit/geography/exact_place_query_response.json.gz",
+    "query_response_gzip_sha256": "e71ea490bef41db466a03ac907a441b4bc483cff5d352ac971d1b54156e772db"
+  },
+  "prior_NYC_Colorado_query_rerun": false,
+  "schema": "scientist_birthplace_completion_v5_offline_cross_cohort_Anderson_review",
+  "source_corroboration_candidate": {
+    "conditional_hemisphere": "north",
+    "geographic_basis_if_same_person_independently_verified": "explicit NY state qualifier is wholly north; no city point or US-wide assumption required",
+    "integration_status": "not_applied; candidate for root review only",
+    "place_has_explicit_state_qualifier": true,
+    "raw_birthplace": "New York, NY, USA",
+    "same_person_identity_status": "plausible_candidate_not_independently_verified_to_requested_name_prize_identity_standard"
+  },
+  "verification": {
+    "NAS_and_Nobel_native_fields_unchanged": true,
+    "NAS_and_Nobel_rows_each_unique_in_native_cohort": true,
+    "NAS_memoir_source_original_bytes_SHA_matches": true,
+    "hotel_missing_coordinate_preserved": true,
+    "master_SHA_matches": true,
+    "no_new_network_or_git_operations": true,
+    "prior_query_original_response_SHA_matches": true
+  }
+}

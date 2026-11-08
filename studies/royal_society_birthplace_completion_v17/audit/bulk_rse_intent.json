@@ -1,0 +1,37 @@
+{
+  "written_utc": "2026-11-05T00:21:19.703993+00:00",
+  "initial_queries": [
+    "Royal Society of Edinburgh former fellows biographical index 2006 Waterston Macmillan Shearer PDF",
+    "site:rse.org.uk biographical index former fellows 1783 2002 pdf"
+  ],
+  "limits": {
+    "queries": 4,
+    "original_navigation": 6
+  },
+  "source_policy": "Original RSE institutional source; no retry after403/429; no fullsource redistribution, <=25distinct quoted English words wholeindex.",
+  "planned_original_opens": {
+    "written_utc": "2026-11-05T00:21:31.481253+00:00",
+    "urls": [
+      "https://rse.org.uk/fellowship/past-fellows/",
+      "https://rse.org.uk/wp-content/uploads/2021/07/RSE-Fellows-BiographicalIndex-1.pdf",
+      "https://rse.org.uk/wp-content/uploads/2024/06/RSE-Fellows-BiographicalIndex-2.pdf"
+    ]
+  },
+  "planned_bulk_byte_acquisition": {
+    "written_utc": "2026-11-05T00:22:11.967997+00:00",
+    "urls": [
+      "https://rse.org.uk/wp-content/uploads/2021/07/RSE-Fellows-BiographicalIndex-1.pdf",
+      "https://rse.org.uk/wp-content/uploads/2021/07/RSE-Fellows-BiographicalIndex-2.pdf"
+    ],
+    "reason": "Both PDF bodies are web-tool accessible but only selected windows returned; local complete-text159-target bulk scan requires original byte acquisition. This is a documented plan interpretation, not a claim original body was inaccessible.",
+    "max_bytes_per_PDF": 16777216,
+    "timeout_seconds": 30,
+    "retries": 0
+  },
+  "planned_authoritative_metadata_verification": {
+    "written_utc": "2026-11-05T00:28:04.215998+00:00",
+    "engine": "system1",
+    "query": "site:rse.org.uk/fellowship/past-fellows/ \"Waterston\" \"Shearer\"",
+    "purpose": "Verify original institutional publisher/compiler metadata; not a PDF request retry."
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "written_utc": "2026-11-05T14:04:06.434686+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA4636",
+    "RS_PAST_NA4124",
+    "RS_CURRENT_11792",
+    "RS_CURRENT_37377"
+  ],
+  "initial_queries": [
+    "Bernard Ephraim Julius Pagel born obituary astronomy",
+    "David John Finney born obituary Edinburgh",
+    "Steffen Lauritzen curriculum vitae born Oxford",
+    "Xiaodong Chen born NTU materials scientist"
+  ],
+  "limits": {
+    "queries": 6,
+    "original_navigations": 8
+  },
+  "purpose": "New original subject birthplace observations only; no native field/Git changes. Full native components required; current names bind stored name. No 403/429/timeout retry; unknown raw HTTP metadata null. Source quotations <=25 English words per work.",
+  "first_open_plan": {
+    "written_utc": "2026-11-05T14:04:28.704605+00:00",
+    "urls": [
+      "https://assets.cambridge.org/97805218/40309/frontmatter/9780521840309_frontmatter.pdf",
+      "https://web.math.ku.dk/~lauritzen/cv.html",
+      "https://onlinelibrary.wiley.com/doi/10.1002/anie.201811655",
+      "https://www.rcpe.ac.uk/heritage/oral-history-interviews/david-john-finney"
+    ]
+  },
+  "adaptive_query_plan": {
+    "written_utc": "2026-11-05T14:05:05.868821+00:00",
+    "queries": [
+      "\"David John Finney\" born obituary Royal Society Edinburgh",
+      "陈晓东 \"出生\" 南洋理工"
+    ]
+  },
+  "next_open_plan": {
+    "written_utc": "2026-11-05T14:05:05.868869+00:00",
+    "urls": [
+      "https://www.ae-info.org/ae/User/Lauritzen_Steffen"
+    ]
+  },
+  "final_open_plan": {
+    "written_utc": "2026-11-05T14:05:37.859714+00:00",
+    "actions": [
+      {
+        "open": "https://imstat.org/2020/03/31/obituary-david-john-finney-1917-2018/"
+      },
+      {
+        "click_ref": "turn3834354view0",
+        "link_id": 130
+      },
+      {
+        "open": "https://www3.ntu.edu.sg/home/CHENXD/PI.html"
+      }
+    ],
+    "stop_after": "Navigation budget8 and querybudget6 reached; no further sourcequeries/opens."
+  }
+}

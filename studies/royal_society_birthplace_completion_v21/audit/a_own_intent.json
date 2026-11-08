@@ -1,0 +1,68 @@
+{
+  "schema": "v21-a-own-intent-v1",
+  "written_utc": "2026-11-05T23:29:54.631078+00:00",
+  "scope": [
+    "RS_PAST_NA4076",
+    "RS_PAST_NA4834"
+  ],
+  "budgets": {
+    "discovery_queries": 3,
+    "navigation_attempts": 4
+  },
+  "planned_queries": [
+    {
+      "q": "\"Albert Alan Townsend\" \"born\"",
+      "purpose": "Find original biography born relation and identity."
+    },
+    {
+      "q": "\"Michael Derek Waterfield\" \"born\"",
+      "purpose": "Find original biography born relation and identity."
+    }
+  ],
+  "adaptive_operations": [
+    {
+      "written_utc": "2026-11-05T23:30:06.035436+00:00",
+      "opens": [
+        {
+          "url": "https://www.asbmb.org/asbmb-today/people/050624/in-memoriam-michael-waterfield",
+          "record_id": "RS_PAST_NA4834",
+          "purpose": "Original signed society obituary candidate born clause, exactDOB and professional identity."
+        },
+        {
+          "url": "https://www.asap.unimelb.edu.au/bsparcs/physics/P001827p.htm",
+          "record_id": "RS_PAST_NA4076",
+          "purpose": "Original linked Physics in Australia biographical entry; seek explicitbornplace rather than education context."
+        }
+      ]
+    },
+    {
+      "written_utc": "2026-11-05T23:30:15.545987+00:00",
+      "query": {
+        "q": "\"Alan Townsend\" \"born\" \"Melbourne\" memoir",
+        "purpose": "Melbourne-onlydiscoverylead notproof. Seek originalcollege/memoir explicitbirthbody after priorPhysicsentry hadDOBbutnoBP."
+      }
+    },
+    {
+      "written_utc": "2026-11-05T23:30:31.382485+00:00",
+      "opens": [
+        {
+          "url": "https://www.cambridge.org/core/books/voyage-through-turbulence/aa-townsend/33EBAD36028186677507F3177B624121",
+          "record_id": "RS_PAST_NA4076",
+          "purpose": "Originalpublisher chapterSummary candidate explicitbirth relation fullidentity and attribution/publicationmetadata."
+        }
+      ]
+    },
+    {
+      "written_utc": "2026-11-05T23:31:43.927106+00:00",
+      "opens": [
+        {
+          "url": "https://www.kings.cam.ac.uk/sites/default/files/documents/kings-annual-report-2020-web18082021-1-1.pdf",
+          "record_id": "RS_PAST_NA4585",
+          "purpose": "Use remainingA-navigationbudget on distinct originalcollegeannualreport chapter discoveredbychildfinalquery; not retryOxfordfailedroutes. CandidatefullPeterBryanConrad+Cambridgebornpassage."
+        }
+      ],
+      "budget_note": "Child3queries4nav+own3queries3nav; this finalsharedA nav8. No more queries or navigations."
+    }
+  ],
+  "limits": "No rawGET/retries; record adaptive intent before requests. Preserve nativeDOB/allfields."
+}

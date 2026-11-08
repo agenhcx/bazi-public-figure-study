@@ -1,0 +1,37 @@
+{
+  "audit_kind": "final_source_origin_and_ring_QA_bindings",
+  "date": "2026-10-30",
+  "lanes": [
+    {
+      "lane": "a",
+      "decisions_sha256": "69fa05de812b71e3ccb7f8ec2fe70534e1f7e887765d74b8dbebf722e5ddebe8",
+      "worker_manifest_sha256": "2464dc8b6ed73cd1c887ca372aba50c8a540861b17e75344fd53da64738e0601",
+      "independent_qa_sha256": "719cc99fde555258bb8c9195100b4326c6123b5f5585cd7645a603e884a4a821"
+    },
+    {
+      "lane": "b",
+      "decisions_sha256": "8798f98ac72438c3e81911fdd370f6d0435808ff13162e15e90e4c9fd9e89c68",
+      "worker_manifest_sha256": "4df99feaa9169da142ef25af227265706d833e413214eb3074508fd4334d2f9b",
+      "independent_qa_sha256": "daf16eb02e8862ad1ce00740ef0e8ac51f840d28444d938e4fe61e66d86f7ca6"
+    },
+    {
+      "lane": "c",
+      "decisions_sha256": "9b106d754ed5a61317ffe9141c0643a09d2239a8b45e0f5d9417ccd48d5dcfa4",
+      "worker_manifest_sha256": "45d921d2c4b5c5cfb8d584ccf4ce5654910e6ad5dcabf0c4a05902264251cb37",
+      "independent_qa_sha256": "7f384208c2ee3b202571298498cba3b5abb8c9b9679140f562b166a2d497aa3c"
+    }
+  ],
+  "supplementary_reparse_file": "source_audits/france_positive_independent_reparse.json",
+  "supplementary_reparse_sha256": "2ae16718b17c400ad54775c4ba46e66464f3b54bd3a2283b16839f55a2e0d343",
+  "positive_actual_bodies": 196,
+  "fixed_batch_direct_URL_attempts": 307,
+  "successful_HTML_bodies": 306,
+  "failed_HTTP500_responses": 1,
+  "fixed_batch_new_person_search_queries": 0,
+  "separate_role_controls_counted_in_own_metadata": true,
+  "exact_institution_credit_not_host_domain": true,
+  "independent_source_votes_not_inferred_from_coauthors": true,
+  "all_identity_and_DOB_fields_preserved": true,
+  "analysis_cohort_frozen": false,
+  "bazi_variables_computed": 0
+}

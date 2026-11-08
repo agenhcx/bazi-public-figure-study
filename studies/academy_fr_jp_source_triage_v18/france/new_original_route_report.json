@@ -1,0 +1,83 @@
+{
+  "schema": "v18_bounded_france_new_original_route_check",
+  "baseline_commit": "a392edba4c34be218670261083d3b1efaf1bd6a5",
+  "canonical_data_study": "studies/academy_fr_jp_completion_v15",
+  "completed_utc": "2026-11-01T10:33:30.682337+00:00",
+  "search_queries": [
+    {
+      "engine": "system1",
+      "literal": "site:gallica.bnf.fr \"Annuaire de l’Institut de France\" \"1950\""
+    },
+    {
+      "engine": "system1",
+      "literal": "site:gallica.bnf.fr \"Annuaire\" \"Institut de France\" \"élection\" \"sciences\""
+    }
+  ],
+  "query_outcome": "No new annuaire or elected-member/start table found. Scientific-press collection result points to an already tracked Comptes Rendus source family, not a new corpus.",
+  "prior_coverage": {
+    "v9_bulk_route_audit": "studies/academy_fr_jp_completion_v9/source_audits/france_bulk_route_audit.json",
+    "v9_bulk_route_audit_sha256": "ed1531503d818165dd3f6fa921d2bca9fdfc319551b905e1290893b459e29699",
+    "prior_Gallica1994_403_not_retried": true,
+    "blocked_Leridon_and_five_closed_legacy_links_not_retried": true,
+    "existing_211_volume_inventory": "data/france_academy_comptes_rendus_211_volume_inventory_v1/academy_original_wikisource_211_volume_inventory_v1.csv",
+    "existing_211_volume_inventory_sha256": "ac77e4ded7c0864b7ab54a1e4cfb506f1c4ae8529687941cd8b2b6b99c85e465"
+  },
+  "actual_local_reopenings": {
+    "archive_path": "data/france_academy_shard06_source_snapshot_v1/source_cache_v1.tar.gz",
+    "archive_sha256": "065c1810470588f5f12ed7c420b5117c5878ca21fa2f49799041d29df800e322",
+    "members": [
+      {
+        "name": "table_173_1921.html",
+        "sha256": "d5708785ef51b560c486195f58db988ab7abc32d80429f5a19c10d9442b09178",
+        "read_scope": "The governing elections heading and own Marcel Brillouin section-member entry pointing to printed962; this remains a Wikisource index transcription, not the original scan."
+      },
+      {
+        "name": "official_journal_archive.html",
+        "sha256": "254a0f290f2d2bd360391f0ca59171e6944bb33873fdd55fb251827d60a30ef8",
+        "read_scope": "Actual1921 list row binds t.CLXXIII to the literal BHL item31144 href."
+      }
+    ]
+  },
+  "bounded_Brillouin_original_check": {
+    "candidate_group_id": "CTHS_111847",
+    "subject": "Marcel Brillouin",
+    "exact_officially_declared_item_URL": "https://www.biodiversitylibrary.org/item/31144",
+    "expected_original_publication": "Comptes rendus hebdomadaires des séances de l’Académie des sciences, tome173,1921",
+    "not_a_newly_discovered_corpus": true,
+    "new_attempt_at_previously_unread_original": true,
+    "root_budget": "One item GET plus at most two actually declared page/image resources; stop on403 or missing direct declarations; no Wikisource fallback.",
+    "receipt_file": "bhl_item_receipt.json",
+    "receipt_sha256": "6cd8d0b51f29e6583bf8d9979e1f5a20a9d998759c7d4456550bc4be01eaff62",
+    "actual_http_status": 403,
+    "actual_response_sha256": "03d7544fe6bd451d8feac05818654ceed72037102cd054689423661d06eb93c0",
+    "actual_response_bytes": 5991,
+    "actual_visible_body_reading": "Just a moment; JavaScript/cookie challenge only. No journal body, page map or declared scan link read.",
+    "substantive_journal_body_recovered": false,
+    "target_printed962_original_read": false,
+    "unused_followup_GET_budget": 2,
+    "retries": 0,
+    "fallbacks_or_guessed_URLs": 0,
+    "stop_disposition": "parked_after_actual_403_challenge_no_membership_event_selected"
+  },
+  "six_leads_file": "six_unapplied_original_scan_leads.json",
+  "six_leads_sha256": "6cdc6bccfe307ba5f1ecb1344aae73505bb22fdd7c3dfa4524822e3ec4af8617",
+  "other5_leads_only_existing_transcribed_metadata_read": true,
+  "activity": {
+    "search_queries": 2,
+    "direct_HTTP_GETs": 1,
+    "redirects": 0,
+    "retries": 0,
+    "original_election_scan_pages_read": 0,
+    "new_approvals": 0,
+    "new_DOB_claims": 0,
+    "repo_edits": 0,
+    "Japan_activity": 0
+  },
+  "limits": [
+    "No publication year or plaintext printed-page number becomes an accepted election year/date.",
+    "Six source leads remain unapplied and are not six successful original person reviews.",
+    "The actual BHL item challenge is not a claim that all BHL or public sources fail.",
+    "No source-control bypass, source-gate relaxation, birthday repair or lifetime membership exclusion."
+  ],
+  "next_step": "Stop this bounded check. Reopen only if a substantive, attributable original becomes newly accessible; avoid another repeated zero-gain legacy route pipeline."
+}

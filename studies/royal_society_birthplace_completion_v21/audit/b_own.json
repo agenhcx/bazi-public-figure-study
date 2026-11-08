@@ -1,0 +1,168 @@
+{
+  "written_utc": "2026-11-05T23:31:59.646791+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA5885",
+    "RS_PAST_NA9858"
+  ],
+  "counts": {
+    "discovery_queries": 3,
+    "navigation_attempts": 3,
+    "raw_GETs": 0,
+    "finds": 0,
+    "screenshots": 0
+  },
+  "candidates": [
+    {
+      "record_id": "RS_PAST_NA5885",
+      "native": {
+        "record_id": "RS_PAST_NA5885",
+        "authority_name": "Pickett; George Richard (1939 - 2024); physicist",
+        "native_dob": "1939-04-10",
+        "prior_raw_birthplace": "",
+        "prior_hemisphere": "unknown",
+        "full_target_object_canonical_sha256": "008476c07cef0840bf380f1cf242ee8e5c13168cfc792aa82e1b3a8b2fa182fc"
+      },
+      "status": "candidate_original_explicit_birthplace_conservative_S3_pending_parent_genre_adjudication",
+      "raw_birthplace": "Biddenham, Bedfordshire",
+      "source_url": "https://www.theguardian.com/science/2024/aug/30/george-pickett-obituary",
+      "source_title": "George Pickett obituary",
+      "source_author": "Mick O'Hare",
+      "source_kind": "original_signed_edited_newspaper_obituary",
+      "source_grade_proposal": "S3",
+      "source_grade_basis": "Signed original edited obituary with acquired byline; acquired page does not establish writer as subject professional colleague. ConservativeS3 proposal rather than silently extending v20 signed-expert-colleague newspaperS2 admission or grading from host. Parent may separately adjudicate the genre.",
+      "source_grade_role": "person_birthplace_support_only",
+      "source_quote": "Pickett was born in Biddenham, Bedfordshire",
+      "source_quote_word_count": 6,
+      "source_locator": "turn8498563view0: bylineL65; publication/versionL67; explicit birth clauseL83; FRS1997/SimonPrizeL84; full George Richard Pickett, exactDOB and deathL88.",
+      "source_webrefs": [
+        "turn8498563view0"
+      ],
+      "source_birthdate": "1939-04-10",
+      "source_birthdate_precision": "day_in_subject_vital_dates",
+      "source_DOB_matches_native": true,
+      "source_death_date": "2024-07-21",
+      "source_lifespan_compatible_with_native": true,
+      "publication_date": "2024-08-30",
+      "last_modified_date": "2025-04-02",
+      "identity_review": [
+        "All native name components George Richard Pickett explicitly appear at originalL88, with exact10April1939 and compatible2024death.",
+        "Lancaster1970appointment, low-temperaturephysics1988chair/ultra-low-temperaturelaboratory, FRS1997 and SimonPrize1998 provide distinctive same-person professional anchors.",
+        "No nickname/initial expansion, native DOB repair or death-endpoint exception needed."
+      ],
+      "geographic_basis": "Birth clause explicitly supplies Bedfordshire as whole-region qualifier for Biddenham. Under existing wholly-northern region rule this can supportNorth; no personal country/entity/coordinate assignment. Parent geographic review required.",
+      "reviewed_hemisphere_proposal": "north",
+      "geography_assignment_performed": false,
+      "discovery_variant_caveat": "Unopened Times discovery projection says Bedford rather than Biddenham. It is not bodyverified or adopted as a separate original observation; no alternative birthplace/civil-record verdict made. Both returned names are retained only as source-lead context, not merged or geocoded.",
+      "caveats": [
+        "Original Guardian acquired body supports the factual candidate; source genre grade remains parent decision.",
+        "No author expertise/colleague relationship was acquired; author byline alone does not establish those roles.",
+        "No fulloriginalHTML/PDF/image/rawbytes redistributed; only six-word birth excerpt.",
+        "No raw HTTP status/time/hash known."
+      ],
+      "retrieval_representation": "web-tool parsed original HTML, not raw HTTP bytes",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "no_master_change": true
+    }
+  ],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA9858",
+      "native": {
+        "record_id": "RS_PAST_NA9858",
+        "authority_name": "O'Brien; Paul (1954 - 2018)",
+        "native_dob": "1954-01-22",
+        "prior_raw_birthplace": "",
+        "prior_hemisphere": "unknown",
+        "full_target_object_canonical_sha256": "f81f674b162c1a4bc6defafa8fee793c0fd39a167887b050726293af559ddfa5"
+      },
+      "status": "hold_original_birthplace_body_unavailable",
+      "hold_type": "original_birthplace_body_unavailable",
+      "reason": "Original LSW AGM collection PDF could not be acquired due tool content-length limit. Distinct original authored Catlow obituary discovered in PMC, but direct PMCopen returned a reCAPTCHA/browser-check shell, not the obituary body. Both routes stopped. Oldham,Lancashire remains search-only; sourceDOBprecision not acquired and no birthday/place/grade/geography adopted.",
+      "sources": [
+        {
+          "url": "https://www.learnedsociety.wales/wp-content/uploads/2019/05/AGM-2019-All-papers.pdf",
+          "ref": "turn8498563view1",
+          "source_kind": "original scientific-society meeting papers, body unavailable",
+          "tool_result": "Failed to fetch: (400) Content length is too large:15362389",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "birthplace_relation_body_verified": false
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6364596/",
+          "ref": "turn5142654view0",
+          "source_title_from_discovery": "Obituary: Professor Paul O'Brien",
+          "source_author_from_discovery": "Richard Catlow",
+          "publication_from_discovery": "Proceedings of the Royal Society A, issue2019Jan",
+          "source_kind": "original RoyalSociety obituary carried in PMC; actual open only browsercheck/reCAPTCHA",
+          "tool_result": "Parsed3-line Checking your browser - reCAPTCHA shell; no obituary body",
+          "birthplace_relation_body_verified": false,
+          "source_DOB_precision_acquired": null,
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null
+        }
+      ],
+      "unverified_discovery_birthplace_lead": "Oldham, Lancashire",
+      "unverified_discovery_ref": "turn2411984search0",
+      "no_master_change": true,
+      "geography_assignment_performed": false,
+      "retrieval_representation": "tool-parsed original route results; no raw HTTP/PDF bytes",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    }
+  ],
+  "query_ledger": [
+    {
+      "q": "\"George Richard Pickett\" obituary born",
+      "ref": "turn6109440search0",
+      "intent_file": "v21_b_intent.json"
+    },
+    {
+      "q": "\"Paul O'Brien\" \"1954\" \"born\" Manchester obituary",
+      "refs": [
+        "turn6109440search6",
+        "turn6109440search7",
+        "turn6109440search8"
+      ],
+      "intent_file": "v21_b_intent.json"
+    },
+    {
+      "q": "\"Paul O'Brien\" obituary \"born\" Oldham",
+      "refs": [
+        "turn2411984search0",
+        "turn2411984search4"
+      ],
+      "intent_file": "v21_b_intent.json"
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "url": "https://www.theguardian.com/science/2024/aug/30/george-pickett-obituary",
+      "ref": "turn8498563view0",
+      "outcome": "original_obituary_body_acquired",
+      "intent_recorded_before": true
+    },
+    {
+      "url": "https://www.learnedsociety.wales/wp-content/uploads/2019/05/AGM-2019-All-papers.pdf",
+      "ref": "turn8498563view1",
+      "outcome": "tool_content_length_limit_no_body",
+      "intent_recorded_before": true,
+      "no_retry": true
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6364596/",
+      "ref": "turn5142654view0",
+      "outcome": "reCAPTCHA_browsercheck_shell_no_obituary_body",
+      "intent_recorded_before": true,
+      "no_retry_or_bypass": true
+    }
+  ],
+  "intent_file": "v21_b_intent.json",
+  "protocol_deviations": [],
+  "limits": "No raw GET/find/screenshot. One own navigation remained unused. No original cached fulltext/images or allsourceprojection redistributed."
+}

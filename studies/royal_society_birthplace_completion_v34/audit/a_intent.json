@@ -1,0 +1,120 @@
+{
+  "written_before_requests_utc": "2026-11-06T23:10:28.150795+00:00",
+  "scope": [
+    "RS_PAST_NA3474",
+    "RS_PAST_NA4568",
+    "RS_PAST_NA5494",
+    "RS_PAST_NA6231"
+  ],
+  "phase": "geography_only",
+  "baseline_commit": "433064a032cf85a26c81959621df4240c9d02190",
+  "prior_context_review": {
+    "full_scope_records_read_before_queries": true,
+    "targetedcurrentv33historicalaudit_read": true,
+    "additional_targetedoriginal_v13_v16_v23_v24_source_entries_read": true,
+    "original_BP_sources": {
+      "RS_PAST_NA3474": [
+        "https://www.the-independent.com/news/people/obituary-professor-bryan-coles-1273472.html"
+      ],
+      "RS_PAST_NA4568": [
+        "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/579372118"
+      ],
+      "RS_PAST_NA5494": [
+        "https://heritagesearch.oxfordshire.gov.uk/image_collections/other/church"
+      ],
+      "RS_PAST_NA6231": [
+        "https://doi.org/10.1098/rsbm.1971.0030"
+      ]
+    },
+    "closed_or_previously_inspected_works": [
+      "ColesDavidEdwardsIndependent1997full/exactnative/Cardiffonly andJeremyClarkeFelix1997yearonlyCardiff alreadyread; authorDavidEdwardslink404closed; no reopening",
+      "Colesagecontrast71versusprimaryarithmetic70retainednotalternateDOB/no clearance",
+      "MackintoshADickinsonODNB2019fullnative-longname/exact1935-07-09/hospitalIslingtonLondononly alreadyacquired; CorpusChristiPelican2015signedBakerMurphymemoir exactDOB/Londononlyalreadyacquired; Cambridgepsychometricsprofile403closed/noretryvariants",
+      "ChurchOxfordshireheritageoriginalfull/year1865/Plymouthonly sourceworkeractual/rootlater403closed; no reopening or alternatecarrier",
+      "Whiddington1971RSmemoirabstract full/exact1885-11-25/Londononly andFeatherrevisedFalconerODNBextract Londononly previouslyacquired; no reopening"
+    ],
+    "other_historical_DOB_or_place_holds_found": false,
+    "sidecars": "All9DOBobjects/eightotherissuefilesfrozen; globalinventoriesnotexhaustive. Anynewactualcontradictionblocked, no yearonly/countrybypass."
+  },
+  "initial_queries": [
+    {
+      "record_id": "RS_PAST_NA3474",
+      "q": "\"Bryan Randell Coles\" \"Cardiff\" \"Wales\""
+    },
+    {
+      "record_id": "RS_PAST_NA4568",
+      "q": "\"Nicholas John Mackintosh\" \"born\" \"England\""
+    },
+    {
+      "record_id": "RS_PAST_NA5494",
+      "q": "\"Arthur Harry Church\" \"Plymouth\" \"Devon\""
+    },
+    {
+      "record_id": "RS_PAST_NA6231",
+      "q": "\"Richard Whiddington\" \"born\" \"England\""
+    }
+  ],
+  "budgets": {
+    "queries": 8,
+    "opens": 10,
+    "cached_finds": "separateledger"
+  },
+  "pre_request_guard": "Write/validateintent in separate toolcall; requireobservedexit0/prints exactentries BEFORE separate webtoolcall. On anylocalfailure stopnetworkandfixfirst. No backdating.",
+  "admission": "Neworiginalworks/fullnative/actuallycompatibleDOBprecision/coherentcareer/directborncountryorwholeregionbindstoredplace. Geographic_support_only. NativeDOB/BPgradesandallpriorfactsfrozen. No familiarcity/nationality/workcountry/familycontextinference. No pureWiki/Kiddlemirroradmission, nohostS1. Stopfailedworks403/timeouts/size/challenge/textless/notaccessible; no variants/retries/rawGET/authbypass. <=25quotedwords/workinclusiveofinherited. Rawstatus/hash/exactrequesttimeunknownnull.",
+  "adaptive_pre_request_plans": [
+    {
+      "written_before_requests_utc": "2026-11-06T23:10:49.921104+00:00",
+      "queries": [
+        {
+          "record_id": "RS_PAST_NA3474",
+          "q": "\"Bryan Randell Coles\" memoir obituary biography"
+        },
+        {
+          "record_id": "RS_PAST_NA4568",
+          "q": "\"Nicholas John Mackintosh\" memoir obituary birth"
+        },
+        {
+          "record_id": "RS_PAST_NA5494",
+          "q": "\"Arthur Harry Church\" biography obituary born -site:botanicalartandartists.com"
+        },
+        {
+          "record_id": "RS_PAST_NA6231",
+          "q": "\"Richard Whiddington\" biography born London Middlesex"
+        }
+      ],
+      "opens": [
+        {
+          "record_id": "RS_PAST_NA5494",
+          "url": "https://www.botanicalartandartists.com/about-arthur-harry-church.html",
+          "observed_ref": "turn5624840search0",
+          "purpose": "Firstgenuinelynewselfpublishedbotanicalreferencebody fullArthurHarryChurch/lifespan/career/directPlymouthDevon; searchprojectionclaims24March1865vsnative28March so possibleactualDOBconflict requires originalbody/no adoptionorcorrection fromprojection."
+        }
+      ],
+      "reason": "InitialS2mostlyknowncityonlysources/irrelevantnames/mirrors. StrongerS1sourceworklocatorpass+firstChurchoriginalprofilebody;4newqueriesexhaust8budget. No reopeningoldfailedworks/hostgradeinference."
+    },
+    {
+      "written_before_requests_utc": "2026-11-06T23:11:30.112267+00:00",
+      "opens": [
+        {
+          "record_id": "RS_PAST_NA3474",
+          "url": "https://www.jstor.org/stable/770263",
+          "observed_ref": "turn9969444search0",
+          "purpose": "Firstdistinct1999DavidCaplinRSmemoirfullbody route, notpreviousDavidEdwardsIndependent/ClarkeFelixwork; inspectfullnative/date/directbornregion. Agecontrastremainsunchanged."
+        },
+        {
+          "record_id": "RS_PAST_NA4568",
+          "url": "https://www.admin.cam.ac.uk/reporter/2014-15/weekly/6375/section3.shtml",
+          "observed_ref": "turn9969444search2",
+          "purpose": "Distinctoriginal2015CambridgeReporterobituarynoticeactualbody; verifywhetherdate/bornregioncontextpresent. Newsource/fullnativebutdeathonlydoesnotmeetDOB/birthproof. NotCambridgePsychometrics403workvariant."
+        },
+        {
+          "record_id": "RS_PAST_NA6231",
+          "url": "https://repository.kulib.kyoto-u.ac.jp/dspace/bitstream/2433/255656/1/eoas_4_3.pdf",
+          "observed_ref": "turn5624840search48",
+          "purpose": "Distinctoriginal2020historicalessay withWhiddingtonfull/exactDOBfootnote; inspectactualbirthregion versusLeedsEnglandworkcontext. ExplicitattributiontoFeather1971retained,noindependence. No regionfromwork orcity."
+        }
+      ],
+      "reason": "Final8queriesalreadyused;3neworiginalworkfirstopens. ChurchactualHTML24Marchvsnative28held; no countryshortcut/clearance. Stopallerrors/textless,no alternatecarriers."
+    }
+  ]
+}

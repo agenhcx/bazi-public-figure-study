@@ -1,0 +1,46 @@
+[
+  {
+    "source_id": "ndl1944_manifest_v16",
+    "source_sha256": "8f422f5c6cb80c8d0bea2155c7e3057b4d8f7c5aa8e02d04178507cc0dc7709e",
+    "source_kind": "official_NDL_IIIF_manifest",
+    "actual_body_read": true,
+    "finding": "117 declared canvases; one-based106and107 actual imageURLs used, not guessed. Manifest raw bytes match historical v11 hash.",
+    "source_locator": "sequences[0].canvases[105] and[106], each images[0].resource[@id]"
+  },
+  {
+    "source_id": "ndl1944_canvas106_v16",
+    "source_sha256": "d3bd237fcee800af77403948fef7202951ca82a36056e243b6870db1da502d0b",
+    "source_kind": "official_digitized_original_image",
+    "full_image_visually_reviewed": true,
+    "source_locator": "Canvas106, printed208 right leaf, former Imperial Academy members/guests table, own ×妹澤克惟 column, second named Japanese member column from left on right leaf, between丘淺次郎and春木一郎",
+    "governing_heading": "帝國學士院前會員及客員",
+    "observed_subject_name": "妹澤克惟",
+    "preserved_member_key": "jpa-unlinked-f85799efdd6bf1bb",
+    "observed_election_era_expression": "自昭和十八年八月二十五日",
+    "observed_retirement_era_expression": "至同十九年四月二十三日",
+    "matches_preserved_election_date": "1943-08-25",
+    "matches_preserved_retirement_date": "1944-04-23",
+    "preserved_dates_not_changed": true,
+    "observed_degree_text": "理學博士・工學博士",
+    "explicit_person_I_or_II_label_observed": false,
+    "scope_assignment": null,
+    "DOB_body_review_performed": false,
+    "finding": "Own name/degree/exactmembershipinterval are directly observed. No I/II label accompanies this column or the governing former-member table. Degree and scientific career do not establish division. Retain unresolved.",
+    "preserved_membership_identity_and_interval_corroborated": true
+  },
+  {
+    "source_id": "ndl1944_canvas107_v16",
+    "source_sha256": "8ebb54775156ff7a276c6ea8501dc9007515f2b82d0f04f4f7588f817cf920ea",
+    "source_kind": "official_digitized_original_image",
+    "full_image_visually_reviewed": true,
+    "source_locator": "Canvas107 printed210–211, former Tokyo Academy officers and members/guests tables",
+    "governing_headings": [
+      "元東京學士會院役員",
+      "元東京學士會院會員及客員"
+    ],
+    "explicit_person_I_or_II_label_observed": false,
+    "scope_assignment": null,
+    "DOB_body_review_performed": false,
+    "finding": "Historical Tokyo Academy tables provide no direct Sezawa-to-division binding. No nonappearance inference or division assignment."
+  }
+]

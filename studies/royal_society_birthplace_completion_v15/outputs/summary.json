@@ -1,0 +1,71 @@
+{
+  "schema": "royal_society_birthplace_completion_v15",
+  "method": "reviewed first stored birthplaces from new original biographical sources; separate offline evidence screening",
+  "baseline_v14_source_commit": "9a4d6af3681e2ecf024a752dbcfb643951d53844",
+  "baseline_v14_canonical_jsonl_sha256": "1b6318ed3e7056886949b47ff08f65eaa518a355cede9de67be934088eadf108",
+  "reconstructed_v11_canonical_jsonl_sha256": "577515b90cff05d61288222a4daf595aaaed76a1baa16ab96391720b02c32da6",
+  "underlying_v10_gzip_sha256": "e44f6dc02cc0cafece9b792164f016da0f08de5736ac62442d176d45b19a5799",
+  "records": 4983,
+  "counting_unit": "fixed UK cohort records, not cross-cohort independent persons",
+  "bulk_screened_records": 169,
+  "targeted_source_followups": 8,
+  "bulk_screening_count_note": "Frozen 169-target offline screening is retained separately in audit; not a claim of 169 original biographical bodies read.",
+  "new_birthplaces": 5,
+  "new_first_birthplace_records": 5,
+  "new_primary_person_birthplace_observations": 5,
+  "new_geographic_resolutions": 5,
+  "newly_classified": 5,
+  "new_birthplaces_with_unresolved_geography": 0,
+  "new_birthplace_source_grade_counts": {
+    "S2": 4,
+    "S3": 1
+  },
+  "birthplace_source_grade_role": "person_birthplace_support_only; original DOB tiers unchanged",
+  "new_hemisphere_counts": {
+    "south": 2,
+    "north": 3
+  },
+  "overall": {
+    "north": 4162,
+    "unknown": 636,
+    "south": 185
+  },
+  "native_dob_window": "1835-1985 inclusive",
+  "native_dob_window_records": 2644,
+  "native_dob_window_counts": {
+    "north": 2262,
+    "unknown": 202,
+    "south": 180
+  },
+  "newly_classified_in_native_dob_window": 5,
+  "unchanged_complete_rows": 4978,
+  "followup_held_records": 3,
+  "followup_holds": {
+    "original_body_inaccessible": 2,
+    "no_explicit_original_birthplace": 1
+  },
+  "bulk_targets_remaining_without_adopted_birthplace": 164,
+  "remaining_blank_current_fields": {
+    "all_blank_raw_birthplace": 586,
+    "window_blank_raw_birthplace": 164,
+    "all_unknown": 636,
+    "all_unknown_with_blank_raw_birthplace": 586,
+    "all_unknown_with_nonblank_raw_birthplace": 50,
+    "window_unknown": 202,
+    "window_unknown_with_blank_raw_birthplace": 164,
+    "window_unknown_with_nonblank_raw_birthplace": 38
+  },
+  "native_fields_and_prior_evidence_preserved": true,
+  "all_v11_v12_v13_v14_evidence_objects_preserved": true,
+  "original_DOB_source_grades_preserved": true,
+  "new_birthplace_fields_versioned_with_rollback_snapshots": true,
+  "prior_selected_evidence_official_field_status_and_source_hashes_kept_as_history": true,
+  "other_cohorts_modified": false,
+  "country_or_personal_coordinates_assigned": false,
+  "DOB_calendar_identity_eligibility_modified": false,
+  "cross_cohort_statistical_deduplication": false,
+  "BaZi_or_outcomes": false,
+  "final_cohort_freeze": false,
+  "gzip_note": "GzipFile uses empty filename/zero mtime; baseline identity checked with canonical objects.",
+  "recovery_note": "Self-contained UK v10 carrier plus frozen v11/v12/v13/v14 inputs; no comprehensive v8 NAS/DE increment reconstruction."
+}

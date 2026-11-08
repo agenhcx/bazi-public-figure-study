@@ -1,0 +1,48 @@
+{
+  "written_utc": "2026-11-05T00:40:05.874706+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA1744",
+    "RS_PAST_NA3830",
+    "RS_PAST_NA4918",
+    "RS_PAST_NA8089"
+  ],
+  "planned_queries": [
+    "Edward Charles Cyril Baly born Oxford Dictionary National Biography",
+    "Reginald Patrick Linstead born Oxford Dictionary National Biography",
+    "Neil Kensington Adam born biography",
+    "Siegfried Ruhemann born Oxford Dictionary National Biography"
+  ],
+  "budget": {
+    "queries": 6,
+    "original_navigations": 8
+  },
+  "rules": "Original available birth clause only; no nativeDOB/identity/sourcegrade/geo changes. Source quote<=25Englishwords. Stop403/429/inaccessible, no retries.",
+  "adaptive_queries_planned_utc": "2026-11-05T00:40:23.149232+00:00",
+  "adaptive_queries": [
+    "\"Baly, Edward Charles Cyril\" site:academic.oup.com",
+    "\"Linstead, Sir Reginald Patrick\" site:academic.oup.com"
+  ],
+  "planned_original_opens": [
+    "https://www.npg.org.uk/collections/search/person/mp80623/sir-reginald-patrick-linstead",
+    "http://www.chem.ucl.ac.uk/resources/history/people/adam.html",
+    "https://electronicsandbooks.com/edt/manual/Magazine/J/Journal%20of%20the%20Chemical%20Society%20%28Resumed%29%20UK/1944/JR9440000040.pdf"
+  ],
+  "next_navigation_plan": {
+    "written_utc": "2026-11-05T00:41:00.737040+00:00",
+    "click": {
+      "ref": "turn123view0",
+      "id": 59
+    },
+    "opens": [
+      "https://www.deutsche-biographie.de/122880773.html?language=en",
+      "https://www.treccani.it/enciclopedia/neil-kensington-adam/",
+      "https://pubs.rsc.org/en/content/articlelanding/1944/jr/jr9440000040"
+    ],
+    "purpose": "Follow observedoriginalODNBlink; readoriginalinstitutionalreferencework/authorityAdam and originalRSCpublishedRuhemannmemoir. NofailedURLretry."
+  },
+  "final_original_open_planned": {
+    "written_utc": "2026-11-05T00:41:40.218254+00:00",
+    "url": "https://history.aip.org/history/catalog/icos/2306.html",
+    "purpose": "OriginalcatalogueprofessionalidentitycrosscheckforAdam; notbirthplaceinferenceorfailedendpointretry."
+  }
+}

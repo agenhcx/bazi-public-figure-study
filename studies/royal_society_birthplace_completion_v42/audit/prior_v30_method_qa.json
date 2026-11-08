@@ -1,0 +1,197 @@
+{
+  "schema": "UK_v30_geography_only_source_method_review_v1",
+  "reviewer": "/root/v26_source_qa",
+  "initial_written_utc": "2026-11-06T12:05:00.245307+00:00",
+  "status": "final_documentary_geography_source_review_passed",
+  "timing": "Written before final v30 sources/rootdecisions/facts; preliminarybaseline/scope/schema review, not latercaseadoption/source-blindclaim.",
+  "materials_read": [
+    "v30_plan.json",
+    "v30_scope_a.json",
+    "v30_scope_b.json",
+    "v30_scope_c.json",
+    "actualv29nativeandbirthplaceobjects/nineissuefiles",
+    "v29 priorfirstpasscloseoutcontext"
+  ],
+  "native_and_stored_birthplace_scope": [
+    {
+      "record_id": "RS_CURRENT_10965",
+      "authority_name": "",
+      "dob": "1940-06-17",
+      "raw_birthplace": "United States of America",
+      "birthplace_source_grade": "S2"
+    },
+    {
+      "record_id": "RS_PAST_NA1998",
+      "authority_name": "Kassanis; Basil (1911 - 1985)",
+      "dob": "1911-10-16",
+      "raw_birthplace": "Macedonian born",
+      "birthplace_source_grade": "S3"
+    },
+    {
+      "record_id": "RS_PAST_NA2007",
+      "authority_name": "Young; Pierre Henry John (1926 - 1985)",
+      "dob": "1926-06-12",
+      "raw_birthplace": "France",
+      "birthplace_source_grade": "S3"
+    },
+    {
+      "record_id": "RS_PAST_NA2892",
+      "authority_name": "Rambaut; Arthur Alcock (1859 - 1923)",
+      "dob": "1859-09-21",
+      "raw_birthplace": "Waterford",
+      "birthplace_source_grade": "S1"
+    },
+    {
+      "record_id": "RS_PAST_NA173",
+      "authority_name": "Bunn; Charles William (1905 - 1990)",
+      "dob": "1905-01-15",
+      "raw_birthplace": "Camberwell, South London",
+      "birthplace_source_grade": "S2"
+    },
+    {
+      "record_id": "RS_PAST_NA187",
+      "authority_name": "Bell; George Douglas Hutton (1905 - 1993)",
+      "dob": "1905-10-18",
+      "raw_birthplace": "Swansea",
+      "birthplace_source_grade": "S2"
+    },
+    {
+      "record_id": "RS_PAST_NA4571",
+      "authority_name": "Maitlis; Peter Michael (1933 - 2022); chemist",
+      "dob": "1933-01-15",
+      "raw_birthplace": "Berlin",
+      "birthplace_source_grade": "S3"
+    },
+    {
+      "record_id": "RS_PAST_NA4636",
+      "authority_name": "Pagel; Bernard Ephraim Julius (1930 - 2007)",
+      "dob": "1930-01-04",
+      "raw_birthplace": "Berlin",
+      "birthplace_source_grade": "S2"
+    },
+    {
+      "record_id": "RS_PAST_NA4774",
+      "authority_name": "Ross; Graham Garland (1944 - 2021); theoretical physicist",
+      "dob": "1944-09-13",
+      "raw_birthplace": "Aberdeen",
+      "birthplace_source_grade": "S2"
+    },
+    {
+      "record_id": "RS_PAST_NA5003",
+      "authority_name": "Dudley; Sir; Sheldon Francis (1884 - 1956)",
+      "dob": "1884-08-16",
+      "raw_birthplace": "Lisbon",
+      "birthplace_source_grade": "S2"
+    },
+    {
+      "record_id": "RS_PAST_NA6938",
+      "authority_name": "Christopherson; Sir; Derman Guy (1915 - 2000)",
+      "dob": "1915-09-06",
+      "raw_birthplace": "Plumstead, south-east London",
+      "birthplace_source_grade": "S2"
+    },
+    {
+      "record_id": "RS_PAST_NA8835",
+      "authority_name": "Jardine; Lisa Anne (1944 - 2015)",
+      "dob": "1944-04-14",
+      "raw_birthplace": "Oxford",
+      "birthplace_source_grade": "S1"
+    }
+  ],
+  "scope_assessment": {
+    "fixed_individual_followups": 12,
+    "groups": 3,
+    "per_group": 4,
+    "fixed_nonblank_unknown_window_pool": 69,
+    "raw_birthplaces_already_present": true,
+    "blank_birthplace_window_records_prior_closeout": 103,
+    "blank_firstpass_closeout_preserved": true,
+    "new_first_birthplaces_allowed": false
+  },
+  "inherited_sidecar_sha256": {
+    "active_source_DOB_conflicts.json": "9a6912399bab98c088d76c647ceb20eb4bd2963d84a493a2dd583e6be28e4dec",
+    "provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+    "birthplace_source_conflicts.json": "6ddf58a7f13b3aee13c1424a1594cec521e3d2523817db2c4ac7915652687538",
+    "source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+    "source_derived_age_inconsistencies.json": "9a299ead41add638a45fd85603a59ee3c42e1b0284af5c06c5e273a3affac18a",
+    "lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+    "cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+    "omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+    "source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+  },
+  "mutation_boundary": "Only declared sixGEO_FIELDS plus geography_followup_v30 withfullprevious/absentrollback. Allrawbirthplaces/claimtexts/sourcegrades/selectedBPevidence/priorfacts/nativeDOBidentity/cohort/eligibility/personcountryQIDscoords immutable. Newsourcegrades geographic_support_only, not birthplace or DOB grades. ExactGEO_FIELDS names will becheckedagainstactualreplayschema whenready.",
+  "source_admission": "Actualfullnativecomponents/actuallystatedcompatibleDOBprecision/distinctivecareer/directsubjectbirthlinkedcountry-wholeregion plus consistentbindingtostoredbirthplace. No genericfamouscity/nationality/family/school/work/death/footer/map inference, no USA/France automaticNorth ifsourcecountrygeographyambiguous. Existingboundedmiddleomission onlyifallgatespass; no nickname/initialexpansion or automaticcombination acrossdifferentclaims. Actualdate/placeconflictsholdgeography, nativefrozen.",
+  "Jardine_boundary": "InheritedunqualifiedApril12searchprojection/nativeApril14 discrepancy mustnot be silently bypassedbydateless/yearonlyNIASsource. Newactuallyacquiredfullnative/exactApril12original would be qualifiedseventhDOB-sourceconflict withgeographyheld, notnativecorrection. Needactualoldhold/newsourcecontext atfinalreview.",
+  "quote_budget": "Atmost25distinctEnglishquote words peroriginalwork acrossinheritedbirthplacefacts plusnewgeographicfacts. No sourcefullcache/projections/images; sourcegrade roles separate.",
+  "closed_routes": "Priorfailed/challengedroutes stayclosed; distinctneworiginalworksallowed. General/exactpriorintent and laterledger timing explicit; no retry/variants/bypass/rawGET or rawstatus/time/hashclaim.",
+  "inherited_issues": "Nineissuefiles retainoldobjects unchangedunlessqualifiednewcaseexplicitappend. SixactiveDOB/Tomesprovisional/Gotchplace/Maletapprox/Waterfieldinternalage/Midwinterendpoint/Colescrossage/Wagermiddleadmission/Shorttordinal distinct.",
+  "new_method_exceptions": [],
+  "final_case_assessment_pending": false,
+  "no_fact_adoption": true,
+  "verification_limits": "DocumentaryQA only; no network/sourceacquisition/sourcechildren/code/mainoutput/Gitmutation byreviewer.",
+  "actual_schema_review_utc": "2026-11-06T12:10:51.934676+00:00",
+  "declared_six_GEO_FIELDS": [
+    "hemisphere",
+    "geo_resolution_status",
+    "geography_decision",
+    "reason",
+    "northern_birthplace_candidate",
+    "southern_birthplace_separate"
+  ],
+  "current_name_binding_note": {
+    "record_id": "RS_CURRENT_10965",
+    "native_name": "Jerry Adams",
+    "native_authority_field_empty": true,
+    "assessment": "UseactualfrozennativeJerryAdamscomponents, notinventfullauthorityfromQID. Sourceextraactuallystatedcomponents mayremainobservedonlyifallnativecomponents/DOB/careergatespass, no unobservednicknameexpansion."
+  },
+  "preliminary_cases_reviewed_utc": "2026-11-06T12:10:51.934689+00:00",
+  "preliminary_cases": {
+    "Rambaut": {
+      "record_id": "RS_PAST_NA2892",
+      "root_primary_ref": "turn3673458view0",
+      "assessment": "NewactualODNBpublicExtract fullArthurAlcock/exact1859-09-21/life1859–1923/directWaterfordIreland/byP.A.Wayman/actual2004publication+2015version supportsS2geographic_support_onlyNorth withstoredWaterford/S1claim/sourceallunchanged. NewDIBactualpersonbiography byPatriciaMByrne/fullsameDOB/Waterfordcity-CoWaterford/astronomerroyalAndrewsprofRadcliffeObservercareer is explicitadditionalidentitycontext, notinferredprimarycareer/independentcorroboration orgrade-transfer. Actualnewpersonwork distinctfromoldDIBtaxonomyroute; familyordinalsecond-vs-thirdsons contrast retainedunadjudicated, notDOB/placeconflict/nativeidentityrepair. FinalrootDIBverification/factpending.",
+      "quote_words_primary": 9,
+      "new_method_exception": false
+    },
+    "Jardine": {
+      "record_id": "RS_PAST_NA8835",
+      "root_new_ref": "turn3673458view1",
+      "assessment": "Actualnew2013SteveConnorIndependentinterviewCVtable fullLisaAnneJardine/Born12April1944 vsfrozen14April1944 plusUCLrenaissancestudies/HFEA2008career qualifiesseventhactiveDOB-sourceconflict observation. Source2013living notlater2015endpointconfirmation; sourceprovidesnobirthcountry. ConservativeS3observationqualityonly, notnativeDOB/BPgradechange/geographicsupportadoption. Preserveold6objectsexact andholdgeo/no NIASyearonlybypass/nativecorrectbirthdayverdict. PriorAnnualReport/Natureprojectionsremainunqualifiedoldobservations, notretrospectiveproof.",
+      "quote_words_new_work": 4,
+      "new_method_exception": false
+    }
+  },
+  "protocol_observations_pending_final": {
+    "A": "Targetedpriorholds inspectedbeforework, but Kassanisv20acceptedResearchGatecontext found/readlateaftercurrentcover/downloadattempt; currentcovercannotcountnewqualifiedbody. Newdownloadfirstcurrentattempt404stopped; no adoption/failedroutevariant/bypass. Retainlateinspection honestly.",
+    "B": "No geographiccandidates; actualnewbodiescityonly/date-namebindinginsufficient; sourcecountriesnotinferredfromnationality/work/family.",
+    "C": "Jardine newqualifieddatebody; otherclosedroutes/challengeheld, no bypass or year-onlyDOBconflictevading adoption."
+  },
+  "final_fact_review_utc": "2026-11-06T12:18:31.570419+00:00",
+  "accepted_fact_path": "inputs/accepted_geography.json",
+  "accepted_fact_sha256_at_review": "4390f50fa688235d6f24419ea5601a0f112051ea8a386f0c6fabd5604b3ebb32",
+  "active_DOB_conflicts_sha256_at_review": "93fc69c77bc85e2fe032b42f88f66d5dd59332d4d4bd0bca0ff36b11d3a00ad4",
+  "blocking_issues": [],
+  "final_case_review_scope": "OneRambautS2geographic_support_onlyNorth/existingWaterfordS1BPfullyfrozen; elevenholds. NewJardineactual12/native14seventhDOB-sourceconflict appendedwitholdsixobjectsexact; eightotherissuefilesbyteidentical. Allscopeexistingnonblank;103blankhistoricalfirstpasscopyretained, zeroBPadditions. Onlydeclaredsixgeo_fields+versionedcontextallowed; finalruntimeimmutability/replaychecks belongtofinalQA afterproduction.",
+  "final_protocol_disclosures": {
+    "A": "Priorindividualholds preinspected, but Kassanisv20acceptedRGcover-context inspection lateaftercurrentnonproductivecover/download attempt. Reusedcover notnewqualifiedbodycoverage, firstobserveddownload404stopped; no geographyadoption fromit. Actualtiming/deviationretained, no retrospectivepreinspectionclaim.",
+    "B": "NewactualPagelBerlinbornbody lacksbirthcountry; genericNPGGermanytaxonomy notcombined. OldCUP/otherclosedroutesnotreopened; allerrors/metadata-onlyroles retained.",
+    "C": "NewfullJardine2013actualDOBday12 qualifiesseventhflag; oldAnnualReport/Natureprojectionsnotpromoted, NIASyearonlynotusedasbypass. Othernewchallenge/failedroutesstopped, no borncountryfromnationality/work/family.",
+    "root": "ThreeobservedneworiginalURLsprelogged: RambautODNBgeographicprimary/DIBprofessionalidentitycontext/JardineactualDOBconflict. No informationalindependence/rawbytes/HTTP200 or unobservedprimarycareerclaim."
+  },
+  "quote_audit": {
+    "new_original_works_old_package_identifier_hits": {
+      "RambautODNB": [],
+      "RambautDIB": [],
+      "JardineIndependent": [],
+      "PagelObservatory": []
+    },
+    "new_quoted_words_by_work": {
+      "RambautODNB": 9,
+      "RambautDIB": 0,
+      "JardineIndependent": 4,
+      "PagelObservatory_held": 4
+    },
+    "same_inherited_birthplace_work_new_quote_additions": 0,
+    "note": "Checkednewworkidentifiers againstallpriorstudyJSON andactualcanonicalmastertext; oldBell/Bunn/CUP/RSpicture/NIAS/AnnualReport quotes unchanged, no sameworknewquotedwordsadded."
+  }
+}

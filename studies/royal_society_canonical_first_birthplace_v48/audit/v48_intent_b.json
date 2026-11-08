@@ -1,0 +1,245 @@
+{
+  "written_utc": "2026-11-08T12:42:51.049821+00:00",
+  "group": "b",
+  "method_id": "uk-first-birthplace-canonical-community-reference-pilot-v1",
+  "method_sha256": "98e9efbe9c97049e64954b4f3e4ec1b6d92c21a104107ccad3bb5c14bf0850af",
+  "scope_sha256": "5619bae49af23c1e9646d98d49d41f189ea797f0767216f835124c38a3706290",
+  "native_scope_sha256": "62aa441cfc01a2a7973e99d8343962846868e126625cd135d86168085cc773cb",
+  "all9_issue_inventories_read_full_and_pins_verified_before_query": true,
+  "inventory_file_pins": {
+    "active_source_DOB_conflicts.json": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+    "birthplace_source_conflicts.json": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+    "source_derived_age_inconsistencies.json": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+    "provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+    "lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+    "cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+    "source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+    "omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+    "source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+  },
+  "full_native_and_targeted_worker_AND_root_history_reviewed_before_query": true,
+  "prior_context_file_pins": {
+    "v20_sources_b.json": "1481565f7c2fb0049c7043421f7c8776e2589f187271fe81584930cbff019afe",
+    "v20_b_crisp_rishbeth.json": "cb0becf4ce287e9dfc5772fe265116d3753eba7409e9bbe499c14371d2d8151e",
+    "v28_sources_b.json": "42b2d56d3776f9a490116c3e5f494357b05894bea9dfd6d654243ecf688f3e48",
+    "v28_root_intent.json": "f71fbb6a387077e4f3cac99a7d056ea22e17c59d8242f8c395ae31bf3702d688",
+    "v25_sources_c.json": "0c6eb718f8a83299b4a5d4229685a099e023cc00f71b3ce3657df8e11ebac49c",
+    "v26_sources_a.json": "975ded068547fdeb1aab9ef6407ebf21eaa48ab0bf8ad0346349937eb49dca3d",
+    "v26_root_intent.json": "69522bdda59d2b4d0fba2200425a61d8ee38c7484dfd0f65d8a2b1c2522b14b6",
+    "v48_triage_b.json": "7272052a307019d5af362ad4b66dc8beb5bc056832194ee788ce790671e421f6"
+  },
+  "historical_V10_batch_membership_and_perperson_outcomes": "unknown; explicitindividualledgersnotexhaustive; neverrequestedclaimfalse. OnecurrentENbodyperrecord expresslyauthorizedby frozenboundedaccessrecheckamendment, notfirstever/newwork/independence.",
+  "entries": [
+    {
+      "entry_id": 0,
+      "written_utc": "2026-11-08T12:42:51.049798+00:00",
+      "written_before_requests_utc": "2026-11-08T12:42:51.049798+00:00",
+      "operation": "query",
+      "engine": "system2",
+      "record_id": "RS_PAST_NA2090",
+      "exact_query": "\"John Rishbeth\" \"10 July 1918\" site:wikipedia.org",
+      "exact_request": {
+        "system2_search_query": [
+          {
+            "q": "\"John Rishbeth\" \"10 July 1918\" site:wikipedia.org"
+          }
+        ],
+        "response_length": "long"
+      },
+      "purpose": "LocateactuallyobservedcanonicalENpersonURI for frozenonecurrentaccessrecheck; projectionsnotproof, namesake mismatchnotfalseDOBconflict.",
+      "status": "completed",
+      "observed_result_refs": [
+        "turn9981162search0",
+        "turn9981162search1",
+        "turn9981162search2",
+        "turn9981162search3",
+        "turn9981162search4",
+        "turn9981162search5"
+      ],
+      "outcome": "OnlyFRSlists/parentsotherpeoplecanonicalURLs observed, no JohnRishbethtargetpersonalURI; no globalarticleabsence or sourcefacts.",
+      "pre_request_validation": {
+        "separate_successful_exit0": true,
+        "tool_chunk_id": "34cad2"
+      }
+    },
+    {
+      "entry_id": 1,
+      "written_utc": "2026-11-08T12:42:51.049815+00:00",
+      "written_before_requests_utc": "2026-11-08T12:42:51.049815+00:00",
+      "operation": "query",
+      "engine": "system2",
+      "record_id": "RS_PAST_NA1614",
+      "exact_query": "\"William Watson\" \"4 August 1868\" site:wikipedia.org",
+      "exact_request": {
+        "system2_search_query": [
+          {
+            "q": "\"William Watson\" \"4 August 1868\" site:wikipedia.org"
+          }
+        ],
+        "response_length": "long"
+      },
+      "purpose": "LocateactuallyobservedcanonicalENpersonURI for frozenonecurrentaccessrecheck; projectionsnotproof, namesake mismatchnotfalseDOBconflict.",
+      "status": "completed",
+      "observed_result_refs": [
+        "turn9629156search0",
+        "turn9629156search1",
+        "turn9629156search2",
+        "turn9629156search3"
+      ],
+      "outcome": "ActualtargetWilliamWatsonphysicistborn1868canonicalURI observed; projections arelocatoronly.",
+      "pre_request_validation": {
+        "separate_successful_exit0": true,
+        "tool_chunk_id": "34cad2"
+      }
+    },
+    {
+      "entry_id": 2,
+      "written_utc": "2026-11-08T12:42:51.049818+00:00",
+      "written_before_requests_utc": "2026-11-08T12:42:51.049818+00:00",
+      "operation": "query",
+      "engine": "system2",
+      "record_id": "RS_PAST_NA3113",
+      "exact_query": "\"Harry Smith\" \"19 September 1935\" site:wikipedia.org",
+      "exact_request": {
+        "system2_search_query": [
+          {
+            "q": "\"Harry Smith\" \"19 September 1935\" site:wikipedia.org"
+          }
+        ],
+        "response_length": "long"
+      },
+      "purpose": "LocateactuallyobservedcanonicalENpersonURI for frozenonecurrentaccessrecheck; projectionsnotproof, namesake mismatchnotfalseDOBconflict.",
+      "status": "completed",
+      "observed_result_refs": [
+        "turn5979183search0",
+        "turn5979183search1",
+        "turn5979183search2"
+      ],
+      "outcome": "ActualtargetHarrySmithbotanistcanonicalURI observed; projections arelocatoronly, not1921microbiologist.",
+      "pre_request_validation": {
+        "separate_successful_exit0": true,
+        "tool_chunk_id": "34cad2"
+      }
+    },
+    {
+      "entry_id": 3,
+      "written_utc": "2026-11-08T12:43:36.358596+00:00",
+      "written_before_requests_utc": "2026-11-08T12:43:36.358596+00:00",
+      "operation": "query",
+      "record_id": "RS_PAST_NA2090",
+      "exact_request": {
+        "system1_search_query": [
+          {
+            "q": "\"John Rishbeth\" Wikipedia"
+          }
+        ],
+        "response_length": "long"
+      },
+      "purpose": "Lastboundedstrongerlocator for actualtargetENpersonalURI; notparent/family/FRSlistbody, no URIguess/noWD-languagefallback.",
+      "status": "completed",
+      "engine": "system1",
+      "exact_query": "\"John Rishbeth\" Wikipedia",
+      "observed_result_refs": [
+        "turn9899661search0",
+        "turn9899661search1",
+        "turn9899661search2",
+        "turn9899661search3",
+        "turn9899661search4",
+        "turn9899661search5",
+        "turn9899661search6",
+        "turn9899661search7",
+        "turn9899661search8"
+      ],
+      "outcome": "No actualtargetJohnRishbethcanonicalENpersonURI observed; otherpeople/parents/lists andoldAPS/genealogy projections only. No parent/list/WD/languagefallback/bodyguess. OldAPSBorn/ageprojection notbodyornewconflict.",
+      "pre_request_validation": {
+        "separate_successful_exit0": true,
+        "tool_chunk_id": "b424cd"
+      }
+    },
+    {
+      "entry_id": 4,
+      "written_utc": "2026-11-08T12:43:36.358608+00:00",
+      "written_before_requests_utc": "2026-11-08T12:43:36.358608+00:00",
+      "operation": "open",
+      "record_id": "RS_PAST_NA1614",
+      "exact_request": {
+        "open": [
+          {
+            "ref_id": "https://en.wikipedia.org/wiki/William_Watson_%28physicist%2C_born_1868%29"
+          }
+        ],
+        "response_length": "long"
+      },
+      "purpose": "OnecurrentexactENtargetpersonbody underfrozenboundedaccessrecheckamendment; historicalV10batchunknown, notfirstever/newwork/independent. Actualfullnative/exactDOB/life/career/directbirthneeded; firstcurrentunusablecloseswork.",
+      "status": "completed",
+      "url": "https://en.wikipedia.org/wiki/William_Watson_%28physicist%2C_born_1868%29",
+      "current_person_read_number_for_record": 1,
+      "result_ref": "turn4202032view0",
+      "actual_redirected_url": "https://en.wikipedia.org/wiki/William_Watson_(physicist,_born_1868)",
+      "tool_header_explicit_rewritten_summary": true,
+      "outcome": "OnecurrentENpersonread explicitlylabelledrewrittensummary, not actualoriginalproof. Currentpersonworkclosedafterfirstunusable; no secondread/currentvariant/carrier/WD/language/placefallback.",
+      "pre_request_validation": {
+        "separate_successful_exit0": true,
+        "tool_chunk_id": "b424cd"
+      }
+    },
+    {
+      "entry_id": 5,
+      "written_utc": "2026-11-08T12:43:36.358612+00:00",
+      "written_before_requests_utc": "2026-11-08T12:43:36.358612+00:00",
+      "operation": "open",
+      "record_id": "RS_PAST_NA3113",
+      "exact_request": {
+        "open": [
+          {
+            "ref_id": "https://en.wikipedia.org/wiki/Harry_Smith_%28botanist%29"
+          }
+        ],
+        "response_length": "long"
+      },
+      "purpose": "OnecurrentexactENtarget1935botanistpersonbody underfrozenboundedaccessrecheckamendment; historicalV10batchunknown/notfirstever/newwork. ActualnativeHarrySmith/exact19September1935/life2015/career/directbirthneeded. No1921microbiologistdata.",
+      "status": "completed",
+      "url": "https://en.wikipedia.org/wiki/Harry_Smith_%28botanist%29",
+      "current_person_read_number_for_record": 1,
+      "result_ref": "turn3219438view0",
+      "actual_redirected_url": "https://en.wikipedia.org/wiki/Harry_Smith_(botanist)",
+      "tool_header_explicit_rewritten_summary": true,
+      "outcome": "OnecurrentENpersonread explicitlylabelledrewrittensummary, not actualoriginalproof. Currentpersonworkclosedafterfirstunusable; no secondread/currentvariant/carrier/WD/language/placefallback.",
+      "pre_request_validation": {
+        "separate_successful_exit0": true,
+        "tool_chunk_id": "b424cd"
+      }
+    }
+  ],
+  "budgets": {
+    "queries": 4,
+    "current_EN_person_body_opens": 3,
+    "per_record_current_EN_person_body_opens": 1,
+    "worker_place_opens": 0
+  },
+  "stop_policy": "Firstcurrentunusable/header/rewrite/challenge/errorcloses underlyingpersonwork. No secondcurrentpersonrequest, variant/carrier/rawGET/WD/languagefallback. Workersneveropenplacepages; reportactualhref/linkID/ref toroot.",
+  "strict_person_gate": "Allliteralnativecomponents/exactactualnativeDOB/coherentdistinctivecareer/compatiblelife/directBornfield-clause; noyear/DOBtransfer/initialoromittedmiddleexception.",
+  "S3_role": "person_birthplace_support_only inexpandedS1+S2+S3; strictS1+S2unchanged, nativeDOBtiers/frozenfields unchanged.",
+  "quote_policy": "<=25quotedEnglishlexicalwords/work includinghistory; minimalstructuredfacts/locators, nofullcache.",
+  "raw_HTTP_status": null,
+  "raw_bytes_sha256": null,
+  "exact_request_utc": null,
+  "retrieval_counts": {
+    "queries": 4,
+    "navigation_attempts": 2,
+    "current_EN_person_body_open_attempts": 2,
+    "place_page_opens": 0,
+    "Wikidata_person_opens": 0,
+    "other_language_person_opens": 0,
+    "clicks": 0,
+    "parsed_finds": 0,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "current_person_read_counts": {
+    "RS_PAST_NA2090": 0,
+    "RS_PAST_NA1614": 1,
+    "RS_PAST_NA3113": 1
+  },
+  "completed_utc": "2026-11-08T12:45:21.033174+00:00"
+}

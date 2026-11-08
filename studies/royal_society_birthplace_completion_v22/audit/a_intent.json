@@ -1,0 +1,75 @@
+{
+  "schema": "v22_groupA_prior_intent_v1",
+  "written_utc": "2026-11-05T23:43:34.200991+00:00",
+  "scope": [
+    "RS_PAST_NA3931",
+    "RS_PAST_NA4220",
+    "RS_PAST_NA4252",
+    "RS_PAST_NA4747"
+  ],
+  "delegated_scope": {
+    "agent": "ridley_roberts",
+    "queries": 3,
+    "nav": 4,
+    "intent_file": "v22_a_rr_intent.json"
+  },
+  "own_budget": {
+    "queries": 3,
+    "nav": 4
+  },
+  "queries": [
+    {
+      "q": "\"Geoffrey Frederick Hewitt\" \"born\" obituary",
+      "purpose": "Find originalfullbiographybirthclause withidentity/date."
+    },
+    {
+      "q": "\"Eric Albert Barnard\" \"born\" obituary",
+      "purpose": "Find originalfullbiographybirthclause withidentity/date."
+    },
+    {
+      "written_utc": "2026-11-05T23:43:54.770419+00:00",
+      "q": "\"Geoffrey Hewitt\" obituary \"born\"",
+      "purpose": "LocateoriginalIChemE/Imperialbornbody fromacquiredreferences; lastownquery."
+    }
+  ],
+  "navigation_intents": [
+    {
+      "written_utc": "2026-11-05T23:43:54.770403+00:00",
+      "url": "https://discovery.ucl.ac.uk/10055685/3/Stephenson_EAB%20August%2029%202018.pdf",
+      "purpose": "Inspectoriginalauthoredobituarycopy foractualbirthplace/identity/date; upbringingnotbirth."
+    },
+    {
+      "written_utc": "2026-11-05T23:44:17.545697+00:00",
+      "url": "https://royalsocietypublishing.org/rsbm/article/doi/10.1098/rsbm.2025.0002/234058/Geoffrey-Frederick-Hewitt3-January-1934-18-January",
+      "purpose": "Originalnewscientificmemoir potentiallybornbody/fullnativeidentity."
+    },
+    {
+      "written_utc": "2026-11-05T23:44:17.545714+00:00",
+      "url": "https://doi.org/10.1098/rsbm.2020.0017",
+      "purpose": "OriginalnewBarnardmemoir potentiallyexplicitbornplace beyond acquiredobituary upbringingonly."
+    },
+    {
+      "written_utc": "2026-11-05T23:44:17.545717+00:00",
+      "url": "https://globalenergyprize.org/en/2019/01/18/in-memory-of-the-outstanding-scientist-the-2007-global-energy-prize-laureate-geoffrey-hewitt/",
+      "purpose": "OriginalawardorganizationbornWarringtonEnglandlead; checkfullnativecomponents andyearprecision, do notexpandmissingmiddlecomponent."
+    }
+  ],
+  "limits": "No failedroute retry/rawGET; no native or master edits; quotes<=25words/work; rawstatus/time/hashnull unless acquired.",
+  "postcompletion_index": {
+    "written_utc": "2026-11-05T23:46:15.570948+00:00",
+    "actual_own_requests": {
+      "queries": 3,
+      "nav": 4
+    },
+    "actual_child_requests": {
+      "queries": 3,
+      "nav": 4,
+      "cached_find": 1
+    },
+    "actual_prior_intent_files": [
+      "v22_a_intent.json",
+      "v22_a_rr_intent.json"
+    ],
+    "note": "This finalindexpostdatesrequests; originalwritten_utc and priorquery/navigationintents remainactual. No retrospectivepreregistrationclaim."
+  }
+}

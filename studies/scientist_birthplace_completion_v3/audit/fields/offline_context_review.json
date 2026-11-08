@@ -1,0 +1,10 @@
+{
+  "reviewed_utc": "2026-11-03T14:38:08.641668+00:00",
+  "reviewer": "fields_v3_offline_context (independent offline subagent)",
+  "network_requests": 0,
+  "source_file": "/workspace/scratch/7e8aa4e0d4af/academy_v3_workers/fields/raw/fields_v3_body_003.webcapture.json",
+  "source_sha256": "f941752a001da2b8e5015afc4e134e7b5814e062027b0dbb99fdbcc957057880",
+  "finding": "L72 exact name; L74 standalone asterisk-prefixed birth row immediately below name; not footnote/death row. L80 independently gives Fields Medal 2022. L108 identifies Heidelberg Laureate Forum Foundation; no individual author shown.",
+  "parent_rule_interpretation": "Parent explicitly allowed clear structured birth rows; preserve exact original star/date/place, evidence_kind=structured_birth_row. Root QA remains required.",
+  "geographic_assignment": false
+}

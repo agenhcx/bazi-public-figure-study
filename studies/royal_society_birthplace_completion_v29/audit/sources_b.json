@@ -1,0 +1,626 @@
+{
+  "schema": "v29_sources_b_v1",
+  "worker": "/root/v26_sources_b",
+  "batch_role": "v29groupb_six_fixed_neverreviewed_records",
+  "written_utc": "2026-11-06T11:38:47.035401+00:00",
+  "scope_record_ids": [
+    "RS_PAST_NA5088",
+    "RS_PAST_NA5089",
+    "RS_PAST_NA530",
+    "RS_PAST_NA5362",
+    "RS_PAST_NA604",
+    "RS_PAST_NA611"
+  ],
+  "intent_file": "v29_b_intent.json",
+  "counts": {
+    "discovery_queries": 12,
+    "web_navigation_attempts": 9,
+    "parsed_find_operations": 3,
+    "cached_screenshot_attempts": 0,
+    "ImageContent_blocks_exposed_from_screenshot": 0,
+    "raw_HTTP_or_PDF_GETs": 0,
+    "body_verified_birthplace_candidates": 2,
+    "holds": 4,
+    "new_confirmed_printed_DOB_conflicts": 0,
+    "new_confirmed_original_birthplace_conflicts": 0
+  },
+  "budgets": {
+    "queries": 12,
+    "navigation": 14
+  },
+  "candidates": [
+    {
+      "source_grade_role": "person_birthplace_support_only",
+      "native_DOB_source_grade_unchanged": true,
+      "retrieval_representation": "web-tool parsed original text, not raw HTTP/PDF bytes",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "source_body_acquisition_role": "worker_original_body_verified_parent_review_pending",
+      "birth_source_all_native_components_confirmed": true,
+      "record_id": "RS_PAST_NA5088",
+      "native": {
+        "record_id": "RS_PAST_NA5088",
+        "authority_name": "Ford; Charles Edmund (1912 - 1999)",
+        "native_dob": "1912-10-24",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "6db0b09699d961ebcc97168c67069a7bea2f1c3b310d19d646ed2ff27583938a"
+      },
+      "status": "candidate_original_authored_medical_history_person_biographical_paragraph",
+      "source_url": "https://www.scielo.br/j/hcsm/a/VXZsqXbrtn7Ynp5jzgy9nmj/?lang=en",
+      "source_title": "Revisiting establishment of the etiology of Turner syndrome",
+      "source_author": "Monica de Paula Jung; Maria Helena Cabral de Almeida Cardoso; Maria Auxiliadora Monteiro Villar; Juan Clinton Lerena Jr.",
+      "source_kind": "original_authored_edited_medical_history_article_with_explicit_subject_biographical_paragraph",
+      "publication_date": "2009-06",
+      "publication_date_precision": "month_in_original_issue_identity",
+      "source_observed_name": "Charles Edmund Ford",
+      "source_birthdate": "1912",
+      "source_birthdate_precision": "year_only_in_lifespan_adjacent_to_born_clause_not_exact_native_day",
+      "source_lifespan": "1912-99",
+      "source_quote": "was born in England",
+      "raw_birthplace": "England",
+      "source_grade": "S2",
+      "source_grade_basis": "Actual authored edited medicalhistory article, with separately stated physician/historian/medicalgenetics affiliations in acquiredoriginalbylineblock and explicitsubjectbiographicalparagraph. S2 genre/personbirthplacesupport, not civilregister/host-onlyS1 or claimfirsthandknowledgeofbirth.",
+      "reviewed_hemisphere": "north",
+      "geographic_basis": "Explicit born-country England in directsubjectpredicate supportsNorth. No personalcountry/QID/coordinate added.",
+      "source_ref": "turn2464932view0",
+      "source_locator": "turn2464932view0:L152-155 originalfullnative/lifespan1912-99/directbornEngland/HarwellMRCRadiobiology/cytogenetics/KingCollege doctorate. turn1485342view1:L84-85 issueJune2009/DOI/title;L106-108 originalfourauthornames/medical-history-genetics roles.",
+      "identity_review": [
+        "AllnativeCharlesEdmundFordcomponents appear adjacent to1912-99 and directbornEngland. Sourcebirthyear1912/lifespanendpoint1999 compatible frozen native1912-10-24/authority1912-1999; doesnotconfirmOctober24.",
+        "HarwellMRCradiobiology/cytogeneticswithKennethWJones/KingCollegeLondonPhD/human-chromosomecountworkwithHamerton are coherent source-onlyprofessionalanchors.",
+        "Sourceparagraph is subject-specific despite articlefocusTurnersyndromeresearch, not an inferredlocationfrominstitution/work orfellowship."
+      ],
+      "caveats": [
+        "Originalarticleactualyearprecisiononly. No birthday/DOBgradeupgrade or claimexactOct24stated.",
+        "Medicalhistoryinterviewbasisdoesnotmakebirthclaimindependentcivilverification. BibliographicKent-First1999citationnotseparatelyacquiredorcorroboration.",
+        "CarrierSciELOoriginaljournalrepresentation not independentsecondsource. No sourcecache distributed."
+      ],
+      "source_quote_word_count": 4
+    },
+    {
+      "source_grade_role": "person_birthplace_support_only",
+      "native_DOB_source_grade_unchanged": true,
+      "retrieval_representation": "web-tool parsed original text, not raw HTTP/PDF bytes",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "source_body_acquisition_role": "worker_original_body_verified_parent_review_pending",
+      "birth_source_all_native_components_confirmed": true,
+      "record_id": "RS_PAST_NA5089",
+      "native": {
+        "record_id": "RS_PAST_NA5089",
+        "authority_name": "Ditchburn; Robert William (1903 - 1987)",
+        "native_dob": "1903-01-14",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "0d5eb7e461825257390bd4dd0165e029377a38c38cbf850a8ee7356d1f1d3316"
+      },
+      "status": "candidate_original_unsigned_professional_society_historical_obituary",
+      "source_url": "https://www.optica.org/about/newsroom/obituaries/2022/robert_william_ditchburn/",
+      "source_title": "In Memoriam: Robert William Ditchburn,1903-1987",
+      "source_author": null,
+      "source_kind": "original_unsigned_professional_society_historical_obituary",
+      "publication_date": "2022-08-05",
+      "publication_date_precision": "displayed_original_page_date_not_1987death_date",
+      "source_observed_name": "Robert William Ditchburn",
+      "source_birthdate": "1903-01-14",
+      "source_birthdate_precision": "exact_day_in_born_clause",
+      "source_lifespan": "1903-1987",
+      "source_death_date": "1987-04-08",
+      "source_quote": "was born on 14 January 1903 in Waterloo, Lancashire, England",
+      "raw_birthplace": "Waterloo, Lancashire, England",
+      "source_grade": "S3",
+      "source_grade_basis": "OriginalunsignedhistoricalOpticaprofile, noacquiredpersonalbyline/editedexpertmemoircredential. ConservativecompiledS3; professionalhostandFRSreferencealonearenotS1/S2upgrade.",
+      "reviewed_hemisphere": "north",
+      "geographic_basis": "Directbornclause explicitlyincludesEngland withWaterloo,Lancashire; birth-linkedcountry/wholeregion supportsNorth withoutpersonalcountry/coordinates.",
+      "source_ref": "turn1485342view0",
+      "source_locator": "turn1485342view0:L99-106 fullnative/lifespan/pubdate2022/death8April1987/age84/exactDOB14Jan1903/directWaterlooLancashireEngland. L107-112 Cambridge/Dublin/Readingphysicist/FRS1962/bookLight1952/eye-movementsresearch.",
+      "identity_review": [
+        "FullnativeRobertWilliamDitchburn present in title/body; exact14January1903 equals frozen native1903-01-14; death1987compatibleauthority.",
+        "Readingphysicschair1946-1968/Dublin1929/opticsretinastabilization/Lighttextbook/FRS1962 coherentsourcecareerfingerprint.",
+        "Actualsourceage84consistentwithitsstatedbirthanddeathdates; no new internalageissue inferred."
+      ],
+      "caveats": [
+        "RetrospectivepagepublishedAugust2022describes1987death; neveruse2022asdeathyear.",
+        "Namednative/components/career verified; sourcequalityconservativeS3ratherthansocietyhostupgrade.",
+        "No personalcountry/QID/coordinate/nativeDOBtier/eligibility change."
+      ],
+      "source_quote_word_count": 10
+    }
+  ],
+  "holds": [
+    {
+      "source_grade_adopted": null,
+      "source_quote": "",
+      "source_quote_word_count": 0,
+      "geography_decision": "unchanged_unknown",
+      "frozen_preserved": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA530",
+      "native": {
+        "record_id": "RS_PAST_NA530",
+        "authority_name": "Smith; Herbert Williams (1919 - 1987)",
+        "native_dob": "1919-05-03",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "4d4de54795a2590ab3a1b219f460abd7c9526a13a4ad225ac2d0cd2fbcd2e36e"
+      },
+      "status": "hold_no_acquired_original_birthplace_body",
+      "hold_type": "no_acquired_original_birthplace_body",
+      "reason": "OriginalAvianPathologyobituaryroute singlefirstopen notaccessible; separateoriginalRSmemoirJSTORroute returnedonlyoneGoogleTagManagerline, no body. Searchprojections1919/WelshtownPontypriddnotadopted. No actualprintedDOBconflict or datecorrection.",
+      "source_url": "https://www.tandfonline.com/doi/pdf/10.1080/03079458708436418",
+      "source_ref": "turn1485342view2",
+      "source_title": "Obituary: Dr Herbert Williams Smith, FRS",
+      "source_author": null,
+      "source_kind": "originalobituaryroute_notbodyacquired",
+      "failed_retrievals": [
+        {
+          "source_url": "https://www.tandfonline.com/doi/pdf/10.1080/03079458708436418",
+          "source_ref": "turn1485342view2",
+          "actual_tool_result": "URL https://www.tandfonline.com/doi/pdf/10.1080/03079458708436418 is not accessible via this tool.",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "body_acquired": false,
+          "no_retry_after_failure": true
+        }
+      ],
+      "other_retrieval": {
+        "source_url": "https://www.jstor.org/stable/770067",
+        "source_ref": "turn4198074view1",
+        "source_title": "HerbertWilliamsSmith,3May1919-16June1987",
+        "source_author": "Naomi Datta (bibliographicprojectiononly)",
+        "actual_rendered_result": "Total lines:1; L0 GoogleTagManagerlink only",
+        "body_acquired": false,
+        "not_HTTP_failure_claim": true,
+        "no_retry_after_uninformative_route": true
+      },
+      "caveats": [
+        "TandFdiscoverybirthparagraphissearchprojectiononly, not originalbody; noWelsh/Pontypriddgeo adoption.",
+        "JSTOR1linerenderisnot403orverifiedmemoirtext; no imaginedpublicationbody/byline.",
+        "OtherHerbertWilliamsSmith2025funeralpersonsnotmergedwithnative1919-1987scientist."
+      ]
+    },
+    {
+      "source_grade_adopted": null,
+      "source_quote": "",
+      "source_quote_word_count": 0,
+      "geography_decision": "unchanged_unknown",
+      "frozen_preserved": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA5362",
+      "native": {
+        "record_id": "RS_PAST_NA5362",
+        "authority_name": "Stanley; Herbert Muggleton (1903 - 1987)",
+        "native_dob": "1903-07-20",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "e7ab327ce0d2566c424843f2964907543367f76ac72c7a142b96a6e5979cd1a8"
+      },
+      "status": "hold_no_acquired_original_birthplace_body",
+      "hold_type": "no_acquired_original_birthplace_body",
+      "reason": "ObservedRoyalSocietymemoirJSTORsinglefirstopen notaccessible. Otherdiscoverycatalogue/patent/bibliographicmetadatahadname/careerbutnooriginalbornassertion. No sourcebodyplace/DOBadoption.",
+      "source_url": "https://www.jstor.org/stable/770068",
+      "source_ref": "turn4198074view0",
+      "source_title": "HerbertMuggletonStanley,20July1903-4July1987",
+      "source_author": "H. C. Bailey (bibliographicprojectiononly; initials not expanded)",
+      "source_kind": "originalmemoirroute_notbodyacquired",
+      "source_birthdate": "1903-07-20",
+      "source_birthdate_precision": "exact_day_in_discovery_bibliographic_title_only",
+      "failed_retrievals": [
+        {
+          "source_url": "https://www.jstor.org/stable/770068",
+          "source_ref": "turn4198074view0",
+          "actual_tool_result": "URL https://www.jstor.org/stable/770068 is not accessible via this tool.",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "body_acquired": false,
+          "no_retry_after_failure": true
+        }
+      ],
+      "caveats": [
+        "ExactnativeDOBprojectioncompatiblebutnotoriginalbodyconfirmation.",
+        "No birthday/placefrompatentinventoraddresses orauthorbookpublisherlocation.",
+        "No same-routealternatecarrier/DOIretry or initialexpansion."
+      ]
+    },
+    {
+      "source_grade_adopted": null,
+      "source_quote": "",
+      "source_quote_word_count": 0,
+      "geography_decision": "unchanged_unknown",
+      "frozen_preserved": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA604",
+      "native": {
+        "record_id": "RS_PAST_NA604",
+        "authority_name": "Snow; George Robert Sabine (1897 - 1969)",
+        "native_dob": "1897-01-19",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "0fb956121b128ad39c53f7759180fb4638c2584030833aa4063f0ec559e16d51"
+      },
+      "status": "hold_genealogical_fullname_place_assertion_missing_date_and_professional_binding",
+      "hold_type": "date_and_identity_binding_insufficient",
+      "reason": "Acquiredoriginalgenealogyp2383namesGeorgeRobertSabineSnow/directbornMorlandsRoadBudleighSalterton, but states no subjectDOB/lifespan/profession inthatentry. Samefullnamealone doesnotbindittothefixedbotanistrecord orqualifyadmission. Separatep5527Mar1897searchprojectionoriginalfirstfetch429, no actualcontrarydatebody. Do notadoptdatelessgenealogybycombiningexternalnativeDOB.",
+      "source_url": "https://www.townsley.info/Strangeway/GedSite/g3/p2383.htm",
+      "source_ref": "turn7312544view1",
+      "source_title": "Strangway-Towneley,PersonPage2383,GeorgeRobertSabineSnowentry",
+      "source_author": null,
+      "source_kind": "original_unsigned_compiled_genealogy_person_entry",
+      "source_locator": "turn7312544view1:L822-836 fullname/entry/ThomasSnowfather/directplace/marriedChristineMaryPilkington24July1930; no DOB/lifespan/career;turn4198074view3firstpageopen.",
+      "source_birthdate": null,
+      "source_birthdate_precision": "not_stated_in_acquired_subject_entry",
+      "raw_birthplace_candidate_held": "Morlands Road, Budleigh, Salterton",
+      "observed_relation_context": {
+        "source_father": "Thomas Snow",
+        "source_spouse": "Christine Mary Pilkington",
+        "source_marriage_date": "1930-07-24",
+        "role": "Source-onlygenealogycontext; no acceptednativefamilylink orpersondisambiguation verdict."
+      },
+      "failed_retrievals": [
+        {
+          "source_url": "https://townsley.info/Strangeway/GedSite/g6/p5527.htm",
+          "source_ref": "turn4198074view4",
+          "actual_tool_result": "Failed to fetch https://townsley.info/Strangeway/GedSite/g6/p5527.htm: (429) Too Many Requests",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "body_acquired": false,
+          "no_retry_after_failure": true
+        }
+      ],
+      "unacquired_date_projection": {
+        "source_url": "https://townsley.info/Strangeway/GedSite/g6/p5527.htm",
+        "discovery_ref": "turn1485342search8",
+        "projected_date_text": "Mar1897",
+        "status": "searchprojectiononly_original429notacquired",
+        "not_confirmed_DOB_conflict": true,
+        "no_registration_vs_birth_relabeling": true
+      },
+      "caveats": [
+        "Do not assertthese two genealogyentriesare sameperson orsameoriginaldateclaim basedonfullname; no duplicatedpersonmerge or provenancecorrection.",
+        "Mar1897projectionnotrecast asQ1registration/baptismoractualMarchbirthday.",
+        "Unknownnativehemisphereunchanged; no address/cityfame/inferredDevoncountry adoption.",
+        "No conflict-listappend: actualacquiredentrydatelessandinsufficientbinding; otherprojecteddateoriginalfailed."
+      ]
+    },
+    {
+      "source_grade_adopted": null,
+      "source_quote": "",
+      "source_quote_word_count": 0,
+      "geography_decision": "unchanged_unknown",
+      "frozen_preserved": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA611",
+      "native": {
+        "record_id": "RS_PAST_NA611",
+        "authority_name": "Gates; Sidney Barrington (1893 - 1973)",
+        "native_dob": "1893-02-02",
+        "raw_birthplace": "",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "f07686d4a9261ece679c980f0b87b7ab02f9175e7f8b906e69065ac3ff559497"
+      },
+      "status": "hold_original_obituary_metadata_without_birthplace_body",
+      "hold_type": "no_acquired_original_birthplace_body",
+      "reason": "CambridgeoriginalAeronauticalJournal1973obituarylandingmetadata/bylineactualacquired, but parsedpageonlypreviewdescription, no originalbody/PDFlink/imagepixels exposed. SeparateRoyalSociety1974memoirJSTORfirstopen notaccessible. No birthplace/DOBbody, noadoption/conflictverdict.",
+      "source_url": "https://www.cambridge.org/core/journals/aeronautical-journal/article/sidney-barrington-gates-obe-ma-frs-ceng/4C3C84D9C6B49165422D662061924485",
+      "source_ref": "turn7312544view0",
+      "source_title": "SidneyBarringtonGatesOBE,MA,FRS,CEng",
+      "source_author": "H. H. B. M. Thomas (literal acquiredbyline; initials not expanded)",
+      "source_kind": "original_publisher_obituary_landing_metadata_only",
+      "publication_date": "1973-11",
+      "publication_date_precision": "originaljournalissue_month",
+      "online_date": "2016-07-04",
+      "source_locator": "turn7312544view0:L424-439 fullname/byline/online2016/abstractnotavailablepreviewdescribed;L441 firstpageimageplaceholderonly;L446-459 originalObituary/AeronauticalJournal77issue755November1973/v-vi/DOI.",
+      "source_birthdate": null,
+      "source_birthdate_precision": "not_stated_in_acquired_landing_metadata",
+      "failed_retrievals": [
+        {
+          "source_url": "https://www.jstor.org/stable/769637",
+          "source_ref": "turn6593853view0",
+          "actual_tool_result": "URL https://www.jstor.org/stable/769637 is not accessible via this tool.",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "body_acquired": false,
+          "no_retry_after_failure": true
+        }
+      ],
+      "caveats": [
+        "Source1973originalpublicationmonthand2016onlinepostingaredistinct; neitherrebadgedsubjectbirth/death.",
+        "No parsedPDFlinkorpixelsavailablefrompreviewplaceholder; no failedscreenshot/image-renderclaim or imaginedvisualDOB.",
+        "UnopenedWikipediaG,H,Ifellowslistprojectionturn1485342search30says3Feb1893vsnative2Feb1893. Itisnotacquiredoriginalcontrarybody; do notappendqualifiedDOBconflict, correctnativeorclearpossibleissuebydatelessmetadata.",
+        "Separate1974memoirbyThomas/Kuchemannobservedbibliographyonly; noacquiredmemoirbody/gradeupgrade."
+      ]
+    }
+  ],
+  "query_log": [
+    {
+      "query_index": 1,
+      "engine": "system2",
+      "query": "\"Charles Edmund Ford\" born",
+      "observed_call_result_ref_prefix": "turn3635722",
+      "topic_relevant_observed_refs": [
+        "turn3635722search14",
+        "turn3635722search15",
+        "turn3635722search31"
+      ],
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "intent_timing": "Exactstringprelistedbeforeexecution ininitialintent"
+    },
+    {
+      "query_index": 2,
+      "engine": "system2",
+      "query": "\"Robert William Ditchburn\" born",
+      "observed_call_result_ref_prefix": "turn3635722",
+      "topic_relevant_observed_refs": [
+        "turn3635722search1",
+        "turn3635722search2",
+        "turn3635722search5"
+      ],
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "intent_timing": "Exactstringprelistedbeforeexecution ininitialintent"
+    },
+    {
+      "query_index": 3,
+      "engine": "system2",
+      "query": "\"Herbert Williams Smith\" born",
+      "observed_call_result_ref_prefix": "turn3635722",
+      "topic_relevant_observed_refs": [
+        "turn3635722search18",
+        "turn3635722search56",
+        "turn3635722search20"
+      ],
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "intent_timing": "Exactstringprelistedbeforeexecution ininitialintent"
+    },
+    {
+      "query_index": 4,
+      "engine": "system2",
+      "query": "\"Herbert Muggleton Stanley\" born",
+      "observed_call_result_ref_prefix": "turn3635722",
+      "topic_relevant_observed_refs": [
+        "turn3635722search11",
+        "turn3635722search53",
+        "turn3635722search28"
+      ],
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "intent_timing": "Exactstringprelistedbeforeexecution ininitialintent"
+    },
+    {
+      "query_index": 5,
+      "engine": "system2",
+      "query": "\"George Robert Sabine Snow\" born",
+      "observed_call_result_ref_prefix": "turn1485342",
+      "topic_relevant_observed_refs": [
+        "turn1485342search0",
+        "turn1485342search7",
+        "turn1485342search8",
+        "turn1485342search13"
+      ],
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "intent_timing": "Exactstringprelistedbeforeexecution ininitialintent"
+    },
+    {
+      "query_index": 6,
+      "engine": "system2",
+      "query": "\"Sidney Barrington Gates\" born",
+      "observed_call_result_ref_prefix": "turn1485342",
+      "topic_relevant_observed_refs": [
+        "turn1485342search1",
+        "turn1485342search16",
+        "turn1485342search30"
+      ],
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "intent_timing": "Exactstringprelistedbeforeexecution ininitialintent"
+    },
+    {
+      "query_index": 7,
+      "engine": "system1",
+      "query": "\"Herbert Muggleton Stanley\" \"born\" \"1903\"",
+      "observed_call_result_ref_prefix": "turn7285404",
+      "topic_relevant_observed_refs": [
+        "turn7285404search0",
+        "turn7285404search1"
+      ],
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "intent_timing": "Exactadaptivestringprelistedbeforeexecution inintentadaptive_exact_queries_prelisted"
+    },
+    {
+      "query_index": 8,
+      "engine": "system1",
+      "query": "\"Sidney Barrington Gates\" \"born\" \"1893\"",
+      "observed_call_result_ref_prefix": "turn7285404",
+      "topic_relevant_observed_refs": [
+        "turn7285404search2",
+        "turn7285404search3",
+        "turn7285404search6"
+      ],
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "intent_timing": "Exactadaptivestringprelistedbeforeexecution inintentadaptive_exact_queries_prelisted"
+    },
+    {
+      "query_index": 9,
+      "engine": "system1",
+      "query": "\"George Robert Sabine Snow\" \"born\" \"1897\"",
+      "observed_call_result_ref_prefix": "turn7285404",
+      "topic_relevant_observed_refs": [
+        "turn7285404search4",
+        "turn7285404search5",
+        "turn7285404search9"
+      ],
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "intent_timing": "Exactadaptivestringprelistedbeforeexecution inintentadaptive_exact_queries_prelisted"
+    },
+    {
+      "query_index": 10,
+      "engine": "system1",
+      "query": "\"Herbert Williams Smith\" \"Pontypridd\"",
+      "observed_call_result_ref_prefix": "turn7285404",
+      "topic_relevant_observed_refs": [
+        "turn7285404search8",
+        "turn7285404search1"
+      ],
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "intent_timing": "Exactadaptivestringprelistedbeforeexecution inintentadaptive_exact_queries_prelisted"
+    },
+    {
+      "query_index": 11,
+      "engine": "system1",
+      "query": "\"Herbert Muggleton Stanley\" memoir",
+      "observed_call_result_ref_prefix": "turn4198074",
+      "topic_relevant_observed_refs": [
+        "turn4198074search0",
+        "turn4198074search1",
+        "turn4198074search7",
+        "turn4198074search8"
+      ],
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "intent_timing": "Exactadaptivestringprelistedbeforeexecution inintentadaptive_exact_queries_prelisted"
+    },
+    {
+      "query_index": 12,
+      "engine": "system1",
+      "query": "\"Sidney Barrington Gates\" biography",
+      "observed_call_result_ref_prefix": "turn4198074",
+      "topic_relevant_observed_refs": [
+        "turn4198074search2",
+        "turn4198074search3",
+        "turn4198074search4",
+        "turn4198074search5",
+        "turn4198074search10"
+      ],
+      "exact_backend_per_query_result_assignment_exposed": false,
+      "intent_timing": "Exactadaptivestringprelistedbeforeexecution inintentadaptive_exact_queries_prelisted"
+    }
+  ],
+  "query_result_mapping_limit": "Toolreturnedaggregatemultiqueryresultlists; exactbackendperquerymappingnotexposed. Topicrelevantrefsareobservedmatchesinaggregate, notfabricatedallocation.",
+  "navigation_log": [
+    {
+      "ref": "turn1485342view0",
+      "target": "DitchburnOptica",
+      "result": "actualoriginalbornbody/fullname/exactDOB/England"
+    },
+    {
+      "ref": "turn1485342view1",
+      "target": "FordSciELOmedicalhistory",
+      "result": "actualoriginalauthoredjournalbody;findlocatedFordparagraph"
+    },
+    {
+      "ref": "turn1485342view2",
+      "target": "HWSmithAvianPathologyPDF",
+      "result": "notaccessibleviatool;stopped"
+    },
+    {
+      "ref": "turn4198074view0",
+      "target": "StanleyJSTORmemoir",
+      "result": "notaccessibleviatool;stopped"
+    },
+    {
+      "ref": "turn4198074view1",
+      "target": "HWSmithJSTORmemoir",
+      "result": "onelineGoogleTagManageronly_nooriginalbody;notHTTPfailureclaim;stopped"
+    },
+    {
+      "ref": "turn4198074view2",
+      "target": "GatesCambridgeAeronauticalJournalmetadata",
+      "result": "parsedpublisherlandingmetadata/previewplaceholderonly_noDOB/BPbody"
+    },
+    {
+      "ref": "turn4198074view3",
+      "target": "Snowgenealogyp2383",
+      "result": "actualdatelessfullnamedirectplaceassertion;insufficientdate/professionalbinding"
+    },
+    {
+      "ref": "turn4198074view4",
+      "target": "Snowseparategenealogyp5527",
+      "result": "toolreported429TooManyRequests;stopped"
+    },
+    {
+      "ref": "turn6593853view0",
+      "target": "GatesdistinctRoyalSociety1974memoirJSTOR",
+      "result": "notaccessibleviatool;stopped"
+    }
+  ],
+  "parsed_find_log": [
+    {
+      "source_ref": "turn1485342view1",
+      "pattern": "Charles Edmund Ford",
+      "result_ref": "turn2464932view0",
+      "result": "actualFordfullnative/lifespanyear/directbornEngland154;bylineactualinitialopen"
+    },
+    {
+      "source_ref": "turn4198074view2",
+      "pattern": "Save PDF",
+      "result_ref": "turn7312544view0",
+      "result": "actualGatesmetadatapreviewdescription,nolink/pixels/body"
+    },
+    {
+      "source_ref": "turn4198074view3",
+      "pattern": "George Robert Sabine Snow",
+      "result_ref": "turn7312544view1",
+      "result": "actualSnowentrydateless/no career"
+    }
+  ],
+  "error_ledger": [
+    {
+      "source_url": "https://www.tandfonline.com/doi/pdf/10.1080/03079458708436418",
+      "source_ref": "turn1485342view2",
+      "actual_tool_result": "URL https://www.tandfonline.com/doi/pdf/10.1080/03079458708436418 is not accessible via this tool.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "body_acquired": false,
+      "no_retry_after_failure": true
+    },
+    {
+      "source_url": "https://www.jstor.org/stable/770068",
+      "source_ref": "turn4198074view0",
+      "actual_tool_result": "URL https://www.jstor.org/stable/770068 is not accessible via this tool.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "body_acquired": false,
+      "no_retry_after_failure": true
+    },
+    {
+      "source_url": "https://townsley.info/Strangeway/GedSite/g6/p5527.htm",
+      "source_ref": "turn4198074view4",
+      "actual_tool_result": "Failed to fetch https://townsley.info/Strangeway/GedSite/g6/p5527.htm: (429) Too Many Requests",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "body_acquired": false,
+      "no_retry_after_failure": true
+    },
+    {
+      "source_url": "https://www.jstor.org/stable/769637",
+      "source_ref": "turn6593853view0",
+      "actual_tool_result": "URL https://www.jstor.org/stable/769637 is not accessible via this tool.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "body_acquired": false,
+      "no_retry_after_failure": true
+    }
+  ],
+  "protocol_deviations": [],
+  "retrieval_limits": [
+    "Oneearlierdirectdisplayfordfindpluslatersearchoutputwastruncatedinmiddle; actualFord154fullbirthpredicateandinitialauthors/dateblockremainedvisible. No missingresultstatusorunseenfactadopted. Laterfilteredfindoutputkeptheaders/statusandrequiredminimalactualsubjectlines; fulloriginalsourcesnotcached.",
+    "Actual12queries9nav3find;5unusednavigationbudgetslotsnotclaimedreads. Retrievalstoppedafterunavailableoriginals/metadataandbindingholds; no failedroutevariantsorrawGET.",
+    "No originalsourcebytes/status/time independentlyacquired; sourceerrorsquotedtoolmessagesonly. AuditUTCtimeisreportwrite.",
+    "Nineinheritedissues/methodfilesnative/master/Git/studyfilesuntouched. No birthdate/sourcegrade/identity/eligibilitycorrection.",
+    "Sixrecordindividualfollowupscompleteinthisgroup; notall112blankbirthplacequeueclosed or18birthplacesrecovered."
+  ]
+}

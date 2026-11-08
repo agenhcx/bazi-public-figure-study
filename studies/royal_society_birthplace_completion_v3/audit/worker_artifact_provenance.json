@@ -1,0 +1,12 @@
+{
+  "worker_source_artifact_sha256": {
+    "extent/extent_results.jsonl": "11ff9aa11dd925adb09bdb0e4c2f4384a74503fd0de0ab50bfc47396a7f740c5",
+    "localities/row_results.jsonl": "11dd8aac155abe51d32c8de7fd8fcb372179e26d658c3cae5e005429498628be",
+    "official_lowfruit/accepted.jsonl": "5afdf28dac166fb0d852b0522f5b9a1d2ebc2b354a135978277a7d1f5176e9fd",
+    "wiki_body/accepted_birthplace_candidates.jsonl": "f4b36b571a0ea9155c194b1cc72e19252f39eacb7f5ad8481621b244dd898c5e",
+    "new_facts_geography/new_fact_geography.jsonl": "d2aa94c35f764b1a9d0ae665e0ab09ae339caae40c3231210d10fad59e53b1eb",
+    "current_qid_audit/review_current99_qid_audit.jsonl": "8c73751e85cde92ed2fef19bdd37f0a74eb516f0232c4b70cb2ab5ef74f16d76",
+    "wiki_identity_qa/wiki_person_identity_qa.jsonl": "f54a90c138c0856f9644af90f379d14f493b72431ecc50c6341520272e979d33"
+  },
+  "transformation": "Deterministic gzip; evidence_quote shortened to at most 25 words recursively for new facts and geography. These projected input files have independent hashes in outputs/summary.json. Original full biography/HTML caches excluded."
+}

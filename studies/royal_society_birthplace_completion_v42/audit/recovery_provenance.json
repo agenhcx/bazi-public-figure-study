@@ -1,0 +1,30 @@
+{
+  "artifact_type": "recovery_provenance",
+  "written_utc": "2026-11-08T09:39:09.480569+00:00",
+  "recovered_from_commit": "e14ab1bbeeb3f4193c7bf1b18e107eee94bc57c1",
+  "baseline_restored_commit": "5556e7e981f29383187ea201beb1edb22ad04be0",
+  "baseline_all378_Gitfiles_SHA1_exact": true,
+  "baseline_all378_manifest_entries_SHA256_exact": true,
+  "original_scope_bytes_exact": true,
+  "original_replay_script_exact": true,
+  "original_replay_sha256": "01b29beee4f90dc8f10f1c4322f4d345683ec26601d82c2a690730c37c8eb290",
+  "original_worker_reports_and_intents_recovered": false,
+  "original_source_QA_report_recovered": false,
+  "original_production_output_pins": {
+    "birthplace_rows.jsonl.gz": "433749a0b7ff0bfc62db8993f662cd928a4bc023418a54600259fdbea0b1537a",
+    "birthplaces.csv": "c4c1c00bbbb256d4e9a346f1540d053a3c701f9b3764418ac612651a3424eb12",
+    "changes.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "remaining_unknown_window.csv": "44d9bfc19a6943e8dc363d3b8f147bf2310e9ce7b636a5986dff28b82e783f67",
+    "summary.json": "d8c128a106aa04d04ed15897a36f438f9d4c4546fb7ec2d7e3223ddd88167ada"
+  },
+  "original_final_replays_completion_unobserved": true,
+  "old_session_88045_now_unknown": true,
+  "historical_checks_are_not_new_checks": {
+    "source_QA": 171,
+    "replay_preflight": 112,
+    "final_light_preflight": 48,
+    "last_observed_final_structural_checks": 56
+  },
+  "reconstruction_cannot_restore_original_entry_UTCs_or_report_bytes": true,
+  "new_recovery_requires_independent_source_review_and_final_sequential_CLI_exits": true
+}

@@ -1,0 +1,46 @@
+{
+  "DOB_or_native_acceptance_modified": false,
+  "by_route": {
+    "australian_directory": {
+      "north": 2,
+      "south": 2
+    },
+    "historical_dnb": {
+      "north": 1,
+      "unknown": 1
+    }
+  },
+  "candidate_count": 6,
+  "country_or_birthpoint_assigned": false,
+  "created_utc": "2026-11-03T00:42:26.052160+00:00",
+  "distinct_people": 6,
+  "held": [
+    {
+      "basis": "bounded_exact_geographic_inventory_unresolved_or_cross_hemispheres",
+      "raw_birthplace": "Lindley",
+      "record_id": "RS_PAST_NA1510",
+      "source_url": "https://en.wikisource.org/wiki/Dictionary_of_National_Biography,_1912_supplement/Broadbent,_William_Henry"
+    }
+  ],
+  "hemisphere_counts": {
+    "north": 3,
+    "south": 2,
+    "unknown": 1
+  },
+  "input_sha256": {
+    "australian_directory": "2d02fab936c2b76763f2fc8bbc168ccad4d9f1ca4fdf63f4677b8090b1813159",
+    "historical_dnb": "128d5c22b7dda218d01191cbb272c9282e3ae8f5ec134e58800fc4da49961143"
+  },
+  "network_bound": "at most one new exact-label query, one new place-pageprops query, and one at-most-50-QID entity request; no retries; no prior exact term requeried",
+  "network_requests_executed": {
+    "exact_name_geographic": 1,
+    "place_entity_api": 0,
+    "place_pageprops": 0
+  },
+  "no_person_queries": true,
+  "output_sha256": "7a82f7836ae64a99d1fcabf3b2e5bc092b6229c2025eee95fd33631ce35a8648",
+  "people_with_supported_hemisphere": 5,
+  "qualified_historical_city_entity_resolutions": 0,
+  "script_sha256": "74d01179ad8b307f178ebe19446e037c0e0b6bc4ddc1bcb7a0989d38ed2fef46",
+  "source_place_name_timing_discrepancy_count": 0
+}

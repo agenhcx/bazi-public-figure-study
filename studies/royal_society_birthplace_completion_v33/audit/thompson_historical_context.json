@@ -1,0 +1,64 @@
+{
+  "written_utc": "2026-11-06T22:38:14.862009+00:00",
+  "origin": "priorv12actualacquisition/history, NOTnewv33source",
+  "full_original_hold": [
+    {
+      "record_id": "RS_PAST_NA2153",
+      "source_authorised_full_name": "Thompson; Robert Henry Stewart (1912 - 1998)",
+      "native_name": "Robert Henry Stewart",
+      "native_dob": "1912-02-02",
+      "existing_raw_birthplace": "Croydon",
+      "input_complete_object_canonical_json_sha256": "40be643b5bb9e3894eabf2f180ae9da003ddef60d6d69caf9aa21dd08b0fc8e4",
+      "disposition": "hold",
+      "hold_reason": "new_signed_obituary_birth_year_conflict_and_unqualified_city",
+      "identity_review": {
+        "full_name": "Robert Henry Stewart Thompson",
+        "source_full_name_match": true,
+        "source_lifespan_years": "1913–1998",
+        "source_birth_year": 1913,
+        "source_exact_dob": null,
+        "native_birth_year": 1912,
+        "native_date_unchanged": true,
+        "conflict_detected": true,
+        "conflict_description": "BMJ birth year1913 conflicts with native1912; article also gives death15 January1998 while old memoir title gives16 January1998. Do not reconcile by replacing native dates."
+      },
+      "source_reviews": [
+        {
+          "author": "Peter Williams (subsection byline at line89; page-level indexing lists I. F. Brockington for another obituary)",
+          "title": "BMJ obituaries, 2 May1998, subsection Robert Henry Stewart Thompson",
+          "publisher": "BMJ Publishing Group, original article supplied to PMC",
+          "source_grade_suggestion": "S2",
+          "grade_basis": "Signed edited professional obituary; conflict prevents use.",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1113094/",
+          "source_doi": "10.1136/bmj.316.7141.1392",
+          "webref": "turn30view2",
+          "original_location": "Lines83–89; birth clause at line84",
+          "evidence_quote": "b Croydon to a doctor father 1913",
+          "qualifier_present": false
+        }
+      ],
+      "candidate_for_parent_geography_review": false,
+      "hold_type": "birth_year_conflict",
+      "root_decision": "Retain frozen native row unchanged; this audit does not correct DOB or adjudicate a competing birthplace."
+    }
+  ],
+  "full_original_navigation_entry": [
+    {
+      "request_kind": "original_navigation",
+      "navigation_index": 7,
+      "input_ref": "turn28search2",
+      "request_started_utc": "2026-11-04T23:12:27.845Z",
+      "tool_finished_utc": "2026-11-04T23:12:28.396Z",
+      "http_status": null,
+      "http_response_time_ms": null,
+      "raw_http_sha256": null,
+      "output_ref": "turn30view2",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1113094/",
+      "source_doi": "10.1136/bmj.316.7141.1392",
+      "outcome": "parsed_publisher_supplied_original_signed_obituary",
+      "locator": "lines83-89; subsection Robert Henry Stewart Thompson",
+      "note": "Signed by Peter Williams. Croydon only, no qualifier; birth year1913 conflicts with frozen1912."
+    }
+  ],
+  "note": "PrioractualoriginalsignedPeterWilliamsBMJ1998subsection, fullsubject/year1913 vsnative1912. Sourcebodynotreopenedv33, no nativecorrection. Rootmayreconcilequalifiedhistoricalcasewithoutcallingnewsource/newconflict."
+}

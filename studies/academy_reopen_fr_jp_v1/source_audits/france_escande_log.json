@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "case_id": "cths-2092-leopold-escande",
+  "events": [
+    {
+      "action": "read_local_overlay",
+      "paths": [
+        "data/france_academy_cths_nine_source_adjudication_v1_2/person_evidence_triage_v1_2.csv",
+        "data/france_academy_cths_nine_source_adjudication_v1_2/source_claim_evidence_ledger_v1_2.csv",
+        "data/france_academy_cths_profile_dob_harvest_v1/cths_dob_claims_all_targets_candidate_only_v1.csv"
+      ],
+      "timestamp_utc": null,
+      "note": "Read frozen CTHS2092 rows only. Full name and Toulouse birth-place lead preserved; BnF and previous biographies not reopened."
+    },
+    {
+      "action": "search",
+      "query": "\"Léopold Escande\" \"naissance\" Toulouse 1902 archives",
+      "method": "web.system2_search_query",
+      "tool_batch": "turn1361",
+      "timestamp_utc": null,
+      "note": "No original official birth-register record surfaced. Secondary index/Wikipedia snippets were leads only, not evidence adopted."
+    },
+    {
+      "action": "search",
+      "query": "site:archives.toulouse.fr état civil 1902 naissances registre numérisé",
+      "method": "web.system2_search_query",
+      "tool_batch": "turn1361",
+      "timestamp_utc": null,
+      "note": "Found official Archives de Toulouse genealogy/etat-civil guide."
+    },
+    {
+      "action": "open",
+      "url": "https://archives.toulouse.fr/genealogie-et-etat-civil/",
+      "method": "web.open",
+      "timestamp_utc": null,
+      "status": "body_observed",
+      "note": "Official guide says digitized civil registers1792–1925 and nominative searches from1900; links official database. General guide only, not Escande record."
+    },
+    {
+      "action": "open",
+      "url": "https://basededonnees.archives.toulouse.fr/",
+      "method": "web.click, [session-reference-omitted] link6",
+      "timestamp_utc": null,
+      "status": "blocked",
+      "http_status": 503,
+      "note": "Service Unavailable. No original register, individual transcription, image, login page or challenge observed. Not retried."
+    },
+    {
+      "action": "search",
+      "query": "\"Escande\" \"1902\" site:basededonnees.archives.toulouse.fr",
+      "method": "web.system2_search_query",
+      "tool_batch": null,
+      "timestamp_utc": null,
+      "status": "empty_results",
+      "note": "No indexed record URL was returned."
+    }
+  ],
+  "budget": {
+    "targeted_queries_used": 3,
+    "targeted_queries_limit": 3,
+    "new_official_body_or_image_requests_used": 2,
+    "new_official_body_or_image_requests_limit": 4
+  },
+  "requests_to_old_bnf_or_matchid": 0,
+  "original_register_images_opened": 0,
+  "contact_attempts": 0,
+  "authentication_attempts": 0,
+  "stop_reason": "Targeted-search budget exhausted; official database returned503 and no original record URL was found. No guessing, retry, or access circumvention."
+}

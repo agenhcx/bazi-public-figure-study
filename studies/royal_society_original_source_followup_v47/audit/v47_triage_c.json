@@ -1,0 +1,254 @@
+{
+  "schema": "UK_v47_group_c_local_original_source_triage_v1",
+  "written_utc": "2026-11-08T12:05:11.674116+00:00",
+  "status": "local_only_pre_source_scope",
+  "recommended_record_ids": [
+    "RS_PAST_NA8672",
+    "RS_PAST_NA1585"
+  ],
+  "conditional_reserve_record_ids": [],
+  "remaining_native_compact_file": "remaining_unknown_v46_compact.json",
+  "remaining_native_compact_sha256": "4322330d9497706ce23b2c30f12bc2d2d17dea999b2cebd6bdb0303f1b6665f3",
+  "actual_prior_V46_data_QA_report_sha256": "55bc8fb3b9ea4d2c5e99bdc7cdd7b1a9f97c3a7a6f125035af592a1ceba12b4f",
+  "excluded_recent_V45_V46_record_ids": [
+    "RS_CURRENT_10965",
+    "RS_PAST_NA1196",
+    "RS_PAST_NA1998",
+    "RS_PAST_NA4155",
+    "RS_PAST_NA4193",
+    "RS_PAST_NA4250",
+    "RS_PAST_NA4252",
+    "RS_PAST_NA4301",
+    "RS_PAST_NA4490",
+    "RS_PAST_NA6868",
+    "RS_PAST_NA780"
+  ],
+  "all9_current_V46_inventory_crosscheck": {
+    "active_source_DOB_conflicts.json": {
+      "sha256": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+      "records": 13,
+      "target_matches": []
+    },
+    "birthplace_source_conflicts.json": {
+      "sha256": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+      "records": 2,
+      "target_matches": []
+    },
+    "source_derived_age_inconsistencies.json": {
+      "sha256": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+      "records": 4,
+      "target_matches": []
+    },
+    "provisional_parsed_date_discrepancies.json": {
+      "sha256": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+      "records": 1,
+      "target_matches": []
+    },
+    "lifespan_endpoint_discrepancies.json": {
+      "sha256": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+      "records": 1,
+      "target_matches": []
+    },
+    "cross_source_reported_age_contrasts.json": {
+      "sha256": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+      "records": 1,
+      "target_matches": []
+    },
+    "source_date_precision_holds.json": {
+      "sha256": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+      "records": 1,
+      "target_matches": []
+    },
+    "omitted_middle_name_admission.json": {
+      "sha256": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+      "records": null,
+      "target_matches": []
+    },
+    "source_ordinal_age_wording_observations.json": {
+      "sha256": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d",
+      "records": 1,
+      "target_matches": []
+    }
+  },
+  "targeted_history_file_pins": {
+    "v21_sources_b.json": "df480b7f21fb4f964c154738bc351ae6b40b693e80d3ebf7110680ce2a82be1c",
+    "v21_b_fw_intent.json": "95898447790e8fb2b986395f3860f7f1206d0168925d452b1c754707c0b5ab7a",
+    "v21_root_intent.json": "656e6f7c8aa2654bccd66738327296217f10ba6d47783018912837e56f8abcb1",
+    "v27_sources_a.json": "88e6be32092fd6b4ff3e669d0ab10f372f913bc86780b1a8da8a0b81e69aefad",
+    "v27_a_intent.json": "bdf2c311cf2379a14a986f333834af6e82718ef7bf6084f258d58449555a35a2",
+    "v27_root_intent.json": "7762d09359fb37f51e7a6315f21b1da9562f05c81f238bc297aaaf637ce99e37",
+    "v16_sources_a.json": "f4e1f6fee5589dbfeb204a8b9460fdf27ef549b5336888113ecf4326a0f6faab",
+    "v16_a_intent.json": "3e4aeeee07524d314e74a5ec0ed4c54bbc0355f5715e98659ed280d20aace971",
+    "v16_root_intent.json": "74219be49bb3c28fcb2caf2b399e063c2c0f819d929d17632ebd6b1b3a797007",
+    "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v21_holds.json": "cf04731a4626cefb1141e640b23550bbc6a9a34fad0ad83a25ba504ff4e2b928",
+    "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v27_holds.json": "f7ef7d491d0f8d3067209e0b02852cb5b8e8872f2d09703ad9bff7cb45fc88df",
+    "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v16_holds.json": "28ba18ff1853415f5d540b09fefc7c1d244911b20a3c841352c8a8c8239e753b"
+  },
+  "available_local_request_source_ledger_scan": {
+    "files_scanned": 234,
+    "matching_target_or_work_files": [
+      {
+        "path": "v16_a_intent.json",
+        "sha256": "3e4aeeee07524d314e74a5ec0ed4c54bbc0355f5715e98659ed280d20aace971"
+      },
+      {
+        "path": "v16_sources_a.json",
+        "sha256": "f4e1f6fee5589dbfeb204a8b9460fdf27ef549b5336888113ecf4326a0f6faab"
+      },
+      {
+        "path": "v21_b_fw_intent.json",
+        "sha256": "95898447790e8fb2b986395f3860f7f1206d0168925d452b1c754707c0b5ab7a"
+      },
+      {
+        "path": "v21_sources_b.json",
+        "sha256": "df480b7f21fb4f964c154738bc351ae6b40b693e80d3ebf7110680ce2a82be1c"
+      },
+      {
+        "path": "v27_a_intent.json",
+        "sha256": "bdf2c311cf2379a14a986f333834af6e82718ef7bf6084f258d58449555a35a2"
+      },
+      {
+        "path": "v27_sources_a.json",
+        "sha256": "88e6be32092fd6b4ff3e669d0ab10f372f913bc86780b1a8da8a0b81e69aefad"
+      }
+    ],
+    "limit": "Targeted local request/source histories only; not historical source-exhaustion proof."
+  },
+  "candidates": [
+    {
+      "record_id": "RS_PAST_NA8672",
+      "native": {
+        "record_id": "RS_PAST_NA8672",
+        "name": "Roger",
+        "source_authorised_full_name": "Fletcher; Roger (1939 - 2016); mathematician",
+        "dob": "1939-01-29",
+        "raw_birthplace": "",
+        "birthplace_source_grade": "unknown"
+      },
+      "native_personal_components": [
+        "Roger",
+        "Fletcher"
+      ],
+      "rank": 1,
+      "recommended_avenue": "Genuinely distinct Dundee/Institute of Mathematics and its Applications/London Mathematical Society original personal biography or interview",
+      "observed_new_original_URL": null,
+      "lead_status": "New prospective locator avenue; no retained specific original title/URL or original body acquisition claim. Clean two-component native identity reduces omitted-name risk.",
+      "prospective_locator_queries": [
+        "\"Roger Fletcher\" site:dundee.ac.uk biography",
+        "\"Roger Fletcher\" site:ima.org.uk obituary",
+        "\"Roger Fletcher\" site:lms.ac.uk biography"
+      ],
+      "prior_closed_works": [
+        {
+          "work": "Roger Fletcher.29January1939–15July2016, Gould N.I.M./Hall J.A.J., DOI10.1098/rsbm.2024.0037",
+          "actual_attempt": "https://doi.org/10.1098/rsbm.2024.0037",
+          "ref": "turn9642229view0",
+          "outcome": "First tool403; closed across publisher/PDF/institutional carriers. A new institutional page merely reprinting/hosting this memoir is not a distinct work."
+        }
+      ],
+      "prior_successful_nonbirth_work": {
+        "url": "https://numericalanalysisconference.org.uk/conferences/2025/slides/16",
+        "ref": "turn9412493view1",
+        "description": "Jacek Gondzio June2025 conference lecture. Actual RogerFletcher/exact date1939-01-29 and1939-2016/optimization identity from cited memoir title; inspected biography section has no birthplace. Not an unopened biography and not new memoir body.",
+        "locator": "v21_sources_b.json Fletcher hold sources[0]; v21_b_fw_intent.json operations; current prior_v21_holds.json"
+      },
+      "root_history_crosscheck": "v21_root_intent.json contains no Fletcher/LMS/IMA/Dundee source request; targeted worker/current inherited hold scans show no earlier LMS/IMA/Dundee personal body request.",
+      "reason_to_prioritize": "A compact new professional/institutional personal composition may state explicit birthyear/place while satisfying the two-component native name. No date/place availability promised and career/death-only notices will not qualify."
+    },
+    {
+      "record_id": "RS_PAST_NA1585",
+      "native": {
+        "record_id": "RS_PAST_NA1585",
+        "name": "William",
+        "source_authorised_full_name": "Watt; William (1912 - 1985)",
+        "dob": "1912-04-14",
+        "raw_birthplace": "",
+        "birthplace_source_grade": "unknown"
+      },
+      "native_personal_components": [
+        "William",
+        "Watt"
+      ],
+      "rank": 2,
+      "recommended_avenue": "Retained genuinely unopened Royal Society original personal scientific memoir; prioritize this concrete older-work citation over a speculative generic source search",
+      "observed_new_original_URL": null,
+      "retained_original_citation_literal": "MairW.N./MansfieldE.H.1987RoyalSocietymemoir33pp642–667",
+      "retained_citation_locator": "v27_sources_a.json unopened_distinct_original_leads[0] (lines275-279), recordRS_PAST_NA1585",
+      "lead_status": "Citation only; actual DOI/article title/URL not observed. No memoir body request found in available matched worker/root ledgers. Initials remain initials.",
+      "prospective_locator_queries": [
+        "\"William Watt\" \"Mair\" \"Mansfield\" \"1987\"",
+        "\"William Watt\" \"642\" \"667\" \"1987\""
+      ],
+      "prior_closed_works": [
+        {
+          "work": "University of Delaware CCM Excellence scientific-award PDF",
+          "actual_attempt": "https://www.ccm.udel.edu/wp-content/uploads/2016/05/CCM_Excellence_Final-1.pdf",
+          "ref": "turn1001451view0",
+          "outcome": "First tool502; no body. Closed across variants/carriers. Distinct from the retained1987 personal memoir."
+        }
+      ],
+      "prior_discovery_not_body_proof": {
+        "ref": "turn3331581search0",
+        "description": "British Newspaper Archive projection credited JimLove and called DrWilliamWatt Edinburgh-born with RAE/Surrey career. Actual article/body/date/nativeDOB/lifespan not acquired; no Edinburgh adoption, Watts alias or work-city inference."
+      },
+      "root_history_crosscheck": "v27_root_intent.json contains no Watt or retained Mair/Mansfield memoir request; prior_v27_holds.json retains award failure, while the top-level scratch source report retains the unopened memoir citation.",
+      "reason_to_prioritize": "Specific learned-society personal memoir with retained author initials/year/volume/pages and simple two-component name. This is an original biography target, not a large general bibliography. The actual body must supply explicit compatible birth precision and direct birthplace."
+    }
+  ],
+  "ordinary_admission_boundary": "Both selected records remain blank/unknown. Reuse ordinary original-source first-birthplace rules: actual all native personal components, explicitly stated compatible DOB precision/year, coherent distinctive career and compatible observed lifespan, direct personal birthplace relation. No dateless/age-derived date, invented aliases/middles, source-day transfer, host-onlyS1 or automatic journalist/unsignedS2. New birthplace can remain hemisphereunknown; hemisphere requires direct whole-region birth context. All actual conflicts remain held.",
+  "retrieval_boundary": "Prospective scope/individual exact durable intents and real entryUTC/separate successful exit0 required before any future query/open/click/find. Query strings here are proposals, not executed intents. Open only observed distinct original personal works; first unusable work closes across URL/carrier/rawGET/auth variants. No closed-work expansion.",
+  "source_queries_executed": 0,
+  "source_navigation_executed": 0,
+  "no_data_replay_code_or_Git_changes": true,
+  "only_written_artifact": "v47_triage_c.json",
+  "source_exhausted": false,
+  "final_freeze": false,
+  "excluded_conditional_record_ids": [
+    "RS_PAST_NA3088"
+  ],
+  "excluded_conditional_history": [
+    {
+      "record_id": "RS_PAST_NA3088",
+      "native": {
+        "record_id": "RS_PAST_NA3088",
+        "name": "Alan",
+        "source_authorised_full_name": "Davison; Alan (1936 - 2015)",
+        "dob": "1936-03-24",
+        "raw_birthplace": "",
+        "birthplace_source_grade": "unknown"
+      },
+      "native_personal_components": [
+        "Alan",
+        "Davison"
+      ],
+      "status": "excluded_from_selected_C_scope_due_to_MIT_same_work_uncertainty",
+      "suggested_distinct_avenues": [
+        "New MIT Chemistry faculty biography or independently composed departmental personal memorial",
+        "Original NPG personal catalogue entry, if actually located"
+      ],
+      "observed_new_original_URL": null,
+      "prior_work_boundaries": [
+        {
+          "work": "PMID26833907 InMemoriam:AlanDavison,PhD,1936–2015",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/26833907/",
+          "ref": "turn82view1",
+          "outcome": "Unusable HHS footer-only representation; no original personal body. Treat same work as closed across carriers."
+        },
+        {
+          "work": "MIT News article represented in RSSing obituary mirror/feed",
+          "url": "https://obituaries83.rssing.com/chan-7437767/all_p11.html",
+          "ref": "turn86view3",
+          "outcome": "Tool400/timeout; source report says original MITNews text appeared only in search projection. The same underlying article remains closed; a MIT News original URL or departmental republication would be a forbidden carrier retry. Exact original article URL/title not retained."
+        },
+        {
+          "work": "Original MIT retirees2015 memorial list",
+          "url": "https://web.mit.edu/retireesassoc/obit/mem-2015.html",
+          "ref": "turn92view0",
+          "outcome": "Actual list L81-82 names AlanDavison/Chemistry but no DOB/BP or personal obituary link. Not a new unopened personal biography."
+        }
+      ],
+      "root_history_crosscheck": "v16_root_intent.json contains no Davison additional source request.",
+      "selection_caution": "Do not call a new MIT URL a new work. Body request requires observed distinct composition, with no unresolved identity to the failed MITNews/RSS work. Otherwise hold before request. NPG is a prospective source-family query only, with no claim an entry exists."
+    }
+  ]
+}

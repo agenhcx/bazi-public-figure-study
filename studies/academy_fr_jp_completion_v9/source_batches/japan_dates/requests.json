@@ -1,0 +1,104 @@
+{
+  "max_queries": 9,
+  "max_distinct_urls": 6,
+  "queries": [
+    {
+      "query_index": 1,
+      "member_key": "jpa:matsuoka_makoto",
+      "name_jp": "松岡 信",
+      "query": "\"松岡信\" \"生年月日\"",
+      "engine": "system2",
+      "response_ref_prefix": "turn1888",
+      "evidence_status": "discovery_only_not_claim_evidence"
+    },
+    {
+      "query_index": 2,
+      "member_key": "jpa-unlinked-0b282a35315cdffd",
+      "name_jp": "田村 憲造",
+      "query": "\"田村憲造\" \"生\" \"月\"",
+      "engine": "system2",
+      "response_ref_prefix": "turn1888",
+      "evidence_status": "discovery_only_not_claim_evidence"
+    },
+    {
+      "query_index": 3,
+      "member_key": "jpa-unlinked-8042991ce47eac0c",
+      "name_jp": "平井 金三郎",
+      "query": "\"平井金三郎\" 生年月日",
+      "engine": "system2",
+      "response_ref_prefix": "turn1888",
+      "evidence_status": "discovery_only_not_claim_evidence"
+    },
+    {
+      "query_index": 4,
+      "member_key": "jpa:matsuoka_makoto",
+      "name_jp": "松岡 信",
+      "query": "\"松岡 信\" \"1955\" 生まれ 名古屋",
+      "engine": "system1",
+      "response_ref_prefix": "turn1894",
+      "evidence_status": "discovery_only_not_claim_evidence"
+    },
+    {
+      "query_index": 5,
+      "member_key": "jpa-unlinked-0b282a35315cdffd",
+      "name_jp": "田村 憲造",
+      "query": "\"田村憲造\" \"2月18日\" 大学",
+      "engine": "system1",
+      "response_ref_prefix": "turn1894",
+      "evidence_status": "discovery_only_not_claim_evidence"
+    },
+    {
+      "query_index": 6,
+      "member_key": "jpa-unlinked-8042991ce47eac0c",
+      "name_jp": "平井 金三郎",
+      "query": "\"平井金三郎\" \"1884\" \"27\" -site:wikipedia.org -site:newikis.com",
+      "engine": "system1",
+      "response_ref_prefix": "turn1894",
+      "evidence_status": "discovery_only_not_claim_evidence"
+    },
+    {
+      "query_index": 7,
+      "member_key": "jpa:matsuoka_makoto",
+      "name_jp": "松岡 信",
+      "query": "\"Makoto Matsuoka\" \"date of birth\"",
+      "engine": "system2",
+      "response_ref_prefix": "turn1900",
+      "evidence_status": "discovery_only_not_claim_evidence"
+    },
+    {
+      "query_index": 8,
+      "member_key": "jpa-unlinked-0b282a35315cdffd",
+      "name_jp": "田村 憲造",
+      "query": "\"田村憲造\" \"2月\" \"駒屋\"",
+      "engine": "system2",
+      "response_ref_prefix": "turn1900",
+      "evidence_status": "discovery_only_not_claim_evidence"
+    },
+    {
+      "query_index": 9,
+      "member_key": "jpa-unlinked-8042991ce47eac0c",
+      "name_jp": "平井 金三郎",
+      "query": "\"平井金三郎\" \"生\" site:repo.nii.ac.jp",
+      "engine": "system2",
+      "response_ref_prefix": "turn1900",
+      "evidence_status": "discovery_only_not_claim_evidence"
+    }
+  ],
+  "url_requests": [
+    {
+      "member_key": "jpa-unlinked-8042991ce47eac0c",
+      "url": "https://fileserver-az.core.ac.uk/download/58757208.pdf",
+      "route_status": "new_CORE_mirror_discovered_in_search_not_previously_requested_old_Nagasaki_URL",
+      "web_ref": "turn1900view0",
+      "web_http_status": 403,
+      "original_capture_http_status": 403,
+      "original_capture_method": "urllib.request.urlopen single attempt timeout25",
+      "source_original_capture_succeeded": false,
+      "original_source_sha256": null,
+      "body_verified": false,
+      "claim_evidence": false,
+      "retrieved_utc": "2026-10-30T00:56:41.890776+00:00",
+      "note": "One distinct new URL, two access operations (web open and local original GET); both403. The spent university med150kinensi URL was not requested again."
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "schema": "royal_society_birthplace_completion_v3",
+  "baseline": 4983,
+  "previous_counts": {
+    "north": 3955,
+    "unknown": 855,
+    "south": 173
+  },
+  "hemisphere_counts": {
+    "north": 4081,
+    "unknown": 722,
+    "south": 180
+  },
+  "hemisphere_net_change": {
+    "north": 126,
+    "south": 7,
+    "unknown": -133
+  },
+  "previous_unknown_newly_classified": 135,
+  "prior_known_reverted_to_unknown": 2,
+  "unknown_breakdown": {
+    "no_active_explicit_birthplace_evidence": 677,
+    "explicit_place_but_geography_unresolved": 45
+  },
+  "existing75_review": {
+    "reviewed": 75,
+    "resolved": 50,
+    "north": 48,
+    "south": 2,
+    "held": 25
+  },
+  "new_birthplace_facts": {
+    "official_or_edited_S2": 20,
+    "wikipedia_S3": 93,
+    "unique_people": 105,
+    "route_overlap_people": 8,
+    "unique_people_classified": 85
+  },
+  "current99_identity_audit": {
+    "supported_name_exact_dob_membership": 72,
+    "quarantined_non_person_entity_for_geography": 14,
+    "quarantined_name_dob_mismatch_for_geography": 8,
+    "held_review_unknown": 3,
+    "strong_external_id_match": 1,
+    "quarantined_different_named_person_for_geography": 1
+  },
+  "quarantined_current_people": 23,
+  "quarantined_candidates": 9,
+  "source_grade_counts_for_selected_geography": {
+    "S1": 3007,
+    "S2": 55,
+    "S3": 1233,
+    "S1_or_S2_existing_body_metadata_not_reopened": 10,
+    "unknown": 678
+  },
+  "descriptive_existing_native_DOB_window_1835_1985": {
+    "rows": 2644,
+    "hemisphere_counts": {
+      "north": 2184,
+      "unknown": 285,
+      "south": 175
+    },
+    "not_new_calendar_or_final_cohort_adjudication": true
+  },
+  "native_DOB_calendar_identity_eligibility_fields_preserved": true,
+  "birth_window_changed": false,
+  "source_quality_DOB_groups_unchanged": true,
+  "cross_cohort_deduplicated": false,
+  "final_cohort_frozen": false,
+  "source_hash_scope": "Source evidence SHA identifies retrieved bytes or explicitly labelled tool excerpt captures. Full Wikipedia HTML/Crossref abstracts not included. Inputs are evidence projections with their own file hashes.",
+  "inputs_sha256": {
+    "studies/royal_society_birthplace_completion_v2/outputs/uk_birthplace_rows.jsonl.gz": "739c0bf9ae48e61bd7a59378f186027c0cd87e9e248d1efc3ee0c8c8d9a5e773",
+    "studies/royal_society_birthplace_completion_v3/inputs/current99_identity_audit.jsonl.gz": "1fedda8f91cd38bd079c23ca60b3b07b627f7164bd6b2a3b2c9f8a0efae1d9fd",
+    "studies/royal_society_birthplace_completion_v3/inputs/geo_extent29.jsonl.gz": "d63680b24f4b117bfb7c48c23c5b755a76c4376f0373128112b7d9a5afa100c7",
+    "studies/royal_society_birthplace_completion_v3/inputs/geo_localities46.jsonl.gz": "6039d577004bc1fb839dc4c7f7d8d85bb2bfe0c5f3340b3df4716888b2ccd19a",
+    "studies/royal_society_birthplace_completion_v3/inputs/new_fact_geography.jsonl.gz": "cee7f9f7b354ec7641a735d7bbdb11f889eacb796776fbe079077441b8ce936f",
+    "studies/royal_society_birthplace_completion_v3/inputs/new_official_birthplaces.jsonl.gz": "d95fbe1b2d79931e5a549f250ad6de1e6c06f4ef3f9ebd5e5252b92f16f69a80",
+    "studies/royal_society_birthplace_completion_v3/inputs/new_wikipedia_birthplaces.jsonl.gz": "78f03c95fe19a99cf4f21512c4fd9edf23e51e544d378a0ecf8e19adab470a54",
+    "studies/royal_society_birthplace_completion_v3/audit/wiki_identity_review.jsonl.gz": "945e011544c8f13fcd62178e5dae4a22596ae547d5313245f4e0806429a43146"
+  }
+}

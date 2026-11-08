@@ -1,0 +1,122 @@
+{
+  "written_utc": "2026-11-06T22:37:10.084881+00:00",
+  "scope": "v33_scope_b.json",
+  "scope_sha256": "12c0265302d271d2b4c927f583383e33de242a3aae10b65b53db96869897f522",
+  "all4_fullobjects_read_untruncated_before_queries": true,
+  "targeted_prior_audits_read_sha256": {
+    "prior_v14_holds.json": "83b624fef9d10aa0ccf5f98fddaef97659e42b2e244ce858b6a2cea722d581da",
+    "prior_v11_holds.json": "d945eb7e0388c9f0aa1d82076fb8d3dfe7b37e4041f5b984346671cecf4356d2",
+    "prior_v12_holds.json": "00c91a7cc6982df70ee6b099b38f800530417f289352f7b3a3c9baba945fe801",
+    "prior_v13_holds.json": "9b54ad12c2a8aa10d3bbc6cefbbf84f8322474a6585310ce86559da2900e05ee"
+  },
+  "targets": [
+    {
+      "record_id": "RS_PAST_NA2154",
+      "fullauthority": "Woods; Stephen Esslemont (1912 - 1994)",
+      "DOB": "1912-01-12",
+      "rawplace": "Cardiff",
+      "BPgrade": "S2",
+      "prior_BP_URLs": [
+        "https://doi.org/10.1098/rsbm.1998.0029"
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA2460",
+      "fullauthority": "Thornton; Sir; Henry Gerard (1892 - 1977)",
+      "DOB": "1892-01-22",
+      "rawplace": "London",
+      "BPgrade": "S2",
+      "prior_BP_URLs": [
+        "https://doi.org/10.1098/rsbm.1977.0021"
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA2863",
+      "fullauthority": "Pedler; Sir; Alexander (1849 - 1918)",
+      "DOB": "1849-05-21",
+      "rawplace": "197 Fleet Street, London",
+      "BPgrade": "S2",
+      "prior_BP_URLs": [
+        "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/581678577"
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA331",
+      "fullauthority": "Fawcett; Edward (1867 - 1942)",
+      "DOB": "1867-05-18",
+      "rawplace": "Little Blencoe, near Penrith",
+      "BPgrade": "S2",
+      "prior_BP_URLs": [
+        "https://doi.org/10.1098/rsbm.1943.0006"
+      ]
+    }
+  ],
+  "closed_work_or_holds": [
+    {
+      "record_id": "RS_PAST_NA2154",
+      "work": "10.1098/rsbm.1998.0029",
+      "state": "Old original-full-memoir DOI attempt inaccessiblev11; no failedworkvariant/retry; oldabstractCardiffcityonly."
+    },
+    {
+      "record_id": "RS_PAST_NA331",
+      "work": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5058300/",
+      "state": "Oldobituary browsercheckchallenge; no variants/retry; v14 Blencoe/Blencow/Blencowe aliasunproven preserve literal."
+    },
+    {
+      "record_id": "RS_PAST_NA2460",
+      "work": "aim25 archiveindex",
+      "state": "Prior index fullname/lifespannotbornclause; noadoption."
+    },
+    {
+      "record_id": "RS_PAST_NA2863",
+      "work": "ODNB RoyMacLeod publicextract",
+      "state": "Alreadyacceptedv24 exactDOB/rawFleetStreetLondononly; no newwork reuse, no country fromschool/work."
+    }
+  ],
+  "calls": [
+    {
+      "kind": "system2_search_query",
+      "queries": [
+        "\"Stephen Esslemont Woods\" born Wales",
+        "\"Henry Gerard Thornton\" born England",
+        "\"Alexander Pedler\" born England biography",
+        "\"Edward Fawcett\" born Cumberland anatomist"
+      ],
+      "intent": "Discover distinct original biographical country/region claims not frozenabstract/closedfailedworks."
+    },
+    {
+      "written_utc": "2026-11-06T22:37:22.568720+00:00",
+      "kind": "system1_search_query",
+      "queries": [
+        "\"Stephen Esslemont Woods\" obituary biography",
+        "\"Henry Gerard Thornton\" biography born",
+        "\"Alexander Pedler\" biography \"born\" London",
+        "\"Edward Fawcett\" biography \"Little\" Cumberland"
+      ],
+      "intent": "Strongcoverage original obituary/institutionalhistory/reference gaps afterS2results mostlyaggregators."
+    },
+    {
+      "written_utc": "2026-11-06T22:37:42.882637+00:00",
+      "kind": "open",
+      "urls": [
+        "https://www.cumbrianlives.org.uk/lives-index/f.html",
+        "https://prabook.com/web/professor_edward.fawcett/746801",
+        "https://darwin-editorial.darwinproject.ac.uk/view/nameregs/nameregs_6507",
+        "https://embryology.med.unsw.edu.au/embryology/index.php?title=Embryology_History_-_Edward_Fawcett"
+      ],
+      "intent": "Neworiginalreference/localbiography/compiledprofile bodies. UNSWownintroonly; if it is simply reprintofclosedPMCobituary, donotuseasfailedworkvariant. PrabooksearchtitleMarch18versusbodyMay18notqualifiedconflictuntilactualbodycheck; preserveifactualheaderinconsistent."
+    },
+    {
+      "written_utc": "2026-11-06T22:38:02.278288+00:00",
+      "kind": "cached_find",
+      "source_ref": "turn1914481view0",
+      "pattern": "Fawcett, Edward",
+      "intent": "Locate exact anatomy subject within newCumbrianLivesreference, not genericcountygeography."
+    }
+  ],
+  "budget": {
+    "queries": 8,
+    "opens": 10
+  },
+  "gates": "Fullnative/actuallycompatibleDOBprecision/coherentcareer/directborncountry/wholeregion+storedplace binding; geographyonly, no nativeDOB/BPgrade edits/nooldholdbypass; no pureWiki mirrors; <=25quotedwords/workincludinginherited; rawstatus/hash/requesttimeunknownnull."
+}

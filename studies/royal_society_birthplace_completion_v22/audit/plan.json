@@ -1,0 +1,47 @@
+{
+  "written_utc": "2026-11-05T23:42:56.307567+00:00",
+  "baseline_commit": "065a8a5e438b6fadb85756df6ad513fb9aba27ae",
+  "baseline_canonical_sha256": "91b14b75fa13811abed8122644ed4b10f739fef5695ee72ed62ad5fd296bcac2",
+  "fixed_blank_window_pool": 133,
+  "individual_followup_groups": {
+    "a": [
+      "RS_PAST_NA4252",
+      "RS_PAST_NA4747",
+      "RS_PAST_NA4220",
+      "RS_PAST_NA3931"
+    ],
+    "b": [
+      "RS_PAST_NA4193",
+      "RS_PAST_NA6876",
+      "RS_PAST_NA3621",
+      "RS_PAST_NA3635"
+    ]
+  },
+  "geography_pilot_ids": [],
+  "source_strategy": "Eight not-yet-individually-reviewed targets; new original university/scientific-society/signed expert biographies, no closed bulk index reruns.",
+  "budgets": {
+    "per_group_queries": 6,
+    "per_group_navigation_attempts": 8,
+    "root_primary_source_or_author_verification_opens": 8,
+    "root_adaptive_author_query": 1
+  },
+  "admission": "Full native name components and actually stated compatible DOBprecision plus distinctivecareeranchors. Explicit subject birth relation only; report source actual lifespan precision, no missing endpoint fabricated. Birthdate conflict holds/no datelessbypass. Existing v20 death-only exception only if exactDOB/identity/eligibility gates pass and discrepancy separate. v21 expert-authored S2 genre may use acquired same-field credentials without a claimed personalcolleague relationship; journalist lacking credentials conservativeS3. All genres documented, not host-onlyS1.",
+  "geography": "Only direct birth-linked country/whole-region supports hemisphere. City-only may stayunknown. No nationality/family/education/work/death/footer/map inference.",
+  "frozen": [
+    "DOB",
+    "calendar",
+    "identity",
+    "eligibility",
+    "QIDs",
+    "DOBtiers",
+    "old_evidence",
+    "country",
+    "coords",
+    "all_prior_facts",
+    "untargeted_complete_objects"
+  ],
+  "active_DOB_conflicts": "Argyris/Laver/Wells remain active; no bypass or correction. Waterfield age82/computed81 and Midwinter deathendpoint discrepancy remain separate historicalissues.",
+  "quote_policy": "<=25distinctEnglishwords/originalwork; no fullsource/projectioncaches.",
+  "retrieval": "Record intent before requests. Stop failed403/429/timeouts; no retries/rawGET/bypass. Unknownrawstatus/time/hashnull; parsedtextnotrawbytes.",
+  "no_analysis_or_final_freeze": true
+}

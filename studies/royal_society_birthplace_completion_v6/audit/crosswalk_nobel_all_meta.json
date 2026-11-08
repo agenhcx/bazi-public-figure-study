@@ -1,0 +1,30 @@
+{
+  "source_url": "https://api.nobelprize.org/2.1/laureates?limit=1000&offset=0&sort=asc&format=json",
+  "request_started_utc": "2026-11-02T23:15:27.510158+00:00",
+  "endpoint_provenance": "Existing repository scripts/nobel_science_crawl.py API constant; same query parameters as saved official API birthplace source rows; category intentionally omitted for all categories. One request only.",
+  "http_status": 200,
+  "headers": {
+    "date": "Mon, 02 Nov 2026 23:15:33 GMT",
+    "content-type": "application/json",
+    "server": "envoy",
+    "access-control-allow-headers": "X-Requested-With, Content-Type, Accept, Origin, Authorization",
+    "access-control-allow-methods": "GET",
+    "access-control-allow-origin": "*",
+    "cache-control": "public, max-age=60",
+    "expires": "Mon, 02 Nov 2026 23:16:33 GMT",
+    "pragma": "no-cache",
+    "x-powered-by": "PHP/8.5.12",
+    "vary": "accept-encoding",
+    "last-modified": "Mon, 02 Nov 2026 23:15:33 GMT",
+    "cf-cache-status": "MISS",
+    "cf-ray": "a546d7798f0672fa-SJC",
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "x-envoy-upstream-service-time": "2228",
+    "connection": "close",
+    "transfer-encoding": "chunked"
+  },
+  "source_sha256": "76649ef3171e269feb9e8274dbb38c8b7dc2acdbd8a01a0ecab3c1b606d524d5",
+  "bytes": 3821475,
+  "laureates": 1000,
+  "completed_utc": "2026-11-02T23:15:34.436465+00:00"
+}

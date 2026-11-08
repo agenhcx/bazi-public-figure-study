@@ -1,0 +1,60 @@
+{
+  "baseline_file": "uk_birthplace_checkout/studies/royal_society_birthplace_completion_v9/outputs/uk_birthplace_rows.jsonl.gz",
+  "baseline_sha256": "e44f6dc02cc0cafece9b792164f016da0f08de5736ac62442d176d45b19a5799",
+  "baseline_rows": 4983,
+  "baseline_hemispheres": {
+    "north": 4155,
+    "unknown": 645,
+    "south": 183
+  },
+  "unknown_targets": 645,
+  "window_unknown_targets": 211,
+  "unknown_without_birthplace": 591,
+  "unknown_with_birthplace_geoheld": 54,
+  "index_request_cap": 2,
+  "index_requests": 2,
+  "index_HTTP_statuses": {
+    "Y": 200,
+    "Z": 503
+  },
+  "successful_index_count": 1,
+  "successful_indices": [
+    "Y"
+  ],
+  "unavailable_indices": [
+    "Z"
+  ],
+  "directory_biography_links": 23,
+  "directory_unique_biography_urls": 23,
+  "whole_target_rows_compared": 645,
+  "window_rows_compared": 211,
+  "matching_method": "Canonical catalogue surname+givens and frozen native/alias/label tokens, native birth year and no observed lifespan conflict; existing frozen birthplace URLs screened for exclusion. All645 targets compared to actual200 Y directory; Z503 unavailable.",
+  "strong_candidates": 0,
+  "selected_biography_body_requests": 0,
+  "biography_body_request_cap": 4,
+  "all_indexed_person_bodies_read": false,
+  "source_facts_accepted": 0,
+  "held_new_source_facts": 0,
+  "accepted_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "all_documented_request_attempts": 2,
+  "durable_pre_request_intents": 2,
+  "request_status_counts": {
+    "200": 1,
+    "503": 1
+  },
+  "retries": 0,
+  "redirects_followed": 0,
+  "individual_birthday_queries": 0,
+  "new_web_search_requests": 0,
+  "QID_guessing": false,
+  "DOB_or_acceptance_modified": false,
+  "calendar_modified": false,
+  "formal_identity_flags_modified": false,
+  "QIDs_modified": false,
+  "DOB_tier_modified": false,
+  "geography_assignment_performed": false,
+  "country_or_point_assignment_performed": false,
+  "source_grade_if_fact_accepted": "S2 curated EOAS dictionary, independently of DOB match; no accepted fact in this route",
+  "network_frozen": true,
+  "frozen_utc": "2026-11-03T13:55:41.519463+00:00"
+}

@@ -1,0 +1,295 @@
+{
+  "schema": "v15_new_primary_birthplace_pilot_b_v1",
+  "generated_at_utc": "2026-11-04T23:56:40.314776+00:00",
+  "input_file": "/workspace/scratch/262552d8c0f0/v15_blank_queue.json",
+  "pre_request_intent_file": "/workspace/scratch/262552d8c0f0/v15_b_intent.json",
+  "scope_record_ids": [
+    "RS_PAST_NA4682",
+    "RS_PAST_NA4250",
+    "RS_PAST_NA4117",
+    "RS_PAST_NA4780"
+  ],
+  "budget": {
+    "max_queries": 6,
+    "actual_queries": 6,
+    "max_original_navigations": 8,
+    "actual_original_navigations": 8
+  },
+  "candidates": [
+    {
+      "record_id": "RS_PAST_NA4682",
+      "status": "candidate_explicit_birthplace",
+      "raw_birthplace": "Ernakulam, India",
+      "birthplace_quote": "G. N. Ramachandran was born in Ernakulam, India, on 8 October 1922.",
+      "source_title": "G. N. Ramachandran (1922–2001)",
+      "source_author": "N. Yathindra",
+      "source_author_relationship": "Author describes graduating from Ramachandran’s Madras school and subsequent scientific interactions.",
+      "source_host": "International Union of Crystallography; Acta Crystallographica Section A",
+      "source_kind": "original_signed_scholarly_obituary",
+      "source_grade_suggested": "S2",
+      "source_grade_reason": "Signed original scholarly obituary; not upgraded solely because the host is an official scientific union.",
+      "publication_date": "2001-09",
+      "publication_date_precision": "month",
+      "bibliographic_locator": "Acta Crystallographica A57, 479–481; DOI 10.1107/S0108767301009734",
+      "source_location": "turn73view0 L39 full name; L42 explicit birthplace and DOB; L58 FRS; L64 author relationship",
+      "body_dob": "1922-10-08",
+      "body_date_precision": "day",
+      "identity": {
+        "native_authorised_full_name": "Ramachandran; Gopalasamudram Narayana (1922 - 2001)",
+        "native_dob": "1922-10-08",
+        "observed_full_name": "Professor Gopalasamudram Narayana Ramachandran",
+        "anchors": [
+          "Exact native DOB in subject-born clause",
+          "Full name in body",
+          "1922–2001 lifespan",
+          "Structural biology/physics career",
+          "FRS 1977"
+        ],
+        "native_fields_modified": false,
+        "identity_conflict_observed": false
+      },
+      "source": {
+        "url": "https://journals.iucr.org/a/issues/2001/05/00/es0305/index.html",
+        "web_ref": "turn73view0",
+        "capture_kind": "web_tool_parsed_text",
+        "raw_http_status": null,
+        "raw_http_bytes_sha256": null,
+        "request_started_at_utc": null,
+        "response_received_at_utc": null,
+        "source_body_available": true
+      },
+      "birthplace_or_dob_conflict_observed": false,
+      "geography_assignment_performed": false,
+      "notes": [
+        "Literal source place retained; no geocoding or hemisphere assigned."
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA4117",
+      "status": "candidate_explicit_birthplace_conditional_source_class",
+      "raw_birthplace": "Durban, South Africa",
+      "birthplace_quote": "Gordon was born in Durban, South Africa.",
+      "source_title": "Gordon Henry Dixon",
+      "source_author": null,
+      "source_author_relationship": "Uncredited family/funeral obituary; family voice and arrangements identify First Memorial Funeral Services, Victoria, British Columbia.",
+      "source_host": "Dignity Memorial / First Memorial Funeral Services & Garden of Memories",
+      "source_kind": "original_family_funeral_obituary",
+      "source_grade_suggested": "S2_pending_parent_review",
+      "source_grade_reason": "Original obituary with exact full name and DOB plus multiple unique professional anchors, but author is uncredited and this is not a signed scholarly memoir or university biography. Retain as conditional candidate; do not promote to S1.",
+      "publication_date": null,
+      "publication_date_precision": null,
+      "bibliographic_locator": null,
+      "source_location": "turn70view1 L6–7 name and exact dates; L15–17 name/credentials/dates; L21 born clause; L23–28 professional anchors; L30–33 family/arrangements",
+      "body_dob": "1930-03-25",
+      "body_date_precision": "day_in_title_and_body_dates; born_clause_undated",
+      "identity": {
+        "native_authorised_full_name": "Dixon; Gordon Henry (1930 - 2016)",
+        "native_dob": "1930-03-25",
+        "observed_full_name": "Gordon Henry Dixon OC PhD FRS FRSC",
+        "anchors": [
+          "Exact native DOB 25 March 1930",
+          "Exact 1930–2016 lifespan",
+          "Biochemistry and insulin research at University of Toronto",
+          "UBC 1963–1972, Sussex 1972–1974, Calgary 1974–1994",
+          "FRS London 1978; Officer of Order of Canada 1993"
+        ],
+        "native_fields_modified": false,
+        "identity_conflict_observed": false
+      },
+      "source": {
+        "url": "https://www.dignitymemorial.com/en-ca/obituaries/victoria-bc/gordon-dixon-7024317",
+        "web_ref": "turn70view1",
+        "capture_kind": "web_tool_parsed_text",
+        "raw_http_status": null,
+        "raw_http_bytes_sha256": null,
+        "request_started_at_utc": null,
+        "response_received_at_utc": null,
+        "source_body_available": true
+      },
+      "birthplace_or_dob_conflict_observed": false,
+      "geography_assignment_performed": false,
+      "notes": [
+        "Literal source place retained.",
+        "Belleville appeared only as a speculative discovery-query term and is not evidence or an adopted alternative.",
+        "Source is outside the strongest requested university/signed-memoir class; parent decides admission."
+      ]
+    }
+  ],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA4250",
+      "status": "hold_no_original_birthplace_body",
+      "native_authorised_full_name": "Morris; Sir; Peter John (1934 - 2022)",
+      "native_dob": "1934-04-17",
+      "raw_birthplace_candidate": null,
+      "reason": "Three distinct official Oxford routes returned tool-reported 403 and no body; search snippets supplied exact dates but no birth location was adopted.",
+      "source_author": null,
+      "source_grade_suggested": null,
+      "body_date_precision": null,
+      "identity_anchors_observed": [
+        "Official Oxford search title gives 17 April 1934–29 October 2022; university profile heading names Professor Sir Peter Morris."
+      ],
+      "source_attempts": [
+        {
+          "url": "https://www.nds.ox.ac.uk/news/obituary-professor-sir-peter-j-morris-frs",
+          "web_ref": "turn70view0",
+          "tool_reported_status": 403,
+          "raw_http_status": null
+        },
+        {
+          "url": "https://www.medsci.ox.ac.uk/news/obituary-professor-sir-peter-j-morris-frs",
+          "web_ref": "turn73view1",
+          "tool_reported_status": 403,
+          "raw_http_status": null
+        },
+        {
+          "url": "https://www.ndph.ox.ac.uk/team/pmorris",
+          "web_ref": "turn76view0",
+          "tool_reported_status": 403,
+          "raw_http_status": null
+        }
+      ],
+      "native_fields_modified": false,
+      "geography_assignment_performed": false
+    },
+    {
+      "record_id": "RS_PAST_NA4780",
+      "status": "hold_no_new_explicit_primary_birthplace",
+      "native_authorised_full_name": "Salton; Milton Robert James (1921 - 2008)",
+      "native_dob": "1921-04-29",
+      "raw_birthplace_candidate": null,
+      "reason": "No explicit original birthplace found within bounded pilot. Wellcome concept page names Salton and lists books, without a DOB or birthplace. Wikidata was a lead only and supplied no observed P19 or DOB. No Auckland inference adopted.",
+      "source_author": null,
+      "source_grade_suggested": null,
+      "body_date_precision": null,
+      "identity_anchors_observed": [
+        "Wikidata alias Milton Robert James Salton, microbiologist, death 14 April 2008 and Royal Society membership; these are leads, not primary birthplace evidence.",
+        "Wellcome concept label Salton, Milton R. J.; linked authored works. Initials not expanded from Wellcome."
+      ],
+      "sources_observed": [
+        {
+          "url": "https://www.wikidata.org/wiki/Q21166792",
+          "web_ref": "turn73view3",
+          "role": "identity_and_source_lead_only",
+          "raw_http_status": null
+        },
+        {
+          "url": "https://wellcomecollection.org/concepts/q5jtchje",
+          "web_ref": "turn76view1",
+          "role": "original_institutional_catalogue_no_birthplace",
+          "source_location": "L19–25 person label and authored books",
+          "raw_http_status": null
+        }
+      ],
+      "native_fields_modified": false,
+      "geography_assignment_performed": false
+    }
+  ],
+  "queries": [
+    {
+      "query": "G N Ramachandran born 8 October 1922 Ernakulam site:ac.in",
+      "engine": "system2",
+      "batch_ref": "turn67search"
+    },
+    {
+      "query": "Peter John Morris born 17 April 1934 site:ox.ac.uk",
+      "engine": "system2",
+      "batch_ref": "turn67search"
+    },
+    {
+      "query": "Gordon Henry Dixon born Belleville 1930 obituary",
+      "engine": "system2",
+      "batch_ref": "turn67search",
+      "note": "Belleville was speculative search term, not evidence."
+    },
+    {
+      "query": "Milton Robert James Salton born 29 April 1921 obituary",
+      "engine": "system2",
+      "batch_ref": "turn67search"
+    },
+    {
+      "query": "\"Milton Salton\" born Auckland obituary",
+      "engine": "system1",
+      "batch_ref": "turn71search",
+      "note": "Auckland was speculative search term, not evidence."
+    },
+    {
+      "query": "\"Gopalasamudram Narayana Ramachandran\" \"born\" Ernakulam",
+      "engine": "system1",
+      "batch_ref": "turn71search"
+    }
+  ],
+  "original_navigation_ledger": [
+    {
+      "url": "https://www.nds.ox.ac.uk/news/obituary-professor-sir-peter-j-morris-frs",
+      "web_ref": "turn70view0",
+      "outcome": "tool_reported_403_no_body",
+      "raw_http_status": null,
+      "request_started_at_utc": null,
+      "response_received_at_utc": null
+    },
+    {
+      "url": "https://www.dignitymemorial.com/en-ca/obituaries/victoria-bc/gordon-dixon-7024317",
+      "web_ref": "turn70view1",
+      "outcome": "original_obituary_parsed_body_explicit_birthplace",
+      "raw_http_status": null,
+      "request_started_at_utc": null,
+      "response_received_at_utc": null
+    },
+    {
+      "url": "https://journals.iucr.org/a/issues/2001/05/00/es0305/index.html",
+      "web_ref": "turn73view0",
+      "outcome": "original_signed_obituary_parsed_body_explicit_birthplace",
+      "raw_http_status": null,
+      "request_started_at_utc": null,
+      "response_received_at_utc": null
+    },
+    {
+      "url": "https://www.medsci.ox.ac.uk/news/obituary-professor-sir-peter-j-morris-frs",
+      "web_ref": "turn73view1",
+      "outcome": "tool_reported_403_no_body",
+      "raw_http_status": null,
+      "request_started_at_utc": null,
+      "response_received_at_utc": null
+    },
+    {
+      "url": "https://insa.ndl.gov.in/items/01bd8716-64ce-4eb6-9b9d-a8840c45c781/full",
+      "web_ref": "turn73view2",
+      "outcome": "original_repository_metadata_only_memoir_body_not_read",
+      "raw_http_status": null,
+      "request_started_at_utc": null,
+      "response_received_at_utc": null
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Q21166792",
+      "web_ref": "turn73view3",
+      "outcome": "identity_source_lead_no_birthplace_or_DOB_observed",
+      "raw_http_status": null,
+      "request_started_at_utc": null,
+      "response_received_at_utc": null
+    },
+    {
+      "url": "https://www.ndph.ox.ac.uk/team/pmorris",
+      "web_ref": "turn76view0",
+      "outcome": "tool_reported_403_no_body",
+      "raw_http_status": null,
+      "request_started_at_utc": null,
+      "response_received_at_utc": null
+    },
+    {
+      "url": "https://wellcomecollection.org/concepts/q5jtchje",
+      "web_ref": "turn76view1",
+      "outcome": "original_institutional_catalogue_no_birthplace_or_DOB",
+      "raw_http_status": null,
+      "request_started_at_utc": null,
+      "response_received_at_utc": null
+    }
+  ],
+  "capture_notes": [
+    "All source bodies are web-tool parsed text, not raw HTTP response bytes.",
+    "Unknown raw HTTP status, exact source-response times and raw-byte hashes are null; 403 is reported only as tool-observed error.",
+    "No full PDF or HTML body is redistributed; at most 25 English words quoted per source.",
+    "INSA metadata author M. Vijayan, 2004, BM24_0405.pdf was observed; underlying PDF was not read and is not claimed as birthplace evidence.",
+    "No master, native DOB/name, membership, country, QID, coordinates or hemisphere fields were changed."
+  ]
+}

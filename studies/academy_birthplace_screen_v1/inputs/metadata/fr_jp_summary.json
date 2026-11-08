@@ -1,0 +1,81 @@
+{
+  "scope": "Existing explicit birthplace evidence only; full-DOB baseline, no source/DOB/calendar/identity/membership acceptance changes.",
+  "no_new_external_collection": true,
+  "no_outcomes_computed": true,
+  "geographic_rule_notes": [
+    "No latitude/longitude invented.",
+    "Metropolitan departments and explicitly named unambiguous localities classified with transparent static rules.",
+    "Countries crossing equator are not assigned by country centroid.",
+    "French CTHS records are editorial secondary, not their unopened original cited sources.",
+    "Original academy/DOB flags preserved; these are geographic annotations, not final cohort eligibility."
+  ],
+  "cohorts": {
+    "France": {
+      "baseline": 775,
+      "counts": {
+        "north": 537,
+        "unknown": 237,
+        "south": 1
+      },
+      "explicit_birthplace_count": 538,
+      "inputs": [
+        {
+          "path": "studies/academy_fr_jp_completion_v15/outputs/france_master877.csv",
+          "sha256": "dd2dd779b648691bd76bdbcf12dcc6b11b9228cc057cd1d19585ace3b3161930"
+        },
+        {
+          "path": "data/france_academy_cths_profile_dob_harvest_v1/cths_dob_claims_all_targets_candidate_only_v1.csv",
+          "sha256": "7308ff06f2a021dfd59970e307fb8190e6b17e6e05a3e83422375687f8b763a8"
+        },
+        {
+          "path": "data/france_academy_cths_profile_dob_harvest_v1/cths_profile_source_html_sha256_bundle_v1.tar.gz",
+          "sha256": "6258a366f69e120395450420fee8ae2587d586cb5db153937d1ef45267468811"
+        }
+      ],
+      "output_file": "france_birthplaces.jsonl",
+      "output_sha256": "f0de562847632a17b3b8d08aa9048868582f7b88e911dc4c963d0702d12506c3",
+      "unknown_reason_counts": {
+        "No explicit birthplace in examined existing evidence; academy, nationality and employment are not substitutes.": 237
+      }
+    },
+    "Japan": {
+      "baseline": 368,
+      "counts": {
+        "unknown": 343,
+        "north": 25
+      },
+      "explicit_birthplace_count": 25,
+      "inputs": [
+        {
+          "path": "studies/academy_fr_jp_completion_v15/outputs/japan_master.csv",
+          "sha256": "f901f568d0a5c85e8ace5ae928d5a3473b9e7691131941075b9cd19d1c7a3021"
+        },
+        {
+          "path": "studies/academy_fr_jp_completion_v15/outputs/japan_birth_claims.csv",
+          "sha256": "c0a7820ea8149829d3b58caae18fefbb7b15fbc68f3ca1cb1f86582f793aff4c"
+        }
+      ],
+      "output_file": "japan_birthplaces.jsonl",
+      "output_sha256": "e4626818c48e98e27c7594f2b773aca4328495d1fbf85f16b53f138a1e41e3b0",
+      "unknown_reason_counts": {
+        "No explicit birthplace in examined existing evidence; academy, nationality and employment are not substitutes.": 343
+      }
+    }
+  },
+  "france_existing_exact_profile_qid_seeds": {
+    "count": 210,
+    "file": "france_exact_profile_qid_seeds.jsonl",
+    "sha256": "1eee58f969f68fe0d7667da0540ff8fd992e7371af36ab67dd6ae494e0f2c179",
+    "method": "Exact stored P6282 identifier to current Academy profile URL plus unique QID and exact DOB agreement; not fuzzy name matching.",
+    "inputs": [
+      {
+        "path": "data/france_academy_wikidata_candidate_discovery_v1/raw_sparql/official_id_P6282.json",
+        "sha256": "a370042c6feac52ee1214e2c6a80be86babb6aabe28507b1d0c5d900785dab5a"
+      },
+      {
+        "path": "studies/academy_fr_jp_completion_v15/outputs/france_master877.csv",
+        "sha256": "dd2dd779b648691bd76bdbcf12dcc6b11b9228cc057cd1d19585ace3b3161930"
+      }
+    ]
+  }
+}

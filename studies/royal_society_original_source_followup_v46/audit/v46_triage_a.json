@@ -1,0 +1,152 @@
+{
+  "artifact_type": "local_original_source_triage",
+  "written_utc": "2026-11-08T11:32:26.200454+00:00",
+  "stage": "local_only_before_V46_external_requests",
+  "scope_revision_note": "Parent narrowed initial3-5 shortlist request to MorrisNA4250 single priority for promptscopefreeze; no additional sources requested.",
+  "baseline_study": "academy_repo/studies/royal_society_birthplace_completion_v44",
+  "remaining_unknown_snapshot_file": "remaining_unknown_v44_compact.json",
+  "remaining_unknown_snapshot_sha256": "34e87ded590b005f2cac7fa644bf41035b0262b62497156368c5d04d1e0f8d3b",
+  "remaining_window_unknown": 157,
+  "remaining_window_blank": 103,
+  "V45_supplement_reviewed": {
+    "summary_path": "academy_repo/studies/royal_society_original_source_followup_v45/summary.json",
+    "summary_sha256": "9c943ae29894a6ec9e0440d9ec26704a75bb716d609de2dc420c36cf35a9fcc1",
+    "parent_adjudication_path": "academy_repo/studies/royal_society_original_source_followup_v45/audit/parent_adjudication.json",
+    "parent_adjudication_sha256": "4de4a9b2433cc321d7a50ddfe32be6f801acdc052f28d0344e38f156235f5a2d",
+    "accepted_birthplaces": 0,
+    "accepted_geography": 0,
+    "excluded_V45six": [
+      "RS_PAST_NA4193",
+      "RS_PAST_NA4301",
+      "RS_PAST_NA4155",
+      "RS_PAST_NA6868",
+      "RS_PAST_NA1998",
+      "RS_PAST_NA4490"
+    ]
+  },
+  "candidates": [
+    {
+      "priority": 1,
+      "record_id": "RS_PAST_NA4250",
+      "native_name": "Peter John",
+      "native_authority": "Morris; Sir; Peter John (1934 - 2022)",
+      "native_DOB": "1934-04-17",
+      "frozen_raw_birthplace": "",
+      "birthplace_source_grade": "unknown",
+      "hemisphere": "unknown",
+      "native_complete_object_canonical_sha256": "fc998df690476d58c405ebb7deb0dfcd37ba2d8319ede191d722ab039682bd31",
+      "native_personal_components": [
+        "Peter",
+        "John",
+        "Morris"
+      ],
+      "honorific_not_personal_component": "Sir",
+      "current_status": "blank_place_unresolved_prior_original_body_inaccessible",
+      "historical_hold": {
+        "record_id": "RS_PAST_NA4250",
+        "native_dob": "1934-04-17",
+        "authority_name": "Morris; Sir; Peter John (1934 - 2022)",
+        "hold_type": "original_body_inaccessible",
+        "evidence_audit_file": "audit/sources_b.json",
+        "reason": "Three distinct official Oxford routes returned tool-reported 403 and no body; search snippets supplied exact dates but no birth location was adopted.",
+        "no_master_fields_changed": true
+      },
+      "complete_retained_prior_closed_work_route_list": [
+        {
+          "url": "https://www.nds.ox.ac.uk/news/obituary-professor-sir-peter-j-morris-frs",
+          "historical_ref": "turn70view0",
+          "historical_tool_reported_status": 403,
+          "raw_HTTP_status": null,
+          "work_identity": "Oxford institutional obituary/profile route; the two similarly titled obituary URLs may be republications, so no independent-work claim",
+          "outcome": "First attempt tool-reported403, no original body acquired; all same-work variants/carriers remainclosed",
+          "historical_provenance": "academy_repo/studies/royal_society_birthplace_completion_v15/audit/sources_b.json:holds[0].source_attempts"
+        },
+        {
+          "url": "https://www.medsci.ox.ac.uk/news/obituary-professor-sir-peter-j-morris-frs",
+          "historical_ref": "turn73view1",
+          "historical_tool_reported_status": 403,
+          "raw_HTTP_status": null,
+          "work_identity": "Oxford institutional obituary/profile route; the two similarly titled obituary URLs may be republications, so no independent-work claim",
+          "outcome": "First attempt tool-reported403, no original body acquired; all same-work variants/carriers remainclosed",
+          "historical_provenance": "academy_repo/studies/royal_society_birthplace_completion_v15/audit/sources_b.json:holds[0].source_attempts"
+        },
+        {
+          "url": "https://www.ndph.ox.ac.uk/team/pmorris",
+          "historical_ref": "turn76view0",
+          "historical_tool_reported_status": 403,
+          "raw_HTTP_status": null,
+          "work_identity": "Oxford institutional obituary/profile route; the two similarly titled obituary URLs may be republications, so no independent-work claim",
+          "outcome": "First attempt tool-reported403, no original body acquired; all same-work variants/carriers remainclosed",
+          "historical_provenance": "academy_repo/studies/royal_society_birthplace_completion_v15/audit/sources_b.json:holds[0].source_attempts"
+        }
+      ],
+      "closed_work_list_limit": "All target acquisition routes retained in V44 inheritedhold and originalV15 workerreport. This is no claim of exhaustive external publication/history knowledge. Treat every listedURL and any same-work republishing asclosed.",
+      "actually_retained_untried_original_URL": null,
+      "actually_retained_untried_original_work_title": null,
+      "retained_historical_discovery_context": {
+        "source": "v15_sources_b.json:holds[0].identity_anchors_observed",
+        "observation": "Oxford discovery title supplied17April1934–29October2022 and ProfessorSirPeterMorris; no originalbody or birthplace acquired. ExactnewRCSURL/title/ref notobserved.",
+        "body_claim_qualified": false
+      },
+      "prospective_distinct_institutional_discovery_avenue": {
+        "institution": "Royal College of Surgeons of England",
+        "collection": "Plarr’s Lives of the Fellows",
+        "work_sought": "An attributed substantial original personal biography/obituary for Peter John Morris, distinct from inaccessible Oxford obituary/profile works",
+        "actual_URL": null,
+        "actual_work_title": null,
+        "actual_source_ref": null,
+        "existence_verified": false,
+        "not_yet_a_direct_open_target": true,
+        "why_high_value": "A personal biographical collection is a more relevant first-place discovery avenue than a catalogue shell, deathnotice or repeat of closedOxfordURLs. No actualRCSbody, author, date, birthplace or statedDOB is assumed.",
+        "work_identity_gate": "Locate an actuallyobserved personalworkURL first; confirm it is an original distinctbiography, not merely Oxfordcopiedtext or another carrier of the same closedwork, before anybodyrequest. DifferentURL alone doesnot establish distinctwork.",
+        "source_quality_gate": "Authorship/editing and actualbirth/DOB/career text determine grade; RCS hostalone doesnot conferS1/S2.",
+        "identity_gate": "Require allnativePeterJohnMorriscomponents or explicitly reviewed preexistingboundedomittedmiddle criteria; no initials expansion. Sir is anhonorific. ActuallystatedcompatibleDOBprecision/lifespan/career and directsubjectbirthrelation remainmandatory; no dateless bypass.",
+        "proposed_discovery_query_unexecuted": "\"Peter John Morris\" \"Plarr\" biography"
+      },
+      "record_conflict_status": {
+        "active_DOB_conflict": false,
+        "partial_birthplace_conflict": false,
+        "other9inventory_target_hits": {
+          "active_source_DOB_conflicts.json": false,
+          "birthplace_source_conflicts.json": false,
+          "source_derived_age_inconsistencies.json": false,
+          "provisional_parsed_date_discrepancies.json": false,
+          "lifespan_endpoint_discrepancies.json": false,
+          "cross_source_reported_age_contrasts.json": false,
+          "source_date_precision_holds.json": false,
+          "omitted_middle_name_admission.json": false,
+          "source_ordinal_age_wording_observations.json": false
+        },
+        "individual_name_DOB_place_conflict_observed_in_retained_hold": false,
+        "separate_native_repair_required": false,
+        "statement_limit": "No acquired original birthbody exists in retained target review, so no qualified new conflict or correctdate/place verdict is inferred."
+      },
+      "admission_candidate_now": false,
+      "discovery_only": true
+    }
+  ],
+  "reviewed_target_history_pins": {
+    "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v15_holds.json": "c6aa776aaa1aa60ae8a6497532210b4fc937253694011de1f0d6f2dd9fdb4942",
+    "academy_repo/studies/royal_society_birthplace_completion_v15/audit/sources_b.json": "357e84c5de12d6f4c629cb3a889415090f114d160d7136f6e51f6717d5aeaf3a",
+    "v15_sources_b.json": "357e84c5de12d6f4c629cb3a889415090f114d160d7136f6e51f6717d5aeaf3a"
+  },
+  "issue_inventory_sha256": {
+    "active_source_DOB_conflicts.json": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+    "birthplace_source_conflicts.json": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+    "source_derived_age_inconsistencies.json": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+    "provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+    "lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+    "cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+    "source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+    "omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+    "source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+  },
+  "web_queries": 0,
+  "web_opens": 0,
+  "web_clicks": 0,
+  "web_finds": 0,
+  "source_quotes_added": 0,
+  "source_or_dataset_mutations": false,
+  "pipeline_replay_tests_Git_mutations": false,
+  "source_exhaustion_claimed": false
+}

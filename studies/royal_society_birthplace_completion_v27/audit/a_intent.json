@@ -1,0 +1,30 @@
+{
+  "schema": "v27_a_source_intent_v1",
+  "written_utc": "2026-11-06T10:54:50.915263+00:00",
+  "scope": [
+    "RS_PAST_NA1585",
+    "RS_PAST_NA1937",
+    "RS_PAST_NA1951",
+    "RS_PAST_NA1967"
+  ],
+  "planned_initial_queries": [
+    "\"William Watt\" \"1912\" born",
+    "\"Montague Mattinson Pennell\" born",
+    "\"William Kenneth Hutchison\" born",
+    "\"Alan Richard Powell\" born"
+  ],
+  "adaptive_query_purpose": "Withinremainingfourqueries, use observed scientificcareer/memoirtitle/byline/unique fullsubjectname to locate a distinct original biography or source carrier and actualbornclause. If initialresults insufficient, verify targetedfullsubject/actualDOBprecision; no failedroute repeat/variant or accessbypass. Exact adaptivequerywording will be logged after observedinitialresults, not falsely preclaimed.",
+  "navigation_purpose": "Inspect first informative original memoir, editedbiography or institutionalbody; parsecachedfinds for actualsubjectborn/DOB/career/byline, no allsourcecaches or rawGET.",
+  "budgets": {
+    "queries": 8,
+    "navigation": 10
+  },
+  "source_gates": "Nativeidentity/DOB/cohort/eligibility frozen; explicitbirthrelation required; citiesaloneunknowngeo; fullnativecomponents or alreadyauthorizedstrictmiddleomissiononly. Conflictsheld; no date-repair/datelessbypass. <=25quotewords/originalwork.",
+  "adaptive_step_recorded_utc": "2026-11-06T10:55:18.704370+00:00",
+  "adaptive_queries_planned_after_initial_observation": [
+    {
+      "query": "\"William Watt\" \"carbon\" \"born\"",
+      "purpose": "InitialresultsidentifyRoyalAircraftEstablishment physicalchemist1912\u20131985 and1987memoirreference; locate informative originalscientificbiography, not Australianpoliticianorothernamesakes."
+    }
+  ]
+}

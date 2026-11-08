@@ -1,0 +1,317 @@
+{
+  "schema": "UK_v22_independent_documentary_source_QA_v1",
+  "reviewer": "/root/v22_source_qa",
+  "written_utc": "2026-11-05T23:51:16.663849+00:00",
+  "result": "PASS_with_explicit_documentary_verification_limits",
+  "blocking_issues": [],
+  "actual_checks_passed": 49,
+  "checks": [
+    {
+      "check": "fact_count_and_keys",
+      "pass": true,
+      "evidence": [
+        "RS_PAST_NA3635",
+        "RS_PAST_NA4747"
+      ]
+    },
+    {
+      "check": "review_scope",
+      "pass": true,
+      "evidence": "8 declared individual records"
+    },
+    {
+      "check": "fact_hold_partition",
+      "pass": true,
+      "evidence": "2 facts +6 holds, disjoint/exact"
+    },
+    {
+      "check": "birthplace_support_grades",
+      "pass": true,
+      "evidence": "2S2/0S3; original attributededitedbiographies"
+    },
+    {
+      "check": "hemisphere_decisions",
+      "pass": true,
+      "evidence": "WetherellNorth;Robertsunknown"
+    },
+    {
+      "check": "RS_PAST_NA3635_native_authority",
+      "pass": true,
+      "evidence": "Exact unchanged source-authorised full native string"
+    },
+    {
+      "check": "RS_PAST_NA3635_native_DOB",
+      "pass": true,
+      "evidence": "Exact unchanged native DOB"
+    },
+    {
+      "check": "RS_PAST_NA3635_unique_native_key",
+      "pass": true,
+      "evidence": "Unique authority+DOB key among4983"
+    },
+    {
+      "check": "RS_PAST_NA3635_prior_blank_unknown",
+      "pass": true,
+      "evidence": "Actual v21 current object"
+    },
+    {
+      "check": "RS_PAST_NA3635_actual_source_DOB",
+      "pass": true,
+      "evidence": "Actual exactday in original born clause/header, not completed from native"
+    },
+    {
+      "check": "RS_PAST_NA3635_identity_documented",
+      "pass": true,
+      "evidence": "Full components and distinctive professional anchors reported in original body observations"
+    },
+    {
+      "check": "RS_PAST_NA3635_explicit_place_quote",
+      "pass": true,
+      "evidence": "Source observed direct born relation, not search/career inference"
+    },
+    {
+      "check": "RS_PAST_NA3635_source_genre_and_author",
+      "pass": true,
+      "evidence": "Original signed/edited biography credentials retained"
+    },
+    {
+      "check": "RS_PAST_NA3635_quote_bound",
+      "pass": true,
+      "evidence": "10 actualwhitespacewords, repeated same excerpt only"
+    },
+    {
+      "check": "RS_PAST_NA3635_grade_role",
+      "pass": true,
+      "evidence": "New BP grade separate from native DOBtier"
+    },
+    {
+      "check": "RS_PAST_NA3635_raw_retrieval_limits",
+      "pass": true,
+      "evidence": "Tool parsedtext not rawbytes/status/time proof"
+    },
+    {
+      "check": "RS_PAST_NA3635_no_person_geocode",
+      "pass": true,
+      "evidence": "No personal country/QID/point assignment"
+    },
+    {
+      "check": "RS_PAST_NA4747_native_authority",
+      "pass": true,
+      "evidence": "Exact unchanged source-authorised full native string"
+    },
+    {
+      "check": "RS_PAST_NA4747_native_DOB",
+      "pass": true,
+      "evidence": "Exact unchanged native DOB"
+    },
+    {
+      "check": "RS_PAST_NA4747_unique_native_key",
+      "pass": true,
+      "evidence": "Unique authority+DOB key among4983"
+    },
+    {
+      "check": "RS_PAST_NA4747_prior_blank_unknown",
+      "pass": true,
+      "evidence": "Actual v21 current object"
+    },
+    {
+      "check": "RS_PAST_NA4747_actual_source_DOB",
+      "pass": true,
+      "evidence": "Actual exactday in original born clause/header, not completed from native"
+    },
+    {
+      "check": "RS_PAST_NA4747_identity_documented",
+      "pass": true,
+      "evidence": "Full components and distinctive professional anchors reported in original body observations"
+    },
+    {
+      "check": "RS_PAST_NA4747_explicit_place_quote",
+      "pass": true,
+      "evidence": "Source observed direct born relation, not search/career inference"
+    },
+    {
+      "check": "RS_PAST_NA4747_source_genre_and_author",
+      "pass": true,
+      "evidence": "Original signed/edited biography credentials retained"
+    },
+    {
+      "check": "RS_PAST_NA4747_quote_bound",
+      "pass": true,
+      "evidence": "12 actualwhitespacewords, repeated same excerpt only"
+    },
+    {
+      "check": "RS_PAST_NA4747_grade_role",
+      "pass": true,
+      "evidence": "New BP grade separate from native DOBtier"
+    },
+    {
+      "check": "RS_PAST_NA4747_raw_retrieval_limits",
+      "pass": true,
+      "evidence": "Tool parsedtext not rawbytes/status/time proof"
+    },
+    {
+      "check": "RS_PAST_NA4747_no_person_geocode",
+      "pass": true,
+      "evidence": "No personal country/QID/point assignment"
+    },
+    {
+      "check": "Wetherell_worker_body_scope",
+      "pass": true,
+      "evidence": "Earlier worker originalparsedPDF explicit; no parentPDFbodyclaim"
+    },
+    {
+      "check": "Wetherell_later_challenge_separate",
+      "pass": true,
+      "evidence": "ParentAnubisHTMLchallenge separate; no retry/bypass"
+    },
+    {
+      "check": "Wetherell_publication_precision",
+      "pass": true,
+      "evidence": "DOI1999/downloadstamp2023 not substituted for publication"
+    },
+    {
+      "check": "Wetherell_birth_region",
+      "pass": true,
+      "evidence": "Explicit birth-linked England; no nationality/work/map inference"
+    },
+    {
+      "check": "Roberts_public_Extract_scope",
+      "pass": true,
+      "evidence": "Root original publicExtract only, notpaidchapter"
+    },
+    {
+      "check": "Roberts_geography_unknown",
+      "pass": true,
+      "evidence": "Address/city only; no inferredEngland from travel/work/footer"
+    },
+    {
+      "check": "Roberts_death_precision",
+      "pass": true,
+      "evidence": "Header2021only; exact17Feb2021 from separatelyscopedworkerUCL identity observation"
+    },
+    {
+      "check": "inherited_active_source_DOB_conflicts.json",
+      "pass": true,
+      "evidence": "Byte-identical v21 sidecar"
+    },
+    {
+      "check": "inherited_source_derived_age_inconsistencies.json",
+      "pass": true,
+      "evidence": "Byte-identical v21 sidecar"
+    },
+    {
+      "check": "inherited_lifespan_endpoint_discrepancies.json",
+      "pass": true,
+      "evidence": "Byte-identical v21 sidecar"
+    },
+    {
+      "check": "active_DOB_conflict_boundary",
+      "pass": true,
+      "evidence": "Argyris/Laver/Wells active; no correction/dateless bypass"
+    },
+    {
+      "check": "worker_request_counts",
+      "pass": true,
+      "evidence": "Actual finalworker ledgers12queries16navigation"
+    },
+    {
+      "check": "root_request_counts",
+      "pass": true,
+      "evidence": "Root4openattempts, not4bodyproofs"
+    },
+    {
+      "check": "aggregate_request_counts",
+      "pass": true,
+      "evidence": "12queries/20navigation/2find/0screen/0GET"
+    },
+    {
+      "check": "no_worker_protocol_deviations",
+      "pass": true,
+      "evidence": "Actual prior own/child intents retained; aggregate reports notbackdated"
+    },
+    {
+      "check": "Hewitt_root_followups_held",
+      "pass": true,
+      "evidence": "Career-onlyIChemE + distinctaward502, no adoption"
+    },
+    {
+      "check": "Lilly_discovery_only_boundary",
+      "pass": true,
+      "evidence": "Unopened1939title projection notacquired originalbody verdict; noBP/geo adoption"
+    },
+    {
+      "check": "no_new_DOB_conflicts",
+      "pass": true,
+      "evidence": "No new acquired originalbody DOBconflict established"
+    },
+    {
+      "check": "no_cache_distributed",
+      "pass": true,
+      "evidence": "No sourcePDF/HTML/images among studyfiles"
+    },
+    {
+      "check": "method_timing",
+      "pass": true,
+      "evidence": "Initialmethodlimitnote23:48:02 precedesfactwrite23:48:51 afterobservations"
+    }
+  ],
+  "materials_read": [
+    "finalfacts/holds/plan/parent/rootaudits",
+    "finalworkerA/Breports and actualpriorintentfiles",
+    "actualv21master nativeobjects forfixed8records",
+    "v21method/parent/activeconflict and historicalissue sidecars",
+    "parentoriginalaccess/bodyobservations",
+    "scratchv22methodlimitreview"
+  ],
+  "actual_native_identity_date_quote_checks": [
+    {
+      "record_id": "RS_PAST_NA3635",
+      "native_authority": "Wetherell; Alan Marmaduke (1932 - 1998)",
+      "native_dob": "1932-12-31",
+      "unique_key_count": 1,
+      "source_quote_words": 10,
+      "source_grade": "S2",
+      "reviewed_hemisphere": "north"
+    },
+    {
+      "record_id": "RS_PAST_NA4747",
+      "native_authority": "Roberts; Sir; Derek Harry (1932 - 2021); engineer",
+      "native_dob": "1932-03-28",
+      "unique_key_count": 1,
+      "source_quote_words": 12,
+      "source_grade": "S2",
+      "reviewed_hemisphere": "unknown"
+    }
+  ],
+  "case_reviews": {
+    "Roberts": "S2 signededitedODNBpublicExtract; exactnativeDOB/fullDerekHarry/headerlifespan verified in recordedrootbody. Address+city only=>unknown geography. Exactdeathdate is separateworkerUCLidentitycontext, no independentbirthplaceconfirmation or paidchapterclaim.",
+    "Wetherell": "S2 originalauthored publishedscientificmemoir body verifiedearlier byworker. Fullidentity/exactnativeDOB/lifespan/byline/CERNaffiliation/journalDOIcopyright and collaborationcontext retained; explicitEngland=>North. LaterparentAnubisHTMLaccesschallenge stopped and separatelyrecorded; no independentparentPDF/bodybytes/rawHTTP200/versionchange/cachedbypassclaim."
+  },
+  "holds_review": "Sixholds avoid search-onlyplaces, orphanage/upbringing/raisedregions and inaccessible/too-largeoriginals. ParentadditionalHewittIChemEcareer-onlybodyandDecember502recordedwithoutadoption. Lilly1939unopenedtitleprojection remainsunverifiedlead, notneworiginalbodyDOBverdict.",
+  "conflict_review": "All3inheritedactiveDOBholds and age/deathsidecars byte-identical tov21; no exception/clearing/datecorrection.",
+  "request_accounting": "12queries+20navigationattempts(16worker+4root),2parsedfinds,0screenshots/GET. Root2actualoriginalbodies(Roberts,career-onlyIChemE), AnubisHTML and502 notrepresented as bodybirthproof.",
+  "quote_review": "Actual12Roberts/10Wetherell words, same excerpts repeated; no newHewittquote. No fullsources/caches redistributed.",
+  "timing": {
+    "initial_method_review_utc": "2026-11-05T23:48:02.552733+00:00",
+    "parent_fact_write_utc": "2026-11-05T23:48:51.051882+00:00",
+    "final_source_QA_utc": "2026-11-05T23:51:16.663849+00:00",
+    "interpretation": "Afterobservations, methodverificationlimitnote beforefactwrite; finaldocumentaryQAafterfacts. No source-blindpreregistrationclaim."
+  },
+  "nonblocking_documentation_notes": [
+    "Hewitt finalhold retains the original worker-stage reason that IChemE was unopened; appended root_followup_observations and parent/root audits explicitly supersede that stage with the latercareer-onlybody open. No birthplaceadoption or count ambiguity."
+  ],
+  "verification_limits": [
+    "Documentary/native-row qualityreview only; no network/originalsourceacquisition/PDFimage rendering/rawHTTPbyteinspection by this reviewer.",
+    "Underlying sourcebody observations are worker/root reports with precise refs; finalsourceQA does not claim informationalindependence or parentWetherellPDFverification.",
+    "No replay, productionfacts/input/output/master/code/Git change. Only finalmethodreport copied and thisauditwritten. Numeric/frozen-master/replayQA is separate."
+  ],
+  "accepted_fact_sha256_at_review": "d496194f23f5ccc2e5f7c60ce1198f2504a4e0bd5062616de8f068590a37a251",
+  "reviewed_audit_sha256": {
+    "parent_adjudication.json": "a7a6d6d84248a87a141899715f1fa94b81b44e5a618c1953964d1f8315ae8df8",
+    "root_followups.json": "068610a02a7a5527d76114d0ecba68dcacd617d10f312ad65c2a1c6ad3f1106d",
+    "followup_holds.json": "d3b4535dd510b91cf96ed77ac57ab704aa341e70654eec55065b8864d1c86d35",
+    "active_source_DOB_conflicts.json": "36dfc81566f17189c72a9f0b3a9c6416b77ff43f6c858fd4b2d3184fefe8c970",
+    "method_qa.json": "bd06d4c5dd0ad4858f02f1b2332f93a5b8cfa65092323e39287a6d1aba5e62da"
+  },
+  "helper_review": "Read-only /root/v22_source_qa/identity_counts independently confirmed2nativeuniqueauthority/DOBbindings,10/12wordcounts,8=2+6partition,12queries/20nav/2find arithmetic and inheritedactiveconflictbytes; no sources/replays/fileschanged."
+}

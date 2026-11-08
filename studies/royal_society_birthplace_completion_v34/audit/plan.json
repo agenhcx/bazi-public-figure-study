@@ -1,0 +1,78 @@
+{
+  "written_utc": "2026-11-06T23:09:18.101204+00:00",
+  "baseline_commit": "433064a032cf85a26c81959621df4240c9d02190",
+  "baseline_canonical_sha256": "773cd149b4ee77d77233d81ac37fefa1e861a98c375b3d1c285ae36a32aa9847",
+  "phase": "geography_only_original_person_birth_context_followup",
+  "fixed_nonblank_unknown_window_pool": 64,
+  "geography_followup_groups": {
+    "a": [
+      "RS_PAST_NA3474",
+      "RS_PAST_NA4568",
+      "RS_PAST_NA5494",
+      "RS_PAST_NA6231"
+    ],
+    "b": [
+      "RS_PAST_NA6313",
+      "RS_PAST_NA6434",
+      "RS_PAST_NA645",
+      "RS_PAST_NA661"
+    ],
+    "c": [
+      "RS_PAST_NA663",
+      "RS_PAST_NA6655",
+      "RS_PAST_NA669",
+      "RS_PAST_NA6847"
+    ]
+  },
+  "first_birthplace_followup_groups": {},
+  "source_strategy": "Twelve records fixed before discovery from current64nonblankunknowns, outside currentv30-v33geofollowups and all9activeDOB/knownEwinsBarberplaceholds. FULLprioracceptedBP/geocontexts+targetedhistoricalholds beforequeries. New originalworks/directbornregion only; no rawcitymapping/newfirstbirthplace or failedroutevariants.",
+  "budgets": {
+    "per_group_queries": 8,
+    "per_group_navigation_attempts": 10,
+    "root_source_or_context_verification_opens": 12,
+    "root_adaptive_author_or_observed_original_work_locator_query": 1
+  },
+  "admission": "Actualsourcefullnativecomponents/actuallystatedcompatibleDOBprecision/distinctivecareer/directsubjectborncountryorwholeregion plus explicitreviewedbinding to existingstoredplace. Sourceadditionalpreciseplace mayqualify geography if consistentrefinement, with originalrawplaceunchanged. No inferredcountryfromfamouscity/nationality/family/school/work/death/footer. USA/Francegenericcountrylabels remainunresolved withoutwhollyonehemispherebirthcontext; no overseas-exclusionassumption. No conflictingDOB/place/identity repair or datelessbypass. Existingv24omitted-middle rule onlycompletefirstsurname/exactunchangedDOB/compatiblelifespan/coherentfingerprint/uniquefixedcohortmatch/no observedcontradiction; sourceactualshortname/unconfirmedmiddles explicit, no initials/nicknameexpansion. SourceextraGordon-stylecomponents canremainobservedwithoutnativeedit. No automaticcombinationofexceptions.",
+  "geography_role": "New geography_followup_v34 sourcegrade_role geographic_support_only; originalDOBtiers, BPsourcegrade/rawplace/sourceURL/claims/selectedevidence and allpriorfacts unchanged. Only sixexistinggeo fields+versionedcontext mutable, with previous+absentfieldrollback.",
+  "known_holds": "All9activeDOBcases includinghistoricalThompson2153 andFawcett331 excluded fromcurrent12; Tomesprovisional separate. KnownEwins9209/Barber8779placeholds excluded. Coles3474cross-sourceagecontrast retained butnotalternateDOB conflict; anynewdate/placecontradiction held, noclearance or source-grade repair. Fulltargetedpriorcontexts/individualholds must be checked, globalissuefilesnotexhaustive. PriorWynne/GuggenheimS3geo-only facts/originalS2grades frozen.",
+  "grades": "S2originalattributededitedbiography/memoir/scholarlyhistory/referencework; S3uncreditedcompiledmetadata/unverifiedexpertrole. No host-onlyS1. Earlierqualifiedworkeroriginalbody maystandiflaterrootfirstattemptfails withroles/errors/limits explicit.",
+  "quote_policy": "<=25distinctEnglishquotedwords/originalwork acrosspackage, accountfor priorcurrentfrozenobservations; no fullsourceHTML/PDF/images/projectioncaches.",
+  "retrieval": "Intentbeforequeries/opens; stop403/429/timeouts/size/challenges/no repeatsvariantsbypassrawGET; rawstatus/requesttime/bytehashunknownnull, parsedtextnotrawbytes.",
+  "frozen": [
+    "nativeDOB",
+    "calendar",
+    "authorityidentity",
+    "cohort",
+    "eligibility",
+    "DOBtiers",
+    "rawbirthplace",
+    "BPsourcegrade",
+    "BPsourceURLs/claims/evidence",
+    "QIDs",
+    "country",
+    "coords",
+    "officialstatus",
+    "oldsourcehash",
+    "allpriorversionedfacts",
+    "untargetedcompleteobjects"
+  ],
+  "inherited_issues": "Active9DOBobjects/all8otherissue/methodsidecarsbyteidentical unlessactualnewqualifiedexplicitappend preservingold9. Thompsonhistoricalv12case/currentv33rootreverification andFawcettnewheader-bodycontrast are priorfacts; no recountednewconflict/discovery. Tomesprovisional, place/approx/date-age/endpoint/middle/ordinalcases remainseparate. Globalinventoriesnotexhaustiveofolderindividualholds.",
+  "blank_queue_boundary": "103blankwindowcompleteobjects remainuntouched. v29firstpasscloseout stayshistoricalprior withv29hash; currentgeoonlyscope doesnotreopenblankqueue.",
+  "no_analysis_or_final_freeze": true,
+  "preselection_conflict_exclusions": [
+    {
+      "record_id": "RS_PAST_NA9209",
+      "prior_hold": "prior_v11_holds.json",
+      "frozen_raw_birthplace": "Blackpool",
+      "prior_observed_city": "Bristol",
+      "decision": "Unresolvedplaceholdpreserved,notselectedforgeo-onlyshortcut."
+    },
+    {
+      "record_id": "RS_PAST_NA8779",
+      "prior_hold": "prior_v12_holds.json",
+      "frozen_raw_birthplace": "Hatfield",
+      "prior_observed_city": "Letchworth",
+      "decision": "Unresolvedplaceholdpreserved,notselectedforgeo-onlyshortcut."
+    }
+  ]
+}
