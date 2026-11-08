@@ -1,0 +1,131 @@
+{
+  "schema": "UK_v41_final_QA_report_shape_precheck_v1",
+  "status": "PASS",
+  "written_utc": "2026-11-08T09:01:48.764389+00:00",
+  "historical_reconstruction_or_CLI_invoked": false,
+  "checks": [
+    "expectations_have_canonical_ids_sourcecounts_and_explicit_append_mapping",
+    "sourceqa_passed_final_shape",
+    "all9_inventory_names",
+    "active_source_DOB_conflicts.json_sha_shape_count",
+    "active_source_DOB_conflicts.json_oldobjects_and_authorized_appends",
+    "active_source_DOB_conflicts.json_wholefile_exact",
+    "birthplace_source_conflicts.json_sha_shape_count",
+    "birthplace_source_conflicts.json_oldobjects_and_authorized_appends",
+    "birthplace_source_conflicts.json_wholefile_exact",
+    "source_derived_age_inconsistencies.json_sha_shape_count",
+    "source_derived_age_inconsistencies.json_oldobjects_and_authorized_appends",
+    "source_derived_age_inconsistencies.json_wholefile_exact",
+    "provisional_parsed_date_discrepancies.json_sha_shape_count",
+    "provisional_parsed_date_discrepancies.json_oldobjects_and_authorized_appends",
+    "provisional_parsed_date_discrepancies.json_wholefile_exact",
+    "lifespan_endpoint_discrepancies.json_sha_shape_count",
+    "lifespan_endpoint_discrepancies.json_oldobjects_and_authorized_appends",
+    "lifespan_endpoint_discrepancies.json_wholefile_exact",
+    "cross_source_reported_age_contrasts.json_sha_shape_count",
+    "cross_source_reported_age_contrasts.json_oldobjects_and_authorized_appends",
+    "cross_source_reported_age_contrasts.json_wholefile_exact",
+    "source_date_precision_holds.json_sha_shape_count",
+    "source_date_precision_holds.json_oldobjects_and_authorized_appends",
+    "source_date_precision_holds.json_wholefile_exact",
+    "omitted_middle_name_admission.json_sha_shape_count",
+    "omitted_middle_name_admission.json_oldobjects_and_authorized_appends",
+    "omitted_middle_name_admission.json_wholefile_exact",
+    "source_ordinal_age_wording_observations.json_sha_shape_count",
+    "source_ordinal_age_wording_observations.json_oldobjects_and_authorized_appends",
+    "source_ordinal_age_wording_observations.json_wholefile_exact",
+    "all_sourceqa_tail_bindings_actual",
+    "worker_report_and_intent_binding_shapes",
+    "parent_tail_fields_actual",
+    "worker_a_report_copy",
+    "worker_a_ledger_shapes",
+    "worker_b_report_copy",
+    "worker_b_ledger_shapes",
+    "worker_c_report_copy",
+    "worker_c_ledger_shapes",
+    "root_query_open_click_find_operation_shape",
+    "sourcecount_recomputation",
+    "all_isolated_runtime_auditfiles_present",
+    "five_pinfile_outputs_exact",
+    "all3_documentary_artifact_pins_and_exact_copies",
+    "six_documentary_cases_exact_sourceqa_and_frozen_personal_name_DOB_place",
+    "documentary_binds_all11_actual_artifacts",
+    "docs_current_canonical_no_placeholders",
+    "no_distributed_source_caches"
+  ],
+  "source_counts": {
+    "worker_queries": 11,
+    "root_queries": 1,
+    "total_queries": 12,
+    "worker_navigation_attempts": 10,
+    "worker_source_open_operations": 7,
+    "worker_click_operations": 3,
+    "root_source_opens": 2,
+    "root_click_operations": 0,
+    "total_navigation_attempts": 12,
+    "total_source_open_operations": 9,
+    "total_click_operations": 3,
+    "worker_parsed_finds": 0,
+    "root_parsed_finds": 0,
+    "total_parsed_finds": 0,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "root_observation_operation_counts": {
+    "open": 2,
+    "source_locator_query": 1
+  },
+  "inventory_summary": {
+    "active_source_DOB_conflicts.json": {
+      "baseline_records": 13,
+      "current_records": 13,
+      "inventory_shape": "records"
+    },
+    "birthplace_source_conflicts.json": {
+      "baseline_records": 2,
+      "current_records": 2,
+      "inventory_shape": "records"
+    },
+    "source_derived_age_inconsistencies.json": {
+      "baseline_records": 4,
+      "current_records": 4,
+      "inventory_shape": "records"
+    },
+    "provisional_parsed_date_discrepancies.json": {
+      "baseline_records": 1,
+      "current_records": 1,
+      "inventory_shape": "records"
+    },
+    "lifespan_endpoint_discrepancies.json": {
+      "baseline_records": 1,
+      "current_records": 1,
+      "inventory_shape": "records"
+    },
+    "cross_source_reported_age_contrasts.json": {
+      "baseline_records": 1,
+      "current_records": 1,
+      "inventory_shape": "records"
+    },
+    "source_date_precision_holds.json": {
+      "baseline_records": 1,
+      "current_records": 1,
+      "inventory_shape": "records"
+    },
+    "omitted_middle_name_admission.json": {
+      "baseline_records": null,
+      "current_records": null,
+      "inventory_shape": "metadata_without_records"
+    },
+    "source_ordinal_age_wording_observations.json": {
+      "baseline_records": 1,
+      "current_records": 1,
+      "inventory_shape": "records"
+    }
+  },
+  "documentation_sha256": {
+    "README.md": "678785cbd6057afa2433bc917aa16ba9659fe60435b0602c8398ec1b1b8010b6",
+    "CONTINUATION.md": "53fbc719d1a87c250d4f9fbe0a6e3b919070338abc18b9bfca3cd19641f65e40"
+  },
+  "production_mutated": false,
+  "network_used": false
+}

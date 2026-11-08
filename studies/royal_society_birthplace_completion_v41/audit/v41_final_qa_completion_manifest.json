@@ -1,0 +1,72 @@
+{
+  "schema": "UK_v41_final_QA_completion_manifest_v1",
+  "written_utc": "2026-11-08T09:03:44.371393+00:00",
+  "status": "PASS",
+  "final_run_clean_exit": 0,
+  "validation_categories_passed": 60,
+  "shape_precheck_passed": 48,
+  "canonical_sha256": "a0c04e44631478f82e562deab64d699fc273e6fc99fa35ba23f8a61d7e1f8717",
+  "records": 4983,
+  "changed_complete_objects": 0,
+  "unchanged_complete_objects": 4983,
+  "overall": {
+    "north": 4205,
+    "unknown": 591,
+    "south": 187
+  },
+  "window_counts": {
+    "north": 2305,
+    "unknown": 157,
+    "south": 182
+  },
+  "active_DOB_conflict_count": 13,
+  "source_derived_age_inconsistency_count": 4,
+  "inherited_old_function_count": 57,
+  "inherited_old_assignment_count": 120,
+  "reviewed_production_input_code_audit_doc_count": 360,
+  "documentation_sha256": {
+    "README.md": "678785cbd6057afa2433bc917aa16ba9659fe60435b0602c8398ec1b1b8010b6",
+    "CONTINUATION.md": "53fbc719d1a87c250d4f9fbe0a6e3b919070338abc18b9bfca3cd19641f65e40"
+  },
+  "source_counts": {
+    "worker_queries": 11,
+    "root_queries": 1,
+    "total_queries": 12,
+    "worker_navigation_attempts": 10,
+    "worker_source_open_operations": 7,
+    "worker_click_operations": 3,
+    "root_source_opens": 2,
+    "root_click_operations": 0,
+    "total_navigation_attempts": 12,
+    "total_source_open_operations": 9,
+    "total_click_operations": 3,
+    "worker_parsed_finds": 0,
+    "root_parsed_finds": 0,
+    "total_parsed_finds": 0,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "two_isolated_replays_exact_all_five_outputs": true,
+  "production_rechecked_unchanged": true,
+  "main_outputs_rerun_or_mutated": false,
+  "retained_initial_failure_and_harness_correction": true,
+  "independent_static_correction_review": {
+    "reviewer": "/root/v41_final_qa/harness_static_review",
+    "status": "PASS",
+    "finding": "Initial independent static review missed documentary display-name vs archive-authority formatting. Follow-up reviewed all six actual names/DOB/places and confirmed corrected frozen given-name plus authority-surname equality is exact for all six. Original4983 full-object and native authority raw-string freeze assertions were not relaxed.",
+    "no_edit_replay_or_network_by_static_reviewer": true
+  },
+  "scratch_file_sha256": {
+    "qa_v41_final.py": "c4e58eb4e282f99d8a41427710d182a77eeb266a46d36491eb5eb0030d5e53c3",
+    "preflight_v41_final.py": "234911e1154a123603d0d1490b1ef9a013b78cd9861f6032a763bcf4423d5569",
+    "v41_final_qa_report.json": "202c345ba41a9f3b9e71cc958c7d0fed5706bc122ea98167e675bdd23454b4bf",
+    "v41_final_qa_run.log": "8c852614e0e2f05a7a4a797f523d462f2e51f94c2ffe7520b75aaa2ae2ee39a3",
+    "v41_final_qa_report_shape_precheck.json": "a58c7d6d23334b07530204285b704f161ca8d7d01c56220c5bc2a6aa312dad32",
+    "v41_final_qa_shape_precheck.log": "ea1aa32cb807dfd47af49b573d7a4f3ed967338ba07408d80f59d5965a7d9dce",
+    "v41_final_qa_documentary_tail_precheck.json": "bf569e3da6f1580b6bf965b81e98f0980a8f4ce95828941ce490061f791fddfa",
+    "v41_final_qa_initial_failed_report.json": "e5840b24e317865683fe6c3838a59b8dcd4f62d0fcd6b9b4005d086ef32390ee",
+    "v41_final_qa_initial_failed_run.log": "33dedf708599339e5b85e58e87e4b6f17a7ac15d0ea8ddfeafa2f2f1607468f5",
+    "v41_final_qa_failure_report.json": "e5840b24e317865683fe6c3838a59b8dcd4f62d0fcd6b9b4005d086ef32390ee",
+    "v41_final_qa_correction.json": "9b5c29f25d2711e22bc4c52c747dcb236907a10f5ea6b385ac176454757aa43c"
+  }
+}

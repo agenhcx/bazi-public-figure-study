@@ -1,0 +1,81 @@
+{
+  "written_utc": "2026-11-07T01:46:31.089215+00:00",
+  "baseline_commit": "e454dbb163f48f38306897d58c3072729f2b4bc7",
+  "baseline_canonical_sha256": "d431829f69534e32c5ad8eb30b24606317cde64989aaf23db00c0fa31efd3921",
+  "phase": "canonical_community_reference_geography_method_application",
+  "fixed_nonblank_unknown_window_pool": 56,
+  "geography_followup_groups": {
+    "a": [
+      "RS_PAST_NA2863",
+      "RS_PAST_NA5003"
+    ],
+    "b": [
+      "RS_PAST_NA6434",
+      "RS_PAST_NA6655"
+    ],
+    "c": [
+      "RS_PAST_NA669",
+      "RS_PAST_NA187"
+    ]
+  },
+  "first_birthplace_followup_groups": {},
+  "source_strategy": "Six newly fixed stored-place unknown records under unchanged V36 method. Read all9 current issue inventories/full targeted old contexts before requests. Preserve activeDOB13, partial/separate place holds, three age-quality cases. All old application scope files retained at runtime paths; V40 separately versioned.",
+  "budgets": {
+    "per_group_queries": 4,
+    "per_group_navigation_attempts": 10,
+    "root_source_or_context_verification_opens": 18,
+    "root_adaptive_author_or_observed_original_work_locator_query": 1
+  },
+  "admission": "Actualallnativepersonalcomponents(fullname/observedfullalias, honorificnotpersonalcomponent), exactunchangednativeDOBasstated and coherentdistinctivecareer; actually observedcompatiblelifespanwhereprovided. OriginalacceptedpersonidentityandBP evidence remainsseparatelyfrozen. No inventedfullnames, dates, calendars or guessedQIDs. SourceP19/bornplace must matchliteralexistinglocalitycomponent or be an explicitlyconsistentbroaderqualifier in existingrawplace (e.g.WoodGreen,London->London). No different-cityequivalence, substitutedplace or unobservedalias. Preservegranularstreetuncertainty. Any actualincompatibleplace orDOB meanshold, notchooseotherpositivesource. Everyedge mustactuallyappear in acquiredtext/structuredstatement: personbornplace/P19->specifictargetURI/QID, then actualtargetcountry/adminP131path. RecordeachnodeURI,label,edgeproperty,toolref,locator and acquisitionrole. No guessedlinks fromfamiliarcitynames, nationality/work or genericcoordinates. No personalcountry/QID/latlon fields assigned.",
+  "geography_role": "Newgeography_followup_v40 includes method_id/proof_mode/proofchain asS3geographic_support_only; oldDOB/BPtiers andnativefields preserved. ExactlysixGEO_FIELDS+newcontext/rollback only.",
+  "known_holds": "All13activeDOBcases, allpartialplacecases andEwins/Barber excluded; do not retroactivelyadmitKiddleorclear anypriorhold. Priorv35firstpasscloseout stayshistorical, notcurrentmasteraudit.",
+  "grades": "S3 geographic_support_only; canonicalcommunitydata is notcivil/peerreview/independenteditingproof and notupgrading originalDOBorBPgrade. Informationaldependenceonpriorreferencesunknown.",
+  "quote_policy": "<=25distinctEnglishquotedwords/originalwork acrosspackage, accountfor priorcurrentfrozenobservations; no fullsourceHTML/PDF/images/projectioncaches.",
+  "retrieval": "Intentbeforequeries/opens; stop403/429/timeouts/size/challenges/no repeatsvariantsbypassrawGET; rawstatus/requesttime/bytehashunknownnull, parsedtextnotrawbytes.",
+  "frozen": [
+    "nativeDOB",
+    "calendar",
+    "authorityidentity",
+    "cohort",
+    "eligibility",
+    "DOBtiers",
+    "rawbirthplace",
+    "BPsourcegrade",
+    "BPsourceURLs/claims/evidence",
+    "QIDs",
+    "country",
+    "coords",
+    "officialstatus",
+    "oldsourcehash",
+    "allpriorversionedfacts",
+    "untargetedcompleteobjects"
+  ],
+  "inherited_issues": "13 activeDOB, two partialplace plus separate Ewins/Barber, age3(Waterfield/Spath/Desty), six other issuefiles. Preserve all old holds and unqualified source representations. The omitted-middle file is metadata without records array; wholefile equality required.",
+  "blank_queue_boundary": "103blankwindowcompleteobjects remainuntouched. v29firstpasscloseout stayshistoricalprior withv29hash; currentgeoonlyscope doesnotreopenblankqueue.",
+  "no_analysis_or_final_freeze": true,
+  "preselection_conflict_exclusions": [
+    {
+      "record_id": "RS_PAST_NA9209",
+      "prior_hold": "prior_v11_holds.json",
+      "frozen_raw_birthplace": "Blackpool",
+      "prior_observed_city": "Bristol",
+      "decision": "Unresolvedplaceholdpreserved,notselectedforgeo-onlyshortcut."
+    },
+    {
+      "record_id": "RS_PAST_NA8779",
+      "prior_hold": "prior_v12_holds.json",
+      "frozen_raw_birthplace": "Hatfield",
+      "prior_observed_city": "Letchworth",
+      "decision": "Unresolvedplaceholdpreserved,notselectedforgeo-onlyshortcut."
+    }
+  ],
+  "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+  "method_preregistration_file": "v36_method_preregistration.json",
+  "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+  "method_application_scope_file": "v40_method_application_scope.json",
+  "method_application_scope_sha256": "b44c66bc0d7883aeef9650578d0b339a65b563942da3fe72976b05c0094cc1fc",
+  "method_amendment_created": false,
+  "scope_application_extension": true,
+  "no_new_admission_method_exception": true,
+  "current_method_application_scope_audit_path": "audit/method_application_scope_v40.json"
+}
