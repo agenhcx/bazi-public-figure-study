@@ -1,0 +1,77 @@
+{
+  "written_utc": "2026-11-08T10:25:07.073525+00:00",
+  "status": "prospectively_frozen_before_V44_external_queries",
+  "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+  "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+  "method_preregistration_origin": "Unchanged original V36 method; seven historical application scopes stay byte-exact. V44 prospectively fixes the five remaining nonblocked canonical first-pass candidates.",
+  "baseline_commit": "0f50abe91b8e4c1f7faf13f652cf988a5c3303df",
+  "baseline_canonical_sha256": "a0c04e44631478f82e562deab64d699fc273e6fc99fa35ba23f8a61d7e1f8717",
+  "fixed_record_ids": [
+    "RS_CURRENT_10965",
+    "RS_PAST_NA6847",
+    "RS_PAST_NA780",
+    "RS_PAST_NA8736",
+    "RS_PAST_NA8744"
+  ],
+  "groups": {
+    "a": [
+      "RS_CURRENT_10965",
+      "RS_PAST_NA6847"
+    ],
+    "b": [
+      "RS_PAST_NA780",
+      "RS_PAST_NA8736"
+    ],
+    "c": [
+      "RS_PAST_NA8744"
+    ]
+  },
+  "fixed_nonblank_unknown_window_pool": 54,
+  "fixed_review_count": 5,
+  "group_sizes": [
+    2,
+    2,
+    1
+  ],
+  "rules_unchanged": true,
+  "method_amendment_created": false,
+  "method_reused_from_version": 36,
+  "scope_application_extension": true,
+  "no_new_admission_method_exception": true,
+  "current_audit_path": "audit/method_application_scope_v44.json",
+  "legacy_application_scope_file_sha256": {
+    "method_application_scope.json": "ae080b06f8abad9ed7575783486795c977e44ce5e5024bfa2096e16816a44d94",
+    "method_application_scope_v38.json": "bd7540715a6b4649ffe79371e38ee2b650bd0176013fbb5418efa02b8995fad0",
+    "method_application_scope_v39.json": "cc12b3159a035064dbde6a35e0778642fdb25d988e9e399617b216062127b17e",
+    "method_application_scope_v40.json": "b44c66bc0d7883aeef9650578d0b339a65b563942da3fe72976b05c0094cc1fc",
+    "method_application_scope_v41.json": "d6ebcba7aa672c1a4877857bd4e9b4072af2ae159c04fd0dddf4d7766d2e3176",
+    "method_application_scope_v42.json": "c5c7594d271b6923725acad91612b8f53b3528383d3bf50f0658ccfa0e639796",
+    "method_application_scope_v43.json": "b25ef3f4bbf1f3e5dddd48531812a60e40d1383b897a0d3d044b0604e62db212"
+  },
+  "per_entry_intent_UTC_required": true,
+  "native_identity_bindings": {
+    "RS_CURRENT_10965": {
+      "native_personal_name": "Jerry Adams",
+      "native_authority_field": "",
+      "frozen_full_aliases": [
+        "J. M. Adams",
+        "Jerry M Adams",
+        "Jerry M. Adams",
+        "Jerry McKee Adams",
+        "Jerry McKee Adams"
+      ],
+      "basis": "CURRENT row has native name Jerry Adams and frozen supported full-alias lookup context, while source_authorised_full_name is empty. Apply existing full-native-components/observed-full-alias rule to actually displayed source name; preserve empty authority string and all native fields. No initials expansion, invented McKee or native-name repair. Actual source fullalias must be observed and exact DOB/distinctive career/lifespan/frozen birthplace/whole-region proof remain mandatory.",
+      "new_admission_exception": false
+    }
+  },
+  "mandatory_rules": "All native personal components or actually observed full alias; exact displayed native DOB; distinctive coherent career and compatible observed lifespan; literal frozen-place component or explicitly consistent actual qualifier; acquired direct personalbirth whole-region, actual birth-place hyperlink followed to acquired target region, or actualP19/P131 chain. S3 geographic_support_only. Hold actual DOB/place conflict; do not positive-source shop. No guessed city/QID, nationality/work/death/centroid, mirror or rewritten-primary-body promotion. Unknown calendar/rank/raw/revision/editorial/independence staysnull. Only sixGEO_FIELDS plus versioned exactrollback context may change; nativeDOB/name/authority/grades/rawBP/countryQIDcoordinates/priorfacts frozen.",
+  "budgets": {
+    "per_group_queries": 4,
+    "per_group_navigation_attempts": 10,
+    "root_source_or_context_verification_opens": 18,
+    "root_adaptive_author_or_observed_original_work_locator_query": 1
+  },
+  "first_pass_closeout_scope": "All five remaining nonblocked records only. Queue coverage is separate from birthplace completeness, existing blocked cases and source exhaustion.",
+  "source_exhausted": false,
+  "final_freeze": false
+}

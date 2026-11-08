@@ -1,0 +1,305 @@
+{
+  "written_utc": "2026-11-08T10:28:40.749764+00:00",
+  "group": "a",
+  "version": 44,
+  "scope_sha256": "3575db7b377008a55d4c6876c23ce6b6f67fc8b50dce40b7dddc01fcf8523e65",
+  "complete_native_objects_and_targeted_prior_holds_read_before_web": true,
+  "all9_issue_inventories_read_in_full_before_web": true,
+  "current_inventory_sha256": {
+    "active_source_DOB_conflicts.json": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+    "birthplace_source_conflicts.json": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+    "source_derived_age_inconsistencies.json": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+    "provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+    "lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+    "cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+    "source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+    "omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+    "source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+  },
+  "entries": [
+    {
+      "entry_id": 1,
+      "written_utc": "2026-11-08T10:28:40.749778+00:00",
+      "operation": "system2_search_query",
+      "record_id": "RS_CURRENT_10965",
+      "q": "\"Jerry McKee Adams\" site:wikipedia.org",
+      "purpose": "First canonical person reference locator; no search projection promoted."
+    },
+    {
+      "entry_id": 2,
+      "written_utc": "2026-11-08T10:28:40.749781+00:00",
+      "operation": "system2_search_query",
+      "record_id": "RS_PAST_NA6847",
+      "q": "\"Charles Todd\" bacteriologist site:wikipedia.org",
+      "purpose": "First canonical person reference locator; no search projection promoted."
+    },
+    {
+      "entry_id": 3,
+      "written_utc": "2026-11-08T10:28:56.927902+00:00",
+      "operation": "open",
+      "record_id": "RS_CURRENT_10965",
+      "ref_id": "https://en.wikipedia.org/wiki/Jerry_Adams",
+      "purpose": "Observed canonical person URI from turn8722266search0; actual body required."
+    },
+    {
+      "entry_id": 4,
+      "written_utc": "2026-11-08T10:28:56.927914+00:00",
+      "operation": "open",
+      "record_id": "RS_CURRENT_10965",
+      "ref_id": "https://www.wikidata.org/wiki/Q6183179",
+      "purpose": "Frozen supported lookup QID, first actual P19/person statements attempt."
+    },
+    {
+      "entry_id": 5,
+      "written_utc": "2026-11-08T10:28:56.927916+00:00",
+      "operation": "open",
+      "record_id": "RS_PAST_NA6847",
+      "ref_id": "https://www.wikidata.org/wiki/Q21165635",
+      "purpose": "Frozen lookup QID, first actual person/P19/sitelink carrier attempt; not1826 Todd."
+    },
+    {
+      "entry_id": 6,
+      "written_utc": "2026-11-08T10:29:19.561815+00:00",
+      "operation": "system1_search_query",
+      "record_id": "RS_PAST_NA6847",
+      "q": "\"Charles Todd\" \"1869\" Wikipedia",
+      "domains": [
+        "wikipedia.org"
+      ],
+      "purpose": "Engine2 coverage gap: only namesakes/disambiguation; seek actual canonical bacteriologist person URI."
+    },
+    {
+      "entry_id": 7,
+      "written_utc": "2026-11-08T10:29:19.561832+00:00",
+      "operation": "click",
+      "record_id": "RS_CURRENT_10965",
+      "ref_id": "turn9796027view0",
+      "id": 25,
+      "purpose": "Actual observed French language-person link from acquired English page; first open of distinct canonical person work."
+    },
+    {
+      "entry_id": 8,
+      "written_utc": "2026-11-08T10:29:19.561834+00:00",
+      "operation": "find",
+      "record_id": "RS_CURRENT_10965",
+      "ref_id": "turn9796027view1",
+      "pattern": "place of birth",
+      "purpose": "Find P19 label in cached acquired full person graph; no request/retry of another work."
+    },
+    {
+      "entry_id": 9,
+      "written_utc": "2026-11-08T10:30:01.242828+00:00",
+      "operation": "click",
+      "record_id": "RS_CURRENT_10965",
+      "ref_id": "turn9796027view0",
+      "id": 24,
+      "purpose": "Observed Arabic distinct canonical language-person link; first open, no failed French retry."
+    },
+    {
+      "entry_id": 10,
+      "written_utc": "2026-11-08T10:30:01.242846+00:00",
+      "operation": "open",
+      "record_id": "RS_PAST_NA6847",
+      "ref_id": "https://en.wikipedia.org/wiki/List_of_fellows_of_the_Royal_Society_S%2C_T%2C_U%2C_V",
+      "purpose": "Observed canonical fellows-list URI turn6562347search4; inspect actual subject row only for distinct person-link carrier, not geographyproof."
+    },
+    {
+      "entry_id": 11,
+      "written_utc": "2026-11-08T10:30:24.254645+00:00",
+      "operation": "find",
+      "record_id": "RS_PAST_NA6847",
+      "ref_id": "turn4698637view0",
+      "pattern": "Charles Todd",
+      "purpose": "Cached rewritten-list URI/link carrier inspection only; no list claim promoted."
+    },
+    {
+      "entry_id": 12,
+      "written_utc": "2026-11-08T10:30:24.254658+00:00",
+      "operation": "system1_search_query",
+      "record_id": "RS_PAST_NA6847",
+      "q": "\"Charles Todd\" immunologiste site:wikipedia.org",
+      "domains": [
+        "wikipedia.org"
+      ],
+      "purpose": "Final bounded alternate-language canonical person locator for1869 immunologist; no guessed URI or claim admission."
+    }
+  ],
+  "web_operation_batches": [
+    {
+      "entries": [
+        1,
+        2
+      ],
+      "tool_arguments": {
+        "system2_search_query": [
+          {
+            "q": "\"Jerry McKee Adams\" site:wikipedia.org"
+          },
+          {
+            "q": "\"Charles Todd\" bacteriologist site:wikipedia.org"
+          }
+        ],
+        "response_length": "long"
+      },
+      "local_validation_chunk_id": "42709a",
+      "local_validation_exit_code": 0,
+      "validation_completed_before_web": true,
+      "result_refs": [
+        "turn8722266search0",
+        "turn8722266search1",
+        "turn8722266search2",
+        "turn8722266search3",
+        "turn8722266search4",
+        "turn8722266search5"
+      ]
+    },
+    {
+      "entries": [
+        3,
+        4,
+        5
+      ],
+      "tool_arguments": {
+        "open": [
+          {
+            "ref_id": "https://en.wikipedia.org/wiki/Jerry_Adams"
+          },
+          {
+            "ref_id": "https://www.wikidata.org/wiki/Q6183179"
+          },
+          {
+            "ref_id": "https://www.wikidata.org/wiki/Q21165635"
+          }
+        ],
+        "response_length": "long"
+      },
+      "local_validation_chunk_id": "808528",
+      "local_validation_exit_code": 0,
+      "validation_completed_before_web": true,
+      "result_refs": [
+        "turn9796027view0",
+        "turn9796027view1",
+        "turn9796027view2"
+      ]
+    },
+    {
+      "entries": [
+        6,
+        7,
+        8
+      ],
+      "tool_arguments": {
+        "system1_search_query": [
+          {
+            "q": "\"Charles Todd\" \"1869\" Wikipedia",
+            "domains": [
+              "wikipedia.org"
+            ]
+          }
+        ],
+        "click": [
+          {
+            "ref_id": "turn9796027view0",
+            "id": 25
+          }
+        ],
+        "find": [
+          {
+            "ref_id": "turn9796027view1",
+            "pattern": "place of birth"
+          }
+        ],
+        "response_length": "long"
+      },
+      "local_validation_chunk_id": "d4c270",
+      "local_validation_exit_code": 0,
+      "validation_completed_before_web": true,
+      "result_refs": [
+        "turn6562347search0",
+        "turn6562347search1",
+        "turn6562347search2",
+        "turn6562347search3",
+        "turn6562347search4",
+        "turn6562347search5",
+        "turn6562347search6",
+        "turn6562347view0",
+        "turn6562347view1"
+      ]
+    },
+    {
+      "entries": [
+        9,
+        10
+      ],
+      "tool_arguments": {
+        "click": [
+          {
+            "ref_id": "turn9796027view0",
+            "id": 24
+          }
+        ],
+        "open": [
+          {
+            "ref_id": "https://en.wikipedia.org/wiki/List_of_fellows_of_the_Royal_Society_S%2C_T%2C_U%2C_V"
+          }
+        ],
+        "response_length": "long"
+      },
+      "local_validation_chunk_id": "17659d",
+      "local_validation_exit_code": 0,
+      "validation_completed_before_web": true,
+      "result_refs": [
+        "turn4698637view0",
+        "turn4698637view1"
+      ]
+    },
+    {
+      "entries": [
+        11,
+        12
+      ],
+      "tool_arguments": {
+        "system1_search_query": [
+          {
+            "q": "\"Charles Todd\" immunologiste site:wikipedia.org",
+            "domains": [
+              "wikipedia.org"
+            ]
+          }
+        ],
+        "find": [
+          {
+            "ref_id": "turn4698637view0",
+            "pattern": "Charles Todd"
+          }
+        ],
+        "response_length": "long"
+      },
+      "local_validation_chunk_id": "223057",
+      "local_validation_exit_code": 0,
+      "validation_completed_before_web": true,
+      "result_refs": [
+        "turn7433502search0",
+        "turn7433502search1",
+        "turn7433502search2",
+        "turn7433502search3",
+        "turn7433502search4",
+        "turn7433502search5",
+        "turn7433502search6",
+        "turn7433502search7",
+        "turn7433502search8",
+        "turn7433502view0"
+      ]
+    }
+  ],
+  "actual_retrieval_counts": {
+    "queries": 4,
+    "navigation_attempts": 6,
+    "source_open_operations": 4,
+    "click_operations": 2,
+    "parsed_finds": 2,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "completed_utc": "2026-11-08T10:32:31.719354+00:00"
+}

@@ -1,0 +1,404 @@
+{
+  "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+  "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+  "method_application_scope_sha256": "3575db7b377008a55d4c6876c23ce6b6f67fc8b50dce40b7dddc01fcf8523e65",
+  "written_utc": "2026-11-08T10:31:01.492510+00:00",
+  "group": "c",
+  "phase": "canonical_community_reference_geography_method_application",
+  "intent_file": "v44_c_intent.json",
+  "current_method_application_scope_audit_path": "audit/method_application_scope_v44.json",
+  "full1nativeobjects/priorholdsbeforequeries": true,
+  "all9_issue_inventories_loaded_before_queries": true,
+  "inventory_file_pins": {
+    "active_source_DOB_conflicts.json": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+    "birthplace_source_conflicts.json": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+    "source_derived_age_inconsistencies.json": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+    "provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+    "lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+    "cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+    "source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+    "omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+    "source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+  },
+  "targeted_prior_context_file_pins": {
+    "academy_repo/studies/royal_society_birthplace_completion_v43/audit/prior_v12_holds.json": "00c91a7cc6982df70ee6b099b38f800530417f289352f7b3a3c9baba945fe801",
+    "academy_repo/studies/royal_society_birthplace_completion_v43/audit/prior_v31_holds.json": "fb132f1350a62a5298ba0c5d26d862aaf4d12ebf0a1ddaff465f78c979176d80",
+    "academy_repo/studies/royal_society_birthplace_completion_v43/audit/prior_v31_method_qa.json": "4bbdc130cec93d80a810a478f0152bcc093e36f98df20849e530a21f46b6542b",
+    "academy_repo/studies/royal_society_birthplace_completion_v43/audit/prior_v35_geography_first_pass_queue_closeout.json": "56fd3053935afc42fe2f9cf301bb66bc2bc6839fa9483467cd03e602fb61be3b",
+    "academy_repo/studies/royal_society_birthplace_completion_v43/audit/release.json": "eaa889b585000da86e3eed8b45b23daae2af6a7f2400cdebb698775aa2f3c7b8",
+    "v12_sources_a.json": "28c7ac72f9813f8ec8b3e2e8e271b2aafc8dcdb76044f5a2efc63afc1f833426",
+    "v12_a_intent.json": "3275c801fe25fc8b1ea0bee0ff17a8abba443c775d30669a6a1b1f244ca4a9e3",
+    "v31_sources_b.json": "20653684ca7d882c734407f0aed2216e8968f45234ff5439816fc8a16e6a30e8",
+    "v31_b_intent.json": "08d9f5e8a5222e7acafa411b7ef8b71579b583ea536a1d34a0f6483742200873",
+    "v44_scope_c.json": "f8fd72cecdef6cb91e15368b660fc3f31b660f69b4182e9cc0a27162ead1afba"
+  },
+  "prior_context_review": {
+    "complete_plan_scope_method_scope_read": true,
+    "all9_current_issue_inventories_read": true,
+    "full_native_scope_objects_read": true,
+    "inherited_active_DOB": 13,
+    "inherited_partial_place": 2,
+    "inherited_age_quality": 4,
+    "omitted_middle_metadata_no_records": true,
+    "prior_personal_holds_read": [
+      "V43 prior_v12_holds Finlay Copenhagen metadata only and failed Fenchel125906 route",
+      "V43 prior_v31_holds Finlay yearbook work address and failed Berninger125910 route",
+      "v12_sources_a Finlay and v31_sources_b Finlay actual acquisition history",
+      "prior_v31_method_qa Finlay binding; prior_v35 queue and V43 release remaining-person context"
+    ],
+    "closed_prior_works": [
+      "10.1016/j.protis.2022.125906",
+      "10.1016/j.protis.2022.125910"
+    ],
+    "separate_Ewins_Barber_placeholds_preserved": true,
+    "Tomes_glyph_uncertainty_preserved": true
+  },
+  "inherited_issue_counts": {
+    "active_DOB": 13,
+    "partial_birthplace": 2,
+    "source_derived_age_inconsistencies": 4,
+    "other_issue_files": 6
+  },
+  "omitted_middle_inventory_is_metadata_without_records_array": true,
+  "separate_Ewins_Barber_placeholds_preserved": true,
+  "Tomes_glyph_uncertainty_preserved": true,
+  "intent_writes_validated_exit0_separately_beforeweb": true,
+  "pre_request_intent_validations": [
+    {
+      "intent_entries": [
+        0
+      ],
+      "validation_exit_code": 0,
+      "validation_utc": "2026-11-08T10:28:42.781158+00:00",
+      "separate_local_validation_before_web": true
+    },
+    {
+      "intent_entries": [
+        1
+      ],
+      "validation_exit_code": 0,
+      "validation_utc": "2026-11-08T10:29:01.882698+00:00",
+      "separate_local_validation_before_web": true
+    },
+    {
+      "intent_entries": [
+        2
+      ],
+      "validation_exit_code": 0,
+      "validation_utc": "2026-11-08T10:29:21.456096+00:00",
+      "separate_local_validation_before_web": true
+    },
+    {
+      "intent_entries": [
+        3
+      ],
+      "validation_exit_code": 0,
+      "validation_utc": "2026-11-08T10:29:42.985718+00:00",
+      "separate_local_validation_before_web": true
+    }
+  ],
+  "retrieval_counts": {
+    "queries": 1,
+    "navigation_attempts": 3,
+    "source_open_operations": 2,
+    "click_operations": 1,
+    "cached_finds": 0,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "query_ledger": [
+    {
+      "index": 0,
+      "kind": "query",
+      "engine": "system2",
+      "query": "\"Bland James Finlay\" site:wikipedia.org",
+      "record_id": "RS_PAST_NA8744",
+      "purpose": "Discover observed canonical personal reference URI; query projections and rewritten results are not original identity or birthplace proof. No guessed personal URL/QID.",
+      "written_utc": "2026-11-08T10:28:34.560678+00:00",
+      "status": "executed",
+      "result_ref": "turn5013948search0",
+      "outcome": "Observed personal canonical Wikipedia URI carrier; search projection not original body proof.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "index": 1,
+      "kind": "open",
+      "exact_url": "https://en.wikipedia.org/wiki/Bland_Finlay",
+      "from_ref": "turn5013948search0",
+      "record_id": "RS_PAST_NA8744",
+      "purpose": "First acquire observed canonical personal article actual body for all native name components, exactDOB, lifespan, distinctive career and birthplace edge. Stop this work on first failed/header/textless/challenge result.",
+      "URL_provenance": "Actual engine2 result turn5013948search0 URI, not guessed or rewritten claim proof.",
+      "written_utc": "2026-11-08T10:28:54.540579+00:00",
+      "status": "executed",
+      "result_ref": "turn4027123view0",
+      "outcome": "Actual canonical personal HTML body acquired: full Bland James Finlay, exact native DOB and compatible 2021 death/career; no personal birthplace or birthplace hyperlink observed. Actual Wikidata item link36 is available.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "index": 2,
+      "kind": "click",
+      "from_ref": "turn4027123view0",
+      "link_id": 36,
+      "record_id": "RS_PAST_NA8744",
+      "purpose": "Follow actual personal-article Wikidata-item link36 to inspect actual P19/P131 pathway. Person birthplace absent in acquired Wikipedia body; no inferred city/QID.",
+      "URL_provenance": "Actual Wikidata item link36 at personal original L96-97; destination will be observed from click result.",
+      "written_utc": "2026-11-08T10:29:14.816165+00:00",
+      "status": "executed",
+      "result_ref": "turn1385032view0",
+      "observed_url": "https://www.wikidata.org/wiki/Special%3AEntityPage/Q4924984",
+      "observed_canonical_url": "https://www.wikidata.org/wiki/Q4924984",
+      "outcome": "Explicitly rewritten summary; URI carrier only. No dates, labels, claims, missing-P19 conclusion, links or metadata treated as actual original evidence.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "index": 3,
+      "kind": "open",
+      "exact_url": "https://www.wikidata.org/wiki/Q4924984",
+      "from_ref": "turn1385032view0",
+      "record_id": "RS_PAST_NA8744",
+      "purpose": "First direct acquisition of observed canonical Wikidata personal URI after rewritten SpecialEntityPage carrier; inspect actual original statements and any P19. No summary statements promoted.",
+      "URL_provenance": "Canonical Q4924984 URI actually observed in rewritten click result header/redirect; QID not guessed.",
+      "written_utc": "2026-11-08T10:29:36.859333+00:00",
+      "status": "executed",
+      "result_ref": "turn4375175view0",
+      "outcome": "Tool reports canonical original URI not accessible. No original body/P19 acquired; work closed on first failure. No retry/variant/raw GET.",
+      "tool_result_error": "URL https://www.wikidata.org/wiki/Q4924984 is not accessible via this tool.",
+      "source_body_acquired": false,
+      "stopped_no_retry": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    }
+  ],
+  "parsed_find_ledger": [],
+  "candidates": [],
+  "holds": [
+    {
+      "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+      "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+      "method_application_scope_sha256": "3575db7b377008a55d4c6876c23ce6b6f67fc8b50dce40b7dddc01fcf8523e65",
+      "publication_date": null,
+      "publication_date_precision": "not_observed",
+      "source_revision_id": null,
+      "source_revision_utc": null,
+      "source_calendar_model": null,
+      "source_statement_rank": null,
+      "source_editorial_validation": null,
+      "source_informational_independence": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA8744",
+      "native": {
+        "authority_name": "Finlay; Bland James (1952 - 2021); biologist",
+        "native_dob": "1952-03-16",
+        "raw_birthplace": "Edinburgh",
+        "frozen_birthplace_source_grade": "S1",
+        "hemisphere": "unknown",
+        "complete_scope_object_canonical_sha256": "f84f280bafe329ce1848ac7c9ca37598583712a3ad9e84960018850c8ab885a7"
+      },
+      "status": "held_actual_canonical_person_body_without_birthplace_and_original_Wikidata_unavailable",
+      "hold_type": "no_actual_person_birthplace_or_original_P19_chain",
+      "reason": "Actual canonical English person body supplies all native personal components, exact displayed DOB, compatible lifespan and distinctive microbial ecology career, but no personal birthplace or birth-place hyperlink. Actual article Wikidata link yielded explicitly rewritten summary, used only as canonical URI carrier. First direct original Q4924984 request failed inaccessible and was closed. Frozen Edinburgh/S1 remains unqualified; no actual original P19/P131 chain acquired.",
+      "proof_mode": null,
+      "proof_chain": [],
+      "source_grade_adopted": null,
+      "source_grade_role": "geographic_support_only",
+      "reviewed_hemisphere": "unknown",
+      "geography_decision": "unchanged_unknown",
+      "no_new_geographic_assignment": true,
+      "native_and_original_birthplace_fields_unchanged": true,
+      "source_quote": null,
+      "source_quote_word_count": 0,
+      "identity_binding": {
+        "all_native_personal_components_observed": [
+          "Bland",
+          "James",
+          "Finlay"
+        ],
+        "observed_full_alias": null,
+        "exact_native_DOB_displayed": true,
+        "compatible_lifespan_observed": "1952-2021",
+        "distinctive_career_observed": "Stirling degrees; Freshwater Biological Association Windermere 1978-2003; microbial ecology professorship at Queen Mary in 2007 and research on protists in low-oxygen habitats.",
+        "binding_role": "Actual source identity fingerprint only; no independent native career validation, DOB repair, alias expansion or grade upgrade."
+      },
+      "source_observations": [
+        {
+          "publication_date": null,
+          "publication_date_precision": "not_observed",
+          "source_revision_id": null,
+          "source_revision_utc": null,
+          "source_calendar_model": null,
+          "source_statement_rank": null,
+          "source_editorial_validation": null,
+          "source_informational_independence": null,
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "source_url": "https://en.wikipedia.org/wiki/Bland_Finlay",
+          "source_title": "Bland Finlay – Wikipedia",
+          "source_body_ref": "turn4027123view0",
+          "source_body_acquired": true,
+          "source_kind": "actual_canonical_original_community_person_reference_body",
+          "source_locator": "L110 birthdate/L111 deathdate and age69; L123 full Bland James Finlay with exact native DOB and 2021 endpoint; L127-128 distinctive protist ecology career. No personal birthplace in acquired body, Born field has date only.",
+          "observed_source_full_name": "Bland James Finlay",
+          "source_birthdate": "1952-03-16",
+          "source_death_date": "2021-12-24",
+          "source_birthdate_precision": "exact_displayed_day",
+          "source_birthplace_literal": null,
+          "source_birthplace_hyperlink_observed": false,
+          "actual_P19_statement_acquired": false,
+          "actual_P131_statement_acquired": false,
+          "observed_reported_age": 69,
+          "arithmetic_age_from_observed_dates": 69,
+          "age_observation_classification": "consistent_same_source_completed_years_no_new_age_issue",
+          "source_quote": null,
+          "source_quote_word_count": 0,
+          "displayed_footer_only": {
+            "displayed_oldid": "1354414322",
+            "displayed_last_edit_literal": "16 May 2026, at 07:42 (UTC)",
+            "source_locator": "L241/L258",
+            "metadata_limit": "Displayed footer only; raw revision bytes/history not authenticated."
+          },
+          "acquisition_role": "first_actual_canonical_person_body; identity_context_only_no_birthplace_edge"
+        },
+        {
+          "publication_date": null,
+          "publication_date_precision": "not_observed",
+          "source_revision_id": null,
+          "source_revision_utc": null,
+          "source_calendar_model": null,
+          "source_statement_rank": null,
+          "source_editorial_validation": null,
+          "source_informational_independence": null,
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "source_url": "https://www.wikidata.org/wiki/Special%3AEntityPage/Q4924984",
+          "observed_original_source_uri": "https://www.wikidata.org/wiki/Q4924984",
+          "source_body_ref": "turn1385032view0",
+          "source_body_acquired": false,
+          "representation": "explicit_rewritten_summary_of_canonical_URI",
+          "source_locator": "Tool header explicitly labels rewritten summary; observed canonical original URI/redirect only used as carrier.",
+          "acquisition_role": "observed_canonical_URI_carrier_only_not_original_statement_proof",
+          "actual_P19_statement_acquired": false,
+          "actual_P131_statement_acquired": false,
+          "P19_absence_in_original_claimed": false,
+          "source_quote": null,
+          "source_quote_word_count": 0,
+          "same_underlying_work_as_canonical_followthrough": true
+        },
+        {
+          "publication_date": null,
+          "publication_date_precision": "not_observed",
+          "source_revision_id": null,
+          "source_revision_utc": null,
+          "source_calendar_model": null,
+          "source_statement_rank": null,
+          "source_editorial_validation": null,
+          "source_informational_independence": null,
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "source_url": "https://www.wikidata.org/wiki/Q4924984",
+          "source_body_ref": "turn4375175view0",
+          "source_body_acquired": false,
+          "representation": "tool_reported_inaccessible",
+          "tool_result_error": "URL https://www.wikidata.org/wiki/Q4924984 is not accessible via this tool.",
+          "acquisition_role": "first_direct_original_item_attempt_failed_and_closed",
+          "actual_P19_statement_acquired": false,
+          "actual_P131_statement_acquired": false,
+          "P19_absence_in_original_claimed": false,
+          "source_quote": null,
+          "source_quote_word_count": 0,
+          "same_underlying_work_as_rewritten_carrier": true,
+          "no_further_request_after_failed_canonical_open": true
+        }
+      ],
+      "discovery_only_refs": [
+        "turn5013948search0"
+      ],
+      "prior_holds_preserved": [
+        "V43 prior_v12_holds Finlay Copenhagen bibliographic metadata and failed Fenchel125906 route",
+        "V43 prior_v31_holds Finlay actual yearbook full name/date with Dorset UK work address; failed distinct Berninger125910 route"
+      ],
+      "caveats": [
+        "No birthplace observed. British nationality, Windermere research location, Dorset/UK workplace, death, or familiar Edinburgh are not substituted for a birthplace-to-region relation.",
+        "No direct birth-region claim, person birthplace hyperlink or actual original P19/P131 chain acquired. The rewritten item cannot prove either presence or absence of original statements.",
+        "No QID or URL was guessed. The personal article URI came from actual search result; Q4924984 canonical URI came from actual rewritten-link response.",
+        "Historical failed memoir works remain closed; no variants or raw GETs. No native name/DOB/lifespan/raw Edinburgh/S1 or eligibility change.",
+        "Both requests concern the same underlying Q4924984 entity/work, not distinct sources. Canonical follow-through was attempted using the observed URI carrier. If the first rewritten response closes this work, the subsequent canonical open is a protocol deviation; no clean/no-variants compliance assertion is made for this pair. Original statements were not adopted, the canonical request failed, and no further request occurred. All original entry UTCs and exact operations are preserved.",
+        "Source QA independently reviewed full report and intent, classified the rewritten SpecialEntityPage then canonical Q4924984 pair as a same-work request-protocol deviation under frozen closure rule. No original statements/absence adopted; Finlay remains held."
+      ]
+    }
+  ],
+  "new_source_quality_observations": [],
+  "new_source_quality_issue_candidates": [],
+  "new_qualified_DOB_place_or_age_conflicts_observed": false,
+  "bounded_pass_complete": true,
+  "source_exhausted": false,
+  "final_freeze": false,
+  "master_or_repo_or_git_writes": false,
+  "quote_accounting": [
+    {
+      "work": "Bland Finlay actual canonical English personal article",
+      "new_distinct_quoted_words": 0,
+      "prior_distinct_quoted_words_for_same_work_observed": 0,
+      "max_distinct_quoted_words": 25
+    },
+    {
+      "work": "Q4924984 rewritten carrier and failed original acquisition",
+      "new_distinct_quoted_words": 0,
+      "original_body_acquired": false,
+      "same_underlying_entity_work": true
+    },
+    {
+      "work": "Historical Fenchel125906/Berninger125910 memoir and Danish yearbook contexts",
+      "new_distinct_quoted_words": 0,
+      "prior_context_only": true
+    }
+  ],
+  "quote_policy": "No new source quotation retained. Structured identity/date/place-gap facts and locators only; no HTML/PDF/images/JSON/search projection caches. Historical work quotations not extended.",
+  "same_work_canonical_followthrough_disclosure": {
+    "same_underlying_work": true,
+    "entity": "Q4924984",
+    "ordered_operations": [
+      {
+        "intent_index": 2,
+        "operation": {
+          "click": {
+            "ref_id": "turn4027123view0",
+            "id": 36
+          }
+        },
+        "result_ref": "turn1385032view0",
+        "returned_header_uri": "https://www.wikidata.org/wiki/Special%3AEntityPage/Q4924984",
+        "explicit_rewritten_summary_of": "https://www.wikidata.org/wiki/Q4924984",
+        "observed_redirect_canonical_uri": "https://www.wikidata.org/wiki/Q4924984",
+        "original_body_proof_adopted": false
+      },
+      {
+        "intent_index": 3,
+        "operation": {
+          "open": {
+            "ref_id": "https://www.wikidata.org/wiki/Q4924984"
+          }
+        },
+        "result_ref": "turn4375175view0",
+        "tool_result": "not accessible via this tool",
+        "original_body_proof_adopted": false
+      }
+    ],
+    "protocol_status": "same_work_request_protocol_deviation_independently_classified_by_source_QA",
+    "disclosure": "Both requests concern the same underlying Q4924984 entity/work, not distinct sources. Canonical follow-through was attempted using the observed URI carrier. If the first rewritten response closes this work, the subsequent canonical open is a protocol deviation; no clean/no-variants compliance assertion is made for this pair. Original statements were not adopted, the canonical request failed, and no further request occurred. All original entry UTCs and exact operations are preserved.",
+    "independent_source_QA_classification": "Source QA independently reviewed full report and intent, classified the rewritten SpecialEntityPage then canonical Q4924984 pair as a same-work request-protocol deviation under frozen closure rule. No original statements/absence adopted; Finlay remains held."
+  }
+}
