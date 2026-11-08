@@ -1,0 +1,122 @@
+{
+  "written_utc": "2026-11-08T11:07:48.415545+00:00",
+  "status": "prospectively_frozen_before_new_source_requests",
+  "strategy_id": "unopened_original_person_sources_after_canonical_closeout_v1",
+  "strategy_not_new_admission_method": true,
+  "baseline_commit": "cc23cc8d35eb2bfffcbbf041310dd049b308e5ca",
+  "baseline_canonical_sha256": "a0c04e44631478f82e562deab64d699fc273e6fc99fa35ba23f8a61d7e1f8717",
+  "baseline_gzip_sha256": "433749a0b7ff0bfc62db8993f662cd928a4bc023418a54600259fdbea0b1537a",
+  "fixed_record_ids": [
+    "RS_PAST_NA4193",
+    "RS_PAST_NA4301",
+    "RS_PAST_NA4155",
+    "RS_PAST_NA6868",
+    "RS_PAST_NA1998",
+    "RS_PAST_NA4490"
+  ],
+  "groups": {
+    "a": [
+      "RS_PAST_NA4193",
+      "RS_PAST_NA4301"
+    ],
+    "b": [
+      "RS_PAST_NA4155",
+      "RS_PAST_NA6868"
+    ],
+    "c": [
+      "RS_PAST_NA1998",
+      "RS_PAST_NA4490"
+    ]
+  },
+  "initial_blank_ids": [
+    "RS_PAST_NA4193",
+    "RS_PAST_NA4301",
+    "RS_PAST_NA4490"
+  ],
+  "initial_storedplace_ids": [
+    "RS_PAST_NA4155",
+    "RS_PAST_NA6868",
+    "RS_PAST_NA1998"
+  ],
+  "source_leads": {
+    "RS_PAST_NA4193": {
+      "url": "https://history.rcp.ac.uk/inspiring-physicians/kenneth-dawson-bagshawe",
+      "retained_at": "V44audit/prior_v22_holds.json/record4193.unopened_other_leads[0]",
+      "nature": "RCP personal biography lead, historical projection awaiting obituary; no body claim verified.",
+      "identity_gate": "DistinctRCPbiography from closedLancet/BMJ/RS memoir; noobituary availability assumed."
+    },
+    "RS_PAST_NA4301": {
+      "url": "https://makingscience.royalsociety.org/people/na4301/cecil-edwin-henry-bawn",
+      "retained_at": "V44audit/prior_v23_holds.json/record4301.unopened_distinct_original_lead",
+      "nature": "Officialperson frontend lead, discoveryDOBonly; possible same catalogue record as priorCalmview, not independent byURL.",
+      "identity_gate": "Before anyrequest verify local priorwork outcome. If this is variant of previouslyfailed/unusableoriginalrecord, DONOTrequest. If oldsamecataloguerecord was successfullyacquired and nofailedfullroute, allow one prospectivelybounded originalrecord-body expansion; label samework/republication, never newindependentwork. Ifworkidentity unresolved, holdwithoutrequest."
+    },
+    "RS_PAST_NA4155": {
+      "url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/580496700",
+      "retained_at": "v31_sources_a.json/unopened_distinct_original_leads[0];turn2925228search1",
+      "nature": "Distinct ODNB personalreference, no previouslyacquiredbody. StoredprojectionWoodGreenLondononly; no regionpromise.",
+      "identity_gate": "Do not re-open oldRCP/2021memoir; newODNBattributedbody only ifacquired."
+    },
+    "RS_PAST_NA6868": {
+      "url": "https://royalsociety.org/people/roger-ekins-11386/",
+      "retained_at": "v31_sources_a.json/unopened_distinct_original_leads[1];turn8040524search2",
+      "nature": "RS institutionalprofile lead, career/deathprojection only; no DOB/birthbodyproof.",
+      "identity_gate": "Distinctinstitutionalprofile from closedpublisher2023.0020 memoir; no host-onlyS1 or adoptionfromsearchprojection."
+    },
+    "RS_PAST_NA1998": {
+      "url": "https://www.harpenden-history.org.uk/harpenden-history/people-2/artists/basil_kassanis",
+      "retained_at": "v20_sources_b.json/other_unopened_non_evidence_leads[0];turn4071624search0",
+      "nature": "Original localhistory/creditedreprint lead HertfordshireCountrysideMay1983, author/date/bornregionunverified.",
+      "identity_gate": "Exclude closedRS/RGmemoir works; actual creditedarticle/body and birthnotmigration/nationality required."
+    },
+    "RS_PAST_NA4490": {
+      "url": null,
+      "observed_title": "Former Royal Society of Chemistry president dies",
+      "observed_author": "Emma Stoye",
+      "observed_date": "2015-01-09",
+      "retained_at": "v20_sources_a.json/holds[2].new_unopened_original_reference_lead",
+      "nature": "Distinct ChemistryWorld/RSC authoredarticle citation; URL notobserved.",
+      "identity_gate": "One bounded original-title locatorquery permitted; open only actuallyobservedURL, no URL synthesis. ClosedRS2017.0029memoir remainsclosed."
+    }
+  },
+  "inherited_admission_authority": {
+    "29": {
+      "path": "studies/royal_society_birthplace_completion_v29/audit/plan.json",
+      "sha256": "1e3dbd1ba94b012425803df5426e269adf42bdb5e17a9a5294fbaa4e3714bb42",
+      "admission": "Fullnativecomponents+actuallystatedcompatibleDOBprecision+distinctivecareercontext+directsubjectbirthrelation. Existingv24omitted-middle rule allowedonlywithobservedcompletefirstsurname/exactunchangedDOB/compatiblelifespan/coherentdistinctivefingerprint/unique fixedcohortmatch/noobservedcompetingidentityorname/date/placecontradiction; no initial/aliasexpansion,sourceactualshortname/unconfirmedmiddles explicit,nativeidentityunchanged. Allsourcequality/geo/rollbackgates stillrequired. Birthdate/place/identityconflicts held,norepair/datelessbypass; approximateyear no inventedtolerance.",
+      "grades": "S2originalauthorededitedbiography/signedmemoir/verifiedexpert; S3uncreditedcompiledmetadata/journalistconservative. No host-onlyS1. Earlierworkeroriginalbodymaystandiflaterrootaccessfailswithrole/ref/limits andno independentbody/bytes/HTTP200/versionclaim.",
+      "geography_role": null
+    },
+    "35": {
+      "path": "studies/royal_society_birthplace_completion_v35/audit/plan.json",
+      "sha256": "6d4e45c648b787999b4ba82fcb1d025ef7bb36382ef9d21a3328e83cbf3b28f0",
+      "admission": "Actualsourcefullnativecomponents/actuallystatedcompatibleDOBprecision/distinctivecareer/directsubjectborncountryorwholeregion plus explicitreviewedbinding to existingstoredplace. Sourceadditionalpreciseplace mayqualify geography if consistentrefinement, with originalrawplaceunchanged. No inferredcountryfromfamouscity/nationality/family/school/work/death/footer. USA/Francegenericcountrylabels remainunresolved withoutwhollyonehemispherebirthcontext; no overseas-exclusionassumption. No conflictingDOB/place/identity repair or datelessbypass. Existingv24omitted-middle rule onlycompletefirstsurname/exactunchangedDOB/compatiblelifespan/coherentfingerprint/uniquefixedcohortmatch/no observedcontradiction; sourceactualshortname/unconfirmedmiddles explicit, no initials/nicknameexpansion. SourceextraGordon-stylecomponents canremainobservedwithoutnativeedit. No automaticcombinationofexceptions.",
+      "grades": "S2originalattributededitedbiography/memoir/scholarlyhistory/referencework; S3uncreditedcompiledmetadata/unverifiedexpertrole. No host-onlyS1. Earlierqualifiedworkeroriginalbody maystandiflaterrootfirstattemptfails withroles/errors/limits explicit.",
+      "geography_role": "New geography_followup_v35 sourcegrade_role geographic_support_only; originalDOBtiers, BPsourcegrade/rawplace/sourceURL/claims/selectedevidence and allpriorfacts unchanged. Only sixexistinggeo fields+versionedcontext mutable, with previous+absentfieldrollback."
+    }
+  },
+  "admission": "Prospective reuse of existing V15-29 first-birthplace method for blank rows and V30-35 original-person geography method for storedplaces. All native personal components, actually stated compatible DOB precision (year-only allowed if stated and compatible, no dateless or age-inferred bypass), distinctive coherent career and compatible lifespan; direct subject birthplace relation. Any actual incompatible DOB/lifespan/place held and preserved, no positive shopping or native repairs. Source S1/S2/S3 only as existing specific-source rules; no host-onlyS1 or journalist/unsignedautomaticS2. OriginalDOB/sourcegrades remainfrozen. Newfirstplace mayqualify whilehemisphereunknown; geographicclassification requires explicitwhole-region birth context. Storedrawplace/sourcegrade/claims frozen for geography-only. No omitted-middle/alias exception invented or silently stacked.",
+  "retrieval": "Exact durableintent plusrealentryUTC andseparate localsuccessfulexit0 beforeeveryquery/open/click/find. Readall9inventories/full targetedhistories/closedworksets beforequeries. Firstfailed/header/textless/challengeworkcloses; noretries/URLvariants/carriers/rawGET/authbypass. DifferentURL notnewwork. Same-successful-oldwork firstfullbody expansion only ifprospectivelyauthorized asabove/no earlierfailedfullroute andneverindependentcorroboration. Rewritten responsesnotoriginalproof; observedURIcarrieronlytodistinctwork.",
+  "budgets": {
+    "per_group_queries": 4,
+    "per_group_navigation_attempts": 8,
+    "root_verification_source_opens": 8,
+    "root_locator_queries": 1
+  },
+  "quotes": "<=25distinctquotedEnglishwords/originalwork includingoldquotes; no fullsource/projectionHTML/PDF/imagecaches. UnknownHTTPrawstatus/bytes/exactrequesttime/calendar/rank/revision/editorialindependence null; author/date/footer onlyifobserved.",
+  "data_commit_policy": "Source-stage only until actualqualifiedfacts and independentoriginal-source adjudication. Ifzeroaccepted, master/pipeline/CSVschemasremainexactV44, createonlyevidenceaudit+summaryZIP; noemptywrapper/newcolumns/irrelevantCLIreplays. Ifactualqualifiedfactexists, rootwillmakeconcreteacceptedfact with oldmethodeligiblefieldboundary/rollback, validateandapplywithoutDOB/grade/cohortrepair.",
+  "V44_boundary": "Canonicalfirstpass53reviewed/9blocked remainscompletehistorical, no reopening asnewfirstpass; sourceexhaustionfalse and157windowunknown unchangeduntilvalidnewdata. ExistingV44Q4924984deviationretainednotcleared.",
+  "native_frozen_fields": [
+    "dob",
+    "calendar",
+    "native_name",
+    "source_authorised_full_name",
+    "DOB_sourcegrades",
+    "cohort",
+    "eligibility",
+    "country_QID_coordinates",
+    "oldsourceclaims_hashes",
+    "alloldfacts"
+  ],
+  "no_analysis_or_final_cohort_freeze": true
+}

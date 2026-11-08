@@ -1,0 +1,784 @@
+{
+  "schema": "UK_v45_independent_original_source_stage_QA_v1",
+  "reviewer": "/root/v42_source_qa",
+  "written_utc": "2026-11-08T11:21:56.211129+00:00",
+  "phase": "final_source_evidence_review",
+  "status": "PASS",
+  "scope_sha256": "9a3226a121555bb4a7586e01a2ccd394f9f46071a1e4a839e87a408b388d278b",
+  "baseline_pointer_sha256": "de3f5dd9b169ddf51c9354d95d90c0e5e41f41a84f5e881eb5ae9f4724454e04",
+  "baseline_commit": "cc23cc8d35eb2bfffcbbf041310dd049b308e5ca",
+  "baseline_canonical_sha256": "a0c04e44631478f82e562deab64d699fc273e6fc99fa35ba23f8a61d7e1f8717",
+  "baseline_gzip_sha256": "433749a0b7ff0bfc62db8993f662cd928a4bc023418a54600259fdbea0b1537a",
+  "checks": [
+    {
+      "check": "prospective_original_scope_exact_pin",
+      "passed": true
+    },
+    {
+      "check": "baseline_pointer_scope_consistent",
+      "passed": true
+    },
+    {
+      "check": "prospective_timestamp_and_three_fixed_pairs",
+      "passed": true
+    },
+    {
+      "check": "original_V29_authority_exact_bytes_and_rules",
+      "passed": true
+    },
+    {
+      "check": "original_V35_authority_exact_bytes_and_rules",
+      "passed": true
+    },
+    {
+      "check": "active_source_DOB_conflicts.json_baseline_snapshot_exact",
+      "passed": true
+    },
+    {
+      "check": "birthplace_source_conflicts.json_baseline_snapshot_exact",
+      "passed": true
+    },
+    {
+      "check": "source_derived_age_inconsistencies.json_baseline_snapshot_exact",
+      "passed": true
+    },
+    {
+      "check": "provisional_parsed_date_discrepancies.json_baseline_snapshot_exact",
+      "passed": true
+    },
+    {
+      "check": "lifespan_endpoint_discrepancies.json_baseline_snapshot_exact",
+      "passed": true
+    },
+    {
+      "check": "cross_source_reported_age_contrasts.json_baseline_snapshot_exact",
+      "passed": true
+    },
+    {
+      "check": "source_date_precision_holds.json_baseline_snapshot_exact",
+      "passed": true
+    },
+    {
+      "check": "omitted_middle_name_admission.json_baseline_snapshot_exact",
+      "passed": true
+    },
+    {
+      "check": "source_ordinal_age_wording_observations.json_baseline_snapshot_exact",
+      "passed": true
+    },
+    {
+      "check": "six_current_targets_exclude_active_and_individual_conflict_holds",
+      "passed": true
+    },
+    {
+      "check": "actual_baseline_gzip_and_canonical_match_pointer",
+      "passed": true
+    },
+    {
+      "check": "six_targets_in_actual157unknown_window",
+      "passed": true
+    },
+    {
+      "check": "firstplace_and_storedplace_roles_match_actual_native_objects",
+      "passed": true
+    },
+    {
+      "check": "all_three_complete_native_scope_copies_exact",
+      "passed": true
+    },
+    {
+      "check": "Bawn_prospective_work_identity_gate_is_conditional_not_URL_identity",
+      "passed": true
+    },
+    {
+      "check": "Ledwith_title_only_no_invented_URL",
+      "passed": true
+    },
+    {
+      "check": "V44_Finlay_prior_request_deviation_remains_explicit",
+      "passed": true
+    },
+    {
+      "check": "source_only_stage_has_no_master_pipeline_or_empty_replay_wrapper",
+      "passed": true
+    },
+    {
+      "check": "a_actual_reports_intents_and_parent_pins_exact",
+      "passed": true
+    },
+    {
+      "check": "a_fixed_pair_scope_and_all9_inventory_bindings",
+      "passed": true
+    },
+    {
+      "check": "a_exact_requests_entryUTC_and_budget_accounting",
+      "passed": true
+    },
+    {
+      "check": "a_separate_local_exit0_evidence_covers_all_intent_entries",
+      "passed": true
+    },
+    {
+      "check": "b_actual_reports_intents_and_parent_pins_exact",
+      "passed": true
+    },
+    {
+      "check": "b_fixed_pair_scope_and_all9_inventory_bindings",
+      "passed": true
+    },
+    {
+      "check": "b_exact_requests_entryUTC_and_budget_accounting",
+      "passed": true
+    },
+    {
+      "check": "b_separate_local_exit0_evidence_covers_all_intent_entries",
+      "passed": true
+    },
+    {
+      "check": "c_actual_reports_intents_and_parent_pins_exact",
+      "passed": true
+    },
+    {
+      "check": "c_fixed_pair_scope_and_all9_inventory_bindings",
+      "passed": true
+    },
+    {
+      "check": "c_exact_requests_entryUTC_and_budget_accounting",
+      "passed": true
+    },
+    {
+      "check": "c_separate_local_exit0_evidence_covers_all_intent_entries",
+      "passed": true
+    },
+    {
+      "check": "all_six_held_native_authority_DOB_place_grade_exact",
+      "passed": true
+    },
+    {
+      "check": "unknown_raw_calendar_rank_revision_editorial_independence_metadata_null",
+      "passed": true
+    },
+    {
+      "check": "Bagshawe_metadata_only_no_career_or_born_place_promotion",
+      "passed": true
+    },
+    {
+      "check": "Bawn_unresolved_same_work_gate_prevents_external_request",
+      "passed": true
+    },
+    {
+      "check": "Goodwin_identity_and_direct_address_do_not_supply_birth_whole_region",
+      "passed": true
+    },
+    {
+      "check": "Ekins_incomplete_identity_date_birth_gates_and_auxiliary_day_contrast",
+      "passed": true
+    },
+    {
+      "check": "C_unusable_original_bodies_not_promoted_and_Ledwith_URI_actually_observed",
+      "passed": true
+    },
+    {
+      "check": "V45_current_work_closures_clean_no_retries_variants_or_canonical_reopens",
+      "passed": true
+    },
+    {
+      "check": "zero_new_body_quotes_and_no_full_source_caches",
+      "passed": true
+    },
+    {
+      "check": "root_six_hold_partition_and_actual_request_totals",
+      "passed": true
+    },
+    {
+      "check": "all141_V44_master_inputs_scripts_outputs_schema_pins_unchanged",
+      "passed": true
+    },
+    {
+      "check": "all9_original_issue_files_and_stage_snapshots_byte_exact",
+      "passed": true
+    },
+    {
+      "check": "prior_V44_Finlay_deviation_preserved_not_cleared_by_current_clean_stage",
+      "passed": true
+    },
+    {
+      "check": "zero_admission_source_supplement_no_empty_pipeline_wrapper_or_new_columns",
+      "passed": true
+    },
+    {
+      "check": "separate_portable_baseline_PASS_report_bound_without_rerunning_it",
+      "passed": true
+    }
+  ],
+  "scope_checks_passed": 23,
+  "blocking_issues": [],
+  "final_source_review_complete": true,
+  "worker_reports_complete": true,
+  "accepted_record_ids": [],
+  "native_case_bindings": [
+    {
+      "record_id": "RS_PAST_NA4193",
+      "native_authority": "Bagshawe; Kenneth Dawson (1925 - 2022); oncologist",
+      "native_DOB": "1925-08-17",
+      "raw_birthplace": "",
+      "original_BP_grade": "unknown",
+      "scope_role": "first_birthplace",
+      "source_lead": {
+        "url": "https://history.rcp.ac.uk/inspiring-physicians/kenneth-dawson-bagshawe",
+        "retained_at": "V44audit/prior_v22_holds.json/record4193.unopened_other_leads[0]",
+        "nature": "RCP personal biography lead, historical projection awaiting obituary; no body claim verified.",
+        "identity_gate": "DistinctRCPbiography from closedLancet/BMJ/RS memoir; noobituary availability assumed."
+      },
+      "closed_work_boundary": [
+        "https://www.thelancet.com/article/S0140673623003604/pdf",
+        "https://www.bmj.com/bmj/section-pdf/1081914?path=%2Fbmj%2F381%2F8380%2FComment.full.pdf",
+        "https://doi.org/10.1098/rsbm.2023.0050"
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA4301",
+      "native_authority": "Bawn; Cecil Edwin Henry (1908 - 2003)",
+      "native_DOB": "1908-11-06",
+      "raw_birthplace": "",
+      "original_BP_grade": "unknown",
+      "scope_role": "first_birthplace",
+      "source_lead": {
+        "url": "https://makingscience.royalsociety.org/people/na4301/cecil-edwin-henry-bawn",
+        "retained_at": "V44audit/prior_v23_holds.json/record4301.unopened_distinct_original_lead",
+        "nature": "Officialperson frontend lead, discoveryDOBonly; possible same catalogue record as priorCalmview, not independent byURL.",
+        "identity_gate": "Before anyrequest verify local priorwork outcome. If this is variant of previouslyfailed/unusableoriginalrecord, DONOTrequest. If oldsamecataloguerecord was successfullyacquired and nofailedfullroute, allow one prospectivelybounded originalrecord-body expansion; label samework/republication, never newindependentwork. Ifworkidentity unresolved, holdwithoutrequest."
+      },
+      "closed_work_boundary": [
+        "https://doi.org/10.1098/rsbm.2020.0034",
+        "https://doi.org/10.1093/ww/9780199540884.013.U6837"
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA4155",
+      "native_authority": "Goodwin; Leonard George (1915 - 2008)",
+      "native_DOB": "1915-07-11",
+      "raw_birthplace": "Wood Green, London",
+      "original_BP_grade": "S2",
+      "scope_role": "stored_place_geography_only",
+      "source_lead": {
+        "url": "https://academic.oup.com/oxford-dictionary-of-national-biography/reference/63486/reference-article-abstract/580496700",
+        "retained_at": "v31_sources_a.json/unopened_distinct_original_leads[0];turn2925228search1",
+        "nature": "Distinct ODNB personalreference, no previouslyacquiredbody. StoredprojectionWoodGreenLondononly; no regionpromise.",
+        "identity_gate": "Do not re-open oldRCP/2021memoir; newODNBattributedbody only ifacquired."
+      },
+      "closed_work_boundary": [
+        "Already acquired RCP Goodwin biography and2021 Peaker/Ogilvie memoir: WoodGreen/northLondon only; no re-acquisition as new work."
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA6868",
+      "native_authority": "Ekins; Roger Philip (1926 - 2016)",
+      "native_DOB": "1926-09-22",
+      "raw_birthplace": "London",
+      "original_BP_grade": "S2",
+      "scope_role": "stored_place_geography_only",
+      "source_lead": {
+        "url": "https://royalsociety.org/people/roger-ekins-11386/",
+        "retained_at": "v31_sources_a.json/unopened_distinct_original_leads[1];turn8040524search2",
+        "nature": "RS institutionalprofile lead, career/deathprojection only; no DOB/birthbodyproof.",
+        "identity_gate": "Distinctinstitutionalprofile from closedpublisher2023.0020 memoir; no host-onlyS1 or adoptionfromsearchprojection."
+      },
+      "closed_work_boundary": [
+        "Existing memoir10.1098/rsbm.2023.0020 publisher PDF403/London-only abstract; same work closed."
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA1998",
+      "native_authority": "Kassanis; Basil (1911 - 1985)",
+      "native_DOB": "1911-10-16",
+      "raw_birthplace": "Macedonian born",
+      "original_BP_grade": "S3",
+      "scope_role": "stored_place_geography_only",
+      "source_lead": {
+        "url": "https://www.harpenden-history.org.uk/harpenden-history/people-2/artists/basil_kassanis",
+        "retained_at": "v20_sources_b.json/other_unopened_non_evidence_leads[0];turn4071624search0",
+        "nature": "Original localhistory/creditedreprint lead HertfordshireCountrysideMay1983, author/date/bornregionunverified.",
+        "identity_gate": "Exclude closedRS/RGmemoir works; actual creditedarticle/body and birthnotmigration/nationality required."
+      },
+      "closed_work_boundary": [
+        "Old memoir/RG247606177 cover+abstract already acquired; attempted PDFdownload404 closed; no same-work carrier or nationality/migration inference."
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA4490",
+      "native_authority": "Ledwith; Anthony (1933 - 2015)",
+      "native_DOB": "1933-08-14",
+      "raw_birthplace": "",
+      "original_BP_grade": "unknown",
+      "scope_role": "first_birthplace",
+      "source_lead": {
+        "url": null,
+        "observed_title": "Former Royal Society of Chemistry president dies",
+        "observed_author": "Emma Stoye",
+        "observed_date": "2015-01-09",
+        "retained_at": "v20_sources_a.json/holds[2].new_unopened_original_reference_lead",
+        "nature": "Distinct ChemistryWorld/RSC authoredarticle citation; URL notobserved.",
+        "identity_gate": "One bounded original-title locatorquery permitted; open only actuallyobservedURL, no URL synthesis. ClosedRS2017.0029memoir remainsclosed."
+      },
+      "closed_work_boundary": [
+        "https://doi.org/10.1098/rsbm.2017.0029"
+      ]
+    }
+  ],
+  "policy_assessment": {
+    "unchanged_primary_method_reuse": true,
+    "ordinary_date_gate": "Actual stated compatible precision; year-only may qualify under V29/V35 when actually stated and otherwise bound. No inferred exact birthday, invented tolerance, dateless or age-inferred bypass. Preserve any actual incompatibility.",
+    "exact_DOB_exception_gate": "Existing V24 omitted-middle exception alone requires exact unchanged DOB plus every other original gate; never silently stack exceptions.",
+    "source_quality": "Actual original authored/edited biography or signed scholarly memoir can be S2; conservative S3 where inherited specific-source rules permit. No host-only S1, unsigned/journalist automatic S2, canonical-only restriction, or mirror/rewritten-source promotion.",
+    "Bawn_boundary": "Native Calmview seed and MakingScience share NA4301. Local URL difference does not establish a different work. No positive old-success/no-failed-full-route evidence is asserted here; worker must prove the frozen conditional gate before requesting, otherwise hold without request.",
+    "source_fact_alert": "Any actual qualified first-place or geographic fact requires immediate independent case review and root adjudication before data adoption."
+  },
+  "final_review_plan": [
+    "Read full actual reports/intents and targeted old histories; match every query/open/click/find to exact durable entryUTC and retained separate exit0 validation; inspect budgets and all source-work identities.",
+    "Review full names, actual compatible date precision/lifespan/career, original authorship/genre and direct birth predicate. For stored places require consistent frozen-place binding and explicit whole-region extent. No contradictory-date/place positive shopping.",
+    "Review per-work cumulative quotes<=25, unknown raw/calendar/rank/revision/editorial/independence metadata, first unusable work closures and any actual deviations honestly. Preserve original V44 Finlay deviation.",
+    "If no fact qualifies, compare all baseline critical pins and all9 inventories byte-for-byte, require no V45 master/scripts/outputs/wrapper/CSV schema changes, and do not run production or replay CLIs."
+  ],
+  "nine_issue_inventory": {
+    "active_source_DOB_conflicts.json": {
+      "sha256": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+      "record_count": 13,
+      "shape": "records"
+    },
+    "birthplace_source_conflicts.json": {
+      "sha256": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+      "record_count": 2,
+      "shape": "records"
+    },
+    "source_derived_age_inconsistencies.json": {
+      "sha256": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+      "record_count": 4,
+      "shape": "records"
+    },
+    "provisional_parsed_date_discrepancies.json": {
+      "sha256": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+      "record_count": 1,
+      "shape": "records"
+    },
+    "lifespan_endpoint_discrepancies.json": {
+      "sha256": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+      "record_count": 1,
+      "shape": "records"
+    },
+    "cross_source_reported_age_contrasts.json": {
+      "sha256": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+      "record_count": 1,
+      "shape": "records"
+    },
+    "source_date_precision_holds.json": {
+      "sha256": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+      "record_count": 1,
+      "shape": "records"
+    },
+    "omitted_middle_name_admission.json": {
+      "sha256": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+      "record_count": null,
+      "shape": "metadata_without_records"
+    },
+    "source_ordinal_age_wording_observations.json": {
+      "sha256": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d",
+      "record_count": 1,
+      "shape": "records"
+    }
+  },
+  "baseline_critical_file_sha256": {
+    "inputs/accepted_geography.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "inputs/geography_followup_ids.json": "0ee4a3678f3f2f3c096f6a53b48831486da62c34ab10a310e2880a6953f539c6",
+    "inputs/geography_target_ids.json": "d667e3fe94b2dcf05ceeec80560b8a570d68b05452de71d9baa4aec2c220d0c0",
+    "inputs/reviewed_record_ids.json": "0ee4a3678f3f2f3c096f6a53b48831486da62c34ab10a310e2880a6953f539c6",
+    "inputs/uk_birthplace_rows_v10.jsonl.gz": "e44f6dc02cc0cafece9b792164f016da0f08de5736ac62442d176d45b19a5799",
+    "inputs/v11_accepted_context.json": "4eef1c6412640a62f11f354b862a960207f0c7e7978c5d1c9a93a346cada8e8b",
+    "inputs/v12_accepted_context.json": "d57551babf2eaf6ffa9b106b24d43d1a0a3c12ccdcc79fe85afc323d54649ce9",
+    "inputs/v13_accepted_context.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "inputs/v14_accepted_geography.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "inputs/v15_accepted_birthplaces.json": "9a601324d934810fd875babec504923ab65fd13530a95aba8c5956e73aa4c153",
+    "inputs/v15_followup_ids.json": "3b12009ce6498f2dd8f7f37b7c70e997aa3ce6c564cbb9afc5949e475070373c",
+    "inputs/v15_target_ids.json": "3386cd45600872a8ee8966bf33a239bd89034038edb45787dd005dd3773d221c",
+    "inputs/v16_accepted_birthplaces.json": "5a8391ae903ed269fad87fd591c3978ec460eeb610e3f6930bf11d89cdf809de",
+    "inputs/v16_followup_ids.json": "65fe7be95ed6e9065bd2abbcbb2f04848862b66841a48645c259e4970926e6e1",
+    "inputs/v16_target_ids.json": "34cad812e02c88fee3845e9c93cc9e2112eb55a9f7e46b6b52477040263976d8",
+    "inputs/v17_accepted_birthplaces.json": "7ce007dabe08484601b7f17d4ac6a34517e96a64209f832d2b69ca3c0ed85052",
+    "inputs/v17_individual_followup_ids.json": "1c5c58e2b2884bf764972dcdbfb86d5d998c35dba7904a646fac53482e95c290",
+    "inputs/v17_reviewed_record_ids.json": "ec90d7bbad0b3c4e49606f29e3d664181be1b26104623d51cd1820faedd04ebe",
+    "inputs/v17_target_ids.json": "cf08cc7e8e526ba917ea58de027bc739ee5c69d693f4d443808b310b458d9390",
+    "inputs/v18_accepted_birthplaces.json": "007ac60124268c120f28b5cbd9340bf052a0897d7477a034177bfb2e5756e6ac",
+    "inputs/v18_individual_followup_ids.json": "0cd4140ff5c1928c2a043757b47fd91d3ea39655ef12a454c927a21cb2b581bb",
+    "inputs/v18_reviewed_record_ids.json": "c0c5eff26c760415deab35a481f1d49b2a4185ca97418c0369d2c86df8d65ee8",
+    "inputs/v18_target_ids.json": "7987d0d9520ed9cf592777b7cb5c929268c9159f6933a565c752dadc19100442",
+    "inputs/v19_accepted_birthplaces.json": "773edf4ff729c0f545eaa91d8806f549e4ce8a9c55908adda451656da8ad40bb",
+    "inputs/v19_individual_followup_ids.json": "1c0ef8be0545f7c78daeb9b2e46ff85a25ecf0d3cd66334535bacce4635aaa90",
+    "inputs/v19_reviewed_record_ids.json": "d87c8e08eddf8ebb09bc03bc95c9df3898475117331b973693f461241796c270",
+    "inputs/v19_target_ids.json": "713c7874ed139615e4d3f0da1874118bf55017a991ab96719ca25c24269112ee",
+    "inputs/v20_accepted_birthplaces.json": "2b9f22618bc966ac6784e851a48ae9b749f0545f1bb7e547fd2de1f99df8ef78",
+    "inputs/v20_accepted_geography.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "inputs/v20_geography_followup_ids.json": "03c3ad13358b1f33fddd1792b52c44b54e83625fca77137f9ac5e2b5e25ce737",
+    "inputs/v20_individual_followup_ids.json": "1ce66f0ad8cc79673b5d657ec01827113ce1dc9e4ba82f52a5aad8509ca56f59",
+    "inputs/v20_reviewed_record_ids.json": "1f3bb8a0bc34d5c464228ca32d41dc473f6af7c4ada1e3d944913d54d52225c5",
+    "inputs/v20_target_ids.json": "5008f161df7b7402beab471bb9cf0534f666ef44f1391786f3244734976a2e2f",
+    "inputs/v21_accepted_birthplaces.json": "01e53e7b8ce13b7a75fcb9ce388213ade5a2ec5d9ff10d1ae539d22c760b8b64",
+    "inputs/v21_individual_followup_ids.json": "f30d995cf648a63543c865578dd07f1f41d7f32ab34435c1e6c30bce29779af4",
+    "inputs/v21_reviewed_record_ids.json": "f30d995cf648a63543c865578dd07f1f41d7f32ab34435c1e6c30bce29779af4",
+    "inputs/v21_target_ids.json": "0068b7d7b28418253a0c7401aa01737761d926b1c0d5289843bc7a03828b6065",
+    "inputs/v22_accepted_birthplaces.json": "d496194f23f5ccc2e5f7c60ce1198f2504a4e0bd5062616de8f068590a37a251",
+    "inputs/v22_individual_followup_ids.json": "9fec7d93f6ec45e19a1f0c3a6b129f0c8fd64d97dfd72b62133cf437b13096ec",
+    "inputs/v22_reviewed_record_ids.json": "9fec7d93f6ec45e19a1f0c3a6b129f0c8fd64d97dfd72b62133cf437b13096ec",
+    "inputs/v22_target_ids.json": "9e1c5c2644ca111ba1f1b97a32c5299559291e4f31b2a2daa2265e85b4e06c9f",
+    "inputs/v23_accepted_birthplaces.json": "72698a991538f9680892fe6d2a6ebfd572232d5a18a20d37795428eacf09eb12",
+    "inputs/v23_individual_followup_ids.json": "44e80a4070e8327b43bebb23f9b91c7b9ab2afe9d6247baa8c1fea6277da5f98",
+    "inputs/v23_reviewed_record_ids.json": "44e80a4070e8327b43bebb23f9b91c7b9ab2afe9d6247baa8c1fea6277da5f98",
+    "inputs/v23_target_ids.json": "27a07c4a02aa18a88c46fb42a07703f2dc7ed0bc8f24dac3cc00834d61dee821",
+    "inputs/v24_accepted_birthplaces.json": "ec112bf0518b45c76fc19c48257aa7ffbeb390065c6d64c61b7cf602aafce109",
+    "inputs/v24_individual_followup_ids.json": "888d7d947bd76fd0880892f9ca1e475b7cc9e252b1a14d9cfb48af38a2db97c5",
+    "inputs/v24_reviewed_record_ids.json": "888d7d947bd76fd0880892f9ca1e475b7cc9e252b1a14d9cfb48af38a2db97c5",
+    "inputs/v24_target_ids.json": "a86735dc28576a67f653aefc06a36fa40f33e7c11dbd5679e5802238b901ed67",
+    "inputs/v25_accepted_birthplaces.json": "45d827675ed879deb9357e2c82bd1b82d1e9b8eff957c8800103fb7c4c0f5e96",
+    "inputs/v25_individual_followup_ids.json": "db833e4acc8efba9278cdc28194b45898e1f8b7f05143bdabda6f94f4d02900e",
+    "inputs/v25_reviewed_record_ids.json": "db833e4acc8efba9278cdc28194b45898e1f8b7f05143bdabda6f94f4d02900e",
+    "inputs/v25_target_ids.json": "a1c4b0c820c3a0dd6ef93037ab7e1d32815aa86f0094637157e6617a4e8b056f",
+    "inputs/v26_accepted_birthplaces.json": "bbc1ad988babbe34f85cd25446688b169cd559af788bfea0b1b7c69a62b72fdb",
+    "inputs/v26_individual_followup_ids.json": "26bb47ce0635c500d1d65fc9e48c9633ce4418518e2be84df63fd94c49739ccf",
+    "inputs/v26_reviewed_record_ids.json": "26bb47ce0635c500d1d65fc9e48c9633ce4418518e2be84df63fd94c49739ccf",
+    "inputs/v26_target_ids.json": "cb7c38f31765f5ac7b831cff16798d429d19dc01cc96eed9b5653a762eb83f79",
+    "inputs/v27_accepted_birthplaces.json": "3b1f307df5c43dc6a0268a6293898cb7cd32ba02b06a0a2304a55ace9d769c02",
+    "inputs/v27_individual_followup_ids.json": "9d1d69c751a4e07d059f387c502d59bebd1137849f164a6cf80de2e081fc70f3",
+    "inputs/v27_reviewed_record_ids.json": "9d1d69c751a4e07d059f387c502d59bebd1137849f164a6cf80de2e081fc70f3",
+    "inputs/v27_target_ids.json": "3d46647f32b73e853959b74c96f0650c3e0aef57b157676c4b8fa3a5b2a777f0",
+    "inputs/v28_accepted_birthplaces.json": "1c8790f52bdaaba96ba2e75af1008edc01186998bfebaa7d8322a9c641ab90b9",
+    "inputs/v28_individual_followup_ids.json": "979b09dc5a7aaf2bba96e8207f88bb6e1cf71c47ba90f2d7f3c9e1a54e2d798a",
+    "inputs/v28_reviewed_record_ids.json": "979b09dc5a7aaf2bba96e8207f88bb6e1cf71c47ba90f2d7f3c9e1a54e2d798a",
+    "inputs/v28_target_ids.json": "e079ee276e2b2d2335f8937dca440d202f05197a7adef9314c01a0b46a69562d",
+    "inputs/v29_accepted_birthplaces.json": "0bc47fa89ee0ad7f0b13f05c92ba3f8105cf983fabb059dac1b84aac94ed4bc8",
+    "inputs/v29_individual_followup_ids.json": "175d1343302f413ff0a06dae45e0f3d1f0f146df3b3ab98460e79b9a54990b05",
+    "inputs/v29_reviewed_record_ids.json": "175d1343302f413ff0a06dae45e0f3d1f0f146df3b3ab98460e79b9a54990b05",
+    "inputs/v29_target_ids.json": "f46dabc25d6577b51c1d87e8fdf47b70ce019e83f62056807bf8164b9df4771f",
+    "inputs/v30_accepted_geography.json": "4390f50fa688235d6f24419ea5601a0f112051ea8a386f0c6fabd5604b3ebb32",
+    "inputs/v30_geography_followup_ids.json": "42013e18cae0f5ac878e2e151d9f615422a776d92deba942fbf71a36f6233b80",
+    "inputs/v30_geography_target_ids.json": "363e0019eea0d28a34a88b45cc847207ec6ae3628da5fc3bfe7f17ba597d785c",
+    "inputs/v30_reviewed_record_ids.json": "42013e18cae0f5ac878e2e151d9f615422a776d92deba942fbf71a36f6233b80",
+    "inputs/v31_accepted_geography.json": "8f503a3ff82129d075af080a3ab4b0adcaa584ab1663c4bfa613c6d89cf7d5cd",
+    "inputs/v31_geography_followup_ids.json": "0a6794f6f854762d26b813a79da2837f0e89943625977b1b41da130b0772f0cb",
+    "inputs/v31_geography_target_ids.json": "c00eea2dba9a54dbc46394652f0f9caf35c6e8789871a831aa37ac565e18a747",
+    "inputs/v31_reviewed_record_ids.json": "0a6794f6f854762d26b813a79da2837f0e89943625977b1b41da130b0772f0cb",
+    "inputs/v32_accepted_geography.json": "7fcf0c2e260eaacddbd608bcb5dbc48e9395716840d7e1062d3224825b9fbe27",
+    "inputs/v32_geography_followup_ids.json": "98e015583a592292206a15d51af8b0b7cfb2bda5ad9ffcb4226b1b81a884f063",
+    "inputs/v32_geography_target_ids.json": "64063f6f4037095c32bbd4fe873e58a4c5a8835965962d31b71f47df803cab4b",
+    "inputs/v32_reviewed_record_ids.json": "98e015583a592292206a15d51af8b0b7cfb2bda5ad9ffcb4226b1b81a884f063",
+    "inputs/v33_accepted_geography.json": "b4cd974667892c6806b1004a23219bc18dfa493403c8e9fe27c29b5e2e8c2a78",
+    "inputs/v33_geography_followup_ids.json": "cc318bd6cf53f61e60322d822a2dadc145abc64a6d42e2d11741dd8b40a92720",
+    "inputs/v33_geography_target_ids.json": "9afdc982b6430a28f7bfa0d97b91b4b0601dd3c4498b026496c6db59cb20d44b",
+    "inputs/v33_reviewed_record_ids.json": "cc318bd6cf53f61e60322d822a2dadc145abc64a6d42e2d11741dd8b40a92720",
+    "inputs/v34_accepted_geography.json": "c14e33fb416d776ef5143974a8515c48cc41d0fa38d1c53676c7959dd32eed2f",
+    "inputs/v34_geography_followup_ids.json": "501a5d508be054a48c59f7a88ae90cd31dc559cc063c02d2136bedfbd8e28260",
+    "inputs/v34_geography_target_ids.json": "3872e8cc6bdd9f883d462dcce681c8b7e261485ae9cbf403faf2498fdb24a636",
+    "inputs/v34_reviewed_record_ids.json": "501a5d508be054a48c59f7a88ae90cd31dc559cc063c02d2136bedfbd8e28260",
+    "inputs/v35_accepted_geography.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "inputs/v35_geography_followup_ids.json": "85bed17673685b0a6b8d5b0b51f1056aa0df42f6cab36696f60ecc627621e396",
+    "inputs/v35_geography_target_ids.json": "ce6555960e66464a23a7ee88aa4c408844421275f816d3d6ef7fd1765ebee718",
+    "inputs/v35_reviewed_record_ids.json": "85bed17673685b0a6b8d5b0b51f1056aa0df42f6cab36696f60ecc627621e396",
+    "inputs/v36_accepted_geography.json": "299660cfd08143412340496529d634b89d57d94bd81619cf8c45894be9d28b71",
+    "inputs/v36_followup_holds.json": "e53da3819069a98a3e9e267a4ece93665bd7976153de983e29431eb50112bc11",
+    "inputs/v36_geography_followup_ids.json": "a2da135a517f2530495efec0f68ef4f5d069a0a19362869e7ad68c8390913a94",
+    "inputs/v36_geography_target_ids.json": "ce6555960e66464a23a7ee88aa4c408844421275f816d3d6ef7fd1765ebee718",
+    "inputs/v36_reviewed_record_ids.json": "a2da135a517f2530495efec0f68ef4f5d069a0a19362869e7ad68c8390913a94",
+    "inputs/v37_accepted_geography.json": "0d3c630d295776aa9a1e7cca3c52d9635b3a1e3d4ee117d3259346b79d32f831",
+    "inputs/v37_followup_holds.json": "01cc47729239dacb68c619b0cda4e6792e04f58e9657297a406f66f264e93262",
+    "inputs/v37_geography_followup_ids.json": "586a47872b163f4d6cab32294a17e734b29f4997022872b1ed17e6ab2792505a",
+    "inputs/v37_geography_target_ids.json": "83ec54e9cf07410373207b25282cc8a18bc66ec897afef9afe78cc3aa6b7fcd1",
+    "inputs/v37_reviewed_record_ids.json": "586a47872b163f4d6cab32294a17e734b29f4997022872b1ed17e6ab2792505a",
+    "inputs/v38_accepted_geography.json": "8a51bc4aa38b942a76f0db88b15d40f4bdcd451d79a24dce63456f4f1ec7c56b",
+    "inputs/v38_followup_holds.json": "c3dadadba08530652eb695f87053f2be342acb52b9e40b648a32117d4d4c1c7d",
+    "inputs/v38_geography_followup_ids.json": "c2828697c060070fe6b2063ea2369ef5d63855215e3eb9d6007cbb9bab08c0c9",
+    "inputs/v38_geography_target_ids.json": "b2dbc8c85774378ab69aeaa69b3687e6ba7c74a59b13c040ee0e58515bba1d86",
+    "inputs/v38_reviewed_record_ids.json": "c2828697c060070fe6b2063ea2369ef5d63855215e3eb9d6007cbb9bab08c0c9",
+    "inputs/v39_accepted_geography.json": "73674f5a4298c33e50a72db2a8986f6e1bcde1ba3641d09524b94020b9cff486",
+    "inputs/v39_followup_holds.json": "144407caf646d2b085949a22689d71c75e1316f517af443f86477ee4c8f9e28b",
+    "inputs/v39_geography_followup_ids.json": "9d6a191c425464dade87808c249a2ae7b24c981e9ca9a0a00d4ddfc159896c1f",
+    "inputs/v39_geography_target_ids.json": "4ddfb0f917e432d60e86c7a90681d1dc9bb7f9c6a24dd2ce7dabc1062dfd9738",
+    "inputs/v39_reviewed_record_ids.json": "9d6a191c425464dade87808c249a2ae7b24c981e9ca9a0a00d4ddfc159896c1f",
+    "inputs/v40_accepted_geography.json": "82afb93120b55e327f27ffa28f3d118e4f60a737991f70a05e9d822a00334d91",
+    "inputs/v40_followup_holds.json": "1c3dcd1ddcf3817d8f7bd0f34c764654b290d8122f08aeff425f4c8b5ceda360",
+    "inputs/v40_geography_followup_ids.json": "11be847d8ef484c8ee99d28c92a94800f338dd4d54d7fb436cfb4a157f86b35d",
+    "inputs/v40_geography_target_ids.json": "b5fef250af31bccc516ca93a5c11e12a0a2ab52989cdcb634da9652ce8cb3ebf",
+    "inputs/v40_reviewed_record_ids.json": "11be847d8ef484c8ee99d28c92a94800f338dd4d54d7fb436cfb4a157f86b35d",
+    "inputs/v41_accepted_geography.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "inputs/v41_followup_holds.json": "80dee4aeee68784c953d55c56b194f753e549555c53337d71743c3c6f08f5a2a",
+    "inputs/v41_geography_followup_ids.json": "c709c321a9b03a307951300962d806142467a76b1cfca806f94ea471a8935cbb",
+    "inputs/v41_geography_target_ids.json": "d667e3fe94b2dcf05ceeec80560b8a570d68b05452de71d9baa4aec2c220d0c0",
+    "inputs/v41_reviewed_record_ids.json": "c709c321a9b03a307951300962d806142467a76b1cfca806f94ea471a8935cbb",
+    "inputs/v42_accepted_geography.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "inputs/v42_followup_holds.json": "cd861d68b55cb39a1119b60a12c6edd22a84d88ea4cbda42c63a53c358e9850d",
+    "inputs/v42_geography_followup_ids.json": "11c9324d871f81b92a14fa399d0e89d31b8d6ccb024cfc3decd4a97292574434",
+    "inputs/v42_geography_target_ids.json": "d667e3fe94b2dcf05ceeec80560b8a570d68b05452de71d9baa4aec2c220d0c0",
+    "inputs/v42_reviewed_native_rows.json": "421972d5602749d5df23d8d240e76883b0509e12803e882b17f3209120039065",
+    "inputs/v42_reviewed_record_ids.json": "11c9324d871f81b92a14fa399d0e89d31b8d6ccb024cfc3decd4a97292574434",
+    "inputs/v43_accepted_geography.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "inputs/v43_followup_holds.json": "710b60982479de81fb8f48eed9e5f9552f4284e2636b01f385df5088f4580188",
+    "inputs/v43_geography_followup_ids.json": "c53b1c162c424acb594dc0379e2b0e40838575f4209ed9d5b90e206f2542e6d5",
+    "inputs/v43_geography_target_ids.json": "d667e3fe94b2dcf05ceeec80560b8a570d68b05452de71d9baa4aec2c220d0c0",
+    "inputs/v43_reviewed_record_ids.json": "c53b1c162c424acb594dc0379e2b0e40838575f4209ed9d5b90e206f2542e6d5",
+    "scripts/replay.py": "e7e6e6ced8a9f49b9db0c6a8c3b8bb1c0ab71949d3e6a2a3548292d5c064d1aa",
+    "outputs/birthplace_rows.jsonl.gz": "433749a0b7ff0bfc62db8993f662cd928a4bc023418a54600259fdbea0b1537a",
+    "outputs/birthplaces.csv": "1bfdff7927abe23631fbd1d5a0be0e39898d835e8fe30d3ed97a72a5f08f288c",
+    "outputs/changes.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "outputs/remaining_unknown_window.csv": "046c86fd8e27671974c3fc5714f0a49a77c55237fb9110f306dee6f95e4e6df7",
+    "outputs/summary.json": "23d4021c0029f1804a4a8166728e8f1618b860f0f80cadc531fe36eb09565451",
+    "METHOD_SCHEMA.md": "2bdcfba8fbf61de219dd28af236009220274619b717309649779e0a809e8a665"
+  },
+  "prior_V44_protocol_deviation_sha256": "32e272a449e25626a2b26019188eb8f02eaa9b2941a7660b24428534195a41bb",
+  "prior_V44_protocol_deviations": [
+    {
+      "record_id": "RS_PAST_NA8744",
+      "work_url": "https://www.wikidata.org/wiki/Q4924984",
+      "kind": "same_work_request_protocol_deviation",
+      "ordered_source_refs": [
+        "turn1385032view0",
+        "turn4375175view0"
+      ],
+      "first_request": "Actualarticlelink36 followed to Special%3AEntityPage/Q4924984, explicitly rewritten summary of canonicalQ4924984.",
+      "second_request": "Opened observed canonicalQ4924984 URI, sameunderlyingentitywork, then toolinaccessible.",
+      "assessment": "Same-work canonical follow-through after unusable rewritten representation, contrary to first-unusable-work closure/no-variant retrieval protocol. This is not a distinct originalwork or a retroactive policy exception.",
+      "containment": "Exactrequests/realentryUTCs remain in originalintent/report, graphstatements/P19/absence/grade notadopted; Finlayheld; no further request, no actualmasterchange.",
+      "worker_disclosure": {
+        "same_underlying_work": true,
+        "entity": "Q4924984",
+        "ordered_operations": [
+          {
+            "intent_index": 2,
+            "operation": {
+              "click": {
+                "ref_id": "turn4027123view0",
+                "id": 36
+              }
+            },
+            "result_ref": "turn1385032view0",
+            "returned_header_uri": "https://www.wikidata.org/wiki/Special%3AEntityPage/Q4924984",
+            "explicit_rewritten_summary_of": "https://www.wikidata.org/wiki/Q4924984",
+            "observed_redirect_canonical_uri": "https://www.wikidata.org/wiki/Q4924984",
+            "original_body_proof_adopted": false
+          },
+          {
+            "intent_index": 3,
+            "operation": {
+              "open": {
+                "ref_id": "https://www.wikidata.org/wiki/Q4924984"
+              }
+            },
+            "result_ref": "turn4375175view0",
+            "tool_result": "not accessible via this tool",
+            "original_body_proof_adopted": false
+          }
+        ],
+        "protocol_status": "same_work_request_protocol_deviation_independently_classified_by_source_QA",
+        "disclosure": "Both requests concern the same underlying Q4924984 entity/work, not distinct sources. Canonical follow-through was attempted using the observed URI carrier. If the first rewritten response closes this work, the subsequent canonical open is a protocol deviation; no clean/no-variants compliance assertion is made for this pair. Original statements were not adopted, the canonical request failed, and no further request occurred. All original entry UTCs and exact operations are preserved.",
+        "independent_source_QA_classification": "Source QA independently reviewed full report and intent, classified the rewritten SpecialEntityPage then canonical Q4924984 pair as a same-work request-protocol deviation under frozen closure rule. No original statements/absence adopted; Finlay remains held."
+      }
+    }
+  ],
+  "reviewer_external_requests": 0,
+  "production_or_Git_mutated_by_reviewer": false,
+  "QA_report_only_write": true,
+  "held_record_ids": [
+    "RS_PAST_NA4193",
+    "RS_PAST_NA4301",
+    "RS_PAST_NA4155",
+    "RS_PAST_NA6868",
+    "RS_PAST_NA1998",
+    "RS_PAST_NA4490"
+  ],
+  "checks_passed": 50,
+  "case_reviews": [
+    {
+      "record_id": "RS_PAST_NA4193",
+      "native_authority": "Bagshawe; Kenneth Dawson (1925 - 2022); oncologist",
+      "native_DOB": "1925-08-17",
+      "raw_birthplace": "",
+      "original_BP_grade": "unknown",
+      "scope_role": "first_birthplace",
+      "decision": "hold",
+      "source_ref": "turn5990851view0",
+      "locator": "L64/76 full name;L84 exact DOB/death;L88 obituary pending.",
+      "independent_review": "Actual entry matches full native name/exact17August1925/compatible2022 endpoint. No distinctive oncology biography or personal birth relation. Metadata observation only, not host-only S1 or an acquired authored obituary.",
+      "new_birthplace_or_geography_adopted": false
+    },
+    {
+      "record_id": "RS_PAST_NA4301",
+      "native_authority": "Bawn; Cecil Edwin Henry (1908 - 2003)",
+      "native_DOB": "1908-11-06",
+      "raw_birthplace": "",
+      "original_BP_grade": "unknown",
+      "scope_role": "first_birthplace",
+      "decision": "hold",
+      "source_ref": null,
+      "locator": "Local prior-work gate;zero external requests.",
+      "independent_review": "MakingScience and Calmview share NA4301; prior successful original-body/no failed-full-route prerequisites remain unproven. Native no_birthplace_field is not an acquisition receipt. Correctly held before request with no URL-difference independence claim.",
+      "new_birthplace_or_geography_adopted": false
+    },
+    {
+      "record_id": "RS_PAST_NA4155",
+      "native_authority": "Goodwin; Leonard George (1915 - 2008)",
+      "native_DOB": "1915-07-11",
+      "raw_birthplace": "Wood Green, London",
+      "original_BP_grade": "S2",
+      "scope_role": "stored_place_geography_only",
+      "decision": "hold",
+      "source_ref": "turn1705466view0",
+      "locator": "L757 full identity/life;L761-763 MaxBlythe;L781 exact DOB/direct address;L782-783 career.",
+      "independent_review": "Actual attributed ODNB public Extract supports a conservative S2 observation and full native/exact11July1915/compatible life/coherent pharmacy-physiology career. Born5CheapsideHighRoad/WoodGreen/London consistently refines existing locality, but gives no birth whole-region. Hold geography; original raw place/grade remain frozen.",
+      "new_birthplace_or_geography_adopted": false
+    },
+    {
+      "record_id": "RS_PAST_NA6868",
+      "native_authority": "Ekins; Roger Philip (1926 - 2016)",
+      "native_DOB": "1926-09-22",
+      "raw_birthplace": "London",
+      "original_BP_grade": "S2",
+      "scope_role": "stored_place_geography_only",
+      "decision": "hold",
+      "source_ref": "turn9432100view0",
+      "locator": "L191 shortRogerEkins;L193-195 career;L196 death27July2016.",
+      "independent_review": "Actual unsigned profile lacks Philip, any stated DOB and birthplace. Old memoir dates cannot fill missing current prose; omitted-middle exception cannot apply without exact DOB. New27July versus old memoir-title26July is auxiliary/unqualified, both endpoint years2016 compatible, no correct-date/native repair or active issue append.",
+      "new_birthplace_or_geography_adopted": false
+    },
+    {
+      "record_id": "RS_PAST_NA1998",
+      "native_authority": "Kassanis; Basil (1911 - 1985)",
+      "native_DOB": "1911-10-16",
+      "raw_birthplace": "Macedonian born",
+      "original_BP_grade": "S3",
+      "scope_role": "stored_place_geography_only",
+      "decision": "hold",
+      "source_ref": "turn5163502view0",
+      "locator": "Five-line verification loader/challenge,L2-4.",
+      "independent_review": "No actual personal article, credited author/date, source identity/date/career or birth predicate acquired. First challenge closes work. Historical Macedonia/Greek nationality/migration do not qualify birth geography; Macedonian born/S3 remains unchanged.",
+      "new_birthplace_or_geography_adopted": false
+    },
+    {
+      "record_id": "RS_PAST_NA4490",
+      "native_authority": "Ledwith; Anthony (1933 - 2015)",
+      "native_DOB": "1933-08-14",
+      "raw_birthplace": "",
+      "original_BP_grade": "unknown",
+      "scope_role": "first_birthplace",
+      "decision": "hold",
+      "source_ref": "turn9908670view0",
+      "locator": "Actual URL from title/author query turn5163502search0; first open tool405.",
+      "independent_review": "One permitted query located the retained distinct ChemistryWorld original URI. First tool405 response supplies no body/name/date/career/birthplace or journalist-grade proof. Search age/title metadata is not used to reconstruct DOB; no retry/variant.",
+      "new_birthplace_or_geography_adopted": false
+    }
+  ],
+  "worker_evidence": {
+    "a": {
+      "source_report_sha256": "bfcbe7d83f6992b2476cf2efbe84f151125bf178925bfd9fb9dcb02892338e43",
+      "intent_sha256": "0fbbed6127785b40cba02a66779a15c2ec606a65583bfdb721a49035061e50ff",
+      "record_ids": [
+        "RS_PAST_NA4193",
+        "RS_PAST_NA4301"
+      ]
+    },
+    "b": {
+      "source_report_sha256": "19c32334302f9c2c66d18a3750c978b033d890a0a235ce2102b6ba0277d4ab2f",
+      "intent_sha256": "e0e5094d65d899c275205a9e14fc7581db426277da225fac7cd0af5e6f4562e9",
+      "record_ids": [
+        "RS_PAST_NA4155",
+        "RS_PAST_NA6868"
+      ]
+    },
+    "c": {
+      "source_report_sha256": "d4b7e96f5b69dc47ab17665fa7dfd36c2013501a4679e41bdbd8a18a8a2793d3",
+      "intent_sha256": "eb4ccbec26d72db718d0c99e3e631c1808e21b9fe48d1f88d811e5c9fabcdb7d",
+      "record_ids": [
+        "RS_PAST_NA1998",
+        "RS_PAST_NA4490"
+      ]
+    }
+  },
+  "actual_worker_counts": {
+    "a": {
+      "queries": 0,
+      "opens": 1,
+      "clicks": 0,
+      "finds": 0,
+      "exact_intent_entries": 1
+    },
+    "b": {
+      "queries": 0,
+      "opens": 2,
+      "clicks": 0,
+      "finds": 0,
+      "exact_intent_entries": 2
+    },
+    "c": {
+      "queries": 1,
+      "opens": 2,
+      "clicks": 0,
+      "finds": 0,
+      "exact_intent_entries": 3
+    }
+  },
+  "source_operation_totals": {
+    "queries": 1,
+    "opens": 5,
+    "clicks": 0,
+    "finds": 0,
+    "exact_intent_entries": 6,
+    "Bawn_external_requests": 0,
+    "root_verification_opens": 0
+  },
+  "current_V45_work_closures_clean": true,
+  "current_V45_protocol_deviations": [],
+  "historical_V44_all_collection_work_closures_clean": false,
+  "auxiliary_Ekins_death_day_observation": {
+    "record_id": "RS_PAST_NA6868",
+    "classification": "source_only_unqualified_cross_source_death_day_contrast",
+    "new_profile_death": "2016-07-27",
+    "old_retained_memoir_title_death": "2016-07-26",
+    "actual_source_ref": "turn9432100view0",
+    "no_correct_date_verdict": true,
+    "new_profile_missing_native_component": "Philip",
+    "new_profile_birthdate_not_stated": true,
+    "both_death_years_compatible_with_native_authority_2016": true,
+    "active_DOB_or_lifespan_endpoint_inventory_addition": false,
+    "retained_in": "audit/v45_sources_b.json"
+  },
+  "parent_adjudication_sha256": "4de4a9b2433cc321d7a50ddfe32be6f801acdc052f28d0344e38f156235f5a2d",
+  "stage_summary_sha256": "bbb0cbcb7c71f6b5f57f69409193685895f7ae4bff4d9f4feeee60babb5cbe3d",
+  "stage_README_sha256": "1eb3efb806f77e3b8d7405cb5b526e22dc6c921e52ba4b377bc25e5e610cbd9e",
+  "zero_admissions_preservation": {
+    "baseline_critical_files_verified": 141,
+    "all9_issue_inventories_unchanged": true,
+    "master_version": "V44",
+    "complete_objects": 4983,
+    "changed_complete_objects": 0,
+    "master_canonical_sha256": "a0c04e44631478f82e562deab64d699fc273e6fc99fa35ba23f8a61d7e1f8717",
+    "master_gzip_sha256": "433749a0b7ff0bfc62db8993f662cd928a4bc023418a54600259fdbea0b1537a",
+    "new_pipeline_wrapper_or_columns": false,
+    "reviewer_historical_loader_or_replay_CLI_runs": 0
+  },
+  "separate_baseline_integrity_report": {
+    "path": "audit/baseline_integrity_final.json",
+    "sha256": "854edddce9cfc232154a52387170c7244e4d74196faec9803a7991a73c862593",
+    "reported_passes": 38,
+    "manifest_files": 551,
+    "rerun_by_source_reviewer": false,
+    "not_added_to_source_review_check_count": true
+  },
+  "quote_assessment": {
+    "new_literal_body_quote_words": 0,
+    "inherited_target_quote_budgets_preserved": true,
+    "no_full_source_caches_distributed": true
+  },
+  "report_generation_note": "Initial final-report assembly stopped before writing because C intent uses frozen_original_scope_sha256 while A/B use scope_sha256. Normalized the actual exact field; no source/data/pending-report bytes changed by that failed assembly.",
+  "limitations": [
+    "Documentary review of retained actual worker observations/refs/locators; reviewer did not reacquire originals, authenticate raw bytes/pixels or independently reconstruct HTTP timing.",
+    "All6 exact request entries have UTC bounded by scope/report/adjudication, with retained per-batch separate local exit0-before-web evidence; this is not raw HTTP timing authentication.",
+    "Source identity/date agreement/genre observations do not validate native civil/calendar DOB or informational independence. Unknown raw/calendar/rank/revision/editorial metadata stays null.",
+    "No facts or new qualified issues; Ekins day contrast remains source-only and all prior holds plus V44 Finlay same-work deviation remain.",
+    "Preservation uses pre-stage critical-file pins and all9 snapshots, alongside the separately executed portable baseline report. No production or numerical replay CLI was run for zero-admission work."
+  ]
+}

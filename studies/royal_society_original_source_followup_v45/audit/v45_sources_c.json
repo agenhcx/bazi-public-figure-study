@@ -1,0 +1,396 @@
+{
+  "schema": "UK_v45_sources_c_original_person_mixed_followups_v1",
+  "written_utc": "2026-11-08T11:14:52.234328+00:00",
+  "group": "c",
+  "strategy_id": "unopened_original_person_sources_after_canonical_closeout_v1",
+  "phase": "one_geography_only_and_one_first_birthplace",
+  "scope_file": "v45_original_scope.json",
+  "scope_sha256": "9a3226a121555bb4a7586e01a2ccd394f9f46071a1e4a839e87a408b388d278b",
+  "native_scope_file": "v45_scope_c.json",
+  "native_scope_sha256": "7c71bad3211efd7e125fdaa622d79c860a590921dbaeaa2bc1e7e7e2531198a6",
+  "inherited_admission_file": {
+    "first_birthplace": "academy_repo/studies/royal_society_birthplace_completion_v29/audit/plan.json",
+    "geography_only": "academy_repo/studies/royal_society_birthplace_completion_v35/audit/plan.json"
+  },
+  "inherited_admission_sha256": {
+    "29": "1e3dbd1ba94b012425803df5426e269adf42bdb5e17a9a5294fbaa4e3714bb42",
+    "35": "6d4e45c648b787999b4ba82fcb1d025ef7bb36382ef9d21a3328e83cbf3b28f0"
+  },
+  "intent_file": "v45_intent_c.json",
+  "scope_record_ids": [
+    "RS_PAST_NA1998",
+    "RS_PAST_NA4490"
+  ],
+  "all9_issue_inventories_read_before_any_web": true,
+  "inventory_file_pins": {
+    "active_source_DOB_conflicts.json": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+    "birthplace_source_conflicts.json": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+    "source_derived_age_inconsistencies.json": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+    "provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+    "lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+    "cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+    "source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+    "omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+    "source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+  },
+  "full_target_native_objects_and_historical_holds_reviewed_before_any_web": true,
+  "prior_context_file_pins": {
+    "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v20_holds.json": "0fe269f7dcf6eb2855b511b4cc41394c67dcdf9a65c4e3ef9bec7c4d3103e277",
+    "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v30_holds.json": "93fa0fdccf1d12e9918943e79fee7585f769ad6cbae591627870cf71abf8bc18",
+    "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v42_holds.json": "cd861d68b55cb39a1119b60a12c6edd22a84d88ea4cbda42c63a53c358e9850d",
+    "v20_sources_a.json": "b8fe977f544b6321dbe52233f08d2589274a1270c7ec7234dbc36c006f666c23",
+    "v20_sources_b.json": "1481565f7c2fb0049c7043421f7c8776e2589f187271fe81584930cbff019afe",
+    "v30_sources_a.json": "896b9cf560bc7e068fa63cace081342c3f40a6cabb320e9150431116e917af37",
+    "v45_scope_c.json": "7c71bad3211efd7e125fdaa622d79c860a590921dbaeaa2bc1e7e7e2531198a6"
+  },
+  "prior_context_review": {
+    "full_frozen_scope_and_two_native_objects_read": true,
+    "all9_current_V44_issue_inventories_read": true,
+    "inherited_active_DOB_conflicts": 13,
+    "inherited_partial_place_conflicts": 2,
+    "inherited_same_source_age_issues": 4,
+    "omitted_middle_inventory_metadata_only": true,
+    "targeted_historical_holds_context_read": [
+      "V20 Ledwith original memoir first failure and unopened Stoye citation",
+      "V20 Kassanis frozen catalogue first-birthplace fact/full source context and unopened Harpenden personal article",
+      "V30 Kassanis old cover/abstract plus failed memoir download and closed Rosebery Avenue local-history book challenge",
+      "V42 Kassanis acquired actual Wikidata item without birthplace; reconstructed hold provenance preserved"
+    ],
+    "new_work_identity_review": "Retained Harpenden personal article credited in discovery to Hertfordshire Countryside May1983 is a distinct title/work from the previously failed 2021 Rosebery Avenue history book, not a URL variant of it. No body/author/independence inferred before acquisition. Ledwith Stoye article is a distinct title/author/date citation from the closed RS2017.0029 memoir.",
+    "closed_work_set": [
+      {
+        "work": "Kassanis RS memoir10.1098/rsbm.1988.0013 including RG full-body download",
+        "historical_result": "cover/abstract only; first observed PDF download404; no retry or new carrier"
+      },
+      {
+        "work": "A History of Rosebery Avenue Harpenden Final14Aug2021",
+        "historical_result": "HTML verification challenge instead of PDF; closed distinct book"
+      },
+      {
+        "work": "Ledwith RS memoir10.1098/rsbm.2017.0029",
+        "historical_result": "first DOI original body inaccessible; closed"
+      },
+      {
+        "work": "Ledwith historical Wikipedia work",
+        "historical_result": "historical closed/unadopted; outside V45 primary-only lead scope"
+      }
+    ],
+    "V44_Q4924984_same_work_deviation_boundary_preserved": true,
+    "year_only_stated_compatible_precision_permitted_not_dateless_or_age_inferred": true
+  },
+  "retrieval_counts": {
+    "queries": 1,
+    "navigation_attempts": 2,
+    "source_open_operations": 2,
+    "click_operations": 0,
+    "parsed_finds": 0,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "counts": {
+    "queries": 1,
+    "navigation_attempts": 2,
+    "source_open_operations": 2,
+    "click_operations": 0,
+    "parsed_finds": 0,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "budgets": {
+    "queries": 4,
+    "navigation_attempts": 8
+  },
+  "query_ledger": [
+    {
+      "index": 1,
+      "kind": "query",
+      "record_id": "RS_PAST_NA4490",
+      "engine": "system2",
+      "query": "\"Former Royal Society of Chemistry president dies\" \"Emma Stoye\"",
+      "purpose": "One bounded original-title/author locator query permitted by frozen V45 scope. Locate actual observed original Chemistry World/RSC URL only; do not synthesize URL or adopt projection facts. No further locator-query variants for this work.",
+      "written_utc": "2026-11-08T11:12:38.686523+00:00",
+      "status": "executed",
+      "result_ref": "turn5163502search0",
+      "observed_original_url": "https://www.chemistryworld.com/news/former-royal-society-of-chemistry-president-dies/8135.article",
+      "outcome": "Actual observed Chemistry World URL/title/author/date locator matches retained citation. Search projections including incidental Wikipedia/mirrors are discovery only; no DOB/place/age fact or conflict adopted.",
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "index": 0,
+      "kind": "open",
+      "record_id": "RS_PAST_NA1998",
+      "exact_url": "https://www.harpenden-history.org.uk/harpenden-history/people-2/artists/basil_kassanis",
+      "URL_provenance": "Frozen V45 retained lead; original V20 discovery turn4071624search0, v20_sources_b other_unopened_non_evidence_leads.",
+      "purpose": "First acquire retained distinct personal article actual body, inspect actual source attribution/date, all Basil/Kassanis components, explicitly stated compatible birth precision, career/lifespan and direct birth-region predicate consistent with frozen Macedonian born. No migration/nationality or source-host geocoding. Stop whole work if first representation unusable.",
+      "written_utc": "2026-11-08T11:12:38.686513+00:00",
+      "status": "executed",
+      "result_ref": "turn5163502view0",
+      "outcome": "Five-line verification challenge/loader, not original personal article body. First unusable representation closes the work; no repeat, URL variant, carrier, raw GET or authentication bypass.",
+      "source_body_acquired": false,
+      "stopped_no_retry": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    },
+    {
+      "index": 2,
+      "kind": "open",
+      "record_id": "RS_PAST_NA4490",
+      "exact_url": "https://www.chemistryworld.com/news/former-royal-society-of-chemistry-president-dies/8135.article",
+      "from_ref": "turn5163502search0",
+      "URL_provenance": "Actual original URL observed in single bounded engine2 title/author locator result; not guessed or synthesized.",
+      "purpose": "First acquire original Stoye Chemistry World article actual body and inspect all Anthony/Ledwith components, actually stated compatible DOB precision, distinctive career/compatible lifespan and direct personal birthplace. Article byline does not automatically establish S2. Stop whole work on first unusable/header/textless/challenge result; no variants/carriers.",
+      "written_utc": "2026-11-08T11:13:08.984133+00:00",
+      "status": "executed",
+      "result_ref": "turn9908670view0",
+      "outcome": "First original Chemistry World article request failed with tool-reported405 Method Not Allowed; original body not acquired. Work closed, no retry/variant/carrier/rawGET/auth bypass.",
+      "source_body_acquired": false,
+      "tool_reported_HTTP_status": 405,
+      "stopped_no_retry": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    }
+  ],
+  "parsed_find_ledger": [],
+  "candidates": [],
+  "holds": [
+    {
+      "publication_date": null,
+      "publication_date_precision": "not_observed_in_actual_original_body",
+      "source_revision_id": null,
+      "source_revision_utc": null,
+      "source_calendar_model": null,
+      "source_statement_rank": null,
+      "source_editorial_validation": null,
+      "source_informational_independence": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA1998",
+      "native": {
+        "record_id": "RS_PAST_NA1998",
+        "authority_name": "Kassanis; Basil (1911 - 1985)",
+        "native_dob": "1911-10-16",
+        "raw_birthplace": "Macedonian born",
+        "birthplace_source_grade": "S3",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "b7ecb1b7c24eec8c45f19c57ee8e8f5457d4b5a6d87fc2813958487795e1d7db"
+      },
+      "status": "held_first_original_work_unusable",
+      "phase": "geography_only",
+      "source_grade_adopted": null,
+      "source_grade_role": "geographic_support_only",
+      "reviewed_hemisphere_proposal": null,
+      "reviewed_hemisphere": "unknown",
+      "no_new_geographic_assignment": true,
+      "native_and_original_birthplace_fields_unchanged": true,
+      "qualified_new_DOB_conflict": false,
+      "qualified_new_birthplace_conflict": false,
+      "source_quote": null,
+      "source_quote_word_count": 0,
+      "no_master_or_native_changes": true,
+      "source_author": null,
+      "source_doi": null,
+      "source_observation_quality": null,
+      "displayed_source_version_date": null,
+      "observed_source_full_name": null,
+      "source_birthdate": null,
+      "source_birthdate_precision": "not_observed",
+      "source_lifespan": null,
+      "source_death_date": null,
+      "source_birthplace_observed": null,
+      "direct_subject_birth_relation_observed": false,
+      "direct_birth_whole_region_observed": false,
+      "source_body_acquired": false,
+      "proof_chain": [],
+      "native_binding": {
+        "native_components": [
+          "Basil",
+          "Kassanis"
+        ],
+        "all_native_personal_components_actually_present": false,
+        "exact_native_DOB_actually_stated": false,
+        "stated_DOB_precision": "not_observed",
+        "native_DOB_literal_agreement": null,
+        "compatible_lifespan_actually_present": false,
+        "distinctive_coherent_source_career_present": false,
+        "all_geography_admission_gates_satisfied": false,
+        "all_first_birthplace_admission_gates_satisfied": null,
+        "failed_gate": "No usable original personal body acquired; no source name/date/career/birthplace predicate verified."
+      },
+      "retrieval_representation": "Web-tool parsed response/error only; no raw HTTP/PDF bytes, original body or inspected pixels.",
+      "no_geographic_inference": true,
+      "stopped_on_first_unusable_work_representation": true,
+      "no_retry_variant_carrier_rawGET_or_auth_bypass": true,
+      "hold_type": "first_personal_article_verification_challenge_no_body",
+      "reason": "First retained Harpenden personal-article request returned only a five-line verification loader/challenge. No actual personal article, credited reprint author/date, source birth precision or direct birth-region predicate acquired. Frozen Macedonian born/S3 remains unchanged and geographically unresolved. Migration, nationality and old search-only Greece lead do not qualify.",
+      "source_url": "https://www.harpenden-history.org.uk/harpenden-history/people-2/artists/basil_kassanis",
+      "source_ref": "turn5163502view0",
+      "source_title": null,
+      "source_kind": "verification_challenge_instead_of_original_local_history_personal_article",
+      "source_locator": "turn5163502view0 total5 lines; loader/verification text L2-L4 only.",
+      "tool_reported_HTTP_status": null,
+      "prior_holds_preserved": [
+        "V20 original picture catalogue Macedonian born/S3 fact unchanged",
+        "V30 original memoir cover/abstract only and closed404 download",
+        "Closed distinct Rosebery Avenue2021 history book verification challenge",
+        "V42 acquired canonical item no birthplace and reconstructed-hold provenance"
+      ],
+      "work_identity_review": "Retained unopened personal article lead is a distinct title/work from the closed2021 Rosebery Avenue history book and RS1988 memoir, despite shared Harpenden host with the book. Hertfordshire Countryside May1983 is prior discovery metadata only; original body/reprint attribution not verified."
+    },
+    {
+      "publication_date": null,
+      "publication_date_precision": "not_observed_in_actual_original_body",
+      "source_revision_id": null,
+      "source_revision_utc": null,
+      "source_calendar_model": null,
+      "source_statement_rank": null,
+      "source_editorial_validation": null,
+      "source_informational_independence": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA4490",
+      "native": {
+        "record_id": "RS_PAST_NA4490",
+        "authority_name": "Ledwith; Anthony (1933 - 2015)",
+        "native_dob": "1933-08-14",
+        "raw_birthplace": "",
+        "birthplace_source_grade": "unknown",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "fa61e39b9f3fe29fb6e323350807bbfae174298a2b08b085b14bd1196daac44a"
+      },
+      "status": "held_first_original_work_unusable",
+      "phase": "first_birthplace",
+      "source_grade_adopted": null,
+      "source_grade_role": "no_new_birthplace_adopted",
+      "reviewed_hemisphere_proposal": null,
+      "reviewed_hemisphere": "unknown",
+      "no_new_geographic_assignment": true,
+      "native_and_original_birthplace_fields_unchanged": true,
+      "qualified_new_DOB_conflict": false,
+      "qualified_new_birthplace_conflict": false,
+      "source_quote": null,
+      "source_quote_word_count": 0,
+      "no_master_or_native_changes": true,
+      "source_author": null,
+      "source_doi": null,
+      "source_observation_quality": null,
+      "displayed_source_version_date": null,
+      "observed_source_full_name": null,
+      "source_birthdate": null,
+      "source_birthdate_precision": "not_observed",
+      "source_lifespan": null,
+      "source_death_date": null,
+      "source_birthplace_observed": null,
+      "direct_subject_birth_relation_observed": false,
+      "direct_birth_whole_region_observed": false,
+      "source_body_acquired": false,
+      "proof_chain": [],
+      "native_binding": {
+        "native_components": [
+          "Anthony",
+          "Ledwith"
+        ],
+        "all_native_personal_components_actually_present": false,
+        "exact_native_DOB_actually_stated": false,
+        "stated_DOB_precision": "not_observed",
+        "native_DOB_literal_agreement": null,
+        "compatible_lifespan_actually_present": false,
+        "distinctive_coherent_source_career_present": false,
+        "all_geography_admission_gates_satisfied": false,
+        "all_first_birthplace_admission_gates_satisfied": false,
+        "failed_gate": "No usable original personal body acquired; no source name/date/career/birthplace predicate verified."
+      },
+      "retrieval_representation": "Web-tool parsed response/error only; no raw HTTP/PDF bytes, original body or inspected pixels.",
+      "no_geographic_inference": true,
+      "stopped_on_first_unusable_work_representation": true,
+      "no_retry_variant_carrier_rawGET_or_auth_bypass": true,
+      "hold_type": "first_original_news_article_tool_reported405_no_body",
+      "reason": "The single permitted title/author locator query exposed the actual Chemistry World original URL. Its first open failed with tool-reported405 Method Not Allowed. No original body, stated birth precision, personal birthplace or journalist source quality established; reported age in discovery is not used to infer DOB. Blank birthplace remains unchanged.",
+      "source_url": "https://www.chemistryworld.com/news/former-royal-society-of-chemistry-president-dies/8135.article",
+      "source_ref": "turn9908670view0",
+      "source_title": null,
+      "source_kind": "unavailable_original_Chemistry_World_news_article_body",
+      "source_locator": "turn9908670view0 tool error only; no original article lines.",
+      "tool_reported_HTTP_status": 405,
+      "prior_holds_preserved": [
+        "V20 RS2017.0029 memoir first inaccessible route remains closed",
+        "Historical canonical/mirror work outside current primary-only scope; discovery projections not adopted"
+      ],
+      "work_identity_review": "Observed Chemistry World title/author/date citation identifies a different work from the closed RS2017.0029 scientific memoir. A distinct original URL was actually observed, not synthesized; no independent-information or original-body acquisition claim.",
+      "discovery_metadata_only": {
+        "source_ref": "turn5163502search0",
+        "observed_title": "Former Royal Society of Chemistry president dies",
+        "observed_author": "Emma Stoye",
+        "observed_date": "2015-01-09",
+        "metadata_role": "locator_only_no_original_body_proof_or_source_grade",
+        "incidental_canonical_and_mirror_projections": "Discovery-only; not opened, not DOB/place/conflict observations."
+      }
+    }
+  ],
+  "new_DOB_or_place_conflicts": [],
+  "source_derived_age_inconsistency_candidates": [],
+  "source_quality_issue_candidates": [],
+  "qualified_lifespan_endpoint_discrepancy_candidates": [],
+  "auxiliary_unqualified_source_death_day_observations": [],
+  "new_source_quality_observations": [],
+  "new_source_quality_issue_candidates": [],
+  "source_quote_words_by_original_work": {
+    "retained_Harpenden_Kassanis_personal_article": 0,
+    "Stoye_Chemistry_World_Ledwith_article": 0
+  },
+  "historical_quote_accounting": [
+    {
+      "work": "RS picture catalogue Portrait of Basil Kassanis",
+      "historical_retained_quote_words_observed": 2,
+      "new_quote_words": 0,
+      "new_request": false
+    },
+    {
+      "work": "Closed Kassanis RS1988 memoir, Ledwith RS2017 memoir, Rosebery Avenue history book, and canonical histories",
+      "historical_retained_quote_word_totals": null,
+      "new_quote_words": 0,
+      "new_request": false,
+      "accounting_limit": "Historical quotations not extended. No newly requested work had a previous body acquisition in inspected targeted histories."
+    }
+  ],
+  "intent_writes_validated_exit0_separately_beforeweb": true,
+  "pre_request_intent_validations": [
+    {
+      "intent_entries": [
+        0,
+        1
+      ],
+      "validation_exit_code": 0,
+      "validation_utc": "2026-11-08T11:12:46.335844+00:00",
+      "separate_local_validation_before_web": true
+    },
+    {
+      "intent_entries": [
+        2
+      ],
+      "validation_exit_code": 0,
+      "validation_utc": "2026-11-08T11:13:15.786660+00:00",
+      "separate_local_validation_before_web": true
+    }
+  ],
+  "all_collection_work_closures_clean": true,
+  "protocol_deviations": [],
+  "V44_same_work_deviation_retained_not_repaired": true,
+  "raw_HTTP_status": null,
+  "raw_bytes_sha256": null,
+  "exact_request_utc": null,
+  "no_source_cache_retained": true,
+  "no_new_admission_method_or_exception": true,
+  "no_data_repo_Git_master_native_or_replay_wrapper_edits": true,
+  "no_source_exhaustion_or_finalfreeze_claim": true,
+  "source_exhausted": false,
+  "final_freeze": false,
+  "bounded_pass_complete": true
+}

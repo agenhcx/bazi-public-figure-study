@@ -1,0 +1,272 @@
+{
+  "artifact_type": "V45_original_source_group_review",
+  "written_utc": "2026-11-08T11:13:20.119704+00:00",
+  "group": "a",
+  "strategy_id": "unopened_original_person_sources_after_canonical_closeout_v1",
+  "strategy_not_new_admission_method": true,
+  "fixed_record_ids": [
+    "RS_PAST_NA4193",
+    "RS_PAST_NA4301"
+  ],
+  "scope_file": "v45_original_scope.json",
+  "scope_sha256": "9a3226a121555bb4a7586e01a2ccd394f9f46071a1e4a839e87a408b388d278b",
+  "native_scope_file": "v45_scope_a.json",
+  "native_scope_sha256": "b95a8d2ba6bdef1f05c1631149ed08cde541656f6a3cb829747bb9054c07e32a",
+  "intent_file": "v45_intent_a.json",
+  "intent_sha256": "0fbbed6127785b40cba02a66779a15c2ec606a65583bfdb721a49035061e50ff",
+  "admission_authority": {
+    "path": "academy_repo/studies/royal_society_birthplace_completion_v29/audit/plan.json",
+    "sha256": "1e3dbd1ba94b012425803df5426e269adf42bdb5e17a9a5294fbaa4e3714bb42",
+    "rules_applied": "All native personal components, actually stated compatible DOB precision, compatible lifespan, distinctive coherent career and direct subject birthplace relation. No dateless/age-inferred bypass; no source-host automaticgrade; actual conflicts held; whole-region birth context required for hemisphere."
+  },
+  "all9_current_issue_inventories_read_in_full_before_web": true,
+  "inventory_file_pins": {
+    "active_source_DOB_conflicts.json": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+    "birthplace_source_conflicts.json": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+    "source_derived_age_inconsistencies.json": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+    "provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+    "lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+    "cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+    "source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+    "omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+    "source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+  },
+  "targeted_prior_holds_and_full_native_objects_read_before_web": true,
+  "target_history_files": [
+    {
+      "path": "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v22_holds.json",
+      "sha256": "d3b4535dd510b91cf96ed77ac57ab704aa341e70654eec55065b8864d1c86d35"
+    },
+    {
+      "path": "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v23_holds.json",
+      "sha256": "c6f2beff853e821d0b49f70270007475c86d594545356bd68d9bf5d09d038c99"
+    }
+  ],
+  "Bawn_work_identity_gate_completed_before_any_Bawn_request": true,
+  "Bawn_external_request_count": 0,
+  "retrieval_counts": {
+    "queries": 0,
+    "navigation_attempts": 1,
+    "opens": 1,
+    "clicks": 0,
+    "finds": 0,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "query_ledger": [],
+  "navigation_ledger": [
+    {
+      "operation": "open",
+      "record_id": "RS_PAST_NA4193",
+      "requested_URL": "https://history.rcp.ac.uk/inspiring-physicians/kenneth-dawson-bagshawe",
+      "source_ref": "turn5990851view0",
+      "intent_entry_id": 1,
+      "local_validation_exit_code": 0,
+      "outcome": "Actual entry has matching full name/exactDOB/deathdate and pendingobituary notice, no birthplace or distinctive oncology career. Closed, no retry/variants."
+    }
+  ],
+  "find_ledger": [],
+  "candidates": [],
+  "holds": [
+    {
+      "source_author": null,
+      "publication_date": null,
+      "source_revision_id": null,
+      "source_revision_utc": null,
+      "source_calendar_model": null,
+      "source_statement_rank": null,
+      "source_editorial_validation": null,
+      "source_informational_independence": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA4193",
+      "native": {
+        "record_id": "RS_PAST_NA4193",
+        "native_name": "Kenneth Dawson",
+        "authority_name": "Bagshawe; Kenneth Dawson (1925 - 2022); oncologist",
+        "native_DOB": "1925-08-17",
+        "raw_birthplace": "",
+        "birthplace_source_grade": "unknown",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "1979f61cb74937a37a77de32d447a522d53b67bfc8ae7ae845fd462a5403266e"
+      },
+      "decision": "hold",
+      "status": "hold_original_RCP_entry_awaits_obituary_no_birthplace_or_distinctive_career",
+      "source_url": "https://history.rcp.ac.uk/inspiring-physicians/kenneth-dawson-bagshawe",
+      "source_ref": "turn5990851view0",
+      "work_identity": "RCP Inspiring Physicians personal record; distinct retained work from closed Lancet/BMJ/RS memoirs. First current original entry acquisition.",
+      "retrieval_representation": "Actual web-tool parsed RCP personal entry metadata and pending-obituary notice; no signed biography body or rawHTTPbytes. Header is not labelled rewritten summary.",
+      "actual_original_entry_metadata_acquired": true,
+      "actual_authored_obituary_body_acquired": false,
+      "all_native_components_observed": true,
+      "observed_name": "Kenneth Dawson Bagshawe",
+      "source_name_locator": "L64/L76",
+      "source_birthdate": "1925-08-17",
+      "source_birthdate_precision": "exact_day_in_actual_entry_vital_line",
+      "source_birthdate_locator": "L84",
+      "compatible_native_DOB_precision": true,
+      "source_death_date": "2022-12-27",
+      "compatible_lifespan": "1925-2022 atL68/L78 and vitalLine84; compatible nativeauthority1925-2022",
+      "source_professional_metadata": "L86 MRCP1954/FRCP1969; distinctive oncologist career not supplied in acquired entry.",
+      "distinctive_coherent_career_gate_passed": false,
+      "direct_subject_birthplace_relation_observed": false,
+      "source_raw_birthplace": null,
+      "source_birthplace_locator": null,
+      "reason": "Actual retained RCP entry confirms full name and exact native DOB/compatible lifespan, then says obituary is pending atL88. No subject birthplace or distinctive oncology career body is acquired. Membership qualifications do not supply the missing birth relation or biography. Site contact London/footer/category metadata are excluded from birthplace inference.",
+      "source_kind": "institutional_compiled_person_entry_metadata_only",
+      "source_grade_observation_proposal": "S3 conservative metadata observation only; no host-onlyS1 or unacquired authoredobituaryS2",
+      "source_grade_adopted": null,
+      "geography_decision": "unchanged_unknown",
+      "first_birthplace_adoption_candidate": false,
+      "source_quote": null,
+      "source_quote_word_count": 0,
+      "observed_footer_copyright_year": "2019 atL133; not a publication/update date",
+      "first_unusable_birthplace_work_closed_without_retry": true,
+      "prior_closed_works_preserved": [
+        {
+          "url": "https://www.thelancet.com/article/S0140673623003604/pdf",
+          "ref": "turn6547588view0",
+          "tool_result": "URLnotaccessible",
+          "actual_born_body_acquired": false
+        },
+        {
+          "url": "https://www.bmj.com/bmj/section-pdf/1081914?path=%2Fbmj%2F381%2F8380%2FComment.full.pdf",
+          "ref": "turn6298002view0",
+          "tool_result": "Failedtofetch403Forbidden",
+          "raw_HTTP_status": null,
+          "actual_born_body_acquired": false
+        },
+        {
+          "url": "https://doi.org/10.1098/rsbm.2023.0050",
+          "ref": "turn9890169view0",
+          "tool_result": "URLnotaccessible",
+          "actual_born_body_acquired": false
+        }
+      ],
+      "prior_discovery_Marple_UK_not_promoted": true,
+      "qualified_new_DOB_conflict": false,
+      "qualified_new_birthplace_conflict": false,
+      "qualified_new_age_issue": false,
+      "native_and_prior_fields_unchanged": true
+    },
+    {
+      "source_author": null,
+      "publication_date": null,
+      "source_revision_id": null,
+      "source_revision_utc": null,
+      "source_calendar_model": null,
+      "source_statement_rank": null,
+      "source_editorial_validation": null,
+      "source_informational_independence": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA4301",
+      "native": {
+        "record_id": "RS_PAST_NA4301",
+        "native_name": "Cecil Edwin Henry",
+        "authority_name": "Bawn; Cecil Edwin Henry (1908 - 2003)",
+        "native_DOB": "1908-11-06",
+        "raw_birthplace": "",
+        "birthplace_source_grade": "unknown",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "007967c0a58fa44d957cf56307eda1f979658984a634f6deab5858289971b02f"
+      },
+      "decision": "hold",
+      "status": "hold_before_request_work_identity_prior_acquisition_gate_unresolved",
+      "source_url": "https://makingscience.royalsociety.org/people/na4301/cecil-edwin-henry-bawn",
+      "source_ref": null,
+      "work_identity": "Potential official catalogue record frontend/republication of originalCalmviewNA4301; no independent-new-work or successful-old-work expansion authorization established from actual local acquisition history.",
+      "work_identity_gate": {
+        "written_utc": "2026-11-08T11:13:20.119292+00:00",
+        "record_id": "RS_PAST_NA4301",
+        "retained_url": "https://makingscience.royalsociety.org/people/na4301/cecil-edwin-henry-bawn",
+        "decision": "hold_without_external_request",
+        "work_identity_status": "potential_same_catalogue_record_republication_prior_acquisition_status_unresolved",
+        "reviewed_evidence": [
+          {
+            "path": "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v23_holds.json",
+            "sha256": "c6f2beff853e821d0b49f70270007475c86d594545356bd68d9bf5d09d038c99",
+            "finding": "Memoir10.1098/rsbm.2020.0034 and WhoWasWho10.1093/ww/9780199540884.013.U6837 firstattempts inaccessible, remainclosed. MakingScience retained as discovery-only unopened."
+          },
+          {
+            "path": "v23_sources_b.json",
+            "sha256": "05394ab256fad47c4d5a68b41913bf21e5a40b1e83d1dec9789402805adac8de",
+            "finding": "Target hold and actual navigation ledger contain only closed memoir/WhoWasWho attempts; no originalCalmview success/failure outcome established."
+          },
+          {
+            "path": "v45_scope_a.json",
+            "sha256": "b95a8d2ba6bdef1f05c1631149ed08cde541656f6a3cb829747bb9054c07e32a",
+            "finding": "Native official_birthplace_field_status=no_birthplace_field and originalCalmview seed do not establish prior success or absence of a failed same-work fullroute."
+          }
+        ],
+        "new_work_independence_established": false,
+        "old_same_catalogue_record_success_established": false,
+        "absence_of_previously_failed_fullroute_established": false,
+        "original_HTTP_acquisition_ledger_located": false,
+        "request_permitted_under_frozen_gate": false,
+        "external_requests_for_Bawn": 0,
+        "no_inference_from_different_URL": true
+      },
+      "actual_current_source_body_acquired": false,
+      "source_birthdate": null,
+      "source_birthdate_precision": "none_acquired_in_current_original_body",
+      "source_raw_birthplace": null,
+      "source_grade_observation_proposal": null,
+      "source_grade_adopted": null,
+      "reason": "Frozen scope permits one same-successful-oldwork fullbody expansion only when actual local prior success and no earlier failed fullroute are established. Native no_birthplace_field and seedURL are not acquisition receipts. Local retained records establish closed memoir/WhoWasWho attempts and unopenedMakingScience discovery only; originalCalmview success/failure remains unresolved. Hold prospectively without request, no URL-difference independence inference or variant of potentially failed work.",
+      "geography_decision": "unchanged_unknown",
+      "first_birthplace_adoption_candidate": false,
+      "source_quote": null,
+      "source_quote_word_count": 0,
+      "prior_closed_works_preserved": [
+        {
+          "url": "https://doi.org/10.1098/rsbm.2020.0034",
+          "source_ref": "turn2759049view2",
+          "tool_result": "notaccessible",
+          "original_body_acquired": false
+        },
+        {
+          "url": "https://doi.org/10.1093/ww/9780199540884.013.U6837",
+          "source_ref": "turn6890275view1",
+          "tool_result": "notaccessible",
+          "original_body_acquired": false
+        }
+      ],
+      "prior_discovery_fullname_and_numericDOB_not_promoted": true,
+      "qualified_new_DOB_conflict": false,
+      "qualified_new_birthplace_conflict": false,
+      "qualified_new_age_issue": false,
+      "native_and_prior_fields_unchanged": true
+    }
+  ],
+  "qualified_new_issue_candidates": [],
+  "new_DOB_or_place_conflicts": [],
+  "new_age_issue_candidates": [],
+  "source_quote_words_by_work": {
+    "https://history.rcp.ac.uk/inspiring-physicians/kenneth-dawson-bagshawe": 0,
+    "https://makingscience.royalsociety.org/people/na4301/cecil-edwin-henry-bawn": 0
+  },
+  "inherited_quote_accounting": "No new literal source quotations. Old target holds have no retained quoted original body clauses from these two leadworks. Prior Lancet discovery text, closed memoirs/WhoWasWho and MakingScience projections not copied or promoted.",
+  "intent_guard": {
+    "real_per_entry_written_utc": true,
+    "separate_successful_local_exit0_before_each_web_call": true,
+    "failed_or_unusable_work_not_retried": true
+  },
+  "budgets": {
+    "queries_max": 4,
+    "navigation_max": 8,
+    "queries_used": 0,
+    "navigation_used": 1
+  },
+  "raw_HTTP_status": null,
+  "raw_bytes_sha256": null,
+  "exact_request_utc": null,
+  "all_prior_issue_holds_and_source_boundaries_preserved": true,
+  "native_fields_original_DOB_grades_and_prior_facts_unchanged": true,
+  "source_data_master_replay_output_Git_mutations": false,
+  "original_source_caches_written": false,
+  "no_new_pipeline_wrapper_or_replay": true,
+  "source_exhaustion_claimed": false
+}
