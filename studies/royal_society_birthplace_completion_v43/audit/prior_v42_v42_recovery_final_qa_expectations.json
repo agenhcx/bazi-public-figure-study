@@ -1,0 +1,40 @@
+{
+  "final_canonical_sha256": "a0c04e44631478f82e562deab64d699fc273e6fc99fa35ba23f8a61d7e1f8717",
+  "accepted_record_ids": [],
+  "approved_issue_appends": {},
+  "recovery_source_review_path": "audit/recovery_source_review.json",
+  "recovery_source_review_sha256": "53e068c95705f1337e97f196d35c911787ab6b6061d640cabff90cad8692c0cd",
+  "recovery_artifact_sha256": {
+    "inputs/accepted_geography.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "inputs/reviewed_record_ids.json": "11c9324d871f81b92a14fa399d0e89d31b8d6ccb024cfc3decd4a97292574434",
+    "inputs/reviewed_native_rows.json": "421972d5602749d5df23d8d240e76883b0509e12803e882b17f3209120039065",
+    "audit/followup_holds.json": "cd861d68b55cb39a1119b60a12c6edd22a84d88ea4cbda42c63a53c358e9850d",
+    "audit/recovery_source_review.json": "53e068c95705f1337e97f196d35c911787ab6b6061d640cabff90cad8692c0cd",
+    "audit/recovery_provenance.json": "d0ee2495563e6b2ca870b60cd42de5415176bda3ec30330227299e686b73215c",
+    "audit/plan.json": "45e70674595e845ed6270bd91f127fe22f6ee1970acf2d30174396998b93d949",
+    "audit/parent_adjudication.json": "6b84ed1213f09707306b65e6f48ea3221af57d2258a4e8d6b861cd1a96678235",
+    "audit/source_class_adjudication.json": "6ed69814822c043786f0965abf9a6f9c5a4392225bd4cbe755487c291702f002",
+    "audit/v42_recovery_structure_review.json": "cba495a297fe8bf7fda1d66603db108e93a25a3a54eca4c1d793d685b6ff82fc",
+    "audit/interruption_checkpoint/checkpoint.json": "4d2f5ade2a17685d2b9b864f424186a331131c136e6f331e6e5e1b3fe1242aeb",
+    "audit/interruption_checkpoint/source_qa_reconstructed_summary.json": "3697f82f24dadf709841da45d859884b47c621f81c19e939598b47f1a8e00a17",
+    "audit/interruption_checkpoint/replay_preflight_reconstructed_summary.json": "0ddd3f76709696252c5c7a122405f7bd8556cc2373bcce91d9d73f61af8b70f1",
+    "audit/interruption_checkpoint/method_application_scope_v42.json": "c5c7594d271b6923725acad91612b8f53b3528383d3bf50f0658ccfa0e639796",
+    "audit/method_application_scope_v42.json": "c5c7594d271b6923725acad91612b8f53b3528383d3bf50f0658ccfa0e639796",
+    "METHOD_SCHEMA.md": "a696371c1c3160aaf4ce4b027bebd2b5c3fbc64956757eb7a51b68a2597bfe32"
+  },
+  "original_output_pins": {
+    "birthplace_rows.jsonl.gz": "433749a0b7ff0bfc62db8993f662cd928a4bc023418a54600259fdbea0b1537a",
+    "birthplaces.csv": "c4c1c00bbbb256d4e9a346f1540d053a3c701f9b3764418ac612651a3424eb12",
+    "changes.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "remaining_unknown_window.csv": "44d9bfc19a6943e8dc363d3b8f147bf2310e9ce7b636a5986dff28b82e783f67",
+    "summary.json": "d8c128a106aa04d04ed15897a36f438f9d4c4546fb7ec2d7e3223ddd88167ada"
+  },
+  "fresh_source_recovery_checks": 101,
+  "fresh_structure_checks": 55,
+  "original_historical_checks_not_new": {
+    "sourceQA": 171,
+    "preflight": 112,
+    "lightfinal": 48,
+    "observedstructure": 56
+  }
+}

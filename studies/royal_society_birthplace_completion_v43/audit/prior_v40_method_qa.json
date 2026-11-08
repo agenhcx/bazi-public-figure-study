@@ -1,0 +1,741 @@
+{
+  "schema": "UK_v40_canonical_community_person_place_method_QA_v1",
+  "reviewer": "/root/v40_source_qa",
+  "initial_written_utc": "2026-11-07T01:50:48.653618+00:00",
+  "status": "final_documentary_source_and_unchanged_method_application_review_passed",
+  "final_case_assessment_pending": false,
+  "blocking_issues": [],
+  "preliminary_checks_report": "v40_source_qa_preflight.json",
+  "preliminary_checks_passed": 29,
+  "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+  "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+  "method_application_scope_sha256": "b44c66bc0d7883aeef9650578d0b339a65b563942da3fe72976b05c0094cc1fc",
+  "method_application_scope_path": "audit/method_application_scope_v40.json",
+  "explicit_prospective_admission_method_amendment": false,
+  "no_new_admission_method_exception": true,
+  "historical_V36_method_amendment_preserved": true,
+  "scope_application_extension": true,
+  "method_reused_from_version": 36,
+  "new_method_exceptions": [],
+  "geography_fields_mutable": [
+    "geo_resolution_status",
+    "geography_decision",
+    "hemisphere",
+    "northern_birthplace_candidate",
+    "reason",
+    "southern_birthplace_separate"
+  ],
+  "new_versioned_context": "geography_followup_v40",
+  "reviewer_network_acquisitions": 0,
+  "production_code_or_outputs_mutated_by_reviewer": false,
+  "legacy_application_scopes": {
+    "audit/method_application_scope.json": "ae080b06f8abad9ed7575783486795c977e44ce5e5024bfa2096e16816a44d94",
+    "audit/method_application_scope_v38.json": "bd7540715a6b4649ffe79371e38ee2b650bd0176013fbb5418efa02b8995fad0",
+    "audit/method_application_scope_v39.json": "cc12b3159a035064dbde6a35e0778642fdb25d988e9e399617b216062127b17e"
+  },
+  "conceptual_assessment": "V40 applies the unchanged V36 admission method to six prospectively fixed records within the actual 56-record nonblank unknown pool. Every native personal-name component, exact displayed native DOB, coherent distinctive career, compatible acquired lifespan and frozen-place agreement remain mandatory. Only actual direct subject-born whole-region, actually followed person-born-place hyperlink plus acquired target-region, or actual P19/P131 path qualifies. Other whole regions require the existing single-hemisphere extent rule; historical colonial extent or nationality supplies no birth-region proof. Original native/DOB/BP grades and fields remain frozen. Nine issue inventories default to whole-file byte identity; a qualified current append requires all prior objects and a byte-exact prior_v39 snapshot. A metadata-only inventory cannot be treated as a records array. No fact decision is inferred from the preceding version.",
+  "limitations": [
+    "Documentary reviewer only: zero network acquisitions, no raw-source/pixel inspection, no production execution and no source/fact/audit/runtime/schema/production/Git changes. Checker and report writes are scratch only.",
+    "V40 reuses byte-exact V36 policy with a prospectively frozen audit/method_application_scope_v40.json. V37 unversioned and V38/V39 versioned scopes remain byteexact at their old runtime paths. No admission exception or old-gate relaxation.",
+    "Actually displayed exact-DOB agreement binds source identity only; it is not civil/calendar validation or a native DOB/BP grade upgrade. Unknown rank/calendar/editorial validation/informational independence/raw status/raw bytes/exact request time remain null.",
+    "Each accepted geographic edge is observed in acquired body/statement text and each nonterminal URI identifies the actual followed place node. Birth/death parenthetical relations are described as such rather than recast as a literal Born field. Worker actual-link following and root body verification are separate acquisition roles; neither implies informational independence.",
+    "Held cases receive no current geography. Missing acquired P19 or born-place proof is not verified universal absence. Rewritten summary/list/graph representations remain limited to discovery or observed link carriers; mirror projections and familiar city/nationality/work/death/centroid assumptions supply no accepted path.",
+    "Age-quality appends, if any, preserve same-source exact birth/death/reported age observations and conventional completed-year arithmetic without calendar/civil verification, alternate DOB, date/age repair, omitted-name exception or automatic new geographic adoption. Prior Waterfield/Spath/Desty objects remain unchanged.",
+    "Active13 DOB cases, two partial-place cases, separate Ewins/Barber holds, Tomes provisional-date record, metadata-only omitted-middle file and all other inherited issue objects/holds remain historical. Default inventory policy is whole-file byte identity; only qualified appended observations change an inventory.",
+    "Historical V35 and V29 queue audits retain their old bytes and as-of meaning. All 103 blank-window records remain outside the current geography-only scope.",
+    "Each worker reports per-operation exact durable intent separately validated with exit0 before web use; all recorded operations match those intents and budgets. First unusable/failed/challenged work closes without retry/variant/raw GET. Documentary QA validates retained ledgers and disclosures; it does not independently reconstruct HTTP timing or source authenticity.",
+    "Per-original-work quote accounting includes inherited observations and stays at most25 words. No full-source HTML/JSON/PDF/image/projection caches are distributed."
+  ],
+  "final_fact_review_utc": "2026-11-07T01:58:55.446486+00:00",
+  "final_checks_passed": 207,
+  "source_qa_report_sha256": "b2003a64a7e51193d61051e02fb87b0e9ca6387ec4a3d03af732607595c86e73",
+  "final_fact_review_scope": "Unchanged V36 method applied to fixed V40 six-record scope: 2 S3 geography-only accepted observations, 4 holds. All native personal-name components, exact displayed native DOB, compatible acquired lifespan, distinctive career, frozen original birthplace and actual birth-edge/target whole-region semantics reviewed. Original DOB/BP/native fields remain frozen. All nine issue inventories checked by complete bytes/object history; qualified appends require a byte-exact prior_v39 snapshot. Historical V35/V29 queue files and V37/V38/V39 runtime scope files remain byte-exact.",
+  "final_accepted_cases": [
+    {
+      "record_id": "RS_PAST_NA6434",
+      "observed_source_full_name": "Edmund James Mills",
+      "source_birthdate_as_displayed": "8 December 1840",
+      "source_lifespan": "1840-1921; actual displayed death21April1921",
+      "frozen_raw_birthplace": "London",
+      "frozen_birthplace_source_grade": "S1",
+      "proof_mode": "explicit_person_born_place_hyperlink_then_actual_target_place_region",
+      "source_birthplace_context": "ActualdirectbornLondon; explicitEngland qualifier acquired only from actualfollowed London target, not from personnationality.",
+      "place_binding_review": "Actual bornLondon exactly matches frozenLondon. LondonURI comes from actual personalbornlink result, not guessed citybinding. Originalofficialcatalogue LondonS1 remainsS1; newS3 support applies geographicregion only.",
+      "geographic_basis": "ActualpersonbornLondon hyperlink49 was followed. Actualclicked Londonbody explicitlyCountryEngland atL451 with England/southeastEngland lead. England whollyNorth under existingextentgate; no cityfamiliarity/nationality/school/work/death/centroid inference.",
+      "identity_review": [
+        "All native personal name components are actually displayed in the canonical body; no initials expansion or omitted-middle exception.",
+        "Exact displayed DOB and compatible lifespan match unchanged native authority. Distinctive career appears in the same acquired primary person body.",
+        "Actual linked birth locality exactly matches frozen raw locality; no incompatible actual DOB/place was chosen around, and no native date/calendar/grade is repaired."
+      ],
+      "source_grade_basis": "Unchanged V36 canonical original community-reference method at fixed V40 scope. Actual full native name, exact native date as displayed, compatible life and distinctive career; actual subject birthplace association link followed by worker to actual target geographical Country England. S3 geographic support only; original DOB/BP grades unchanged, no civil/editorial/independent validation.",
+      "caveats": [
+        "Root read normal canonical person and already observed actual target bodies; worker actually followed the birthplace link. Root did not reclick that birth edge. Parsed link-number changes are not authenticated source-version changes.",
+        "Terminal England is an actual region literal with unresolved target URI/QID left null. No personal country/QID/coordinate or finer street/point assigned.",
+        "Community editing, independence, calendar and raw revision authenticity remain unverified. Current root adjudication is complete; original worker provisional reports remain separate history.",
+        "All native DOB, raw birthplace, original source grades/claims/URLs/hashes/eligibility and previous facts stay unchanged.",
+        "Mills actual article displays a needs-more-citations maintenance notice. It remains low-tier community geographical support; no upgrade of original London/S1."
+      ],
+      "parent_source_ref": "turn4863943view0",
+      "worker_source_body_ref": "turn5721135view0",
+      "root_reclicked_edge": false,
+      "proof_chain": [
+        {
+          "source_url": "https://en.wikipedia.org/wiki/Edmund_James_Mills",
+          "source_node_label": "Edmund James Mills",
+          "source_node_uri": "https://en.wikipedia.org/wiki/Edmund_James_Mills",
+          "edge_property": "explicit_subject_born_place_hyperlink",
+          "tool_ref": "turn4863943view0",
+          "locator": "L106 fullEdmundJamesMills/life1840-1921/chemist-Parozone;L110 explicitbornLondon/exact8December1840/link48(worker49);L112-115GlasgowTechnicalChemistry;L118death1921. L104needs-more-citations notice.",
+          "acquisition_role": "root_actual_canonical_person_birthplace_link_observed_after_worker_actual_follow",
+          "target_kind": "entity",
+          "target_label": "London",
+          "target_uri": "https://en.wikipedia.org/wiki/London",
+          "source_qid": null,
+          "target_qid": null,
+          "actual_click_ref_id": "turn5721135view0",
+          "actual_click_link_id": 49,
+          "actual_click_result_ref": "turn3174698view0",
+          "worker_actually_followed_edge": true,
+          "root_reclicked_person_link": false,
+          "worker_reported_target_kind": "actual_followed_canonical_place_URI",
+          "worker_tool_ref": "turn5721135view0",
+          "worker_follow_link_result_ref": "turn3174698view0"
+        },
+        {
+          "source_url": "https://en.wikipedia.org/wiki/London",
+          "source_node_label": "London",
+          "source_node_uri": "https://en.wikipedia.org/wiki/London",
+          "edge_property": "actual_target_place_country_region_literal",
+          "tool_ref": "turn4863943view1",
+          "initial_click_result_ref": "turn3174698view0",
+          "locator": "L442 actualcapitalEngland/L451CountryEngland; observedLondongeographiccity, no coordinates used.",
+          "acquisition_role": "root_actual_previously_observed_person_birthplace_link_target_after_worker_actual_follow",
+          "target_kind": "literal",
+          "target_label": "England",
+          "target_uri": null,
+          "source_qid": null,
+          "target_qid": null,
+          "target_uri_limit": "England actually displayed as target-country literal; no EnglandURI orQID guessed/followed and no personalcountry/QID field assigned.",
+          "worker_reported_target_kind": "literal_whole_region",
+          "source_node_type": "geographic_city",
+          "source_quote": "England",
+          "source_quote_word_count": 1
+        }
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA669",
+      "observed_source_full_name": "Edward Waymouth Reid",
+      "source_birthdate_as_displayed": "11 October 1862",
+      "source_lifespan": "1862-1948; actual displayed death10March1948",
+      "frozen_raw_birthplace": "Canterbury",
+      "frozen_birthplace_source_grade": "S2",
+      "proof_mode": "explicit_person_born_place_hyperlink_then_actual_target_place_region",
+      "source_birthplace_context": "Actual fullsubject lead pairs birthdate11October1862 with linkedCanterbury before the dash and deathdate10March1948 with Edinburgh after it. This is a birth/death parenthetical relation; no standalone literal was-born-in clause or Born infobox is claimed.",
+      "place_binding_review": "Actual linked birth-parenthetical locality Canterbury exactly matches frozenrawCanterbury. Actual targetEngland is broader geographic context, not substitutedcity or an unobservedalias. OriginalCanterburyS2/nativefields remain frozen.",
+      "geographic_basis": "Actually observed source birth/death parenthetical hyperlinks Canterbury in its birth half. Worker actually followed link39 to actual Canterbury target, which explicitly states Country England and city in Kent,England. England wholly North under existing whole-region gate. No familiarity, nationality British, Dundeecareer, Edinburghdeath or pointcoordinate inference.",
+      "identity_review": [
+        "All native personal name components are actually displayed in the canonical body; no initials expansion or omitted-middle exception.",
+        "Exact displayed DOB and compatible lifespan match unchanged native authority. Distinctive career appears in the same acquired primary person body.",
+        "Actual linked birth locality exactly matches frozen raw locality; no incompatible actual DOB/place was chosen around, and no native date/calendar/grade is repaired."
+      ],
+      "source_grade_basis": "Unchanged V36 canonical original community-reference method at fixed V40 scope. Actual full native name, exact native date as displayed, compatible life and distinctive career; actual subject birthplace association link followed by worker to actual target geographical Country England. S3 geographic support only; original DOB/BP grades unchanged, no civil/editorial/independent validation.",
+      "caveats": [
+        "Root read normal canonical person and already observed actual target bodies; worker actually followed the birthplace link. Root did not reclick that birth edge. Parsed link-number changes are not authenticated source-version changes.",
+        "Terminal England is an actual region literal with unresolved target URI/QID left null. No personal country/QID/coordinate or finer street/point assigned.",
+        "Community editing, independence, calendar and raw revision authenticity remain unverified. Current root adjudication is complete; original worker provisional reports remain separate history.",
+        "All native DOB, raw birthplace, original source grades/claims/URLs/hashes/eligibility and previous facts stay unchanged.",
+        "The actual lead associates the first exact life date with Canterbury and the second with Edinburgh. Only the birth-half Canterbury hyperlink is used; no standalone Born field or was-born clause is claimed. This is the unchanged explicit personal birth-association mode, not an admission exception."
+      ],
+      "parent_source_ref": "turn4863943view2",
+      "worker_source_body_ref": "turn8536039view0",
+      "root_reclicked_edge": false,
+      "proof_chain": [
+        {
+          "source_url": "https://en.wikipedia.org/wiki/Edward_Waymouth_Reid",
+          "source_node_uri": "https://en.wikipedia.org/wiki/Edward_Waymouth_Reid",
+          "source_node_label": "Edward Waymouth Reid",
+          "edge_property": "explicit_subject_birth_place_hyperlink_in_birth_death_parenthetical",
+          "tool_ref": "turn4863943view2",
+          "locator": "L106 fullEdwardWaymouthReid/(11October1862,Canterbury link38 -10March1948,Edinburgh)/physiologist;L108Dundee46years/1935retirement;L113FRS1898/L115-116osmometer-epithelialtransport. Birth half of life parenthetical, not literalwasborn clause; workerbirthlink39 differs parsedrendering only.",
+          "acquisition_role": "root_actual_canonical_person_birthplace_link_observed_after_worker_actual_follow",
+          "target_kind": "entity",
+          "target_label": "Canterbury",
+          "target_uri": "https://en.wikipedia.org/wiki/Canterbury",
+          "source_qid": null,
+          "target_qid": null,
+          "observed_anchor": "Canterbury",
+          "actual_click": {
+            "ref_id": "turn8536039view0",
+            "id": 39,
+            "result_ref": "turn7451081view0",
+            "observed_result_url": "https://en.wikipedia.org/wiki/Canterbury"
+          },
+          "worker_reported_target_kind": "actual_link_target",
+          "root_reclicked_person_link": false,
+          "worker_tool_ref": "turn8536039view0",
+          "worker_follow_link_result_ref": "turn7451081view0"
+        },
+        {
+          "source_url": "https://en.wikipedia.org/wiki/Canterbury",
+          "source_node_uri": "https://en.wikipedia.org/wiki/Canterbury",
+          "source_node_label": "Canterbury",
+          "edge_property": "actual_target_place_explicit_country_region_literal",
+          "tool_ref": "turn4863943view3",
+          "locator": "L244 actualCountryEngland/L255CanterburycityinKentEngland; actualtargetgeographiccity, no coordinate inference.",
+          "acquisition_role": "root_actual_previously_observed_person_birthplace_link_target_after_worker_actual_follow",
+          "target_kind": "literal",
+          "target_label": "England",
+          "target_uri": null,
+          "source_qid": null,
+          "target_qid": null,
+          "target_uri_limit": "England anchor177 observed but not followed; terminal country-region literal sufficient. No England URI/QID guessed.",
+          "worker_reported_target_kind": "literal",
+          "source_node_type": "geographic_city",
+          "source_quote": "England",
+          "source_quote_word_count": 1
+        }
+      ]
+    }
+  ],
+  "final_held_cases": [
+    {
+      "record_id": "RS_PAST_NA187",
+      "status": "held_no_actual_person_born_place_region_or_P19_chain",
+      "hold_type": "actual_canonical_person_body_without_birthplace_and_rewritten_Wikidata_representation_not_actual_statement_proof",
+      "reason": "Actual English canonicalpersonbody supplies all George Douglas Hutton Bell components/exact18October1905/coherentplantbreeding-PBIcareer/compatible27June1993 but no subjectbirthplace. English nationality is not birthregion. ActualWikidataitemclick explicitlylabelled rewrittensummary; no geographicstatementproof or authenticatedP19absence/completeness. Carrier lists only acquiredEnglish article, so no new distinctlanguageoriginallead observed. No actualpersonalbirthplaceedge connects frozenSwansea to wholeWales; no nationality/work/school/award/geographicfamiliarity inference.",
+      "no_new_geographic_assignment": true
+    },
+    {
+      "record_id": "RS_PAST_NA2863",
+      "status": "held_no_admitted_birthplace_region_chain_matching_literal_frozen_place",
+      "hold_type": "English_Urdu_no_birthplace_Bengali_different_locality_labels_without_acquired_binding_and_generic_UK_only",
+      "reason": "ActualEnglishfullnative/exactDOB/distinctivechemistcareer/compatiblelife has no personalbirthplace. UrduactualfullLatin/exactDOB/compatiblelife also no birthplace, and69reportedversus68computed retained separately. ActualBengali birthfield/bornclause states StDunstanWest,Middlesex,UK, without frozenLondon/FleetStreetcomponent or an acquired relation establishing consistency. GenericUKalone also fails unchanged constituent-regiongate. No invented localityequivalence, definitiveincompatibility verdict, fatherFleetStreet/work/death/nationality inference or adoption.",
+      "no_new_geographic_assignment": true
+    },
+    {
+      "record_id": "RS_PAST_NA5003",
+      "status": "hold_no_new_qualified_geographic_support",
+      "hold_type": "bounded_canonical_person_discovery_no_subject_body_or_actual_P19_chain",
+      "reason": "ThreeDudleyqueries(twoWikipedia,oneWikidata) found no observed canonicalpersonURL orsubjectQID. FirstactualFellowsDEFlistURL yields explicitlylabelled rewritten-summary representation; cachedfind displays samefullname/date/life only and no observedsubjecthyperlink orbirthplace. No actual canonicalpersonbody or actualP19/P131 acquired. StoredLisbon cannot implyPortugal by familiarity/nationality/navalservice/father/work/death. No historicalempireextent substitution.",
+      "no_new_geographic_assignment": true
+    },
+    {
+      "record_id": "RS_PAST_NA6655",
+      "status": "held_no_qualified_current_canonical_person_birth_region_proof",
+      "hold_type": "bounded_canonical_person_discovery_without_actual_person_body_or_observed_item_URI",
+      "reason": "Three boundedGrovesqueries acrosssystem2/system1 didnotdiscover actualcanonicalWikipedia personarticle or observedWikidataitemURI. Frozenlookup_qid isblank; no QID or canonicalpersonURL guessed. No currentactualfullnative/exactDOB/career/lifespan/personbornHighgateedge or actualHighgatetargetregion/P19P131 acquired. KeepHighgateS2/year1841priorcontext and unknown; familiarHighgatecity/nationality/work/deathnotproof.",
+      "no_new_geographic_assignment": true
+    }
+  ],
+  "final_source_counts": {
+    "worker_queries": 10,
+    "root_queries": 1,
+    "total_queries": 11,
+    "worker_navigation_attempts": 10,
+    "worker_source_open_operations": 5,
+    "worker_click_operations": 5,
+    "root_source_opens": 8,
+    "root_click_operations": 1,
+    "total_navigation_attempts": 19,
+    "total_source_open_operations": 13,
+    "total_click_operations": 6,
+    "worker_parsed_finds": 5,
+    "root_parsed_finds": 0,
+    "total_parsed_finds": 5,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "final_protocol_disclosure": "All9 inventories/fulltargetcontexts/oldindividualholds read beforeworkerqueries; root nineinventoryJSONcontrols/pins read beforefirstrootquery. Everyexact query/open/click/find has durableintent and separateexit0 validation. Firstfailed/textlesswork closed, no variant/rawGET. Root1locatorquery/8opens/1discoveryclick/0find; workers10queries/5opens5clicks/5cachedfinds. Counts include context/redlinkdiscovery views, not independentworks/HTTPrequests. Worker non-schema target_kind labels normalized entity/literal in currentfacts without altering observed edges; workerreports byte-preserved.",
+  "root_acquisition_observations": [
+    {
+      "written_utc": "2026-11-07T01:50:44.639662+00:00",
+      "record_id": "RS_PAST_NA2863",
+      "operation": "source_locator_query",
+      "engine": "system1",
+      "query": "\"Alexander Pedler\" (site:de.wikipedia.org OR site:fr.wikipedia.org)",
+      "purpose": "One permitted root locator query for a distinct canonical community-language person work. English/Urdu no birthplace; Bengali StDunstan/Middlesex wording is unqualified compatible-locality uncertainty, not an actual proven incompatible city/DOB. No source shopping around actual conflict, no guessed URL or retry of failedwork. Any actual date/place contradiction holds.",
+      "ref": "turn4304600search8",
+      "acquisition_role": "root_first_actual_source_or_context_observation",
+      "adopted_geography": false,
+      "outcome": "Locator returned German surname list only as distinct lead; other results are discovery projections, not new eligible body proof."
+    },
+    {
+      "written_utc": "2026-11-07T01:51:19.594811+00:00",
+      "record_id": "RS_PAST_NA2863",
+      "operation": "open",
+      "url": "https://de.wikipedia.org/wiki/Pedler",
+      "purpose": "First actual German surname-list body from observed locator query result turn4304600search8, solely to inspect whether actual Alexander subject hyperlink exists. Not itself DOB/career/birthplace proof; no guessed person URI or redlink admission.",
+      "ref": "turn3034609view0",
+      "acquisition_role": "root_first_actual_source_or_context_observation",
+      "adopted_geography": false,
+      "outcome": "Actual surname listL94 Alexander1849-1918chemist hyperlink31; not full personalbirth proof."
+    },
+    {
+      "written_utc": "2026-11-07T01:51:35.143751+00:00",
+      "record_id": "RS_PAST_NA2863",
+      "operation": "click",
+      "ref_id": "turn3034609view0",
+      "id": 31,
+      "purpose": "First actual follow of observed AlexanderPedler hyperlink31 in German surname list L94, to inspect canonical person body. List lifespan/career only not birthplace proof. No guessed person URI or samefailedwork variant.",
+      "ref": "turn4750609view0",
+      "acquisition_role": "root_actual_discovery_redlink_creation_UI_not_existing_person_body_no_submission",
+      "adopted_geography": false,
+      "actual_result_url": "https://de.wikipedia.org/wiki/Alexander_Pedler?action=edit&redlink=1",
+      "outcome": "Actual click resolves action=edit&redlink=1 creation UI, no existingpersonbody acquired. Stopped; no article created, editor submission, canonical-URLvariant or retry."
+    },
+    {
+      "written_utc": "2026-11-07T01:52:30.514195+00:00",
+      "record_id": "RS_PAST_NA6434",
+      "operation": "open",
+      "url": "https://en.wikipedia.org/wiki/Edmund_James_Mills",
+      "lineno": 110,
+      "purpose": "First root actual observed person/target body verification. Mills explicit bornLondon link; Reid birth-death parenthetical Canterbury link (not claimed wasborn wording); actual England target regions. Pedler normal English/Urdu age identity/date comparison and Bengali unqualified StDunstan-Middlesex wording only, no inferred equivalence or positivegeo. Unknown metadata stays null.",
+      "ref": "turn4863943view0",
+      "acquisition_role": "root_first_actual_source_or_context_observation",
+      "adopted_geography": true
+    },
+    {
+      "written_utc": "2026-11-07T01:52:30.514279+00:00",
+      "record_id": "RS_PAST_NA6434",
+      "operation": "open",
+      "url": "https://en.wikipedia.org/wiki/London",
+      "lineno": 440,
+      "purpose": "First root actual observed person/target body verification. Mills explicit bornLondon link; Reid birth-death parenthetical Canterbury link (not claimed wasborn wording); actual England target regions. Pedler normal English/Urdu age identity/date comparison and Bengali unqualified StDunstan-Middlesex wording only, no inferred equivalence or positivegeo. Unknown metadata stays null.",
+      "ref": "turn4863943view1",
+      "acquisition_role": "root_first_actual_source_or_context_observation",
+      "adopted_geography": true
+    },
+    {
+      "written_utc": "2026-11-07T01:52:30.514283+00:00",
+      "record_id": "RS_PAST_NA669",
+      "operation": "open",
+      "url": "https://en.wikipedia.org/wiki/Edward_Waymouth_Reid",
+      "lineno": 100,
+      "purpose": "First root actual observed person/target body verification. Mills explicit bornLondon link; Reid birth-death parenthetical Canterbury link (not claimed wasborn wording); actual England target regions. Pedler normal English/Urdu age identity/date comparison and Bengali unqualified StDunstan-Middlesex wording only, no inferred equivalence or positivegeo. Unknown metadata stays null.",
+      "ref": "turn4863943view2",
+      "acquisition_role": "root_first_actual_source_or_context_observation",
+      "adopted_geography": true
+    },
+    {
+      "written_utc": "2026-11-07T01:52:30.514285+00:00",
+      "record_id": "RS_PAST_NA669",
+      "operation": "open",
+      "url": "https://en.wikipedia.org/wiki/Canterbury",
+      "lineno": 240,
+      "purpose": "First root actual observed person/target body verification. Mills explicit bornLondon link; Reid birth-death parenthetical Canterbury link (not claimed wasborn wording); actual England target regions. Pedler normal English/Urdu age identity/date comparison and Bengali unqualified StDunstan-Middlesex wording only, no inferred equivalence or positivegeo. Unknown metadata stays null.",
+      "ref": "turn4863943view3",
+      "acquisition_role": "root_first_actual_source_or_context_observation",
+      "adopted_geography": true
+    },
+    {
+      "written_utc": "2026-11-07T01:52:30.514286+00:00",
+      "record_id": "RS_PAST_NA2863",
+      "operation": "open",
+      "url": "https://en.wikipedia.org/wiki/Alexander_Pedler",
+      "lineno": 105,
+      "purpose": "First root actual observed person/target body verification. Mills explicit bornLondon link; Reid birth-death parenthetical Canterbury link (not claimed wasborn wording); actual England target regions. Pedler normal English/Urdu age identity/date comparison and Bengali unqualified StDunstan-Middlesex wording only, no inferred equivalence or positivegeo. Unknown metadata stays null.",
+      "ref": "turn4342016view0",
+      "acquisition_role": "root_first_actual_source_or_context_observation",
+      "adopted_geography": false
+    },
+    {
+      "written_utc": "2026-11-07T01:52:30.514290+00:00",
+      "record_id": "RS_PAST_NA2863",
+      "operation": "open",
+      "url": "https://ur.wikipedia.org/wiki/%D8%A7%D9%84%DB%8C%DA%AF%D8%B2%DB%8C%D9%86%DA%88%D8%B1_%D9%BE%DB%8C%DA%88%D9%84%D8%B1",
+      "lineno": 105,
+      "purpose": "First root actual observed person/target body verification. Mills explicit bornLondon link; Reid birth-death parenthetical Canterbury link (not claimed wasborn wording); actual England target regions. Pedler normal English/Urdu age identity/date comparison and Bengali unqualified StDunstan-Middlesex wording only, no inferred equivalence or positivegeo. Unknown metadata stays null.",
+      "ref": "turn4342016view1",
+      "acquisition_role": "root_first_actual_source_or_context_observation",
+      "adopted_geography": false
+    },
+    {
+      "written_utc": "2026-11-07T01:52:30.514291+00:00",
+      "record_id": "RS_PAST_NA2863",
+      "operation": "open",
+      "url": "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%B2%E0%A7%87%E0%A6%95%E0%A6%9C%E0%A6%BE%E0%A6%A8%E0%A7%8D%E0%A6%A1%E0%A6%BE%E0%A6%B0_%E0%A6%AA%E0%A7%87%E0%A6%A1%E0%A6%B2%E0%A6%BE%E0%A6%B0",
+      "lineno": 108,
+      "purpose": "First root actual observed person/target body verification. Mills explicit bornLondon link; Reid birth-death parenthetical Canterbury link (not claimed wasborn wording); actual England target regions. Pedler normal English/Urdu age identity/date comparison and Bengali unqualified StDunstan-Middlesex wording only, no inferred equivalence or positivegeo. Unknown metadata stays null.",
+      "ref": "turn4342016view2",
+      "acquisition_role": "root_first_actual_source_or_context_observation",
+      "adopted_geography": false,
+      "outcome": "Actual Bengali birth StDunstanWest,Middlesex,UK L106-107/L121; fatherFleetStreet and schoolLondon not subjectbornLondon. No raw-address/parish equivalence or definite incompatiblecity conclusion, no placeconflict append. Reported Bengali68 not chosen to clear Urdu69."
+    }
+  ],
+  "followup_holds_sha256_at_review": "1c3dcd1ddcf3817d8f7bd0f34c764654b290d8122f08aeff425f4c8b5ceda360",
+  "parent_adjudication_sha256_at_review": "0a4b773e09174ea37ad7b922ac69c664df330f9a3dd1e9fa6ce60bfbfec4b22c",
+  "root_followups_sha256_at_review": "42daef26ef2db6ad6347860c140a383fc16370330068f8a7b1bba2d28bab72c6",
+  "root_intent_sha256_at_review": "1fae30e132312006e509c1389bffcac498e76a534e9c152d645f0fbdb0a5c7a9",
+  "worker_source_report_sha256_at_review": {
+    "a": "0bf1f630e057b6efcdb1fff46869b660a0c7bda5574c14ba833584d68b3f8220",
+    "b": "13d6016a7ea3eef4387d62283e161bfcf9ca83ca57def6b1bd30abbf2dc18b18",
+    "c": "bf5cd0eb9b79c2ee87c3524fcbd7f16e39057e3d1bd5aa27d7c30fdb2df6e2e0"
+  },
+  "worker_intent_sha256_at_review": {
+    "a": "75fd7c43c1b39db9e12425d23e48ba14dad055b0ee006c3787f6a4fdb500fee0",
+    "b": "8451024fc1f2c467cc2c54f4a4b9265d65a14bb1a3ce0e754f145fc3a182f119",
+    "c": "f464cc3dc9aabc2d58a17ce58a325a42ade8d2a8f878c21be0ab383451e88cd5"
+  },
+  "accepted_fact_sha256_at_review": "82afb93120b55e327f27ffa28f3d118e4f60a737991f70a05e9d822a00334d91",
+  "accepted_geography_sha256_at_review": "82afb93120b55e327f27ffa28f3d118e4f60a737991f70a05e9d822a00334d91",
+  "active_DOB_conflicts_sha256_at_review": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+  "source_derived_age_inconsistencies_sha256_at_review": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+  "prior_v39_source_derived_age_inconsistencies_sha256_at_review": "0874cda202bd6e9465d3d76c9833f53ac67a273093f18a0e31ea9d3468960268",
+  "birthplace_source_conflicts_sha256_at_review": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+  "source_class_adjudication_sha256_at_review": "55f0f41b967037a36330807187259452b51cf4f90c7ebc15852f622ebe01e012",
+  "historical_v35_geography_first_pass_queue_closeout_sha256_at_review": "56fd3053935afc42fe2f9cf301bb66bc2bc6839fa9483467cd03e602fb61be3b",
+  "historical_v29_first_pass_queue_closeout_sha256_at_review": "29d5a08c382fc5d1587c99e09a43a3c6c4559f9c971ef4efd5b8fb3f05407503",
+  "method_preregistration_sha256_at_review": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+  "method_application_scope_sha256_at_review": "b44c66bc0d7883aeef9650578d0b339a65b563942da3fe72976b05c0094cc1fc",
+  "legacy_V37_method_application_scope_sha256_at_review": "ae080b06f8abad9ed7575783486795c977e44ce5e5024bfa2096e16816a44d94",
+  "legacy_V38_method_application_scope_sha256_at_review": "bd7540715a6b4649ffe79371e38ee2b650bd0176013fbb5418efa02b8995fad0",
+  "legacy_V39_method_application_scope_sha256_at_review": "cc12b3159a035064dbde6a35e0778642fdb25d988e9e399617b216062127b17e",
+  "method_schema_sha256_at_review": "40c60a43b33be15fc7369fd75d5464ec3023d7fd0c6177f3550d45f820df4bd9",
+  "accepted_geographic_bindings": [
+    {
+      "record_id": "RS_PAST_NA6434",
+      "native_DOB": "1840-12-08",
+      "native_authority": "Mills; Edmund James (1840 - 1921)",
+      "observed_source_full_name": "Edmund James Mills",
+      "source_birthdate": "1840-12-08",
+      "source_birthdate_as_displayed": "8 December 1840",
+      "frozen_raw_birthplace": "London",
+      "frozen_BP_source_grade": "S1",
+      "source_birthplace_context": "ActualdirectbornLondon; explicitEngland qualifier acquired only from actualfollowed London target, not from personnationality.",
+      "new_geographic_grade": "S3",
+      "new_hemisphere": "north",
+      "proof_mode": "explicit_person_born_place_hyperlink_then_actual_target_place_region",
+      "proof_chain": [
+        {
+          "source_url": "https://en.wikipedia.org/wiki/Edmund_James_Mills",
+          "source_node_label": "Edmund James Mills",
+          "source_node_uri": "https://en.wikipedia.org/wiki/Edmund_James_Mills",
+          "edge_property": "explicit_subject_born_place_hyperlink",
+          "tool_ref": "turn4863943view0",
+          "locator": "L106 fullEdmundJamesMills/life1840-1921/chemist-Parozone;L110 explicitbornLondon/exact8December1840/link48(worker49);L112-115GlasgowTechnicalChemistry;L118death1921. L104needs-more-citations notice.",
+          "acquisition_role": "root_actual_canonical_person_birthplace_link_observed_after_worker_actual_follow",
+          "target_kind": "entity",
+          "target_label": "London",
+          "target_uri": "https://en.wikipedia.org/wiki/London",
+          "source_qid": null,
+          "target_qid": null,
+          "actual_click_ref_id": "turn5721135view0",
+          "actual_click_link_id": 49,
+          "actual_click_result_ref": "turn3174698view0",
+          "worker_actually_followed_edge": true,
+          "root_reclicked_person_link": false,
+          "worker_reported_target_kind": "actual_followed_canonical_place_URI",
+          "worker_tool_ref": "turn5721135view0",
+          "worker_follow_link_result_ref": "turn3174698view0"
+        },
+        {
+          "source_url": "https://en.wikipedia.org/wiki/London",
+          "source_node_label": "London",
+          "source_node_uri": "https://en.wikipedia.org/wiki/London",
+          "edge_property": "actual_target_place_country_region_literal",
+          "tool_ref": "turn4863943view1",
+          "initial_click_result_ref": "turn3174698view0",
+          "locator": "L442 actualcapitalEngland/L451CountryEngland; observedLondongeographiccity, no coordinates used.",
+          "acquisition_role": "root_actual_previously_observed_person_birthplace_link_target_after_worker_actual_follow",
+          "target_kind": "literal",
+          "target_label": "England",
+          "target_uri": null,
+          "source_qid": null,
+          "target_qid": null,
+          "target_uri_limit": "England actually displayed as target-country literal; no EnglandURI orQID guessed/followed and no personalcountry/QID field assigned.",
+          "worker_reported_target_kind": "literal_whole_region",
+          "source_node_type": "geographic_city",
+          "source_quote": "England",
+          "source_quote_word_count": 1
+        }
+      ],
+      "identity_review": [
+        "All native personal name components are actually displayed in the canonical body; no initials expansion or omitted-middle exception.",
+        "Exact displayed DOB and compatible lifespan match unchanged native authority. Distinctive career appears in the same acquired primary person body.",
+        "Actual linked birth locality exactly matches frozen raw locality; no incompatible actual DOB/place was chosen around, and no native date/calendar/grade is repaired."
+      ],
+      "source_lifespan": "1840-1921; actual displayed death21April1921",
+      "source_locator": "L106 fullEdmundJamesMills/life1840-1921/chemist-Parozone;L110 explicitbornLondon/exact8December1840/link48(worker49);L112-115GlasgowTechnicalChemistry;L118death1921. L104needs-more-citations notice.L442 actualcapitalEngland/L451CountryEngland; observedLondongeographiccity, no coordinates used.",
+      "source_grade_basis": "Unchanged V36 canonical original community-reference method at fixed V40 scope. Actual full native name, exact native date as displayed, compatible life and distinctive career; actual subject birthplace association link followed by worker to actual target geographical Country England. S3 geographic support only; original DOB/BP grades unchanged, no civil/editorial/independent validation.",
+      "source_body_acquisition_role": "root_actual_canonical_person_birth_association_and_already_observed_place_target_after_worker_actual_follow",
+      "parent_source_ref": "turn4863943view0",
+      "worker_source_body_ref": "turn5721135view0",
+      "root_reclicked_edge": false
+    },
+    {
+      "record_id": "RS_PAST_NA669",
+      "native_DOB": "1862-10-11",
+      "native_authority": "Reid; Edward Waymouth (1862 - 1948)",
+      "observed_source_full_name": "Edward Waymouth Reid",
+      "source_birthdate": "1862-10-11",
+      "source_birthdate_as_displayed": "11 October 1862",
+      "frozen_raw_birthplace": "Canterbury",
+      "frozen_BP_source_grade": "S2",
+      "source_birthplace_context": "Actual fullsubject lead pairs birthdate11October1862 with linkedCanterbury before the dash and deathdate10March1948 with Edinburgh after it. This is a birth/death parenthetical relation; no standalone literal was-born-in clause or Born infobox is claimed.",
+      "new_geographic_grade": "S3",
+      "new_hemisphere": "north",
+      "proof_mode": "explicit_person_born_place_hyperlink_then_actual_target_place_region",
+      "proof_chain": [
+        {
+          "source_url": "https://en.wikipedia.org/wiki/Edward_Waymouth_Reid",
+          "source_node_uri": "https://en.wikipedia.org/wiki/Edward_Waymouth_Reid",
+          "source_node_label": "Edward Waymouth Reid",
+          "edge_property": "explicit_subject_birth_place_hyperlink_in_birth_death_parenthetical",
+          "tool_ref": "turn4863943view2",
+          "locator": "L106 fullEdwardWaymouthReid/(11October1862,Canterbury link38 -10March1948,Edinburgh)/physiologist;L108Dundee46years/1935retirement;L113FRS1898/L115-116osmometer-epithelialtransport. Birth half of life parenthetical, not literalwasborn clause; workerbirthlink39 differs parsedrendering only.",
+          "acquisition_role": "root_actual_canonical_person_birthplace_link_observed_after_worker_actual_follow",
+          "target_kind": "entity",
+          "target_label": "Canterbury",
+          "target_uri": "https://en.wikipedia.org/wiki/Canterbury",
+          "source_qid": null,
+          "target_qid": null,
+          "observed_anchor": "Canterbury",
+          "actual_click": {
+            "ref_id": "turn8536039view0",
+            "id": 39,
+            "result_ref": "turn7451081view0",
+            "observed_result_url": "https://en.wikipedia.org/wiki/Canterbury"
+          },
+          "worker_reported_target_kind": "actual_link_target",
+          "root_reclicked_person_link": false,
+          "worker_tool_ref": "turn8536039view0",
+          "worker_follow_link_result_ref": "turn7451081view0"
+        },
+        {
+          "source_url": "https://en.wikipedia.org/wiki/Canterbury",
+          "source_node_uri": "https://en.wikipedia.org/wiki/Canterbury",
+          "source_node_label": "Canterbury",
+          "edge_property": "actual_target_place_explicit_country_region_literal",
+          "tool_ref": "turn4863943view3",
+          "locator": "L244 actualCountryEngland/L255CanterburycityinKentEngland; actualtargetgeographiccity, no coordinate inference.",
+          "acquisition_role": "root_actual_previously_observed_person_birthplace_link_target_after_worker_actual_follow",
+          "target_kind": "literal",
+          "target_label": "England",
+          "target_uri": null,
+          "source_qid": null,
+          "target_qid": null,
+          "target_uri_limit": "England anchor177 observed but not followed; terminal country-region literal sufficient. No England URI/QID guessed.",
+          "worker_reported_target_kind": "literal",
+          "source_node_type": "geographic_city",
+          "source_quote": "England",
+          "source_quote_word_count": 1
+        }
+      ],
+      "identity_review": [
+        "All native personal name components are actually displayed in the canonical body; no initials expansion or omitted-middle exception.",
+        "Exact displayed DOB and compatible lifespan match unchanged native authority. Distinctive career appears in the same acquired primary person body.",
+        "Actual linked birth locality exactly matches frozen raw locality; no incompatible actual DOB/place was chosen around, and no native date/calendar/grade is repaired."
+      ],
+      "source_lifespan": "1862-1948; actual displayed death10March1948",
+      "source_locator": "L106 fullEdwardWaymouthReid/(11October1862,Canterbury link38 -10March1948,Edinburgh)/physiologist;L108Dundee46years/1935retirement;L113FRS1898/L115-116osmometer-epithelialtransport. Birth half of life parenthetical, not literalwasborn clause; workerbirthlink39 differs parsedrendering only.L244 actualCountryEngland/L255CanterburycityinKentEngland; actualtargetgeographiccity, no coordinate inference.",
+      "source_grade_basis": "Unchanged V36 canonical original community-reference method at fixed V40 scope. Actual full native name, exact native date as displayed, compatible life and distinctive career; actual subject birthplace association link followed by worker to actual target geographical Country England. S3 geographic support only; original DOB/BP grades unchanged, no civil/editorial/independent validation.",
+      "source_body_acquisition_role": "root_actual_canonical_person_birth_association_and_already_observed_place_target_after_worker_actual_follow",
+      "parent_source_ref": "turn4863943view2",
+      "worker_source_body_ref": "turn8536039view0",
+      "root_reclicked_edge": false
+    }
+  ],
+  "new_source_quality_observations": [
+    {
+      "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+      "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+      "method_application_scope_sha256": "b44c66bc0d7883aeef9650578d0b339a65b563942da3fe72976b05c0094cc1fc",
+      "publication_date": null,
+      "publication_date_precision": "not_observed",
+      "source_revision_id": null,
+      "source_revision_utc": null,
+      "source_calendar_model": null,
+      "source_statement_rank": null,
+      "source_editorial_validation": null,
+      "source_informational_independence": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA2863",
+      "authority_name": "Pedler; Sir; Alexander (1849 - 1918)",
+      "native_dob": "1849-05-21",
+      "source_url": "https://ur.wikipedia.org/wiki/%D8%A7%D9%84%DB%8C%DA%AF%D8%B2%DB%8C%D9%86%DA%88%D8%B1_%D9%BE%DB%8C%DA%88%D9%84%D8%B1",
+      "source_title": "الیگزینڈر پیڈلر – Wikipedia (Urdu)",
+      "worker_source_ref": "turn7895065view1",
+      "worker_cached_find_ref": "turn4792973view1",
+      "parent_source_ref": "turn4342016view1",
+      "source_locator": "Rootturn4342016view1:L11421May1849/L11513May1918(69سال)/L127actualLatinAlexanderPedler/L119chemist/L121Calcutta/L116FRS/L132EnglishWikipedia credit; workerturn7895065view1 andcachedfindturn4792973view1.",
+      "observed_source_full_name": "Alexander Pedler",
+      "observed_source_birthdate": "1849-05-21",
+      "observed_source_death_date": "1918-05-13",
+      "observed_reported_age": 69,
+      "source_reported_age_literal": "69 سال",
+      "arithmetic_age_from_observed_dates": 68,
+      "arithmetic_basis": "Conventional completed years:1918−1849 minus1 becauseMay13 precedesMay21. No sourcecalendar-model/civilverification or date/agecorrectionverdict.",
+      "status": "unresolved_reported_age_inconsistency_not_an_explicit_disagreeing_birthdate",
+      "origin_version": "v40",
+      "source_observation_quality": "S3_canonical_original_community_reference_actual_Urdu_person_body",
+      "source_grade_role": "source_quality_observation_only; not_DOB_BP_geography_adoption",
+      "source_quote": "69",
+      "source_quote_word_count": 1,
+      "not_explicit_alternate_DOB": true,
+      "no_source_or_native_DOB_repair": true,
+      "parent_adjudication_required": false,
+      "identity_review": "Actual Latin fullnativeAlexanderPedler/exactbirthdate/compatible1849-1918/deathdate pluschemist/FRS/Calcuttaemployment and explicitEnglisharticlecredit identify namedsubject. Urdu body is brief; English distinctive helium/valeric-acid career is separate acquired identitycontext, not transferred as Urdu prose. Same-date age arithmetic observation only, not fullgeographyadmission.",
+      "retrieval_representation": "web-tool parsed actual canonical UrduHTML; not rawbytes/pixels.",
+      "dependency_limit": "L132 expressly credits EnglishWikipedia; L158–168 categories identify Wikidata-based fields. Not independent verification.",
+      "geography_effect": "No geographyadoption; Pedler independently held for no admissible birthplace-to-region chain matching frozenplace.",
+      "supporting_identity_context": {
+        "source_url": "https://en.wikipedia.org/wiki/Alexander_Pedler",
+        "worker_source_ref": "turn3686313view0",
+        "source_locator": "RootL110 fullAlexanderPedler/exact21May1849-13May1918/chemistry/PresidencyCollege-Calcutta/PrafullaChandraRay;L114-120 distinctiveRoyalInstitution-Lockyer-Frankland-chemicalcareer;L122same death. No personalbirthplace; fatherFleetStreet/schoolLondon not inferredbirth.",
+        "source_quote": null,
+        "source_quote_word_count": 0,
+        "role": "Actual English distinctive chemistrycareer identitycontext only; not independentinformation or Urduprose.",
+        "root_source_ref": "turn4342016view0"
+      },
+      "parent_adjudication": "Retain reported69 and conventional completed68 separately from the same source displayed dates. Exact statedDOB matches native; life1849-1918 is compatible. No alternativeDOB, typo verdict, calendar/civil verification, source-age convention verdict or geographical adoption. Bengali reported68 and English same dates do not clear the actual Urdu69 observation. Raw197FleetStreetLondon/S2/nativefields unchanged.",
+      "native_DOB_source_grade_unchanged": true,
+      "original_birthplace_fields_and_source_grades_unchanged": true
+    }
+  ],
+  "nine_issue_inventory_sha256_at_review": {
+    "provisional_parsed_date_discrepancies.json": {
+      "baseline_sha256": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+      "current_sha256": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd"
+    },
+    "source_date_precision_holds.json": {
+      "baseline_sha256": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+      "current_sha256": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c"
+    },
+    "source_derived_age_inconsistencies.json": {
+      "baseline_sha256": "0874cda202bd6e9465d3d76c9833f53ac67a273093f18a0e31ea9d3468960268",
+      "current_sha256": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6"
+    },
+    "lifespan_endpoint_discrepancies.json": {
+      "baseline_sha256": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+      "current_sha256": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363"
+    },
+    "cross_source_reported_age_contrasts.json": {
+      "baseline_sha256": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+      "current_sha256": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0"
+    },
+    "omitted_middle_name_admission.json": {
+      "baseline_sha256": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+      "current_sha256": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5"
+    },
+    "source_ordinal_age_wording_observations.json": {
+      "baseline_sha256": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d",
+      "current_sha256": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+    },
+    "birthplace_source_conflicts.json": {
+      "baseline_sha256": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+      "current_sha256": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1"
+    },
+    "active_source_DOB_conflicts.json": {
+      "baseline_sha256": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+      "current_sha256": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c"
+    }
+  },
+  "nine_issue_inventory_counts_at_review": {
+    "provisional_parsed_date_discrepancies.json": {
+      "baseline_records": 1,
+      "current_records": 1,
+      "inventory_shape": "records"
+    },
+    "source_date_precision_holds.json": {
+      "baseline_records": 1,
+      "current_records": 1,
+      "inventory_shape": "records"
+    },
+    "source_derived_age_inconsistencies.json": {
+      "baseline_records": 3,
+      "current_records": 4,
+      "inventory_shape": "records"
+    },
+    "lifespan_endpoint_discrepancies.json": {
+      "baseline_records": 1,
+      "current_records": 1,
+      "inventory_shape": "records"
+    },
+    "cross_source_reported_age_contrasts.json": {
+      "baseline_records": 1,
+      "current_records": 1,
+      "inventory_shape": "records"
+    },
+    "omitted_middle_name_admission.json": {
+      "baseline_records": null,
+      "current_records": null,
+      "inventory_shape": "metadata_without_records"
+    },
+    "source_ordinal_age_wording_observations.json": {
+      "baseline_records": 1,
+      "current_records": 1,
+      "inventory_shape": "records"
+    },
+    "birthplace_source_conflicts.json": {
+      "baseline_records": 2,
+      "current_records": 2,
+      "inventory_shape": "records"
+    },
+    "active_source_DOB_conflicts.json": {
+      "baseline_records": 13,
+      "current_records": 13,
+      "inventory_shape": "records"
+    }
+  },
+  "nine_issue_inventory_changes": {
+    "provisional_parsed_date_discrepancies.json": {
+      "byte_identical": true,
+      "appended_record_ids": []
+    },
+    "source_date_precision_holds.json": {
+      "byte_identical": true,
+      "appended_record_ids": []
+    },
+    "source_derived_age_inconsistencies.json": {
+      "byte_identical": false,
+      "appended_record_ids": [
+        "RS_PAST_NA2863"
+      ]
+    },
+    "lifespan_endpoint_discrepancies.json": {
+      "byte_identical": true,
+      "appended_record_ids": []
+    },
+    "cross_source_reported_age_contrasts.json": {
+      "byte_identical": true,
+      "appended_record_ids": []
+    },
+    "omitted_middle_name_admission.json": {
+      "byte_identical": true,
+      "appended_record_ids": []
+    },
+    "source_ordinal_age_wording_observations.json": {
+      "byte_identical": true,
+      "appended_record_ids": []
+    },
+    "birthplace_source_conflicts.json": {
+      "byte_identical": true,
+      "appended_record_ids": []
+    },
+    "active_source_DOB_conflicts.json": {
+      "byte_identical": true,
+      "appended_record_ids": []
+    }
+  },
+  "all_three_Waterfield_Spath_Desty_age_records_unchanged": true,
+  "worker_counts_from_actual_ledgers": {
+    "a": {
+      "queries": 4,
+      "navigation_operations": 4,
+      "parsed_finds": 2
+    },
+    "b": {
+      "queries": 4,
+      "navigation_operations": 2,
+      "parsed_finds": 1
+    },
+    "c": {
+      "queries": 2,
+      "navigation_operations": 4,
+      "parsed_finds": 2
+    }
+  }
+}

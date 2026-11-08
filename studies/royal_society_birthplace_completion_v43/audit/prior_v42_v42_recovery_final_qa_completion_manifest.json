@@ -1,0 +1,39 @@
+{
+  "schema": "UK_v42_recovery_final_QA_completion_manifest_v1",
+  "status": "PASS",
+  "written_utc": "2026-11-08T09:46:18.807893+00:00",
+  "files": {
+    "qa_v42_recovery_final.py": "1615afb30a4298d8443e5ee6df1429e4fa24ad9a669930a3c6a22cdb0e57fba1",
+    "v42_recovery_final_qa_expectations.json": "4e1ce4c6511ace1a8fc74b1be03615a39a4cecfa03aaf0310c14eb2f00807f3b",
+    "v42_recovery_final_qa_preflight.json": "1e9195a34c34416cea5179af1a2f474d7a79579c6f9d59980e0605d5a2642856",
+    "v42_recovery_final_qa_preflight.log": "cc069b924dfaa7fb2c779ae852154a1858ef68f991e528a289370d34970b9547",
+    "v42_recovery_final_qa_replay_1.json": "6492caf2f4315c6a851fd2fc5f2f4526cc4043ba980568fd238ec5cb3071725f",
+    "v42_recovery_final_qa_replay_1.log": "b671f22f9e697b71411bd3642557161f960199b8661a028d9939fe9f4df2d128",
+    "v42_recovery_isolated_cli_1.log": "11d9e8bc9daec0c0eb9ab856985eaf6cecb4d93b2829598f9088742c1888ca7d",
+    "v42_recovery_final_qa_replay_2.json": "6e49f8e6a3e5070054eb9a40502d7c311f62bc06a0c1296107ffb4031a572f3f",
+    "v42_recovery_final_qa_replay_2.log": "1db976ccde455b308a9596c4e2c4eb8749514a37ef3b2662fa74de0b8224f5b9",
+    "v42_recovery_isolated_cli_2.log": "11d9e8bc9daec0c0eb9ab856985eaf6cecb4d93b2829598f9088742c1888ca7d",
+    "v42_recovery_final_qa_report.json": "ea450e4ec5ee02d3ead4745cfdbb31431ac891ff32d4c2652d2b7a32a32dba8e",
+    "v42_recovery_final_qa_finish.log": "88e3092b7646ba2c620761d69beba2e75a9dc9a8c406686c3050dd18015abf73"
+  },
+  "observed_mode_exit_codes": {
+    "preflight_session77021": 0,
+    "replay1_session58335": 0,
+    "replay2_session72697": 0,
+    "finish": 0
+  },
+  "actual_new_CLI_returncodes": [
+    0,
+    0
+  ],
+  "new_checks": {
+    "preflight": 58,
+    "replay1": 10,
+    "replay2": 11,
+    "finish": 6
+  },
+  "reviewed_production_files_unchanged": 384,
+  "five_original_output_pins_unchanged": true,
+  "original_QA_session88045_result": "still_unknown_historical_only",
+  "production_mutated": false
+}

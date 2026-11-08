@@ -1,0 +1,367 @@
+{
+  "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+  "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+  "method_application_scope_sha256": "d6ebcba7aa672c1a4877857bd4e9b4072af2ae159c04fd0dddf4d7766d2e3176",
+  "written_utc": "2026-11-08T08:45:26.220823+00:00",
+  "group": "b",
+  "phase": "canonical_community_reference_geography_method_application",
+  "intent_file": "v41_b_intent.json",
+  "full2nativeobjects/priorholdsbeforequeries": true,
+  "all9_issue_inventories_loaded_before_queries": true,
+  "inventory_file_pins": {
+    "active_source_DOB_conflicts.json": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+    "birthplace_source_conflicts.json": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+    "cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+    "lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+    "omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+    "provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+    "source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+    "source_derived_age_inconsistencies.json": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+    "source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+  },
+  "prior_context_review": [
+    "v41_plan.json",
+    "v41_scope_b.json complete two nativeobjects and BinnieV27fullcontext",
+    "v36_method_preregistration.json",
+    "v41_method_application_scope.json",
+    "V40 nine currentissueinventories in full",
+    "prior_v11_holds.json Walker",
+    "prior_v14_holds.json Walker",
+    "prior_v14_geography_candidates.json Walker",
+    "prior_v32_holds.json Walker",
+    "prior_v33_holds.json Binnie",
+    "prior_v11_holds.json Ewins",
+    "prior_v12_holds.json Barber",
+    "v40_sources_c.json and v40_final_geography.json schemas"
+  ],
+  "inherited_issue_counts": {
+    "active_DOB": 13,
+    "partial_birthplace": 2,
+    "source_derived_age_inconsistencies": 4,
+    "other_issue_files": 6
+  },
+  "separate_Ewins_Barber_placeholds_preserved": true,
+  "Tomes_provisional_glyph_and_all_independent_holds_preserved": true,
+  "omitted_middle_inventory_is_metadata_without_records_array": true,
+  "intent_writes_validated_exit0_separately_beforeweb": true,
+  "retrieval_counts": {
+    "queries": 4,
+    "navigation_attempts": 3,
+    "source_open_operations": 2,
+    "click_operations": 1,
+    "parsed_finds": 0,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "query_ledger": [
+    {
+      "kind": "search",
+      "engine": "system2",
+      "record_id": "RS_PAST_NA1727",
+      "query": "\"Miles Walker\" site:wikipedia.org",
+      "result_refs": [
+        "turn9958938search4"
+      ],
+      "intent_entries": [
+        0
+      ],
+      "outcome": "different1940politicianprojectiononly; no nativeengineercanonicalpersonlead"
+    },
+    {
+      "kind": "search",
+      "engine": "system2",
+      "record_id": "RS_PAST_NA2016",
+      "query": "\"Geoffrey Morse Binnie\" site:wikipedia.org",
+      "result_refs": [
+        "turn9958938search0",
+        "turn9958938search2"
+      ],
+      "intent_entries": [
+        1
+      ],
+      "outcome": "canonicalGeoffreyBinniepersonURLdiscovered; WilliamBinnie1901secondpersonprojectionleftunopened"
+    },
+    {
+      "kind": "search",
+      "engine": "system1",
+      "record_id": "RS_PAST_NA1727",
+      "query": "\"Miles Walker\" \"1868\" Wikipedia",
+      "result_refs": [
+        "turn4817569search4",
+        "turn4817569search6"
+      ],
+      "intent_entries": [
+        2
+      ],
+      "outcome": "nativeFRSlistprojectionbut no nativecanonicalpersonarticle; different1940politicianexcluded"
+    },
+    {
+      "kind": "search",
+      "engine": "system1",
+      "record_id": "RS_PAST_NA1727",
+      "query": "\"Miles Walker\" \"1868\" site:wikidata.org",
+      "result_refs": [
+        "turn8898224search9",
+        "turn8898224search5"
+      ],
+      "intent_entries": [
+        4
+      ],
+      "outcome": "no actualcanonicalitemURLdiscovered; offdomain/otherpersonprojectionsunopened"
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "kind": "open",
+      "record_id": "RS_PAST_NA2016",
+      "url": "https://en.wikipedia.org/wiki/Geoffrey_Binnie",
+      "ref": "turn4817569view0",
+      "outcome": "actualcanonicalpersonbody_fullnative_exactDOB_compatiblelife_distinctivecareer_no_birthplace",
+      "intent_entry": 3
+    },
+    {
+      "kind": "click",
+      "record_id": "RS_PAST_NA2016",
+      "ref_id": "turn4817569view0",
+      "link_id": 36,
+      "observed_anchor": "Wikidata item",
+      "ref": "turn8898224view0",
+      "requested_target_url_as_returned": "https://www.wikidata.org/wiki/Special%3AEntityPage/Q15989847",
+      "actual_target_url": "https://www.wikidata.org/wiki/Q15989847",
+      "outcome": "explicitlyrewrittensummary_notactualP19proof_onlyobserved_enwikisitelink",
+      "intent_entry": 5
+    },
+    {
+      "kind": "open",
+      "record_id": "RS_PAST_NA1727",
+      "url": "https://www.wikidata.org/wiki/Q21166789",
+      "ref": "turn4873912view0",
+      "outcome": "first_open_toolnotaccessible_closed_no_retry_variant_rawGET",
+      "intent_entry": 6
+    }
+  ],
+  "parsed_find_ledger": [],
+  "candidates": [],
+  "holds": [
+    {
+      "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+      "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+      "method_application_scope_sha256": "d6ebcba7aa672c1a4877857bd4e9b4072af2ae159c04fd0dddf4d7766d2e3176",
+      "publication_date": null,
+      "publication_date_precision": "not_observed",
+      "source_revision_id": null,
+      "source_revision_utc": null,
+      "source_calendar_model": null,
+      "source_statement_rank": null,
+      "source_editorial_validation": null,
+      "source_informational_independence": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA1727",
+      "native": {
+        "authority_name": "Walker; Miles (1868 - 1941)",
+        "native_dob": "1868-08-13",
+        "raw_birthplace": "Lowther Street, Carlisle",
+        "frozen_birthplace_source_grade": "S2",
+        "hemisphere": "unknown"
+      },
+      "status": "held_no_actual_canonical_person_birthplace_to_region_proof",
+      "hold_type": "canonical_person_discovery_unresolved_and_supplied_lookup_item_first_open_unavailable",
+      "reason": "Four bounded groupqueries found no canonical article for the native1868 electrical engineer. Search found a different1940 Miles RawstronWalker politician, excluded before opening. Native frozenlookupQ21166789 was supplied in fullscope, not guessed; its first canonical item open was toolinaccessible and closed. No actual original canonical allnative/exactDOB/career/compatiblelife/bornplace/P19 evidence acquired. LowtherStreetCarlisle remains unqualified; no generic Carlisle or street administrative candidate can substitute personal birth binding.",
+      "proof_mode": null,
+      "proof_chain": [],
+      "source_grade_adopted": null,
+      "source_grade_role": "geographic_support_only",
+      "reviewed_hemisphere": "unknown",
+      "no_new_geographic_assignment": true,
+      "native_and_original_birthplace_fields_unchanged": true,
+      "source_url": "https://www.wikidata.org/wiki/Q21166789",
+      "source_ref": "turn4873912view0",
+      "source_observations": [
+        {
+          "source_url": "https://www.wikidata.org/wiki/Q21166789",
+          "source_body_ref": "turn4873912view0",
+          "source_locator": null,
+          "status": "first_open_tool_not_accessible",
+          "tool_reported_error": "URL https://www.wikidata.org/wiki/Q21166789 is not accessible via this tool.",
+          "raw_HTTP_status": null,
+          "raw_bytes_sha256": null,
+          "exact_request_utc": null,
+          "actual_original_body_acquired": false,
+          "lookup_identifier_from_frozen_scope": "Q21166789",
+          "identifier_role": "existing supplied lookup only; neither actualsourcepersonidentity nor nativeQID assignment",
+          "acquisition_role": "worker_first_canonical_item_open_failed; no statementproof",
+          "source_quote": null,
+          "source_quote_word_count": 0,
+          "stopped_without_retry_variant_or_rawGET": true
+        }
+      ],
+      "discovery_only_observations": [
+        {
+          "ref": "turn9958938search4",
+          "url": "https://en.wikipedia.org/wiki/Miles_Walker",
+          "role": "unopenedprojection_different1940politician_not_nativeengineer; no qualified DOBconflict"
+        },
+        {
+          "ref": "turn4817569search4",
+          "url": "https://en.wikipedia.org/wiki/List_of_fellows_of_the_Royal_Society_W%2C_X%2C_Y%2C_Z",
+          "role": "unopenedcanonical_listprojection_exactnativeDOBanddeath1941 but no actual personalbornplace/body; not evidence"
+        },
+        {
+          "ref": "turn8898224search5",
+          "url": "https://www.npg.org.uk/collections/search/person-list?displayNo=40&grp=1001&page=34",
+          "role": "unopenedsearchprojection_year1903 not actualpersonbody; no qualified DOBconflict or sourcegrade adoption"
+        }
+      ],
+      "prior_holds_preserved": [
+        "V11Nature1941A.B.Fieldsubscriptionpreview has no birthplace; closed work not retried. Search returned samework again but no new originalacquisition or sourcequality qualification.",
+        "V14officialLowtherStreetCarlisle candidate-only hold preserved. Frozen samecompound permits literal broader Carlisle only if new actual personbirth association is acquired; none acquired here. Street identity/continuity not confirmed.",
+        "V32Gracefirstopeninaccessible and RSEfindnoMilesWalker remain historical; no retry/variant.",
+        "OriginalRoyalSociety/Crossref1868-08-13/LowtherStreetCarlisleS2 and lookupidentity remain separately frozen; no geographyfrom city familiarity."
+      ],
+      "qualified_new_DOB_conflict": false,
+      "qualified_new_birthplace_conflict": false,
+      "source_derived_age_inconsistency_observed": false,
+      "retrieval_representation": "Searchprojections discoveryonly and tool-reported firstitemopen error; no originalcanonicalbody/rawbytes or completeprojectioncache."
+    },
+    {
+      "method_id": "uk-geography-canonical-community-reference-pilot-v1",
+      "method_preregistration_sha256": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+      "method_application_scope_sha256": "d6ebcba7aa672c1a4877857bd4e9b4072af2ae159c04fd0dddf4d7766d2e3176",
+      "publication_date": null,
+      "publication_date_precision": "not_observed",
+      "source_revision_id": null,
+      "source_revision_utc": null,
+      "source_calendar_model": null,
+      "source_statement_rank": null,
+      "source_editorial_validation": null,
+      "source_informational_independence": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "record_id": "RS_PAST_NA2016",
+      "native": {
+        "authority_name": "Binnie; Geoffrey Morse (1908 - 1989)",
+        "native_dob": "1908-11-13",
+        "raw_birthplace": "Kensington",
+        "frozen_birthplace_source_grade": "S2",
+        "hemisphere": "unknown"
+      },
+      "status": "held_no_actual_person_born_place_region_or_P19_chain",
+      "hold_type": "actual_canonical_person_body_without_birthplace_and_rewritten_Wikidata_representation_not_actual_statement_proof",
+      "reason": "Actual English canonicalpersonbody supplies allGeoffreyMorseBinnie components/exact13November1908/coherentdistinctivecivilengineering-damscareer/compatible5April1989. It contains no subjectbornplace or birthregion. British nationality, UKwork and schooling cannot bind frozenKensington to any region. ActualWikidataitemclick is explicitly labelledrewritten summary; no actualP19proof or authenticatedabsence/completeness. Its displayed sitelinkcarrier lists only already acquiredEnglisharticle; no other canonical languageoriginallead observed. FrozenKensington remainsunqualified.",
+      "proof_mode": null,
+      "proof_chain": [],
+      "source_grade_adopted": null,
+      "source_grade_role": "geographic_support_only",
+      "reviewed_hemisphere": "unknown",
+      "no_new_geographic_assignment": true,
+      "native_and_original_birthplace_fields_unchanged": true,
+      "source_observations": [
+        {
+          "source_url": "https://en.wikipedia.org/wiki/Geoffrey_Binnie",
+          "source_title": "Geoffrey Binnie - Wikipedia",
+          "source_body_ref": "turn4817569view0",
+          "source_locator": "L105-107fullGeoffreyMorseBinnie/exact13November1908/death5April1989(aged80);L119fullnative/exactdates/civilengineer-dams-reservoirs;L120GrunerSwisspupil/Sernf-Niederenbach/Albbruck-Dogern;L121BinniePartners1931/JubileeDam1932-1936/partner1939;L123-126Dukan/Mangla/Bennett/historybooks1981/1987;L131FRS1975/ICEawards. Acquired fullbodyL103-144 has no personalbirthplace.",
+          "observed_source_full_name": "Geoffrey Morse Binnie",
+          "source_birthdate": "1908-11-13",
+          "source_birthdate_as_displayed": "13 November 1908",
+          "source_birthdate_precision": "exact_day_in_actual_Born_infobox_and_lead_lifespan",
+          "source_lifespan": "1908-1989; actualdeath5April1989",
+          "source_death_date": "1989-04-05",
+          "source_reported_age": 80,
+          "conventional_completed_age_from_displayed_dates": 80,
+          "source_career_anchors": [
+            "civilengineer and writer particularly dams/reservoirs",
+            "pupil of HenryEdwardGruner; Sernf-Niederenbach and Albbruck-Dogern work",
+            "Binnie&Partners joined1931 and partner1939; JubileeDam1932-1936",
+            "Dukan/Mangla/WACBennett projects",
+            "EarlyVictorianWaterEngineers1981; EarlyDamBuildersinBritain1987; FRS1975"
+          ],
+          "all_Geoffrey_Morse_Binnie_components_actually_present": true,
+          "source_exact_native_month_day_confirmed": true,
+          "source_DOB_native_compatibility": "Exactdisplayed13November1908 matchesunchangednative1908-11-13; compatible1908-1989. Literaldate usedforidentity only; no nativecalendar/civilDOBvalidation or gradeupgrade.",
+          "observed_birthplace": null,
+          "no_actual_born_place_or_region_observed": true,
+          "source_quote": "13 November 1908",
+          "source_quote_word_count": 3,
+          "source_observation_grade": "S3 canonical originalcommunityreference identity observation only",
+          "acquisition_role": "worker_actual_canonical_original_person_body",
+          "tool_header_rewritten_summary": false,
+          "observed_displayed_footer_metadata": {
+            "oldid": "1362678740",
+            "last_edited_literal": "5 July 2026, at 15:42 (UTC)",
+            "locator": "L147/L168",
+            "limits": "Displayedfooter only; authenticatedrevisionfields remainnull."
+          },
+          "information_dependency_limit": "ReferencesL140-141cite oldAsianAffairs and AlanMuirWoodRoyalSocietymemoir; not independentcorroboration or editorial/civilproof."
+        },
+        {
+          "source_url": "https://www.wikidata.org/wiki/Q15989847",
+          "requested_click_ref": "turn4817569view0",
+          "requested_click_id": 36,
+          "observed_anchor": "Wikidata item",
+          "requested_target_url_as_returned": "https://www.wikidata.org/wiki/Special%3AEntityPage/Q15989847",
+          "actual_target_url": "https://www.wikidata.org/wiki/Q15989847",
+          "source_body_ref": "turn8898224view0",
+          "source_locator": "Toolheader expressly rewritten summary ofhttps://www.wikidata.org/wiki/Q15989847;L47itemtitle/L91/101aliasGeoffreyMorseBinnie/L102-220displayedStatements/L288-289NA2016/L298-304Wikipedia(1entry)onlyenwiki.",
+          "tool_header_rewritten_summary": true,
+          "source_original_statements_authenticated": false,
+          "source_calendar_model": null,
+          "source_statement_rank": null,
+          "observed_qid_from_actual_click_result": "Q15989847",
+          "qid_role": "actually acquiredlinktarget only; not nativeQIDassignment or originalP19proof",
+          "displayed_representation_has_P19_value": false,
+          "P19_absence_or_novalue_claim_authenticated": false,
+          "other_canonical_language_sitelink_observed": false,
+          "acquisition_role": "worker_actual_click_result_explicitly_labelled_rewritten_summary; observed_sitelinkcarrier_only_not_geographic_statement_proof",
+          "source_quote": null,
+          "source_quote_word_count": 0,
+          "stopped_without_retry_variant_or_rawGET": true
+        }
+      ],
+      "prior_holds_preserved": [
+        "FrozenV27AlanMuirWoodODNBactualpublicExtract fullnative/exact1908-11-13/directKensington/S2 remainsunchanged and cityonly; no newquote or priorBPgrade alteration.",
+        "V33AsianAffairsAndreSinger/RALongmire1989DOIfirstopeninaccessible remainsclosed; not retried despite actualcanonicalreferencesagain namingwork.",
+        "OldWilliamBinnie1901searchprojection remainsunopened/unqualified. Newsearchagainreturned sameunopenedsecondpersonprojectionturn9958938search2; no actualbody/P19 acquisition or qualified1901conflict.",
+        "OldP19no-value remains historical; currentrewrittenrepresentation doesnotauthenticate P19absence/completeness."
+      ],
+      "qualified_new_DOB_conflict": false,
+      "qualified_new_birthplace_conflict": false,
+      "source_derived_age_inconsistency_observed": false,
+      "retrieval_representation": "ActualEnglishcanonicalparsedHTMLpersonbody and explicitlyrewrittenWikidataitemrepresentation; no rawbytes/fullsourcecache."
+    }
+  ],
+  "new_DOB_or_place_conflicts": [],
+  "source_derived_age_inconsistency_candidates": [],
+  "source_quality_issue_candidates": [],
+  "unopened_distinct_original_work_leads": [],
+  "source_quote_words_by_original_work": {
+    "https://en.wikipedia.org/wiki/Geoffrey_Binnie": 3,
+    "https://www.wikidata.org/wiki/Q15989847": 0,
+    "https://www.wikidata.org/wiki/Q21166789": 0
+  },
+  "prior_quote_accounting": "No newquote from frozenCrossref/1941memoir/Nature/Grace/ODNB/AsianAffairs/V14geography works. OldWalkerCrossref11wordbornquote and oldBinnieODNB8wordbornquote remainunchanged inheritedfacts only. No previousactualcanonicalpersonquote for these two works found in targetedpriorholds. NewEnglishGeoffreyBinnie3wordDOBquote only; allnewworkquotations<=25. No completeoriginalsource/projectioncache written.",
+  "protocol_limits": {
+    "per_group_queries": 4,
+    "per_group_navigation_attempts": 10,
+    "used_queries": 4,
+    "used_navigation_attempts": 3,
+    "cached_finds_counted_separately": true,
+    "unused_navigation_budget_not_required_to_spend": true,
+    "first_failed_or_unusable_work_not_retried": true,
+    "no_rawGET_auth_bypass_or_failedwork_variants": true,
+    "original_source_caches_distributed": false,
+    "source_exhaustion_claimed": false
+  },
+  "method_amendment_created": false,
+  "method_reused_from_version": 36,
+  "scope_application_extension": true,
+  "no_new_admission_method_exception": true,
+  "raw_HTTP_status": null,
+  "raw_bytes_sha256": null,
+  "exact_request_utc": null,
+  "no_repo_master_Git_edit": true,
+  "no_source_exhaustion_finalfreeze_or_DOB_BPtierupgrade": true
+}

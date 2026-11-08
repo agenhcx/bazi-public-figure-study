@@ -1,0 +1,962 @@
+{
+  "schema": "UK_v38_independent_geography_source_documentary_QA_v1",
+  "reviewer": "/root/v38_source_qa",
+  "written_utc": "2026-11-07T01:15:26.233179+00:00",
+  "phase": "final",
+  "passed": true,
+  "checks_passed": 185,
+  "checks": [
+    {
+      "check": "actual_v37_baseline_canonical_pin",
+      "passed": true
+    },
+    {
+      "check": "fixed4983_unique_native_records",
+      "passed": true
+    },
+    {
+      "check": "actual60_nonblankunknown_window_pool",
+      "passed": true
+    },
+    {
+      "check": "fixed6_scope_threegroups2",
+      "passed": true
+    },
+    {
+      "check": "scope_within_actual_nonblankunknown_pool",
+      "passed": true
+    },
+    {
+      "check": "complete_target_scope_objects_exactbaseline",
+      "passed": true
+    },
+    {
+      "check": "103blank_window_outside_scope",
+      "passed": true
+    },
+    {
+      "check": "zero_firstbirthplace_groups",
+      "passed": true
+    },
+    {
+      "check": "all13_activeDOBcases_excluded",
+      "passed": true
+    },
+    {
+      "check": "Ewins_Barber_separate_placeholds_excluded",
+      "passed": true
+    },
+    {
+      "check": "both_partialplacecases_excluded",
+      "passed": true
+    },
+    {
+      "check": "Tomes_provisional_separate_not14thactive",
+      "passed": true
+    },
+    {
+      "check": "historical_V36_preregistration_exact_SHA",
+      "passed": true
+    },
+    {
+      "check": "historical_V36_policy_fixedscope_preserved",
+      "passed": true
+    },
+    {
+      "check": "historical_V37_application_scope_preserved_distinct_newscope",
+      "passed": true
+    },
+    {
+      "check": "current_application_scope_exact_SHA",
+      "passed": true
+    },
+    {
+      "check": "current_application_scope_exactgroups_ids",
+      "passed": true
+    },
+    {
+      "check": "unchanged_method_id",
+      "passed": true
+    },
+    {
+      "check": "V38_reuse_explicit_no_new_amendment",
+      "passed": true
+    },
+    {
+      "check": "exact_original_sourceclasses",
+      "passed": true
+    },
+    {
+      "check": "exact_three_original_proofmodes",
+      "passed": true
+    },
+    {
+      "check": "fullnative_exactDOB_actualedges_mandatory",
+      "passed": true
+    },
+    {
+      "check": "generic_UK_and_centroid_not_enough",
+      "passed": true
+    },
+    {
+      "check": "S3_geography_only_no_DOB_BP_upgrade",
+      "passed": true
+    },
+    {
+      "check": "Kiddle_not_retroapproved",
+      "passed": true
+    },
+    {
+      "check": "60_target_ids_equal_actual_pool",
+      "passed": true
+    },
+    {
+      "check": "fixed6_followups_reviewed",
+      "passed": true
+    },
+    {
+      "check": "complete_disjoint_accepted_held_partition",
+      "passed": true
+    },
+    {
+      "check": "runtime_exact_six_GEO_FIELDS",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4636_native_DOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4636_native_key_unique",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4636_full_native_personal_components_in_observed_name",
+      "passed": true,
+      "detail": {
+        "native_components": [
+          "pagel",
+          "bernard",
+          "ephraim",
+          "julius"
+        ],
+        "observed": "Bernard Ephraim Julius Pagel"
+      }
+    },
+    {
+      "check": "RS_PAST_NA4636_exact_source_native_DOB",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4636_source_lifespan_compatible_authority_years",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4636_exactday_confirmation_not_overstated",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4636_frozen_rawBP_grade",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4636_S3_geo_only_NorthSouth",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4636_DOB_BP_grades_explicitly_unchanged",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4636_method_base_current_application_hashes",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4636_canonical_original_sourcekind",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4636_identity_career_lifespan_place_roles_documented",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4636_source_quote_count_under25",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4636_unknown_raw_metadata_null",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4636_no_frozen_country_QID_coords_BP_replacementkeys",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4636_no_pending_proposal_fields",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4636_proof_mode_allowed_chain_nonempty",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4636_edges_required_semantic_fields_present",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4636_all_nonterminal_edges_actual_entity_URIs",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4636_exact_edge_continuity",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4636_person_start_node_actual_source",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4636_whole_region_terminal_supported_by_existing_extent_gate",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4636_linked_birthplace_atleast_two_edges",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4636_worker_actual_follow_ref_or_explicit_acquisition_role",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4636_target_city_geographic_not_employer",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4568_native_DOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4568_native_key_unique",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4568_full_native_personal_components_in_observed_name",
+      "passed": true,
+      "detail": {
+        "native_components": [
+          "mackintosh",
+          "nicholas",
+          "john"
+        ],
+        "observed": "Nicholas John Seymour Mackintosh"
+      }
+    },
+    {
+      "check": "RS_PAST_NA4568_exact_source_native_DOB",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4568_source_lifespan_compatible_authority_years",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4568_exactday_confirmation_not_overstated",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4568_frozen_rawBP_grade",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4568_S3_geo_only_NorthSouth",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4568_DOB_BP_grades_explicitly_unchanged",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4568_method_base_current_application_hashes",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4568_canonical_original_sourcekind",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4568_identity_career_lifespan_place_roles_documented",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4568_source_quote_count_under25",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4568_unknown_raw_metadata_null",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4568_no_frozen_country_QID_coords_BP_replacementkeys",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4568_no_pending_proposal_fields",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4568_proof_mode_allowed_chain_nonempty",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4568_edges_required_semantic_fields_present",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4568_all_nonterminal_edges_actual_entity_URIs",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4568_exact_edge_continuity",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4568_person_start_node_actual_source",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4568_whole_region_terminal_supported_by_existing_extent_gate",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4568_direct_region_one_actual_person_born_edge",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6313_native_DOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6313_native_key_unique",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6313_full_native_personal_components_in_observed_name",
+      "passed": true,
+      "detail": {
+        "native_components": [
+          "chibnall",
+          "albert",
+          "charles"
+        ],
+        "observed": "Albert Charles Chibnall"
+      }
+    },
+    {
+      "check": "RS_PAST_NA6313_exact_source_native_DOB",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6313_source_lifespan_compatible_authority_years",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6313_exactday_confirmation_not_overstated",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6313_frozen_rawBP_grade",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6313_S3_geo_only_NorthSouth",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6313_DOB_BP_grades_explicitly_unchanged",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6313_method_base_current_application_hashes",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6313_canonical_original_sourcekind",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6313_identity_career_lifespan_place_roles_documented",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6313_source_quote_count_under25",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6313_unknown_raw_metadata_null",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6313_no_frozen_country_QID_coords_BP_replacementkeys",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6313_no_pending_proposal_fields",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6313_proof_mode_allowed_chain_nonempty",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6313_edges_required_semantic_fields_present",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6313_all_nonterminal_edges_actual_entity_URIs",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6313_exact_edge_continuity",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6313_person_start_node_actual_source",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6313_whole_region_terminal_supported_by_existing_extent_gate",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6313_linked_birthplace_atleast_two_edges",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6313_worker_actual_follow_ref_or_explicit_acquisition_role",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6313_target_city_geographic_not_employer",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1611_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA1611_held_frozen_rawBP_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4571_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4571_held_frozen_rawBP_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4774_held_nativeDOB_authority_exact",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4774_held_frozen_rawBP_exact",
+      "passed": true
+    },
+    {
+      "check": "inherited_provisional_parsed_date_discrepancies.json_exactbytes",
+      "passed": true
+    },
+    {
+      "check": "inherited_source_date_precision_holds.json_exactbytes",
+      "passed": true
+    },
+    {
+      "check": "inherited_lifespan_endpoint_discrepancies.json_exactbytes",
+      "passed": true
+    },
+    {
+      "check": "inherited_cross_source_reported_age_contrasts.json_exactbytes",
+      "passed": true
+    },
+    {
+      "check": "inherited_omitted_middle_name_admission.json_exactbytes",
+      "passed": true
+    },
+    {
+      "check": "inherited_source_ordinal_age_wording_observations.json_exactbytes",
+      "passed": true
+    },
+    {
+      "check": "inherited_birthplace_source_conflicts.json_exactbytes",
+      "passed": true
+    },
+    {
+      "check": "inherited_active_source_DOB_conflicts.json_exactbytes",
+      "passed": true
+    },
+    {
+      "check": "all13_prior_activeDOB_objects_prefix_unchanged",
+      "passed": true
+    },
+    {
+      "check": "old_Waterfield_age_object_unchanged_new_Spath_only",
+      "passed": true
+    },
+    {
+      "check": "prior_V37_age_sidecar_snapshot_exactbytes",
+      "passed": true
+    },
+    {
+      "check": "Spath_actual_same_source_age75_vs_computed74_dates_retained",
+      "passed": true
+    },
+    {
+      "check": "Spath_age_discrepancy_not_activeDOB_alternate_or_geography",
+      "passed": true
+    },
+    {
+      "check": "new_activeDOB_cases_not_adopted",
+      "passed": true
+    },
+    {
+      "check": "prior_V37_activeDOB_snapshot_exactbytes",
+      "passed": true
+    },
+    {
+      "check": "Adam_historical_conflict_still_active_unchanged",
+      "passed": true
+    },
+    {
+      "check": "prior_v11_holds.json_exacthistoricalbytes",
+      "passed": true
+    },
+    {
+      "check": "prior_v12_holds.json_exacthistoricalbytes",
+      "passed": true
+    },
+    {
+      "check": "prior_v29_first_pass_queue_closeout.json_exacthistoricalbytes",
+      "passed": true
+    },
+    {
+      "check": "prior_v35_geography_first_pass_queue_closeout.json_exacthistoricalbytes",
+      "passed": true
+    },
+    {
+      "check": "historical_V35_queue_pin_no_current_relabel",
+      "passed": true
+    },
+    {
+      "check": "historical_V36_class_admission_preserved",
+      "passed": true
+    },
+    {
+      "check": "historical_base_prereg_bytes_preserved",
+      "passed": true
+    },
+    {
+      "check": "current_application_scope_bytes_exact",
+      "passed": true
+    },
+    {
+      "check": "legacy_V37_runtime_scope_byteexact",
+      "passed": true
+    },
+    {
+      "check": "a_report_exact_scratch",
+      "passed": true
+    },
+    {
+      "check": "a_queries_atmost4",
+      "passed": true
+    },
+    {
+      "check": "a_source_navigation_atmost10",
+      "passed": true
+    },
+    {
+      "check": "a_exact_worker_scope_partition",
+      "passed": true
+    },
+    {
+      "check": "a_intent_exact_scratch",
+      "passed": true
+    },
+    {
+      "check": "a_scope_application_predates_worker_initial_intent",
+      "passed": true
+    },
+    {
+      "check": "b_report_exact_scratch",
+      "passed": true
+    },
+    {
+      "check": "b_queries_atmost4",
+      "passed": true
+    },
+    {
+      "check": "b_source_navigation_atmost10",
+      "passed": true
+    },
+    {
+      "check": "b_exact_worker_scope_partition",
+      "passed": true
+    },
+    {
+      "check": "b_intent_exact_scratch",
+      "passed": true
+    },
+    {
+      "check": "b_scope_application_predates_worker_initial_intent",
+      "passed": true
+    },
+    {
+      "check": "c_report_exact_scratch",
+      "passed": true
+    },
+    {
+      "check": "c_queries_atmost4",
+      "passed": true
+    },
+    {
+      "check": "c_source_navigation_atmost10",
+      "passed": true
+    },
+    {
+      "check": "c_exact_worker_scope_partition",
+      "passed": true
+    },
+    {
+      "check": "c_intent_exact_scratch",
+      "passed": true
+    },
+    {
+      "check": "c_scope_application_predates_worker_initial_intent",
+      "passed": true
+    },
+    {
+      "check": "parent_same_method_current_scope_hash",
+      "passed": true
+    },
+    {
+      "check": "thisversion_no_new_admission_amendment",
+      "passed": true
+    },
+    {
+      "check": "class_current_method_scope_hash",
+      "passed": true
+    },
+    {
+      "check": "class_adopted_ids_grades_modes_actual",
+      "passed": true
+    },
+    {
+      "check": "class_native_BP_fields_unchanged",
+      "passed": true
+    },
+    {
+      "check": "adopted_count_matches_partition",
+      "passed": true
+    },
+    {
+      "check": "three_adopted_Pagel_Mackintosh_Chibnall_three_held",
+      "passed": true
+    },
+    {
+      "check": "Pagel_actual_Berlin_link_then_literal_Bundesrepublik_Deutschland",
+      "passed": true
+    },
+    {
+      "check": "Pagel_worker45_root46_roles_and_body_refs",
+      "passed": true
+    },
+    {
+      "check": "Mackintosh_direct_London_England_fullnative_plus_source_extra_Seymour",
+      "passed": true
+    },
+    {
+      "check": "Mackintosh_frozen_hospital_locality_preserved_not_reconfirmed_street",
+      "passed": true
+    },
+    {
+      "check": "Chibnall_actual_Hammersmith_person_link_target_CountryEngland",
+      "passed": true
+    },
+    {
+      "check": "all_three_person_country_entity_fields_unassigned_and_S3geo",
+      "passed": true
+    },
+    {
+      "check": "Maitlis_primary_rewritten_summary_not_qualified_by_normal_target",
+      "passed": true
+    },
+    {
+      "check": "Ross_yearonly_and_rewritten_Oxford_contrast_not_qualified_source_conflict",
+      "passed": true
+    },
+    {
+      "check": "Spath_no_qualified_born_place_edge",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4636_unknown_calendar_rank_editorial_independence_null",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4636_root_actual_body_role_separate_worker_role",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4568_unknown_calendar_rank_editorial_independence_null",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA4568_root_actual_body_role_separate_worker_role",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6313_unknown_calendar_rank_editorial_independence_null",
+      "passed": true
+    },
+    {
+      "check": "RS_PAST_NA6313_root_actual_body_role_separate_worker_role",
+      "passed": true
+    },
+    {
+      "check": "root_intents_after_scope_before_adjudication",
+      "passed": true
+    },
+    {
+      "check": "root_atmost18opens1query",
+      "passed": true
+    },
+    {
+      "check": "parent_worker_counts_exact_ledgers",
+      "passed": true
+    },
+    {
+      "check": "root_counts_match_intent_entries",
+      "passed": true
+    },
+    {
+      "check": "parent_totals_match_worker_plus_root",
+      "passed": true
+    },
+    {
+      "check": "all_root_quoteworkcounts_atmost25",
+      "passed": true
+    },
+    {
+      "check": "held_no_current_geography",
+      "passed": true
+    },
+    {
+      "check": "parent_decision_counts_match_actual_facts_holds",
+      "passed": true
+    },
+    {
+      "check": "zero_firstbirthplaces_DOB_inventory_count_no_place_or_other_exceptions",
+      "passed": true
+    },
+    {
+      "check": "schema_no_relaxation_and_runtime_semantic_boundary",
+      "passed": true
+    },
+    {
+      "check": "schema_current_application_scope_documented",
+      "passed": true
+    },
+    {
+      "check": "no_source_caches_or_images",
+      "passed": true
+    }
+  ],
+  "blocking_issues": [],
+  "declared_six_GEO_FIELDS": [
+    "geo_resolution_status",
+    "geography_decision",
+    "hemisphere",
+    "northern_birthplace_candidate",
+    "reason",
+    "southern_birthplace_separate"
+  ],
+  "no_new_admission_method_exception": true,
+  "explicit_prospective_admission_method_amendment": false,
+  "historical_V36_method_amendment_preserved": true,
+  "scope_application_extension": true,
+  "review_scope": "Documentary source/native binding/scope/protocol review only. Workers and root acquired source observations. Reviewer did not fetch network originals, inspect raw bytes/pixels or execute production. Final QA independently checks full-object rollback and deterministic output replays.",
+  "no_network_source_code_mainoutputs_audits_or_Git_mutation_by_reviewer": true,
+  "accepted_fact_path": "inputs/accepted_geography.json",
+  "accepted_fact_sha256_at_review": "8a51bc4aa38b942a76f0db88b15d40f4bdcd451d79a24dce63456f4f1ec7c56b",
+  "accepted_geography_sha256_at_review": "8a51bc4aa38b942a76f0db88b15d40f4bdcd451d79a24dce63456f4f1ec7c56b",
+  "active_DOB_conflicts_sha256_at_review": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+  "source_derived_age_inconsistencies_sha256_at_review": "e095513676cfd206a684328fa925d7c201f045e8f0b919ca2143b5dde4293fa0",
+  "prior_v37_source_derived_age_inconsistencies_sha256_at_review": "9a299ead41add638a45fd85603a59ee3c42e1b0284af5c06c5e273a3affac18a",
+  "birthplace_source_conflicts_sha256_at_review": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+  "source_class_adjudication_sha256_at_review": "28c850373cbfacec205d8aab9362c58f3a203543b6de3cb69e00b288b74d0ced",
+  "historical_v35_geography_first_pass_queue_closeout_sha256_at_review": "56fd3053935afc42fe2f9cf301bb66bc2bc6839fa9483467cd03e602fb61be3b",
+  "method_preregistration_sha256_at_review": "b76b7ad55125b1cf2dffe7d847d013f7fb8c2a6c8868c66f1e3060efae471147",
+  "method_application_scope_sha256_at_review": "bd7540715a6b4649ffe79371e38ee2b650bd0176013fbb5418efa02b8995fad0",
+  "method_application_scope_path": "audit/method_application_scope_v38.json",
+  "legacy_V37_method_application_scope_sha256_at_review": "ae080b06f8abad9ed7575783486795c977e44ce5e5024bfa2096e16816a44d94",
+  "method_schema_sha256_at_review": "dbcadab815994ebfe6fe41f49f649d6b5530a41ba949ff6f0f6def753fefa742",
+  "accepted_geographic_bindings": [
+    {
+      "record_id": "RS_PAST_NA4636",
+      "native_DOB": "1930-01-04",
+      "native_authority": "Pagel; Bernard Ephraim Julius (1930 - 2007)",
+      "observed_source_full_name": "Bernard Ephraim Julius Pagel",
+      "source_birthdate": "1930-01-04",
+      "source_birthdate_as_displayed": "4. Januar 1930",
+      "frozen_raw_birthplace": "Berlin",
+      "frozen_BP_source_grade": "S2",
+      "source_birthplace_context": "Berlin actual personal-born hyperlink target; Bundesrepublik Deutschland actual target-place geographic region statement.",
+      "new_geographic_grade": "S3",
+      "new_hemisphere": "north",
+      "proof_mode": "explicit_person_born_place_hyperlink_then_actual_target_place_region",
+      "proof_chain": [
+        {
+          "source_url": "https://de.wikipedia.org/wiki/Bernard_Pagel",
+          "source_node_label": "Bernard Ephraim Julius Pagel",
+          "edge_property": "explicit_subject_birthplace_hyperlink",
+          "tool_ref": "turn6297734view1",
+          "locator": "L115 full Bernard Ephraim Julius Pagel/exact4January1930/inBerlin bornlink46;L120bornBerlin/L121RGO-Sussex-NORDITAcareer/life1930-2007. Worker parsedlink45 actually followed, rootlink46 difference not sourceversion proof.",
+          "acquisition_role": "root_actual_canonical_person_birthlink_observed_after_worker_actual_follow",
+          "target_kind": "entity",
+          "target_label": "Berlin",
+          "target_uri": "https://de.wikipedia.org/wiki/Berlin",
+          "source_qid": null,
+          "target_qid": null,
+          "worker_tool_ref": "turn7373260view1",
+          "worker_follow_link_result_ref": "turn2807097view1",
+          "root_reclicked_person_link": false
+        },
+        {
+          "source_url": "https://de.wikipedia.org/wiki/Berlin",
+          "source_node_label": "Berlin",
+          "edge_property": "explicit_geographic_country_region_statement",
+          "tool_ref": "turn6297734view2",
+          "locator": "L485 Berlin capital and Land of Bundesrepublik Deutschland;L501 geographiccity NEGermany/withinBrandenburg. No coordinates/historicalsovereignty assigned.",
+          "acquisition_role": "root_actual_previously_observed_person_birthlink_target_body_after_worker_actual_follow",
+          "target_kind": "literal",
+          "target_label": "Bundesrepublik Deutschland",
+          "target_uri": null,
+          "source_qid": null,
+          "target_qid": null,
+          "target_uri_limit": "Actual literal terminal region value, no observed value hyperlink URI/QID; country equivalence Germany is linguistic normalization only.",
+          "source_node_type": "geographic_city_and_city_state",
+          "source_quote": "Bundesrepublik Deutschland",
+          "source_quote_word_count": 2
+        }
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA4568",
+      "native_DOB": "1935-07-09",
+      "native_authority": "Mackintosh; Nicholas John (1935 - 2015)",
+      "observed_source_full_name": "Nicholas John Seymour Mackintosh",
+      "source_birthdate": "1935-07-09",
+      "source_birthdate_as_displayed": "9 July 1935",
+      "frozen_raw_birthplace": "the Royal Northern Hospital in Islington, London",
+      "frozen_BP_source_grade": "S2",
+      "source_birthplace_context": "Born London, England (actual personal infobox); frozen finer hospital/Islington text not independently confirmed by this source.",
+      "new_geographic_grade": "S3",
+      "new_hemisphere": "north",
+      "proof_mode": "direct_born_region_in_actual_canonical_person_body",
+      "proof_chain": [
+        {
+          "source_url": "https://en.wikipedia.org/wiki/Nicholas_Mackintosh",
+          "source_node_label": "Nicholas John Seymour Mackintosh",
+          "edge_property": "explicit_subject_born_region_literal",
+          "tool_ref": "turn1978583view0",
+          "locator": "L111 Nicholas John Seymour Mackintosh(all nativecomponents plus sourceextraSeymour)/L112exact9July1935/L113BornLondon,England/L123fullnative-life-psychology/L128Oxford-Sutherland/L133Cambridgecareer1981-2002.",
+          "acquisition_role": "root_actual_canonical_person_direct_Born_region_literal",
+          "target_kind": "literal",
+          "target_label": "England",
+          "target_uri": null,
+          "source_qid": null,
+          "target_qid": null,
+          "target_uri_limit": "Direct born-region literal used; the composite London,England hyperlink was not followed and no target URI/QID assigned.",
+          "root_reclicked_person_link": false
+        }
+      ]
+    },
+    {
+      "record_id": "RS_PAST_NA6313",
+      "native_DOB": "1894-01-28",
+      "native_authority": "Chibnall; Albert Charles (1894 - 1988); biochemist",
+      "observed_source_full_name": "Albert Charles Chibnall",
+      "source_birthdate": "1894-01-28",
+      "source_birthdate_as_displayed": "28 January 1894",
+      "frozen_raw_birthplace": "Hammersmith, London",
+      "frozen_BP_source_grade": "S2",
+      "source_birthplace_context": "Hammersmith (explicit personal Born field and born-prose hyperlink); England (actual target district Country field and geographic lead)",
+      "new_geographic_grade": "S3",
+      "new_hemisphere": "north",
+      "proof_mode": "explicit_person_born_place_hyperlink_then_actual_target_place_region",
+      "proof_chain": [
+        {
+          "source_url": "https://en.wikipedia.org/wiki/Albert_Chibnall",
+          "source_node_label": "Albert Charles Chibnall",
+          "edge_property": "explicit_subject_birthplace_hyperlink",
+          "tool_ref": "turn3758274view0",
+          "locator": "L109fullAlbertCharlesChibnall/L111exact28January1894/L112BornHammersmithlink39/L123fullDOB-biochemistry/L128explicitbornclause-link39/L131-133Imperial-Cambridgecareer. Workercachedpersonlocators differ, no sourceversion inference.",
+          "acquisition_role": "root_actual_canonical_person_birthlink_observed_after_worker_actual_follow",
+          "target_kind": "entity",
+          "target_label": "Hammersmith",
+          "target_uri": "https://en.wikipedia.org/wiki/Hammersmith",
+          "source_qid": null,
+          "target_qid": null,
+          "worker_tool_ref": "turn7079468view0",
+          "worker_follow_link_result_ref": "turn4523945view0",
+          "root_reclicked_person_link": false
+        },
+        {
+          "source_url": "https://en.wikipedia.org/wiki/Hammersmith",
+          "source_node_label": "Hammersmith",
+          "edge_property": "Country",
+          "tool_ref": "turn3758274view1",
+          "locator": "L157Hammersmithgeographicdistrict/L170CountryEngland/L184WestLondondistrictEngland. Actual England anchorvalue text seen, targetURI not resolved, null not guessed.",
+          "acquisition_role": "root_actual_previously_observed_person_birthlink_target_body_after_worker_actual_follow",
+          "target_kind": "literal",
+          "target_label": "England",
+          "target_uri": null,
+          "source_qid": null,
+          "target_qid": null,
+          "target_uri_limit": "England anchor text103 observed but terminal anchor hrefURI was not acquired/followed; no guessed regionURI/QID. Literal England field sufficient.",
+          "source_node_type": "geographic_district",
+          "source_quote": "England",
+          "source_quote_word_count": 1
+        }
+      ]
+    }
+  ],
+  "inherited_six_other_issue_sidecars_byte_identical": [
+    "provisional_parsed_date_discrepancies.json",
+    "source_date_precision_holds.json",
+    "lifespan_endpoint_discrepancies.json",
+    "cross_source_reported_age_contrasts.json",
+    "omitted_middle_name_admission.json",
+    "source_ordinal_age_wording_observations.json"
+  ],
+  "old_Waterfield_age_record_unchanged": true,
+  "new_Spath_one_source_age_arithmetic_observation_only": true,
+  "worker_counts_from_actual_ledgers": {
+    "a": {
+      "queries": 2,
+      "navigation_operations": 7,
+      "parsed_finds": 1
+    },
+    "b": {
+      "queries": 3,
+      "navigation_operations": 4,
+      "parsed_finds": 1
+    },
+    "c": {
+      "queries": 2,
+      "navigation_operations": 4,
+      "parsed_finds": 0
+    }
+  }
+}

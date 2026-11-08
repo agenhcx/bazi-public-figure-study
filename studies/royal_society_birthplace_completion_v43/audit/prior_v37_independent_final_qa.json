@@ -1,0 +1,147 @@
+{
+  "schema": "UK_v37_geography_only_independent_final_QA_v1",
+  "reviewer": "/root/v37_final_qa",
+  "written_utc": "2026-11-07T01:01:19.894307+00:00",
+  "status": "PASS",
+  "validation_categories_passed": 49,
+  "checks": [
+    "root final canonical and adopted IDs supplied before QA",
+    "five completed production output pins match before QA",
+    "v36 baseline and v37 current canonical match root pins",
+    "self-contained v36 reconstruction all4983 complete objects exact",
+    "all prior loaders and geography and birthplace helpers verbatim",
+    "all prior geography constants unchanged",
+    "fixed record order unique keys and UK cohort",
+    "61 stored-place unknown queue and6 fixed complete disjoint outcomes",
+    "three groups two each match predeclared scope and no first birthplace inputs",
+    "only six existing geography fields mutable",
+    "complete changed object set exactly accepted geography IDs",
+    "all native and BP fields and prior evidence frozen with exact six-field rollback",
+    "all103 window blank and all525 blank complete objects unchanged",
+    "all current holds preserve complete objects",
+    "all raw birthplace and source grades unchanged",
+    "adopted documentary facts carry geography-only grade roles identity place and parsed-source limits",
+    "V36 historical method and V37 current application separately pinned",
+    "all accepted canonical community facts bind current scope exact native identity and actual geographic chain",
+    "independent overall and2644 window counts",
+    "unchanged blank counts and resolved nonblank unknown diagnostics recomputed",
+    "summary zero newBP and geography counts grade roles exact",
+    "changes contain only current geography refinements originalBP unchanged",
+    "CSV152 old columns retain positions plus6 newgeo=158",
+    "all4983 CSV rows preserve old meanings except adopted current hemisphere cells",
+    "remaining unknown CSV equals master native-window order",
+    "eight non-DOB issue sidecars byte exact including two place objects",
+    "current activeDOB inventory appends only Adam after exact old12 record objects",
+    "new Adam conflict hold leaves complete master object and nativeDOB untouched",
+    "all inherited historical audit files remain byte exact",
+    "historical v29 first-pass closeout retains v29 hash and same103 blank IDs",
+    "untargeted prior issue geography and source-class complete objects unchanged",
+    "known place holds and prior active DOB cases excluded from currentselection",
+    "sourceQA passed with exact current facts activeDOB and source-class hash bindings",
+    "sourceQA binds preregistration changed method and unchanged historical queue",
+    "sourceQA binds declared method schema application and actual proof modes",
+    "no full-source caches PDFs or images distributed",
+    "README continuation final canonical and v37 labels updated",
+    "parent adjudication describes current baseline geography-only phase",
+    "actual source request accounting equals root final declared counts",
+    "worker reports preserved byte exact",
+    "prior12 activeDOB subjects excluded and all13 current conflict master objects unchanged",
+    "all old source-conflict record objects remain unchanged",
+    "inherited Thompson historical context and provenance note byte exact",
+    "prior v36 source class decision byte exact",
+    "v35 first-pass queue audit is exact historical file with former canonical hash",
+    "historical V36 pilot preregistration byte pinned with original six IDs",
+    "current class adjudication explicitly reuses historical V36 method",
+    "two isolated clean replays all5 outputs equal original pins",
+    "production five outputs untouched after QA"
+  ],
+  "baseline_canonical_sha256": "56d5117eed499c0116eb088362874c8273bcee79ef7bb74da3e807f27ce0a020",
+  "final_canonical_sha256": "c7fbc21d596077694148aee316baa663697fb3fd7159cd7de79c7a194b2affbe",
+  "records": 4983,
+  "changed_complete_objects": 1,
+  "unchanged_complete_objects": 4982,
+  "new_birthplaces": 0,
+  "geography_only_resolutions": 1,
+  "accepted_record_ids": [
+    "RS_PAST_NA1580"
+  ],
+  "overall": {
+    "north": 4199,
+    "unknown": 597,
+    "south": 187
+  },
+  "window_counts": {
+    "north": 2299,
+    "unknown": 163,
+    "south": 182
+  },
+  "blank_diagnostics": {
+    "all_blank_raw_birthplace": 525,
+    "window_blank_raw_birthplace": 103,
+    "all_unknown": 597,
+    "all_unknown_with_blank_raw_birthplace": 525,
+    "all_unknown_with_nonblank_raw_birthplace": 72,
+    "window_unknown": 163,
+    "window_unknown_with_blank_raw_birthplace": 103,
+    "window_unknown_with_nonblank_raw_birthplace": 60
+  },
+  "main_pre_QA_output_pins": {
+    "birthplace_rows.jsonl.gz": "bb17dd06065c43164db7d277ae060077d983a582096459034166d40295681ded",
+    "birthplaces.csv": "fba5f9fdede2b29fabfce886a57e6f0a73fe540d8e323bee8493a2569efbdccc",
+    "changes.json": "d25f540e85b3976b937b2ba9ea6149ad35b63b4003fb1617c77e9eec1a093d9b",
+    "remaining_unknown_window.csv": "9dd4200ebad37aa933a978748e65e39b555d0bda199616c3d1a2be17162cfa63",
+    "summary.json": "0cd7ff8e48630b26d9cdf8b8046adab26ebb60b88edb9dc32b57a3f4c6f74653"
+  },
+  "isolated_replay_runs": [
+    {
+      "run": 1,
+      "clean_exit": true,
+      "five_hashes": {
+        "birthplace_rows.jsonl.gz": "bb17dd06065c43164db7d277ae060077d983a582096459034166d40295681ded",
+        "birthplaces.csv": "fba5f9fdede2b29fabfce886a57e6f0a73fe540d8e323bee8493a2569efbdccc",
+        "changes.json": "d25f540e85b3976b937b2ba9ea6149ad35b63b4003fb1617c77e9eec1a093d9b",
+        "remaining_unknown_window.csv": "9dd4200ebad37aa933a978748e65e39b555d0bda199616c3d1a2be17162cfa63",
+        "summary.json": "0cd7ff8e48630b26d9cdf8b8046adab26ebb60b88edb9dc32b57a3f4c6f74653"
+      },
+      "matched_original_pins": true
+    },
+    {
+      "run": 2,
+      "clean_exit": true,
+      "five_hashes": {
+        "birthplace_rows.jsonl.gz": "bb17dd06065c43164db7d277ae060077d983a582096459034166d40295681ded",
+        "birthplaces.csv": "fba5f9fdede2b29fabfce886a57e6f0a73fe540d8e323bee8493a2569efbdccc",
+        "changes.json": "d25f540e85b3976b937b2ba9ea6149ad35b63b4003fb1617c77e9eec1a093d9b",
+        "remaining_unknown_window.csv": "9dd4200ebad37aa933a978748e65e39b555d0bda199616c3d1a2be17162cfa63",
+        "summary.json": "0cd7ff8e48630b26d9cdf8b8046adab26ebb60b88edb9dc32b57a3f4c6f74653"
+      },
+      "matched_original_pins": true
+    }
+  ],
+  "main_outputs_rerun_or_mutated": false,
+  "new_active_DOB_conflict_inventory_entries": 1,
+  "active_DOB_conflict_count": 13,
+  "all12_prior_active_DOB_conflict_objects_unchanged": true,
+  "historical_v29_closeout_hash_preserved": true,
+  "historical_v35_closeout_hash_preserved": true,
+  "explicit_prospective_admission_method_amendment": false,
+  "method_application_scope_sha256": "ae080b06f8abad9ed7575783486795c977e44ce5e5024bfa2096e16816a44d94",
+  "quote_words": {
+    "RS_PAST_NA1580": 1
+  },
+  "documentation_checks": {
+    "files": [
+      "README.md",
+      "CONTINUATION.md"
+    ],
+    "counts_scope_limits_consistent": true,
+    "review_method": "Direct final documentary review plus complete structural equality and rollback, documentary source semantics separately reviewed by sourceQA. All originalBP/DOBtiers and previous facts retained; only six geographic fields and versioned context may change."
+  },
+  "limitations": [
+    "Independent local data/structural/replay verification only; no network or original-source acquisition/rawHTTP inspection by this reviewer.",
+    "Source semantic/genre/source-newness reviewed separately in independent_source_qa.json; recorded parsed source locators are not new acquisition claims by this reviewer.",
+    "New source grades are geographic_support_only and do not upgrade original birthplaces or DOB grades.",
+    "The old12 activeDOB record objects remain exact and only Adam is appended as case13; its native master object is unchanged. Two partial place objects and seven other issue files remain byte-identical. The prospective canonical-community method does not retroapprove old Kiddle or clear prior conflicts; Tomes provisional distinct. v29 first-pass closeout stays historical with its v29hash and all103blank objects unchanged.",
+    "No production facts, inputs, code, main outputs or Git changed; this audit and scratch harness only."
+  ]
+}
