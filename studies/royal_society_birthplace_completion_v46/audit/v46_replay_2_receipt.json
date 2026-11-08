@@ -1,0 +1,26 @@
+{
+  "index": 2,
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-B",
+    "/workspace/scratch/262552d8c0f0/academy_repo/studies/royal_society_birthplace_completion_v46/scripts/replay.py",
+    "--output-dir",
+    "/workspace/scratch/262552d8c0f0/v46_isolated_replay_2"
+  ],
+  "start_utc": "2026-11-08T11:50:38.183213+00:00",
+  "end_utc": "2026-11-08T11:50:42.299091+00:00",
+  "exit_code": 0,
+  "output_dir": "/workspace/scratch/262552d8c0f0/v46_isolated_replay_2",
+  "log_path": "/workspace/scratch/262552d8c0f0/v46_replay_2.log",
+  "log_sha256": "471c2901212fba62d84864ddba2f3d6c12c2f94087b237b1aa0db3920d334faa",
+  "replay_script_sha256": "16cc7bcf0394857ba5350cce3a8166be7c6644b18433f048eda3329c1750cecf",
+  "source_pointer_sha256": "b87259b49ddd884a3f30a88fa48b1eb4c98ee9ff4e8b0da63d341f120b49c319",
+  "output_sha256": {
+    "birthplace_rows.jsonl.gz": "95048d6e3ef240f1f5d11a92d3314295b9eb98af7c388bead6889fa2af300b95",
+    "birthplaces.csv": "175f19dfe95e965bf480cc12b7e745b53955c0631a9672152a33b79f33e724fa",
+    "changes.json": "72ec8f5bfccc6e88bbea3051980870e63a801b1e75b1446c296a8b54e9ba431d",
+    "remaining_unknown_window.csv": "812650e327483e447b5fa849ac1dbf9093e83f399676360613e0425b4cc07ee3",
+    "summary.json": "43596f7341a0bf0868ca612df4ad8d8cf58ea31eae03fbde1b5cd7aa5e6b9e3e"
+  },
+  "historical_imports_or_replay": false
+}

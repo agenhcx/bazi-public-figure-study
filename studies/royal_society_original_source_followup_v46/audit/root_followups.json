@@ -1,0 +1,75 @@
+{
+  "written_utc": "2026-11-08T11:40:13.160029+00:00",
+  "scope_sha256": "6051c4a3f9887bbba4556595f9dfbbfd8c5bb6ab552d586e9cf67f217597c7bc",
+  "counts": {
+    "queries": 1,
+    "opens": 1,
+    "clicks": 0,
+    "finds": 0,
+    "raw_GETs": 0
+  },
+  "observations": [
+    {
+      "entry_id": "root_npg_morris_verify_1",
+      "record_id": "RS_PAST_NA4250",
+      "url": "https://www.npg.org.uk/collections/search/person/mp15431/sir-peter-john-morris",
+      "source_ref": "turn1031603view0",
+      "actual_original_person_body": true,
+      "rewritten_header": false,
+      "observed_full_name": "Sir Peter John Morris",
+      "native_components": [
+        "Peter",
+        "John",
+        "Morris"
+      ],
+      "source_birthyear": "1934",
+      "source_deathyear": "2022",
+      "source_birthdate_precision": "year_only",
+      "source_exact_day_confirmation": false,
+      "direct_birthplace_predicate": "Australian-born",
+      "source_quote": "Australian-born scientist and surgeon.",
+      "conservative_quote_lexical_words": 5,
+      "source_locator": "L61 full native name;L63 1934-2022;L66 born country and coherentNuffield/Balliol/transplant/knighthood career",
+      "source_grade_adopted": "S3",
+      "geography": "south using unchangedV16Australia precedent",
+      "source_author": null,
+      "publication_date": null,
+      "source_revision_id": null,
+      "source_informational_independence": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "separate_local_intent_validation_exit0_observed_before_web": true,
+      "exact_validation_utc_not_recorded": true,
+      "not_used": [
+        "NPG Places taxonomy",
+        "portrait date1999",
+        "copyright2026",
+        "RCS exactDOB and missingJohn"
+      ],
+      "accepted_first_birthplace": true
+    },
+    {
+      "entry_id": "root_jerry_wehi_locator_1",
+      "record_id": "RS_CURRENT_10965",
+      "query": "\"Jerry Adams\" site:wehi.edu.au \"born\"",
+      "discovery_refs": [
+        "turn5332750search0",
+        "turn5332750search1",
+        "turn5332750search2"
+      ],
+      "result_role": "other-subject institutional histories with Jerry mentions; no target personal-body locator pursued",
+      "source_body_opened": false,
+      "search_projection_facts_adopted": false,
+      "global_absence_claim": false,
+      "separate_local_intent_validation_exit0_observed_before_web": true,
+      "exact_validation_utc_not_recorded": true,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null
+    }
+  ],
+  "source_exhausted": false,
+  "all_old_holds_preserved": true,
+  "historical_V44_Finlay_deviation_preserved": true
+}

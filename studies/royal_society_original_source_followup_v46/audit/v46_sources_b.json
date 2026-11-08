@@ -1,0 +1,611 @@
+{
+  "schema": "UK_v46_sources_b_distinct_original_person_geography_v1",
+  "written_utc": "2026-11-08T11:40:08.754989+00:00",
+  "group": "b",
+  "scope_sha256": "6051c4a3f9887bbba4556595f9dfbbfd8c5bb6ab552d586e9cf67f217597c7bc",
+  "native_scope_sha256": "c22baf6bddaacbe19cbc2cec892fc489691431e507792441a4f06022a4d4b963",
+  "intent_file": "v46_intent_b.json",
+  "scope_record_ids": [
+    "RS_CURRENT_10965",
+    "RS_PAST_NA780"
+  ],
+  "all9_issue_inventories_read_in_full_before_queries": true,
+  "inventory_file_pins": {
+    "active_source_DOB_conflicts.json": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+    "birthplace_source_conflicts.json": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+    "source_derived_age_inconsistencies.json": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+    "provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+    "lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+    "cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+    "source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+    "omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+    "source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+  },
+  "full_target_native_and_prior_worker_AND_root_ledgers_reviewed_before_queries": true,
+  "prior_context_file_pins": {
+    "v46_triage_b.json": "33007c582c5f8824236051dad7870563f71397c89069146c2e9e42f6cbcea4d9",
+    "v26_sources_c.json": "2729732409fc5735d38de7edd331a122220cf27ae66d9ca6767baff543f906e1",
+    "v26_c_intent.json": "7593daa8d653dfd96b1e577f1aa7bca3d94ab739d3792ae9ba915cff20f15d27",
+    "v26_root_intent.json": "69522bdda59d2b4d0fba2200425a61d8ee38c7484dfd0f65d8a2b1c2522b14b6",
+    "v30_sources_a.json": "896b9cf560bc7e068fa63cace081342c3f40a6cabb320e9150431116e917af37",
+    "v35_sources_a.json": "38febedd98ea5061e1847fba8611d53fc37b02344bca17b34c3fe479b3b62443",
+    "v35_a_intent.json": "1cfebae71ae6c6423eb5f65c2a4e8889d68209dba865689a338b95096e0524a8",
+    "v44_sources_a.json": "d88d1478d4ccc17e68176a4b5638d5a7708ac66b629260c40bdd4b652ed04a4f",
+    "v44_sources_b.json": "58b918f28f270725c96bbf481a69113a5907eb6c957ab0201785aea9233c39c4",
+    "academy_repo/studies/royal_society_birthplace_completion_v44/audit/root_intent.json": "4bdc37c632e7764fb8105abcb4d833ba13ebc3ace7c17de0a3f413af9222f33b",
+    "academy_repo/studies/royal_society_birthplace_completion_v44/audit/root_followups.json": "385ecbb8973288dc649cd5d35b88c5abe27515abe537aa3c40775d274ad0202e",
+    "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v33_root_followups.json": "8d9a253398a523dbae1282dcff8bec489fc7031aea2d9a7f708a09c455ea1748"
+  },
+  "inherited_admission": "V35originalpersongeography, no newmethod/exception; fullnative components/actuallystatedcompatibleDOBprecision/coherentcareer/life/frozenplace/directbirthwhole-region required.",
+  "retrieval_counts": {
+    "queries": 5,
+    "navigation_attempts": 4,
+    "source_open_operations": 3,
+    "click_operations": 1,
+    "parsed_finds": 0,
+    "screenshots": 0,
+    "raw_GETs": 0
+  },
+  "budgets": {
+    "queries": 5,
+    "navigation_attempts": 6,
+    "parsed_finds": "separate_count"
+  },
+  "query_ledger": [
+    {
+      "intent_entry_id": 0,
+      "written_utc": "2026-11-08T11:35:19.918457+00:00",
+      "operation": "query",
+      "record_id": "RS_CURRENT_10965",
+      "exact_request": {
+        "system2_search_query": [
+          {
+            "q": "\"Jerry Adams\" WEHI biography born"
+          }
+        ],
+        "response_length": "long"
+      },
+      "result_ref": null,
+      "observed_result_refs": [
+        "turn6755929search12",
+        "turn6755929search0",
+        "turn6755929search13",
+        "turn6755929search1",
+        "turn6755929search14",
+        "turn6755929search15",
+        "turn6755929search16"
+      ],
+      "outcome": "Broadengine2discoveryreturnedoldWiki/EOASandirrelevantwork/otherpersonprojections; directdisplaytruncated, no absence claim or unobservedURL promoted.",
+      "separate_pre_request_successful_exit0": true,
+      "validation_tool_chunk_id": "b06a01"
+    },
+    {
+      "intent_entry_id": 1,
+      "written_utc": "2026-11-08T11:35:19.918468+00:00",
+      "operation": "query",
+      "record_id": "RS_PAST_NA780",
+      "exact_request": {
+        "system2_search_query": [
+          {
+            "q": "\"John William Evans\" \"Mineralogical Magazine\" \"1933\""
+          }
+        ],
+        "response_length": "long"
+      },
+      "result_ref": null,
+      "observed_result_refs": [
+        "turn9311676search0",
+        "turn9311676search1",
+        "turn9311676search2",
+        "turn9311676search3",
+        "turn9311676search4",
+        "turn9311676search5",
+        "turn9311676search6",
+        "turn9311676search7",
+        "turn9311676search8",
+        "turn9311676search9"
+      ],
+      "outcome": "BGSbibliography locator plusirrelevantprojections; no originalobituaryURLacquired from visible results.",
+      "separate_pre_request_successful_exit0": true,
+      "validation_tool_chunk_id": "b06a01"
+    },
+    {
+      "intent_entry_id": 2,
+      "written_utc": "2026-11-08T11:36:03.727378+00:00",
+      "operation": "query",
+      "record_id": "RS_CURRENT_10965",
+      "exact_request": {
+        "system1_search_query": [
+          {
+            "q": "\"Jerry Adams\" biography site:science.org.au"
+          }
+        ],
+        "response_length": "long"
+      },
+      "result_ref": null,
+      "observed_result_refs": [
+        "turn3656327search0",
+        "turn3656327search1",
+        "turn3656327search2",
+        "turn3656327search3",
+        "turn3656327search6",
+        "turn3656327search4",
+        "turn3656327search5"
+      ],
+      "outcome": "ActualnewAASfellowprofileURLobserved. CSHLoralhistory projection appears sameGenomeLegacy composition/text, excluded beforeopen.",
+      "separate_pre_request_successful_exit0": true,
+      "validation_tool_chunk_id": "41e2dd"
+    },
+    {
+      "intent_entry_id": 3,
+      "written_utc": "2026-11-08T11:36:03.727395+00:00",
+      "operation": "query",
+      "record_id": "RS_PAST_NA780",
+      "exact_request": {
+        "system1_search_query": [
+          {
+            "q": "\"John William Evans\" \"Proceedings\" \"1931\""
+          }
+        ],
+        "response_length": "long"
+      },
+      "result_ref": null,
+      "observed_result_refs": [
+        "turn9386244search0",
+        "turn9386244search1",
+        "turn9386244search2",
+        "turn9386244search3",
+        "turn9386244search5",
+        "turn9386244search6",
+        "turn9386244search7",
+        "turn9386244search8",
+        "turn9386244search4"
+      ],
+      "outcome": "BGSprojection confirms twocitedworks. ClosedCambridgeoriginalURLrediscovered, notopened. OtherNature/GeographicJournal citations unrequested; target1933MMURLnotyetfound.",
+      "separate_pre_request_successful_exit0": true,
+      "validation_tool_chunk_id": "41e2dd"
+    },
+    {
+      "intent_entry_id": 5,
+      "written_utc": "2026-11-08T11:36:38.483217+00:00",
+      "operation": "query",
+      "record_id": "RS_PAST_NA780",
+      "exact_request": {
+        "system1_search_query": [
+          {
+            "q": "\"Mineralogical Magazine\" \"1933\" \"349\" \"Evans\""
+          }
+        ],
+        "response_length": "long"
+      },
+      "result_ref": null,
+      "observed_result_refs": [
+        "turn6135480search0",
+        "turn6135480search3",
+        "turn6135480search4",
+        "turn6135480search1",
+        "turn6135480search5",
+        "turn6135480search6",
+        "turn6135480search2"
+      ],
+      "outcome": "Observed actualRRuff Arizona originalMM23/141BiographicalNoticesPDF URL; alternateRRuffcarrier excluded. Searchprojectionnotproof.",
+      "separate_pre_request_successful_exit0": true,
+      "validation_tool_chunk_id": "59a9f3"
+    }
+  ],
+  "navigation_ledger": [
+    {
+      "intent_entry_id": 4,
+      "written_utc": "2026-11-08T11:36:38.483203+00:00",
+      "operation": "open",
+      "record_id": "RS_CURRENT_10965",
+      "exact_request": {
+        "open": [
+          {
+            "ref_id": "https://science.org.au/about-us/academy-fellows/discover-our-fellows/jerry-adams"
+          }
+        ],
+        "response_length": "long"
+      },
+      "result_ref": "turn4923919view0",
+      "observed_result_refs": [],
+      "outcome": "ActualAASpersonalprofile JerryAdams/JerryMAdams/coherentcareer/elected1986, noDOB/birthplace; Victoria isworklocation. ActualConversationsdirectoryhref51 available.",
+      "separate_pre_request_successful_exit0": true,
+      "validation_tool_chunk_id": "59a9f3"
+    },
+    {
+      "intent_entry_id": 6,
+      "written_utc": "2026-11-08T11:37:21.895630+00:00",
+      "operation": "open",
+      "record_id": "RS_PAST_NA780",
+      "exact_request": {
+        "open": [
+          {
+            "ref_id": "https://rruff.geo.arizona.edu/doclib/MinMag/Volume_23/23-141-337.pdf"
+          }
+        ],
+        "response_length": "long"
+      },
+      "result_ref": "turn8252959view0",
+      "observed_result_refs": [],
+      "outcome": "FirstMM1933originalPDFtool404, no body. Entireworkclosed; no alternateRRuff/Cambridgecarrier retry.",
+      "separate_pre_request_successful_exit0": true,
+      "validation_tool_chunk_id": "eb6c66"
+    },
+    {
+      "intent_entry_id": 7,
+      "written_utc": "2026-11-08T11:37:21.895647+00:00",
+      "operation": "click",
+      "record_id": "RS_CURRENT_10965",
+      "exact_request": {
+        "click": [
+          {
+            "ref_id": "turn4923919view0",
+            "id": 51
+          }
+        ],
+        "response_length": "long"
+      },
+      "result_ref": "turn4415539view0",
+      "observed_result_refs": [],
+      "outcome": "ActualAASinterviewdirectorycurrentpage10of151 otherpeople, noJerryhrefobserved. No globalarticleabsence. No date/place imported from otherpeople.",
+      "separate_pre_request_successful_exit0": true,
+      "validation_tool_chunk_id": "eb6c66"
+    },
+    {
+      "intent_entry_id": 8,
+      "written_utc": "2026-11-08T11:38:22.290010+00:00",
+      "operation": "open",
+      "record_id": "RS_PAST_NA780",
+      "exact_request": {
+        "open": [
+          {
+            "ref_id": "https://earthwise.bgs.ac.uk/index.php/Geologists%3A_biographies_and_obituaries%2C_a_bibliography_%E2%80%94_E"
+          }
+        ],
+        "response_length": "long"
+      },
+      "result_ref": "turn1191408view0",
+      "observed_result_refs": [],
+      "outcome": "FirstactualBGSbibliographybodyrequest tool500; no body. Workclosed without retry/variant/rawGET.",
+      "separate_pre_request_successful_exit0": true,
+      "validation_tool_chunk_id": "9e915e"
+    }
+  ],
+  "parsed_find_ledger": [],
+  "candidates": [],
+  "holds": [
+    {
+      "status": "hold",
+      "source_grade_adopted": null,
+      "source_grade_role": "geographic_support_only",
+      "reviewed_hemisphere": "unknown",
+      "proof_mode": null,
+      "proof_chain": [],
+      "publication_date": null,
+      "source_revision_id": null,
+      "source_revision_utc": null,
+      "source_calendar_model": null,
+      "source_statement_rank": null,
+      "source_editorial_validation": null,
+      "source_informational_independence": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "source_quote": "",
+      "source_quote_word_count": 0,
+      "native_and_original_birthplace_fields_unchanged": true,
+      "qualified_new_DOB_conflict": false,
+      "qualified_new_birthplace_conflict": false,
+      "source_derived_age_inconsistency_observed": false,
+      "record_id": "RS_CURRENT_10965",
+      "native": {
+        "record_id": "RS_CURRENT_10965",
+        "native_name": "Jerry Adams",
+        "native_authority": "",
+        "native_DOB": "1940-06-17",
+        "frozen_raw_birthplace": "United States of America",
+        "frozen_birthplace_source_grade": "S2",
+        "frozen_source_url": "https://www.eoas.info/biogs/P003088b.htm",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "8108acff3211b5597274df60828ac05d5f2d41e27c679cf5dde7438f89710443"
+      },
+      "hold_type": "actual_new_AAS_person_profile_without_stated_DOB_or_birthplace",
+      "reason": "Actual distinct AustralianAcademyofSciencefellowprofile supplies all nativeJerryAdams components and coherentWEHI/lymphocyte/immunoglobulin/oncogene/Corycareer, but no statedDOB/birthyear/lifespan or subjectbirthplace. Elected1986 is not birthdate; Victoria is institutionalworklocation. No actual USbirthstate/whole-region. ExactDOB/fullMcKeealias from older works not transferred. ActualAASinterviewdirectory firstpage has otherpeople only; no observed Jerryinterviewhref and no globalabsence claim. GenericUSAfrozenS2 unresolved.",
+      "source_url": "https://science.org.au/about-us/academy-fellows/discover-our-fellows/jerry-adams",
+      "source_ref": "turn4923919view0",
+      "source_title": "Jerry Adams | Australian Academy of Science",
+      "source_author": null,
+      "source_kind": "original_unsigned_institutional_fellow_profile_election_citation_actual_body",
+      "source_observation_quality": "Uncreditedinstitutionalprofessionalcitation, no adoptedgrade or hostonlyS1/expertbyline/independentcivilverification claim.",
+      "source_locator": "L182-190JerryAdams/DrJerryMAdams/WEHIHeadMolecularBiologyUnit;L190-191lymphocyte/polypeptide/mRNA/immunoglobulin/oncogenetranslocation/Corycareer;L201-203elected1986;L205-210institution/LocationVictoria;L212copyright2026.",
+      "observed_source_name": "Jerry Adams; Dr Jerry M. Adams",
+      "unexpanded_source_initial": "M.",
+      "source_birthdate": null,
+      "source_birthdate_precision": "none_actually_stated",
+      "source_birthplace": null,
+      "source_lifespan": null,
+      "native_binding": {
+        "all_native_personal_components_actually_present": true,
+        "native_components": [
+          "Jerry",
+          "Adams"
+        ],
+        "fullMcKeealias_actually_present_in_this_body": false,
+        "native_authority_empty_preserved": true,
+        "actual_stated_DOB_precision": "none",
+        "native_DOB_compatibility_from_this_body": null,
+        "coherent_source_career": true,
+        "lifespan_not_stated_no_incompatible_endpoint_observed": true,
+        "frozen_place_binding": null,
+        "direct_subject_birth_relation_observed": false,
+        "direct_birth_whole_region_observed": false,
+        "all_admission_gates_satisfied": false
+      },
+      "work_identity": "ActualnewAASinstitutionalelectioncitation composition is distinct from oldEOASbiography andGenomeLegacyoralhistory. Similar CSHLoralhistorysearchresult repeatsGenomeLegacycomposition and excluded beforeopen. No independentinformationalverification claim.",
+      "directory_observation": {
+        "source_url": "https://science.org.au/our-focus/history-australian-science/conversations-australian-scientists",
+        "source_ref": "turn4415539view0",
+        "actual_click_from_ref": "turn4923919view0",
+        "actual_click_link_id": 51,
+        "locator": "L180-182directorytitle/purpose;L196-242tenotherpeople;L243-253pagination1to10of151; noJerryhrefininspectedpage.",
+        "role": "Actualnewdirectorydiscoverycontext only, no targetpersonbody/date/birthplace. No country/DOB transfer from otherpeople.",
+        "global_Jerry_interview_absence_claimed": false
+      },
+      "observed_footer_only": {
+        "copyright_year": "2026",
+        "locator": "turn4923919view0:L212",
+        "not_publication_or_revision_date": true
+      },
+      "prior_work_closures_preserved": [
+        {
+          "url": "https://www.eoas.info/biogs/P003088b.htm",
+          "work": "EOAS personalbiography",
+          "retained_outcome": "Frozen successful source exactDOB1940-06-17/genericUSA only; not a new composition.",
+          "ref": null,
+          "reopen_allowed": false
+        },
+        {
+          "url": "https://genomelegacy.org/oralhistory/speaker/jerry-adams/",
+          "work": "GenomeLegacy oralhistoryspeaker originalwork",
+          "retained_outcome": "V30 first502; same oralhistory anycarrierclosed.",
+          "ref": "turn7799518view1",
+          "reopen_allowed": false
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Jerry_Adams",
+          "work": "Englishcanonicalperson",
+          "retained_outcome": "V44 actualfullalias/date/career; no birthplace.",
+          "ref": "turn9796027view0",
+          "reopen_allowed": false
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q6183179",
+          "work": "Canonicalpersonitem",
+          "retained_outcome": "V44 no acquiredP19proof; no authenticatedabsence.",
+          "ref": "turn9796027view1",
+          "reopen_allowed": false
+        },
+        {
+          "url": "https://fr.wikipedia.org/wiki/Jerry_Adams",
+          "work": "Frenchcanonicalperson",
+          "retained_outcome": "V44 header-only no body; workclosed.",
+          "ref": "turn6562347view0",
+          "reopen_allowed": false
+        },
+        {
+          "url": "https://ar.wikipedia.org/wiki/%D8%AC%D9%8A%D8%B1%D9%8A_%D8%A2%D8%AF%D8%A7%D9%85%D8%B2_%28%D8%B9%D8%A7%D9%84%D9%85_%D8%A3%D8%AD%D9%8A%D8%A7%D8%A1_%D8%AC%D8%B2%D9%8A%D8%A6%D9%8A%D8%A9%29",
+          "work": "Arabiccanonicalperson",
+          "retained_outcome": "V44 rewritten/header-only; workclosed.",
+          "ref": "turn4698637view1",
+          "reopen_allowed": false
+        }
+      ]
+    },
+    {
+      "status": "hold",
+      "source_grade_adopted": null,
+      "source_grade_role": "geographic_support_only",
+      "reviewed_hemisphere": "unknown",
+      "proof_mode": null,
+      "proof_chain": [],
+      "publication_date": null,
+      "source_revision_id": null,
+      "source_revision_utc": null,
+      "source_calendar_model": null,
+      "source_statement_rank": null,
+      "source_editorial_validation": null,
+      "source_informational_independence": null,
+      "raw_HTTP_status": null,
+      "raw_bytes_sha256": null,
+      "exact_request_utc": null,
+      "source_quote": "",
+      "source_quote_word_count": 0,
+      "native_and_original_birthplace_fields_unchanged": true,
+      "qualified_new_DOB_conflict": false,
+      "qualified_new_birthplace_conflict": false,
+      "source_derived_age_inconsistency_observed": false,
+      "record_id": "RS_PAST_NA780",
+      "native": {
+        "record_id": "RS_PAST_NA780",
+        "native_name": "John William",
+        "native_authority": "Evans; John William (1857 - 1930)",
+        "native_DOB": "1857-07-27",
+        "frozen_raw_birthplace": "Barbican, London (2 Beech Street, Barbican, London)",
+        "frozen_birthplace_source_grade": "S3",
+        "frozen_source_url": "https://www.turle.name/the_doctors/indiI25.html",
+        "hemisphere": "unknown",
+        "complete_object_canonical_sha256": "10a2ff7720b14950986300ed8605200daf36e29117b9edab82b6991deefcc12d"
+      },
+      "hold_type": "new_1933_original_obituary_first404_and_BGS_bibliography_first500_PGA_original_URL_unlocated",
+      "reason": "Bounded exactbibliographicdiscovery identified actual originalMM23/141BiographicalNoticesPDF URL for citedEvans1933pages349-350; firstbodyopen returnedtool404, closed across allcarriers. BGSindex washistorical/currentsearchprojectiononly until its firstbodyattempt now500; no actualbibliographicbody or originalPGA1931URL acquired. Nativefullname/date/life/directCityLondon appearinginsearchprojection remains discoveryonly, no actualnewpersonalbody/gate/birthcountry. FrozenBarbicanLondonstreetaddressS3 untouched; no cityfamiliarity/Englishness/workgeography inference.",
+      "source_url": "https://rruff.geo.arizona.edu/doclib/MinMag/Volume_23/23-141-337.pdf",
+      "source_ref": "turn8252959view0",
+      "source_title": null,
+      "source_author": null,
+      "source_kind": "distinct_original_scholarly_biographical_notices_attempt_unacquired",
+      "source_birthdate": null,
+      "source_birthdate_precision": "none_acquired_in_actual_original_body",
+      "source_birthplace": null,
+      "source_lifespan": null,
+      "native_binding": {
+        "all_native_personal_components_actually_present_in_new_original_body": false,
+        "actual_stated_DOB_precision": "none_acquired",
+        "coherent_source_career_acquired_in_new_body": false,
+        "compatible_lifespan_acquired_in_new_body": false,
+        "frozen_place_binding": null,
+        "direct_subject_birth_relation_observed_in_new_body": false,
+        "direct_birth_whole_region_observed": false,
+        "all_admission_gates_satisfied": false
+      },
+      "new_work_attempts": [
+        {
+          "url": "https://rruff.geo.arizona.edu/doclib/MinMag/Volume_23/23-141-337.pdf",
+          "observed_discovery_ref": "turn6135480search3",
+          "result_ref": "turn8252959view0",
+          "tool_reported_error": "404 Not Found",
+          "raw_HTTP_status": null,
+          "body_acquired": false,
+          "work_closed_all_carriers": true,
+          "no_alternate_RRuff_or_Cambridge_request": true
+        },
+        {
+          "url": "https://earthwise.bgs.ac.uk/index.php/Geologists%3A_biographies_and_obituaries%2C_a_bibliography_%E2%80%94_E",
+          "observed_discovery_refs": [
+            "turn9311676search0",
+            "turn9386244search0",
+            "turn6135480search0"
+          ],
+          "result_ref": "turn1191408view0",
+          "tool_reported_error": "500 Internal Server Error",
+          "raw_HTTP_status": null,
+          "body_acquired": false,
+          "work_closed_all_carriers": true,
+          "prior_projection_not_relabelled_actual_body": true
+        }
+      ],
+      "unlocated_fixed_work": {
+        "citation": "Proceedings Geologists Association42 no1(1931)69-70",
+        "actual_URL_observed": null,
+        "body_acquired": false,
+        "failed_body_fetch_claimed": false,
+        "limit": "No exactoriginalURLdiscovered within5groupqueries; no DOI/URLguess or globalabsenceclaim."
+      },
+      "prior_work_closures_preserved": [
+        {
+          "url": "https://www.turle.name/the_doctors/indiI25.html",
+          "work": "OriginalTurle personalfamilyhistory",
+          "retained_outcome": "V26 successfulS3 fullnative/exactDOB/life/directBarbicanLondon2BeechStreet; latercensusEngland notbirth. Nine historicalquote words, no newquote.",
+          "ref": "turn3105208view1;rootturn2020789view0",
+          "reopen_allowed": false
+        },
+        {
+          "url": null,
+          "work": "Geological Magazine68(1931)47-48 original Cambridge obituary",
+          "retained_outcome": "V26 landing metadata only/no actualsubjectbody; textlessbodyroute closed; exactURL not preserved in examined context.",
+          "ref": "turn5489168view1",
+          "reopen_allowed": false
+        },
+        {
+          "url": "https://biography.wales/article/s-EVAN-WIL-1734.html?lang%5B%5D=cy&lang%5B%5D=en&order=asc&page=122&query=William+Llewelyn+Davies&rows=12&sort=sort_name",
+          "work": "DWB1959 familyentry nameddescendantparagraph",
+          "retained_outcome": "V35 actualfullnative/exactDOB/career but date-only, Londondeath notbirth.",
+          "ref": "turn3817480view1",
+          "reopen_allowed": false
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/John_William_Evans_(geologist)",
+          "work": "Englishcanonicalperson",
+          "retained_outcome": "V44 rewritten firstresponse; closed as proof/work.",
+          "ref": "turn3891619view0",
+          "reopen_allowed": false
+        },
+        {
+          "url": "https://fr.wikipedia.org/wiki/John_William_Evans",
+          "work": "Frenchcanonicalperson",
+          "retained_outcome": "V44 actualfull/date/career; ambiguousunlinkedLondres/no region.",
+          "ref": "turn9626439view0",
+          "reopen_allowed": false
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q6264151",
+          "work": "Canonicalpersonitem",
+          "retained_outcome": "V44 rewritten firstresponse; no actualP19/P131proof; closed.",
+          "ref": "turn9626439view1",
+          "reopen_allowed": false
+        }
+      ],
+      "projection_limits": "Searchmetadata/quotedpreview is locator only. No quote fromMMbody, authenticatedpublication/byline/fullDOB/placeclaim or absence proof adopted."
+    }
+  ],
+  "new_DOB_or_place_conflicts": [],
+  "source_derived_age_inconsistency_candidates": [],
+  "source_quality_issue_candidates": [],
+  "source_lifespan_endpoint_discrepancy_candidates": [],
+  "new_unopened_outside_fixed_cited_work_leads": [
+    {
+      "record_id": "RS_PAST_NA780",
+      "url": "https://www.nature.com/articles/127134a0",
+      "discovery_ref": "turn9386244search2",
+      "title": "Dr. J. W. Evans, C.B.E., F.R.S.",
+      "bibliographic_projection": "Nature127,134-135(1931), issue24January1931; DOI10.1038/127134a0",
+      "role": "Unopened originalobituaryprojection outsidefixedcitedMM/PGAworklocator; year1857/careerpreview, no birthregion; no actualbody/grade/admission."
+    },
+    {
+      "record_id": "RS_PAST_NA780",
+      "url": "https://pahar.in/pahar/Journals/Royal%20Geographical%20Society%201830-1954/Geographical%20Journal%201893-1954/1931%20Geographical%20Journal%20Vol%2077%20asia%20part%20s.pdf",
+      "discovery_ref": "turn9386244search6",
+      "title": "Geographical Journal77(1931) obituary DrJohnWilliamEvans p206",
+      "role": "Unopened originalissueTOCprojection, exactsubjectbody/date/birthregion unverified, not requested."
+    }
+  ],
+  "same_closed_work_search_leads_excluded": [
+    {
+      "record_id": "RS_CURRENT_10965",
+      "url": "https://journals.cshl.edu/oralhistory/interview/cshl/symposia/Jerry-Adams-2004-symposium-epigenetics/",
+      "discovery_ref": "turn3656327search4",
+      "reason": "Carried2004oralhistory biography appears sameGenomeLegacycomposition/text; closedoldoralhistorywork not reopened on CSHLcarrier."
+    },
+    {
+      "record_id": "RS_PAST_NA780",
+      "url": "https://www.rruff.net/doclib/MinMag/Volume_23/23-141-337.pdf",
+      "discovery_ref": "turn6135480search4",
+      "reason": "Same1933BiographicalNoticeswork, firstArizona404closes allcarriers; notrequested."
+    },
+    {
+      "record_id": "RS_PAST_NA780",
+      "url": "https://www.cambridge.org/core/journals/geological-magazine/article/john-william-evans-cbe-dsc-llb-frs/70574E149D076075730CA334A97A9D62",
+      "discovery_ref": "turn9386244search3",
+      "reason": "RediscoveredoriginalGeologicalMagazine68(1931)47-48metadataonlyclosedwork, notrequested."
+    }
+  ],
+  "quote_accounting": {
+    "new_literal_English_quote_words_per_work": {
+      "AAS_Jerry_profile": 0,
+      "AAS_conversations_directory": 0,
+      "MM1933BiographicalNotices": 0,
+      "BGS_bibliography_E": 0
+    },
+    "old_Turle_Evans_quote_words": 9,
+    "old_EOAS_Jerry_quote_words": 8,
+    "new_quote_words_added_to_oldworks": 0,
+    "no_full_source_or_projection_cache": true
+  },
+  "display_limits": [
+    {
+      "operation_entries": [
+        0,
+        1
+      ],
+      "limit": "Initial combinedengine2directdisplay truncated; ledgerlists onlyobservedrefs. No missingresultabsence claim, source-bodyfact or guessedURL fromomittedcontent; no repeatquery/recoveryrequest."
+    }
+  ],
+  "all_intents_separately_validated_exit0_before_requests": true,
+  "all_first_unusable_work_closures_clean": true,
+  "request_protocol_deviations": [],
+  "raw_HTTP_status": null,
+  "raw_bytes_sha256": null,
+  "exact_request_utc": null,
+  "no_native_master_data_pipeline_schema_replay_or_Git_edits": true,
+  "no_source_exhaustion_or_finalfreeze_claim": true
+}

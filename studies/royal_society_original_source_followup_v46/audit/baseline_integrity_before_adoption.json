@@ -1,0 +1,189 @@
+{
+  "written_utc": "2026-11-08T11:39:22.227551+00:00",
+  "status": "pass",
+  "phase": "read_only_baseline_snapshot_while_V46_source_review_ongoing",
+  "check_count": 35,
+  "checks": [
+    "V46_scope_exact_frozen_SHA256",
+    "scope_and_pointer_preserve_V45_supplement_and_V44_data_commit",
+    "scope_pointer_master_pins_and_source_only_boundary",
+    "V44_manifest_exact_frozen_SHA256",
+    "V44_manifest_551_data_files_and_exact_fileset",
+    "all_551_V44_manifest_data_file_hashes_match",
+    "V45_manifest_matches_original_release_SHA256_and_Gitblob",
+    "V45_release_receipt_records_expected_commit_tree_and_31_files",
+    "V45_manifest_30_data_files_and_exact_31_distributed_fileset",
+    "all_30_V45_manifest_data_file_hashes_match",
+    "all_31_V45_files_match_recorded_release_SHA256_size_and_Gitblob",
+    "exact_V46_issue_snapshot_active_source_DOB_conflicts.json",
+    "exact_V46_issue_snapshot_birthplace_source_conflicts.json",
+    "exact_V46_issue_snapshot_source_derived_age_inconsistencies.json",
+    "exact_V46_issue_snapshot_provisional_parsed_date_discrepancies.json",
+    "exact_V46_issue_snapshot_lifespan_endpoint_discrepancies.json",
+    "exact_V46_issue_snapshot_cross_source_reported_age_contrasts.json",
+    "exact_V46_issue_snapshot_source_date_precision_holds.json",
+    "exact_V46_issue_snapshot_omitted_middle_name_admission.json",
+    "exact_V46_issue_snapshot_source_ordinal_age_wording_observations.json",
+    "issue_inventory_counts_13_DOB_2_place_4_age_metadata_omitted_middle",
+    "inherited_V29_admission_plan_exact",
+    "inherited_V35_admission_plan_exact",
+    "fixed_five_ids_groups_1_2_2_and_no_blocked_intersection",
+    "V44_streamed_canonical_master_and_gzip_exact",
+    "V44_4983_window2644_counts_and_525_103_blank_boundaries",
+    "five_scope_rows_are_native_window_unknown",
+    "scope_three_blank_two_storedplace_partition_exact",
+    "complete_native_objects_exact_group_a",
+    "complete_native_objects_exact_group_b",
+    "complete_native_objects_exact_group_c",
+    "V44_replay_and_five_outputs_match_original_frozen_hashes",
+    "V44_exact_five_output_files",
+    "V44_zero_current_facts_five_holds_zero_changes",
+    "no_V46_production_master_replay_or_CSV_artifacts_at_snapshot"
+  ],
+  "V46_scope_sha256": "6051c4a3f9887bbba4556595f9dfbbfd8c5bb6ab552d586e9cf67f217597c7bc",
+  "baseline_pointer": {
+    "path": "studies/royal_society_original_source_followup_v46/audit/baseline_pointer.json",
+    "sha256": "70cc732854dd72882359b89494be8308da06f381d95d5adee3cb4453d75e2cac",
+    "commit": "5ceab58d4ec43f411fc0dfbf016f211e119c234a",
+    "master_data_commit": "cc23cc8d35eb2bfffcbbf041310dd049b308e5ca",
+    "canonical_sha256": "a0c04e44631478f82e562deab64d699fc273e6fc99fa35ba23f8a61d7e1f8717",
+    "gzip_sha256": "433749a0b7ff0bfc62db8993f662cd928a4bc023418a54600259fdbea0b1537a",
+    "primary_data_directory": "studies/royal_society_birthplace_completion_v44",
+    "master_changed": false,
+    "original_source_stage_only": true
+  },
+  "V44": {
+    "manifest_sha256": "58a4943643317939337e836cf9bd127fd26e19337d93f7ed3ba49ae8fd00b8cc",
+    "manifest_data_files_verified": 551,
+    "distributed_files_including_manifest": 552,
+    "master_canonical_sha256": "a0c04e44631478f82e562deab64d699fc273e6fc99fa35ba23f8a61d7e1f8717",
+    "pipeline_sha256": {
+      "scripts/replay.py": "e7e6e6ced8a9f49b9db0c6a8c3b8bb1c0ab71949d3e6a2a3548292d5c064d1aa",
+      "outputs/birthplace_rows.jsonl.gz": "433749a0b7ff0bfc62db8993f662cd928a4bc023418a54600259fdbea0b1537a",
+      "outputs/birthplaces.csv": "1bfdff7927abe23631fbd1d5a0be0e39898d835e8fe30d3ed97a72a5f08f288c",
+      "outputs/remaining_unknown_window.csv": "046c86fd8e27671974c3fc5714f0a49a77c55237fb9110f306dee6f95e4e6df7",
+      "outputs/summary.json": "23d4021c0029f1804a4a8166728e8f1618b860f0f80cadc531fe36eb09565451",
+      "outputs/changes.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "records": 4983,
+    "hemispheres": {
+      "north": 4205,
+      "unknown": 591,
+      "south": 187
+    },
+    "native_window_records": 2644,
+    "native_window_hemispheres": {
+      "north": 2305,
+      "unknown": 157,
+      "south": 182
+    },
+    "blank_all": 525,
+    "blank_window": 103,
+    "storedplace_unknown_window": 54
+  },
+  "V45": {
+    "commit_from_preexisting_release_receipt": "5ceab58d4ec43f411fc0dfbf016f211e119c234a",
+    "tree_from_preexisting_release_receipt": "d26b3cf961fdc077bce0c461332921073da821a5",
+    "manifest_sha256": "d14775a5aa2042b673eb4b89ee6f99287ec6e494ee22dadb42891ed372b9654c",
+    "manifest_Gitblob_SHA1": "78f79ed814bb75d76f8eec04c5ddde783246f35e",
+    "manifest_data_files_verified": 30,
+    "distributed_files_verified_against_recorded_release": 31,
+    "recorded_release_inventory_sha256": "6d4a99ccb3c2cee381935e9bb544c9c36df91ec30f2f3c57db5244a896c8db49",
+    "preexisting_release_receipt_sha256": "234570c4e427ee97b442a3b4de3fd01625b8a0da1c05e203bc23a61623ffe901"
+  },
+  "V46_issue_snapshots": {
+    "active_source_DOB_conflicts.json": {
+      "sha256": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+      "shape": "dict",
+      "record_count": 13
+    },
+    "birthplace_source_conflicts.json": {
+      "sha256": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+      "shape": "dict",
+      "record_count": 2
+    },
+    "source_derived_age_inconsistencies.json": {
+      "sha256": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+      "shape": "list",
+      "record_count": 4
+    },
+    "provisional_parsed_date_discrepancies.json": {
+      "sha256": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+      "shape": "dict",
+      "record_count": 1
+    },
+    "lifespan_endpoint_discrepancies.json": {
+      "sha256": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+      "shape": "list",
+      "record_count": 1
+    },
+    "cross_source_reported_age_contrasts.json": {
+      "sha256": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+      "shape": "list",
+      "record_count": 1
+    },
+    "source_date_precision_holds.json": {
+      "sha256": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+      "shape": "list",
+      "record_count": 1
+    },
+    "omitted_middle_name_admission.json": {
+      "sha256": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+      "shape": "dict",
+      "record_count": null
+    },
+    "source_ordinal_age_wording_observations.json": {
+      "sha256": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d",
+      "shape": "dict",
+      "record_count": 1
+    }
+  },
+  "V46_native_scope_snapshots": {
+    "a": {
+      "sha256": "8a76b1abba6b227af1d0395738b6891f047790645250976de439bfe83d6059b8",
+      "record_ids": [
+        "RS_PAST_NA4250"
+      ],
+      "complete_objects": 1
+    },
+    "b": {
+      "sha256": "c22baf6bddaacbe19cbc2cec892fc489691431e507792441a4f06022a4d4b963",
+      "record_ids": [
+        "RS_CURRENT_10965",
+        "RS_PAST_NA780"
+      ],
+      "complete_objects": 2
+    },
+    "c": {
+      "sha256": "9467b946dfba8452ee3acf75cda6cb59d1e6d1cd7aa19e6e4d9d93a95e17d566",
+      "record_ids": [
+        "RS_PAST_NA1196",
+        "RS_PAST_NA4252"
+      ],
+      "complete_objects": 2
+    }
+  },
+  "inherited_admission_pins": {
+    "29": {
+      "path": "studies/royal_society_birthplace_completion_v29/audit/plan.json",
+      "sha256": "1e3dbd1ba94b012425803df5426e269adf42bdb5e17a9a5294fbaa4e3714bb42"
+    },
+    "35": {
+      "path": "studies/royal_society_birthplace_completion_v35/audit/plan.json",
+      "sha256": "6d4e45c648b787999b4ba82fcb1d025ef7bb36382ef9d21a3328e83cbf3b28f0"
+    }
+  },
+  "historical_loader_runs": 0,
+  "production_imports": 0,
+  "replay_CLI_runs": 0,
+  "web_requests": 0,
+  "Git_operations": 0,
+  "baseline_or_stage_mutations_by_this_check": 0,
+  "report_written_to": "/workspace/scratch/262552d8c0f0/v46_baseline_integrity.json",
+  "limits": [
+    "This is an actual local byte/object integrity snapshot before final V46 source adjudication. Candidate evidence and current source decisions are not assessed.",
+    "V44 full manifest and original frozen code/output/master hashes were checked; five selected complete native objects were compared to streamed stored V44 rows.",
+    "V45 local files were compared to the preexisting root release inventory and receipt for commit 5ceab58; no remote Git reachability or current HEAD was independently re-queried. V45 contains 30 manifest data entries plus its manifest, 31 distributed files total.",
+    "No production module import, historical baseline reconstruction, replay CLI, new pipeline wrapper, source collection, or source-stage fact adoption was performed. This report does not assert future V46 outputs remain absent."
+  ]
+}

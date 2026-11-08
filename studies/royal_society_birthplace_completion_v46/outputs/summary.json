@@ -1,0 +1,57 @@
+{
+  "schema": "royal_society_birthplace_completion_v46",
+  "method": "positive first-birthplace overlay using the unchanged V15-V29 original-person admission and V29 mutation/rollback semantics",
+  "method_reused_from_version": 29,
+  "new_admission_method_exception": false,
+  "baseline_master_commit": "cc23cc8d35eb2bfffcbbf041310dd049b308e5ca",
+  "source_baseline_commit": "5ceab58d4ec43f411fc0dfbf016f211e119c234a",
+  "baseline_gzip_sha256": "433749a0b7ff0bfc62db8993f662cd928a4bc023418a54600259fdbea0b1537a",
+  "baseline_canonical_sha256": "a0c04e44631478f82e562deab64d699fc273e6fc99fa35ba23f8a61d7e1f8717",
+  "source_scope_sha256": "6051c4a3f9887bbba4556595f9dfbbfd8c5bb6ab552d586e9cf67f217597c7bc",
+  "source_qa_sha256": "eb2f7cfdd388e99e2fe1d72fc98d205d03316b343428f76eb723df3c0146deb6",
+  "accepted_birthplaces_sha256": "18df8fc0b12973c4599a23b2ca261eff197239e4679fd885f90b316701d4471b",
+  "accepted_geography_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+  "records": 4983,
+  "counting_unit": "fixed UK cohort membership records, not deduplicated independent persons",
+  "actual_unique_source_reviewed_records": 5,
+  "new_first_birthplace_records": 1,
+  "new_geography_only_resolutions": 0,
+  "new_geographic_resolutions_from_new_birthplaces": 1,
+  "new_birthplace_source_grade_counts": {
+    "S3": 1
+  },
+  "source_grade_role": "person_birthplace_support_only",
+  "source_stated_birthdate_precision": "1934 year only; no independent native day confirmation",
+  "overall": {
+    "north": 4205,
+    "unknown": 590,
+    "south": 188
+  },
+  "native_dob_window": "1835-1985 inclusive",
+  "native_dob_window_records": 2644,
+  "native_dob_window_counts": {
+    "north": 2305,
+    "unknown": 156,
+    "south": 183
+  },
+  "remaining_blank_current_fields": {
+    "all_blank_raw_birthplace": 524,
+    "window_blank_raw_birthplace": 102,
+    "all_unknown": 590,
+    "all_unknown_with_blank_raw_birthplace": 524,
+    "all_unknown_with_nonblank_raw_birthplace": 66,
+    "window_unknown": 156,
+    "window_unknown_with_blank_raw_birthplace": 102,
+    "window_unknown_with_nonblank_raw_birthplace": 54
+  },
+  "unchanged_complete_rows": 4982,
+  "existing_CSV_columns_preserved": 200,
+  "CSV_columns": 201,
+  "new_CSV_context_column": "birthplace_followup_v46",
+  "native_DOB_source_grades_identity_eligibility_and_prior_evidence_preserved": true,
+  "country_QIDs_personal_coordinates_and_other_cohorts_modified": false,
+  "exact_previous_and_absent_field_rollback_verified": true,
+  "historical_pipeline_imported_or_replayed": false,
+  "no_analysis_or_final_cohort_freeze": true,
+  "replay_note": "Pinned V44 stored master plus reviewed positive facts; gzip uses empty filename and zero mtime."
+}

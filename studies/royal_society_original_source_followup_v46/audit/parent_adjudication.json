@@ -1,0 +1,109 @@
+{
+  "written_utc": "2026-11-08T11:44:19.791705+00:00",
+  "scope_sha256": "6051c4a3f9887bbba4556595f9dfbbfd8c5bb6ab552d586e9cf67f217597c7bc",
+  "baseline_commit": "5ceab58d4ec43f411fc0dfbf016f211e119c234a",
+  "baseline_master_data_commit": "cc23cc8d35eb2bfffcbbf041310dd049b308e5ca",
+  "source_evidence_pins": {
+    "v46_sources_a.json": "796bfd982155c3290f9f3bc577366c07ac555e2b93525388e869a63476a28cfe",
+    "v46_intent_a.json": "12cae6251d43e38f086cc78b61676050b7c003b438fd7a2b98b6087198997924",
+    "v46_sources_b.json": "41b16f8e17a71534aa242229581d058a4816475e2b5ecfa09713cc261f8c538b",
+    "v46_intent_b.json": "7c08aae9e7c6ea2b7b5641cff2f91d22e60315b76caf06468271ac47bec6c7d2",
+    "v46_sources_c.json": "2212ece5f284c52668e48c6c5bf283c9c34e5dffdbb7022525f3d8218f96ce9e",
+    "v46_intent_c.json": "e8a2ec302e879f451312c332e8529dbf3a40351d054296663b22230c6699fb84"
+  },
+  "method": "UnchangedV29 original-first-birthplace admission for blanks; V35 originalperson geography for storedplaces. Allnativecomponents/actuallystatedcompatibleDOBprecision/coherentcareer/life/directbirth and sourcegrade gates; no new exception.",
+  "accepted_first_birthplace_records": [
+    "RS_PAST_NA4250"
+  ],
+  "accepted_geography_only_records": [],
+  "accepted_birthplace_file": "audit/accepted_birthplaces.json",
+  "accepted_birthplace_sha256": "18df8fc0b12973c4599a23b2ca261eff197239e4679fd885f90b316701d4471b",
+  "accepted_decision": {
+    "record_id": "RS_PAST_NA4250",
+    "new_raw_birthplace": "Australia",
+    "new_birthplace_source_grade": "S3",
+    "new_hemisphere": "south",
+    "evidence_work": "NPG original unattributed compiled personal catalogue mp15431",
+    "source_birthdate_precision": "year1934 only",
+    "source_exact_native_DOB_confirmation": false,
+    "source_full_name": "Sir Peter John Morris",
+    "ordinary_full_component_gate": true,
+    "middle_omission_exception_used": false,
+    "source_date_combined_from_RCS": false,
+    "direct_born_country_not_nationality_or_Places_taxonomy": true,
+    "source_informational_independence": null,
+    "native_DOB_and_DOB_tier_unchanged": true,
+    "all_priorfacts_snapshot_and_mutation_boundary": "Use exact inherited apply_first_birthplaces BIRTHPLACE_FIELDS plus6GEO_FIELDS andnewbirthplace_followup_v46 only; exact previous and absent-field rollback retained."
+  },
+  "held_records": [
+    {
+      "record_id": "RS_CURRENT_10965",
+      "decision": "hold",
+      "reason": "Actual distinct AustralianAcademyofSciencefellowprofile supplies all nativeJerryAdams components and coherentWEHI/lymphocyte/immunoglobulin/oncogene/Corycareer, but no statedDOB/birthyear/lifespan or subjectbirthplace. Elected1986 is not birthdate; Victoria is institutionalworklocation. No actual USbirthstate/whole-region. ExactDOB/fullMcKeealias from older works not transferred. ActualAASinterviewdirectory firstpage has otherpeople only; no observed Jerryinterviewhref and no globalabsence claim. GenericUSAfrozenS2 unresolved.",
+      "source_report": "audit/v46_sources_b.json",
+      "native_and_prior_fields_changed": false,
+      "new_source_grade_adopted": null
+    },
+    {
+      "record_id": "RS_PAST_NA780",
+      "decision": "hold",
+      "reason": "Bounded exactbibliographicdiscovery identified actual originalMM23/141BiographicalNoticesPDF URL for citedEvans1933pages349-350; firstbodyopen returnedtool404, closed across allcarriers. BGSindex washistorical/currentsearchprojectiononly until its firstbodyattempt now500; no actualbibliographicbody or originalPGA1931URL acquired. Nativefullname/date/life/directCityLondon appearinginsearchprojection remains discoveryonly, no actualnewpersonalbody/gate/birthcountry. FrozenBarbicanLondonstreetaddressS3 untouched; no cityfamiliarity/Englishness/workgeography inference.",
+      "source_report": "audit/v46_sources_b.json",
+      "native_and_prior_fields_changed": false,
+      "new_source_grade_adopted": null
+    },
+    {
+      "record_id": "RS_PAST_NA1196",
+      "decision": "hold",
+      "reason": "Three bounded citation-specific queries found only the already closed catalogue projection or unrelated people, not an actual distinct Proceedings102 obituary URI. No original personal body/name/date/birthplace proof acquired. Preserve George1/Walker2 native multiplicity and blank birthplace; do not synthesize URL or reopen catalogue frontends.",
+      "source_report": "audit/v46_sources_c.json",
+      "native_and_prior_fields_changed": false,
+      "new_source_grade_adopted": null
+    },
+    {
+      "record_id": "RS_PAST_NA4252",
+      "decision": "hold",
+      "reason": "Two genuinely distinct original Essex bodies were acquired: conference news and staff profile. Both state only Brian Ridley, omitting Kidd, and supply no birthdate or personal birthplace. Career context alone fails ordinary full-native/date/birth gates. No automatic omitted-middle exception, transfer of closed memoir dates, age inference, workplace/footer geography or native repair.",
+      "source_report": "audit/v46_sources_c.json",
+      "native_and_prior_fields_changed": false,
+      "new_source_grade_adopted": null
+    }
+  ],
+  "counts": {
+    "scope_records": 5,
+    "accepted_first_birthplaces": 1,
+    "accepted_geo_only": 0,
+    "holds": 4,
+    "worker_queries": 12,
+    "root_queries": 1,
+    "worker_navigation": 8,
+    "root_navigation": 1,
+    "all_queries": 13,
+    "all_navigation": 9,
+    "all_opens": 8,
+    "all_clicks": 1,
+    "finds": 0,
+    "raw_GETs": 0
+  },
+  "new_qualified_DOB_place_age_or_endpointyear_issues": 0,
+  "all9_prior_issue_inventories_unchanged": true,
+  "V45_six_source_holds_and_closures_preserved": true,
+  "V44_Finlay_same_work_request_deviation_preserved": true,
+  "data_version": "royal_society_birthplace_completion_v46",
+  "data_application_phase": "accepted_for_implementation_before_execution",
+  "expected_changes": {
+    "complete_objects_changed": 1,
+    "overall_north": 4205,
+    "overall_south": 188,
+    "overall_unknown": 590,
+    "window_total": 2644,
+    "window_north": 2305,
+    "window_south": 183,
+    "window_unknown": 156,
+    "window_unknown_blank": 102,
+    "window_unknown_storedplace": 54,
+    "overall_blank": 524
+  },
+  "source_exhausted": false,
+  "final_analysis_cohort_freeze": false
+}
