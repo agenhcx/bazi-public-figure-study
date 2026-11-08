@@ -1,0 +1,120 @@
+{
+  "schema": "UK_v48_baseline_integrity_v1",
+  "written_utc": "2026-11-08T12:57:03.534481+00:00",
+  "status": "PASS",
+  "actual_checks": {
+    "all74_prior_local_V46_data_and_source_release_files_match_manifests": true,
+    "all72_local_release_entry_sha256_and_sizes_match": true,
+    "two_archive_only_gzip_files_in_manifest_coverage": true,
+    "current_V46_master_gzip_canonical_and_code_pins_match": true,
+    "all9_V48_snapshot_inventory_hashes_equal_current_V46": true,
+    "all9_complete_native_scope_objects_equal_current_V46_rows": true,
+    "released201_column_CSV_and156_remaining_rows_preserved": true,
+    "Morris_Australia_S3_south_and_source_YEAR1934_native_fullDOB_preserved": true,
+    "V48_scope_method_pins_match_frozen_source_folder_before_all17_worker_entries": true,
+    "no_V48_data_master_pipeline_or_output_directory": true
+  },
+  "V46_master_gzip_sha256": "95048d6e3ef240f1f5d11a92d3314295b9eb98af7c388bead6889fa2af300b95",
+  "V46_master_canonical_sha256": "149afefd545fb9e98bd806ff5927be29057cc04db38b18c49de8fe5dde7055ed",
+  "V46_replay_sha256": "16cc7bcf0394857ba5350cce3a8166be7c6644b18433f048eda3329c1750cecf",
+  "complete_records": 4983,
+  "overall": {
+    "north": 4205,
+    "unknown": 590,
+    "south": 188
+  },
+  "window_counts": {
+    "north": 2305,
+    "unknown": 156,
+    "south": 183
+  },
+  "prior_release_inventory": {
+    "data_folder_files": 38,
+    "source_folder_files": 36,
+    "total_local_files": 74,
+    "manifest_leaf_entries": 72,
+    "local_release_entry_records": 72,
+    "local_release_entries_sha256": "8688966c2459fb8ca68151b57f8c034c8c170b2394ffab5461cf9ff5e47d8394",
+    "manifest_sha256": {
+      "studies/royal_society_birthplace_completion_v46/MANIFEST.sha256": "07dde319397ff0be5c9cc65c7d97fdc44cfb51c0f77e63e2ee9d6e2696203f45",
+      "studies/royal_society_original_source_followup_v46/MANIFEST.sha256": "ebd3c80cd481010b65cfb90beccd516ed02f1169c1ebe1de24cad762e7348eb8"
+    },
+    "archive_only_gzip_paths": [
+      "studies/royal_society_birthplace_completion_v46/inputs/baseline_v44_birthplace_rows.jsonl.gz",
+      "studies/royal_society_birthplace_completion_v46/outputs/birthplace_rows.jsonl.gz"
+    ]
+  },
+  "native_scope_sha256": {
+    "a": "ab084b72e150e134ef0841d361471a72ad55730a17a66cb94a3acb68c4d85a34",
+    "b": "62aa441cfc01a2a7973e99d8343962846868e126625cd135d86168085cc773cb",
+    "c": "7e73ce1cc33c06eef99b34f3d35572fc0bd9658dc79c34b1ae8d142b35506ed8"
+  },
+  "native_complete_object_matches": [
+    "RS_PAST_NA1176",
+    "RS_PAST_NA1177",
+    "RS_PAST_NA1614",
+    "RS_PAST_NA2090",
+    "RS_PAST_NA3088",
+    "RS_PAST_NA3113",
+    "RS_PAST_NA8089",
+    "RS_PAST_NA8672",
+    "RS_PAST_NA9858"
+  ],
+  "nine_inventory_sha256": {
+    "active_source_DOB_conflicts.json": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+    "birthplace_source_conflicts.json": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+    "source_derived_age_inconsistencies.json": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+    "provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+    "lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+    "cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+    "source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+    "omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+    "source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+  },
+  "CSV_columns": 201,
+  "full_CSV_records": 4983,
+  "remaining_unknown_window_CSV_records": 156,
+  "Morris_preserved": {
+    "record_id": "RS_PAST_NA4250",
+    "native_DOB": "1934-04-17",
+    "raw_birthplace": "Australia",
+    "birthplace_source_grade": "S3",
+    "hemisphere": "south",
+    "source_birthdate": "1934",
+    "source_birthdate_precision": "year_in_actual_person_lifespan_header",
+    "independent_native_day_confirmation": false
+  },
+  "V48_scope_sha256": "5619bae49af23c1e9646d98d49d41f189ea797f0767216f835124c38a3706290",
+  "V48_method_sha256": "98e9efbe9c97049e64954b4f3e4ec1b6d92c21a104107ccad3bb5c14bf0850af",
+  "scope_written_utc": "2026-11-08T12:41:12.064967+00:00",
+  "method_written_utc": "2026-11-08T12:41:12.064967+00:00",
+  "intent_file_sha256": {
+    "v48_intent_a.json": "258592a7169f2238a5c1a39ccd3e753a9a8505e941e5129e16a18a1cf73989fc",
+    "v48_intent_b.json": "90bdc9533590d38ce973a73a6c60c866af8949f9e0f69b2e032521d78417f7a4",
+    "v48_intent_c.json": "492e25fda0913ae96cb7182f8579f803ce46f1cc6e200967454ab375d3ca4557",
+    "v48_root_intent.json": "5262b2cfa66bd0a5cecb6a183ab08a34c8fa1db613f741452e5bc47cbfca1c0d"
+  },
+  "actual_entry_timing_checks": {
+    "v48_intent_a.json": {
+      "entries_checked": 6,
+      "earliest_entry_utc": "2026-11-08T12:42:29.876439+00:00"
+    },
+    "v48_intent_b.json": {
+      "entries_checked": 6,
+      "earliest_entry_utc": "2026-11-08T12:42:51.049798+00:00"
+    },
+    "v48_intent_c.json": {
+      "entries_checked": 5,
+      "earliest_entry_utc": "2026-11-08T12:43:47.295682+00:00"
+    },
+    "v48_root_intent.json": {
+      "entries_checked": 0,
+      "earliest_entry_utc": null
+    }
+  },
+  "V48_master_created": false,
+  "replay_or_historical_loader_imported_or_executed": false,
+  "external_requests": 0,
+  "data_or_prior_release_files_mutated": false,
+  "only_written_artifact": "v48_baseline_integrity.json"
+}

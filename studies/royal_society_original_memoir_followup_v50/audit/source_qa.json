@@ -1,0 +1,65 @@
+{
+ "schema": "UK_v50_independent_source_review_v1",
+ "status": "PASS",
+ "passed": true,
+ "phase": "final_source_only_review",
+ "written_utc": "2026-11-08T13:14:21.493Z",
+ "source_review_complete": true,
+ "scope_sha256": "3d5d1e222b2790f77eb881a260af2f5e447320b7c92d23df5458a1059d444700",
+ "method_sha256": "8eb3c1c7ae67d89102b8a966ed293ec9d0519eb8a81264d6faed826929d64b66",
+ "accepted_record_ids": [],
+ "held_ids": [
+  "RS_PAST_NA3088"
+ ],
+ "pins": {
+  "audit/parent_adjudication.json": "9545dd94d50b3ea3a91d82d54de14aca6036479a370376de3ca063801146a4a5",
+  "audit/root_followups.json": "aa92627d35f9effbf1ff438ed2b64453d8a37f69b2ff0473146d75a68a3dff85",
+  "audit/v50_root_intent.json": "fb534dd4624b9b058cb025204743559356874e037511f0ffd59d2ffd85fb58d8",
+  "retained_memoir_citation_history": "4bf23b17be5fcc58706ed7d3e57ea7a8eebe7b78185ae9035c1718a04b98d4a7",
+  "historical_V48_baseline_integrity": "e56916d2da5fadb9e6b2ca6cdf13807469758d195215a8cdb5271c8fc793f8d4"
+ },
+ "case_review": {
+  "record_id": "RS_PAST_NA3088",
+  "native_authority": "Davison; Alan (1936 - 2015)",
+  "native_DOB": "1936-03-24",
+  "decision": "held",
+  "work_DOI": "10.1098/rsbm.2017.0004",
+  "citation_role": "Actual retained canonical citation/link79 L163 identifies the 2017 Green/Cummins/Kronauge memoir, distinct from JNM2016 memorial and MIT2015 biography. Citation authors/title/life dates are not acquired memoir-body proof.",
+  "source_ref": "turn2999897view0",
+  "requested_URL": "https://royalsocietypublishing.org/doi/pdf/10.1098/rsbm.2017.0004",
+  "actual_original_body_acquired": false,
+  "tool_reported_status": 403,
+  "raw_HTTP_status": null,
+  "source_full_name": null,
+  "source_birthdate": null,
+  "source_birthplace": null,
+  "source_grade_adopted": null,
+  "review": "First selected current publisher PDF route returned tool-reported Forbidden/403 and no original body. Every ordinary source name/date/life/career/direct-birth gate remains unobserved. No inference that the memoir lacks DOB or birthplace; no citation-date transfer, age-derived date, source-grade or conflict claim.",
+  "method": "Unchanged V29 single-provider full native components/actually stated compatible DOB precision/coherent career-life/direct subject birth. V49 composite path does not apply."
+ },
+ "operations": {
+  "queries": 2,
+  "opens": 1,
+  "clicks": 0,
+  "cached_continuations": 0,
+  "place_reads": 0,
+  "finds": 0,
+  "raw_GETs": 0,
+  "exact_intent_entries": 3,
+  "entry_UTCs": [
+   "2026-11-08T13:06:59.474593+00:00",
+   "2026-11-08T13:07:34.647911+00:00",
+   "2026-11-08T13:08:14.637285+00:00"
+  ],
+  "pre_request_validation_chunks": [
+   "aa9c7b",
+   "90d4c7",
+   "56282d"
+  ],
+  "review": "All three real-entry UTCs follow freeze and exact intent arguments match root operation ledger. Separate local exit0 before each request; exact validationUTC unrecorded/null. Search refs turn4792403search*/turn4142470search* are locator projections only; observed publisher URL, not guessed. Complete search result inventory not retranscribed."
+ },
+ "work_closure": "Focused retained histories found no actual prior request for this DOI; this is not global historical clearance or novelty/independence. Entire current DOI work closed after first failed body route: no DOI/epdf/ResearchGate/carrier retry. All old distinct-work failures and V44 Finlay deviation preserved.",
+ "new_literal_source_prose_quote_words": 0,
+ "preservation": "No fact/issue/grade adopted; native blank/unknown/DOB tiers/all9 inventories/strict and expanded groups/Morris/prior facts preserved. V46 master and201-column CSV retained; no V50 data wrapper, code change or CLI. The bound V48 integrity report verifies all74 V46 release files at its recorded earlier time; it is historical preapplication evidence, not a fresh V50 run.",
+ "limitations": "Retained root ledgers/observations reviewed; reviewer made no external requests, replay imports, numerical tests or data execution. Raw bytes/status/time/revision/calendar/rank/independence unknown/null. Across V48–V50:11 scoped reviews represent9 unique people, with Davison followed through two distinct biographies; no11-person claim. No exhaustion/final-freeze claim."
+}

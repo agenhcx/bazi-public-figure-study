@@ -1,0 +1,318 @@
+{
+  "schema": "UK_v48_group_c_local_canonical_first_birthplace_triage_v1",
+  "written_utc": "2026-11-08T12:36:31.666009+00:00",
+  "status": "local_triage_for_prospective_first_birthplace_extension_and_bounded_recheck",
+  "recommended_record_ids": [
+    "RS_PAST_NA1177",
+    "RS_PAST_NA8089",
+    "RS_PAST_NA9858"
+  ],
+  "remaining_native_file": "remaining_unknown_v46_compact.json",
+  "remaining_native_sha256": "4322330d9497706ce23b2c30f12bc2d2d17dea999b2cebd6bdb0303f1b6665f3",
+  "baseline_data_directory": "studies/royal_society_birthplace_completion_v46",
+  "baseline_data_canonical_sha256": "149afefd545fb9e98bd806ff5927be29057cc04db38b18c49de8fe5dde7055ed",
+  "all9_current_inventory_crosscheck": {
+    "active_source_DOB_conflicts.json": {
+      "sha256": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+      "record_count": 13,
+      "target_matches": []
+    },
+    "birthplace_source_conflicts.json": {
+      "sha256": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+      "record_count": 2,
+      "target_matches": []
+    },
+    "source_derived_age_inconsistencies.json": {
+      "sha256": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+      "record_count": 4,
+      "target_matches": []
+    },
+    "provisional_parsed_date_discrepancies.json": {
+      "sha256": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+      "record_count": 1,
+      "target_matches": []
+    },
+    "lifespan_endpoint_discrepancies.json": {
+      "sha256": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+      "record_count": 1,
+      "target_matches": []
+    },
+    "cross_source_reported_age_contrasts.json": {
+      "sha256": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+      "record_count": 1,
+      "target_matches": []
+    },
+    "source_date_precision_holds.json": {
+      "sha256": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+      "record_count": 1,
+      "target_matches": []
+    },
+    "omitted_middle_name_admission.json": {
+      "sha256": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+      "record_count": null,
+      "target_matches": []
+    },
+    "source_ordinal_age_wording_observations.json": {
+      "sha256": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d",
+      "record_count": 1,
+      "target_matches": []
+    }
+  },
+  "targeted_context_file_sha256": {
+    "v25_sources_a.json": "1fb9d95f59120d19493146240e78d708cd08e7ec3927d6b5aeeafe9888553506",
+    "v25_a_intent.json": "b74cd324fcc4d0cf26405deb2417abe2af995cd1e54ed1989b67e45459c28249",
+    "v25_root_intent.json": "c4efb79acd678335b5cd74adb1eb1ef3ebb13b264cb64a7bab4afb20cc962434",
+    "v18_sources_a.json": "f43e9935d4ab54aaf222a7af057ba9f77b1972088052b3d2fc70baa0e495e0ae",
+    "v18_a_intent.json": "2799abd3e600f5708c115a13856796fad5afad519dbeab04dbcc3f5a0f2af4c7",
+    "v18_root_intent.json": "f2a1c8304ed8d33af6027923894a5088bc2a4876c6a46a1ab50a00e581b15a49",
+    "v21_sources_b.json": "df480b7f21fb4f964c154738bc351ae6b40b693e80d3ebf7110680ce2a82be1c",
+    "v21_b_intent.json": "45e99692ccca06188dc125ffab14f7ae27739327024142e74b37c7a2f4b2b994",
+    "v21_root_intent.json": "656e6f7c8aa2654bccd66738327296217f10ba6d47783018912837e56f8abcb1",
+    "v19_sources_c.json": "e323c53a0773c90fb3d469a6403b29a534d6f2f41a9956864244e6dfaea82a75",
+    "v19_c_intent.json": "c930cd166100318fa7b2b71f30aec89aa75e3481a32236a4ce1066acd28fa609",
+    "v19_root_intent.json": "7ef0afa443229246ace1666d713d63b76d6848ac287521caacb2efaf11ae131e",
+    "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v25_holds.json": "499bd2c8658e99d259484241c8bb0b69f0a30aab04c3a86b4c6fcded5bc83cf0",
+    "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v18_holds.json": "81e5432af8ad764152805fbc15311ae18ba89e1eb823a521ea6222ad14efc249",
+    "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v21_holds.json": "cf04731a4626cefb1141e640b23550bbc6a9a34fad0ad83a25ba504ff4e2b928",
+    "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v19_holds.json": "124e4c2c9c26b31ba13761bd14903104a5cf3c724871dbb75495132b0e083200",
+    "academy_repo/studies/royal_society_birthplace_completion_v44/audit/prior_v17_holds.json": "3142cc4a347807ac06cef0a73caa4d4054fd28ab2cc1c34a8175d096a9d94407"
+  },
+  "available_request_ledger_review": {
+    "worker_and_root_patterns": [
+      "v*_sources_*.json",
+      "v*_intent*.json",
+      "v*_root_intent.json"
+    ],
+    "files_scanned": 241,
+    "target_or_frozen_QID_matching_files": [
+      {
+        "path": "v18_a_intent.json",
+        "sha256": "2799abd3e600f5708c115a13856796fad5afad519dbeab04dbcc3f5a0f2af4c7"
+      },
+      {
+        "path": "v18_root_intent.json",
+        "sha256": "f2a1c8304ed8d33af6027923894a5088bc2a4876c6a46a1ab50a00e581b15a49"
+      },
+      {
+        "path": "v18_sources_a.json",
+        "sha256": "f43e9935d4ab54aaf222a7af057ba9f77b1972088052b3d2fc70baa0e495e0ae"
+      },
+      {
+        "path": "v19_c_intent.json",
+        "sha256": "c930cd166100318fa7b2b71f30aec89aa75e3481a32236a4ce1066acd28fa609"
+      },
+      {
+        "path": "v19_root_intent.json",
+        "sha256": "7ef0afa443229246ace1666d713d63b76d6848ac287521caacb2efaf11ae131e"
+      },
+      {
+        "path": "v19_sources_c.json",
+        "sha256": "e323c53a0773c90fb3d469a6403b29a534d6f2f41a9956864244e6dfaea82a75"
+      },
+      {
+        "path": "v21_b_intent.json",
+        "sha256": "45e99692ccca06188dc125ffab14f7ae27739327024142e74b37c7a2f4b2b994"
+      },
+      {
+        "path": "v21_sources_b.json",
+        "sha256": "df480b7f21fb4f964c154738bc351ae6b40b693e80d3ebf7110680ce2a82be1c"
+      },
+      {
+        "path": "v25_a_intent.json",
+        "sha256": "b74cd324fcc4d0cf26405deb2417abe2af995cd1e54ed1989b67e45459c28249"
+      },
+      {
+        "path": "v25_sources_a.json",
+        "sha256": "1fb9d95f59120d19493146240e78d708cd08e7ec3927d6b5aeeafe9888553506"
+      }
+    ],
+    "independent_local_crosscheck": "A separate read-only reviewer also found no retained canonical personal-page open/click/failure for the selected three.",
+    "scope_limit": "Early V10 English-Wikipedia acquisition batches of300+66+9 exist, but target membership/outcomes are not resolved in this targeted retained corpus. Therefore none of these people is claimed first-ever unrequested or free of all historical canonical requests. No target-specific actual canonical open/click/failure was identified in reviewed worker/root ledgers; that bounded finding does not settle the global-batch history."
+  },
+  "candidates": [
+    {
+      "actual_prior_canonical_person_open_click_attempts_found": [],
+      "actual_prior_canonical_person_failure_refs_found": [],
+      "observed_unrequested_Wikipedia_person_URL": null,
+      "observed_unrequested_Wikidata_person_URL": null,
+      "canonical_history_result": "Early V10 English-Wikipedia acquisition batches of300+66+9 exist, but target membership/outcomes are not resolved in this targeted retained corpus. Therefore none of these people is claimed first-ever unrequested or free of all historical canonical requests. No target-specific actual canonical open/click/failure was identified in reviewed worker/root ledgers; that bounded finding does not settle the global-batch history.",
+      "new_avenue": "After root prospectively freezes the source extension and bounded recheck, locate an actual canonical English person URI and perform only the permitted current exact-body request. No guessed URL/QID, current failure retry, variant, raw GET or access bypass; strict exact displayedDOB/fullnative/career/life/directbirth gates remain.",
+      "record_id": "RS_PAST_NA1177",
+      "native": {
+        "record_id": "RS_PAST_NA1177",
+        "name": "Clive",
+        "source_authorised_full_name": "Cuthbertson; Clive (1863 - 1943)",
+        "dob": "1863-11-29",
+        "raw_birthplace": "",
+        "birthplace_source_grade": "unknown"
+      },
+      "native_personal_components": [
+        "Clive",
+        "Cuthbertson"
+      ],
+      "rank": 1,
+      "frozen_lookup_qid": "Q21165701",
+      "frozen_lookup_role": "Existing stored lookup metadata with no_value_birthplace_P19; not a source-page acquisition or validation.",
+      "prior_actual_separate_work_attempts": [
+        {
+          "work": "E.C.C.Baly1944 CliveCuthbertson1863-1943 original memoir",
+          "url": "https://www.jstor.org/stable/768853",
+          "ref": "turn8845463view0",
+          "outcome": "One GoogleTagManager line only; no personal body, closed across carriers."
+        },
+        {
+          "work": "1944 RS issue metadata",
+          "url": "https://www.jstor.org/stable/i231367",
+          "refs": [
+            "turn3172888view0",
+            "turn9565257view0"
+          ],
+          "outcome": "Issue title/author and actual memoir URL observed; not personal birth body and not canonical personal work."
+        }
+      ],
+      "prior_locator": "v25_sources_a.json holdNA1177/query/navigation ledgers; v25_a_intent.json; v25_root_intent.json has no target canonical request.",
+      "prospective_locator_query": "\"Clive Cuthbertson\" site:wikipedia.org",
+      "selection_basis": "Distinctive two-component name and compatible frozen lifespan allow strict exact-DOB/full-native binding without an omitted-name exception; canonical birthplace/date availability remains unverified.",
+      "historical_global_canonical_batch_membership": "unknown",
+      "first_ever_unrequested_claim": false
+    },
+    {
+      "actual_prior_canonical_person_open_click_attempts_found": [],
+      "actual_prior_canonical_person_failure_refs_found": [],
+      "observed_unrequested_Wikipedia_person_URL": null,
+      "observed_unrequested_Wikidata_person_URL": null,
+      "canonical_history_result": "Early V10 English-Wikipedia acquisition batches of300+66+9 exist, but target membership/outcomes are not resolved in this targeted retained corpus. Therefore none of these people is claimed first-ever unrequested or free of all historical canonical requests. No target-specific actual canonical open/click/failure was identified in reviewed worker/root ledgers; that bounded finding does not settle the global-batch history.",
+      "new_avenue": "After root prospectively freezes the source extension and bounded recheck, locate an actual canonical English person URI and perform only the permitted current exact-body request. No guessed URL/QID, current failure retry, variant, raw GET or access bypass; strict exact displayedDOB/fullnative/career/life/directbirth gates remain.",
+      "record_id": "RS_PAST_NA8089",
+      "native": {
+        "record_id": "RS_PAST_NA8089",
+        "name": "Siegfried",
+        "source_authorised_full_name": "Ruhemann; Siegfried (1859 - 1942)",
+        "dob": "1859-01-04",
+        "raw_birthplace": "",
+        "birthplace_source_grade": "unknown"
+      },
+      "native_personal_components": [
+        "Siegfried",
+        "Ruhemann"
+      ],
+      "rank": 2,
+      "frozen_lookup_qid": "Q21165991",
+      "frozen_lookup_role": "Existing stored lookup metadata with no_value_birthplace_P19, not canonical body proof.",
+      "prior_actual_separate_work_attempts": [
+        {
+          "work": "1944 JournalChemicalSociety obituary external original-work carrier",
+          "url": "https://electronicsandbooks.com/edt/manual/Magazine/J/Journal%20of%20the%20Chemical%20Society%20%28Resumed%29%20UK/1944/JR9440000040.pdf",
+          "ref": "turn123view2",
+          "outcome": "Timed out; no original body."
+        },
+        {
+          "work": "Same1944 obituary original RSC publisher landing",
+          "url": "https://pubs.rsc.org/en/content/articlelanding/1944/jr/jr9440000040",
+          "ref": "turn130view2",
+          "outcome": "Tool403; no original body. Both historical actual routes preserved; entire original work remains closed, no cleanup/retry claim."
+        }
+      ],
+      "prior_locator": "v18_sources_a.json Ruhemann hold/source attempts; v18_a_intent.json; v18_root_intent.json has original OUP locator query but no target canonical body request.",
+      "unadopted_prior_search_place": "Johannesburg in East Prussia; unacquired original excerpt only. No correction to Johannisburg or SouthAfrica/famous-city inference.",
+      "prospective_locator_query": "\"Siegfried Ruhemann\" site:wikipedia.org",
+      "selection_basis": "Distinctive two-component full name and lifespan. Canonical work is distinct from the closed original obituary; any actual new date/place discrepancy must be held, not overridden with old unverified search spelling.",
+      "historical_global_canonical_batch_membership": "unknown",
+      "first_ever_unrequested_claim": false
+    },
+    {
+      "actual_prior_canonical_person_open_click_attempts_found": [],
+      "actual_prior_canonical_person_failure_refs_found": [],
+      "observed_unrequested_Wikipedia_person_URL": null,
+      "observed_unrequested_Wikidata_person_URL": null,
+      "canonical_history_result": "Early V10 English-Wikipedia acquisition batches of300+66+9 exist, but target membership/outcomes are not resolved in this targeted retained corpus. Therefore none of these people is claimed first-ever unrequested or free of all historical canonical requests. No target-specific actual canonical open/click/failure was identified in reviewed worker/root ledgers; that bounded finding does not settle the global-batch history.",
+      "new_avenue": "After root prospectively freezes the source extension and bounded recheck, locate an actual canonical English person URI and perform only the permitted current exact-body request. No guessed URL/QID, current failure retry, variant, raw GET or access bypass; strict exact displayedDOB/fullnative/career/life/directbirth gates remain.",
+      "record_id": "RS_PAST_NA9858",
+      "native": {
+        "record_id": "RS_PAST_NA9858",
+        "name": "Paul",
+        "source_authorised_full_name": "O'Brien; Paul (1954 - 2018)",
+        "dob": "1954-01-22",
+        "raw_birthplace": "",
+        "birthplace_source_grade": "unknown"
+      },
+      "native_personal_components": [
+        "Paul",
+        "O'Brien"
+      ],
+      "rank": 3,
+      "frozen_lookup_qid": null,
+      "prior_actual_separate_work_attempts": [
+        {
+          "work": "LearnedSocietyWales2019 AGM paper collection",
+          "url": "https://www.learnedsociety.wales/wp-content/uploads/2019/05/AGM-2019-All-papers.pdf",
+          "ref": "turn8498563view1",
+          "outcome": "Tool400 contentlength15362389; closed original collection work."
+        },
+        {
+          "work": "RichardCatlow original PaulOBrien obituary carried in PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6364596/",
+          "ref": "turn5142654view0",
+          "outcome": "Three-line browser-check/reCAPTCHA shell; no original obituary body. Samework closed across publisher/PMC/repository carriers."
+        }
+      ],
+      "prior_locator": "v21_sources_b.json NA9858 hold/query/navigation context; v21_b_intent.json; v21_root_intent.json has no target canonical request.",
+      "unadopted_prior_search_place": "Oldham,Lancashire remains discovery-only, not birthplace proof.",
+      "prospective_locator_query": "\"Paul O'Brien\" \"1954\" site:wikipedia.org",
+      "selection_basis": "Two native personal components and distinctive chemistry/lifespan fingerprint; exact1954-01-22 and actual career must distinguish namesakes. Native apostrophe/name retained literally, no invented canonical URL/QID.",
+      "historical_global_canonical_batch_membership": "unknown",
+      "first_ever_unrequested_claim": false
+    }
+  ],
+  "considered_not_selected": [
+    {
+      "record_id": "RS_PAST_NA5620",
+      "native": {
+        "record_id": "RS_PAST_NA5620",
+        "name": "John",
+        "source_authorised_full_name": "Brown; John (1850 - 1911)",
+        "dob": "1850-02-24",
+        "raw_birthplace": "",
+        "birthplace_source_grade": "unknown"
+      },
+      "frozen_lookup_qid": "Q21165654",
+      "prior_history": "V17 RSE index candidates with other life years/professions rejected; not same-person DOB conflicts. No retained target canonical person request found.",
+      "reason": "Common two-component name has greater wrong-person risk; exact1850-02-24 and experimental/scientific career must bind any future source."
+    },
+    {
+      "record_id": "RS_CURRENT_11792",
+      "native": {
+        "record_id": "RS_CURRENT_11792",
+        "name": "Steffen Lauritzen",
+        "source_authorised_full_name": "",
+        "dob": "1947-04-22",
+        "raw_birthplace": "",
+        "birthplace_source_grade": "unknown"
+      },
+      "frozen_lookup_qid": "Q15994572",
+      "prior_history": "V19 KU CV timed out; AE member/CV wrapper career only. Root later followed CV attachment route; not a canonical person-body acquisition in retained matching ledgers.",
+      "reason": "Frozen member-query metadata lists normalized1947-01-01 and1947-04-22 while claimprecision/rank/calendar are unavailable. This is not a qualified literal DOB conflict or calendar verdict; inspect actual claims if later selected, never assume January1 exact or silently ignore an actual contradiction. Other three are cleaner first pilot choices."
+    }
+  ],
+  "prospective_gate_boundary": "Requires the separately frozen prospective first-birthplace S3canonical extension and one bounded current exact canonical-English-body recheck per fixed person, not a first-ever/unrequested claim. StrictV36 exact actually displayed nativeDOB/fullnative components/coherent distinctive career/compatible observed life/directbirth; no year-only/dateless/age-derived/omitted-middle/initial/alias/inference exception. Actual conflicts held. Canonical birthplace support explicitlyS3 and only in the expanded S1+S2+S3 birthplace-source group, with the S1+S2 comparison and all nativeDOB tiers unchanged. No civil/independent-editing or native grade upgrade.",
+  "prospective_mutation_boundary": "If a genuine qualified first birthplace is later adopted, use only inherited seven birthplace fields plus six geographic fields and a new versioned context with exact previous/absent rollback; all native fields/country/QIDs/coordinates/eligibility/previous facts remain frozen. This triage makes no mutation or adoption.",
+  "first_unusable_work_boundary": "All known work-specific historical closures and the V44 Finlay same-work deviation remain retained. Early global-batch target membership stays unknown. The proposed bounded recheck needs explicit prospective scope authorization; once the one permitted current exact canonicalEnglish body is unusable/rewritten/header/textless/challenged/failed, close the work with no current variants/retries/carrier/rawGET/auth bypass. No inferred cleanliness or first-ever acquisition claim.",
+  "source_queries_executed": 0,
+  "source_navigation_executed": 0,
+  "only_written_artifact": "v48_triage_c.json",
+  "no_data_replay_code_or_Git_changes": true,
+  "source_exhausted": false,
+  "final_freeze": false,
+  "global_early_canonical_batch_caveat": {
+    "historical_batches_as_reported_by_root": [
+      "V10 enwiki300",
+      "V10 enwiki66",
+      "V10 enwiki9"
+    ],
+    "membership_for_selected_targets": "unknown",
+    "first_ever_unrequested_claim": false,
+    "history_statement": "Early V10 English-Wikipedia acquisition batches of300+66+9 exist, but target membership/outcomes are not resolved in this targeted retained corpus. Therefore none of these people is claimed first-ever unrequested or free of all historical canonical requests. No target-specific actual canonical open/click/failure was identified in reviewed worker/root ledgers; that bounded finding does not settle the global-batch history.",
+    "prospective_authorization_boundary": "Root will separately freeze a first-birthplace canonicalS3 source extension plus one bounded current exact canonical-English-body recheck for the fixed nine. This triage does not authorize it; no web until frozen amendment. Known historical closures and V44 Finlay deviation are not cleared."
+  },
+  "updated_utc": "2026-11-08T12:37:22.364174+00:00"
+}

@@ -1,0 +1,89 @@
+{
+ "schema": "UK_v48_independent_source_review_v1",
+ "status": "PASS",
+ "passed": true,
+ "phase": "final_source_only_review",
+ "source_review_complete": true,
+ "scope_sha256": "5619bae49af23c1e9646d98d49d41f189ea797f0767216f835124c38a3706290",
+ "method_sha256": "98e9efbe9c97049e64954b4f3e4ec1b6d92c21a104107ccad3bb5c14bf0850af",
+ "accepted_record_ids": [],
+ "accepted_geography_only_record_ids": [],
+ "held_ids": [
+  "RS_PAST_NA8672",
+  "RS_PAST_NA3088",
+  "RS_PAST_NA1176",
+  "RS_PAST_NA2090",
+  "RS_PAST_NA1614",
+  "RS_PAST_NA3113",
+  "RS_PAST_NA1177",
+  "RS_PAST_NA8089",
+  "RS_PAST_NA9858"
+ ],
+ "source_pins": {
+  "v48_sources_a.json": "c512830bc81b1776250c6010547f9cbaa38f7ca8104c1d6cfedd92cd1cdc6778",
+  "v48_intent_a.json": "258592a7169f2238a5c1a39ccd3e753a9a8505e941e5129e16a18a1cf73989fc",
+  "v48_sources_b.json": "5b46473fd9d3fd7f6b3a3d9e603fc7f2752036dd47750e77bf63edae3994901c",
+  "v48_intent_b.json": "90bdc9533590d38ce973a73a6c60c866af8949f9e0f69b2e032521d78417f7a4",
+  "v48_sources_c.json": "6ab3aeac1f6b1c864c992b670661f7f2decfb3e285eca1046133c479c6cbf4ee",
+  "v48_intent_c.json": "492e25fda0913ae96cb7182f8579f803ce46f1cc6e200967454ab375d3ca4557"
+ },
+ "policy_review": "Explicit prospective first-BP canonical S3 extension and bounded access recheck; not unchanged V36 scope or novelty/independence. ExactDOB/full native components/life/distinctive career/direct birth required, no binding exception. Expanded S1+S2+S3 only; no adoption.",
+ "case_reviews": [
+  {
+   "record_id": "RS_PAST_NA3088",
+   "name": "Alan Davison",
+   "decision": "held",
+   "source_ref": "turn9163963view1",
+   "review": "Actual normal body: full name L112/124, exact1936-03-24 L114/124, compatible life/death2015-11-14, distinctive MIT/Cardiolite career L124/135/144. Born field is date-only; no acquired subject birthplace/edge. Age79 agrees. Education/work/nationality excluded; footer is displayed metadata only."
+  },
+  {
+   "record_ids": [
+    "RS_PAST_NA8672",
+    "RS_PAST_NA1614",
+    "RS_PAST_NA3113",
+    "RS_PAST_NA9858"
+   ],
+   "decision": "held",
+   "source_refs": [
+    "turn9163963view0",
+    "turn4202032view0",
+    "turn3219438view0",
+    "turn3709976view0"
+   ],
+   "review": "One explicit rewritten representation each. No original identity/date/career/birthplace/absence/footer claim promoted; encoded/decoded URIs are the same work. No follow-through, variant or person fallback."
+  },
+  {
+   "record_ids": [
+    "RS_PAST_NA1176",
+    "RS_PAST_NA2090",
+    "RS_PAST_NA1177",
+    "RS_PAST_NA8089"
+   ],
+   "decision": "held",
+   "review": "No actual target English person URI observed within budgets. No guessed URL, list/parent/namesake substitution or global absence claim; old obituary projections remain discovery only."
+  }
+ ],
+ "operations": {
+  "worker_queries": 12,
+  "worker_opens": 5,
+  "clicks": 0,
+  "finds": 0,
+  "raw_GETs": 0,
+  "root_queries": 0,
+  "root_navigation": 0,
+  "place_reads": 0,
+  "exact_intent_entries": 17,
+  "review": "A6/B6/C5 exact entries match actual ledgers; real entryUTC after freeze and separate pre-web local exit0 evidence covers all. One current person request maximum; worker place reads0."
+ },
+ "new_quoted_English_lexical_words": 0,
+ "preservation": "All9 inventory pin maps match scope/reports/intents; no qualified issue/append or grade update. Native fields/DOB tiers/analysis groups/Morris frozen. Historical V10 membership unknown; old failures/closures and V44 Finlay deviation preserved, not cleared. Current scoped closures clean.",
+ "limitations": "Documentary review of retained worker refs/locators; no fresh source acquisition/raw HTTP authentication. Unknown metadata remains null. Quotes0 is new-only, not an unavailable historical total. Reviewer external requests/replay imports/data execution0; no exhaustion/freeze claim.",
+ "written_utc": "2026-11-08T13:13:32.962Z",
+ "parent_adjudication_sha256": "e9ef498d396186b70d44a7395bc79d55f62dc1bec5f3677580ad903bec30d1e4",
+ "baseline_integrity": {
+  "path": "audit/baseline_integrity.json",
+  "sha256": "e56916d2da5fadb9e6b2ca6cdf13807469758d195215a8cdb5271c8fc793f8d4",
+  "status": "PASS",
+  "role": "Separate read-only verification: all74 V46 release files, nine inventories/native objects, Morris fact, master/code/201-column CSV preserved; no V48 data wrapper."
+ }
+}

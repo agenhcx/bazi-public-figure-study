@@ -1,0 +1,224 @@
+{
+  "written_utc": "2026-11-08T13:04:48.618269+00:00",
+  "scope_sha256": "14bfed5eec4c3814809bd3158aaab2ea51afa65cfaef6791d9388b9fb768c9c6",
+  "method_sha256": "3c38a8075bdf36fb429990839c1df65d3dc62d9e621677bd29dd22d3da0919c3",
+  "root_intent_file": "audit/v49_root_intent.json",
+  "root_intent_sha256": "6da698cda80b1cbad4764ab384f3b8bbcba0f53ed595e23c0604af6aa1941b74",
+  "evidence_provenance": "Sparse original-body observations and actual operation outcome supplied by the root source reviewer; collator made no external requests.",
+  "raw_HTTP_status": null,
+  "raw_bytes_sha256": null,
+  "exact_request_utc": null,
+  "artifact_type": "single_original_linked_personal_source_followup_zero_result",
+  "record_id": "RS_PAST_NA3088",
+  "native_authority": "Davison; Alan (1936 - 2015)",
+  "native_DOB": "1936-03-24",
+  "native_raw_birthplace": "",
+  "native_birthplace_source_grade": "unknown",
+  "actual_operation_ledger": [
+    {
+      "entry_id": "v49_original_MIT_observed_person_citation_1",
+      "entry_utc": "2026-11-08T12:56:25.303371+00:00",
+      "operation": "click",
+      "exact_arguments": {
+        "click": [
+          {
+            "ref_id": "turn9163963view1",
+            "id": 102
+          }
+        ],
+        "response_length": "long"
+      },
+      "from_ref": "turn9163963view1",
+      "link_id": 102,
+      "result_ref": "turn5338515view0",
+      "actual_result_URL": "https://news.mit.edu/2015/chemistry-professor-emeritus-alan-davison-dies-1117",
+      "separate_pre_request_local_validation": {
+        "chunk_id": "3b10f8",
+        "exit_code": 0,
+        "completed_before_request": true,
+        "exact_validation_utc": null,
+        "root_observed_result": "PASS exact observed MIT citation/frozen method before click."
+      },
+      "outcome": "Normal actual original body; neither stated DOB/birthyear nor direct subject birthplace. One current work request completed; no second request."
+    }
+  ],
+  "retrieval_counts": {
+    "scope_records": 1,
+    "accepted_facts": 0,
+    "accepted_first_birthplaces": 0,
+    "accepted_geography": 0,
+    "held_records": 1,
+    "queries": 0,
+    "clicks": 1,
+    "direct_open_operations": 0,
+    "all_navigation_operations": 1,
+    "current_original_work_requests": 1,
+    "actual_original_person_bodies": 1,
+    "cached_continuations": 0,
+    "place_reads": 0,
+    "finds": 0,
+    "screenshots": 0,
+    "raw_GETs": 0,
+    "new_source_grade_adoptions": 0,
+    "new_qualified_issue_records": 0,
+    "complete_objects_changed": 0
+  },
+  "canonical_identity_support": {
+    "role": "Canonical identity support only; separate from the original birthplace provider.",
+    "source_ref": "turn9163963view1",
+    "source_URL": "https://en.wikipedia.org/wiki/Alan_Davison",
+    "source_report_file": "audit/prior_v48_sources_a.json",
+    "source_report_sha256": "c512830bc81b1776250c6010547f9cbaa38f7ca8104c1d6cfedd92cd1cdc6778",
+    "source_intent_file": "audit/prior_v48_intent_a.json",
+    "source_intent_sha256": "258592a7169f2238a5c1a39ccd3e753a9a8505e941e5129e16a18a1cf73989fc",
+    "actual_full_native_name": "Alan Davison",
+    "native_name_locator": "L112/L124",
+    "exact_birthdate": "1936-03-24",
+    "birthdate_locator": "L114/L124",
+    "compatible_life_observed": true,
+    "life_locator": "L115/L124/L153",
+    "distinctive_career_observed": true,
+    "career_locator": "L124/L135/L144",
+    "citation_edge": {
+      "from_ref": "turn9163963view1",
+      "reference_number": 6,
+      "link_id": 102,
+      "locator": "L168",
+      "observed_link_title_in_canonical_reference": "Alan Davison, professor emeritus of chemistry, dies at 79",
+      "full_target_URL_known_before_click": false
+    },
+    "canonical_DOB_transferred_to_original_provider": false,
+    "native_DOB_validated_or_grade_upgraded": false
+  },
+  "original_birthplace_provider": {
+    "role": "Actual original personal-biography body inspected as the prospective birthplace provider.",
+    "source_ref": "turn5338515view0",
+    "actual_URL": "https://news.mit.edu/2015/chemistry-professor-emeritus-alan-davison-dies-1117",
+    "tool_header_rewritten_summary": false,
+    "actual_original_body_acquired": true,
+    "parsed_line_count": 205,
+    "title_locator": "L76",
+    "title_verbatim_retranscribed": false,
+    "source_author": "Liz McGrath",
+    "author_affiliation_observed": "Chemistry department",
+    "byline_locator": "L80",
+    "source_publication_date": "2015-11-17",
+    "publication_date_precision": "day_displayed_by_original_provider",
+    "publication_locator": "L82",
+    "all_native_personal_components_observed": true,
+    "full_name": "Alan Davison",
+    "name_locator": "L107",
+    "source_birthdate": null,
+    "source_birthdate_precision": "not_stated_in_original_birthplace_provider",
+    "source_birthyear": null,
+    "source_birthdate_not_inferred_from_age_or_publication": true,
+    "observed_death_month_day": "11-14",
+    "source_reported_age": 79,
+    "death_and_age_locator": "L107",
+    "exact_death_year_in_personal_clause_not_retranscribed": null,
+    "life_context_compatible_with_native_and_canonical_person": true,
+    "distinctive_career_observed": true,
+    "career_summary": "Study and Harvard/MIT career, MIT arrival in 1964, and Cardiolite research identify the same chemist.",
+    "career_locator": "L108-L113",
+    "direct_subject_birthplace_observed": false,
+    "source_birthplace": null,
+    "direct_subject_birth_relation_observed": false,
+    "personal_body_reviewed_locator": "L107-L127",
+    "birthplace_hyperlinks_observed": [],
+    "nonbirth_locations_excluded": [
+      {
+        "locator": "L124",
+        "role": "Family residence; not subject birth."
+      },
+      {
+        "locator": "L194",
+        "role": "Institutional address; not subject birth."
+      }
+    ],
+    "source_calendar_model": null,
+    "source_statement_rank": null,
+    "source_revision_id": null,
+    "source_revision_utc": null,
+    "source_editorial_validation": null,
+    "source_informational_independence": null,
+    "grade_adopted": null,
+    "prospective_grade_cap": "S3_birthplace_support_only_expanded_group",
+    "no_source_cache_retained": true
+  },
+  "admission_path_results": {
+    "A_ordinary_original_provider": {
+      "passed": false,
+      "provider_full_native_name": true,
+      "provider_actually_stated_compatible_DOB_precision": false,
+      "provider_compatible_life_context": true,
+      "provider_distinctive_career": true,
+      "provider_direct_subject_birthplace": false,
+      "failed_gates": [
+        "Original provider states neither DOB nor birthyear.",
+        "Original provider supplies no direct subject birthplace."
+      ]
+    },
+    "B_NEW_explicit_composite_identity_link": {
+      "passed": false,
+      "separately_preregistered_new_path_not_unchanged_V29": true,
+      "canonical_full_native_exact_DOB_life_career": true,
+      "actual_specific_personal_citation_edge_followed": true,
+      "original_full_native_life_career_binding": true,
+      "original_direct_subject_birthplace": false,
+      "provider_birthdate_remains_null": true,
+      "failed_gates": [
+        "Original provider supplies no direct subject birthplace."
+      ],
+      "per_source_DOB_confirmation_claimed": false
+    },
+    "actual_new_same_person_date_or_place_conflict_observed": false
+  },
+  "historical_access": {
+    "old_mirror_URL": "https://obituaries83.rssing.com/chan-7437767/all_p11.html",
+    "old_mirror_ref": "turn86view3",
+    "old_outcome": "400/timeout; no original body.",
+    "likely_same_underlying_MIT_work": true,
+    "old_failure_preserved": true,
+    "current_original_host_recheck_explicitly_preregistered": true,
+    "new_work_first_ever_or_independence_claimed": false,
+    "other_old_closed_routes_preserved": [
+      {
+        "URL": "https://pubmed.ncbi.nlm.nih.gov/26833907/",
+        "ref": "turn82view1",
+        "result": "HHSfooter/textlessrecordonly"
+      },
+      {
+        "URL": "https://web.mit.edu/retireesassoc/obit/mem-2015.html",
+        "ref": "turn92view0",
+        "result": "MITretireeindexonly,nodate/place or subjectobituarylink"
+      }
+    ],
+    "historical_Finlay_deviation_and_all_other_closures_preserved": true
+  },
+  "current_work_status": "Single authorized original-host access recheck complete; no further request or carrier variation in V49.",
+  "candidates": [],
+  "holds": [
+    {
+      "record_id": "RS_PAST_NA3088",
+      "decision": "hold",
+      "reason": "Path A lacks original-provider birthdate/birthyear and direct birthplace; NEW Path B binds the person through the actual citation but still lacks original direct birthplace.",
+      "new_birthplace": null,
+      "new_hemisphere": null,
+      "new_grade_adopted": null
+    }
+  ],
+  "qualified_new_DOB_place_age_issue_records": [],
+  "quote_accounting": {
+    "new_literal_source_prose_quotes": [],
+    "new_literal_source_prose_English_lexical_words": 0,
+    "retained_bibliographic_title_English_lexical_words": 8,
+    "sparse_bibliographic_metadata_only": true,
+    "maximum_distinct_quoted_English_lexical_words_per_work": 25,
+    "no_full_source_cache": true
+  },
+  "native_DOB_tiers_all_prior_facts_and_groups_unchanged": true,
+  "data_code_replay_CLI_or_Git_actions": false,
+  "source_stage_complete": true,
+  "source_exhausted": false,
+  "final_analysis_cohort_freeze": false
+}

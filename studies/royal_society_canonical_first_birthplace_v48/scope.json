@@ -1,0 +1,105 @@
+{
+  "written_utc": "2026-11-08T12:41:12.064967+00:00",
+  "status": "prospectively_frozen_before_current_source_queries",
+  "method_id": "uk-first-birthplace-canonical-community-reference-pilot-v1",
+  "method_sha256": "98e9efbe9c97049e64954b4f3e4ec1b6d92c21a104107ccad3bb5c14bf0850af",
+  "baseline_commit": "8ac47b2eb82ce411e2663baaeeee72a86b4c5678",
+  "master_data_commit": "9ffe623ca6062b9755999021cb0447fec2410bcf",
+  "primary_data_directory": "studies/royal_society_birthplace_completion_v46",
+  "baseline_canonical_sha256": "149afefd545fb9e98bd806ff5927be29057cc04db38b18c49de8fe5dde7055ed",
+  "baseline_gzip_sha256": "95048d6e3ef240f1f5d11a92d3314295b9eb98af7c388bead6889fa2af300b95",
+  "baseline_replay_sha256": "16cc7bcf0394857ba5350cce3a8166be7c6644b18433f048eda3329c1750cecf",
+  "groups": {
+    "a": [
+      "RS_PAST_NA8672",
+      "RS_PAST_NA3088",
+      "RS_PAST_NA1176"
+    ],
+    "b": [
+      "RS_PAST_NA2090",
+      "RS_PAST_NA1614",
+      "RS_PAST_NA3113"
+    ],
+    "c": [
+      "RS_PAST_NA1177",
+      "RS_PAST_NA8089",
+      "RS_PAST_NA9858"
+    ]
+  },
+  "fixed_record_ids": [
+    "RS_PAST_NA8672",
+    "RS_PAST_NA3088",
+    "RS_PAST_NA1176",
+    "RS_PAST_NA2090",
+    "RS_PAST_NA1614",
+    "RS_PAST_NA3113",
+    "RS_PAST_NA1177",
+    "RS_PAST_NA8089",
+    "RS_PAST_NA9858"
+  ],
+  "initial_blank_ids": [
+    "RS_PAST_NA8672",
+    "RS_PAST_NA3088",
+    "RS_PAST_NA1176",
+    "RS_PAST_NA2090",
+    "RS_PAST_NA1614",
+    "RS_PAST_NA3113",
+    "RS_PAST_NA1177",
+    "RS_PAST_NA8089",
+    "RS_PAST_NA9858"
+  ],
+  "initial_storedplace_ids": [],
+  "triages": {
+    "a": {
+      "file": "v48_triage_a.json",
+      "sha256": "82c20408bef2cf1f5ed91cb2b5f2a8e90f9483e6f92c2e5e6592efcacd5138a4",
+      "available_before_freeze": true
+    },
+    "b": {
+      "file": "v48_triage_b.json",
+      "sha256": "7272052a307019d5af362ad4b66dc8beb5bc056832194ee788ce790671e421f6",
+      "available_before_freeze": true
+    },
+    "c": {
+      "file": "v48_triage_c.json",
+      "sha256": "8239f607283f5f424644f61249a55fce9ee5e7a0736bce2d92e7aa6260144b57",
+      "available_before_freeze": true
+    }
+  },
+  "issue_inventory_pins": {
+    "active_source_DOB_conflicts.json": "e7237530a454de7f80cd8c002fed504761a79c05b51eb7f64824661a96181b6c",
+    "birthplace_source_conflicts.json": "3b2ba1d0b51b64cf6330741983bc0cb942b453a4b296059d8357813cf96cbbe1",
+    "source_derived_age_inconsistencies.json": "5fe820b74de24785e7eee87bcda08c8201f79124da61de33a1e4c440736a22e6",
+    "provisional_parsed_date_discrepancies.json": "660ea7672e85bddbcff05cd99e3564baa77da7f161366521b9d41de31c0256dd",
+    "lifespan_endpoint_discrepancies.json": "1b279786632de93ce0d2e9fcf95d824f2245ec0c9120b2fbf9b9bad8ce099363",
+    "cross_source_reported_age_contrasts.json": "75b4116477cbdd1e39cda91c1e06d38b5ca931ac75ea4fe6ac1c30ab355d21c0",
+    "source_date_precision_holds.json": "b52c6a54dc9475e2dd23aac7f3a6e7f91659d769794d399dc983430c9a8d438c",
+    "omitted_middle_name_admission.json": "102fa2b9e737f7b6d3571a792fb80d4cb1cb872bdf630fb71472fb0780da64d5",
+    "source_ordinal_age_wording_observations.json": "084c27633a249e73b61ca1d22dda86e25ebb26fffc16e04a082d4a5721abb69d"
+  },
+  "budgets": {
+    "a": {
+      "queries": 4,
+      "person_body_opens": 3
+    },
+    "b": {
+      "queries": 4,
+      "person_body_opens": 3
+    },
+    "c": {
+      "queries": 4,
+      "person_body_opens": 3
+    },
+    "root_navigation_attempts": 12,
+    "root_locator_queries": 1
+  },
+  "worker_place_page_opens_allowed": false,
+  "place_registry_owner": "root",
+  "all9_existing_hold_exclusions_preserved": true,
+  "access_recheck_not_novelty_or_independence_claim": true,
+  "retrieval_intents": "Exact durableinput/realentryUTC and separate localexit0 validation beforeeachquery/open/click/find. All9/currentnative/targetpriorworkerANDrootledgers readbeforequery. ActualURLonly, historicalstateunknown recorded, strictcurrentonebody/workcap.",
+  "zero_adoption_policy": "KeepV46master/pipeline/201-columnCSVbyteexact; source-stageonly/noemptynewmasterwrapper. Positivefacts requireactualreviewedapplication, exactrollback andindependentQA.",
+  "new_master_first_birthplace_grade": "S3",
+  "strict_vs_expanded_groups_preserved": true,
+  "no_analysis_or_final_cohort_freeze": true
+}
