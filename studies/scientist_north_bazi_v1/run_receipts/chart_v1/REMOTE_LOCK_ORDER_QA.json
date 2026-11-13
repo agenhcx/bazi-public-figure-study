@@ -1,0 +1,209 @@
+{
+  "schema": "scientist_chart_remote_prior_lock_order_independent_QA_v1",
+  "status": "PASS_REMOTE_BYTES_AND_RECORDED_EXECUTION_ORDER",
+  "all_checks_pass": true,
+  "checks": {
+    "remote_commit_matches_receipt": true,
+    "eighteen_remote_files_exact_manifest_plus_manifest": true,
+    "all_remote_newfile_patch_hashes_match_local_and_exact_commit_objects": true,
+    "receipt_manifest_digest_matches_actual": true,
+    "input_V4_hash_consistent_with_locked_assumptions": true,
+    "receipt_authorizes_features_only_and_reports_no_tests": true,
+    "completed_BUILD_QA_counts_match_frozen_6537_5894": true,
+    "completed_BUILD_QA_records_unknown_hours_and_no_inference": true,
+    "recorded_prelaunch_verification_precedes_current_completed_output_observation": true
+  },
+  "remote_source": {
+    "API_operation": "GitHub fetch_commit",
+    "repository": "agenhcx/bazi-public-figure-study",
+    "immutable_commit_SHA": "6d02e0e4f22da59d171888d75a5163bb1ee410d8",
+    "canonical_commit_URL": "https://github.com/agenhcx/bazi-public-figure-study/commit/6d02e0e4f22da59d171888d75a5163bb1ee410d8",
+    "Git_commit_timestamp_not_remote_upload_time": "2026-11-13T12:40:20Z"
+  },
+  "eighteen_file_comparisons": [
+    {
+      "path": "studies/scientist_north_bazi_v1/.gitignore",
+      "remote_patch_is_complete_new_file": true,
+      "remote_reconstructed_SHA256": "2242ca5224fe3e28dc01d472f7d67c18c2bf25d11ddbec38009194d75af0cea0",
+      "local_SHA256": "2242ca5224fe3e28dc01d472f7d67c18c2bf25d11ddbec38009194d75af0cea0",
+      "immutable_Git_object_SHA256": "2242ca5224fe3e28dc01d472f7d67c18c2bf25d11ddbec38009194d75af0cea0",
+      "remote_patch_bytes_equal_local_and_Git_blob": true,
+      "locked_manifest_SHA256_matches": true
+    },
+    {
+      "path": "studies/scientist_north_bazi_v1/ASSUMPTIONS_LOCK_V1.json",
+      "remote_patch_is_complete_new_file": true,
+      "remote_reconstructed_SHA256": "7d33aa3a6178e1aa1b14ebb3457ad38e42b715d9899a92b3ab15606c8082121c",
+      "local_SHA256": "7d33aa3a6178e1aa1b14ebb3457ad38e42b715d9899a92b3ab15606c8082121c",
+      "immutable_Git_object_SHA256": "7d33aa3a6178e1aa1b14ebb3457ad38e42b715d9899a92b3ab15606c8082121c",
+      "remote_patch_bytes_equal_local_and_Git_blob": true,
+      "locked_manifest_SHA256_matches": true
+    },
+    {
+      "path": "studies/scientist_north_bazi_v1/LOCKED_FILES.sha256.json",
+      "remote_patch_is_complete_new_file": true,
+      "remote_reconstructed_SHA256": "f232b9c73b3a3553c1ee14e4dfeaf46bab4c7298593ca30ca98fc306c0941819",
+      "local_SHA256": "f232b9c73b3a3553c1ee14e4dfeaf46bab4c7298593ca30ca98fc306c0941819",
+      "immutable_Git_object_SHA256": "f232b9c73b3a3553c1ee14e4dfeaf46bab4c7298593ca30ca98fc306c0941819",
+      "remote_patch_bytes_equal_local_and_Git_blob": true,
+      "locked_manifest_SHA256_matches": true
+    },
+    {
+      "path": "studies/scientist_north_bazi_v1/PROTOCOL_V1.md",
+      "remote_patch_is_complete_new_file": true,
+      "remote_reconstructed_SHA256": "24a26a138c2dfdb28b2afc96b9485a6bc83f8709de825fbb79b115a808fb8324",
+      "local_SHA256": "24a26a138c2dfdb28b2afc96b9485a6bc83f8709de825fbb79b115a808fb8324",
+      "immutable_Git_object_SHA256": "24a26a138c2dfdb28b2afc96b9485a6bc83f8709de825fbb79b115a808fb8324",
+      "remote_patch_bytes_equal_local_and_Git_blob": true,
+      "locked_manifest_SHA256_matches": true
+    },
+    {
+      "path": "studies/scientist_north_bazi_v1/README.md",
+      "remote_patch_is_complete_new_file": true,
+      "remote_reconstructed_SHA256": "f74c6982592b433337aa143da43f22a7b853c88683d57ea42704003a29548c51",
+      "local_SHA256": "f74c6982592b433337aa143da43f22a7b853c88683d57ea42704003a29548c51",
+      "immutable_Git_object_SHA256": "f74c6982592b433337aa143da43f22a7b853c88683d57ea42704003a29548c51",
+      "remote_patch_bytes_equal_local_and_Git_blob": true,
+      "locked_manifest_SHA256_matches": true
+    },
+    {
+      "path": "studies/scientist_north_bazi_v1/input_freeze/DATA_FREEZE_POLICY_V4.json",
+      "remote_patch_is_complete_new_file": true,
+      "remote_reconstructed_SHA256": "313548a002b80a7987b7abba111e05d1f76c97a555fec8dabe4a76a802729208",
+      "local_SHA256": "313548a002b80a7987b7abba111e05d1f76c97a555fec8dabe4a76a802729208",
+      "immutable_Git_object_SHA256": "313548a002b80a7987b7abba111e05d1f76c97a555fec8dabe4a76a802729208",
+      "remote_patch_bytes_equal_local_and_Git_blob": true,
+      "locked_manifest_SHA256_matches": true
+    },
+    {
+      "path": "studies/scientist_north_bazi_v1/input_freeze/FINAL_DATA_V4_INDEPENDENT_QA_SUMMARY.json",
+      "remote_patch_is_complete_new_file": true,
+      "remote_reconstructed_SHA256": "d95b3c75f2dec46ddb3ba4471129571f3dca02fa650bb48de029b8160c71d814",
+      "local_SHA256": "d95b3c75f2dec46ddb3ba4471129571f3dca02fa650bb48de029b8160c71d814",
+      "immutable_Git_object_SHA256": "d95b3c75f2dec46ddb3ba4471129571f3dca02fa650bb48de029b8160c71d814",
+      "remote_patch_bytes_equal_local_and_Git_blob": true,
+      "locked_manifest_SHA256_matches": true
+    },
+    {
+      "path": "studies/scientist_north_bazi_v1/input_freeze/GROUP_SELECTION_SHA256.json",
+      "remote_patch_is_complete_new_file": true,
+      "remote_reconstructed_SHA256": "eaedbc6369d76be8ea12d8ee5d494f9942edc9fe9b1f9c9db11ebed0a44c3ff6",
+      "local_SHA256": "eaedbc6369d76be8ea12d8ee5d494f9942edc9fe9b1f9c9db11ebed0a44c3ff6",
+      "immutable_Git_object_SHA256": "eaedbc6369d76be8ea12d8ee5d494f9942edc9fe9b1f9c9db11ebed0a44c3ff6",
+      "remote_patch_bytes_equal_local_and_Git_blob": true,
+      "locked_manifest_SHA256_matches": true
+    },
+    {
+      "path": "studies/scientist_north_bazi_v1/input_freeze/HYPOTHESES_DRAFT_V2.json",
+      "remote_patch_is_complete_new_file": true,
+      "remote_reconstructed_SHA256": "fafdc459b17cb7b278e085c9d5eca01ab53ad692f9cc3424416f6b20c7846163",
+      "local_SHA256": "fafdc459b17cb7b278e085c9d5eca01ab53ad692f9cc3424416f6b20c7846163",
+      "immutable_Git_object_SHA256": "fafdc459b17cb7b278e085c9d5eca01ab53ad692f9cc3424416f6b20c7846163",
+      "remote_patch_bytes_equal_local_and_Git_blob": true,
+      "locked_manifest_SHA256_matches": true
+    },
+    {
+      "path": "studies/scientist_north_bazi_v1/input_freeze/counts.json",
+      "remote_patch_is_complete_new_file": true,
+      "remote_reconstructed_SHA256": "98b55ad26f5446312bd72a3da70ae99e47fe5d3cbe0a8ec3c340bea450f7e2cb",
+      "local_SHA256": "98b55ad26f5446312bd72a3da70ae99e47fe5d3cbe0a8ec3c340bea450f7e2cb",
+      "immutable_Git_object_SHA256": "98b55ad26f5446312bd72a3da70ae99e47fe5d3cbe0a8ec3c340bea450f7e2cb",
+      "remote_patch_bytes_equal_local_and_Git_blob": true,
+      "locked_manifest_SHA256_matches": true
+    },
+    {
+      "path": "studies/scientist_north_bazi_v1/input_freeze/output_file_hashes.json",
+      "remote_patch_is_complete_new_file": true,
+      "remote_reconstructed_SHA256": "de7b4250f4880fb896e5cb953e76e392488610b6e5ac672309e9dc7ce820401a",
+      "local_SHA256": "de7b4250f4880fb896e5cb953e76e392488610b6e5ac672309e9dc7ce820401a",
+      "immutable_Git_object_SHA256": "de7b4250f4880fb896e5cb953e76e392488610b6e5ac672309e9dc7ce820401a",
+      "remote_patch_bytes_equal_local_and_Git_blob": true,
+      "locked_manifest_SHA256_matches": true
+    },
+    {
+      "path": "studies/scientist_north_bazi_v1/input_freeze/selection_diagnostics.json",
+      "remote_patch_is_complete_new_file": true,
+      "remote_reconstructed_SHA256": "b7386f965cec692914626d364aed2fb4b6a8c9f7c16e6c41358465b7c8a66f8d",
+      "local_SHA256": "b7386f965cec692914626d364aed2fb4b6a8c9f7c16e6c41358465b7c8a66f8d",
+      "immutable_Git_object_SHA256": "b7386f965cec692914626d364aed2fb4b6a8c9f7c16e6c41358465b7c8a66f8d",
+      "remote_patch_bytes_equal_local_and_Git_blob": true,
+      "locked_manifest_SHA256_matches": true
+    },
+    {
+      "path": "studies/scientist_north_bazi_v1/qa/CALENDAR_PRELOCK_QA.json",
+      "remote_patch_is_complete_new_file": true,
+      "remote_reconstructed_SHA256": "a4e9d8b252920da3fb20ddedb126e43007c2ae1744ccb1993867e4d88cbca30b",
+      "local_SHA256": "a4e9d8b252920da3fb20ddedb126e43007c2ae1744ccb1993867e4d88cbca30b",
+      "immutable_Git_object_SHA256": "a4e9d8b252920da3fb20ddedb126e43007c2ae1744ccb1993867e4d88cbca30b",
+      "remote_patch_bytes_equal_local_and_Git_blob": true,
+      "locked_manifest_SHA256_matches": true
+    },
+    {
+      "path": "studies/scientist_north_bazi_v1/qa/PROTOCOL_PRELOCK_QA.json",
+      "remote_patch_is_complete_new_file": true,
+      "remote_reconstructed_SHA256": "2e41ac656fa58b19526c05f8e49582256599f1f54634cc1e4b86cac1eb41879b",
+      "local_SHA256": "2e41ac656fa58b19526c05f8e49582256599f1f54634cc1e4b86cac1eb41879b",
+      "immutable_Git_object_SHA256": "2e41ac656fa58b19526c05f8e49582256599f1f54634cc1e4b86cac1eb41879b",
+      "remote_patch_bytes_equal_local_and_Git_blob": true,
+      "locked_manifest_SHA256_matches": true
+    },
+    {
+      "path": "studies/scientist_north_bazi_v1/qa/TRANSFORM_SYNTHETIC_QA.json",
+      "remote_patch_is_complete_new_file": true,
+      "remote_reconstructed_SHA256": "535ab53ac00d161b22e89e7adcb596bd40cb21c55e0543b4a6c402b2252713bf",
+      "local_SHA256": "535ab53ac00d161b22e89e7adcb596bd40cb21c55e0543b4a6c402b2252713bf",
+      "immutable_Git_object_SHA256": "535ab53ac00d161b22e89e7adcb596bd40cb21c55e0543b4a6c402b2252713bf",
+      "remote_patch_bytes_equal_local_and_Git_blob": true,
+      "locked_manifest_SHA256_matches": true
+    },
+    {
+      "path": "studies/scientist_north_bazi_v1/requirements-calendar.txt",
+      "remote_patch_is_complete_new_file": true,
+      "remote_reconstructed_SHA256": "f9f46c32e3ec2b28bf7020a3a73d8c7d40a815eee7ee0b6eb853c5f975de642c",
+      "local_SHA256": "f9f46c32e3ec2b28bf7020a3a73d8c7d40a815eee7ee0b6eb853c5f975de642c",
+      "immutable_Git_object_SHA256": "f9f46c32e3ec2b28bf7020a3a73d8c7d40a815eee7ee0b6eb853c5f975de642c",
+      "remote_patch_bytes_equal_local_and_Git_blob": true,
+      "locked_manifest_SHA256_matches": true
+    },
+    {
+      "path": "studies/scientist_north_bazi_v1/scripts/audit_charts.py",
+      "remote_patch_is_complete_new_file": true,
+      "remote_reconstructed_SHA256": "2019c4ae31bf377ded2638f48dbf645980a2c10a3898a0727f6d1f3d26d9ef3e",
+      "local_SHA256": "2019c4ae31bf377ded2638f48dbf645980a2c10a3898a0727f6d1f3d26d9ef3e",
+      "immutable_Git_object_SHA256": "2019c4ae31bf377ded2638f48dbf645980a2c10a3898a0727f6d1f3d26d9ef3e",
+      "remote_patch_bytes_equal_local_and_Git_blob": true,
+      "locked_manifest_SHA256_matches": true
+    },
+    {
+      "path": "studies/scientist_north_bazi_v1/scripts/build_charts.py",
+      "remote_patch_is_complete_new_file": true,
+      "remote_reconstructed_SHA256": "1cb872fb0d6c37cf8ea353c006c76bfe34f0cc05fc3a496a12f1523002663637",
+      "local_SHA256": "1cb872fb0d6c37cf8ea353c006c76bfe34f0cc05fc3a496a12f1523002663637",
+      "immutable_Git_object_SHA256": "1cb872fb0d6c37cf8ea353c006c76bfe34f0cc05fc3a496a12f1523002663637",
+      "remote_patch_bytes_equal_local_and_Git_blob": true,
+      "locked_manifest_SHA256_matches": true
+    }
+  ],
+  "receipt_SHA256": "a001329293d4beb8a44e5f4fef69a0e9a372a6257bd57783d72da484c50ed597",
+  "BUILD_QA_SHA256": "66983a5da843c58dd4734426972d93df449b0d014e9650808882f4837a61b388",
+  "timing": {
+    "exact_first_build_start_utc": null,
+    "root_recorded_prelaunch_remote_verification_utc": "2026-11-13T12:41:54.888879+00:00",
+    "start_utc_lower_bound": "2026-11-13T12:41:54.888879+00:00",
+    "completed_BUILD_QA_observed_by_this_auditor_utc": "2026-11-13T12:44:56.173486+00:00",
+    "exact_builder_completion_utc": null,
+    "file_mtime_or_ctime_not_used_as_start_time": true,
+    "basis": "Prelaunch receipt plus immutable guarded code sequence; root records that build was called only after remote verification and receipt validation. Exact process launch clock was not captured. Receipt first_chart_run_has_started=false is a prelaunch snapshot, not a claim that execution has not subsequently occurred."
+  },
+  "scope": {
+    "chart_rows_CSV_or_JSONL_opened_by_this_proof_audit": false,
+    "cohort_TenGod_DayMaster_or_cooccurrence_frequencies_computed": false,
+    "scientist_features_computed_by_this_audit": false,
+    "hypothesis_tests_executed_by_this_audit": false,
+    "locked_files_changed": false
+  },
+  "limits": [
+    "This verifies independent remote commit content and consistency of the recorded order, not a forensic proof that no unrecorded computation ever occurred.",
+    "Actual chart feature/provenance correctness is covered by the separate frozen row-auditor; this proof audit reads only authorization, code/hash metadata and completed BUILD_QA counts."
+  ]
+}

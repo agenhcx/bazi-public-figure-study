@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "unique_charts_expanded": 6537,
+  "unique_charts_strict": 5894,
+  "source_DOB_and_ID_preserved": true,
+  "strict_subset_of_expanded": true,
+  "all_24_effective_DOB_holds_absent": true,
+  "source_date_coordinate_changes": 0,
+  "hour_pillars_filled": 0,
+  "all_day_pillars_JDN_verified": true,
+  "all_ten_god_count_sums_equal_five": true,
+  "group_population_counts": {
+    "expanded/Fields_parallel_cohort.jsonl.gz": 57,
+    "expanded/Nobel_frozen_candidate_cohort.jsonl.gz": 621,
+    "expanded/Nobel_full_roster_matched_people.jsonl.gz": 627,
+    "expanded/academy_all.jsonl.gz": 6268,
+    "expanded/academy_excluding_official_Nobel.jsonl.gz": 5871,
+    "expanded/academy_excluding_official_Nobel_and_Fields.jsonl.gz": 5853,
+    "expanded/by_institution/CAS.jsonl.gz": 904,
+    "expanded/by_institution/DE_Leopoldina.jsonl.gz": 654,
+    "expanded/by_institution/France.jsonl.gz": 493,
+    "expanded/by_institution/Japan.jsonl.gz": 226,
+    "expanded/by_institution/NAS.jsonl.gz": 1690,
+    "expanded/by_institution/UK_Royal_Society.jsonl.gz": 2371,
+    "expanded/excluded_people.jsonl.gz": 185,
+    "expanded/people.jsonl.gz": 6537,
+    "sensitivity/LOC_quoted_metadata_only_support_people.jsonl.gz": 4,
+    "sensitivity/expanded_without_LOC_quoted_metadata_academy.jsonl.gz": 6264,
+    "sensitivity/expanded_without_LOC_quoted_metadata_people.jsonl.gz": 6533,
+    "strict/Fields_parallel_cohort.jsonl.gz": 57,
+    "strict/Nobel_frozen_candidate_cohort.jsonl.gz": 621,
+    "strict/Nobel_full_roster_matched_people.jsonl.gz": 621,
+    "strict/academy_all.jsonl.gz": 5625,
+    "strict/academy_excluding_official_Nobel.jsonl.gz": 5234,
+    "strict/academy_excluding_official_Nobel_and_Fields.jsonl.gz": 5216,
+    "strict/by_institution/CAS.jsonl.gz": 821,
+    "strict/by_institution/DE_Leopoldina.jsonl.gz": 654,
+    "strict/by_institution/France.jsonl.gz": 492,
+    "strict/by_institution/Japan.jsonl.gz": 226,
+    "strict/by_institution/NAS.jsonl.gz": 1130,
+    "strict/by_institution/UK_Royal_Society.jsonl.gz": 2371,
+    "strict/excluded_people.jsonl.gz": 828,
+    "strict/people.jsonl.gz": 5894
+  },
+  "boundary_flagged_expanded": 675,
+  "boundary_exact_day_expanded": 210,
+  "synthetic_QA": {
+    "status": "PASS",
+    "study_input_loaded": false,
+    "out_of_window_JDN_day_checks": 1462,
+    "all_100_ten_god_pairs_checked": true,
+    "explicit_sect2_23h_check": true,
+    "LiChun_before_after_check": true,
+    "synthetic_fixed_fixtures": {
+      "2000-01-07": [
+        "己卯",
+        "丁丑",
+        "甲子"
+      ],
+      "2024-02-10": [
+        "甲辰",
+        "丙寅",
+        "甲辰"
+      ],
+      "2024-02-04": [
+        "癸卯",
+        "乙丑",
+        "戊戌"
+      ]
+    }
+  },
+  "inference_executed": false,
+  "hypothesis_outcome_frequencies_or_effects_computed": false
+}

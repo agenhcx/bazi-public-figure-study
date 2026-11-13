@@ -1,0 +1,11 @@
+{
+  "schema": "scientist_chart_execution_order_evidence_v1",
+  "lock_commit": "6d02e0e4f22da59d171888d75a5163bb1ee410d8",
+  "remote_lock_verified_utc": "2026-11-13T12:41:54.888879+00:00",
+  "actual_first_process_start_utc_recorded": false,
+  "first_process_started_after_verified_utc": true,
+  "first_process_finished_before_completion_observed_utc": true,
+  "completion_observed_utc": "2026-11-13T12:43:30.365104+00:00",
+  "evidence": "Tool execution sequence: verified remote lock and all Git objects, wrote prerequisite receipt, then launched frozen builder; first command exited0 with PASS6537/5894. Exact launch time not recorded; filemtime not used as launch evidence.",
+  "hypothesis_statistics_executed": false
+}
