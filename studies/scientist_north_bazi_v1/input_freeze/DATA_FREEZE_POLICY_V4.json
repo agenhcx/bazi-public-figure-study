@@ -1,0 +1,59 @@
+{
+  "schema": "scientist_north_data_freeze_policy_v4",
+  "created_utc": "2026-11-13T00:26:59.991877+00:00",
+  "baseline_V3_sha256": "e1f6a5fd4fea531b7f359e4aee716a91ad36abad246d7140de8f4fb982f44a76",
+  "authorization": "User continued final data screening and list locking; CAS26 parked outside main; no renewed tail collection.",
+  "scope": {
+    "birth_window_inclusive": [
+      "1835-01-01",
+      "1985-12-31"
+    ],
+    "admission_award_cutoff_inclusive": "2025-12-31",
+    "hemisphere": "north",
+    "hemisphere_only_sufficient": true,
+    "professors": "paused",
+    "Fields": "parallel_separate",
+    "2026_extension": false
+  },
+  "calendar_convention_id": "scientist-unmarked-biographical-date-Gregorian-coordinate-v1-20261110",
+  "calendar_rule": "Use only V3 bound analysis-date coordinates under V2 convention and existing explicit canonical registry. Ordinary unmarked biographical dates are not claimed explicitly Gregorian. No new conversion, date inference, or native DOB rewrite.",
+  "source_groups": {
+    "strict": [
+      "S1",
+      "S2"
+    ],
+    "expanded": [
+      "S1",
+      "S2",
+      "S3"
+    ],
+    "known_S1_or_S2_union_with_null_fine_grade": "qualifies in both groups; do not invent fine grade",
+    "genuinely_unknown_source_bridge": "does not itself supply DOB support",
+    "same_person_source_rule": "At least one retained qualified complete-date source in the accepted V3 identity component, at exactly the same coordinate, can support a person regardless of which cohort owns that source. Do not relabel the original weaker or unknown record.",
+    "LOC_quoted_metadata_four": "Remain S3: retained in expanded main under existing compiled/quoted metadata rule, absent strict. Provenance warnings retained. Predeclared supplementary expanded_without_LOC list removes cases whose sole expanded support has this flag."
+  },
+  "date_hold_rule": "Exclude all V3 person-level active DOB/calendar holds. Also propagate any already documented positive DOB/calendar warning outside candidate-node scope after an independently qualified same-person bridge; use explicit external_DOB_holds sidecar. No source-priority date guessing or majority vote.",
+  "CAS26": "Keep all26source records outside main node universe. Proven independent other-cohort records are not automatically deleted; any independently bound positive birthday warning is carried at person level.",
+  "CAS977": "New positive membership overlay from exact ordinary-domestic roster/name/profile binding plus actual CAS ordinary admission statement <=2025; foreign admission does not replace ordinary admission. Original I/D/M and stage flags unchanged.",
+  "UK12": "Existing role scope remains unresolved after bounded pass. Exclude flagged membership route in both groups; never infer Royal/Honorary membership from title. Independent eligible other-cohort route could qualify, but none exists among these12 current components.",
+  "honor_crosswalk": "Use complete retained official Nobel science and Fields rosters through2025. Preserve original624/57candidate membership and all source nodes separately. Confirmed or potentially unresolved full-roster awardees are never treated as controls without that honor.",
+  "cohort_outputs": "Produce academy_all, legacy_frozen_Nobel_cohort, full_roster_matched_Nobel, Fields_parallel, per-institution lists, and full-roster-screened academy_without_Nobel / without_Nobel_or_Fields. These are data populations, not a committed statistical contrast.",
+  "coverage": "Different roster denominators and missingness mechanisms are documented separately; current lists are not asserted exhaustive of all worldwide eligible scientists. Do not infer completeness from selected birthdays or mix working candidate denominators with full primary rosters.",
+  "data_lists_locked": true,
+  "analysis_preregistration_complete": false,
+  "analysis_unblinding_ready": false,
+  "Bazi_features_or_outcomes_generated": 0,
+  "native_source_or_V3_identity_objects_modified": false,
+  "explicit_pre_feature_population_amendment": "V4 additionally provides Nobel_full_roster_matched_people: already existing candidate identities with a confirmed full-official-roster Nobel identity and a qualified same-person exact DOB source under the corresponding quality group. This may recover awardees missing exact dates from the official API, using already retained academy DOB evidence. It adds no person/source nodes and does not upgrade DOB source grades from S3 to S1 merely because award identity is official. Legacy624 candidate-cohort output remains separate. Final statistical contrast is not yet preregistered.",
+  "external_DOB_hold_amendments": {
+    "new_people": 2,
+    "new_effective_hold_person_ids": [
+      "SCI_P_d66b0598876634e85be6",
+      "SCI_P_f3a067e9e28292f846fc"
+    ],
+    "original_V3_person_holds": 22,
+    "effective_person_holds": 24,
+    "Yang_binding_limited_purpose": "Primary Chinese biography Nobel Physics status +explicit birthyear1922+birthcountryChina is reverse-unique in retained230-objectPhysicsAPI and bound toNobel68; a DOB-warning overlay only, no inferred bilingual alias or newidentityunion.",
+    "Patapoutian_rule": "Confirmed NAS/Nobel identity propagates already-retained prior frozen conflict assessment; no claim of newly recovered competing-date source bodies, no hold merely for partial official API date."
+  }
+}

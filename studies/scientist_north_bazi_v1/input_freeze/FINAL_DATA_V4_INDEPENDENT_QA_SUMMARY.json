@@ -1,0 +1,129 @@
+{
+  "original_file": "audit/independent_qa/FINAL_DATA_V4_INDEPENDENT_QA.json inside pinned V4ZIP",
+  "original_sha256": "e688d92d050828ba96e2f3b3e712d77f339de4424efbe9f2d3d0ae3d6d85b345",
+  "summary_only_original_full_assertions_preserved_in_V4": true,
+  "schema": "scientist_north_final_data_v4_independent_QA_v1",
+  "stage": "release_blocking_final_data_only_QA",
+  "all_checks_pass": true,
+  "check_count": 95521,
+  "check_summary": {
+    "immutable_baseline_nodes_people_and_events_preserved": true,
+    "selection_sets_recomputed_independently": true,
+    "baseline22_plus_two_external_holds_effective24": true,
+    "unknown_record_source_not_misused_and_S1S2_union_retained": true,
+    "source_support_never_promoted_from_official_award_identity": true,
+    "four_LOC_nativeS3_mainexpanded_and_exact_sensitivity": true,
+    "twelve_UK_membership_role_holds_not_proven_Royal_categories": true,
+    "allCAS26_still_parked": true,
+    "full_official_honor_screen_not_candidate_negative_flag": true,
+    "zero_BaZi_or_hypothesis_results_and_no_unblinding": true,
+    "minimal_portable_offline_replay_all_output_bytes_equal": true
+  },
+  "input_snapshot_hashes": {
+    "DATA_FREEZE_POLICY_V4.json": "313548a002b80a7987b7abba111e05d1f76c97a555fec8dabe4a76a802729208",
+    "scripts/build_final_data.py": "dad8b62b56f3ba64f9b41188a108de42ab02199718510dc9eaedb49ccb42fd18",
+    "baseline/scientist_north_cross_academy_dedup_v3.zip": "e1f6a5fd4fea531b7f359e4aee716a91ad36abad246d7140de8f4fb982f44a76",
+    "INPUT_PINS.json": "7404fd9642dab5be620b0b00f7fd98787577890a5cd04244d707ef0535733c56",
+    "inputs/CAS26_PARKED_DECISION.json": "59a9e30baa09ef5db87e67743c97c116ea1346c0d819ea93969c2c2da016e7b0",
+    "inputs/CAS26_RETAINED_SOURCE_EXPLANATIONS.json": "df88911bbc8e80561eaf37964604360fe76a6373c8463d5941c3c11eaab2d22f",
+    "inputs/external_DOB_holds.jsonl": "5f6c01656072ce3b40dcd73d5ef2f73fe1a599ebae0875dd36dcef257fb48d65",
+    "inputs/full_award_person_status.jsonl": "4abf170e8fa39dd62318aeeab800589d2ef4bbc6f51438fae7241c1250e8c300",
+    "inputs/record_scope_decisions.jsonl": "69d1cefd25c44e162d1d8e77915f450de38a91f2897416f07d126c230061ac0b"
+  },
+  "counts_independently_recomputed": {
+    "strict": {
+      "people": 5894,
+      "academy_all": 5625,
+      "academy_excluding_official_Nobel": 5234,
+      "academy_excluding_official_Nobel_and_Fields": 5216,
+      "institution:CAS": 821,
+      "excluded_people": 828,
+      "institution:DE_Leopoldina": 654,
+      "institution:NAS": 1130,
+      "Nobel_frozen_candidate_cohort": 621,
+      "Nobel_full_roster_matched_people": 621,
+      "institution:UK_Royal_Society": 2371,
+      "institution:France": 492,
+      "Fields_parallel_cohort": 57,
+      "institution:Japan": 226
+    },
+    "expanded": {
+      "people": 6537,
+      "academy_all": 6268,
+      "academy_excluding_official_Nobel": 5871,
+      "academy_excluding_official_Nobel_and_Fields": 5853,
+      "institution:CAS": 904,
+      "excluded_people": 185,
+      "institution:DE_Leopoldina": 654,
+      "institution:NAS": 1690,
+      "Nobel_frozen_candidate_cohort": 621,
+      "Nobel_full_roster_matched_people": 627,
+      "institution:UK_Royal_Society": 2371,
+      "institution:France": 493,
+      "Fields_parallel_cohort": 57,
+      "institution:Japan": 226
+    }
+  },
+  "effective_date_hold_person_ids": [
+    "SCI_P_1296ddf70a3c5347531b",
+    "SCI_P_166cc3f32589596e9ba7",
+    "SCI_P_1a7798bd1fe3a2543cef",
+    "SCI_P_2315c6d9feee4965b097",
+    "SCI_P_28da956b6738d1cce962",
+    "SCI_P_4ac3b947b225b2e55818",
+    "SCI_P_5671b27cea841840a178",
+    "SCI_P_7dde466ca5b971fa3f07",
+    "SCI_P_810e4ffeea00844906d3",
+    "SCI_P_9880de7c4d92ead9893e",
+    "SCI_P_a181500a036fc28ae8e1",
+    "SCI_P_a62a8834aab2e4ae9433",
+    "SCI_P_a8d5b1e2e6c3144b39b8",
+    "SCI_P_a91c3965c553695f2f0d",
+    "SCI_P_b1c55f2f49a182e3b77e",
+    "SCI_P_bdee1ac9331646aea126",
+    "SCI_P_c367772b69e07984ebdb",
+    "SCI_P_d66b0598876634e85be6",
+    "SCI_P_dab8b15df98b1dcca9ad",
+    "SCI_P_df5af84973611cada8c9",
+    "SCI_P_dfc6fd17202f7b7d0ca7",
+    "SCI_P_f246c67188a31249b311",
+    "SCI_P_f3a067e9e28292f846fc",
+    "SCI_P_fe4487d69e7609ead6f4"
+  ],
+  "new_external_hold_person_ids": [
+    "SCI_P_d66b0598876634e85be6",
+    "SCI_P_f3a067e9e28292f846fc"
+  ],
+  "LOC4_person_ids": [
+    "SCI_P_38e7a2719f782f36e1b9",
+    "SCI_P_3b3c5b1c0630c1044d70",
+    "SCI_P_c92e689bc4ca2ff588dd",
+    "SCI_P_fdb9224db66508b325a4"
+  ],
+  "seven_extra_official_Nobel_identity_person_ids": [
+    "SCI_P_1c9a81bc3a8c22fd2699",
+    "SCI_P_40daeb212e8bd3bb4c04",
+    "SCI_P_4a53d583abd532d0ddd3",
+    "SCI_P_4de9fc4c313847f7dde1",
+    "SCI_P_8620e4730127511fa53b",
+    "SCI_P_96650ee2617dacb40150",
+    "SCI_P_d66b0598876634e85be6"
+  ],
+  "sensitivity": {
+    "expanded_without_LOC_people": 6533,
+    "expanded_without_LOC_academy": 6264
+  },
+  "replay_minimum_inputs": [
+    "immutable V3 ZIP",
+    "five final JSON/JSONL sidecars",
+    "policy JSON",
+    "builder script"
+  ],
+  "replay_output_file_count": 53,
+  "limits": [
+    "Data lists are source-qualified records under accepted identity components, not proof no unseen duplicate or missing eligible scientist exists.",
+    "No statistical contrast or hypotheses/null/matching/multiplicity plan is unlocked by this data-only QA.",
+    "Archived task-filtered source derivatives and prior warnings are labelled as retained evidence, not newly verified original source bodies.",
+    "No final artifact inputs, outputs or source payloads were changed by this QA; all QA/replay writes are confined to final_cohort_work/independent_qa."
+  ]
+}

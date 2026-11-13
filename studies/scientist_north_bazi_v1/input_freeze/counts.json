@@ -1,0 +1,137 @@
+{
+  "Bazi_features_generated": 0,
+  "analysis_unblinding_ready": false,
+  "candidate_input": {
+    "Bazi_features_generated": 0,
+    "Fields_award_events": 57,
+    "Fields_person_count": 57,
+    "Nobel_and_Fields_people": 0,
+    "Nobel_award_events": 628,
+    "Nobel_person_count": 624,
+    "academy_Nobel_Fields_people": 0,
+    "academy_and_Fields_people": 18,
+    "academy_and_Nobel_people": 393,
+    "academy_deduplicated_identity_count": 6452,
+    "academy_duplicate_records_removed_from_pooled_person_count": 71,
+    "academy_input_membership_records": 6523,
+    "academy_people_without_Nobel": 6059,
+    "academy_people_without_either_award": 6041,
+    "accepted_adjudication_observations": 897,
+    "accepted_unique_record_pairs": 516,
+    "cross_record_DOB_conflict_people": 3,
+    "deduplicated_people_by_institution": {
+      "CAS": 977,
+      "DE_Leopoldina": 655,
+      "France": 570,
+      "Japan": 226,
+      "NAS": 1694,
+      "UK_Royal_Society": 2401
+    },
+    "existing_record_DOB_review_people": 19,
+    "final_analysis_eligibility_assigned": false,
+    "global_deduplicated_identity_count": 6722,
+    "global_duplicate_records_removed_from_pooled_person_count": 482,
+    "identity_count_is_under_accepted_links_not_proof_no_unseen_duplicate_exists": true,
+    "input_records": 7204,
+    "institution_source_record_counts_unchanged": {
+      "CAS": 977,
+      "DE_Leopoldina": 655,
+      "France": 570,
+      "Japan": 226,
+      "NAS": 1694,
+      "UK_Royal_Society": 2401
+    },
+    "no_source_DOB_grade_calendar_or_membership_scope_changes": true,
+    "people_by_academy_count": {
+      "1": 6381,
+      "2": 71
+    },
+    "people_with_multiple_academies": 71,
+    "person_level_DOB_analysis_hold_people": 22,
+    "review_pair_status_counts": {
+      "coincident_birthday_discovery_no_qualified_identity_link": 150,
+      "confirmed_distinct_do_not_merge": 4,
+      "identity_resolved_by_other_accepted_evidence": 76
+    },
+    "same_institution_multiple_source_record_components": 0,
+    "unpaired_review_observations": 3
+  },
+  "data_lists_locked": true,
+  "groups": {
+    "expanded": {
+      "Fields_parallel_cohort": 57,
+      "Nobel_frozen_candidate_cohort": 621,
+      "Nobel_full_roster_matched_people": 627,
+      "academy_Fields_current_cohort_overlap": 18,
+      "academy_Nobel_current_cohort_overlap": 391,
+      "academy_Nobel_full_roster_matched_overlap": 397,
+      "academy_all": 6268,
+      "academy_excluding_official_Nobel": 5871,
+      "academy_excluding_official_Nobel_and_Fields": 5853,
+      "by_institution": {
+        "CAS": 904,
+        "DE_Leopoldina": 654,
+        "France": 493,
+        "Japan": 226,
+        "NAS": 1690,
+        "UK_Royal_Society": 2371
+      },
+      "excluded_people": 185,
+      "extra_Nobel_people_from_existing_academy_DOB_support": 6,
+      "nonadditive_exclusion_reason_counts": {
+        "no_qualified_cohort_route_after_membership_scope_hold": 12,
+        "no_same_person_same_date_expanded_source_support": 149,
+        "person_level_DOB_or_calendar_hold": 24
+      },
+      "people": 6537,
+      "person_source_bridges_by_institution": {
+        "CAS": 0,
+        "DE_Leopoldina": 0,
+        "France": 2,
+        "Japan": 0,
+        "NAS": 0,
+        "UK_Royal_Society": 0
+      }
+    },
+    "strict": {
+      "Fields_parallel_cohort": 57,
+      "Nobel_frozen_candidate_cohort": 621,
+      "Nobel_full_roster_matched_people": 621,
+      "academy_Fields_current_cohort_overlap": 18,
+      "academy_Nobel_current_cohort_overlap": 391,
+      "academy_Nobel_full_roster_matched_overlap": 391,
+      "academy_all": 5625,
+      "academy_excluding_official_Nobel": 5234,
+      "academy_excluding_official_Nobel_and_Fields": 5216,
+      "by_institution": {
+        "CAS": 821,
+        "DE_Leopoldina": 654,
+        "France": 492,
+        "Japan": 226,
+        "NAS": 1130,
+        "UK_Royal_Society": 2371
+      },
+      "excluded_people": 828,
+      "extra_Nobel_people_from_existing_academy_DOB_support": 0,
+      "nonadditive_exclusion_reason_counts": {
+        "no_qualified_cohort_route_after_membership_scope_hold": 12,
+        "no_same_person_same_date_strict_source_support": 792,
+        "person_level_DOB_or_calendar_hold": 24
+      },
+      "people": 5894,
+      "person_source_bridges_by_institution": {
+        "CAS": 0,
+        "DE_Leopoldina": 0,
+        "France": 1,
+        "Japan": 0,
+        "NAS": 100,
+        "UK_Royal_Society": 0
+      }
+    }
+  },
+  "sensitivity_expanded_without_LOC": {
+    "academy_all": 6264,
+    "people": 6533,
+    "removed_people": 4
+  }
+}

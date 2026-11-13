@@ -1,0 +1,342 @@
+{
+  "schema": "scientist_BaZi_hypotheses_directional_draft_v2",
+  "created_utc": "2026-11-13T11:49:00.852607+00:00",
+  "status": "expanded_directional_draft_not_complete_preregistration",
+  "parent": {
+    "file": "baseline/scientist_hypotheses_draft_v1.zip",
+    "sha256": "81bce115d5e04971f60b06874af27287b55e3def6e744a5a83336d5df32001ca",
+    "library_file_id": "libfile_fde3_f-e7acbc9d40bc8191828924fb0f838c4c_e546463623c08191899c4998606cfe65",
+    "V1_snapshot_preserved_byteexact": true
+  },
+  "exact_new_user_statement": "假设二，院士组官印相生，伤官配印的比例高于基线，同时官印相生高于院士，官印相生的比例随着年代增加上升。假设三，日主分配不均匀，水日主更高。假设四，各个国家之间也不一样",
+  "confirmed_user_clarifications": {
+    "ambiguous_between_group_phrase": "院士高于诺奖",
+    "structure_definition": "先用共现指标（推荐）",
+    "country_comparison": "按六院所属国家（推荐）",
+    "three_answers_received_before_drafting": true
+  },
+  "data_source": {
+    "filename": "scientist_north_data_freeze_v4.zip",
+    "library_file_id": "libfile_fde3_f-65d4013511a88191a897c4a22f0c7726_e546463623c08191899c4998606cfe65",
+    "sha256": "53302ef5c4bbb946adcaceb70d7a7fd576c7f06d03c3e7080874654e1a2644f9",
+    "candidate_nodes_and_final_lists_modified": false
+  },
+  "themes": {
+    "H1": {
+      "label": "偏印、伤官的富集与荣誉组差异",
+      "components": [
+        {
+          "id": "H1a_PI",
+          "trait": "偏印",
+          "comparison": "Nobel_vs_calendar_null",
+          "left_group": "Nobel",
+          "right_group_or_baseline": "respective_prespecified_calendar_null",
+          "alternative_direction": "greater_than",
+          "claim_zh": "诺奖组高于其预先指定日历条件零模型期望",
+          "outcome_metric_status": "proposed_not_final",
+          "research_unit": "unique_person",
+          "prior_v1_id": "H1_PI"
+        },
+        {
+          "id": "H1a_SG",
+          "trait": "伤官",
+          "comparison": "Nobel_vs_calendar_null",
+          "left_group": "Nobel",
+          "right_group_or_baseline": "respective_prespecified_calendar_null",
+          "alternative_direction": "greater_than",
+          "claim_zh": "诺奖组高于其预先指定日历条件零模型期望",
+          "outcome_metric_status": "proposed_not_final",
+          "research_unit": "unique_person",
+          "prior_v1_id": "H1_SG"
+        },
+        {
+          "id": "H1b_PI",
+          "trait": "偏印",
+          "comparison": "Academy_vs_calendar_null",
+          "left_group": "nonNobel_academy",
+          "right_group_or_baseline": "respective_prespecified_calendar_null",
+          "alternative_direction": "greater_than",
+          "claim_zh": "非诺奖院士组高于其预先指定日历条件零模型期望",
+          "outcome_metric_status": "proposed_not_final",
+          "research_unit": "unique_person",
+          "prior_v1_id": "H2_PI"
+        },
+        {
+          "id": "H1b_SG",
+          "trait": "伤官",
+          "comparison": "Academy_vs_calendar_null",
+          "left_group": "nonNobel_academy",
+          "right_group_or_baseline": "respective_prespecified_calendar_null",
+          "alternative_direction": "greater_than",
+          "claim_zh": "非诺奖院士组高于其预先指定日历条件零模型期望",
+          "outcome_metric_status": "proposed_not_final",
+          "research_unit": "unique_person",
+          "prior_v1_id": "H2_SG"
+        },
+        {
+          "id": "H1c_PI",
+          "trait": "偏印",
+          "comparison": "Nobel_vs_nonNobel_academy",
+          "left_group": "Nobel",
+          "right_group_or_baseline": "nonNobel_academy",
+          "alternative_direction": "greater_than",
+          "claim_zh": "诺奖组平均计数高于非诺奖院士组；进行直接组间比较",
+          "outcome_metric_status": "proposed_not_final",
+          "research_unit": "unique_person",
+          "prior_v1_id": "H3_PI"
+        },
+        {
+          "id": "H1c_SG",
+          "trait": "伤官",
+          "comparison": "Nobel_vs_nonNobel_academy",
+          "left_group": "Nobel",
+          "right_group_or_baseline": "nonNobel_academy",
+          "alternative_direction": "greater_than",
+          "claim_zh": "诺奖组平均计数高于非诺奖院士组；进行直接组间比较",
+          "outcome_metric_status": "proposed_not_final",
+          "research_unit": "unique_person",
+          "prior_v1_id": "H3_SG"
+        }
+      ],
+      "V1_id_crosswalk": {
+        "H1_PI": "H1a_PI",
+        "H1_SG": "H1a_SG",
+        "H2_PI": "H1b_PI",
+        "H2_SG": "H1b_SG",
+        "H3_PI": "H1c_PI",
+        "H3_SG": "H1c_SG"
+      },
+      "semantics_preserved_from_V1": true
+    },
+    "H2": {
+      "label": "官印、伤官配印共现及年代趋势",
+      "components": [
+        {
+          "id": "H2a",
+          "endpoint": "guan_yin_cooccurrence_predefined_encoding",
+          "group": "nonNobel_academy",
+          "contrast": "greater_than_respective_calendar_null",
+          "direction_confirmed": true
+        },
+        {
+          "id": "H2b",
+          "endpoint": "shang_guan_pei_yin_cooccurrence_predefined_encoding",
+          "group": "nonNobel_academy",
+          "contrast": "greater_than_respective_calendar_null",
+          "direction_confirmed": true
+        },
+        {
+          "id": "H2c",
+          "endpoint": "guan_yin_cooccurrence_predefined_encoding",
+          "left": "nonNobel_academy",
+          "right": "Nobel",
+          "contrast": "left_rate_greater_than_right_rate",
+          "direction_confirmed_by_clarification": true
+        },
+        {
+          "id": "H2d",
+          "endpoint": "guan_yin_cooccurrence_predefined_encoding",
+          "contrast": "increases_with_later_cohorts",
+          "direction_confirmed": true,
+          "proposed_group": "nonNobel_academy",
+          "proposed_time_axis": "birth_year_or_prespecified_birth_cohort",
+          "group_and_time_axis_status": "working_interpretation_not_explicitly_confirmed",
+          "null_calendar_trend_and_institution_composition_handling": "pending_before_features",
+          "admission_or_award_year_not_automatically_substituted": true
+        }
+      ],
+      "operational_encodings": {
+        "common_basis": {
+          "positions": [
+            "年干",
+            "年支本气",
+            "月干",
+            "月支本气",
+            "日支本气"
+          ],
+          "mode": "binary_person_level_cooccurrence",
+          "numerator": "unique_people_satisfying_conditions",
+          "denominator": "eligible_unique_people_in_the_prespecified_group",
+          "pair_counting_not_used": true,
+          "hour_pillar_used": false,
+          "full_classical_pattern_or_interaction_claim": false,
+          "main_vs_sensitivity_priority": "proposed_not_finalized"
+        },
+        "guan_yin": {
+          "label": "官印共现（官印相生的操作指标）",
+          "narrow_candidate": {
+            "all_of": [
+              "正官>=1",
+              "正印>=1"
+            ]
+          },
+          "broad_candidate": {
+            "all_of": [
+              "正官或七杀>=1",
+              "正印或偏印>=1"
+            ]
+          },
+          "traditional_definition_not_adjudicated": true
+        },
+        "shang_guan_pei_yin": {
+          "label": "伤官配印共现指标",
+          "narrow_candidate": {
+            "all_of": [
+              "伤官>=1",
+              "正印>=1"
+            ]
+          },
+          "broad_candidate": {
+            "all_of": [
+              "伤官>=1",
+              "正印或偏印>=1"
+            ]
+          },
+          "traditional_definition_not_adjudicated": true
+        },
+        "cautions": [
+          "Two indicators are not mutually exclusive; the same person may satisfy both.",
+          "Cooccurrence elevation can follow marginal TenGod elevations; it does not prove a synergetic interaction.",
+          "No evidence of 成格, causal相生 or配印增益 is claimed from cooccurrence alone.",
+          "Narrow and broad encodings must have prespecified roles; do not select the more favorable variant after outcomes."
+        ]
+      },
+      "no_between_group_direction_added_for_shang_guan_pei_yin": true
+    },
+    "H3": {
+      "label": "日主分布与水日主富集",
+      "components": [
+        {
+          "id": "H3a",
+          "endpoint": "Day_Master_distribution",
+          "direction": "deviates_from_prespecified_calendar_conditioned_expectation",
+          "proposed_primary_categories": [
+            "甲",
+            "乙",
+            "丙",
+            "丁",
+            "戊",
+            "己",
+            "庚",
+            "辛",
+            "壬",
+            "癸"
+          ],
+          "category_scheme_status": "proposed_10_stem_omnibus; five_element_summary_secondary_candidate",
+          "uniform_10_percent_not_assumed": true
+        },
+        {
+          "id": "H3b",
+          "endpoint": "water_Day_Master_person_indicator",
+          "definition": "Day Stem in {壬,癸}",
+          "direction": "person_fraction_greater_than_corresponding_calendar_null",
+          "water_not_automatically_20_percent": true,
+          "not_claimed": [
+            "壬 individually enriched",
+            "癸 individually enriched",
+            "water is the most common of all five elements"
+          ]
+        }
+      ],
+      "proposed_population": "Nobel_and_nonNobel_academy_unique_person_union",
+      "population_status": "proposed_not_explicitly_confirmed",
+      "Nobel_or_academy_subgroup_tests": "secondary_candidate_not_automatically_additional_primary_tests",
+      "Fields": "parallel_not_added_to_primary_H3_union_by_default"
+    },
+    "H4": {
+      "label": "六院体样本异质性",
+      "grouping_confirmed": "six_academy_institution_labels_by_institution_country",
+      "institution_country_labels": {
+        "NAS": "美国",
+        "UK_Royal_Society": "英国",
+        "DE_Leopoldina": "德国",
+        "France": "法国",
+        "Japan": "日本",
+        "CAS": "中国"
+      },
+      "nationality_or_birth_country_effect_claimed": false,
+      "Leopoldina_international_membership_preserved": true,
+      "direction": "at_least_some_institution_distributions_or_effects_differ; no_country_ranks",
+      "proposed_population": "nonNobel_academy_records_with_six_institution_memberships",
+      "population_status": "proposed_to_keep_honor_level_comparable",
+      "proposed_endpoints": [
+        "偏印五位计数",
+        "伤官五位计数",
+        "官印共现率",
+        "伤官配印共现率",
+        "十天干日主分布",
+        "水日主比例"
+      ],
+      "endpoint_scope_status": "candidate_prespecified_endpoint_family_not_final",
+      "primary_test_candidate": "omnibus_institution_heterogeneity; exact_multivariate_or_endpoint_specific_family_pending",
+      "pairwise_15_per_endpoint_tests_not_automatically_added": true,
+      "multiple_membership_people": "preserve_membership_vectors; person-level clustering/permutation or prespecified exclusive assignment needed",
+      "unaffiliated_Nobel_people_not_assigned_to_institution_country_by_birthplace": true,
+      "birth_cohort_source_grade_and_null_structure_adjustment": "pending_before_features"
+    }
+  },
+  "proposed_populations": {
+    "strict": {
+      "Nobel": 621,
+      "nonNobel_academy": 5234,
+      "Nobel_plus_nonNobel_academy_unique_union": 5855
+    },
+    "expanded": {
+      "Nobel": 627,
+      "nonNobel_academy": 5871,
+      "Nobel_plus_nonNobel_academy_unique_union": 6498
+    }
+  },
+  "study_units": {
+    "TenGod_count": "unique_person_count_among5informationpositions; slots_not_independent_people",
+    "structure_rate": "binary_people_satisfying_condition / eligible_people",
+    "water_rate": "people_with壬or癸DayMaster / eligible_people",
+    "institution_tests": "memberships_can_overlap; unit_of_uncertainty_is_person"
+  },
+  "current_claim_bookkeeping": {
+    "top_level_themes": 4,
+    "H1_component_claims": 6,
+    "H2_component_claims_current_narrow_encoding_and_proposed_scope": 4,
+    "H3_component_claims_proposed_scope": 2,
+    "H1_through_H3_total_components_before_H4": 12,
+    "H4_final_test_family_size": null,
+    "full_multiplicity_family_finalized": false,
+    "strict_expanded_and_encoding_sensitivities_are_not_independent_replications": true
+  },
+  "prior_registry_preserved": {
+    "V1_H1_enrichment_components_preserved": true,
+    "earlier_NAS_hypotheses_not_silently_deleted": true,
+    "earlier_metal_or_geng_DayMaster_exploration_not_silently_promoted_or_substituted_for_new_water_prediction": true,
+    "complete_protocol_must_declare_scope_of_prior_directions": true
+  },
+  "baseline_semantics": {
+    "high_means": "above_a_prespecified_cohort_calendar_conditioned_null_expectation",
+    "not_automatically_10_percent": true,
+    "not_empirical_general_population": "No representative general-population comparison cohort exists in V4. Calendar-null expectation is not a measured ordinary-person distribution.",
+    "conditional_variables_and_randomization": "pending_full_protocol_before_any_feature_computation",
+    "different_cohort_null_expectations_may_differ": true
+  },
+  "direct_comparison_semantics": {
+    "primary_directional_meaning": "Nobel_vs_academy trait count difference, with birth-era and cohort comparability rules prespecified before results",
+    "not_p_value_comparison": true,
+    "not_inferred_from_one_significant_and_one_nonsignificant_group": true,
+    "raw_mean_difference_is_not_identical_to_null_enrichment_difference": true,
+    "optional_null_adjusted_enrichment_contrast": "May report (mean_N-null_N)-(mean_A-null_A) separately if prespecified; not silently substitute it for the user stated direct group ranking.",
+    "comparison_standardization_and_weights": "pending_full_protocol"
+  },
+  "pending_before_any_BaZi_features": [
+    "finalize_proposed_narrow_broad_indicator_priority",
+    "finalize_time_axis_and_population_for_H2_trend",
+    "finalize_H3_population_and_10_stem_vs5element_omnibus_priority",
+    "finalize_H4_endpoint_family_and_multiacademy_person_handling",
+    "primary_and_sensitivity_source_group_priority",
+    "calendar_algorithm_version_boundary_sensitivity_and_null_conditions",
+    "common_support_birth_cohort_institution_adjustment",
+    "tests_effect_sizes_intervals_multiplicity_support_rules_and_validation",
+    "hypothesis_discussion_completion_and_formal_preregistration"
+  ],
+  "Bazi_features_generated_or_viewed": 0,
+  "outcome_or_hypothesis_statistics_computed": false,
+  "analysis_unblinding_ready": false,
+  "data_V4_or_prior_source_records_modified": false
+}

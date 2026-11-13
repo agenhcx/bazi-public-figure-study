@@ -1,0 +1,1769 @@
+{
+  "audit": "calendar_prelock_synthetic_QA",
+  "generated_utc": "2026-11-13T12:30:50.680683+00:00",
+  "status": "CONDITIONAL_PASS_REQUIRES_STRICT_GREGORIAN_INPUT_GUARD",
+  "scope": {
+    "study_DOB_files_loaded": false,
+    "scientist_features_computed": false,
+    "old_NAS_BaZi_result_files_opened": false,
+    "repo_modified": false,
+    "synthetic_range_overlap_authorized_by_parent": true,
+    "note": "Synthetic fixed calendar dates/solar terms only. Dates within1835–1985 are calendar sentinels unjoined to any person or cohort."
+  },
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "isolated_dependency_target": "/tmp/scientist_calendar_audit_deps"
+  },
+  "dependencies": {
+    "lunar_python": {
+      "distribution_name": "lunar_python",
+      "version": "1.4.8",
+      "upstream": "https://github.com/6tail/lunar-python",
+      "module_manifest": {
+        "manifest_convention": "relative path, bytes, sha256; sorted paths; UTF-8 compact JSON sort_keys; runtime caches excluded",
+        "module_tree_sha256": "3cd230b38675c1d9c4eb2f1d0ae1b5bcc1fd1f787d1c53dd3678034ada6c16b7",
+        "files": [
+          {
+            "path": "lunar_python/EightChar.py",
+            "bytes": 13761,
+            "sha256": "d38241e75b693f25fc8c2a3e1587fd028a0a52cc504f9d5c7b47326eef051c0c"
+          },
+          {
+            "path": "lunar_python/Foto.py",
+            "bytes": 3848,
+            "sha256": "94e3e72fb625f0e60a474d420f7ceb24bca8ee647243d7f1b20140b9238b2cf8"
+          },
+          {
+            "path": "lunar_python/FotoFestival.py",
+            "bytes": 946,
+            "sha256": "44d2d1853e47b5155b1090b832ecb60a446f64e4654b419f46f2be908ef03798"
+          },
+          {
+            "path": "lunar_python/Fu.py",
+            "bytes": 768,
+            "sha256": "ef61ccbfa86e7d2481dda0e0e3d413dc3ede1d3045518a45b71a00c4de518a54"
+          },
+          {
+            "path": "lunar_python/Holiday.py",
+            "bytes": 1263,
+            "sha256": "109a40074b0dd53d50353157fb808e30565f9b8fde198eb79153e2110105a3f2"
+          },
+          {
+            "path": "lunar_python/JieQi.py",
+            "bytes": 1383,
+            "sha256": "c4d760d317d09053b228dd851616ba68a5455482f206e08ac750ca6148daf459"
+          },
+          {
+            "path": "lunar_python/Lunar.py",
+            "bytes": 48684,
+            "sha256": "489a1725a2ba443f9e8acf0534f05a0ee28c24f8904adb129c8a30daa3ed7079"
+          },
+          {
+            "path": "lunar_python/LunarMonth.py",
+            "bytes": 5419,
+            "sha256": "4559d617666bb00ad8db1633bd59332242795b81bd049643a64cfe6aff47ab28"
+          },
+          {
+            "path": "lunar_python/LunarTime.py",
+            "bytes": 5108,
+            "sha256": "63f073d30c524cc25abf8c58adcc02d6fe836eba1f450254c7f231fd8103f91a"
+          },
+          {
+            "path": "lunar_python/LunarYear.py",
+            "bytes": 12228,
+            "sha256": "84308cf06c2e7666401676b58fdbc1a9a81491584b710cd9927fd5d2d579bbb5"
+          },
+          {
+            "path": "lunar_python/NineStar.py",
+            "bytes": 5148,
+            "sha256": "b52c00d12d5c8080a27d9f34afba3a8e4e3c6e7941033fb55fb5a507ab5cd1ec"
+          },
+          {
+            "path": "lunar_python/ShuJiu.py",
+            "bytes": 577,
+            "sha256": "af852d2db583d0b08757ebdf39d1064a0e6101506e976f6d02ba32e4bdb5952a"
+          },
+          {
+            "path": "lunar_python/Solar.py",
+            "bytes": 14919,
+            "sha256": "8fa3df760f59ea937dae7125d49406985df90d92178a0741d6d4c2ff85b26d5e"
+          },
+          {
+            "path": "lunar_python/SolarHalfYear.py",
+            "bytes": 1690,
+            "sha256": "569c98ab78e137aebf431ca85512a2e2610c637d2d747ed9ffde707aeebfd3c3"
+          },
+          {
+            "path": "lunar_python/SolarMonth.py",
+            "bytes": 2196,
+            "sha256": "f3957598018c35114099cd48030fa287c1767f69b63dd84c51dd999c5997827b"
+          },
+          {
+            "path": "lunar_python/SolarSeason.py",
+            "bytes": 1638,
+            "sha256": "4fdaca631c3f28112e4d557f8ce88037b31c85fd257db5872f10aa5a68e38192"
+          },
+          {
+            "path": "lunar_python/SolarWeek.py",
+            "bytes": 5707,
+            "sha256": "f90bc349f31d52bc25646957b443b8c9e41d68874b714d947915d1535588291b"
+          },
+          {
+            "path": "lunar_python/SolarYear.py",
+            "bytes": 1130,
+            "sha256": "66e87edb42688fc805bcfe39bce4958fe810a76fed294aaa514402d6f6304a10"
+          },
+          {
+            "path": "lunar_python/Tao.py",
+            "bytes": 3803,
+            "sha256": "bed11b1de9d83a4381029d3c7b57325eff7943a74fe52abf69255ba351044f37"
+          },
+          {
+            "path": "lunar_python/TaoFestival.py",
+            "bytes": 597,
+            "sha256": "d3fc8f576c74dc5e83b7233d20873f094b23e0f3e2a0680b54d4d54450e0f9ea"
+          },
+          {
+            "path": "lunar_python/__init__.py",
+            "bytes": 638,
+            "sha256": "fddc55f6b0bd5cc424f4d861d910fa938f94bd5c5761517672a279f32854f5c7"
+          },
+          {
+            "path": "lunar_python/eightchar/DaYun.py",
+            "bytes": 2611,
+            "sha256": "039749b92900097bcfa40e8b67b44eca7b7b48ecb3af0ce1b8c554a762c82ce7"
+          },
+          {
+            "path": "lunar_python/eightchar/LiuNian.py",
+            "bytes": 1447,
+            "sha256": "a069ceca115f0ddeba0b720bf3edf20c882aec88c25140478d4742218b26678b"
+          },
+          {
+            "path": "lunar_python/eightchar/LiuYue.py",
+            "bytes": 1642,
+            "sha256": "4aa59e23263a1b3ac6979ff57a0abf4f15f3cb10976e6e1305308d0d3f8f0a46"
+          },
+          {
+            "path": "lunar_python/eightchar/XiaoYun.py",
+            "bytes": 1334,
+            "sha256": "a1ea1352db91f967ca6b77ebf2827f789aeeb715cfdbe4664dfc8a1ee5009ffd"
+          },
+          {
+            "path": "lunar_python/eightchar/Yun.py",
+            "bytes": 3423,
+            "sha256": "b532004acb38a3caa7f399e3a3d5269c586538f9acf95e526be8bbd2d31bf696"
+          },
+          {
+            "path": "lunar_python/eightchar/__init__.py",
+            "bytes": 155,
+            "sha256": "b2ea776642cb827d79ec1110cdfdcf8ad98eec63bc8f90a83ece496bb378cfbb"
+          },
+          {
+            "path": "lunar_python/util/FotoUtil.py",
+            "bytes": 14678,
+            "sha256": "e07a7f395082e46c691bf6579a096b9b71755aee7152d98b3a89b7ca74323e74"
+          },
+          {
+            "path": "lunar_python/util/HolidayUtil.py",
+            "bytes": 21983,
+            "sha256": "e62b6e8d796ac8df6a058788133f336f47cf320196f45ed03cc7e99ef86b6ae6"
+          },
+          {
+            "path": "lunar_python/util/LunarUtil.py",
+            "bytes": 109420,
+            "sha256": "87a84818a3ddd10925cbb28ec04a048b27e1ac46f291ff4d9a861f15fb59aa00"
+          },
+          {
+            "path": "lunar_python/util/ShouXingUtil.py",
+            "bytes": 67277,
+            "sha256": "5247110bf663bce23e9185cc9d4022950a9f7be5664a619286c1b657476ad9d6"
+          },
+          {
+            "path": "lunar_python/util/SolarUtil.py",
+            "bytes": 10017,
+            "sha256": "bba034d893ef74e4f219452ed143302082532990b2aafc852f74c90bfb25a7a3"
+          },
+          {
+            "path": "lunar_python/util/TaoUtil.py",
+            "bytes": 8061,
+            "sha256": "20ea01c41caa09affbaac0da793b88efb7e1cc4bb363aeb6d1edef2114493dee"
+          },
+          {
+            "path": "lunar_python/util/__init__.py",
+            "bytes": 226,
+            "sha256": "8beb7a058bcf5862b53441beb41855140e8ef4c914f59eef22cfb81f1f4ad8f2"
+          }
+        ]
+      }
+    },
+    "sxtwl": {
+      "distribution_name": "sxtwl",
+      "version": "2.0.7",
+      "upstream": "https://github.com/yuangu/sxtwl_cpp",
+      "module_manifest": {
+        "manifest_convention": "relative path, bytes, sha256; sorted paths; UTF-8 compact JSON sort_keys; runtime caches excluded",
+        "module_tree_sha256": "754c79fe742a8359bf7711ee6daa01745d92fead099994ec2a17b7de215d66ad",
+        "files": [
+          {
+            "path": "_sxtwl.cpython-312-x86_64-linux-gnu.so",
+            "bytes": 4358024,
+            "sha256": "738b8db8cb494f46a6ddcada355f1df167f658d12952727ae41260449e1662bb"
+          },
+          {
+            "path": "sxtwl.py",
+            "bytes": 14298,
+            "sha256": "04ff66502e3019357f9dd1683390110ad2e69481fd6a267fea49cbfeb15a2c5a"
+          }
+        ]
+      }
+    }
+  },
+  "recommended_frozen_algorithm": {
+    "input_date": "Already adjudicated Gregorian civil yyyy-mm-dd; no lunar/Julian conversion here. Do not alter any selected DOB.",
+    "reference_offset": "Fixed UTC+08:00 library convention; no geographical/time-zone/longitude/historical DST adjustment.",
+    "placeholder": "12:00:00 on that numeric civil date for computation only; not an imputed birth time.",
+    "call": "x=datetime.datetime(y,m,d,12,0,0); ec=Solar.fromYmdHms(x.year,x.month,x.day,12,0,0).getLunar().getEightChar(); ec.setSect(2)",
+    "year": "ec.getYear(): Exact LiChun transition instant, not January1 or Lunar New Year.",
+    "month": "ec.getMonth(): Exact12Jie transition instants, not lunar month or all24solar terms.",
+    "day": "ec.getDay() with explicit sect2: midnight civil date rollover; no23:00 rollover.",
+    "hour_pillar": "Do not use noon hour pillar as observed birth-hour data.",
+    "JDN_audit_formula": "a=(14-m)//12; Y=y+4800-a; M=m+12*a-3; JDN=d+(153*M+2)//5+365*Y+Y//4-Y//100+Y//400-32045; cycle=(JDN+49)%60 with0=甲子.",
+    "boundary_flags": {
+      "term_civil_day": "true if d==date(term) for any of12Jie in fixedUTC+8; LiChun also year_boundary_day.",
+      "near_Jie_1day": "true iff any of12Jie has abs((d-date(term)).days)<=1, inclusive.",
+      "near_LiChun_1day": "same rule restricted to LiChun.",
+      "record": "retain term name/time, signed civil-day delta, fixed-noon year/month choices; flags do not change DOB or choose a birth time.",
+      "implementation": "Build term timestamps for adjacent calendar years, normalize English duplicate aliases, deduplicate timestamps; use all0:00:00..23:59:59 if checking intraday change, not0:30..22:30.",
+      "interpretation": "Conservative date/algorithm sensitivity flag, not proof of an astronomical or source conflict."
+    },
+    "mandatory_input_validation": "Before callingSolar, construct datetime.datetime(y,m,d,12,0,0) (or datetime.date). RejectValueError. lunar_pythonSolar doesnot validateGregorian month lengths/leapdays; its constructor condition is day<1 or month>31 (an upper-day typo), not a completeGregorian date check. Do not normalize or repair invalidDOBs."
+  },
+  "existing_repo_findings": [
+    {
+      "file": "bazi_music_relation_test.py",
+      "lines": "240–269",
+      "finding": "Noon representative; year/month/day viaEightChar defaultsect; old intraday flag compares00:30 with22:30 and may miss near-midnight terms. No software version pin observed in this function."
+    },
+    {
+      "file": "bazi_music_tengod_1986_v2.py",
+      "lines": "78–102",
+      "finding": "Same no-explicit-sect/defaultnoon pattern; function also returns hour, which must not be used as a genuine observed hour in new date-only study."
+    }
+  ],
+  "independence_limits": [
+    "sxtwl and lunar_python both reference ShouXing astronomical calendar algorithms: cross-implementation corroboration, not fully independent astronomical theory.",
+    "The integer GregorianJDN computation is independently implemented here, while the phase relationcycle=(JDN+49)%60 is an explicit conventional calibration checked with sxtwl.",
+    "OfficialHKO fixtures check civil-to-lunar conversion only; HKOyear field changes at LunarNewYear and is not an oracle for the selectedLiChun year pillar.",
+    "NAOJ publishes minute precision; these checks do not establish second-level ephemeris accuracy over1835–1985.",
+    "No cross-cohort or person-level output, feature distribution, p-value or substantive inference was inspected."
+  ],
+  "primary_external_fixtures": [
+    {
+      "publisher": "HongKongObservatory",
+      "url": "https://data.weather.gov.hk/weatherAPI/hko_data/calendar/nongli_calendar_2024.csv",
+      "retrieved_ref": "turn735479694view0",
+      "lines": "40–41",
+      "role": "Two independent factual Gregorian-lunar date fixtures"
+    },
+    {
+      "publisher": "NationalAstronomicalObservatoryofJapan",
+      "url": "https://eco.mtk.nao.ac.jp/koyomi/yoko/2024/rekiyou242.html",
+      "retrieved_ref": "turn735479694view1",
+      "lines": "18–24,45",
+      "role": "Solar terms in JapaneseCentralStandardTimeUTC+9; subtractonehour for fixedUTC+8.",
+      "published_precision": "minute"
+    }
+  ],
+  "synthetic_fixtures": [
+    {
+      "input": "1834-12-31T12:00:00",
+      "lunar_python": {
+        "year": "甲午",
+        "month": "丙子",
+        "day": "壬辰",
+        "lunar_year": 1834,
+        "lunar_month": 12,
+        "lunar_day": 2
+      },
+      "gregorian_JDN": 2391279,
+      "pure_JDN_day": "壬辰",
+      "sxtwl_day": "壬辰"
+    },
+    {
+      "input": "1986-01-01T12:00:00",
+      "lunar_python": {
+        "year": "乙丑",
+        "month": "戊子",
+        "day": "乙巳",
+        "lunar_year": 1985,
+        "lunar_month": 11,
+        "lunar_day": 21
+      },
+      "gregorian_JDN": 2446432,
+      "pure_JDN_day": "乙巳",
+      "sxtwl_day": "乙巳"
+    },
+    {
+      "input": "2000-01-01T12:00:00",
+      "lunar_python": {
+        "year": "己卯",
+        "month": "丙子",
+        "day": "戊午",
+        "lunar_year": 1999,
+        "lunar_month": 11,
+        "lunar_day": 25
+      },
+      "gregorian_JDN": 2451545,
+      "pure_JDN_day": "戊午",
+      "sxtwl_day": "戊午"
+    },
+    {
+      "input": "2000-01-07T12:00:00",
+      "lunar_python": {
+        "year": "己卯",
+        "month": "丁丑",
+        "day": "甲子",
+        "lunar_year": 1999,
+        "lunar_month": 12,
+        "lunar_day": 1
+      },
+      "gregorian_JDN": 2451551,
+      "pure_JDN_day": "甲子",
+      "sxtwl_day": "甲子"
+    },
+    {
+      "input": "2024-02-04T12:00:00",
+      "lunar_python": {
+        "year": "癸卯",
+        "month": "乙丑",
+        "day": "戊戌",
+        "lunar_year": 2023,
+        "lunar_month": 12,
+        "lunar_day": 25
+      },
+      "gregorian_JDN": 2460345,
+      "pure_JDN_day": "戊戌",
+      "sxtwl_day": "戊戌"
+    },
+    {
+      "input": "2024-02-10T12:00:00",
+      "lunar_python": {
+        "year": "甲辰",
+        "month": "丙寅",
+        "day": "甲辰",
+        "lunar_year": 2024,
+        "lunar_month": 1,
+        "lunar_day": 1
+      },
+      "gregorian_JDN": 2460351,
+      "pure_JDN_day": "甲辰",
+      "sxtwl_day": "甲辰"
+    },
+    {
+      "input": "2026-02-17T12:00:00",
+      "lunar_python": {
+        "year": "丙午",
+        "month": "庚寅",
+        "day": "壬戌",
+        "lunar_year": 2026,
+        "lunar_month": 1,
+        "lunar_day": 1
+      },
+      "gregorian_JDN": 2461089,
+      "pure_JDN_day": "壬戌",
+      "sxtwl_day": "壬戌"
+    }
+  ],
+  "checks": [
+    {
+      "check": "seven_synthetic_day_fixtures_JDN_and_sxtwl",
+      "status": "PASS",
+      "details": {
+        "n": 7
+      }
+    },
+    {
+      "check": "synthetic_1835_1985_quarterly_day_JDN_sweep",
+      "status": "PASS",
+      "details": {
+        "n": 604,
+        "fixed_dates_each_year": "Jan/Apr/Jul/Oct 15; no DOB file loaded",
+        "mismatches": []
+      }
+    },
+    {
+      "check": "synthetic_2024_2027_daily_day_sweep",
+      "status": "PASS",
+      "details": {
+        "n": 1461,
+        "mismatches": []
+      }
+    },
+    {
+      "check": "sect2_midnight_and_sect1_2300_rollover",
+      "status": "PASS",
+      "details": [
+        {
+          "input": "2000-01-07T22:59:59",
+          "sect1_day": "甲子",
+          "sect2_day": "甲子"
+        },
+        {
+          "input": "2000-01-07T23:00:00",
+          "sect1_day": "乙丑",
+          "sect2_day": "甲子"
+        },
+        {
+          "input": "2000-01-07T23:59:59",
+          "sect1_day": "乙丑",
+          "sect2_day": "甲子"
+        },
+        {
+          "input": "2000-01-08T00:00:00",
+          "sect1_day": "乙丑",
+          "sect2_day": "乙丑"
+        }
+      ]
+    },
+    {
+      "check": "sentinel_1835_24_terms",
+      "status": "PASS",
+      "details": {
+        "observed_term_count": 24
+      }
+    },
+    {
+      "check": "sentinel_1850_24_terms",
+      "status": "PASS",
+      "details": {
+        "observed_term_count": 24
+      }
+    },
+    {
+      "check": "sentinel_1900_24_terms",
+      "status": "PASS",
+      "details": {
+        "observed_term_count": 24
+      }
+    },
+    {
+      "check": "sentinel_1950_24_terms",
+      "status": "PASS",
+      "details": {
+        "observed_term_count": 24
+      }
+    },
+    {
+      "check": "sentinel_1985_24_terms",
+      "status": "PASS",
+      "details": {
+        "observed_term_count": 24
+      }
+    },
+    {
+      "check": "sentinel_solar_term_before_at_after_structure",
+      "status": "PASS",
+      "details": {
+        "n": 120,
+        "Jie_cases": 60,
+        "Qi_cases": 60,
+        "mismatches": [],
+        "limitation": "internal structural consistency, not an independent ephemeris oracle"
+      }
+    },
+    {
+      "check": "synthetic_boundary_flag_plus_minus_one_civil_day",
+      "status": "PASS",
+      "details": [
+        {
+          "synthetic_date": "2024-02-02",
+          "delta_civil_days_from_LiChun": -2,
+          "term_civil_day": false,
+          "near_Jie_1day": false
+        },
+        {
+          "synthetic_date": "2024-02-03",
+          "delta_civil_days_from_LiChun": -1,
+          "term_civil_day": false,
+          "near_Jie_1day": true
+        },
+        {
+          "synthetic_date": "2024-02-04",
+          "delta_civil_days_from_LiChun": 0,
+          "term_civil_day": true,
+          "near_Jie_1day": true
+        },
+        {
+          "synthetic_date": "2024-02-05",
+          "delta_civil_days_from_LiChun": 1,
+          "term_civil_day": false,
+          "near_Jie_1day": true
+        },
+        {
+          "synthetic_date": "2024-02-06",
+          "delta_civil_days_from_LiChun": 2,
+          "term_civil_day": false,
+          "near_Jie_1day": false
+        }
+      ]
+    },
+    {
+      "check": "HKO_2024_official_lunar_conversion_fixtures",
+      "status": "PASS",
+      "details": [
+        {
+          "input": "2024-02-09T12:00:00",
+          "expected_lunar": [
+            2023,
+            12,
+            30
+          ],
+          "observed_lunar": [
+            2023,
+            12,
+            30
+          ],
+          "pass": true
+        },
+        {
+          "input": "2024-02-10T12:00:00",
+          "expected_lunar": [
+            2024,
+            1,
+            1
+          ],
+          "observed_lunar": [
+            2024,
+            1,
+            1
+          ],
+          "pass": true
+        }
+      ]
+    },
+    {
+      "check": "NAOJ_2024_official_Jie_times_at_published_minute_precision",
+      "status": "PASS",
+      "details": {
+        "tolerance_seconds": 60,
+        "reason": "official source publishes minutes; do not treat minute value as an exact second timestamp",
+        "fixtures": [
+          {
+            "term": "小寒",
+            "official_JST_minute": "2024-01-06T05:49:00",
+            "official_converted_UTC_plus_8_minute": "2024-01-06T04:49:00",
+            "lunar_python_UTC_plus_8": "2024-01-06T04:49:22",
+            "difference_from_published_minute_seconds": 22.0,
+            "pass": true
+          },
+          {
+            "term": "立春",
+            "official_JST_minute": "2024-02-04T17:27:00",
+            "official_converted_UTC_plus_8_minute": "2024-02-04T16:27:00",
+            "lunar_python_UTC_plus_8": "2024-02-04T16:27:07",
+            "difference_from_published_minute_seconds": 7.0,
+            "pass": true
+          },
+          {
+            "term": "惊蛰",
+            "official_JST_minute": "2024-03-05T11:23:00",
+            "official_converted_UTC_plus_8_minute": "2024-03-05T10:23:00",
+            "lunar_python_UTC_plus_8": "2024-03-05T10:22:45",
+            "difference_from_published_minute_seconds": -15.0,
+            "pass": true
+          },
+          {
+            "term": "大雪",
+            "official_JST_minute": "2024-12-07T00:17:00",
+            "official_converted_UTC_plus_8_minute": "2024-12-06T23:17:00",
+            "lunar_python_UTC_plus_8": "2024-12-06T23:17:03",
+            "difference_from_published_minute_seconds": 3.0,
+            "pass": true
+          }
+        ]
+      }
+    },
+    {
+      "check": "Gregorian_century_and_modern_leap_day_validation",
+      "status": "FAIL",
+      "details": [
+        {
+          "input": [
+            1900,
+            2,
+            29
+          ],
+          "expected_valid": false,
+          "observed_valid": true
+        },
+        {
+          "input": [
+            2000,
+            2,
+            29
+          ],
+          "expected_valid": true,
+          "observed_valid": true
+        },
+        {
+          "input": [
+            2024,
+            2,
+            29
+          ],
+          "expected_valid": true,
+          "observed_valid": true
+        }
+      ]
+    },
+    {
+      "check": "strict_datetime_Gregorian_input_guard_before_library",
+      "status": "PASS",
+      "details": [
+        {
+          "input": [
+            1900,
+            2,
+            29
+          ],
+          "expected_valid": false,
+          "guarded_wrapper_accepted": false,
+          "pass": true
+        },
+        {
+          "input": [
+            1900,
+            2,
+            30
+          ],
+          "expected_valid": false,
+          "guarded_wrapper_accepted": false,
+          "pass": true
+        },
+        {
+          "input": [
+            2024,
+            4,
+            31
+          ],
+          "expected_valid": false,
+          "guarded_wrapper_accepted": false,
+          "pass": true
+        },
+        {
+          "input": [
+            2000,
+            2,
+            29
+          ],
+          "expected_valid": true,
+          "guarded_wrapper_accepted": true,
+          "pass": true
+        },
+        {
+          "input": [
+            2024,
+            2,
+            29
+          ],
+          "expected_valid": true,
+          "guarded_wrapper_accepted": true,
+          "pass": true
+        }
+      ]
+    }
+  ],
+  "sentinel_boundary_case_summary": [
+    {
+      "sentinel_year": 1835,
+      "term": "小寒",
+      "timestamp_fixed_UTC_plus_8": "1835-01-06T07:36:33",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1835,
+      "term": "大寒",
+      "timestamp_fixed_UTC_plus_8": "1835-01-21T01:09:02",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1835,
+      "term": "立春",
+      "timestamp_fixed_UTC_plus_8": "1835-02-04T19:33:41",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 1,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1835,
+      "term": "雨水",
+      "timestamp_fixed_UTC_plus_8": "1835-02-19T15:53:29",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1835,
+      "term": "惊蛰",
+      "timestamp_fixed_UTC_plus_8": "1835-03-06T14:24:45",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1835,
+      "term": "春分",
+      "timestamp_fixed_UTC_plus_8": "1835-03-21T15:55:30",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1835,
+      "term": "清明",
+      "timestamp_fixed_UTC_plus_8": "1835-04-05T20:22:15",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1835,
+      "term": "谷雨",
+      "timestamp_fixed_UTC_plus_8": "1835-04-21T04:10:14",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1835,
+      "term": "立夏",
+      "timestamp_fixed_UTC_plus_8": "1835-05-06T14:50:23",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1835,
+      "term": "小满",
+      "timestamp_fixed_UTC_plus_8": "1835-05-22T04:21:47",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1835,
+      "term": "芒种",
+      "timestamp_fixed_UTC_plus_8": "1835-06-06T19:51:22",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1835,
+      "term": "夏至",
+      "timestamp_fixed_UTC_plus_8": "1835-06-22T12:54:37",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1835,
+      "term": "小暑",
+      "timestamp_fixed_UTC_plus_8": "1835-07-08T06:25:54",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1835,
+      "term": "大暑",
+      "timestamp_fixed_UTC_plus_8": "1835-07-23T23:46:14",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1835,
+      "term": "立秋",
+      "timestamp_fixed_UTC_plus_8": "1835-08-08T15:55:12",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1835,
+      "term": "处暑",
+      "timestamp_fixed_UTC_plus_8": "1835-08-24T06:12:42",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1835,
+      "term": "白露",
+      "timestamp_fixed_UTC_plus_8": "1835-09-08T18:00:00",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1835,
+      "term": "秋分",
+      "timestamp_fixed_UTC_plus_8": "1835-09-24T02:48:59",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1835,
+      "term": "寒露",
+      "timestamp_fixed_UTC_plus_8": "1835-10-09T08:31:23",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1835,
+      "term": "霜降",
+      "timestamp_fixed_UTC_plus_8": "1835-10-24T10:59:43",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1835,
+      "term": "立冬",
+      "timestamp_fixed_UTC_plus_8": "1835-11-08T10:35:44",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1835,
+      "term": "小雪",
+      "timestamp_fixed_UTC_plus_8": "1835-11-23T07:33:29",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1835,
+      "term": "大雪",
+      "timestamp_fixed_UTC_plus_8": "1835-12-08T02:37:33",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1835,
+      "term": "冬至",
+      "timestamp_fixed_UTC_plus_8": "1835-12-22T20:18:03",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1850,
+      "term": "小寒",
+      "timestamp_fixed_UTC_plus_8": "1850-01-05T22:58:19",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1850,
+      "term": "大寒",
+      "timestamp_fixed_UTC_plus_8": "1850-01-20T16:20:47",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1850,
+      "term": "立春",
+      "timestamp_fixed_UTC_plus_8": "1850-02-04T10:54:55",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 1,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1850,
+      "term": "雨水",
+      "timestamp_fixed_UTC_plus_8": "1850-02-19T07:03:20",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1850,
+      "term": "惊蛰",
+      "timestamp_fixed_UTC_plus_8": "1850-03-06T05:43:06",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1850,
+      "term": "春分",
+      "timestamp_fixed_UTC_plus_8": "1850-03-21T07:01:45",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1850,
+      "term": "清明",
+      "timestamp_fixed_UTC_plus_8": "1850-04-05T11:37:11",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1850,
+      "term": "谷雨",
+      "timestamp_fixed_UTC_plus_8": "1850-04-20T19:13:25",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1850,
+      "term": "立夏",
+      "timestamp_fixed_UTC_plus_8": "1850-05-06T06:02:59",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1850,
+      "term": "小满",
+      "timestamp_fixed_UTC_plus_8": "1850-05-21T19:24:12",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1850,
+      "term": "芒种",
+      "timestamp_fixed_UTC_plus_8": "1850-06-06T11:02:47",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1850,
+      "term": "夏至",
+      "timestamp_fixed_UTC_plus_8": "1850-06-22T03:58:36",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1850,
+      "term": "小暑",
+      "timestamp_fixed_UTC_plus_8": "1850-07-07T21:36:20",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1850,
+      "term": "大暑",
+      "timestamp_fixed_UTC_plus_8": "1850-07-23T14:52:59",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1850,
+      "term": "立秋",
+      "timestamp_fixed_UTC_plus_8": "1850-08-08T07:04:11",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1850,
+      "term": "处暑",
+      "timestamp_fixed_UTC_plus_8": "1850-08-23T21:22:01",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1850,
+      "term": "白露",
+      "timestamp_fixed_UTC_plus_8": "1850-09-08T09:07:29",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1850,
+      "term": "秋分",
+      "timestamp_fixed_UTC_plus_8": "1850-09-23T18:00:02",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1850,
+      "term": "寒露",
+      "timestamp_fixed_UTC_plus_8": "1850-10-08T23:38:12",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1850,
+      "term": "霜降",
+      "timestamp_fixed_UTC_plus_8": "1850-10-24T02:12:33",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1850,
+      "term": "立冬",
+      "timestamp_fixed_UTC_plus_8": "1850-11-08T01:43:46",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1850,
+      "term": "小雪",
+      "timestamp_fixed_UTC_plus_8": "1850-11-22T22:49:08",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1850,
+      "term": "大雪",
+      "timestamp_fixed_UTC_plus_8": "1850-12-07T17:48:52",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1850,
+      "term": "冬至",
+      "timestamp_fixed_UTC_plus_8": "1850-12-22T11:37:19",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1900,
+      "term": "小寒",
+      "timestamp_fixed_UTC_plus_8": "1900-01-06T02:03:57",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1900,
+      "term": "大寒",
+      "timestamp_fixed_UTC_plus_8": "1900-01-20T19:32:25",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1900,
+      "term": "立春",
+      "timestamp_fixed_UTC_plus_8": "1900-02-04T13:51:31",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 1,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1900,
+      "term": "雨水",
+      "timestamp_fixed_UTC_plus_8": "1900-02-19T10:01:14",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1900,
+      "term": "惊蛰",
+      "timestamp_fixed_UTC_plus_8": "1900-03-06T08:21:52",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1900,
+      "term": "春分",
+      "timestamp_fixed_UTC_plus_8": "1900-03-21T09:39:01",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1900,
+      "term": "清明",
+      "timestamp_fixed_UTC_plus_8": "1900-04-05T13:52:41",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1900,
+      "term": "谷雨",
+      "timestamp_fixed_UTC_plus_8": "1900-04-20T21:27:06",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1900,
+      "term": "立夏",
+      "timestamp_fixed_UTC_plus_8": "1900-05-06T07:55:12",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1900,
+      "term": "小满",
+      "timestamp_fixed_UTC_plus_8": "1900-05-21T21:16:55",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1900,
+      "term": "芒种",
+      "timestamp_fixed_UTC_plus_8": "1900-06-06T12:38:55",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1900,
+      "term": "夏至",
+      "timestamp_fixed_UTC_plus_8": "1900-06-22T05:39:45",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1900,
+      "term": "小暑",
+      "timestamp_fixed_UTC_plus_8": "1900-07-07T23:10:08",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1900,
+      "term": "大暑",
+      "timestamp_fixed_UTC_plus_8": "1900-07-23T16:36:07",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1900,
+      "term": "立秋",
+      "timestamp_fixed_UTC_plus_8": "1900-08-08T08:50:34",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1900,
+      "term": "处暑",
+      "timestamp_fixed_UTC_plus_8": "1900-08-23T23:19:49",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1900,
+      "term": "白露",
+      "timestamp_fixed_UTC_plus_8": "1900-09-08T11:16:38",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1900,
+      "term": "秋分",
+      "timestamp_fixed_UTC_plus_8": "1900-09-23T20:20:11",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1900,
+      "term": "寒露",
+      "timestamp_fixed_UTC_plus_8": "1900-10-09T02:13:09",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1900,
+      "term": "霜降",
+      "timestamp_fixed_UTC_plus_8": "1900-10-24T04:55:16",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1900,
+      "term": "立冬",
+      "timestamp_fixed_UTC_plus_8": "1900-11-08T04:39:44",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1900,
+      "term": "小雪",
+      "timestamp_fixed_UTC_plus_8": "1900-11-23T01:47:50",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1900,
+      "term": "大雪",
+      "timestamp_fixed_UTC_plus_8": "1900-12-07T20:55:50",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1900,
+      "term": "冬至",
+      "timestamp_fixed_UTC_plus_8": "1900-12-22T14:41:34",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1950,
+      "term": "小寒",
+      "timestamp_fixed_UTC_plus_8": "1950-01-06T05:38:43",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1950,
+      "term": "大寒",
+      "timestamp_fixed_UTC_plus_8": "1950-01-20T22:59:35",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1950,
+      "term": "立春",
+      "timestamp_fixed_UTC_plus_8": "1950-02-04T17:20:46",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 1,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1950,
+      "term": "雨水",
+      "timestamp_fixed_UTC_plus_8": "1950-02-19T13:17:29",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1950,
+      "term": "惊蛰",
+      "timestamp_fixed_UTC_plus_8": "1950-03-06T11:35:26",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1950,
+      "term": "春分",
+      "timestamp_fixed_UTC_plus_8": "1950-03-21T12:35:06",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1950,
+      "term": "清明",
+      "timestamp_fixed_UTC_plus_8": "1950-04-05T16:44:27",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1950,
+      "term": "谷雨",
+      "timestamp_fixed_UTC_plus_8": "1950-04-20T23:59:06",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1950,
+      "term": "立夏",
+      "timestamp_fixed_UTC_plus_8": "1950-05-06T10:24:41",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1950,
+      "term": "小满",
+      "timestamp_fixed_UTC_plus_8": "1950-05-21T23:27:07",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1950,
+      "term": "芒种",
+      "timestamp_fixed_UTC_plus_8": "1950-06-06T14:51:00",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1950,
+      "term": "夏至",
+      "timestamp_fixed_UTC_plus_8": "1950-06-22T07:36:00",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1950,
+      "term": "小暑",
+      "timestamp_fixed_UTC_plus_8": "1950-07-08T01:13:17",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1950,
+      "term": "大暑",
+      "timestamp_fixed_UTC_plus_8": "1950-07-23T18:29:53",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1950,
+      "term": "立秋",
+      "timestamp_fixed_UTC_plus_8": "1950-08-08T10:55:11",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1950,
+      "term": "处暑",
+      "timestamp_fixed_UTC_plus_8": "1950-08-24T01:23:09",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1950,
+      "term": "白露",
+      "timestamp_fixed_UTC_plus_8": "1950-09-08T13:33:39",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1950,
+      "term": "秋分",
+      "timestamp_fixed_UTC_plus_8": "1950-09-23T22:43:32",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1950,
+      "term": "寒露",
+      "timestamp_fixed_UTC_plus_8": "1950-10-09T04:51:39",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1950,
+      "term": "霜降",
+      "timestamp_fixed_UTC_plus_8": "1950-10-24T07:44:43",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1950,
+      "term": "立冬",
+      "timestamp_fixed_UTC_plus_8": "1950-11-08T07:43:43",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1950,
+      "term": "小雪",
+      "timestamp_fixed_UTC_plus_8": "1950-11-23T05:02:29",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1950,
+      "term": "大雪",
+      "timestamp_fixed_UTC_plus_8": "1950-12-08T00:21:40",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1950,
+      "term": "冬至",
+      "timestamp_fixed_UTC_plus_8": "1950-12-22T18:13:18",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1985,
+      "term": "小寒",
+      "timestamp_fixed_UTC_plus_8": "1985-01-05T17:35:05",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1985,
+      "term": "大寒",
+      "timestamp_fixed_UTC_plus_8": "1985-01-20T10:57:33",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1985,
+      "term": "立春",
+      "timestamp_fixed_UTC_plus_8": "1985-02-04T05:11:47",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 1,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1985,
+      "term": "雨水",
+      "timestamp_fixed_UTC_plus_8": "1985-02-19T01:07:21",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1985,
+      "term": "惊蛰",
+      "timestamp_fixed_UTC_plus_8": "1985-03-05T23:16:21",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1985,
+      "term": "春分",
+      "timestamp_fixed_UTC_plus_8": "1985-03-21T00:13:43",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1985,
+      "term": "清明",
+      "timestamp_fixed_UTC_plus_8": "1985-04-05T04:13:35",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1985,
+      "term": "谷雨",
+      "timestamp_fixed_UTC_plus_8": "1985-04-20T11:25:46",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1985,
+      "term": "立夏",
+      "timestamp_fixed_UTC_plus_8": "1985-05-05T21:42:32",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1985,
+      "term": "小满",
+      "timestamp_fixed_UTC_plus_8": "1985-05-21T10:42:55",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1985,
+      "term": "芒种",
+      "timestamp_fixed_UTC_plus_8": "1985-06-06T01:59:56",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1985,
+      "term": "夏至",
+      "timestamp_fixed_UTC_plus_8": "1985-06-21T18:44:07",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1985,
+      "term": "小暑",
+      "timestamp_fixed_UTC_plus_8": "1985-07-07T12:18:35",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1985,
+      "term": "大暑",
+      "timestamp_fixed_UTC_plus_8": "1985-07-23T05:36:26",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1985,
+      "term": "立秋",
+      "timestamp_fixed_UTC_plus_8": "1985-08-07T22:04:16",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1985,
+      "term": "处暑",
+      "timestamp_fixed_UTC_plus_8": "1985-08-23T12:35:41",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1985,
+      "term": "白露",
+      "timestamp_fixed_UTC_plus_8": "1985-09-08T00:53:01",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1985,
+      "term": "秋分",
+      "timestamp_fixed_UTC_plus_8": "1985-09-23T10:07:27",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1985,
+      "term": "寒露",
+      "timestamp_fixed_UTC_plus_8": "1985-10-08T16:24:33",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1985,
+      "term": "霜降",
+      "timestamp_fixed_UTC_plus_8": "1985-10-23T19:21:52",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1985,
+      "term": "立冬",
+      "timestamp_fixed_UTC_plus_8": "1985-11-07T19:29:29",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1985,
+      "term": "小雪",
+      "timestamp_fixed_UTC_plus_8": "1985-11-22T16:50:46",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1985,
+      "term": "大雪",
+      "timestamp_fixed_UTC_plus_8": "1985-12-07T12:16:21",
+      "kind": "Jie_month_boundary",
+      "month_cycle_step": 1,
+      "year_cycle_step": 0,
+      "pass": true
+    },
+    {
+      "sentinel_year": 1985,
+      "term": "冬至",
+      "timestamp_fixed_UTC_plus_8": "1985-12-22T06:07:40",
+      "kind": "Qi_not_month_boundary",
+      "month_cycle_step": 0,
+      "year_cycle_step": 0,
+      "pass": true
+    }
+  ],
+  "next_stage_not_performed": "AfterrootGitSHA/protocolfreeze, full valid-DOB transformation and complete secondary-calendar comparison are separate authorized stages.",
+  "status_explanation": "14 checks pass;1 rawlibrary validation check fails. The mandatory strictdatetime input guard passes5valid/invalid fixtures and is part of the recommended frozen algorithm. Retain the upstreamfailure transparently. Freeze without this guard is not recommended.",
+  "upstream_input_validation_defect": {
+    "observed": "Solar.fromYmdHms accepts1900-02-29 although not a realGregorian date.",
+    "remedy": "Strictdatetime/date validation beforeSolar, no automaticDOBrepair.",
+    "repo_implementation_changed": false,
+    "root_must_include_guard_before_lock": true,
+    "source_pointer": "/tmp/scientist_calendar_audit_deps/lunar_python/Solar.py:16–23; condition day<1 or month>31",
+    "severity_note": "Upperday validation is also incomplete, beyond the demonstratedGregorian leapday acceptance. Mandatorydatetime guard rejects both."
+  }
+}
