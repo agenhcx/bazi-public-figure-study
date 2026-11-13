@@ -1,0 +1,28 @@
+{
+  "schema": "NAS_decade_auditor_preexecution_QA_v1",
+  "status": "PASS",
+  "no_new_decade_trait_data_loaded": true,
+  "synthetic_tests": {
+    "status": "PASS",
+    "no_study_data_loaded": true,
+    "exact_centered_two_sided_tails": [
+      0.1111111111111111,
+      0.5555555555555556,
+      1.0
+    ],
+    "deterministic_calendar_trend_excess_zero": true
+  },
+  "source_sha256": {
+    "nas_decade_work/scripts/audit_decades.py": "b5ca4e944da54e1686b1ba2c9d17985ecf4687277c94066cae79093f14cef600",
+    "nas_decade_work/scripts/_independent_literal_reference.py": "05b25e2deffd2604c6d93ff2e4eadf177407ca9a31f9bbf821e0c85e88f2fdfc"
+  },
+  "metadata_empty_bins": "zero_totals_None_shares",
+  "preselected_independent_MC_endpoints": [
+    0,
+    18,
+    28
+  ],
+  "QA_MC_replicates": 15000,
+  "QA_MC_seed": "202611230000+endpoint_index",
+  "QA_only_not_new_inferential_claim": true
+}
