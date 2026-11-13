@@ -1,0 +1,24 @@
+{
+  "schema": "NAS_independent_audit_pure_code_prelock_QA_v1",
+  "all_pass": true,
+  "checks": {
+    "binomial17_closed_form": true,
+    "two_discrete_uniform_count_sum_triangle": true,
+    "leading_zero_support_preserved_and_upper_tail_includes_ties": true,
+    "import_opens_no_study_files": true,
+    "no_study_or_Nobel_feature_statistics_computed": true,
+    "inclusive_NAS_traits_prohibited_count_metadata_only": true,
+    "only_nonNobel_NAS_feature_rows_retained": true,
+    "DM10_uniform_n4_all_distinct_inclusive_numeric_ties_exact_10000_of10000": true,
+    "DM10_recorded_tolerance_checked_1e_minus12_max1absobserved": true
+  },
+  "script_sha256": "31eab2dbf63bb2bcfb9c39c1cb137864ff5bd4eef7172e7b2f2216ce917e8e62",
+  "scope": "pure synthetic probability distributions only; no study or calendar pool opened",
+  "synthetic_DM_tie_reference": {
+    "observed_Pearson_distance": 6.000000000000001,
+    "floating_point_tie_tolerance": 6.000000000000001e-12,
+    "extreme_assignments_including_ties": 10000,
+    "assignments": 10000,
+    "exact_synthetic_p": 1.0
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "scientist_country_reveal_execution_lock_v1",
+  "created_utc": "2026-11-13T13:03:03.483224+00:00",
+  "user_instruction": "好的，开奖吧，一个国家一个国家开，先开美国吧",
+  "original_assumptions_lock_commit": "6d02e0e4f22da59d171888d75a5163bb1ee410d8",
+  "original_18_Holm_family_unchanged": true,
+  "current_country": "NAS",
+  "country_order": [
+    "NAS",
+    "UK_Royal_Society",
+    "DE_Leopoldina",
+    "France",
+    "Japan",
+    "CAS"
+  ],
+  "secondary_family": {
+    "endpoint_order": [
+      "PI_count",
+      "SG_count",
+      "guan_yin_narrow",
+      "shangguan_yin_narrow",
+      "water_daymaster",
+      "DM10_omnibus"
+    ],
+    "size": 36,
+    "correction": "Bonferroni36 for strict/narrow/year-only country diagnostics",
+    "scalar_direction": "greater_only",
+    "omnibus_tail": "upper_tail_Pearson_distance"
+  },
+  "NAS_expected_people": {
+    "strict_nonNobel": 908,
+    "expanded_nonNobel": 1462,
+    "strict_all": 1130,
+    "expanded_all": 1690
+  },
+  "country_weights": "one_per_eligible_person; differs original_H4_fractional_membership",
+  "replicates": 99999,
+  "MC_seed": "2026111300+100*zero_based_country_index+zero_based_endpoint_index; same seed across sensitivity cases",
+  "bootstrap": {
+    "replicates": 10000,
+    "seed": "202611150000+100*zero_based_country_index+zero_based_case_index",
+    "interval": "paired_person_obs_minus_own_calendar_expectation percentile2.5,97.5 linear; unadjusted95percent",
+    "five_scalar_endpoints_share_resampling_indices": true
+  },
+  "case_order": [
+    "strict_primary",
+    "expanded",
+    "strict_broad",
+    "strict_noJie",
+    "strict_yearMonth",
+    "expanded_withoutLOC",
+    "strict_withoutFields"
+  ],
+  "all_NAS": "counts_metadata_only; no_subtractable_allNAS_trait_tables_or_NAS_Nobel_outcomes",
+  "tenGod_all10": "descriptive_only_no_extra_tests",
+  "NAS_GY_birthyear_trend": "descriptive_intercept_and_birthyear_only; raw_and_calendar_excess_slopes; no_p",
+  "current_authorization": "NAS cohort inference and sensitivities only; no other country cohort summaries",
+  "inputs": {
+    "chart_zip_sha256": "44706fa5b430550d13841ffca9522f61ca1e16a23166160fd9d94c9cfa1cbd3d",
+    "V4_zip_sha256": "53302ef5c4bbb946adcaceb70d7a7fd576c7f06d03c3e7080874654e1a2644f9"
+  },
+  "new_subgroup_results_viewed_before_this_note": false,
+  "DM10_inclusive_tail_numerical_tie_rule": "sim_distance >= observed_distance - 1e-12*max(1,abs(observed_distance)); fixed in synthetic QA before study summaries"
+}

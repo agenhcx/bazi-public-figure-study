@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "fixture": "artificial_uniform60_states_outside_study_window_year2000",
+  "study_files_opened": 0,
+  "study_aggregates_computed": 0,
+  "known_null_tail_checks": [
+    {
+      "metric": "PI_count",
+      "matches_known_null_tail_5MCSE": true
+    },
+    {
+      "metric": "SG_count",
+      "matches_known_null_tail_5MCSE": true
+    },
+    {
+      "metric": "GY_narrow",
+      "matches_known_null_tail_5MCSE": true
+    },
+    {
+      "metric": "SGY_narrow",
+      "matches_known_null_tail_5MCSE": true
+    },
+    {
+      "metric": "water_DM",
+      "matches_known_null_tail_5MCSE": true
+    },
+    {
+      "metric": "DM_index",
+      "matches_known_null_tail_5MCSE": true
+    }
+  ],
+  "bootstrap_constant_person_CI_degenerate_check": true,
+  "synthetic_engine_MC_only_not_study_analysis": true
+}

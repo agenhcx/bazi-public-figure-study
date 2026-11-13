@@ -1,0 +1,235 @@
+{
+  "schema": "US_NAS_population_metadata_audit_v1",
+  "authorization_scope": "NAS population metadata only; before feature reveal execution note",
+  "pins": {
+    "chart_zip": {
+      "path": "/workspace/scratch/77fca0050ec4/scientist_north_charts_v1.zip",
+      "sha256": "44706fa5b430550d13841ffca9522f61ca1e16a23166160fd9d94c9cfa1cbd3d"
+    },
+    "V4_zip": {
+      "path": "/workspace/scratch/77fca0050ec4/hypothesis_inputs_v1/scientist_north_data_freeze_v4.zip",
+      "sha256": "53302ef5c4bbb946adcaceb70d7a7fd576c7f06d03c3e7080874654e1a2644f9"
+    },
+    "Gitlock_commit": "6d02e0e4f22da59d171888d75a5163bb1ee410d8",
+    "Gitlock_evidence": "Retained GitHub connector fetch_commit at exact SHA; local18filepatch reconstructions equal locked files; no fresh remote fetch in this metadata pass",
+    "locked_files_manifest_sha256": "f232b9c73b3a3553c1ee14e4dfeaf46bab4c7298593ca30ca98fc306c0941819",
+    "remote_proof_sha256": "f38ebb3bc902b8f16b15e001ad3df68c429a3d6e583d2e977c90d377594454d5"
+  },
+  "groups": {
+    "strict": {
+      "NAS_all": {
+        "unique_people": 1130,
+        "person_ID_set_SHA256": "d8a26d703fc6a5a218c58c498d0fb68fab4ec381befc4e26006f1c93f7b01bba",
+        "DOB_min": "1851-10-27",
+        "DOB_max": "1981-10-22",
+        "birth_decades": {
+          "1850": 1,
+          "1860": 1,
+          "1870": 7,
+          "1880": 12,
+          "1890": 44,
+          "1900": 135,
+          "1910": 252,
+          "1920": 351,
+          "1930": 176,
+          "1940": 90,
+          "1950": 38,
+          "1960": 21,
+          "1970": 1,
+          "1980": 1
+        },
+        "same_date_DOB_source_priority_class_S1_thenS2_thenunion_thenS3": {
+          "S1": 1116,
+          "S2": 6,
+          "S1_or_S2_union": 8
+        },
+        "has_qualified_own_NAS_same_date_support": 1030,
+        "qualifies_only_via_other_cohort_same_person_same_date_source": 100,
+        "multiple_qualified_source_records": 150
+      },
+      "NAS_nonNobel": {
+        "unique_people": 908,
+        "person_ID_set_SHA256": "018d99c70a11f6f370c688a4c74be2f80893d5c6f428b6e849c7b6de5c706337",
+        "DOB_min": "1851-10-27",
+        "DOB_max": "1981-10-22",
+        "birth_decades": {
+          "1850": 1,
+          "1860": 1,
+          "1870": 7,
+          "1880": 10,
+          "1890": 34,
+          "1900": 116,
+          "1910": 213,
+          "1920": 305,
+          "1930": 138,
+          "1940": 51,
+          "1950": 20,
+          "1960": 10,
+          "1970": 1,
+          "1980": 1
+        },
+        "same_date_DOB_source_priority_class_S1_thenS2_thenunion_thenS3": {
+          "S1": 894,
+          "S2": 6,
+          "S1_or_S2_union": 8
+        },
+        "has_qualified_own_NAS_same_date_support": 895,
+        "qualifies_only_via_other_cohort_same_person_same_date_source": 13,
+        "multiple_qualified_source_records": 9
+      },
+      "NAS_nonNobel_nonFields": {
+        "unique_people": 907,
+        "person_ID_set_SHA256": "c58f952dcec11fd773e0ad9f2cd8c7d99a87c7af200ca76131dbf58bc9091f7a",
+        "DOB_min": "1851-10-27",
+        "DOB_max": "1981-10-22",
+        "birth_decades": {
+          "1850": 1,
+          "1860": 1,
+          "1870": 7,
+          "1880": 10,
+          "1890": 34,
+          "1900": 116,
+          "1910": 213,
+          "1920": 305,
+          "1930": 138,
+          "1940": 51,
+          "1950": 19,
+          "1960": 10,
+          "1970": 1,
+          "1980": 1
+        },
+        "same_date_DOB_source_priority_class_S1_thenS2_thenunion_thenS3": {
+          "S1": 894,
+          "S2": 5,
+          "S1_or_S2_union": 8
+        },
+        "has_qualified_own_NAS_same_date_support": 895,
+        "qualifies_only_via_other_cohort_same_person_same_date_source": 12,
+        "multiple_qualified_source_records": 9
+      }
+    },
+    "expanded": {
+      "NAS_all": {
+        "unique_people": 1690,
+        "person_ID_set_SHA256": "5319997e1cae4b8084ab905a7f5e773b373e8774226ceb74a4da7393a2078406",
+        "DOB_min": "1851-10-27",
+        "DOB_max": "1981-10-22",
+        "birth_decades": {
+          "1850": 1,
+          "1860": 1,
+          "1870": 7,
+          "1880": 12,
+          "1890": 44,
+          "1900": 137,
+          "1910": 253,
+          "1920": 363,
+          "1930": 270,
+          "1940": 284,
+          "1950": 213,
+          "1960": 88,
+          "1970": 16,
+          "1980": 1
+        },
+        "same_date_DOB_source_priority_class_S1_thenS2_thenunion_thenS3": {
+          "S3": 560,
+          "S1": 1116,
+          "S2": 6,
+          "S1_or_S2_union": 8
+        },
+        "has_qualified_own_NAS_same_date_support": 1690,
+        "qualifies_only_via_other_cohort_same_person_same_date_source": 0,
+        "multiple_qualified_source_records": 244
+      },
+      "NAS_nonNobel": {
+        "unique_people": 1462,
+        "person_ID_set_SHA256": "f5577456d4c832b6b62422a020a29a9b9f455f4be76780988e409ced58373355",
+        "DOB_min": "1851-10-27",
+        "DOB_max": "1981-10-22",
+        "birth_decades": {
+          "1850": 1,
+          "1860": 1,
+          "1870": 7,
+          "1880": 10,
+          "1890": 34,
+          "1900": 118,
+          "1910": 214,
+          "1920": 317,
+          "1930": 232,
+          "1940": 244,
+          "1950": 191,
+          "1960": 76,
+          "1970": 16,
+          "1980": 1
+        },
+        "same_date_DOB_source_priority_class_S1_thenS2_thenunion_thenS3": {
+          "S3": 554,
+          "S1": 894,
+          "S2": 6,
+          "S1_or_S2_union": 8
+        },
+        "has_qualified_own_NAS_same_date_support": 1462,
+        "qualifies_only_via_other_cohort_same_person_same_date_source": 0,
+        "multiple_qualified_source_records": 22
+      },
+      "NAS_nonNobel_nonFields": {
+        "unique_people": 1461,
+        "person_ID_set_SHA256": "21ca48740476176bb807f546110b3c6241355cbefb80b5a8d77a8a250185afe4",
+        "DOB_min": "1851-10-27",
+        "DOB_max": "1981-10-22",
+        "birth_decades": {
+          "1850": 1,
+          "1860": 1,
+          "1870": 7,
+          "1880": 10,
+          "1890": 34,
+          "1900": 118,
+          "1910": 214,
+          "1920": 317,
+          "1930": 232,
+          "1940": 244,
+          "1950": 190,
+          "1960": 76,
+          "1970": 16,
+          "1980": 1
+        },
+        "same_date_DOB_source_priority_class_S1_thenS2_thenunion_thenS3": {
+          "S3": 554,
+          "S1": 894,
+          "S2": 5,
+          "S1_or_S2_union": 8
+        },
+        "has_qualified_own_NAS_same_date_support": 1461,
+        "qualifies_only_via_other_cohort_same_person_same_date_source": 0,
+        "multiple_qualified_source_records": 21
+      }
+    }
+  },
+  "validation": {
+    "all_NAS_person_IDs_unique": true,
+    "NAS_chart_and_V4_metadata_identical": true,
+    "NAS_chart_group_links_match_qualified_memberships": true,
+    "NAS_dates_complete_day_ISO_in1835to1985": true,
+    "NAS_north_only": true,
+    "NAS_no_effective_DOB_hold_selected": true,
+    "all_NAS_rows_same_assumptions_lock": true,
+    "locked_local_manifest_files_checked": 17,
+    "retained_remote_newfile_patches_checked": 18
+  },
+  "scope_limits": [
+    "USNAS is an institutional cohort, not a nationality or birthcountry group.",
+    "Country-by-country current task authorizes USNAS only; no otheracademy or Nobel feature aggregation performed.",
+    "Use complete-official-roster control classification to define nonNobel; do not infer nonNobel from old candidate tagfalse.",
+    "Sourcegrade and birthcohort summaries below are acquisition/selection metadata, not BaZi outcomes."
+  ],
+  "feature_statistics_computed": false,
+  "TenGod_DM_or_structure_fields_aggregated": false,
+  "Nobel_features_inspected_or_aggregated": false,
+  "source_records_or_code_modified": false,
+  "recommended_primary_population": {
+    "definition": "strict S1+S2 qualifiedNAS membership AND complete-official-Nobel-roster screen eligible_as_nonNobel_control_for_award_condition_only",
+    "people": 908,
+    "expanded_sensitivity_people": 1462,
+    "Fields_policy": "primary nonNobelNAS does not automaticallyexcludeFields; report nonNobel_nonFields sensitivity separately ifdifferent",
+    "no_new_scientific_contrast_locked_by_this_report": true
+  }
+}
