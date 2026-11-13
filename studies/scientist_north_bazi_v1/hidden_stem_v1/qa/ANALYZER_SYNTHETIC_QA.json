@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "fixture": "artificial_uniform60states_year2000_outside_study_window",
+  "study_files_opened": 0,
+  "new_hidden_study_features_computed": 0,
+  "statistical_checks": [
+    {
+      "model": "M0_5",
+      "trait": "PI",
+      "known_uniform_count_tail_within5MCSE": true,
+      "fixed_seed_verified": true
+    },
+    {
+      "model": "M0_5",
+      "trait": "SG",
+      "known_uniform_count_tail_within5MCSE": true,
+      "fixed_seed_verified": true
+    },
+    {
+      "model": "M1_priority_5",
+      "trait": "PI",
+      "known_uniform_count_tail_within5MCSE": true,
+      "fixed_seed_verified": true
+    },
+    {
+      "model": "M1_priority_5",
+      "trait": "SG",
+      "known_uniform_count_tail_within5MCSE": true,
+      "fixed_seed_verified": true
+    }
+  ],
+  "hour_presence_uses_mean_indicator_not_indicator_mean": true,
+  "slot_share_distinct_from_person_presence": true,
+  "synthetic_only_not_hidden_study_analysis": true
+}

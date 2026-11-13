@@ -1,0 +1,21 @@
+{
+  "schema": "NAS_hidden_independent_audit_prelock_pure_QA_v1",
+  "status": "PASS",
+  "audit_script_sha256": "fe56d7f30a050e5f100d1c11cd4e3e9cfb9b8e9e4c50c729728541ee6ebaa8e2",
+  "encoder_script_sha256": "abc1d0de4a7bd94003258323a62d71c6cf4dd4c43ca45d627f85f0d99c427746",
+  "historical_pure_source_pins": {
+    "run_chess_c7_hiddenstem_hour_performance_sensitivity_v1.py": "93774e8a71f826d816ab113046a4dee27c95761f67701ec8e1ab21a4a2ebbeba",
+    "run_tt_stage2_targeted_holdout_v2.py": "940ae56a060a4b4cb2a320ae0f70abebd41fb37680ba34c4a46e6d88aa1fcd94"
+  },
+  "checks": {
+    "AST_extracted_old_scoring_only_no_old_imports_or_cohort_loaders": true,
+    "new_vectorized_encoder_matches_historical_C7_and_TT_on124_symbolic_fixtures": true,
+    "reference_DM_omitted_but_actualYG_MG_same_character_remains_visible": true,
+    "priority_share_any_distinguish72_108_144": true,
+    "hour_presence_mean_indicator_not_indicator_mean": true,
+    "exact_PMFSum_matches_closed_form_binomial17": true,
+    "exact_integer_inclusive_tie_edge": true,
+    "no_calendar_or_NAS_hidden_data_opened": true
+  },
+  "symbolic_fixture_rows": 124
+}

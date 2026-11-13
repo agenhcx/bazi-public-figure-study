@@ -1,0 +1,126 @@
+{
+  "schema": "NAS_hidden_supplement_independent_preinference_QA_v1",
+  "status": "PASS",
+  "reviewed_utc": "2026-11-13T13:42:43.790153+00:00",
+  "scope": "static note/config/analyzer/encoder and pure synthetic tests only",
+  "reviewed_files_sha256": {
+    "scientist_lock_repo/studies/scientist_north_bazi_v1/hidden_stem_v1/HIDDEN_STEM_SUPPLEMENT_V1.md": "2af7a0171c076e10a91459a85a6aa607e7866094e46597b3f2b7385d6144ce0a",
+    "scientist_lock_repo/studies/scientist_north_bazi_v1/hidden_stem_v1/HIDDEN_EXECUTION_V1.json": "e5c8b1b5001a08300ef1c331ee61c493dd2aad54093297df3dc613052fb98b7c",
+    "scientist_lock_repo/studies/scientist_north_bazi_v1/hidden_stem_v1/scripts/analyze_hidden.py": "7bcc4ab4554b9f5c66633313d2468edbfe0571409a59bfb7d0dcdc860015e26a",
+    "scientist_lock_repo/studies/scientist_north_bazi_v1/hidden_stem_v1/scripts/hidden_features.py": "abc1d0de4a7bd94003258323a62d71c6cf4dd4c43ca45d627f85f0d99c427746"
+  },
+  "scientist_features_computed": false,
+  "NAS_hidden_features_or_aggregates_loaded": false,
+  "study_chart_or_calendar_pool_loaded": false,
+  "other_country_or_Nobel_aggregates_viewed": false,
+  "new_study_inference_executed": false,
+  "checks": [
+    {
+      "check": "case_names_and_expected_counts",
+      "status": "PASS",
+      "detail": "Static configuration and analyzer guards; study records not loaded in this review."
+    },
+    {
+      "check": "five_seven_position_denominators",
+      "status": "PASS",
+      "detail": "Count share is mean score divided by5or7; not person prevalence."
+    },
+    {
+      "check": "integer_scales",
+      "status": "PASS",
+      "detail": "Exact exposure shares and12hour marginalization; tested0..5priority counts integer."
+    },
+    {
+      "check": "historical_source_pin:C7_HIDDENSTEM_HOUR_PERFORMANCE_SENSITIVITY_PLAN_V1.md",
+      "status": "PASS",
+      "detail": "Actual retained source file matches declared SHA256."
+    },
+    {
+      "check": "historical_source_pin:run_chess_c7_hiddenstem_hour_performance_sensitivity_v1.py",
+      "status": "PASS",
+      "detail": "Actual retained source file matches declared SHA256."
+    },
+    {
+      "check": "historical_source_pin:run_tt_stage2_targeted_holdout_v2.py",
+      "status": "PASS",
+      "detail": "Actual retained source file matches declared SHA256."
+    },
+    {
+      "check": "NAS_selection_only",
+      "status": "PASS",
+      "detail": "Analyzer intersects NAS institution and nonNobel academy groups; asserts908/1462andstrictsubset; output contains no allNAS-inclusive or otherinstitution/Nobel aggregates."
+    },
+    {
+      "check": "source_and_DOB_scope",
+      "status": "PASS",
+      "detail": "Analyzer consumes frozen positive membership links and existing chart DOB/pillars; original chart lock and data hash gates precede feature loading."
+    },
+    {
+      "check": "exposure_and_fallback",
+      "status": "PASS",
+      "detail": "Exact retained main/middle/residual order; visible year+month stems, referenceDMexcluded, fallbackmain; candidatehourstem added only to hypotheticalhourmodels."
+    },
+    {
+      "check": "historical_relation_matrix",
+      "status": "PASS",
+      "detail": "100stem-to-stem TenGod relations agree with retained C7 scalar function extracted without astronomy imports/calls."
+    },
+    {
+      "check": "encoder_scalar_legacy_equivalence",
+      "status": "PASS",
+      "detail": "204symbolic pillar fixtures;6528count/presence comparisons across8models×2traits match retained scalar C7 functions; no dates or cohort files."
+    },
+    {
+      "check": "presence_before_hour_average",
+      "status": "PASS",
+      "detail": "Encoder counts12candidate-hour indicators before person averaging. SyntheticAnalyzer hourpresence=.5whileaveragescore>0, verifying no indicator-after-mean substitution."
+    },
+    {
+      "check": "synthetic_denominator_and_expectation",
+      "status": "PASS",
+      "detail": "Analyzer toy fixtures verify five/seven slot shares, separate person prevalence, exact yearcalendar expectations."
+    },
+    {
+      "check": "synthetic_null_tail",
+      "status": "PASS",
+      "detail": "Degenerate zero SG toy givesp1inclusive; Bernoulli n2PItoy MCpwithin.005ofexact.25; testedintegercountcomparison."
+    },
+    {
+      "check": "synthetic_conditioning",
+      "status": "PASS",
+      "detail": "Sameyearmonth null restricted to exactmonth; noJie null excludes flaggeddates andcorrectlyrenormalizes."
+    },
+    {
+      "check": "limited_nominal_endpoints",
+      "status": "PASS",
+      "detail": "Only2models(M0reproduction,M1priority)×2traits×4cases=16nominalpvalues, ofwhich8areoldM0reproduction; no presence/share/any/hourtests."
+    },
+    {
+      "check": "post_reveal_status",
+      "status": "PASS",
+      "detail": "Note explicitly states supplement follows NAS main reveal; no original18/36familymembership or rescue/independentvalidation claim."
+    },
+    {
+      "check": "optional_hours_not_observed",
+      "status": "PASS",
+      "detail": "Fixeddate threepillars preserved;12uniform candidatehourbranches are descriptive sensitivity, not actual birthtime recovery."
+    },
+    {
+      "check": "syntax",
+      "status": "PASS",
+      "detail": "Analyzer and pure encoder parse successfully; only imported functions executed on synthetic fixtures."
+    },
+    {
+      "check": "metadata_case_alignment",
+      "status": "PASS",
+      "detail": "Earlier JSONstrict vsanalyzerstrict_primary mismatch resolved before this final report."
+    }
+  ],
+  "check_count": 20,
+  "limitations": [
+    "Does not certify future pool creation, remoteGitreceipt or actualNAS results; separate postlock input/output audit remains required.",
+    "build_hidden_pool.py not yet available at this review; pure encoder and analyzer reviewed.",
+    "No newNAScase selections recomputed from study records during preinference QA."
+  ],
+  "synthetic_test_note": "Initial direct import of retained C7 file hit absent system sxtwl; reran only its pure AST-extracted constants and scoring functions. No astronomy calls or dependency changes."
+}
