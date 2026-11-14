@@ -1,0 +1,50 @@
+{
+  "schema": "Nobel_global18_report_visual_QA_v1",
+  "status": "PASS",
+  "checked_utc": "2026-11-14T23:51:33.963730+00:00",
+  "input_results_sha256": "645edd7f66b1c2585d3cda5526e6f1d4ce16aad1b57fa369cd809474508cdd40",
+  "input_descriptives_sha256": "4abad4fe31637453dc0b2423257c0cdaa9da0f72dabcaf9361c91d3e16dd0eea",
+  "figure_manifest_sha256": "4bcd11800dfafb8b94c4816ba0a98614708f1770aad452b7812ef47a4c396e20",
+  "actual_PNGs_viewed": [
+    "Nobel_primary_descriptives.png",
+    "Nobel_hidden_descriptives.png"
+  ],
+  "checks": {
+    "Chinese_glyphs_rendered": true,
+    "labels_and_legends_readable": true,
+    "no_clipping_or_overlap": true,
+    "all_predefined_panels_present": true,
+    "observation_expected_legends_consistent": true,
+    "fixed_category_order_preserved": true,
+    "denominators_and_inference_limits_explained": true,
+    "HTML_tables_and_image_paths_valid": true,
+    "all18_test_IDs_appear_in_all7_case_tables": true,
+    "descriptor_QA_bound_to_exact_descriptives_and_lock": true,
+    "root_also_viewed_both_actual_PNGs_PASS": true
+  },
+  "HTML_structure": {
+    "html": 1,
+    "meta": 2,
+    "title": 1,
+    "style": 1,
+    "main": 1,
+    "h1": 1,
+    "p": 15,
+    "h2": 8,
+    "div": 24,
+    "table": 24,
+    "thead": 24,
+    "tr": 346,
+    "th": 203,
+    "tbody": 24,
+    "td": 2835,
+    "img": 2,
+    "h3": 14,
+    "details": 22,
+    "summary": 22,
+    "pre": 22,
+    "h4": 6
+  },
+  "locked_builder_sha256": "827f6fb629cd7f145404783d5c31b45e9b229eb75f1415a5c58f48bf2ee1bfb9",
+  "statistical_results_modified": false
+}

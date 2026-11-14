@@ -1,0 +1,2254 @@
+{
+  "schema": "Nobel_global18_audited_result_summary_v1",
+  "created_utc": "2026-11-14T23:51:26.480515+00:00",
+  "execution_lock_commit": "b65dc371264ed5bff64503478899b1192ac4449c",
+  "original18_unchanged": true,
+  "locked_files_unchanged": true,
+  "result_sha256": "645edd7f66b1c2585d3cda5526e6f1d4ce16aad1b57fa369cd809474508cdd40",
+  "descriptive_sha256": "4abad4fe31637453dc0b2423257c0cdaa9da0f72dabcaf9361c91d3e16dd0eea",
+  "independent_QA_sha256": "126209aab220415609e8d9b387f51e04a361283b6ff4dab0e93e719571e7587c",
+  "descriptive_QA_sha256": "cc8322b2211ba3a4f1a57833965e5f3720c9348ba2e3834217c8b5677703c7ce",
+  "primary_N": {
+    "Nobel": 621,
+    "academy": 5234,
+    "union": 5855
+  },
+  "primary_Holm18_rejections": 0,
+  "minimum_primary_nominal_p": 0.07817,
+  "primary_tests": [
+    {
+      "test_id": "H1a_PI",
+      "index": 0,
+      "kind": "calendar",
+      "observed_statistic": -0.02925812255851926,
+      "raw_effect": 0.5040257648953301,
+      "excess_effect": -0.02925812255851926,
+      "p_nominal": 0.8586,
+      "seed": 20261113,
+      "generator": "PCG64",
+      "replicates": 99999,
+      "extreme_count": 85859,
+      "diagnostics": {
+        "observed_integer_sum": 313,
+        "expected_sum": 331.16929410884046,
+        "inclusive_integer_tail": true
+      },
+      "unadjusted95CI": {
+        "excess": [
+          -0.08109968081973604,
+          0.025209435905929386
+        ],
+        "raw": [
+          0.4524959742351047,
+          0.5587761674718197
+        ]
+      },
+      "p_Holm18_reference": 1.0,
+      "primary_family_member": true,
+      "reject_primary_Holm18_0_05": false,
+      "supports_original_directional_prediction": false,
+      "sensitivity_does_not_rescue_primary": false
+    },
+    {
+      "test_id": "H1a_SG",
+      "index": 1,
+      "kind": "calendar",
+      "observed_statistic": 0.037693551025387226,
+      "raw_effect": 0.5040257648953301,
+      "excess_effect": 0.037693551025387226,
+      "p_nominal": 0.08093,
+      "seed": 20261114,
+      "generator": "PCG64",
+      "replicates": 99999,
+      "extreme_count": 8092,
+      "diagnostics": {
+        "observed_integer_sum": 313,
+        "expected_sum": 289.59230481323453,
+        "inclusive_integer_tail": true
+      },
+      "unadjusted95CI": {
+        "excess": [
+          -0.01417755120909158,
+          0.09226749467420162
+        ],
+        "raw": [
+          0.4524959742351047,
+          0.5587761674718197
+        ]
+      },
+      "p_Holm18_reference": 1.0,
+      "primary_family_member": true,
+      "reject_primary_Holm18_0_05": false,
+      "supports_original_directional_prediction": false,
+      "sensitivity_does_not_rescue_primary": false
+    },
+    {
+      "test_id": "H1b_PI",
+      "index": 2,
+      "kind": "calendar",
+      "observed_statistic": 0.014114346409718755,
+      "raw_effect": 0.5473824990447077,
+      "excess_effect": 0.014114346409718755,
+      "p_nominal": 0.07817,
+      "seed": 20261115,
+      "generator": "PCG64",
+      "replicates": 99999,
+      "extreme_count": 7816,
+      "diagnostics": {
+        "observed_integer_sum": 2865,
+        "expected_sum": 2791.125510891532,
+        "inclusive_integer_tail": true
+      },
+      "unadjusted95CI": {
+        "excess": [
+          -0.005073334506943538,
+          0.03337807757657313
+        ],
+        "raw": [
+          0.5282766526557127,
+          0.5666794038975926
+        ]
+      },
+      "p_Holm18_reference": 1.0,
+      "primary_family_member": true,
+      "reject_primary_Holm18_0_05": false,
+      "supports_original_directional_prediction": false,
+      "sensitivity_does_not_rescue_primary": false
+    },
+    {
+      "test_id": "H1b_SG",
+      "index": 3,
+      "kind": "calendar",
+      "observed_statistic": 0.008085196886326054,
+      "raw_effect": 0.4745892243026366,
+      "excess_effect": 0.008085196886326054,
+      "p_nominal": 0.19023,
+      "seed": 20261116,
+      "generator": "PCG64",
+      "replicates": 99999,
+      "extreme_count": 19022,
+      "diagnostics": {
+        "observed_integer_sum": 2484,
+        "expected_sum": 2441.6820794969694,
+        "inclusive_integer_tail": true
+      },
+      "unadjusted95CI": {
+        "excess": [
+          -0.009522919442835013,
+          0.026162460498637907
+        ],
+        "raw": [
+          0.45701184562476116,
+          0.4927397783721819
+        ]
+      },
+      "p_Holm18_reference": 1.0,
+      "primary_family_member": true,
+      "reject_primary_Holm18_0_05": false,
+      "supports_original_directional_prediction": false,
+      "sensitivity_does_not_rescue_primary": false
+    },
+    {
+      "test_id": "H1c_PI",
+      "index": 4,
+      "kind": "direct",
+      "observed_statistic": -0.04782429240648931,
+      "raw_effect": -0.043356734149377574,
+      "excess_effect": null,
+      "p_nominal": 0.9351,
+      "seed": 20261117,
+      "generator": "PCG64",
+      "replicates": 99999,
+      "extreme_count": 93509,
+      "diagnostics": {
+        "common_decades": [
+          1830,
+          1840,
+          1850,
+          1860,
+          1870,
+          1880,
+          1890,
+          1900,
+          1910,
+          1920,
+          1930,
+          1940,
+          1950,
+          1960,
+          1970
+        ],
+        "pooled_decade_weights": [
+          0.01383669285958319,
+          0.037068670994192005,
+          0.039972668261018106,
+          0.04714724974376495,
+          0.04646395626921763,
+          0.0550051247010591,
+          0.061667236077895454,
+          0.10796036897847626,
+          0.12862999658353264,
+          0.17663136317048173,
+          0.13392552101127433,
+          0.07362487188247352,
+          0.04270584215920738,
+          0.029894089511445166,
+          0.005466347796378545
+        ],
+        "raw_whole_group_contrast_in_predicted_direction": -0.043356734149377574,
+        "raw_direction_gate": false,
+        "floating_inclusive_tolerance": 1e-12,
+        "method": "within_birthdecade_person_labels_equivalent_multivariate_hypergeometric_endpoint_histograms"
+      },
+      "unadjusted95CI": {
+        "standardized": [
+          -0.10312428914734495,
+          0.010666199962748348
+        ],
+        "raw": [
+          -0.0981358877942254,
+          0.012869725817259476
+        ]
+      },
+      "p_Holm18_reference": 1.0,
+      "primary_family_member": true,
+      "reject_primary_Holm18_0_05": false,
+      "supports_original_directional_prediction": false,
+      "sensitivity_does_not_rescue_primary": false
+    },
+    {
+      "test_id": "H1c_SG",
+      "index": 5,
+      "kind": "direct",
+      "observed_statistic": 0.03195795761036094,
+      "raw_effect": 0.029436540592693516,
+      "excess_effect": null,
+      "p_nominal": 0.14035,
+      "seed": 20261118,
+      "generator": "PCG64",
+      "replicates": 99999,
+      "extreme_count": 14034,
+      "diagnostics": {
+        "common_decades": [
+          1830,
+          1840,
+          1850,
+          1860,
+          1870,
+          1880,
+          1890,
+          1900,
+          1910,
+          1920,
+          1930,
+          1940,
+          1950,
+          1960,
+          1970
+        ],
+        "pooled_decade_weights": [
+          0.01383669285958319,
+          0.037068670994192005,
+          0.039972668261018106,
+          0.04714724974376495,
+          0.04646395626921763,
+          0.0550051247010591,
+          0.061667236077895454,
+          0.10796036897847626,
+          0.12862999658353264,
+          0.17663136317048173,
+          0.13392552101127433,
+          0.07362487188247352,
+          0.04270584215920738,
+          0.029894089511445166,
+          0.005466347796378545
+        ],
+        "raw_whole_group_contrast_in_predicted_direction": 0.029436540592693516,
+        "raw_direction_gate": true,
+        "floating_inclusive_tolerance": 1e-12,
+        "method": "within_birthdecade_person_labels_equivalent_multivariate_hypergeometric_endpoint_histograms"
+      },
+      "unadjusted95CI": {
+        "standardized": [
+          -0.02570068815209737,
+          0.08943737945234699
+        ],
+        "raw": [
+          -0.02515261602417489,
+          0.08568802891043756
+        ]
+      },
+      "p_Holm18_reference": 1.0,
+      "primary_family_member": true,
+      "reject_primary_Holm18_0_05": false,
+      "supports_original_directional_prediction": false,
+      "sensitivity_does_not_rescue_primary": false
+    },
+    {
+      "test_id": "H2a",
+      "index": 6,
+      "kind": "calendar",
+      "observed_statistic": -0.0031473174170291206,
+      "raw_effect": 0.13087504776461598,
+      "excess_effect": -0.0031473174170291206,
+      "p_nominal": 0.75601,
+      "seed": 20261119,
+      "generator": "PCG64",
+      "replicates": 99999,
+      "extreme_count": 75600,
+      "diagnostics": {
+        "observed_integer_sum": 685,
+        "expected_sum": 701.4730593607304,
+        "inclusive_integer_tail": true
+      },
+      "unadjusted95CI": {
+        "excess": [
+          -0.01210580047289332,
+          0.006008998855079324
+        ],
+        "raw": [
+          0.12170424149789835,
+          0.1400458540313336
+        ]
+      },
+      "p_Holm18_reference": 1.0,
+      "primary_family_member": true,
+      "reject_primary_Holm18_0_05": false,
+      "supports_original_directional_prediction": false,
+      "sensitivity_does_not_rescue_primary": false
+    },
+    {
+      "test_id": "H2b",
+      "index": 7,
+      "kind": "calendar",
+      "observed_statistic": -0.0007878047406812519,
+      "raw_effect": 0.13278563240351549,
+      "excess_effect": -0.0007878047406812519,
+      "p_nominal": 0.57542,
+      "seed": 20261120,
+      "generator": "PCG64",
+      "replicates": 99999,
+      "extreme_count": 57541,
+      "diagnostics": {
+        "observed_integer_sum": 695,
+        "expected_sum": 699.1233700127257,
+        "inclusive_integer_tail": true
+      },
+      "unadjusted95CI": {
+        "excess": [
+          -0.009923871840459385,
+          0.008541158646945149
+        ],
+        "raw": [
+          0.12361482613679786,
+          0.14214749713412303
+        ]
+      },
+      "p_Holm18_reference": 1.0,
+      "primary_family_member": true,
+      "reject_primary_Holm18_0_05": false,
+      "supports_original_directional_prediction": false,
+      "sensitivity_does_not_rescue_primary": false
+    },
+    {
+      "test_id": "H2c",
+      "index": 8,
+      "kind": "direct",
+      "observed_statistic": 0.014909179133988646,
+      "raw_effect": 0.006881488988448509,
+      "excess_effect": null,
+      "p_nominal": 0.15793,
+      "seed": 20261121,
+      "generator": "PCG64",
+      "replicates": 99999,
+      "extreme_count": 15792,
+      "diagnostics": {
+        "common_decades": [
+          1830,
+          1840,
+          1850,
+          1860,
+          1870,
+          1880,
+          1890,
+          1900,
+          1910,
+          1920,
+          1930,
+          1940,
+          1950,
+          1960,
+          1970
+        ],
+        "pooled_decade_weights": [
+          0.01383669285958319,
+          0.037068670994192005,
+          0.039972668261018106,
+          0.04714724974376495,
+          0.04646395626921763,
+          0.0550051247010591,
+          0.061667236077895454,
+          0.10796036897847626,
+          0.12862999658353264,
+          0.17663136317048173,
+          0.13392552101127433,
+          0.07362487188247352,
+          0.04270584215920738,
+          0.029894089511445166,
+          0.005466347796378545
+        ],
+        "raw_whole_group_contrast_in_predicted_direction": 0.006881488988448509,
+        "raw_direction_gate": true,
+        "floating_inclusive_tolerance": 1e-12,
+        "method": "within_birthdecade_person_labels_equivalent_multivariate_hypergeometric_endpoint_histograms"
+      },
+      "unadjusted95CI": {
+        "standardized": [
+          -0.012668723452984695,
+          0.04070394786065808
+        ],
+        "raw": [
+          -0.02125862301303812,
+          0.03346576669207959
+        ]
+      },
+      "p_Holm18_reference": 1.0,
+      "primary_family_member": true,
+      "reject_primary_Holm18_0_05": false,
+      "supports_original_directional_prediction": false,
+      "sensitivity_does_not_rescue_primary": false
+    },
+    {
+      "test_id": "H2d",
+      "index": 9,
+      "kind": "trend",
+      "observed_statistic": -3.3750503226083126e-05,
+      "raw_effect": 2.6803253043317793e-06,
+      "excess_effect": -3.3750503226083126e-05,
+      "p_nominal": 0.50876,
+      "seed": 20261122,
+      "generator": "PCG64",
+      "replicates": 99999,
+      "extreme_count": 50875,
+      "diagnostics": {
+        "raw_slope_per_decade": 2.6803253043317793e-06,
+        "calendar_excess_slope_per_decade": -3.3750503226083126e-05,
+        "design_rank": 7,
+        "design_columns": [
+          "intercept",
+          "(birthyear-1900)/10",
+          "NAS",
+          "UK_Royal_Society",
+          "DE_Leopoldina",
+          "France",
+          "Japan"
+        ],
+        "rcond": 1e-12,
+        "slope_unit": "fraction_of_people_per_birth_decade",
+        "direction_gate": false,
+        "floating_inclusive_tolerance": 1e-12,
+        "calendar_grouping": "identical_exact_model_key_and_design_row"
+      },
+      "unadjusted95CI": {
+        "raw": [
+          -0.0031105339011162996,
+          0.0030274106786840156
+        ],
+        "excess": [
+          -0.0031133519017015115,
+          0.003020264932837425
+        ],
+        "method": "person_multinomial_counts_of_identical_complete_design_outcome_profiles_refit_each_draw",
+        "profile_count": 995
+      },
+      "p_Holm18_reference": 1.0,
+      "primary_family_member": true,
+      "reject_primary_Holm18_0_05": false,
+      "supports_original_directional_prediction": false,
+      "sensitivity_does_not_rescue_primary": false
+    },
+    {
+      "test_id": "H3a",
+      "index": 10,
+      "kind": "H3_DM10",
+      "observed_statistic": 6.06373809593349,
+      "raw_effect": null,
+      "excess_effect": null,
+      "p_nominal": 0.73572,
+      "seed": 20261123,
+      "generator": "PCG64",
+      "replicates": 99999,
+      "extreme_count": 73571,
+      "diagnostics": {
+        "observed_counts": [
+          556,
+          570,
+          589,
+          586,
+          579,
+          573,
+          587,
+          631,
+          597,
+          587
+        ],
+        "expected_counts": [
+          585.55284826708,
+          585.6079496968274,
+          585.5972378171947,
+          585.5808593457515,
+          585.4601242607903,
+          585.5307582902848,
+          585.4428699752923,
+          585.3634179204976,
+          585.3797963919403,
+          585.4841380342791
+        ],
+        "floating_inclusive_tolerance": 6.06373809593349e-12
+      },
+      "unadjusted95CI": null,
+      "p_Holm18_reference": 1.0,
+      "primary_family_member": true,
+      "reject_primary_Holm18_0_05": false,
+      "supports_original_directional_prediction": false,
+      "sensitivity_does_not_rescue_primary": false
+    },
+    {
+      "test_id": "H3b",
+      "index": 11,
+      "kind": "calendar",
+      "observed_statistic": 0.00224356371883365,
+      "raw_effect": 0.2022203245089667,
+      "excess_effect": 0.00224356371883365,
+      "p_nominal": 0.3364,
+      "seed": 20261124,
+      "generator": "PCG64",
+      "replicates": 99999,
+      "extreme_count": 33639,
+      "diagnostics": {
+        "observed_integer_sum": 1184,
+        "expected_sum": 1170.863934426229,
+        "inclusive_integer_tail": true
+      },
+      "unadjusted95CI": {
+        "excess": [
+          -0.00802458044736954,
+          0.012357162025441265
+        ],
+        "raw": [
+          0.1919726729291204,
+          0.21229718189581553
+        ]
+      },
+      "p_Holm18_reference": 1.0,
+      "primary_family_member": true,
+      "reject_primary_Holm18_0_05": false,
+      "supports_original_directional_prediction": false,
+      "sensitivity_does_not_rescue_primary": false
+    },
+    {
+      "test_id": "H4_PI",
+      "index": 12,
+      "kind": "H4",
+      "observed_statistic": 2.360688766791662,
+      "raw_effect": null,
+      "excess_effect": null,
+      "p_nominal": 0.46256,
+      "seed": 20261125,
+      "generator": "PCG64",
+      "replicates": 99999,
+      "extreme_count": 46255,
+      "diagnostics": {
+        "institution_order": [
+          "NAS",
+          "UK_Royal_Society",
+          "DE_Leopoldina",
+          "France",
+          "Japan",
+          "CAS"
+        ],
+        "effective_weights": [
+          897.5,
+          2285.5,
+          553.0,
+          466.0,
+          211.0,
+          821.0
+        ],
+        "centered_means": [
+          [
+            0.02233610884006502
+          ],
+          [
+            0.024728263330454865
+          ],
+          [
+            -0.03472397461288473
+          ],
+          [
+            0.009054351489262995
+          ],
+          [
+            -0.03970232894095924
+          ],
+          [
+            0.02517857144485289
+          ]
+        ],
+        "raw_means": [
+          [
+            0.5554317548746518
+          ],
+          [
+            0.5578647998249836
+          ],
+          [
+            0.49819168173598555
+          ],
+          [
+            0.5429184549356223
+          ],
+          [
+            0.4928909952606635
+          ],
+          [
+            0.559074299634592
+          ]
+        ],
+        "calendar_expected_means": [
+          [
+            0.5330956460345865
+          ],
+          [
+            0.5331365364945283
+          ],
+          [
+            0.5329156563488694
+          ],
+          [
+            0.5338641034463589
+          ],
+          [
+            0.5325933242016229
+          ],
+          [
+            0.5338957281897394
+          ]
+        ],
+        "pooled_centered_mean": [
+          0.014114346409718403
+        ],
+        "stratum_count": 46,
+        "singleton_strata": 1,
+        "permutable_people": 5233,
+        "permutation_distribution_varies": true,
+        "floating_inclusive_tolerance": 2.3606887667916616e-12,
+        "entire_person_vector_moved": true
+      },
+      "unadjusted95CI": null,
+      "p_Holm18_reference": 1.0,
+      "primary_family_member": true,
+      "reject_primary_Holm18_0_05": false,
+      "supports_original_directional_prediction": false,
+      "sensitivity_does_not_rescue_primary": false
+    },
+    {
+      "test_id": "H4_SG",
+      "index": 13,
+      "kind": "H4",
+      "observed_statistic": 1.046562119422508,
+      "raw_effect": null,
+      "excess_effect": null,
+      "p_nominal": 0.62018,
+      "seed": 20261126,
+      "generator": "PCG64",
+      "replicates": 99999,
+      "extreme_count": 62017,
+      "diagnostics": {
+        "institution_order": [
+          "NAS",
+          "UK_Royal_Society",
+          "DE_Leopoldina",
+          "France",
+          "Japan",
+          "CAS"
+        ],
+        "effective_weights": [
+          897.5,
+          2285.5,
+          553.0,
+          466.0,
+          211.0,
+          821.0
+        ],
+        "centered_means": [
+          [
+            -0.0018688662208256918
+          ],
+          [
+            0.001144993983278762
+          ],
+          [
+            0.0063675841726196
+          ],
+          [
+            0.0035653577164387806
+          ],
+          [
+            0.01719919013718495
+          ],
+          [
+            0.03966697238145456
+          ]
+        ],
+        "raw_means": [
+          [
+            0.4646239554317549
+          ],
+          [
+            0.4675125793043098
+          ],
+          [
+            0.472875226039783
+          ],
+          [
+            0.4699570815450644
+          ],
+          [
+            0.4834123222748815
+          ],
+          [
+            0.5066991473812423
+          ]
+        ],
+        "calendar_expected_means": [
+          [
+            0.46649282165258094
+          ],
+          [
+            0.46636758532103145
+          ],
+          [
+            0.46650764186716237
+          ],
+          [
+            0.4663917238286255
+          ],
+          [
+            0.4662131321376968
+          ],
+          [
+            0.4670321749997883
+          ]
+        ],
+        "pooled_centered_mean": [
+          0.008085196886326265
+        ],
+        "stratum_count": 46,
+        "singleton_strata": 1,
+        "permutable_people": 5233,
+        "permutation_distribution_varies": true,
+        "floating_inclusive_tolerance": 1.046562119422508e-12,
+        "entire_person_vector_moved": true
+      },
+      "unadjusted95CI": null,
+      "p_Holm18_reference": 1.0,
+      "primary_family_member": true,
+      "reject_primary_Holm18_0_05": false,
+      "supports_original_directional_prediction": false,
+      "sensitivity_does_not_rescue_primary": false
+    },
+    {
+      "test_id": "H4_GY",
+      "index": 14,
+      "kind": "H4",
+      "observed_statistic": 0.4735340200075907,
+      "raw_effect": null,
+      "excess_effect": null,
+      "p_nominal": 0.47879,
+      "seed": 20261127,
+      "generator": "PCG64",
+      "replicates": 99999,
+      "extreme_count": 47878,
+      "diagnostics": {
+        "institution_order": [
+          "NAS",
+          "UK_Royal_Society",
+          "DE_Leopoldina",
+          "France",
+          "Japan",
+          "CAS"
+        ],
+        "effective_weights": [
+          897.5,
+          2285.5,
+          553.0,
+          466.0,
+          211.0,
+          821.0
+        ],
+        "centered_means": [
+          [
+            0.00033792331377697875
+          ],
+          [
+            -0.0014577183943878913
+          ],
+          [
+            -0.0010075157762536788
+          ],
+          [
+            -0.03316381523507167
+          ],
+          [
+            0.004380524835662908
+          ],
+          [
+            0.002000576417801327
+          ]
+        ],
+        "raw_means": [
+          [
+            0.1331476323119777
+          ],
+          [
+            0.13257492889958433
+          ],
+          [
+            0.13381555153707053
+          ],
+          [
+            0.09763948497854077
+          ],
+          [
+            0.13744075829383887
+          ],
+          [
+            0.13885505481120586
+          ]
+        ],
+        "calendar_expected_means": [
+          [
+            0.13280970899820116
+          ],
+          [
+            0.13403264729397224
+          ],
+          [
+            0.13482306731332422
+          ],
+          [
+            0.1308033002136123
+          ],
+          [
+            0.133060233458176
+          ],
+          [
+            0.13685447839340484
+          ]
+        ],
+        "pooled_centered_mean": [
+          -0.0031473174170291544
+        ],
+        "stratum_count": 46,
+        "singleton_strata": 1,
+        "permutable_people": 5233,
+        "permutation_distribution_varies": true,
+        "floating_inclusive_tolerance": 1e-12,
+        "entire_person_vector_moved": true
+      },
+      "unadjusted95CI": null,
+      "p_Holm18_reference": 1.0,
+      "primary_family_member": true,
+      "reject_primary_Holm18_0_05": false,
+      "supports_original_directional_prediction": false,
+      "sensitivity_does_not_rescue_primary": false
+    },
+    {
+      "test_id": "H4_SGY",
+      "index": 15,
+      "kind": "H4",
+      "observed_statistic": 0.5956909040687576,
+      "raw_effect": null,
+      "excess_effect": null,
+      "p_nominal": 0.48365,
+      "seed": 20261128,
+      "generator": "PCG64",
+      "replicates": 99999,
+      "extreme_count": 48364,
+      "diagnostics": {
+        "institution_order": [
+          "NAS",
+          "UK_Royal_Society",
+          "DE_Leopoldina",
+          "France",
+          "Japan",
+          "CAS"
+        ],
+        "effective_weights": [
+          897.5,
+          2285.5,
+          553.0,
+          466.0,
+          211.0,
+          821.0
+        ],
+        "centered_means": [
+          [
+            -0.014306293254565734
+          ],
+          [
+            0.004523954371863914
+          ],
+          [
+            0.015051207257855033
+          ],
+          [
+            -0.02133339405335716
+          ],
+          [
+            -0.010835693422862424
+          ],
+          [
+            0.002778813390800061
+          ]
+        ],
+        "raw_means": [
+          [
+            0.116991643454039
+          ],
+          [
+            0.1382629621527018
+          ],
+          [
+            0.15009041591320071
+          ],
+          [
+            0.11587982832618025
+          ],
+          [
+            0.12322274881516587
+          ],
+          [
+            0.13520097442143728
+          ]
+        ],
+        "calendar_expected_means": [
+          [
+            0.13129793670860498
+          ],
+          [
+            0.13373900778083783
+          ],
+          [
+            0.13503920865534566
+          ],
+          [
+            0.13721322237953737
+          ],
+          [
+            0.13405844223802837
+          ],
+          [
+            0.13242216103063728
+          ]
+        ],
+        "pooled_centered_mean": [
+          -0.0007878047406812197
+        ],
+        "stratum_count": 46,
+        "singleton_strata": 1,
+        "permutable_people": 5233,
+        "permutation_distribution_varies": true,
+        "floating_inclusive_tolerance": 1e-12,
+        "entire_person_vector_moved": true
+      },
+      "unadjusted95CI": null,
+      "p_Holm18_reference": 1.0,
+      "primary_family_member": true,
+      "reject_primary_Holm18_0_05": false,
+      "supports_original_directional_prediction": false,
+      "sensitivity_does_not_rescue_primary": false
+    },
+    {
+      "test_id": "H4_DM10",
+      "index": 16,
+      "kind": "H4",
+      "observed_statistic": 5.917716799265144,
+      "raw_effect": null,
+      "excess_effect": null,
+      "p_nominal": 0.24158,
+      "seed": 20261129,
+      "generator": "PCG64",
+      "replicates": 99999,
+      "extreme_count": 24157,
+      "diagnostics": {
+        "institution_order": [
+          "NAS",
+          "UK_Royal_Society",
+          "DE_Leopoldina",
+          "France",
+          "Japan",
+          "CAS"
+        ],
+        "effective_weights": [
+          897.5,
+          2285.5,
+          553.0,
+          466.0,
+          211.0,
+          821.0
+        ],
+        "centered_means": [
+          [
+            -0.015907308792690877,
+            -0.005365212356186541,
+            0.006942874520864849,
+            -0.0030680744580609803,
+            -0.0008791585946357104,
+            -0.0013659304724200163,
+            -0.002435752680268788,
+            -0.00525634393347132,
+            0.017555798402837757,
+            0.00977910836403166
+          ],
+          [
+            -0.0022181125442034535,
+            -0.013591232960558397,
+            -0.00878909335582378,
+            0.008925271816094912,
+            -0.006998812344211444,
+            -0.000701696707039589,
+            0.006753877477607978,
+            0.012022354124294199,
+            0.006148494491573476,
+            -0.0015510499977327208
+          ],
+          [
+            0.002163037779760352,
+            0.01475933015202514,
+            0.021118027724298025,
+            -0.020418835694272216,
+            -0.004129020442158834,
+            -0.029472596174606125,
+            -0.0005170945568118058,
+            0.004942506470703872,
+            -0.005961859767145368,
+            0.017516504508206864
+          ],
+          [
+            -0.0002634735002074132,
+            0.01371442055588053,
+            0.012676678402658565,
+            -0.018506684182305326,
+            0.01691584365332781,
+            0.0040815742999446925,
+            -0.0066627776937121744,
+            -0.026999246943196577,
+            0.01594858009918885,
+            -0.010904914691579247
+          ],
+          [
+            -0.0004908560499711079,
+            0.018466525398323847,
+            0.02328366236227485,
+            -0.014501291175624393,
+            -0.00038705113509577687,
+            0.023257799825383507,
+            -0.03843130409979753,
+            0.004209668899217324,
+            -0.03379591442870583,
+            0.018388760403994734
+          ],
+          [
+            -0.005022858403176869,
+            -0.007432388753962905,
+            -0.007475788765578826,
+            0.007113790727514551,
+            0.004771110982856129,
+            -0.0061843193022737405,
+            0.0011272697134750858,
+            0.03158806021915766,
+            -0.011039431189965334,
+            -0.00744544522804569
+          ]
+        ],
+        "raw_means": [
+          [
+            0.08412256267409471,
+            0.0947075208913649,
+            0.10696378830083565,
+            0.09693593314763231,
+            0.09916434540389972,
+            0.09860724233983287,
+            0.09749303621169916,
+            0.0947075208913649,
+            0.11754874651810585,
+            0.10974930362116991
+          ],
+          [
+            0.0977904178516736,
+            0.08641435134543864,
+            0.09122730255961496,
+            0.10894771384817327,
+            0.09297746663749727,
+            0.0993218114198206,
+            0.1067600087508204,
+            0.1120105009844673,
+            0.10610369722161453,
+            0.09844672938087946
+          ],
+          [
+            0.10216998191681737,
+            0.11482820976491863,
+            0.12115732368896925,
+            0.07956600361663653,
+            0.09584086799276673,
+            0.0705244122965642,
+            0.09945750452079566,
+            0.10488245931283906,
+            0.09403254972875226,
+            0.11754068716094032
+          ],
+          [
+            0.09978540772532189,
+            0.11373390557939914,
+            0.11266094420600858,
+            0.0815450643776824,
+            0.11695278969957082,
+            0.10407725321888411,
+            0.09334763948497854,
+            0.07296137339055794,
+            0.11587982832618025,
+            0.0890557939914163
+          ],
+          [
+            0.0995260663507109,
+            0.11848341232227488,
+            0.12322274881516587,
+            0.08530805687203792,
+            0.0995260663507109,
+            0.12322274881516587,
+            0.061611374407582936,
+            0.10426540284360189,
+            0.06635071090047394,
+            0.11848341232227488
+          ],
+          [
+            0.09500609013398295,
+            0.0925700365408039,
+            0.0925700365408039,
+            0.1071863580998782,
+            0.10475030450669914,
+            0.09378806333739342,
+            0.10109622411693057,
+            0.1315468940316687,
+            0.08891595615103533,
+            0.0925700365408039
+          ]
+        ],
+        "calendar_expected_means": [
+          [
+            0.10002987146678641,
+            0.10007273324755213,
+            0.10002091377997153,
+            0.10000400760569396,
+            0.10004350399853601,
+            0.0999731728122533,
+            0.09992878889196828,
+            0.09996386482483648,
+            0.09999294811526852,
+            0.09997019525713885
+          ],
+          [
+            0.1000085303958756,
+            0.10000558430599617,
+            0.10001639591543754,
+            0.10002244203207762,
+            0.09997627898170747,
+            0.10002350812685865,
+            0.10000613127321079,
+            0.09998814686017155,
+            0.09995520273003944,
+            0.09999777937861065
+          ],
+          [
+            0.1000069441370572,
+            0.10006887961289372,
+            0.1000392959646716,
+            0.09998483931090915,
+            0.09996988843492585,
+            0.09999700847117064,
+            0.09997459907760765,
+            0.09993995284213533,
+            0.0999944094958978,
+            0.10002418265273365
+          ],
+          [
+            0.10004888122552938,
+            0.10001948502351864,
+            0.09998426580335013,
+            0.10005174855998776,
+            0.10003694604624296,
+            0.09999567891893947,
+            0.1000104171786907,
+            0.0999606203337546,
+            0.09993124822699145,
+            0.09996070868299567
+          ],
+          [
+            0.10001692240068186,
+            0.10001688692395085,
+            0.09993908645289085,
+            0.09980934804766212,
+            0.09991311748580647,
+            0.09996494898978216,
+            0.10004267850738022,
+            0.10005573394438436,
+            0.10014662532917952,
+            0.10009465191827988
+          ],
+          [
+            0.10002894853716028,
+            0.10000242529476738,
+            0.10004582530638328,
+            0.10007256737236427,
+            0.0999791935238436,
+            0.09997238263966765,
+            0.09996895440345592,
+            0.09995883381251182,
+            0.09995538734100108,
+            0.10001548176884997
+          ]
+        ],
+        "pooled_centered_mean": [
+          -0.004298865494011617,
+          -0.004495751963293855,
+          0.00047852286335812517,
+          9.744568034421486e-05,
+          -0.001404276134127702,
+          -0.0033236363904717396,
+          0.0005111911576330051,
+          0.007591348156518329,
+          0.003391198347460825,
+          0.001452823776591681
+        ],
+        "stratum_count": 46,
+        "singleton_strata": 1,
+        "permutable_people": 5233,
+        "permutation_distribution_varies": true,
+        "floating_inclusive_tolerance": 5.917716799265144e-12,
+        "entire_person_vector_moved": true
+      },
+      "unadjusted95CI": null,
+      "p_Holm18_reference": 1.0,
+      "primary_family_member": true,
+      "reject_primary_Holm18_0_05": false,
+      "supports_original_directional_prediction": false,
+      "sensitivity_does_not_rescue_primary": false
+    },
+    {
+      "test_id": "H4_WATER",
+      "index": 17,
+      "kind": "H4",
+      "observed_statistic": 1.0124040163460972,
+      "raw_effect": null,
+      "excess_effect": null,
+      "p_nominal": 0.14159,
+      "seed": 20261130,
+      "generator": "PCG64",
+      "replicates": 99999,
+      "extreme_count": 14158,
+      "diagnostics": {
+        "institution_order": [
+          "NAS",
+          "UK_Royal_Society",
+          "DE_Leopoldina",
+          "France",
+          "Japan",
+          "CAS"
+        ],
+        "effective_weights": [
+          897.5,
+          2285.5,
+          553.0,
+          466.0,
+          211.0,
+          821.0
+        ],
+        "centered_means": [
+          [
+            0.02733490676686937
+          ],
+          [
+            0.004597444493840699
+          ],
+          [
+            0.011554644741061475
+          ],
+          [
+            0.005043665407609644
+          ],
+          [
+            -0.015407154024710977
+          ],
+          [
+            -0.018484876418011022
+          ]
+        ],
+        "raw_means": [
+          [
+            0.22729805013927576
+          ],
+          [
+            0.20455042660249398
+          ],
+          [
+            0.2115732368896926
+          ],
+          [
+            0.20493562231759657
+          ],
+          [
+            0.1848341232227488
+          ],
+          [
+            0.1814859926918392
+          ]
+        ],
+        "calendar_expected_means": [
+          [
+            0.1999631433724067
+          ],
+          [
+            0.19995298210865267
+          ],
+          [
+            0.20001859214863138
+          ],
+          [
+            0.19989195690998723
+          ],
+          [
+            0.2002412772474595
+          ],
+          [
+            0.19997086910985082
+          ]
+        ],
+        "pooled_centered_mean": [
+          0.004844022124052387
+        ],
+        "stratum_count": 46,
+        "singleton_strata": 1,
+        "permutable_people": 5233,
+        "permutation_distribution_varies": true,
+        "floating_inclusive_tolerance": 1.0124040163460971e-12,
+        "entire_person_vector_moved": true
+      },
+      "unadjusted95CI": null,
+      "p_Holm18_reference": 1.0,
+      "primary_family_member": true,
+      "reject_primary_Holm18_0_05": false,
+      "supports_original_directional_prediction": false,
+      "sensitivity_does_not_rescue_primary": false
+    }
+  ],
+  "primary_population_scalar_metrics": {
+    "Nobel": [
+      {
+        "metric": "PI_count",
+        "observed_sum": 313,
+        "observed_mean_or_rate": 0.5040257648953301,
+        "calendar_expected_mean_or_rate": 0.5332838874538492,
+        "observed_minus_expected": -0.029258122558519117,
+        "unit": "count_per_person_of_five_positions",
+        "raw_unadjusted95CI": [
+          0.4524959742351047,
+          0.5587761674718197
+        ],
+        "excess_unadjusted95CI": [
+          -0.08109968081973604,
+          0.025209435905929386
+        ]
+      },
+      {
+        "metric": "SG_count",
+        "observed_sum": 313,
+        "observed_mean_or_rate": 0.5040257648953301,
+        "calendar_expected_mean_or_rate": 0.4663322138699429,
+        "observed_minus_expected": 0.03769355102538724,
+        "unit": "count_per_person_of_five_positions",
+        "raw_unadjusted95CI": [
+          0.4524959742351047,
+          0.5587761674718197
+        ],
+        "excess_unadjusted95CI": [
+          -0.01417755120909158,
+          0.09226749467420162
+        ]
+      },
+      {
+        "metric": "GY",
+        "observed_sum": 77,
+        "observed_mean_or_rate": 0.12399355877616747,
+        "calendar_expected_mean_or_rate": 0.13293977933058573,
+        "observed_minus_expected": -0.008946220554418266,
+        "unit": "fraction_of_people",
+        "raw_unadjusted95CI": [
+          0.09822866344605476,
+          0.1497584541062802
+        ],
+        "excess_unadjusted95CI": [
+          -0.0344853888752075,
+          0.016997097013370044
+        ]
+      },
+      {
+        "metric": "SGY",
+        "observed_sum": 91,
+        "observed_mean_or_rate": 0.14653784219001612,
+        "calendar_expected_mean_or_rate": 0.13785770363065591,
+        "observed_minus_expected": 0.008680138559360201,
+        "unit": "fraction_of_people",
+        "raw_unadjusted95CI": [
+          0.11916264090177134,
+          0.17552334943639292
+        ],
+        "excess_unadjusted95CI": [
+          -0.019378409424177307,
+          0.037033045927652
+        ]
+      },
+      {
+        "metric": "water_DM",
+        "observed_sum": 112,
+        "observed_mean_or_rate": 0.18035426731078905,
+        "calendar_expected_mean_or_rate": 0.20002825478827654,
+        "observed_minus_expected": -0.019673987477487498,
+        "unit": "fraction_of_people",
+        "raw_unadjusted95CI": [
+          0.15136876006441224,
+          0.21256038647342995
+        ],
+        "excess_unadjusted95CI": [
+          -0.04879376493727809,
+          0.01243357774207353
+        ]
+      }
+    ],
+    "academy": [
+      {
+        "metric": "PI_count",
+        "observed_sum": 2865,
+        "observed_mean_or_rate": 0.5473824990447077,
+        "calendar_expected_mean_or_rate": 0.5332681526349893,
+        "observed_minus_expected": 0.014114346409718426,
+        "unit": "count_per_person_of_five_positions",
+        "raw_unadjusted95CI": [
+          0.5282766526557127,
+          0.5666794038975926
+        ],
+        "excess_unadjusted95CI": [
+          -0.005073334506943538,
+          0.03337807757657313
+        ]
+      },
+      {
+        "metric": "SG_count",
+        "observed_sum": 2484,
+        "observed_mean_or_rate": 0.4745892243026366,
+        "calendar_expected_mean_or_rate": 0.4665040274163103,
+        "observed_minus_expected": 0.008085196886326307,
+        "unit": "count_per_person_of_five_positions",
+        "raw_unadjusted95CI": [
+          0.45701184562476116,
+          0.4927397783721819
+        ],
+        "excess_unadjusted95CI": [
+          -0.009522919442835013,
+          0.026162460498637907
+        ]
+      },
+      {
+        "metric": "GY",
+        "observed_sum": 685,
+        "observed_mean_or_rate": 0.13087504776461598,
+        "calendar_expected_mean_or_rate": 0.13402236518164515,
+        "observed_minus_expected": -0.0031473174170291718,
+        "unit": "fraction_of_people",
+        "raw_unadjusted95CI": [
+          0.12170424149789835,
+          0.1400458540313336
+        ],
+        "excess_unadjusted95CI": [
+          -0.01210580047289332,
+          0.006008998855079324
+        ]
+      },
+      {
+        "metric": "SGY",
+        "observed_sum": 695,
+        "observed_mean_or_rate": 0.13278563240351549,
+        "calendar_expected_mean_or_rate": 0.1335734371441967,
+        "observed_minus_expected": -0.0007878047406812139,
+        "unit": "fraction_of_people",
+        "raw_unadjusted95CI": [
+          0.12361482613679786,
+          0.14214749713412303
+        ],
+        "excess_unadjusted95CI": [
+          -0.009923871840459385,
+          0.008541158646945149
+        ]
+      },
+      {
+        "metric": "water_DM",
+        "observed_sum": 1072,
+        "observed_mean_or_rate": 0.20481467329002676,
+        "calendar_expected_mean_or_rate": 0.19997065116597434,
+        "observed_minus_expected": 0.004844022124052411,
+        "unit": "fraction_of_people",
+        "raw_unadjusted95CI": [
+          0.19373328238440962,
+          0.21589606419564386
+        ],
+        "excess_unadjusted95CI": [
+          -0.0062165474278215605,
+          0.015927640007067156
+        ]
+      }
+    ],
+    "union": [
+      {
+        "metric": "PI_count",
+        "observed_sum": 3178,
+        "observed_mean_or_rate": 0.5427839453458583,
+        "calendar_expected_mean_or_rate": 0.5332698215201322,
+        "observed_minus_expected": 0.009514123825726029,
+        "unit": "count_per_person_of_five_positions",
+        "raw_unadjusted95CI": [
+          0.5248505550811272,
+          0.5608881298035867
+        ],
+        "excess_unadjusted95CI": [
+          -0.008453571889058159,
+          0.027583303496448823
+        ]
+      },
+      {
+        "metric": "SG_count",
+        "observed_sum": 2797,
+        "observed_mean_or_rate": 0.47771135781383434,
+        "calendar_expected_mean_or_rate": 0.4664858043228357,
+        "observed_minus_expected": 0.01122555349099863,
+        "unit": "count_per_person_of_five_positions",
+        "raw_unadjusted95CI": [
+          0.46131511528608027,
+          0.4946199829205807
+        ],
+        "excess_unadjusted95CI": [
+          -0.005255479359363845,
+          0.0281488841068899
+        ]
+      },
+      {
+        "metric": "GY",
+        "observed_sum": 762,
+        "observed_mean_or_rate": 0.13014517506404782,
+        "calendar_expected_mean_or_rate": 0.1339075426686634,
+        "observed_minus_expected": -0.0037623676046155685,
+        "unit": "fraction_of_people",
+        "raw_unadjusted95CI": [
+          0.12160546541417591,
+          0.13868488471391974
+        ],
+        "excess_unadjusted95CI": [
+          -0.012326629606921923,
+          0.00482939898764913
+        ]
+      },
+      {
+        "metric": "SGY",
+        "observed_sum": 786,
+        "observed_mean_or_rate": 0.13424423569598634,
+        "calendar_expected_mean_or_rate": 0.13402784013106112,
+        "observed_minus_expected": 0.00021639556492522583,
+        "unit": "fraction_of_people",
+        "raw_unadjusted95CI": [
+          0.125533731853117,
+          0.14295473953885568
+        ],
+        "excess_unadjusted95CI": [
+          -0.008516852997774249,
+          0.008994908072668957
+        ]
+      },
+      {
+        "metric": "water_DM",
+        "observed_sum": 1184,
+        "observed_mean_or_rate": 0.2022203245089667,
+        "calendar_expected_mean_or_rate": 0.19997676079013316,
+        "observed_minus_expected": 0.002243563718833552,
+        "unit": "fraction_of_people",
+        "raw_unadjusted95CI": [
+          0.1919726729291204,
+          0.21229718189581553
+        ],
+        "excess_unadjusted95CI": [
+          -0.00802458044736954,
+          0.012357162025441265
+        ]
+      }
+    ]
+  },
+  "sensitivity_summaries": {
+    "strict_primary": {
+      "N": {
+        "Nobel": 621,
+        "academy": 5234,
+        "union": 5855
+      },
+      "minimum_nominal_p": 0.07817,
+      "minimum_Holm18_reference_p": 1.0,
+      "Holm18_reference_rejections": []
+    },
+    "expanded": {
+      "N": {
+        "Nobel": 627,
+        "academy": 5871,
+        "union": 6498
+      },
+      "minimum_nominal_p": 0.06353,
+      "minimum_Holm18_reference_p": 1.0,
+      "Holm18_reference_rejections": []
+    },
+    "strict_broad": {
+      "N": {
+        "Nobel": 621,
+        "academy": 5234,
+        "union": 5855
+      },
+      "minimum_nominal_p": 0.04851,
+      "minimum_Holm18_reference_p": 0.87318,
+      "Holm18_reference_rejections": []
+    },
+    "strict_noJie": {
+      "N": {
+        "Nobel": 557,
+        "academy": 4699,
+        "union": 5256
+      },
+      "minimum_nominal_p": 0.05379,
+      "minimum_Holm18_reference_p": 0.96822,
+      "Holm18_reference_rejections": []
+    },
+    "strict_yearMonth": {
+      "N": {
+        "Nobel": 621,
+        "academy": 5234,
+        "union": 5855
+      },
+      "minimum_nominal_p": 0.0705,
+      "minimum_Holm18_reference_p": 1.0,
+      "Holm18_reference_rejections": []
+    },
+    "expanded_withoutLOC": {
+      "N": {
+        "Nobel": 627,
+        "academy": 5867,
+        "union": 6494
+      },
+      "minimum_nominal_p": 0.06353,
+      "minimum_Holm18_reference_p": 1.0,
+      "Holm18_reference_rejections": []
+    },
+    "strict_withoutFields": {
+      "N": {
+        "Nobel": 621,
+        "academy": 5216,
+        "union": 5837
+      },
+      "minimum_nominal_p": 0.07291,
+      "minimum_Holm18_reference_p": 1.0,
+      "Holm18_reference_rejections": []
+    }
+  },
+  "Nobel_strict_TenGod_M0": [
+    {
+      "calendar_expected_count_total": 330.9648252114679,
+      "calendar_expected_mean_count": 0.5329546299701576,
+      "calendar_expected_person_presence_probability": 0.4255568658351996,
+      "calendar_expected_position_share": 0.10659092599403153,
+      "count_total": 328,
+      "excess_mean_count": -0.004774275702846831,
+      "excess_person_presence_pp": 0.2784519027924426,
+      "excess_position_share_pp": -0.09548551405693662,
+      "inferential_p_value_added": false,
+      "label": "比肩",
+      "mean_count_per_person": 0.5281803542673108,
+      "people_at_least_one": 266,
+      "person_presence_probability": 0.428341384863124,
+      "position_share": 0.10563607085346216
+    },
+    {
+      "calendar_expected_count_total": 289.89879481997156,
+      "calendar_expected_mean_count": 0.46682575655389946,
+      "calendar_expected_person_presence_probability": 0.3830742728460274,
+      "calendar_expected_position_share": 0.0933651513107799,
+      "count_total": 302,
+      "excess_mean_count": 0.01948664280197815,
+      "excess_person_presence_pp": 0.9840380938191617,
+      "excess_position_share_pp": 0.389732856039563,
+      "inferential_p_value_added": false,
+      "label": "劫财",
+      "mean_count_per_person": 0.4863123993558776,
+      "people_at_least_one": 244,
+      "person_presence_probability": 0.392914653784219,
+      "position_share": 0.09726247987117552
+    },
+    {
+      "calendar_expected_count_total": 331.2913840856352,
+      "calendar_expected_mean_count": 0.5334804896709101,
+      "calendar_expected_person_presence_probability": 0.42584852661042955,
+      "calendar_expected_position_share": 0.10669609793418203,
+      "count_total": 320,
+      "excess_mean_count": -0.018182583068655722,
+      "excess_person_presence_pp": -1.03895894123619,
+      "excess_position_share_pp": -0.36365166137311444,
+      "inferential_p_value_added": false,
+      "label": "食神",
+      "mean_count_per_person": 0.5152979066022544,
+      "people_at_least_one": 258,
+      "person_presence_probability": 0.41545893719806765,
+      "position_share": 0.10305958132045087
+    },
+    {
+      "calendar_expected_count_total": 289.59230481323453,
+      "calendar_expected_mean_count": 0.4663322138699429,
+      "calendar_expected_person_presence_probability": 0.383206723193119,
+      "calendar_expected_position_share": 0.09326644277398857,
+      "count_total": 313,
+      "excess_mean_count": 0.03769355102538724,
+      "excess_person_presence_pp": 2.7421296130552495,
+      "excess_position_share_pp": 0.7538710205077448,
+      "inferential_p_value_added": false,
+      "label": "伤官",
+      "mean_count_per_person": 0.5040257648953301,
+      "people_at_least_one": 255,
+      "person_presence_probability": 0.4106280193236715,
+      "position_share": 0.10080515297906603
+    },
+    {
+      "calendar_expected_count_total": 331.20587618833747,
+      "calendar_expected_mean_count": 0.5333427957944242,
+      "calendar_expected_person_presence_probability": 0.4253938222062626,
+      "calendar_expected_position_share": 0.10666855915888485,
+      "count_total": 352,
+      "excess_mean_count": 0.033484901468055606,
+      "excess_person_presence_pp": 1.9050622238181825,
+      "excess_position_share_pp": 0.6696980293611121,
+      "inferential_p_value_added": false,
+      "label": "偏财",
+      "mean_count_per_person": 0.5668276972624798,
+      "people_at_least_one": 276,
+      "person_presence_probability": 0.4444444444444444,
+      "position_share": 0.11336553945249597
+    },
+    {
+      "calendar_expected_count_total": 289.8546897222846,
+      "calendar_expected_mean_count": 0.46675473385231014,
+      "calendar_expected_person_presence_probability": 0.38322915585565415,
+      "calendar_expected_position_share": 0.09335094677046203,
+      "count_total": 290,
+      "excess_mean_count": 0.0002339940059829515,
+      "excess_person_presence_pp": -0.31969497364914834,
+      "excess_position_share_pp": 0.00467988011965903,
+      "inferential_p_value_added": false,
+      "label": "正财",
+      "mean_count_per_person": 0.4669887278582931,
+      "people_at_least_one": 236,
+      "person_presence_probability": 0.38003220611916266,
+      "position_share": 0.09339774557165861
+    },
+    {
+      "calendar_expected_count_total": 331.27377049180325,
+      "calendar_expected_mean_count": 0.5334521263958184,
+      "calendar_expected_person_presence_probability": 0.425798381593693,
+      "calendar_expected_position_share": 0.10669042527916368,
+      "count_total": 333,
+      "excess_mean_count": 0.00277975766215266,
+      "excess_person_presence_pp": -0.7118832479361237,
+      "excess_position_share_pp": 0.0555951532430532,
+      "inferential_p_value_added": false,
+      "label": "七杀",
+      "mean_count_per_person": 0.5362318840579711,
+      "people_at_least_one": 260,
+      "person_presence_probability": 0.41867954911433175,
+      "position_share": 0.10724637681159421
+    },
+    {
+      "calendar_expected_count_total": 290.09516430870576,
+      "calendar_expected_mean_count": 0.46714197151160347,
+      "calendar_expected_person_presence_probability": 0.38332488944289494,
+      "calendar_expected_position_share": 0.0934283943023207,
+      "count_total": 273,
+      "excess_mean_count": -0.027528444941555152,
+      "excess_person_presence_pp": -0.9733907156260491,
+      "excess_position_share_pp": -0.550568898831103,
+      "inferential_p_value_added": false,
+      "label": "正官",
+      "mean_count_per_person": 0.4396135265700483,
+      "people_at_least_one": 232,
+      "person_presence_probability": 0.37359098228663445,
+      "position_share": 0.08792270531400967
+    },
+    {
+      "calendar_expected_count_total": 331.1692941088404,
+      "calendar_expected_mean_count": 0.5332838874538492,
+      "calendar_expected_person_presence_probability": 0.4255294186709907,
+      "calendar_expected_position_share": 0.10665677749076985,
+      "count_total": 313,
+      "excess_mean_count": -0.029258122558519117,
+      "excess_person_presence_pp": -1.3291093389187159,
+      "excess_position_share_pp": -0.5851624511703823,
+      "inferential_p_value_added": false,
+      "label": "偏印",
+      "mean_count_per_person": 0.5040257648953301,
+      "people_at_least_one": 256,
+      "person_presence_probability": 0.41223832528180354,
+      "position_share": 0.10080515297906603
+    },
+    {
+      "calendar_expected_count_total": 289.6538962497193,
+      "calendar_expected_mean_count": 0.46643139492708424,
+      "calendar_expected_person_presence_probability": 0.3829988021850209,
+      "calendar_expected_position_share": 0.09328627898541685,
+      "count_total": 281,
+      "excess_mean_count": -0.013935420691979561,
+      "excess_person_presence_pp": -1.2628431814650565,
+      "excess_position_share_pp": -0.2787084138395912,
+      "inferential_p_value_added": false,
+      "label": "正印",
+      "mean_count_per_person": 0.4524959742351047,
+      "people_at_least_one": 230,
+      "person_presence_probability": 0.37037037037037035,
+      "position_share": 0.09049919484702093
+    }
+  ],
+  "Nobel_strict_DayMaster10": [
+    {
+      "calendar_expected_people": 62.05258627142771,
+      "calendar_expected_share": 0.09992364939038278,
+      "excess_share_pp": -1.13568216931203,
+      "inferential_p_value_added": false,
+      "label": "甲",
+      "people": 55,
+      "share": 0.08856682769726248
+    },
+    {
+      "calendar_expected_people": 62.07718392095233,
+      "calendar_expected_share": 0.09996325913196832,
+      "excess_share_pp": 1.2758157937274832,
+      "inferential_p_value_added": false,
+      "label": "乙",
+      "people": 70,
+      "share": 0.11272141706924316
+    },
+    {
+      "calendar_expected_people": 62.101826484018446,
+      "calendar_expected_share": 0.10000294119809734,
+      "excess_share_pp": 0.14463341642215044,
+      "inferential_p_value_added": false,
+      "label": "丙",
+      "people": 63,
+      "share": 0.10144927536231885
+    },
+    {
+      "calendar_expected_people": 62.09089003667957,
+      "calendar_expected_share": 0.09998533017178675,
+      "excess_share_pp": -0.014636076759994806,
+      "inferential_p_value_added": false,
+      "label": "丁",
+      "people": 62,
+      "share": 0.0998389694041868
+    },
+    {
+      "calendar_expected_people": 62.110142974773794,
+      "calendar_expected_share": 0.10001633329271142,
+      "excess_share_pp": 0.14329420696074172,
+      "inferential_p_value_added": false,
+      "label": "戊",
+      "people": 63,
+      "share": 0.10144927536231885
+    },
+    {
+      "calendar_expected_people": 62.13484542256183,
+      "calendar_expected_share": 0.10005611179156494,
+      "excess_share_pp": 0.7834387403282076,
+      "inferential_p_value_added": false,
+      "label": "己",
+      "people": 67,
+      "share": 0.10789049919484701
+    },
+    {
+      "calendar_expected_people": 62.11844449434865,
+      "calendar_expected_share": 0.10002970127914436,
+      "excess_share_pp": -0.18010378330896154,
+      "inferential_p_value_added": false,
+      "label": "庚",
+      "people": 61,
+      "share": 0.09822866344605476
+    },
+    {
+      "calendar_expected_people": 62.0965341717197,
+      "calendar_expected_share": 0.09999441895607038,
+      "excess_share_pp": 0.950638619690869,
+      "inferential_p_value_added": false,
+      "label": "辛",
+      "people": 68,
+      "share": 0.10950080515297907
+    },
+    {
+      "calendar_expected_people": 62.12932854255583,
+      "calendar_expected_share": 0.10004722792682098,
+      "excess_share_pp": -0.9870094271426462,
+      "inferential_p_value_added": false,
+      "label": "壬",
+      "people": 56,
+      "share": 0.09017713365539452
+    },
+    {
+      "calendar_expected_people": 62.08821768096435,
+      "calendar_expected_share": 0.09998102686145628,
+      "excess_share_pp": -0.9803893206061753,
+      "inferential_p_value_added": false,
+      "label": "癸",
+      "people": 56,
+      "share": 0.09017713365539452
+    }
+  ],
+  "Nobel_strict_hidden_models": [
+    {
+      "calendar_expected_mean_count": 0.5332838874538495,
+      "calendar_expected_person_presence_probability": 0.42552941867099064,
+      "calendar_expected_position_share": 0.10665677749076989,
+      "count_sum_scaled72": 22536,
+      "excess_mean_count": -0.02925812255851934,
+      "excess_person_presence_pp": -1.3291093389187103,
+      "excess_position_share_pp": -0.5851624511703868,
+      "inference_role": "descriptive_only_post_academy_reveal_model_sensitivity",
+      "inferential_p_value_added": false,
+      "label": "偏印",
+      "mean_count_per_person": 0.5040257648953301,
+      "model": "M0_5",
+      "person_presence_probability": 0.41223832528180354,
+      "position_denominator": 5,
+      "position_share": 0.10080515297906603,
+      "presence_interpretation": "known_five_position_indicator_mean",
+      "presence_sum_scaled12": 3072,
+      "trait": "PI"
+    },
+    {
+      "calendar_expected_mean_count": 0.46633221386994284,
+      "calendar_expected_person_presence_probability": 0.38320672319311894,
+      "calendar_expected_position_share": 0.09326644277398857,
+      "count_sum_scaled72": 22536,
+      "excess_mean_count": 0.037693551025387295,
+      "excess_person_presence_pp": 2.7421296130552553,
+      "excess_position_share_pp": 0.7538710205077459,
+      "inference_role": "descriptive_only_post_academy_reveal_model_sensitivity",
+      "inferential_p_value_added": false,
+      "label": "伤官",
+      "mean_count_per_person": 0.5040257648953301,
+      "model": "M0_5",
+      "person_presence_probability": 0.4106280193236715,
+      "position_denominator": 5,
+      "position_share": 0.10080515297906603,
+      "presence_interpretation": "known_five_position_indicator_mean",
+      "presence_sum_scaled12": 3060,
+      "trait": "SG"
+    },
+    {
+      "calendar_expected_mean_count": 0.5222062023358657,
+      "calendar_expected_person_presence_probability": 0.36515025001991935,
+      "calendar_expected_position_share": 0.10444124046717314,
+      "count_sum_scaled72": 21312,
+      "excess_mean_count": -0.04555563872878027,
+      "excess_person_presence_pp": -1.8934469021529676,
+      "excess_position_share_pp": -0.9111127745756054,
+      "inference_role": "descriptive_only_post_academy_reveal_model_sensitivity",
+      "inferential_p_value_added": false,
+      "label": "偏印",
+      "mean_count_per_person": 0.4766505636070854,
+      "model": "M1_priority_5",
+      "person_presence_probability": 0.3462157809983897,
+      "position_denominator": 5,
+      "position_share": 0.09533011272141709,
+      "presence_interpretation": "known_five_position_indicator_mean",
+      "presence_sum_scaled12": 2580,
+      "trait": "PI"
+    },
+    {
+      "calendar_expected_mean_count": 0.47689397185779697,
+      "calendar_expected_person_presence_probability": 0.3347870204927977,
+      "calendar_expected_position_share": 0.0953787943715594,
+      "count_sum_scaled72": 23760,
+      "excess_mean_count": 0.054506994325777935,
+      "excess_person_presence_pp": 2.4311208170648357,
+      "excess_position_share_pp": 1.0901398865155587,
+      "inference_role": "descriptive_only_post_academy_reveal_model_sensitivity",
+      "inferential_p_value_added": false,
+      "label": "伤官",
+      "mean_count_per_person": 0.5314009661835749,
+      "model": "M1_priority_5",
+      "person_presence_probability": 0.35909822866344604,
+      "position_denominator": 5,
+      "position_share": 0.10628019323671498,
+      "presence_interpretation": "known_five_position_indicator_mean",
+      "presence_sum_scaled12": 2676,
+      "trait": "SG"
+    },
+    {
+      "calendar_expected_mean_count": 0.5215580177240937,
+      "calendar_expected_person_presence_probability": 0.36515025001991935,
+      "calendar_expected_position_share": 0.10431160354481875,
+      "count_sum_scaled72": 21348,
+      "excess_mean_count": -0.044102301137942335,
+      "excess_person_presence_pp": -1.8934469021529676,
+      "excess_position_share_pp": -0.8820460227588466,
+      "inference_role": "descriptive_only_post_academy_reveal_model_sensitivity",
+      "inferential_p_value_added": false,
+      "label": "偏印",
+      "mean_count_per_person": 0.4774557165861514,
+      "model": "M1_share_5",
+      "person_presence_probability": 0.3462157809983897,
+      "position_denominator": 5,
+      "position_share": 0.09549114331723027,
+      "presence_interpretation": "known_five_position_indicator_mean",
+      "presence_sum_scaled12": 2580,
+      "trait": "PI"
+    },
+    {
+      "calendar_expected_mean_count": 0.4775532823951575,
+      "calendar_expected_person_presence_probability": 0.3347870204927977,
+      "calendar_expected_position_share": 0.0955106564790315,
+      "count_sum_scaled72": 23580,
+      "excess_mean_count": 0.04982191889308729,
+      "excess_person_presence_pp": 2.4311208170648357,
+      "excess_position_share_pp": 0.9964383778617458,
+      "inference_role": "descriptive_only_post_academy_reveal_model_sensitivity",
+      "inferential_p_value_added": false,
+      "label": "伤官",
+      "mean_count_per_person": 0.5273752012882448,
+      "model": "M1_share_5",
+      "person_presence_probability": 0.35909822866344604,
+      "position_denominator": 5,
+      "position_share": 0.10547504025764895,
+      "presence_interpretation": "known_five_position_indicator_mean",
+      "presence_sum_scaled12": 2676,
+      "trait": "SG"
+    },
+    {
+      "calendar_expected_mean_count": 0.5345345837282554,
+      "calendar_expected_person_presence_probability": 0.36515025001991935,
+      "calendar_expected_position_share": 0.10690691674565107,
+      "count_sum_scaled72": 21744,
+      "excess_mean_count": -0.04822218437237774,
+      "excess_person_presence_pp": -1.8934469021529676,
+      "excess_position_share_pp": -0.9644436874475548,
+      "inference_role": "descriptive_only_post_academy_reveal_model_sensitivity",
+      "inferential_p_value_added": false,
+      "label": "偏印",
+      "mean_count_per_person": 0.4863123993558776,
+      "model": "M1_any_5",
+      "person_presence_probability": 0.3462157809983897,
+      "position_denominator": 5,
+      "position_share": 0.09726247987117552,
+      "presence_interpretation": "known_five_position_indicator_mean",
+      "presence_sum_scaled12": 2580,
+      "trait": "PI"
+    },
+    {
+      "calendar_expected_mean_count": 0.4890683622432614,
+      "calendar_expected_person_presence_probability": 0.3347870204927977,
+      "calendar_expected_position_share": 0.09781367244865227,
+      "count_sum_scaled72": 24120,
+      "excess_mean_count": 0.05038413373097378,
+      "excess_person_presence_pp": 2.4311208170648357,
+      "excess_position_share_pp": 1.0076826746194756,
+      "inference_role": "descriptive_only_post_academy_reveal_model_sensitivity",
+      "inferential_p_value_added": false,
+      "label": "伤官",
+      "mean_count_per_person": 0.5394524959742352,
+      "model": "M1_any_5",
+      "person_presence_probability": 0.35909822866344604,
+      "position_denominator": 5,
+      "position_share": 0.10789049919484703,
+      "presence_interpretation": "known_five_position_indicator_mean",
+      "presence_sum_scaled12": 2676,
+      "trait": "SG"
+    },
+    {
+      "calendar_expected_mean_count": 0.7332893680470248,
+      "calendar_expected_person_presence_probability": 0.527976247374368,
+      "calendar_expected_position_share": 0.10475562400671783,
+      "count_sum_scaled72": 31506,
+      "excess_mean_count": -0.028646319201077408,
+      "excess_person_presence_pp": -1.0128689671737856,
+      "excess_position_share_pp": -0.40923313144396295,
+      "inference_role": "descriptive_only_post_academy_reveal_model_sensitivity",
+      "inferential_p_value_added": false,
+      "label": "偏印",
+      "mean_count_per_person": 0.7046430488459474,
+      "model": "M2_main_7",
+      "person_presence_probability": 0.5178475577026301,
+      "position_denominator": 7,
+      "position_share": 0.10066329269227821,
+      "presence_interpretation": "mean_of_12_uniform_hour_specific_presence_indicators",
+      "presence_sum_scaled12": 3859,
+      "trait": "PI"
+    },
+    {
+      "calendar_expected_mean_count": 0.6663284198449386,
+      "calendar_expected_person_presence_probability": 0.488672150313545,
+      "calendar_expected_position_share": 0.09518977426356266,
+      "count_sum_scaled72": 31536,
+      "excess_mean_count": 0.03898558981689715,
+      "excess_person_presence_pp": 2.407610518833364,
+      "excess_position_share_pp": 0.556936997384245,
+      "inference_role": "descriptive_only_post_academy_reveal_model_sensitivity",
+      "inferential_p_value_added": false,
+      "label": "伤官",
+      "mean_count_per_person": 0.7053140096618358,
+      "model": "M2_main_7",
+      "person_presence_probability": 0.5127482555018786,
+      "position_denominator": 7,
+      "position_share": 0.1007591442374051,
+      "presence_interpretation": "mean_of_12_uniform_hour_specific_presence_indicators",
+      "presence_sum_scaled12": 3821,
+      "trait": "SG"
+    },
+    {
+      "calendar_expected_mean_count": 0.7214124625715467,
+      "calendar_expected_person_presence_probability": 0.43872356502782067,
+      "calendar_expected_position_share": 0.10305892322450667,
+      "count_sum_scaled72": 30258,
+      "excess_mean_count": -0.04468138366655472,
+      "excess_person_presence_pp": -1.2663446938717127,
+      "excess_position_share_pp": -0.6383054809507817,
+      "inference_role": "descriptive_only_post_academy_reveal_model_sensitivity",
+      "inferential_p_value_added": false,
+      "label": "偏印",
+      "mean_count_per_person": 0.676731078904992,
+      "model": "M3_priority_7",
+      "person_presence_probability": 0.42606011808910355,
+      "position_denominator": 7,
+      "position_share": 0.09667586841499885,
+      "presence_interpretation": "mean_of_12_uniform_hour_specific_presence_indicators",
+      "presence_sum_scaled12": 3175,
+      "trait": "PI"
+    },
+    {
+      "calendar_expected_mean_count": 0.6807746276019306,
+      "calendar_expected_person_presence_probability": 0.414481004902921,
+      "calendar_expected_position_share": 0.09725351822884723,
+      "count_sum_scaled72": 32958,
+      "excess_mean_count": 0.056342924733013056,
+      "excess_person_presence_pp": 2.016741162955349,
+      "excess_position_share_pp": 0.8048989247573294,
+      "inference_role": "descriptive_only_post_academy_reveal_model_sensitivity",
+      "inferential_p_value_added": false,
+      "label": "伤官",
+      "mean_count_per_person": 0.7371175523349437,
+      "model": "M3_priority_7",
+      "person_presence_probability": 0.4346484165324745,
+      "position_denominator": 7,
+      "position_share": 0.10530250747642053,
+      "presence_interpretation": "mean_of_12_uniform_hour_specific_presence_indicators",
+      "presence_sum_scaled12": 3239,
+      "trait": "SG"
+    },
+    {
+      "calendar_expected_mean_count": 0.7188325356137101,
+      "calendar_expected_person_presence_probability": 0.43872356502782067,
+      "calendar_expected_position_share": 0.10269036223053,
+      "count_sum_scaled72": 30194,
+      "excess_mean_count": -0.04353283978261324,
+      "excess_person_presence_pp": -1.2663446938717127,
+      "excess_position_share_pp": -0.6218977111801891,
+      "inference_role": "descriptive_only_post_academy_reveal_model_sensitivity",
+      "inferential_p_value_added": false,
+      "label": "偏印",
+      "mean_count_per_person": 0.6752996958310968,
+      "model": "M3_share_7",
+      "person_presence_probability": 0.42606011808910355,
+      "position_denominator": 7,
+      "position_share": 0.09647138511872812,
+      "presence_interpretation": "mean_of_12_uniform_hour_specific_presence_indicators",
+      "presence_sum_scaled12": 3175,
+      "trait": "PI"
+    },
+    {
+      "calendar_expected_mean_count": 0.6790636763494899,
+      "calendar_expected_person_presence_probability": 0.414481004902921,
+      "calendar_expected_position_share": 0.0970090966213557,
+      "count_sum_scaled72": 32645,
+      "excess_mean_count": 0.05105351813968528,
+      "excess_person_presence_pp": 2.016741162955349,
+      "excess_position_share_pp": 0.7293359734240755,
+      "inference_role": "descriptive_only_post_academy_reveal_model_sensitivity",
+      "inferential_p_value_added": false,
+      "label": "伤官",
+      "mean_count_per_person": 0.7301171944891752,
+      "model": "M3_share_7",
+      "person_presence_probability": 0.4346484165324745,
+      "position_denominator": 7,
+      "position_share": 0.10430245635559646,
+      "presence_interpretation": "mean_of_12_uniform_hour_specific_presence_indicators",
+      "presence_sum_scaled12": 3239,
+      "trait": "SG"
+    },
+    {
+      "calendar_expected_mean_count": 0.7634557864195161,
+      "calendar_expected_person_presence_probability": 0.43872356502782067,
+      "calendar_expected_position_share": 0.10906511234564516,
+      "count_sum_scaled72": 31908,
+      "excess_mean_count": -0.049821862640664794,
+      "excess_person_presence_pp": -1.2663446938717127,
+      "excess_position_share_pp": -0.7117408948666399,
+      "inference_role": "descriptive_only_post_academy_reveal_model_sensitivity",
+      "inferential_p_value_added": false,
+      "label": "偏印",
+      "mean_count_per_person": 0.7136339237788513,
+      "model": "M3_any_7",
+      "person_presence_probability": 0.42606011808910355,
+      "position_denominator": 7,
+      "position_share": 0.10194770339697876,
+      "presence_interpretation": "mean_of_12_uniform_hour_specific_presence_indicators",
+      "presence_sum_scaled12": 3175,
+      "trait": "PI"
+    },
+    {
+      "calendar_expected_mean_count": 0.7193878786154687,
+      "calendar_expected_person_presence_probability": 0.414481004902921,
+      "calendar_expected_position_share": 0.10276969694506696,
+      "count_sum_scaled72": 34656,
+      "excess_mean_count": 0.05570605589875566,
+      "excess_person_presence_pp": 2.016741162955349,
+      "excess_position_share_pp": 0.7958007985536523,
+      "inference_role": "descriptive_only_post_academy_reveal_model_sensitivity",
+      "inferential_p_value_added": false,
+      "label": "伤官",
+      "mean_count_per_person": 0.7750939345142244,
+      "model": "M3_any_7",
+      "person_presence_probability": 0.4346484165324745,
+      "position_denominator": 7,
+      "position_share": 0.11072770493060348,
+      "presence_interpretation": "mean_of_12_uniform_hour_specific_presence_indicators",
+      "presence_sum_scaled12": 3239,
+      "trait": "SG"
+    }
+  ],
+  "hidden_models_new_p_values": 0
+}
