@@ -1,0 +1,1153 @@
+{
+  "schema": "existing_target_daymaster_decade_readback_v1",
+  "no_new_hypothesis_tests": true,
+  "no_decade_merging": true,
+  "source_json_sha256": {
+    "CAS": "39b11c38bb34945963b0ef18e919ac0d2f55d56e6763bf685b7c295b37ad4a6d",
+    "NAS": "4524477c54e3949cf41fb401158edb23b2d237aacfd842052253a85fa40fc35e"
+  },
+  "bins": [
+    1830,
+    1840,
+    1850,
+    1860,
+    1870,
+    1880,
+    1890,
+    1900,
+    1910,
+    1920,
+    1930,
+    1940,
+    1950,
+    1960,
+    1970,
+    1980
+  ],
+  "prior_display_rule": "All and only decades with N>=20 in BOTH strict and expanded sources; all16bins retained in fullsample analyses",
+  "original_per_bin_significance_tests_performed": false,
+  "targets": {
+    "CAS_辛": {
+      "institution": "CAS",
+      "target_endpoint_components": [
+        "DM_辛"
+      ],
+      "common_adequate_decades": [
+        1890,
+        1900,
+        1910,
+        1920,
+        1930,
+        1940,
+        1950,
+        1960
+      ],
+      "sources": {
+        "strict": {
+          "people": 821,
+          "person_ids_sha256": "4f9e1bab0f1da86aaf984356e09ec3bd69d9b85b1b6e11df36cc174dd8d22e90",
+          "bins": [
+            {
+              "decade": 1830,
+              "n": 0,
+              "observed_count": 0,
+              "calendar_expected_count": 0.0,
+              "observed_share": null,
+              "calendar_expected_share": null,
+              "excess_percentage_points": null,
+              "component_observed_counts": {
+                "DM_辛": 0
+              },
+              "in_prior_common_adequate_display": false
+            },
+            {
+              "decade": 1840,
+              "n": 0,
+              "observed_count": 0,
+              "calendar_expected_count": 0.0,
+              "observed_share": null,
+              "calendar_expected_share": null,
+              "excess_percentage_points": null,
+              "component_observed_counts": {
+                "DM_辛": 0
+              },
+              "in_prior_common_adequate_display": false
+            },
+            {
+              "decade": 1850,
+              "n": 0,
+              "observed_count": 0,
+              "calendar_expected_count": 0.0,
+              "observed_share": null,
+              "calendar_expected_share": null,
+              "excess_percentage_points": null,
+              "component_observed_counts": {
+                "DM_辛": 0
+              },
+              "in_prior_common_adequate_display": false
+            },
+            {
+              "decade": 1860,
+              "n": 0,
+              "observed_count": 0,
+              "calendar_expected_count": 0.0,
+              "observed_share": null,
+              "calendar_expected_share": null,
+              "excess_percentage_points": null,
+              "component_observed_counts": {
+                "DM_辛": 0
+              },
+              "in_prior_common_adequate_display": false
+            },
+            {
+              "decade": 1870,
+              "n": 0,
+              "observed_count": 0,
+              "calendar_expected_count": 0.0,
+              "observed_share": null,
+              "calendar_expected_share": null,
+              "excess_percentage_points": null,
+              "component_observed_counts": {
+                "DM_辛": 0
+              },
+              "in_prior_common_adequate_display": false
+            },
+            {
+              "decade": 1880,
+              "n": 3,
+              "observed_count": 0,
+              "calendar_expected_count": 0.3013698630136986,
+              "observed_share": 0.0,
+              "calendar_expected_share": 0.1004566210045662,
+              "excess_percentage_points": -10.045662100456621,
+              "component_observed_counts": {
+                "DM_辛": 0
+              },
+              "in_prior_common_adequate_display": false
+            },
+            {
+              "decade": 1890,
+              "n": 25,
+              "observed_count": 5,
+              "calendar_expected_count": 2.509319559847294,
+              "observed_share": 0.2,
+              "calendar_expected_share": 0.10037278239389176,
+              "excess_percentage_points": 9.962721760610824,
+              "component_observed_counts": {
+                "DM_辛": 5
+              },
+              "in_prior_common_adequate_display": true
+            },
+            {
+              "decade": 1900,
+              "n": 67,
+              "observed_count": 10,
+              "calendar_expected_count": 6.69566584325174,
+              "observed_share": 0.14925373134328357,
+              "calendar_expected_share": 0.09993531109330955,
+              "excess_percentage_points": 4.931842024997402,
+              "component_observed_counts": {
+                "DM_辛": 10
+              },
+              "in_prior_common_adequate_display": true
+            },
+            {
+              "decade": 1910,
+              "n": 152,
+              "observed_count": 18,
+              "calendar_expected_count": 15.15964518302268,
+              "observed_share": 0.11842105263157894,
+              "calendar_expected_share": 0.09973450778304395,
+              "excess_percentage_points": 1.8686544848534996,
+              "component_observed_counts": {
+                "DM_辛": 18
+              },
+              "in_prior_common_adequate_display": true
+            },
+            {
+              "decade": 1920,
+              "n": 147,
+              "observed_count": 19,
+              "calendar_expected_count": 14.680103301145296,
+              "observed_share": 0.1292517006802721,
+              "calendar_expected_share": 0.09986464830711086,
+              "excess_percentage_points": 2.938705237316125,
+              "component_observed_counts": {
+                "DM_辛": 19
+              },
+              "in_prior_common_adequate_display": true
+            },
+            {
+              "decade": 1930,
+              "n": 247,
+              "observed_count": 32,
+              "calendar_expected_count": 24.756224268283553,
+              "observed_share": 0.12955465587044535,
+              "calendar_expected_share": 0.1002276286165326,
+              "excess_percentage_points": 2.932702725391274,
+              "component_observed_counts": {
+                "DM_辛": 32
+              },
+              "in_prior_common_adequate_display": true
+            },
+            {
+              "decade": 1940,
+              "n": 72,
+              "observed_count": 6,
+              "calendar_expected_count": 7.186121715697283,
+              "observed_share": 0.08333333333333333,
+              "calendar_expected_share": 0.09980724605135115,
+              "excess_percentage_points": -1.6473912718017816,
+              "component_observed_counts": {
+                "DM_辛": 6
+              },
+              "in_prior_common_adequate_display": true
+            },
+            {
+              "decade": 1950,
+              "n": 49,
+              "observed_count": 11,
+              "calendar_expected_count": 4.880253012950071,
+              "observed_share": 0.22448979591836735,
+              "calendar_expected_share": 0.09959700026428717,
+              "excess_percentage_points": 12.489279565408017,
+              "component_observed_counts": {
+                "DM_辛": 11
+              },
+              "in_prior_common_adequate_display": true
+            },
+            {
+              "decade": 1960,
+              "n": 53,
+              "observed_count": 7,
+              "calendar_expected_count": 5.29776929410884,
+              "observed_share": 0.1320754716981132,
+              "calendar_expected_share": 0.09995791120960076,
+              "excess_percentage_points": 3.211756048851245,
+              "component_observed_counts": {
+                "DM_辛": 7
+              },
+              "in_prior_common_adequate_display": true
+            },
+            {
+              "decade": 1970,
+              "n": 6,
+              "observed_count": 0,
+              "calendar_expected_count": 0.5997305187514036,
+              "observed_share": 0.0,
+              "calendar_expected_share": 0.09995508645856727,
+              "excess_percentage_points": -9.995508645856725,
+              "component_observed_counts": {
+                "DM_辛": 0
+              },
+              "in_prior_common_adequate_display": false
+            },
+            {
+              "decade": 1980,
+              "n": 0,
+              "observed_count": 0,
+              "calendar_expected_count": 0.0,
+              "observed_share": null,
+              "calendar_expected_share": null,
+              "excess_percentage_points": null,
+              "component_observed_counts": {
+                "DM_辛": 0
+              },
+              "in_prior_common_adequate_display": false
+            }
+          ],
+          "existing_component_linear_trends": {
+            "DM_辛": {
+              "status": "estimable",
+              "people": 821,
+              "raw_slope_pp_per_decade": -0.06245188882377994,
+              "calendar_expected_slope_pp_per_decade": -0.00035306385860739545,
+              "calendar_excess_slope_pp_per_decade": -0.06209882496517254,
+              "coefficient_design": "intercept + integer_decade_index=(floor(birthyear/10)*10-1900)/10",
+              "OLS_integer_denominator": 2023958,
+              "observed_integer_raw_numerator": -1264,
+              "exact_expected_numerator_times_LCM": -954616,
+              "observed_centered_numerator_times_LCM": -167903144,
+              "LCM": 133590,
+              "analytic_null_slope_SD_pp_per_decade": 0.604041386071902,
+              "hypothesis_test_performed": true,
+              "seed": 202611230007,
+              "generator": "PCG64",
+              "replicates": 99999,
+              "tail": "two_sided_absolute_calendar_centered_integer_contrast_inclusive",
+              "extreme_replicates_including_ties": 91932,
+              "p_nominal_two_sided": 0.91933,
+              "MC_excess_slope_mean_pp_per_decade": -0.0011247172562522333,
+              "MC_excess_slope_SD_pp_per_decade": 0.603624854185802,
+              "zero_weight_years_skipped": true,
+              "integer_arithmetic_no_squared_contrasts": true,
+              "endpoint_id": "DM_辛",
+              "family": "DM10",
+              "label": "辛",
+              "p_Holm30": 1.0,
+              "reject_Holm30_0_05": false,
+              "inference_role": "supplementary_birth_decade_trends_family30_strict"
+            }
+          },
+          "combined_linear_p_test_previously_performed": true
+        },
+        "expanded": {
+          "people": 904,
+          "person_ids_sha256": "630f8f91c2c90521b9d684fb5fcf7f7c016e5b7487418700086b089bc4e69d64",
+          "bins": [
+            {
+              "decade": 1830,
+              "n": 0,
+              "observed_count": 0,
+              "calendar_expected_count": 0.0,
+              "observed_share": null,
+              "calendar_expected_share": null,
+              "excess_percentage_points": null,
+              "component_observed_counts": {
+                "DM_辛": 0
+              },
+              "in_prior_common_adequate_display": false
+            },
+            {
+              "decade": 1840,
+              "n": 0,
+              "observed_count": 0,
+              "calendar_expected_count": 0.0,
+              "observed_share": null,
+              "calendar_expected_share": null,
+              "excess_percentage_points": null,
+              "component_observed_counts": {
+                "DM_辛": 0
+              },
+              "in_prior_common_adequate_display": false
+            },
+            {
+              "decade": 1850,
+              "n": 0,
+              "observed_count": 0,
+              "calendar_expected_count": 0.0,
+              "observed_share": null,
+              "calendar_expected_share": null,
+              "excess_percentage_points": null,
+              "component_observed_counts": {
+                "DM_辛": 0
+              },
+              "in_prior_common_adequate_display": false
+            },
+            {
+              "decade": 1860,
+              "n": 0,
+              "observed_count": 0,
+              "calendar_expected_count": 0.0,
+              "observed_share": null,
+              "calendar_expected_share": null,
+              "excess_percentage_points": null,
+              "component_observed_counts": {
+                "DM_辛": 0
+              },
+              "in_prior_common_adequate_display": false
+            },
+            {
+              "decade": 1870,
+              "n": 0,
+              "observed_count": 0,
+              "calendar_expected_count": 0.0,
+              "observed_share": null,
+              "calendar_expected_share": null,
+              "excess_percentage_points": null,
+              "component_observed_counts": {
+                "DM_辛": 0
+              },
+              "in_prior_common_adequate_display": false
+            },
+            {
+              "decade": 1880,
+              "n": 3,
+              "observed_count": 0,
+              "calendar_expected_count": 0.3013698630136986,
+              "observed_share": 0.0,
+              "calendar_expected_share": 0.1004566210045662,
+              "excess_percentage_points": -10.045662100456621,
+              "component_observed_counts": {
+                "DM_辛": 0
+              },
+              "in_prior_common_adequate_display": false
+            },
+            {
+              "decade": 1890,
+              "n": 25,
+              "observed_count": 5,
+              "calendar_expected_count": 2.509319559847294,
+              "observed_share": 0.2,
+              "calendar_expected_share": 0.10037278239389176,
+              "excess_percentage_points": 9.962721760610824,
+              "component_observed_counts": {
+                "DM_辛": 5
+              },
+              "in_prior_common_adequate_display": true
+            },
+            {
+              "decade": 1900,
+              "n": 67,
+              "observed_count": 10,
+              "calendar_expected_count": 6.69566584325174,
+              "observed_share": 0.14925373134328357,
+              "calendar_expected_share": 0.09993531109330955,
+              "excess_percentage_points": 4.931842024997402,
+              "component_observed_counts": {
+                "DM_辛": 10
+              },
+              "in_prior_common_adequate_display": true
+            },
+            {
+              "decade": 1910,
+              "n": 153,
+              "observed_count": 18,
+              "calendar_expected_count": 15.258275320008982,
+              "observed_share": 0.11764705882352941,
+              "calendar_expected_share": 0.09972728967326132,
+              "excess_percentage_points": 1.7919769150268092,
+              "component_observed_counts": {
+                "DM_辛": 18
+              },
+              "in_prior_common_adequate_display": true
+            },
+            {
+              "decade": 1920,
+              "n": 148,
+              "observed_count": 19,
+              "calendar_expected_count": 14.778733438131596,
+              "observed_share": 0.12837837837837837,
+              "calendar_expected_share": 0.09985630701440268,
+              "excess_percentage_points": 2.8522071363975705,
+              "component_observed_counts": {
+                "DM_辛": 19
+              },
+              "in_prior_common_adequate_display": true
+            },
+            {
+              "decade": 1930,
+              "n": 269,
+              "observed_count": 34,
+              "calendar_expected_count": 26.958155550565163,
+              "observed_share": 0.12639405204460966,
+              "calendar_expected_share": 0.1002161916377887,
+              "excess_percentage_points": 2.6177860406820956,
+              "component_observed_counts": {
+                "DM_辛": 34
+              },
+              "in_prior_common_adequate_display": true
+            },
+            {
+              "decade": 1940,
+              "n": 81,
+              "observed_count": 6,
+              "calendar_expected_count": 8.086683134965192,
+              "observed_share": 0.07407407407407407,
+              "calendar_expected_share": 0.09983559425882953,
+              "excess_percentage_points": -2.5761520184755455,
+              "component_observed_counts": {
+                "DM_辛": 6
+              },
+              "in_prior_common_adequate_display": true
+            },
+            {
+              "decade": 1950,
+              "n": 72,
+              "observed_count": 12,
+              "calendar_expected_count": 7.174758589714799,
+              "observed_share": 0.16666666666666666,
+              "calendar_expected_share": 0.09964942485714999,
+              "excess_percentage_points": 6.701724180951667,
+              "component_observed_counts": {
+                "DM_辛": 12
+              },
+              "in_prior_common_adequate_display": true
+            },
+            {
+              "decade": 1960,
+              "n": 74,
+              "observed_count": 8,
+              "calendar_expected_count": 7.387349352496445,
+              "observed_share": 0.10810810810810811,
+              "calendar_expected_share": 0.099829045304006,
+              "excess_percentage_points": 0.8279062804102096,
+              "component_observed_counts": {
+                "DM_辛": 8
+              },
+              "in_prior_common_adequate_display": true
+            },
+            {
+              "decade": 1970,
+              "n": 12,
+              "observed_count": 0,
+              "calendar_expected_count": 1.204933003967363,
+              "observed_share": 0.0,
+              "calendar_expected_share": 0.10041108366394691,
+              "excess_percentage_points": -10.04110836639469,
+              "component_observed_counts": {
+                "DM_辛": 0
+              },
+              "in_prior_common_adequate_display": false
+            },
+            {
+              "decade": 1980,
+              "n": 0,
+              "observed_count": 0,
+              "calendar_expected_count": 0.0,
+              "observed_share": null,
+              "calendar_expected_share": null,
+              "excess_percentage_points": null,
+              "component_observed_counts": {
+                "DM_辛": 0
+              },
+              "in_prior_common_adequate_display": false
+            }
+          ],
+          "existing_component_linear_trends": {
+            "DM_辛": {
+              "status": "estimable",
+              "people": 904,
+              "raw_slope_pp_per_decade": -0.5678379747211179,
+              "calendar_expected_slope_pp_per_decade": -0.0007393917876767085,
+              "calendar_excess_slope_pp_per_decade": -0.5670985829334412,
+              "coefficient_design": "intercept + integer_decade_index=(floor(birthyear/10)*10-1900)/10",
+              "OLS_integer_denominator": 2695135,
+              "observed_integer_raw_numerator": -15304,
+              "exact_expected_numerator_times_LCM": -2662129,
+              "observed_centered_numerator_times_LCM": -2041799231,
+              "LCM": 133590,
+              "analytic_null_slope_SD_pp_per_decade": 0.5492622696193403,
+              "hypothesis_test_performed": true,
+              "seed": 202611231007,
+              "generator": "PCG64",
+              "replicates": 99999,
+              "tail": "two_sided_absolute_calendar_centered_integer_contrast_inclusive",
+              "extreme_replicates_including_ties": 30153,
+              "p_nominal_two_sided": 0.30154,
+              "MC_excess_slope_mean_pp_per_decade": 0.0012465491911376506,
+              "MC_excess_slope_SD_pp_per_decade": 0.5479479198692342,
+              "zero_weight_years_skipped": true,
+              "integer_arithmetic_no_squared_contrasts": true,
+              "endpoint_id": "DM_辛",
+              "family": "DM10",
+              "label": "辛",
+              "p_Holm30": 1.0,
+              "reject_Holm30_0_05": false,
+              "inference_role": "expanded_source_sensitivity_Holm30_reference_not_replication"
+            }
+          },
+          "combined_linear_p_test_previously_performed": true
+        }
+      }
+    },
+    "NAS_壬癸水": {
+      "institution": "NAS",
+      "target_endpoint_components": [
+        "DM_壬",
+        "DM_癸"
+      ],
+      "common_adequate_decades": [
+        1890,
+        1900,
+        1910,
+        1920,
+        1930,
+        1940,
+        1950
+      ],
+      "sources": {
+        "strict": {
+          "people": 908,
+          "person_ids_sha256": "4276faeaffeba22128418baf8296926b12780f41898ca87648fc17e6caa417d8",
+          "bins": [
+            {
+              "decade": 1830,
+              "n": 0,
+              "observed_count": 0,
+              "calendar_expected_count": 0.0,
+              "observed_share": null,
+              "calendar_expected_share": null,
+              "excess_percentage_points": null,
+              "component_observed_counts": {
+                "DM_壬": 0,
+                "DM_癸": 0
+              },
+              "in_prior_common_adequate_display": false
+            },
+            {
+              "decade": 1840,
+              "n": 0,
+              "observed_count": 0,
+              "calendar_expected_count": 0.0,
+              "observed_share": null,
+              "calendar_expected_share": null,
+              "excess_percentage_points": null,
+              "component_observed_counts": {
+                "DM_壬": 0,
+                "DM_癸": 0
+              },
+              "in_prior_common_adequate_display": false
+            },
+            {
+              "decade": 1850,
+              "n": 1,
+              "observed_count": 0,
+              "calendar_expected_count": 0.19726027397260273,
+              "observed_share": 0.0,
+              "calendar_expected_share": 0.19726027397260273,
+              "excess_percentage_points": -19.726027397260275,
+              "component_observed_counts": {
+                "DM_壬": 0,
+                "DM_癸": 0
+              },
+              "in_prior_common_adequate_display": false
+            },
+            {
+              "decade": 1860,
+              "n": 1,
+              "observed_count": 1,
+              "calendar_expected_count": 0.20273972602739726,
+              "observed_share": 1.0,
+              "calendar_expected_share": 0.20273972602739726,
+              "excess_percentage_points": 79.72602739726027,
+              "component_observed_counts": {
+                "DM_壬": 0,
+                "DM_癸": 1
+              },
+              "in_prior_common_adequate_display": false
+            },
+            {
+              "decade": 1870,
+              "n": 7,
+              "observed_count": 1,
+              "calendar_expected_count": 1.401639344262295,
+              "observed_share": 0.14285714285714285,
+              "calendar_expected_share": 0.2002341920374707,
+              "excess_percentage_points": -5.737704918032785,
+              "component_observed_counts": {
+                "DM_壬": 0,
+                "DM_癸": 1
+              },
+              "in_prior_common_adequate_display": false
+            },
+            {
+              "decade": 1880,
+              "n": 10,
+              "observed_count": 0,
+              "calendar_expected_count": 1.9988921326446591,
+              "observed_share": 0.0,
+              "calendar_expected_share": 0.1998892132644659,
+              "excess_percentage_points": -19.988921326446594,
+              "component_observed_counts": {
+                "DM_壬": 0,
+                "DM_癸": 0
+              },
+              "in_prior_common_adequate_display": false
+            },
+            {
+              "decade": 1890,
+              "n": 34,
+              "observed_count": 5,
+              "calendar_expected_count": 6.802185792349727,
+              "observed_share": 0.14705882352941177,
+              "calendar_expected_share": 0.20006428801028608,
+              "excess_percentage_points": -5.300546448087432,
+              "component_observed_counts": {
+                "DM_壬": 2,
+                "DM_癸": 3
+              },
+              "in_prior_common_adequate_display": true
+            },
+            {
+              "decade": 1900,
+              "n": 116,
+              "observed_count": 26,
+              "calendar_expected_count": 23.181585448012576,
+              "observed_share": 0.22413793103448276,
+              "calendar_expected_share": 0.19984125386217738,
+              "excess_percentage_points": 2.4296677172305374,
+              "component_observed_counts": {
+                "DM_壬": 13,
+                "DM_癸": 13
+              },
+              "in_prior_common_adequate_display": true
+            },
+            {
+              "decade": 1910,
+              "n": 213,
+              "observed_count": 54,
+              "calendar_expected_count": 42.610637023729325,
+              "observed_share": 0.2535211267605634,
+              "calendar_expected_share": 0.20004993907854143,
+              "excess_percentage_points": 5.347118768202194,
+              "component_observed_counts": {
+                "DM_壬": 32,
+                "DM_癸": 22
+              },
+              "in_prior_common_adequate_display": true
+            },
+            {
+              "decade": 1920,
+              "n": 305,
+              "observed_count": 70,
+              "calendar_expected_count": 60.90301669286623,
+              "observed_share": 0.22950819672131148,
+              "calendar_expected_share": 0.1996820219438237,
+              "excess_percentage_points": 2.982617477748777,
+              "component_observed_counts": {
+                "DM_壬": 34,
+                "DM_癸": 36
+              },
+              "in_prior_common_adequate_display": true
+            },
+            {
+              "decade": 1930,
+              "n": 138,
+              "observed_count": 28,
+              "calendar_expected_count": 27.645317763305638,
+              "observed_share": 0.2028985507246377,
+              "calendar_expected_share": 0.2003283895891713,
+              "excess_percentage_points": 0.25701611354663934,
+              "component_observed_counts": {
+                "DM_壬": 11,
+                "DM_癸": 17
+              },
+              "in_prior_common_adequate_display": true
+            },
+            {
+              "decade": 1940,
+              "n": 51,
+              "observed_count": 13,
+              "calendar_expected_count": 10.222554083389475,
+              "observed_share": 0.2549019607843137,
+              "calendar_expected_share": 0.2004422369292054,
+              "excess_percentage_points": 5.445972385510833,
+              "component_observed_counts": {
+                "DM_壬": 10,
+                "DM_癸": 3
+              },
+              "in_prior_common_adequate_display": true
+            },
+            {
+              "decade": 1950,
+              "n": 20,
+              "observed_count": 5,
+              "calendar_expected_count": 3.998922075005614,
+              "observed_share": 0.25,
+              "calendar_expected_share": 0.1999461037502807,
+              "excess_percentage_points": 5.00538962497193,
+              "component_observed_counts": {
+                "DM_壬": 4,
+                "DM_癸": 1
+              },
+              "in_prior_common_adequate_display": true
+            },
+            {
+              "decade": 1960,
+              "n": 10,
+              "observed_count": 2,
+              "calendar_expected_count": 1.9873792948573996,
+              "observed_share": 0.2,
+              "calendar_expected_share": 0.19873792948573996,
+              "excess_percentage_points": 0.12620705142600386,
+              "component_observed_counts": {
+                "DM_壬": 1,
+                "DM_癸": 1
+              },
+              "in_prior_common_adequate_display": false
+            },
+            {
+              "decade": 1970,
+              "n": 1,
+              "observed_count": 0,
+              "calendar_expected_count": 0.19726027397260273,
+              "observed_share": 0.0,
+              "calendar_expected_share": 0.19726027397260273,
+              "excess_percentage_points": -19.726027397260275,
+              "component_observed_counts": {
+                "DM_壬": 0,
+                "DM_癸": 0
+              },
+              "in_prior_common_adequate_display": false
+            },
+            {
+              "decade": 1980,
+              "n": 1,
+              "observed_count": 1,
+              "calendar_expected_count": 0.20273972602739726,
+              "observed_share": 1.0,
+              "calendar_expected_share": 0.20273972602739726,
+              "excess_percentage_points": 79.72602739726027,
+              "component_observed_counts": {
+                "DM_壬": 0,
+                "DM_癸": 1
+              },
+              "in_prior_common_adequate_display": false
+            }
+          ],
+          "existing_component_linear_trends": {
+            "DM_壬": {
+              "status": "estimable",
+              "people": 908,
+              "raw_slope_pp_per_decade": 0.8004659748424979,
+              "calendar_expected_slope_pp_per_decade": 0.0008882784574269607,
+              "calendar_excess_slope_pp_per_decade": 0.7995776963850709,
+              "coefficient_design": "intercept + integer_decade_index=(floor(birthyear/10)*10-1900)/10",
+              "OLS_integer_denominator": 1867912,
+              "observed_integer_raw_numerator": 14952,
+              "exact_expected_numerator_times_LCM": 2216560,
+              "observed_centered_numerator_times_LCM": 1995221120,
+              "LCM": 133590,
+              "analytic_null_slope_SD_pp_per_decade": 0.661322898107557,
+              "hypothesis_test_performed": true,
+              "seed": 202611170008,
+              "generator": "PCG64",
+              "replicates": 99999,
+              "tail": "two_sided_absolute_calendar_centered_integer_contrast_inclusive",
+              "extreme_replicates_including_ties": 22421,
+              "p_nominal_two_sided": 0.22422,
+              "MC_excess_slope_mean_pp_per_decade": -0.0015606680344763869,
+              "MC_excess_slope_SD_pp_per_decade": 0.6608711541070463,
+              "zero_weight_years_skipped": true,
+              "integer_arithmetic_no_squared_contrasts": true,
+              "endpoint_id": "DM_壬",
+              "family": "DM10",
+              "label": "壬",
+              "p_Holm30": 1.0,
+              "reject_Holm30_0_05": false,
+              "inference_role": "post_reveal_exploratory_primary_strict"
+            },
+            "DM_癸": {
+              "status": "estimable",
+              "people": 908,
+              "raw_slope_pp_per_decade": -0.05032356984697352,
+              "calendar_expected_slope_pp_per_decade": 0.0012061296691926152,
+              "calendar_excess_slope_pp_per_decade": -0.051529699516166136,
+              "coefficient_design": "intercept + integer_decade_index=(floor(birthyear/10)*10-1900)/10",
+              "OLS_integer_denominator": 1867912,
+              "observed_integer_raw_numerator": -940,
+              "exact_expected_numerator_times_LCM": 3009708,
+              "observed_centered_numerator_times_LCM": -128584308,
+              "LCM": 133590,
+              "analytic_null_slope_SD_pp_per_decade": 0.6614295550637161,
+              "hypothesis_test_performed": true,
+              "seed": 202611170009,
+              "generator": "PCG64",
+              "replicates": 99999,
+              "tail": "two_sided_absolute_calendar_centered_integer_contrast_inclusive",
+              "extreme_replicates_including_ties": 93885,
+              "p_nominal_two_sided": 0.93886,
+              "MC_excess_slope_mean_pp_per_decade": 0.0007249527752269975,
+              "MC_excess_slope_SD_pp_per_decade": 0.6648251011703021,
+              "zero_weight_years_skipped": true,
+              "integer_arithmetic_no_squared_contrasts": true,
+              "endpoint_id": "DM_癸",
+              "family": "DM10",
+              "label": "癸",
+              "p_Holm30": 1.0,
+              "reject_Holm30_0_05": false,
+              "inference_role": "post_reveal_exploratory_primary_strict"
+            }
+          },
+          "combined_linear_p_test_previously_performed": false
+        },
+        "expanded": {
+          "people": 1462,
+          "person_ids_sha256": "e2d591bf063593ff91c7315f8f3f2a3b7ed1a8e5375f1d8cd6cfb60206177b36",
+          "bins": [
+            {
+              "decade": 1830,
+              "n": 0,
+              "observed_count": 0,
+              "calendar_expected_count": 0.0,
+              "observed_share": null,
+              "calendar_expected_share": null,
+              "excess_percentage_points": null,
+              "component_observed_counts": {
+                "DM_壬": 0,
+                "DM_癸": 0
+              },
+              "in_prior_common_adequate_display": false
+            },
+            {
+              "decade": 1840,
+              "n": 0,
+              "observed_count": 0,
+              "calendar_expected_count": 0.0,
+              "observed_share": null,
+              "calendar_expected_share": null,
+              "excess_percentage_points": null,
+              "component_observed_counts": {
+                "DM_壬": 0,
+                "DM_癸": 0
+              },
+              "in_prior_common_adequate_display": false
+            },
+            {
+              "decade": 1850,
+              "n": 1,
+              "observed_count": 0,
+              "calendar_expected_count": 0.19726027397260273,
+              "observed_share": 0.0,
+              "calendar_expected_share": 0.19726027397260273,
+              "excess_percentage_points": -19.726027397260275,
+              "component_observed_counts": {
+                "DM_壬": 0,
+                "DM_癸": 0
+              },
+              "in_prior_common_adequate_display": false
+            },
+            {
+              "decade": 1860,
+              "n": 1,
+              "observed_count": 1,
+              "calendar_expected_count": 0.20273972602739726,
+              "observed_share": 1.0,
+              "calendar_expected_share": 0.20273972602739726,
+              "excess_percentage_points": 79.72602739726027,
+              "component_observed_counts": {
+                "DM_壬": 0,
+                "DM_癸": 1
+              },
+              "in_prior_common_adequate_display": false
+            },
+            {
+              "decade": 1870,
+              "n": 7,
+              "observed_count": 1,
+              "calendar_expected_count": 1.401639344262295,
+              "observed_share": 0.14285714285714285,
+              "calendar_expected_share": 0.2002341920374707,
+              "excess_percentage_points": -5.737704918032785,
+              "component_observed_counts": {
+                "DM_壬": 0,
+                "DM_癸": 1
+              },
+              "in_prior_common_adequate_display": false
+            },
+            {
+              "decade": 1880,
+              "n": 10,
+              "observed_count": 0,
+              "calendar_expected_count": 1.9988921326446591,
+              "observed_share": 0.0,
+              "calendar_expected_share": 0.1998892132644659,
+              "excess_percentage_points": -19.988921326446594,
+              "component_observed_counts": {
+                "DM_壬": 0,
+                "DM_癸": 0
+              },
+              "in_prior_common_adequate_display": false
+            },
+            {
+              "decade": 1890,
+              "n": 34,
+              "observed_count": 5,
+              "calendar_expected_count": 6.802185792349727,
+              "observed_share": 0.14705882352941177,
+              "calendar_expected_share": 0.20006428801028608,
+              "excess_percentage_points": -5.300546448087432,
+              "component_observed_counts": {
+                "DM_壬": 2,
+                "DM_癸": 3
+              },
+              "in_prior_common_adequate_display": true
+            },
+            {
+              "decade": 1900,
+              "n": 118,
+              "observed_count": 26,
+              "calendar_expected_count": 23.575028070963395,
+              "observed_share": 0.22033898305084745,
+              "calendar_expected_share": 0.19978837348274064,
+              "excess_percentage_points": 2.0550609568106823,
+              "component_observed_counts": {
+                "DM_壬": 13,
+                "DM_癸": 13
+              },
+              "in_prior_common_adequate_display": true
+            },
+            {
+              "decade": 1910,
+              "n": 214,
+              "observed_count": 54,
+              "calendar_expected_count": 42.81337674975671,
+              "observed_share": 0.2523364485981308,
+              "calendar_expected_share": 0.20006250817643323,
+              "excess_percentage_points": 5.2273940421697604,
+              "component_observed_counts": {
+                "DM_壬": 32,
+                "DM_癸": 22
+              },
+              "in_prior_common_adequate_display": true
+            },
+            {
+              "decade": 1920,
+              "n": 317,
+              "observed_count": 74,
+              "calendar_expected_count": 63.295321506100755,
+              "observed_share": 0.2334384858044164,
+              "calendar_expected_share": 0.19966978393091722,
+              "excess_percentage_points": 3.376870187349919,
+              "component_observed_counts": {
+                "DM_壬": 36,
+                "DM_癸": 38
+              },
+              "in_prior_common_adequate_display": true
+            },
+            {
+              "decade": 1930,
+              "n": 232,
+              "observed_count": 43,
+              "calendar_expected_count": 46.45012351223894,
+              "observed_share": 0.1853448275862069,
+              "calendar_expected_share": 0.20021604962171957,
+              "excess_percentage_points": -1.4871222035512668,
+              "component_observed_counts": {
+                "DM_壬": 20,
+                "DM_癸": 23
+              },
+              "in_prior_common_adequate_display": true
+            },
+            {
+              "decade": 1940,
+              "n": 244,
+              "observed_count": 44,
+              "calendar_expected_count": 48.831641589939366,
+              "observed_share": 0.18032786885245902,
+              "calendar_expected_share": 0.20012967864729247,
+              "excess_percentage_points": -1.9801809794833467,
+              "component_observed_counts": {
+                "DM_壬": 23,
+                "DM_癸": 21
+              },
+              "in_prior_common_adequate_display": true
+            },
+            {
+              "decade": 1950,
+              "n": 191,
+              "observed_count": 40,
+              "calendar_expected_count": 38.166254959203535,
+              "observed_share": 0.2094240837696335,
+              "calendar_expected_share": 0.1998233243937358,
+              "excess_percentage_points": 0.9600759375897724,
+              "component_observed_counts": {
+                "DM_壬": 18,
+                "DM_癸": 22
+              },
+              "in_prior_common_adequate_display": true
+            },
+            {
+              "decade": 1960,
+              "n": 76,
+              "observed_count": 15,
+              "calendar_expected_count": 15.20092821318961,
+              "observed_share": 0.19736842105263158,
+              "calendar_expected_share": 0.20001221333144223,
+              "excess_percentage_points": -0.2643792278810649,
+              "component_observed_counts": {
+                "DM_壬": 8,
+                "DM_癸": 7
+              },
+              "in_prior_common_adequate_display": false
+            },
+            {
+              "decade": 1970,
+              "n": 16,
+              "observed_count": 4,
+              "calendar_expected_count": 3.20600344337151,
+              "observed_share": 0.25,
+              "calendar_expected_share": 0.20037521521071938,
+              "excess_percentage_points": 4.962478478928062,
+              "component_observed_counts": {
+                "DM_壬": 2,
+                "DM_癸": 2
+              },
+              "in_prior_common_adequate_display": false
+            },
+            {
+              "decade": 1980,
+              "n": 1,
+              "observed_count": 1,
+              "calendar_expected_count": 0.20273972602739726,
+              "observed_share": 1.0,
+              "calendar_expected_share": 0.20273972602739726,
+              "excess_percentage_points": 79.72602739726027,
+              "component_observed_counts": {
+                "DM_壬": 0,
+                "DM_癸": 1
+              },
+              "in_prior_common_adequate_display": false
+            }
+          ],
+          "existing_component_linear_trends": {
+            "DM_壬": {
+              "status": "estimable",
+              "people": 1462,
+              "raw_slope_pp_per_decade": -0.22612457083457121,
+              "calendar_expected_slope_pp_per_decade": 0.0013087657489935266,
+              "calendar_excess_slope_pp_per_decade": -0.22743333658356474,
+              "coefficient_design": "intercept + integer_decade_index=(floor(birthyear/10)*10-1900)/10",
+              "OLS_integer_denominator": 7670993,
+              "observed_integer_raw_numerator": -17346,
+              "exact_expected_numerator_times_LCM": 13411812,
+              "observed_centered_numerator_times_LCM": -2330663952,
+              "LCM": 133590,
+              "analytic_null_slope_SD_pp_per_decade": 0.41415638385965736,
+              "hypothesis_test_performed": true,
+              "seed": 202611171008,
+              "generator": "PCG64",
+              "replicates": 99999,
+              "tail": "two_sided_absolute_calendar_centered_integer_contrast_inclusive",
+              "extreme_replicates_including_ties": 58502,
+              "p_nominal_two_sided": 0.58503,
+              "MC_excess_slope_mean_pp_per_decade": -0.0013178385894949973,
+              "MC_excess_slope_SD_pp_per_decade": 0.4145915099243604,
+              "zero_weight_years_skipped": true,
+              "integer_arithmetic_no_squared_contrasts": true,
+              "endpoint_id": "DM_壬",
+              "family": "DM10",
+              "label": "壬",
+              "p_Holm30": 1.0,
+              "reject_Holm30_0_05": false,
+              "inference_role": "expanded_source_sensitivity_Holm30_reference_not_independent_replication"
+            },
+            "DM_癸": {
+              "status": "estimable",
+              "people": 1462,
+              "raw_slope_pp_per_decade": -0.05459527860343504,
+              "calendar_expected_slope_pp_per_decade": 0.0011913425807258723,
+              "calendar_excess_slope_pp_per_decade": -0.05578662118416092,
+              "coefficient_design": "intercept + integer_decade_index=(floor(birthyear/10)*10-1900)/10",
+              "OLS_integer_denominator": 7670993,
+              "observed_integer_raw_numerator": -4188,
+              "exact_expected_numerator_times_LCM": 12208497,
+              "observed_centered_numerator_times_LCM": -571683417,
+              "LCM": 133590,
+              "analytic_null_slope_SD_pp_per_decade": 0.41412130438083855,
+              "hypothesis_test_performed": true,
+              "seed": 202611171009,
+              "generator": "PCG64",
+              "replicates": 99999,
+              "tail": "two_sided_absolute_calendar_centered_integer_contrast_inclusive",
+              "extreme_replicates_including_ties": 89358,
+              "p_nominal_two_sided": 0.89359,
+              "MC_excess_slope_mean_pp_per_decade": 0.0007550878632261937,
+              "MC_excess_slope_SD_pp_per_decade": 0.4144328108225991,
+              "zero_weight_years_skipped": true,
+              "integer_arithmetic_no_squared_contrasts": true,
+              "endpoint_id": "DM_癸",
+              "family": "DM10",
+              "label": "癸",
+              "p_Holm30": 1.0,
+              "reject_Holm30_0_05": false,
+              "inference_role": "expanded_source_sensitivity_Holm30_reference_not_independent_replication"
+            }
+          },
+          "combined_linear_p_test_previously_performed": false
+        }
+      }
+    }
+  }
+}

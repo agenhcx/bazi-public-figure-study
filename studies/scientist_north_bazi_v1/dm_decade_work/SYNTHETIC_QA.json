@@ -1,0 +1,21 @@
+{
+  "schema": "DM_decade_conditional_synthetic_QA_v1",
+  "status": "PASS",
+  "study_inputs_loaded": false,
+  "exact_enumeration_people": 6,
+  "exact_enumeration_conditioning_K": 3,
+  "conditional_marginals_and_integer_linear_moments": true,
+  "inclusive_reflected_tails": true,
+  "conditional_sampler_exact_tail_MC_checks": {
+    "heterogeneity": {
+      "exact_p": 0.6981132075471698,
+      "MC_p": 0.6979333333333333
+    },
+    "linear": {
+      "exact_p": 0.39622641509433965,
+      "MC_p": 0.39493333333333336
+    }
+  },
+  "deterministic_K0_KN": true,
+  "fixed_test_family": 19
+}

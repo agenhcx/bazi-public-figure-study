@@ -1,0 +1,280 @@
+{
+  "schema": "targeted_DM_birth_decade_scope_v1",
+  "created_utc": "2026-11-14T14:56:36.591642+00:00",
+  "user_instruction": "日主有随年份变化的趋势么？比如中国辛金日主，美国水日主，有没有特定年代富集现象",
+  "target_order": [
+    "CAS_xin",
+    "NAS_water"
+  ],
+  "source_order": [
+    "strict",
+    "expanded"
+  ],
+  "targets": {
+    "CAS_xin": {
+      "institution": "CAS",
+      "day_stem_indices": [
+        7
+      ],
+      "local_decades": [
+        1890,
+        1900,
+        1910,
+        1920,
+        1930,
+        1940,
+        1950,
+        1960
+      ],
+      "populations": {
+        "strict": {
+          "people": 821,
+          "person_ids_sha256": "4f9e1bab0f1da86aaf984356e09ec3bd69d9b85b1b6e11df36cc174dd8d22e90",
+          "decade_N": {
+            "1830": 0,
+            "1840": 0,
+            "1850": 0,
+            "1860": 0,
+            "1870": 0,
+            "1880": 3,
+            "1890": 25,
+            "1900": 67,
+            "1910": 152,
+            "1920": 147,
+            "1930": 247,
+            "1940": 72,
+            "1950": 49,
+            "1960": 53,
+            "1970": 6,
+            "1980": 0
+          }
+        },
+        "expanded": {
+          "people": 904,
+          "person_ids_sha256": "630f8f91c2c90521b9d684fb5fcf7f7c016e5b7487418700086b089bc4e69d64",
+          "decade_N": {
+            "1830": 0,
+            "1840": 0,
+            "1850": 0,
+            "1860": 0,
+            "1870": 0,
+            "1880": 3,
+            "1890": 25,
+            "1900": 67,
+            "1910": 153,
+            "1920": 148,
+            "1930": 269,
+            "1940": 81,
+            "1950": 72,
+            "1960": 74,
+            "1970": 12,
+            "1980": 0
+          }
+        }
+      }
+    },
+    "NAS_water": {
+      "institution": "NAS",
+      "day_stem_indices": [
+        8,
+        9
+      ],
+      "local_decades": [
+        1890,
+        1900,
+        1910,
+        1920,
+        1930,
+        1940,
+        1950
+      ],
+      "populations": {
+        "strict": {
+          "people": 908,
+          "person_ids_sha256": "4276faeaffeba22128418baf8296926b12780f41898ca87648fc17e6caa417d8",
+          "decade_N": {
+            "1830": 0,
+            "1840": 0,
+            "1850": 1,
+            "1860": 1,
+            "1870": 7,
+            "1880": 10,
+            "1890": 34,
+            "1900": 116,
+            "1910": 213,
+            "1920": 305,
+            "1930": 138,
+            "1940": 51,
+            "1950": 20,
+            "1960": 10,
+            "1970": 1,
+            "1980": 1
+          }
+        },
+        "expanded": {
+          "people": 1462,
+          "person_ids_sha256": "e2d591bf063593ff91c7315f8f3f2a3b7ed1a8e5375f1d8cd6cfb60206177b36",
+          "decade_N": {
+            "1830": 0,
+            "1840": 0,
+            "1850": 1,
+            "1860": 1,
+            "1870": 7,
+            "1880": 10,
+            "1890": 34,
+            "1900": 118,
+            "1910": 214,
+            "1920": 317,
+            "1930": 232,
+            "1940": 244,
+            "1950": 191,
+            "1960": 76,
+            "1970": 16,
+            "1980": 1
+          }
+        }
+      }
+    }
+  },
+  "post_reveal_exploratory": true,
+  "new_study_test_p_computed_before_scope": false,
+  "original_aggregate_decade_counts_previously_seen": true,
+  "test_definitions": [
+    {
+      "test_id": "CAS_xin_local_1890",
+      "target": "CAS_xin",
+      "kind": "local",
+      "decade": 1890
+    },
+    {
+      "test_id": "CAS_xin_local_1900",
+      "target": "CAS_xin",
+      "kind": "local",
+      "decade": 1900
+    },
+    {
+      "test_id": "CAS_xin_local_1910",
+      "target": "CAS_xin",
+      "kind": "local",
+      "decade": 1910
+    },
+    {
+      "test_id": "CAS_xin_local_1920",
+      "target": "CAS_xin",
+      "kind": "local",
+      "decade": 1920
+    },
+    {
+      "test_id": "CAS_xin_local_1930",
+      "target": "CAS_xin",
+      "kind": "local",
+      "decade": 1930
+    },
+    {
+      "test_id": "CAS_xin_local_1940",
+      "target": "CAS_xin",
+      "kind": "local",
+      "decade": 1940
+    },
+    {
+      "test_id": "CAS_xin_local_1950",
+      "target": "CAS_xin",
+      "kind": "local",
+      "decade": 1950
+    },
+    {
+      "test_id": "CAS_xin_local_1960",
+      "target": "CAS_xin",
+      "kind": "local",
+      "decade": 1960
+    },
+    {
+      "test_id": "CAS_xin_heterogeneity",
+      "target": "CAS_xin",
+      "kind": "global_heterogeneity"
+    },
+    {
+      "test_id": "CAS_xin_linear",
+      "target": "CAS_xin",
+      "kind": "global_linear"
+    },
+    {
+      "test_id": "NAS_water_local_1890",
+      "target": "NAS_water",
+      "kind": "local",
+      "decade": 1890
+    },
+    {
+      "test_id": "NAS_water_local_1900",
+      "target": "NAS_water",
+      "kind": "local",
+      "decade": 1900
+    },
+    {
+      "test_id": "NAS_water_local_1910",
+      "target": "NAS_water",
+      "kind": "local",
+      "decade": 1910
+    },
+    {
+      "test_id": "NAS_water_local_1920",
+      "target": "NAS_water",
+      "kind": "local",
+      "decade": 1920
+    },
+    {
+      "test_id": "NAS_water_local_1930",
+      "target": "NAS_water",
+      "kind": "local",
+      "decade": 1930
+    },
+    {
+      "test_id": "NAS_water_local_1940",
+      "target": "NAS_water",
+      "kind": "local",
+      "decade": 1940
+    },
+    {
+      "test_id": "NAS_water_local_1950",
+      "target": "NAS_water",
+      "kind": "local",
+      "decade": 1950
+    },
+    {
+      "test_id": "NAS_water_heterogeneity",
+      "target": "NAS_water",
+      "kind": "global_heterogeneity"
+    },
+    {
+      "test_id": "NAS_water_linear",
+      "target": "NAS_water",
+      "kind": "global_linear"
+    }
+  ],
+  "primary_family_size": 19,
+  "strict_correction": "Holm19 across15local+2heterogeneity+2linear",
+  "expanded_role": "same19source_sensitivity_reference_not_independent_replication",
+  "null": "individual_year_calendar_Bernoulli_conditioned_on_full_cohort_observed_target_total_K; common odds multiplier cancels",
+  "local_support_rule": "bothsourcesN>=20 fixed fromprior metadata;all16binsstillreported;globalsfullsample",
+  "global_replicates": 99999,
+  "main_seed_formula": "202611240000+targetindex1000+sourceindex100",
+  "global_Q_tail": "upper inclusive with tol1e-12max(1,abs(Qobs))",
+  "global_linear_tail": "two-sided absolute conditional-centered L;exactintegerC/M/S andFractionreflectedcutoffs",
+  "local_tail": "upper conditional marginal finite PMF;float64weights",
+  "old_CAS_Xin_unconditional_linear_p_not_replaced": true,
+  "old_NAS_Ren_Gui_tests_not_test_of_their_sum": true,
+  "new_Nobel_global18_or_other_institution_tests_authorized": false,
+  "between_country_difference_test_authorized": false,
+  "input_sha256": {
+    "v4_zip": "53302ef5c4bbb946adcaceb70d7a7fd576c7f06d03c3e7080874654e1a2644f9",
+    "calendar_npz": "d150883033464ebd3afafaf764738ed3b573d0d0fb4bd252a955e403a75fcc8b",
+    "existing_readback": "f87972ca12b96416e643ac84c81bad4a33c64fc8dea9a4039947d7a296903fda"
+  },
+  "code_sha256": {
+    "main": "076334ef29af0d995923633cad0184af6d7956b3c4fbb4f00de65743e411746f",
+    "audit": "8bd4326f6d24d09af8540e52431799579f135ad76a4a02259f648729ba1212f1",
+    "plot": "9d198dd855aabae60c36ab1f14a40b08628c7cd4cb799ef84eabcd8f390b6807"
+  },
+  "no_hour_or_five_position_redefinition": true,
+  "CAS26_reopened": false
+}
