@@ -1,0 +1,59 @@
+{
+  "schema": "CAS_postrun_receipt_v1",
+  "country": "CAS",
+  "original_definition_lock_commit": "31edf73f06b82035290d7cc3297139183bfe2561",
+  "metadata_checksum_erratum_lock_commit": "12f538938e9d658501c9fc1bf698e2a843377292",
+  "metadata_only_correction_input_code_models_seeds_unchanged": true,
+  "replay_QA": "PASS",
+  "populations": {
+    "strict": {
+      "people": 821,
+      "person_ids_sha256": "4f9e1bab0f1da86aaf984356e09ec3bd69d9b85b1b6e11df36cc174dd8d22e90",
+      "levels_Holm40_rejections": 0,
+      "trends_Holm30_rejections": 0
+    },
+    "expanded": {
+      "people": 904,
+      "person_ids_sha256": "630f8f91c2c90521b9d684fb5fcf7f7c016e5b7487418700086b089bc4e69d64",
+      "levels_Holm40_rejections": 0,
+      "trends_Holm30_rejections": 0
+    }
+  },
+  "primary_country_diagnostics": {
+    "UK_NAS_DE_FR_JP_previously_complete": true,
+    "CAS_primary_members": 6,
+    "family_size": 36,
+    "CAS_Bonf36_rejections": 0,
+    "all_six_institution_reveals_now_complete": true
+  },
+  "statistical_QA": {
+    "tables": "PASS",
+    "country": "PASS",
+    "figures": "PASS"
+  },
+  "CAS26_reopened": false,
+  "other_institution_outcomes_computed_in_this_execution": false,
+  "original_global18_run": false,
+  "Nobel_group_outcomes_opened": false,
+  "artifact": {
+    "library_file_id": "libfile_fde3_f-9752a51aae0881918d63ad3ddd56c85f_e546463623c08191899c4998606cfe65",
+    "file_id": "file_00000000005881fdbd1ff2cbed14c08f",
+    "name": "scientist_CAS_reveal_v1.zip",
+    "version": 0,
+    "local_path": "/workspace/scratch/77fca0050ec4/scientist_CAS_reveal_v1.zip",
+    "xattrs_applied": true
+  },
+  "archive_CRC_and_manifest_verified": true,
+  "output_sha256": {
+    "cas_reveal_work/outputs/CAS/tables_results.json": "39b11c38bb34945963b0ef18e919ac0d2f55d56e6763bf685b7c295b37ad4a6d",
+    "cas_reveal_work/outputs/CAS/country/country_results.json": "3685afd34003206f8a689765c66a09b8eabc34bcc4801a5d7871ea039ab1d18b",
+    "cas_reveal_work/outputs/CAS/TABLES_INDEPENDENT_QA.json": "52537586ffcceabfa7e3d98173f72f302600bd467648dfb5536d5c3ae0896101",
+    "cas_reveal_work/outputs/CAS/COUNTRY_INDEPENDENT_QA.json": "98e75e8686d0ef6b9154e428a5f8d55defae71c7572e2727acc6ed9e423e7c06",
+    "cas_reveal_work/outputs/CAS/figures/FIGURE_MANIFEST.json": "f315eb5f954db28b81f146dd74c449920474b7f8d1f3ef353040cbdecd53b8c3",
+    "cas_reveal_work/outputs/CAS/figures/VISUAL_QA.json": "416900546eebef6a1fd8cb4e71aff2053e592acb2a5489c702d54b8281a0830c",
+    "cas_reveal_work/METADATA_ERRATUM.json": "47cccb510fab706f153915f3a0d460448f1ae15541d79b9aa7af48922b43eae9",
+    "cas_reveal_work/METADATA_REPLAY_QA.json": "0a317c0aff11ae4a9a7e4122dbe0dcde02e461a76be51062dad7b4a0f413232f",
+    "scientist_CAS_reveal_v1.zip": "92660d9f0b37b583a836ee8cdf1fc1c437938282f7bc98423c2791ad890a914e"
+  },
+  "report_builder_sha256": "a86419ca71f53aad9d350fa819ec26b2ebaa0385a0b4e2352e6c1f94105a5a0e"
+}
