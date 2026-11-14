@@ -1,0 +1,85 @@
+{
+  "schema": "DM_decades_independent_QA_v1",
+  "status": "PASS",
+  "groups": [
+    {
+      "target": "CAS_xin",
+      "source": "strict",
+      "people": 821,
+      "target_people": 108,
+      "all16bin_counts_calendarE_conditional_moments_and_local_tails_checked": true,
+      "exact_linear_expectation_and_tail_cutoffs_checked": true,
+      "independent_person_level_MC_crosschecks": [
+        {
+          "statistic": "heterogeneity",
+          "primary_p": 0.55952,
+          "independent_QA_p": 0.5567628824745017,
+          "replicates": 15000,
+          "tolerance": 0.021869456399976964
+        },
+        {
+          "statistic": "linear",
+          "primary_p": 0.92952,
+          "independent_QA_p": 0.9301379908006133,
+          "replicates": 15000,
+          "tolerance": 0.011333029253205722
+        }
+      ]
+    },
+    {
+      "target": "CAS_xin",
+      "source": "expanded",
+      "people": 904,
+      "target_people": 112,
+      "all16bin_counts_calendarE_conditional_moments_and_local_tails_checked": true,
+      "exact_linear_expectation_and_tail_cutoffs_checked": true,
+      "independent_person_level_MC_crosschecks": []
+    },
+    {
+      "target": "NAS_water",
+      "source": "strict",
+      "people": 908,
+      "target_people": 206,
+      "all16bin_counts_calendarE_conditional_moments_and_local_tails_checked": true,
+      "exact_linear_expectation_and_tail_cutoffs_checked": true,
+      "independent_person_level_MC_crosschecks": [
+        {
+          "statistic": "heterogeneity",
+          "primary_p": 0.46428,
+          "independent_QA_p": 0.46810212652489835,
+          "replicates": 15000,
+          "tolerance": 0.021968844907391528
+        },
+        {
+          "statistic": "linear",
+          "primary_p": 0.42953,
+          "independent_QA_p": 0.4266382241183921,
+          "replicates": 15000,
+          "tolerance": 0.021802364393803512
+        }
+      ]
+    },
+    {
+      "target": "NAS_water",
+      "source": "expanded",
+      "people": 1462,
+      "target_people": 308,
+      "all16bin_counts_calendarE_conditional_moments_and_local_tails_checked": true,
+      "exact_linear_expectation_and_tail_cutoffs_checked": true,
+      "independent_person_level_MC_crosschecks": []
+    }
+  ],
+  "conditional_marginal_method": "year_grouped_binary_polynomial_powers_balanced_convolution_rebuild_others",
+  "independent_sampler": "person_level_conditional_Bernoulli_suffix",
+  "strict_MC_QA_replicates": 15000,
+  "strict_MC_QA_seed_base": 202611250000,
+  "fixed_Holm19_each_source_checked": true,
+  "old_tests_not_replaced": true,
+  "hashes": {
+    "results": "496bdd677f5fd06e544d3c0b3ed366e6de10c4a559118c9cc95ff09cc15631e1",
+    "auditor": "8bd4326f6d24d09af8540e52431799579f135ad76a4a02259f648729ba1212f1",
+    "V4": "53302ef5c4bbb946adcaceb70d7a7fd576c7f06d03c3e7080874654e1a2644f9",
+    "calendar_pool": "d150883033464ebd3afafaf764738ed3b573d0d0fb4bd252a955e403a75fcc8b",
+    "execution_receipt": "7a92566e9fceafa6f33d85abcd819c18d8e40f53b2409f6828c7a7e4ce8d3031"
+  }
+}

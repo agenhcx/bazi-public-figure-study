@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "input_results_sha256": "496bdd677f5fd06e544d3c0b3ed366e6de10c4a559118c9cc95ff09cc15631e1",
+  "plot_code_sha256": "2c7ff92109154637fa50b44ed198a5054c14d53a9007da518530b061e8dbd2d3",
+  "original_locked_plot_sha256": "9d198dd855aabae60c36ab1f14a40b08628c7cd4cb799ef84eabcd8f390b6807",
+  "reviewed_image": "dm_decade_work/figures_layout_v2/DM_targeted_birth_decades.png",
+  "reviewed_image_sha256": "d4ff5714a4a4918e585c538a2c66640603a33d2e778cc6ad716e6d25b881b5ad",
+  "pixel_dimensions": [
+    3040,
+    2280
+  ],
+  "method": "Actual generated PNG viewed in tool; visually reviewed all four panels after final render.",
+  "checks": {
+    "four_panels_correct_targets_and_sources": true,
+    "chinese_text_readable": true,
+    "adjacent_tick_labels_do_not_overlap": true,
+    "decade_n_and_target_counts_on_separate_lines": true,
+    "bar_percentage_labels_readable_with_white_backing": true,
+    "observed_bars_and_two_expectation_lines_distinct": true,
+    "both_sources_share_y_scale_per_target": true,
+    "cohort_and_displayed_counts_present": true,
+    "legend_and_footer_not_clipped": true,
+    "all_preselected_bins_shown": true,
+    "no_significance_colour_or_selected_peak_windows": true,
+    "original_and_revision_manifest_panels_identical": true,
+    "prelocked_plot_code_unchanged": true
+  },
+  "revision_scope": "Display only: taller canvas, spacing, three-line count labels, label background. Original statistical JSON, data extraction, plotted values, bins, and p-values unchanged."
+}
