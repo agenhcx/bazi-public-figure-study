@@ -1,0 +1,322 @@
+{
+  "schema": "NAS_elements_conditional_scope_v1",
+  "country": "NAS",
+  "created_utc": "2026-11-14T00:24:30.903739+00:00",
+  "user_instruction": "统计一下总体五行个数，金木水火土，是不是水会更富集，因为水主智，同样计算本气和藏干两种情况。还有偏财，食神，七杀，偏印似乎偏高，检测一下是不是食神制杀？杀生财？就是之前使用的条件概率",
+  "status": "post_NAS_reveal_exploratory",
+  "population": {
+    "strict": 908,
+    "expanded": 1462,
+    "scope": "Northern Hemisphere NAS excluding official Nobel"
+  },
+  "five_positions": "YG,MG,YB_representative,MB_representative,DB_representative;DayStem reference only;nohour",
+  "models": {
+    "M0": "M0_5_mainqi",
+    "M1": "M1_5_priority"
+  },
+  "element_order": [
+    "金",
+    "木",
+    "水",
+    "火",
+    "土"
+  ],
+  "focus_gods": [
+    "偏财",
+    "食神",
+    "七杀",
+    "偏印"
+  ],
+  "endpoint_count": 42,
+  "endpoint_definitions": [
+    {
+      "id": "M0_element_金",
+      "model": "M0",
+      "kind": "element_count",
+      "category": "金"
+    },
+    {
+      "id": "M0_element_木",
+      "model": "M0",
+      "kind": "element_count",
+      "category": "木"
+    },
+    {
+      "id": "M0_element_水",
+      "model": "M0",
+      "kind": "element_count",
+      "category": "水"
+    },
+    {
+      "id": "M0_element_火",
+      "model": "M0",
+      "kind": "element_count",
+      "category": "火"
+    },
+    {
+      "id": "M0_element_土",
+      "model": "M0",
+      "kind": "element_count",
+      "category": "土"
+    },
+    {
+      "id": "M1_element_金",
+      "model": "M1",
+      "kind": "element_count",
+      "category": "金"
+    },
+    {
+      "id": "M1_element_木",
+      "model": "M1",
+      "kind": "element_count",
+      "category": "木"
+    },
+    {
+      "id": "M1_element_水",
+      "model": "M1",
+      "kind": "element_count",
+      "category": "水"
+    },
+    {
+      "id": "M1_element_火",
+      "model": "M1",
+      "kind": "element_count",
+      "category": "火"
+    },
+    {
+      "id": "M1_element_土",
+      "model": "M1",
+      "kind": "element_count",
+      "category": "土"
+    },
+    {
+      "id": "M0_god_偏财",
+      "model": "M0",
+      "kind": "god_count",
+      "category": "偏财"
+    },
+    {
+      "id": "M0_god_食神",
+      "model": "M0",
+      "kind": "god_count",
+      "category": "食神"
+    },
+    {
+      "id": "M0_god_七杀",
+      "model": "M0",
+      "kind": "god_count",
+      "category": "七杀"
+    },
+    {
+      "id": "M0_god_偏印",
+      "model": "M0",
+      "kind": "god_count",
+      "category": "偏印"
+    },
+    {
+      "id": "M1_god_偏财",
+      "model": "M1",
+      "kind": "god_count",
+      "category": "偏财"
+    },
+    {
+      "id": "M1_god_食神",
+      "model": "M1",
+      "kind": "god_count",
+      "category": "食神"
+    },
+    {
+      "id": "M1_god_七杀",
+      "model": "M1",
+      "kind": "god_count",
+      "category": "七杀"
+    },
+    {
+      "id": "M1_god_偏印",
+      "model": "M1",
+      "kind": "god_count",
+      "category": "偏印"
+    },
+    {
+      "id": "M0_conditional_食神_given_偏财",
+      "model": "M0",
+      "kind": "conditional_presence",
+      "anchor": "偏财",
+      "target": "食神"
+    },
+    {
+      "id": "M0_conditional_七杀_given_偏财",
+      "model": "M0",
+      "kind": "conditional_presence",
+      "anchor": "偏财",
+      "target": "七杀"
+    },
+    {
+      "id": "M0_conditional_偏印_given_偏财",
+      "model": "M0",
+      "kind": "conditional_presence",
+      "anchor": "偏财",
+      "target": "偏印"
+    },
+    {
+      "id": "M0_conditional_偏财_given_食神",
+      "model": "M0",
+      "kind": "conditional_presence",
+      "anchor": "食神",
+      "target": "偏财"
+    },
+    {
+      "id": "M0_conditional_七杀_given_食神",
+      "model": "M0",
+      "kind": "conditional_presence",
+      "anchor": "食神",
+      "target": "七杀"
+    },
+    {
+      "id": "M0_conditional_偏印_given_食神",
+      "model": "M0",
+      "kind": "conditional_presence",
+      "anchor": "食神",
+      "target": "偏印"
+    },
+    {
+      "id": "M0_conditional_偏财_given_七杀",
+      "model": "M0",
+      "kind": "conditional_presence",
+      "anchor": "七杀",
+      "target": "偏财"
+    },
+    {
+      "id": "M0_conditional_食神_given_七杀",
+      "model": "M0",
+      "kind": "conditional_presence",
+      "anchor": "七杀",
+      "target": "食神"
+    },
+    {
+      "id": "M0_conditional_偏印_given_七杀",
+      "model": "M0",
+      "kind": "conditional_presence",
+      "anchor": "七杀",
+      "target": "偏印"
+    },
+    {
+      "id": "M0_conditional_偏财_given_偏印",
+      "model": "M0",
+      "kind": "conditional_presence",
+      "anchor": "偏印",
+      "target": "偏财"
+    },
+    {
+      "id": "M0_conditional_食神_given_偏印",
+      "model": "M0",
+      "kind": "conditional_presence",
+      "anchor": "偏印",
+      "target": "食神"
+    },
+    {
+      "id": "M0_conditional_七杀_given_偏印",
+      "model": "M0",
+      "kind": "conditional_presence",
+      "anchor": "偏印",
+      "target": "七杀"
+    },
+    {
+      "id": "M1_conditional_食神_given_偏财",
+      "model": "M1",
+      "kind": "conditional_presence",
+      "anchor": "偏财",
+      "target": "食神"
+    },
+    {
+      "id": "M1_conditional_七杀_given_偏财",
+      "model": "M1",
+      "kind": "conditional_presence",
+      "anchor": "偏财",
+      "target": "七杀"
+    },
+    {
+      "id": "M1_conditional_偏印_given_偏财",
+      "model": "M1",
+      "kind": "conditional_presence",
+      "anchor": "偏财",
+      "target": "偏印"
+    },
+    {
+      "id": "M1_conditional_偏财_given_食神",
+      "model": "M1",
+      "kind": "conditional_presence",
+      "anchor": "食神",
+      "target": "偏财"
+    },
+    {
+      "id": "M1_conditional_七杀_given_食神",
+      "model": "M1",
+      "kind": "conditional_presence",
+      "anchor": "食神",
+      "target": "七杀"
+    },
+    {
+      "id": "M1_conditional_偏印_given_食神",
+      "model": "M1",
+      "kind": "conditional_presence",
+      "anchor": "食神",
+      "target": "偏印"
+    },
+    {
+      "id": "M1_conditional_偏财_given_七杀",
+      "model": "M1",
+      "kind": "conditional_presence",
+      "anchor": "七杀",
+      "target": "偏财"
+    },
+    {
+      "id": "M1_conditional_食神_given_七杀",
+      "model": "M1",
+      "kind": "conditional_presence",
+      "anchor": "七杀",
+      "target": "食神"
+    },
+    {
+      "id": "M1_conditional_偏印_given_七杀",
+      "model": "M1",
+      "kind": "conditional_presence",
+      "anchor": "七杀",
+      "target": "偏印"
+    },
+    {
+      "id": "M1_conditional_偏财_given_偏印",
+      "model": "M1",
+      "kind": "conditional_presence",
+      "anchor": "偏印",
+      "target": "偏财"
+    },
+    {
+      "id": "M1_conditional_食神_given_偏印",
+      "model": "M1",
+      "kind": "conditional_presence",
+      "anchor": "偏印",
+      "target": "食神"
+    },
+    {
+      "id": "M1_conditional_七杀_given_偏印",
+      "model": "M1",
+      "kind": "conditional_presence",
+      "anchor": "偏印",
+      "target": "七杀"
+    }
+  ],
+  "inference": "two-sided exact distribution of whole-person sum; absolute calendar-centered inclusive tails; rational expected value cutoffs; float64 PMFs",
+  "multiplicity": "one Holm42 strict exploratory family; same42 expanded Holm reference not independent validation",
+  "conditional_null": "observed anchor-positive subgroup fixed; same Gregorian birthyear uniform dates conditional on same model anchor presence",
+  "original18_country36_decade30_unchanged": true,
+  "no_other_country_or_Nobel_subgroup_outcomes_opened": true,
+  "new_element_and_conditional_outcomes_computed_before_scope": false,
+  "code_sha256": "d0a9c1a73853c976e8183598b2a46775261301a90bf11e70c3ba0b9ca0948b73",
+  "input_sha256": {
+    "v4_zip": "53302ef5c4bbb946adcaceb70d7a7fd576c7f06d03c3e7080874654e1a2644f9",
+    "calendar_npz": "d150883033464ebd3afafaf764738ed3b573d0d0fb4bd252a955e403a75fcc8b",
+    "prior_tables": "2a92dd9b4f15c719c7448e0bb1bcc1a3a718324c823bc3dee7ddc18da637afcc"
+  },
+  "prior_descriptive_encoder_sha256": "4b3ea67141c2363b4fb760ce365063545a4717542860caddf82c501d312ddc1d"
+}
