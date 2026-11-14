@@ -1,0 +1,122 @@
+{
+  "schema": "DE_FR_JP_postrun_receipt_v1",
+  "pre_reveal_lock_commit": "1c82928c43467f6083d08d1cb031b749a1301ad7",
+  "allowed_institutions": [
+    "DE_Leopoldina",
+    "France",
+    "Japan"
+  ],
+  "institutions": {
+    "DE_Leopoldina": {
+      "people": 564,
+      "person_ids_sha256": "30be1d82ec63ce5d4957599a3ff4dde1073b7fb6e82d277b6f0434f11085a8d6",
+      "sources_identical": true,
+      "country_Bonf36_rejections": 0,
+      "levels_Holm40_rejections": 0,
+      "trends_Holm30_rejections": 0,
+      "table_QA": "PASS",
+      "country_QA": "PASS",
+      "visual_QA": "PASS",
+      "preplanned_cases": {
+        "strict_primary": 564,
+        "expanded": 564,
+        "strict_broad": 564,
+        "strict_noJie": 495,
+        "strict_yearMonth": 564,
+        "expanded_withoutLOC": 564,
+        "strict_withoutFields": 562
+      }
+    },
+    "France": {
+      "people": 469,
+      "person_ids_sha256": "c79149b9a1984b2019393b02927ecbacda94eaa87af9e25be46ee779f0ddb3e6",
+      "sources_identical": true,
+      "country_Bonf36_rejections": 0,
+      "levels_Holm40_rejections": 0,
+      "trends_Holm30_rejections": 0,
+      "table_QA": "PASS",
+      "country_QA": "PASS",
+      "visual_QA": "PASS",
+      "preplanned_cases": {
+        "strict_primary": 469,
+        "expanded": 469,
+        "strict_broad": 469,
+        "strict_noJie": 417,
+        "strict_yearMonth": 469,
+        "expanded_withoutLOC": 469,
+        "strict_withoutFields": 461
+      }
+    },
+    "Japan": {
+      "people": 211,
+      "person_ids_sha256": "8d11d98ac6c4d94516275f85539881fb7252d9f0858c456fb52f3304a7f500b5",
+      "sources_identical": true,
+      "country_Bonf36_rejections": 0,
+      "levels_Holm40_rejections": 0,
+      "trends_Holm30_rejections": 0,
+      "table_QA": "PASS",
+      "country_QA": "PASS",
+      "visual_QA": "PASS",
+      "preplanned_cases": {
+        "strict_primary": 211,
+        "expanded": 211,
+        "strict_broad": 211,
+        "strict_noJie": 187,
+        "strict_yearMonth": 211,
+        "expanded_withoutLOC": 211,
+        "strict_withoutFields": 208
+      }
+    }
+  },
+  "fixed_batch_adjustment": {
+    "Holm120_rejections": 0,
+    "Holm90_rejections": 0,
+    "independent_QA": "PASS",
+    "no_pooled_trait_observations": true
+  },
+  "source_data_and_calendar_hashes_unchanged": true,
+  "original18_and_country36_unchanged": true,
+  "original_global18_run": false,
+  "China_and_Nobel_group_outcomes_opened": false,
+  "new_reveal_state": [
+    "NAS",
+    "UK_Royal_Society",
+    "DE_Leopoldina",
+    "France",
+    "Japan"
+  ],
+  "still_unopened_institution": "CAS",
+  "artifact": {
+    "library_file_id": "libfile_fde3_f-47528f6d09cc8191b26867a9da4ff955_e546463623c08191899c4998606cfe65",
+    "file_id": "file_00000000f71481fd9e5e59728cde49fb",
+    "name": "scientist_DE_FR_JP_reveal_v1.zip",
+    "version": 0,
+    "local_path": "/workspace/scratch/77fca0050ec4/scientist_DE_FR_JP_reveal_v1.zip",
+    "xattrs_applied": true
+  },
+  "archive_CRC_and_manifest_verified": true,
+  "output_sha256": {
+    "remaining_reveal_work/outputs/DE_Leopoldina/tables_results.json": "9b501094c80fb9de392408114c450b0c0d02c4a5164c25b4be904c54daa9a137",
+    "remaining_reveal_work/outputs/DE_Leopoldina/country/country_results.json": "64d032b3cc1212f8b743c6b81114357bc429f41393adc3968d9607769c699709",
+    "remaining_reveal_work/outputs/DE_Leopoldina/TABLES_INDEPENDENT_QA.json": "060a4bf0e21b8847e220ceb919c9fcca1d9100884cf6f9a8e32e09b04aa42bcb",
+    "remaining_reveal_work/outputs/DE_Leopoldina/COUNTRY_INDEPENDENT_QA.json": "6382de2570016bc6f223fba84b51aad6978b2d577a1f4455681cf3685232e2cf",
+    "remaining_reveal_work/outputs/DE_Leopoldina/figures/FIGURE_MANIFEST.json": "5d9f5f0d14a7d3f0c068467615c06463b056eb922773973d5824b1b04e5d1644",
+    "remaining_reveal_work/outputs/DE_Leopoldina/figures/VISUAL_QA.json": "9e9c7bfa93453770a4b91741144482a8e4307ba7970fa3a71070f1ca3b8fc0a4",
+    "remaining_reveal_work/outputs/France/tables_results.json": "e3f2dbabc3e2cb3d5d398b3545d06f1a619a194df1abd0e33b48c8caab256110",
+    "remaining_reveal_work/outputs/France/country/country_results.json": "d067996d7612c2f93c8ebf7c8456b72e5c4b70ca72ee2195921d0a7488ebeec0",
+    "remaining_reveal_work/outputs/France/TABLES_INDEPENDENT_QA.json": "6d8ae08d999bba659a37984438894e7aac327608ffbf1dc85113630ce195338b",
+    "remaining_reveal_work/outputs/France/COUNTRY_INDEPENDENT_QA.json": "90edc32895651f3a1dc5919071af5f39510875f7f441e8a2886047addab11e3c",
+    "remaining_reveal_work/outputs/France/figures/FIGURE_MANIFEST.json": "eb2711a69ef1343c02732f27fe2ecec603c3777224b27e6fd78035070b7e161e",
+    "remaining_reveal_work/outputs/France/figures/VISUAL_QA.json": "70dc25bd2b0386c33866d22b646d5938be79f38f75d4d6f53f2e2337fa9d38b3",
+    "remaining_reveal_work/outputs/Japan/tables_results.json": "96f578b0ec99d3a9e0a03da57fca7149885d8766b6b6398a49aabf1fbaef7bbf",
+    "remaining_reveal_work/outputs/Japan/country/country_results.json": "1e5af1b92d6d229802335b84b65c39b4301ec0d010baf563916328e0c9c956dd",
+    "remaining_reveal_work/outputs/Japan/TABLES_INDEPENDENT_QA.json": "befc267d1955ecb16fcb61c7e9ae8645b29975a921d93b9933b589a13aaad1ff",
+    "remaining_reveal_work/outputs/Japan/COUNTRY_INDEPENDENT_QA.json": "8db7b3feacee7d90ebeceae6c11f6d928a455667e1bec5f61f6705fcb6b9eaf8",
+    "remaining_reveal_work/outputs/Japan/figures/FIGURE_MANIFEST.json": "6b62ce275f976d348c97ed8fcf3859f6635ac5133898ab26b0e3a9f9c3559a77",
+    "remaining_reveal_work/outputs/Japan/figures/VISUAL_QA.json": "47d26c9bdbf9f86640b7744f8ab3fd7521f09d9649b13fe29a1dfb5dd1dc4aa3",
+    "remaining_reveal_work/BATCH_CORRECTION.json": "f51037beeb71e048759b4a44dadc3871f080eeff4d032db94d453b299de1b967",
+    "remaining_reveal_work/BATCH_CORRECTION_QA.json": "735f4768f3410d9f11e9ba4ba82a37babbc0cb108470107864ca248ce54a9a3e",
+    "scientist_DE_FR_JP_reveal_v1.zip": "8f585fac13208033cfbf7a1a2d28b540aab9d5b1f96c5527150ad2bc9cec849e"
+  },
+  "report_builder_sha256": "b26320baeda0dd3910f83e3e56dafe42c962f870010843ba73f0b854b7653836"
+}
