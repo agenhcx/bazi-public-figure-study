@@ -1,0 +1,41 @@
+{
+  "schema": "CAS_country_adapter_synthetic_QA_v1",
+  "status": "PASS",
+  "study_inputs_loaded": false,
+  "original_statistical_functions_AST_identical": [
+    "load_pool",
+    "observed_arrays",
+    "CalendarModel",
+    "mc_tests",
+    "bootstrap_intervals",
+    "descriptive",
+    "run_case",
+    "json_safe"
+  ],
+  "original_engine_sha256": "c24b25271c3ca8a3e3a870d2476f7d2c2596f457a1232ef5b1bd85f71c9e42fe",
+  "adapter_sha256": "85bc5f9186b59b7399880fb139260d32562a9108c980a0c65430be03ed924165",
+  "allowed_institutions": [
+    "CAS"
+  ],
+  "country_indexes": [
+    5
+  ],
+  "original_MC_replicates": 99999,
+  "institution_MC_seeds": {
+    "CAS": [
+      2026111800,
+      2026111801,
+      2026111802,
+      2026111803,
+      2026111804,
+      2026111805
+    ]
+  },
+  "synthetic_MC_replicates_only": 9999,
+  "original_bootstrap_replicates": 10000,
+  "separate_source_DOB_selection_preserved": true,
+  "carrier_conversion_and_fields_LOC_synthetic": true,
+  "Nobel_fixture_excluded_without_subgroup_trait_aggregate": true,
+  "deterministic_tie_inclusive_MC": true,
+  "Bonferroni36_preserved": true
+}

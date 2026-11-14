@@ -1,0 +1,447 @@
+{
+  "schema": "CAS_pre_reveal_scope_v1",
+  "created_utc": "2026-11-14T01:24:28.104556+00:00",
+  "user_instruction": "好吧，是不是只剩下中国的了，开中国的吧",
+  "allowed_institutions": [
+    "CAS"
+  ],
+  "prior_five_institutions_disclosed": true,
+  "CAS_new_aggregate_outcomes_seen_before_scope": false,
+  "populations": {
+    "CAS": {
+      "strict": {
+        "people": 821,
+        "person_ids_sha256": "4f9e1bab0f1da86aaf984356e09ec3bd69d9b85b1b6e11df36cc174dd8d22e90",
+        "inclusive_people_count_metadata_only": 821,
+        "Fields_overlap": 0,
+        "withoutLOC_people": 821,
+        "decade_N": {
+          "1830": 0,
+          "1840": 0,
+          "1850": 0,
+          "1860": 0,
+          "1870": 0,
+          "1880": 3,
+          "1890": 25,
+          "1900": 67,
+          "1910": 152,
+          "1920": 147,
+          "1930": 247,
+          "1940": 72,
+          "1950": 49,
+          "1960": 53,
+          "1970": 6,
+          "1980": 0
+        },
+        "birthyear_min": 1885,
+        "birthyear_max": 1976
+      },
+      "expanded": {
+        "people": 904,
+        "person_ids_sha256": "630f8f91c2c90521b9d684fb5fcf7f7c016e5b7487418700086b089bc4e69d64",
+        "inclusive_people_count_metadata_only": 904,
+        "Fields_overlap": 0,
+        "withoutLOC_people": 904,
+        "decade_N": {
+          "1830": 0,
+          "1840": 0,
+          "1850": 0,
+          "1860": 0,
+          "1870": 0,
+          "1880": 3,
+          "1890": 25,
+          "1900": 67,
+          "1910": 153,
+          "1920": 148,
+          "1930": 269,
+          "1940": 81,
+          "1950": 72,
+          "1960": 74,
+          "1970": 12,
+          "1980": 0
+        },
+        "birthyear_min": 1885,
+        "birthyear_max": 1977
+      },
+      "sources_identical": false,
+      "common_person_DOBs_identical": true
+    }
+  },
+  "common_adequate_decades": {
+    "CAS": [
+      1890,
+      1900,
+      1910,
+      1920,
+      1930,
+      1940,
+      1950,
+      1960
+    ]
+  },
+  "common_adequate_people": {
+    "strict": 812,
+    "expanded": 889
+  },
+  "CAS26": {
+    "decision": "parked_outside_main_database",
+    "records": 26,
+    "reopened": false,
+    "native_dates_modified": false
+  },
+  "input_sha256": {
+    "v4_zip": "53302ef5c4bbb946adcaceb70d7a7fd576c7f06d03c3e7080874654e1a2644f9",
+    "calendar_npz": "d150883033464ebd3afaf764738ed3b573d0d0fb4bd252a955e403a75fcc8b"
+  },
+  "code_sha256": {
+    "tables": "be4d5c6de43da6fdf725723be187287d1e94e317920906757c68d4fcc980b6d2",
+    "country": "85bc5f9186b59b7399880fb139260d32562a9108c980a0c65430be03ed924165",
+    "tables_audit": "49f75f5ab516676a3663915f3462af4f57173c7676e6268caafd6d19b5c17cfa",
+    "country_audit": "b071da3ad56e5b77a02161155cc5e85f7bb0c63554e86d1f1779fd2ff51ffa0d",
+    "plot": "12632ca77bd5aaef2ad9a5b17d5294d8df3786400f0a666ebafb1281150adaa7"
+  },
+  "endpoint_definitions": [
+    {
+      "id": "DM_甲",
+      "family": "DM10",
+      "label": "甲",
+      "position_denominator": 1,
+      "display_unit": "person_share"
+    },
+    {
+      "id": "DM_乙",
+      "family": "DM10",
+      "label": "乙",
+      "position_denominator": 1,
+      "display_unit": "person_share"
+    },
+    {
+      "id": "DM_丙",
+      "family": "DM10",
+      "label": "丙",
+      "position_denominator": 1,
+      "display_unit": "person_share"
+    },
+    {
+      "id": "DM_丁",
+      "family": "DM10",
+      "label": "丁",
+      "position_denominator": 1,
+      "display_unit": "person_share"
+    },
+    {
+      "id": "DM_戊",
+      "family": "DM10",
+      "label": "戊",
+      "position_denominator": 1,
+      "display_unit": "person_share"
+    },
+    {
+      "id": "DM_己",
+      "family": "DM10",
+      "label": "己",
+      "position_denominator": 1,
+      "display_unit": "person_share"
+    },
+    {
+      "id": "DM_庚",
+      "family": "DM10",
+      "label": "庚",
+      "position_denominator": 1,
+      "display_unit": "person_share"
+    },
+    {
+      "id": "DM_辛",
+      "family": "DM10",
+      "label": "辛",
+      "position_denominator": 1,
+      "display_unit": "person_share"
+    },
+    {
+      "id": "DM_壬",
+      "family": "DM10",
+      "label": "壬",
+      "position_denominator": 1,
+      "display_unit": "person_share"
+    },
+    {
+      "id": "DM_癸",
+      "family": "DM10",
+      "label": "癸",
+      "position_denominator": 1,
+      "display_unit": "person_share"
+    },
+    {
+      "id": "M0_比肩",
+      "family": "M0",
+      "label": "比肩",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_劫财",
+      "family": "M0",
+      "label": "劫财",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_食神",
+      "family": "M0",
+      "label": "食神",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_伤官",
+      "family": "M0",
+      "label": "伤官",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_偏财",
+      "family": "M0",
+      "label": "偏财",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_正财",
+      "family": "M0",
+      "label": "正财",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_七杀",
+      "family": "M0",
+      "label": "七杀",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_正官",
+      "family": "M0",
+      "label": "正官",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_偏印",
+      "family": "M0",
+      "label": "偏印",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_正印",
+      "family": "M0",
+      "label": "正印",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_比肩",
+      "family": "M1",
+      "label": "比肩",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_劫财",
+      "family": "M1",
+      "label": "劫财",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_食神",
+      "family": "M1",
+      "label": "食神",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_伤官",
+      "family": "M1",
+      "label": "伤官",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_偏财",
+      "family": "M1",
+      "label": "偏财",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_正财",
+      "family": "M1",
+      "label": "正财",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_七杀",
+      "family": "M1",
+      "label": "七杀",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_正官",
+      "family": "M1",
+      "label": "正官",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_偏印",
+      "family": "M1",
+      "label": "偏印",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_正印",
+      "family": "M1",
+      "label": "正印",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_element_金",
+      "family": "M0_elements",
+      "label": "金",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_element_木",
+      "family": "M0_elements",
+      "label": "木",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_element_水",
+      "family": "M0_elements",
+      "label": "水",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_element_火",
+      "family": "M0_elements",
+      "label": "火",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_element_土",
+      "family": "M0_elements",
+      "label": "土",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_element_金",
+      "family": "M1_elements",
+      "label": "金",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_element_木",
+      "family": "M1_elements",
+      "label": "木",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_element_水",
+      "family": "M1_elements",
+      "label": "水",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_element_火",
+      "family": "M1_elements",
+      "label": "火",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_element_土",
+      "family": "M1_elements",
+      "label": "土",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    }
+  ],
+  "strict_supplementary_levels": {
+    "tests": 40,
+    "correction": "Holm40",
+    "tail": "two-sided absolute calendar-centered inclusive finitepersonsum",
+    "arithmetic": "float64PMFconvolution,rationalexactEandtailcuts"
+  },
+  "strict_decade_trends": {
+    "tests": 30,
+    "correction": "Holm30",
+    "replicates": 99999,
+    "seed_base": 202611230000,
+    "source_seed_offset": 1000,
+    "integer_centering": "LCM365*366;inclusive absolute contrasts no squares"
+  },
+  "expanded_inference_role": "source_sensitivity_reference;not independent validation",
+  "five_positions": "YG,MG,YB,MB,DB representative;DayStem reference only;nohour",
+  "models": {
+    "M0": "mainqi",
+    "M1": "priorityhidden exposedinYGorMG elsemain;oneperbranch"
+  },
+  "decade_bins": [
+    1830,
+    1840,
+    1850,
+    1860,
+    1870,
+    1880,
+    1890,
+    1900,
+    1910,
+    1920,
+    1930,
+    1940,
+    1950,
+    1960,
+    1970,
+    1980
+  ],
+  "small_bin_policy": "all bins in complete tables/fullsample inference;plotbothsourceN>=20",
+  "element_decade_inference": "descriptive_only",
+  "country36": {
+    "metrics": [
+      "PI_count",
+      "SG_count",
+      "GY_narrow",
+      "SGY_narrow",
+      "water_DM",
+      "DM_index"
+    ],
+    "country_index": 5,
+    "seed_base": 2026111800,
+    "replicates": 99999,
+    "bootstrap": 10000,
+    "family_size": 36,
+    "correction": "Bonferroni36 unchanged",
+    "original7cases_retained": true
+  },
+  "Nobel_or_original_global18_run_authorized": false,
+  "other_institution_outcome_aggregation_authorized": false,
+  "original18_and_country36_unchanged": true,
+  "original_assumptions_commit": "6d02e0e4f22da59d171888d75a5163bb1ee410d8",
+  "original_country_protocol_commit": "327cc1382828b2159a55db9c3a20231c1546345a"
+}
