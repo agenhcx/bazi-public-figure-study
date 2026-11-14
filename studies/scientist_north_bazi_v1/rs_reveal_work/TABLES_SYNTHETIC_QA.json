@@ -1,0 +1,51 @@
+{
+  "schema": "RS_tables_synthetic_QA_v1",
+  "status": "PASS",
+  "study_inputs_loaded": false,
+  "count_kernels": {
+    "status": "PASS",
+    "study_data_loaded": false,
+    "exact_fraction_tail_boundaries": true,
+    "zero_or_negative_cutoff": true,
+    "Holm": true,
+    "encoder_synthetic": {
+      "status": "PASS",
+      "study_inputs_loaded": false,
+      "full_TenGod_bijection": true,
+      "priority_fallback_and_visible_reference_character": true,
+      "five_position_totals": true
+    }
+  },
+  "decade_kernels": {
+    "schema": "NAS_decade_pure_synthetic_QA_v1",
+    "status": "PASS",
+    "study_inputs_loaded": false,
+    "outside_window_synthetic_years": [
+      2000,
+      2020
+    ],
+    "exact_integer_calendar_centering": true,
+    "exact_absolute_tail_inclusive_ties_p1": true,
+    "int64_absolute_not_square": true,
+    "examples": [
+      {
+        "p1": "1/2",
+        "p2": "1/2",
+        "exact_two_sided_p": 0.125,
+        "MC_two_sided_p": 0.12464,
+        "tolerance": 0.005249151511661896
+      },
+      {
+        "p1": "1/3",
+        "p2": "2/3",
+        "exact_two_sided_p": 0.30864197530864196,
+        "MC_two_sided_p": 0.30868,
+        "tolerance": 0.007323838920644452
+      }
+    ],
+    "Holm_monotonicity_example": true,
+    "empty_bin_counts_zero_shares_undefined": true
+  },
+  "fixed_level_count": 40,
+  "fixed_trend_count": 30
+}

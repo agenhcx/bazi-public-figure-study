@@ -1,0 +1,616 @@
+{
+  "schema": "UK_Royal_Society_reveal_scope_v1",
+  "country": "UK_Royal_Society",
+  "created_utc": "2026-11-14T00:42:17.707408+00:00",
+  "user_instruction": "好吧，统计一下英国的，做同样统计，十神，十天干，五行数量，年代富集",
+  "new_UK_aggregate_outcomes_seen_before_scope": false,
+  "US_results_previously_disclosed": true,
+  "UK_only_reveal_authorized": true,
+  "country_six_diagnostics_authorized": true,
+  "original_assumptions_lock_commit": "6d02e0e4f22da59d171888d75a5163bb1ee410d8",
+  "original_country_protocol_lock_commit": "327cc1382828b2159a55db9c3a20231c1546345a",
+  "original18_and_country36_unchanged": true,
+  "population": {
+    "strict": 2293,
+    "expanded": 2293,
+    "sources_identical": true,
+    "person_ids_sha256": "15d3eadfe82ca2de2b8b0fd0430083edd7cd450c5d7086d33985c0943fbdede4",
+    "inclusive_count_metadata_only": 2371,
+    "strict_withoutFields": 2288,
+    "north_DOB_window": [
+      1835,
+      1985
+    ],
+    "institution_label_not_nationality": true,
+    "shared_NAS_strict_person_ID_count": 8
+  },
+  "five_positions": "YG,MG,YB,MB,DB representative;DayStem reference only;nohour",
+  "models": {
+    "M0": "branch_mainqi",
+    "M1": "one_representative_hidden_stem_priority_exposed_in_YG_MG_else_main"
+  },
+  "endpoint_definitions": [
+    {
+      "id": "DM_甲",
+      "family": "DM10",
+      "label": "甲",
+      "position_denominator": 1,
+      "display_unit": "person_share"
+    },
+    {
+      "id": "DM_乙",
+      "family": "DM10",
+      "label": "乙",
+      "position_denominator": 1,
+      "display_unit": "person_share"
+    },
+    {
+      "id": "DM_丙",
+      "family": "DM10",
+      "label": "丙",
+      "position_denominator": 1,
+      "display_unit": "person_share"
+    },
+    {
+      "id": "DM_丁",
+      "family": "DM10",
+      "label": "丁",
+      "position_denominator": 1,
+      "display_unit": "person_share"
+    },
+    {
+      "id": "DM_戊",
+      "family": "DM10",
+      "label": "戊",
+      "position_denominator": 1,
+      "display_unit": "person_share"
+    },
+    {
+      "id": "DM_己",
+      "family": "DM10",
+      "label": "己",
+      "position_denominator": 1,
+      "display_unit": "person_share"
+    },
+    {
+      "id": "DM_庚",
+      "family": "DM10",
+      "label": "庚",
+      "position_denominator": 1,
+      "display_unit": "person_share"
+    },
+    {
+      "id": "DM_辛",
+      "family": "DM10",
+      "label": "辛",
+      "position_denominator": 1,
+      "display_unit": "person_share"
+    },
+    {
+      "id": "DM_壬",
+      "family": "DM10",
+      "label": "壬",
+      "position_denominator": 1,
+      "display_unit": "person_share"
+    },
+    {
+      "id": "DM_癸",
+      "family": "DM10",
+      "label": "癸",
+      "position_denominator": 1,
+      "display_unit": "person_share"
+    },
+    {
+      "id": "M0_比肩",
+      "family": "M0",
+      "label": "比肩",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_劫财",
+      "family": "M0",
+      "label": "劫财",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_食神",
+      "family": "M0",
+      "label": "食神",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_伤官",
+      "family": "M0",
+      "label": "伤官",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_偏财",
+      "family": "M0",
+      "label": "偏财",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_正财",
+      "family": "M0",
+      "label": "正财",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_七杀",
+      "family": "M0",
+      "label": "七杀",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_正官",
+      "family": "M0",
+      "label": "正官",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_偏印",
+      "family": "M0",
+      "label": "偏印",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_正印",
+      "family": "M0",
+      "label": "正印",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_比肩",
+      "family": "M1",
+      "label": "比肩",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_劫财",
+      "family": "M1",
+      "label": "劫财",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_食神",
+      "family": "M1",
+      "label": "食神",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_伤官",
+      "family": "M1",
+      "label": "伤官",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_偏财",
+      "family": "M1",
+      "label": "偏财",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_正财",
+      "family": "M1",
+      "label": "正财",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_七杀",
+      "family": "M1",
+      "label": "七杀",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_正官",
+      "family": "M1",
+      "label": "正官",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_偏印",
+      "family": "M1",
+      "label": "偏印",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_正印",
+      "family": "M1",
+      "label": "正印",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_element_金",
+      "family": "M0_elements",
+      "label": "金",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_element_木",
+      "family": "M0_elements",
+      "label": "木",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_element_水",
+      "family": "M0_elements",
+      "label": "水",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_element_火",
+      "family": "M0_elements",
+      "label": "火",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_element_土",
+      "family": "M0_elements",
+      "label": "土",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_element_金",
+      "family": "M1_elements",
+      "label": "金",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_element_木",
+      "family": "M1_elements",
+      "label": "木",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_element_水",
+      "family": "M1_elements",
+      "label": "水",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_element_火",
+      "family": "M1_elements",
+      "label": "火",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_element_土",
+      "family": "M1_elements",
+      "label": "土",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    }
+  ],
+  "supplementary_level_family": {
+    "size": 40,
+    "tail": "two_sided_inclusive_absolute_calendar_centered_count",
+    "probabilities": "deterministic_personPMF_convolution_float64;rational_exact_expected_and_tailcuts",
+    "correction": "Holm40;strict only;expanded identical reused"
+  },
+  "trend_endpoint_definitions": [
+    {
+      "id": "DM_甲",
+      "family": "DM10",
+      "label": "甲",
+      "position_denominator": 1,
+      "display_unit": "person_share"
+    },
+    {
+      "id": "DM_乙",
+      "family": "DM10",
+      "label": "乙",
+      "position_denominator": 1,
+      "display_unit": "person_share"
+    },
+    {
+      "id": "DM_丙",
+      "family": "DM10",
+      "label": "丙",
+      "position_denominator": 1,
+      "display_unit": "person_share"
+    },
+    {
+      "id": "DM_丁",
+      "family": "DM10",
+      "label": "丁",
+      "position_denominator": 1,
+      "display_unit": "person_share"
+    },
+    {
+      "id": "DM_戊",
+      "family": "DM10",
+      "label": "戊",
+      "position_denominator": 1,
+      "display_unit": "person_share"
+    },
+    {
+      "id": "DM_己",
+      "family": "DM10",
+      "label": "己",
+      "position_denominator": 1,
+      "display_unit": "person_share"
+    },
+    {
+      "id": "DM_庚",
+      "family": "DM10",
+      "label": "庚",
+      "position_denominator": 1,
+      "display_unit": "person_share"
+    },
+    {
+      "id": "DM_辛",
+      "family": "DM10",
+      "label": "辛",
+      "position_denominator": 1,
+      "display_unit": "person_share"
+    },
+    {
+      "id": "DM_壬",
+      "family": "DM10",
+      "label": "壬",
+      "position_denominator": 1,
+      "display_unit": "person_share"
+    },
+    {
+      "id": "DM_癸",
+      "family": "DM10",
+      "label": "癸",
+      "position_denominator": 1,
+      "display_unit": "person_share"
+    },
+    {
+      "id": "M0_比肩",
+      "family": "M0",
+      "label": "比肩",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_劫财",
+      "family": "M0",
+      "label": "劫财",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_食神",
+      "family": "M0",
+      "label": "食神",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_伤官",
+      "family": "M0",
+      "label": "伤官",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_偏财",
+      "family": "M0",
+      "label": "偏财",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_正财",
+      "family": "M0",
+      "label": "正财",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_七杀",
+      "family": "M0",
+      "label": "七杀",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_正官",
+      "family": "M0",
+      "label": "正官",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_偏印",
+      "family": "M0",
+      "label": "偏印",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M0_正印",
+      "family": "M0",
+      "label": "正印",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_比肩",
+      "family": "M1",
+      "label": "比肩",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_劫财",
+      "family": "M1",
+      "label": "劫财",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_食神",
+      "family": "M1",
+      "label": "食神",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_伤官",
+      "family": "M1",
+      "label": "伤官",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_偏财",
+      "family": "M1",
+      "label": "偏财",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_正财",
+      "family": "M1",
+      "label": "正财",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_七杀",
+      "family": "M1",
+      "label": "七杀",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_正官",
+      "family": "M1",
+      "label": "正官",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_偏印",
+      "family": "M1",
+      "label": "偏印",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    },
+    {
+      "id": "M1_正印",
+      "family": "M1",
+      "label": "正印",
+      "position_denominator": 5,
+      "display_unit": "five_position_share"
+    }
+  ],
+  "supplementary_trend_family": {
+    "size": 30,
+    "correction": "Holm30",
+    "replicates": 99999,
+    "seed_base": 202611180000,
+    "integer_centering": "LCM365*366;absolute_int64_contrasts_not_squared"
+  },
+  "element_decades": "descriptive_only_no_added_tests",
+  "year_month_stem_tables": "descriptive_only_no_added_tests",
+  "decade_bins": [
+    1830,
+    1840,
+    1850,
+    1860,
+    1870,
+    1880,
+    1890,
+    1900,
+    1910,
+    1920,
+    1930,
+    1940,
+    1950,
+    1960,
+    1970,
+    1980
+  ],
+  "common_adequate_decades": [
+    1830,
+    1840,
+    1850,
+    1860,
+    1870,
+    1880,
+    1890,
+    1900,
+    1910,
+    1920,
+    1930,
+    1940,
+    1950
+  ],
+  "common_adequate_N": 2272,
+  "small_decades": {
+    "1960": 14,
+    "1970": 7,
+    "1980": 0
+  },
+  "no_per_decade_significance_tests": true,
+  "country_six": {
+    "metrics": [
+      "PI_count",
+      "SG_count",
+      "GY_narrow",
+      "SGY_narrow",
+      "water_DM",
+      "DM_index"
+    ],
+    "country_index": 1,
+    "replicates": 99999,
+    "seed_base": 2026111400,
+    "correction": "Bonferroni36;no_change",
+    "all_7_preplanned_sensitivity_cases_retained": true
+  },
+  "code_sha256": "14f2e0cbe7cbae9b4d35039eac4713cb9ff418c1acaa6249efcb9acbd414e108",
+  "input_sha256": {
+    "v4_zip": "53302ef5c4bbb946adcaceb70d7a7fd576c7f06d03c3e7080874654e1a2644f9",
+    "calendar_npz": "d150883033464ebd3afafaf764738ed3b573d0d0fb4bd252a955e403a75fcc8b"
+  },
+  "dependency_sha256": {
+    "encoder": {
+      "path": "nas_full_tables_work/scripts/build_full_nas_tables.py",
+      "sha256": "4b3ea67141c2363b4fb760ce365063545a4717542860caddf82c501d312ddc1d"
+    },
+    "decades": {
+      "path": "nas_decade_work/scripts/analyze_decades.py",
+      "sha256": "60805842463d7578704b42e1ad95a3943e77086902c08fd8d5d28709bf39817f"
+    },
+    "counts": {
+      "path": "nas_elements_conditional_work/scripts/analyze_elements_conditional.py",
+      "sha256": "d0a9c1a73853c976e8183598b2a46775261301a90bf11e70c3ba0b9ca0948b73"
+    }
+  },
+  "no_other_unopened_country_or_Nobel_subgroup_outcomes_authorized": true
+}
