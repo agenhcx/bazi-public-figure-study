@@ -1,0 +1,260 @@
+{
+  "schema": "scientist_north_assumptions_and_preanalysis_lock_v1",
+  "created_utc": "2026-11-13T12:33:16.483956+00:00",
+  "status": "prospective_lock_to_be_committed_before_first_V4_feature_transform",
+  "authorization": "User: 好的，先排八字吧，还是在git上先lock assumption",
+  "current_execution_scope": "date_only_three_pillars_and_fixed_person_features; no hypothesis frequencies, effects or tests",
+  "inputs": {
+    "V4_zip": "scientist_north_data_freeze_v4.zip",
+    "V4_zip_sha256": "53302ef5c4bbb946adcaceb70d7a7fd576c7f06d03c3e7080874654e1a2644f9",
+    "V4_library_file_id": "libfile_fde3_f-65d4013511a88191a897c4a22f0c7726_e546463623c08191899c4998606cfe65",
+    "hypotheses_draft_v2_zip_sha256": "94c63a1e9b9a8aed6588a8976d59aa88d86f914260252e1afcf7418cab016a7f",
+    "hypotheses_library_file_id": "libfile_fde3_f-e7acbc9d40bc8191828924fb0f838c4c_e546463623c08191899c4998606cfe65",
+    "hypotheses_library_version": 1,
+    "native_data_and_identity_objects_mutated": false
+  },
+  "scope": {
+    "Gregorian_birth_window_inclusive": [
+      "1835-01-01",
+      "1985-12-31"
+    ],
+    "admission_award_cutoff_inclusive": "2025-12-31",
+    "hemisphere": "north",
+    "hemisphere_only_sufficient": true,
+    "professors": "paused_outside_primary_scope",
+    "Fields": "parallel",
+    "include_2026": false,
+    "V4_holds_and_CAS26": "preserved_excluded_no_reopening"
+  },
+  "populations": {
+    "primary_source": "strict_S1_S2",
+    "sensitivity_source": "expanded_S1_S2_S3",
+    "chart_unique_expanded": 6537,
+    "chart_unique_strict": 5894,
+    "Nobel_full_roster": {
+      "strict": 621,
+      "expanded": 627
+    },
+    "nonNobel_academy": {
+      "strict": 5234,
+      "expanded": 5871
+    },
+    "H3_unique_union": {
+      "strict": 5855,
+      "expanded": 6498
+    },
+    "Nobel_legacy_labels_kept_separate": true,
+    "Fields_only_not_in_H3": 39,
+    "four_LOC_in_expanded_primary": true
+  },
+  "calendar": {
+    "package": "lunar_python",
+    "package_version": "1.4.8",
+    "module_tree_sha256": "3cd230b38675c1d9c4eb2f1d0ae1b5bcc1fd1f787d1c53dd3678034ada6c16b7",
+    "reference_time": "12:00:00_fixed_UTC+08:00",
+    "reference_is_inferred_birth_time": false,
+    "historical_timezone_or_DST_conversion": false,
+    "true_solar_time_conversion": false,
+    "year_rollover": "exact_LiChun",
+    "month_rollover": "12_exact_Jie",
+    "EightChar_sect": 2,
+    "day_rollover": "00:00_civil",
+    "input_Gregorian_validation": "datetime.date.fromisoformat + datetime.datetime before Solar constructor",
+    "day_check": "Gregorian JDN integer formula; stem=(JDN+49)%10; branch=(JDN+49)%12",
+    "hour_pillar": null,
+    "boundary_flag": "abs(DOB_civil_date - exact_Jie_reference_civil_date)<=1",
+    "boundary_sensitivity": "exclude_flagged_observed_people_and_exclude_same_flagged_candidate_null_dates",
+    "crosscheck_package": "sxtwl==2.0.7",
+    "crosscheck_independence": "shared_ShouXing_ancestry_cross_implementation_only"
+  },
+  "features": {
+    "positions": [
+      "year_stem",
+      "year_branch_main_qi",
+      "month_stem",
+      "month_branch_main_qi",
+      "day_branch_main_qi"
+    ],
+    "branch_main_qi": {
+      "子": "癸",
+      "丑": "己",
+      "寅": "甲",
+      "卯": "乙",
+      "辰": "戊",
+      "巳": "丙",
+      "午": "丁",
+      "未": "己",
+      "申": "庚",
+      "酉": "辛",
+      "戌": "戊",
+      "亥": "壬"
+    },
+    "DayMaster_reference_excluded_from_counts": true,
+    "count_range": [
+      0,
+      5
+    ],
+    "unit": "unique_person",
+    "guan_yin_narrow": "count(正官)>0 and count(正印)>0",
+    "guan_yin_broad": "count(正官)+count(七杀)>0 and count(正印)+count(偏印)>0",
+    "shangguan_yin_narrow": "count(伤官)>0 and count(正印)>0",
+    "shangguan_yin_broad": "count(伤官)>0 and count(正印)+count(偏印)>0",
+    "primary_encoding": "narrow",
+    "sensitivity_encoding": "broad",
+    "water_DayMaster": [
+      "壬",
+      "癸"
+    ],
+    "not_a_full_classical_pattern_or_interaction_claim": true
+  },
+  "hypotheses": {
+    "H1a_PI": "Nobel偏印 count > own year-conditioned calendar expectation",
+    "H1a_SG": "Nobel伤官 count > own year-conditioned calendar expectation",
+    "H1b_PI": "nonNobel academy偏印 count > own calendar expectation",
+    "H1b_SG": "nonNobel academy伤官 count > own calendar expectation",
+    "H1c_PI": "Nobel偏印 count > nonNobel academy; direct standardized contrast and positive whole-group raw contrast",
+    "H1c_SG": "Nobel伤官 count > nonNobel academy; direct standardized contrast and positive whole-group raw contrast",
+    "H2a": "nonNobel academy narrow官印 rate > own calendar expectation",
+    "H2b": "nonNobel academy narrow伤官配印 rate > own calendar expectation",
+    "H2c": "nonNobel academy narrow官印 > Nobel; direct standardized and whole-group raw directions agree",
+    "H2d": "nonNobel academy narrow官印 increases with birthyear; raw and calendar-excess slopes >0 plus Holm-significant excess test",
+    "H3a": "Nobel plus nonNobel academy unique union 10-stem DayMaster distribution differs from year-calendar expectation",
+    "H3b": "same union water DayMaster rate > year-calendar expectation",
+    "H4": "six nonNobel academy institution omnibus tests, one per predefined endpoint; no directional country rankings"
+  },
+  "analysis_methods": {
+    "reference_protocol": "PROTOCOL_V1.md",
+    "confirmatory_ID_order": [
+      "H1a_PI",
+      "H1a_SG",
+      "H1b_PI",
+      "H1b_SG",
+      "H1c_PI",
+      "H1c_SG",
+      "H2a",
+      "H2b",
+      "H2c",
+      "H2d",
+      "H3a",
+      "H3b",
+      "H4_PI",
+      "H4_SG",
+      "H4_GY",
+      "H4_SGY",
+      "H4_DM10",
+      "H4_WATER"
+    ],
+    "family_size": 18,
+    "multiple_testing": "Holm FWER 0.05 across strict/narrow primary tests",
+    "directional_tests": "one-sided greater; no doubling",
+    "omnibus_tests": "H3a and H4 distance statistics use upper-tail Monte Carlo; no multiply-by-two",
+    "calendar_null": {
+      "conditions": [
+        "each_person_Gregorian_birth_year"
+      ],
+      "date_probabilities": "uniform_valid_days_within_year",
+      "leap_days": "exact_Gregorian",
+      "expectations": "enumerate_every_eligible_date",
+      "replicates": 99999,
+      "person_draws": "independent; one shared draw per person across memberships",
+      "same_month_sensitivity": "uniform_valid_days_in_same_Gregorian_year_and_month; changes_estimand"
+    },
+    "Monte_Carlo": {
+      "generator": "NumPy PCG64",
+      "seed": "20261113 + zero_based_confirmatory_ID_index",
+      "p": "(1 + count(null_stat >= observed_stat))/(99999+1)",
+      "ties_included": true,
+      "adaptive_stopping": false
+    },
+    "direct_contrasts": {
+      "stratum": "floor(birthyear/10)*10",
+      "support": "decades_with_both_Nobel_and_nonNobel_academy",
+      "weights": "pooled_person_counts_within_common_support_normalized_to_sum_one",
+      "statistic": "weighted_sum_of_within_decade_mean_differences_in_predicted_direction",
+      "permutation": "person_Nobel_Academy_labels_within_decade_preserving_group_sizes",
+      "raw_direction_gate": true
+    },
+    "trend": {
+      "population": "nonNobel_academy",
+      "axis": "birthyear",
+      "design": [
+        "intercept",
+        "(birthyear-1900)/10",
+        "fractional_membership_first_five_columns_in_institution_order"
+      ],
+      "estimation": "OLS linear probability; numpy.linalg.lstsq rcond=1e-12",
+      "calendar_excess": "observed_binary - exact_year_calendar_expected_binary",
+      "support_gate": [
+        "raw_slope>0",
+        "excess_slope>0",
+        "one_sided_Holm_significant_excess"
+      ]
+    },
+    "H4": {
+      "population": "nonNobel_academy",
+      "institution_order": [
+        "NAS",
+        "UK_Royal_Society",
+        "DE_Leopoldina",
+        "France",
+        "Japan",
+        "CAS"
+      ],
+      "institution_country_semantics": "institution country only; not nationality or birthplace",
+      "membership_weights": "1/k per eligible institution; multiple memberships preserved as a vector",
+      "endpoints": [
+        "偏印_count",
+        "伤官_count",
+        "guan_yin_narrow",
+        "shangguan_yin_narrow",
+        "DayMaster_10stem",
+        "water_DayMaster"
+      ],
+      "features_centered": "subtract each person exact_birthyear_calendar_expectation; onehot minus probabilities for DM10",
+      "permutation_unit": "entire_person_feature_vector",
+      "permutation_strata": "birth_decade * effective_source_support_class",
+      "source_class_rule": [
+        "any_accepted_S1 -> S1",
+        "else any_accepted_S2 -> S2",
+        "else confirmed_strict_union -> S1_or_S2_union",
+        "else expanded_only -> S3_only"
+      ],
+      "membership_vector_fixed": true,
+      "statistic": "sum_j effective_weight_j*(institution_centered_mean_j - effective_weight_pooled_mean)^2; sum over ten stem categories for DM10",
+      "small_strata": "no adaptive pooling; unchanged if not permutable",
+      "zero_variation": "not_estimable_or_nonrejection_no_fallback_test"
+    },
+    "intervals": {
+      "replicates": 10000,
+      "seed": 2026111301,
+      "unit": "person complete membership vector",
+      "method": "percentile 0.025,0.975; linear interpolation; descriptive unadjusted95percent",
+      "direct_contrast_resampling": "within fixed group*decade; fixed common-support weights",
+      "others": "within relevant population",
+      "omnibus_endpoint_interval": "none; category descriptive estimates only"
+    },
+    "sensitivities": [
+      "expanded_source_group",
+      "broad_cooccurrence_encoding",
+      "symmetric_Jie_plus_minus_one_exclusion",
+      "year_and_month_conditioned_calendar_null",
+      "expanded_without_four_LOC",
+      "academy_excluding_Fields"
+    ],
+    "missingness": "V4 complete-candidate/roster diagnostics; no imputed dates or fabricated IPW; source variants not independent replication",
+    "prior_NAS_directions": "historically retained; professor hierarchy, isolated正官正印 inverse ladder, recent PI/SG weakening, 金or庚 are outside this 18-test confirmatory family",
+    "no_extra_primary_tests_from_exported_features": true
+  },
+  "publication_claim_limits": [
+    "calendar expectation is not observed general population",
+    "observational cohort differences not success prediction or causation",
+    "cooccurrence not classical pattern or synergy",
+    "no independent validation cohort presently"
+  ],
+  "unblinding_control": {
+    "study_features_generated_before_remote_lock": 0,
+    "old_PR31_outputs": "quarantined_not_read_or_reused",
+    "required_receipt": "remote lock SHA and locked-file-manifest SHA before transform",
+    "followup_changes": "version with timing and reason; retain original rules and outputs"
+  }
+}

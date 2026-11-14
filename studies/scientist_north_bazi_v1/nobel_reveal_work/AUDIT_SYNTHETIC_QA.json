@@ -1,0 +1,19 @@
+{
+  "schema": "global18_independent_synthetic_QA_v1",
+  "status": "PASS",
+  "fixed_strict_MC_checks": 18,
+  "MC_replicates_per_endpoint": 10000,
+  "MC_seed_base": 202611150000,
+  "p_agreement_tolerance": "6*sqrt(pmain*(1-pmain)/99999+pqa*(1-pqa)/10000)+0.002",
+  "tests": [
+    "Holm",
+    "source_union",
+    "fractional_H4",
+    "zero_variation",
+    "unpermutable_H4",
+    "common_decade_weights",
+    "no_common_support_no_fallback",
+    "exhaustive_label_tail",
+    "rank_deficient_OLS"
+  ]
+}

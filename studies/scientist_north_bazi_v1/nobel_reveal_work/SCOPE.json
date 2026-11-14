@@ -1,0 +1,190 @@
+{
+  "schema": "Nobel_original_global18_execution_scope_v1",
+  "created_utc": "2026-11-14T23:40:45.564501+00:00",
+  "user_instruction": "好的，接下来把诺贝尔奖开了吧",
+  "global18_authorized": true,
+  "original_assumptions_commit": "6d02e0e4f22da59d171888d75a5163bb1ee410d8",
+  "current_parent_commit": "f37ef292ae520409f1b129cc5d24da5cf8b9af29",
+  "original_assumptions_and_primary18_unchanged": true,
+  "prior_six_academies_revealed": true,
+  "prior_selected_individual_birthdate_examples_seen": true,
+  "new_Nobel_cohort_effect_or_p_computed_before_execution_lock": false,
+  "original_global18_previously_run": false,
+  "primary_test_order": [
+    "H1a_PI",
+    "H1a_SG",
+    "H1b_PI",
+    "H1b_SG",
+    "H1c_PI",
+    "H1c_SG",
+    "H2a",
+    "H2b",
+    "H2c",
+    "H2d",
+    "H3a",
+    "H3b",
+    "H4_PI",
+    "H4_SG",
+    "H4_GY",
+    "H4_SGY",
+    "H4_DM10",
+    "H4_WATER"
+  ],
+  "primary_family": {
+    "size": 18,
+    "source": "strict_S1_S2",
+    "cooccurrence": "narrow_M0_five_positions",
+    "calendar": "own_Gregorian_birth_year_uniform_valid_dates",
+    "adjustment": "Holm_FWER_0.05"
+  },
+  "case_order": [
+    "strict_primary",
+    "expanded",
+    "strict_broad",
+    "strict_noJie",
+    "strict_yearMonth",
+    "expanded_withoutLOC",
+    "strict_withoutFields"
+  ],
+  "populations": {
+    "strict_primary": {
+      "Nobel": {
+        "n": 621,
+        "person_ids_sha256": "8d049d16f84deb881d1a0f57e1fa1ee021c045bc4f9bfde37265465fce8d75c4"
+      },
+      "academy": {
+        "n": 5234,
+        "person_ids_sha256": "9cf7e02db25881f975a51dc98713d73f78bc43192930e42465ce91c3883c67fa"
+      },
+      "union": {
+        "n": 5855,
+        "person_ids_sha256": "a69959b3ffeced6172a3416eb0a6c3e3ed8aee908925e58ff3c1cf01642eb584"
+      }
+    },
+    "expanded": {
+      "Nobel": {
+        "n": 627,
+        "person_ids_sha256": "e76541b664444b8ef03bb0115e8c3908781924d615135403600ea9b19948c3dc"
+      },
+      "academy": {
+        "n": 5871,
+        "person_ids_sha256": "a1e4b44c93e70650d71f90a4eca15d759eda9c4aba94289fc1bb8a6937bb3a0d"
+      },
+      "union": {
+        "n": 6498,
+        "person_ids_sha256": "5b4157a50b175421c0fa1753e0d4091673dc8bc2c9f4e3132d344ffbdcd77655"
+      }
+    },
+    "strict_broad": {
+      "Nobel": {
+        "n": 621,
+        "person_ids_sha256": "8d049d16f84deb881d1a0f57e1fa1ee021c045bc4f9bfde37265465fce8d75c4"
+      },
+      "academy": {
+        "n": 5234,
+        "person_ids_sha256": "9cf7e02db25881f975a51dc98713d73f78bc43192930e42465ce91c3883c67fa"
+      },
+      "union": {
+        "n": 5855,
+        "person_ids_sha256": "a69959b3ffeced6172a3416eb0a6c3e3ed8aee908925e58ff3c1cf01642eb584"
+      }
+    },
+    "strict_noJie": {
+      "Nobel": {
+        "n": 557,
+        "person_ids_sha256": "89d8b353a8f4c4e93062fac9048a7f5f6accef20d0b22c3d9308f507a5f4b757"
+      },
+      "academy": {
+        "n": 4699,
+        "person_ids_sha256": "5733a198ee20fe3a9fb96f7d19aba74c5e882b2c8de2782e44a0afb846e15159"
+      },
+      "union": {
+        "n": 5256,
+        "person_ids_sha256": "238ce0df555cbdcab87f8b6b6f199956741b86764b84230f34c707927ed0d99b"
+      }
+    },
+    "strict_yearMonth": {
+      "Nobel": {
+        "n": 621,
+        "person_ids_sha256": "8d049d16f84deb881d1a0f57e1fa1ee021c045bc4f9bfde37265465fce8d75c4"
+      },
+      "academy": {
+        "n": 5234,
+        "person_ids_sha256": "9cf7e02db25881f975a51dc98713d73f78bc43192930e42465ce91c3883c67fa"
+      },
+      "union": {
+        "n": 5855,
+        "person_ids_sha256": "a69959b3ffeced6172a3416eb0a6c3e3ed8aee908925e58ff3c1cf01642eb584"
+      }
+    },
+    "expanded_withoutLOC": {
+      "Nobel": {
+        "n": 627,
+        "person_ids_sha256": "e76541b664444b8ef03bb0115e8c3908781924d615135403600ea9b19948c3dc"
+      },
+      "academy": {
+        "n": 5867,
+        "person_ids_sha256": "086834b18d55d37507f625cdaec669ed7d2d42ce3f841058932f802d5f58d7ab"
+      },
+      "union": {
+        "n": 6494,
+        "person_ids_sha256": "89019583a804708f5a80a99d307b1be014f18e452618cc17291991b46f37cde4"
+      }
+    },
+    "strict_withoutFields": {
+      "Nobel": {
+        "n": 621,
+        "person_ids_sha256": "8d049d16f84deb881d1a0f57e1fa1ee021c045bc4f9bfde37265465fce8d75c4"
+      },
+      "academy": {
+        "n": 5216,
+        "person_ids_sha256": "db979459120eb94ae46418fcffa4ec21ec45282283713fc34d5fc0f9d8e9d529"
+      },
+      "union": {
+        "n": 5837,
+        "person_ids_sha256": "965fae1aae105f9a1fa7a09a4e63e52350f7f02e25cfb8ba24ec845651d0051d"
+      }
+    }
+  },
+  "input_sha256": {
+    "V4_zip": "53302ef5c4bbb946adcaceb70d7a7fd576c7f06d03c3e7080874654e1a2644f9",
+    "calendar_npz": "d150883033464ebd3afafaf764738ed3b573d0d0fb4bd252a955e403a75fcc8b",
+    "hidden_npz": "19e8bc8648fe8b69122161da260e1dae487816241c655bd96a1273783f1ef723",
+    "population_metadata": "76eb4aa5690cb987c18a113c8ffca6199af13eaac9798f4d208b8cddd126c4cc"
+  },
+  "code_sha256": {
+    "analyze_global": "d096f997186934167fba44aaaff2fa72e2e9e850b3c29e14142ac9df35791ac6",
+    "audit_descriptives": "7e7c718713f49f7c33cd33d198e03c5f56ba943f7227bc91c2111bd463a88bac",
+    "audit_global": "46f6df9ce9984127093d17c39bee8d3a34bd14c314cec52dbe9621d96f452e49",
+    "build_nobel_descriptives": "193003bc8f8d925f1d27ab9f29f0361ecffd7e69f35c227a6c4d9969111b5301",
+    "build_report": "827f6fb629cd7f145404783d5c31b45e9b229eb75f1415a5c58f48bf2ee1bfb9",
+    "run_global_parallel": "ea5cbad2fa5d9ca8d1540b473b8b19a52f7170a3efa5802c460c843d8e0283bc"
+  },
+  "R": 99999,
+  "MC_generator": "NumPy_PCG64",
+  "MC_seed": "20261113+zero_based_original_endpoint_index; reset_per_case",
+  "inclusive_floating_stat_tolerance": "1e-12*max(1,abs(observed)); integer_tails_exact",
+  "B": 10000,
+  "bootstrap_seed": 2026111301,
+  "bootstrap_case_stream_reset": true,
+  "bootstrap_unit": "complete_person; direct_group_by_decade; trend_design_outcome_paired_refit",
+  "max_parallel_sensitivity_cases": 3,
+  "BLAS_threads_per_process": 1,
+  "Nobel_definition": "Nobel_full_roster_matched_people; legacy_frozen_candidate_not_substituted",
+  "source_quality_sensitivities_not_independent_replications": true,
+  "descriptive_supplement": {
+    "models": "all10M0TG,DM10,full16decades,existing8hidden_PI_SG_models",
+    "new_p_values": 0,
+    "unknown_hour": "uniform12candidate_hour_marginalization_only",
+    "primary18_not_replaced": true
+  },
+  "independent_QA": {
+    "strict_MC_replicates_per_endpoint": 10000,
+    "seed_base": 202611150000,
+    "agreement_bound": "6*combined_MC_SE+0.002",
+    "all7cases_statistics_and_Holm_recomputed": true
+  },
+  "CAS26_and_holds_reopened": false,
+  "new_records_or_DOB_edits": false,
+  "new_country36_or_other_hypothesis_families": false
+}

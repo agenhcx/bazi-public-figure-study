@@ -1,0 +1,152 @@
+{
+  "schema": "Nobel_pre_reveal_population_metadata_QA_v1",
+  "created_utc": "2026-11-14T23:29:46.018902+00:00",
+  "no_trait_outcome_aggregates_computed": true,
+  "input_sha256": {
+    "V4": "53302ef5c4bbb946adcaceb70d7a7fd576c7f06d03c3e7080874654e1a2644f9",
+    "calendar": "d150883033464ebd3afafaf764738ed3b573d0d0fb4bd252a955e403a75fcc8b",
+    "hidden": "19e8bc8648fe8b69122161da260e1dae487816241c655bd96a1273783f1ef723"
+  },
+  "calendar": {
+    "date_count": 55152,
+    "first_date": "1835-01-01",
+    "last_date": "1985-12-31",
+    "hidden_calendar_dates_byteequal": true
+  },
+  "groups": {
+    "strict": {
+      "Nobel": {
+        "people": 621,
+        "person_ids_sha256_newline_no_trailing": "e57d7a549b7b0d72a510d232c99b56254d8e3b991ebefb708f0aeb59846acc88",
+        "DOB_min": "1835-10-31",
+        "DOB_max": "1976-07-27",
+        "hemisphere_counts": {
+          "north": 621
+        },
+        "all_dates_in_original_cache": true,
+        "active_DOB_holds": 0,
+        "jie_boundary_day_people": 26,
+        "jie_boundary_plus_minus_one_civil_day_people": 64,
+        "source_support_class_person_counts": {
+          "has_fine_S1_support": 621
+        }
+      },
+      "academy_nonNobel": {
+        "people": 5234,
+        "person_ids_sha256_newline_no_trailing": "233448c8e096bc25b39d5a5aef5641c9dfeeff1a2c7e169ac73fe15bfe351112",
+        "DOB_min": "1835-01-01",
+        "DOB_max": "1981-10-22",
+        "hemisphere_counts": {
+          "north": 5234
+        },
+        "all_dates_in_original_cache": true,
+        "active_DOB_holds": 0,
+        "jie_boundary_day_people": 154,
+        "jie_boundary_plus_minus_one_civil_day_people": 535,
+        "source_support_class_person_counts": {
+          "has_fine_S1_support": 3901,
+          "S1_or_S2_union_no_fine_grade": 460,
+          "has_fine_S2_no_fine_S1_support": 873
+        }
+      },
+      "H3_union": {
+        "people": 5855,
+        "person_ids_sha256_newline_no_trailing": "ffff164c614b3e5a27e064c5f98480f857515d59a751258371ec8be0becb8fe1",
+        "DOB_min": "1835-01-01",
+        "DOB_max": "1981-10-22",
+        "hemisphere_counts": {
+          "north": 5855
+        },
+        "all_dates_in_original_cache": true,
+        "active_DOB_holds": 0,
+        "jie_boundary_day_people": 180,
+        "jie_boundary_plus_minus_one_civil_day_people": 599,
+        "source_support_class_person_counts": {
+          "has_fine_S1_support": 4522,
+          "S1_or_S2_union_no_fine_grade": 460,
+          "has_fine_S2_no_fine_S1_support": 873
+        }
+      },
+      "checks": {
+        "fullNobel_confirmed_classification": {
+          "confirmed_full_roster_awardee": 621
+        },
+        "fullNobel_legacy_difference": 0,
+        "legacy_only_difference": 0,
+        "Nobel_academy_all_overlap": 391,
+        "Nobel_nonNobel_academy_overlap": 0,
+        "Fields_in_nonNobel_academy": 18,
+        "Fields_only_outside_H3": 39
+      }
+    },
+    "expanded": {
+      "Nobel": {
+        "people": 627,
+        "person_ids_sha256_newline_no_trailing": "330462abcd2aa90df75bd71edb7a7b625223c5e57ef7107a48512cd5bdb4246f",
+        "DOB_min": "1835-10-31",
+        "DOB_max": "1976-07-27",
+        "hemisphere_counts": {
+          "north": 627
+        },
+        "all_dates_in_original_cache": true,
+        "active_DOB_holds": 0,
+        "jie_boundary_day_people": 26,
+        "jie_boundary_plus_minus_one_civil_day_people": 66,
+        "source_support_class_person_counts": {
+          "has_fine_S1_support": 621,
+          "S3_only_among_qualified_support": 6
+        }
+      },
+      "academy_nonNobel": {
+        "people": 5871,
+        "person_ids_sha256_newline_no_trailing": "4e24af14a80029d22289bfa328ea7b6399e62993ff0f07adf84e4c28316a1959",
+        "DOB_min": "1835-01-01",
+        "DOB_max": "1981-10-22",
+        "hemisphere_counts": {
+          "north": 5871
+        },
+        "all_dates_in_original_cache": true,
+        "active_DOB_holds": 0,
+        "jie_boundary_day_people": 183,
+        "jie_boundary_plus_minus_one_civil_day_people": 606,
+        "source_support_class_person_counts": {
+          "has_fine_S1_support": 3901,
+          "S3_only_among_qualified_support": 637,
+          "S1_or_S2_union_no_fine_grade": 460,
+          "has_fine_S2_no_fine_S1_support": 873
+        }
+      },
+      "H3_union": {
+        "people": 6498,
+        "person_ids_sha256_newline_no_trailing": "5ac2e3f631d7f124656d2acb956060864f2ba71d4a5ae7ee16b09df8a40d60cd",
+        "DOB_min": "1835-01-01",
+        "DOB_max": "1981-10-22",
+        "hemisphere_counts": {
+          "north": 6498
+        },
+        "all_dates_in_original_cache": true,
+        "active_DOB_holds": 0,
+        "jie_boundary_day_people": 209,
+        "jie_boundary_plus_minus_one_civil_day_people": 672,
+        "source_support_class_person_counts": {
+          "has_fine_S1_support": 4522,
+          "S3_only_among_qualified_support": 643,
+          "S1_or_S2_union_no_fine_grade": 460,
+          "has_fine_S2_no_fine_S1_support": 873
+        }
+      },
+      "checks": {
+        "fullNobel_confirmed_classification": {
+          "confirmed_full_roster_awardee": 627
+        },
+        "fullNobel_legacy_difference": 6,
+        "legacy_only_difference": 0,
+        "Nobel_academy_all_overlap": 397,
+        "Nobel_nonNobel_academy_overlap": 0,
+        "Fields_in_nonNobel_academy": 18,
+        "Fields_only_outside_H3": 39
+      }
+    }
+  },
+  "strict_subset_expanded_same_DOB_verified": true
+}
