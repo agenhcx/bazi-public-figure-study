@@ -1,0 +1,16 @@
+{
+  "schema": "UK_RS_display_schema_patch_v1_1",
+  "old_file": "rs_reveal_work/scripts/plot_rs_reveal.py",
+  "old_sha256": "ad4bc04175442768e22f03b6d1c2398f7294bec760cd8d8d1636b0ecefb4fea2",
+  "new_file": "rs_reveal_work/scripts/plot_rs_reveal_v1_1.py",
+  "new_sha256": "6246edd0d84e3d01017515ac8c70744bc71476f8ab347aca298654f01af0ba89",
+  "reason": "Final analysis result uses levels/bins rather than draft communicated levels40/bins40; renderer stopped before producing figures.",
+  "changes": "Only replace levels40 field references with levels and bins40 references with bins.",
+  "replacements": {
+    "levels40": 3,
+    "bins40": 4
+  },
+  "analysis_or_test_changed": false,
+  "filtering_or_figure_algorithm_changed": false,
+  "original_locked_script_preserved": true
+}
