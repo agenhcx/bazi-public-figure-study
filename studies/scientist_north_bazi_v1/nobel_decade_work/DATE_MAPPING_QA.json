@@ -1,0 +1,120 @@
+{
+  "schema": "Nobel_birthdate_2027_2028_mapping_QA_v1",
+  "status": "PASS",
+  "population": "full_roster_Nobel_strict_and_expanded_same_six_people_after_threshold",
+  "DOB_lower_inclusive": "1967-08-16",
+  "future_window": [
+    "2027-01-01",
+    "2028-12-31"
+  ],
+  "matching_rule": "same_year_month_day_pillars_no_hour",
+  "calendar_reference": "12:00_fixed_UTC+08;sect2_civil_day",
+  "independent_agent_full_daily_search_engines": [
+    "lunar_python==1.4.8",
+    "sxtwl==2.0.7"
+  ],
+  "cross_implementation_not_independent_astronomical_origin": true,
+  "root_original_and_nearest_date_pillars_recomputed": true,
+  "total_people_after_threshold": 6,
+  "same_year_pillar_candidates": 3,
+  "full_matching_people": 0,
+  "people": [
+    {
+      "person_id": "SCI_P_fc31b98d8934ab62d52c",
+      "name": "Benjamin List",
+      "DOB": "1968-01-11",
+      "original_pillars": [
+        "丁未",
+        "癸丑",
+        "庚辰"
+      ],
+      "full_matches_2027_2028": [],
+      "included_strict": true,
+      "year_pillar_eligible": true,
+      "nearest_same_day_date": "2027-12-27",
+      "nearest_same_day_pillars": [
+        "丁未",
+        "壬子",
+        "庚辰"
+      ]
+    },
+    {
+      "person_id": "SCI_P_be04c37ee34a32e4c930",
+      "name": "David W.C. MacMillan",
+      "DOB": "1968-03-16",
+      "original_pillars": [
+        "戊申",
+        "乙卯",
+        "乙酉"
+      ],
+      "full_matches_2027_2028": [],
+      "included_strict": true,
+      "year_pillar_eligible": true,
+      "nearest_same_day_date": "2028-03-01",
+      "nearest_same_day_pillars": [
+        "戊申",
+        "甲寅",
+        "乙酉"
+      ]
+    },
+    {
+      "person_id": "SCI_P_fef0cb026c5c3ff07c40",
+      "name": "Emmanuelle Charpentier",
+      "DOB": "1968-12-11",
+      "original_pillars": [
+        "戊申",
+        "甲子",
+        "乙卯"
+      ],
+      "full_matches_2027_2028": [],
+      "included_strict": true,
+      "year_pillar_eligible": true,
+      "nearest_same_day_date": "2028-11-26",
+      "nearest_same_day_pillars": [
+        "戊申",
+        "癸亥",
+        "乙卯"
+      ]
+    },
+    {
+      "person_id": "SCI_P_ac1980e3e9995a9c9dc4",
+      "name": "Adam G. Riess",
+      "DOB": "1969-12-16",
+      "original_pillars": [
+        "己酉",
+        "丙子",
+        "乙丑"
+      ],
+      "full_matches_2027_2028": [],
+      "included_strict": true,
+      "year_pillar_eligible": false
+    },
+    {
+      "person_id": "SCI_P_7020fb2ecfa0a706b3c3",
+      "name": "Konstantin Novoselov",
+      "DOB": "1974-08-23",
+      "original_pillars": [
+        "甲寅",
+        "壬申",
+        "丙申"
+      ],
+      "full_matches_2027_2028": [],
+      "included_strict": true,
+      "year_pillar_eligible": false
+    },
+    {
+      "person_id": "SCI_P_d4a6f69b4f31614cc3fb",
+      "name": "Demis Hassabis",
+      "DOB": "1976-07-27",
+      "original_pillars": [
+        "丙辰",
+        "乙未",
+        "庚辰"
+      ],
+      "full_matches_2027_2028": [],
+      "included_strict": true,
+      "year_pillar_eligible": false
+    }
+  ],
+  "V4_sha256": "53302ef5c4bbb946adcaceb70d7a7fd576c7f06d03c3e7080874654e1a2644f9"
+}

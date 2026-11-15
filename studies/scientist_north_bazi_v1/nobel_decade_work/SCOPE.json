@@ -1,0 +1,549 @@
+{
+  "schema": "Nobel_conditional_birth_decade_scope_v1",
+  "created_utc": "2026-11-15T01:11:11.390104+00:00",
+  "user_instruction": "有年代富集么？另外同样看从1967-08-16往后，哪些日子对应了2027年和2028年的日子？都是哪几天？",
+  "post_reveal_exploratory": true,
+  "new_temporal_p_computed_before_execution_lock": false,
+  "existing_Nobel_aggregate_and_decade_descriptive_counts_seen": true,
+  "original_global18_and_all6sensitivities_unchanged": true,
+  "original_global18_execution_commit": "b65dc371264ed5bff64503478899b1192ac4449c",
+  "parent_commit": "6ace88d894614be04cf883b1f429ce66e2ee37f8",
+  "endpoint_order": [
+    "TG_M0_比肩",
+    "TG_M0_劫财",
+    "TG_M0_食神",
+    "TG_M0_伤官",
+    "TG_M0_偏财",
+    "TG_M0_正财",
+    "TG_M0_七杀",
+    "TG_M0_正官",
+    "TG_M0_偏印",
+    "TG_M0_正印",
+    "DM_甲",
+    "DM_乙",
+    "DM_丙",
+    "DM_丁",
+    "DM_戊",
+    "DM_己",
+    "DM_庚",
+    "DM_辛",
+    "DM_壬",
+    "DM_癸",
+    "DM_water",
+    "GY_narrow",
+    "SGY_narrow",
+    "M1_priority_PI_count",
+    "M1_priority_SG_count"
+  ],
+  "endpoint_definitions": [
+    {
+      "id": "TG_M0_比肩",
+      "kind": "M0_TenGod_count",
+      "label": "比肩",
+      "maximum_person_score": 5,
+      "position_denominator": 5
+    },
+    {
+      "id": "TG_M0_劫财",
+      "kind": "M0_TenGod_count",
+      "label": "劫财",
+      "maximum_person_score": 5,
+      "position_denominator": 5
+    },
+    {
+      "id": "TG_M0_食神",
+      "kind": "M0_TenGod_count",
+      "label": "食神",
+      "maximum_person_score": 5,
+      "position_denominator": 5
+    },
+    {
+      "id": "TG_M0_伤官",
+      "kind": "M0_TenGod_count",
+      "label": "伤官",
+      "maximum_person_score": 5,
+      "position_denominator": 5
+    },
+    {
+      "id": "TG_M0_偏财",
+      "kind": "M0_TenGod_count",
+      "label": "偏财",
+      "maximum_person_score": 5,
+      "position_denominator": 5
+    },
+    {
+      "id": "TG_M0_正财",
+      "kind": "M0_TenGod_count",
+      "label": "正财",
+      "maximum_person_score": 5,
+      "position_denominator": 5
+    },
+    {
+      "id": "TG_M0_七杀",
+      "kind": "M0_TenGod_count",
+      "label": "七杀",
+      "maximum_person_score": 5,
+      "position_denominator": 5
+    },
+    {
+      "id": "TG_M0_正官",
+      "kind": "M0_TenGod_count",
+      "label": "正官",
+      "maximum_person_score": 5,
+      "position_denominator": 5
+    },
+    {
+      "id": "TG_M0_偏印",
+      "kind": "M0_TenGod_count",
+      "label": "偏印",
+      "maximum_person_score": 5,
+      "position_denominator": 5
+    },
+    {
+      "id": "TG_M0_正印",
+      "kind": "M0_TenGod_count",
+      "label": "正印",
+      "maximum_person_score": 5,
+      "position_denominator": 5
+    },
+    {
+      "id": "DM_甲",
+      "kind": "DayMaster_indicator",
+      "label": "甲",
+      "maximum_person_score": 1,
+      "position_denominator": 1
+    },
+    {
+      "id": "DM_乙",
+      "kind": "DayMaster_indicator",
+      "label": "乙",
+      "maximum_person_score": 1,
+      "position_denominator": 1
+    },
+    {
+      "id": "DM_丙",
+      "kind": "DayMaster_indicator",
+      "label": "丙",
+      "maximum_person_score": 1,
+      "position_denominator": 1
+    },
+    {
+      "id": "DM_丁",
+      "kind": "DayMaster_indicator",
+      "label": "丁",
+      "maximum_person_score": 1,
+      "position_denominator": 1
+    },
+    {
+      "id": "DM_戊",
+      "kind": "DayMaster_indicator",
+      "label": "戊",
+      "maximum_person_score": 1,
+      "position_denominator": 1
+    },
+    {
+      "id": "DM_己",
+      "kind": "DayMaster_indicator",
+      "label": "己",
+      "maximum_person_score": 1,
+      "position_denominator": 1
+    },
+    {
+      "id": "DM_庚",
+      "kind": "DayMaster_indicator",
+      "label": "庚",
+      "maximum_person_score": 1,
+      "position_denominator": 1
+    },
+    {
+      "id": "DM_辛",
+      "kind": "DayMaster_indicator",
+      "label": "辛",
+      "maximum_person_score": 1,
+      "position_denominator": 1
+    },
+    {
+      "id": "DM_壬",
+      "kind": "DayMaster_indicator",
+      "label": "壬",
+      "maximum_person_score": 1,
+      "position_denominator": 1
+    },
+    {
+      "id": "DM_癸",
+      "kind": "DayMaster_indicator",
+      "label": "癸",
+      "maximum_person_score": 1,
+      "position_denominator": 1
+    },
+    {
+      "id": "DM_water",
+      "kind": "DayMaster_indicator",
+      "label": "壬癸水日主",
+      "maximum_person_score": 1,
+      "position_denominator": 1
+    },
+    {
+      "id": "GY_narrow",
+      "kind": "cooccurrence_indicator",
+      "label": "狭义官印共现",
+      "maximum_person_score": 1,
+      "position_denominator": 1
+    },
+    {
+      "id": "SGY_narrow",
+      "kind": "cooccurrence_indicator",
+      "label": "狭义伤官配印共现",
+      "maximum_person_score": 1,
+      "position_denominator": 1
+    },
+    {
+      "id": "M1_priority_PI_count",
+      "kind": "M1_priority_TenGod_count",
+      "label": "优先透干偏印",
+      "maximum_person_score": 5,
+      "position_denominator": 5
+    },
+    {
+      "id": "M1_priority_SG_count",
+      "kind": "M1_priority_TenGod_count",
+      "label": "优先透干伤官",
+      "maximum_person_score": 5,
+      "position_denominator": 5
+    }
+  ],
+  "test_definitions": [
+    {
+      "test_id": "TG_M0_比肩_heterogeneity",
+      "endpoint_id": "TG_M0_比肩",
+      "kind": "heterogeneity"
+    },
+    {
+      "test_id": "TG_M0_比肩_linear",
+      "endpoint_id": "TG_M0_比肩",
+      "kind": "linear"
+    },
+    {
+      "test_id": "TG_M0_劫财_heterogeneity",
+      "endpoint_id": "TG_M0_劫财",
+      "kind": "heterogeneity"
+    },
+    {
+      "test_id": "TG_M0_劫财_linear",
+      "endpoint_id": "TG_M0_劫财",
+      "kind": "linear"
+    },
+    {
+      "test_id": "TG_M0_食神_heterogeneity",
+      "endpoint_id": "TG_M0_食神",
+      "kind": "heterogeneity"
+    },
+    {
+      "test_id": "TG_M0_食神_linear",
+      "endpoint_id": "TG_M0_食神",
+      "kind": "linear"
+    },
+    {
+      "test_id": "TG_M0_伤官_heterogeneity",
+      "endpoint_id": "TG_M0_伤官",
+      "kind": "heterogeneity"
+    },
+    {
+      "test_id": "TG_M0_伤官_linear",
+      "endpoint_id": "TG_M0_伤官",
+      "kind": "linear"
+    },
+    {
+      "test_id": "TG_M0_偏财_heterogeneity",
+      "endpoint_id": "TG_M0_偏财",
+      "kind": "heterogeneity"
+    },
+    {
+      "test_id": "TG_M0_偏财_linear",
+      "endpoint_id": "TG_M0_偏财",
+      "kind": "linear"
+    },
+    {
+      "test_id": "TG_M0_正财_heterogeneity",
+      "endpoint_id": "TG_M0_正财",
+      "kind": "heterogeneity"
+    },
+    {
+      "test_id": "TG_M0_正财_linear",
+      "endpoint_id": "TG_M0_正财",
+      "kind": "linear"
+    },
+    {
+      "test_id": "TG_M0_七杀_heterogeneity",
+      "endpoint_id": "TG_M0_七杀",
+      "kind": "heterogeneity"
+    },
+    {
+      "test_id": "TG_M0_七杀_linear",
+      "endpoint_id": "TG_M0_七杀",
+      "kind": "linear"
+    },
+    {
+      "test_id": "TG_M0_正官_heterogeneity",
+      "endpoint_id": "TG_M0_正官",
+      "kind": "heterogeneity"
+    },
+    {
+      "test_id": "TG_M0_正官_linear",
+      "endpoint_id": "TG_M0_正官",
+      "kind": "linear"
+    },
+    {
+      "test_id": "TG_M0_偏印_heterogeneity",
+      "endpoint_id": "TG_M0_偏印",
+      "kind": "heterogeneity"
+    },
+    {
+      "test_id": "TG_M0_偏印_linear",
+      "endpoint_id": "TG_M0_偏印",
+      "kind": "linear"
+    },
+    {
+      "test_id": "TG_M0_正印_heterogeneity",
+      "endpoint_id": "TG_M0_正印",
+      "kind": "heterogeneity"
+    },
+    {
+      "test_id": "TG_M0_正印_linear",
+      "endpoint_id": "TG_M0_正印",
+      "kind": "linear"
+    },
+    {
+      "test_id": "DM_甲_heterogeneity",
+      "endpoint_id": "DM_甲",
+      "kind": "heterogeneity"
+    },
+    {
+      "test_id": "DM_甲_linear",
+      "endpoint_id": "DM_甲",
+      "kind": "linear"
+    },
+    {
+      "test_id": "DM_乙_heterogeneity",
+      "endpoint_id": "DM_乙",
+      "kind": "heterogeneity"
+    },
+    {
+      "test_id": "DM_乙_linear",
+      "endpoint_id": "DM_乙",
+      "kind": "linear"
+    },
+    {
+      "test_id": "DM_丙_heterogeneity",
+      "endpoint_id": "DM_丙",
+      "kind": "heterogeneity"
+    },
+    {
+      "test_id": "DM_丙_linear",
+      "endpoint_id": "DM_丙",
+      "kind": "linear"
+    },
+    {
+      "test_id": "DM_丁_heterogeneity",
+      "endpoint_id": "DM_丁",
+      "kind": "heterogeneity"
+    },
+    {
+      "test_id": "DM_丁_linear",
+      "endpoint_id": "DM_丁",
+      "kind": "linear"
+    },
+    {
+      "test_id": "DM_戊_heterogeneity",
+      "endpoint_id": "DM_戊",
+      "kind": "heterogeneity"
+    },
+    {
+      "test_id": "DM_戊_linear",
+      "endpoint_id": "DM_戊",
+      "kind": "linear"
+    },
+    {
+      "test_id": "DM_己_heterogeneity",
+      "endpoint_id": "DM_己",
+      "kind": "heterogeneity"
+    },
+    {
+      "test_id": "DM_己_linear",
+      "endpoint_id": "DM_己",
+      "kind": "linear"
+    },
+    {
+      "test_id": "DM_庚_heterogeneity",
+      "endpoint_id": "DM_庚",
+      "kind": "heterogeneity"
+    },
+    {
+      "test_id": "DM_庚_linear",
+      "endpoint_id": "DM_庚",
+      "kind": "linear"
+    },
+    {
+      "test_id": "DM_辛_heterogeneity",
+      "endpoint_id": "DM_辛",
+      "kind": "heterogeneity"
+    },
+    {
+      "test_id": "DM_辛_linear",
+      "endpoint_id": "DM_辛",
+      "kind": "linear"
+    },
+    {
+      "test_id": "DM_壬_heterogeneity",
+      "endpoint_id": "DM_壬",
+      "kind": "heterogeneity"
+    },
+    {
+      "test_id": "DM_壬_linear",
+      "endpoint_id": "DM_壬",
+      "kind": "linear"
+    },
+    {
+      "test_id": "DM_癸_heterogeneity",
+      "endpoint_id": "DM_癸",
+      "kind": "heterogeneity"
+    },
+    {
+      "test_id": "DM_癸_linear",
+      "endpoint_id": "DM_癸",
+      "kind": "linear"
+    },
+    {
+      "test_id": "DM_water_heterogeneity",
+      "endpoint_id": "DM_water",
+      "kind": "heterogeneity"
+    },
+    {
+      "test_id": "DM_water_linear",
+      "endpoint_id": "DM_water",
+      "kind": "linear"
+    },
+    {
+      "test_id": "GY_narrow_heterogeneity",
+      "endpoint_id": "GY_narrow",
+      "kind": "heterogeneity"
+    },
+    {
+      "test_id": "GY_narrow_linear",
+      "endpoint_id": "GY_narrow",
+      "kind": "linear"
+    },
+    {
+      "test_id": "SGY_narrow_heterogeneity",
+      "endpoint_id": "SGY_narrow",
+      "kind": "heterogeneity"
+    },
+    {
+      "test_id": "SGY_narrow_linear",
+      "endpoint_id": "SGY_narrow",
+      "kind": "linear"
+    },
+    {
+      "test_id": "M1_priority_PI_count_heterogeneity",
+      "endpoint_id": "M1_priority_PI_count",
+      "kind": "heterogeneity"
+    },
+    {
+      "test_id": "M1_priority_PI_count_linear",
+      "endpoint_id": "M1_priority_PI_count",
+      "kind": "linear"
+    },
+    {
+      "test_id": "M1_priority_SG_count_heterogeneity",
+      "endpoint_id": "M1_priority_SG_count",
+      "kind": "heterogeneity"
+    },
+    {
+      "test_id": "M1_priority_SG_count_linear",
+      "endpoint_id": "M1_priority_SG_count",
+      "kind": "linear"
+    }
+  ],
+  "family_size": 50,
+  "strict_adjustment": "Holm50_FWER0.05_exploratory",
+  "expanded_adjustment": "Holm50_reference_not_independent_validation",
+  "source_order": [
+    "strict",
+    "expanded"
+  ],
+  "people": {
+    "strict": 621,
+    "expanded": 627
+  },
+  "person_ids_sha256": {
+    "expanded": "1fe963ccfa103abc335d7ee76902291eb19009042166814bbb98c7d47f61caf6",
+    "strict": "abafaca59e9d2eb6f240e6edcea1b49ef49fe6fbbe4e8e0cae2a1096beb42cc3"
+  },
+  "decade_bins": [
+    1830,
+    1840,
+    1850,
+    1860,
+    1870,
+    1880,
+    1890,
+    1900,
+    1910,
+    1920,
+    1930,
+    1940,
+    1950,
+    1960,
+    1970,
+    1980
+  ],
+  "display_decades": [
+    1850,
+    1860,
+    1870,
+    1880,
+    1890,
+    1900,
+    1910,
+    1920,
+    1930,
+    1940,
+    1950,
+    1960
+  ],
+  "local_deccade_p_values": false,
+  "conditional_null": "person-specific exact year-calendar score_PMF conditioned on observed full-cohort sumK; common exponential tilt cancels",
+  "R": 99999,
+  "generator": "NumPy_PCG64",
+  "seed_formula": "202611160000+endpoint_index*1000+source_index*100",
+  "same_conditional_vectors_for_heterogeneity_and_linear": true,
+  "Q_tail": "upper_inclusive_tol1e-12*max(1,abs(Qobs))",
+  "L_tail": "two-sided_absolute_centered_integer_L; exactFractionEL reflectedinclusiveintegercuts",
+  "independent_QA": {
+    "strict_replicates_per_endpoint": 10000,
+    "seed_formula": "202611170000+endpoint_index*1000",
+    "p_tolerance": "6*combined_MC_SE+0.002",
+    "all50_source_cases_deterministic_recomputed": true
+  },
+  "maximum_parallel_workers": 3,
+  "BLAS_threads": 1,
+  "input_sha256": {
+    "V4_zip": "53302ef5c4bbb946adcaceb70d7a7fd576c7f06d03c3e7080874654e1a2644f9",
+    "calendar_npz": "d150883033464ebd3afafaf764738ed3b573d0d0fb4bd252a955e403a75fcc8b",
+    "hidden_npz": "19e8bc8648fe8b69122161da260e1dae487816241c655bd96a1273783f1ef723",
+    "existing_Nobel_descriptives": "4abad4fe31637453dc0b2423257c0cdaa9da0f72dabcaf9361c91d3e16dd0eea"
+  },
+  "code_sha256": {
+    "analyze_nobel_decades": "a57ceba809e5d9f09f0b272a21d8c1f494e7adc85b00f47392e9f35218189056",
+    "audit_nobel_decades": "740de98e2991ec75a0abf2549287e4dcbe5a474854026ba190d5e25509e16fd8",
+    "build_report": "e3676690cb53ad31245d0c1686a69c139a84e7dd6b6cc4b2df0647e6ba3b4d96"
+  },
+  "date_mapping": {
+    "QA_sha256": "d50aec0473f1fc091d2b18609dc2705ecb2ef11e2d07d7bb99a09534697adedb",
+    "matching": "Nobel_DOB>=1967-08-16; sameYMDpillars in2027/28; nohour",
+    "people_after_threshold": 6,
+    "same_year_candidates": 3,
+    "full_matching_people": 0
+  },
+  "no_new_records_dates_holds_or_CAS26_changes": true
+}

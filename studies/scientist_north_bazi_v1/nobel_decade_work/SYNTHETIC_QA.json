@@ -1,0 +1,23 @@
+{
+  "schema": "Nobel_discrete_conditional_decade_synthetic_QA_v1",
+  "status": "PASS",
+  "study_inputs_loaded": false,
+  "six_ternary_people_exhaustively_enumerated": true,
+  "conditional_marginals_and_integer_CMS_moments": true,
+  "exponential_tilt_cancellation": true,
+  "score_five_and_sparse_support": true,
+  "fixed_total_K0_and_max": true,
+  "inclusive_integer_reflection": true,
+  "conditional_MC_tail_checks": {
+    "heterogeneity": {
+      "exact_p": 0.24175824175824176,
+      "MC_p": 0.24725
+    },
+    "linear": {
+      "exact_p": 0.1401098901098901,
+      "MC_p": 0.14365
+    }
+  },
+  "endpoints": 25,
+  "family_size": 50
+}
