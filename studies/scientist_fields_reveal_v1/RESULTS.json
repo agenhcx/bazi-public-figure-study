@@ -1,0 +1,826 @@
+{
+  "schema": "Fields_reveal_v1",
+  "created_utc": "2026-11-15T23:53:09.253369+00:00",
+  "N": 57,
+  "person_ids_sha256": "4d919e60a7368cbd416e6fa3b611efe7b88c54d76971a240187385edc49bc78f",
+  "strict_equals_expanded": true,
+  "all_hemisphere_north": true,
+  "prior_academy_overlap_N": 18,
+  "R": 99999,
+  "seed": 2026111501,
+  "generator": "NumPy_PCG64",
+  "primary_family_size": 6,
+  "primary_null": "Each person's Gregorian birth year uniformly sampled over valid dates",
+  "primary_tail": "one-sided inclusive >=; plus-one Monte Carlo p",
+  "primary_multiplicity": "Holm6 FWER .05",
+  "primary": [
+    {
+      "endpoint": "overall_PI",
+      "N": 57,
+      "observed_sum": 31,
+      "expected_sum": 30.41394565461486,
+      "observed_per_person": 0.543859649122807,
+      "expected_per_person": 0.5335779939406116,
+      "reporting_denominator": 285,
+      "observed_fraction": 0.10877192982456141,
+      "expected_fraction": 0.10671559878812231,
+      "difference_percentage_points": 0.20563310364390874,
+      "raw_p_one_sided": 0.48174,
+      "holm6_p": 1.0,
+      "MC_standard_error": 0.0015800840876358448
+    },
+    {
+      "endpoint": "overall_SG",
+      "N": 57,
+      "observed_sum": 35,
+      "expected_sum": 26.596923422411855,
+      "observed_per_person": 0.6140350877192983,
+      "expected_per_person": 0.4666126916212606,
+      "reporting_denominator": 285,
+      "observed_fraction": 0.12280701754385964,
+      "expected_fraction": 0.09332253832425212,
+      "difference_percentage_points": 2.9484479219607524,
+      "raw_p_one_sided": 0.05819,
+      "holm6_p": 0.33564,
+      "MC_standard_error": 0.000740296723618307
+    },
+    {
+      "endpoint": "year_PI",
+      "N": 57,
+      "observed_sum": 10,
+      "expected_sum": 10.536671906579834,
+      "observed_per_person": 0.17543859649122806,
+      "expected_per_person": 0.18485389309789182,
+      "reporting_denominator": 57,
+      "observed_fraction": 0.17543859649122806,
+      "expected_fraction": 0.18485389309789182,
+      "difference_percentage_points": -0.9415296606663747,
+      "raw_p_one_sided": 0.62376,
+      "holm6_p": 1.0,
+      "MC_standard_error": 0.0015319381919646758
+    },
+    {
+      "endpoint": "year_SG",
+      "N": 57,
+      "observed_sum": 11,
+      "expected_sum": 10.520270978366643,
+      "observed_per_person": 0.19298245614035087,
+      "expected_per_person": 0.18456615751520425,
+      "reporting_denominator": 57,
+      "observed_fraction": 0.19298245614035087,
+      "expected_fraction": 0.18456615751520425,
+      "difference_percentage_points": 0.8416298625146618,
+      "raw_p_one_sided": 0.49015,
+      "holm6_p": 1.0,
+      "MC_standard_error": 0.001580831988226453
+    },
+    {
+      "endpoint": "month_PI",
+      "N": 57,
+      "observed_sum": 8,
+      "expected_sum": 10.766846320832398,
+      "observed_per_person": 0.14035087719298245,
+      "expected_per_person": 0.18889204071635787,
+      "reporting_denominator": 57,
+      "observed_fraction": 0.14035087719298245,
+      "expected_fraction": 0.18889204071635787,
+      "difference_percentage_points": -4.854116352337541,
+      "raw_p_one_sided": 0.86858,
+      "holm6_p": 1.0,
+      "MC_standard_error": 0.0010684043410619409
+    },
+    {
+      "endpoint": "month_SG",
+      "N": 57,
+      "observed_sum": 16,
+      "expected_sum": 10.709431843700875,
+      "observed_per_person": 0.2807017543859649,
+      "expected_per_person": 0.18788476918773464,
+      "reporting_denominator": 57,
+      "observed_fraction": 0.2807017543859649,
+      "expected_fraction": 0.18788476918773464,
+      "difference_percentage_points": 9.281698519823028,
+      "raw_p_one_sided": 0.05594,
+      "holm6_p": 0.33564,
+      "MC_standard_error": 0.0007267098210427598
+    }
+  ],
+  "source_sha256": {
+    "V4": "53302ef5c4bbb946adcaceb70d7a7fd576c7f06d03c3e7080874654e1a2644f9",
+    "calendar": "d150883033464ebd3afafaf764738ed3b573d0d0fb4bd252a955e403a75fcc8b",
+    "hidden": "19e8bc8648fe8b69122161da260e1dae487816241c655bd96a1273783f1ef723",
+    "code": "2889997196e58961a4b2fe51a00d9833db911e0f39cbb5c2ce322716c177235e"
+  },
+  "execution_receipt": {
+    "remote_lock_verified": true,
+    "repository": "agenhcx/bazi-public-figure-study",
+    "branch": "fields-reveal-lock-v1-20261115",
+    "commit": "76a8abbd73f05155b00f43a173d3736e8c716629",
+    "commit_url": "https://github.com/agenhcx/bazi-public-figure-study/commit/76a8abbd73f05155b00f43a173d3736e8c716629",
+    "verified_utc": "2026-11-15T23:52:49.165Z",
+    "verified_files_sha256": {
+      "analyze_fields.py": "2889997196e58961a4b2fe51a00d9833db911e0f39cbb5c2ce322716c177235e",
+      "PLAN.md": "a14221f9a5a541c1a5ee865d81c572f13e1811d1c9e28738c7eed98d959ceea5",
+      "METADATA_QA.json": "d93e8acf2ba2e9dc9d9d62a246038f48068dd6eadc155817c45020516fa1ec69",
+      "INPUT_PINS.json": "d6c682ebc308fc79c0cea293c8dc731dbe3f96bcb5119226877e6044fdb37690",
+      "ENGINE_PRELOCK_QA.json": "0e69442d4105c82b0df865b2407530f4076877eb053ee86ee102b9e6a9ffb6a7"
+    },
+    "code_sha256": "2889997196e58961a4b2fe51a00d9833db911e0f39cbb5c2ce322716c177235e",
+    "Fields_feature_mapping_started": false
+  },
+  "sensitivity_extra_p_values": 0,
+  "sensitivities": {
+    "M1_priority_5": [
+      {
+        "endpoint": "overall_PI",
+        "N": 57,
+        "observed_sum": 26,
+        "expected_sum": 29.805906130698403,
+        "observed_per_person": 0.45614035087719296,
+        "expected_per_person": 0.5229106338719018,
+        "reporting_denominator": 285,
+        "observed_fraction": 0.0912280701754386,
+        "expected_fraction": 0.10458212677438036,
+        "difference_percentage_points": -1.3354056598941766
+      },
+      {
+        "endpoint": "overall_SG",
+        "N": 57,
+        "observed_sum": 39,
+        "expected_sum": 27.166576839583794,
+        "observed_per_person": 0.6842105263157895,
+        "expected_per_person": 0.4766066112207683,
+        "reporting_denominator": 285,
+        "observed_fraction": 0.1368421052631579,
+        "expected_fraction": 0.09532132224415366,
+        "difference_percentage_points": 4.152078301900423
+      },
+      {
+        "endpoint": "year_PI",
+        "N": 57,
+        "observed_sum": 8,
+        "expected_sum": 9.956314095366423,
+        "observed_per_person": 0.14035087719298245,
+        "expected_per_person": 0.17467217711169164,
+        "reporting_denominator": 57,
+        "observed_fraction": 0.14035087719298245,
+        "expected_fraction": 0.17467217711169164,
+        "difference_percentage_points": -3.4321299918709176
+      },
+      {
+        "endpoint": "year_SG",
+        "N": 57,
+        "observed_sum": 12,
+        "expected_sum": 9.931679017890563,
+        "observed_per_person": 0.21052631578947367,
+        "expected_per_person": 0.17423998277000988,
+        "reporting_denominator": 57,
+        "observed_fraction": 0.21052631578947367,
+        "expected_fraction": 0.17423998277000988,
+        "difference_percentage_points": 3.6286333019463815
+      },
+      {
+        "endpoint": "month_PI",
+        "N": 57,
+        "observed_sum": 7,
+        "expected_sum": 10.093165656111989,
+        "observed_per_person": 0.12280701754385964,
+        "expected_per_person": 0.17707308168617525,
+        "reporting_denominator": 57,
+        "observed_fraction": 0.12280701754385964,
+        "expected_fraction": 0.17707308168617525,
+        "difference_percentage_points": -5.42660641423156
+      },
+      {
+        "endpoint": "month_SG",
+        "N": 57,
+        "observed_sum": 16,
+        "expected_sum": 10.046680140729093,
+        "observed_per_person": 0.2807017543859649,
+        "expected_per_person": 0.17625754632858057,
+        "reporting_denominator": 57,
+        "observed_fraction": 0.2807017543859649,
+        "expected_fraction": 0.17625754632858057,
+        "difference_percentage_points": 10.444420805738433
+      }
+    ],
+    "M0_birth_year_and_month_null": [
+      {
+        "endpoint": "overall_PI",
+        "N": 57,
+        "observed_sum": 31,
+        "expected_sum": 30.137403993855596,
+        "observed_per_person": 0.543859649122807,
+        "expected_per_person": 0.5287263858571157,
+        "reporting_denominator": 285,
+        "observed_fraction": 0.10877192982456141,
+        "expected_fraction": 0.10574527717142314,
+        "difference_percentage_points": 0.302665265313826
+      },
+      {
+        "endpoint": "overall_SG",
+        "N": 57,
+        "observed_sum": 35,
+        "expected_sum": 26.771658986175122,
+        "observed_per_person": 0.6140350877192983,
+        "expected_per_person": 0.46967822782763374,
+        "reporting_denominator": 285,
+        "observed_fraction": 0.12280701754385964,
+        "expected_fraction": 0.09393564556552675,
+        "difference_percentage_points": 2.8871371978332907
+      },
+      {
+        "endpoint": "year_PI",
+        "N": 57,
+        "observed_sum": 10,
+        "expected_sum": 10.577649769585246,
+        "observed_per_person": 0.17543859649122806,
+        "expected_per_person": 0.18557280297517975,
+        "reporting_denominator": 57,
+        "observed_fraction": 0.17543859649122806,
+        "expected_fraction": 0.18557280297517975,
+        "difference_percentage_points": -1.0134206483951689
+      },
+      {
+        "endpoint": "year_SG",
+        "N": 57,
+        "observed_sum": 11,
+        "expected_sum": 10.484331797235017,
+        "observed_per_person": 0.19298245614035087,
+        "expected_per_person": 0.1839356455655266,
+        "reporting_denominator": 57,
+        "observed_fraction": 0.19298245614035087,
+        "expected_fraction": 0.1839356455655266,
+        "difference_percentage_points": 0.9046810574824268
+      },
+      {
+        "endpoint": "month_PI",
+        "N": 57,
+        "observed_sum": 8,
+        "expected_sum": 10.231566820276491,
+        "observed_per_person": 0.14035087719298245,
+        "expected_per_person": 0.17950117228555248,
+        "reporting_denominator": 57,
+        "observed_fraction": 0.14035087719298245,
+        "expected_fraction": 0.17950117228555248,
+        "difference_percentage_points": -3.915029509257002
+      },
+      {
+        "endpoint": "month_SG",
+        "N": 57,
+        "observed_sum": 16,
+        "expected_sum": 10.502150537634401,
+        "observed_per_person": 0.2807017543859649,
+        "expected_per_person": 0.18424825504621756,
+        "reporting_denominator": 57,
+        "observed_fraction": 0.2807017543859649,
+        "expected_fraction": 0.18424825504621756,
+        "difference_percentage_points": 9.645349933974735
+      }
+    ],
+    "M0_noJie_plus_minus_one_day": [
+      {
+        "endpoint": "overall_PI",
+        "N": 53,
+        "observed_sum": 29,
+        "expected_sum": 28.268740175162808,
+        "observed_per_person": 0.5471698113207547,
+        "expected_per_person": 0.5333724561351473,
+        "reporting_denominator": 265,
+        "observed_fraction": 0.10943396226415095,
+        "expected_fraction": 0.10667449122702946,
+        "difference_percentage_points": 0.2759471037121479
+      },
+      {
+        "endpoint": "overall_SG",
+        "N": 53,
+        "observed_sum": 33,
+        "expected_sum": 24.71747136761733,
+        "observed_per_person": 0.6226415094339622,
+        "expected_per_person": 0.46636738429466656,
+        "reporting_denominator": 265,
+        "observed_fraction": 0.12452830188679245,
+        "expected_fraction": 0.09327347685893332,
+        "difference_percentage_points": 3.125482502785914
+      },
+      {
+        "endpoint": "year_PI",
+        "N": 53,
+        "observed_sum": 9,
+        "expected_sum": 10.018863687401753,
+        "observed_per_person": 0.16981132075471697,
+        "expected_per_person": 0.18903516391324063,
+        "reporting_denominator": 53,
+        "observed_fraction": 0.16981132075471697,
+        "expected_fraction": 0.18903516391324063,
+        "difference_percentage_points": -1.9223843158523641
+      },
+      {
+        "endpoint": "year_SG",
+        "N": 53,
+        "observed_sum": 11,
+        "expected_sum": 9.999723033161166,
+        "observed_per_person": 0.20754716981132076,
+        "expected_per_person": 0.1886740194936069,
+        "reporting_denominator": 53,
+        "observed_fraction": 0.20754716981132076,
+        "expected_fraction": 0.1886740194936069,
+        "difference_percentage_points": 1.8873150317713854
+      },
+      {
+        "endpoint": "month_PI",
+        "N": 53,
+        "observed_sum": 8,
+        "expected_sum": 9.966846320832397,
+        "observed_per_person": 0.1509433962264151,
+        "expected_per_person": 0.18805370416664902,
+        "reporting_denominator": 53,
+        "observed_fraction": 0.1509433962264151,
+        "expected_fraction": 0.18805370416664902,
+        "difference_percentage_points": -3.711030794023391
+      },
+      {
+        "endpoint": "month_SG",
+        "N": 53,
+        "observed_sum": 14,
+        "expected_sum": 9.920390747810464,
+        "observed_per_person": 0.2641509433962264,
+        "expected_per_person": 0.18717718392095214,
+        "reporting_denominator": 53,
+        "observed_fraction": 0.2641509433962264,
+        "expected_fraction": 0.18717718392095214,
+        "difference_percentage_points": 7.697375947527427
+      }
+    ],
+    "M0_without_prior_academy_overlap": [
+      {
+        "endpoint": "overall_PI",
+        "N": 39,
+        "observed_sum": 23,
+        "expected_sum": 20.80314394790029,
+        "observed_per_person": 0.5897435897435898,
+        "expected_per_person": 0.5334139473820587,
+        "reporting_denominator": 195,
+        "observed_fraction": 0.11794871794871795,
+        "expected_fraction": 0.10668278947641173,
+        "difference_percentage_points": 1.1265928472306213
+      },
+      {
+        "endpoint": "overall_SG",
+        "N": 39,
+        "observed_sum": 26,
+        "expected_sum": 18.221438730443893,
+        "observed_per_person": 0.6666666666666666,
+        "expected_per_person": 0.46721637770368957,
+        "reporting_denominator": 195,
+        "observed_fraction": 0.13333333333333333,
+        "expected_fraction": 0.09344327554073792,
+        "difference_percentage_points": 3.9890057792595424
+      },
+      {
+        "endpoint": "year_PI",
+        "N": 39,
+        "observed_sum": 7,
+        "expected_sum": 7.148716221274049,
+        "observed_per_person": 0.1794871794871795,
+        "expected_per_person": 0.18330041593010382,
+        "reporting_denominator": 39,
+        "observed_fraction": 0.1794871794871795,
+        "expected_fraction": 0.18330041593010382,
+        "difference_percentage_points": -0.3813236442924337
+      },
+      {
+        "endpoint": "year_SG",
+        "N": 39,
+        "observed_sum": 8,
+        "expected_sum": 7.135069990268735,
+        "observed_per_person": 0.20512820512820512,
+        "expected_per_person": 0.1829505125709932,
+        "reporting_denominator": 39,
+        "observed_fraction": 0.20512820512820512,
+        "expected_fraction": 0.1829505125709932,
+        "difference_percentage_points": 2.217769255721192
+      },
+      {
+        "endpoint": "month_PI",
+        "N": 39,
+        "observed_sum": 6,
+        "expected_sum": 7.4170896025151585,
+        "observed_per_person": 0.15384615384615385,
+        "expected_per_person": 0.19018178467987587,
+        "reporting_denominator": 39,
+        "observed_fraction": 0.15384615384615385,
+        "expected_fraction": 0.19018178467987587,
+        "difference_percentage_points": -3.6335630833722017
+      },
+      {
+        "endpoint": "month_SG",
+        "N": 39,
+        "observed_sum": 13,
+        "expected_sum": 7.400838386106744,
+        "observed_per_person": 0.3333333333333333,
+        "expected_per_person": 0.18976508682324986,
+        "reporting_denominator": 39,
+        "observed_fraction": 0.3333333333333333,
+        "expected_fraction": 0.18976508682324986,
+        "difference_percentage_points": 14.356824651008347
+      }
+    ]
+  },
+  "descriptives": {
+    "M0_all10_TG": [
+      {
+        "label": "比肩",
+        "observed_sum": 26.0,
+        "expected_sum": 30.400299423609557,
+        "observed_fraction": 0.0912280701754386,
+        "expected_fraction": 0.10666771727582301
+      },
+      {
+        "label": "劫财",
+        "observed_sum": 30.0,
+        "expected_sum": 26.632435062504676,
+        "observed_fraction": 0.10526315789473684,
+        "expected_fraction": 0.09344714057019185
+      },
+      {
+        "label": "食神",
+        "observed_sum": 28.0,
+        "expected_sum": 30.38400329365971,
+        "observed_fraction": 0.09824561403508772,
+        "expected_fraction": 0.10661053787249021
+      },
+      {
+        "label": "伤官",
+        "observed_sum": 35.0,
+        "expected_sum": 26.596923422411855,
+        "observed_fraction": 0.12280701754385964,
+        "expected_fraction": 0.09332253832425212
+      },
+      {
+        "label": "偏财",
+        "observed_sum": 33.0,
+        "expected_sum": 30.37579160116776,
+        "observed_fraction": 0.11578947368421053,
+        "expected_fraction": 0.1065817249163781
+      },
+      {
+        "label": "正财",
+        "observed_sum": 25.0,
+        "expected_sum": 26.550400479077773,
+        "observed_fraction": 0.08771929824561403,
+        "expected_fraction": 0.09315929992658868
+      },
+      {
+        "label": "七杀",
+        "observed_sum": 21.0,
+        "expected_sum": 30.441477655513133,
+        "observed_fraction": 0.07368421052631578,
+        "expected_fraction": 0.10681220230004608
+      },
+      {
+        "label": "正官",
+        "observed_sum": 24.0,
+        "expected_sum": 26.561314469645936,
+        "observed_fraction": 0.08421052631578947,
+        "expected_fraction": 0.09319759463033661
+      },
+      {
+        "label": "偏印",
+        "observed_sum": 31.0,
+        "expected_sum": 30.41394565461486,
+        "observed_fraction": 0.10877192982456141,
+        "expected_fraction": 0.10671559878812231
+      },
+      {
+        "label": "正印",
+        "observed_sum": 32.0,
+        "expected_sum": 26.643408937794735,
+        "observed_fraction": 0.11228070175438597,
+        "expected_fraction": 0.093485645395771
+      }
+    ],
+    "M1_all10_TG": [
+      {
+        "label": "比肩",
+        "observed_sum": 32.0,
+        "expected_sum": 29.76211542780149,
+        "observed_fraction": 0.11228070175438597,
+        "expected_fraction": 0.10442847518526839
+      },
+      {
+        "label": "劫财",
+        "observed_sum": 27.0,
+        "expected_sum": 27.248693764503333,
+        "observed_fraction": 0.09473684210526316,
+        "expected_fraction": 0.09560945180527486
+      },
+      {
+        "label": "食神",
+        "observed_sum": 26.0,
+        "expected_sum": 29.721214162736725,
+        "observed_fraction": 0.0912280701754386,
+        "expected_fraction": 0.10428496197451483
+      },
+      {
+        "label": "伤官",
+        "observed_sum": 39.0,
+        "expected_sum": 27.166576839583794,
+        "observed_fraction": 0.1368421052631579,
+        "expected_fraction": 0.09532132224415366
+      },
+      {
+        "label": "偏财",
+        "observed_sum": 33.0,
+        "expected_sum": 29.66094767572422,
+        "observed_fraction": 0.11578947368421053,
+        "expected_fraction": 0.1040735006165762
+      },
+      {
+        "label": "正财",
+        "observed_sum": 25.0,
+        "expected_sum": 27.15564039224493,
+        "observed_fraction": 0.08771929824561403,
+        "expected_fraction": 0.09528294874471906
+      },
+      {
+        "label": "七杀",
+        "observed_sum": 19.0,
+        "expected_sum": 29.89370461860918,
+        "observed_fraction": 0.06666666666666667,
+        "expected_fraction": 0.10489019164424274
+      },
+      {
+        "label": "正官",
+        "observed_sum": 24.0,
+        "expected_sum": 27.284422486713073,
+        "observed_fraction": 0.08421052631578947,
+        "expected_fraction": 0.09573481574285289
+      },
+      {
+        "label": "偏印",
+        "observed_sum": 26.0,
+        "expected_sum": 29.805906130698403,
+        "observed_fraction": 0.0912280701754386,
+        "expected_fraction": 0.10458212677438036
+      },
+      {
+        "label": "正印",
+        "observed_sum": 34.0,
+        "expected_sum": 27.30077850138484,
+        "observed_fraction": 0.11929824561403508,
+        "expected_fraction": 0.09579220526801699
+      }
+    ],
+    "day_master": [
+      {
+        "label": "甲",
+        "observed_sum": 7.0,
+        "expected_sum": 5.717508795568534,
+        "observed_fraction": 0.12280701754385964,
+        "expected_fraction": 0.10030717185207955
+      },
+      {
+        "label": "乙",
+        "observed_sum": 3.0,
+        "expected_sum": 5.703817651021787,
+        "observed_fraction": 0.05263157894736842,
+        "expected_fraction": 0.10006697633371556
+      },
+      {
+        "label": "丙",
+        "observed_sum": 8.0,
+        "expected_sum": 5.690133992065277,
+        "observed_fraction": 0.14035087719298245,
+        "expected_fraction": 0.0998269121414961
+      },
+      {
+        "label": "丁",
+        "observed_sum": 9.0,
+        "expected_sum": 5.687401751628118,
+        "observed_fraction": 0.15789473684210525,
+        "expected_fraction": 0.09977897809873892
+      },
+      {
+        "label": "戊",
+        "observed_sum": 6.0,
+        "expected_sum": 5.687401751628119,
+        "observed_fraction": 0.10526315789473684,
+        "expected_fraction": 0.09977897809873894
+      },
+      {
+        "label": "己",
+        "observed_sum": 5.0,
+        "expected_sum": 5.687409237218357,
+        "observed_fraction": 0.08771929824561403,
+        "expected_fraction": 0.09977910942488345
+      },
+      {
+        "label": "庚",
+        "observed_sum": 5.0,
+        "expected_sum": 5.695635900890788,
+        "observed_fraction": 0.08771929824561403,
+        "expected_fraction": 0.09992343685773313
+      },
+      {
+        "label": "辛",
+        "observed_sum": 7.0,
+        "expected_sum": 5.709319559847297,
+        "observed_fraction": 0.12280701754385964,
+        "expected_fraction": 0.10016350104995259
+      },
+      {
+        "label": "壬",
+        "observed_sum": 2.0,
+        "expected_sum": 5.709319559847297,
+        "observed_fraction": 0.03508771929824561,
+        "expected_fraction": 0.10016350104995259
+      },
+      {
+        "label": "癸",
+        "observed_sum": 5.0,
+        "expected_sum": 5.712051800284456,
+        "observed_fraction": 0.08771929824561403,
+        "expected_fraction": 0.10021143509270976
+      }
+    ],
+    "hidden_models": [
+      {
+        "model": "M0_5",
+        "trait": "PI",
+        "position_denominator": 5,
+        "observed_count_mean": 0.543859649122807,
+        "expected_count_mean": 0.5335779939406116,
+        "observed_position_share": 0.10877192982456141,
+        "expected_position_share": 0.10671559878812231,
+        "observed_person_presence": 0.42105263157894735,
+        "expected_person_presence": 0.42304038410270756
+      },
+      {
+        "model": "M0_5",
+        "trait": "SG",
+        "position_denominator": 5,
+        "observed_count_mean": 0.6140350877192983,
+        "expected_count_mean": 0.4666126916212606,
+        "observed_position_share": 0.12280701754385966,
+        "expected_position_share": 0.09332253832425212,
+        "observed_person_presence": 0.5087719298245614,
+        "expected_person_presence": 0.38302294399071274
+      },
+      {
+        "model": "M1_priority_5",
+        "trait": "PI",
+        "position_denominator": 5,
+        "observed_count_mean": 0.45614035087719296,
+        "expected_count_mean": 0.5229106338719018,
+        "observed_position_share": 0.09122807017543859,
+        "expected_position_share": 0.10458212677438036,
+        "observed_person_presence": 0.3508771929824561,
+        "expected_person_presence": 0.3648642153328527
+      },
+      {
+        "model": "M1_priority_5",
+        "trait": "SG",
+        "position_denominator": 5,
+        "observed_count_mean": 0.6842105263157895,
+        "expected_count_mean": 0.4766066112207683,
+        "observed_position_share": 0.1368421052631579,
+        "expected_position_share": 0.09532132224415366,
+        "observed_person_presence": 0.5087719298245614,
+        "expected_person_presence": 0.33522692501145823
+      },
+      {
+        "model": "M1_share_5",
+        "trait": "PI",
+        "position_denominator": 5,
+        "observed_count_mean": 0.4649122807017544,
+        "expected_count_mean": 0.5222375217180613,
+        "observed_position_share": 0.09298245614035087,
+        "expected_position_share": 0.10444750434361225,
+        "observed_person_presence": 0.3508771929824561,
+        "expected_person_presence": 0.3648642153328527
+      },
+      {
+        "model": "M1_share_5",
+        "trait": "SG",
+        "position_denominator": 5,
+        "observed_count_mean": 0.6929824561403509,
+        "expected_count_mean": 0.4774958862085223,
+        "observed_position_share": 0.1385964912280702,
+        "expected_position_share": 0.09549917724170445,
+        "observed_person_presence": 0.5087719298245614,
+        "expected_person_presence": 0.33522692501145823
+      },
+      {
+        "model": "M1_any_5",
+        "trait": "PI",
+        "position_denominator": 5,
+        "observed_count_mean": 0.47368421052631576,
+        "expected_count_mean": 0.5349175206149215,
+        "observed_position_share": 0.09473684210526315,
+        "expected_position_share": 0.1069835041229843,
+        "observed_person_presence": 0.3508771929824561,
+        "expected_person_presence": 0.3648642153328527
+      },
+      {
+        "model": "M1_any_5",
+        "trait": "SG",
+        "position_denominator": 5,
+        "observed_count_mean": 0.7192982456140351,
+        "expected_count_mean": 0.48875887600579415,
+        "observed_position_share": 0.14385964912280702,
+        "expected_position_share": 0.09775177520115882,
+        "observed_person_presence": 0.5087719298245614,
+        "expected_person_presence": 0.33522692501145823
+      },
+      {
+        "model": "M2_main_7",
+        "trait": "PI",
+        "position_denominator": 7,
+        "observed_count_mean": 0.7412280701754385,
+        "expected_count_mean": 0.7336124889412442,
+        "observed_position_share": 0.10588972431077692,
+        "expected_position_share": 0.10480178413446346,
+        "observed_person_presence": 0.5248538011695907,
+        "expected_person_presence": 0.5258913214868396
+      },
+      {
+        "model": "M2_main_7",
+        "trait": "SG",
+        "position_denominator": 7,
+        "observed_count_mean": 0.8216374269005848,
+        "expected_count_mean": 0.6665710065142146,
+        "observed_position_share": 0.11737677527151212,
+        "expected_position_share": 0.09522442950203067,
+        "observed_person_presence": 0.5935672514619883,
+        "expected_person_presence": 0.4891508736034013
+      },
+      {
+        "model": "M3_priority_7",
+        "trait": "PI",
+        "position_denominator": 7,
+        "observed_count_mean": 0.652046783625731,
+        "expected_count_mean": 0.7216171151235627,
+        "observed_position_share": 0.09314954051796157,
+        "expected_position_share": 0.10308815930336611,
+        "observed_person_presence": 0.41812865497076024,
+        "expected_person_presence": 0.43884923933708314
+      },
+      {
+        "model": "M3_priority_7",
+        "trait": "SG",
+        "position_denominator": 7,
+        "observed_count_mean": 0.8991228070175438,
+        "expected_count_mean": 0.6802411607655262,
+        "observed_position_share": 0.12844611528822053,
+        "expected_position_share": 0.09717730868078946,
+        "observed_person_presence": 0.5511695906432749,
+        "expected_person_presence": 0.415371429734603
+      },
+      {
+        "model": "M3_share_7",
+        "trait": "PI",
+        "position_denominator": 7,
+        "observed_count_mean": 0.6603313840155944,
+        "expected_count_mean": 0.7195892096311094,
+        "observed_position_share": 0.09433305485937063,
+        "expected_position_share": 0.10279845851872992,
+        "observed_person_presence": 0.41812865497076024,
+        "expected_person_presence": 0.43884923933708314
+      },
+      {
+        "model": "M3_share_7",
+        "trait": "SG",
+        "position_denominator": 7,
+        "observed_count_mean": 0.9035087719298246,
+        "expected_count_mean": 0.6787165608980489,
+        "observed_position_share": 0.12907268170426064,
+        "expected_position_share": 0.09695950869972127,
+        "observed_person_presence": 0.5511695906432749,
+        "expected_person_presence": 0.415371429734603
+      },
+      {
+        "model": "M3_any_7",
+        "trait": "PI",
+        "position_denominator": 7,
+        "observed_count_mean": 0.6944444444444445,
+        "expected_count_mean": 0.7639007520172791,
+        "observed_position_share": 0.09920634920634921,
+        "expected_position_share": 0.1091286788596113,
+        "observed_person_presence": 0.41812865497076024,
+        "expected_person_presence": 0.43884923933708314
+      },
+      {
+        "model": "M3_any_7",
+        "trait": "SG",
+        "position_denominator": 7,
+        "observed_count_mean": 0.9678362573099415,
+        "expected_count_mean": 0.7182978796518459,
+        "observed_position_share": 0.13826232247284878,
+        "expected_position_share": 0.10261398280740655,
+        "observed_person_presence": 0.5511695906432749,
+        "expected_person_presence": 0.415371429734603
+      }
+    ]
+  }
+}

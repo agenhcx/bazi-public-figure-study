@@ -1,0 +1,121 @@
+{
+  "schema": "Fields_postreveal_independent_QA_v1",
+  "status": "PASS",
+  "created_utc": "2026-11-15T23:57:48.349228+00:00",
+  "remote_lock_commit": "76a8abbd73f05155b00f43a173d3736e8c716629",
+  "N": 57,
+  "strict_equals_expanded": true,
+  "noJie_retained_N": 53,
+  "prior_academy_overlap_N": 18,
+  "without_prior_academy_N": 39,
+  "fresh_MC_R": 19999,
+  "fresh_MC_seed": 2026111599,
+  "checks": {
+    "locked_files_and_inputs_unchanged": true,
+    "independent_full_universe_reconstruction": true,
+    "frozen_cohort_N57_unique_north_strict_equals_expanded": true,
+    "Fields_and_Nobel_disjoint": true,
+    "all_six_observed_expected_denominators_and_sensitivities": true,
+    "Holm6_exact_and_no_extra_sensitivity_p": true,
+    "fresh_joint_MC_19999_all_six_pass": true,
+    "same_endpoint_exact_finite_calendar_convolution_QA_pass": true,
+    "all10_TG_M0_M1_and_DM10_descriptives_exact": true,
+    "all_8_hidden_models_2_traits_counts_presence_and_denominators": true,
+    "individual_chart_audit_all57_exact": true
+  },
+  "primary_recomputed": [
+    {
+      "endpoint": "overall_PI",
+      "observed_sum": 31,
+      "expected_sum": 30.41394565461486,
+      "holm6_p": 1.0
+    },
+    {
+      "endpoint": "overall_SG",
+      "observed_sum": 35,
+      "expected_sum": 26.596923422411855,
+      "holm6_p": 0.33564
+    },
+    {
+      "endpoint": "year_PI",
+      "observed_sum": 10,
+      "expected_sum": 10.536671906579834,
+      "holm6_p": 1.0
+    },
+    {
+      "endpoint": "year_SG",
+      "observed_sum": 11,
+      "expected_sum": 10.520270978366643,
+      "holm6_p": 1.0
+    },
+    {
+      "endpoint": "month_PI",
+      "observed_sum": 8,
+      "expected_sum": 10.766846320832398,
+      "holm6_p": 1.0
+    },
+    {
+      "endpoint": "month_SG",
+      "observed_sum": 16,
+      "expected_sum": 10.709431843700875,
+      "holm6_p": 0.33564
+    }
+  ],
+  "fresh_MC_comparisons": [
+    {
+      "endpoint": "overall_PI",
+      "locked_raw_p": 0.48174,
+      "fresh_raw_p": 0.477,
+      "absolute_difference": 0.004740000000000022,
+      "allowed_bound_6combinedSE_plus_0_002": 0.02521481781242317,
+      "exact_finite_calendar_tail_QA_only": 0.48246233532818084
+    },
+    {
+      "endpoint": "overall_SG",
+      "locked_raw_p": 0.05819,
+      "fresh_raw_p": 0.0578,
+      "absolute_difference": 0.00039000000000000146,
+      "allowed_bound_6combinedSE_plus_0_002": 0.012851539089179931,
+      "exact_finite_calendar_tail_QA_only": 0.05910525843729879
+    },
+    {
+      "endpoint": "year_PI",
+      "locked_raw_p": 0.62376,
+      "fresh_raw_p": 0.6256,
+      "absolute_difference": 0.0018400000000000638,
+      "allowed_bound_6combinedSE_plus_0_002": 0.024496453019620668,
+      "exact_finite_calendar_tail_QA_only": 0.6266329885956532
+    },
+    {
+      "endpoint": "year_SG",
+      "locked_raw_p": 0.49015,
+      "fresh_raw_p": 0.4871,
+      "absolute_difference": 0.003049999999999997,
+      "allowed_bound_6combinedSE_plus_0_002": 0.02523070239790437,
+      "exact_finite_calendar_tail_QA_only": 0.48845551582185537
+    },
+    {
+      "endpoint": "month_PI",
+      "locked_raw_p": 0.86858,
+      "fresh_raw_p": 0.86295,
+      "absolute_difference": 0.005630000000000024,
+      "allowed_bound_6combinedSE_plus_0_002": 0.017936583623725633,
+      "exact_finite_calendar_tail_QA_only": 0.8681387340804412
+    },
+    {
+      "endpoint": "month_SG",
+      "locked_raw_p": 0.05594,
+      "fresh_raw_p": 0.0579,
+      "absolute_difference": 0.0019600000000000034,
+      "allowed_bound_6combinedSE_plus_0_002": 0.01282578033695493,
+      "exact_finite_calendar_tail_QA_only": 0.05704530226374815
+    }
+  ],
+  "locked_code_SHA256": "2889997196e58961a4b2fe51a00d9833db911e0f39cbb5c2ce322716c177235e",
+  "result_SHA256": "c40b32a60bcafe5f9d46391d0b51094509a34874951ced12aa40b95ffbf1c03c",
+  "auditor_code_SHA256": "cadf2ef4c9f586bf050e8345cd6ca801dfdc0c0143de08e45a595c0f78eb91c7",
+  "no_locked_files_modified": true,
+  "new_endpoints_or_hypotheses_added": false,
+  "exact_tail_role": "QA reference only for same six endpoints; does not replace locked 99999-replicate p-values.",
+  "blockers": []
+}

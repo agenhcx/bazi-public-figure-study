@@ -1,0 +1,57 @@
+Fields Medal PI/SG analysis, version 1
+
+Runtime: Python 3 with NumPy. No lunar-calendar package is needed because the
+analysis reuses the exact pinned calendar and hidden-feature universes.
+
+Run from the parent directory containing fields_reveal_v1,
+fields_restore_v1 and hypothesis_inputs_v1.
+
+Required input paths and SHA256:
+
+hypothesis_inputs_v1/scientist_north_data_freeze_v4.zip
+53302ef5c4bbb946adcaceb70d7a7fd576c7f06d03c3e7080874654e1a2644f9
+
+fields_restore_v1/methods/scientist_US_NAS_reveal_v1/calendar_pool.npz
+d150883033464ebd3afafaf764738ed3b573d0d0fb4bd252a955e403a75fcc8b
+
+fields_restore_v1/methods/scientist_US_NAS_reveal_v2_hidden_stems/hidden_pool.npz
+19e8bc8648fe8b69122161da260e1dae487816241c655bd96a1273783f1ef723
+
+QA command (calendar universe and synthetic checks only, no Fields cohort load):
+python3 fields_reveal_v1/analyze_fields.py --qa-only --output fields_reveal_v1/LOCAL_QA.json
+
+Before study execution, publish the plan, code and input pins to the authorized
+Git branch; fetch that exact commit and verify its file contents. Save a receipt
+with remote_lock_verified=true, the exact code_sha256, commit identifier, remote
+repository and verification evidence. This receipt is external evidence of the
+Git lock: the analysis checks the Boolean and local code hash but does not itself
+perform network verification. Do not create a receipt before verification.
+
+Execution command (use an output path that does not already exist):
+python3 fields_reveal_v1/analyze_fields.py --execute --receipt fields_reveal_v1/REMOTE_LOCK_RECEIPT.json --output fields_reveal_v1/RESULTS.json
+
+The command also writes INDIVIDUAL_AUDIT.json beside RESULTS.json. Outputs contain
+all six primary one-sided Monte Carlo tests, one Holm6 family, descriptive
+sensitivities and an exact copy of the execution receipt. The simulation uses
+99,999 draws with NumPy PCG64 seed 2026111501 and inclusive integer >= tails.
+
+Custom input locations may be supplied with --v4, --calendar and --hidden.
+The input SHA256 checks remain mandatory regardless of their filesystem paths.
+
+The sample is the frozen 57-person northern-hemisphere 1835-1985 cohort. It is
+not a newly updated or complete current recipient roster. Strict and expanded
+source-quality variants are identical in this freeze. Unknown-hour sensitivity
+models uniformly marginalize the 12 cached candidate hour branches.
+
+For independent validation, recompute the six observed and year-conditioned
+expected sums from INDIVIDUAL_AUDIT.json and the pinned universe, verify Holm6,
+and compare a separately seeded null simulation within Monte Carlo error.
+
+The self-contained independent auditor uses the package's relative paths:
+python3 fields_reveal_v1/audit_fields.py
+It rechecks all inputs and outputs, recomputes the six endpoints, and uses a
+fresh 19,999-draw joint simulation. Exact finite-calendar tails are QA references
+only and do not replace the locked Monte Carlo results.
+
+To rerun the locked engine alongside the delivered outputs, choose a new folder:
+python3 fields_reveal_v1/analyze_fields.py --execute --receipt fields_reveal_v1/REMOTE_LOCK_RECEIPT.json --output fields_reveal_v1/rerun/RESULTS.json
