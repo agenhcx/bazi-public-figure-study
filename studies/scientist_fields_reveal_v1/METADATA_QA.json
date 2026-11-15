@@ -1,0 +1,128 @@
+{
+  "schema": "fields_reveal_metadata_qa_v1",
+  "created_utc": "2026-11-15T23:52:11.148051+00:00",
+  "scope": "Independent metadata-only verification of frozen Fields cohort; no calendar feature tables loaded, no BaZi features or hypothesis effects computed or inspected.",
+  "input": {
+    "file": "hypothesis_inputs_v1/scientist_north_data_freeze_v4.zip",
+    "sha256": "53302ef5c4bbb946adcaceb70d7a7fd576c7f06d03c3e7080874654e1a2644f9",
+    "member_sha256": {
+      "outputs/strict/Fields_parallel_cohort.jsonl.gz": "54ad51aaa1d008d2e9b46059f263fcf960b84e5192e5abe974fb470964841dc2",
+      "outputs/expanded/Fields_parallel_cohort.jsonl.gz": "54ad51aaa1d008d2e9b46059f263fcf960b84e5192e5abe974fb470964841dc2"
+    }
+  },
+  "official_full_roster": {
+    "award_cutoff_year": 2025,
+    "latest_award_year": 2022,
+    "earliest_award_year": 1936,
+    "n": 64,
+    "declined_award_retained": true,
+    "special_silver_plaque_excluded": true,
+    "separate_2026_extension_excluded": true
+  },
+  "eligibility_funnel": {
+    "inherited_audit_path": "V4/baseline/V3/baseline/V2/baseline/V1/scientist_north_input_lock_v1/audit/lock_nobel_fields.json",
+    "inherited_audit_sha256": "4c9e645894416d2fb849d173ae4203c7e0c7ab0a5f41cca50f4969268e7c0599",
+    "full_roster_n": 64,
+    "source_DOB_status_counts": {
+      "day_source_verified": 63,
+      "month_only": 1
+    },
+    "day_level_DOB_geography_n": 63,
+    "day_level_DOB_geography": {
+      "north": 59,
+      "south": 4,
+      "unknown": 0
+    },
+    "partial_month_only_DOB_not_in_day_geography_table_n": 1,
+    "birth_window_inclusive": [
+      "1835-01-01",
+      "1985-12-31"
+    ],
+    "day_level_DOB_in_birth_window_n": 61,
+    "day_level_DOB_in_birth_window_geography": {
+      "north": 57,
+      "south": 4,
+      "unknown": 0
+    },
+    "mutually_exclusive_exclusions_from_full64": {
+      "month_only_DOB": 1,
+      "south_day_DOB": 4,
+      "north_day_DOB_outside_birth_window": 2
+    },
+    "excluded_north_outside_window_birth_year_counts": {
+      "1987": 2
+    },
+    "note": "Geography unknown=0 is conditional on the 63 day-level DOB records. The one month-only record is not present in that geography table; do not describe all 64 as fully geographically assessed."
+  },
+  "selected_cohort": {
+    "strict_n": 57,
+    "expanded_n": 57,
+    "strict_expanded_compressed_member_bytes_identical": true,
+    "unique_person_id_n": 57,
+    "unique_analysis_DOB_n": 57,
+    "person_id_set_sha256_sorted_newline_final_newline": "97e827da996cc846230223e67fc8b70fb59a145cb47e1661c5ff07eb761daed3",
+    "hemisphere_counts": {
+      "north": 57
+    },
+    "birth_year_range": [
+      1897,
+      1985
+    ],
+    "actual_DOB_field": "analysis_DOB",
+    "date_coordinate_policy_values": [
+      "scientist-unmarked-biographical-date-Gregorian-coordinate-v1-20261110"
+    ],
+    "person_level_DOB_analysis_hold_n": 0,
+    "nonnull_strict_support_coordinates_disagreeing_with_analysis_DOB_n": 0,
+    "dedup_unit": "accepted frozen V3 global person_id; do not deduplicate by name, DOB, institution, award event, or raw QID alone",
+    "cohort_role": "parallel Fields cohort; no automatic hierarchy placement"
+  },
+  "DOB_support": {
+    "person_source_grade_profile_counts": {
+      "None|S2": 1,
+      "S1": 1,
+      "S1|S2": 5,
+      "S2": 50
+    },
+    "persons_with_at_least_one_S1_support_n": 6,
+    "persons_without_S1_but_with_S2_support_n": 51,
+    "all57_have_qualified_strict_S1_or_S2_support": true,
+    "source_calendar_note": "Unmarked biographical dates retain the frozen coordinate convention. No new calendar conversion or DOB rewriting was performed. One person has an additional unspecified-grade support route alongside S2; this is not source-grade promotion."
+  },
+  "overlap": {
+    "strict": {
+      "Nobel_science_intersection_n": 0,
+      "academy_excluding_Nobel_intersection_n": 18,
+      "academy_excluding_Nobel_and_Fields_control_n": 5216
+    },
+    "expanded": {
+      "Nobel_science_intersection_n": 0,
+      "academy_excluding_Nobel_intersection_n": 18,
+      "academy_excluding_Nobel_and_Fields_control_n": 5853
+    }
+  },
+  "nonexclusive_original_academy_membership_tag_counts": {
+    "DE_Leopoldina": 2,
+    "UK_Royal_Society": 5,
+    "France": 8,
+    "Japan": 3,
+    "NAS": 1
+  },
+  "prior_exposure_record_limits": {
+    "V4_QA_records_zero_BaZi_or_hypothesis_results": true,
+    "V4_analysis_unblinding_ready": false,
+    "note": "This documents the V4 freeze metadata, not a claim that no Fields result was ever exposed later in any prior thread."
+  },
+  "checks": {
+    "funnel_64_equals_57_plus_7": true,
+    "strict_expanded_n57_and_identical": true,
+    "all_north": true,
+    "person_ids_unique": true,
+    "no_person_DOB_hold": true,
+    "qualified_strict_source_support": true,
+    "Fields_Nobel_disjoint": true,
+    "academy_overlap18_in_both_groups": true,
+    "public_report_contains_no_person_names_or_person_DOB_list": true
+  },
+  "all_checks_pass": true
+}
